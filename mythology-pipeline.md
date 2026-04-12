@@ -1,6 +1,6 @@
 # Mythology Book Pipeline — Full Pack for Review
 
-This document consolidates the README, CHANGELOG, and all fifteen SKILL.md files. Each section is delimited by a clear header.
+This document contains the full pipeline: the README (overview and principles), the CHANGELOG, and all fifteen skill files (step-by-step instructions for each stage). Each section is marked with a `FILE N of 17` header.
 
 ---
 
@@ -8,18 +8,30 @@ This document consolidates the README, CHANGELOG, and all fifteen SKILL.md files
 
 # Mythology Book Pipeline
 
-Multi-agent, multi-stage pipeline for producing Asimov-style mythology retellings with per-culture focus, auditable citations, and explicit handling of lacunae, reconstructions, and variants.
+A step-by-step process for producing mythology books in the style of Isaac Asimov's non-fiction: clear, plain-English retellings of myths, one culture per book, with every factual claim traced to a scholarly source. The process uses multiple AI agents (Claude, GPT, Gemini, etc.) working in sequence, each doing one job and being checked by a different AI. It handles the hard parts of mythology writing: gaps in ancient texts, contradictory versions of the same story, and the constant risk of mixing up material from neighboring cultures.
 
 ## Core principles
 
-1. **Author ≠ Auditor.** Every step should be carried out by an agent and reviewed by an agent of a different AI. For instance, if Claude does a step GPT should review the result.
-2. **Scope is sacred.** `scope.md` + `sources.yaml` + `glossary.yaml` are prepended to every downstream prompt.
-3. **Citations only from provided sources.** Drafting stages may cite only sources whose text is in the conversation or fetched in it. No citations from training memory.
-4. **Internal variance is not an error.** Ancient mythologies are internally variant. Two in-scope sources disagreeing is part of the corpus, handled per the variant-classification rule.
-5. **Contamination is document-level, not entity-level.** The question is whether *this specific narrative detail* appears in an in-scope document — not whether the entity "belongs to" the scope culture.
-6. **Length follows source volume.** Chapters are never padded.
+1. **The writer and the checker must be different AIs.** The AI that writes a chapter must not be the one that checks it. Use a different AI model (e.g., Claude writes, GPT checks), and start a fresh conversation for the check so the checker has no memory of the writing process. Self-review catches almost nothing.
+
+2. **Three files govern the entire book.** Three files are created early and must be read by every AI and every human before starting any later stage:
+   - `scope.md` — what culture, period, and sources the book covers, and what it explicitly excludes.
+   - `sources.yaml` — the approved list of scholarly sources (whitelist) and banned popularizations (blacklist).
+   - `glossary.yaml` — the locked English translations for key terms (created after the scope, before any writing begins).
+
+   These are the single source of truth. If an AI or human is unsure whether something belongs in the book, these files have the answer.
+
+3. **Cite only sources you can see.** When writing, the AI may only cite sources whose text has been pasted into the conversation or retrieved during it. No citing from the AI's training memory, even for famous texts. This is the main defense against fabricated references — a common AI failure mode.
+
+4. **Contradictions between sources are normal, not errors.** Ancient mythologies have multiple versions of the same story. Two legitimate sources disagreeing is part of the record, not a mistake. The pipeline handles this explicitly: when one version dominates the scholarly record, it goes in the main text with alternatives in footnotes. When versions are roughly equal, they are presented side by side. The key is to never silently pick one and ignore the others.
+
+5. **Check the document, not the deity.** When checking whether something belongs in the book, the question is: "Does this specific story detail appear in a document from within our scope?" — not "Does this god belong to our culture?" Gods and heroes cross cultural boundaries; specific narrative details are tied to specific texts. A detail found only in a Babylonian tablet does not belong in a Sumerian book, even if the god is originally Sumerian.
+
+6. **Chapter length follows the evidence.** A myth preserved on a single broken tablet gets a short chapter. A richly-documented cycle gets a long one. Chapters are never padded to reach a target length.
 
 ## Stage order
+
+The book is built in stages. Each stage produces a file that the next stage consumes. `[HUMAN]` marks points where you review and approve before continuing. The arrows show what feeds into what:
 
 ```
 scope-lock → story-inventory → inventory-audit → [HUMAN ~15min] →
@@ -32,6 +44,8 @@ scope-lock → story-inventory → inventory-audit → [HUMAN ~15min] →
   character-appendix → chapter-factcheck(appendix) →
   format-finalize
 ```
+
+**In plain English:** First you define what the book covers and what sources are allowed (scope-lock). Then an AI researches all the stories in that mythology (story-inventory), and a different AI checks the list (inventory-audit). You review, then the approved list is turned into one planning document per chapter (chapter-briefs) and a locked glossary of key terms (glossary-lock). An introductory chapter on cultural context is written and fact-checked. Then, for each story chapter: the facts are written out one by one (chapter-claims), checked (chapter-factcheck), you review, then the facts are turned into narrative prose (chapter-draft), and a different AI confirms the prose faithfully represents the facts (narrative-fidelity). After all chapters are done, a cross-cultural comparison chapter is written. All chapters get their placeholder markers converted to final text (marker-resolve), then a prose-quality polish (line-edit). A character reference appendix is compiled and fact-checked. Finally, everything is assembled into a book with a bibliography and validated (format-finalize).
 
 ## Artifact layout per book
 
@@ -128,18 +142,24 @@ Initial pipeline: scope-lock, story-inventory, inventory-audit, chapter-briefs, 
 
 ---
 name: scope-lock
-description: Interactive skill run once at the start of each book. Produces scope.md and sources.yaml, which are prepended to every downstream skill. Defines cultural, temporal, and source boundaries — the single strongest defense against cultural contamination.
+description: Interactive conversation run once at the start of each book. Produces scope.md and sources.yaml — the two files that define what belongs in the book and what doesn't. Every later stage reads them.
 ---
 
 # scope-lock
 
 ## For the human
 
-This is where you define what the book is and, equally importantly, what it is not. A Sumerian book is not a Mesopotamian book. A Norse book is not a Germanic book. Without a locked scope, the research, drafting, and audit stages drift: material from adjacent cultures seeps in, and by the time anyone notices, it's woven through every chapter.
+This is where you define what the book is and, equally importantly, what it is not. A Sumerian book is not a Mesopotamian book. A Norse book is not a Germanic book. Without a locked scope, the research, drafting, and checking stages drift: material from neighboring cultures seeps in, and by the time anyone notices, it's woven through every chapter.
 
-This skill runs once. Its two outputs — `scope.md` and `sources.yaml` — are prepended to every later prompt in the pipeline. Every downstream agent reads them before doing anything.
+This step runs once, at the very start. It produces two files — `scope.md` (what the book covers and excludes) and `sources.yaml` (which scholarly sources are approved and which are banned). Every AI working on every later stage reads these two files before doing anything. They are the rulebook for the entire book.
 
-The skill is interactive. Don't accept vague answers; press for specifics — especially on which adjacent cultures are most likely to contaminate the book, and on what counts as a legitimate source to fill gaps in the primary corpus.
+This step is a conversation between you and the AI. The AI will ask you questions about the book's boundaries. Don't accept vague answers from yourself — the more specific you are here, the fewer problems you'll have later. Three decisions matter most:
+
+1. **Which neighboring cultures to exclude.** For a Sumerian book, the main risk is Akkadian/Babylonian material leaking in. For a Norse book, it's continental Germanic and Christianized sagas. The AI will propose specific exclusions with reasons; you confirm or adjust.
+
+2. **What counts as a legitimate gap-fill.** Ancient texts have physical gaps — broken tablets, lost pages. The pipeline allows filling those gaps from other texts in the same tradition, clearly marked. You need to define what "same tradition" means for this book (e.g., "any Sumerian literary text from within 400 years of the damaged one").
+
+3. **Which sources are approved.** The AI will propose 8–15 scholarly sources (critical editions, standard reference works) and a blacklist of popularizations that should never be cited. You approve or edit the lists.
 
 ## Inputs
 - Target mythology (e.g., "Sumerian", "Norse", "Yoruba")
@@ -227,18 +247,20 @@ Pass `scope.md` and `sources.yaml` to `story-inventory`. These files are re-read
 
 ---
 name: story-inventory
-description: Produces a structured inventory of stories attested in the scope mythology, each with verifiable identifiers for primary sources. Best run via Gemini Deep Research or an equivalent research-capable model with web access. Output is inventory.yaml, consumed by inventory-audit.
+description: Produces a structured list of every story the book will cover, each with verifiable scholarly references. Best run with a research-capable AI (Gemini Deep Research or equivalent) that can search many sources at once. Output is inventory.yaml.
 ---
 
 # story-inventory
 
 ## For the human
 
-This skill produces the table of contents, in effect — the list of stories the book will cover. The research happens here, not in the drafting stage. Everything downstream depends on this inventory being accurate and in-scope.
+This step produces what is essentially the book's table of contents — the list of stories it will cover. All the research happens here, not during writing. Everything that follows depends on this list being accurate and staying within the book's scope.
 
-The main risk is hallucinated stories: the model producing entries for stories that sound right for the culture but aren't actually attested, or confusing attestations across related cultures. The defense is strict sourcing — every entry carries a verifiable identifier (not a generic URL, which can be a dead link or a homepage), and uncertain entries are flagged rather than silently included or excluded.
+The main risk is invented stories: the AI producing entries for stories that sound plausible for the culture but aren't actually documented in real sources, or confusing stories from one culture with those of a neighboring one. (AI models do this regularly — they "know" enough about a mythology to produce convincing-sounding entries that don't correspond to any real text.)
 
-Best run with a deep-research model (Gemini Deep Research, or equivalent) that can consult many sources in one pass.
+The defense is strict sourcing. Every story in the list must carry a verifiable reference — not a generic web link (which can be a dead link or a homepage), but something a scholar could look up: a catalogue number (like ETCSL 1.4.1), a museum tablet number (like BM 92687), an ISBN, or a DOI. Entries where no such reference can be found are flagged as uncertain rather than silently included or dropped.
+
+Best run with a research-capable AI (like Gemini Deep Research) that can search many scholarly databases in one pass.
 
 ## Inputs
 - `scope.md`, `sources.yaml`
@@ -300,18 +322,26 @@ To `inventory-audit`, which must be run in a fresh conversation with a different
 
 ---
 name: inventory-audit
-description: Audits the story inventory. Must be run in a fresh conversation with a different model than story-inventory. Detects contamination (document-provenance method), unsupported entries with fabricated identifiers, missing canonical stories, and internal variants that need explicit handling. Output is severity-ranked for minimal-time human review.
+description: Checks the story inventory for errors before any writing begins. Must be run by a different AI model than the one that produced the inventory, in a fresh conversation. Catches material from wrong cultures, made-up references, missing well-known stories, and silently merged variants.
 ---
 
 # inventory-audit
 
 ## For the human
 
-This is the first of the two critical audit skills. It checks the story inventory before any drafting begins. The cost of catching errors here is minutes; the cost of catching them after chapters are drafted is hours.
+This is the first major quality check. It reviews the story list before any chapters are written. Catching errors here costs minutes; catching them after chapters are drafted costs hours.
 
-The hardest check is contamination detection. Gemini's review of an earlier version pointed out that checking "what culture is this entity from?" is too coarse — the same deity exists across cultures, but specific narrative details are culture- and period-bound. The correct check is at the document level: is *this specific plot element* attested in a document from within the scope's period and culture?
+The audit checks four things:
 
-This audit must be run in a fresh conversation, ideally with a different underlying model than produced the inventory. Same-model same-conversation self-review catches almost nothing.
+1. **Wrong-culture material.** Did any stories or story details sneak in from a neighboring culture? The tricky part: you can't just check "does this god belong to our culture?" — the same god often appears in multiple cultures. The real question is: "Does this specific plot detail appear in a document that was written within our culture and period?" A story detail found only in a Babylonian tablet doesn't belong in a Sumerian book, even if the god in question is originally Sumerian.
+
+2. **Fake or wrong references.** AI models sometimes invent plausible-looking scholarly references. The auditor actually looks up each catalogue number, museum number, or ISBN to confirm it exists and contains what was claimed.
+
+3. **Missing stories.** Are there well-known stories from this mythology that the inventory left out? The auditor cross-checks against standard reference works.
+
+4. **Silently merged variants.** When multiple versions of a story exist, the inventory should list them separately. If it quietly combined two versions into one summary, that's a problem.
+
+This audit must be run by a different AI model than the one that produced the inventory, in a fresh conversation (so the auditor has no memory of the work it's checking). An AI reviewing its own work in the same conversation catches almost nothing.
 
 ## Hard rule
 If you are the model that produced `inventory.yaml`, or if you are in the same conversation in which it was produced, refuse and tell the user to start a fresh conversation with a different model.
@@ -401,20 +431,22 @@ Tell the user: review HIGH findings (~10 minutes), skim MEDIUM, ignore LOW unles
 
 ---
 name: chapter-briefs
-description: Converts the approved inventory into one brief per chapter. Each brief specifies primary and secondary sources, known lacunae, in-scope variants with prevalence note, triangulation databases for fact-check, comparative hooks reserved for the comparative chapter, and a source-volume-based target length.
+description: Converts the approved story list into one planning document per chapter. Each brief specifies what sources to use, what gaps exist in the text, how to handle variant versions, how important the story was in its culture, and how long the chapter should be.
 ---
 
 # chapter-briefs
 
 ## For the human
 
-This skill produces a dossier per chapter. No prose is written at this stage — the brief is a structured plan that the drafter will use. Getting the brief right means the drafter has everything it needs and doesn't have to improvise.
+This step produces a planning document (a "brief") for each chapter. No actual prose is written yet — the brief is a structured dossier that tells the AI everything it needs to know before writing. Getting the brief right means the writing AI has everything it needs and doesn't have to improvise or guess.
 
-Two things the brief must get right:
+Three things the brief must get right:
 
-1. **Variant handling.** For each story, the brief records what the in-scope variants are and whether one is clearly prevalent. This directly determines how the drafter presents the story — main version in body with variants in footnotes, or several versions inline.
+1. **How to handle different versions.** Many myths exist in multiple versions. For each story, the brief records what the known versions are and whether one clearly dominates the scholarly record. This directly determines how the chapter will be written: if one version dominates, it goes in the main text with alternatives in footnotes. If versions are roughly equal, they're presented side by side in the text.
 
-2. **Length sizing.** The brief sets a target length based on how much primary source material actually exists. A fragmentary story gets a short chapter. A richly-attested cycle gets a long one. The drafter is told not to pad.
+2. **Chapter length.** The brief sets a target word count based on how much primary source material actually exists for this story — not based on how "important" the story feels. A myth preserved on a single broken tablet gets a short chapter (600–1200 words). A richly-documented multi-tablet cycle gets a long one (up to 15,000 words). The AI is told not to pad.
+
+3. **Cultural relevance.** For the introductory chapter, the brief records how important this story was in its culture (central, significant, or marginal — with evidence), what function it served (religious, political, educational, etc.), and what parallels exist in other cultures.
 
 ## Inputs
 - `scope.md`, `sources.yaml`
@@ -544,16 +576,16 @@ To `glossary-lock`, which runs once over all briefs before any drafting. The `cu
 
 ---
 name: glossary-lock
-description: Locks the English rendering of recurring technical terms and proper nouns before any chapter is drafted. Prevents phantom translation-conflict findings in fact-check and ensures consistency across chapters. Interactive, runs once per book after chapter-briefs.
+description: Locks the English translation for recurring terms and proper nouns before any chapter is written. Prevents inconsistency across chapters and false contradictions during fact-checking. Interactive — the AI proposes, you decide.
 ---
 
 # glossary-lock
 
 ## For the human
 
-Scholarly translations disagree on key words. Sumerian *me* is rendered "divine powers" (Kramer), "cosmic ordinances" (Jacobsen), or left untranslated (Black). If the drafter picks one and the fact-checker is reading a source that uses another, the fact-checker will flag phantom contradictions. Across chapters, inconsistent renderings make the book read as if multiple hands wrote it.
+Scholars translate key terms differently. For example, the Sumerian word *me* is translated as "divine powers" (Kramer), "cosmic ordinances" (Jacobsen), or left untranslated (Black). If the writing AI picks one translation and the fact-checking AI is reading a source that uses a different one, the fact-checker will flag a false contradiction — the claim is correct, it's just using a different translation of the same word. And if different chapters use different translations of the same term, the book reads as if multiple people wrote it without coordinating.
 
-This skill short-circuits both problems by having the user lock each recurring term's English form before any chapter is drafted. Usually 10–30 terms per book. Interactive: the skill proposes, you decide.
+This step solves both problems by locking in a single English translation for each recurring term before any chapter is written. Usually 10–30 terms per book. It's interactive: the AI proposes options for each term (with reasons), and you pick the one you prefer or supply your own.
 
 ## Inputs
 - `scope.md`, `sources.yaml`
@@ -604,7 +636,7 @@ terms:
 
 ---
 name: intro-chapter
-description: Produces the introductory chapter that frames the cultural relevance of every myth covered in the book. For each myth: was it central or marginal? What function did it serve? How does it resonate across cultures? Runs after glossary-lock, before or in parallel with per-chapter drafting. Goes through chapter-factcheck like any other chapter.
+description: Produces the introductory chapter that frames the cultural relevance of every myth covered in the book. For each myth: was it central or marginal? What function did it serve? How does it resonate across cultures?
 ---
 
 # intro-chapter
@@ -613,15 +645,15 @@ description: Produces the introductory chapter that frames the cultural relevanc
 
 This chapter is the reader's first encounter with the mythology as a living cultural system — not yet the stories themselves, but the frame that makes them intelligible. Without it, the reader goes into a retelling of, say, the Descent of Inanna without knowing whether Sumerians treated this as a central cosmological narrative or a minor literary curiosity. That context changes how the retelling lands.
 
-Three questions per myth, answered from scholarship:
+The chapter answers three questions for each myth, based on scholarly evidence:
 
-1. **Centrality.** Was this myth central to the culture's self-understanding, or peripheral? A creation myth recited at the New Year festival is not the same as a scribal exercise preserved in one school tablet. The evidence is in the number of copies, the ritual contexts, the iconographic record, and the scholarly literature.
+1. **How important was it?** A creation myth recited at the New Year festival is not the same as a scribal exercise preserved in one school tablet. The evidence comes from: how many copies survive, whether it was used in rituals, whether it shows up in art (cylinder seals, reliefs), whether kings invoked it, and how much scholarly attention it has received.
 
-2. **Function.** What did the myth *do* in its culture? Myths are not just stories — they legitimate kingship, explain ritual, encode cosmology, teach scribal students, mark seasonal transitions. The function shapes the narrative, and the reader should know this before encountering the narrative itself.
+2. **What did it do?** Myths are not just stories — they legitimate kingship, explain rituals, encode how the world works, teach students, mark seasonal transitions. Knowing that a myth was recited at a political ceremony changes how you read it. The reader should know this before encountering the retelling.
 
-3. **Cross-cultural resonance.** A brief preview — not the full comparative analysis, which belongs in the comparative chapter — of where this myth's themes appear in other traditions. This orients the reader to watch for these parallels as they read the retellings, and prepares them for the comparative chapter at the end.
+3. **Where else does this theme appear?** A brief preview — not the full analysis, which comes in the comparative chapter at the end — of where this myth's themes show up in other cultures. This gives the reader something to watch for as they read, and prepares them for the cross-cultural discussion later.
 
-This chapter is scholarly in character: it makes claims about cultural significance that must be sourced. It goes through `chapter-factcheck` like any other chapter.
+This chapter makes factual claims about cultural significance, so it goes through the same fact-checking process as any other chapter: a different AI checks every claim against sources.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
@@ -731,18 +763,20 @@ To `chapter-factcheck`, fresh conversation, different model — same as any chap
 
 ---
 name: chapter-claims
-description: Produces the factual skeleton of a single chapter — one claim per paragraph, each individually cited. This is the first step of a two-step drafting process. The claims document is fact-checked before any narrative prose is written, so that the creative Asimov-style retelling (chapter-draft) operates only on verified material.
+description: Produces the factual skeleton of a single chapter — one fact per paragraph, each with its own citation. This is step 1 of a two-step writing process: first the facts are written and verified, then the narrative prose is created from the verified facts.
 ---
 
 # chapter-claims
 
 ## For the human
 
-This is the first half of a split that makes fact-checking dramatically more reliable. Instead of writing flowing Asimov prose and then trying to extract claims from it for verification, we write the claims first — one per paragraph, each with its own citation — and only write the narrative after the claims have been verified.
+This is the first half of a deliberate split between "getting the facts right" and "writing beautiful prose."
 
-Why this matters: when a model writes a beautiful paragraph of narrative prose, it is simultaneously composing, citing, connecting, and styling. Each of these tasks interferes with the others. The model fills gaps to smooth transitions, reaches for evocative phrasing that drifts from the source, and buries claims in connective tissue that makes them hard to audit. By separating the factual skeleton from the prose, we let the model do one job at a time, and we let the fact-checker verify claims that are individually isolated and individually cited.
+Instead of asking the AI to write flowing Asimov-style narrative and then trying to check the facts buried inside it, we write the facts first — one per paragraph, each with its own source reference — and only write the narrative after the facts have been verified.
 
-The output of this stage is not prose the reader will see. It is a verified blueprint that `chapter-draft` will transform into the final narrative.
+Why this matters: when an AI writes a beautiful paragraph of narrative prose, it is simultaneously researching, citing, connecting, and styling. These tasks interfere with each other. The AI fills gaps to smooth transitions, reaches for evocative phrasing that drifts from the source, and buries factual claims in connective tissue that makes them hard to check. By separating the factual skeleton from the prose, we let the AI do one job at a time, and we give the fact-checker a document where each paragraph is a single, individually cited claim — trivially easy to verify compared to extracting claims from flowing prose.
+
+The output of this stage is not text the reader will ever see. It is a verified blueprint — a list of numbered facts — that the next stage (`chapter-draft`) will transform into the final narrative.
 
 ## Hard rules
 1. Cite only sources whose text has been provided to you in this conversation or fetched by you via tool use. No citing from memory, even confidently.
@@ -859,25 +893,28 @@ To `chapter-factcheck`, fresh conversation, different model. The fact-checker's 
 
 ---
 name: chapter-factcheck
-description: Audits factual claims against cited sources. For story chapters, the input is a claims document (one claim per paragraph) from chapter-claims — this is the primary use case and the easiest to audit. Also used on intro-chapter and character-appendix prose. Must be run in a fresh conversation with a different model than the producer. Uses quote-to-claim mapping, triangulates citation references, and distinguishes internal variants (not findings) from contamination and fabrication (findings).
+description: Checks factual claims against the cited sources. For story chapters, the input is a claims document (one fact per paragraph) — straightforward to check. Also used on the intro chapter and character appendix. Must be run by a different AI model in a fresh conversation.
 ---
 
 # chapter-factcheck
 
 ## For the human
 
-This is the most important audit in the pipeline.
+This is the most important quality check in the entire process.
 
-For story chapters, the input is now a **claims document** — one claim per paragraph, each individually cited — produced by `chapter-claims`. This makes the audit dramatically easier and more reliable than verifying claims embedded in flowing prose. There is no connective tissue to parse through, no stylistic distractions, no bundled assertions. Each paragraph is one claim, one citation, one verification task.
+For story chapters, the input is a **claims document** — one fact per paragraph, each individually cited — produced by `chapter-claims`. This makes checking straightforward: each paragraph is one claim, one source reference, one thing to verify. No need to dig through flowing prose to find what's being asserted.
 
-The skill is also used to audit the intro-chapter (cultural-relevance prose) and the character-appendix (character profiles). For these, the input is prose, and the auditor must extract claims from it — the traditional, harder mode.
+This step is also used to check the intro chapter (cultural-relevance claims) and the character appendix (character profiles). For those, the input is prose rather than isolated claims, so the checker has to extract the claims first — harder, but the same principles apply.
 
-Regardless of input format, the skill enforces four disciplines:
+Regardless of what it's checking, this step enforces four disciplines:
 
-1. **Quote-to-claim mapping.** Every "supported" verdict requires the auditor to paste a verbatim quote from the source. Without a quote, the verdict downgrades to unverified.
-2. **Triangulation of citations.** Tablet numbers, line ranges, and page references are verified against triangulation databases.
-3. **Three-way distinction.** Internal variance (not a finding) vs contamination (finding) vs fabrication (finding).
-4. **Reverse-order second pass.** To counter lead bias.
+1. **Show your evidence.** For every claim the checker marks as "supported," it must paste a verbatim quote from the source. Not a paraphrase — the actual text. If the checker can't produce a quote, the claim is downgraded to "unverified." This turns the check from a yes/no judgment into a retrieval task, which AI does more honestly.
+
+2. **Verify the references.** Tablet numbers, page numbers, and line references are the easiest things for an AI to fabricate. The checker looks up each reference in scholarly databases (ETCSL, CDLI, Perseus, etc.) to confirm it actually exists and contains what was claimed.
+
+3. **Distinguish contradictions from errors.** Two legitimate sources disagreeing about the same story is normal in mythology — it's part of the historical record, not a problem to fix. Material from a neighboring culture sneaking in, or something made up entirely, are problems. The checker must tell these apart.
+
+4. **Read it backwards too.** AI checkers tend to be more careful at the start and get sloppy toward the end. The checker does one pass start-to-end, then a second pass end-to-start, to catch anything missed the first time.
 
 ## Hard rule
 Must be run in a fresh conversation, ideally with a different underlying model than produced the content. If you have any memory of producing the input, refuse.
@@ -999,16 +1036,18 @@ Review HIGH findings (~10 minutes), skim MEDIUM, ignore LOW unless maximum rigor
 
 ---
 name: chapter-draft
-description: Transforms fact-checked claims into Asimov-style narrative prose. The input is a verified claims document — the creative work here is purely prose craft, not factual research. No new factual claims may be introduced. The narrative must faithfully represent every verified claim and add nothing that wasn't verified.
+description: Transforms the verified facts into Asimov-style narrative prose. The AI's only job is writing — the facts are already checked. No new facts may be introduced. Every verified claim must appear in the narrative, and nothing unverified may be added.
 ---
 
 # chapter-draft
 
 ## For the human
 
-This is the creative stage, and it is now much safer than in v1. The model is not simultaneously researching, citing, and composing — it is only composing. The factual skeleton has already been written and verified. The drafter's job is to turn a list of verified claims into a narrative that reads like Asimov at his best.
+This is the creative stage — and it is much safer now that the facts are already locked. The AI is not simultaneously researching, citing, and writing. It is only writing. The factual skeleton has already been written and verified. The AI's job is to turn a list of numbered, checked facts into a narrative that reads like Asimov at his best.
 
-The main risk is no longer fabrication of facts (those are locked) but **drift during prose transformation**: dropping a verified claim because it doesn't fit the narrative flow, softening a claim until its meaning changes, or inserting a "helpful" detail that was never in the claims document. The `narrative-fidelity` review that follows will catch these, but the drafter should work to prevent them.
+The main risk is no longer inventing facts (those are locked) but **drift during the prose transformation**: dropping a verified fact because it doesn't fit the narrative flow, softening a claim until its meaning changes, or inserting a "helpful" detail that was never in the verified facts. The next step (`narrative-fidelity`) will catch these, but the writing AI should work to prevent them.
+
+Importantly, the writing AI does **not** receive the original source texts. It only receives the verified claims document. This is deliberate: giving it the sources would tempt it to "improve" the chapter with additional details that were never fact-checked.
 
 ## Hard rules
 1. **Every factual assertion in the narrative must correspond to a claim in the approved claims document.** No new facts, no new citations, no "I happen to know" additions.
@@ -1088,22 +1127,22 @@ To `narrative-fidelity`, fresh conversation, different model.
 
 ---
 name: narrative-fidelity
-description: Audits that the Asimov-style narrative faithfully represents the fact-checked claims — nothing dropped, nothing added, nothing distorted. Must be run in a fresh conversation with a different model than chapter-draft. This is the final gate before marker-resolve.
+description: Checks that the narrative prose faithfully represents the verified facts — nothing dropped, nothing added, nothing distorted. Must be run by a different AI model in a fresh conversation.
 ---
 
 # narrative-fidelity
 
 ## For the human
 
-The claims have been verified. The narrative has been written from those verified claims. This skill answers one question: **is the narrative a faithful representation of the claims?**
+The facts have been verified. The narrative has been written from those verified facts. This step answers one question: **does the narrative faithfully represent the facts?**
 
-This is not a fact-check — the facts were checked at the claims stage. This is a fidelity review: a structural comparison between two documents. It catches three failure modes:
+This is not a fact-check — the facts were already checked in the previous step. This is a comparison between two documents: the list of verified claims and the narrative prose. It catches three problems:
 
-1. **Dropped claims.** The drafter omitted a verified claim because it didn't fit the prose flow. The reader loses information.
-2. **Added claims.** The drafter introduced a new factual assertion that was never in the claims document and therefore never verified. This is the most dangerous failure — it reintroduces the fabrication risk that the claims-first process was designed to eliminate.
-3. **Distorted claims.** The drafter paraphrased a claim in a way that changes its meaning — softening certainty, shifting causation, conflating distinct events.
+1. **Dropped facts.** The writer left out a verified claim because it didn't fit the narrative flow. The reader loses information.
+2. **Added facts.** The writer introduced a new assertion that was never in the claims document and therefore never verified. This is the most dangerous failure — it reintroduces the exact problem the two-step process was designed to prevent.
+3. **Distorted facts.** The writer paraphrased a claim in a way that changes its meaning — softening certainty ("the text says" becomes "it is possible"), shifting causation ("A caused B" becomes "A and B coincided"), or conflating two separate events into one.
 
-This review must be a different model in a fresh conversation. The drafter cannot audit its own fidelity.
+This check must be done by a different AI model in a fresh conversation. The AI that wrote the narrative cannot reliably judge whether it drifted from the source material.
 
 ## Hard rule
 Must be run in a fresh conversation with a different model than produced the narrative. If you produced the narrative, refuse.
@@ -1206,16 +1245,18 @@ Answer in `meta`:
 
 ---
 name: marker-resolve
-description: Resolves [INFERENCE], [LACUNA], [RECONSTRUCTION], and [VARIANT] markers into final AsciiDoc prose constructs. Runs after narrative-fidelity has passed and before line-edit, so that line-edit can polish the actual final prose.
+description: Converts placeholder markers ([INFERENCE:], [LACUNA:], etc.) into the final reader-facing text — italicized notes, editorial brackets, footnotes. Runs before the prose polish so the editor sees the actual final text.
 ---
 
 # marker-resolve
 
 ## For the human
 
-The drafting stage puts markers inline as placeholders. They need to become final prose — italicized parentheticals, editorial notes, footnotes — before line-editing, because marker expansion changes sentence rhythm and line-editing needs to see the actual final text.
+Throughout the earlier stages, the text contains placeholder markers — tagged notes like `[LACUNA: 20 lines lost here]` or `[INFERENCE: this bridge is not in the source]`. These are useful during writing and fact-checking because they make the status of every claim explicit. But the reader shouldn't see raw markers.
 
-Separated from `format-finalize` (which handles mechanical assembly) so that line-edit operates on the true final prose.
+This step converts each marker into the final text the reader will see: an italicized editorial note ("_At this point the tablet breaks..._"), a footnote explaining a reconstruction, or a parenthetical acknowledging an inference. This must happen before the prose-quality polish (line-edit), because expanding a marker changes the rhythm of a sentence, and the editor needs to see the actual final text.
+
+This step does not change any prose outside the markers. It is a mechanical conversion, not an editorial pass.
 
 ## Inputs
 - Fidelity-reviewed chapters (`chapters/NN-<slug>.adoc`)
@@ -1263,16 +1304,18 @@ To `line-edit`.
 
 ---
 name: comparative-chapter
-description: Produces the single comparative-mythology chapter that quarantines all cross-cultural comparison to one place. Runs only after all culture-internal chapters are locked (fact-checked, marker-resolved). Uses comparative_hooks collected in briefs and drafts, plus comparative-mythology scholarship.
+description: Produces the single chapter where cross-cultural comparison is allowed. All the "this is similar to Greek/Norse/Egyptian mythology" observations are confined here, keeping the story chapters focused on one culture. Runs after all story chapters are finished.
 ---
 
 # comparative-chapter
 
 ## For the human
 
-The body of the book is culturally pure — each chapter stays within its own tradition. The comparative chapter is where cross-cultural observation is allowed, and confining it to one place keeps the rest of the book clean.
+Every story chapter in the book stays strictly within its own culture — no "this is similar to the Greek myth of..." asides. All cross-cultural observation is confined to this single chapter at the end. This separation keeps the story chapters clean and focused, while still giving the reader the comparative perspective that makes mythology fascinating.
 
-This chapter is inherently more speculative than the others. It uses an additional marker, `[SPECULATION:]`, for hypotheses that are plausible but not scholarly consensus.
+Throughout the earlier stages, the AI has been collecting notes on cross-cultural parallels (tagged as `COMPARATIVE-HOOK` comments). This chapter draws on those notes, plus comparative-mythology scholarship, to explore the parallels in depth.
+
+This chapter is inherently more speculative than the story chapters. It uses an additional marker, `[SPECULATION:]`, for hypotheses that are plausible but not established scholarly consensus — each with both the evidence for it and the main argument against it.
 
 ## Inputs
 - All locked chapters (post marker-resolve)
@@ -1310,16 +1353,18 @@ To `line-edit` along with all other chapters.
 
 ---
 name: line-edit
-description: Pinker-style clarity pass on all chapters after marker-resolve. Forbidden from introducing new facts, changing citations, or altering resolved marker content. Improves sentence rhythm, reduces nominalizations, repairs transitions.
+description: Final prose-quality polish. All facts are locked — this step only improves clarity, sentence rhythm, and transitions. It cannot add, remove, or change any factual content. Based on Steven Pinker's *The Sense of Style*.
 ---
 
 # line-edit
 
 ## For the human
 
-The last prose pass. All facts are locked, all markers resolved, all citations in place. This stage only polishes — it cannot add, remove, or change factual content. A single introduced or removed claim is a bug.
+This is the final prose polish. By this point, all facts are verified, all markers have been converted to final text, all citations are in place. This step only improves how the text reads — sentence rhythm, word choice, paragraph transitions, removing unnecessary jargon or throat-clearing. It cannot add, remove, or change any factual content. If an edit would change the meaning of a sentence, the editor must revert it.
 
-Runs after `marker-resolve` so line-editing operates on the actual final prose the reader will see.
+This step runs after `marker-resolve` (which converts placeholder markers into final text) so the editor sees and polishes the actual prose the reader will read, not a version full of placeholders.
+
+The editor produces a diff file showing every change it made, so you can skim and approve in bulk rather than comparing full documents line by line.
 
 ## Hard rules
 1. No new factual claims. If editing changes a sentence's factual meaning, revert.
@@ -1359,18 +1404,18 @@ To `character-appendix` and `format-finalize`.
 
 ---
 name: character-appendix
-description: Produces a back-matter appendix cataloguing every named character (deity, hero, creature, notable mortal) who appears in the book. Each entry includes cross-references to chapters, a physical description (only if attested in sources — never fabricated), the myths in which the character appears, and its relevance in the mythology. Runs after line-edit, goes through a factcheck pass, then feeds format-finalize.
+description: Produces a reference appendix listing every named character in the book — who they are, where they appear, what they look like (only if the sources actually say so), and how important they are. Runs after all chapters are finished. Goes through fact-checking before the book is assembled.
 ---
 
 # character-appendix
 
 ## For the human
 
-This appendix is the reader's reference companion while reading the book. Halfway through a chapter on Gilgamesh, the reader encounters Siduri and wants to know: who is she, where else does she appear, what does she look like according to the sources? This appendix answers that — and only that. It never fabricates details the sources don't provide.
+This appendix is the reader's reference companion. Halfway through a chapter on Gilgamesh, the reader encounters Siduri and wants to know: who is she, where else does she appear, what does she look like? This appendix answers that — and only what the sources actually say.
 
-The hardest discipline here is restraint. Models asked to describe a mythological character will readily produce vivid physical descriptions drawn from cultural stereotypes, later artistic traditions, or pure invention. For most ancient characters, the sources say very little about physical appearance — sometimes nothing at all. An honest "No physical description survives in the in-scope sources" is the correct entry, not a fabricated portrait.
+The hardest discipline here is restraint on physical descriptions. AI models asked to describe a mythological character will readily produce vivid physical portraits drawn from cultural stereotypes, later artistic traditions, or pure invention. For most ancient characters, the sources say very little about physical appearance — sometimes nothing at all. The correct entry is an honest "No physical description survives in the in-scope sources," not a fabricated portrait. Accuracy is more important than completeness: it is better to leave a field empty than to fill it with something the sources don't support.
 
-This skill runs after line-edit because it needs the final chapter text to build accurate cross-references. It goes through a factcheck pass (via `chapter-factcheck`) before format-finalize assembles the book.
+This step runs after all chapters are finalized because it needs the final text to build accurate cross-references ("Siduri appears in Chapter 5, where she..."). It goes through fact-checking by a different AI before the book is assembled.
 
 ## Cardinal rule
 
@@ -1492,21 +1537,20 @@ After factcheck passes, to `format-finalize`.
 
 ---
 name: format-finalize
-description: Final mechanical assembly. Builds bibliography.bib from accumulated footnote citations, assembles the master book.adoc, and validates with asciidoctor dry-run. Does not touch prose — that is line-edit's job, already complete.
+description: Final mechanical assembly. Compiles the bibliography, assembles all chapters into the master book file, and runs a test build to PDF and EPUB to catch formatting errors. No prose is changed at this stage — all writing is finished.
 ---
 
 # format-finalize
 
 ## For the human
 
-Pure mechanical stage. All prose is final. This skill:
-- Parses every footnote citation across all chapters, the comparative chapter, and the character appendix.
-- Produces `bibliography.bib` with one entry per unique source.
-- Cross-checks against `sources.yaml` whitelist — any cited source not on the whitelist is a finding.
-- Assembles the master `book.adoc`.
-- Dry-runs Asciidoctor to PDF and EPUB to catch format-level errors.
+This is a purely mechanical step — no writing, no editing, no judgment calls. All prose is final. This step:
 
-No prose is changed. If this stage finds a problem requiring prose change, it reports it and stops.
+- **Builds the bibliography.** Scans every footnote across all chapters and produces a single bibliography file listing every source cited in the book. If any footnote cites a source that isn't on the approved list (`sources.yaml`), this is flagged as a problem.
+- **Assembles the book.** Combines the introduction, all story chapters, the comparative chapter, and the character appendix into one master file (`book.adoc`) in the correct order.
+- **Runs a test build.** Generates a test PDF and EPUB to catch formatting errors (broken cross-references, missing files, syntax problems) before the final render.
+
+No prose is changed. If this step finds a problem that requires changing text (e.g., a broken cross-reference), it reports the problem and stops — it does not attempt to fix it.
 
 ## Inputs
 - `chapters/00-introduction.edited.adoc` (intro chapter)
