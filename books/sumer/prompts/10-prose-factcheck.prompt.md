@@ -1,3 +1,639 @@
+# Stage 10 of 17: prose-factcheck
+# Book: sumer
+# Generated: 2026-04-12T15:44:23Z
+
+---
+
+# Governing file: scope.md
+
+```
+# Scope: Sumerian Mythology
+
+## Culture
+Sumerians (self-designation: *saĝ-gig-ga*, "black-headed people"). Southern Mesopotamian alluvial plain — the city-states of Eridu, Ur, Uruk, Nippur, Lagash, Umma, Shuruppag, Isin, Larsa, and their hinterlands. The culture that produced Sumerian-language literary compositions, preserved primarily through the scribal school (*edubba*) tradition.
+
+## Period
+ca. 2600 BCE (earliest attested literary fragments, Early Dynastic period: Abu Salabikh and Fara tablets) — ca. 1600 BCE (end of the Old Babylonian scribal copying tradition).
+
+## Languages of primary sources
+- Sumerian (Emegir, main dialect)
+- Sumerian (Emesal, liturgical/feminine dialect, used in some compositions — e.g., Inanna's speeches)
+- Sumerian-Akkadian bilingual tablets: only the Sumerian text is in scope.
+
+## Excluded adjacent cultures (contamination risks)
+- **Akkadian/Babylonian literary tradition**: Shares geographic space and many deities, but compositions in Akkadian are a distinct literary tradition. Excludes: Standard Babylonian *Epic of Gilgamesh* (*Sha naqba imuru*), *Enuma Elish*, *Atrahasis*, Akkadian *Descent of Ishtar*. The Sumerian Gilgamesh poems, Inanna's Descent, and the Eridu Flood Story are separate compositions and remain in scope.
+- **Elamite literary tradition**: Eastern neighbor (southwestern Iran). Elamite mythological texts, even when featuring shared deities or motifs, are a separate corpus in a separate language. Aratta narratives are in scope (Sumerian compositions *about* a distant land, not Elamite texts).
+- **Hurrian/Hittite literary tradition**: Northern Mesopotamia and Anatolia. The Hurrian *Song of Kumarbi* and Hittite mythological cycles draw on Mesopotamian themes but are distinct traditions in distinct languages. Excluded even when they retell recognizably Sumerian-origin stories.
+- **Neo-Assyrian and later recensions**: First-millennium library copies (e.g., Ashurbanipal's Nineveh library) often rework earlier material. Excluded unless a Sumerian original is independently attested from OB or earlier tablets. The Adapa narrative (ETCSL 1.8.3.1) is excluded — it survives almost exclusively in Akkadian fragments.
+- **Post-OB Sumerian liturgical tradition**: After 1600 BCE, Sumerian continued as a liturgical/scholarly language, but new compositions from this period reflect Kassite and later Babylonian theological developments, not the original Sumerian literary tradition.
+
+## Reconstruction policy
+When a primary source has a physical lacuna, content may be reconstructed from:
+- **Parallel recensions of the same composition** from different sites (e.g., a Nippur tablet filling a gap in a Ur tablet of the same text) — always permitted.
+- **A different composition within the same thematic cycle** (e.g., using *Dumuzid's Dream* to fill a gap in *Inanna's Descent*) — permitted only when strictly necessary; the donor text must be named in the marker.
+- All reconstructed material must be flagged with `[RECONSTRUCTION:]` markers that identify the donor source. Reconstructions must appear explicitly in the claims stage and in the final text — they are never silent fills.
+- **Not permitted**: Akkadian-language versions of the "same" story (e.g., Akkadian *Descent of Ishtar* to fill a gap in Sumerian *Inanna's Descent*). These belong to the excluded tradition.
+- In-tradition means: Sumerian language (Emegir or Emesal), attested on tablets from ca. 2600–1600 BCE, originating from the southern Mesopotamian scribal tradition.
+
+## In-scope corpus (broad)
+- ETCSL categories 1.x (narrative and mythological compositions) and 5.3.x (debate poems)
+- Sumerian heroic narratives: Gilgamesh poems, Enmerkar cycle, Lugalbanda cycle
+- Sumerian divine narratives: Enki cycle, Enlil cycle, Inanna/Dumuzid cycle
+- Underworld/eschatological narratives: Inanna's Descent, Ningishzida's Journey, the Eridu Flood Story, The Death of Ur-Namma
+- Debate poems with mythological framing: Hoe and Plough, Ewe and Grain, Winter and Summer, Bird and Fish, Copper and Silver
+- Early Dynastic literary fragments (Abu Salabikh, Fara) where identifiable as precursors to OB compositions
+
+## Out-of-scope (explicit)
+- Standard Babylonian *Epic of Gilgamesh* (*Sha naqba imuru*)
+- *Enuma Elish*, *Atrahasis*, Akkadian *Descent of Ishtar*
+- The Adapa narrative (ETCSL 1.8.3.1 — surviving texts overwhelmingly Akkadian)
+- Elamite, Hurrian, and Hittite mythological compositions
+- Neo-Assyrian library recensions without independently attested Sumerian originals
+- Post-1600 BCE Sumerian liturgical compositions reflecting Kassite/later theology
+- Royal hymns, temple hymns, and lamentations unless they contain substantial embedded narrative (e.g., The Death of Ur-Namma is in scope for its underworld narrative)
+- Administrative, legal, and epistolary texts
+
+## Book register
+Asimov-style retelling. Narrative prose in the body. Citations in AsciiDoc footnotes. Inferences, lacunae, reconstructions, and variants flagged inline with explicit markers.
+
+## Variant presentation policy
+- If one variant is clearly prevalent in the scholarly corpus: present it in the body, with minor variants in footnotes.
+- If several variants are roughly co-equal: present them inline in the chapter body, introducing each with its source.
+```
+
+---
+
+# Governing file: sources.yaml
+
+```
+registry:
+  # ── Primary / Primary-translation tier ──────────────────────────────
+
+  - id: etcsl
+    source_tier: primary
+    in_scope: true
+    author: "Black, Jeremy; Cunningham, Graham; Flückiger-Hawker, Esther; Robson, Eleanor; Zólyomi, Gábor"
+    title: "The Electronic Text Corpus of Sumerian Literature"
+    year: 1998–2006
+    full_citation: "Black, J.A., Cunningham, G., Flückiger-Hawker, E., Robson, E., and Zólyomi, G., The Electronic Text Corpus of Sumerian Literature (https://etcsl.orinst.ox.ac.uk/), Oxford, 1998–2006."
+    short_citation: "ETCSL"
+    identifier_type: stable-url
+    identifier_value: "https://etcsl.orinst.ox.ac.uk/"
+    access_url: "https://etcsl.orinst.ox.ac.uk/"
+    notes: "Standard digital corpus of transliterated and translated Sumerian literary texts. Primary reference for composition numbers (e.g., ETCSL 1.4.1)."
+
+  - id: black-2004
+    source_tier: primary-translation
+    in_scope: true
+    author: "Black, Jeremy; Cunningham, Graham; Robson, Eleanor; Zólyomi, Gábor"
+    title: "The Literature of Ancient Sumer"
+    year: 2004
+    full_citation: "Black, J.A., Cunningham, G., Robson, E., and Zólyomi, G., *The Literature of Ancient Sumer* (Oxford: Oxford University Press, 2004)."
+    short_citation: "Black et al. 2004"
+    identifier_type: ISBN
+    identifier_value: "9780199296330"
+    notes: "Most comprehensive single-volume English anthology of Sumerian literary texts."
+
+  - id: kramer-1961
+    source_tier: secondary
+    in_scope: true
+    author: "Kramer, Samuel Noah"
+    title: "Sumerian Mythology: A Study of Spiritual and Literary Achievement in the Third Millennium B.C."
+    year: 1961
+    full_citation: "Kramer, S.N., *Sumerian Mythology: A Study of Spiritual and Literary Achievement in the Third Millennium B.C.*, rev. ed. (New York: Harper & Row, 1961)."
+    short_citation: "Kramer 1961"
+    identifier_type: ISBN
+    identifier_value: "9780812210477"
+    notes: "Foundational but dated. Useful for orientation; must be cross-checked against ETCSL for textual accuracy. Never cite alone for textual claims."
+
+  - id: jacobsen-1987
+    source_tier: primary-translation
+    in_scope: true
+    author: "Jacobsen, Thorkild"
+    title: "The Harps That Once…: Sumerian Poetry in Translation"
+    year: 1987
+    full_citation: "Jacobsen, T., *The Harps That Once…: Sumerian Poetry in Translation* (New Haven: Yale University Press, 1987)."
+    short_citation: "Jacobsen 1987"
+    identifier_type: ISBN
+    identifier_value: "9780300072785"
+    notes: "Literary translations with extensive commentary. Standard reference for narrative interpretations."
+
+  - id: george-2003
+    source_tier: reference
+    in_scope: true
+    author: "George, Andrew R."
+    title: "The Babylonian Gilgamesh Epic: Introduction, Critical Edition and Cuneiform Texts"
+    year: 2003
+    full_citation: "George, A.R., *The Babylonian Gilgamesh Epic: Introduction, Critical Edition and Cuneiform Texts*, 2 vols. (Oxford: Oxford University Press, 2003)."
+    short_citation: "George 2003"
+    identifier_type: ISBN
+    identifier_value: "9780199278985"
+    notes: "Critical for distinguishing Sumerian Gilgamesh poems from the Akkadian epic. In scope only for its treatment of the Sumerian poems."
+
+  # ── Secondary / Reference tier ──────────────────────────────────────
+
+  - id: cdli
+    source_tier: reference
+    in_scope: true
+    author: "Cuneiform Digital Library Initiative"
+    title: "Cuneiform Digital Library Initiative"
+    year: 2000–present
+    full_citation: "Cuneiform Digital Library Initiative (https://cdli.ucla.edu/)."
+    short_citation: "CDLI"
+    identifier_type: stable-url
+    identifier_value: "https://cdli.ucla.edu/"
+    access_url: "https://cdli.ucla.edu/"
+    notes: "Primary database for tablet identification, P-numbers, museum numbers, and physical descriptions."
+
+  - id: attinger-glossaire
+    source_tier: reference
+    in_scope: true
+    author: "Attinger, Pascal"
+    title: "Glossaire sumérien–français"
+    year: 2021
+    full_citation: "Attinger, P., *Glossaire sumérien–français* (online, updated), Bern, 2021."
+    short_citation: "Attinger 2021"
+    identifier_type: stable-url
+    identifier_value: "http://www.iaw.unibe.ch/attinger"
+    access_url: "http://www.iaw.unibe.ch/attinger"
+    notes: "Standard Sumerian philological reference. Continuously updated."
+
+  - id: civil-1994
+    source_tier: secondary
+    in_scope: true
+    author: "Civil, Miguel"
+    title: "The Farmer's Instructions: A Sumerian Agricultural Manual"
+    year: 1994
+    full_citation: "Civil, M., *The Farmer's Instructions: A Sumerian Agricultural Manual*, Aula Orientalis Supplementa 5 (Barcelona: Editorial AUSA, 1994)."
+    short_citation: "Civil 1994"
+    identifier_type: ISBN
+    identifier_value: "9788486695569"
+    notes: "Critical edition relevant to debate poems and agricultural compositions."
+
+  - id: vanstiphout-2003
+    source_tier: primary-translation
+    in_scope: true
+    author: "Vanstiphout, Herman L.J."
+    title: "Epics of Sumerian Kings: The Matter of Aratta"
+    year: 2003
+    full_citation: "Vanstiphout, H.L.J., *Epics of Sumerian Kings: The Matter of Aratta*, Writings from the Ancient World 20 (Atlanta: Society of Biblical Literature, 2003)."
+    short_citation: "Vanstiphout 2003"
+    identifier_type: ISBN
+    identifier_value: "9781589830837"
+    notes: "Critical editions of the Enmerkar and Lugalbanda cycles."
+
+  - id: alster-1972
+    source_tier: primary-translation
+    in_scope: true
+    author: "Alster, Bendt"
+    title: "Dumuzi's Dream: Aspects of Oral Poetry in a Sumerian Myth"
+    year: 1972
+    full_citation: "Alster, B., *Dumuzi's Dream: Aspects of Oral Poetry in a Sumerian Myth*, Mesopotamia 1 (Copenhagen: Akademisk Forlag, 1972)."
+    short_citation: "Alster 1972"
+    identifier_type: ISBN
+    identifier_value: "9788750015536"
+    notes: "Critical edition of the Dumuzid cycle texts."
+
+  - id: sladek-1974
+    source_tier: secondary
+    in_scope: true
+    author: "Sladek, William R."
+    title: "Inanna's Descent to the Netherworld"
+    year: 1974
+    full_citation: "Sladek, W.R., *Inanna's Descent to the Netherworld* (PhD diss., Johns Hopkins University, 1974)."
+    short_citation: "Sladek 1974"
+    identifier_type: corpus-id
+    identifier_value: "JHU-diss-1974-Sladek"
+    notes: "Most detailed philological study of the Sumerian Descent text."
+
+  - id: fluckiger-hawker-1999
+    source_tier: primary-translation
+    in_scope: true
+    author: "Flückiger-Hawker, Esther"
+    title: "Urnamma of Ur in Sumerian Literary Tradition"
+    year: 1999
+    full_citation: "Flückiger-Hawker, E., *Urnamma of Ur in Sumerian Literary Tradition*, Orbis Biblicus et Orientalis 166 (Fribourg: University Press / Göttingen: Vandenhoeck & Ruprecht, 1999)."
+    short_citation: "Flückiger-Hawker 1999"
+    identifier_type: ISBN
+    identifier_value: "9783727812446"
+    notes: "Critical edition relevant to The Death of Ur-Namma and royal underworld narratives."
+
+blacklist:
+  - pattern: "wikipedia.org"
+    reason: "Unvetted; mixes Sumerian and Akkadian material freely."
+  - pattern: "worldhistory.org"
+    reason: "Popular summaries; frequent conflation of Sumerian and Babylonian traditions."
+  - pattern: "ancient.eu"
+    reason: "Redirects to worldhistory.org. Same conflation issues."
+  - pattern: "mythopedia.com"
+    reason: "No philological rigor; treats pan-Mesopotamian as a single tradition."
+  - pattern: "theoi.com"
+    reason: "Greco-Roman focus; Mesopotamian content is shallow and conflated."
+  - pattern: "Sitchin"
+    reason: "Pseudoscholarship (*The 12th Planet* and related works)."
+  - pattern: "Any source citing Enuma Elish or Atrahasis as 'Sumerian'"
+    reason: "Misattribution signals the source does not distinguish the traditions."
+  - pattern: "Kramer 1961 cited without ETCSL cross-check"
+    reason: "Readings superseded by 40+ years of collation; never cite Kramer alone for textual claims."
+
+triangulation_databases:
+  - id: ETCSL
+    url: "https://etcsl.orinst.ox.ac.uk/"
+    covers: "Sumerian literary texts — transliterations and translations"
+  - id: CDLI
+    url: "https://cdli.ucla.edu/"
+    covers: "Tablet catalog — P-numbers, museum numbers, physical metadata"
+  - id: ORACC
+    url: "http://oracc.museum.upenn.edu/"
+    covers: "Open Richly Annotated Cuneiform Corpus — multiple sub-projects with Sumerian texts"
+  - id: BDTNS
+    url: "http://bdtns.filol.csic.es/"
+    covers: "Database of Neo-Sumerian Texts — administrative texts, useful for cross-referencing names and dates"
+```
+
+---
+
+# Governing file: glossary.yaml
+
+```
+terms:
+  # ── Deities ──────────────────────────────────────────────────────────
+
+  - native: "Inanna"
+    renderings_considered:
+      - { form: "Inanna", source: "ETCSL, Black 2004, Jacobsen 1987" }
+      - { form: "Innin", source: "archaic variant in some hymns" }
+    chosen: "Inanna"
+    rationale: "Universal in scholarship, no ambiguity."
+    first_mention_gloss: "goddess of love, war, and the morning and evening star"
+    never_use: ["Ishtar"]
+
+  - native: "Enki"
+    renderings_considered:
+      - { form: "Enki", source: "ETCSL, Black 2004, Jacobsen 1987" }
+      - { form: "Ea", source: "Akkadian equivalent" }
+    chosen: "Enki"
+    rationale: "Standard Sumerian form."
+    first_mention_gloss: "god of wisdom, fresh water, and cunning, lord of the abzu beneath Eridu"
+    never_use: ["Ea"]
+
+  - native: "Enlil"
+    renderings_considered:
+      - { form: "Enlil", source: "ETCSL, Black 2004, Jacobsen 1987" }
+      - { form: "Ellil", source: "variant transliteration" }
+    chosen: "Enlil"
+    rationale: "Standard in all major editions."
+    first_mention_gloss: "king of the gods, lord of wind and command, supreme authority in Nippur"
+    never_use: []
+
+  - native: "Ninurta"
+    renderings_considered:
+      - { form: "Ninurta", source: "ETCSL, Black 2004" }
+      - { form: "Ningirsu", source: "related but distinct deity in Lagash tradition" }
+    chosen: "Ninurta"
+    rationale: "Ningirsu is a separate deity; Ninurta is the standard form for these narratives."
+    first_mention_gloss: "warrior god, son of Enlil, champion of the gods"
+    never_use: ["Ningirsu"]
+
+  - native: "Ereshkigal"
+    renderings_considered:
+      - { form: "Ereshkigal", source: "ETCSL, Black 2004" }
+      - { form: "Ereškigal", source: "diacritical transliteration" }
+    chosen: "Ereshkigal"
+    rationale: "Anglicized without diacritics for readability."
+    first_mention_gloss: "queen of the underworld, elder sister of Inanna"
+    never_use: []
+
+  - native: "Ninhursaja"
+    renderings_considered:
+      - { form: "Ninhursaja", source: "ETCSL" }
+      - { form: "Ninhursag", source: "older anglicization (Kramer 1961)" }
+      - { form: "Ninḫursaĝa", source: "full diacritical" }
+    chosen: "Ninhursaja"
+    rationale: "ETCSL standard form."
+    first_mention_gloss: "mother goddess, lady of the mountain"
+    never_use: ["Ninhursag"]
+
+  - native: "Dumuzid"
+    renderings_considered:
+      - { form: "Dumuzid", source: "ETCSL, Black 2004" }
+      - { form: "Tammuz", source: "Akkadian/biblical form" }
+      - { form: "Dumuzi", source: "shortened form in some scholarship" }
+    chosen: "Dumuzid"
+    rationale: "Sumerian form for a Sumerian book; Tammuz is Akkadian."
+    first_mention_gloss: "shepherd-god, consort of Inanna"
+    never_use: ["Tammuz"]
+
+  - native: "Nanna-Suen"
+    renderings_considered:
+      - { form: "Nanna", source: "short Sumerian form" }
+      - { form: "Suen", source: "short form, basis of 'Sin'" }
+      - { form: "Nanna-Suen", source: "full double name" }
+    chosen: "Nanna-Suen"
+    rationale: "Full form on first mention, then 'Nanna' in subsequent references."
+    first_mention_gloss: "moon god, son of Enlil and Ninlil, patron of Ur"
+    never_use: ["Sin"]
+
+  - native: "Geshtinanna"
+    renderings_considered:
+      - { form: "Geshtinanna", source: "ETCSL, Black 2004" }
+      - { form: "Geštinanna", source: "diacritical" }
+    chosen: "Geshtinanna"
+    rationale: "Anglicized without diacritics."
+    first_mention_gloss: "goddess, sister of Dumuzid, who shares his time in the underworld"
+    never_use: []
+
+  - native: "Ningishzida"
+    renderings_considered:
+      - { form: "Ningishzida", source: "ETCSL" }
+      - { form: "Ningišzida", source: "diacritical" }
+    chosen: "Ningishzida"
+    rationale: "Anglicized."
+    first_mention_gloss: "god of the underworld, a judge among the dead"
+    never_use: []
+
+  - native: "Ninlil"
+    renderings_considered:
+      - { form: "Ninlil", source: "ETCSL, standard" }
+      - { form: "Sud", source: "pre-marriage name in Enlil and Sud" }
+    chosen: "Ninlil"
+    rationale: "Standard name; Sud noted only in chapter 06 where the naming occurs."
+    first_mention_gloss: "queen of the gods, wife of Enlil"
+    never_use: []
+
+  # ── Heroes ───────────────────────────────────────────────────────────
+
+  - native: "Gilgamesh"
+    renderings_considered:
+      - { form: "Gilgamesh", source: "conventional anglicization" }
+      - { form: "Bilgames", source: "Sumerian form (ETCSL)" }
+    chosen: "Gilgamesh"
+    rationale: "Universally recognized; note Bilgames as Sumerian form on first mention."
+    first_mention_gloss: "king of Uruk, two-thirds divine hero (Sumerian: Bilgames)"
+    never_use: []
+
+  - native: "Enkidu"
+    renderings_considered:
+      - { form: "Enkidu", source: "ETCSL, standard" }
+    chosen: "Enkidu"
+    rationale: "No variation."
+    first_mention_gloss: "companion and servant of Gilgamesh"
+    never_use: []
+
+  - native: "Enmerkar"
+    renderings_considered:
+      - { form: "Enmerkar", source: "ETCSL, standard" }
+    chosen: "Enmerkar"
+    rationale: "No variation."
+    first_mention_gloss: "king of Uruk, rival of Aratta, credited with the invention of writing"
+    never_use: []
+
+  - native: "Lugalbanda"
+    renderings_considered:
+      - { form: "Lugalbanda", source: "ETCSL, standard" }
+    chosen: "Lugalbanda"
+    rationale: "No variation."
+    first_mention_gloss: "soldier and later king of Uruk, father of Gilgamesh in tradition"
+    never_use: []
+
+  - native: "Huwawa"
+    renderings_considered:
+      - { form: "Huwawa", source: "Sumerian form (ETCSL)" }
+      - { form: "Humbaba", source: "Akkadian form" }
+    chosen: "Huwawa"
+    rationale: "Sumerian form for a Sumerian book."
+    first_mention_gloss: "guardian of the Cedar Forest, appointed by Enlil"
+    never_use: ["Humbaba"]
+
+  # ── Places ───────────────────────────────────────────────────────────
+
+  - native: "Nippur"
+    renderings_considered:
+      - { form: "Nippur", source: "conventional anglicization" }
+      - { form: "Nibru", source: "Sumerian form (ETCSL)" }
+    chosen: "Nippur"
+    rationale: "Universally known; note Nibru as Sumerian form on first mention."
+    first_mention_gloss: "religious capital of Sumer, seat of Enlil's temple the E-kur (Sumerian: Nibru)"
+    never_use: []
+
+  - native: "Uruk"
+    renderings_considered:
+      - { form: "Uruk", source: "conventional anglicization" }
+      - { form: "Unug", source: "Sumerian form (ETCSL)" }
+    chosen: "Uruk"
+    rationale: "Universally known; note Unug as Sumerian form on first mention."
+    first_mention_gloss: "great walled city of southern Mesopotamia, seat of Inanna's temple the E-ana (Sumerian: Unug)"
+    never_use: []
+
+  - native: "Eridu"
+    renderings_considered:
+      - { form: "Eridu", source: "standard" }
+    chosen: "Eridu"
+    rationale: "No variation."
+    first_mention_gloss: "oldest city in Sumerian tradition, seat of Enki's temple the E-abzu"
+    never_use: []
+
+  - native: "Dilmun"
+    renderings_considered:
+      - { form: "Dilmun", source: "standard" }
+      - { form: "Tilmun", source: "variant transliteration" }
+    chosen: "Dilmun"
+    rationale: "Standard in scholarship."
+    first_mention_gloss: "paradisal land associated with purity, trade, and immortality"
+    never_use: []
+
+  - native: "Aratta"
+    renderings_considered:
+      - { form: "Aratta", source: "standard" }
+    chosen: "Aratta"
+    rationale: "No variation."
+    first_mention_gloss: "distant, fabulously wealthy city beyond the mountains, rival of Uruk"
+    never_use: []
+
+  - native: "Kish"
+    renderings_considered:
+      - { form: "Kish", source: "standard" }
+    chosen: "Kish"
+    rationale: "No variation."
+    first_mention_gloss: "city in northern Sumer, seat of early kingship"
+    never_use: []
+
+  # ── Technical / Ritual Terms ─────────────────────────────────────────
+
+  - native: "me"
+    renderings_considered:
+      - { form: "divine powers", source: "Kramer 1961" }
+      - { form: "cosmic ordinances", source: "Jacobsen 1987" }
+      - { form: "divine properties", source: "Black 2004" }
+      - { form: "me (untranslated)", source: "ETCSL transliterations" }
+    chosen: "me"
+    rationale: "No English word captures the concept. Left untranslated and italicized, glossed on first mention."
+    first_mention_gloss: "the me — the divine powers and cultural blueprints that govern civilization"
+    never_use: ["cosmic ordinances"]
+
+  - native: "kur"
+    renderings_considered:
+      - { form: "mountain", source: "geographic sense" }
+      - { form: "netherworld", source: "underworld sense" }
+      - { form: "foreign land", source: "political sense" }
+      - { form: "kur (untranslated)", source: "ETCSL transliterations" }
+    chosen: "kur"
+    rationale: "Left untranslated and italicized. Glossed on first mention with all three senses; context makes the intended meaning clear."
+    first_mention_gloss: "the kur — a word meaning mountain, netherworld, or foreign land depending on context"
+    never_use: []
+
+  - native: "abzu"
+    renderings_considered:
+      - { form: "underground waters", source: "descriptive" }
+      - { form: "abyss", source: "false cognate with Greek abyssos" }
+      - { form: "freshwater deep", source: "Jacobsen 1987" }
+      - { form: "abzu (untranslated)", source: "ETCSL" }
+    chosen: "abzu"
+    rationale: "Left untranslated and italicized, glossed on first mention."
+    first_mention_gloss: "the abzu — the underground freshwater ocean beneath Eridu, Enki's domain"
+    never_use: ["abyss"]
+
+  - native: "galla"
+    renderings_considered:
+      - { form: "demons", source: "generic" }
+      - { form: "constables of the underworld", source: "Jacobsen 1987" }
+      - { form: "underworld officers", source: "descriptive" }
+      - { form: "galla demons", source: "hybrid" }
+    chosen: "galla demons"
+    rationale: "Retains the Sumerian term while making the category clear to readers."
+    first_mention_gloss: "the galla — underworld demons who enforce the laws of the dead"
+    never_use: []
+
+  - native: "me-lam"
+    renderings_considered:
+      - { form: "divine radiance", source: "Black 2004" }
+      - { form: "terrifying splendor", source: "Jacobsen 1987" }
+      - { form: "aura", source: "popular usage" }
+      - { form: "me-lam (untranslated)", source: "ETCSL transliterations" }
+    chosen: "me-lam"
+    rationale: "Left untranslated and italicized, like me, kur, and abzu. Glossed on first mention."
+    first_mention_gloss: "the me-lam — the terrifying divine radiance that emanates from gods, monsters, and sacred objects"
+    never_use: ["aura"]
+
+  - native: "edubba"
+    renderings_considered:
+      - { form: "scribal school", source: "descriptive" }
+      - { form: "tablet house", source: "literal translation" }
+      - { form: "edubba (untranslated)", source: "ETCSL" }
+    chosen: "edubba"
+    rationale: "Left untranslated and italicized, glossed on first mention."
+    first_mention_gloss: "the edubba — the scribal school where these texts were copied and taught"
+    never_use: []
+
+  - native: "Anzud"
+    renderings_considered:
+      - { form: "Anzud", source: "Sumerian form (ETCSL)" }
+      - { form: "Anzu", source: "Akkadian form" }
+    chosen: "Anzud"
+    rationale: "Sumerian form for a Sumerian book."
+    first_mention_gloss: "divine lion-headed eagle"
+    never_use: ["Anzu"]
+
+  - native: "huluppu"
+    renderings_considered:
+      - { form: "willow", source: "conjectural identification" }
+      - { form: "poplar", source: "conjectural identification" }
+      - { form: "huluppu (untranslated)", source: "ETCSL" }
+    chosen: "huluppu"
+    rationale: "Species identification is uncertain; left untranslated."
+    first_mention_gloss: "the huluppu — a tree of uncertain species, sacred to Inanna"
+    never_use: []
+```
+
+---
+
+# Skill instructions: prose-factcheck
+
+---
+name: prose-factcheck
+description: Checks factual claims embedded in prose — for the intro chapter, comparative chapter, and character appendix. Unlike claims-factcheck which operates on isolated claims, this skill must first extract claims from flowing prose before verifying them. Must be run by a different AI model in a fresh conversation.
+---
+
+# prose-factcheck
+
+## For the human
+
+This is the factcheck for prose content that wasn't written through the claims-first process: the intro chapter, the comparative chapter, and the character appendix. Unlike `claims-factcheck` (where each paragraph is one isolated, individually cited claim), here the checker must first extract the factual claims from flowing prose — a harder task that requires judgment about what constitutes a claim vs. connective tissue.
+
+The same four disciplines apply (show evidence, verify references, distinguish contradictions from errors, read backwards), but with an added initial step: claim extraction.
+
+## Hard rule
+Must be run in a fresh conversation with a different AI model than produced the content.
+
+## Inputs
+- `scope.md`, `sources.yaml`, `glossary.yaml`
+- The prose document to check:
+  - `chapters/00-introduction.adoc` (intro chapter)
+  - `comparative.adoc` (comparative chapter)
+  - `character-appendix.adoc` (character appendix)
+- Primary source translations (pasted or accessible via fetch)
+- Web search tool (required)
+
+## The six passes
+
+### Pass 0 — Claim extraction
+Walk the prose document and extract every factual claim into a numbered list. A claim is any assertion about the myth, character, or culture — not transitions, opinions, or reader-orienting context. This extraction is the foundation for all subsequent passes. Record each extracted claim with its paragraph location.
+
+This pass is what makes prose-factcheck harder than claims-factcheck. The quality of the entire audit depends on thorough extraction.
+
+### Pass 1 — Claim-level verification (start to end)
+For each extracted claim, assign a verdict using the same six verdicts as `claims-factcheck` (✓ SUPPORTED, △ INTERNAL-VARIANCE, ? UNVERIFIED, ! CITATION-WRONG, ⚠ CONTAMINATION, ✗ FABRICATION).
+
+### Pass 2 — Triangulation of references
+Same as `claims-factcheck`.
+
+### Pass 3 — Document-provenance contamination scan
+Same as `claims-factcheck`.
+
+### Pass 4 — Marker and glossary integrity
+- Check all markers have required sub-fields.
+- For comparative chapter: verify `[SPECULATION:]` markers have both basis and counterargument.
+- Check `glossary.yaml` renderings and `never_use` terms.
+- For character appendix: flag any physical-description language without a source citation (the primary fabrication risk).
+
+### Pass 5 — Reverse-order second pass
+Same as `claims-factcheck`.
+
+## Output
+
+- `chapters/00-introduction.factcheck.yaml`
+- `comparative.factcheck.yaml`
+- `character-appendix.factcheck.yaml`
+
+Same YAML schema as `claims-factcheck`, plus:
+
+```yaml
+meta:
+  claims_extracted: <n>   # from Pass 0 — if this is low, extraction was lazy
+```
+
+## Verdict rules
+Same as `claims-factcheck`.
+
+## Honesty self-check
+Same as `claims-factcheck`, plus:
+6. Did I extract every factual claim in Pass 0, or only the prominent ones? Name any sections I under-extracted.
+
+## Human review protocol
+Review HIGH findings. Apply accepted fixes directly to the prose file. Run `post-human-normalize` before proceeding.
+
+- **Intro chapter** → corrected `chapters/00-introduction.adoc` proceeds to `post-human-normalize`, then `marker-resolve`.
+- **Comparative chapter** → corrected `comparative.adoc` proceeds to `post-human-normalize`, then `marker-resolve`.
+- **Character appendix** → corrected `character-appendix.adoc` proceeds to `post-human-normalize`, then `format-finalize`.
+
+## Handoff
+After human review and normalization: the corrected file proceeds to the next stage as defined in the stage order.
+
+---
+
+# Input file: chapters/00-introduction.adoc
+
+```
 == Introduction: The Literature of the Black-Headed People
 
 Somewhere around 2100 BCE, in the southern Mesopotamian city of Nippur (Sumerian: Nibru), a student at an _edubba_ -- a scribal school, literally a "tablet house" -- sat down with a lump of damp clay and began copying a story about a goddess who walked into the land of the dead. He did not invent the story. He may not even have understood all of it. But he copied it, and because fired clay is nearly indestructible, his copy survived. It survived the fall of the Third Dynasty of Ur, the rise and collapse of Babylon, the Persians, Alexander, the Parthians, and nineteen centuries of desert. It survived because nobody knew it was there.
@@ -188,7 +824,7 @@ The royal afterlife journey parallels the Egyptian Book of the Dead tradition an
 
 === The Debate Poems
 
-The Sumerian debate poems are a genre with few close parallels in later Western literature, though medieval European debate poetry -- such as _The Owl and the Nightingale_ -- offers a distant echo.footnote:[Black et al. 2004, pp. 207-209.] // EVIDENCE: source_id=black-2004 ; loc=pp. 207-209 Two personified entities -- a pair of animals, plants, tools, metals, or seasons -- argue their respective merits before a divine judge, who delivers a verdict. They are products of the _edubba_ and represent the scribal school's intellectual culture at its most playful and systematic.
+The Sumerian debate poems are a genre without close parallel in later Western literature. Two personified entities -- a pair of animals, plants, tools, metals, or seasons -- argue their respective merits before a divine judge, who delivers a verdict. They are products of the _edubba_ and represent the scribal school's intellectual culture at its most playful and systematic.
 
 Six compositions are treated in Chapters 31-36. Four are significant; two are marginal. As a group, the debate poems are the compositions most obviously tied to the _edubba_ classroom: they train students in the construction of arguments, the marshalling of evidence (however fanciful), and the recognition that every claim has a counterclaim. Several of them open with cosmogonic prologues that set the debate within a narrative of divine creation, lending cosmic weight to what might otherwise be exercises in rhetoric.
 
@@ -199,10 +835,10 @@ The tension between pastoral and agricultural economies mirrors the Cain-and-Abe
 
 The Hoe and Plough debate, meanwhile, stages a contest between two agricultural technologies, with Enlil as judge. Its function is didactic: it teaches the merits of each implement while displaying the rhetorical skills the _edubba_ cultivated.footnote:[ETCSL 5.3.1; Civil, M., _The Farmer's Instructions_ (Barcelona: Editorial AUSA, 1994).] // EVIDENCE: source_id=civil-1994 ; loc=general
 
-*The Debate between Winter and Summer* (Chapter 33) and *The Debate between Bird and Fish* (Chapter 34) are both significant and well preserved.footnote:[ETCSL 5.3.3 and 5.3.5; Black et al. 2004.] // EVIDENCE: source_id=etcsl ; loc=5.3.3 and 5.3.5
+*The Debate between Winter and Summer* (Chapter 33) and *The Debate between Bird and Fish* (Chapter 34) are both significant and well preserved.footnote:[ETCSL 5.3.3 and 5.3.4; Black et al. 2004.] // EVIDENCE: source_id=etcsl ; loc=5.3.3 and 5.3.4
 Winter and Summer argues the relative merits of the two agricultural seasons, with Enlil delivering the verdict. It maps the Sumerian calendar of farming activities onto a dramatic framework: each season claims credit for the harvests, the festivals, and the prosperity of the land. Bird and Fish is the best preserved of the group and stages a particularly vivid contest of insults between two creatures from different ecological niches -- the bird mocks the fish's inability to leave the water, the fish mocks the bird's fragility on the ground. Both function as didactic texts, training students in the art of formal argumentation, and both display a playful delight in competitive rhetoric that makes them the most entertaining of the corpus's pedagogical compositions.
 
-*The Debate between Copper and Silver* (Chapter 35) and *The Debate between Date Palm and Tamarisk* (Chapter 36) are marginal. Both are fragmentary. Copper and Silver is missing its verdict -- the most dramatically important section of any debate poem -- which leaves its rhetorical structure incomplete.footnote:[ETCSL 5.3.6 and 5.3.7; Black et al. 2004.] // EVIDENCE: source_id=etcsl ; loc=5.3.6 and 5.3.7
+*The Debate between Copper and Silver* (Chapter 35) and *The Debate between Date Palm and Tamarisk* (Chapter 36) are marginal. Both are fragmentary. Copper and Silver is missing its verdict -- the most dramatically important section of any debate poem -- which leaves its rhetorical structure incomplete.footnote:[ETCSL 5.3.6 and 5.3.5; Black et al. 2004.] // EVIDENCE: source_id=etcsl ; loc=5.3.6 and 5.3.5
 [LACUNA: Neither composition can be fully analysed without substantial missing text.]
 
 
@@ -216,7 +852,7 @@ This distribution suggests a worldview in which four concerns were paramount.foo
 
 First, *cosmic order*. The Sumerians were preoccupied with the question of how the world was organised and who was responsible for its parts. The _me_ system -- the divine powers and cultural blueprints distributed by Enki, fought over by Inanna, embedded in temples and cities -- is the Sumerian answer to the question that every complex civilisation must ask: why does the world work the way it does? The Enki cycle and the Inanna cycle between them constitute a sustained meditation on the structure of order itself.
 
-Second, *the boundary between the living and the dead*. Few ancient literary traditions devote as sustained an attention to the underworld as the Sumerian. Inanna descends to it. Enkidu is trapped in it. Ur-Namma is received into it. Ningishzida journeys to it. Dumuzid spends half the year there. The _kur_ is not a distant hell; it is the inevitable destination, present in nearly every cycle, and the laws that govern it -- you must have a substitute, you cannot return unchanged, your status there depends on how you lived and how you died -- pervade the entire corpus.footnote:[Jacobsen 1987, pp. 205-232.] // EVIDENCE: source_id=jacobsen-1987 ; loc=pp. 205-232
+Second, *the boundary between the living and the dead*. No other ancient literary tradition devotes as much attention to the underworld as the Sumerian. Inanna descends to it. Enkidu is trapped in it. Ur-Namma is received into it. Ningishzida journeys to it. Dumuzid spends half the year there. The _kur_ is not a distant hell; it is the inevitable destination, present in nearly every cycle, and the laws that govern it -- you must have a substitute, you cannot return unchanged, your status there depends on how you lived and how you died -- pervade the entire corpus.footnote:[Jacobsen 1987, pp. 205-232.] // EVIDENCE: source_id=jacobsen-1987 ; loc=pp. 205-232
 
 Third, *the legitimacy of power*. Nearly every central composition addresses the question of who has the right to rule: gods over gods (Enlil's authority, Inanna's complaint), cities over cities (Uruk over Aratta, Uruk over Kish), the living over the dead (Ereshkigal's sovereignty). The scribal school that preserved these texts was an instrument of state power, and the texts it taught were not religiously neutral; they encoded the political claims of the cities that funded the schools.footnote:[Vanstiphout 2003, pp. 1-10.] // EVIDENCE: source_id=vanstiphout-2003 ; loc=pp. 1-10
 
@@ -229,3 +865,4 @@ One further pattern deserves attention. The corpus is not theologically monolith
 The cross-cultural resonances that run through these thirty-six compositions -- paradise and fall, the theft of civilisation, the dying god, the flood, the confusion of tongues, the hero's quest for fame, the catalogue of the dead -- are striking not because they prove borrowing or common ancestry (though in some cases they may), but because they reveal the depth of the questions the Sumerians were asking. How was the world organised, and who organised it? Why do humans exist? What happens after death? Is power legitimate? Can civilisation survive its own contradictions? These are the questions that every major mythological tradition addresses, and the Sumerian answers -- worked out in clay, in a dead language, by anonymous scribal students four thousand years ago -- are among the earliest surviving attempts to address them systematically.
 
 These patterns will be explored in detail in the comparative chapter that concludes this volume. For now, the reader has a map. The territory itself begins with Enki, fresh water, and a paradise called Dilmun.
+```

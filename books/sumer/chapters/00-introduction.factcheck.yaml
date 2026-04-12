@@ -1,0 +1,89 @@
+meta:
+  auditor_model: "GPT-5.4"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/00-introduction.adoc"
+  claims_identified: 75
+  claims_extracted: 75
+  triangulations_performed: 8
+  verdict: "MAJOR-REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. I sampled the chapter at paragraph level and opened ETCSL catalogue pages for the claims I verified or challenged. I did not open every cited primary source or every page-level citation in Black 2004, Jacobsen 1987, Vanstiphout 2003, Sladek 1974, or Fluckiger-Hawker 1999."
+    triangulated_every_reference: "No. I triangulated the highest-risk identifiers and the references attached to flagged claims, plus core bibliography entries (ETCSL subgroup numbering, ISBN 9780199296330, ISBN 9780812210477, ISBN 9781589830837, ISBN 9788750015536)."
+    supported_quotes_real: "Yes. Every item listed under supported_claims uses a verbatim quote from the fetched source output."
+    distinguished_variance_from_contamination: "Yes. I found citation and verification problems, but no clear wrong-culture contamination in the checked sample."
+    same_model_as_author: "No."
+    claim_extraction_completeness: "Pass 0 was paragraph-level rather than micro-claim-level. Under-extracted multi-assertion paragraphs include 2-5, 30-34, 50, 65-74."
+
+tallies:
+  supported: 4
+  internal_variance: 0
+  unverified: 2
+  citation_wrong: 3
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 22
+    claim: "Ninurta and the Turtle is an attested Sumerian Ninurta composition in ETCSL."
+    source_id: "etcsl"
+    source_loc: "ETCSL subgroup 1.6"
+    verbatim_quote: "• 1.6.1 Ninurta's return to Nibru: a cir-gida to Ninurta: transliteration | translation • 1.6.2 Ninurta's exploits: a cir-sud (?) to Ninurta: transliteration | translation • 1.6.3 Ninurta and the turtle: transliteration | translation"
+  - claim_number: 60
+    claim: "Hoe and Plough and Grain and Sheep/Ewe are attested debate poems in ETCSL 5.3.1 and 5.3.2."
+    source_id: "etcsl"
+    source_loc: "ETCSL subgroup 5.3"
+    verbatim_quote: "• 5.3.1 The debate between Hoe and Plough: transliteration | translation • 5.3.2 The debate between Grain and Sheep: transliteration | translation"
+  - claim_number: 6
+    claim: "Kramer's Sumerian Mythology is a real bibliographic source in the approved source list."
+    source_id: "kramer-1961"
+    source_loc: "Open Library edition metadata"
+    verbatim_quote: "# Sumerian mythology ## a study of spiritual and literary achievement in the third millennium B.C. ... ## de Samuel Noah Kramer ... - ISBN 10 0812210476"
+  - claim_number: 48
+    claim: "Vanstiphout 2003 is a real bibliographic source in the approved source list."
+    source_id: "vanstiphout-2003"
+    source_loc: "Open Library edition metadata"
+    verbatim_quote: "# Epics of Sumerian Kings ## The Matter of Aratta ... Fecha de publicación November 1, 2003 ... - ISBN 13 9781589830837"
+
+findings:
+  - claim_number: 62
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The Debate between Winter and Summer and The Debate between Bird and Fish are cited as ETCSL 5.3.3 and 5.3.4."
+    issue: "The ETCSL numbering in the footnote is wrong: 5.3.4 does not resolve, and Bird and Fish is listed as 5.3.5."
+    evidence: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.5.3*&charenc=j ; quote: '• 5.3.3 The debate between Winter and Summer: transliteration | translation • 5.3.5 The debate between Bird and Fish: transliteration | translation'"
+    recommended_fix: "Change the citation in paragraph 62 to ETCSL 5.3.3 and 5.3.5, and re-check any downstream references derived from this numbering."
+
+  - claim_number: 63
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The Debate between Copper and Silver and The Debate between Date Palm and Tamarisk are cited as ETCSL 5.3.6 and 5.3.5."
+    issue: "The second ETCSL number is wrong: Date Palm and Tamarisk is listed as 5.3.7, while 5.3.5 is Bird and Fish."
+    evidence: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.5.3*&charenc=j ; quote: '• 5.3.5 The debate between Bird and Fish: transliteration | translation • 5.3.6 The debate between Copper and Silver: transliteration | translation • 5.3.7 The debate between Date Palm and Tamarisk: transliteration | translation'"
+    recommended_fix: "Change the citation in paragraph 63 to ETCSL 5.3.6 and 5.3.7."
+
+  - claim_number: 33
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The paragraph relies on Alster 1972 as the critical edition for Dumuzid's Dream via source_id=alster-1972."
+    issue: "The identifier currently registered for alster-1972 in sources.yaml resolves to an unrelated Danish economics book, so the citation metadata is not trustworthy as written."
+    evidence: "https://openlibrary.org/isbn/9788750015536 ; quote: '# En model for Danmark, 1949-1965 ... de Andersen, Ellen ... Fecha de publicación 1975 ... - OCLC/WorldCat 2127661'"
+    recommended_fix: "Correct the alster-1972 bibliographic identifier in books/sumer/sources.yaml and then revalidate every chapter citation that uses source_id=alster-1972."
+
+  - claim_number: 58
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The Sumerian debate poems are a genre without close parallel in later Western literature."
+    issue: "This is a broad comparative-literary assertion, but the paragraph supplies no direct supporting evidence or bounded scholarly attribution for the claim."
+    evidence: "No verifiable supporting quote located in the checked source sample; current paragraph is uncited."
+    recommended_fix: "Either attribute this judgment explicitly to a named scholar and source, or narrow it to a less absolute formulation."
+
+  - claim_number: 69
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "No other ancient literary tradition devotes as much attention to the underworld as the Sumerian."
+    issue: "This is an absolute cross-cultural superlative and is not supported by the citation provided to a single Inanna's Descent reference range."
+    evidence: "No verifiable supporting quote located in the checked source sample; the claim exceeds what the cited location obviously proves."
+    recommended_fix: "Replace with a scoped formulation such as 'The Sumerian corpus devotes unusually sustained attention to the underworld' unless a comparative scholarly source is cited explicitly."
