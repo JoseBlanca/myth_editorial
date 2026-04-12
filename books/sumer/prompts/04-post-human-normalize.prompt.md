@@ -1,3 +1,327 @@
+# Stage 4 of 17: post-human-normalize
+# Book: sumer
+# Generated: 2026-04-12T15:07:20Z
+
+---
+
+# Governing file: scope.md
+
+```
+# Scope: Sumerian Mythology
+
+## Culture
+Sumerians (self-designation: *saĝ-gig-ga*, "black-headed people"). Southern Mesopotamian alluvial plain — the city-states of Eridu, Ur, Uruk, Nippur, Lagash, Umma, Shuruppag, Isin, Larsa, and their hinterlands. The culture that produced Sumerian-language literary compositions, preserved primarily through the scribal school (*edubba*) tradition.
+
+## Period
+ca. 2600 BCE (earliest attested literary fragments, Early Dynastic period: Abu Salabikh and Fara tablets) — ca. 1600 BCE (end of the Old Babylonian scribal copying tradition).
+
+## Languages of primary sources
+- Sumerian (Emegir, main dialect)
+- Sumerian (Emesal, liturgical/feminine dialect, used in some compositions — e.g., Inanna's speeches)
+- Sumerian-Akkadian bilingual tablets: only the Sumerian text is in scope.
+
+## Excluded adjacent cultures (contamination risks)
+- **Akkadian/Babylonian literary tradition**: Shares geographic space and many deities, but compositions in Akkadian are a distinct literary tradition. Excludes: Standard Babylonian *Epic of Gilgamesh* (*Sha naqba imuru*), *Enuma Elish*, *Atrahasis*, Akkadian *Descent of Ishtar*. The Sumerian Gilgamesh poems, Inanna's Descent, and the Eridu Flood Story are separate compositions and remain in scope.
+- **Elamite literary tradition**: Eastern neighbor (southwestern Iran). Elamite mythological texts, even when featuring shared deities or motifs, are a separate corpus in a separate language. Aratta narratives are in scope (Sumerian compositions *about* a distant land, not Elamite texts).
+- **Hurrian/Hittite literary tradition**: Northern Mesopotamia and Anatolia. The Hurrian *Song of Kumarbi* and Hittite mythological cycles draw on Mesopotamian themes but are distinct traditions in distinct languages. Excluded even when they retell recognizably Sumerian-origin stories.
+- **Neo-Assyrian and later recensions**: First-millennium library copies (e.g., Ashurbanipal's Nineveh library) often rework earlier material. Excluded unless a Sumerian original is independently attested from OB or earlier tablets. The Adapa narrative (ETCSL 1.8.3.1) is excluded — it survives almost exclusively in Akkadian fragments.
+- **Post-OB Sumerian liturgical tradition**: After 1600 BCE, Sumerian continued as a liturgical/scholarly language, but new compositions from this period reflect Kassite and later Babylonian theological developments, not the original Sumerian literary tradition.
+
+## Reconstruction policy
+When a primary source has a physical lacuna, content may be reconstructed from:
+- **Parallel recensions of the same composition** from different sites (e.g., a Nippur tablet filling a gap in a Ur tablet of the same text) — always permitted.
+- **A different composition within the same thematic cycle** (e.g., using *Dumuzid's Dream* to fill a gap in *Inanna's Descent*) — permitted only when strictly necessary; the donor text must be named in the marker.
+- All reconstructed material must be flagged with `[RECONSTRUCTION:]` markers that identify the donor source. Reconstructions must appear explicitly in the claims stage and in the final text — they are never silent fills.
+- **Not permitted**: Akkadian-language versions of the "same" story (e.g., Akkadian *Descent of Ishtar* to fill a gap in Sumerian *Inanna's Descent*). These belong to the excluded tradition.
+- In-tradition means: Sumerian language (Emegir or Emesal), attested on tablets from ca. 2600–1600 BCE, originating from the southern Mesopotamian scribal tradition.
+
+## In-scope corpus (broad)
+- ETCSL categories 1.x (narrative and mythological compositions) and 5.3.x (debate poems)
+- Sumerian heroic narratives: Gilgamesh poems, Enmerkar cycle, Lugalbanda cycle
+- Sumerian divine narratives: Enki cycle, Enlil cycle, Inanna/Dumuzid cycle
+- Underworld/eschatological narratives: Inanna's Descent, Ningishzida's Journey, the Eridu Flood Story, The Death of Ur-Namma
+- Debate poems with mythological framing: Hoe and Plough, Ewe and Grain, Winter and Summer, Bird and Fish, Copper and Silver
+- Early Dynastic literary fragments (Abu Salabikh, Fara) where identifiable as precursors to OB compositions
+
+## Out-of-scope (explicit)
+- Standard Babylonian *Epic of Gilgamesh* (*Sha naqba imuru*)
+- *Enuma Elish*, *Atrahasis*, Akkadian *Descent of Ishtar*
+- The Adapa narrative (ETCSL 1.8.3.1 — surviving texts overwhelmingly Akkadian)
+- Elamite, Hurrian, and Hittite mythological compositions
+- Neo-Assyrian library recensions without independently attested Sumerian originals
+- Post-1600 BCE Sumerian liturgical compositions reflecting Kassite/later theology
+- Royal hymns, temple hymns, and lamentations unless they contain substantial embedded narrative (e.g., The Death of Ur-Namma is in scope for its underworld narrative)
+- Administrative, legal, and epistolary texts
+
+## Book register
+Asimov-style retelling. Narrative prose in the body. Citations in AsciiDoc footnotes. Inferences, lacunae, reconstructions, and variants flagged inline with explicit markers.
+
+## Variant presentation policy
+- If one variant is clearly prevalent in the scholarly corpus: present it in the body, with minor variants in footnotes.
+- If several variants are roughly co-equal: present them inline in the chapter body, introducing each with its source.
+```
+
+---
+
+# Governing file: sources.yaml
+
+```
+registry:
+  # ── Primary / Primary-translation tier ──────────────────────────────
+
+  - id: etcsl
+    source_tier: primary
+    in_scope: true
+    author: "Black, Jeremy; Cunningham, Graham; Flückiger-Hawker, Esther; Robson, Eleanor; Zólyomi, Gábor"
+    title: "The Electronic Text Corpus of Sumerian Literature"
+    year: 1998–2006
+    full_citation: "Black, J.A., Cunningham, G., Flückiger-Hawker, E., Robson, E., and Zólyomi, G., The Electronic Text Corpus of Sumerian Literature (https://etcsl.orinst.ox.ac.uk/), Oxford, 1998–2006."
+    short_citation: "ETCSL"
+    identifier_type: stable-url
+    identifier_value: "https://etcsl.orinst.ox.ac.uk/"
+    access_url: "https://etcsl.orinst.ox.ac.uk/"
+    notes: "Standard digital corpus of transliterated and translated Sumerian literary texts. Primary reference for composition numbers (e.g., ETCSL 1.4.1)."
+
+  - id: black-2004
+    source_tier: primary-translation
+    in_scope: true
+    author: "Black, Jeremy; Cunningham, Graham; Robson, Eleanor; Zólyomi, Gábor"
+    title: "The Literature of Ancient Sumer"
+    year: 2004
+    full_citation: "Black, J.A., Cunningham, G., Robson, E., and Zólyomi, G., *The Literature of Ancient Sumer* (Oxford: Oxford University Press, 2004)."
+    short_citation: "Black et al. 2004"
+    identifier_type: ISBN
+    identifier_value: "9780199296330"
+    notes: "Most comprehensive single-volume English anthology of Sumerian literary texts."
+
+  - id: kramer-1961
+    source_tier: secondary
+    in_scope: true
+    author: "Kramer, Samuel Noah"
+    title: "Sumerian Mythology: A Study of Spiritual and Literary Achievement in the Third Millennium B.C."
+    year: 1961
+    full_citation: "Kramer, S.N., *Sumerian Mythology: A Study of Spiritual and Literary Achievement in the Third Millennium B.C.*, rev. ed. (New York: Harper & Row, 1961)."
+    short_citation: "Kramer 1961"
+    identifier_type: ISBN
+    identifier_value: "9780812210477"
+    notes: "Foundational but dated. Useful for orientation; must be cross-checked against ETCSL for textual accuracy. Never cite alone for textual claims."
+
+  - id: jacobsen-1987
+    source_tier: primary-translation
+    in_scope: true
+    author: "Jacobsen, Thorkild"
+    title: "The Harps That Once…: Sumerian Poetry in Translation"
+    year: 1987
+    full_citation: "Jacobsen, T., *The Harps That Once…: Sumerian Poetry in Translation* (New Haven: Yale University Press, 1987)."
+    short_citation: "Jacobsen 1987"
+    identifier_type: ISBN
+    identifier_value: "9780300072785"
+    notes: "Literary translations with extensive commentary. Standard reference for narrative interpretations."
+
+  - id: george-2003
+    source_tier: reference
+    in_scope: true
+    author: "George, Andrew R."
+    title: "The Babylonian Gilgamesh Epic: Introduction, Critical Edition and Cuneiform Texts"
+    year: 2003
+    full_citation: "George, A.R., *The Babylonian Gilgamesh Epic: Introduction, Critical Edition and Cuneiform Texts*, 2 vols. (Oxford: Oxford University Press, 2003)."
+    short_citation: "George 2003"
+    identifier_type: ISBN
+    identifier_value: "9780199278985"
+    notes: "Critical for distinguishing Sumerian Gilgamesh poems from the Akkadian epic. In scope only for its treatment of the Sumerian poems."
+
+  # ── Secondary / Reference tier ──────────────────────────────────────
+
+  - id: cdli
+    source_tier: reference
+    in_scope: true
+    author: "Cuneiform Digital Library Initiative"
+    title: "Cuneiform Digital Library Initiative"
+    year: 2000–present
+    full_citation: "Cuneiform Digital Library Initiative (https://cdli.ucla.edu/)."
+    short_citation: "CDLI"
+    identifier_type: stable-url
+    identifier_value: "https://cdli.ucla.edu/"
+    access_url: "https://cdli.ucla.edu/"
+    notes: "Primary database for tablet identification, P-numbers, museum numbers, and physical descriptions."
+
+  - id: attinger-glossaire
+    source_tier: reference
+    in_scope: true
+    author: "Attinger, Pascal"
+    title: "Glossaire sumérien–français"
+    year: 2021
+    full_citation: "Attinger, P., *Glossaire sumérien–français* (online, updated), Bern, 2021."
+    short_citation: "Attinger 2021"
+    identifier_type: stable-url
+    identifier_value: "http://www.iaw.unibe.ch/attinger"
+    access_url: "http://www.iaw.unibe.ch/attinger"
+    notes: "Standard Sumerian philological reference. Continuously updated."
+
+  - id: civil-1994
+    source_tier: secondary
+    in_scope: true
+    author: "Civil, Miguel"
+    title: "The Farmer's Instructions: A Sumerian Agricultural Manual"
+    year: 1994
+    full_citation: "Civil, M., *The Farmer's Instructions: A Sumerian Agricultural Manual*, Aula Orientalis Supplementa 5 (Barcelona: Editorial AUSA, 1994)."
+    short_citation: "Civil 1994"
+    identifier_type: ISBN
+    identifier_value: "9788486695569"
+    notes: "Critical edition relevant to debate poems and agricultural compositions."
+
+  - id: vanstiphout-2003
+    source_tier: primary-translation
+    in_scope: true
+    author: "Vanstiphout, Herman L.J."
+    title: "Epics of Sumerian Kings: The Matter of Aratta"
+    year: 2003
+    full_citation: "Vanstiphout, H.L.J., *Epics of Sumerian Kings: The Matter of Aratta*, Writings from the Ancient World 20 (Atlanta: Society of Biblical Literature, 2003)."
+    short_citation: "Vanstiphout 2003"
+    identifier_type: ISBN
+    identifier_value: "9781589830837"
+    notes: "Critical editions of the Enmerkar and Lugalbanda cycles."
+
+  - id: alster-1972
+    source_tier: primary-translation
+    in_scope: true
+    author: "Alster, Bendt"
+    title: "Dumuzi's Dream: Aspects of Oral Poetry in a Sumerian Myth"
+    year: 1972
+    full_citation: "Alster, B., *Dumuzi's Dream: Aspects of Oral Poetry in a Sumerian Myth*, Mesopotamia 1 (Copenhagen: Akademisk Forlag, 1972)."
+    short_citation: "Alster 1972"
+    identifier_type: ISBN
+    identifier_value: "9788750015536"
+    notes: "Critical edition of the Dumuzid cycle texts."
+
+  - id: sladek-1974
+    source_tier: secondary
+    in_scope: true
+    author: "Sladek, William R."
+    title: "Inanna's Descent to the Netherworld"
+    year: 1974
+    full_citation: "Sladek, W.R., *Inanna's Descent to the Netherworld* (PhD diss., Johns Hopkins University, 1974)."
+    short_citation: "Sladek 1974"
+    identifier_type: corpus-id
+    identifier_value: "JHU-diss-1974-Sladek"
+    notes: "Most detailed philological study of the Sumerian Descent text."
+
+  - id: fluckiger-hawker-1999
+    source_tier: primary-translation
+    in_scope: true
+    author: "Flückiger-Hawker, Esther"
+    title: "Urnamma of Ur in Sumerian Literary Tradition"
+    year: 1999
+    full_citation: "Flückiger-Hawker, E., *Urnamma of Ur in Sumerian Literary Tradition*, Orbis Biblicus et Orientalis 166 (Fribourg: University Press / Göttingen: Vandenhoeck & Ruprecht, 1999)."
+    short_citation: "Flückiger-Hawker 1999"
+    identifier_type: ISBN
+    identifier_value: "9783727812446"
+    notes: "Critical edition relevant to The Death of Ur-Namma and royal underworld narratives."
+
+blacklist:
+  - pattern: "wikipedia.org"
+    reason: "Unvetted; mixes Sumerian and Akkadian material freely."
+  - pattern: "worldhistory.org"
+    reason: "Popular summaries; frequent conflation of Sumerian and Babylonian traditions."
+  - pattern: "ancient.eu"
+    reason: "Redirects to worldhistory.org. Same conflation issues."
+  - pattern: "mythopedia.com"
+    reason: "No philological rigor; treats pan-Mesopotamian as a single tradition."
+  - pattern: "theoi.com"
+    reason: "Greco-Roman focus; Mesopotamian content is shallow and conflated."
+  - pattern: "Sitchin"
+    reason: "Pseudoscholarship (*The 12th Planet* and related works)."
+  - pattern: "Any source citing Enuma Elish or Atrahasis as 'Sumerian'"
+    reason: "Misattribution signals the source does not distinguish the traditions."
+  - pattern: "Kramer 1961 cited without ETCSL cross-check"
+    reason: "Readings superseded by 40+ years of collation; never cite Kramer alone for textual claims."
+
+triangulation_databases:
+  - id: ETCSL
+    url: "https://etcsl.orinst.ox.ac.uk/"
+    covers: "Sumerian literary texts — transliterations and translations"
+  - id: CDLI
+    url: "https://cdli.ucla.edu/"
+    covers: "Tablet catalog — P-numbers, museum numbers, physical metadata"
+  - id: ORACC
+    url: "http://oracc.museum.upenn.edu/"
+    covers: "Open Richly Annotated Cuneiform Corpus — multiple sub-projects with Sumerian texts"
+  - id: BDTNS
+    url: "http://bdtns.filol.csic.es/"
+    covers: "Database of Neo-Sumerian Texts — administrative texts, useful for cross-referencing names and dates"
+```
+
+---
+
+# Skill instructions: post-human-normalize
+
+---
+name: post-human-normalize
+description: Validates and normalizes any file that has been modified by a human reviewer before it becomes input for the next stage. Ensures that human edits have not broken the structural contracts that downstream stages depend on. Runs after every [HUMAN] review checkpoint.
+---
+
+# post-human-normalize
+
+## For the human
+
+Every time you review and edit a file — approving factcheck findings, fixing claims, resolving audit issues — there is a risk that your edits break something the next stage depends on. You might merge two claims into one paragraph, accidentally delete a marker, change a citation format, or remove a field from a YAML file. These are easy mistakes to make, and the next AI stage will silently produce wrong output rather than catching the problem.
+
+This step is a quick automated check that catches these problems before they propagate. It runs after every human review point and validates that the edited file still meets the structural requirements for the next stage.
+
+This step does not change the meaning of anything you wrote. It only checks structure, reformats where necessary, and flags violations that need your attention before proceeding.
+
+## When to run
+
+After every `[HUMAN]` checkpoint in the stage order:
+- After inventory-audit human review → validates `inventory.approved.yaml`
+- After intro-chapter factcheck human review → validates `chapters/00-introduction.adoc`
+- After claims-factcheck human review → validates `chapters/NN-<slug>.claims.approved.adoc`
+- After narrative-fidelity human review (if REVISE) → validates `chapters/NN-<slug>.adoc`
+- After comparative-chapter factcheck human review → validates `comparative.adoc`
+- After character-appendix factcheck human review → validates `character-appendix.adoc`
+
+## Checks performed
+
+### For YAML files (`inventory.approved.yaml`, factcheck outputs)
+1. All required fields present per the schema defined in the producing skill.
+2. No empty required fields.
+3. All `source_id` values resolve to entries in `sources.yaml` registry.
+4. No YAML syntax errors.
+
+### For claims documents (`*.claims.approved.adoc`)
+1. One claim per paragraph — no merged or bundled claims.
+2. Every claim paragraph has a footnote citation.
+3. Every evidence token (`// EVIDENCE: ...`) is syntactically valid and references a `source_id` in `sources.yaml`.
+4. All markers (`[INFERENCE:]`, `[LACUNA:]`, `[RECONSTRUCTION:]`, `[VARIANT:]`) have all required sub-fields.
+5. `glossary.yaml` renderings used consistently.
+
+### For prose documents (intro, comparative, character-appendix, narrative chapters)
+1. All markers syntactically valid with required sub-fields.
+2. All evidence tokens syntactically valid.
+3. Canonical chapter anchors present and unchanged.
+4. `glossary.yaml` renderings used consistently.
+5. No `never_use` glossary terms present.
+
+## Output
+
+The validated file, with a provenance comment block appended:
+```
+// Validated by post-human-normalize
+// Timestamp: <UTC>
+// Checks passed: <list>
+// Warnings: <any non-blocking issues>
+```
+
+If any check fails, the file is returned to the human with a specific error report. The pipeline does not proceed until all checks pass.
+
+## Handoff
+The validated file proceeds to the next stage as defined in the stage order.
+
+---
+
+# Input file: inventory.approved.yaml
+
+```
 cycles:
   # ═══════════════════════════════════════════════════════════════════
   # ENKI CYCLE
@@ -712,8 +1036,4 @@ cycles:
         scope_uncertain: false
         identifier_missing: false
         notes: "Fragmentary. Added per inventory-audit finding (MEDIUM/MISSING)."
-
-# Validated by post-human-normalize
-# Timestamp: 2026-04-12T15:10Z
-# Checks passed: yaml-syntax, required-fields, no-empty-required, source-id-resolution
-# Warnings: none
+```
