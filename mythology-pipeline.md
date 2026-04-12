@@ -74,6 +74,7 @@ scope-lock → story-inventory → inventory-audit →
 
 ```
 <book-name>/
+  cover.jpg                          (provided by user — JPG or PNG)
   scope.md
   sources.yaml
   inventory.yaml
@@ -1800,6 +1801,7 @@ No prose is changed. If this step finds a problem that requires changing text (e
 - `comparative.edited.adoc` (comparative chapter)
 - `character-appendix.adoc` (fact-checked — this is a reference appendix and does not go through marker-resolve or line-edit)
 - `sources.yaml`
+- `cover.jpg` or `cover.png` — the cover image, provided by the user. Used by Asciidoctor-PDF for the front cover and by Asciidoctor-EPUB3 for the EPUB cover.
 - `front-matter.adoc` and `back-matter.adoc` (dedication, preface, index, etc. — optional; if absent, omit the corresponding `include::` directives from `book.adoc`)
 
 ## Agent instructions
@@ -1817,6 +1819,7 @@ Produce `book.adoc`:
 :doctype: book
 :toc: left
 :sectnums:
+:front-cover-image: image:cover.jpg[]
 :bibtex-file: bibliography.bib
 :bibtex-style: chicago-author-date
 
@@ -1853,6 +1856,7 @@ Any warning or error is reported.
 - Every footnote citation resolves to a bibliography entry.
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
+- Cover image file exists and is referenced correctly in `:front-cover-image:`.
 - `front-matter.adoc` and `back-matter.adoc`: if referenced in `book.adoc`, confirm the files exist. If absent, confirm the include directives are removed.
 - Asciidoctor dry runs exit clean.
 
