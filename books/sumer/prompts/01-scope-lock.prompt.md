@@ -1,6 +1,6 @@
-# Prompt for: scope-lock
+# Stage 1 of 17: scope-lock
 # Book: sumer
-# Generated: 2026-04-12T14:26:07Z
+# Generated: 2026-04-12T14:34:00Z
 
 ---
 

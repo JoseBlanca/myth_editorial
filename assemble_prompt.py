@@ -35,21 +35,29 @@ BOOKS_DIR = PIPELINE_DIR / "books"
 GOVERNING_FILES = ["scope.md", "sources.yaml", "glossary.yaml"]
 
 
-def find_skill_file(stage: str) -> Path | None:
-    """Find a skill file matching the stage name, ignoring the NN- prefix."""
+def find_skill_file(stage: str) -> tuple[Path, int] | tuple[None, None]:
+    """Find a skill file matching the stage name, ignoring the NN- prefix.
+    Returns (path, stage_number) or (None, None)."""
     for path in sorted(SKILLS_DIR.glob("*.md")):
-        # e.g. "01-scope-lock.md" -> "scope-lock"
-        name = path.stem.split("-", 1)[1] if "-" in path.stem else path.stem
+        parts = path.stem.split("-", 1)
+        number = int(parts[0]) if parts[0].isdigit() else 0
+        name = parts[1] if len(parts) > 1 else path.stem
         if name == stage:
-            return path
-    return None
+            return path, number
+    return None, None
+
+
+def total_stages() -> int:
+    return len(list(SKILLS_DIR.glob("*.md")))
 
 
 def list_stages() -> list[str]:
     stages = []
     for path in sorted(SKILLS_DIR.glob("*.md")):
-        name = path.stem.split("-", 1)[1] if "-" in path.stem else path.stem
-        stages.append(name)
+        parts = path.stem.split("-", 1)
+        number = parts[0] if parts[0].isdigit() else "?"
+        name = parts[1] if len(parts) > 1 else path.stem
+        stages.append(f"{number}. {name}")
     return stages
 
 
@@ -74,11 +82,13 @@ def copy_to_clipboard(text: str) -> str | None:
 
 
 def assemble(stage: str, book: str, extra_files: list[str]) -> None:
-    skill_file = find_skill_file(stage)
+    skill_file, stage_number = find_skill_file(stage)
     if skill_file is None:
         print(f"Error: no skill file found for stage '{stage}'")
-        print(f"Available stages: {', '.join(list_stages())}")
+        print(f"Available stages:\n  " + "\n  ".join(list_stages()))
         sys.exit(1)
+
+    total = total_stages()
 
     book_dir = BOOKS_DIR / book
     if not book_dir.is_dir():
@@ -90,7 +100,7 @@ def assemble(stage: str, book: str, extra_files: list[str]) -> None:
 
     # Header
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    parts.append(f"# Prompt for: {stage}")
+    parts.append(f"# Stage {stage_number} of {total}: {stage}")
     parts.append(f"# Book: {book}")
     parts.append(f"# Generated: {now}")
     parts.append("")
@@ -140,11 +150,13 @@ def assemble(stage: str, book: str, extra_files: list[str]) -> None:
     # Write to file
     prompts_dir = book_dir / "prompts"
     prompts_dir.mkdir(exist_ok=True)
-    output_path = prompts_dir / f"{stage}.prompt.md"
+    padded = f"{stage_number:02d}"
+    output_path = prompts_dir / f"{padded}-{stage}.prompt.md"
     output_path.write_text(prompt_text)
 
     line_count = prompt_text.count("\n")
     print(f"Assembled: {output_path} ({line_count} lines)")
+    print(f"  Stage {stage_number} of {total}: {stage}")
 
     # Try clipboard
     tool = copy_to_clipboard(prompt_text)
@@ -158,7 +170,10 @@ def main():
     if len(sys.argv) < 3:
         print("Usage: python assemble_prompt.py <stage> <book> [extra-input-files...]")
         print()
-        print(f"Available stages: {', '.join(list_stages())}")
+        print("Available stages:")
+        for s in list_stages():
+            print(f"  {s}")
+        print()
         print(f"Available books: {', '.join(list_books())}")
         sys.exit(1)
 
