@@ -110,5 +110,32 @@ triangulation_databases:
 
 The `full_citation` and `short_citation` fields are used directly by `format-finalize` to build the bibliography — no parsing of free-text footnotes required.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 Pass `scope.md` and `sources.yaml` to `story-inventory`. These files are re-read by every subsequent skill.

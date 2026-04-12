@@ -336,6 +336,28 @@ Paste all final files.
 
 ---
 
+## Verifying stage completion
+
+Every skill instructs the agent to write a completion record as its very last action:
+
+```
+books/<book>/completions/<NN>-<stage-name>.done.yaml
+```
+
+After any batch run, check for truncated stages:
+
+```bash
+# List completed stages
+ls books/sumer/completions/
+
+# Find stages that ran but didn't complete (no .done.yaml)
+# Compare against the stages you expected to run
+```
+
+A missing `.done.yaml` means the agent was interrupted (rate limit, timeout, context overflow). A file with `status: "partial"` means the agent knew it couldn't finish and reported what's missing. Re-run only the incomplete stages.
+
+---
+
 ## Quick reference: file flow
 
 ```
