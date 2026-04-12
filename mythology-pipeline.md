@@ -36,16 +36,17 @@ The book is built in stages. Each stage produces a file that the next stage cons
 ```
 scope-lock → story-inventory → inventory-audit → [HUMAN ~15min] →
   chapter-briefs → glossary-lock →
-  intro-chapter → chapter-factcheck(intro) →
+  intro-chapter → chapter-factcheck(intro) → [HUMAN resolves findings] →
   [per chapter:
     chapter-claims → chapter-factcheck(claims) → [HUMAN resolves findings] →
-    chapter-draft → narrative-fidelity] →
-  comparative-chapter → marker-resolve → line-edit →
-  character-appendix → chapter-factcheck(appendix) →
+    chapter-draft → narrative-fidelity → [HUMAN if REVISE]] →
+  comparative-chapter → chapter-factcheck(comparative) → [HUMAN resolves findings] →
+  marker-resolve → line-edit →
+  character-appendix → chapter-factcheck(appendix) → [HUMAN resolves findings] →
   format-finalize
 ```
 
-**In plain English:** First you define what the book covers and what sources are allowed (scope-lock). Then an AI researches all the stories in that mythology (story-inventory), and a different AI checks the list (inventory-audit). You review, then the approved list is turned into one planning document per chapter (chapter-briefs) and a locked glossary of key terms (glossary-lock). An introductory chapter on cultural context is written and fact-checked. Then, for each story chapter: the facts are written out one by one (chapter-claims), checked (chapter-factcheck), you review, then the facts are turned into narrative prose (chapter-draft), and a different AI confirms the prose faithfully represents the facts (narrative-fidelity). After all chapters are done, a cross-cultural comparison chapter is written. All chapters get their placeholder markers converted to final text (marker-resolve), then a prose-quality polish (line-edit). A character reference appendix is compiled and fact-checked. Finally, everything is assembled into a book with a bibliography and validated (format-finalize).
+**In plain English:** First you define what the book covers and what sources are allowed (scope-lock). Then an AI researches all the stories in that mythology (story-inventory), and a different AI checks the list (inventory-audit). You review and approve, then the approved list is turned into one planning document per chapter (chapter-briefs) and a locked glossary of key terms (glossary-lock). An introductory chapter on cultural context is written, fact-checked, and you review the findings. Then, for each story chapter: the facts are written out one by one (chapter-claims), checked by a different AI (chapter-factcheck), you review the findings, then the facts are turned into narrative prose (chapter-draft), and yet another AI confirms the prose faithfully represents the facts (narrative-fidelity) — if it finds problems, you review those too. After all story chapters are done, a cross-cultural comparison chapter is written and fact-checked (you review). Then all chapters — intro, story chapters, and comparative — get their placeholder markers converted to final text (marker-resolve) and a prose-quality polish (line-edit). A character reference appendix is compiled and fact-checked (you review). Finally, everything is assembled into a book with a bibliography and validated (format-finalize).
 
 ## Artifact layout per book
 
@@ -76,10 +77,14 @@ scope-lock → story-inventory → inventory-audit → [HUMAN ~15min] →
     01-<slug>.edited.adoc         (line-edited)
     01-<slug>.diff.md             (line-edit diff for review)
     ...
-  comparative.adoc
-  character-appendix.adoc           (character reference)
-  character-appendix.factcheck.yaml
-  book.adoc                         (master)
+  comparative.adoc                   (drafted)
+  comparative.factcheck.yaml         (audited)
+  comparative.resolved.adoc          (markers resolved)
+  comparative.edited.adoc            (line-edited)
+  comparative.diff.md                (line-edit diff)
+  character-appendix.adoc            (character reference)
+  character-appendix.factcheck.yaml  (audited)
+  book.adoc                          (master)
   bibliography.bib
   validation-report.md
 ```
@@ -488,7 +493,9 @@ Target based on source volume, not narrative length:
 - Well-preserved single composition: 2000–4000 words.
 - Multi-tablet or multi-manuscript cycle: 8000–15000 words.
 
-## Output: `briefs/NN-<slug>.yaml`
+## Outputs: `briefs/NN-<slug>.yaml` and `toc.yaml`
+
+One brief per chapter, plus `toc.yaml` recording the final chapter order (used by `intro-chapter`, `format-finalize`, and other downstream stages).
 
 ```yaml
 chapter_number: <n>
@@ -537,14 +544,17 @@ cultural_relevance:
       basis: <one sentence>
       source: <id + loc>
   cross_cultural_parallels:
-    # Brief pointers — expanded in intro-chapter and comparative-chapter
+    # Surface-level parallels for the intro chapter's "cross-cultural resonance" preview.
+    # Keep to 1–2 sentences each. These orient the reader, not analyze the parallel.
     - other_culture: <name>
       parallel: <one sentence>
       source: <id>
 
 comparative_hooks:
-  # Collected here, used only in the comparative chapter. Not for this chapter.
-  - other_culture: <n>
+  # Deeper or more specific parallels for the comparative chapter's full analysis.
+  # These may overlap with cross_cultural_parallels but go into more detail
+  # (e.g., specific motifs, structural parallels, scholarly debate).
+  - other_culture: <name>
     parallel: <brief>
     source: <id>
 
@@ -627,8 +637,12 @@ terms:
 - Every `never_use` entry is a real out-of-scope equivalent (e.g., Akkadian for a Sumerian book), not just a synonym.
 - First-mention glosses are functional, not poetic (no "mighty", "ancient", etc.).
 
+## Mid-pipeline glossary updates
+
+If a later stage (e.g., `chapter-claims`) encounters a recurring term that should be in the glossary but isn't, the AI should stop and flag it. The human then adds the term to `glossary.yaml` using the same process (survey renderings, pick one, add `never_use` entries). This does not require re-running `glossary-lock` from scratch — just append the new entry and confirm consistency with existing entries.
+
 ## Handoff
-`glossary.yaml` to `intro-chapter` and `chapter-draft`.
+`glossary.yaml` to `intro-chapter` and `chapter-claims`.
 
 ---
 
@@ -924,7 +938,7 @@ Must be run in a fresh conversation, ideally with a different underlying model t
 - **For story chapters**: `chapters/NN-<slug>.claims.adoc` (claims document)
 - **For intro-chapter**: `chapters/00-introduction.adoc`
 - **For character-appendix**: `character-appendix.adoc`
-- `briefs/NN-<slug>.yaml` (for story chapters)
+- `briefs/NN-<slug>.yaml` (for story chapters; not applicable for intro or character-appendix — for those, provide `scope.md` and `sources.yaml` as the source-pointer documents)
 - Primary source translations referenced in the brief (pasted or accessible via fetch)
 - Web search tool (required)
 
@@ -1013,9 +1027,12 @@ findings:
 ```
 
 ## Verdict rules
-- **PASS**: zero HIGH findings, zero silent bridges, ≤ 3 MEDIUM.
+
+Apply in order — the first matching rule wins (MAJOR-REVISE takes precedence over REVISE):
+
+- **MAJOR-REVISE**: ≥ 3 HIGH findings, or any contamination finding, or triangulation failures indicating fabricated references.
 - **REVISE**: 1–2 HIGH, or > 3 MEDIUM, or any silent bridge.
-- **MAJOR-REVISE**: ≥ 3 HIGH, or any contamination finding, or triangulation failures indicating fabricated references.
+- **PASS**: zero HIGH findings, zero silent bridges, ≤ 3 MEDIUM.
 
 ## Honesty self-check
 Answer in `meta` explicitly:
@@ -1028,7 +1045,12 @@ Answer in `meta` explicitly:
 A partial honest audit is more useful than a complete dishonest one. If you cut corners, say so.
 
 ## Human review protocol
-Review HIGH findings (~10 minutes), skim MEDIUM, ignore LOW unless maximum rigor is desired. For story chapter claims: apply accepted fixes to produce `chapters/NN-<slug>.claims.approved.adoc` for `chapter-draft`.
+Review HIGH findings (~10 minutes), skim MEDIUM, ignore LOW unless maximum rigor is desired. Mark each finding's `recommended_fix` field as `ACCEPTED` or `REJECTED`. Then:
+
+- **For story chapter claims**: apply accepted fixes to produce `chapters/NN-<slug>.claims.approved.adoc` for `chapter-draft`.
+- **For intro chapter**: apply accepted fixes directly to `chapters/00-introduction.adoc`. The corrected file proceeds to `marker-resolve`.
+- **For comparative chapter**: apply accepted fixes directly to `comparative.adoc`. The corrected file proceeds to `marker-resolve`.
+- **For character appendix**: apply accepted fixes directly to `character-appendix.adoc`. The corrected file proceeds to `format-finalize`.
 
 ---
 
@@ -1239,6 +1261,19 @@ Answer in `meta`:
 3. For distortion checks, did I compare precise meaning or just topic? Any I only topic-matched are noted here.
 4. Am I the same model that produced the narrative? If yes, this review is not valid.
 
+## Human review protocol
+
+If the verdict is **PASS**: the chapter proceeds to `marker-resolve` (after all chapters are done and the comparative chapter is written and fact-checked).
+
+If the verdict is **REVISE**: review the findings. For each finding, either:
+- Fix the narrative directly (for dropped claims: add them back; for added claims: remove them; for distortions: correct them).
+- Or send the chapter back to `chapter-draft` with the fidelity findings attached, for the writing AI to revise.
+
+The corrected narrative does not need to go through `chapter-factcheck` again (the facts haven't changed — only the prose representation). But it should go through `narrative-fidelity` again to confirm the fixes resolved the findings.
+
+## Handoff
+After PASS (or PASS on re-review): the chapter waits until all story chapters are complete, then proceeds with the comparative chapter and marker-resolve.
+
 ---
 
 # FILE 13 of 17: skills/marker-resolve/SKILL.md
@@ -1259,7 +1294,9 @@ This step converts each marker into the final text the reader will see: an itali
 This step does not change any prose outside the markers. It is a mechanical conversion, not an editorial pass.
 
 ## Inputs
-- Fidelity-reviewed chapters (`chapters/NN-<slug>.adoc`)
+- Story chapters after narrative-fidelity has passed (`chapters/NN-<slug>.adoc`)
+- Intro chapter after factcheck and human review (`chapters/00-introduction.adoc`)
+- Comparative chapter after factcheck and human review (`comparative.adoc`)
 - `scope.md` (for marker-rendering preferences)
 
 ## Agent instructions
@@ -1291,8 +1328,20 @@ Only appears in single-prevalent cases (co-equal variants are already inline wit
 <prevalent version text>.footnote:[An alternate tradition in <B source> gives: "<alt phrase>". The prevalent version is chosen here because <reason>.]
 ```
 
+### `[SPECULATION: claim | basis: X | counterargument: Y]`
+Only appears in the comparative chapter. Render as the claim in prose, with a footnote presenting both sides:
+```
+<claim rendered as normal prose>.footnote:[This parallel is speculative. Basis: <basis>. The main counterargument: <counterargument>.]
+```
+
+## Output
+
+- Story chapters: `chapters/NN-<slug>.resolved.adoc`
+- Intro chapter: `chapters/00-introduction.resolved.adoc`
+- Comparative chapter: `comparative.resolved.adoc`
+
 ## Self-check
-- Grep the output for `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:` — must be zero matches.
+- Grep all output files for `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` — must be zero matches.
 - No prose outside of marker-replaced sections has changed.
 
 ## Handoff
@@ -1318,7 +1367,8 @@ Throughout the earlier stages, the AI has been collecting notes on cross-cultura
 This chapter is inherently more speculative than the story chapters. It uses an additional marker, `[SPECULATION:]`, for hypotheses that are plausible but not established scholarly consensus — each with both the evidence for it and the main argument against it.
 
 ## Inputs
-- All locked chapters (post marker-resolve)
+- All story chapters after narrative-fidelity has passed (`chapters/NN-<slug>.adoc`) — the factual content is locked, though markers have not yet been resolved and prose has not yet been polished. The comparative chapter needs the factual content, not the final formatting.
+- `chapters/00-introduction.adoc` (the intro chapter, post-factcheck)
 - All briefs (for `comparative_hooks`) and all `// COMPARATIVE-HOOK:` comments left in chapter drafts
 - `scope.md`, `sources.yaml`
 - Optional comparative-mythology whitelist (Dumézil, Puhvel, Watkins, West, Witzel, Lincoln — add to `sources.yaml` before this stage)
@@ -1345,7 +1395,7 @@ Structured as:
 - No claim presented as consensus unless it actually is.
 
 ## Handoff
-To `line-edit` along with all other chapters.
+To `chapter-factcheck` (fresh conversation, different model). After factcheck and human review, to `marker-resolve` along with all other chapters.
 
 ---
 
@@ -1373,7 +1423,9 @@ The editor produces a diff file showing every change it made, so you can skim an
 4. AsciiDoc structure (headings, footnote syntax, include directives) is untouched.
 
 ## Inputs
-- Marker-resolved chapters (`chapters/NN-<slug>.resolved.adoc`)
+- Marker-resolved story chapters (`chapters/NN-<slug>.resolved.adoc`)
+- Marker-resolved intro chapter (`chapters/00-introduction.resolved.adoc`)
+- Marker-resolved comparative chapter (`comparative.resolved.adoc`)
 - `glossary.yaml` (to confirm renderings stay consistent)
 
 ## Method (Pinker, *The Sense of Style*)
@@ -1388,7 +1440,12 @@ The editor produces a diff file showing every change it made, so you can skim an
 
 ## Output
 
-`chapters/NN-<slug>.edited.adoc` plus a diff file `chapters/NN-<slug>.diff.md` showing original sentence vs edited sentence for every non-trivial change. The human skims the diff to approve in bulk.
+For each chapter:
+- `chapters/NN-<slug>.edited.adoc` plus `chapters/NN-<slug>.diff.md`
+- `chapters/00-introduction.edited.adoc` plus `chapters/00-introduction.diff.md`
+- `comparative.edited.adoc` plus `comparative.diff.md`
+
+Each diff file shows original sentence vs edited sentence for every non-trivial change. The human skims the diffs to approve in bulk.
 
 ## Self-check
 - Extract all factual claims from original and edited versions; compare. Any difference is a bug.
@@ -1416,6 +1473,8 @@ This appendix is the reader's reference companion. Halfway through a chapter on 
 The hardest discipline here is restraint on physical descriptions. AI models asked to describe a mythological character will readily produce vivid physical portraits drawn from cultural stereotypes, later artistic traditions, or pure invention. For most ancient characters, the sources say very little about physical appearance — sometimes nothing at all. The correct entry is an honest "No physical description survives in the in-scope sources," not a fabricated portrait. Accuracy is more important than completeness: it is better to leave a field empty than to fill it with something the sources don't support.
 
 This step runs after all chapters are finalized because it needs the final text to build accurate cross-references ("Siduri appears in Chapter 5, where she..."). It goes through fact-checking by a different AI before the book is assembled.
+
+**Note on markers and line-edit:** The character appendix is a reference section, not narrative prose. It does not use `[INFERENCE:]`, `[LACUNA:]`, or other markers — all claims must be directly sourced or explicitly noted as absent. It does not go through `marker-resolve` or `line-edit`. The Asimov register and citation discipline are enforced at writing time; the factcheck catches any problems.
 
 ## Cardinal rule
 
@@ -1555,10 +1614,10 @@ No prose is changed. If this step finds a problem that requires changing text (e
 ## Inputs
 - `chapters/00-introduction.edited.adoc` (intro chapter)
 - All `chapters/NN-<slug>.edited.adoc` (story chapters)
-- `comparative.adoc` (edited)
-- `character-appendix.adoc` (fact-checked)
+- `comparative.edited.adoc` (comparative chapter)
+- `character-appendix.adoc` (fact-checked — this is a reference appendix and does not go through marker-resolve or line-edit)
 - `sources.yaml`
-- Front-matter and back-matter text (dedication, preface, index, etc. — optional)
+- `front-matter.adoc` and `back-matter.adoc` (dedication, preface, index, etc. — optional; if absent, omit the corresponding `include::` directives from `book.adoc`)
 
 ## Agent instructions
 
@@ -1576,7 +1635,7 @@ Produce `book.adoc`:
 :bibtex-file: bibliography.bib
 :bibtex-style: chicago-author-date
 
-include::front-matter.adoc[]
+// include::front-matter.adoc[]   ← include only if file exists
 
 include::chapters/00-introduction.edited.adoc[]
 
@@ -1584,11 +1643,11 @@ include::chapters/01-<slug>.edited.adoc[]
 include::chapters/02-<slug>.edited.adoc[]
 // ... in toc.yaml order ...
 
-include::comparative.adoc[]
+include::comparative.edited.adoc[]
 
 include::character-appendix.adoc[]
 
-include::back-matter.adoc[]
+// include::back-matter.adoc[]    ← include only if file exists
 ```
 
 ### 3. Validation
@@ -1605,10 +1664,11 @@ Any warning or error is reported.
 - Rendered `book.pdf` and `book.epub` as build artifacts.
 
 ## Self-check
-- No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all includes.)
+- No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all `.edited.adoc` files, `comparative.edited.adoc`, and `character-appendix.adoc`.)
 - Every footnote citation resolves to a bibliography entry.
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
+- `front-matter.adoc` and `back-matter.adoc`: if referenced in `book.adoc`, confirm the files exist. If absent, confirm the include directives are removed.
 - Asciidoctor dry runs exit clean.
 
 ---
