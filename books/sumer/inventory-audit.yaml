@@ -1,0 +1,79 @@
+meta:
+  auditor_model: "GPT-5.3-Codex"
+  entries_reviewed: 35
+  triangulations_performed: 7
+  time_to_review_estimate_minutes: 45
+  honesty_self_check:
+    resolved_identifiers: "No. I did not resolve every identifier in every story entry. I fully resolved: ETCSL 1.6.x subgroup, ETCSL 5.3.x subgroup, ISBN 9780199296330, ISBN 9780300072785. I assumed the remaining well-known ISBN/source IDs from sources.yaml were correct for this pass."
+    provenance_coverage: "I checked major plot-level provenance risks and identifier integrity for sampled high-risk entries, not every micro-detail in all summaries. Skipped exhaustive line-by-line provenance validation for all 35 stories."
+    high_findings_with_quotes: "Yes. Every HIGH finding includes a verbatim evidence quote."
+    same_model_as_inventory_author: "No. I am not the model that produced inventory.yaml in this conversation context."
+
+summary:
+  high: 1
+  medium: 2
+  low: 0
+
+findings:
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: debate-tree-and-reed
+    entity_or_detail: "ETCSL identifier 5.3.4"
+    issue: "The cited ETCSL identifier does not resolve to an available composite text and the 5.3 catalogue lists different items; current entry is not verifiable as cited."
+    evidence_quote: "ETCSLtransliteration : c.5.3.4 ... Composite text not found."
+    evidence_source: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.5.3.4&charenc=j"
+    recommended_action: "Replace this entry's ETCSL identifier with a verifiable in-scope text or mark as scope_uncertain: true with explicit note; do not proceed to chapter drafting until resolved."
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW
+    entity_or_detail: "Ninurta and the turtle (ETCSL 1.6.3)"
+    issue: "A canonical Ninurta narrative present in ETCSL is missing from the inventory."
+    evidence_quote: "1.6.3 Ninurta and the turtle: transliteration | translation"
+    evidence_source: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.1.6*&charenc=j"
+    recommended_action: "Add a new story entry under ninurta-cycle with sources including etcsl loc ETCSL 1.6.3; flag fragmentary status in notes."
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW
+    entity_or_detail: "The debate between Date Palm and Tamarisk (ETCSL 5.3.7)"
+    issue: "The debate-poems cycle omits an in-scope ETCSL 5.3.x disputation currently listed in the corpus."
+    evidence_quote: "5.3.7 The debate between Date Palm and Tamarisk: transliteration | translation"
+    evidence_source: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=c.5.3*&charenc=j"
+    recommended_action: "Add this story to debate-poems with ETCSL 5.3.7 and indicate fragmentary condition where applicable."
+
+clean_entries:
+  - enki-and-ninhursaja
+  - enki-and-ninmah
+  - enki-and-the-world-order
+  - enkis-journey-to-nibru
+  - enlil-and-ninlil
+  - enlil-and-sud
+  - lugal-e
+  - angim
+  - inanna-and-enki
+  - inanna-and-ebih
+  - inanna-and-shu-kale-tuda
+  - inanna-and-gudam
+  - inannas-descent
+  - dumuzids-dream
+  - inanna-and-bilulu
+  - nannas-journey-to-nibru
+  - gilgamesh-and-aga
+  - gilgamesh-and-the-bull-of-heaven
+  - death-of-gilgamesh
+  - gilgamesh-enkidu-and-the-nether-world
+  - gilgamesh-and-huwawa
+  - enmerkar-and-the-lord-of-aratta
+  - enmerkar-and-en-suhgir-ana
+  - lugalbanda-in-the-mountain-cave
+  - lugalbanda-and-the-anzud-bird
+  - marriage-of-martu
+  - eridu-flood-story
+  - ningishzidas-journey
+  - death-of-ur-namma
+  - debate-hoe-and-plough
+  - debate-ewe-and-grain
+  - debate-winter-and-summer
+  - debate-bird-and-fish
+  - debate-copper-and-silver
