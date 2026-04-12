@@ -1,10 +1,10 @@
 # Mythology Book Pipeline — Full Pack for Review
 
-This document contains the full pipeline: the README (overview and principles), the CHANGELOG, and all fifteen skill files (step-by-step instructions for each stage). Each section is marked with a `FILE N of 17` header.
+This document contains the full pipeline: the README (overview and principles), the CHANGELOG, and all seventeen skill files (step-by-step instructions for each stage). Each section is marked with a `FILE N of 19` header. This is v2.1, incorporating improvements from external review (ChatGPT).
 
 ---
 
-# FILE 1 of 17: README.md
+# FILE 1 of 19: README.md
 
 # Mythology Book Pipeline
 
@@ -29,24 +29,46 @@ A step-by-step process for producing mythology books in the style of Isaac Asimo
 
 6. **Chapter length follows the evidence.** A myth preserved on a single broken tablet gets a short chapter. A richly-documented cycle gets a long one. Chapters are never padded to reach a target length.
 
+7. **Human edits are validated before proceeding.** Every time a human reviews and modifies a file, the result must pass a validation step (`post-human-normalize`) before it becomes input for the next stage. Human edits are one of the main ways that the pipeline's structural guarantees can break — merged claims, removed markers, altered citations. The validator catches these before they propagate.
+
+8. **Comparison metadata is not comparison prose.** Cross-cultural notes may exist in planning files and comments throughout the pipeline, but reader-facing comparison prose is confined to the comparative chapter. This distinction — noting a parallel vs. writing about it — must be enforced.
+
+## Global contracts
+
+These rules apply across all stages. They are not repeated in each skill, but every skill must comply.
+
+**Provenance metadata.** Every machine-generated file must include a metadata block recording: the stage that produced it, the AI model used, and a timestamp. For YAML files, use a `meta:` section. For AsciiDoc files, use a comment block at the top. This makes model-separation auditable rather than trust-based.
+
+**Canonical anchors.** Every chapter has a stable anchor ID defined in its brief (e.g., `ch-01-descent-of-inanna`). All cross-references use this anchor, never auto-generated section IDs. Anchors survive marker-resolve and line-edit unchanged.
+
+**Evidence tokens.** Every factual claim carries both a reader-facing AsciiDoc footnote AND a machine-readable evidence token in a comment. The token format is: `// EVIDENCE: source_id=<id> ; loc=<tablet/line/page>`. The `format-finalize` stage builds the bibliography from these tokens (not from parsing footnote prose), which eliminates ambiguity between bibliographic and editorial footnotes.
+
+**Negative-evidence discipline.** When a source does not attest something (e.g., no physical description survives), this must be stated explicitly and scoped: "No physical description survives in the in-scope sources" — not "No description exists." Absence of evidence in the in-scope corpus is not the same as universal absence.
+
 ## Stage order
 
 The book is built in stages. Each stage produces a file that the next stage consumes. `[HUMAN]` marks points where you review and approve before continuing. The arrows show what feeds into what:
 
 ```
-scope-lock → story-inventory → inventory-audit → [HUMAN ~15min] →
+scope-lock → story-inventory → inventory-audit →
+  [HUMAN] → post-human-normalize(inventory) →
   chapter-briefs → glossary-lock →
-  intro-chapter → chapter-factcheck(intro) → [HUMAN resolves findings] →
+  intro-chapter → prose-factcheck(intro) →
+  [HUMAN] → post-human-normalize(intro) →
   [per chapter:
-    chapter-claims → chapter-factcheck(claims) → [HUMAN resolves findings] →
-    chapter-draft → narrative-fidelity → [HUMAN if REVISE]] →
-  comparative-chapter → chapter-factcheck(comparative) → [HUMAN resolves findings] →
+    chapter-claims → claims-factcheck →
+    [HUMAN] → post-human-normalize(claims) →
+    chapter-draft → narrative-fidelity →
+    [HUMAN if REVISE] → post-human-normalize(narrative if revised)] →
+  comparative-chapter → prose-factcheck(comparative) →
+  [HUMAN] → post-human-normalize(comparative) →
   marker-resolve → line-edit →
-  character-appendix → chapter-factcheck(appendix) → [HUMAN resolves findings] →
+  character-appendix → prose-factcheck(appendix) →
+  [HUMAN] → post-human-normalize(appendix) →
   format-finalize
 ```
 
-**In plain English:** First you define what the book covers and what sources are allowed (scope-lock). Then an AI researches all the stories in that mythology (story-inventory), and a different AI checks the list (inventory-audit). You review and approve, then the approved list is turned into one planning document per chapter (chapter-briefs) and a locked glossary of key terms (glossary-lock). An introductory chapter on cultural context is written, fact-checked, and you review the findings. Then, for each story chapter: the facts are written out one by one (chapter-claims), checked by a different AI (chapter-factcheck), you review the findings, then the facts are turned into narrative prose (chapter-draft), and yet another AI confirms the prose faithfully represents the facts (narrative-fidelity) — if it finds problems, you review those too. After all story chapters are done, a cross-cultural comparison chapter is written and fact-checked (you review). Then all chapters — intro, story chapters, and comparative — get their placeholder markers converted to final text (marker-resolve) and a prose-quality polish (line-edit). A character reference appendix is compiled and fact-checked (you review). Finally, everything is assembled into a book with a bibliography and validated (format-finalize).
+**In plain English:** First you define what the book covers and what sources are allowed (scope-lock). Then an AI researches all the stories (story-inventory), and a different AI checks the list (inventory-audit). You review, the result is validated (post-human-normalize), then turned into one planning document per chapter (chapter-briefs) and a locked glossary (glossary-lock). An introductory chapter on cultural context is written and fact-checked by a different AI (prose-factcheck); you review; the result is validated. Then, for each story chapter: the facts are written out one by one (chapter-claims), checked by a different AI (claims-factcheck), you review, the result is validated, then the facts are turned into narrative prose (chapter-draft), and yet another AI confirms the prose faithfully represents the facts (narrative-fidelity) — if it finds problems, you review and the result is validated. After all story chapters are done, a cross-cultural comparison chapter is written and fact-checked (prose-factcheck); you review; validated. Then all chapters get their placeholder markers converted to final text (marker-resolve) and a prose-quality polish (line-edit). A character reference appendix is compiled and fact-checked (prose-factcheck); you review; validated. Finally, everything is assembled into a book with a bibliography and validated (format-finalize).
 
 ## Artifact layout per book
 
@@ -99,9 +121,25 @@ See `CHANGELOG.md`.
 
 ---
 
-# FILE 2 of 17: CHANGELOG.md
+# FILE 2 of 19: CHANGELOG.md
 
 # Changelog
+
+## v2.1
+
+**New skills (from external review)**
+- `post-human-normalize` — validates human-edited files before they become downstream inputs. Catches broken schemas, merged claims, removed markers, and altered citations. Runs after every `[HUMAN]` checkpoint.
+- `claims-factcheck` — dedicated factcheck for isolated claims documents (one claim per paragraph). Split from the former unified `chapter-factcheck`.
+- `prose-factcheck` — dedicated factcheck for prose content (intro, comparative, character appendix). Includes an explicit claim-extraction pass (Pass 0) before verification. Split from the former unified `chapter-factcheck`.
+
+**Structural improvements (from external review)**
+- `sources.yaml` expanded from simple whitelist into a full source registry with `full_citation`, `short_citation`, `source_tier`, `identifier_type`, and `identifier_value` fields. Supports automated bibliography generation.
+- Machine-readable evidence tokens (`// EVIDENCE: source_id=X ; loc=Y`) added alongside reader-facing footnotes. `format-finalize` builds bibliography from tokens, not from parsing footnote prose.
+- Canonical chapter anchors defined in briefs (`chapter_anchor` field). Cross-references use these, never auto-generated section IDs.
+- Provenance metadata blocks required on all machine-generated files (`auditor_model`, `auditor_conversation_id`).
+- Variant classification expanded from 2 to 4 categories: `single-prevalent`, `single-prevalent-reconstructed`, `co-equal`, `composite-editorial`.
+- Global contracts section added to README: provenance metadata, canonical anchors, evidence tokens, negative-evidence discipline, human-review re-entry rule.
+- Comparison-metadata vs comparison-prose distinction made explicit as core principle 8.
 
 ## v2
 
@@ -143,7 +181,7 @@ Initial pipeline: scope-lock, story-inventory, inventory-audit, chapter-briefs, 
 
 ---
 
-# FILE 3 of 17: skills/scope-lock/SKILL.md
+# FILE 3 of 19: skills/scope-lock/SKILL.md
 
 ---
 name: scope-lock
@@ -224,12 +262,24 @@ Asimov-style retelling. Narrative prose in the body. Citations in AsciiDoc footn
 
 ### `sources.yaml`
 
+This file is a real source registry, not just a whitelist. Later stages use it for citation normalization, bibliography generation, and disambiguation. Every field marked (required) must be present.
+
 ```yaml
-whitelist:
-  - id: <short_id>
-    full: <full bibliographic citation>
-    kind: primary-corpus | critical-translation | reference-work | peer-reviewed-monograph
-    url_or_identifier: <DOI, ISBN, corpus identifier>
+registry:
+  - id: <short_id>                              # (required) unique key, used in all citations
+    source_tier: primary | primary-translation | secondary | reference | comparative
+    in_scope: true | false                       # false for comparative-only sources
+    author: <last, first>                        # (required)
+    title: <title>                               # (required)
+    year: <year>                                 # (required)
+    translator_editor: <name, if applicable>
+    container_title: <journal or edited volume, if applicable>
+    full_citation: <complete bibliographic string>  # (required) — used in first footnote mention
+    short_citation: <author year>                   # (required) — used in subsequent footnote mentions
+    identifier_type: DOI | ISBN | corpus-id | museum-number | stable-url
+    identifier_value: <the identifier>              # (required)
+    access_url: <where to retrieve the text, if online>
+    notes: <any caveats — e.g., "translation only, no original-language text">
 
 blacklist:
   - pattern: <URL pattern or citation pattern>
@@ -243,12 +293,14 @@ triangulation_databases:
   # ...
 ```
 
+The `full_citation` and `short_citation` fields are used directly by `format-finalize` to build the bibliography — no parsing of free-text footnotes required.
+
 ## Handoff
 Pass `scope.md` and `sources.yaml` to `story-inventory`. These files are re-read by every subsequent skill.
 
 ---
 
-# FILE 4 of 17: skills/story-inventory/SKILL.md
+# FILE 4 of 19: skills/story-inventory/SKILL.md
 
 ---
 name: story-inventory
@@ -323,7 +375,7 @@ To `inventory-audit`, which must be run in a fresh conversation with a different
 
 ---
 
-# FILE 5 of 17: skills/inventory-audit/SKILL.md
+# FILE 5 of 19: skills/inventory-audit/SKILL.md
 
 ---
 name: inventory-audit
@@ -428,11 +480,77 @@ Answer these in `meta` explicitly:
 Tell the user: review HIGH findings (~10 minutes), skim MEDIUM, ignore LOW unless maximum rigor is desired. Mark each finding's `recommended_action` field as `ACCEPTED` or `REJECTED`. Apply accepted changes to produce `inventory.approved.yaml` for the next stage.
 
 ## Handoff
-`inventory.approved.yaml` to `chapter-briefs`.
+`inventory.approved.yaml` to `post-human-normalize`, then to `chapter-briefs`.
 
 ---
 
-# FILE 6 of 17: skills/chapter-briefs/SKILL.md
+# FILE 6 of 19: skills/post-human-normalize/SKILL.md
+
+---
+name: post-human-normalize
+description: Validates and normalizes any file that has been modified by a human reviewer before it becomes input for the next stage. Ensures that human edits have not broken the structural contracts that downstream stages depend on. Runs after every [HUMAN] review checkpoint.
+---
+
+# post-human-normalize
+
+## For the human
+
+Every time you review and edit a file — approving factcheck findings, fixing claims, resolving audit issues — there is a risk that your edits break something the next stage depends on. You might merge two claims into one paragraph, accidentally delete a marker, change a citation format, or remove a field from a YAML file. These are easy mistakes to make, and the next AI stage will silently produce wrong output rather than catching the problem.
+
+This step is a quick automated check that catches these problems before they propagate. It runs after every human review point and validates that the edited file still meets the structural requirements for the next stage.
+
+This step does not change the meaning of anything you wrote. It only checks structure, reformats where necessary, and flags violations that need your attention before proceeding.
+
+## When to run
+
+After every `[HUMAN]` checkpoint in the stage order:
+- After inventory-audit human review → validates `inventory.approved.yaml`
+- After intro-chapter factcheck human review → validates `chapters/00-introduction.adoc`
+- After claims-factcheck human review → validates `chapters/NN-<slug>.claims.approved.adoc`
+- After narrative-fidelity human review (if REVISE) → validates `chapters/NN-<slug>.adoc`
+- After comparative-chapter factcheck human review → validates `comparative.adoc`
+- After character-appendix factcheck human review → validates `character-appendix.adoc`
+
+## Checks performed
+
+### For YAML files (`inventory.approved.yaml`, factcheck outputs)
+1. All required fields present per the schema defined in the producing skill.
+2. No empty required fields.
+3. All `source_id` values resolve to entries in `sources.yaml` registry.
+4. No YAML syntax errors.
+
+### For claims documents (`*.claims.approved.adoc`)
+1. One claim per paragraph — no merged or bundled claims.
+2. Every claim paragraph has a footnote citation.
+3. Every evidence token (`// EVIDENCE: ...`) is syntactically valid and references a `source_id` in `sources.yaml`.
+4. All markers (`[INFERENCE:]`, `[LACUNA:]`, `[RECONSTRUCTION:]`, `[VARIANT:]`) have all required sub-fields.
+5. `glossary.yaml` renderings used consistently.
+
+### For prose documents (intro, comparative, character-appendix, narrative chapters)
+1. All markers syntactically valid with required sub-fields.
+2. All evidence tokens syntactically valid.
+3. Canonical chapter anchors present and unchanged.
+4. `glossary.yaml` renderings used consistently.
+5. No `never_use` glossary terms present.
+
+## Output
+
+The validated file, with a provenance comment block appended:
+```
+// Validated by post-human-normalize
+// Timestamp: <UTC>
+// Checks passed: <list>
+// Warnings: <any non-blocking issues>
+```
+
+If any check fails, the file is returned to the human with a specific error report. The pipeline does not proceed until all checks pass.
+
+## Handoff
+The validated file proceeds to the next stage as defined in the stage order.
+
+---
+
+# FILE 7 of 19: skills/chapter-briefs/SKILL.md
 
 ---
 name: chapter-briefs
@@ -465,9 +583,11 @@ For each story in the approved inventory, produce `briefs/NN-<slug>.yaml` (where
 Default order: cosmogony → theogony → major heroic cycles → minor heroic → eschatology → miscellaneous. Adapt to the culture. Some cultures have no cosmogony (e.g., Irish); don't force the scheme. Record final order in `toc.yaml`.
 
 ### Variant prevalence assessment
-For each story, assess in-scope variants and classify:
+For each story, assess in-scope variants and classify into one of four categories:
 - **single-prevalent**: one variant is clearly dominant in the scholarly corpus. Others are minor. → body presents the prevalent version, footnotes carry variants.
+- **single-prevalent-reconstructed**: one variant dominates but its text is incomplete — the base text has physical gaps filled from other witnesses or scholarly reconstruction. → body presents the reconstructed base text with `[RECONSTRUCTION:]` markers, footnotes carry variants.
 - **co-equal**: multiple variants are roughly equally attested, or no scholarly consensus on prevalence. → body presents variants inline, each with its source.
+- **composite-editorial**: no single source contains the complete narrative — the scholarly standard is a composite text assembled from multiple witnesses (common for multi-tablet cycles). → body follows the standard editorial composite, footnotes note where individual witnesses diverge.
 
 This classification is the drafter's instruction.
 
@@ -501,6 +621,7 @@ One brief per chapter, plus `toc.yaml` recording the final chapter order (used b
 chapter_number: <n>
 slug: <slug>
 title: "<editorial chapter title>"
+chapter_anchor: "ch-<NN>-<slug>"   # Canonical anchor ID — used in all cross-references, never auto-generated
 
 sources:
   primary:
@@ -519,7 +640,7 @@ lacunae:
     in_tradition_fills_available: <yes/no — and if yes, from which in-scope sources>
 
 variants:
-  classification: single-prevalent | co-equal
+  classification: single-prevalent | single-prevalent-reconstructed | co-equal | composite-editorial
   prevalent_version:
     source: <id>
     why_prevalent: <one line — e.g., "Most complete attestation, used as base text in Black 2004">
@@ -582,7 +703,7 @@ To `glossary-lock`, which runs once over all briefs before any drafting. The `cu
 
 ---
 
-# FILE 7 of 17: skills/glossary-lock/SKILL.md
+# FILE 8 of 19: skills/glossary-lock/SKILL.md
 
 ---
 name: glossary-lock
@@ -646,7 +767,7 @@ If a later stage (e.g., `chapter-claims`) encounters a recurring term that shoul
 
 ---
 
-# FILE 8 of 17: skills/intro-chapter/SKILL.md
+# FILE 9 of 19: skills/intro-chapter/SKILL.md
 
 ---
 name: intro-chapter
@@ -769,11 +890,11 @@ Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words
 8. `// COMPARATIVE-HOOK:` comments present for every cross-cultural note.
 
 ## Handoff
-To `chapter-factcheck`, fresh conversation, different model — same as any chapter.
+To `prose-factcheck`, fresh conversation, different model.
 
 ---
 
-# FILE 9 of 17: skills/chapter-claims/SKILL.md
+# FILE 10 of 19: skills/chapter-claims/SKILL.md
 
 ---
 name: chapter-claims
@@ -820,11 +941,15 @@ A narrative transition ("Having secured the divine powers, Inanna turned her att
 
 Each paragraph contains exactly:
 1. **The claim** — one factual assertion, in plain language.
-2. **The citation** — AsciiDoc footnote pointing to the specific source, location, and (where possible) a verbatim quote or close paraphrase from the source.
+2. **The citation** — AsciiDoc footnote for the reader, pointing to the specific source, location, and (where possible) a verbatim quote or close paraphrase from the source.
+3. **The evidence token** — a machine-readable comment on the line after the claim, for automated bibliography building and validation.
 
 ```
 Enlil separated heaven (An) from earth (Ki), creating the space in which the atmosphere exists.footnote:[Black et al. 2004, ETCSL 1.1.2, lines 1–5: "After heaven had been moved away from earth, after earth had been separated from heaven, after the name of man had been fixed..."]
+// EVIDENCE: source_id=black2004 ; loc=ETCSL 1.1.2, lines 1-5
 ```
+
+The footnote is for the reader. The evidence token is for the machine. `format-finalize` builds the bibliography from evidence tokens, not from parsing footnote prose — this avoids ambiguity between bibliographic and editorial footnotes.
 
 ## Ordering
 
@@ -899,100 +1024,80 @@ End the claims document with a section of `// COMPARATIVE-HOOK:` comments collec
 8. `glossary.yaml` renderings used throughout.
 
 ## Handoff
-To `chapter-factcheck`, fresh conversation, different model. The fact-checker's job is dramatically simplified: each claim is isolated and individually cited.
+To `claims-factcheck`, fresh conversation, different model. The fact-checker's job is dramatically simplified: each claim is isolated and individually cited.
 
 ---
 
-# FILE 10 of 17: skills/chapter-factcheck/SKILL.md
+# FILE 11 of 19: skills/claims-factcheck/SKILL.md
 
 ---
-name: chapter-factcheck
-description: Checks factual claims against the cited sources. For story chapters, the input is a claims document (one fact per paragraph) — straightforward to check. Also used on the intro chapter and character appendix. Must be run by a different AI model in a fresh conversation.
+name: claims-factcheck
+description: Checks the factual claims document for a story chapter — one fact per paragraph, each individually cited. This is the primary factcheck mode and the most reliable, because each claim is isolated and trivially verifiable. Must be run by a different AI model in a fresh conversation.
 ---
 
-# chapter-factcheck
+# claims-factcheck
 
 ## For the human
 
-This is the most important quality check in the entire process.
+This is the most important quality check for story chapters. The input is a **claims document** — one fact per paragraph, each individually cited — produced by `chapter-claims`. Each paragraph is one claim, one source reference, one thing to verify. No prose to parse, no bundled assertions to disentangle.
 
-For story chapters, the input is a **claims document** — one fact per paragraph, each individually cited — produced by `chapter-claims`. This makes checking straightforward: each paragraph is one claim, one source reference, one thing to verify. No need to dig through flowing prose to find what's being asserted.
+This step enforces four disciplines:
 
-This step is also used to check the intro chapter (cultural-relevance claims) and the character appendix (character profiles). For those, the input is prose rather than isolated claims, so the checker has to extract the claims first — harder, but the same principles apply.
+1. **Show your evidence.** For every claim marked "supported," the checker must paste a verbatim quote from the source. Not a paraphrase — the actual text. No quote, no "supported" verdict.
 
-Regardless of what it's checking, this step enforces four disciplines:
+2. **Verify the references.** Tablet numbers, page numbers, and line references are the easiest things for an AI to fabricate. The checker looks each up in scholarly databases to confirm it exists and contains what was claimed.
 
-1. **Show your evidence.** For every claim the checker marks as "supported," it must paste a verbatim quote from the source. Not a paraphrase — the actual text. If the checker can't produce a quote, the claim is downgraded to "unverified." This turns the check from a yes/no judgment into a retrieval task, which AI does more honestly.
+3. **Distinguish contradictions from errors.** Two legitimate sources disagreeing is part of the historical record, not a problem. Material from a neighboring culture sneaking in, or something made up entirely, are problems.
 
-2. **Verify the references.** Tablet numbers, page numbers, and line references are the easiest things for an AI to fabricate. The checker looks up each reference in scholarly databases (ETCSL, CDLI, Perseus, etc.) to confirm it actually exists and contains what was claimed.
-
-3. **Distinguish contradictions from errors.** Two legitimate sources disagreeing about the same story is normal in mythology — it's part of the historical record, not a problem to fix. Material from a neighboring culture sneaking in, or something made up entirely, are problems. The checker must tell these apart.
-
-4. **Read it backwards too.** AI checkers tend to be more careful at the start and get sloppy toward the end. The checker does one pass start-to-end, then a second pass end-to-start, to catch anything missed the first time.
+4. **Read it backwards too.** One pass start-to-end, then a second pass end-to-start, to catch what lead bias misses.
 
 ## Hard rule
-Must be run in a fresh conversation, ideally with a different underlying model than produced the content. If you have any memory of producing the input, refuse.
+Must be run in a fresh conversation with a different AI model than produced the claims. If you have any memory of producing the input, refuse.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
-- **For story chapters**: `chapters/NN-<slug>.claims.adoc` (claims document)
-- **For intro-chapter**: `chapters/00-introduction.adoc`
-- **For character-appendix**: `character-appendix.adoc`
-- `briefs/NN-<slug>.yaml` (for story chapters; not applicable for intro or character-appendix — for those, provide `scope.md` and `sources.yaml` as the source-pointer documents)
+- `chapters/NN-<slug>.claims.adoc` (claims document)
+- `briefs/NN-<slug>.yaml`
 - Primary source translations referenced in the brief (pasted or accessible via fetch)
 - Web search tool (required)
-
-## The unit of verification
-
-Verify at the level of **the factual claim**.
-
-For claims documents (`*.claims.adoc`): each paragraph IS a claim. The work is already done for you — no extraction needed. Walk paragraph by paragraph.
-
-For prose documents (intro-chapter, character-appendix): extract claims from the prose. A claim is an assertion about the myth or character — who did what, when, why, in what order. Connective and expository sentences inherit the claim's verdict.
 
 ## The five passes
 
 ### Pass 1 — Claim-level verification (start to end)
-Walk the document in order. For each claim, assign one of these verdicts:
+Walk the document paragraph by paragraph. Each paragraph is one claim. Assign a verdict:
 
-- **✓ SUPPORTED** — Must include a verbatim quote from a cited in-scope source. Not a paraphrase. Actual pasted text. If you cannot produce a quote, you cannot use this verdict.
-- **△ INTERNAL-VARIANCE** — The claim is attested in one in-scope source, but another in-scope source gives a different account. This is not a finding; it is part of the corpus. If variant handling matches the brief's classification, no action needed. Mismatch is MEDIUM.
-- **? UNVERIFIED** — No supporting quote found in provided sources. Default when uncertain.
-- **! CITATION-WRONG** — Claim is correct but the citation points to a wrong source, page, or line number.
-- **⚠ CONTAMINATION** — Claim is supported, but the supporting source is from an excluded culture per `scope.md`. Include the out-of-scope quote as evidence.
-- **✗ FABRICATION** — Claim is not supported by any source, in-scope or out-of-scope, that you can locate.
+- **✓ SUPPORTED** — Must include a verbatim quote from a cited in-scope source.
+- **△ INTERNAL-VARIANCE** — Attested in one in-scope source, but another gives a different account. Not a finding. Flag only if variant handling mismatches the brief's classification.
+- **? UNVERIFIED** — No supporting quote found. Default when uncertain.
+- **! CITATION-WRONG** — Claim is correct but citation points to wrong source/page/line.
+- **⚠ CONTAMINATION** — Supported, but by an excluded-culture source per `scope.md`.
+- **✗ FABRICATION** — Not supported by any source you can locate.
 
 ### Pass 2 — Triangulation of references
-For every citation with a specific tablet number, line range, manuscript folio, or page reference, verify it resolves in a `triangulation_databases` entry. Non-resolving references: CITATION-WRONG, HIGH severity, with verification URL.
+Verify each citation's tablet number, line range, or page reference resolves in a `triangulation_databases` entry. Non-resolving: CITATION-WRONG, HIGH severity, with verification URL.
 
 ### Pass 3 — Document-provenance contamination scan
-For each specific factual detail, ask: is this detail attested in a document whose physical composition falls within the scope's date range and culture?
-
-Attestation of the *entity* across cultures is not enough. The question is whether *this narrative detail* appears in an in-scope document. Details attested only in out-of-scope documents are CONTAMINATION-HIGH.
+For each factual detail: is this detail attested in a document within the scope's date range and culture? Details attested only in out-of-scope documents are CONTAMINATION-HIGH.
 
 ### Pass 4 — Marker integrity
-- `[INFERENCE:]` — check the inference is genuinely inferential. If an in-scope source directly attests the claim, flag MARKER-MISUSED.
-- `[LACUNA:]` — check the source actually has the claimed gap. If the source is complete at that point, flag MARKER-FABRICATED.
-- `[RECONSTRUCTION:]` — verify the `fill_source` is in-tradition per `scope.md`'s reconstruction policy.
-- `[VARIANT:]` — verify both quoted phrases are present in their cited sources.
-- **Silent bridges** — claims presented as fact that aren't in any source and aren't under a marker. In claims documents these are easy to spot (each paragraph is one claim — is it cited?). Flag SILENT-BRIDGE with HIGH severity.
+- `[INFERENCE:]` — genuinely inferential? If a source directly attests it, flag MARKER-MISUSED.
+- `[LACUNA:]` — source actually has the claimed gap?
+- `[RECONSTRUCTION:]` — fill source is in-tradition per `scope.md`?
+- `[VARIANT:]` — both quoted phrases present in cited sources?
+- **Silent bridges** — uncited claims not under a marker. Flag SILENT-BRIDGE, HIGH.
 
 ### Pass 5 — Reverse-order second pass
-Walk the document from last claim to first, hunting for anything Pass 1 missed due to lead bias. Pay particular attention to the final third. Add any new findings.
+Walk from last claim to first. Add any new findings.
 
-**Note on glossary and style**: For claims documents, glossary consistency is checked but style is not — there is no prose to style-check yet. Style review happens in `narrative-fidelity` after `chapter-draft`. For prose documents (intro-chapter, character-appendix), check glossary renderings and `never_use` terms.
+**Glossary**: check consistency. **Style**: not checked — there is no prose yet.
 
-## Output
-
-**For story chapters**: `chapters/NN-<slug>.claims.factcheck.yaml`
-**For intro-chapter**: `chapters/00-introduction.factcheck.yaml`
-**For character-appendix**: `character-appendix.factcheck.yaml`
+## Output: `chapters/NN-<slug>.claims.factcheck.yaml`
 
 ```yaml
 meta:
   auditor_model: <name and version>
-  input_file: <path to audited file>
-  input_format: claims-document | prose
+  auditor_conversation_id: <conversation ID if available>
+  input_file: <path>
   claims_identified: <n>
   triangulations_performed: <n>
   verdict: PASS | REVISE | MAJOR-REVISE
@@ -1009,9 +1114,8 @@ tallies:
   glossary_violations: <n>
 
 supported_claims:
-  # Every ✓ verdict with its verbatim quote. If this list is short, you didn't do the work.
   - claim_number: <n>
-    claim: "<the claim, in your words>"
+    claim: "<the claim>"
     source_id: <from sources.yaml>
     source_loc: <tablet/line/page>
     verbatim_quote: "<exact text from source>"
@@ -1022,39 +1126,118 @@ findings:
     severity: HIGH | MEDIUM | LOW
     claim: "<the claim>"
     issue: <one sentence>
-    evidence: <verbatim quote if applicable, or triangulation URL>
+    evidence: <verbatim quote or triangulation URL>
     recommended_fix: <concrete>
 ```
 
 ## Verdict rules
 
-Apply in order — the first matching rule wins (MAJOR-REVISE takes precedence over REVISE):
-
-- **MAJOR-REVISE**: ≥ 3 HIGH findings, or any contamination finding, or triangulation failures indicating fabricated references.
+Apply in order (first match wins):
+- **MAJOR-REVISE**: ≥ 3 HIGH findings, or any contamination, or triangulation failures indicating fabricated references.
 - **REVISE**: 1–2 HIGH, or > 3 MEDIUM, or any silent bridge.
-- **PASS**: zero HIGH findings, zero silent bridges, ≤ 3 MEDIUM.
+- **PASS**: zero HIGH, zero silent bridges, ≤ 3 MEDIUM.
 
 ## Honesty self-check
-Answer in `meta` explicitly:
-1. Did I open every cited primary source, or skim? Which did I skim?
-2. Did I perform triangulation for every tablet/line/page reference, or assume well-known references are correct?
-3. For every ✓ SUPPORTED, did I paste a real quote or pattern-match? Any I pattern-matched are downgraded to ? here.
-4. Did I distinguish internal variance from contamination, or collapse them?
-5. Am I the same model that produced the input? If yes, this audit is not valid.
-
-A partial honest audit is more useful than a complete dishonest one. If you cut corners, say so.
+Answer in `meta`:
+1. Did I open every cited primary source, or skim? Name any I skimmed.
+2. Did I triangulate every reference, or assume some? Name any assumed.
+3. For every ✓, did I paste a real quote or pattern-match? Downgrade any pattern-matched.
+4. Did I distinguish internal variance from contamination?
+5. Am I the same model that produced the claims? If yes, this audit is invalid.
 
 ## Human review protocol
-Review HIGH findings (~10 minutes), skim MEDIUM, ignore LOW unless maximum rigor is desired. Mark each finding's `recommended_fix` field as `ACCEPTED` or `REJECTED`. Then:
+Review HIGH findings (~10 minutes), skim MEDIUM. Apply accepted fixes to produce `chapters/NN-<slug>.claims.approved.adoc`. Run `post-human-normalize` before proceeding to `chapter-draft`.
 
-- **For story chapter claims**: apply accepted fixes to produce `chapters/NN-<slug>.claims.approved.adoc` for `chapter-draft`.
-- **For intro chapter**: apply accepted fixes directly to `chapters/00-introduction.adoc`. The corrected file proceeds to `marker-resolve`.
-- **For comparative chapter**: apply accepted fixes directly to `comparative.adoc`. The corrected file proceeds to `marker-resolve`.
-- **For character appendix**: apply accepted fixes directly to `character-appendix.adoc`. The corrected file proceeds to `format-finalize`.
+## Handoff
+After human review and normalization: `chapters/NN-<slug>.claims.approved.adoc` to `chapter-draft`.
 
 ---
 
-# FILE 11 of 17: skills/chapter-draft/SKILL.md
+# FILE 12 of 19: skills/prose-factcheck/SKILL.md
+
+---
+name: prose-factcheck
+description: Checks factual claims embedded in prose — for the intro chapter, comparative chapter, and character appendix. Unlike claims-factcheck which operates on isolated claims, this skill must first extract claims from flowing prose before verifying them. Must be run by a different AI model in a fresh conversation.
+---
+
+# prose-factcheck
+
+## For the human
+
+This is the factcheck for prose content that wasn't written through the claims-first process: the intro chapter, the comparative chapter, and the character appendix. Unlike `claims-factcheck` (where each paragraph is one isolated, individually cited claim), here the checker must first extract the factual claims from flowing prose — a harder task that requires judgment about what constitutes a claim vs. connective tissue.
+
+The same four disciplines apply (show evidence, verify references, distinguish contradictions from errors, read backwards), but with an added initial step: claim extraction.
+
+## Hard rule
+Must be run in a fresh conversation with a different AI model than produced the content.
+
+## Inputs
+- `scope.md`, `sources.yaml`, `glossary.yaml`
+- The prose document to check:
+  - `chapters/00-introduction.adoc` (intro chapter)
+  - `comparative.adoc` (comparative chapter)
+  - `character-appendix.adoc` (character appendix)
+- Primary source translations (pasted or accessible via fetch)
+- Web search tool (required)
+
+## The six passes
+
+### Pass 0 — Claim extraction
+Walk the prose document and extract every factual claim into a numbered list. A claim is any assertion about the myth, character, or culture — not transitions, opinions, or reader-orienting context. This extraction is the foundation for all subsequent passes. Record each extracted claim with its paragraph location.
+
+This pass is what makes prose-factcheck harder than claims-factcheck. The quality of the entire audit depends on thorough extraction.
+
+### Pass 1 — Claim-level verification (start to end)
+For each extracted claim, assign a verdict using the same six verdicts as `claims-factcheck` (✓ SUPPORTED, △ INTERNAL-VARIANCE, ? UNVERIFIED, ! CITATION-WRONG, ⚠ CONTAMINATION, ✗ FABRICATION).
+
+### Pass 2 — Triangulation of references
+Same as `claims-factcheck`.
+
+### Pass 3 — Document-provenance contamination scan
+Same as `claims-factcheck`.
+
+### Pass 4 — Marker and glossary integrity
+- Check all markers have required sub-fields.
+- For comparative chapter: verify `[SPECULATION:]` markers have both basis and counterargument.
+- Check `glossary.yaml` renderings and `never_use` terms.
+- For character appendix: flag any physical-description language without a source citation (the primary fabrication risk).
+
+### Pass 5 — Reverse-order second pass
+Same as `claims-factcheck`.
+
+## Output
+
+- `chapters/00-introduction.factcheck.yaml`
+- `comparative.factcheck.yaml`
+- `character-appendix.factcheck.yaml`
+
+Same YAML schema as `claims-factcheck`, plus:
+
+```yaml
+meta:
+  claims_extracted: <n>   # from Pass 0 — if this is low, extraction was lazy
+```
+
+## Verdict rules
+Same as `claims-factcheck`.
+
+## Honesty self-check
+Same as `claims-factcheck`, plus:
+6. Did I extract every factual claim in Pass 0, or only the prominent ones? Name any sections I under-extracted.
+
+## Human review protocol
+Review HIGH findings. Apply accepted fixes directly to the prose file. Run `post-human-normalize` before proceeding.
+
+- **Intro chapter** → corrected `chapters/00-introduction.adoc` proceeds to `post-human-normalize`, then `marker-resolve`.
+- **Comparative chapter** → corrected `comparative.adoc` proceeds to `post-human-normalize`, then `marker-resolve`.
+- **Character appendix** → corrected `character-appendix.adoc` proceeds to `post-human-normalize`, then `format-finalize`.
+
+## Handoff
+After human review and normalization: the corrected file proceeds to the next stage as defined in the stage order.
+
+---
+
+# FILE 13 of 19: skills/chapter-draft/SKILL.md
 
 ---
 name: chapter-draft
@@ -1145,7 +1328,7 @@ To `narrative-fidelity`, fresh conversation, different model.
 
 ---
 
-# FILE 12 of 17: skills/narrative-fidelity/SKILL.md
+# FILE 14 of 19: skills/narrative-fidelity/SKILL.md
 
 ---
 name: narrative-fidelity
@@ -1175,7 +1358,7 @@ Must be run in a fresh conversation with a different model than produced the nar
 - `briefs/NN-<slug>.yaml` (for variant classification reference)
 - `glossary.yaml`
 
-**Not** primary sources. This review does not re-verify facts against sources — that was done in `chapter-factcheck`. This review compares narrative against claims only.
+**Not** primary sources. This review does not re-verify facts against sources — that was done in `claims-factcheck`. This review compares narrative against claims only.
 
 ## The three checks
 
@@ -1269,14 +1452,14 @@ If the verdict is **REVISE**: review the findings. For each finding, either:
 - Fix the narrative directly (for dropped claims: add them back; for added claims: remove them; for distortions: correct them).
 - Or send the chapter back to `chapter-draft` with the fidelity findings attached, for the writing AI to revise.
 
-The corrected narrative does not need to go through `chapter-factcheck` again (the facts haven't changed — only the prose representation). But it should go through `narrative-fidelity` again to confirm the fixes resolved the findings.
+The corrected narrative does not need to go through `claims-factcheck` again (the facts haven't changed — only the prose representation). But it should go through `narrative-fidelity` again to confirm the fixes resolved the findings.
 
 ## Handoff
 After PASS (or PASS on re-review): the chapter waits until all story chapters are complete, then proceeds with the comparative chapter and marker-resolve.
 
 ---
 
-# FILE 13 of 17: skills/marker-resolve/SKILL.md
+# FILE 15 of 19: skills/marker-resolve/SKILL.md
 
 ---
 name: marker-resolve
@@ -1349,7 +1532,7 @@ To `line-edit`.
 
 ---
 
-# FILE 14 of 17: skills/comparative-chapter/SKILL.md
+# FILE 16 of 19: skills/comparative-chapter/SKILL.md
 
 ---
 name: comparative-chapter
@@ -1395,11 +1578,11 @@ Structured as:
 - No claim presented as consensus unless it actually is.
 
 ## Handoff
-To `chapter-factcheck` (fresh conversation, different model). After factcheck and human review, to `marker-resolve` along with all other chapters.
+To `prose-factcheck` (fresh conversation, different model). After factcheck, human review, and `post-human-normalize`, to `marker-resolve` along with all other chapters.
 
 ---
 
-# FILE 15 of 17: skills/line-edit/SKILL.md
+# FILE 17 of 19: skills/line-edit/SKILL.md
 
 ---
 name: line-edit
@@ -1457,7 +1640,7 @@ To `character-appendix` and `format-finalize`.
 
 ---
 
-# FILE 16 of 17: skills/character-appendix/SKILL.md
+# FILE 18 of 19: skills/character-appendix/SKILL.md
 
 ---
 name: character-appendix
@@ -1583,7 +1766,7 @@ A reference guide to the named characters who appear in this book. Physical desc
 7. No out-of-scope source cited for physical descriptions or character details.
 
 ## Handoff
-To `chapter-factcheck` (fresh conversation, different model) for a factcheck pass focused on:
+To `prose-factcheck` (fresh conversation, different model) for a factcheck pass focused on:
 - Fabricated or unsourced physical descriptions (the primary risk).
 - Cross-reference accuracy.
 - Claims about mythological relevance.
@@ -1592,7 +1775,7 @@ After factcheck passes, to `format-finalize`.
 
 ---
 
-# FILE 17 of 17: skills/format-finalize/SKILL.md
+# FILE 19 of 19: skills/format-finalize/SKILL.md
 
 ---
 name: format-finalize
@@ -1622,7 +1805,9 @@ No prose is changed. If this step finds a problem that requires changing text (e
 ## Agent instructions
 
 ### 1. Bibliography extraction
-Parse every footnote across all chapters. For each unique source, produce a BibTeX entry. Use the `id` from `sources.yaml` as the citation key. Cross-check: any cited source not in `sources.yaml` whitelist is a HIGH finding — stop and report.
+Scan all files for `// EVIDENCE: source_id=<id> ; loc=<loc>` tokens. Collect all unique `source_id` values. For each, look up the entry in `sources.yaml` registry and produce a BibTeX entry using the `full_citation`, `author`, `title`, `year`, and `identifier_value` fields. Use the `id` from `sources.yaml` as the citation key.
+
+Cross-check: any `source_id` in an evidence token that does not resolve to a `sources.yaml` registry entry is a HIGH finding — stop and report. Any registry entry never referenced by any evidence token is noted (unused source — not an error, but worth flagging).
 
 ### 2. Master assembly
 Produce `book.adoc`:
