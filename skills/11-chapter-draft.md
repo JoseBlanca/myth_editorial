@@ -59,12 +59,26 @@ These are **not** factual claims — they are prose scaffolding. They must not i
 
 Per brief's `target_length_words`, driven by source volume. If you find yourself padding, stop and return the shorter version with a note.
 
+## Source overview opening
+
+Every chapter begins with a short prose passage (2–5 paragraphs) that orients the reader in the physical evidence before the story begins. This passage is built from the `=== Source overview` claims in the approved claims document and covers:
+
+- **What we have**: the tablets, fragments, or manuscripts — named by museum number or corpus ID where possible — and where they were found.
+- **What condition it is in**: complete, fragmentary, or composite. Where the major gaps are.
+- **How we read it**: which critical edition or translation the retelling follows.
+
+This passage sets the Asimov register immediately: the reader understands they are about to hear a story reconstructed from physical artifacts, not received from some mystical tradition. It is the scholarly equivalent of "here is the evidence, now here is the story it tells."
+
+The source overview is separated from the narrative body by a blank line or a section transition (e.g., "The story, as the tablets preserve it, goes as follows."). It is not a dry bibliography — it is narrative prose about artifacts, written in the same Asimov register as the rest of the chapter.
+
 ## Output: `chapters/NN-<slug>.adoc`
 
 ```asciidoc
 == <Chapter Title>
 
-<Opening — orient the reader in time, place, and source situation.>
+<Source overview — 2-5 paragraphs on the physical evidence: tablets, sites, preservation, edition. Built from the Source overview claims.>
+
+<Transition to narrative.>
 
 <Body — the verified claims, woven into narrative prose. Every claim present, no claims added.>
 
@@ -72,8 +86,9 @@ Per brief's `target_length_words`, driven by source volume. If you find yourself
 ```
 
 ## Self-check before returning
-1. **Completeness**: walk the approved claims document claim by claim. Is every claim represented in the narrative? List any you cannot find — they are bugs.
-2. **No additions**: scan the narrative for any factual assertion that does not correspond to a claim in the approved document. Flag it.
+1. **Source overview present**: the chapter opens with 2–5 paragraphs on the physical evidence, built from the Source overview claims. No source overview = incomplete chapter.
+2. **Completeness**: walk the approved claims document claim by claim — including Source overview claims. Is every claim represented in the narrative? List any you cannot find — they are bugs.
+3. **No additions**: scan the narrative for any factual assertion that does not correspond to a claim in the approved document. Flag it.
 3. Scan for forbidden words — each hit is a drift signal; revise.
 4. Every proper noun was glossed on first mention using `glossary.yaml`.
 5. Variant handling matches the brief's classification.

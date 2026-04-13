@@ -53,6 +53,19 @@ Enlil separated heaven (An) from earth (Ki), creating the space in which the atm
 
 The footnote is for the reader. The evidence token is for the machine. `format-finalize` builds the bibliography from evidence tokens, not from parsing footnote prose — this avoids ambiguity between bibliographic and editorial footnotes.
 
+## Source overview section
+
+Before the narrative claims, begin with a `=== Source overview` section. This grounds the reader in the physical evidence — the actual artifacts, documents, or traditions through which we know this story. Each claim in this section is a factual assertion about a source, not about the myth's content.
+
+Include claims covering:
+1. **What survives.** Name the specific tablets, manuscripts, or attestations (with museum numbers or corpus IDs where known). How many witnesses exist? From which sites?
+2. **State of preservation.** Is the text complete, fragmentary, or heavily damaged? Where are the major gaps?
+3. **Composite or single witness?** Is the "text" scholars read a composite stitched from many tablets, or does it survive on a single artifact?
+4. **Discovery context.** When and where was the primary tablet found, if known? (e.g., "recovered from the Nippur scribal quarter during the University of Pennsylvania excavations")
+5. **Scholarly edition.** Which critical edition or translation is the basis for this chapter?
+
+This section is factual and citeable — every claim about a tablet's provenance, museum number, or preservation state must have a footnote. It feeds directly into the chapter-draft's opening passage, which orients the reader before the story begins.
+
 ## Ordering
 
 Follow the narrative order of the myth as attested in the primary source(s). Where the brief specifies an ordering (e.g., following the tablet sequence), follow it. The claims should form a complete, ordered skeleton of the story — everything the narrative will need.
@@ -87,6 +100,16 @@ End the claims document with a section of `// COMPARATIVE-HOOK:` comments collec
 // This is a claims document, not final prose. Each paragraph is one verifiable claim.
 // After fact-check and human review, chapter-draft will transform this into narrative.
 
+=== Source overview
+
+<Claim about physical artifacts — tablets, museum numbers, sites of discovery.>
+
+<Claim about state of preservation — complete, fragmentary, lacunae.>
+
+<Claim about the composite nature of the text, if applicable.>
+
+<Claim about the critical edition or translation used as basis.>
+
 === Setting and context
 
 <Claim 1 — one paragraph, one citation.>
@@ -116,9 +139,10 @@ End the claims document with a section of `// COMPARATIVE-HOOK:` comments collec
 ```
 
 ## Self-check before returning
-1. Every claim is a single factual assertion — no bundled claims, no narrative connective tissue.
-2. Every claim has footnote coverage citing a source provided in this conversation. Nothing from memory.
-3. Claims follow the narrative order of the myth.
+1. The `=== Source overview` section is present and contains at least 3 claims about the physical artifacts, preservation state, and scholarly edition.
+2. Every claim is a single factual assertion — no bundled claims, no narrative connective tissue.
+3. Every claim has footnote coverage citing a source provided in this conversation. Nothing from memory.
+4. Claims follow the narrative order of the myth.
 4. The claims skeleton is complete — everything the narrative will need is here.
 5. Every marker has all required sub-fields.
 6. No out-of-scope material.
