@@ -1,0 +1,72 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/21-gilgamesh-and-huwawa.claims.adoc"
+  claims_identified: 28
+  triangulations_performed: 20
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 20
+  internal_variance: 0
+  unverified: 5
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition is catalogued as ETCSL 1.8.1.5 and exists in two versions (A and B)."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, composite text"
+    verbatim_quote: "ETCSL catalogues Bilgames and Huwawa under 1.8.1.5, with Version A (1.8.1.5.1) as the primary witness."
+
+findings:
+  - claim_number: 3
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Kramer 1961 discusses the Cedar Forest expedition."
+    issue: "Kramer 1961 cited without ETCSL cross-check, violating sources.yaml blacklist rule."
+    evidence: "sources.yaml blacklist: Kramer 1961 must never be cited alone for textual claims."
+    recommended_fix: "Add ETCSL 1.8.1.5.1 as co-citation."
+
+  - claim_number: 10
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Dream sequences during the journey to the Cedar Forest."
+    issue: "The dream sequences are more prominently attested in the Akkadian Epic than in the Sumerian poem. The Sumerian Version A has dream elements but their extent and content differ from the Akkadian tradition."
+    evidence: "ETCSL 1.8.1.5.1 has dream elements but conflation with the Akkadian epic's more elaborate dream scenes is a contamination risk."
+    recommended_fix: "Verify which specific dream elements are in the Sumerian text vs. the Akkadian epic. Add [INFERENCE:] if drawing on both."
+
+  - claim_number: 13
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Huwawa invokes Utu in his plea for mercy."
+    issue: "In the ETCSL text, Huwawa's plea may be directed to Gilgamesh rather than to Utu. The specific invocation needs verification."
+    evidence: "Training-data recall suggests the plea is directed at Gilgamesh, with Utu's role being prior to the encounter."
+    recommended_fix: "Verify addressee of Huwawa's plea against ETCSL composite."
+
+  - claim_number: 15
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Kramer 1961 discusses the moral dimensions of the Cedar Forest narrative."
+    issue: "Second Kramer-alone citation without ETCSL cross-check, violating blacklist."
+    evidence: "sources.yaml blacklist violation."
+    recommended_fix: "Add ETCSL or George 2003 as co-citation."
+
+  - claim_number: 28
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "The composition served a didactic function in the edubba."
+    issue: "The edubba didactic-function interpretation is presented as fact without [INFERENCE:] marker."
+    evidence: "While plausible and widely held, this is scholarly interpretation, not a textual claim."
+    recommended_fix: "Add [INFERENCE:] marker."

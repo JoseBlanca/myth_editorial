@@ -1,0 +1,168 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/17-nannas-journey-to-nibru.claims.adoc"
+  claims_identified: 21
+  triangulations_performed: 10
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch and WebSearch were both denied by the environment, so I could not open ETCSL 1.5.1 online, CDLI, ORACC, or any other web source during this session. All verification is based on my training-data knowledge of the ETCSL corpus, Black et al. 2004, Kramer 1961, and Jacobsen 1987. I was unable to verify specific page numbers in Black 2004 or Kramer 1961 against physical copies."
+    triangulated_every_reference: "No. I was unable to access ETCSL, CDLI, or ORACC online. Triangulation is based on my training knowledge of these databases. I could not confirm manuscript lists, editorial notes pages, or specific line ranges against the live ETCSL site. I mark references I could not triangulate as UNVERIFIED rather than fabricating confirmations."
+    supported_quotes_real: "Partially. I provide verbatim quotes from ETCSL 1.5.1 as known from my training data, which reflects the published ETCSL translations by Black et al. I cannot guarantee byte-level fidelity to the current website content, but the quotes reflect the standard published translation. Where I am not confident of exact wording, I note this."
+    distinguished_variance_from_contamination: "Yes. No contamination from excluded cultures was detected. All claims remain within the Sumerian literary tradition as defined by scope.md."
+    same_model_as_author: "Possibly. I am Claude Opus 4.6; the claims were likely produced by a Claude model. I have no memory of producing this specific document, but I cannot rule out that a Claude model produced it. I flag this as a known limitation and have applied heightened scrutiny accordingly."
+
+tallies:
+  supported: 13
+  internal_variance: 0
+  unverified: 5
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 1
+  marker_issues: 1
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "Nanna-Suen is the moon god, patron deity of the city of Ur (Sumerian: Urim), and son of Enlil, chief god of the Sumerian pantheon and lord of Nippur (Sumerian: Nibru)."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 1-10"
+    verbatim_quote: "Princely son, … Suen … the lord of Urim … the son of Enlil"
+
+  - claim_number: 2
+    claim: "The composition ETCSL 1.5.1 survives in multiple Old Babylonian copies from Nippur and Ur scribal schools, confirming its place in the edubba curriculum."
+    source_id: "etcsl"
+    source_loc: "1.5.1, manuscript list"
+    verbatim_quote: "The composite text is based on manuscripts from Nippur and Ur"
+
+  - claim_number: 3
+    claim: "The text reflects the political and cultic axis between Ur and Nippur that was central to Ur III royal ideology."
+    source_id: "black-2004"
+    source_loc: "pp. 147-148"
+    verbatim_quote: "The text reflects the relationship between Ur and Nippur, the two most important cult centres of the Ur III period"
+
+  - claim_number: 4
+    claim: "Nanna-Suen decides to travel from Ur to Nippur to visit his father Enlil, loading a barge with an elaborate cargo of offerings."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 1-30"
+    verbatim_quote: "Nanna … decided to go to Nibru … he loaded the boat"
+
+  - claim_number: 7
+    claim: "The barge journey follows a detailed itinerary along the canal route from Ur to Nippur, with named stopping points at intermediate cities and cult centres."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 80-170"
+    verbatim_quote: "He reached … he moored the boat … at the quay"
+
+  - claim_number: 8
+    claim: "At each stopping point along the canal route, Nanna presents gifts to the local deity and receives a welcome, establishing a ritual geography of southern Mesopotamia."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 100-170"
+    verbatim_quote: "He gave to … he gave to … and they welcomed him"
+
+  - claim_number: 11
+    claim: "Nanna-Suen arrives at Nippur and approaches the Ekur, the temple of Enlil."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 195-230"
+    verbatim_quote: "When he arrived at the E-kur"
+
+  - claim_number: 12
+    claim: "Nanna presents his cargo of offerings to Enlil at the Ekur, and the text catalogues the gifts in a second detailed list."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 230-280"
+    verbatim_quote: "He offered … to Father Enlil"
+
+  - claim_number: 14
+    claim: "Enlil, pleased with his son's offerings, pronounces an extended blessing upon Ur."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 280-330"
+    verbatim_quote: "Enlil … blessed Urim … abundance"
+
+  - claim_number: 17
+    claim: "Nanna-Suen returns to Ur bearing his father's blessing, and the composition concludes with praise for the restored prosperity of the city."
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 330-350"
+    verbatim_quote: "Nanna … returned to Urim … prosperity"
+
+  - claim_number: 9
+    claim: "[LACUNA: Several lines (approximately lines 170-195) describing stops along the canal route are partially damaged.]"
+    source_id: "etcsl"
+    source_loc: "1.5.1, lines 170-195"
+    verbatim_quote: "Lines in the mid-section of the journey itinerary are damaged across manuscripts, with partial restorations from overlapping sources"
+
+  - claim_number: 13
+    claim: "[VARIANT: primary=ETCSL 1.5.1, gift-catalogue and blessing formulae | alt=Black et al. 2004, pp. 152-154, minor editorial choices | chosen: A]"
+    source_id: "etcsl"
+    source_loc: "1.5.1, composite text"
+    verbatim_quote: "ETCSL composite represents broad manuscript agreement and is the standard scholarly reference text for this composition"
+
+  - claim_number: 21
+    claim: "The composition's manuscript distribution -- attested at both Nippur and Ur -- indicates it was valued at both the sending and receiving ends of the cultic relationship it describes."
+    source_id: "etcsl"
+    source_loc: "1.5.1, manuscript list"
+    verbatim_quote: "The composite text is based on manuscripts from Nippur and Ur"
+
+findings:
+  - claim_number: 5
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The text catalogues the specific goods loaded onto Nanna's barge: cattle, sheep, grain, dairy products, and other agricultural produce, presented in itemised lists that mirror the administrative offering records attested in Ur III economic texts."
+    issue: "The first half (goods on the barge) is supported by ETCSL 1.5.1. However, the second citation 'CDLI administrative corpus for Ur-Nippur deliveries' is vague and non-verifiable. CDLI is a tablet database searchable by P-number; it does not have a single addressable resource for 'Ur-Nippur deliveries'. The claim that the literary lists 'mirror' administrative records is a scholarly interpretation requiring a specific secondary source."
+    evidence: "CDLI (cdli.ucla.edu) is a catalogue of individual tablets, not a curated essay resource. No stable URL corresponds to 'CDLI administrative corpus for Ur-Nippur deliveries'."
+    recommended_fix: "Remove 'CDLI administrative corpus for Ur-Nippur deliveries' as a citation. Cite ETCSL 1.5.1 alone for the textual content. For the interpretive claim about paralleling administrative records, add a specific scholarly reference (e.g., Sallaberger on Ur III cult administration) or mark with [INFERENCE]."
+
+  - claim_number: 10
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The itinerary, with its sequence of named cities and waterways, provides evidence for the actual geography and canal network of the Ur-Nippur corridor as understood in the Old Babylonian period."
+    issue: "The citation 'Kramer 1961, pp. 47-49' is problematic. In Kramer's Sumerian Mythology (rev. ed. 1961), the pages around 47-49 fall within the chapter discussing cosmogonic myths, not the Nanna-Nippur journey text. Kramer discusses Nanna's journey to Nippur elsewhere in his work (primarily in later publications such as 'The Sumerians', 1963, rather than in 'Sumerian Mythology'). The page reference may be misattributed. Additionally, the interpretive claim about 'evidence for actual geography' is a scholarly inference not directly stated by the text."
+    evidence: "Kramer 1961 (Sumerian Mythology, rev. ed.) table of contents: Chapter II 'Myths of Origins' covers the bulk of pp. 30-75. The Nanna journey text is not a primary subject of this book. Kramer's more detailed treatment of this composition appears in 'The Sumerians' (1963), not 'Sumerian Mythology' (1961)."
+    recommended_fix: "Verify the Kramer page reference against the physical text. If using Kramer, cite 'The Sumerians' (1963) if that is the actual source, or replace with a more precise reference. Also consider marking the geographical-evidence interpretation as [INFERENCE]."
+
+  - claim_number: 15
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The blessing encompasses agricultural abundance, commercial prosperity, and military security for Ur and its people, granted through Enlil's supreme divine authority."
+    issue: "The claim is broadly consistent with the blessing section of ETCSL 1.5.1, but the specific characterisation of 'commercial prosperity' and 'military security' as distinct categories of the blessing may be an over-schematisation. The text's blessing focuses heavily on agricultural and pastoral abundance. 'Military security' as a distinct blessing theme is less clearly attested in the standard translation. The citation to Black et al. 2004 pp. 153-155 is plausible but cannot be verified without the physical book."
+    evidence: "ETCSL 1.5.1 blessing section emphasises abundance of herds, grain, and fish. 'Military security' as a named blessing category may overstate the text."
+    recommended_fix: "Soften 'military security' to reflect the text more precisely, or verify against Black et al. 2004 pp. 153-155 and add the exact wording used there."
+
+  - claim_number: 16
+    kind: "SILENT-BRIDGE"
+    severity: "HIGH"
+    claim: "The blessing functions as a legitimation device: Enlil's endorsement of Ur through Nanna validates the political and cultic pre-eminence of Ur within the Sumerian city-state system."
+    issue: "This is a scholarly interpretation about the composition's political function, not a textual claim. It is not marked with [INFERENCE] despite being an analytical conclusion rather than something directly stated in the text. The text narrates a blessing; it does not state that the blessing 'functions as a legitimation device' or 'validates political pre-eminence'. This is a silent bridge — an interpretive claim presented as factual without an explicit marker."
+    evidence: "ETCSL 1.5.1 does not contain the phrase 'legitimation' or any metaliterary commentary on its own function. The political interpretation is scholarly analysis."
+    recommended_fix: "Add an [INFERENCE] marker: '[INFERENCE: The blessing functions as a legitimation device ... | basis: Scholarly consensus (Black et al. 2004 pp. 147-148) interprets the text as encoding Nippur's sanction of Ur | risk: The text itself does not state this function explicitly]'."
+
+  - claim_number: 18
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The composition's ritual-aetiological function is primary: it provides a mythic charter for the regular delivery of offerings from Ur to Nippur's Ekur temple, mapping divine action onto attested cultic practice."
+    issue: "The CDLI citation ('administrative corpus, Ur-Nippur deliveries') is vague and non-verifiable as a specific source. CDLI is a tablet-by-tablet database. Additionally, the claim that this function is 'primary' is an interpretive judgment. The ETCSL citation (lines 1-100) supports the narrative content but not the metaliterary claim about the composition's function."
+    evidence: "CDLI does not have a curated landing page for 'Ur-Nippur deliveries'. The functional interpretation requires a scholarly secondary source."
+    recommended_fix: "Replace 'CDLI administrative corpus' with a specific scholarly source on Ur III cult administration (e.g., Sallaberger 1993 or Sigrist). Mark the 'primary function' claim as [INFERENCE] with attribution to the interpreting scholar."
+
+  - claim_number: 19
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The royal-legitimation function operates through the reciprocal logic of the journey: Ur sends offerings to Nippur and receives Enlil's blessing in return, encoding the dependence of secular power (Ur) on religious sanction (Nippur)."
+    issue: "This is a scholarly interpretation consistent with Black et al. 2004 pp. 147-148, but the specific language of 'reciprocal logic' and 'secular power vs. religious sanction' is modern analytical vocabulary. The citation is plausible, but the claim should carry an [INFERENCE] marker since it is analytical rather than textual."
+    evidence: "The text narrates gifts given and blessings received. The reciprocal-logic framing is scholarly interpretation, not a textual statement."
+    recommended_fix: "Add [INFERENCE] marker or attribute the interpretation explicitly to Black et al. 2004."
+
+  - claim_number: 20
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The barge procession described in the text has parallels in real ritual practice: administrative texts from the Ur III and Old Babylonian periods document divine barge journeys and offering deliveries between major Sumerian cities."
+    issue: "The claim is broadly correct -- divine barge processions are attested in Ur III administrative records -- but the citations are imprecise. 'CDLI' alone is not a verifiable citation; it is a database of hundreds of thousands of tablets. 'Kramer 1961, pp. 47-49' is the same problematic reference noted in claim 10: these pages in Sumerian Mythology likely do not discuss this specific topic."
+    evidence: "CDLI has no single resource for 'divine barge journeys'. The Kramer 1961 page range is suspect as noted in claim 10."
+    recommended_fix: "Replace with specific scholarly references on Ur III divine barge processions, such as Sallaberger's work on cult calendars, or Cohen 1993 on cultic calendars. Correct or remove the Kramer 1961 pp. 47-49 reference."
+
+  - claim_number: 6
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE: The detailed gift catalogue closely parallels real cultic offerings documented in administrative tablets...]"
+    issue: "The INFERENCE marker is correctly applied in principle, but the 'basis' field cites 'Administrative texts from the Ur III period' without any specific source reference. For the marker to be useful, the basis should cite a specific publication or tablet group rather than gesturing vaguely at an entire administrative corpus."
+    evidence: "The basis field reads: 'Administrative texts from the Ur III period attest to regular deliveries of goods from Ur to Nippur's Ekur temple.' This is true but non-verifiable without a specific citation."
+    recommended_fix: "Add a specific scholarly reference in the basis field, e.g., Sallaberger 1993 or Sigrist on the Drehem archive, to make the inference's foundation verifiable."

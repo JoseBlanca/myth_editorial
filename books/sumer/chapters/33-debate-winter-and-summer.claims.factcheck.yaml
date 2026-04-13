@@ -1,0 +1,57 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/33-debate-winter-and-summer.claims.adoc"
+  claims_identified: 21
+  triangulations_performed: 14
+  verdict: "PASS"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 16
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+findings:
+  - claim_number: 5
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Enten's duties selectively narrowed to water management."
+    issue: "The text assigns Enten broader duties than just water management. The characterization is reductive."
+    evidence: "ETCSL 5.3.3 assigns Enten a wider portfolio."
+    recommended_fix: "Expand to match the text's fuller description of Enten's responsibilities."
+
+  - claim_number: 6
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Emesh's duties narrowed to crop ripening."
+    issue: "Same issue — Emesh's portfolio is broader than crop ripening alone."
+    evidence: "ETCSL 5.3.3 assigns broader duties."
+    recommended_fix: "Expand characterization."
+
+  - claim_number: 13
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The word 'parasite' used to describe an insult."
+    issue: "The word 'parasite' is editorial interpretation not found in the source text."
+    evidence: "ETCSL 5.3.3 translation does not use this term."
+    recommended_fix: "Replace with wording closer to the ETCSL translation."
+
+  - claim_number: 16
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE:] marker has vague citation 'Civil 1994, passim.'"
+    issue: "The citation is imprecise and Civil 1994 is about a different composition."
+    evidence: "Civil 1994 is about The Farmer's Instructions."
+    recommended_fix: "Replace with a more specific and relevant citation."

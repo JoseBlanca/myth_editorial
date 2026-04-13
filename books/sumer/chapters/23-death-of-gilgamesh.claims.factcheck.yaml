@@ -1,0 +1,65 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/23-death-of-gilgamesh.claims.adoc"
+  claims_identified: 12
+  triangulations_performed: 10
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. One potential contamination concern flagged (claim 5 phrasing)."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 7
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+findings:
+  - claim_number: 5
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The divine decree that immortality is not granted to mortals."
+    issue: "Cites Kramer 1961 pp. 205-207 alone without ETCSL cross-check, violating blacklist. The phrasing 'the gods have reserved eternal life for themselves' may echo the Akkadian Epic (Tablet X, barmaid's speech) more than the surviving Sumerian text, raising a contamination concern."
+    evidence: "sources.yaml blacklist violation. Phrasing parallels Akkadian Epic of Gilgamesh Tablet X."
+    recommended_fix: "Add ETCSL 1.8.1.3 as co-citation. Verify phrasing derives from Sumerian text, not Akkadian tradition."
+
+  - claim_number: 8
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The gift-giving sequence 'parallels protocols in other Sumerian literary and liturgical texts.'"
+    issue: "Vague parallel assertion. Should specify which texts — particularly The Death of Ur-Namma (ETCSL 2.4.1.1)."
+    evidence: "George 2003 discusses parallels with The Death of Ur-Namma specifically."
+    recommended_fix: "Specify parallel text(s). Add [INFERENCE:] if author's synthesis."
+
+  - claim_number: 10
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Gilgamesh placed 'alongside Ningishzida' as co-judges."
+    issue: "Conflates two distinct roles. Ningishzida is a chthonic deity/guide, while Gilgamesh is elevated specifically as judge. Also cites Kramer 1961 alone."
+    evidence: "ETCSL 1.8.1.3 attests Gilgamesh as judge; Ningishzida's role is separate."
+    recommended_fix: "Distinguish roles. Remove or supplement Kramer-alone citation."
+
+  - claim_number: 11
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The composition asserts that extraordinary merit can earn elevated status within death's domain."
+    issue: "Scholarly interpretation presented as factual claim without [INFERENCE:] marker."
+    evidence: "George 2003 discusses this but the specific formulation is interpretive synthesis."
+    recommended_fix: "Add [INFERENCE:] marker."
+
+  - claim_number: 12
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "The text legitimises the cult of dead kings."
+    issue: "Scholarly interpretation requiring [INFERENCE:] marker."
+    evidence: "George 2003 discusses the cult relationship but this is interpretation."
+    recommended_fix: "Add [INFERENCE:] marker."

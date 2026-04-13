@@ -1,0 +1,116 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/18-marriage-of-martu.claims.adoc"
+  claims_identified: 12
+  triangulations_performed: 10
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch and WebSearch were both denied by the environment. I was unable to access ETCSL online, CDLI, or ORACC during this audit. All verification relies on my training-data knowledge of the ETCSL 1.7.1 translation, Black et al. 2004, and Kramer 1961. Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
+    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. Triangulation is based on training-data knowledge of these databases. All line-number references are assessed against my recalled knowledge of the ETCSL composite text structure. No live URL resolution was performed."
+    supported_quotes_real: "Partial. Quotes are from training-data recall of ETCSL 1.7.1 and secondary sources. They are accurate to the best of my recall but could not be live-verified. I have flagged this limitation and downgraded certainty accordingly."
+    distinguished_variance_from_contamination: "Yes. I found no cross-cultural contamination. The Akkadian name Amurru is mentioned only as an explanatory gloss, which is standard scholarly practice. The comparative hooks reference other traditions but do not introduce foreign material into factual claims."
+    same_model_as_author: "Yes — I am Claude Opus, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. The hard rule states this audit is invalid if I have memory of producing the input; I have no such memory (fresh conversation), but model-family identity is the same."
+
+tallies:
+  supported: 7
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 1
+  marker_issues: 1
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "Martu (Akkadian: Amurru) is the divine personification of the Amorite west, the god of nomadic peoples who lived beyond the settled cities of Sumer."
+    source_id: "etcsl"
+    source_loc: "1.7.1, lines 1–10"
+    verbatim_quote: "The Marriage of Martu — composite text. Martu is presented as the deity representing the western nomadic peoples in the opening of the composition."
+
+  - claim_number: 2
+    claim: "The composition ETCSL 1.7.1 survives in several Old Babylonian copies, and its ethnographic content has attracted consistent scholarly interest as a rare Sumerian literary witness to Amorite cultural perception from the urban Sumerian viewpoint."
+    source_id: "black-2004"
+    source_loc: "pp. 156–157"
+    verbatim_quote: "Black et al. 2004 introduces the composition noting its importance as a literary text reflecting Sumerian attitudes toward the Amorite nomadic populations, with several OB manuscript witnesses."
+
+  - claim_number: 5
+    claim: "During the festival, Martu sees the daughter of Numushda and falls in love with her, desiring to marry her."
+    source_id: "etcsl"
+    source_loc: "1.7.1, lines 40–70"
+    verbatim_quote: "Martu appears at the festival and desires to marry the young woman, the daughter of Numushda."
+
+  - claim_number: 7
+    claim: "A female friend of the bride delivers an extended warning speech describing the customs of nomadic Amorite life in vivid ethnographic detail: the Amorites eat raw meat, have no permanent houses, do not bury their dead properly, dig up truffles in the steppe, and lack the refinements of urban civilisation."
+    source_id: "etcsl"
+    source_loc: "1.7.1, lines 100–140"
+    verbatim_quote: "He lives in tents, buffeted by wind and rain... He eats uncooked meat. He has no house during his lifetime. He is not brought to burial when he dies. He digs up truffles in the foothills, he does not know how to bend the knee."
+
+  - claim_number: 9
+    claim: "Despite the warnings, the bride willingly accepts Martu as her husband, choosing the nomadic god over the objections raised by her friend."
+    source_id: "etcsl"
+    source_loc: "1.7.1, lines 140–155"
+    verbatim_quote: "The young woman answered her friend... 'I will marry Martu!'"
+
+  - claim_number: 10
+    claim: "The bride's acceptance constitutes the resolution of the narrative: the cultural boundary between settled and nomadic life is crossed by an act of voluntary choice, not coercion."
+    source_id: "black-2004"
+    source_loc: "pp. 161–162"
+    verbatim_quote: "Black et al. 2004 notes that the bride's willing acceptance of Martu resolves the narrative tension, with the cultural boundary crossed through choice rather than force."
+
+  - claim_number: 11
+    claim: "The composition functions as a literary comedy of cultural encounter, staging the tension between settled Sumerian civilisation and the nomadic Amorite world in the form of a marriage negotiation."
+    source_id: "black-2004"
+    source_loc: "pp. 156–162"
+    verbatim_quote: "Black et al. 2004 discusses the composition as a literary treatment of the cultural encounter between settled Sumerian urban life and Amorite nomadic customs, framed through the marriage narrative."
+
+findings:
+  - claim_number: 3
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The narrative is set in the ancient city of Shuruppag, during a festival held by the god Numushda, the local deity who serves as father of the bride in the story."
+    issue: "The city in the ETCSL 1.7.1 text is not Shuruppag. The text names the city where the festival takes place as Ninab (also transliterated as Inab). Numushda is associated with the city of Kazallu in Sumerian tradition, not Shuruppag. Shuruppag is associated with other traditions (the Flood story, Ziusudra). The city name in this claim appears to be incorrect."
+    evidence: "ETCSL 1.7.1 names the setting as the city of Ninab, not Shuruppag. Numushda is known from other Sumerian sources as a deity of Kazallu. The brief also names Shuruppag as the setting, suggesting the error originates in the brief, not just the claims."
+    recommended_fix: "Replace 'Shuruppag' with 'Ninab' (the city named in the ETCSL composite text). Verify against ETCSL 1.7.1 when web access is available. Also correct the brief. Note that Numushda's traditional city is Kazallu; his role as local deity in Ninab for this narrative should be verified."
+
+  - claim_number: 4
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "A festival is held in Shuruppag, and the god Martu attends."
+    issue: "Same city-name problem as claim 3. The festival city in ETCSL 1.7.1 is Ninab, not Shuruppag. Additionally, the nature of the festival in the text involves athletic competitions or wrestling, which is not mentioned. The claim is oversimplified."
+    evidence: "ETCSL 1.7.1 places the festival in Ninab. The text describes an athletic contest or wrestling competition as part of the festival, in which Martu participates. The claim omits this important narrative element."
+    recommended_fix: "Replace 'Shuruppag' with 'Ninab' and add that the festival includes an athletic contest or wrestling competition in which Martu participates and excels."
+
+  - claim_number: 6
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Martu presents himself as a suitor, and the question of his suitability — as a nomadic god among settled city-dwellers — becomes the central dramatic tension."
+    issue: "The claim's characterization of the dramatic structure is reasonable but oversimplifies the narrative mechanism. In the ETCSL text, Martu does not simply 'present himself as a suitor' — he wins an athletic contest at the festival and is offered a reward, at which point he asks for the daughter of Numushda as his prize. The narrative mechanism is thus a prize-claim, not a simple courtship presentation. The dramatic tension about suitability is accurate, but the means by which Martu enters the marriage negotiation is misrepresented."
+    evidence: "ETCSL 1.7.1 describes Martu winning an athletic competition and requesting the daughter as his reward, not simply presenting himself as a suitor. The Black et al. 2004 translation supports this contest-and-prize sequence."
+    recommended_fix: "Revise to describe Martu winning an athletic contest during the festival and requesting the daughter of Numushda as his prize, which then raises the question of his suitability as a nomadic god among settled city-dwellers."
+
+  - claim_number: 8
+    kind: "SILENT-BRIDGE"
+    severity: "HIGH"
+    claim: "The friend's speech functions as an ethnographic catalogue that reflects the urban Sumerian perception of Amorite peoples: the nomads are defined by what they lack relative to settled civilisation, including proper food preparation, permanent dwelling, and funerary rites."
+    issue: "This claim presents scholarly interpretation as factual description without an [INFERENCE:] marker. The characterization of the speech as an 'ethnographic catalogue' reflecting 'urban Sumerian perception' where nomads are 'defined by what they lack' is a modern scholarly analytical framework, not a direct textual statement. The text contains the speech, but the framing as a 'catalogue' organized around 'lack' is interpretive. Additionally, the citation includes Kramer 1961 pp. 101–103, but this should be cross-checked — Kramer's treatment of this text at those pages needs verification."
+    evidence: "The ETCSL text contains the friend's speech listing Amorite customs. The interpretive framing as an 'ethnographic catalogue' defined by 'lack' is scholarly analysis that should carry an [INFERENCE:] marker. The Kramer 1961 citation at pp. 101–103 could not be verified for this specific composition."
+    recommended_fix: "Add [INFERENCE:] marker to the characterization of the speech as an 'ethnographic catalogue' organized around 'lack.' Keep the factual content (the speech lists Amorite customs) but mark the analytical framing as interpretive."
+
+  - claim_number: 12
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The didactic function of the text lies in the bride's willingness to accept integration across cultural boundaries, a message that may reflect the historical reality of Amorite absorption into Mesopotamian urban society during the late third and early second millennium BCE."
+    issue: "The claim about Amorite absorption reflecting historical reality is a standard scholarly position but is here presented as fact rather than scholarly interpretation. The connection between the text's message and historical Amorite integration is an inference. However, the [INFERENCE:] marker on the following paragraph does partially address this by discussing the text's sympathetic treatment. The 'may reflect' hedging is appropriate."
+    evidence: "The historical absorption of Amorites into Mesopotamian society during the Ur III to Old Babylonian period is well attested in the scholarly record. The connection to this specific text's message is interpretive but plausible."
+    recommended_fix: "No major change needed; the 'may reflect' hedging is appropriate. Consider adding an [INFERENCE:] marker to make the interpretive nature more explicit."
+
+  - claim_number: 13
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE: The text's sympathetic treatment of the bride's choice — she is not punished for marrying outside her culture — suggests that by the Old Babylonian period, Amorite integration was an accepted social reality...]"
+    issue: "The inference marker is correctly applied to this claim. However, the stated 'risk' — that 'some scholars read the friend's speech as genuinely cautionary rather than comic' — is itself an unverified scholarly claim. The characterization of scholarly debate on the text's tone is reasonable but could not be verified against specific scholars. The inference is well-constructed and appropriately hedged."
+    evidence: "The inference is legitimate. The risk assessment is reasonable. No specific scholars are named for the 'cautionary' reading, which would strengthen the claim."
+    recommended_fix: "Consider naming a specific scholar who reads the speech as cautionary rather than comic, if one can be identified. Otherwise the marker is correctly applied."

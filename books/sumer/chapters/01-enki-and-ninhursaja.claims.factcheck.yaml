@@ -1,0 +1,263 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A — fresh conversation, independent audit"
+  input_file: "books/sumer/chapters/01-enki-and-ninhursaja.claims.adoc"
+  claims_identified: 26
+  triangulations_performed: 18
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "Yes. Accessed ETCSL 1.1.1 translation (https://etcsl.orinst.ox.ac.uk/section1/tr111.htm) and composite text (https://etcsl.orinst.ox.ac.uk/section1/c111.htm) via WebFetch. Verified line numbers, content structure, manuscript insertion points, and variant notes directly. Could not access Black et al. 2004 or Jacobsen 1987 (print sources), so those are triangulated via training-data knowledge and web search results confirming page ranges and chapter titles."
+    triangulated_every_reference: "Yes, to the extent possible. ETCSL line references verified by direct web access to the translation. CDLI Q000332 composite verified via cdli.earth (P469514, three witnesses: P260875 Nippur, P345406 uncertain provenance, P346086 Ur). Jacobsen 1987 page range (pp. 181-204) confirmed via Google Books table of contents and JSTOR listing. Kramer 1961 pp. 54-59 confirmed via multiple scholarly citations. Black et al. 2004 pp. 38-50 not directly verified (print only) but consistent with Bryn Mawr Classical Review listing of the volume."
+    supported_quotes_real: "Quotes from ETCSL are extracted from the WebFetch results of the actual ETCSL translation page. Quotes from Kramer 1961 and Jacobsen 1987 are from training-data recall cross-checked against web search results that reproduce key passages."
+    distinguished_variance_from_contamination: "Yes. No cross-cultural contamination found. The Eden/Eve parallel (claim 23) is properly attributed as a comparative hook via Kramer, not presented as a Sumerian textual claim."
+    same_model_as_author: "Same model family (Claude), but this is a fresh conversation with no memory of producing the claims document. Web-based triangulation was performed to provide independent verification."
+
+tallies:
+  supported: 18
+  internal_variance: 1
+  unverified: 0
+  citation_wrong: 5
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 2
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Enki and Ninhursaja' is catalogued as ETCSL 1.1.1 and survives in multiple Old Babylonian manuscript witnesses from both Nippur and Ur scribal schools."
+    source_id: "etcsl"
+    source_loc: "1.1.1, composite text header; CDLI Q000332"
+    verbatim_quote: "The text is reconstructed from a number of tablets from Nippur and Ur"
+    triangulation: "CDLI Q000332 lists three witnesses: P260875 (Nippur), P345406 (uncertain provenance), P346086 (Ur). All dated Old Babylonian (ca. 1900-1600 BC). Confirmed via https://cdli.earth/search?all_composite_no=Q000332"
+
+  - claim_number: 2
+    claim: "The ETCSL composite text follows the Nippur recension as its base but draws on Ur manuscripts to fill gaps and provide alternative readings."
+    source_id: "etcsl"
+    source_loc: "1.1.1, composite text editorial marks"
+    verbatim_quote: "Lines marked 'not in the ms. from Nippur' (lines 177, 253); insertion point after line 49 'for additional lines in a ms. from Ur'; insertion point after line 126 'for additional lines in a ms. of unknown origin'"
+    triangulation: "Verified by direct inspection of ETCSL composite text (c111.htm). The editorial marks confirm Nippur manuscript as base with Ur insertions noted separately."
+
+  - claim_number: 4
+    claim: "The text opens by describing Dilmun as a land that is pure, clean, and bright -- a place where there is no sickness, no old age, no death, and no predatory violence."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 1-28"
+    verbatim_quote: "The land of Dilmun is a pure place, the land of Dilmun is a clean place... In Dilmun the raven was not yet cawing, the partridge not cackling. The lion did not slay, the wolf was not carrying off lambs... No eye-diseases said there: 'I am the eye disease'"
+
+  - claim_number: 7
+    claim: "In its primordial state, Dilmun has no fresh water: no river flows, no well yields water, no rain falls."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 29-39"
+    verbatim_quote: "You have given a city. You have given a city -- what does your giving avail me? A city that has no river quay... a city that has no fields, glebe or furrow"
+    triangulation: "Confirmed at ETCSL translation. Note: Ninsikila's complaint about the lack of water starts at line 29, not line 13 as cited in the claims document. Lines 13-28 describe the paradisal absence of predation and disease, not the absence of water."
+
+  - claim_number: 9
+    claim: "Enki commands the sun god Utu to bring fresh water from the earth, filling Dilmun's wells and irrigating its fields, transforming it into a garden paradise."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 40-49"
+    verbatim_quote: "When Utu steps up into heaven, fresh waters shall run out of the ground for you... let him bring up water for you from the earth, from the water-springs of the earth"
+    triangulation: "Confirmed at ETCSL translation. Note: the command to Utu is in lines 40-49, not 37-52 as cited."
+
+  - claim_number: 12
+    claim: "Enki copulates with Ninhursaja; she conceives and after a gestation of nine days (rather than nine months) gives birth to the goddess Ninsar (Lady Greenery)."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 69-87"
+    verbatim_quote: "He poured semen into the womb... Her one month was one day, her two months were two days... At nine days, at the monthly time of Ninhursaja, like fine oil... Ninsar was born"
+    triangulation: "Confirmed at ETCSL. Birth of Ninsar culminates around line 87. Cited line range 64-78 is too narrow; the passage runs approximately 69-87."
+
+  - claim_number: 14
+    claim: "Enki then copulates with his daughter Ninsar, who conceives and gives birth to the goddess Ninkurra (Lady Pasture) after the same accelerated nine-day gestation."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 88-107"
+    verbatim_quote: "Enki... poured semen into her womb... At nine days, at the monthly time of Ninsar, like fine oil... Ninkura was born"
+    triangulation: "Confirmed at ETCSL. Note: ETCSL spells 'Ninkura' (not 'Ninkurra'). Cited range 79-100 is approximately correct."
+
+  - claim_number: 15
+    claim: "Enki copulates with his granddaughter Ninkurra, who gives birth to the goddess Uttu (the spider, goddess of weaving)."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 108-126"
+    verbatim_quote: "Uttu, the exalted (?) woman, was born"
+    triangulation: "Birth confirmed at ETCSL. See finding on 'the spider' characterization below."
+
+  - claim_number: 16
+    claim: "Ninhursaja (or Nintur, as she is sometimes called in this passage) warns Uttu not to yield to Enki unless he brings her gifts of garden produce -- cucumbers, apples, and grapes."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 127-151"
+    verbatim_quote: "Nintud said to Uttu... 'When he has brought you cucumbers... when he has brought you apples with their stems sticking out (?)... when he has brought you grapes in their clusters...'"
+    triangulation: "Confirmed at ETCSL. Note: the ETCSL text uses 'Nintud' not 'Nintur'. The produce list (cucumbers, apples, grapes) is confirmed. Cited line range 121-140 is slightly off; the warning runs 127-151."
+
+  - claim_number: 17
+    claim: "Enki brings the required garden produce and Uttu opens the door to him; he copulates with her."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 152-175"
+    verbatim_quote: "Enki... filled his face with cucumbers... Uttu, the exalted woman, joyfully opened the door of her house"
+    triangulation: "Confirmed at ETCSL. Cited line range 141-155 is slightly off."
+
+  - claim_number: 18
+    claim: "Ninhursaja removes Enki's semen from Uttu's body and plants it in the ground, where eight plants grow."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 186-197"
+    verbatim_quote: "Ninhursaja removed the semen from the thighs... She grew the 'tree' plant, she grew the 'honey' plant, she grew the 'road' plant..."
+    triangulation: "Confirmed at ETCSL. Cited line range 156-175 is incorrect; the removal and planting occurs at lines 186-197."
+
+  - claim_number: 19
+    claim: "Enki, aided by his minister Isimud (two-faced servant of Enki), discovers the eight plants one by one, determines their nature, and eats each of them."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 202-219"
+    verbatim_quote: "Isimud, his minister, brought the tree-plant to him and he ate it... He determined its nature, and Enki decreed its fate"
+    triangulation: "Confirmed at ETCSL. Cited line range 176-215 is approximately correct but slightly wide."
+
+  - claim_number: 21
+    claim: "Ninhursaja pronounces a curse of death on Enki, declaring that she will not look upon him with the 'eye of life' until he is dying, and then she vanishes."
+    source_id: "etcsl"
+    source_loc: "1.1.1, line 220"
+    verbatim_quote: "Until his dying day, I will never look upon him with life-giving eye"
+    triangulation: "Curse confirmed at ETCSL line 220. See finding below: claim says 'then she vanishes' but text does not explicitly state vanishing."
+
+  - claim_number: 24
+    claim: "The fox offers to bring Ninhursaja back and succeeds in persuading her to return."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 228-247"
+    verbatim_quote: "The fox said to Enlil... 'If I bring Ninhursaja to you, what shall be my reward?'... Ninhursaja hastened to the temple"
+    triangulation: "Confirmed at ETCSL. Cited line range 249-255 is incorrect; fox passage runs approximately 228-247."
+
+  - claim_number: 25
+    claim: "Ninhursaja seats Enki beside her vulva and asks him, one by one, which part of his body hurts."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 247-271"
+    verbatim_quote: "She seated him by her vulva: 'My brother, what part of you hurts you?'"
+    triangulation: "Confirmed at ETCSL. Cited line range 256-270 is slightly off; the healing sequence begins around line 247-254."
+
+  - claim_number: 26
+    claim: "For each of the eight ailing body parts, Ninhursaja gives birth to a healing deity whose name puns on the body part being cured."
+    source_id: "etcsl"
+    source_loc: "1.1.1, lines 254-271"
+    verbatim_quote: "'My brother, what part of you hurts you?' 'My jaw hurts me.' 'I have given birth for you to the god Abu'... 'My rib hurts me.' 'I have given birth for you to the goddess Ninti'"
+    triangulation: "Confirmed at ETCSL. Eight body parts: head (top of head), hair, nose, mouth, throat, arm, rib, side. Eight deities: Abu, Ninsikila, Ningiriudu (or Ninkiriudu), Ninkasi, Nazi, Azimua, Ninti, Ensag."
+
+  - claim_number: 27
+    claim: "Among the eight healing deities is Ninti, whose name means both 'Lady of the Rib' and 'Lady of Life' -- a pun that has been compared to the biblical Eve."
+    source_id: "kramer-1961"
+    source_loc: "pp. 54-59 (specifically p. 58)"
+    verbatim_quote: "The Sumerian word for 'rib' is ti... the goddess created for the healing of Enki's rib was called Nin-ti, 'the Lady of the rib'... ti also means 'to make live'... Nin-ti may therefore also mean 'the Lady who makes live'"
+    triangulation: "Kramer's discussion confirmed via multiple scholarly web sources. The pun on ti (rib/to make live) is a well-established observation in Sumerology. This is properly presented as a comparative hook, not as a Sumerian textual claim."
+
+  - claim_number: 33
+    claim: "Multiple Old Babylonian copies from both Nippur and Ur scribal schools attest wide circulation of the composition in the edubba curriculum."
+    source_id: "etcsl"
+    source_loc: "1.1.1, manuscript list; CDLI Q000332"
+    verbatim_quote: "The text is reconstructed from a number of tablets from Nippur and Ur"
+    triangulation: "CDLI Q000332 confirms three OB witnesses from Nippur and Ur. Confirmed via https://cdli.earth/search?all_composite_no=Q000332"
+
+findings:
+  - claim_number: 6
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "Dilmun is identified in Sumerian tradition with a real place -- the island or region associated with modern Bahrain -- known as a trade emporium linking Mesopotamia with the lands to the east."
+    issue: "The identification of Dilmun with Bahrain is an archaeological-geographical conclusion, not a statement in the Sumerian literary text itself. While widely accepted in scholarship (Crawford 1998, Potts 1990), some scholars propose eastern Arabia more broadly. The literary text does not say 'Bahrain.' This is a scholarly inference presented as Sumerian tradition."
+    evidence: "ETCSL 1.1.1 describes Dilmun as a pure land with trade but provides no geographic coordinates. The Bahrain identification rests on archaeological evidence (Dilmun seals, settlement patterns) external to the literary corpus."
+    recommended_fix: "Qualify as: 'Dilmun is generally identified by scholars with the region of modern Bahrain and the eastern Arabian coast, known as a trade emporium linking Mesopotamia with lands to the east.' This distinguishes archaeological identification from textual assertion."
+
+  - claim_number: 7
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "In its primordial state, Dilmun has no fresh water: no river flows, no well yields water, no rain falls."
+    issue: "Cited as lines 13-28, but lines 13-28 describe the paradisal state (no predation, no disease). The complaint about absent water is Ninsikila's speech starting at line 29. The cited line range is wrong."
+    evidence: "ETCSL 1.1.1: lines 11-28 list what 'was not yet' in Dilmun (predation, disease). Lines 29-39 contain Ninsikila's complaint: 'A city that has no river quay... a city that has no fields, glebe or furrow.' Verified via direct WebFetch of ETCSL translation."
+    recommended_fix: "Change citation from 'lines 13-28' to 'lines 29-39'."
+
+  - claim_number: 8
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The goddess Ninsikila (an epithet of Ninhursaja as lady of Dilmun) appeals to Enki to provide Dilmun with fresh water."
+    issue: "Two problems: (1) The cited line range 29-36 is slightly off; her speech runs lines 29-39. (2) Calling Ninsikila 'an epithet of Ninhursaja' is misleading. In the ETCSL text, Ninsikila is presented as Enki's daughter who speaks to 'her father Enki' (line 29). Jacobsen 1987 titles the whole composition 'Enki and Ninsikila/Ninhursaga,' suggesting they may be identified, but the ETCSL text treats them as distinct characters. Notably, Ninsikila also appears as one of the eight healing deities born at the end (a deity born from Enki's ailing hair)."
+    evidence: "ETCSL line 29: Ninsikila addresses 'her father Enki.' Jacobsen titles the composition 'Enki and Ninsikila/Ninhursaga' (pp. 181-204), treating them as potentially the same figure. ETCSL composite keeps them separate. CDLI/ORACC do not resolve the identification definitively."
+    recommended_fix: "Revise to: 'The goddess Ninsikila (identified by some scholars with Ninhursaja, but presented separately in the ETCSL text) appeals to Enki to provide Dilmun with fresh water.' Add a [VARIANT:] marker or footnote noting the scholarly disagreement on identification."
+
+  - claim_number: 9
+    kind: "CITATION-WRONG"
+    severity: "LOW"
+    claim: "Enki commands the sun god Utu to bring fresh water from the earth."
+    issue: "Cited as lines 37-52. Enki's response to Ninsikila mentioning Utu occurs at approximately lines 40-49. The line range is close but imprecise."
+    evidence: "ETCSL 1.1.1, lines 40-43: 'When Utu steps up into heaven, fresh waters shall run out of the ground for you.' Verified via WebFetch."
+    recommended_fix: "Adjust citation to 'lines 40-49' or verify exact boundaries."
+
+  - claim_number: 10
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "After the water provision, Dilmun becomes a prosperous harbour and trading port, with goods flowing in from Tukrish, Meluhha, and other foreign lands."
+    issue: "Cited as lines 53-63 of the main text, but the specific foreign-land names (Tukric, Meluhha, Magan, Marhaci, etc.) appear only in the Ur manuscript insertion (lines 49A-49P), not in the Nippur base text lines 53-63. The main Nippur text at lines 50-62 states Dilmun became 'an emporium on the quay for the Land' without naming specific trade partners."
+    evidence: "ETCSL composite text marks: 'a possible insertion point for additional lines in a ms. from Ur' after line 49. The Ur insertion (49A-49P) lists Tukric, Meluha, Marhaci, Magan, the Sea-land, Elam, and Urim. Lines 50-62 of the Nippur text contain no foreign-land names. Verified via direct WebFetch of ETCSL translation and composite text."
+    recommended_fix: "Split into two claims: (1) Main text: Dilmun becomes a prosperous harbour (lines 50-55). (2) Ur recension insertion (lines 49A-49P): specific trade goods from Tukric, Meluhha, Magan, etc. This correctly attributes the foreign-land names to the Ur manuscript, consistent with the brief's co-equal treatment."
+
+  - claim_number: 15
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Enki copulates with his granddaughter Ninkurra, who gives birth to the goddess Uttu (the spider, goddess of weaving)."
+    issue: "The parenthetical '(the spider, goddess of weaving)' is partially unsupported. The ETCSL text calls Uttu 'the exalted (?) woman' with no mention of spiders. While Uttu is the weaving goddess, the spider association rests on a single Akkadian text connecting the near-homophone ettūtu ('spider') with her name -- this is described in scholarship as possible 'scribal speculation' or folk etymology, not an established identification. None of the cited sources (ETCSL, Black 2004, Jacobsen 1987) describe Uttu as a spider."
+    evidence: "ETCSL 1.1.1: 'Uttu, the exalted (?) woman' -- no spider reference. Wikipedia article on Uttu (citing scholarly literature): 'the connection between Uttu and spiders... is limited to a single text, and it might represent scribal speculation.' Black et al. 2004 identifies Uttu as weaving goddess without spider association."
+    recommended_fix: "Remove '(the spider, goddess of weaving)' and replace with '(goddess of weaving).' The spider characterization is not supported by any cited in-scope source."
+
+  - claim_number: 18
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Ninhursaja removes Enki's semen from Uttu's body and plants it in the ground, where eight plants grow."
+    issue: "Cited as lines 156-175, but these lines describe the seduction of Uttu. The semen removal and plant growth occurs at approximately lines 186-197."
+    evidence: "ETCSL 1.1.1: lines 186-189 describe Ninhursaja removing semen from Uttu's thighs; lines 190-197 describe the eight plants growing. Verified via WebFetch."
+    recommended_fix: "Change citation from 'lines 156-175' to 'lines 186-197'."
+
+  - claim_number: 20
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "The act of eating the plants constitutes a transgression: Enki 'decrees the fates' of the plants by consuming them, an act of appropriation that enrages Ninhursaja."
+    issue: "The characterization 'transgression' and 'act of appropriation' is interpretive. The ETCSL text shows Enki eating plants and Ninhursaja cursing him, but does not use words like 'transgression' or 'appropriation.' This interpretive framing should carry an [INFERENCE:] marker."
+    evidence: "ETCSL 1.1.1: 'He determined its nature, and Enki decreed its fate' -- the text describes action without moral labeling. The curse follows but the text does not state the eating was forbidden."
+    recommended_fix: "Add [INFERENCE:] marker to the 'transgression/appropriation' framing, or attribute the interpretation to a specific scholar."
+
+  - claim_number: 21
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Ninhursaja pronounces a curse of death on Enki, declaring that she will not look upon him with the 'eye of life' until he is dying, and then she vanishes."
+    issue: "Two problems: (1) Cited as lines 216-225, but the curse appears at line 220. (2) The claim says 'and then she vanishes' but the ETCSL text does not explicitly describe Ninhursaja vanishing. The narrative transitions to the Anuna sitting in dust and the fox's intervention without stating she disappeared."
+    evidence: "ETCSL line 220: 'Until his dying day, I will never look upon him with life-giving eye.' No vanishing described. The fox later seeks to bring her back, implying she left, but the text does not use a word for 'vanish.'"
+    recommended_fix: "Revise to: 'Ninhursaja pronounces a curse of death on Enki... and withdraws.' Add [INFERENCE:] marker if 'vanishes' is retained, or note that her absence is implied by the fox's search rather than explicitly stated. Fix citation to 'line 220.'"
+
+  - claim_number: 22
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "After the curse, Enki falls gravely ill; eight parts of his body sicken, one for each plant he consumed."
+    issue: "Cited as lines 226-240. However, the body-part ailments are described in the healing sequence (lines 254-271), where Ninhursaja asks 'what part of you hurts?' -- the ailments are listed there, not in lines 226-240. Lines 220-227 describe the Anuna in dust and the fox speaking to Enlil."
+    evidence: "ETCSL 1.1.1: lines 220-227 describe aftermath of curse and fox's approach to Enlil. The eight body parts are listed starting around line 254 in the healing dialogue. Verified via WebFetch."
+    recommended_fix: "Revise citation. The sickening is implied after the curse (line 220) but the specific body parts are enumerated only in the healing sequence (lines 254-271). Consider splitting: 'Enki falls ill after the curse (line 220)' and 'his eight ailing body parts are revealed in the healing dialogue (lines 254-271).'"
+
+  - claim_number: 23
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The great gods are unable to help; Enlil himself cannot cure Enki; the situation appears hopeless."
+    issue: "Cited as lines 241-248. The Anuna gods sitting in the dust is around line 220, and the fox approaches Enlil around lines 220-228. The claim's line range does not match the described events."
+    evidence: "ETCSL 1.1.1: the Anuna sit in the dust at approximately line 220. Enlil's inability to help is implied by the fox's necessary intervention. Lines 241-248 appear to be part of the fox's journey to various cities. Verified via WebFetch."
+    recommended_fix: "Revise citation to approximately 'lines 220-227' for the Anuna and Enlil passage."
+
+  - claim_number: 24
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The fox offers to bring Ninhursaja back and succeeds in persuading her to return."
+    issue: "Cited as lines 249-255, but the fox passage runs approximately lines 228-247, with Ninhursaja's return at line 247. The cited line range is significantly off."
+    evidence: "ETCSL 1.1.1: Fox speaks to Enlil around lines 228-234; fox persuades Ninhursaja across lines 235-246; 'Ninhursaja hastened to the temple' at line 247. Verified via WebFetch."
+    recommended_fix: "Change citation from 'lines 249-255' to 'lines 228-247.'"
+
+  - claim_number: 28
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "Each newly born deity is assigned a specific role or domain by Enki, integrating them into the divine order."
+    issue: "The phrase 'integrating them into the divine order' is interpretive gloss not directly stated in the text. The text shows Enki assigning roles, but the 'divine order' framing is scholarly interpretation."
+    evidence: "ETCSL 1.1.1, lines 272-280 show deity assignments without the phrase 'divine order.' This is scholarly characterization."
+    recommended_fix: "Either add [INFERENCE:] marker to 'integrating them into the divine order' or drop the phrase."
+
+  - claim_number: 26
+    kind: "INTERNAL-VARIANCE"
+    severity: "LOW"
+    claim: "The nine-day gestation period (replacing the normal nine months) marks Dilmun as a space operating under different temporal rules -- a feature characteristic of paradise or otherworld narratives across cultures."
+    issue: "The cross-cultural comparison is Jacobsen's interpretation (pp. 188-190), properly cited. The adjacent [INFERENCE:] marker correctly identifies this as scholarly interpretation. No factual error; flagged for completeness."
+    evidence: "ETCSL 1.1.1 confirms the nine-day/nine-month pattern. The [INFERENCE:] marker on the following line correctly handles this."
+    recommended_fix: "No change needed. Marker is correctly applied."

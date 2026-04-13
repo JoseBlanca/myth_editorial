@@ -1,0 +1,81 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/27-lugalbanda-and-the-anzud-bird.claims.adoc"
+  claims_identified: 19
+  triangulations_performed: 19
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online. ETCSL 1.8.2.2 confirmed."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 14
+  internal_variance: 0
+  unverified: 4
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 1
+
+findings:
+  - claim_number: 4
+    kind: "GLOSSARY-VIOLATION"
+    severity: "LOW"
+    claim: "Anzud described as 'an enormous divine eagle.'"
+    issue: "Glossary defines Anzud as 'divine lion-headed eagle' but the claim omits the lion-headed detail."
+    evidence: "glossary.yaml: Anzud — first_mention_gloss includes 'lion-headed.'"
+    recommended_fix: "Change to 'divine lion-headed eagle.'"
+
+  - claim_number: 8
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Lugalbanda's care creates an 'obligation that the parent bird must fulfill.'"
+    issue: "The 'obligation' framing may overstate the transactional nature of the gift exchange. Vanstiphout discusses reciprocity but the exact formulation needs verification."
+    evidence: "Vanstiphout 2003 discusses reciprocity but specific phrasing at pp. 230-235 cannot be confirmed."
+    recommended_fix: "Soften to 'establishing a reciprocal relationship' or verify exact phrasing."
+
+  - claim_number: 10
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The Anzud's divine radiance (me-lam) at lines 140-160."
+    issue: "Whether me-lam specifically appears at these lines of ETCSL 1.8.2.2 cannot be confirmed without live access."
+    evidence: "Anzud has me-lam in Sumerian tradition broadly but the specific attribution to these lines is uncertain."
+    recommended_fix: "Verify me-lam appears at lines 140-160 of ETCSL 1.8.2.2."
+
+  - claim_number: 20
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Inanna instructs the army on 'how to overcome Aratta's defenses.'"
+    issue: "The claim is generic; in the ETCSL text, Inanna gives specific instructions involving a particular stratagem, not generic military advice."
+    evidence: "Training-data recall: Inanna's instructions involve a specific symbolic or ritual act."
+    recommended_fix: "Describe Inanna's specific counsel rather than a generic summary."
+
+  - claim_number: 21
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "'Impossible without the Anzud's gift.'"
+    issue: "Editorial interpretation without [INFERENCE:] marker. The text describes the return but does not state impossibility."
+    evidence: "The text describes Lugalbanda running back but does not editorialize about impossibility."
+    recommended_fix: "Add [INFERENCE:] marker or rephrase."
+
+  - claim_number: 22
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The abandoned soldier has become Enmerkar's most valuable asset through piety and reciprocity rather than martial prowess."
+    issue: "Thematic summary rather than direct textual claim. The concluding lines contain a praise formula, not an explicit piety-vs-prowess contrast."
+    evidence: "The composition ends with a praise formula."
+    recommended_fix: "Add [INFERENCE:] marker."
+
+  - claim_number: 24
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The text valorizes 'practical humility over conventional heroic ambition.'"
+    issue: "The specific phrase is the claims author's formulation. Jacobsen discusses the significance but may not use this exact framing."
+    evidence: "Jacobsen 1987 discusses Lugalbanda's choice but exact formulation is uncertain."
+    recommended_fix: "Add [INFERENCE:] marker or verify Jacobsen's language."

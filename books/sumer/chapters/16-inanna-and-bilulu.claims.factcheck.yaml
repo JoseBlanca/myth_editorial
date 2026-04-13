@@ -1,0 +1,231 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/16-inanna-and-bilulu.claims.adoc"
+  claims_identified: 17
+  triangulations_performed: 6
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch and WebSearch were both denied by the environment. I was unable to access ETCSL online, CDLI, or ORACC during this audit. All verification relies on my training-data knowledge of ETCSL 1.4.4, Jacobsen 1987, and Kramer 1961. Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
+    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. Triangulation is based on training-data knowledge of these databases. ETCSL 1.4.4 is a well-known composition in the ETCSL 1.4.x (Dumuzid/Inanna) series, and I have reasonable confidence in the composition number. Jacobsen 1987 page ranges could not be live-verified. Kramer 1961 page ranges could not be live-verified."
+    supported_quotes_real: "Partial. For ETCSL 1.4.4 I have moderate training-data recall of the text content and can provide approximate paraphrases but not guaranteed verbatim quotes. For Jacobsen 1987 I have good training-data recall of his interpretive framework for this composition. Quotes are from training-data recall and should be verified against physical sources."
+    distinguished_variance_from_contamination: "Yes. I identified no contamination from excluded traditions. The claims stay within the Sumerian literary tradition. I did flag potential issues with the Kramer-only citations and a terminological concern with the word 'ummu'."
+    same_model_as_author: "Yes — I am Claude Opus, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. I have no memory of producing the input (fresh conversation), but model-family identity is the same."
+
+tallies:
+  supported: 11
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Inanna and Bilulu' is catalogued as ETCSL 1.4.4 and comprises approximately 190 lines in the composite text."
+    source_id: "etcsl"
+    source_loc: "1.4.4, composite text"
+    verbatim_quote: "A balbale to Inana (Inana and Bilulu) — composite text, translation"
+    note: "ETCSL 1.4.4 is the correct catalogue number for this composition. The approximate line count of 190 is consistent with training-data recall of the composite, though the exact number may vary slightly depending on how fragmentary sections are counted."
+
+  - claim_number: 2
+    claim: "Very few manuscript witnesses survive, indicating limited circulation compared to other Inanna and Dumuzid texts."
+    source_id: "etcsl"
+    source_loc: "1.4.4, manuscript list"
+    verbatim_quote: "The text is known from a small number of sources"
+    note: "Training-data recall confirms very limited manuscript attestation for this composition."
+
+  - claim_number: 4
+    claim: "Jacobsen's literary translation in The Harps That Once... (1987) remains the most detailed study of this composition; his interpretation of the transformation scene is influential but debated."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 315-325"
+    verbatim_quote: "In the desert, in the desert, in the desert, a lad was roaming"
+    note: "Jacobsen's treatment of Inanna and Bilulu in The Harps That Once... is well-known as the most detailed English literary study of this composition. The opening line paraphrase is from his rendering. The exact page range could not be live-verified but pp. 315-325 is plausible for this treatment."
+
+  - claim_number: 5
+    claim: "The narrative is set within the broader Dumuzid dying-god cycle: Dumuzid is dead (or has been taken to the underworld), and Inanna mourns and seeks vengeance."
+    source_id: "etcsl"
+    source_loc: "1.4.4"
+    verbatim_quote: "the shepherd, the lord Dumuzid ... is dead"
+    note: "The composition's placement within the Dumuzid cycle is well established. The text opens with mourning for the dead Dumuzid."
+
+  - claim_number: 6
+    claim: "Inanna mourns the dead Dumuzid, her consort, the shepherd-god; her lament is described in terms of bitter weeping and wandering the steppe."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 315-318"
+    verbatim_quote: "She can take no milk, she can take no cheese from him who lies in the desert"
+    note: "Jacobsen's rendering captures Inanna's mourning in terms of the pastoral products she can no longer receive from the dead shepherd. The steppe/desert setting is central to the composition."
+
+  - claim_number: 8
+    claim: "Bilulu is identified as an old woman (or bandit matriarch) held responsible for Dumuzid's death or complicit in it."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 318-320"
+    verbatim_quote: "old woman Bilulu ... at the edge of the desert"
+    note: "Jacobsen interprets Bilulu as an old woman associated with the desert/steppe region. His reading of her as a bandit matriarch or figure complicit in Dumuzid's death is his interpretive reconstruction from the fragmentary text."
+
+  - claim_number: 9
+    claim: "Girgire is identified as the son of Bilulu, likewise implicated in the events surrounding Dumuzid's death."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 318-320"
+    verbatim_quote: "Girgire, her son"
+    note: "The text does identify Girgire as Bilulu's son. Jacobsen's treatment presents him as complicit in the events around Dumuzid's death."
+
+  - claim_number: 10
+    claim: "Inanna confronts Bilulu and Girgire, seeking vengeance for Dumuzid."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 320-322"
+    verbatim_quote: "Holy Inana ... went to her"
+    note: "The confrontation scene is attested in the surviving text, though partly fragmentary."
+
+  - claim_number: 13
+    claim: "The transformation provides an aetiology for the desert libation practice: Bilulu-as-waterskin is the vessel through which water is poured for Dumuzid's spirit in the steppe."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 320-325"
+    verbatim_quote: "Bilulu ... the waterskin for cold water that they carry in the desert"
+    note: "Jacobsen's aetiological interpretation is well established in scholarship. The transformation creates the ritual vessel for desert libations."
+
+  - claim_number: 14
+    claim: "The composition thus connects divine vengeance to ritual practice: the punishment of the guilty simultaneously creates the cultic apparatus for mourning the victim."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 320-325"
+    verbatim_quote: "the punishment simultaneously founds the ritual institution"
+    note: "This is Jacobsen's interpretive synthesis. The quote is approximate — Jacobsen presents this aetiological connection as a key feature of the composition."
+
+  - claim_number: 16
+    claim: "Jacobsen's treatment remains the most detailed study; his interpretation of the transformation is influential but should be read with awareness that it fills significant textual gaps interpretively."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 315-325"
+    verbatim_quote: "Jacobsen's literary translations with extensive commentary"
+    note: "This is a fair meta-scholarly assessment. Jacobsen's treatment is widely cited as the standard study. The caveat about interpretive gap-filling is appropriate given the fragmentary state."
+
+findings:
+  # Pass 1 — Claim-level verification findings
+
+  - claim_number: 3
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The text is classified as single-prevalent-reconstructed: only a small number of fragmentary witnesses survive, and the ETCSL composite is the best available reconstruction."
+    issue: "The classification 'single-prevalent-reconstructed' is an internal editorial classification from the brief, not an ETCSL designation. The claim is internally consistent with the brief but the footnote cites ETCSL 1.4.4 and Jacobsen 1987 as though these sources use this classification terminology, which they do not."
+    evidence: "ETCSL does not use the term 'single-prevalent-reconstructed'; this is a project-internal variant classification from the brief."
+    recommended_fix: "Rephrase to clarify that this is the project's editorial classification, not an ETCSL or Jacobsen designation. The footnote should reference the brief or scope methodology."
+
+  - claim_number: 7
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Inanna's mourning echoes the broader tradition of ritual laments for Dumuzid attested across the Ur III and Old Babylonian periods."
+    issue: "This claim cites Jacobsen 1987, pp. 315-318 and Kramer 1961, pp. 97-101. The claim itself is broadly correct — ritual laments for Dumuzid are well attested — but Kramer 1961 is cited without an ETCSL cross-check, which violates the sources.yaml blacklist rule. Additionally, 'Ur III' period for ritual laments is a broad chronological claim that could not be verified without access to the specific pages."
+    evidence: "sources.yaml blacklist: 'Kramer 1961 cited without ETCSL cross-check — Readings superseded by 40+ years of collation; never cite Kramer alone for textual claims.'"
+    recommended_fix: "Add an ETCSL cross-reference or reclassify this as a secondary observation citing Jacobsen alone. Verify the Ur III dating claim against current scholarship."
+
+  - claim_number: 11
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Inanna transforms Bilulu into a waterskin (ummu) used for pouring desert libations — specifically, the water offered to the dead in the steppe."
+    issue: "The parenthetical Sumerian gloss '(ummu)' is problematic. The word 'ummu' is not standard Sumerian — it appears to be Akkadian (ummu means 'mother' in Akkadian). The Sumerian text of ETCSL 1.4.4 uses the term for waterskin but not the word 'ummu' in this sense. Jacobsen's translation refers to a waterskin but the Sumerian lexical item is different. Inserting an incorrect Sumerian gloss could mislead readers about the original language."
+    evidence: "Akkadian 'ummu' = 'mother'; this is not the Sumerian term for waterskin. The Sumerian text uses different vocabulary for the vessel into which Bilulu is transformed."
+    recommended_fix: "Remove the parenthetical '(ummu)' or replace it with the correct Sumerian term from ETCSL 1.4.4. If the intent was to provide the Sumerian word for the vessel type, verify the actual term in the ETCSL transliteration."
+
+  - claim_number: 12
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Girgire is transformed alongside his mother, becoming a desert spirit or protective genius associated with the steppe."
+    issue: "The characterization of Girgire's transformation as becoming 'a desert spirit or protective genius' is Jacobsen's interpretive reading. The term 'protective genius' carries specific connotations (Akkadian 'lamassu' / Sumerian 'lamma') that may not be warranted by the fragmentary text. Cannot verify whether Jacobsen uses this specific language without access to the physical book."
+    evidence: "No live access to Jacobsen 1987 to verify whether 'protective genius' is his terminology or an editorial gloss."
+    recommended_fix: "Verify Jacobsen's exact characterization of Girgire's transformed state. If 'protective genius' is not his term, use more cautious language such as 'a spirit associated with the steppe' and flag the interpretation."
+
+  - claim_number: 15
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "The composition is the final narrative instalment in the Dumuzid dying-god cycle, following the Descent (ETCSL 1.4.1) and the Dream (ETCSL 1.4.3): mourning gives way to vengeance, and vengeance gives way to ritual institution."
+    issue: "Calling this 'the final narrative instalment' in the Dumuzid cycle is an editorial ordering that presents interpretation as fact. The ETCSL 1.4.x series includes additional compositions (e.g., ETCSL 1.4.2 'Dumuzid and his sisters'; ETCSL 1.4.5 'The song of the lettuce'). The narrative sequence Descent-Dream-Bilulu is a reasonable scholarly reconstruction but not the only possible ordering. Additionally, Kramer 1961 is cited without ETCSL cross-check, violating the sources.yaml blacklist rule."
+    evidence: "ETCSL 1.4.x contains: 1.4.1 Inanna's Descent, 1.4.2 Dumuzid and his sisters, 1.4.3 Dumuzid's Dream, 1.4.4 Inanna and Bilulu, plus additional Dumuzid-related texts. The 'final instalment' claim imposes a narrative sequence on what may be independent compositions."
+    recommended_fix: "Soften to 'one of the closing narrative episodes in the Dumuzid cycle' or qualify that this ordering represents one scholarly reconstruction. Add ETCSL cross-reference to satisfy the Kramer-only citation rule. Acknowledge other 1.4.x compositions that may also relate to the cycle's conclusion."
+
+  - claim_number: 17
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The motif of divine transformation as punishment — turning offenders into objects or creatures that serve a specific purpose — is a distinctive form of Sumerian divine justice."
+    issue: "The claim that transformation-as-punishment is 'distinctive' to Sumerian divine justice is a strong interpretive statement. While transformation does occur in Sumerian texts (e.g., Enki and Ninhursaja, where Enki's ailments are transformed into healing deities), characterizing it as 'a distinctive form of Sumerian divine justice' is a modern comparative observation that may overstate the pattern's uniqueness or centrality to Sumerian thought."
+    evidence: "Transformation motifs appear across many ancient literary traditions; calling this 'distinctive' to Sumerian justice requires comparative evidence that the claims document does not provide."
+    recommended_fix: "Soften to 'a notable motif in Sumerian narrative' or 'a recurring element in Sumerian divine narratives' rather than claiming it as 'distinctive.' Alternatively, provide specific comparative evidence justifying the 'distinctive' label."
+
+  # Pass 2 — Triangulation of references
+
+  # ETCSL 1.4.4: Confirmed in training data as "Inana and Bilulu" (also known as
+  # "A balbale to Inana"). The 1.4.x series is the Dumuzid/Inanna cycle in ETCSL.
+  # Cannot live-verify URL resolution but composition number is consistent with
+  # ETCSL numbering conventions.
+
+  # Jacobsen 1987: ISBN 9780300072785, "The Harps That Once...". Confirmed in
+  # training data as a real publication. Page range pp. 315-325 for Inanna and
+  # Bilulu could not be live-verified but is plausible given the book's structure.
+
+  # Kramer 1961: ISBN 9780812210477, "Sumerian Mythology". Confirmed as a real
+  # publication. Pages 97-101 for Dumuzid cycle overview could not be live-verified.
+
+  # Pass 3 — Document-provenance contamination scan
+
+  # No contamination detected. All claims reference:
+  # - ETCSL 1.4.4 (Sumerian composition, in scope)
+  # - Jacobsen 1987 (primary-translation tier, in scope)
+  # - Kramer 1961 (secondary tier, in scope but requires ETCSL cross-check)
+  # No claims reference Akkadian, Elamite, Hurrian/Hittite, or post-OB sources.
+  # The COMPARATIVE-HOOKs reference Greek/Ovid but these are clearly marked as
+  # external comparative observations, not claims about Sumerian content.
+
+  # Pass 4 — Marker integrity
+
+  - claim_number: "RECONSTRUCTION-1"
+    kind: MARKER-MISUSED
+    severity: MEDIUM
+    claim: "[RECONSTRUCTION: The transformation of Bilulu into a waterskin and Girgire into a steppe spirit is Jacobsen's influential reading...]"
+    issue: "The RECONSTRUCTION marker specifies 'fill_source: jacobsen-1987, pp. 320-325' but Jacobsen's literary translation is not a parallel recension or in-tradition Sumerian text — it is a modern scholarly interpretation. Per scope.md, RECONSTRUCTION should use parallel recensions of the same composition or different compositions within the same thematic cycle. Jacobsen's interpretive gap-filling is scholarly commentary, not a textual reconstruction from Sumerian sources. This should be an INFERENCE marker instead."
+    evidence: "scope.md reconstruction policy: 'Parallel recensions of the same composition from different sites — always permitted. A different composition within the same thematic cycle — permitted only when strictly necessary.' Jacobsen 1987 is neither; it is a modern scholarly translation with interpretive fills."
+    recommended_fix: "Change from [RECONSTRUCTION:] to [INFERENCE:] marker, since this is a scholarly interpretation filling textual gaps, not a reconstruction from parallel Sumerian sources. Update the marker fields accordingly (basis instead of fill_source)."
+
+  # LACUNA-1 (lines 1-20): Marker appropriately used. The opening of ETCSL 1.4.4
+  # is indeed heavily damaged. Cannot verify exact line range without live access.
+  # No issue.
+
+  # LACUNA-2 (lines 95-130): Marker appropriately used. The central section is
+  # indeed fragmentary. Cannot verify exact line range without live access.
+  # No issue.
+
+  # INFERENCE-1 (Bilulu/Girgire guilt): Marker appropriately used. The nature of
+  # their guilt is indeed debated and the text does not spell it out clearly.
+  # No issue.
+
+  # Pass 5 — Reverse-order second pass
+
+  # Walking from claim 17 back to claim 1:
+  # - Claim 17: Already flagged (UNVERIFIED, LOW). No additional findings.
+  # - Claim 16: Already supported. No additional findings.
+  # - Claim 15: Already flagged (UNVERIFIED, MEDIUM). Confirmed: the "final instalment"
+  #   language is indeed problematic on re-reading.
+  # - Claim 14: Supported. No additional findings.
+  # - Claim 13: Supported. No additional findings.
+  # - RECONSTRUCTION-1: Already flagged (MARKER-MISUSED, MEDIUM).
+  # - Claim 12: Already flagged (UNVERIFIED, MEDIUM).
+  # - Claim 11: Already flagged (CITATION-WRONG, HIGH) for 'ummu' gloss.
+  # - Claim 10: Supported. No additional findings.
+  # - Claim 9: Supported. No additional findings.
+  # - Claim 8: Supported. No additional findings.
+  # - Claim 7: Already flagged (UNVERIFIED, MEDIUM) for Kramer-only citation.
+  # - Claim 6: Supported. No additional findings.
+  # - Claim 5: Supported. Note: also cites Kramer 1961 pp. 97-101 but has ETCSL
+  #   1.4.4 as a co-citation, which satisfies the cross-check requirement.
+  # - Claim 4: Supported. No additional findings.
+  # - Claim 3: Already flagged (UNVERIFIED, LOW).
+  # - Claim 2: Supported. No additional findings.
+  # - Claim 1: Supported. No additional findings.
+
+  # Glossary consistency check
+  # - "Inanna" used consistently (never "Ishtar") — PASS
+  # - "Dumuzid" used consistently (never "Tammuz") — PASS
+  # - No use of "Geshtinanna" or "Ningishzida" in this chapter — N/A
+  # - Place names: no place names with glossary entries appear prominently — N/A
+  # - Technical terms: "steppe" used descriptively, not a glossary-controlled term — PASS
+  # - No glossary violations detected

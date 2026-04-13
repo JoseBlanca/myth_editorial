@@ -1,0 +1,73 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/30-death-of-ur-namma.claims.adoc"
+  claims_identified: 22
+  triangulations_performed: 16
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. One potential Akkadian influence flagged (Hubur river)."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 10
+  internal_variance: 0
+  unverified: 7
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+findings:
+  - claim_number: 18
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Black et al. 2004, pp. 56-60 cited for the composition."
+    issue: "This page range likely does not discuss The Death of Ur-Namma. The composition is ETCSL 2.4.1.1 (royal section), while Black et al. 2004 focuses on narrative/debate compositions at these pages. Should cite Fluckiger-Hawker 1999 instead."
+    evidence: "Black et al. 2004 pp. 56-60 discusses different compositions."
+    recommended_fix: "Replace with Fluckiger-Hawker 1999 as primary secondary source."
+
+  - claim_number: 1
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Line numbers use suspiciously round increments (1-30, 30-60, 60-90)."
+    issue: "Throughout the document, line numbers appear fabricated or estimated. Citations above line 240 (claims referencing lines 260-310) may exceed the composition's actual length (~240 lines in ETCSL composite)."
+    evidence: "ETCSL 2.4.1.1 composite is approximately 240 lines."
+    recommended_fix: "Verify all line references against ETCSL. Remove or correct those exceeding actual text length."
+
+  - claim_number: 8
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Underworld river crossing."
+    issue: "May derive from Akkadian tradition (Hubur river) rather than the Sumerian text itself."
+    evidence: "The Hubur is better attested in Akkadian underworld geography."
+    recommended_fix: "Verify against Sumerian text. Flag if from Akkadian tradition."
+
+  - claim_number: 10
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "'Seven' underworld judges."
+    issue: "This specific number may not be explicit in the text."
+    evidence: "The number of judges varies across Sumerian underworld texts."
+    recommended_fix: "Verify against ETCSL text."
+
+  - claim_number: 15
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "Kramer 1961 cited alone."
+    issue: "Violates sources.yaml blacklist rule — Kramer 1961 must not be cited alone for textual claims."
+    evidence: "sources.yaml blacklist."
+    recommended_fix: "Add ETCSL or Fluckiger-Hawker 1999 as co-citation."
+
+  - claim_number: 4
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "'Cosmic grief' characterization."
+    issue: "Interpretive and unverifiable editorial characterization."
+    evidence: "Editorial language."
+    recommended_fix: "Add [INFERENCE:] marker or soften language."

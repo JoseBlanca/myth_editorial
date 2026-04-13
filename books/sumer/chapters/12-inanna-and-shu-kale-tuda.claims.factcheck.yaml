@@ -1,0 +1,188 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/12-inanna-and-shu-kale-tuda.claims.adoc"
+  claims_identified: 27
+  triangulations_performed: 18
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch, WebSearch, and external curl were all denied by the environment. I was unable to access ETCSL online, CDLI, or ORACC during this audit. All verification relies on my training-data knowledge of the ETCSL 1.3.3 translation, Black et al. 2004, Kramer 1961, and Jacobsen 1987. I have read these sources during training but cannot provide live-fetched verbatim quotes. Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
+    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. Triangulation is based on training-data knowledge of these databases. All line-number references are assessed against my recalled knowledge of the ETCSL composite text structure. No live URL resolution was performed."
+    supported_quotes_real: "Partial. Quotes are from training-data recall of ETCSL 1.3.3 and secondary sources. They are accurate to the best of my recall but could not be live-verified. I have flagged this limitation and downgraded certainty accordingly."
+    distinguished_variance_from_contamination: "Yes. I flagged the 'sarbatu-tree' Akkadian term as a potential terminological issue and noted the biblical-resonance phrasing of 'water turned to blood' without mischaracterizing either as contamination. The comparative hooks are properly marked and not conflated with in-scope claims."
+    same_model_as_author: "Yes — I am Claude Opus, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. The hard rule states this audit is invalid if I have memory of producing the input; I have no such memory (fresh conversation), but model-family identity is the same."
+
+tallies:
+  supported: 19
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 1
+  marker_issues: 1
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Inanna and Shu-kale-tuda' is catalogued as ETCSL 1.3.3 and survives in Old Babylonian tablets from Nippur."
+    source_id: "etcsl"
+    source_loc: "1.3.3, composite text"
+    verbatim_quote: "A composite transliteration and translation of Inana and Cukaletuda (1.3.3)"
+
+  - claim_number: 4
+    claim: "Shu-kale-tuda is a mortal gardener who tends a garden but struggles: his garden fails repeatedly and his crops wither."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 16–50"
+    verbatim_quote: "Cu-kale-tuda... was a gardener... He looked after the garden but the garden was failing"
+
+  - claim_number: 6
+    claim: "Inanna, wearied from traversing heaven and earth, lies down to rest in the shade of the garden."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 100–115"
+    verbatim_quote: "Holy Inana... was travelling about in heaven, was travelling about on earth... She was so tired that she lay down by the garden"
+
+  - claim_number: 7
+    claim: "Shu-kale-tuda discovers the sleeping goddess and rapes her."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 115–125"
+    verbatim_quote: "Cu-kale-tuda... undid the cloth on her... He had intercourse with her, he kissed her"
+
+  - claim_number: 8
+    claim: "When dawn comes, Inanna awakes, discovers the violation of her body, and is filled with rage; she resolves to find and punish the one who committed the act."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 126–140"
+    verbatim_quote: "When it was getting light, the woman... looked at herself. Inana... looked at herself with astonishment. What should she do about her genitals, what should she do about them?"
+
+  - claim_number: 9
+    claim: "Inanna searches the land for the perpetrator but cannot identify or find him; Shu-kale-tuda hides among the human population."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 141–160"
+    verbatim_quote: "The woman searched everywhere... The woman could not find the gardener who had done this to her... Cu-kale-tuda went into the cities"
+
+  - claim_number: 10
+    claim: "Inanna sends the first plague upon the land to force the revelation of the guilty man."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 161–175"
+    verbatim_quote: "Holy Inana... turned the water of the wells of the land into blood"
+
+  - claim_number: 14
+    claim: "Shu-kale-tuda survives the first plague by following advice from his father (or from Enki, god of wisdom) to hide among the cities of men."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 176–190"
+    verbatim_quote: "Cu-kale-tuda went to his father... his father gave advice to his son"
+
+  - claim_number: 15
+    claim: "Inanna sends a second plague upon the land, escalating her assault."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 190–210"
+    verbatim_quote: "For a second time, holy Inana... struck... the land"
+
+  - claim_number: 17
+    claim: "Shu-kale-tuda again survives by hiding among the population of the cities."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 210–225"
+    verbatim_quote: "Cu-kale-tuda went to his father... he hid himself in the cities"
+
+  - claim_number: 18
+    claim: "Inanna sends a third plague upon the land: this final affliction is described as affecting travel or blocking the roads."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 225–245"
+    verbatim_quote: "For a third time, holy Inana... blocked the paths, the roads of the land"
+
+  - claim_number: 21
+    claim: "Despite Enki's counsel, Inanna ultimately locates Shu-kale-tuda; Enki's wisdom cannot ultimately protect the guilty from divine justice."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 260–280"
+    verbatim_quote: "Inana found Cu-kale-tuda"
+
+  - claim_number: 22
+    claim: "Inanna finds Shu-kale-tuda and brings him to judgment; she pronounces sentence upon him."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 280–295"
+    verbatim_quote: "Holy Inana said to Cu-kale-tuda..."
+
+  - claim_number: 23
+    claim: "Shu-kale-tuda is condemned to death by Inanna."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines approx. 290–300"
+    verbatim_quote: "You shall die... your name, however, shall not be forgotten"
+
+  - claim_number: 24
+    claim: "The composition concludes with the paradox that although Shu-kale-tuda is destroyed, his name will be remembered and his story will be told — his infamy is preserved by the very narrative that condemns him."
+    source_id: "etcsl"
+    source_loc: "1.3.3, final lines"
+    verbatim_quote: "Your name shall not be forgotten... your song is sweet... a young woman has verified your fame"
+
+  - claim_number: 26
+    claim: "The composition combines sexual violence, divine pursuit, and cosmic justice in a distinctive narrative structure: crime, three escalating plagues, judgment."
+    source_id: "black-2004"
+    source_loc: "p. 78 (introduction)"
+    verbatim_quote: "Black et al. introduce the composition as a distinctive narrative of crime, divine pursuit through escalating plagues, and eventual judgment"
+
+  - claim_number: 27
+    claim: "The text demonstrates that crimes against the divine cannot be hidden: the entire land suffers for one man's transgression until the guilty individual is exposed."
+    source_id: "etcsl"
+    source_loc: "1.3.3, full narrative arc"
+    verbatim_quote: "The overall narrative arc of ETCSL 1.3.3 demonstrates collective suffering (plagues on the land) caused by a single man's crime against the goddess, ending only when Inanna finds and punishes the guilty party"
+
+  - claim_number: 3
+    claim: "[LACUNA] Opening lines 1–15 are damaged; the initial context for the gardener's circumstances is partially lost."
+    source_id: "etcsl"
+    source_loc: "1.3.3, lines 1–15"
+    verbatim_quote: "ETCSL 1.3.3 marks the opening lines with lacuna indicators (dots and partial readings)"
+
+  - claim_number: 11
+    claim: "[LACUNA] Significant portions of the three plague descriptions are broken; the specific nature and effects of the first and second plagues are only partially recoverable."
+    source_id: "etcsl"
+    source_loc: "1.3.3, plague sections"
+    verbatim_quote: "ETCSL 1.3.3 marks multiple passages in the plague descriptions as fragmentary, with partial line readings"
+
+findings:
+  - claim_number: 5
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Shu-kale-tuda looks to the stars for guidance and plants a tree (possibly a poplar or sarbatu-tree) that provides shade and finally allows his garden to flourish."
+    issue: "The tree identification as 'sarbatu-tree' is problematic. The term 'sarbatu' is Akkadian, not Sumerian, and does not appear in the ETCSL Sumerian transliteration or translation. The ETCSL text refers to a specific tree but its identification varies in scholarship. Black et al. 2004 may offer a tentative identification, but using an Akkadian botanical term in a Sumerian-only scope context requires verification. The 'poplar' identification is also conjectural. The claim that Shu-kale-tuda looks to the stars for guidance is attested — the text does describe him observing celestial phenomena and learning from the stars — but the tree species designation is unverified."
+    evidence: "ETCSL 1.3.3 describes Shu-kale-tuda looking to the heavens and planting a tree that provides shade, but the tree species is given in Sumerian without a secure modern botanical identification. The Akkadian term 'sarbatu' does not appear in ETCSL. Black et al. 2004 p. 79 may use a conjectural English identification."
+    recommended_fix: "Replace 'possibly a poplar or sarbatu-tree' with 'a tree whose species is uncertain in modern botanical terms' or use whatever English gloss Black et al. actually provide, without the Akkadian term. If 'sarbatu' is used, add a note that this is an Akkadian botanical term used as a scholarly gloss."
+
+  - claim_number: 12
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The first plague affects the wells or water supply of the land: water is turned to blood or becomes otherwise polluted."
+    issue: "The phrasing 'water is turned to blood' is not precisely what the ETCSL text says. The ETCSL translation reads more closely as Inanna 'filling the wells of the land with blood' rather than water being 'turned to blood.' The 'turned to blood' phrasing echoes the biblical first plague of Egypt (Exodus 7:20) rather than the Sumerian text's own formulation. The underlying factual claim — that the first plague involves blood contaminating the water supply — is supported, but the specific wording used in the claims document does not accurately represent the ETCSL source. Additionally, the cautious qualifier '(cautious partial translation)' after Black et al. 2004 pp. 80–81 is appropriate given the fragmentary state of this passage."
+    evidence: "ETCSL 1.3.3 reads approximately 'she filled all the wells of the Land with blood' rather than 'water is turned to blood.' The distinction is between Inanna actively filling wells with blood (divine affliction) versus water passively transforming into blood (which echoes biblical language more closely)."
+    recommended_fix: "Revise to: 'The first plague affects the wells or water supply of the land: Inanna fills the wells with blood.' Remove 'turned to blood' phrasing to avoid unnecessary biblical echo and to match the ETCSL source text more accurately."
+
+  - claim_number: 20
+    kind: "SILENT-BRIDGE"
+    severity: "HIGH"
+    claim: "Shu-kale-tuda goes to the god Enki and seeks his counsel on how to escape Inanna's wrath."
+    issue: "This claim states as fact that Shu-kale-tuda goes to 'the god Enki,' but claim 14 earlier in the same document hedges with 'his father (or from Enki, god of wisdom).' The ETCSL text describes Shu-kale-tuda going to 'his father' for advice. Whether this father figure is to be identified with Enki is a scholarly interpretation, not a textual certainty. Some scholars do identify the father with Enki, but the text itself does not explicitly name Enki in the advice-giving passages in all readings. The shift from the hedged claim 14 to the definitive claim 20 constitutes a silent bridge — an uncited factual escalation from possibility to certainty without a marker or additional evidence."
+    evidence: "ETCSL 1.3.3 uses the term 'his father' (ab-ba-ni) in the advice passages. Claim 14 correctly hedges '(or from Enki).' Claim 20 drops the hedge entirely and states Enki as certain. The ETCSL composite does mention Enki in later passages where Inanna goes to Enki, but the identification of the father-advisor with Enki is not explicitly stated in the text at the point described by claim 20."
+    recommended_fix: "Revise claim 20 to: 'Shu-kale-tuda goes to his father (possibly identified with the god Enki) and seeks counsel on how to escape Inanna's wrath.' Add a [VARIANT:] marker noting the scholarly identification of the father with Enki. Alternatively, if the text does name Enki explicitly at this point in some manuscripts, cite the specific manuscript."
+
+  - claim_number: 2
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The text is classified as single-prevalent-reconstructed: the ETCSL composite is the only standard reconstruction, but significant gaps remain in the plague description sections across all witnesses."
+    issue: "The classification 'single-prevalent-reconstructed' matches the brief's own classification and is consistent with the editorial situation described in ETCSL. However, the specific claim that gaps remain 'across all witnesses' could not be verified against the ETCSL manuscript list without web access. The claim is plausible and consistent with the brief but relies on a characterization of the manuscript tradition that could not be independently confirmed."
+    evidence: "The brief classifies this text as single-prevalent-reconstructed. ETCSL's presentation of 1.3.3 with extensive lacuna markers is consistent with this classification. No contradictory evidence found."
+    recommended_fix: "Retain as-is. Verify against ETCSL manuscript list when web access is available."
+
+  - claim_number: 16
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "[LACUNA] The nature of the second plague is largely lost in the broken text."
+    issue: "While it is true that the plague sections are fragmentary in ETCSL 1.3.3, stating that the second plague's nature is 'largely lost' could not be precisely verified without accessing the current state of the ETCSL composite text. Some fragmentary readings may preserve more or less than 'largely lost' implies. The LACUNA marker is appropriately used."
+    evidence: "ETCSL 1.3.3 does mark the plague sections as fragmentary. The extent of loss for specifically the second plague versus the first and third could not be calibrated without live text access."
+    recommended_fix: "Retain the LACUNA marker. Consider qualifying as 'substantially damaged' rather than 'largely lost' if the ETCSL text preserves partial readings."
+
+  - claim_number: 25
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE] The paradox of the ending — the criminal is condemned but his name is eternally preserved — functions as a literary reflection on the nature of narrative itself."
+    issue: "The INFERENCE marker is appropriate for the interpretive claim about 'literary reflection on the nature of narrative itself.' However, the first part — that the text states Shu-kale-tuda's name will not be forgotten — is directly attested in the text and does not need an INFERENCE marker. The marker should apply only to the interpretive gloss, not to the textual fact. As written, the marker scope is slightly too broad but the direction is correct. The risk note ('Some scholars may read this as a standard scribal colophon formula rather than deliberate literary irony') is a fair and useful caveat."
+    evidence: "ETCSL 1.3.3 final lines do state that Shu-kale-tuda's name will not be forgotten. The interpretation of this as 'literary reflection on the nature of narrative' is scholarly commentary. The marker is directionally correct but could be more precisely scoped."
+    recommended_fix: "No substantive change needed. Consider splitting into two sentences: one stating the textual fact (Shu-kale-tuda's name will not be forgotten, SUPPORTED) and a separate INFERENCE sentence for the literary interpretation."

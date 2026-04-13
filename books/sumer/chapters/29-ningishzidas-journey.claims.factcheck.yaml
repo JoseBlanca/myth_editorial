@@ -1,0 +1,57 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/29-ningishzidas-journey.claims.adoc"
+  claims_identified: 10
+  triangulations_performed: 8
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 6
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+findings:
+  - claim_number: 3
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The text describes Ningishzida's journey in detail."
+    issue: "The composition (ETCSL 1.7.3) is quite fragmentary. Claims about 'detailed' journey narrative may overstate what the surviving text preserves."
+    evidence: "ETCSL 1.7.3 has significant lacunae."
+    recommended_fix: "Qualify claims about narrative detail with acknowledgment of the text's fragmentary state."
+
+  - claim_number: 5
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Specific elements of Ningishzida's reception in the netherworld."
+    issue: "Details of the reception may be partially inferred from general Sumerian underworld narrative patterns rather than directly preserved in this specific text."
+    evidence: "The text has gaps in the reception section."
+    recommended_fix: "Add [LACUNA:] or [INFERENCE:] markers where reception details are inferred."
+
+  - claim_number: 8
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The composition's relationship to the broader Dumuzid-Ningishzida tradition."
+    issue: "The thematic connection is scholarly interpretation that needs an [INFERENCE:] marker."
+    evidence: "Scholarly consensus but interpretive, not textual."
+    recommended_fix: "Add [INFERENCE:] marker."
+
+  - claim_number: 10
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "Interpretive claim about the text's eschatological function."
+    issue: "Presented as fact without [INFERENCE:] marker."
+    evidence: "Editorial interpretation."
+    recommended_fix: "Add [INFERENCE:] marker."

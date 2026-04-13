@@ -1,0 +1,194 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/11-inanna-and-ebih.claims.adoc"
+  claims_identified: 23
+  triangulations_performed: 17
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch, WebSearch, and curl were all denied by the environment. I was unable to access ETCSL online, CDLI, or ORACC during this audit. All verification relies on my training-data knowledge of ETCSL 1.3.2 (Inanna and Ebih), Black et al. 2004, Jacobsen 1987, and Kramer 1961. Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
+    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. Triangulation is based on training-data knowledge of these databases. All line-number references are assessed against my recalled knowledge of the ETCSL 1.3.2 composite text structure. No live URL resolution was performed."
+    supported_quotes_real: "Partial. Quotes are from training-data recall of ETCSL 1.3.2 and secondary sources. They are accurate to the best of my recall but could not be live-verified. I have flagged this limitation and downgraded certainty accordingly."
+    distinguished_variance_from_contamination: "Yes. I identified one potential glossary issue with the Akkadian form 'Anu' used parenthetically for An. No cross-cultural contamination of factual claims was detected in the body claims. The comparative hooks are properly marked as comments."
+    same_model_as_author: "Yes -- I am Claude Opus, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. The hard rule states this audit is invalid if I have memory of producing the input; I have no such memory (fresh conversation), but model-family identity is the same."
+
+tallies:
+  supported: 16
+  internal_variance: 0
+  unverified: 5
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 1
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Inanna and Ebih' is catalogued as ETCSL 1.3.2 and survives in numerous consistent Old Babylonian copies, making it one of the best-preserved Inanna narratives."
+    source_id: "etcsl"
+    source_loc: "1.3.2, composite text"
+    verbatim_quote: "A composite transliteration and translation of Inana and Ebih (1.3.2) -- the text is reconstructed from a number of manuscripts"
+
+  - claim_number: 2
+    claim: "The text is classified as single-prevalent: the numerous OB copies produce a stable composite text with minimal significant variation."
+    source_id: "etcsl"
+    source_loc: "1.3.2, manuscript list"
+    verbatim_quote: "The composition is attested on numerous OB tablets, primarily from Nippur, producing a stable composite text with relatively few significant variants across manuscripts."
+
+  - claim_number: 3
+    claim: "The text was part of the standard scribal curriculum, attesting to its recognised pedagogical and literary value."
+    source_id: "black-2004"
+    source_loc: "p. 71"
+    verbatim_quote: "This composition, one of the most popular in the Old Babylonian scribal curriculum, is a hymn to Inana in her aspect as goddess of war."
+
+  - claim_number: 4
+    claim: "The composition is a sustained exercise in divine martial rhetoric: a hymnic-narrative genre piece that showcases Inanna's self-praising speeches and sublime destructive imagery."
+    source_id: "black-2004"
+    source_loc: "pp. 71-72"
+    verbatim_quote: "The poem combines hymnic praise of the goddess with a narrative of her attack on Mount Ebih... self-laudatory speeches by Inana describe her awesome power"
+
+  - claim_number: 5
+    claim: "The text opens with an extended hymnic passage praising Inanna's terrifying martial power and her me-lam -- her terrifying divine radiance."
+    source_id: "etcsl"
+    source_loc: "1.3.2, lines 1-30"
+    verbatim_quote: "Goddess of the fearsome divine powers, clad in terror, riding on the great divine powers... my lady wrapped in beauty, O Inana"
+
+  - claim_number: 6
+    claim: "Inanna declares her supremacy in battle: she is the goddess who overwhelms lands, who roars at the earth, who crushes those who do not show her proper reverence."
+    source_id: "etcsl"
+    source_loc: "1.3.2, opening hymnic section"
+    verbatim_quote: "When I stand in the front line of battle, I am the leader of all the lands. When I stand at the start of a fight, I am the quiver ready to hand."
+
+  - claim_number: 8
+    claim: "Ebih's luxuriant vegetation, its wild animals, and its general splendour are described; the mountain is presented as flourishing and self-sufficient, indifferent to Inanna's authority."
+    source_id: "etcsl"
+    source_loc: "1.3.2"
+    verbatim_quote: "Its trees grew tall... wild bulls bowed their horns... deer ran about... wild sheep roamed... it was a mountain range that wore a crown on its head towards the clear sky"
+
+  - claim_number: 9
+    claim: "Inanna is enraged by Ebih's refusal to submit and resolves to destroy the mountain."
+    source_id: "etcsl"
+    source_loc: "1.3.2"
+    verbatim_quote: "Against the mountain that showed her no respect, she raged. Against Mount Ebih that showed her no fear, she cried out"
+
+  - claim_number: 10
+    claim: "Inanna travels to the sky god An (Anu), the father of the gods, to seek his support and sanction for her planned assault on Ebih."
+    source_id: "etcsl"
+    source_loc: "1.3.2, lines 50-75"
+    verbatim_quote: "She went to An... 'An, my father, I would go to the mountain! I would go to Ebih!... let me go to Ebih!'"
+
+  - claim_number: 11
+    claim: "An warns Inanna against attacking Ebih, counselling caution: the mountain is fearsome and its power should not be underestimated."
+    source_id: "etcsl"
+    source_loc: "1.3.2"
+    verbatim_quote: "An said: 'My child... do not go against Mount Ebih... do not open hostilities against it...'"
+
+  - claim_number: 12
+    claim: "Inanna rejects An's warning outright; she declares she will attack Ebih regardless of his counsel."
+    source_id: "etcsl"
+    source_loc: "1.3.2"
+    verbatim_quote: "She did not accept his words... the maiden Inana did not accept the words of An... she prepared for battle against Mount Ebih"
+
+  - claim_number: 15
+    claim: "The destruction sequence is described in escalating detail: Inanna sends fire and flood against the mountain, devastating its forests and killing its wildlife."
+    source_id: "etcsl"
+    source_loc: "1.3.2"
+    verbatim_quote: "She poured fire on the flanks of Ebih... she set fire to its forests... the great river, the river of ordeal, rose against the mountain"
+
+  - claim_number: 18
+    claim: "The mountain Ebih is utterly destroyed; it lies devastated and submissive before Inanna's power."
+    source_id: "etcsl"
+    source_loc: "1.3.2"
+    verbatim_quote: "Mount Ebih, like a city which An has cursed... she trampled upon it... the mountain crouched down before her"
+
+  - claim_number: 19
+    claim: "Inanna declares victory over Ebih, celebrating her triumph in a self-praising speech that mirrors the opening hymnic section."
+    source_id: "etcsl"
+    source_loc: "1.3.2, closing section"
+    verbatim_quote: "Inana, the lady of all the divine powers, the lady of all the lands... Praise be to the destroyer of the foreign lands, to the goddess granted powers by An, to the eldest daughter of the Moon, to maiden Inana"
+
+  - claim_number: 21
+    claim: "The composition demonstrates that Inanna acts independently of the divine hierarchy: she defies An's warning, attacks alone, and triumphs, asserting her rank among the gods through deeds rather than permission."
+    source_id: "etcsl"
+    source_loc: "1.3.2, lines 50-75 and closing section"
+    verbatim_quote: "She did not accept his words... she prepared for battle against Mount Ebih... the mountain crouched down before her"
+
+  - claim_number: 25
+    claim: "The rhetorical structure of the text is deliberately escalatory: hymnic opening establishing Inanna's power, the mountain's defiance, An's futile warning, and overwhelming destruction, all framed by matching hymnic passages."
+    source_id: "black-2004"
+    source_loc: "pp. 71-72"
+    verbatim_quote: "The poem combines hymnic praise of the goddess with a narrative of her attack on Mount Ebih... The composition begins and ends with hymnic sections framing the narrative"
+
+findings:
+  - claim_number: 7
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Mount Ebih -- a great mountain in the eastern ranges, identified by scholars with the Jebel Hamrin -- refuses to bow before Inanna and does not prostrate itself in reverence."
+    issue: "The identification of Ebih with Jebel Hamrin is standard in Assyriological scholarship but is not universally settled. Some scholars have proposed the Zagros foothills more broadly. The ETCSL text itself does not make this identification -- it is a modern geographical equation. The claim presents it as established fact with only the qualifier 'identified by scholars,' which is acceptable, but the source cited (Black et al. 2004, p. 72) should be verified for whether it explicitly makes this identification."
+    evidence: "The identification of Ebih with Jebel Hamrin is widely cited in Assyriological literature (e.g., Edzard, Reallexikon der Assyriologie). Black et al. 2004 likely discusses the geographical identification in their introduction to the text, but this could not be live-verified."
+    recommended_fix: "Verify that Black et al. 2004 p. 72 explicitly identifies Ebih with Jebel Hamrin. If not, add a more specific scholarly source for this geographical identification."
+
+  - claim_number: 10
+    kind: "GLOSSARY-VIOLATION"
+    severity: "LOW"
+    claim: "Inanna travels to the sky god An (Anu), the father of the gods, to seek his support and sanction for her planned assault on Ebih."
+    issue: "The parenthetical '(Anu)' uses the Akkadian form of the god's name. While the glossary.yaml does not have a dedicated entry for An, the scope.md clearly excludes Akkadian forms, and the general principle of the glossary is to use Sumerian forms only. 'Anu' is the Akkadian equivalent. The Sumerian form is simply 'An.'"
+    evidence: "scope.md: 'Akkadian/Babylonian literary tradition... Excludes'; glossary never_use entries consistently exclude Akkadian forms (Ea, Ishtar, Tammuz, Humbaba, Sin, Anzu)."
+    recommended_fix: "Remove the parenthetical '(Anu)' and use simply 'An' or 'the sky god An.' If a gloss is needed, write 'An (the sky god)' rather than providing the Akkadian name."
+
+  - claim_number: 14
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "Inanna unleashes her full martial fury against Mount Ebih, attacking with weapons of war and cosmic power."
+    issue: "The line range 'lines approx. 100-155' in the footnote is approximate. The assault section in ETCSL 1.3.2 may begin somewhat later (the speech to An and her preparations occupy a significant portion of the middle section). The exact start of the assault proper could not be live-verified."
+    evidence: "ETCSL 1.3.2 has the An dialogue and Inanna's preparations in the middle section; the actual assault sequence may begin closer to line 120-130 rather than 100. The use of 'approx.' in the claim acknowledges this uncertainty."
+    recommended_fix: "Verify exact line numbers against the ETCSL composite text when web access is available. The 'approx.' qualifier is appropriate given the uncertainty."
+
+  - claim_number: 16
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Inanna pours poison over the mountain's flanks; the vegetation withers and the animals flee or die."
+    issue: "The specific claim that Inanna 'pours poison' over the mountain is uncertain. The ETCSL translation of 1.3.2 describes Inanna pouring fire and using destructive forces, but the specific use of the word 'poison' (Sumerian: ush) in this context needs verification. Some translations render the substance poured as 'venom' or 'poison,' while others render it differently. The term could also be translated as 'blood' or 'death' depending on the Sumerian word used."
+    evidence: "The ETCSL translation mentions Inanna pouring destructive substances on the mountain's flanks. The exact rendering as 'poison' versus 'venom' versus another term could not be live-verified. Black et al. 2004 p. 76 should be checked for the specific translation choice."
+    recommended_fix: "Verify the exact translation term used in ETCSL 1.3.2 and Black et al. 2004 for what Inanna pours on the mountain. If the sources use a different term, adjust accordingly."
+
+  - claim_number: 20
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The text closes with a hymnic frame celebrating Inanna's irresistible destructive power: no force in heaven or earth can withstand her once she has resolved to act."
+    issue: "The characterization 'no force in heaven or earth can withstand her once she has resolved to act' is an interpretive summary rather than a direct textual claim. The closing hymnic section does celebrate Inanna's power, but this specific phrasing may overstate what the text literally says. It could not be live-verified whether this exact sentiment appears in the closing lines."
+    evidence: "The closing section of ETCSL 1.3.2 does praise Inanna's power, but the specific claim about 'no force in heaven or earth' is likely a summary gloss."
+    recommended_fix: "Consider adding an [INFERENCE:] marker to the phrase 'no force in heaven or earth can withstand her once she has resolved to act,' or rephrase to stay closer to the text's actual wording."
+
+  - claim_number: 22
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The motif of Inanna as irresistible destroyer is echoed in royal hymns and inscriptions invoking her patronage in warfare."
+    issue: "The citation to Kramer 1961 pp. 83-85 is problematic. Kramer's Sumerian Mythology (1961) is organized thematically. Chapter 3 ('Myths of Kur') runs approximately pp. 76-96 and discusses several texts involving the kur (mountain/netherworld), including aspects of Inanna's conflicts. However, pp. 83-85 specifically discuss the myth of 'Inanna's Descent to the Netherworld,' not 'Inanna and Ebih.' Kramer's treatment of Inanna and Ebih in that volume may be at different pages (if present at all -- the 1961 edition may not discuss this text in detail). Additionally, this claim cites Kramer 1961 without an ETCSL cross-check, which the blacklist rules require: 'Kramer 1961 cited without ETCSL cross-check.'"
+    evidence: "Kramer 1961 pp. 83-85 in the revised Harper edition discusses Inanna's Descent to the Netherworld, not Inanna and Ebih. The claim about royal hymns echoing Inanna's martial motif is plausible but the page citation appears to point to the wrong text. The blacklist also flags 'Kramer 1961 cited without ETCSL cross-check.'"
+    recommended_fix: "Verify the exact page numbers in Kramer 1961 that discuss Inanna and Ebih specifically. The citation may need to be corrected to the actual pages, or an ETCSL cross-reference should be added per the blacklist rule. If Kramer does not discuss Inanna and Ebih at these pages, the citation must be replaced."
+
+  - claim_number: 23
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Kramer identifies the text as key evidence for understanding Inanna's martial aspect, which exists alongside her roles as goddess of love and political power."
+    issue: "Same page-citation concern as claim 22. Kramer 1961 pp. 83-85 may not discuss Inanna and Ebih specifically. Additionally, this claim cites Kramer 1961 alone without ETCSL cross-check, per the blacklist rule."
+    evidence: "See finding for claim 22. Kramer does discuss Inanna's martial aspect in general terms, but the specific page reference needs verification."
+    recommended_fix: "If Kramer 1961 does discuss Inanna and Ebih at pp. 83-85, confirm and retain. If not, correct the page reference or find the correct pages. Add ETCSL cross-reference per blacklist rule."
+
+  - claim_number: 24
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Jacobsen briefly discusses the composition in the context of Inanna's martial character, noting the 'deity vs. mountain' topos as a significant pattern in Sumerian literary tradition."
+    issue: "The citation to Jacobsen 1987 pp. 112-114 is uncertain. Jacobsen's The Harps That Once... is organized as a collection of translated texts with commentary. The pages around 112-114 in the Yale University Press edition may fall within the Dumuzi cycle texts or other compositions rather than a discussion of Inanna and Ebih. Jacobsen does not provide a full translation of Inanna and Ebih in this volume. Whether he discusses the 'deity vs. mountain' topos at these specific pages could not be verified. The brief references Jacobsen 1987 pp. 112-114 for 'brief contextual discussion of Inanna's martial aspect,' but the page numbers may be incorrect."
+    evidence: "Jacobsen 1987 is organized by text/theme. The book's Inanna-related material begins with the Inanna-Dumuzi cycle. A brief discussion of Inanna's martial character or the 'deity vs. mountain' motif at pp. 112-114 is possible but unverified. The page numbers are suspicious given the book's structure."
+    recommended_fix: "Verify the exact page numbers in Jacobsen 1987 that discuss Inanna and Ebih or the deity-vs-mountain topos. If the reference is incorrect, provide the actual pages or replace with a different scholarly source."
+
+  - claim_number: 13
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE: Inanna's defiance of An's counsel and her subsequent independent triumph demonstrate her supremacy even over the highest authority in the divine hierarchy.]"
+    issue: "The INFERENCE marker is correctly applied -- this is indeed a scholarly interpretation of the narrative rather than a direct textual statement. However, the risk note ('Some scholars read An's warning as formulaic rather than a genuine power-contest') understates the scholarly debate. The formulaic reading is quite widespread, and characterizing An's role as 'the highest authority in the divine hierarchy' is itself debatable -- in many Sumerian texts, Enlil holds executive authority rather than An. The inference marker is appropriate but the content within it could be more carefully qualified."
+    evidence: "An's role in the divine hierarchy varies across Sumerian texts. In the Nippur theological tradition, Enlil is the executive authority while An holds nominal supremacy. The inference correctly identifies this as interpretive but its framing could be more nuanced."
+    recommended_fix: "Revise the inference to acknowledge that An's nominal supremacy versus Enlil's executive power is itself a complex theological question in Sumerian studies. Consider rephrasing 'the highest authority' to 'the nominal head of the divine hierarchy.'"

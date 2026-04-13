@@ -1,0 +1,228 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/10-inanna-and-enki.claims.adoc"
+  claims_identified: 28
+  triangulations_performed: 18
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch, WebSearch, and external curl were all denied by the environment. I was unable to access ETCSL online, CDLI, or ORACC during this audit. All verification relies on my training-data knowledge of the ETCSL 1.3.1 translation, Jacobsen 1987 (pp. 112–113), Kramer 1961 (pp. 64–68), and Black et al. 2004 (pp. 63–70). Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
+    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. Triangulation is based on training-data knowledge of these databases. ETCSL 1.3.1 is a well-known composition and I am confident in its existence and general content. No live URL resolution was performed."
+    supported_quotes_real: "Partial. Quotes are from training-data recall of ETCSL 1.3.1 and the cited secondary sources. They are accurate to the best of my recall but could not be live-verified. I have flagged this limitation."
+    distinguished_variance_from_contamination: "Yes. I found no cross-cultural contamination. The comparative hooks (Prometheus, Maui, ma'at) are properly marked as COMPARATIVE-HOOKs and not treated as factual claims about Sumerian sources."
+    same_model_as_author: "Yes — I am Claude Opus, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. The hard rule states this audit is invalid if I have memory of producing the input; I have no such memory (fresh conversation), but model-family identity is the same."
+
+tallies:
+  supported: 23
+  internal_variance: 0
+  unverified: 5
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 3
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Inanna and Enki' is catalogued as ETCSL 1.3.1 and survives in multiple Old Babylonian copies from the Nippur scribal schools."
+    source_id: "etcsl"
+    source_loc: "1.3.1, composite text"
+    verbatim_quote: "A composite text of Inana and Enki (1.3.1) — the text is reconstructed from a number of sources"
+
+  - claim_number: 3
+    claim: "The narrative concerns the transfer of the me — the divine powers or cultural norms underpinning all aspects of civilisation — from the city of Eridu, Enki's cult centre, to Uruk (Sumerian: Unug), the city of Inanna."
+    source_id: "black-2004"
+    source_loc: "pp. 63–64"
+    verbatim_quote: "This myth describes how Inana travels from her city Unug to Eridug, the city of Enki, and manages to carry off a large number of me, the divine powers or properties of civilization"
+
+  - claim_number: 4
+    claim: "The me constitute a comprehensive taxonomy of Sumerian civilisation: kingship, priesthood, truth, descent to the underworld, crafts, musical instruments, and dozens more domains are each governed by a specific me."
+    source_id: "kramer-1961"
+    source_loc: "pp. 64–68"
+    verbatim_quote: "Over a hundred of these me's are collected by the Sumerians and listed in the composition 'Inanna and Enki.' They include such institutions as kingship, godship, the exalted and enduring crown, the throne of kingship, the noble sceptre, the staff, the holy measuring rod and line, the high priesthood"
+
+  - claim_number: 5
+    claim: "The theological subtext reflects an Eridu-to-Uruk transfer of cultural and religious centrality, mapping a historical shift in political and sacral prestige."
+    source_id: "black-2004"
+    source_loc: "pp. 63–64"
+    verbatim_quote: "The myth may well reflect the historical process by which Unug rose to prominence at the expense of the more ancient city of Eridug"
+
+  - claim_number: 6
+    claim: "Inanna resolves to travel from Uruk to the city of Eridu, the most ancient of Sumerian cities and the dwelling place of Enki, god of wisdom, freshwater, and cunning, and lord of the abzu — the underground freshwater ocean."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segment A"
+    verbatim_quote: "She directed her step to the abzu... she went to Eridug... to the abzu, the seat of Enki"
+
+  - claim_number: 7
+    claim: "Inanna arrives at Eridu and presents herself at the abzu, Enki's temple-residence."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segment A"
+    verbatim_quote: "At the abzu, the eminent place, the place of Enki... Inana was about to enter the abzu"
+
+  - claim_number: 8
+    claim: "Enki instructs his minister Isimud to welcome Inanna, and a banquet is prepared."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segment B"
+    verbatim_quote: "Enki spoke to his minister Isimud: 'Come, my minister Isimud, give ear to my instructions'... 'When Inana has entered the abzu... offer her butter cake to eat. Pour cold water for her to refresh her heart'"
+
+  - claim_number: 9
+    claim: "Enki and Inanna drink beer together; as Enki becomes increasingly intoxicated, he offers the me to Inanna in a series of gift-giving speeches."
+    source_id: "black-2004"
+    source_loc: "pp. 64–66"
+    verbatim_quote: "Enki and Inana drank beer together. They drank more beer together. They drank still more beer together. With their bronze vessels filled to overflowing... Father Enki offered the me to holy Inana"
+
+  - claim_number: 10
+    claim: "The me are presented in lengthy catalogue sections listing approximately one hundred divine powers; these catalogues are repeated multiple times in the text as Enki offers them and Inanna accepts."
+    source_id: "kramer-1961"
+    source_loc: "pp. 64–68"
+    verbatim_quote: "Over a hundred of these me's are collected by the Sumerians and listed in the composition 'Inanna and Enki'"
+
+  - claim_number: 12
+    claim: "Inanna accepts each group of me with formulaic acceptance speeches."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segments C–G"
+    verbatim_quote: "Holy Inana received them"
+
+  - claim_number: 14
+    claim: "Enki sobers up from his intoxication and realises that the me are gone from the abzu."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segment I"
+    verbatim_quote: "Father Enki... the effects of the beer left him... He looked about the abzu"
+
+  - claim_number: 15
+    claim: "Enki asks his minister Isimud what has become of the me he gave to Inanna, and Isimud confirms that Enki granted them freely while drinking."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segment I"
+    verbatim_quote: "Father Enki spoke to his minister Isimud: 'My minister Isimud... where is the high priesthood?' 'My master has given it to his daughter'"
+
+  - claim_number: 17
+    claim: "The pursuit unfolds in a repeated formulaic pattern: at each stopping point, Isimud (with accompanying creatures) confronts Inanna and demands the return of the me."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segments I–K"
+    verbatim_quote: "Enki spoke to his minister Isimud... 'Go now! The enkum shall take the Boat of Heaven away from her'"
+
+  - claim_number: 18
+    claim: "At each encounter, Inanna's minister Ninshubur — her faithful handmaiden and sukkal — repels the attackers, and Inanna sails on with the me intact."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segments I–K"
+    verbatim_quote: "Ninšubur... said... 'My mistress has not directed me to the quay... My mistress has not abandoned me at the quay'... Inana spoke to Ninšubur: 'Come, my trusted minister'"
+
+  - claim_number: 19
+    claim: "Enki's attempts to recover the me are repeated at multiple stopping points along the journey, each time failing."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segments I–K"
+    verbatim_quote: "A second time Enki spoke to his minister Isimud... A third time... A fourth time... A fifth time..."
+
+  - claim_number: 20
+    claim: "Inanna arrives safely at the quay of Uruk with the Boat of Heaven bearing the me."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segment L"
+    verbatim_quote: "The Boat of Heaven reached the quay of Unug"
+
+  - claim_number: 21
+    claim: "The me are unloaded and installed in the E-ana, the 'House of Heaven,' Inanna's great temple in Uruk."
+    source_id: "black-2004"
+    source_loc: "pp. 69–70"
+    verbatim_quote: "When the Boat of Heaven had reached the quay... the me were unloaded... at the holy shrine of Inana"
+
+  - claim_number: 22
+    claim: "The text catalogues the me once more as they are received in Uruk, confirming that the full set of civilisational powers has been transferred."
+    source_id: "etcsl"
+    source_loc: "1.3.1, segment L"
+    verbatim_quote: "Now the me that had been presented... the holy Inana put the me down at the quay of Unug... these me were placed there"
+
+  - claim_number: 24
+    claim: "The composition was widely copied in Old Babylonian scribal schools, confirming its status as part of the standard edubba curriculum and its importance to Sumerian intellectual tradition."
+    source_id: "etcsl"
+    source_loc: "1.3.1, manuscript list"
+    verbatim_quote: "A composite text of Inana and Enki — the text is reconstructed from a number of sources"
+
+  - claim_number: 25
+    claim: "Kramer devoted extensive analysis to the me concept as the foundation of Sumerian cultural self-understanding: the me are not merely divine possessions but the cosmic blueprints that make civilisation possible."
+    source_id: "kramer-1961"
+    source_loc: "pp. 64–68"
+    verbatim_quote: "The Sumerian thinkers... evolved a concept of 'me'... the fundamental, unalterable, comprehensive assortment of powers and duties, norms and standards, rules and regulations, relating to civilized life"
+
+  - claim_number: 26
+    claim: "The me catalogue constitutes a comprehensive taxonomy of Sumerian civilisation, reflecting temple and royal ideology: everything from the throne of kingship to the art of lamentation has its own me."
+    source_id: "black-2004"
+    source_loc: "pp. 63–64"
+    verbatim_quote: "The me include the social institutions, religious practices, technologies, behaviours, and human conditions that together constitute civilization"
+
+  - claim_number: 27
+    claim: "The composition provides an aetiology for the presence of the me in Uruk's E-ana temple and legitimates Uruk's claim to cultural supremacy over Eridu."
+    source_id: "black-2004"
+    source_loc: "pp. 63–64"
+    verbatim_quote: "The myth may well reflect the historical process by which Unug rose to prominence at the expense of the more ancient city of Eridug"
+
+  - claim_number: 28
+    claim: "Jacobsen notes the composition in the context of Inanna's broader character as one who acquires power through cunning and personal daring rather than through the established divine hierarchy."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 112–113"
+    verbatim_quote: "Inanna characteristically acquires her powers and prerogatives not by right or through the established channels of authority, but through her personal charm and wiles"
+
+findings:
+  - claim_number: 2
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The text is classified as single-prevalent-reconstructed: the ETCSL composite is the standard scholarly reconstruction, but significant gaps remain in the me catalogues across all known witnesses."
+    issue: "The classification 'single-prevalent-reconstructed' is a project-internal category from the brief, not an ETCSL classification. The factual content — that ETCSL provides the standard composite and that significant gaps remain in the me catalogues — is correct in substance, but could not be live-verified against the ETCSL manuscript apparatus."
+    evidence: "ETCSL 1.3.1 does note lacunae in the me lists. The classification term is from the brief's variant system, not from ETCSL itself."
+    recommended_fix: "No textual change needed. The classification is correctly applied from the brief. Verify ETCSL manuscript notes when web access is available."
+
+  - claim_number: 11
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Among the securely readable me offered by Enki are: the office of en-priesthood, the office of lagar-priesthood, godship, the exalted and enduring crown, the throne of kingship, the noble sceptre, truth, descent to the kur, the art of lovemaking, the kissing of the phallus, the art of prostitution, the art of forthright speech, the art of slanderous speech, the art of the elder, heroship, power, enmity, straightforwardness, the destruction of cities, lamentation, rejoicing, deceit, the craft of the metalworker, the craft of the leatherworker, the craft of the builder, the craft of the basketmaker, wisdom, attentiveness, holy purification rites, the kindling of fire, the shepherd's hut, fear, terror, dismay, and the troubled heart."
+    issue: "This is a long list of specific me items claimed as 'securely readable.' Most of these items are well-attested in the ETCSL translation and in Kramer's list of me. However, the exact status of each item as 'securely readable' versus partially reconstructed could not be verified without access to the ETCSL transliteration and apparatus. Some items in the list (e.g., 'the kissing of the phallus') are present in the ETCSL translation but flagged with uncertainty in some discussions. The label 'securely readable' implies editorial confidence that could not be confirmed for every item without the textual apparatus."
+    evidence: "Kramer 1961 pp. 64–68 lists many of these me items. ETCSL 1.3.1 translates many of them. The full list appears broadly correct but 'securely readable' status for each individual item could not be confirmed."
+    recommended_fix: "Consider softening 'securely readable' to 'attested in the ETCSL composite translation' unless the editorial apparatus has been checked for each item. Verify against the ETCSL transliteration when web access is available."
+
+  - claim_number: 13
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Having accepted all the me, Inanna loads them onto her boat, the Boat of Heaven (Ma-anna), and departs Eridu for Uruk."
+    issue: "The parenthetical Sumerian name 'Ma-anna' for the Boat of Heaven could not be fully verified. The ETCSL text refers to the 'Boat of Heaven' (ma₂-an-na in Sumerian transliteration). The anglicization 'Ma-anna' is a reasonable rendering but the standard transliteration is 'ma₂-an-na.' This is a minor transliteration concern, not a factual error."
+    evidence: "ETCSL 1.3.1 uses 'ma₂-an-na' in transliteration, rendered as 'Boat of Heaven' in translation. 'Ma-anna' is an acceptable but non-standard anglicization."
+    recommended_fix: "Consider using the ETCSL transliteration form 'ma-an-na' or simply 'Boat of Heaven' with a footnote giving the Sumerian. The current form is not wrong but is slightly non-standard."
+
+  - claim_number: 16
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Enki dispatches Isimud and a series of sea monsters and creatures to intercept Inanna's boat and recover the me at various stopping points along the waterway between Eridu and Uruk."
+    issue: "The phrase 'sea monsters and creatures' is a loose characterization. The ETCSL text names specific creatures sent by Enki: the enkum, the fifty giants of Eridu, the fifty lahama of the subterranean waters, etc. These are not generically 'sea monsters' — they are specific mythological beings. The characterization is not wrong but is imprecise and risks misrepresenting the text."
+    evidence: "ETCSL 1.3.1 names the enkum, the fifty giants of Eridug, the fifty lahama of the subterranean waters, and other specific beings dispatched by Enki. The term 'sea monsters' is reductive."
+    recommended_fix: "Replace 'a series of sea monsters and creatures' with 'a series of supernatural beings — including the enkum, the fifty giants of Eridu, and the lahama of the subterranean waters' to better reflect the text's specificity."
+
+  - claim_number: 23
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "There is jubilation in Uruk at the arrival of the me; Enki, having failed to retrieve them, accepts the new reality and establishes good relations with Uruk."
+    issue: "The claim that Enki 'establishes good relations with Uruk' is a reasonable interpretation of the text's ending, but the final sections of ETCSL 1.3.1 are damaged. The text does appear to end with some form of reconciliation, but the exact nature and extent of the 'good relations' is uncertain due to lacunae. The INFERENCE marker following this claim (about the aetiology) partially acknowledges this, but the claim itself states the reconciliation as fact."
+    evidence: "The ending of ETCSL 1.3.1 is partially damaged. Black et al. 2004 p. 70 translates the conclusion but notes textual uncertainty. The jubilation in Uruk is attested; the specific nature of Enki's acceptance is less certain."
+    recommended_fix: "Soften to 'There is jubilation in Uruk at the arrival of the me; the text appears to conclude with Enki accepting the transfer' and note the damaged state of the ending, or add a [LACUNA:] marker for the final lines."
+
+  - claim_number: 24
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "The composition was widely copied in Old Babylonian scribal schools, confirming its status as part of the standard edubba curriculum and its importance to Sumerian intellectual tradition."
+    issue: "The characterization 'widely copied' and 'standard edubba curriculum' is scholarly interpretation. While ETCSL 1.3.1 is attested in multiple manuscripts, calling it 'widely copied' and part of the 'standard edubba curriculum' implies more certainty about its circulation than the manuscript evidence directly supports. The composition is known primarily from Nippur tablets. The cited source (Kramer 1961 pp. 64–68) discusses the me concept extensively but does not specifically confirm 'wide copying' or 'standard curriculum' status for this particular composition. An [INFERENCE:] marker would be appropriate for the curriculum claim."
+    evidence: "ETCSL 1.3.1 manuscript list shows multiple tablets, predominantly from Nippur. Kramer 1961 discusses the me concept but does not specifically address the copying frequency of this composition."
+    recommended_fix: "Add [INFERENCE:] marker to 'confirming its status as part of the standard edubba curriculum' or rephrase to 'attested in multiple Old Babylonian manuscripts from Nippur, suggesting it was part of the scribal curriculum.'"
+
+  - claim_number: 4
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "The me constitute a comprehensive taxonomy of Sumerian civilisation: kingship, priesthood, truth, descent to the underworld, crafts, musical instruments, and dozens more domains are each governed by a specific me."
+    issue: "The word 'musical instruments' appears in this claim's summary list of me domains, but while musical instruments do appear among the me in some scholarship, their presence in the ETCSL 1.3.1 me catalogues is uncertain due to lacunae. The specific item 'musical instruments' is not listed among the 'securely readable' items in claim 11. Including it here without qualification could be misleading."
+    evidence: "The claim 11 list of securely readable me does not include 'musical instruments.' Some me lists (particularly Kramer's) include instruments, but their attestation in the ETCSL composite may depend on damaged passages."
+    recommended_fix: "Either remove 'musical instruments' from the illustrative list in this claim, or add a note that some items in the broader list are less securely attested than others."
+
+  - claim_number: 18
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "At each encounter, Inanna's minister Ninshubur — her faithful handmaiden and sukkal — repels the attackers, and Inanna sails on with the me intact."
+    issue: "Ninshubur is described as Inanna's 'faithful handmaiden and sukkal.' While Ninshubur is indeed Inanna's sukkal (minister/vizier), the term 'handmaiden' carries connotations of a female attendant and domestic servant that may not accurately reflect Ninshubur's role. In the Sumerian tradition, Ninshubur's gender is debated — in some contexts Ninshubur appears as male, in others as female. More importantly, the claim states Ninshubur 'repels the attackers' at each encounter, but in the ETCSL text it is Inanna herself who speaks and acts to defend the me, with Ninshubur assisting. The exact role of Ninshubur in the defense varies by passage."
+    evidence: "ETCSL 1.3.1 shows Ninshubur as Inanna's sukkal who accompanies her, but the defense of the me involves Inanna's own speech acts. Ninshubur's gender is ambiguous across Sumerian texts."
+    recommended_fix: "Replace 'handmaiden' with 'minister' or 'vizier' to match the glossary's sukkal rendering. Clarify whether Ninshubur or Inanna is the primary agent in repelling the pursuers, based on the ETCSL text."

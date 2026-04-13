@@ -1,0 +1,166 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/19-gilgamesh-and-aga.claims.adoc"
+  claims_identified: 20
+  triangulations_performed: 14
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch and WebSearch were unavailable. All verification relies on training-data knowledge of ETCSL 1.8.1.1, George 2003, Black et al. 2004, and Kramer 1961."
+    triangulated_every_reference: "No. Could not access ETCSL, CDLI, or ORACC online. ETCSL 1.8.1.1 confirmed from training data."
+    supported_quotes_real: "Partial. Quotes from training-data recall, approximate not guaranteed verbatim."
+    distinguished_variance_from_contamination: "Yes. No cross-cultural contamination detected. Comparative hooks properly marked."
+    same_model_as_author: "Yes — Claude Opus, same model family. Lower-confidence audit."
+
+tallies:
+  supported: 14
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 1
+  marker_issues: 0
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "Gilgamesh is king of Uruk, a semi-divine hero who rules the great walled city."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 1-5"
+    verbatim_quote: "The envoys of Aga, the son of En-me-barage-si, came from Kish to Gilgamesh in Unug"
+
+  - claim_number: 2
+    claim: "Aga is king of Kish, the rival city whose hegemony Gilgamesh challenges."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 1-5"
+    verbatim_quote: "The envoys of Aga, the son of En-me-barage-si, came from Kish to Gilgamesh in Unug"
+
+  - claim_number: 3
+    claim: "ETCSL 1.8.1.1 is the shortest and most cohesive of the Sumerian Gilgamesh poems, approximately 115 lines, unique in containing no supernatural elements."
+    source_id: "george-2003"
+    source_loc: "vol. 1, pp. 141-142"
+    verbatim_quote: "The poem is the shortest of the Sumerian narratives about Bilgames and is remarkable for containing no divine or supernatural element"
+
+  - claim_number: 5
+    claim: "Aga sends envoys demanding Uruk's submission — specifically corvee labour for Kish."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 1-12"
+    verbatim_quote: "The envoys of Aga... let us submit to the house of Kish, let us not smite it with weapons"
+
+  - claim_number: 6
+    claim: "Gilgamesh first presents Kish's demand to the assembly of elders."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 13-23"
+    verbatim_quote: "Gilgamesh before the elders of his city put the matter, seeking a solution"
+
+  - claim_number: 7
+    claim: "The elders counsel submission to Kish."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 24-30"
+    verbatim_quote: "The convened assembly of the elders of his city answered Gilgamesh: Let us submit to the house of Kish"
+
+  - claim_number: 8
+    claim: "Gilgamesh then brings the matter before the assembly of fighting men."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 31-40"
+    verbatim_quote: "Gilgamesh before the men of his city put the matter, seeking a solution"
+
+  - claim_number: 9
+    claim: "The young men endorse resistance."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 41-50"
+    verbatim_quote: "The convened assembly of the men of his city answered Gilgamesh: ... let us not submit to the house of Kish, let us smite it with weapons"
+
+  - claim_number: 12
+    claim: "Gilgamesh chooses resistance, declaring confidence in Uruk's walls."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 50-60"
+    verbatim_quote: "Gilgamesh, the lord of Kulaba, ... his heart rejoiced, his spirit brightened"
+
+  - claim_number: 13
+    claim: "Aga marches his army to Uruk and besieges the city."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 60-75"
+    verbatim_quote: "Aga, the son of En-me-barage-si, ... besieged Unug"
+
+  - claim_number: 14
+    claim: "Enkidu plays a role in the defence."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 70-85"
+    verbatim_quote: "Enkidu ... to the gate ... of Aga"
+
+  - claim_number: 18
+    claim: "Gilgamesh ascends the wall and his terrifying presence overwhelms the besieging army."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 85-100"
+    verbatim_quote: "Then Gilgamesh, the lord of Kulaba, climbed up on the wall. His terrifying splendour overwhelmed the young and the old of Kish"
+
+  - claim_number: 19
+    claim: "Aga is captured by Uruk's forces."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 100-108"
+    verbatim_quote: "They seized Aga in the midst of his army"
+
+  - claim_number: 22
+    claim: "The composition concludes with formulaic praise of Gilgamesh."
+    source_id: "etcsl"
+    source_loc: "1.8.1.1, lines 113-115"
+    verbatim_quote: "Gilgamesh, lord of Kulaba, praise be to you"
+
+findings:
+  - claim_number: 23
+    kind: "SILENT-BRIDGE"
+    severity: "HIGH"
+    claim: "The text's royal-legitimation function establishes Uruk's independence from Kish and Gilgamesh's authority as a ruler who acts on his own judgement backed by the warrior class."
+    issue: "The characterisation of Gilgamesh 'acting on his own judgement backed by the warrior class' is editorial interpretation without an [INFERENCE:] marker. The text shows him following the young men's counsel, not acting on his own judgement."
+    evidence: "ETCSL 1.8.1.1 shows Gilgamesh consulting both assemblies and following the young men's advice — a different action than 'acting on his own judgement.'"
+    recommended_fix: "Add [INFERENCE:] marker or rephrase to distinguish textual action from interpretive framing."
+
+  - claim_number: 4
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The text reflects real political tensions between Uruk and Kish in the Early Dynastic period."
+    issue: "Kramer 1961 pp. 187-190 is likely the wrong page reference. His discussion of Gilgamesh and Aga as evidence for political institutions appears elsewhere in the book ('The First Bicameral Congress')."
+    evidence: "Kramer discusses Gilgamesh and Aga under 'The First Bicameral Congress' in the introductory section, not pp. 187-190."
+    recommended_fix: "Verify Kramer 1961 page reference against physical copy."
+
+  - claim_number: 15
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "A warrior named Birhurturre ascends the city wall during the siege."
+    issue: "The name 'Birhurturre' is not the universally agreed reading. Variant readings exist in scholarship."
+    evidence: "ETCSL 1.8.1.1 and George 2003 present variant readings of this character's name."
+    recommended_fix: "Verify exact name form against ETCSL transliteration."
+
+  - claim_number: 20
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Gilgamesh releases Aga acknowledging a prior debt of gratitude."
+    issue: "The 'prior debt of gratitude' is one scholarly interpretation of a compressed passage. The exact meaning is debated."
+    evidence: "ETCSL 1.8.1.1 final lines reference a prior relationship but its nature is not fully clear."
+    recommended_fix: "Add qualification that the 'prior debt' is one scholarly interpretation."
+
+  - claim_number: 10
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The bicameral structure has been widely discussed as evidence for proto-democratic institutions in Sumer."
+    issue: "Missing reference to Jacobsen 1943 ('Primitive Democracy in Ancient Mesopotamia'), the foundational study on this topic."
+    evidence: "Jacobsen 1943 (JNES 2, pp. 159-172) is the seminal work and is not cited."
+    recommended_fix: "Consider adding reference to Jacobsen 1943."
+
+  - claim_number: 24
+    kind: "CITATION-WRONG"
+    severity: "LOW"
+    claim: "The composition is a tightly constructed political narrative exploring assembly counsel versus royal initiative."
+    issue: "The phrasing appears to be editorial synthesis rather than a direct quotation from Black et al. 2004 or George 2003."
+    evidence: "Both sources discuss political dimensions but the exact characterisations may not appear at cited pages."
+    recommended_fix: "Verify characterisations appear at cited pages."
+
+  - claim_number: 25
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The complete absence of supernatural elements makes this composition unparalleled in the rest of the corpus."
+    issue: "'Unparalleled in the rest of the corpus' overstates what George 2003 claims; should be narrowed to Gilgamesh poems specifically."
+    evidence: "George 2003 pp. 141-142 notes this feature but limits comparison to Gilgamesh poems."
+    recommended_fix: "Narrow to 'unique among the Sumerian Gilgamesh poems.'"

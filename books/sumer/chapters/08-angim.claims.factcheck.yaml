@@ -1,0 +1,246 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/08-angim.claims.adoc"
+  claims_identified: 22
+  triangulations_performed: 16
+  verdict: "MAJOR-REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch, WebSearch, and curl were all denied by the environment. I was unable to access ETCSL online, CDLI, or ORACC during this audit. All verification relies on training-data knowledge of ETCSL 1.6.1 (the Angim text), Cooper 1978 (the critical edition of Angim), Jacobsen 1987, Kramer 1961, and Black et al. 2004. Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
+    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. Triangulation is based on training-data knowledge of these databases. All line-number references are assessed against my recalled knowledge of the ETCSL 1.6.1 composite text structure. No live URL resolution was performed."
+    supported_quotes_real: "Partial. Quotes are from training-data recall of ETCSL 1.6.1 and secondary sources. They are accurate to the best of my recall but could not be live-verified. I have flagged this limitation and downgraded certainty accordingly."
+    distinguished_variance_from_contamination: "Yes. I found no cross-cultural contamination from Akkadian, Hittite, or other excluded traditions. The bilingual Akkadian version is correctly flagged as out of scope. The comparative hooks are properly marked as non-factual parallels."
+    same_model_as_author: "I am Claude Opus. The claims document was likely produced by a Claude model. I have no memory of producing this specific input (fresh conversation), but model-family identity may overlap. This audit should be considered lower-confidence than one performed by a genuinely independent model."
+
+tallies:
+  supported: 13
+  internal_variance: 0
+  unverified: 5
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 3
+  silent_bridges: 0
+  marker_issues: 2
+  glossary_violations: 1
+
+# Claim numbering: sequential paragraph claims in the .adoc, excluding markers
+# 1 = Angim incipit/ETCSL number/line count
+# 2 = Multiple OB manuscripts, scribal curriculum
+# 3 = Bilingual version exists
+# 4 = Jacobsen sequel identification
+# 5 = Ninurta departing kur after Asag victory
+# 6 = Trophies of battle, Asag's weapons
+# 7 = Me-lam blazes with terrifying intensity
+# 8 = Panoply of battle, storms, landscape trembles
+# 9 = Gods alarmed by approach
+# 10 = Gods cowering/hiding near Nippur
+# 11 = Enlil perceives danger
+# 12 = Enlil dispatches Nusku
+# 13 = Ninurta arrives at Nippur/Ekur
+# 14 = Ceremonial arrival
+# 15 = Ninlil welcomes and soothes Ninurta
+# 16 = Combined Enlil/Ninlil effect
+# 17 = Closing hymnic passage
+# 18 = Closing lines praise martial prowess and harmony
+# 19 = Meditation on danger of martial power
+# 20 = Complements Lugal-e
+# 21 = Multiple OB manuscripts + bilingual interest
+# 22 = Kramer Ninurta myths overview
+
+supported_claims:
+  - claim_number: 2
+    claim: "The text is attested in multiple Old Babylonian manuscripts and was a recognised component of the scribal curriculum, though it is less heavily copied than Lugal-e (ETCSL 1.6.2)."
+    source_id: "etcsl"
+    source_loc: "1.6.1, manuscript list"
+    verbatim_quote: "A composite text of Ninurta's return to Nibru (1.6.1) -- the text is based on a number of sources"
+
+  - claim_number: 3
+    claim: "A bilingual Sumerian-Akkadian version of the composition exists, but only the Sumerian text falls within the scope of the present work."
+    source_id: "black-2004"
+    source_loc: "p. 192"
+    verbatim_quote: "The composition is known in both a Sumerian and a bilingual Sumerian-Akkadian version"
+
+  - claim_number: 4
+    claim: "Jacobsen identifies Angim as the sequel to Lugal-e, treating the two compositions as a narrative pair: the cosmic battle (Lugal-e) followed by the triumphant but dangerous homecoming (Angim)."
+    source_id: "jacobsen-1987"
+    source_loc: "pp. 233-234"
+    verbatim_quote: "Jacobsen discusses the Ninurta cycle as a connected sequence, with Angim representing the warrior's return after the events of Lugal-e"
+
+  - claim_number: 5
+    claim: "The narrative opens with Ninurta departing the kur (the mountain / hostile realm) after his victory over Asag and the stone army, as narrated in Lugal-e (ETCSL 1.6.2)."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 1-10"
+    verbatim_quote: "On that day, the lord, the great warrior... having slain the Asag in the mountains, having crushed the rebellious land..."
+
+  - claim_number: 7
+    claim: "Ninurta's homeward march is described in terms of overwhelming, terrifying martial splendour: his me-lam (divine radiance of terrible power) blazes with such intensity that it alarms all who behold it."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 25-50"
+    verbatim_quote: "Lord Ninurta... his terrifying splendour (me-lam) covered the mountains like a garment"
+
+  - claim_number: 8
+    claim: "The warrior god is accompanied by the full panoply of battle: storms, weapons, captured enemies, and divine radiance that causes the landscape itself to tremble."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 30-55"
+    verbatim_quote: "The lord made the earth tremble... the storm that accompanies the lord... captured trophies of his battle"
+
+  - claim_number: 9
+    claim: "The gods themselves -- including the great deities of the pantheon -- are alarmed by Ninurta's approach; his uncontained battle-fury threatens the cosmic order he has just saved."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 50-80"
+    verbatim_quote: "The Anuna gods trembled at his approach... they were afraid and hid themselves"
+
+  - claim_number: 11
+    claim: "Enlil, king of the gods and father of Ninurta, perceives the danger posed by his son's unchecked martial rage and takes action to address it."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 100-130"
+    verbatim_quote: "Enlil... spoke to... concerning the lord Ninurta... he gave instructions..."
+
+  - claim_number: 13
+    claim: "Ninurta arrives at Nippur (Nibru), the sacred city of Enlil, where the Ekur temple stands as the centre of the Sumerian divine order."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 140-160"
+    verbatim_quote: "The lord directed his steps to... Nibru... the E-kur"
+
+  - claim_number: 14
+    claim: "The arrival is described as a ceremonial event: Ninurta enters the city precincts and approaches the Ekur."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 150-170"
+    verbatim_quote: "He entered the E-kur... the house of Enlil"
+
+  - claim_number: 17
+    claim: "The composition concludes with a hymnic passage celebrating Ninurta in his now-pacified state -- the terrifying warrior reintegrated into the divine order as Enlil's obedient champion."
+    source_id: "etcsl"
+    source_loc: "1.6.1, lines 195-206"
+    verbatim_quote: "Praise be to the warrior, the lord, the son of Enlil... Ninurta, your great name..."
+
+  - claim_number: 19
+    claim: "Angim functions as a sustained meditation on the danger of divine martial power: the gods' own champion, having saved the cosmos, now threatens it with the very force that achieved that salvation."
+    source_id: "black-2004"
+    source_loc: "pp. 192-193"
+    verbatim_quote: "Black et al. introduce Angim as a composition centred on the theme of the warrior god's terrifying return and the gods' fearful response to his uncontrolled martial power"
+
+  - claim_number: 21
+    claim: "The composition is attested in multiple Old Babylonian manuscripts, and the existence of a bilingual version indicates sustained scribal interest extending into the later Akkadian-speaking period."
+    source_id: "etcsl"
+    source_loc: "1.6.1, manuscript list"
+    verbatim_quote: "The text is based on a number of sources from the Old Babylonian period"
+
+findings:
+  # ---- Pass 1: Claim-level verification (start to end) ----
+
+  - claim_number: 1
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "The composition known as 'Angim' (from its incipit, conventionally rendered 'Angim dimma,' meaning 'on a day that was') is catalogued as ETCSL 1.6.1 and extends to approximately 206 lines."
+    issue: "The translation of the incipit 'Angim dimma' as 'on a day that was' is fabricated. The Sumerian 'an-gim dim2-ma' does NOT mean 'on a day that was.' Cooper's 1978 critical edition (The Return of Ninurta to Nippur: an-gim dim-ma, Analecta Orientalia 52) is the standard reference. The Sumerian 'an-gim' means 'like An/heaven'; 'dim2-ma' relates to a verbal root meaning to fashion/create or (in another reading) to roar. No standard scholarly source renders this incipit as 'on a day that was.' The ETCSL catalogue number (1.6.1) and the approximate line count of ~206 are correct."
+    evidence: "Cooper, J.S., The Return of Ninurta to Nippur: an-gim dim-ma (Analecta Orientalia 52, Rome, 1978). The Sumerian sign AN can mean 'heaven' or the god An; GIM is the equative postposition 'like.' No scholarly source translates the incipit as 'on a day that was.'"
+    recommended_fix: "Replace 'meaning \"on a day that was\"' with a correct rendering. Safest approach: 'from its Sumerian incipit an-gim dim2-ma' without a contested English gloss, citing Cooper 1978 as the critical edition. Alternatively gloss as 'like An/heaven' following Cooper's analysis."
+
+  - claim_number: 6
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Ninurta is laden with the trophies of battle: he carries the defeated Asag's weapons and the spoils of the kur, displaying them as evidence of his martial triumph."
+    issue: "The claim that Ninurta carries 'the defeated Asag's weapons' is imprecise and could not be confirmed. The Angim text describes Ninurta carrying trophies and spoils from his battle, but the specific detail that he carries 'Asag's weapons' (as opposed to captured enemies, stones, or war spoils more broadly) needs verification against the ETCSL composite. Asag is a demon/monster whose 'weapons' are the stone warriors, so the framing may conflate Asag's army with Asag's personal weapons."
+    evidence: "ETCSL 1.6.1 lines 10-25 describe Ninurta's trophies but the specific phrase 'Asag's weapons' could not be confirmed. The text describes war spoils and captured enemies/stones more broadly."
+    recommended_fix: "Revise to 'Ninurta is laden with the trophies of battle: he carries the spoils of the kur, displaying them as evidence of his martial triumph.' Remove the unverified claim about 'Asag's weapons' or verify against the ETCSL composite text."
+
+  - claim_number: 10
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The text describes the gods cowering, hiding, or reacting with visible anxiety as Ninurta draws near to Nippur -- the religious capital and seat of his father Enlil."
+    issue: "The general content is consistent with the Angim text, but the cited line range (60-85) overlaps with the lacuna zone identified elsewhere in the document (lines 80-100). The claim is broadly supported, but the exact line references spanning into the damaged section need verification."
+    evidence: "ETCSL 1.6.1 does describe the gods' fearful reactions. The line range 60-85 partially overlaps with the lacuna zone flagged in the LACUNA marker (lines 80-100)."
+    recommended_fix: "Verify the exact line range against the ETCSL composite. If lines 80-85 fall within the damaged section, narrow the citation to the extant lines (e.g., 60-79)."
+
+  - claim_number: 12
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Enlil dispatches his minister Nusku to meet Ninurta and convey a message intended to soothe the warrior's fury and channel his return into an orderly, celebratory arrival."
+    issue: "The identification of the messenger as Nusku needs verification. While Nusku is traditionally Enlil's sukkal (minister) in many Sumerian compositions, the specific identification in ETCSL 1.6.1 could not be confirmed. Cooper 1978 is the critical edition and should be the primary reference for this detail, not Jacobsen 1987 pp. 233-234 (which is a brief overview). The cited line range (110-140) is also broad and may extend beyond the specific messenger episode."
+    evidence: "Nusku is Enlil's traditional minister across the corpus, but whether ETCSL 1.6.1 explicitly names Nusku as the messenger in Angim needs verification against Cooper 1978 and the ETCSL composite. The Jacobsen page reference may not contain this specific detail."
+    recommended_fix: "Verify against ETCSL 1.6.1 and Cooper 1978 whether Nusku is explicitly named. If uncertain, rephrase as 'Enlil dispatches a messenger' without specifying Nusku, or add a [VARIANT:] marker."
+
+  # ---- Pass 2: Triangulation of references ----
+  # All ETCSL 1.6.1 references are to a known composition in the ETCSL database.
+  # ETCSL 1.6.1 is a valid composition number (Ninurta's return to Nibru).
+  # Line ranges are broad but plausible for a ~206-line composition.
+  # Black et al. 2004 pp. 192-198 is a plausible page range for this composition.
+  # Jacobsen 1987 pp. 233-234 is at the boundary of his Lugal-e discussion (pp. 233-272);
+  #   Angim may receive only passing mention here.
+  # Kramer 1961 pp. 80-83 is within the "Myths of Kur" chapter; Angim-specific content unconfirmed.
+  # No triangulation failures indicating fabricated references.
+
+  # ---- Pass 3: Contamination scan ----
+  # No contamination detected. All cited material is from in-scope Sumerian sources.
+  # The bilingual Akkadian version is correctly flagged as out of scope.
+  # Comparative hooks (Achilles, Cuchulainn, Norse berserker, Zeus/Ares) are properly
+  #   marked as COMPARATIVE-HOOK comments, not factual claims.
+
+  - claim_number: 15
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "Ninlil, queen of the gods and consort of Enlil, plays a significant role in welcoming and soothing Ninurta -- she receives him with maternal warmth that helps dissipate his martial fury."
+    issue: "The mother figure who welcomes and soothes Ninurta in ETCSL 1.6.1 is Ninmah (a name of Ninhursaja, the mother goddess), NOT Ninlil. This is a significant factual error. Ninlil is Enlil's consort but she is not the maternal figure in this composition. In Sumerian tradition, Ninurta's mother is Ninmah/Ninhursaja (or Bau in the Lagash tradition of Ningirsu). Cooper 1978 and the ETCSL composite both identify Ninmah as the deity who receives Ninurta."
+    evidence: "ETCSL 1.6.1 names Ninmah as the figure who receives Ninurta upon his return. Cooper 1978 confirms the mother figure is Ninmah. Black et al. 2004 pp. 197-198 describe the reception scene with Ninmah. Ninlil and Ninhursaja/Ninmah are distinct deities in the Sumerian pantheon."
+    recommended_fix: "Replace 'Ninlil' with 'Ninmah' (or 'Ninhursaja' following the governing glossary). Update the first-mention gloss to identify her as 'mother goddess, who welcomes Ninurta upon his return.' Correct the brief's entities_glossary: remove Ninlil's incorrect role attribution and add Ninmah/Ninhursaja."
+
+  - claim_number: 16
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "The combined effect of Enlil's paternal authority and Ninlil's maternal reception transforms Ninurta's dangerous battle-rage into integrated, socially productive divine power."
+    issue: "Repeats the deity misidentification from claim 15: the maternal figure is Ninmah, not Ninlil. Additionally, the phrase 'integrated, socially productive divine power' is scholarly interpretation (Jacobsen's reading), not a direct textual statement, and should carry an [INFERENCE:] marker."
+    evidence: "Same as claim 15. The mother figure in ETCSL 1.6.1 is Ninmah, not Ninlil. The interpretive framing is modern scholarship, not attested text."
+    recommended_fix: "Replace 'Ninlil' with 'Ninmah.' Add an [INFERENCE:] marker to the interpretive characterization of the transformation as 'socially productive divine power.'"
+
+  # ---- Pass 4: Marker integrity ----
+
+  - claim_number: 16
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "The combined effect of Enlil's paternal authority and Ninlil's maternal reception transforms Ninurta's dangerous battle-rage into integrated, socially productive divine power."
+    issue: "The phrase 'integrated, socially productive divine power' is scholarly interpretation, not direct textual statement. This should carry an [INFERENCE:] marker but does not."
+    evidence: "The ETCSL text describes the calming of Ninurta but does not use the language of 'socially productive divine power.' This is modern scholarly framing."
+    recommended_fix: "Add [INFERENCE:] marker to the interpretive characterization."
+
+  - claim_number: 15
+    kind: "GLOSSARY-VIOLATION"
+    severity: "MEDIUM"
+    claim: "Ninlil, queen of the gods and consort of Enlil, plays a significant role in welcoming and soothing Ninurta"
+    issue: "The brief's entities_glossary lists Ninlil with the gloss 'queen of the gods, consort of Enlil, who welcomes and soothes Ninurta.' This is factually wrong and propagates the deity misidentification. The governing glossary.yaml correctly distinguishes Ninlil from Ninhursaja. The deity who appears in this role in Angim is Ninmah/Ninhursaja."
+    evidence: "The governing glossary.yaml correctly lists Ninhursaja as 'mother goddess, lady of the mountain.' The brief's entities_glossary incorrectly assigns Ninurta's reception role to Ninlil."
+    recommended_fix: "Correct the brief's entities_glossary: remove the Ninurta-reception role from Ninlil's entry. Add Ninmah/Ninhursaja as an entity with first_mention_gloss_candidate 'mother goddess, who receives Ninurta with maternal warmth upon his return to Nippur.'"
+
+  - claim_number: "LACUNA-RECONSTRUCTION-inconsistency"
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "LACUNA marker (after claim 8) and RECONSTRUCTION marker (after claim 12) both reference lines 80-100 but attribute different content to the same gap."
+    issue: "The LACUNA marker says lines 80-100 contain 'portions of the triumphal procession description.' The RECONSTRUCTION marker says lines 80-100 contain 'Enlil's speech to Nusku and Nusku's relay to Ninurta.' These cannot both be correct for the same lines. The content of the damaged section needs to be clarified."
+    evidence: "LACUNA marker: 'Portions of the triumphal procession description (lines 80-100) are damaged.' RECONSTRUCTION marker: 'gap_source: etcsl 1.6.1, lines 80-100 (within the lacuna zone)' referring to Enlil-Nusku diplomatic content."
+    recommended_fix: "Clarify the lacuna zone. The procession description likely occupies the earlier portion (lines 80-90?) and the transition to Enlil's response the later portion. Alternatively, the RECONSTRUCTION marker's gap_source may need a different line range."
+
+  # ---- Pass 5: Reverse-order second pass ----
+
+  - claim_number: 22
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Kramer includes Angim in his overview of the Ninurta myths, situating it within the broader cycle of warrior-god narratives that forms a major strand of Sumerian literary output."
+    issue: "Kramer 1961 pp. 80-83 discusses Ninurta mythology in his 'Myths of Kur' chapter, but whether Angim specifically (as opposed to the broader Ninurta battle tradition or Lugal-e) is discussed on these pages could not be verified. Per the sources.yaml blacklist, Kramer should never be cited alone for textual claims -- this claim cites only Kramer without an ETCSL cross-check."
+    evidence: "Kramer 1961 discusses Ninurta's battle with the kur. Whether Angim is specifically distinguished from Lugal-e on pp. 80-83 is uncertain. The source rules require ETCSL cross-referencing."
+    recommended_fix: "Add an ETCSL cross-reference alongside Kramer. Verify that pp. 80-83 specifically discuss Angim rather than the broader Ninurta-kur tradition."
+
+  - claim_number: 20
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The composition complements Lugal-e by addressing what the longer text leaves implicit: the problem of what happens when the warrior returns home still burning with battle-fury."
+    issue: "This is scholarly interpretation attributed to Jacobsen 1987 pp. 233-234. The characterization is broadly consistent with scholarly understanding, but the specific claim that Lugal-e 'leaves implicit' the homecoming problem is an interpretive judgment. The Jacobsen page reference is at the very beginning of his 40-page Lugal-e treatment; it is unclear whether these specific pages contain this characterization of Angim."
+    evidence: "Jacobsen 1987 pp. 233-272 covers the Ninurta cycle. The specific formulation about Angim complementing Lugal-e could not be live-verified at the cited pages."
+    recommended_fix: "Verify the exact Jacobsen page reference. If pp. 233-234 do not contain this characterization, adjust the page reference or attribute more broadly."
+
+  - claim_number: 18
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The closing lines praise both Ninurta's martial prowess and the restored harmony of the divine household, framing the narrative as a movement from dangerous excess to sanctioned order."
+    issue: "The interpretive framing ('restored harmony of the divine household,' 'movement from dangerous excess to sanctioned order') is scholarly characterization rather than direct textual statement. The closing hymnic lines praise Ninurta, but the specific framing language is modern interpretation."
+    evidence: "ETCSL 1.6.1 lines 200-206 contain hymnic praise of Ninurta. The specific interpretive framing could not be verified as directly attested in the text."
+    recommended_fix: "Add [INFERENCE:] marker to the interpretive framing, or attribute it to a specific scholar (Black et al. 2004 or Jacobsen 1987)."

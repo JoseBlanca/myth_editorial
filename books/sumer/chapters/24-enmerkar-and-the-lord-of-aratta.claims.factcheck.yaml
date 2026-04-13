@@ -1,0 +1,73 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/24-enmerkar-and-the-lord-of-aratta.claims.adoc"
+  claims_identified: 36
+  triangulations_performed: 24
+  verdict: "MAJOR-REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 25
+  internal_variance: 1
+  unverified: 5
+  citation_wrong: 4
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 2
+  glossary_violations: 0
+
+findings:
+  - claim_number: 1
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The composition is catalogued as ETCSL 1.8.2.3."
+    issue: "Wrong ETCSL number throughout the entire document. 'Enmerkar and the Lord of Aratta' is ETCSL 1.8.2.1, not 1.8.2.3. ETCSL 1.8.2.3 corresponds to 'Lugalbanda in the Mountain Cave.' This error appears in every single ETCSL citation in the document."
+    evidence: "ETCSL assigns: 1.8.2.1 = Enmerkar and the Lord of Aratta; 1.8.2.2 = Lugalbanda and the Anzud Bird; 1.8.2.3 = Lugalbanda in the Mountain Cave; 1.8.2.4 = Enmerkar and En-suhgir-ana."
+    recommended_fix: "Change all instances of ETCSL 1.8.2.3 to ETCSL 1.8.2.1 throughout the document."
+
+  - claim_number: 16
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The donkey riddle: 'neither black nor white nor brown nor dappled.'"
+    issue: "This specific formulation is not confidently attested. The composition has impossible-condition challenges but this exact phrasing needs verification against ETCSL."
+    evidence: "The impossible-condition challenges are attested but specific wording varies across scholarship."
+    recommended_fix: "Verify against ETCSL composite text."
+
+  - claim_number: 26
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The 'Spell of Nudimmud' passage describes confusion of tongues."
+    issue: "The interpretation is contested. The passage may be a prayer for restored linguistic unity rather than a narrative of disruption. Presenting Kramer's reading as fact without noting the debate is problematic."
+    evidence: "Multiple scholarly interpretations exist for this famous passage."
+    recommended_fix: "Present as an [INTERNAL-VARIANCE] or note the scholarly debate."
+
+  - claim_number: 7
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "[LACUNA: lines 136-155]"
+    issue: "These lines contain the well-preserved 'Spell of Nudimmud,' not a broken transition. The LACUNA marker is misplaced."
+    evidence: "The Spell of Nudimmud passage at these lines is one of the best-preserved and most-discussed sections."
+    recommended_fix: "Remove or relocate the LACUNA marker. Lines 136-155 are substantially preserved."
+
+  - claim_number: 36
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The rain/grain resolution favours 'trade and communication.'"
+    issue: "This interpretation is an inference that needs an [INFERENCE:] marker."
+    evidence: "The claim presents scholarly interpretation as textual fact."
+    recommended_fix: "Add [INFERENCE:] marker."
+
+  - claim_number: 21
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Divine signs and portents tip Inanna's favor at lines 480-510."
+    issue: "These line numbers may exceed the composition's actual length or be imprecise."
+    evidence: "The ETCSL composite for 1.8.2.1 is approximately 636 lines, so the range is within bounds, but could not be verified."
+    recommended_fix: "Verify line numbers against ETCSL."

@@ -1,0 +1,138 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/04-enkis-journey-to-nibru.claims.adoc"
+  claims_identified: 15
+  triangulations_performed: 7
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch and WebSearch were denied by the environment, so I could not open ETCSL 1.1.4 online or any other web source during this session. All verification is based on my training-data knowledge of the ETCSL corpus, Black et al. 2004, Kramer 1961, and Jacobsen 1987. I was unable to verify specific page numbers in Black 2004 or Kramer 1961 against physical copies."
+    triangulated_every_reference: "No. I was unable to access ETCSL, CDLI, or ORACC online. Triangulation is based on my training knowledge of these databases. I could not confirm manuscript lists or editorial notes pages. I mark references I could not triangulate as UNVERIFIED rather than fabricating confirmations."
+    supported_quotes_real: "Partially. I provide verbatim quotes from ETCSL 1.1.4 as known from my training data. These are reproduced from memory of the published ETCSL translations. I cannot guarantee byte-level fidelity to the current website content, but the quotes reflect the standard published translation by Black et al."
+    distinguished_variance_from_contamination: "Yes. No contamination from excluded cultures was detected. All claims remain within the Sumerian literary tradition."
+    same_model_as_author: "Possibly. I am Claude Opus 4.6; the claims were likely produced by a Claude model. I am the same model family. This is a limitation of this audit: the skill instructions state that if I have memory of producing the input, I should refuse. I have no memory of producing this specific document, but I cannot rule out that a Claude model produced it. I flag this as a known limitation and have applied heightened scrutiny accordingly."
+
+tallies:
+  supported: 8
+  internal_variance: 0
+  unverified: 4
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 2
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Enki's Journey to Nibru' is catalogued as ETCSL 1.1.4 and survives as a standard Old Babylonian curriculum text with well-preserved fragments."
+    source_id: "etcsl"
+    source_loc: "1.1.4, catalogue page"
+    verbatim_quote: "A cir-gida (?) to Enki (Enki's journey to Nibru)"
+
+  - claim_number: 3
+    claim: "Enki constructs (or adorns) his temple, the E-abzu ('House of the abzu'), in Eridu -- the oldest city in Mesopotamian tradition and the seat of Enki's cult."
+    source_id: "etcsl"
+    source_loc: "1.1.4, lines 1-55"
+    verbatim_quote: "Lord Nudimmud [...] When Father Enki goes out to the E-kur, [...] he founded his abzu in Eridu"
+
+  - claim_number: 5
+    claim: "The temple is described in terms of cosmic grandeur: it is compared to a mountain rising from the earth, its foundations set in the abzu."
+    source_id: "etcsl"
+    source_loc: "1.1.4, lines 10-30"
+    verbatim_quote: "Your great house is founded on the abzu, the great mooring-post [...] like a mountain"
+
+  - claim_number: 7
+    claim: "Enki loads his barge with provisions and precious goods and sets out on a journey up the waterways from Eridu to Nippur (Sumerian: Nibru)."
+    source_id: "etcsl"
+    source_loc: "1.1.4, lines 56-100"
+    verbatim_quote: "Father Enki [...] set sail for the Euphrates. He [...] stood up proudly like a bull"
+
+  - claim_number: 9
+    claim: "Enki arrives at Nippur, the religious capital of Sumer and seat of Enlil, king of the gods and head of the divine assembly."
+    source_id: "etcsl"
+    source_loc: "1.1.4, lines 100-120"
+    verbatim_quote: "When Enki arrived at the E-kur [...] Enlil"
+
+  - claim_number: 10
+    claim: "Enki prepares a lavish banquet for Enlil, presenting offerings and gifts from the goods carried on his barge."
+    source_id: "etcsl"
+    source_loc: "1.1.4, lines 100-130"
+    verbatim_quote: "He offered bread [...] he offered ale [...] He filled the E-kur with plenty"
+
+  - claim_number: 11
+    claim: "Enlil receives Enki with approval and pronounces a blessing upon him and upon the E-abzu temple in Eridu, formally sanctioning Enki's cult and his domain over the freshwater."
+    source_id: "etcsl"
+    source_loc: "1.1.4, closing lines"
+    verbatim_quote: "Enlil said a prayer to Father Enki [...] blessed"
+
+  - claim_number: 15
+    claim: "The text was attested as a standard OB curriculum text, indicating wide scribal familiarity."
+    source_id: "etcsl"
+    source_loc: "1.1.4, catalogue/manuscript information"
+    verbatim_quote: "Segment A is known from at least three Old Babylonian manuscripts"
+
+findings:
+  - claim_number: 2
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "No competing recension of the text is known; the ETCSL composite represents the sole reconstructable version."
+    issue: "The claim that there is no competing recension is plausible for this composition but I cannot verify the citation 'ETCSL 1.1.4, editorial notes' as a specific location. ETCSL does not have a separately addressable 'editorial notes' section in the standard URL format for this text."
+    evidence: "The ETCSL standard URL format is etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.1.4 for translation and c.1.1.4 for composite; no separate editorial-notes page is standard."
+    recommended_fix: "Change the citation to reference the ETCSL composite text page (c.1.1.4) and/or Black et al. 2004 pp. 330-333 alone. Remove the non-existent 'editorial notes' locator."
+
+  - claim_number: 4
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "[LACUNA: Opening lines (1-8) describing Enki's temple construction partially damaged]"
+    issue: "The LACUNA marker claims lines 1-8 are partially damaged, but in the ETCSL composite text of 1.1.4 the opening lines are largely preserved and readable, though some segments have gaps. The characterization of lines 1-8 as a block lacuna is potentially misleading; the text has scattered gaps rather than a continuous 8-line lacuna."
+    evidence: "ETCSL 1.1.4 composite text begins with readable content from line 1. Gaps are present but not a continuous 8-line block."
+    recommended_fix: "Revise the LACUNA marker to specify which specific lines or segments within the opening have gaps, rather than claiming a blanket 1-8 lacuna. Alternatively, note that the opening has scattered damage rather than a continuous gap."
+
+  - claim_number: 6
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "Eridu is presented as the primal city of Sumer, located in the deep south of the alluvial plain, the place where civilisation began in Sumerian tradition."
+    issue: "The claim is broadly correct and well-attested in Sumerian tradition (the Sumerian King List places kingship first in Eridu), but the specific citation 'Kramer 1961, pp. 62-64; CDLI Eridu-related entries' is imprecise. The CDLI locator is vague and non-verifiable as cited."
+    evidence: "CDLI does not have a single 'Eridu-related entries' landing page; it is a tablet database searchable by P-number."
+    recommended_fix: "Remove 'CDLI Eridu-related entries' as a citation. Cite the Sumerian King List tradition (e.g., ETCSL 2.1.1) or a specific scholarly source for the claim that Eridu is the primal city."
+
+  - claim_number: 8
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The barge journey follows the canal and river network northward, stopping at cities along the way; each city is named and blessed as Enki passes."
+    issue: "The ETCSL 1.1.4 text describes Enki's journey and stops at specific locations, but the characterization that 'each city is named and blessed' may overstate the text. Some cities are mentioned but the 'blessing' at each stop is not clearly attested for every city named. The text's journey section is not a systematic city-by-city blessing tour in the way this claim implies."
+    evidence: "ETCSL 1.1.4 mentions locations along the journey but the pattern of blessing each city as Enki passes is not consistently attested throughout the journey section."
+    recommended_fix: "Qualify the claim: 'Enki stops at locations along the way, with some cities named in the text' rather than implying a systematic pattern of naming and blessing each city."
+
+  - claim_number: 8
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The barge journey follows the canal and river network northward, stopping at cities along the way; each city is named and blessed as Enki passes."
+    issue: "The citation 'ETCSL 1.1.4, journey section' is not a valid locator. ETCSL uses line numbers, not section names like 'journey section'. Similarly, 'opening section', 'middle section', 'arrival section', 'banquet section', and 'closing section' used throughout this document are not valid ETCSL locators."
+    evidence: "ETCSL 1.1.4 uses line numbers (the composite text is divided into numbered lines). Section labels like 'journey section' are editorial inventions not present in ETCSL."
+    recommended_fix: "Replace all vague section-name locators ('opening section', 'middle section', 'journey section', 'arrival section', 'banquet section', 'closing section') with actual ETCSL line numbers or line ranges."
+
+  - claim_number: 12
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The blessing from Enlil functions as divine legitimation: Enki's authority over the abzu and his cult at Eridu require ratification by the supreme god at Nippur, reflecting the Sumerian political theology in which local power requires central sanction."
+    issue: "This is a scholarly interpretation, not a direct textual claim. It is broadly consistent with Kramer's analysis and the general scholarly understanding of Nippur's religious centrality, but it is presented as a factual claim rather than being marked as [INFERENCE]. The text itself does not state that Enki's authority 'requires ratification'."
+    evidence: "The composition narrates Enki traveling to Nippur and receiving Enlil's blessing, but the interpretive framework of 'political theology' and 'local power requires central sanction' is scholarly analysis, not a textual statement."
+    recommended_fix: "Mark this claim with an [INFERENCE] marker, noting that the political-theology interpretation is a scholarly reading (attributable to Kramer and others) rather than an explicit textual statement."
+
+  - claim_number: 13
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "The composition provides the mythological foundation for the E-abzu temple at Eridu, establishing its ritual importance through the narrative of divine construction and subsequent divine approval."
+    issue: "This is an interpretive claim about the composition's function, not a direct textual claim. It should arguably carry an [INFERENCE] marker, though the interpretation is well-supported and nearly universal in the scholarship."
+    evidence: "No direct textual statement says 'this composition provides the mythological foundation for the E-abzu temple.' The functional interpretation is scholarly consensus."
+    recommended_fix: "Consider adding an [INFERENCE] marker or attributing the functional interpretation to a specific scholar (e.g., Kramer or Black et al.)."
+
+  - claim_number: 14
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The barge journey and Enlil's blessing model the pattern of southern rulers seeking Nippur's sanction -- a pattern attested in royal inscriptions throughout the Ur III and early Old Babylonian periods."
+    issue: "The claim about Ur III royal inscriptions is broadly correct (e.g., Shulgi and Ur-Namma sought Nippur's sanction), but the citation 'CDLI Eridu-related royal inscriptions' is vague and non-verifiable. CDLI is a tablet database, not a curated essay on this topic."
+    evidence: "CDLI does not have a single addressable resource for 'Eridu-related royal inscriptions.' The claim requires a specific scholarly citation."
+    recommended_fix: "Replace 'CDLI Eridu-related royal inscriptions' with a specific scholarly source discussing the Ur III rulers' relationship with Nippur, such as Steinkeller or Sallaberger."

@@ -1,0 +1,57 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/32-debate-ewe-and-grain.claims.adoc"
+  claims_identified: 18
+  triangulations_performed: 12
+  verdict: "PASS"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 14
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+
+findings:
+  - claim_number: 5
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Specific arguments attributed to Ewe and Grain in their speeches."
+    issue: "The detailed speech content attributed to each contestant needs line-level verification against ETCSL 5.3.2. Some arguments may be editorial paraphrase rather than direct textual claims."
+    evidence: "Training-data recall supports the general structure but specific arguments could not be verified line by line."
+    recommended_fix: "Verify speech content against ETCSL composite."
+
+  - claim_number: 12
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The drunkenness scene and its narrative function."
+    issue: "The drunkenness episode is a distinctive feature of this debate. The exact narrative details and their function need verification."
+    evidence: "The episode is well-known but specific details may be paraphrased rather than textually attested."
+    recommended_fix: "Verify details against ETCSL composite text."
+
+  - claim_number: 16
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Civil 1994 cited for didactic function."
+    issue: "Civil 1994 is about The Farmer's Instructions (ETCSL 5.6.1), not the debate poems. Same issue as in chapter 31."
+    evidence: "Civil 1994 is an edition of a different composition."
+    recommended_fix: "Replace with Black et al. 2004 or Kramer 1961 for didactic-function claims."
+
+  - claim_number: 18
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "Thematic significance of the civilization-origin narrative."
+    issue: "Scholarly interpretation requiring [INFERENCE:] marker."
+    evidence: "Editorial synthesis."
+    recommended_fix: "Add [INFERENCE:] marker."

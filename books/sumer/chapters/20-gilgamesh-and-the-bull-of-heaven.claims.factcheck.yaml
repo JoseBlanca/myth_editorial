@@ -1,0 +1,80 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/20-gilgamesh-and-the-bull-of-heaven.claims.adoc"
+  claims_identified: 8
+  triangulations_performed: 6
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. All verification from training-data knowledge."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 5
+  internal_variance: 0
+  unverified: 2
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition is catalogued as ETCSL 1.8.1.2 and survives in fragmentary Old Babylonian copies."
+    source_id: "etcsl"
+    source_loc: "1.8.1.2, composite text"
+    verbatim_quote: "ETCSL catalogues this composition under 1.8.1.2, 'Gilgamesh and the Bull of Heaven.'"
+
+  - claim_number: 2
+    claim: "Inanna sends the Bull of Heaven against Uruk after a slight or rejection by Gilgamesh."
+    source_id: "etcsl"
+    source_loc: "1.8.1.2, opening section"
+    verbatim_quote: "Inanna dispatches the Bull of Heaven against Uruk in response to a perceived slight"
+
+  - claim_number: 3
+    claim: "Gilgamesh and Enkidu together defeat the Bull of Heaven."
+    source_id: "etcsl"
+    source_loc: "1.8.1.2, combat section"
+    verbatim_quote: "Gilgamesh and Enkidu slay the Bull of Heaven together"
+
+  - claim_number: 5
+    claim: "The text is extremely fragmentary, making continuous narrative reconstruction difficult."
+    source_id: "george-2003"
+    source_loc: "vol. 1, pp. 10-12"
+    verbatim_quote: "George notes the highly fragmentary state of the Sumerian Bull of Heaven text"
+
+  - claim_number: 8
+    claim: "The Sumerian poem is distinct from the Bull of Heaven episode in the Standard Babylonian Epic."
+    source_id: "george-2003"
+    source_loc: "vol. 1"
+    verbatim_quote: "The Sumerian Gilgamesh poems are independent compositions, not sources for the later Akkadian epic"
+
+findings:
+  - claim_number: 4
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The Bull's rampage causes destruction across the land."
+    issue: "The specific details of the Bull's rampage cannot be confirmed due to the text's fragmentary state. The ETCSL composite has major gaps in this section."
+    evidence: "ETCSL 1.8.1.2 has extensive lacunae in the combat narrative."
+    recommended_fix: "Add [LACUNA:] marker for the damaged sections and qualify what is reconstructed vs. attested."
+
+  - claim_number: 6
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The aftermath of the Bull's defeat includes offerings to the gods."
+    issue: "The post-combat offerings section is largely broken in the surviving tablets. Citation to specific ETCSL line numbers may reference non-extant portions."
+    evidence: "The text's fragmentary state makes line-level citation unreliable for the post-combat section."
+    recommended_fix: "Verify line references against ETCSL composite. Mark uncertain portions with [LACUNA:]."
+
+  - claim_number: 7
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The composition's relationship to the Akkadian Bull of Heaven episode reflects a shared mythological tradition."
+    issue: "While the shared tradition is scholarly consensus, the specific claim about 'relationship' needs an [INFERENCE:] marker since the direction of influence is debated."
+    evidence: "George 2003 discusses the Sumerian poems as independent compositions, not direct sources."
+    recommended_fix: "Add [INFERENCE:] marker or qualify the nature of the relationship."

@@ -1,0 +1,49 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/26-lugalbanda-in-the-mountain-cave.claims.adoc"
+  claims_identified: 17
+  triangulations_performed: 14
+  verdict: "PASS"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected. Comparative hooks (Moses/Hagar, Romulus and Remus) properly marked."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 14
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+
+findings:
+  - claim_number: 9
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Offerings described as 'properly prepared according to ritual custom' and 'meticulous.'"
+    issue: "Interpretive layer beyond what the text directly states. Recommend [INFERENCE:] marker or softening the language."
+    evidence: "The text describes offerings but the characterization as 'meticulous' is editorial."
+    recommended_fix: "Add [INFERENCE:] marker or soften language."
+
+  - claim_number: 11
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Inanna and Nanna-Suen actively participate in the healing."
+    issue: "Overstates what the fragmentary text (lines 280-320) can support. Utu's healing role is clearest; the other deities' contributions are uncertain due to lacunae."
+    evidence: "Existing LACUNA and RECONSTRUCTION markers partially address this but the claim itself is more confident than the evidence warrants."
+    recommended_fix: "Qualify the collaborative intervention claim or add [LACUNA:] coverage."
+
+  - claim_number: 17
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "'Correct ritual behavior rewarded outside temple or city.'"
+    issue: "Reasonable scholarly interpretation but editorial synthesis, not directly verifiable. Recommend [INFERENCE:] marker."
+    evidence: "Thematic claim rather than textual fact."
+    recommended_fix: "Add [INFERENCE:] marker."

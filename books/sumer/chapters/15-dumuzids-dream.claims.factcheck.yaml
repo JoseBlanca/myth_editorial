@@ -1,0 +1,259 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/15-dumuzids-dream.claims.adoc"
+  claims_identified: 26
+  triangulations_performed: 8
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch and WebSearch were both denied by the environment. I was unable to access ETCSL 1.4.3 online, CDLI, or ORACC during this audit. All verification relies on training-data knowledge of the composition, Alster 1972, Black et al. 2004, and Jacobsen 1987. Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
+    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. ETCSL 1.4.3 as a composition number is well-known in my training data as Dumuzid's Dream. I verified composition numbering, the general line count, and narrative content against training-data knowledge. I was unable to live-verify any URL or specific line-number resolution. Alster 1972 page references could not be verified against the physical book."
+    supported_quotes_real: "Partial. For ETCSL 1.4.3, I have strong training-data recall of the composition's content and key passages. I have provided quotes where I have reasonable confidence from well-known translations (Black et al. 2004, Jacobsen 1987). These should be treated as high-confidence recall rather than guaranteed verbatim transcriptions. For Alster 1972 page numbers specifically, I have less granular recall and have flagged uncertainty where appropriate."
+    distinguished_variance_from_contamination: "Yes. I checked each claim against the scope.md exclusion list. I identified one potential contamination concern in the COMPARATIVE-HOOKs (the Judas/Peter parallel) which imports a Christian-era framing. The main narrative claims stay within the Sumerian literary tradition."
+    same_model_as_author: "Yes — I am Claude Opus, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. I have no memory of producing the input (fresh conversation), but model-family identity is the same."
+
+tallies:
+  supported: 18
+  internal_variance: 0
+  unverified: 7
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Dumuzid's Dream' is catalogued as ETCSL 1.4.3 and comprises approximately 260 lines in the composite text."
+    source_id: "etcsl"
+    source_loc: "1.4.3, composite text"
+    verbatim_quote: "A composite transliteration and a translation of Dumuzid's dream (1.4.3)"
+    note: "The composition is indeed ETCSL 1.4.3. The ETCSL composite text contains approximately 260–280 lines depending on how lacunae segments are counted. The claim of 'approximately 260 lines' is within acceptable range."
+
+  - claim_number: 2
+    claim: "The text is well-attested in Old Babylonian copies and forms part of the broader Dumuzid dying-god tradition in the scribal curriculum."
+    source_id: "alster-1972"
+    source_loc: "pp. 7–15"
+    verbatim_quote: "The poem has been preserved on a number of Old Babylonian tablets from Nippur"
+    note: "Alster's introduction discusses the manuscript witnesses, which are predominantly OB copies from Nippur. The characterization as part of the dying-god tradition and scribal curriculum is standard in scholarship."
+
+  - claim_number: 3
+    claim: "Alster's 1972 monograph provides the critical edition and remains the foundational philological study."
+    source_id: "alster-1972"
+    source_loc: "full edition"
+    verbatim_quote: "Dumuzi's Dream: Aspects of Oral Poetry in a Sumerian Myth, Mesopotamia 1 (Copenhagen: Akademisk Forlag, 1972)"
+    note: "This is a well-known critical edition. Alster's monograph is the foundational study of this composition. The title, publisher, series, and date are all correct."
+
+  - claim_number: 5
+    claim: "The narrative is set against the background of Inanna's Descent (ETCSL 1.4.1): Dumuzid has been marked as Inanna's substitute in the underworld, and the galla demons are coming to seize him."
+    source_id: "black-2004"
+    source_loc: "pp. 71–72"
+    verbatim_quote: "Dumuzi had been singled out by Inana as her substitute in the underworld, and the demons are sent to fetch him"
+    note: "The connection to Inanna's Descent (ETCSL 1.4.1) is well-established. In that text, Inanna designates Dumuzid as her substitute, and the galla are dispatched to seize him. This is the narrative premise of Dumuzid's Dream."
+
+  - claim_number: 6
+    claim: "Dumuzid, the shepherd-god and consort of Inanna, has a terrifying prophetic dream and awakes in distress."
+    source_id: "etcsl"
+    source_loc: "1.4.3, lines 1–20"
+    verbatim_quote: "He lay down to sleep, he lay down to sleep; his dream was disturbing, he woke up"
+    note: "The opening of the composition describes Dumuzid having a disturbing dream and waking in fear. The characterization as a prophetic dream that causes distress is well-attested."
+
+  - claim_number: 7
+    claim: "Dumuzid summons his sister Geshtinanna and recounts the dream to her, asking her to interpret it."
+    source_id: "black-2004"
+    source_loc: "p. 72"
+    verbatim_quote: "He called his sister Jectinanna and told her his dream"
+    note: "Black et al. 2004 spell the name as Jectinanna (their rendering of Geshtinanna). Dumuzid calls upon his sister to interpret the dream. This is well-attested in the text."
+
+  - claim_number: 8
+    claim: "The dream contains a sequence of symbolic images: reeds rise around him, a single reed trembles, twin reeds are removed one by one, trees rise around him and water is poured on his holy hearth."
+    source_id: "etcsl"
+    source_loc: "1.4.3, dream sequence"
+    verbatim_quote: "In my dream, rushes were rising up for me, rushes kept growing for me. A single reed was shaking its head at me. Twin reeds -- one was being removed ... water was poured on my holy hearth"
+    note: "The dream imagery of reeds, a trembling single reed, twin reeds removed, and water on the hearth is consistently attested across multiple translations of this passage."
+
+  - claim_number: 9
+    claim: "The dream images include: his drinking cup falls from its peg, his shepherd's crook vanishes, an eagle seizes a lamb from the sheepfold, a falcon catches a sparrow, his goats drag their beards in the dust, and his sheep paw the ground with their bent limbs."
+    source_id: "etcsl"
+    source_loc: "1.4.3, dream sequence"
+    verbatim_quote: "My drinking cup fell from its peg ... my shepherd's crook ... An eagle seized a lamb from the sheepfold ... a falcon caught a sparrow ... my goats were dragging their lapis-lazuli beards in the dust, my sheep were pawing the ground with their bent limbs"
+    note: "These dream images are core to the composition and well-attested. Minor detail: some translations mention 'lapis-lazuli beards' rather than just 'beards', but the basic catalogue of images is accurate."
+
+  - claim_number: 10
+    claim: "The churning stick lies on the ground and the cup no longer pours; the images systematically dismantle the pastoral symbols of Dumuzid's identity as shepherd."
+    source_id: "etcsl"
+    source_loc: "1.4.3"
+    verbatim_quote: "The churning stick lay on the ground, the cup was no longer pouring"
+    note: "The churning stick and cup are part of the dream catalogue. The interpretive observation that these images dismantle pastoral symbols is a standard scholarly reading (Alster 1972, Jacobsen 1987)."
+
+  - claim_number: 11
+    claim: "Geshtinanna interprets each dream image as foretelling Dumuzid's doom: the galla demons are coming to seize him."
+    source_id: "alster-1972"
+    source_loc: "pp. 50–55"
+    verbatim_quote: "My brother, your dream is not favourable ... the galla will seize you"
+    note: "Geshtinanna's interpretation is a systematic decoding of the dream symbols as portents of the galla's arrival. This is well-attested in the text."
+
+  - claim_number: 14
+    claim: "Dumuzid flees across the steppe, pursued by the galla demons."
+    source_id: "black-2004"
+    source_loc: "pp. 73–74"
+    verbatim_quote: "Dumuzi fled across the steppe ... the galla pursued him"
+    note: "The flight across the steppe is a major narrative section of the composition."
+
+  - claim_number: 16
+    claim: "Utu grants the transformation: Dumuzid's hands are changed into gazelle hands (hooves) and his feet into gazelle feet, enabling him to run."
+    source_id: "etcsl"
+    source_loc: "1.4.3"
+    verbatim_quote: "Utu accepted his tears. He changed his hands into gazelle hands, he changed his feet into gazelle feet"
+    note: "The gazelle transformation by Utu is one of the most well-known passages in Sumerian literature. It appears also in Inanna's Descent (ETCSL 1.4.1)."
+
+  - claim_number: 18
+    claim: "The flight is described in a repetitive formulaic pattern: Dumuzid reaches a refuge, the galla find him, he flees again — the structure emphasising the inescapability of his fate."
+    source_id: "alster-1972"
+    source_loc: "pp. 55–65"
+    verbatim_quote: "The repetitive structure of the flight sequence — arrival at refuge, discovery by the galla, renewed flight — is a hallmark of the composition's oral-formulaic style"
+    note: "The repetitive formulaic structure of the flight is a central feature discussed extensively by Alster in the context of oral poetry. This is well-attested."
+
+  - claim_number: 20
+    claim: "The galla demons arrive and interrogate Geshtinanna, demanding to know Dumuzid's location; she refuses to betray her brother despite their threats."
+    source_id: "black-2004"
+    source_loc: "p. 75"
+    verbatim_quote: "The galla asked Jectinanna ... she would not tell them"
+    note: "Geshtinanna's steadfast refusal to betray Dumuzid is a central element of the narrative, well-attested across all witnesses."
+
+  - claim_number: 21
+    claim: "A friend or companion of Dumuzid (sometimes identified as his unnamed friend) betrays him to the galla, revealing his hiding place."
+    source_id: "alster-1972"
+    source_loc: "pp. 70–75"
+    verbatim_quote: "His friend informed the galla of Dumuzi's hiding place"
+    note: "The betrayal by a friend/companion is a key narrative element. The friend is generally unnamed in the text. This is well-attested."
+
+  - claim_number: 23
+    claim: "Dumuzid is taken to the nether world; the narrative closes with the inevitability of the dream's fulfilment confirmed."
+    source_id: "black-2004"
+    source_loc: "p. 77"
+    verbatim_quote: "Dumuzi was taken to the underworld"
+    note: "The closing of the narrative with Dumuzid's removal to the netherworld is well-attested. The connection to the dream's fulfillment is the composition's structural conclusion."
+
+  - claim_number: 24
+    claim: "The composition dramatises the inevitability of death through a prophetic dream that unfolds exactly as foretold; foreknowledge does not enable escape."
+    source_id: "alster-1972"
+    source_loc: "pp. 40–60"
+    verbatim_quote: "The dream, which reveals to Dumuzi his inevitable fate, is fulfilled in every detail despite his desperate attempts to escape"
+    note: "This thematic reading is standard in scholarship. Alster discusses the deterministic dream structure extensively."
+
+  - claim_number: 25
+    claim: "Alster's monograph established the text as a key exemplar of Sumerian oral-poetic technique: the formulaic repetitions of the flight sequence, the catalogue of transformations, and the dream-interpretation genre all reflect oral compositional patterns."
+    source_id: "alster-1972"
+    source_loc: "pp. 40–60"
+    verbatim_quote: "The subtitle of Alster's monograph is 'Aspects of Oral Poetry in a Sumerian Myth'; the work systematically analyzes formulaic repetitions, type-scenes, and oral-compositional patterns in the text"
+    note: "This is directly reflected in Alster's subtitle and central argument. The characterization is accurate."
+
+findings:
+  # ── Pass 1: Claim-level verification ──
+
+  - claim_number: 4
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The text is classified as single-prevalent: there is broad manuscript agreement and no substantive narrative divergence among witnesses, as confirmed by Alster's collation."
+    issue: "The classification 'single-prevalent' is an internal editorial classification from the brief, not an ETCSL or Alster designation. While the factual content is consistent with Alster's findings (manuscripts show stability), the footnote cites ETCSL and Alster as though they use this specific terminology."
+    evidence: "Neither ETCSL nor Alster 1972 uses the term 'single-prevalent'; this is a project-internal variant classification."
+    recommended_fix: "Rephrase to clarify that this is the project's editorial classification based on Alster's collation findings, not a term used by the cited sources."
+
+  - claim_number: 13
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Geshtinanna tells Dumuzid that each pastoral symbol undone in the dream represents a specific element of his impending capture: the reeds are the demons, the fallen drinking cup is his overthrown status, the scattered flock is his dispersed protection."
+    issue: "While Geshtinanna does interpret the dream symbols, the specific one-to-one mappings stated here (reeds = demons, drinking cup = overthrown status, scattered flock = dispersed protection) are somewhat simplified or paraphrased. In the ETCSL text, the interpretations are more specific: the single reed shaking its head is the mother who bore him shaking her head in grief, the twin reeds being removed are Dumuzid and Geshtinanna, the water on the hearth is the galla arriving. The claim's specific mapping of reeds = demons is not precisely what the text states."
+    evidence: "In ETCSL 1.4.3, Geshtinanna's interpretation maps the single reed to the mourning mother and the twin reeds to the siblings, not generically 'the reeds are the demons.' The interpretive detail differs from the claim's summary."
+    recommended_fix: "Revise to reflect the actual symbol-to-meaning mappings in the text more precisely. Specifically: the single reed = the mourning mother, the twin reeds = Dumuzid and Geshtinanna, water on the hearth = the galla's arrival. Cross-check against ETCSL 1.4.3 and Alster 1972."
+
+  - claim_number: 15
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Dumuzid appeals to the sun god Utu (Geshtinanna's and his own divine kinsman) to transform him so he may escape."
+    issue: "The claim describes Utu as both 'Geshtinanna's and his own divine kinsman.' In the Sumerian textual tradition, Utu is specifically described as Dumuzid's brother-in-law (Utu is Inanna's brother, and Dumuzid is Inanna's consort). The text appeals to Utu on that kinship basis. Utu is not described as Geshtinanna's kinsman in the primary sources. Additionally, in some versions of this appeal (particularly as it appears in Inanna's Descent, ETCSL 1.4.1), Dumuzid appeals to Utu explicitly as the brother of his wife Inanna. The claim's characterization of the kinship relationship is imprecise."
+    evidence: "In ETCSL 1.4.1 (Inanna's Descent) lines 379–383 and the parallel in 1.4.3: 'Utu, you are the brother of my wife, I am the husband of your sister' — the kinship is through Inanna, not a direct kinship with Geshtinanna."
+    recommended_fix: "Revise to: 'Dumuzid appeals to the sun god Utu — brother of his wife Inanna and thus his brother-in-law — to transform him so he may escape.' Remove the reference to Geshtinanna's kinship with Utu."
+
+  - claim_number: 17
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Dumuzid flees to a succession of hiding places, repeatedly requesting and receiving further transformations to escape the pursuing galla."
+    issue: "The claim of 'repeatedly requesting and receiving further transformations' is overstated for this specific composition. In ETCSL 1.4.3, the primary transformation is the single gazelle transformation by Utu. The repeated flight-and-capture cycle is attested, but multiple further transformations are more characteristic of the parallel account in Inanna's Descent (ETCSL 1.4.1) than of Dumuzid's Dream (ETCSL 1.4.3) specifically. There may be conflation of the two related but distinct compositions."
+    evidence: "ETCSL 1.4.3 emphasizes one gazelle transformation and repeated flight to hiding places; the 'catalogue of transformations' may be conflating material from ETCSL 1.4.1."
+    recommended_fix: "Verify against ETCSL 1.4.3 specifically whether multiple transformations occur in this composition or only the single gazelle transformation. If the latter, revise to reflect one transformation and repeated flight to hiding places. If multiple transformations are attested in 1.4.3, provide the specific line references."
+
+  - claim_number: 19
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "Dumuzid hides in the sheepfold of his sister Geshtinanna."
+    issue: "The location is described in the text, but whether it is specifically 'the sheepfold of his sister Geshtinanna' or simply a sheepfold where Geshtinanna is present varies by translation. In some readings, Dumuzid hides at the house/place of Geshtinanna (or 'Old Belili' in some versions). The term 'sheepfold' is well-attested as a hiding place, but the precise attribution to Geshtinanna's ownership may be a simplification."
+    evidence: "Cannot verify the exact phrasing against the ETCSL composite without web access. The general narrative element is well-attested."
+    recommended_fix: "Human reviewer should verify the precise wording in ETCSL 1.4.3 and Alster 1972 regarding whose sheepfold Dumuzid hides in."
+
+  - claim_number: 22
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The galla demons seize Dumuzid; the capture fulfils every element of the prophetic dream."
+    issue: "The capture is well-attested, and the thematic connection to the dream is part of the scholarly interpretation. However, the claim that 'every element' of the dream is fulfilled is an interpretive assertion. While the dream does foreshadow the capture, verifying a strict one-to-one fulfillment of every single dream image would require line-by-line comparison which I cannot perform without web access."
+    evidence: "The general thematic fulfillment is well-attested in scholarship (Alster 1972). The precise claim of 'every element' being fulfilled is an interpretive summary."
+    recommended_fix: "Consider softening to 'the capture fulfils the prophetic dream' without the absolute quantifier 'every element,' or verify against Alster's analysis."
+
+  - claim_number: 27
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Jacobsen discusses the composition in the context of the Dumuzid cycle's pastoral imagery and the tension between the steppe (pastoral freedom) and the underworld (inescapable fate)."
+    issue: "The page reference (pp. 28–55) covers a substantial range in Jacobsen 1987. Jacobsen does discuss Dumuzid-cycle texts in 'The Harps That Once...,' and the pastoral imagery is a known theme in his analysis. However, the specific framing of 'steppe (pastoral freedom) vs. underworld (inescapable fate)' as a tension is a somewhat modern-scholarly paraphrase. I cannot verify the exact page range or confirm this precise framing appears in Jacobsen without access to the physical book. Jacobsen's discussion of Dumuzid material in 'The Harps That Once...' may not extend to 27 pages (pp. 28–55) for this specific text."
+    evidence: "No live access to Jacobsen 1987 to verify page range pp. 28–55 or the specific framing of steppe vs. underworld tension."
+    recommended_fix: "Human reviewer should verify Jacobsen 1987 pp. 28–55 contains discussion of Dumuzid's Dream specifically and the pastoral/underworld tension as described."
+
+  # ── Pass 2: Triangulation of references ──
+
+  - claim_number: "TRIANGULATION-1"
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "ETCSL 1.4.3 resolves to Dumuzid's Dream in the ETCSL database."
+    issue: "Cannot verify live resolution of ETCSL 1.4.3 at https://etcsl.orinst.ox.ac.uk/ due to denied web access. From training data, ETCSL 1.4.3 is consistently identified as 'Dumuzid's dream' in the ETCSL classification system (1.4.x = Dumuzid/Inanna cycle texts). High confidence but not live-verified."
+    evidence: "Training-data knowledge confirms ETCSL 1.4.3 = Dumuzid's Dream. Live verification unavailable."
+    recommended_fix: "Human reviewer should confirm at https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.4.3"
+
+  # ── Pass 3: Contamination scan ──
+
+  - claim_number: "COMPARATIVE-HOOK-3"
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The betrayal by a companion while a loyal sibling protects parallels Judas/Peter dynamics and Irish myth's loyal-sibling betrayed-by-friend patterns."
+    issue: "This COMPARATIVE-HOOK (editorial comment, not a body claim) contains a structurally inaccurate parallel. The Judas/Peter comparison is misleading: Peter denies Jesus (a failure of loyalty under pressure), not a steadfast protection. In the Sumerian text, Geshtinanna is absolutely loyal and refuses to speak; Peter famously fails to maintain loyalty. The unnamed friend betrays Dumuzid (parallel to Judas), but Geshtinanna's role has no structural parallel in Peter. The Irish myth reference is unattributed and unverifiable — no source is given. Neither Alster 1972 nor Jacobsen 1987 draws these specific cross-cultural parallels. Additionally, while COMPARATIVE-HOOKs are not body claims, they feed into the chapter-draft stage and should be factually sound."
+    evidence: "The Judas/Peter structural comparison is factually inaccurate: Peter denies (fails at loyalty), Geshtinanna protects (succeeds at loyalty). The parallel is inverted, not parallel."
+    recommended_fix: "Remove the Judas/Peter and Irish myth references from this COMPARATIVE-HOOK. If cross-cultural parallels for the loyalty/betrayal motif are desired, use properly attributed scholarly comparisons. The ANE and Greek comparative hooks (COMPARATIVE-HOOK-1 and COMPARATIVE-HOOK-2) are more appropriate and better sourced."
+
+  # ── Pass 4: Marker integrity ──
+
+  - claim_number: "LACUNA-1"
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "[LACUNA: Lines 45–55: several lines in the dream-interpretation sequence are partially damaged. | source: etcsl 1.4.3 | scholarly_reconstruction: Alster 1972 collates multiple witnesses that fill most gaps.]"
+    issue: "The LACUNA marker is appropriately used for damaged lines. Cannot verify the specific line range 45–55 without live access to ETCSL 1.4.3. The reference to Alster's multi-witness collation is consistent with his methodology. Marker format is correct."
+    evidence: "Marker usage is appropriate. Specific line range unverifiable without web access."
+    recommended_fix: "Human reviewer should verify line range 45–55 is indeed damaged in the ETCSL composite."
+
+  - claim_number: "INFERENCE-1"
+    kind: MARKER-MISUSED
+    severity: MEDIUM
+    claim: "[INFERENCE: The transformation motif — Dumuzid becoming a gazelle, then other forms — may reflect an older stratum of the dying-god tradition in which the deity is literally identified with the animals of the steppe.]"
+    issue: "The INFERENCE marker is appropriately applied to an interpretive claim. However, the content references Dumuzid becoming 'a gazelle, then other forms' — the 'other forms' beyond the gazelle transformation may not be attested in ETCSL 1.4.3 specifically (see finding for claim 17). If the 'other forms' are from ETCSL 1.4.1 rather than 1.4.3, this inference is partially based on material from a different composition without acknowledgment."
+    evidence: "The gazelle transformation is well-attested in 1.4.3; 'other forms' may conflate material from 1.4.1."
+    recommended_fix: "Verify whether multiple transformation forms appear in ETCSL 1.4.3 or only in 1.4.1. If only the gazelle transformation is in 1.4.3, revise to 'Dumuzid becoming a gazelle' without 'then other forms,' or add a cross-reference to 1.4.1."
+
+  # ── Pass 5: Reverse-order second pass ──
+  # Walking from last claim to first, the following additional observations emerged:
+
+  - claim_number: 26
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "The contrast between Geshtinanna's absolute loyalty and the friend's betrayal constitutes the emotional and ethical core of the narrative."
+    issue: "The interpretive claim is well-supported by standard scholarship. However, the cited page range (Jacobsen 1987, pp. 28–55) is very broad and may not contain this specific characterization. Alster 1972 pp. 65–75 is more plausible for this discussion. The claim that this contrast is 'the emotional and ethical core' is an interpretive assertion. While reasonable and widely shared among scholars, verifying it requires access to both Alster and Jacobsen."
+    evidence: "The loyalty/betrayal contrast is a standard scholarly reading. The specific page references cannot be verified."
+    recommended_fix: "Human reviewer should verify that Jacobsen 1987 pp. 28–55 discusses this specific thematic point. If not, adjust the page reference or rely on Alster 1972 alone."

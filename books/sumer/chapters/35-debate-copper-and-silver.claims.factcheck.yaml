@@ -1,0 +1,81 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/35-debate-copper-and-silver.claims.adoc"
+  claims_identified: 11
+  triangulations_performed: 8
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online. The ETCSL 5.3.6 composition number itself could not be confirmed — known debate poems run 5.3.1 through 5.3.5."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 5
+  internal_variance: 0
+  unverified: 6
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 1
+  marker_issues: 0
+  glossary_violations: 0
+
+findings:
+  - claim_number: 11
+    kind: "SILENT-BRIDGE"
+    severity: "HIGH"
+    claim: "'Explores the tension between practical utility and prestige value.'"
+    issue: "Scholarly interpretation presented as factual statement without [INFERENCE:] marker."
+    evidence: "Editorial synthesis, not a textual claim."
+    recommended_fix: "Add [INFERENCE:] marker."
+
+  - claim_number: 1
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The composition is catalogued as ETCSL 5.3.6."
+    issue: "The ETCSL 5.3.6 number could not be confirmed from training data. The known debate poems run 5.3.1 through 5.3.5. This composition may have a different ETCSL number or may not be in ETCSL at all."
+    evidence: "Training-data recall of ETCSL debate poem numbers does not confidently include 5.3.6."
+    recommended_fix: "Verify the ETCSL composition number against the live database."
+
+  - claim_number: 3
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Copper's specific arguments about utility."
+    issue: "The specific content of Copper's arguments cannot be verified against the fragmentary text."
+    evidence: "The text may be too fragmentary to support detailed argument reconstruction."
+    recommended_fix: "Qualify claims about specific argument content."
+
+  - claim_number: 4
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Silver's specific counter-arguments about prestige."
+    issue: "Same issue as claim 3 — text fragmentary."
+    evidence: "Fragmentary state limits verification."
+    recommended_fix: "Qualify claims."
+
+  - claim_number: 5
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Specific debate structure and escalation details."
+    issue: "May be inferred from genre conventions rather than directly attested in fragmentary text."
+    evidence: "Genre-based inference rather than textual attestation."
+    recommended_fix: "Add [INFERENCE:] markers where appropriate."
+
+  - claim_number: 6
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The verdict and its recipient."
+    issue: "Cannot verify the judge's identity or winner if the ending is damaged."
+    evidence: "Fragmentary text."
+    recommended_fix: "Qualify if based on fragmentary evidence."
+
+  - claim_number: 14
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "'Only available reconstruction.'"
+    issue: "Cannot confirm whether other scholarly treatments exist."
+    evidence: "Other editions may exist."
+    recommended_fix: "Remove or qualify the superlative."

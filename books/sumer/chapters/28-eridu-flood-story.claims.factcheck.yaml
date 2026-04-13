@@ -1,0 +1,65 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/28-eridu-flood-story.claims.adoc"
+  claims_identified: 16
+  triangulations_performed: 12
+  verdict: "MAJOR-REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. Two contamination findings from Akkadian Atrahasis tradition."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 10
+  internal_variance: 0
+  unverified: 2
+  citation_wrong: 0
+  contamination: 2
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+findings:
+  - claim_number: 9
+    kind: "CONTAMINATION"
+    severity: "HIGH"
+    claim: "The reed-wall motif and divine oath circumvention narrative."
+    issue: "The elaborate framing ('circumventing a divine oath,' 'technical obedience to the divine decree while subverting its intent') comes from the Akkadian Atrahasis, not the surviving Sumerian text of ETCSL 1.7.4. The Sumerian tablet has a fragmentary reference to a wall, but the narrative logic is imported from the excluded Akkadian tradition."
+    evidence: "The reed-wall device is most fully attested in the Akkadian Atrahasis. The Sumerian text at ETCSL 1.7.4 is too fragmentary at this point to support the elaborate framing."
+    recommended_fix: "Remove or flag details drawn from Atrahasis. Restrict claims to what the Sumerian text actually preserves."
+
+  - claim_number: 11
+    kind: "CONTAMINATION"
+    severity: "HIGH"
+    claim: "The 'divine oath circumvention' narrative logic."
+    issue: "Same contamination issue as claim 9. The specific narrative mechanism of oath circumvention is from the Akkadian tradition."
+    evidence: "Akkadian Atrahasis, not ETCSL 1.7.4."
+    recommended_fix: "Remove or explicitly flag as derived from Akkadian parallel."
+
+  - claim_number: 12
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "'Ziusudra builds a boat.'"
+    issue: "The boat-building scene is in the broken columns of the tablet. Only the post-flood vessel reference survives in the Sumerian text."
+    evidence: "The surviving Sumerian text jumps from the divine warning (fragmentary) to the flood itself."
+    recommended_fix: "Add [LACUNA:] marker. Clarify that boat-building is inferred, not directly attested in surviving Sumerian text."
+
+  - claim_number: 16
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The sacrifice scene."
+    issue: "Uncertain in the surviving Sumerian text and may be influenced by Akkadian parallels."
+    evidence: "The sacrifice is better attested in Akkadian versions."
+    recommended_fix: "Verify against surviving Sumerian text. Flag if from Akkadian tradition."
+
+  - claim_number: 5
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE:] marker on creation/kingship material."
+    issue: "The marker conflates attested fragments (five cities, descent of kingship) with genuine speculation (creation of humanity)."
+    evidence: "Some elements are attested, others are speculative."
+    recommended_fix: "Split the marker: attested elements as supported claims, speculative elements under [INFERENCE:]."

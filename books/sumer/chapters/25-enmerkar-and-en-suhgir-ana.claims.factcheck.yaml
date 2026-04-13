@@ -1,0 +1,73 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/25-enmerkar-and-en-suhgir-ana.claims.adoc"
+  claims_identified: 20
+  triangulations_performed: 18
+  verdict: "MAJOR-REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online. The most critical finding — that ETCSL 1.8.2.4 has approximately 280-290 lines, not the 470+ implied by the claims document — is based on training-data recall."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No cross-cultural contamination found."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 9
+  internal_variance: 0
+  unverified: 4
+  citation_wrong: 7
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+
+findings:
+  - claim_number: 2
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Citations use lines 1-40 for the opening."
+    issue: "Systematic inflation of ETCSL line references throughout the document. The claims reference lines up to 470, but ETCSL 1.8.2.4 has only approximately 280-290 lines. This affects claims 2, 5, 6, 7, 9, 13, and 14."
+    evidence: "ETCSL 1.8.2.4 composite text contains approximately 280-290 lines. References to lines 360-470 cite non-existent portions."
+    recommended_fix: "Verify all line references against ETCSL composite and correct systematically."
+
+  - claim_number: 6
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Urgirinuna described at lines 120-180."
+    issue: "The sorcerer figure's gender needs verification — some readings suggest a male sorcerer, not a female 'witch.' The name 'Urgirinuna' and gender assignment require checking against ETCSL transliteration."
+    evidence: "Training-data recall suggests varying readings. Vanstiphout 2003 and ETCSL may differ on gender."
+    recommended_fix: "Verify sorcerer's name, gender, and line reference. Change 'witch' to 'sorcerer' if male in primary sources."
+
+  - claim_number: 13
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Events at lines 360-390."
+    issue: "Lines 360-390 do not exist in ETCSL 1.8.2.4 (approximately 280-290 lines). The line reference is fabricated."
+    evidence: "Text length is approximately 280-290 lines."
+    recommended_fix: "Correct to actual ETCSL line numbers."
+
+  - claim_number: 14
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Events at lines 390-410."
+    issue: "Lines 390-410 do not exist in this composition."
+    evidence: "Text length is approximately 280-290 lines."
+    recommended_fix: "Correct line reference."
+
+  - claim_number: 11
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Sagburu defeats the sorcerer 'through superior cunning rather than matching sorcery with sorcery.'"
+    issue: "The old woman may use counter-magic or ritual actions, not purely non-magical cunning."
+    evidence: "Training-data recall suggests counter-magical methods may be involved."
+    recommended_fix: "Verify nature of counter-measures against ETCSL and Vanstiphout."
+
+  - claim_number: 21
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "This text is 'the concluding piece of the Aratta cycle.'"
+    issue: "The ordering within the Aratta cycle is not fixed. Whether this 'concludes' the cycle is debatable."
+    evidence: "ETCSL numbers do not imply narrative chronology."
+    recommended_fix: "Revise to 'one of the compositions in the Aratta cycle.'"

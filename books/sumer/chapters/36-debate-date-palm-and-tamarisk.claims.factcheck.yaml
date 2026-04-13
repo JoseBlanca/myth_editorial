@@ -1,0 +1,65 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/36-debate-date-palm-and-tamarisk.claims.adoc"
+  claims_identified: 14
+  triangulations_performed: 8
+  verdict: "REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. Contamination concern flagged regarding Akkadian 'Dispute of the Date Palm and the Tamarisk' (Lambert BWL)."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 7
+  internal_variance: 0
+  unverified: 4
+  citation_wrong: 0
+  contamination: 1
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+findings:
+  - claim_number: 11
+    kind: "CONTAMINATION"
+    severity: "HIGH"
+    claim: "The composition belongs to a broader ANE tree-debate tradition including Akkadian parallels."
+    issue: "The well-known Akkadian 'Dispute of the Date Palm and the Tamarisk' (Lambert, BWL, 1960, pp. 150-164) is substantially better preserved and belongs to the excluded tradition per scope.md. Multiple details in claims 4-6 may have been silently informed by the Akkadian text rather than the fragmentary Sumerian composition at ETCSL 5.3.7."
+    evidence: "Lambert BWL pp. 150-164 publishes the Akkadian version. The Sumerian text at ETCSL 5.3.7 is too fragmentary to support the level of detail in claims 4-6."
+    recommended_fix: "Explicitly caution that the Akkadian version must not fill gaps in the Sumerian text. Flag any details drawn from the Akkadian parallel."
+
+  - claim_number: 4
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Date Palm's specific product list (dates, date syrup, palm wine, fibre, wood)."
+    issue: "Some details (especially 'palm wine') are better attested in the Akkadian text than in surviving Sumerian fragments. The level of specificity may exceed what the fragmentary text supports."
+    evidence: "The Akkadian text (Lambert BWL) has detailed product catalogues; the Sumerian fragments are too broken to confirm."
+    recommended_fix: "Qualify which products are attested in Sumerian vs. inferred from the Akkadian parallel or general cultural knowledge."
+
+  - claim_number: 5
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Date Palm emphasises pollination by human labour."
+    issue: "Hand-pollination was practised but whether the Sumerian text specifically references it is uncertain given lacunae."
+    evidence: "Hand-pollination attested in agricultural texts (Civil 1994) but not confirmed in ETCSL 5.3.7."
+    recommended_fix: "Add [INFERENCE:] marker."
+
+  - claim_number: 6
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Tamarisk's ritual purity arguments."
+    issue: "Tamarisk's ritual associations are well attested across Mesopotamian literature but specific attribution to this fragmentary Sumerian composition cannot be verified."
+    evidence: "General Mesopotamian ritual knowledge, not necessarily from this specific text."
+    recommended_fix: "Add [INFERENCE:] marker or qualify source."
+
+  - claim_number: 7
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE:] marker cites Enkidu civilisation motif as basis."
+    issue: "The Enkidu parallel is loose — Enkidu's transition is about human wildness vs. civilisation, not cultivated vs. wild plants. Better basis texts would be Ewe and Grain (5.3.2) or Hoe and Plough (5.3.1)."
+    evidence: "The cited basis is imprecise."
+    recommended_fix: "Strengthen basis by citing Ewe and Grain or Hoe and Plough."

@@ -1,0 +1,65 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/34-debate-bird-and-fish.claims.adoc"
+  claims_identified: 19
+  triangulations_performed: 12
+  verdict: "MAJOR-REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
+    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
+    supported_quotes_real: "Partial. Training-data recall, approximate."
+    distinguished_variance_from_contamination: "Yes. No contamination detected."
+    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+
+tallies:
+  supported: 11
+  internal_variance: 0
+  unverified: 1
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 3
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+findings:
+  - claim_number: 2
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "Bird and Fish argue before the god Enki, who renders the final verdict."
+    issue: "The judge in ETCSL 5.3.5 is Enlil, not Enki. All other major Sumerian debate poems (Ewe and Grain, Winter and Summer, Hoe and Plough) have Enlil as judge. This error pervades claims 2, 3, 15, and 16."
+    evidence: "ETCSL 5.3.5: Enlil is the standard judge in Sumerian debate poems. Training-data recall strongly indicates Enlil, not Enki."
+    recommended_fix: "Change all references from 'Enki' to 'Enlil' as judge. Remove claim 3's fabricated rationale about the 'aquatic domain.'"
+
+  - claim_number: 3
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "The choice of Enki reflects the aquatic domain of the dispute."
+    issue: "This entire claim is fabricated to justify the incorrect attribution of Enki as judge. Since the judge is Enlil, the 'aquatic domain' rationale is baseless."
+    evidence: "The premise (Enki as judge) is wrong, making the entire interpretive rationale invalid."
+    recommended_fix: "Delete this claim entirely."
+
+  - claim_number: 15
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "Enki renders the final verdict in favour of Bird."
+    issue: "The judge is Enlil, not Enki."
+    evidence: "Same deity misidentification as claims 2 and 3."
+    recommended_fix: "Change 'Enki' to 'Enlil.'"
+
+  - claim_number: 13
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Bird attacks Fish's nest and destroys Fish's eggs."
+    issue: "Cannot confirm this specific detail without live ETCSL access. The escalation to physical violence is attested but the exact nature (egg destruction) needs verification."
+    evidence: "Training-data recall is uncertain on this specific detail."
+    recommended_fix: "Verify against ETCSL 5.3.5."
+
+  - claim_number: 17
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "Civil 1994 cited for didactic function."
+    issue: "Civil 1994 is about The Farmer's Instructions, not debate poems. Weak citation."
+    evidence: "Civil 1994 is an edition of ETCSL 5.6.1."
+    recommended_fix: "Replace or supplement with more relevant source."

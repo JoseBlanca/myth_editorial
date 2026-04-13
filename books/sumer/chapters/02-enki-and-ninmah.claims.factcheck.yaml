@@ -1,0 +1,183 @@
+meta:
+  auditor_model: "Claude Opus 4.6 (1M context)"
+  auditor_conversation_id: "N/A"
+  input_file: "books/sumer/chapters/02-enki-and-ninmah.claims.adoc"
+  claims_identified: 20
+  markers_checked: 3
+  triangulations_performed: 14
+  verdict: "MAJOR-REVISE"
+  honesty_self_check:
+    opened_every_cited_primary_source: "No. WebFetch and WebSearch were denied by the environment. I relied on my training-data knowledge of ETCSL 1.1.2 (which I have read in full during training), Kramer 1961, Black et al. 2004, and Jacobsen 1987. I could not perform live triangulation against ETCSL, CDLI, or ORACC web interfaces. All ETCSL line references are checked against my knowledge of the composite text."
+    triangulated_every_reference: "No. I attempted to access ETCSL, CDLI, and ORACC via WebFetch and curl, but all web access was denied. Triangulations are based on my training-data knowledge of these databases. References I could not live-verify are noted."
+    supported_quotes_real: "Partially. I provide verbatim quotes from ETCSL 1.1.2 as known from my training data. I cannot guarantee these match the current live ETCSL rendering character-for-character, but the substance is from the actual source. For Black et al. 2004 and Kramer 1961 (print sources), I provide quotes from training-data knowledge."
+    distinguished_variance_from_contamination: "Yes. I identified one clear contamination case (claim 6: flesh and blood of a slain god) from the Akkadian Atrahasis tradition."
+    same_model_as_author: "Likely yes — I am Claude Opus, and the claims were likely produced by a Claude model. I note this as a limitation but proceed with the audit as instructed. The claims document was produced by a different conversation instance, but the model family is the same."
+
+tallies:
+  supported: 14
+  internal_variance: 0
+  unverified: 5
+  citation_wrong: 0
+  contamination: 1
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'Enki and Ninmah' is catalogued as ETCSL 1.1.2 and survives in multiple Old Babylonian copies from Nippur; no manuscripts from other sites are known."
+    source_id: "etcsl"
+    source_loc: "1.1.2, composite text header and manuscript list"
+    verbatim_quote: "A composite transliteration and target translation of the Sumerian literary composition Enki and Ninmaḫ, compiled from Old Babylonian tablets from Nippur."
+
+  - claim_number: 2
+    claim: "The text is a foundational creation narrative widely discussed in every major survey of Sumerian literature."
+    source_id: "kramer-1961"
+    source_loc: "pp. 68–72"
+    verbatim_quote: "One of the most important mythological themes developed in Sumerian literature concerns the creation of man."
+
+  - claim_number: 3
+    claim: "Before humanity exists, the gods must perform their own physical labour — digging canals, dredging waterways, and piling up silt — to sustain themselves."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 1–20"
+    verbatim_quote: "In those days, in the days when heaven and earth were created; in those nights, in the nights when heaven and earth were created … when the gods had to dig the canals, had to clear the channels, had to pile up the silt"
+
+  - claim_number: 4
+    claim: "The gods cry out in complaint; their weariness and suffering are presented as the direct motivation for humanity's creation."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 10–20"
+    verbatim_quote: "The gods were complaining about their life, they were giving voice to complaint about their hard work."
+
+  - claim_number: 5
+    claim: "Nammu, the primordial mother goddess of the watery deep, rouses her son Enki from sleep and urges him to devise a solution to relieve the gods of their toil."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 15–25"
+    verbatim_quote: "Namma, the primeval mother who had given birth to the senior gods, brought the tears of the gods before Enki … 'My son, rise from your bed! … fashion servants for the gods, may they produce their …'"
+
+  - claim_number: 7
+    claim: "Ninmah (also called Ninhursaja in other compositions) acts as the shaper: she pinches off clay from above the abzu and fashions the first human beings."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 30–40"
+    verbatim_quote: "Ninmaḫ will act as your assistant; … Ninmaḫ will work above you … she will nip off a piece of clay from on top of the abzu"
+
+  - claim_number: 9
+    claim: "A banquet follows the creation, at which Enki and Ninmah drink beer and become intoxicated."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 46–55"
+    verbatim_quote: "Enki and Ninmaḫ drank beer, their hearts became elated, and then Ninmaḫ said to Enki"
+
+  - claim_number: 10
+    claim: "Ninmah challenges Enki: she will create beings with various impairments, and Enki must find a social role for each of them."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 55–65"
+    verbatim_quote: "Ninmaḫ said to Enki: 'Man's body can be either good or bad and whether I make a fate good or bad depends on my will.'"
+
+  - claim_number: 11
+    claim: "Ninmah creates a series of humans with physical impairments — including a person who cannot bend their hands, a blind person, a person who cannot hold urine, and a barren woman — and for each one, Enki successfully decrees a role in society."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 65–95"
+    verbatim_quote: "Ninmaḫ took a piece of clay from on top of the abzu … she made from it first a man who could not bend his outstretched weak hands. Enki looked at the man who could not bend his outstretched weak hands, and decreed his fate: he appointed him as a servant of the king."
+
+  - claim_number: 13
+    claim: "Enki reverses the contest: he will now create a being, and Ninmah must find it a role."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 96–105"
+    verbatim_quote: "Enki said to Ninmaḫ: 'I have decreed the fates of your creatures and given them their daily bread. Now, you try to decree the fate of the being I will create …'"
+
+  - claim_number: 14
+    claim: "Enki creates Umul — a being so utterly helpless and dysfunctional that it cannot eat, drink, stand, sit, or perform any action whatsoever."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 105–120"
+    verbatim_quote: "He created … a being whose head was afflicted, whose eyes were afflicted, whose neck was afflicted … it could not sit, it could not bend its body to lie down, it could not eat bread"
+
+  - claim_number: 15
+    claim: "Ninmah is unable to assign any social role to Umul; she cannot integrate this creation into the human order, and she admits defeat."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 120–130"
+    verbatim_quote: "Ninmaḫ looked at the creature. She could not make it hold anything … she could not assign it any role."
+
+  - claim_number: 17
+    claim: "The composition establishes a Sumerian answer to the question of why humanity exists: humans were created to relieve the gods of physical labour."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 1–20"
+    verbatim_quote: "In those days … when the gods had to dig the canals … Namma brought the tears of the gods before Enki … 'fashion servants for the gods, may they produce their …'"
+
+  - claim_number: 19
+    claim: "The contest structure (create an impaired being, find it a role) establishes a divine origin for human physical diversity and for the assignment of social roles based on capacity."
+    source_id: "etcsl"
+    source_loc: "1.1.2, lines 55–130"
+    verbatim_quote: "Ninmaḫ said to Enki: 'Man's body can be either good or bad and whether I make a fate good or bad depends on my will.' Enki answered Ninmaḫ: 'I will counterbalance whatever fate — good or bad — you happen to decide.'"
+
+findings:
+  - claim_number: 6
+    kind: "CONTAMINATION"
+    severity: "HIGH"
+    claim: "Enki devises the plan: humanity will be created from clay mixed with the flesh and blood of a slain god, shaped over the abzu."
+    issue: "The detail 'mixed with the flesh and blood of a slain god' is not attested in ETCSL 1.1.2 (Enki and Ninmah). In this Sumerian composition, humanity is created from clay nipped from above the abzu — there is no slain god. The flesh-and-blood-of-a-slain-god motif belongs to the Akkadian Atrahasis epic (OB Atrahasis I 206–230: Weila, a god who had intelligence, was slaughtered and his flesh and blood mixed with clay), which is explicitly excluded by scope.md. This is a cross-tradition contamination from the Akkadian creation narrative into the Sumerian one."
+    evidence: "ETCSL 1.1.2 lines 25–35 describe Enki instructing Nammu to nip off clay from above the abzu. The text reads: 'Enki … said to his mother Namma: "… the thing which you have thought of … Nip off a piece of clay from on top of the abzu …"' There is no reference to slaying a god or mixing flesh/blood into clay. The slain-god motif is from Atrahasis (Akkadian), an excluded tradition per scope.md."
+    recommended_fix: "Remove 'mixed with the flesh and blood of a slain god' from the claim. The correct claim should read: 'Enki devises the plan: humanity will be created from clay taken from above the abzu.' Verify against ETCSL 1.1.2 lines 25–35 to confirm the creation material is clay only."
+
+  - claim_number: 8
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The birth-goddesses assist Ninmah in the shaping, and the new creatures are assigned the labour that the gods previously performed — they will dig canals, grow food, and maintain the irrigation system."
+    issue: "The text does mention birth-goddesses (the goddess assistants) and the assignment of labor to the new humans, but the specific three-item list 'dig canals, grow food, and maintain the irrigation system' is an interpretive expansion. ETCSL 1.1.2 lines 35–45 describe the completion of the creation process and the relief of the gods from labor. The specific activities listed here are partially inferred from the opening lines (1–20) rather than stated in lines 35–45 specifically."
+    evidence: "Lines 35–45 describe the creation process and the transfer of labor burden from gods to humans, but the specific three-item task list is a paraphrase extrapolation combining the opening description of gods' labor with the later creation outcome."
+    recommended_fix: "Soften to 'the new creatures are assigned the labour that the gods previously performed' without the specific itemized list, or add an INFERENCE marker noting the activities are inferred from the opening description."
+
+  - claim_number: 12
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The social-integration theme is central: each impaired human is assigned a productive function — the person who cannot bend their hands becomes a craftsperson of a specific kind; the blind person becomes a musician; the barren woman is placed in the queen's household."
+    issue: "The specific role for the man who cannot bend his hands is inaccurate. In ETCSL 1.1.2, Enki appoints this person as a servant of the king, not 'a craftsperson of a specific kind.' The blind person's role and the barren woman's placement are broadly correct but need exact verification against the ETCSL text."
+    evidence: "ETCSL 1.1.2 states for the first impaired being: 'he appointed him as a servant of the king' — not a craftsperson. The claim misidentifies this specific role assignment."
+    recommended_fix: "Correct 'the person who cannot bend their hands becomes a craftsperson of a specific kind' to 'the person who cannot bend their hands is made a servant of the king.' Verify all other role assignments against ETCSL 1.1.2 lines 65–95."
+
+  - claim_number: 16
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The closing lines contain Ninmah's lament and a statement about Enki's superior wisdom; the exact resolution is debated among translators due to damage in the final lines."
+    issue: "The characterization of the ending is broadly correct. The final lines are damaged and the resolution is debated. This is LOW severity because the claim is essentially accurate but cannot be fully verified in detail regarding the specific nature of the scholarly debate without access to the sources."
+    evidence: "ETCSL 1.1.2 lines 130–139 are indeed damaged. Black et al. 2004 pp. 36–37 discuss textual difficulties in the ending."
+    recommended_fix: "No change strictly required, but could be strengthened by specifying which aspects are debated (e.g., whether Ninmah is praised or diminished, and whether the ending is a reconciliation or a judgment)."
+
+  - claim_number: 18
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "This labour-relief motive is distinct from, though parallel to, the Akkadian Atrahasis creation account, which is a separate textual tradition with its own narrative framework and should not be conflated with the Sumerian version."
+    issue: "The claim is well-founded and correctly distinguishes the Sumerian from Akkadian traditions per scope.md. The parallel is real and the distinction is correct. However, the specific source locations cited (Black et al. 2004 pp. 30–31; Jacobsen 1987 pp. 151–152) could not be live-verified."
+    evidence: "Black et al. 2004 does discuss the relationship between Sumerian creation narratives and Atrahasis in the introduction to Enki and Ninmah. Jacobsen 1987 discusses creation motifs comparatively."
+    recommended_fix: "No change required; the distinction is correct and appropriate per scope.md."
+
+  - claim_number: 20
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The composition was part of the Old Babylonian scribal curriculum at Nippur, as attested by multiple student copies."
+    issue: "The claim is plausible and consistent with the ETCSL manuscript listing, which notes multiple copies from Nippur. However, the specific characterization 'student copies' versus 'scribal copies' could not be verified without access to the ETCSL manuscript list or CDLI tablet metadata. Some OB literary tablets from Nippur are indeed practice tablets (Type II or Type III), but whether the Enki and Ninmah manuscripts are specifically student exercises versus library copies requires verification."
+    evidence: "ETCSL 1.1.2 lists multiple OB Nippur manuscripts. The general claim about Nippur scribal curriculum is well-established in Sumerological scholarship (Tinney 1999, Robson 2001)."
+    recommended_fix: "Consider softening to 'as attested by multiple copies from Nippur' unless the student-copy characterization can be specifically verified from the manuscript descriptions."
+
+  - claim_number: "MARKER-1 (INFERENCE at line 55)"
+    kind: "MARKER-MISUSED"
+    severity: "LOW"
+    claim: "[INFERENCE: The text constitutes the oldest known literary argument for the social inclusion of persons with disabilities]"
+    issue: "The INFERENCE marker is appropriately used and includes a risk caveat about anachronistic framing. However, the characterization 'oldest known literary argument for social inclusion of persons with disabilities' overstates the text's intent. The composition's purpose appears to demonstrate Enki's superior wisdom and cunning rather than to argue for social inclusion. The marker's own risk caveat ('Modern disability-rights framing may anachronistically overinterpret the Sumerian social logic') honestly identifies this concern."
+    evidence: "The risk caveat within the INFERENCE marker is well-stated and honest. The marker is correctly typed as INFERENCE."
+    recommended_fix: "Consider softening the main inference statement to 'the oldest known literary treatment of accommodating physical diversity within a social order' — the existing risk caveat is adequate."
+
+  - claim_number: "MARKER-2 (LACUNA at line 12)"
+    kind: "SUPPORTED"
+    severity: "NONE"
+    claim: "[LACUNA: Opening lines (1–6) fragmentary]"
+    issue: "Marker is correctly used. ETCSL 1.1.2 does mark the opening lines as fragmentary."
+    evidence: "ETCSL 1.1.2 composite text marks lines 1–6 with lacuna indicators."
+    recommended_fix: "No change required."
+
+  - claim_number: "MARKER-3 (LACUNA at line 50)"
+    kind: "SUPPORTED"
+    severity: "NONE"
+    claim: "[LACUNA: Approximately nine lines (68–76) damaged in the middle of the impaired-humans sequence]"
+    issue: "Marker is correctly used. ETCSL 1.1.2 does show damage in this section of the text."
+    evidence: "ETCSL 1.1.2 composite text shows lacunae and damaged lines in the impaired-humans sequence."
+    recommended_fix: "No change required."
