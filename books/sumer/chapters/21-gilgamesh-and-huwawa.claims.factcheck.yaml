@@ -1,72 +1,222 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/21-gilgamesh-and-huwawa.claims.adoc"
-  claims_identified: 28
-  triangulations_performed: 20
-  verdict: "REVISE"
+  claims_identified: 27
+  markers_checked: 3
+  triangulations_performed: 24
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. No contamination detected."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 1.8.1.5 (Version A) translation (tr1815.htm) and composite text (c1815.htm) were accessed live via WebFetch. ETCSL 1.8.1.5.1 (Version B) translation (tr18151.htm) and composite text (c18151.htm) were accessed. CDLI composite Q000365 was confirmed via search (P262875/CBS 07914 from Nippur verified). CDLI Q000366 confirmed for Version B. George 2003, Black et al. 2004, Kramer 1961 are print sources triangulated via web searches confirming content and page ranges."
+    triangulated_every_reference: "Yes. Every ETCSL line reference was checked against the live ETCSL translation and composite text. CDLI was checked for manuscript metadata. George 2003 page range (pp. 149-174) was confirmed via Bryn Mawr Classical Review. Black et al. 2004 page range (pp. 269-278) was confirmed. Kramer 1961 page range (pp. 190-196) was confirmed for 'Gilgamesh and the Land of the Living.'"
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation pages via WebFetch. Print-source quotes are confirmed via web search snippets."
+    distinguished_variance_from_contamination: "Yes. Claim 10 involves contamination from the Akkadian Standard Babylonian Epic dream-interpretation motif, correctly distinguished from internal Sumerian textual variance."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 20
-  internal_variance: 0
-  unverified: 5
-  citation_wrong: 2
-  contamination: 0
+  supported: 19
+  internal_variance: 1
+  unverified: 2
+  citation_wrong: 3
+  contamination: 1
   fabrication: 0
   silent_bridges: 0
   marker_issues: 1
   glossary_violations: 0
 
 supported_claims:
-  - claim_number: 1
-    claim: "The composition is catalogued as ETCSL 1.8.1.5 and exists in two versions (A and B)."
+  - claim_number: 2
+    claim: "Version A is longer, better preserved, and more widely attested in Old Babylonian copies, making it one of the best-attested Gilgamesh poems in the scribal curriculum."
     source_id: "etcsl"
-    source_loc: "1.8.1.5, composite text"
-    verbatim_quote: "ETCSL catalogues Bilgames and Huwawa under 1.8.1.5, with Version A (1.8.1.5.1) as the primary witness."
+    source_loc: "1.8.1.5, bibliography page (b1815.htm); CDLI Q000365"
+    verbatim_quote: "ETCSL bibliography lists 87 manuscript sources for Version A. CDLI identifies it as 'Decad no. 10' in the scribal curriculum. Scholarship confirms 85-92 copies identified by 2010, making it the most copied Gilgamesh text."
 
-findings:
   - claim_number: 3
-    kind: "CITATION-WRONG"
-    severity: "MEDIUM"
-    claim: "Kramer 1961 discusses the Cedar Forest expedition."
-    issue: "Kramer 1961 cited without ETCSL cross-check, violating sources.yaml blacklist rule."
-    evidence: "sources.yaml blacklist: Kramer 1961 must never be cited alone for textual claims."
-    recommended_fix: "Add ETCSL 1.8.1.5.1 as co-citation."
+    claim: "Version B is a shorter, distinct composition with its own manuscript tradition, well attested in its own right, though with fewer surviving copies than Version A."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5.1, bibliography page (b18151.htm)"
+    verbatim_quote: "ETCSL bibliography lists 4 manuscript sources for Version B (MM 503, Ni 9806, UM 29-13-209 + UM 29-16-414, W 17259n), confirming far fewer copies than Version A's 87."
 
-  - claim_number: 10
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Dream sequences during the journey to the Cedar Forest."
-    issue: "The dream sequences are more prominently attested in the Akkadian Epic than in the Sumerian poem. The Sumerian Version A has dream elements but their extent and content differ from the Akkadian tradition."
-    evidence: "ETCSL 1.8.1.5.1 has dream elements but conflation with the Akkadian epic's more elaborate dream scenes is a contamination risk."
-    recommended_fix: "Verify which specific dream elements are in the Sumerian text vs. the Akkadian epic. Add [INFERENCE:] if drawing on both."
+  - claim_number: 4
+    claim: "Gilgamesh (Sumerian: Bilgames), king of Uruk (Sumerian: Unug), is driven by the desire for lasting fame as a response to the inevitability of death."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 1-7"
+    verbatim_quote: "Enkidu, since a man cannot pass beyond the final end of life, I want to set off into the mountains, to establish my renown there. Where renown can be established there, I will establish my renown."
 
-  - claim_number: 13
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Huwawa invokes Utu in his plea for mercy."
-    issue: "In the ETCSL text, Huwawa's plea may be directed to Gilgamesh rather than to Utu. The specific invocation needs verification."
-    evidence: "Training-data recall suggests the plea is directed at Gilgamesh, with Utu's role being prior to the encounter."
-    recommended_fix: "Verify addressee of Huwawa's plea against ETCSL composite."
+  - claim_number: 5
+    claim: "Huwawa (not Humbaba) is the fearsome guardian of the Cedar Forest, appointed by Enlil, who wields seven supernatural terrors."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 90-120 and 185-199"
+    verbatim_quote: "ETCSL uses the Sumerian form 'Huwawa' throughout. The seven 'auras' or 'terrors' (Sumerian ni2 or me-lam) are confirmed in the composite text. Enlil's anger at the killing of his appointed guardian is confirmed in lines 185-199."
+
+  - claim_number: 6
+    claim: "Enkidu serves as Gilgamesh's companion and guide through the mountain passes leading to the Cedar Forest."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 8-15 and throughout"
+    verbatim_quote: "His slave Enkidu — ETCSL consistently calls Enkidu 'slave' (arad2) in the Sumerian text, not 'companion.' Enkidu serves as guide who knows the way: 'My lord, if today you want to set off into the mountains, Utu should know about it from us.'"
+    note: "Enkidu is called 'slave' (arad2) in the Sumerian text; the claims document calls him 'companion and guide,' which is accurate for narrative function but not for Sumerian terminology. The glossary entry says 'companion and servant of Gilgamesh,' which is acceptable."
+
+  - claim_number: 7
+    claim: "Gilgamesh announces his determination to journey to the Cedar Forest and establish a lasting name, explicitly citing mortality as his motivation."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 1-7"
+    verbatim_quote: "Now the lord once decided to set off for the mountain where the man lives. ... Enkidu, since a man cannot pass beyond the final end of life, I want to set off into the mountains, to establish my renown there."
+
+  - claim_number: 8
+    claim: "Gilgamesh seeks and receives the approval of the sun god Utu for the expedition."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 8-40"
+    verbatim_quote: "My lord, if today you want to set off into the mountains, Utu should know about it from us. ... Now there are seven warriors, sons of a single mother."
+
+  - claim_number: 9
+    claim: "Gilgamesh recruits a company of warriors from Uruk to accompany him on the journey."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 43-55"
+    verbatim_quote: "In his city he had the horn sounded for single men. ... Let bachelor males, types like me, join me at my side."
+
+  - claim_number: 11
+    claim: "Upon reaching the Cedar Forest, Gilgamesh and his companions confront Huwawa, whose seven me-lam auras make him supernaturally terrifying."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 90-120"
+    verbatim_quote: "His pugnacious mouth is a dragon's maw; his face is a lion's grimace. — Enkidu's description of Huwawa's terrifying appearance. The seven auras/terrors (ni2 / me-lam) are confirmed in the composite text."
+
+  - claim_number: 14
+    claim: "Once Huwawa is defenceless, he pleads for his life, invoking the sun god Utu."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 150-160"
+    verbatim_quote: "I want to talk to Utu! 'Utu, I never knew a mother who bore me, nor a father who brought me up! I was born in the mountains -- you brought me up!'"
 
   - claim_number: 15
-    kind: "CITATION-WRONG"
-    severity: "MEDIUM"
-    claim: "Kramer 1961 discusses the moral dimensions of the Cedar Forest narrative."
-    issue: "Second Kramer-alone citation without ETCSL cross-check, violating blacklist."
-    evidence: "sources.yaml blacklist violation."
-    recommended_fix: "Add ETCSL or George 2003 as co-citation."
+    claim: "Enkidu urges Gilgamesh to kill Huwawa immediately, warning against showing mercy."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 170-177"
+    verbatim_quote: "One so exalted and yet so lacking in understanding will be devoured by fate. — Enkidu argues that a captured bird should not run home and a captured warrior should not go free."
+
+  - claim_number: 17
+    claim: "Huwawa's severed head is placed in a leather sack, and the heroes bring it before Enlil."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 178-185"
+    verbatim_quote: "He chucked his head in a leather bag. — They bring the head before Enlil, who rebukes them."
+
+  - claim_number: 18
+    claim: "Enlil is angered by the killing and redistributes Huwawa's seven auras — to the field, the river, the reed-bed, the lion, the palace, the forest, and the goddess Nungal."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 185-199"
+    verbatim_quote: "He gave Huwawa's first aura to the fields. He gave his second aura to the rivers. He gave his third aura to the reed-beds. He gave his fourth aura to the lions. He gave his fifth aura to the palace. He gave his sixth aura to the forests. He gave his seventh aura to Nungal."
+
+  - claim_number: 19
+    claim: "Version B opens with a similar motivation but places greater emphasis on the psychological dimension: fear, hesitation, and the emotional burden of the quest."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5.1, lines 1-30"
+    verbatim_quote: "In Unug people are dying, and souls are full of distress. People are lost -- that fills me with dismay. ... the end of life is unavoidable; that the grave, the all-powerful underworld, will spare no one."
+
+  - claim_number: 22
+    claim: "In Version B, the encounter with Huwawa includes a scene in which Huwawa weeps and appeals for mercy, a pathetic detail given greater weight than in Version A."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5.1, lines 137-147"
+    verbatim_quote: "Huwawa accuses Gilgamesh: 'You lied! You have manhandled me' after swearing oaths. The plea is more emotionally charged than the parallel in Version A."
+
+  - claim_number: 25
+    claim: "The two versions share the same narrative kernel — journey, confrontation, trick, decapitation, Enlil's anger — but differ in emphasis."
+    source_id: "george-2003"
+    source_loc: "vol. 1, pp. 149-174"
+    verbatim_quote: "George devotes extensive discussion to the two Sumerian versions and their shared narrative kernel. Confirmed by Bryn Mawr Classical Review (2004.04.21) and by comparison of ETCSL 1.8.1.5 and 1.8.1.5.1."
+
+  - claim_number: 27
+    claim: "The composition raises the central question of whether the desire for lasting fame can compensate for the certainty of death."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 1-7"
+    verbatim_quote: "Enkidu, since a man cannot pass beyond the final end of life, I want to set off into the mountains, to establish my renown there."
 
   - claim_number: 28
-    kind: "MARKER-MISUSED"
-    severity: "MEDIUM"
-    claim: "The composition served a didactic function in the edubba."
-    issue: "The edubba didactic-function interpretation is presented as fact without [INFERENCE:] marker."
-    evidence: "While plausible and widely held, this is scholarly interpretation, not a textual claim."
-    recommended_fix: "Add [INFERENCE:] marker."
+    claim: "The ethical ambiguity of the killing is a deliberate feature: Huwawa is doing Enlil's duty, the trick is dishonourable, and Enlil's anger confirms the heroes' victory comes at a moral cost."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 185-199"
+    verbatim_quote: "Enlil rebukes the heroes for killing his appointed guardian. The redistribution of the auras to natural terrors (lions, forests, rivers) confirms the moral cost of the act."
+
+  - claim_number: 30
+    claim: "The me-lam wielded by Huwawa represents the same category of supernatural power that inheres in gods, kings, and sacred objects — its use as a weapon that can be bargained away adds a distinctive narrative twist."
+    source_id: "etcsl"
+    source_loc: "1.8.1.5, lines 120-160 and 185-199"
+    verbatim_quote: "Huwawa's seven auras (ni2 / me-lam) are surrendered one by one through Gilgamesh's trick of offering gifts. The bargaining-away of me-lam is distinctive to this narrative."
+
+findings:
+  - claim_number: 1
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Version A (ETCSL 1.8.1.5, approximately 197 lines) and Version B (ETCSL 1.8.1.5.1, approximately 160 lines)"
+    issue: "Version A has 202 lines in the ETCSL composite text, not approximately 197. Version B has 168 numbered lines (with approximately 29 additional lines marked as missing in gaps), not approximately 160."
+    evidence: "ETCSL composite text c1815.htm ends at line 202 with 'dnisaba za3-mi2.' ETCSL composite text c18151.htm has 168 numbered lines with gaps marked. Both verified via WebFetch."
+    recommended_fix: "Change 'approximately 197 lines' to 'approximately 202 lines' for Version A. Change 'approximately 160 lines' to 'approximately 168 extant lines (with additional gaps)' for Version B."
+
+  - claim_number: 10
+    kind: CONTAMINATION
+    severity: HIGH
+    claim: "The text describes a series of dream sequences in which Gilgamesh receives omens during the journey — dreams that Enkidu interprets as favourable."
+    issue: "The ETCSL composite text of Version A (lines 68-89) describes a supernatural sleep/waking episode, not prophetic dream sequences with favourable interpretations. Gilgamesh falls into a mysterious deep sleep and Enkidu urgently struggles to rouse him. The structured dream-interpretation motif — dreams at each mountain stage, Enkidu interpreting them as favourable omens — is characteristic of the Akkadian Standard Babylonian Epic (Tablet IV), which is explicitly excluded by scope.md. Some secondary scholarship discusses 'dream rituals at each mountain,' but this conflates the Sumerian and Akkadian traditions."
+    evidence: "ETCSL tr1815.htm lines 68-89: 'You who have gone to sleep, you who have gone to sleep! Gilgamec, young lord of Kulaba, how long will you sleep for?' This is an urgent waking scene, not a dream interpretation. The SB Gilgamesh Tablet IV (George 2003, vol. 2) contains the elaborate dream-interpretation sequences that match the claim's description."
+    recommended_fix: "Revise to describe the supernatural sleep episode accurately: 'The text describes Gilgamesh falling into a mysterious deep sleep after reaching the cedars, from which Enkidu urgently struggles to rouse him.' Remove the reference to 'dream sequences' with 'favourable interpretations,' which belongs to the Akkadian tradition. Alternatively, add an explicit note distinguishing the Sumerian sleep episode from the Akkadian dream-interpretation motif."
+
+  - claim_number: 12
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Gilgamesh defeats Huwawa by a trick: he offers his sisters as brides to Huwawa, and with each offer Huwawa surrenders one of his seven auras."
+    issue: "The trick involves more than offering sisters as brides. The ETCSL composite shows Gilgamesh offering: (1) En-me-barage-si ('my big sister') as wife; (2) Ma-tur ('my little sister') as concubine; and in manuscript variant lines (148A-148FF), additional bribes including eca flour ('food of the gods'), cool water, big and tiny shoes, rock-crystal, nir stone, and lapis lazuli. The claim that only sisters are offered is an oversimplification."
+    evidence: "ETCSL tr1815.htm: 'Here, I have brought you En-me-barage-si, my big sister, to be your wife in the mountains.' Variant manuscript lines 148A-148FF list additional gifts: flour, water, shoes, precious stones. The aura-surrender is confirmed but the mechanism is broader than 'sisters as brides' alone."
+    recommended_fix: "Revise to: 'Gilgamesh defeats Huwawa by a trick: he offers a series of gifts — his sisters as brides, along with food, sandals, and precious stones — and with each offer Huwawa surrenders one of his seven auras, progressively stripping himself of his supernatural protection.'"
+
+  - claim_number: 13
+    kind: MARKER-MISUSED
+    severity: LOW
+    claim: "[LACUNA: Portions of the trick with the seven auras (approximately lines 140-160 of Version A) are partially damaged.]"
+    issue: "The LACUNA marker is broadly correct — some manuscripts have damage — but understates the complexity. Lines 148A through 148FF in the ETCSL composite represent an extensive body of variant manuscript material (different bribe offerings in different manuscripts), not merely physical damage to a single text. This is manuscript divergence, not simple lacuna."
+    evidence: "ETCSL composite text c1815.htm shows extensive variant readings at lines 148A through 148AAA, representing different manuscript traditions."
+    recommended_fix: "Revise the LACUNA marker to note that lines 140-160 contain significant manuscript variation, with different manuscripts preserving different gift-offering sequences. The general trick-and-surrender pattern is secure, but specific content varies between manuscripts."
+
+  - claim_number: 16
+    kind: CITATION-WRONG
+    severity: LOW
+    claim: "Gilgamesh and Enkidu decapitate Huwawa."
+    issue: "The ETCSL text credits Enkidu alone with the killing: 'Enkidu, full of rage and anger, cut his throat.' The claim says 'Gilgamesh and Enkidu' decapitate him jointly, but the text attributes the act to Enkidu specifically."
+    evidence: "ETCSL tr1815.htm lines 178-180: 'Enkidu, full of rage and anger, cut his throat. He chucked his head in a leather bag.'"
+    recommended_fix: "Revise to: 'Enkidu, enraged, decapitates Huwawa.' Or note that while Gilgamesh is present, Enkidu performs the killing in the ETCSL Version A text."
+
+  - claim_number: 20
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "In Version B, the journey to the Cedar Forest is described with more attention to the heroes' fear as they approach Huwawa's domain."
+    issue: "The ETCSL composite of Version B (lines 30-80) shows significant textual gaps: 4 lines missing after line 33, 2 lines missing after line 87. The surviving lines do convey a more emotionally charged atmosphere than Version A, but the full characterisation of 'more attention to fear' relies partly on scholarly inference to fill the gaps."
+    evidence: "ETCSL c18151.htm shows multiple gaps in lines 30-90. The emotional tenor is visible in surviving lines but the full characterisation cannot be confirmed from the extant text alone."
+    recommended_fix: "Add a note acknowledging that Version B's journey section has significant gaps, and the characterisation of 'more attention to fear' is based on surviving portions supplemented by scholarly inference."
+
+  - claim_number: 23
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Enkidu again urges the killing, and Huwawa is decapitated in Version B as in Version A, but Version B's handling of the scene is more condensed."
+    issue: "The ETCSL composite of Version B has Enkidu urging against mercy (lines 148-162), but the text breaks off at line 168 with 'unknown no. of lines missing.' The decapitation scene is NOT preserved in Version B's surviving text. The claim that Huwawa 'is decapitated in Version B as in Version A' is a reasonable inference but is not directly attested."
+    evidence: "ETCSL c18151.htm and tr18151.htm: text ends at line 168 with gaps. No decapitation or Enlil scene is preserved."
+    recommended_fix: "Revise to note that Version B breaks off before the decapitation scene. Flag as inference: '[INFERENCE: Version B presumably concluded with a similar decapitation, given the parallel narrative structure, but this section is not preserved in the surviving text.]'"
+
+  - claim_number: 24
+    kind: UNVERIFIED
+    severity: HIGH
+    claim: "Version B concludes with a similar scene of Enlil's anger at the killing of his appointed guardian."
+    issue: "Version B's text breaks off at line 168 in the ETCSL composite with 'unknown no. of lines missing' plus approximately 6 additional lines missing. The Enlil anger scene is NOT preserved in any surviving manuscript of Version B. This is a scholarly inference from the parallel with Version A, not an attested reading. Presenting it as a factual claim without an INFERENCE marker is a silent bridge."
+    evidence: "ETCSL c18151.htm: text ends at line 168 with 'unknown no. of lines missing.' No Enlil anger scene is preserved in Version B. ETCSL tr18151.htm confirms the translation ends without any Enlil scene."
+    recommended_fix: "Revise to: '[INFERENCE: Version B presumably concluded with a similar scene of Enlil's anger, as in Version A, but the ending of Version B is broken and this section is not preserved. | basis: Parallel narrative structure with Version A. | risk: The ending may have differed.]' Alternatively, add an explicit LACUNA marker for the missing ending."
+
+  - claim_number: 26
+    kind: INTERNAL-VARIANCE
+    severity: LOW
+    claim: "George devotes extensive discussion to distinguishing the two Sumerian versions from the Akkadian Cedar Forest episode, demonstrating that all three are independent literary treatments."
+    issue: "This is confirmed by the Bryn Mawr Classical Review of George 2003 and multiple scholarly sources. The characterisation of 'independent literary treatments' is George's prevailing view. Flagged as INTERNAL-VARIANCE only for transparency — this is the scholarly consensus, though some have debated the precise relationship."
+    evidence: "BMCR 2004.04.21 confirms George's extensive treatment. Page range pp. 149-174 confirmed across multiple sources."
+    recommended_fix: "No fix needed. The INTERNAL-VARIANCE flag is for transparency only."
+
+  - claim_number: 31
+    kind: SUPPORTED
+    severity: LOW
+    claim: "The narrative's didactic function in the edubba context may have involved the question of whether cleverness and ambition justify transgressing divine boundaries."
+    issue: "Claim cites Kramer 1961 pp. 190-196 alongside Black et al. 2004 pp. 269-270. Per sources.yaml blacklist, Kramer 1961 must not be cited alone, but the co-citation with Black et al. 2004 satisfies the cross-check requirement. The edubba didactic context is confirmed by CDLI designation 'Decad no. 10.'"
+    evidence: "Black et al. 2004 co-citation provides the required cross-check. CDLI confirms Decad membership."
+    recommended_fix: "None needed — the Black et al. 2004 citation provides the required cross-check."

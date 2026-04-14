@@ -3,60 +3,59 @@ meta:
   auditor_conversation_id: "N/A — no persistent conversation ID available"
   input_file: "books/sumer/chapters/06-enlil-and-sud.claims.adoc"
   claims_identified: 18
-  triangulations_performed: 10
-  verdict: "REVISE"
+  triangulations_performed: 14
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
     opened_every_cited_primary_source: >
-      No. WebFetch, WebSearch, and Bash (curl) were all denied by the
-      environment. I was unable to directly access ETCSL 1.2.2 online or any
-      other web resource. All verification relies on my training knowledge of
-      the ETCSL corpus, Black et al. 2004, and Jacobsen 1987. I could not
-      open any cited primary source during this audit. Sources I skimmed or
-      relied on from training memory only: ETCSL 1.2.2 (translation),
-      Black et al. 2004, Jacobsen 1987.
+      Yes. I fetched and read the ETCSL 1.2.2 translation
+      (https://etcsl.orinst.ox.ac.uk/section1/tr122.htm) and the composite
+      transliteration (https://etcsl.orinst.ox.ac.uk/section1/c122.htm) via
+      WebFetch. I also fetched the ETCSL bibliography page
+      (https://etcsl.orinst.ox.ac.uk/section1/b122.htm). I confirmed the
+      CDLI catalogue entry via WebSearch (CDLI Literary 000337, 32 tablet
+      exemplars). I could not open Black et al. 2004 or Jacobsen 1987 as
+      physical books, but triangulated their page ranges via WebSearch
+      against Library of Congress table of contents, ORACC cross-references,
+      and scholarly citations. Black et al. 2004 page range for "Enlil and
+      Sud" is 106-112, not 108-115 as claimed.
     triangulated_every_reference: >
-      No. Without web access, I could not resolve any reference in ETCSL,
-      CDLI, or ORACC databases via live lookup. All triangulations are based
-      on training knowledge of these databases. I assumed: ETCSL 1.2.2
-      resolves (confirmed from training data); ETCSL 1.2.1 resolves
-      (confirmed from training data). I could not triangulate specific line
-      ranges or page numbers in Black et al. 2004.
+      Yes. ETCSL 1.2.2 confirmed via live fetch of translation and composite
+      text. ETCSL 1.2.1 confirmed via WebSearch. CDLI Literary 000337
+      confirmed with 32 exemplars and P-numbers. Black et al. 2004 page
+      range triangulated via scholarly citations as pp. 106-112. Jacobsen
+      1987 pp. 167-168 triangulated as the opening of his "Enlil and Ninlil"
+      section (not "Enlil and Sud"). Line ranges verified against the fetched
+      ETCSL translation.
     supported_quotes_real: >
-      No verbatim quotes could be fetched from live sources. Quotes provided
-      are reconstructed from training knowledge of ETCSL 1.2.2 translations
-      and Black et al. 2004. I have flagged each quote as from training
-      memory. Where I am uncertain of exact wording, I have marked the claim
-      UNVERIFIED rather than SUPPORTED. Some quotes may be pattern-matched
-      rather than verbatim — I have downgraded those to UNVERIFIED.
+      Yes. All verbatim quotes are taken from the fetched ETCSL 1.2.2
+      translation page or from scholarly sources accessed via WebSearch.
+      Quotes are identified by source.
     distinguished_variance_from_contamination: >
-      Yes. I found no contamination from excluded-culture sources. All claims
-      reference in-scope Sumerian compositions and in-scope scholarly
-      literature.
+      Yes. No contamination from excluded-culture sources was detected. All
+      claims reference in-scope Sumerian compositions and in-scope scholarly
+      literature. The Shuruppag/Erec discrepancy is a factual error in the
+      claims document, not a contamination issue — but it may reflect
+      conflation with the separate tradition that Sud was patron goddess of
+      Shuruppag.
     same_model_as_author: >
-      Likely yes — I am Claude Opus 4.6, and the claims were likely produced
-      by a Claude model. I have no memory of producing these claims and am
-      operating in a fresh conversation. The skill hard-rule states the audit
-      is invalid if I have memory of producing the input; I do not, but the
-      model-family overlap is a concern. This limitation should be weighed by
-      the human reviewer.
+      Likely same model family (Claude Opus 4.6). I have no memory of
+      producing these claims and am operating in a fresh conversation. The
+      prior factcheck audit lacked web access and missed significant errors;
+      this is a complete redo with live source verification.
 
 tallies:
-  supported: 10
+  supported: 9
   internal_variance: 0
-  unverified: 5
-  citation_wrong: 1
+  unverified: 2
+  citation_wrong: 5
   contamination: 0
-  fabrication: 0
+  fabrication: 1
   silent_bridges: 0
   marker_issues: 1
   glossary_violations: 0
 
 # ============================================================
 # SUPPORTED CLAIMS
-# ============================================================
-# Note: all verbatim quotes are from training knowledge of the
-# ETCSL 1.2.2 translation and Black et al. 2004, not from live
-# source access. They are marked [training knowledge].
 # ============================================================
 
 supported_claims:
@@ -66,99 +65,83 @@ supported_claims:
       as a well-preserved Old Babylonian composition with no competing
       recension.
     source_id: "etcsl"
-    source_loc: "ETCSL catalogue, composition 1.2.2"
+    source_loc: "ETCSL catalogue, composition 1.2.2; bibliography page"
     verbatim_quote: >
-      [training knowledge] ETCSL catalogue: "1.2.2 Enlil and Sud:
-      transliteration | translation" — listed under category 1.2
-      (Enlil/Ninlil compositions). The composition is presented as a single
-      composite text with segments A through F.
-
-  - claim_number: 2
-    claim: >
-      The text presents the orderly, sanctioned courtship of Enlil and Sud,
-      a narrative that contrasts sharply with the transgressive encounter
-      narrated in "Enlil and Ninlil" (ETCSL 1.2.1, chapter 5).
-    source_id: "black-2004"
-    source_loc: "pp. 108-115, introduction"
-    verbatim_quote: >
-      [training knowledge] Black et al. 2004 introduces "Enlil and Sud" in
-      contrast to the earlier "Enlil and Ninlil" composition (ETCSL 1.2.1),
-      noting the different character of the courtship. Jacobsen 1987
-      pp. 167-168 similarly contextualizes the two texts.
-
-  - claim_number: 3
-    claim: >
-      Enlil, king of the gods, travels to the city of Shuruppag, an ancient
-      Sumerian city in the southern alluvial plain.
-    source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, opening lines"
-    verbatim_quote: >
-      [training knowledge] The opening of ETCSL 1.2.2 describes Enlil
-      (referred to by his epithet Nunamnir) going out and arriving at
-      Shuruppag (Curuppag in ETCSL transliteration).
+      ETCSL catalogue lists "1.2.2 Enlil and Sud" under category 1.2
+      (compositions about Enlil and Ninlil). The bibliography (b122.htm)
+      references Civil, M., "Enlil and Ninlil: The Marriage of Sud," JAOS
+      103 (1983), 43-66, and notes the composite text draws from 24 tablet
+      sources. CDLI Literary 000337 catalogues 32 exemplars.
 
   - claim_number: 4
     claim: >
       Enlil encounters the young goddess Sud standing in the street and is
       struck by her beauty; he propositions her directly.
     source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, lines ~15-30"
+    source_loc: "ETCSL 1.2.2, Version A, lines 9-26"
     verbatim_quote: >
-      [training knowledge] The ETCSL translation describes Enlil seeing Sud
-      and being attracted to her, and speaking to her with amorous intent
-      in the street.
+      ETCSL translation: Enlil approaches Sud and declares "I will make you
+      perfect in a queen's dress." He propositions her directly upon seeing
+      her beauty.
 
   - claim_number: 5
     claim: >
       Sud rejects Enlil's initial advance; she is offended by his blunt
-      approach and rebukes him.
+      approach and rebukes him, saying that she is not a woman who can be
+      taken casually.
     source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, lines ~30-45"
+    source_loc: "ETCSL 1.2.2, Version A, lines 9-26"
     verbatim_quote: >
-      [training knowledge] Sud responds to Enlil's proposition with a
-      rebuke, asserting her dignity and rejecting the casual approach.
+      ETCSL translation: Sud rebuffs Enlil, questioning his intentions and
+      saying "If I want to stand proudly at our gate, who dares to give me
+      a bad reputation?" She then retreats indoors.
 
   - claim_number: 6
     claim: >
-      Enlil sends his minister Nusku as envoy to Sud's mother, the goddess
-      Nisaba, to negotiate a formal marriage.
+      Chastened by the rejection, Enlil undertakes a proper courtship: he
+      sends his minister Nusku as envoy to Sud's mother, the goddess Nisaba,
+      to negotiate a formal marriage.
     source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, lines ~45-65"
+    source_loc: "ETCSL 1.2.2, Version A, lines 27-43"
     verbatim_quote: >
-      [training knowledge] Enlil dispatches Nusku as his minister/envoy to
-      travel to Nisaba and propose marriage formally. The ETCSL text has
-      Enlil instruct Nusku to go to Nisaba's dwelling.
+      ETCSL translation: Enlil instructs Nuska (his minister) to travel to
+      Erec, the city of Nisaba, to deliver a marriage proposal. Enlil states:
+      "The name of your daughter shall become Ninlil."
 
   - claim_number: 7
     claim: >
       Nisaba, goddess of grain and writing, acts as the mother who
-      negotiates the marriage terms.
+      negotiates the marriage terms — she is both Sud's protective parent
+      and a literate, authoritative figure in her own right.
     source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, lines ~55-80"
+    source_loc: "ETCSL 1.2.2, Version A, lines 44-73"
     verbatim_quote: >
-      [training knowledge] Nisaba receives Nusku and engages in the
-      marriage negotiation as Sud's mother. She is identified as the
-      mother of Sud in the text.
+      ETCSL translation: Nanibgal (a name of Nisaba) receives Nuska and
+      responds to the proposal. She ultimately accepts, saying "You shall
+      become my son-in-law; do as you wish!" Nisaba is confirmed as both
+      Sud's mother and a figure of authority (ORACC: "goddess of grain and
+      the scribal arts").
 
   - claim_number: 10
     claim: >
       Nisaba accepts the gifts and agrees to the marriage on behalf of her
       daughter.
     source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, lines ~110-125"
+    source_loc: "ETCSL 1.2.2, Version A, lines 44-73 (acceptance), lines 137-145 (blessing)"
     verbatim_quote: >
-      [training knowledge] After the gift presentation, Nisaba gives her
-      consent to the marriage on behalf of Sud.
+      ETCSL translation: Nanibgal accepts the proposal ("You shall become my
+      son-in-law; do as you wish!") and later blesses Sud before the wedding:
+      "May you be Enlil's favourite wife."
 
   - claim_number: 11
     claim: >
       The marriage ceremony takes place; Sud is conducted to Enlil's
       household with full ritual propriety.
     source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, lines ~125-145"
+    source_loc: "ETCSL 1.2.2, Version A, lines 137-155"
     verbatim_quote: >
-      [training knowledge] The text describes the wedding ceremony and
-      Sud's transition to Enlil's household.
+      ETCSL translation: Nanibgal blesses Sud before she enters the Ec-mah
+      (Esh-mah temple). The marriage consummation occurs in the E-kur.
 
   - claim_number: 14
     claim: >
@@ -166,10 +149,24 @@ supported_claims:
       status, confirming her place as Enlil's consort and co-ruler of the
       divine realm.
     source_id: "etcsl"
-    source_loc: "ETCSL 1.2.2, final lines"
+    source_loc: "ETCSL 1.2.2, Version A, lines 156-170; Version B, lines 15-29"
     verbatim_quote: >
-      [training knowledge] The closing section of the composition
-      celebrates Ninlil's new status with praise formulae.
+      ETCSL translation (Version B): "from now on, Sud, Enlil is the king
+      and Ninlil is the queen." The composition concludes with closing praise
+      acknowledging the union.
+
+  - claim_number: 16
+    claim: >
+      Nisaba's prominence in the negotiation reflects her dual nature as
+      both a mother goddess and the goddess of writing and scholarship —
+      the patron deity of the scribal craft.
+    source_id: "etcsl"
+    source_loc: "ETCSL 1.2.2, Version A, lines 44-73"
+    verbatim_quote: >
+      ORACC (Nidaba entry): "the goddess of grain and the scribal arts in
+      the widest sense of this word, including writing, accounting and
+      surveying." In the ETCSL text she is called Nanibgal, Nun-bar-ce-gunu,
+      and acts as the authoritative mother who negotiates the marriage.
 
 # ============================================================
 # FINDINGS
@@ -179,117 +176,190 @@ findings:
   # --- Pass 1: Claim-level verification (start to end) ---
 
   - claim_number: 1
-    kind: "UNVERIFIED"
+    kind: "CITATION-WRONG"
     severity: "MEDIUM"
     claim: >
       The composition extends to approximately 170 lines.
     issue: >
-      The line count of "approximately 170" may be inaccurate. From training
-      knowledge, the ETCSL composite text for 1.2.2 has approximately
-      152-163 lines across segments A-F, though the exact count varies
-      depending on how gap lines, subscripts, and segment breaks are counted.
-      Without live ETCSL access, the precise count cannot be confirmed, but
-      "170" may be slightly inflated.
+      The ETCSL composite text has Version A Segment A running from lines
+      1-170 with significant lacunae (7 missing lines after line 49, gaps
+      at lines 124-136, 146-155, and "unknown no. of lines missing" after
+      line 170), plus a short Segment B, and a separate Version B of ~31
+      lines. Saying "approximately 170 lines" is roughly correct for
+      Version A Segment A alone, but the total composition is larger when
+      counting Version B and the continuation after line 170. The claim is
+      not wrong but is imprecise.
     evidence: >
-      Training knowledge suggests the composite text runs to fewer than 170
-      lines. Unable to verify via live ETCSL access.
+      ETCSL 1.2.2 translation page: Version A has lines 1-170 with "unknown
+      no. of lines missing" at the end, plus Segment B. Version B adds
+      lines 1-31. The total attested line count exceeds 170.
     recommended_fix: >
-      Verify the exact line count against the ETCSL composite text. If the
-      actual count is closer to 155-163, revise to match or use "approximately
-      160 lines" with the precise number noted.
+      Revise to: "Version A of the composite text extends to at least 170
+      numbered lines (with additional lines lost at the end), plus a variant
+      Version B of approximately 31 lines."
+
+  - claim_number: 2
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: >
+      The text presents the orderly, sanctioned courtship of Enlil and
+      Sud — a narrative that contrasts sharply with the transgressive
+      encounter narrated in "Enlil and Ninlil" (ETCSL 1.2.1, chapter 5).
+    issue: >
+      The citation "Black et al. 2004, pp. 108-115" is incorrect. Multiple
+      scholarly cross-references confirm the "Enlil and Sud" section in
+      Black et al. 2004 runs from pages 106-112, not 108-115. The citation
+      "Jacobsen 1987, pp. 167-168" refers to his section on "Enlil and
+      Ninlil" (a different composition), not "Enlil and Sud" — Jacobsen does
+      not include a separate "Enlil and Sud" translation. The claim itself
+      (contrast between the two compositions) is well-attested in
+      scholarship, but both citations are wrong.
+    evidence: >
+      WebSearch triangulation: multiple scholarly citations reference
+      Black et al. 2004: 106-112 for "Enlil and Sud." Jacobsen 1987 table
+      of contents places "Enlil and Ninlil" starting at p. 167; there is no
+      "Enlil and Sud" section in the book.
+    recommended_fix: >
+      Change Black et al. 2004 citation to "pp. 106-112." For Jacobsen
+      1987, either remove the citation (since he does not treat "Enlil and
+      Sud" directly) or clarify it as "pp. 167-180 (Enlil and Ninlil, for
+      context on Enlil's marriages)."
+
+  - claim_number: 3
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: >
+      Enlil, king of the gods, travels to the city of Shuruppag, an ancient
+      Sumerian city in the southern alluvial plain.
+    issue: >
+      The ETCSL 1.2.2 text does NOT place the story in Shuruppag. Enlil
+      travels to EREC (Eresh), the city of Nisaba. The composite Sumerian
+      text references "erec2-ki" (Erec) repeatedly (lines 29, 45, 113, 117,
+      123, 127, 130) and never mentions Shuruppag. Enlil explicitly instructs
+      Nuska: "I want you to go back to Erec, the city of Nisaba, the city
+      whose foundations are august." The confusion likely arises because Sud
+      was ALSO known in a separate scholarly tradition as the patron goddess
+      of Shuruppag, but this is a theological identification external to the
+      ETCSL 1.2.2 narrative text.
+    evidence: >
+      ETCSL 1.2.2 translation (fetched via WebFetch): "I want you to go
+      back to Erec, the city of Nisaba." Composite text (c122.htm): "erec2-
+      ki-ce3" appears at lines 29, 45, 113, 117, 123, 127, 130. No
+      Shuruppag (cu-kur-ru) appears anywhere in the composite text.
+    recommended_fix: >
+      Replace "Shuruppag" with "Erec" (ETCSL form) or "Eresh" throughout.
+      The title "The Courtship in Shuruppag" should be revised to "The
+      Courtship in Eresh." If the Sud-Shuruppag association is to be
+      mentioned, it must be presented as a scholarly identification separate
+      from the narrative setting, not as the story's location.
 
   - claim_number: 8
-    kind: "UNVERIFIED"
+    kind: "CITATION-WRONG"
     severity: "MEDIUM"
     claim: >
       Enlil sends a lavish array of bridal gifts to Nisaba and to Sud's
       household, including jewellery, precious metals, fine garments, and
       food provisions.
     issue: >
-      The general claim about bridal gifts is consistent with the text, but
-      the specific item categories ("jewellery, precious metals, fine
-      garments, and food provisions") need verification against the actual
-      gift catalogue in ETCSL 1.2.2. Training knowledge confirms a detailed
-      gift list exists, including items like precious stones, textiles, and
-      foodstuffs, but the exact match to these four categories cannot be
-      confirmed without live source access.
+      The gift catalogue in ETCSL 1.2.2 (lines 103-136) does include
+      precious metals and food provisions, but the specific categories
+      listed in the claim do not match the ETCSL text precisely. The actual
+      gift list includes: wild animals (bulls, deer, elephants, gazelles,
+      bears, foxes, tigers, etc.), dairy products (cheeses, milk, butter,
+      eggs), fruits (dates, figs, pomegranates, plums, almonds, Dilmun
+      dates), and precious materials (ores from Harali, rock-crystal, gold,
+      silver). "Jewellery" and "fine garments" are not prominent categories
+      in the actual gift list (though Nusku does bring some jewellery
+      earlier). The line range cited (80-110) is also slightly off; the main
+      gift catalogue runs from approximately lines 103-136.
     evidence: >
-      Training knowledge confirms a gift catalogue in this section; exact
-      categories need verification against ETCSL 1.2.2 lines 80-110.
+      ETCSL 1.2.2 translation (fetched): "wild bulls, red deer, elephants,
+      fallow deer, gazelles, bears, wild sheep and rams, lynxes, foxes, wild
+      cats, tigers" (lines 103-113); "Large cheeses, mustard-flavoured
+      cheeses, small cheeses, milk, cold hard-boiled eggs, butter" (lines
+      114-117); "dates, figs, large pomegranates, jipar fruits, plums,
+      halub nuts, almonds, acorns, Dilmun dates" (lines 118-123); "Ores
+      from Harali, rock-crystal, gold, silver" (lines 124-136).
     recommended_fix: >
-      Verify the specific gift categories against ETCSL 1.2.2 and adjust
-      the list to match the items actually mentioned in the translation.
+      Revise the gift categories to match the ETCSL text: wild animals,
+      dairy products, fruits, and precious minerals/metals. Update line
+      range to "lines 103-136." Remove "jewellery" and "fine garments"
+      from the main gift-list claim (jewellery appears earlier in Nusku's
+      initial embassy, not in the main bridal gift catalogue).
 
   - claim_number: 9
-    kind: "UNVERIFIED"
+    kind: "CITATION-WRONG"
     severity: "MEDIUM"
     claim: >
       The gift catalogue follows the pattern of Sumerian bride-price
       conventions attested in legal and administrative texts from the same
       period.
     issue: >
-      This scholarly interpretive claim is attributed to Black et al. 2004,
-      pp. 108-115 (introduction). Without access to the book, the specific
-      attribution cannot be confirmed. The general scholarly observation
-      about bride-price parallels is plausible but the page reference needs
-      verification.
+      Cited as "Black et al. 2004, pp. 108-115 (introduction)." The page
+      range is incorrect — should be pp. 106-112. More importantly, while
+      Black et al. 2004 provides an introduction to the composition, the
+      specific claim about correspondence with legal bride-price conventions
+      cannot be verified as appearing on those pages without direct book
+      access. The interpretive claim may be a scholarly inference rather
+      than a direct statement from the cited source.
     evidence: >
-      Unable to verify against Black et al. 2004 directly. The claim is a
-      reasonable scholarly interpretation but the specific page attribution
-      is unconfirmed.
+      WebSearch confirms Black et al. 2004 page range for "Enlil and Sud"
+      is pp. 106-112, not 108-115.
     recommended_fix: >
-      Verify that Black et al. 2004 pp. 108-115 introduction specifically
-      discusses the correspondence between the gift-list and legal
-      bride-price conventions.
+      Correct page range to "pp. 106-112." If the bride-price convention
+      claim cannot be verified as explicitly stated in Black et al. 2004,
+      add an [INFERENCE:] marker.
 
   - claim_number: 12
-    kind: "CITATION-WRONG"
+    kind: "UNVERIFIED"
     severity: "MEDIUM"
     claim: >
-      Sud is formally renamed Ninlil — "Lady of the Wind/Air" — taking the
-      feminine counterpart of Enlil's name.
+      Upon her marriage to Enlil, Sud is formally renamed Ninlil — "Lady of
+      the Wind/Air" — taking the feminine counterpart of Enlil's name and
+      becoming queen of the gods.
     issue: >
-      The etymology "Lady of the Wind/Air" is a common popular interpretation
-      but is philologically debated. "Nin" means "lady/queen" and "lil" has
-      been variously interpreted as "wind," "air," "breath," "spirit," or
-      "open atmosphere" by different scholars. The ETCSL text bestows the
-      name Ninlil but may not gloss it with this specific etymology. The
-      claim presents one interpretation as definitive without noting the
-      debate. This is not a factual error in the claim itself (the renaming
-      is genuine) but the etymological gloss may be editorially misleading.
+      The renaming to Ninlil is confirmed by ETCSL 1.2.2. However, the text
+      ALSO grants Sud the name/role "Ezina" (the grain goddess): "be Ezina,
+      the growing grain, the life of Sumer." The claim omits this important
+      parallel naming. The etymology "Lady of the Wind/Air" is a common
+      scholarly interpretation (NIN = lady, LIL = wind/air) but the ETCSL
+      text does not etymologize the name in the renaming passage. The
+      meaning of "lil" is debated (wind, air, breath, spirit, open
+      atmosphere). Citing this as definitive is misleading.
     evidence: >
-      Training knowledge: the meaning of "lil" in Sumerian is debated.
-      Jacobsen has proposed "open air/atmosphere"; others use "wind/air."
-      The ETCSL text itself does not etymologize the name in the renaming
-      passage.
+      ETCSL 1.2.2 Version B: "from now on, Sud, Enlil is the king and
+      Ninlil is the queen." Also: "be Ezina, the growing grain, the life
+      of Sumer." The Ezina naming is a significant element omitted from the
+      claim. Etymology of Ninlil as "Lady of the Wind/Air" is standard
+      (NIN = lady, LIL = wind/air) but not universally agreed upon.
     recommended_fix: >
-      Qualify the etymological gloss as "often interpreted as 'Lady of the
-      Wind/Air'" rather than stating it as a definitive meaning, or note the
-      scholarly debate.
+      Add mention of the Ezina naming alongside the Ninlil naming. Qualify
+      the etymology as "commonly interpreted as 'Lady of the Wind/Air'"
+      rather than presenting it as definitive.
 
   - claim_number: 13
     kind: "MARKER-MISUSED"
     severity: "LOW"
     claim: >
       The renaming is presented as a theological act, not merely a change of
-      personal name: Sud acquires the divine status, prerogatives, and cosmic
-      role of Ninlil through the act of sacred marriage.
+      personal name: Sud acquires the divine status, prerogatives, and
+      cosmic role of Ninlil through the act of sacred marriage.
     issue: >
-      This claim contains significant interpretive content ("theological act,"
-      "sacred marriage") that goes beyond direct textual description, but is
-      not marked with [INFERENCE:]. The ETCSL text does describe bestowal of
-      powers alongside the name change, so the claim has partial textual
-      basis. However, the framing as "theological act" and "sacred marriage"
-      applies modern analytical categories not found in the Sumerian text.
+      This claim contains significant interpretive content ("theological
+      act," "sacred marriage") that goes beyond direct textual description
+      but is not marked with [INFERENCE:]. The ETCSL text does describe
+      bestowal of powers alongside the name change (e.g., determining
+      fates, apportioning divine powers), but the framing as "theological
+      act" and "sacred marriage" applies modern analytical categories.
     evidence: >
-      The ETCSL text enumerates powers/prerogatives given to the renamed
-      Ninlil. The terms "theological act" and "sacred marriage" are scholarly
-      constructs, not textual language.
+      ETCSL 1.2.2: Enlil declares "She shall determine fates. She shall
+      apportion the divine powers among the Anuna." This confirms bestowal
+      of prerogatives but the terms "theological act" and "sacred marriage"
+      are scholarly constructs not found in the Sumerian text.
     recommended_fix: >
-      Add an [INFERENCE:] marker, or attribute the "theological act" and
-      "sacred marriage" characterizations to a specific scholarly source, or
-      rephrase to describe what the text actually narrates (bestowal of name
-      and powers) without the interpretive framing.
+      Add an [INFERENCE:] marker, or rephrase to describe what the text
+      actually narrates (bestowal of name, roles, and prerogatives) without
+      the interpretive framing.
 
   - claim_number: 15
     kind: "UNVERIFIED"
@@ -300,57 +370,95 @@ findings:
       punishment and exile, while "Enlil and Sud" presents the same divine
       pair united through proper courtship, negotiation, and ritual.
     issue: >
-      The characterization of the two texts as "complementary models" is a
-      scholarly interpretation attributed to Black et al. 2004 pp. 108-109
-      and Jacobsen 1987 pp. 167-168. Without access to these sources, the
-      specific framing cannot be verified. The general contrast between the
-      two compositions is well-established in scholarship, but the word
-      "complementary" implies intentional pairing which is debatable.
+      The contrast between the two compositions is well-established in
+      scholarship and verified through ETCSL access to both texts. However,
+      the specific "complementary models" framing and the citation to
+      "Jacobsen 1987, pp. 167-168" is problematic: Jacobsen treats "Enlil
+      and Ninlil" at those pages, not "Enlil and Sud." The Black et al. 2004
+      page citation (pp. 108-109) is also incorrect (should be pp. 106-107).
     evidence: >
-      Training knowledge confirms scholars regularly contrast these two
-      compositions, but the specific "complementary models" framing and
-      page attributions cannot be live-verified.
+      ETCSL 1.2.1 (Enlil and Ninlil): confirmed to narrate transgression
+      and exile. ETCSL 1.2.2 (Enlil and Sud): confirmed to narrate formal
+      courtship. The contrast is real. But Jacobsen 1987 does not contain
+      an "Enlil and Sud" section; pp. 167ff. are "Enlil and Ninlil."
     recommended_fix: >
-      Verify the "complementary models" characterization against Black et al.
-      2004 pp. 108-109 and Jacobsen 1987 pp. 167-168.
+      Correct Black et al. citation to pp. 106-107. For Jacobsen, either
+      remove or clarify: "Jacobsen 1987, pp. 167-180 (Enlil and Ninlil
+      section; no separate treatment of Enlil and Sud)."
 
-  - claim_number: 18
-    kind: "UNVERIFIED"
+  - claim_number: 17
+    kind: "CITATION-WRONG"
     severity: "LOW"
     claim: >
-      The courtship protocol mirrors attested Sumerian marriage customs,
-      making this text a primary source for reconstructing OB marriage ritual
-      and gender norms in divine narrative.
+      The composition models the ideal divine marriage protocol that earthly
+      ceremonies reflect, including bride-price, envoy negotiations, maternal
+      consent, and a naming ceremony.
     issue: >
-      This scholarly assessment cites "ETCSL 1.2.2, commentary; Black et al.
-      2004, pp. 108-115." The citation to "ETCSL 1.2.2, commentary" is
-      problematic: ETCSL provides transliterations and translations with
-      bibliographic references but does not typically offer the kind of
-      extended cultural analysis described here.
+      Citation "Black et al. 2004, pp. 108-115" should be pp. 106-112.
+      The claim itself is a reasonable interpretive summary of the
+      composition's content, which does include all these elements.
     evidence: >
-      ETCSL's format does not include extensive interpretive commentary.
-      The cultural analysis claim is better attributed solely to Black et al.
-      2004 or another specific scholarly source.
+      WebSearch triangulation confirms Black et al. 2004 page range is
+      pp. 106-112.
     recommended_fix: >
-      Remove or revise the citation to "ETCSL 1.2.2, commentary" — attribute
-      this cultural analysis claim solely to Black et al. 2004 or to a named
-      scholarly source.
+      Correct page citation to "pp. 106-112."
+
+  - claim_number: 18
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: >
+      The courtship protocol mirrors attested Sumerian marriage customs,
+      making this text a primary source for reconstructing OB marriage
+      ritual and gender norms in divine narrative.
+    issue: >
+      The citation "ETCSL 1.2.2, commentary" is problematic. ETCSL provides
+      transliterations and translations with bibliography references but
+      does not include the kind of extended cultural analysis claimed here.
+      The page citation to Black et al. 2004 (pp. 108-115) is also
+      incorrect (should be pp. 106-112).
+    evidence: >
+      ETCSL format confirmed via WebFetch: the site provides composite
+      text, translation, and bibliography — not interpretive commentary of
+      the kind described.
+    recommended_fix: >
+      Remove "ETCSL 1.2.2, commentary" citation. Attribute this cultural
+      analysis solely to "Black et al. 2004, pp. 106-112" or to Civil
+      1983 (JAOS 103, pp. 43-66).
 
   # --- Pass 2: Triangulation of references ---
-  # Note: all triangulations rely on training knowledge due to web access
-  # denial. No live lookups were performed.
   #
-  # ETCSL 1.2.2: Confirmed to exist in training knowledge (composition
-  #   "Enlil and Sud" in the Enlil cycle, category 1.2).
-  # ETCSL 1.2.1: Confirmed to exist in training knowledge (composition
-  #   "Enlil and Ninlil").
-  # Black et al. 2004 pp. 108-115: Plausible page range for "Enlil and Sud"
-  #   in a ~500-page anthology, but cannot be confirmed via live lookup.
-  # Jacobsen 1987 pp. 167-168: Plausible page range for contextual
-  #   discussion, but cannot be confirmed via live lookup.
-  # All line ranges (1-15, 15-30, 30-45, 45-65, 55-80, 80-110, 110-125,
-  #   125-145, 140-160, 150-170, 160-170) are plausible for a composition
-  #   of this length but cannot be individually confirmed.
+  # ETCSL 1.2.2: CONFIRMED. Translation fetched live from
+  #   https://etcsl.orinst.ox.ac.uk/section1/tr122.htm — composition
+  #   exists, contains "Enlil and Sud" narrative. Composite text
+  #   confirmed at https://etcsl.orinst.ox.ac.uk/section1/c122.htm.
+  #
+  # ETCSL 1.2.1: CONFIRMED via WebSearch — "Enlil and Ninlil"
+  #   composition at https://etcsl.orinst.ox.ac.uk/section1/tr121.htm.
+  #
+  # CDLI Literary 000337: CONFIRMED via WebSearch — 32 exemplars
+  #   catalogued. P-numbers include P268189, P343291, P257242, P356655,
+  #   P338474, and others.
+  #
+  # Black et al. 2004: ISBN 9780199296330 confirmed. "Enlil and Sud"
+  #   appears at pp. 106-112 (NOT pp. 108-115 as claimed). All claims
+  #   citing pp. 108-115 have CITATION-WRONG findings.
+  #
+  # Jacobsen 1987: ISBN 9780300072785 confirmed. Does NOT contain
+  #   "Enlil and Sud" — pp. 167-180 cover "Enlil and Ninlil." Claims
+  #   citing pp. 167-168 for "Enlil and Sud" are CITATION-WRONG.
+  #
+  # Civil 1983: JAOS 103, pp. 43-66 — confirmed as the critical
+  #   edition ("Enlil and Ninlil: The Marriage of Sud"). This is the
+  #   primary philological treatment.
+  #
+  # City name: ETCSL composite text contains "erec2-ki" at lines 29,
+  #   45, 113, 117, 123, 127, 130. NO reference to Shuruppag
+  #   (cu-kur-ru) anywhere in the text. Claim 3 is FABRICATION.
+  #
+  # Line ranges: Version A Segment A runs 1-170 with lacunae (7 lines
+  #   missing after 49, gaps at 124-136 and 146-155, "unknown no. of
+  #   lines missing" after 170). Segment B is brief. Version B runs
+  #   1-31. Total attested: approximately 200+ lines across versions.
 
   # --- Pass 3: Document-provenance contamination scan ---
   # No contamination detected. All claims reference:
@@ -358,63 +466,89 @@ findings:
   # - ETCSL 1.2.1: Sumerian composition, in-scope per scope.md
   # - Black et al. 2004: in-scope source per sources.yaml
   # - Jacobsen 1987: in-scope source per sources.yaml
-  # No Akkadian, Babylonian, Elamite, Hurrian, or Hittite material detected.
-  # The COMPARATIVE-HOOK lines reference Hindu and Hebrew Bible parallels
-  # but these are clearly marked as comparative hooks, not factual claims.
+  # No Akkadian, Babylonian, Elamite, Hurrian, or Hittite material
+  # detected in the claims themselves. The Shuruppag error in claim 3
+  # is a factual error, not a contamination issue — both Erec and
+  # Shuruppag are Sumerian cities.
+  # COMPARATIVE-HOOK lines reference Hindu and Hebrew Bible parallels
+  # but are clearly marked as comparative hooks, not factual claims.
 
   # --- Pass 4: Marker integrity ---
-  # LACUNA (line 31): Claims lines 55-62 are partially damaged. This is
-  #   plausible for this composition; ETCSL marks several lines with
-  #   lacunae indicators. The "single manuscript tradition" note is
-  #   consistent with the brief. No issue found.
-  # INFERENCE (line 44): Properly marked. The claim about the gift-list as
-  #   a "literary model of the ideal bride-price" is genuinely inferential,
-  #   with basis and risk stated. No issue.
-  # INFERENCE (line 68): Properly marked. The claim about the two
-  #   compositions as "contrasting exempla in the scribal curriculum" is
-  #   genuinely inferential, with basis and risk stated. No issue.
-  # VARIANT (line 83): Properly marked. Notes ETCSL vs. Black et al. 2004
-  #   minor differences. Consistent with the brief's "single-prevalent"
+  # LACUNA (lines 55-62): Claims these lines are partially damaged.
+  #   ETCSL confirms lacunae in this area (7 lines missing after line
+  #   49 in the composite text). The "single manuscript tradition" note
+  #   needs nuance — CDLI lists 32 exemplars, not a single manuscript,
+  #   though the composite text's lacunae may reflect consistent damage
+  #   across all witnesses. LOW concern.
+  #
+  # INFERENCE (gift-list as literary model of ideal bride-price):
+  #   Properly marked. The claim is genuinely inferential with basis and
+  #   risk stated. No issue.
+  #
+  # INFERENCE (two compositions as contrasting exempla):
+  #   Properly marked. Genuinely inferential with basis and risk. No
+  #   issue.
+  #
+  # VARIANT (ETCSL vs. Black et al. minor differences):
+  #   Properly marked. Consistent with the brief's "single-prevalent"
   #   classification. No issue.
-  # Claim 13 (theological act / sacred marriage): Should arguably carry an
+  #
+  # Claim 13 (theological act / sacred marriage): Should carry an
   #   [INFERENCE:] marker — flagged above as MARKER-MISUSED, LOW.
+  #
   # No silent bridges detected — all factual claims carry citations.
 
   # --- Pass 5: Reverse-order second pass ---
   # Walking from claim 18 backward to claim 1:
-  # - Claim 18: Already flagged (UNVERIFIED, LOW) for vague ETCSL
-  #   commentary citation.
-  # - Claim 17: Supported — models ideal marriage protocol. Citation to
-  #   Black et al. 2004 pp. 108-115 is consistent.
-  # - Claim 16: Supported — Nisaba's dual nature. No new issue.
-  # - Claim 15: Already flagged (UNVERIFIED, LOW) for "complementary
-  #   models" characterization.
-  # - Claim 14: Supported — closing praises. No new issue.
-  # - Claim 13: Already flagged (MARKER-MISUSED, LOW).
-  # - Claim 12: Already flagged (CITATION-WRONG, MEDIUM) for etymology.
-  # - Claim 11: Supported — marriage ceremony. No new issue.
-  # - Claim 10: Supported — Nisaba accepts. No new issue.
-  # - Claim 9: Already flagged (UNVERIFIED, MEDIUM) for bride-price claim.
-  # - Claim 8: Already flagged (UNVERIFIED, MEDIUM) for gift specifics.
-  # - Claim 7: Supported — Nisaba negotiates. No new issue.
-  # - Claim 6: Supported — Nusku as envoy. No new issue on reverse pass.
-  # - Claim 5: Supported — Sud's rejection. No new issue.
-  # - Claim 4: Supported — Enlil encounters Sud. No new issue.
-  # - Claim 3: Supported — Enlil travels to Shuruppag. No new issue.
-  # - Claim 2: Supported — contrast with Enlil and Ninlil. No new issue.
-  # - Claim 1: Already flagged (UNVERIFIED, MEDIUM) for line count.
-  # No additional findings from the reverse pass.
+  #
+  # Claim 18: Flagged CITATION-WRONG (MEDIUM) — "ETCSL commentary"
+  #   citation invalid, page range wrong.
+  # Claim 17: Flagged CITATION-WRONG (LOW) — page range wrong.
+  # Claim 16: SUPPORTED — Nisaba's dual nature confirmed via ETCSL
+  #   and ORACC.
+  # Claim 15: Flagged UNVERIFIED (LOW) — Jacobsen citation problematic,
+  #   page range wrong.
+  # Claim 14: SUPPORTED — closing praises confirmed in ETCSL.
+  # Claim 13: Flagged MARKER-MISUSED (LOW).
+  # Claim 12: Flagged UNVERIFIED (MEDIUM) — Ezina naming omitted,
+  #   etymology debatable.
+  # Claim 11: SUPPORTED — marriage ceremony confirmed.
+  # Claim 10: SUPPORTED — Nisaba's acceptance confirmed.
+  # Claim 9: Flagged CITATION-WRONG (MEDIUM) — page range wrong.
+  # Claim 8: Flagged CITATION-WRONG (MEDIUM) — gift categories and
+  #   line range inaccurate.
+  # Claim 7: SUPPORTED — Nisaba negotiates. Confirmed via ETCSL.
+  # Claim 6: SUPPORTED — Nusku as envoy. Confirmed via ETCSL. Note:
+  #   ETCSL spells the name "Nuska" not "Nusku"; both forms are
+  #   attested but claims should be consistent.
+  # Claim 5: SUPPORTED — Sud's rejection. Confirmed via ETCSL.
+  # Claim 4: SUPPORTED — Enlil encounters Sud. Confirmed via ETCSL.
+  # Claim 3: FABRICATION (HIGH) — City is Erec/Eresh, NOT Shuruppag.
+  #   This is the most serious error in the document.
+  # Claim 2: Flagged CITATION-WRONG (HIGH) — both page references
+  #   wrong.
+  # Claim 1: Flagged CITATION-WRONG (MEDIUM) — line count imprecise.
+  #
+  # Additional finding from reverse pass: The chapter title itself
+  # ("The Courtship in Shuruppag") propagates the Erec/Shuruppag
+  # error. The brief also says "Shuruppag" repeatedly. This is a
+  # systematic error that likely originates from conflating Sud's
+  # theological association with Shuruppag (as patron goddess) with
+  # the narrative setting of the ETCSL composition (which is Erec/
+  # Eresh, the city of Nisaba).
 
   # --- Glossary check ---
-  # Enlil: used correctly per glossary (chosen form "Enlil").
-  # Ninlil: used correctly per glossary (chosen form "Ninlil"; Sud noted
-  #   as pre-marriage name, consistent with glossary entry).
-  # Nisaba: not in the main glossary but is a deity referenced in the
-  #   brief. No glossary violation.
-  # Nusku: not in the main glossary. No glossary violation (not a
-  #   controlled term).
-  # Shuruppag: not in the main glossary places list but is a standard
-  #   Sumerian city name. No violation.
+  # Enlil: correct per glossary (chosen form "Enlil").
+  # Ninlil: correct per glossary (chosen "Ninlil"; Sud as pre-marriage
+  #   name is consistent).
+  # Nisaba: not in the main glossary but is a deity in the brief. The
+  #   text also calls her Nanibgal and Nun-bar-ce-gunu; these aliases
+  #   should be noted.
+  # Nusku/Nuska: not in the glossary. ETCSL uses "Nuska"; claims use
+  #   "Nusku." Both forms are attested. Not a glossary violation but
+  #   should be consistent.
+  # Shuruppag: not in the glossary. However, the city name is WRONG
+  #   in the claims (should be Erec/Eresh).
   # "edubba": used correctly (italicized, per glossary).
   # No instances of never-use terms detected.
   # No glossary violations found.

@@ -3,121 +3,140 @@ meta:
   auditor_conversation_id: "N/A"
   input_file: "books/sumer/chapters/13-inanna-and-gudam.claims.adoc"
   claims_identified: 8
-  triangulations_performed: 5
+  triangulations_performed: 8
   verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. WebFetch, WebSearch, and external curl were all denied by the environment. I was unable to access ETCSL online, CDLI, or ORACC during this audit. All verification relies on my training-data knowledge of ETCSL 1.3.4, Kramer 1961, and Black et al. 2004. Every quote I provide is from training-data recall and should be treated as approximate rather than guaranteed verbatim."
-    triangulated_every_reference: "No. I could not access ETCSL, CDLI, or ORACC online. Triangulation is based on training-data knowledge of these databases. I was unable to live-verify any URL or line-number resolution. ETCSL 1.3.4 as a composition number is consistent with the ETCSL 1.3.x Inanna series numbering, but I could not confirm the exact content online."
-    supported_quotes_real: "Partial. For ETCSL 1.3.4, which is an extremely fragmentary text, I have very limited training-data recall of specific lines. I have provided quotes where I have reasonable confidence but flagged uncertainty. The text is so fragmentary that even ETCSL provides only partial transliteration/translation."
-    distinguished_variance_from_contamination: "Yes. I identified one potential contamination issue: claim 7 references Marduk vs. Tiamat (from Enuma Elish, an Akkadian composition) as a comparand. While the claim uses it as a comparative parallel rather than attributing it to Sumerian tradition, the scope.md explicitly excludes Enuma Elish and the reference risks cultural conflation."
-    same_model_as_author: "Yes — I am Claude Opus, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. I have no memory of producing the input (fresh conversation), but model-family identity is the same."
+    opened_every_cited_primary_source: "Yes. I accessed ETCSL 1.3.4 online (translation, composite text, bibliography, and catalogue pages) via WebFetch. I accessed the CDLI entry for CBS 13859 (P268877). I could not access Black et al. 2004 as a physical book but reviewed its table of contents and a scholarly review (BMCR 2006.01.27). I could not access Kramer 1961 directly but reviewed its table of contents via sacred-texts.com and searched extensively for Gudam references within it."
+    triangulated_every_reference: "Yes. ETCSL 1.3.4 confirmed as existing composition via etcsl.orinst.ox.ac.uk. CBS 13859 confirmed as P268877 in CDLI. Ni 4409 confirmed as second witness via ISET 2 12. Kramer 1961 pp. 83-85 investigated and found to cover Inanna's Descent, not Gudam. Black et al. 2004 p. 85 could not be confirmed as containing Gudam material; the composition does not appear in the book's table of contents."
+    supported_quotes_real: "Partial. ETCSL 1.3.4 quotes are from live WebFetch of the ETCSL translation page. Some quotes are summaries of page content rather than guaranteed verbatim extractions due to HTML processing. The key narrative details (fisherman strikes Gudam, Gudam pleads with Inanna, Inanna spares him) are confirmed from the live ETCSL text."
+    distinguished_variance_from_contamination: "Yes. I identified contamination in claim 7 (Marduk vs. Tiamat from Enuma Elish, explicitly excluded by scope.md) and distinguished it from legitimate scholarly variance. I also identified citation errors (Kramer 1961 pp. 83-85 does not discuss Gudam) as distinct from contamination."
+    same_model_as_author: "Yes - I am Claude Opus 4.6, the same model family that likely produced the claims document. This audit should be considered lower-confidence than one performed by a genuinely independent model. I have no memory of producing the input (fresh conversation), but model-family identity is the same."
 
 tallies:
-  supported: 4
+  supported: 1
   internal_variance: 0
-  unverified: 3
-  citation_wrong: 0
+  unverified: 1
+  citation_wrong: 3
   contamination: 1
-  fabrication: 0
+  fabrication: 1
   silent_bridges: 0
-  marker_issues: 0
+  marker_issues: 1
   glossary_violations: 0
 
 supported_claims:
   - claim_number: 1
     claim: "The composition 'Inanna and Gudam' is catalogued as ETCSL 1.3.4 and survives only in very fragmentary witnesses."
     source_id: "etcsl"
-    source_loc: "1.3.4, composite text"
-    verbatim_quote: "A composite transliteration and target translation of Inana and Gudam (1.3.4)"
-
-  - claim_number: 2
-    claim: "Very few manuscript copies survive and all are heavily damaged, indicating either extremely limited circulation or catastrophic preservation failure; ETCSL reconstructs a composite from these minimal fragments."
-    source_id: "etcsl"
-    source_loc: "1.3.4, manuscript list"
-    verbatim_quote: "The text is reconstructed from a small number of fragmentary sources"
-
-  - claim_number: 5
-    claim: "Gudam is a fearsome monster or creature that terrorises the city of Uruk (Sumerian: Unug), Inanna's city; Gudam devours the city's food and drink."
-    source_id: "etcsl"
-    source_loc: "1.3.4"
-    verbatim_quote: "Gudam ... eating ... Unug ... food and drink"
-
-  - claim_number: 6
-    claim: "Inanna confronts and defeats Gudam, protecting her city Uruk."
-    source_id: "etcsl"
-    source_loc: "1.3.4"
-    verbatim_quote: "Inana ... Gudam ... struck down"
+    source_loc: "1.3.4, composite text and bibliography"
+    verbatim_quote: "The tale of Gudam: composite text [...] Sources: CBS 13859 (PBS 5 26); Ni 4409 (ISET 2 12)"
+    # Note: The ETCSL number 1.3.4 is confirmed. However, the characterization "very fragmentary witnesses" is misleading. CBS 13859 is described as a complete single-column tablet (37 lines on Segment C alone). Ni 4409 is a broken fragment. The composition is fragmentary in places but not uniformly "very fragmentary." Verdict is SUPPORTED for the ETCSL number but see finding below for the "very fragmentary" characterization.
 
 findings:
+  # ── Pass 1: Claim-level verification (start to end) ──
+
+  - claim_number: 2
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Very few manuscript copies survive and all are heavily damaged, indicating either extremely limited circulation or catastrophic preservation failure; ETCSL reconstructs a composite from these minimal fragments."
+    issue: "Two manuscripts survive (CBS 13859 and Ni 4409), but CBS 13859 is described in scholarship as a 'complete single-column tablet' with 37 lines (Segment C). Only Ni 4409 is a broken fragment. The claim that 'all are heavily damaged' is factually incorrect. The secondary citation 'Black et al. 2004, p. 85 (brief summary reference)' could not be verified - the Tale of Gudam does not appear in the table of contents of Black et al. 2004, and the book's thematic structure (Groups A-J) does not include a section that would contain this composition at p. 85."
+    evidence: "Wikipedia (Tale of Gudam): 'CBS 13859 [...] is a complete single-column tablet measuring approximately 10 cm in height, inscribed with 37 lines'; CDLI P268877 confirms CBS 13859 as a literary tablet. ETCSL bibliography lists only two sources: CBS 13859 (PBS 5 26) and Ni 4409 (ISET 2 12). BMCR review of Black et al. 2004 does not mention Gudam in its contents survey."
+    recommended_fix: "Correct to: 'Two manuscript copies survive from Nippur: CBS 13859 (a complete tablet) and Ni 4409 (a broken fragment preserving only the left side). ETCSL reconstructs a composite text from these two witnesses.' Remove or verify the Black et al. 2004 p. 85 reference."
+
   - claim_number: 3
-    kind: UNVERIFIED
-    severity: MEDIUM
+    kind: CITATION-WRONG
+    severity: HIGH
     claim: "Black et al. provide only a brief summary rather than a full translation, given the extreme fragmentary state."
-    issue: "Cannot verify the specific page reference (p. 85) in Black et al. 2004 without access to the physical book. Training-data recall suggests Black et al. 2004 does include Inanna and Gudam but I cannot confirm the exact page number or whether it is a summary versus a full translation."
-    evidence: "No live access to Black et al. 2004 to verify p. 85"
-    recommended_fix: "Human reviewer should verify Black et al. 2004, p. 85 contains a summary of Inanna and Gudam. If the page number is wrong, correct it."
+    issue: "Cannot verify that Black et al. 2004 includes Inanna and Gudam at all. The book's table of contents (reviewed via Library of Congress catalog link and BMCR review) organizes texts into 10 thematic groups (A-J: Heroes and Kings; Inana and Dumuzid; Enlil and Ninlil; Nanna-Suen; Warrior Gods; Love and Sex; Natural Order; Hymnic Genres; Scribes and Learning; The Decad). The Tale of Gudam is not listed. The page reference 'p. 85' is unverifiable and may be fabricated."
+    evidence: "BMCR 2006.01.27 review of Black et al. 2004 lists thematic groups without mentioning Gudam. No search result confirms Gudam's inclusion in this volume. The brief's own citation uses parenthetical '(brief summary reference)' suggesting uncertainty about the reference."
+    recommended_fix: "Remove this claim entirely unless a human reviewer can verify in the physical book that Gudam appears on p. 85. If Black et al. 2004 does not include this composition, the citation is fabricated and must be deleted."
 
   - claim_number: 4
     kind: UNVERIFIED
     severity: LOW
     claim: "The text is classified as single-prevalent-reconstructed: it is the only known version, reconstructed from very limited fragments."
-    issue: "The classification 'single-prevalent-reconstructed' is an internal editorial classification from the brief, not an ETCSL designation. The claim is internally consistent with the brief but the footnote cites ETCSL 1.3.4 as though ETCSL uses this classification terminology, which it does not."
-    evidence: "ETCSL does not use the term 'single-prevalent-reconstructed'; this is a project-internal variant classification from the brief."
-    recommended_fix: "Rephrase to clarify that this is the project's editorial classification, not an ETCSL designation. The footnote should reference the brief or scope methodology rather than ETCSL alone."
+    issue: "The classification 'single-prevalent-reconstructed' is a project-internal editorial term from the brief, not an ETCSL designation. The footnote cites ETCSL 1.3.4 as though ETCSL uses this terminology, which it does not. The characterization 'very limited fragments' is misleading given that CBS 13859 is a complete tablet."
+    evidence: "ETCSL does not use the term 'single-prevalent-reconstructed'; this is from the project's variant classification schema."
+    recommended_fix: "Clarify that this is the project's editorial classification. Remove 'very limited fragments' or correct to 'two witnesses, one complete and one fragmentary.'"
+
+  - claim_number: 5
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Gudam is a fearsome monster or creature that terrorises the city of Uruk (Sumerian: Unug), Inanna's city; Gudam devours the city's food and drink."
+    issue: "The ETCSL citation is partially supported but the secondary citation 'Kramer 1961, pp. 83-85' is wrong. Pages 83-85 of Kramer's Sumerian Mythology (1961) cover 'Inanna's Descent to the Nether World,' not the Tale of Gudam. Kramer's involvement with Gudam was in 1976, when he identified the Ni 4409 fragment (published in ISET 2). The 1961 book does not appear to discuss Gudam at all - no search of its index or contents yields any mention of Gudam. Additionally, calling Gudam a 'fearsome monster' is interpretive; the ETCSL text portrays him as a figure who rampages through Uruk and is accused of cannibalism, but his exact nature (bull-man, king, mythical creature) is debated in scholarship. The name 'gu4-dam' means 'he is an ox/bull.'"
+    evidence: "Sacred-texts.com index of Kramer 1961 shows Chapter III 'Myths of Kur' covers the dragon-slaying myth and Inanna's Descent on those pages. Multiple web searches for 'Kramer Gudam' return no results linking Gudam to the 1961 book. ETCSL 1.3.4 translation: 'What you have eaten, what you have eaten -- it was not bread that you have eaten, it was your flesh that you have eaten!' (Segment C, singer's accusation)."
+    recommended_fix: "Remove the Kramer 1961 pp. 83-85 citation entirely - it is incorrect. The ETCSL reference alone is sufficient. If a secondary source is desired, cite Römer 1991 (Bibliotheca Orientalis 48, pp. 363-378), which is the first complete modern edition. Soften 'fearsome monster' to 'a figure of uncertain nature whose name means he is an ox.'"
+
+  - claim_number: 6
+    kind: FABRICATION
+    severity: HIGH
+    claim: "Inanna confronts and defeats Gudam, protecting her city Uruk."
+    issue: "The ETCSL text does NOT describe Inanna defeating Gudam. According to the translation (Segment C, lines 26-29): 'A junior fisherman, a fisherman of Inana, turned the double-axe against him and struck Gudam down.' It is a fisherman in Inanna's service who defeats Gudam, not Inanna herself. After being struck down, Gudam pleads with Inanna for mercy (lines 30-32), and Inanna responds - apparently sparing him and sending him to live near Zabalam (lines 33-35). The claim reverses the roles: Inanna is the authority figure who grants or withholds mercy, not the combatant who strikes the blow. The secondary citation 'Kramer 1961, pp. 83-85 (Inanna myths overview)' is also wrong - those pages cover Inanna's Descent, not Gudam."
+    evidence: "ETCSL 1.3.4 Segment C: 'A junior fisherman, a fisherman of Inana, turned the double-axe against him and struck Gudam down.' [...] 'Gudam began to grieve, and was tear-stricken: Inana, spare my life!' [...] 'Holy Inana replied to him [...]'. Wikipedia: 'He is finally stopped by a fisherman of Inanna. The goddess herself subsequently decides to spare his life when he starts pleading, and sends him to live in a ditch near Zabalam.'"
+    recommended_fix: "Correct to: 'A junior fisherman in Inanna's service struck Gudam down with a double-axe. Gudam pleaded with Inanna for mercy, and the goddess spared his life, sentencing him to live near Zabalam.' Remove the Kramer citation. Cite ETCSL 1.3.4, Segment C, lines 26-35."
 
   - claim_number: 7
     kind: CONTAMINATION
     severity: HIGH
     claim: "The composition follows the widespread Near Eastern pattern of a patron deity slaying a city-threatening monster, a motif also seen in Marduk vs. Tiamat and other Mesopotamian traditions."
-    issue: "Marduk vs. Tiamat is from Enuma Elish, which is explicitly excluded in scope.md as an Akkadian/Babylonian composition. Citing it as a comparand in a claim about a Sumerian text risks cultural conflation. While the claim uses it as a parallel rather than attributing it to Sumerian tradition, the scope.md blacklist warns against sources that do not distinguish traditions. Furthermore, Kramer 1961 is cited alone (without ETCSL cross-check), which violates the sources.yaml blacklist rule for Kramer-only citations on textual claims. Additionally, the Chaoskampf motif framing (from the COMPARATIVE-HOOK comment) is a modern scholarly construct not native to Sumerian literary analysis."
-    evidence: "scope.md excludes: 'Enuma Elish' and 'Akkadian/Babylonian literary tradition'. sources.yaml blacklist: 'Kramer 1961 cited without ETCSL cross-check — Readings superseded by 40+ years of collation; never cite Kramer alone for textual claims.'"
-    recommended_fix: "Remove the Marduk vs. Tiamat reference entirely. If a comparative parallel is desired, use in-scope Sumerian examples such as Ninurta vs. Asag (ETCSL 1.6.2) or Inanna vs. Ebih (ETCSL 1.3.2). Also add an ETCSL cross-reference to satisfy the Kramer-only citation rule, or reclassify this as a comparative observation rather than a textual claim."
+    issue: "Three problems: (1) Marduk vs. Tiamat is from Enuma Elish, which scope.md explicitly excludes as Akkadian/Babylonian tradition. Citing it as a comparand in a Sumerian mythology book risks exactly the cultural conflation the scope warns against. (2) Kramer 1961 is cited alone without ETCSL cross-check, violating the sources.yaml blacklist rule. (3) The characterization 'patron deity slaying a city-threatening monster' is inaccurate for this composition - Inanna does not slay Gudam; a fisherman strikes him down, and Inanna spares him. The narrative pattern is closer to 'agent of patron deity defeats offender, deity exercises judicial mercy' than to Chaoskampf."
+    evidence: "scope.md: 'Excluded [...] Enuma Elish'. sources.yaml blacklist: 'Kramer 1961 cited without ETCSL cross-check - Readings superseded by 40+ years of collation; never cite Kramer alone for textual claims.' ETCSL 1.3.4: the fisherman defeats Gudam, Inanna spares him."
+    recommended_fix: "Remove Marduk vs. Tiamat reference entirely. Replace with in-scope Sumerian parallels if desired (e.g., Ninurta vs. Asag in Lugal-e, ETCSL 1.6.2; Inanna vs. Ebih, ETCSL 1.3.2). Correct the pattern description to reflect the actual narrative: an agent of the patron deity defeats the threat, and the deity exercises judicial authority. Add ETCSL cross-reference to satisfy the Kramer citation rule."
 
   - claim_number: 8
-    kind: UNVERIFIED
+    kind: CITATION-WRONG
     severity: MEDIUM
-    claim: "This is the shortest and most damaged text in the Inanna cycle; only the broadest narrative shape — monster threatens city, goddess defeats monster — can be recovered with confidence from the surviving fragments."
-    issue: "The claim that this is 'the shortest and most damaged text in the Inanna cycle' is a superlative assertion that requires comparison with all other Inanna-cycle compositions. While 1.3.4 is indeed very fragmentary, other Inanna compositions may also be extremely fragmentary. Cannot verify this superlative without comprehensive comparison across the ETCSL 1.3.x corpus."
-    evidence: "No live access to compare fragment lengths across ETCSL 1.3.x compositions."
-    recommended_fix: "Soften to 'one of the shortest and most damaged texts in the Inanna cycle' or verify by comparing preserved line counts across all ETCSL 1.3.x compositions."
+    claim: "This is the shortest and most damaged text in the Inanna cycle; only the broadest narrative shape - monster threatens city, goddess defeats monster - can be recovered with confidence from the surviving fragments."
+    issue: "Two problems: (1) The superlative 'shortest and most damaged' is unverified - it requires comparison across all ETCSL 1.3.x compositions. Given that CBS 13859 is actually a complete tablet with 37 readable lines in Segment C alone, calling it 'most damaged' is questionable. (2) The narrative summary 'goddess defeats monster' is factually wrong per the ETCSL text - the fisherman defeats Gudam, not the goddess. (3) The Black et al. 2004 p. 85 citation remains unverifiable."
+    evidence: "ETCSL 1.3.4 has a complete tablet witness (CBS 13859). The narrative involves a fisherman striking Gudam, not Inanna defeating him directly."
+    recommended_fix: "Soften to 'one of the shorter and more fragmentary texts associated with Inanna.' Correct the narrative summary to: 'a figure rampages through Uruk, is struck down by a fisherman of Inanna, and Inanna exercises judicial mercy.' Remove or verify the Black et al. 2004 citation."
 
-  # Pass 4 — Marker integrity findings
+  # ── Pass 2: Triangulation of references ──
 
-  - claim_number: "LACUNA-1 (line 21)"
-    kind: UNVERIFIED
-    severity: LOW
-    claim: "[LACUNA: Opening lines 1-20 heavily damaged]"
-    issue: "Cannot verify the specific line range 1-20 without live access to ETCSL 1.3.4 transliteration. The LACUNA marker is appropriately used for a fragmentary opening, but the exact line count is unverifiable."
-    evidence: "No live access to ETCSL 1.3.4 line numbering."
-    recommended_fix: "Human reviewer should verify line range against ETCSL 1.3.4 composite transliteration."
+  # ETCSL 1.3.4: CONFIRMED. Resolves at https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.3.4
+  # CDLI CBS 13859: CONFIRMED as P268877 at https://cdli.earth/artifacts/268877
+  # CDLI Ni 4409: Referenced in ETCSL bibliography as ISET 2 12; not individually confirmed in CDLI but attested in scholarship.
+  # Black et al. 2004, p. 85: NOT CONFIRMED. Gudam does not appear in the book's table of contents.
+  # Kramer 1961, pp. 83-85: WRONG TARGET. Those pages cover Inanna's Descent to the Nether World, not Gudam.
+  # Römer 1991: CONFIRMED in ETCSL bibliography as the standard edition (Bibliotheca Orientalis 48, pp. 363-378).
 
-  - claim_number: "INFERENCE-1 (line 28)"
-    kind: UNVERIFIED
-    severity: LOW
-    claim: "[INFERENCE: The surviving fragments indicate a narrative structure in which a patron deity (Inanna) defends her city (Uruk) against a monstrous threat (Gudam)]"
-    issue: "The INFERENCE marker is appropriately used — this is genuinely inferential reasoning from fragmentary evidence. The marker format is correct, includes basis and risk assessment. No issue with marker usage itself, but the underlying inference cannot be independently verified without access to the fragments."
-    evidence: "Marker correctly identifies this as inferential rather than directly attested."
-    recommended_fix: "No fix needed for marker usage. The inference is reasonable given what is known about the composition."
+  # ── Pass 3: Document-provenance contamination scan ──
 
-  # Pass 5 — Reverse-order second pass findings
+  # All factual details about Gudam are attested in ETCSL 1.3.4, a Sumerian composition from Old Babylonian tablets (ca. 1900-1600 BCE), within scope.
+  # The Marduk vs. Tiamat reference introduces out-of-scope Akkadian material (Enuma Elish) - flagged above as CONTAMINATION.
+  # The Chaoskampf framing (from COMPARATIVE-HOOK) is a modern comparative-religion term, not a contamination per se, but its application to this composition is misleading since the narrative is not cosmogonic.
 
-  - claim_number: "COMPARATIVE-HOOK-1 (line 43)"
+  # ── Pass 4: Marker integrity ──
+
+  - claim_number: "LACUNA-1"
+    kind: MARKER-MISUSED
+    severity: MEDIUM
+    claim: "[LACUNA: Opening lines 1-20 heavily damaged; the origin and nature of Gudam are only partially described.]"
+    issue: "The ETCSL composite text shows Segment A (1 fragmentary line) and Segment B (7 lines with gaps), not a uniform block of 'lines 1-20 heavily damaged.' The line numbering '1-20' does not correspond to the ETCSL segment structure. The LACUNA marker is legitimate in principle (there is substantial loss at the beginning), but the specific line range is unverifiable against the actual ETCSL structure."
+    evidence: "ETCSL 1.3.4 composite text: Segment A has 1 line plus unknown missing lines; Segment B has 7 lines plus unknown missing lines. These do not straightforwardly correspond to 'lines 1-20.'"
+    recommended_fix: "Replace 'lines 1-20' with a reference to ETCSL segments A and B, which are largely fragmentary. Describe the gap in terms of segments rather than line numbers."
+
+  # LACUNA-2 and LACUNA-3 (middle and closing sections): Legitimate markers. The middle sections are indeed fragmentary, and the ending is somewhat ambiguous. No issue.
+  # INFERENCE-1: Appropriately marked. The inference about divine urban protection is reasonable but should note that it is the fisherman, not Inanna directly, who defeats Gudam.
+
+  # ── Pass 5: Reverse-order second pass ──
+
+  - claim_number: "COMPARATIVE-HOOK-1"
     kind: CONTAMINATION
     severity: MEDIUM
-    claim: "COMPARATIVE-HOOK: Mesopotamian (general) — Patron deity protects city by slaying a monstrous threat; the Chaoskampf pattern (kramer-1961)."
-    issue: "The 'Chaoskampf' framing is a modern comparative-religion term (from Hermann Gunkel's 1895 work on Genesis) applied retrospectively to ancient Near Eastern myths. While commonly used in scholarship, it originates from biblical studies and can import theological assumptions foreign to Sumerian literary analysis. More importantly, 'Chaoskampf' typically refers to a cosmogonic battle (creation through combat with primordial chaos), which is not what Inanna and Gudam appears to be — it is a city-defense narrative, not a creation myth."
-    evidence: "Chaoskampf (German: 'chaos battle') is Gunkel's term for cosmogonic combat myths. Inanna and Gudam is not cosmogonic."
-    recommended_fix: "Remove the Chaoskampf label. Describe the pattern as 'divine patron defends city against monstrous threat' without importing the cosmogonic Chaoskampf framework, which does not fit this composition."
+    claim: "COMPARATIVE-HOOK: Mesopotamian (general) - Patron deity protects city by slaying a monstrous threat; the Chaoskampf pattern (kramer-1961)."
+    issue: "The Chaoskampf framing is a modern comparative-religion term from Hermann Gunkel's 1895 work on Genesis, applied to cosmogonic combat myths (creation through battle with primordial chaos). The Tale of Gudam is not cosmogonic - it is a city-defense narrative. Applying the Chaoskampf label mischaracterizes the composition. Additionally, the deity (Inanna) does not slay Gudam; a fisherman does. The Kramer 1961 citation is unsupported - Kramer 1961 does not discuss Gudam."
+    evidence: "Chaoskampf refers to cosmogonic combat (Gunkel 1895). ETCSL 1.3.4 is not a creation myth. Inanna does not slay Gudam."
+    recommended_fix: "Remove the Chaoskampf label. Describe the pattern accurately as 'an agent of the patron deity subdues a destructive figure; the deity exercises judicial authority.' Remove the Kramer 1961 citation for this composition."
 
-  - claim_number: "COMPARATIVE-HOOK-2 (line 44)"
-    kind: UNVERIFIED
+  - claim_number: "COMPARATIVE-HOOK-2"
+    kind: CITATION-WRONG
     severity: LOW
-    claim: "COMPARATIVE-HOOK: Greek — City patron defeats threatening monster; Athena and various monsters in the Athenian tradition (kramer-1961)."
-    issue: "Cannot verify that Kramer 1961 specifically draws this Greek parallel. Kramer does make some cross-cultural comparisons, but the specific Athena parallel may be editorial inference rather than a claim Kramer makes. The comparative hook itself is reasonable as a general observation."
-    evidence: "No live access to Kramer 1961 to verify this specific parallel."
-    recommended_fix: "Verify in Kramer 1961 pp. 83-85 that a Greek parallel is actually drawn. If not, either remove the Kramer citation or attribute the comparison to the editorial team."
+    claim: "COMPARATIVE-HOOK: Greek - City patron defeats threatening monster; Athena and various monsters in the Athenian tradition (kramer-1961)."
+    issue: "Cannot verify that Kramer 1961 draws this specific Greek parallel for the Tale of Gudam, since Kramer 1961 does not appear to discuss Gudam at all (pp. 83-85 cover Inanna's Descent). The comparative observation may be editorially reasonable but the citation is unsupported."
+    evidence: "Multiple searches confirm Kramer 1961 pp. 83-85 covers Inanna's Descent, not Gudam."
+    recommended_fix: "Remove Kramer 1961 citation. If the comparative hook is retained, attribute it to editorial observation rather than a specific scholarly source."
 
-  # Glossary consistency check
-  # - "Inanna" used consistently (never "Ishtar") — PASS
-  # - "Uruk" with "(Sumerian: Unug)" on first mention — PASS
-  # - No other glossary-controlled terms appear in this short document
+  # ── Glossary consistency check ──
+  # - "Inanna" used consistently (never "Ishtar"): PASS
+  # - "Uruk" with "(Sumerian: Unug)" on first mention: PASS
+  # - No other glossary-controlled terms require checking in this short document: PASS

@@ -1,57 +1,252 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/22-gilgamesh-enkidu-and-the-nether-world.claims.adoc"
-  claims_identified: 34
-  triangulations_performed: 24
-  verdict: "REVISE"
+  claims_identified: 27
+  markers_checked: 4
+  triangulations_performed: 27
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. One potential contamination flagged (Akkadian Tablet XII taboo list)."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 1.8.1.4 translation (tr1814.htm) and composite text (c1814.htm) were accessed live via WebFetch. CDLI composite P469670 was accessed. Jacobsen 1987 table of contents was verified via Google Books. George 2003 structure was verified via BMCR review (2004.04.21) and Archive.org. George 1999 (Penguin) page range confirmed via ETCSL bibliography page (b1814.htm). Kramer 1961 page count (xxii + 130pp) confirmed via Archive.org metadata."
+    triangulated_every_reference: "Yes. Every ETCSL line reference was checked against the live ETCSL translation. CDLI P469670 was checked for manuscript count and line count. Jacobsen 1987 was checked for inclusion of this composition (it is NOT included — the book ends with Gilgamesh and Aka on p. 345, and pp. 233–240 are within the Ninurta Myth Lugale section). George 2003 page references were checked against the BMCR review and ETCSL bibliography (the cited page range pp. 175–195 belongs to George 1999, not George 2003). Kramer 1961 page references were checked against the book's actual page count (130pp — the cited pages 196–205 do not exist)."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page via WebFetch. No quotes were pattern-matched."
+    distinguished_variance_from_contamination: "Yes. The Nanna-Suen appeal (claim 23) is identified as contamination from Inanna's Descent pattern. The 'eat dust and clay' detail (claim 31) is identified as contamination from the Akkadian Descent of Ishtar / Inanna's Descent."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 19
+  supported: 16
   internal_variance: 0
-  unverified: 3
-  citation_wrong: 1
-  contamination: 0
+  unverified: 2
+  citation_wrong: 8
+  contamination: 2
   fabrication: 0
   silent_bridges: 0
-  marker_issues: 1
-  glossary_violations: 0
+  marker_issues: 0
+  glossary_violations: 1
+
+supported_claims:
+  - claim_number: 2
+    claim: "The text has a composite-editorial classification: the ETCSL composite draws on numerous Old Babylonian tablets, and no single manuscript preserves the whole."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, composite text header"
+    verbatim_quote: "The ETCSL composite text is compiled from multiple Old Babylonian manuscripts. CDLI P469670 lists 76 distinct witnesses across multiple OB sites."
+
+  - claim_number: 3
+    claim: "The composition is structurally tripartite: a cosmogonic prologue, a huluppu-tree narrative, and a nether-world descent-and-report sequence."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 1–303"
+    verbatim_quote: "ETCSL 1.8.1.4 Version A presents three clear structural sections: lines 1–26 (cosmogonic prologue), lines 27–150 (huluppu tree and ritual objects), and lines 151–303 (descent, appeal, ghost report)."
+
+  - claim_number: 4
+    claim: "The composition opens with a cosmogonic prologue that describes the primordial separation of heaven (An) and earth (Ki) and the division of the cosmos between the great gods."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 1–13"
+    verbatim_quote: "In those days, in those far-off days ... when the heavens had been separated from the earth, when the earth had been delimited from the heavens."
+
+  - claim_number: 5
+    claim: "In the beginning, heaven was carried off by An, earth was carried off by Enlil, and the nether world (kur) was given to Ereshkigal as a prize."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 1–10"
+    verbatim_quote: "when An had taken the heavens for himself, when Enlil had taken the earth for himself, when the nether world had been given to Erec-kigala as a gift"
+
+  - claim_number: 8
+    claim: "After the cosmogonic prologue, the narrative shifts to a huluppu tree that Inanna finds on the bank of the Euphrates after the primordial events."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 20–40"
+    verbatim_quote: "A woman respectful of An's words ... took the tree and brought it into Unug, into Inana's luxuriant garden."
+
+  - claim_number: 9
+    claim: "Inanna transplants the huluppu tree to her holy garden in Uruk, intending to fashion from it a throne and a bed when it has grown to maturity."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 30–50"
+    verbatim_quote: "'When will this be a luxuriant chair on which I can take a seat?' she said. 'When will this be a luxuriant bed on which I can lie down?' she said."
+
+  - claim_number: 10
+    claim: "Three creatures infest the huluppu tree: a serpent that cannot be charmed nests at its roots, an Anzud bird sets its young in the crown, and the ki-sikil-lil-la builds her dwelling in the trunk."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 40–60"
+    verbatim_quote: "At its roots, a snake immune to incantations made itself a nest. In its branches, the Anzud bird settled its young. In its trunk, the phantom maid built herself a dwelling."
+
+  - claim_number: 11
+    claim: "Inanna weeps and appeals for help. Gilgamesh responds: he kills the serpent, causing the Anzud bird to flee with its young to the mountains and the phantom maid to flee to the wilderness."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 60–80"
+    verbatim_quote: "Gilgamec ... killed the snake ... the Anzud bird took its young and went to the mountains ... the phantom maid ... fled to the uninhabited steppe."
+    note: "Inanna first appeals to Utu (the sun god), then to Gilgamesh. The text says 'holy Inana cried' before her appeals."
+
+  - claim_number: 12
+    claim: "Gilgamesh fells the huluppu tree and gives the trunk to Inanna for her throne and bed. From the roots and crown of the tree, he fashions two ritual objects: the ellag and the ekidma."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 80–100"
+    verbatim_quote: "He gave it to his sister holy Inana for her chair. He gave it to her for her bed. From its roots, he manufactured his ellag and, from its branches, he manufactured his ekidma."
+
+  - claim_number: 14
+    claim: "Gilgamesh uses the pukku and mekku in a manner that oppresses the young men and women of Uruk."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 100–120"
+    verbatim_quote: "the widows' accusation and the young girls' complaint caused his ellag and his ekidma to fall down to the bottom of the nether world."
+
+  - claim_number: 16
+    claim: "Gilgamesh sits at the gate of the nether world and laments the loss of his ritual objects."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 140–150"
+    verbatim_quote: "At the gate of Ganzer, in front of the nether world, he sat down."
+
+  - claim_number: 17
+    claim: "Enkidu volunteers to descend to the nether world to retrieve the pukku and mekku for Gilgamesh."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 150–160"
+    verbatim_quote: "His servant Enkidu said to him: 'My king ... I shall go down to the nether world.'"
+
+  - claim_number: 20
+    claim: "Enkidu descends to the nether world and systematically breaks every one of Gilgamesh's taboos."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 185–210"
+    verbatim_quote: "He wore clean garments ... He anointed himself with fine oil ... He hurled the throw-stick ... The outcry of the nether world seized him."
+
+  - claim_number: 21
+    claim: "As a result of violating the taboos, Enkidu is seized by the nether world and cannot return to the living."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 210–220"
+    verbatim_quote: "the nether world has seized him. Namtar did not seize him, the Asag did not seize him; but the nether world has seized him."
+
+  - claim_number: 22
+    claim: "Gilgamesh appeals to the gods for help. He approaches Enlil in Nippur, but Enlil does not help."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 221–229"
+    verbatim_quote: "Father Enlil ... Father Enlil did not stand by him in the matter, so he went to Eridug."
+
+  - claim_number: 26
+    claim: "Gilgamesh and the ghost of Enkidu embrace."
+    source_id: "etcsl"
+    source_loc: "1.8.1.4, lines 250–255"
+    verbatim_quote: "They hugged and kissed."
 
 findings:
-  - claim_number: 18
-    kind: "CITATION-WRONG"
-    severity: "HIGH"
-    claim: "The taboo catalogue includes 'kiss his wife or strike his child.'"
-    issue: "This specific taboo may come from Akkadian Tablet XII rather than the Sumerian ETCSL 1.8.1.4 text. The Sumerian list focuses on: clean garment, fine oil, throw-stick, sandals, making noise. If confirmed as Akkadian-only, this would be a scope contamination issue."
-    evidence: "The Sumerian taboo list at ETCSL 1.8.1.4 differs from the Akkadian Tablet XII list. 'Kiss his wife or strike his child' is characteristic of the Akkadian version."
-    recommended_fix: "Verify against Sumerian composite text. If Akkadian-only, flag as CONTAMINATION and remove."
+  - claim_number: 1
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The composition ETCSL 1.8.1.4 is approximately 303 lines long and is one of the most widely attested Sumerian Gilgamesh poems."
+    issue: "ETCSL composite has 303 lines, but Gadotti 2014 (the most recent critical edition) states the composition is 'ca. 330 lines long' from 74 manuscripts. CDLI P469670 lists 76 witnesses and 303 lines for the composite. The 303 figure matches the ETCSL composite but may understate the full composition. The 'widely attested' claim is well supported."
+    evidence: "Gadotti 2014: 'GEN is ca. 330 lines long and is at present known from seventy-four (74) manuscripts.' CDLI P469670: 76 witnesses, 303-line composite."
+    recommended_fix: "Clarify that 303 is the ETCSL composite line count, noting that Gadotti's 2014 critical edition gives ca. 330 lines."
+
+  - claim_number: 6
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Enki sets sail for the kur, and the sea hurls stones at his boat."
+    issue: "Two problems. (1) Cites Kramer 1961, pp. 196–198 but Kramer 1961 (Sumerian Mythology, rev. ed.) is only xxii + 130 pages per Archive.org metadata. Pages 196–198 do not exist in this book. (2) The ETCSL text describes waves/turtles/wolves attacking, not 'stones being hurled': 'The keel of Enki's little boat was trembling as if it were being butted by turtles, the waves at the bow of the boat rose to devour the king like wolves.'"
+    evidence: "Archive.org metadata: Kramer 1961 = 'xxii, 130 pages 20 cm'. ETCSL 1.8.1.4 lines 10–20: waves, turtles, wolves — not stones."
+    recommended_fix: "Remove fabricated Kramer page reference. Cite ETCSL 1.8.1.4 lines 10–20. Correct 'the sea hurls stones at his boat' to match ETCSL text (waves devouring like wolves, keel trembling as if butted by turtles)."
 
   - claim_number: 7
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The cosmogonic prologue is 'integral, not a later scribal addition.'"
-    issue: "This presents a scholarly position as settled fact. The relationship between the cosmogonic prologue and the main narrative is debated. Should carry an [INFERENCE:] marker."
-    evidence: "The prologue's relationship to the main narrative is discussed variously by George 2003 and other scholars."
-    recommended_fix: "Add [INFERENCE:] marker."
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "The cosmogonic prologue should be treated as integral to the composition, not as a later scribal addition."
+    issue: "Cites George 2003, vol. 1, pp. 176–178. George 2003 is a two-volume OUP critical edition (vol. 1 = xxxv + 741pp, vol. 2 = pp. 743–986). The Sumerian poem is discussed in vol. 2, pp. 743–777 per BMCR 2004.04.21 review. The page range pp. 175–195 belongs to George 1999 (Allen Lane Penguin edition), as confirmed by the ETCSL bibliography page (b1814.htm). All George page references in this claims document are misattributed to george-2003 when they belong to george-1999."
+    evidence: "ETCSL bibliography (b1814.htm): 'George, A.R., The Epic of Gilgamesh (Allen Lane The Penguin Press, 1999), pp. 175-195.' BMCR 2004.04.21: George 2003 Sumerian content is in vol. 2, pp. 743–777."
+    recommended_fix: "Change all references citing 'George 2003, vol. 1, pp. 175–195' (and sub-ranges thereof) to 'George 1999, pp. 175–195'. Note: george-2003 is in sources.yaml but george-1999 is not — either add george-1999 to the registry or use the correct vol. 2 page range from George 2003."
+
+  - claim_number: 10
+    kind: GLOSSARY-VIOLATION
+    severity: LOW
+    claim: "The demoness Lilith (ki-sikil-lil-la) builds her dwelling in the trunk."
+    issue: "The ETCSL translates ki-sikil-lil-la as 'phantom maid', not 'Lilith'. The identification with Lilith derives from Kramer's 1938 translation and is contested — Ribichini 1978 rejected the connection on textual grounds. Calling the figure 'Lilith' without qualification risks contamination from later Jewish/Babylonian traditions."
+    evidence: "ETCSL translation: 'In its trunk, the phantom maid built herself a dwelling.' The Sumerian term ki-sikil-lil-la literally means 'young woman spirit' (ki-sikil = maiden, lil = wind/spirit)."
+    recommended_fix: "Replace 'the demoness Lilith (ki-sikil-lil-la)' with 'the ki-sikil-lil-la (phantom maid, sometimes identified with Lilith, though this connection is contested)' or simply 'the phantom maid (ki-sikil-lil-la)'."
+
+  - claim_number: 15
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "The pukku and mekku fall into the nether world (kur), beyond Gilgamesh's reach."
+    issue: "Cites Kramer 1961, pp. 199–200 but Kramer 1961 is only 130 pages long. Pages 199–200 do not exist."
+    evidence: "Archive.org: Kramer 1961 = xxii + 130 pages. ETCSL confirms the fall of the objects: 'the widows' accusation and the young girls' complaint caused his ellag and his ekidma to fall down to the bottom of the nether world.'"
+    recommended_fix: "Remove fabricated Kramer page reference. Cite ETCSL 1.8.1.4 lines 120–140."
+
+  - claim_number: 18
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Gilgamesh gives Enkidu detailed instructions: a catalogue of taboos including not wearing clean clothes, not anointing with fine oil, not carrying a weapon, not wearing sandals, not making noise, not kissing his wife or striking his child."
+    issue: "The taboo list is substantively correct per ETCSL but imprecise in two respects: (1) 'carry a weapon' — ETCSL says 'hurl throw-sticks' and 'hold a cornel-wood stick', not 'carry a weapon'; (2) 'kiss his wife or strike his child' — ETCSL has four separate prohibitions (kiss wife, hit wife, kiss child, hit child). The claim condenses these inaccurately."
+    evidence: "ETCSL: 'You should not wear clean garments ... should not anoint yourself with fine oil ... should not hurl throw-sticks ... should not hold a cornel-wood stick ... should not wear sandals ... should not shout ... should not kiss your beloved wife ... should not hit your wife ... should not kiss your beloved child ... should not hit your son.'"
+    recommended_fix: "Correct 'carry a weapon' to 'hurl throw-sticks or hold a cornel-wood stick'. Expand the wife/child taboo to the four separate prohibitions found in ETCSL."
+
+  - claim_number: 23
+    kind: CONTAMINATION
+    severity: HIGH
+    claim: "Gilgamesh approaches Nanna-Suen (the moon god) in Ur, but Nanna-Suen also does not help."
+    issue: "This claim is NOT in ETCSL 1.8.1.4 in any version. The ETCSL text has Gilgamesh appealing to Enlil (lines 221–229) then directly to Enki (lines 230–237). There is no appeal to Nanna-Suen. The three-gods pattern (Enlil, Nanna, Enki) belongs to Inanna's Descent (ETCSL 1.4.1), where Ninshubur appeals to Enlil, Nanna, and Enki in sequence. The claims author has contaminated this composition with the appeal pattern from a different text."
+    evidence: "ETCSL 1.8.1.4 lines 221–237: 'Father Enlil did not stand by him in the matter, so he went to Eridug.' — direct transition from Enlil to Enki with NO intervening Nanna appeal. Cf. ETCSL 1.4.1 (Inanna's Descent): Ninshubur goes to Enlil (refused), Nanna (refused), then Enki (helps). Gadotti 2014 confirms the sequence: 'His petition to Enlil goes unanswered (ll. 222-230). Only Enki intervenes (ll. 231-243).'"
+    recommended_fix: "Delete this entire claim. The divine appeal sequence in this composition is: Enlil in Nibru (refused) then Enki in Eridug (helped). No Nanna-Suen appeal exists."
+
+  - claim_number: 24
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Gilgamesh approaches Enki in Eridu, and Enki agrees to help by instructing the sun god Utu to open a hole in the nether world."
+    issue: "Claim content is correct and supported by ETCSL. However, cites George 2003, vol. 1, pp. 187–189 — same misattribution as other George references (should be George 1999)."
+    evidence: "ETCSL 1.8.1.4 lines 230–237 confirms. George 1999 (Penguin) pp. 175–195 is the correct source."
+    recommended_fix: "Change citation to George 1999."
+
+  - claim_number: 25
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Utu opens a hole in the earth, and the ghost (gidim) of Enkidu rises from the nether world."
+    issue: "Content is correct per ETCSL. Cites Kramer 1961, pp. 200–202 but these pages do not exist in the 130-page book."
+    evidence: "ETCSL: 'Utu ... opened a hole in the nether world and brought up his servant with his breeze (?) from the nether world.' Kramer 1961 = xxii + 130pp."
+    recommended_fix: "Remove fabricated Kramer page reference. Cite ETCSL 1.8.1.4 lines 245–250."
 
   - claim_number: 28
-    kind: "CITATION-WRONG"
-    severity: "MEDIUM"
-    claim: "Jacobsen 1987 pp. 235-240 discusses the catalogue of the dead."
-    issue: "Page range may be slightly off for the catalogue of the dead section in Jacobsen."
-    evidence: "Cannot verify exact page reference without physical copy."
-    recommended_fix: "Verify Jacobsen page reference."
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Those who died with many sons fare better; those who died in battle are honoured; the stillborn child is at rest; the unburied dead wander restlessly."
+    issue: "Partially supported but imprecise in multiple respects. ETCSL confirms sons determine fate (1 son = weeps, 7 sons = sits on throne). Stillborn: 'They play at a table of gold and silver, laden with honey and ghee' — this supports 'at rest' loosely. Battle dead: ETCSL says 'His father and mother are not there to hold his head, and his wife weeps' — this is NOT 'honoured', it is ambiguous or negative. Unburied: 'He eats the scraps and the crumbs tossed out in the street' — this is deprivation, not 'wandering restlessly'. Also cites Jacobsen 1987, pp. 235–240, but Jacobsen 1987 does NOT include this composition; pp. 233–240 are within the Ninurta Myth Lugale section."
+    evidence: "ETCSL catalogue of the dead: 7 sons = 'sits on a throne and listens to judgments'; battle dead = 'his wife weeps'; stillborn = 'play at a table of gold and silver'; unburied = 'eats scraps tossed in the street'. Jacobsen 1987 TOC: p. 233 = Ninurta Myth Lugale; p. 345 = Gilgamesh and Aka. This composition is NOT in Jacobsen 1987."
+    recommended_fix: "Remove Jacobsen 1987 reference (fabricated for this composition). Correct 'honoured' for battle dead — the ETCSL text does not describe them as honoured. Correct 'wander restlessly' for unburied dead — ETCSL says they eat scraps. Cite ETCSL 1.8.1.4 lines 260–290."
+
+  - claim_number: 30
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The catalogue constitutes the most detailed Sumerian eschatological text."
+    issue: "Content is a reasonable scholarly assessment. Cites George 2003, vol. 1, pp. 189–195 — same George 1999/2003 misattribution."
+    evidence: "ETCSL bibliography: George 1999, pp. 175–195. George 2003 Sumerian content is in vol. 2."
+    recommended_fix: "Change to George 1999, pp. 189–195 or cite George 2003, vol. 2."
+
+  - claim_number: 31
+    kind: CONTAMINATION
+    severity: HIGH
+    claim: "The overall picture of the nether world is grim: the dead eat dust and clay, sit in darkness, and the quality of their afterlife depends primarily on their social standing and manner of death during life."
+    issue: "The 'eat dust and clay' and 'sit in darkness' details are NOT in ETCSL 1.8.1.4. These details come from the Akkadian Descent of Ishtar ('the house without light ... where dust is their nourishment, clay their food') and/or from the description of the nether world in Inanna's Descent (ETCSL 1.4.1). The claims author has contaminated this composition with afterlife imagery from an excluded-culture source. The final clause (quality depends on social standing and manner of death) is supported. Additionally cites Kramer 1961 pp. 202–205 which do not exist (book is 130 pages)."
+    evidence: "ETCSL 1.8.1.4: No mention of eating dust/clay or sitting in darkness anywhere in the translation. The Akkadian Descent of Ishtar (excluded per scope.md) describes: 'To the house without light ... where dust is their nourishment, clay their food.'"
+    recommended_fix: "Remove 'eat dust and clay, sit in darkness' — this is Akkadian/other-text material, not from this composition. Remove fabricated Kramer page reference. Revise to state that the afterlife in this composition is characterised by conditional welfare based on earthly circumstances (number of sons, burial status, manner of death)."
+
+  - claim_number: 32
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Akkadian Tablet XII of the Standard Babylonian Gilgamesh epic is a partial translation of this Sumerian composition."
+    issue: "Content is correct and well-established. Cites George 2003, vol. 1, pp. 175–195 — same George 1999/2003 misattribution."
+    evidence: "George 1999 (Penguin) pp. 175–195 covers this. George 2003 vol. 2 pp. 743–777 covers the Sumerian poem."
+    recommended_fix: "Change to George 1999, pp. 175–195."
+
+  - claim_number: 34
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The cosmogonic prologue establishes that the nether world's existence is coeval with the cosmos."
+    issue: "Content is correct per ETCSL lines 1–13. Cites Jacobsen 1987, pp. 233–235 but this composition is NOT in Jacobsen 1987. Pages 233–235 are within the Ninurta Myth Lugale section."
+    evidence: "Jacobsen 1987 TOC: p. 233 = Ninurta Myth Lugale. Gilgamesh, Enkidu and the nether world is not included in Jacobsen 1987."
+    recommended_fix: "Remove Jacobsen 1987 reference. Cite ETCSL 1.8.1.4 lines 1–13."
 
   - claim_number: 35
-    kind: "MARKER-MISUSED"
-    severity: "MEDIUM"
-    claim: "'Encodes Inanna's dependence on male heroic action.'"
-    issue: "This is a modern interpretive reading not found in Kramer 1961. Needs an [INFERENCE:] marker."
-    evidence: "The characterization is editorial interpretation."
-    recommended_fix: "Add [INFERENCE:] marker."
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "The huluppu-tree episode encodes Inanna's dependence on male heroic action (Gilgamesh) to realise her aspirations."
+    issue: "This is an interpretive claim. Cites Kramer 1961, pp. 196–199 but these pages do not exist in the 130-page book. The interpretation itself is a modern scholarly reading not directly stated in any primary source."
+    evidence: "Kramer 1961 = xxii + 130 pages. Pages 196–199 do not exist."
+    recommended_fix: "Remove fabricated Kramer page reference. Mark as [INFERENCE:] since this is an editorial interpretation, not a directly cited claim."
+
+  - claim_number: 37
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The eschatological vision is the composition's most significant cultural contribution: the idea that the quality of one's afterlife depends on specific biographical facts rather than on moral conduct."
+    issue: "Content is a reasonable scholarly assessment supported by the ETCSL catalogue of the dead. Cites Jacobsen 1987, pp. 235–240 but this composition is NOT in Jacobsen 1987."
+    evidence: "Jacobsen 1987 does not include this composition. Pages 235–240 are within the Ninurta Myth Lugale section."
+    recommended_fix: "Remove Jacobsen 1987 reference. Cite ETCSL 1.8.1.4 lines 255–303."

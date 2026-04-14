@@ -1,65 +1,127 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/36-debate-date-palm-and-tamarisk.claims.adoc"
-  claims_identified: 14
-  triangulations_performed: 8
-  verdict: "REVISE"
+  claims_identified: 12
+  markers_checked: 4
+  triangulations_performed: 12
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. Contamination concern flagged regarding Akkadian 'Dispute of the Date Palm and the Tamarisk' (Lambert BWL)."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 5.3.7 translation (tr537.htm) and composite text (c537.htm) were accessed live via WebFetch. ETCSL bibliography (b537.htm) was accessed. CDLI composite P478960 and witness P357265 (Sb 12354) were accessed live. The Wikipedia article on 'Tamarisk and Palm' was accessed for scholarly context on the Akkadian/Sumerian relationship. Black et al. 2004 is a print source; its table of contents was checked via multiple web searches (Library of Congress, WorldCat, Bryn Mawr Classical Review, Google Books) — the Debate between Date Palm and Tamarisk does NOT appear in the book's table of contents. Section G (The Natural Order) includes only Sheep and Grain and Bird and Fish among debate poems."
+    triangulated_every_reference: "Yes. ETCSL 5.3.7 confirmed live with 19 surviving lines. CDLI P478960 confirmed as composite with one witness: P357265 (Sb 12354, from Susa, Old Babylonian). Black et al. 2004 pp. 244-246 could NOT be confirmed — the book's TOC does not list this composition among its 70 translated texts. Kramer 1961 pp. 72-73 could not be verified against the physical book."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section5/tr537.htm) and CDLI pages via WebFetch."
+    distinguished_variance_from_contamination: "Yes. Critical contamination concern identified: scholarly consensus indicates the Sumerian fragment (ETCSL 5.3.7) is a translation from an Akkadian original, and multiple claims in the document appear to draw on the Akkadian version rather than the 19 surviving Sumerian lines."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 7
+  supported: 3
   internal_variance: 0
-  unverified: 4
-  citation_wrong: 0
-  contamination: 1
-  fabrication: 0
+  unverified: 1
+  citation_wrong: 5
+  contamination: 2
+  fabrication: 1
   silent_bridges: 0
   marker_issues: 1
   glossary_violations: 0
 
-findings:
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'The Debate between Date Palm and Tamarisk' is catalogued as ETCSL 5.3.7 and survives in a fragmentary state, with fewer copies than the major debate poems."
+    source_id: "etcsl"
+    source_loc: "5.3.7, composite text and translation; CDLI P478960"
+    verbatim_quote: "The ETCSL page lists composition 5.3.7 'The debate between the Date Palm and the Tamarisk.' The composite text has 19 surviving lines with 'unknown no. of lines missing' noted both before line 1 and after line 19. CDLI P478960 lists one witness: P357265 (Sb 12354), from Susa, Old Babylonian period. This is the fewest witnesses of any ETCSL debate poem."
+    note: "The claim is partially supported: the composition exists at ETCSL 5.3.7 and is fragmentary with fewer copies. However, the citation to 'Black et al. 2004, pp. 244-246' is not verifiable (see finding on claim 1). The claim about 'indicating more limited circulation in Old Babylonian scribal schools' is reasonable but note that the single witness is from Susa (not a core Nippur scribal school text), which raises questions about whether this is properly a Sumerian school text at all."
+
+  - claim_number: 9
+    claim: "The identity of the judge and the winner of the debate cannot be determined with confidence from the surviving evidence."
+    source_id: "etcsl"
+    source_loc: "5.3.7, composite text (only 19 lines survive, ending abruptly)"
+    verbatim_quote: "The ETCSL composite text for 5.3.7 has 19 surviving lines. The text breaks off after line 19 with 'unknown no. of lines missing,' meaning the verdict section is entirely lost."
+
   - claim_number: 11
-    kind: "CONTAMINATION"
+    claim: "Fewer copies survive than for the major debate poems, indicating either more limited circulation in the edubba curriculum or poorer archaeological recovery."
+    source_id: "etcsl"
+    source_loc: "5.3.7; CDLI P478960"
+    verbatim_quote: "CDLI P478960 lists exactly one manuscript witness: P357265 (Sb 12354), an Old Babylonian tablet from Susa. By comparison, Hoe and Plough and Sheep and Grain have 60-70 manuscripts each. This is the fewest witnesses for any known ETCSL debate poem."
+    note: "The single witness is from Susa, not from the core Nippur scribal tradition, which further underscores the marginal status. The 'edubba curriculum' framing is reasonable but note the provenance is Susa, not a known edubba site."
+
+findings:
+  - claim_number: 1
+    kind: "CITATION-WRONG"
     severity: "HIGH"
-    claim: "The composition belongs to a broader ANE tree-debate tradition including Akkadian parallels."
-    issue: "The well-known Akkadian 'Dispute of the Date Palm and the Tamarisk' (Lambert, BWL, 1960, pp. 150-164) is substantially better preserved and belongs to the excluded tradition per scope.md. Multiple details in claims 4-6 may have been silently informed by the Akkadian text rather than the fragmentary Sumerian composition at ETCSL 5.3.7."
-    evidence: "Lambert BWL pp. 150-164 publishes the Akkadian version. The Sumerian text at ETCSL 5.3.7 is too fragmentary to support the level of detail in claims 4-6."
-    recommended_fix: "Explicitly caution that the Akkadian version must not fill gaps in the Sumerian text. Flag any details drawn from the Akkadian parallel."
+    claim: "The composition is catalogued as ETCSL 5.3.7 and survives in a fragmentary state, with fewer copies than the major debate poems, indicating more limited circulation in Old Babylonian scribal schools."
+    issue: "The citation to 'Black et al. 2004, pp. 244-246' cannot be verified. The table of contents of Black et al. 2004 (The Literature of Ancient Sumer) does not list 'The Debate between Date Palm and Tamarisk' among its 70 translated compositions. Section G (The Natural Order) includes only The Flood story, Enki and the world order, The debate between Sheep and Grain, The debate between Bird and Fish, The heron and the turtle, and The home of the fish. No Date Palm and Tamarisk debate appears in the book."
+    evidence: "Multiple table-of-contents sources for Black et al. 2004 (Library of Congress catalog, Bryn Mawr Classical Review, OUP catalog, Amazon) list Section G contents. No Debate between Date Palm and Tamarisk appears. The previous factcheck for chapter 35 (Copper and Silver) found the same pattern — that composition was also cited to Black et al. 2004 but does not appear in the book's table of contents."
+    recommended_fix: "Remove all citations to Black et al. 2004 for this composition. The primary source is ETCSL 5.3.7 directly. For secondary discussion, cite Vanstiphout 1990/1991/1992, Bottero 1991, or Cavigneaux 2003 (OBC 14, pp. 53-58, the publication of Sb 12354)."
+
+  - claim_number: 2
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The text belongs to the Sumerian debate genre and features two personified trees — the Date Palm (Sumerian gisimmar), the supreme cultivated tree of Mesopotamia, and the Tamarisk (Sumerian sinig), a hardy wild tree used for ritual purification and fuel."
+    issue: "Citation to 'Black et al. 2004, pp. 244-245' is almost certainly wrong — the book does not include this composition (see finding on claim 1). Additionally, the citation to 'Kramer 1961, pp. 72-73' cannot be verified and may be inaccurate. More critically, scholarly consensus indicates that ETCSL 5.3.7 is a Sumerian translation of an Akkadian original, not an independent Sumerian composition. The Wikipedia article on 'Tamarisk and Palm' explicitly states: 'Some have classified Tamarisk and Palm as a Sumerian disputation, but this is on the basis of a Sumerian fragment that turns out to have been translated from an Akkadian original.' The surviving 19 Sumerian lines do NOT mention ritual purification or fuel."
+    evidence: "Wikipedia 'Tamarisk and Palm': 'Some have classified Tamarisk and Palm as a Sumerian disputation, but this is on the basis of a Sumerian fragment that turns out to have been translated from an Akkadian original.' ETCSL 5.3.7 has only 19 lines; none mention ritual purification or fuel. The single source tablet (Sb 12354) is from Susa, published by Cavigneaux in OBC 14 (2003), pp. 53-58."
+    recommended_fix: "Remove Black et al. 2004 citation. Add a prominent note that the Sumerian text is likely a translation from an Akkadian original per scholarly consensus (Lambert 1996, Wikipedia 'Tamarisk and Palm'). Remove or mark as [INFERENCE:] the claims about 'ritual purification and fuel' — these are not attested in the surviving 19 Sumerian lines."
 
   - claim_number: 4
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Date Palm's specific product list (dates, date syrup, palm wine, fibre, wood)."
-    issue: "Some details (especially 'palm wine') are better attested in the Akkadian text than in surviving Sumerian fragments. The level of specificity may exceed what the fragmentary text supports."
-    evidence: "The Akkadian text (Lambert BWL) has detailed product catalogues; the Sumerian fragments are too broken to confirm."
-    recommended_fix: "Qualify which products are attested in Sumerian vs. inferred from the Akkadian parallel or general cultural knowledge."
+    kind: "CONTAMINATION"
+    severity: "HIGH"
+    claim: "Date Palm argues its superiority on the grounds of its immense economic value: it provides dates (a dietary staple), date syrup, palm wine, fibre for rope-making, and wood for construction — making it the most productive tree in the Mesopotamian landscape."
+    issue: "None of these specific products (dates, date syrup, palm wine, fibre, wood for construction) appear in the surviving 19 lines of ETCSL 5.3.7. The surviving Date Palm speech (lines 11-19) discusses daises for gods and silver as divine overlay. This detailed product catalogue is attested in the AKKADIAN version (Lambert, BWL, 1960/1996) which is explicitly out of scope per scope.md. This constitutes contamination from the excluded Akkadian tradition."
+    evidence: "ETCSL 5.3.7 lines 11-19 (Date Palm's speech): discusses construction of daises for gods and the value of silver as overlay for divine statues. No mention of dates, syrup, wine, fibre, or rope-making. The Akkadian 'Tamarisk and Palm' (Lambert BWL pp. 150-164; Lambert 1996 critical edition) contains detailed product catalogues for both trees. The claims document appears to have drawn its content from the Akkadian version, not the Sumerian."
+    recommended_fix: "Replace the entire claim with what the ETCSL 5.3.7 Date Palm actually argues: the Date Palm responds to the Tamarisk by noting that while tamarisk bodies make divine statues, silver is the true overlay of the gods. Add a [CONTAMINATION-RISK:] marker noting that the Akkadian version contains detailed product lists but these are not attested in the Sumerian fragment."
 
   - claim_number: 5
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Date Palm emphasises pollination by human labour."
-    issue: "Hand-pollination was practised but whether the Sumerian text specifically references it is uncertain given lacunae."
-    evidence: "Hand-pollination attested in agricultural texts (Civil 1994) but not confirmed in ETCSL 5.3.7."
-    recommended_fix: "Add [INFERENCE:] marker."
+    kind: "CONTAMINATION"
+    severity: "HIGH"
+    claim: "Date Palm emphasises its status as a cultivated tree — tended, irrigated, and pollinated by human labour — linking its worth to the civilisational enterprise of agriculture and horticulture."
+    issue: "Cultivation, irrigation, and pollination are NOT mentioned in the surviving 19 lines of ETCSL 5.3.7. This content appears to be drawn from the Akkadian version or from general knowledge about date palm cultivation in Mesopotamia, not from the Sumerian text. This constitutes contamination from the excluded Akkadian tradition or from general cultural knowledge wrongly attributed to this specific text."
+    evidence: "ETCSL 5.3.7 lines 11-19 contain the Date Palm's speech. The text discusses daises for gods and silver overlay. No mention of cultivation, irrigation, pollination, or human agricultural labour. Hand-pollination is attested in Mesopotamian agricultural texts (Civil 1994) but not in this composition."
+    recommended_fix: "Remove this claim entirely or replace with what the Date Palm actually says in lines 11-19 of ETCSL 5.3.7. If general knowledge about date palm cultivation is desired, it must be marked [INFERENCE:] with appropriate risk caveat and must NOT be attributed to ETCSL 5.3.7."
 
   - claim_number: 6
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Tamarisk counters by emphasising its hardiness, its independence from human cultivation, and its ritual purity — the tamarisk is used in purification rites and its wood serves as fuel and building material."
+    issue: "The Tamarisk's speech in ETCSL 5.3.7 (lines 1-10) discusses tamarisk wood used for divine statues ('My body ... the bodies of the gods') and criticizes the Date Palm's fruits. It does NOT mention hardiness, independence from cultivation, ritual purity, purification rites, or fuel. The citation to 'Black et al. 2004, pp. 245-246' is almost certainly wrong (the book does not include this composition). The content appears drawn from the Akkadian version or general Mesopotamian ritual knowledge."
+    evidence: "ETCSL 5.3.7 lines 1-10 (Tamarisk's speech): 'The Tamarisk opened his mouth and spoke.' References divine statues ('My body ... the bodies of the gods') and criticizes Date Palm's fruits ('like a maid approaching her mistress'). Mentions measuring vessels. No mention of hardiness, ritual purity, purification rites, or fuel."
+    recommended_fix: "Replace with what the Tamarisk actually argues in ETCSL 5.3.7: tamarisk wood serves for divine statues, and the Date Palm's fruits are subordinate. Remove the Black et al. 2004 citation. If ritual purity associations are mentioned, they must be marked as [INFERENCE:] based on general Mesopotamian practice, not attributed to this text."
+
+  - claim_number: 8
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The composition belongs to a broader Ancient Near Eastern tree-debate tradition that includes Akkadian parallels — debates between trees appear in later Akkadian wisdom literature, suggesting a deep and persistent literary lineage."
+    issue: "The claim itself is factually accurate — there IS an Akkadian tree-debate tradition. However, the relationship is reversed: scholarly consensus indicates the SUMERIAN fragment (ETCSL 5.3.7) is a translation FROM the Akkadian original, not the other way around. The Akkadian 'Tamarisk and Palm' is the primary composition (18th century BC, Lambert 1996), and the Sumerian version is derivative. The citation to 'Black et al. 2004, pp. 244-246' is wrong (the book does not include this composition). The citation to 'Kramer 1961, pp. 72-73' is unverifiable."
+    evidence: "Wikipedia 'Tamarisk and Palm': 'Some have classified Tamarisk and Palm as a Sumerian disputation, but this is on the basis of a Sumerian fragment that turns out to have been translated from an Akkadian original.' Lambert 1996 published the critical edition of the Akkadian text. The Akkadian version has multiple recensions (Old Babylonian from Saduppum, Middle Assyrian, plus Emar manuscript), while the Sumerian has only one witness from Susa."
+    recommended_fix: "Reverse the framing: the Akkadian composition is primary; the Sumerian fragment appears to be a translation. This is a critical scope issue per scope.md — the composition may not properly belong in a Sumerian mythology book at all, since it originates in the Akkadian literary tradition. Add a prominent note about this provenance issue."
+
+  - claim_number: 12
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The ETCSL composite represents the only available reconstruction from limited fragmentary witnesses, and Black et al. 2004 covers only the preserved portions."
+    issue: "The claim about Black et al. 2004 is almost certainly false — the book does not appear to include this composition at all. The ETCSL composite is based on Civil's 1995 composite text from one witness (Sb 12354, published by Cavigneaux 2003). The claim about 'limited fragmentary witnesses' understates the situation: there is exactly ONE witness tablet."
+    evidence: "CDLI P478960 lists one witness: P357265 (Sb 12354, from Susa). ETCSL bibliography (b537.htm) cites Civil 1995d as the composite text source and Cavigneaux in Fs Wilcke (OBC 14, 2003, pp. 53-58) as the publication of Sb 12354."
+    recommended_fix: "Remove the Black et al. 2004 reference. State clearly that the ETCSL composite is based on a SINGLE witness tablet (Sb 12354 = CDLI P357265, from Susa), published by Cavigneaux in 2003. This is the most thinly attested of all ETCSL debate poems."
+
+  - claim_number: 3
     kind: "UNVERIFIED"
     severity: "MEDIUM"
-    claim: "Tamarisk's ritual purity arguments."
-    issue: "Tamarisk's ritual associations are well attested across Mesopotamian literature but specific attribution to this fragmentary Sumerian composition cannot be verified."
-    evidence: "General Mesopotamian ritual knowledge, not necessarily from this specific text."
-    recommended_fix: "Add [INFERENCE:] marker or qualify source."
+    claim: "The debate stages a tension between cultivated and wild nature — between the domesticated tree that provides fruit, syrup, and fibre, and the wild tree that grows without human care and serves ritual and practical functions."
+    issue: "This cultivated-vs-wild framing is a reasonable scholarly interpretation of the debate genre but cannot be verified from the 19 surviving lines of ETCSL 5.3.7. The surviving text shows Tamarisk arguing about divine statues and Date Palm arguing about silver overlay — not a cultivated-vs-wild opposition. The specific products (fruit, syrup, fibre) and functions (ritual, practical) are not attested in the surviving Sumerian lines."
+    evidence: "ETCSL 5.3.7 lines 1-19: Tamarisk discusses divine statues; Date Palm discusses silver and daises. No cultivated-vs-wild opposition is articulated in the surviving text."
+    recommended_fix: "Add [INFERENCE:] marker. Note that the cultivated-vs-wild reading is based on the fuller Akkadian version and general debate genre conventions, not on the surviving Sumerian lines."
 
   - claim_number: 7
     kind: "MARKER-MISUSED"
     severity: "LOW"
-    claim: "[INFERENCE:] marker cites Enkidu civilisation motif as basis."
-    issue: "The Enkidu parallel is loose — Enkidu's transition is about human wildness vs. civilisation, not cultivated vs. wild plants. Better basis texts would be Ewe and Grain (5.3.2) or Hoe and Plough (5.3.1)."
-    evidence: "The cited basis is imprecise."
-    recommended_fix: "Strengthen basis by citing Ewe and Grain or Hoe and Plough."
+    claim: "[INFERENCE: The cultivated-vs-wild opposition maps onto a broader Sumerian conceptual framework in which civilisation is valued over the untamed steppe]"
+    issue: "The inference marker is correctly applied, but the cited basis (Enkidu's transition from steppe to city) is a loose parallel. More relevant Sumerian debate poems for this theme would be Ewe and Grain (5.3.2) or Hoe and Plough (5.3.1), which directly stage cultivated-vs-uncultivated oppositions. Additionally, the risk caveat is appropriate given the fragmentary state, but should be stronger: the surviving 19 Sumerian lines do not engage this theme at all."
+    evidence: "The Enkidu parallel concerns human wildness vs. civilisation, not cultivated vs. wild plants. Better parallels are Ewe and Grain (ETCSL 5.3.2) and Hoe and Plough (ETCSL 5.3.1)."
+    recommended_fix: "Strengthen basis by citing Ewe and Grain or Hoe and Plough instead of the Enkidu parallel. Strengthen risk caveat: the surviving Sumerian lines do not support this reading."
+
+  - claim_number: 10
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "Despite its fragmentary state, the surviving portions reveal a composition concerned with the relative merits of cultivated and wild nature — domesticated utility versus natural resilience."
+    issue: "The surviving 19 lines of ETCSL 5.3.7 do NOT reveal a composition about 'cultivated and wild nature' or 'domesticated utility versus natural resilience.' The surviving portions show: (1) Tamarisk boasting about divine statues made from his wood, (2) Date Palm responding about silver as divine overlay. The 'cultivated vs. wild' and 'utility vs. resilience' framing is not attested in the Sumerian text and appears to be fabricated based on the fuller Akkadian version or on general expectations about what a tree debate 'should' contain."
+    evidence: "ETCSL 5.3.7 translation: Tamarisk discusses 'the bodies of the gods' (divine statues) and criticizes Date Palm's fruits. Date Palm responds about daises for gods and silver overlay. No mention of cultivated vs. wild nature, domesticated utility, or natural resilience."
+    recommended_fix: "Rewrite to accurately describe what the surviving Sumerian lines actually contain: an argument between Tamarisk (claiming divine statue-making authority) and Date Palm (arguing for silver's superior divine prestige). The cultivated-vs-wild framing, if retained, must be marked [INFERENCE:] with acknowledgment that it comes from the Akkadian version, not the Sumerian text."

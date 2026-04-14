@@ -1,81 +1,140 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/35-debate-copper-and-silver.claims.adoc"
-  claims_identified: 11
-  triangulations_performed: 8
-  verdict: "REVISE"
+  claims_identified: 14
+  markers_checked: 3
+  triangulations_performed: 14
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online. The ETCSL 5.3.6 composition number itself could not be confirmed — known debate poems run 5.3.1 through 5.3.5."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. No contamination detected."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 5.3.6 translation (tr536.htm) and composite text (c536.htm) were accessed live via WebFetch. CDLI composite P478959 was accessed. The ETCSL bibliography page (b536.htm) was accessed. Black et al. 2004 is a print source; its table of contents was verified via multiple web searches (Library of Congress catalogue, WorldCat, Google Books, Bryn Mawr Classical Review) — the Debate between Silver and Copper does NOT appear in the book's table of contents."
+    triangulated_every_reference: "Yes. ETCSL 5.3.6 confirmed live. CDLI P478959 confirmed with 11 manuscript witnesses. Black et al. 2004 pp. 241–243 could NOT be confirmed — the book's TOC lists only Debate between Sheep and Grain and Debate between Bird and Fish under section G (The Natural Order); Silver and Copper is not listed. Kramer 1961 pp. 72–73 could not be confirmed against the physical book; Kramer's 1961 Sumerian Mythology is 116 pages in the original edition and later printings vary."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section5/tr536.htm) via WebFetch."
+    distinguished_variance_from_contamination: "Yes. No contamination detected. All content is attested in Sumerian-language sources within scope."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
   supported: 5
   internal_variance: 0
-  unverified: 6
-  citation_wrong: 0
+  unverified: 1
+  citation_wrong: 5
   contamination: 0
-  fabrication: 0
+  fabrication: 2
   silent_bridges: 1
-  marker_issues: 0
+  marker_issues: 1
   glossary_violations: 0
 
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'The Debate between Copper and Silver' is catalogued as ETCSL 5.3.6 and survives in a fragmentary state."
+    source_id: "etcsl"
+    source_loc: "5.3.6, composite text and translation"
+    verbatim_quote: "The ETCSL page title reads 'The debate between Copper and Silver' (composition t.5.3.6). The composite text notes it is 'preserved in a fragmentary state.' CDLI P478959 lists 11 manuscript witnesses, all from Old Babylonian Nippur."
+    note: "The 'fewer copies than other debate poems' claim is also supported: the Wikipedia article on the poem, citing scholarly sources, states 'only nine manuscripts are known, compared to 60–70 of Hoe and Plough and Sheep and Grain (the most popular) and 20–30 for the rest.' CDLI lists 11 witnesses. Either way, it is the least attested debate poem."
+
+  - claim_number: 3
+    claim: "Copper argues that it is the more valuable metal because of its indispensable role in the manufacture of tools and agricultural implements."
+    source_id: "etcsl"
+    source_loc: "5.3.6, Segment D"
+    verbatim_quote: "'When the time of wet ground has arrived for me, you do not supply the copper hoes that chop weeds'; 'you do not supply the copper adzes that make ploughs'; 'you do not supply the copper axes that chop firewood'; 'you do not supply the copper sickles that reap grain.'"
+    note: "Copper's arguments are about agricultural tools (hoes, adzes, axes, sickles) and construction implements — NOT weapons. See finding on claim 4 regarding weapons."
+
+  - claim_number: 12
+    claim: "The composition receives less scholarly treatment than the major debates (Hoe and Plough, Ewe and Grain, Winter and Summer)."
+    source_id: "etcsl"
+    source_loc: "5.3.6, bibliography page (b536.htm); CDLI P478959"
+    verbatim_quote: "The ETCSL bibliography lists only a handful of studies (van Dijk 1953, Bottéro 1991, Vanstiphout 1990/1991/1992, Civil 1960s reconstruction). The Wikipedia article states it is 'the least popular of the known disputation poems: only nine manuscripts are known, compared to 60–70 of Hoe and Plough and Sheep and Grain.' CDLI records 11 witnesses, all from Nippur."
+
+  - claim_number: 13
+    claim: "Fewer copies survive than for other debate poems, suggesting more limited circulation in the edubba curriculum."
+    source_id: "etcsl"
+    source_loc: "5.3.6; CDLI P478959"
+    verbatim_quote: "CDLI lists 11 manuscript witnesses for P478959, all from Old Babylonian Nippur. By comparison, Hoe and Plough and Sheep and Grain have 60–70 manuscripts each. This confirms the most limited circulation of any known Sumerian debate poem."
+
+  - claim_number: 7
+    claim: "[INFERENCE: The debate stages a tension between use-value and exchange-value]"
+    source_id: "N/A — inference marker"
+    source_loc: "N/A"
+    verbatim_quote: "N/A — correctly marked as inference with appropriate risk caveat ('The use-value vs. exchange-value framing is a modern analytical category; the Sumerian text does not use these terms')."
+    note: "Inference marker is properly applied. However, the underlying characterization of Silver's argument as being about 'exchange-value' is somewhat misleading — Silver argues for domestic/banquet/prestige contexts, not explicitly for trade or medium-of-exchange functions. The inference should be flagged as partially inaccurate in its framing."
+
 findings:
+  - claim_number: 10
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "It is unknown which god served as judge or which metal was declared the winner; any reconstruction of the verdict would be speculative."
+    issue: "This is factually wrong. The ETCSL translation of Segment I clearly states that Enlil judged and Copper won. The verdict IS partially preserved."
+    evidence: "ETCSL 5.3.6, Segment I: 'Silver and Strong Copper having carefully had a debate, Strong Copper had the lead over Silver in Enlil's house -- Father Enlil be praised!' Enlil is explicitly named as judge (calling his minister Nuska), and Copper is the winner. The Wikipedia article confirms: 'Copper won the debate (making it the only Sumerian disputation poem where the contender who does not give the first speech goes on to win).'"
+    recommended_fix: "Rewrite to state: Enlil serves as judge, and Copper wins the debate. Quote Segment I: 'Strong Copper had the lead over Silver in Enlil's house.' Note that while the adjudication scene is fragmentary, enough survives to establish the outcome clearly."
+
+  - claim_number: 9
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "[LACUNA: The verdict and conclusion of the debate are entirely lost | source: etcsl 5.3.6, final section | scholarly_reconstruction: No known manuscript preserves the ending; the identity of the judge and the winner cannot be determined from the surviving evidence]"
+    issue: "The verdict is NOT entirely lost. ETCSL Segment I preserves the outcome, naming Enlil as judge and Copper as winner. The LACUNA marker is factually incorrect."
+    evidence: "ETCSL 5.3.6, Segment I: 'Strong Copper had the lead over Silver in Enlil's house -- Father Enlil be praised!' Further: 'Enlil gave strength to the shepherd Ur-Namma in his majestic arms' and 'Strong Copper helped him mightily' in building temples. The ending, while fragmentary in places, is substantially preserved."
+    recommended_fix: "Remove or substantially revise this LACUNA marker. The verdict and conclusion are partially preserved in Segment I. Replace with a note that Segment I is fragmentary but preserves the key outcome. Add a new claim about Copper winning and Enlil judging."
+
+  - claim_number: 2
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The text belongs to the Sumerian debate genre and features two personified metals — Copper (Sumerian urudu) and Silver (Sumerian ku-babbar)."
+    issue: "The citation to 'Black et al. 2004, pp. 241–242' appears to be incorrect. The table of contents of Black et al. 2004 (The Literature of Ancient Sumer) does not list 'The Debate between Copper and Silver' or 'Silver and Copper' among its 70 translated compositions. Section G (The Natural Order) includes only Sheep and Grain and Bird and Fish among debate poems. The page numbers 241–243 cannot be verified as containing this composition."
+    evidence: "Multiple table-of-contents sources for Black et al. 2004 (Library of Congress catalog, WorldCat, Google Books, Bryn Mawr Classical Review) list Section G contents as: The Flood story, Enki and the world order, The debate between Sheep and Grain, The debate between Bird and Fish, The heron and the turtle, The home of the fish. No Copper and Silver debate appears."
+    recommended_fix: "Remove all citations to Black et al. 2004 for this composition unless the page reference can be independently verified. The primary source is ETCSL 5.3.6 directly. Consider citing van Dijk 1953 (pp. 58–64, the earliest edition) or Vanstiphout 1990/1991/1992 instead."
+
+  - claim_number: 4
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Copper claims that without it, fields could not be ploughed, canals could not be dug, wars could not be fought, and the essential work of society would cease."
+    issue: "The citation to 'Black et al. 2004, p. 242' is likely wrong (see finding on claim 2). Additionally, the claim overstates what the text says: Copper argues about agricultural tools (hoes, sickles, axes, adzes) and seasonal farming work, but does NOT argue about wars or weapons in the preserved text. 'Wars could not be fought' appears to be an embellishment."
+    evidence: "ETCSL 5.3.6 Segment D lists hoes, adzes, axes, and sickles as Copper's arguments. No mention of weapons or warfare appears in the surviving text. The claim about 'wars could not be fought' is not supported by any line in the ETCSL translation."
+    recommended_fix: "Remove 'wars could not be fought' — this is not attested. Replace with the actual textual content: seasonal agricultural tools. Fix citation to ETCSL 5.3.6 directly."
+
+  - claim_number: 5
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Silver counters that it is the metal of kings and temples, prized for its beauty, rarity, and function as the standard medium of exchange in trade and temple economies."
+    issue: "Citation to Black et al. 2004 likely wrong (see claim 2 finding). More importantly, the characterization of Silver's arguments is partially inaccurate. Silver argues about domestic/household contexts and banquets, not explicitly about being a 'standard medium of exchange.' The 'medium of exchange' framing appears to be a modern economic interpretation imposed on the text."
+    evidence: "ETCSL 5.3.6: Silver's argument includes 'the palace is your station and banquets are your assigned task' (said by Copper, characterizing Silver's limited domain). Copper mocks Silver: 'someone digs a hole for you in the middle of the cattle-pen. Or they pour clay on top of you... someone buries you in the most obscure corner of a grave.' Silver's prestige arguments focus on domestic and ceremonial roles, not trade."
+    recommended_fix: "Revise Silver's arguments to reflect the actual text: Silver claims superiority in household, palace, and banquet contexts. Remove 'standard medium of exchange' unless a specific textual line can be cited. Fix citation source."
+
+  - claim_number: 6
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Silver argues that prestige, divine favour, and economic power outweigh mere utility."
+    issue: "Citation to Black et al. 2004 likely wrong (see claim 2 finding). The characterization 'divine favour' and 'economic power' are interpretive paraphrases not directly supported by the surviving text."
+    evidence: "The ETCSL translation shows Silver arguing about domestic and ceremonial uses, not explicitly about 'divine favour' or 'economic power.' These are modern interpretive glosses."
+    recommended_fix: "Qualify as interpretive or add [INFERENCE:] marker. Fix citation to ETCSL 5.3.6 directly."
+
   - claim_number: 11
     kind: "SILENT-BRIDGE"
     severity: "HIGH"
-    claim: "'Explores the tension between practical utility and prestige value.'"
-    issue: "Scholarly interpretation presented as factual statement without [INFERENCE:] marker."
-    evidence: "Editorial synthesis, not a textual claim."
-    recommended_fix: "Add [INFERENCE:] marker."
-
-  - claim_number: 1
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The composition is catalogued as ETCSL 5.3.6."
-    issue: "The ETCSL 5.3.6 number could not be confirmed from training data. The known debate poems run 5.3.1 through 5.3.5. This composition may have a different ETCSL number or may not be in ETCSL at all."
-    evidence: "Training-data recall of ETCSL debate poem numbers does not confidently include 5.3.6."
-    recommended_fix: "Verify the ETCSL composition number against the live database."
-
-  - claim_number: 3
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Copper's specific arguments about utility."
-    issue: "The specific content of Copper's arguments cannot be verified against the fragmentary text."
-    evidence: "The text may be too fragmentary to support detailed argument reconstruction."
-    recommended_fix: "Qualify claims about specific argument content."
-
-  - claim_number: 4
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Silver's specific counter-arguments about prestige."
-    issue: "Same issue as claim 3 — text fragmentary."
-    evidence: "Fragmentary state limits verification."
-    recommended_fix: "Qualify claims."
-
-  - claim_number: 5
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Specific debate structure and escalation details."
-    issue: "May be inferred from genre conventions rather than directly attested in fragmentary text."
-    evidence: "Genre-based inference rather than textual attestation."
-    recommended_fix: "Add [INFERENCE:] markers where appropriate."
-
-  - claim_number: 6
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The verdict and its recipient."
-    issue: "Cannot verify the judge's identity or winner if the ending is damaged."
-    evidence: "Fragmentary text."
-    recommended_fix: "Qualify if based on fragmentary evidence."
+    claim: "The surviving portions reveal a composition that explores the tension between practical utility and prestige value — a question central to Mesopotamian economic life, where silver served as the standard of exchange but copper was the workhorse metal of daily existence."
+    issue: "This is a modern scholarly interpretation presented without an [INFERENCE:] marker. The claim that 'silver served as the standard of exchange' is true of Mesopotamian economic history generally but is NOT what the poem argues. The poem frames Silver's role as domestic/banquet/ceremonial, not as medium of exchange."
+    evidence: "The ETCSL text does not frame the debate in terms of 'exchange value' or 'standard of exchange.' Silver is associated with palaces, banquets, and being hidden/buried — not with trade or commerce."
+    recommended_fix: "Add [INFERENCE:] marker. Revise to reflect the actual textual framing: Copper argues agricultural/construction utility; Silver argues domestic/ceremonial prestige. The 'standard of exchange' characterization belongs to Mesopotamian economic history, not to this poem's content."
 
   - claim_number: 14
     kind: "UNVERIFIED"
-    severity: "LOW"
-    claim: "'Only available reconstruction.'"
-    issue: "Cannot confirm whether other scholarly treatments exist."
-    evidence: "Other editions may exist."
-    recommended_fix: "Remove or qualify the superlative."
+    severity: "MEDIUM"
+    claim: "The ETCSL composite represents the only available reconstruction from these limited fragmentary witnesses, and Black et al. 2004 covers only the preserved portions without additional manuscript evidence."
+    issue: "The ETCSL composite is not the only scholarly reconstruction. Van Dijk 1953 (pp. 58–64) provided an earlier composite text and translation. Civil reconstructed the text in the 1960s. The claim about Black et al. 2004 is unverifiable and likely wrong — the book probably does not include this composition at all."
+    evidence: "ETCSL bibliography (b536.htm) lists van Dijk 1953 as providing 'composite text, translation, and partial commentary.' Civil's 1960s reconstruction is also noted. Peterson 2010 published a significant new manuscript."
+    recommended_fix: "Revise to acknowledge van Dijk 1953 and Civil's reconstruction as earlier scholarly treatments. Remove or verify the Black et al. 2004 reference."
+
+  - claim_number: 8
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "[LACUNA: Significant breaks and gaps across the surviving tablets throughout the composition]"
+    issue: "The LACUNA marker is correctly applied — the text IS fragmentary with significant gaps. However, the marker should note that despite these gaps, the main arguments of both sides and the verdict ARE substantially preserved. The current framing overstates the damage."
+    evidence: "ETCSL 5.3.6 composite text has 9 segments (A–I) with approximately 368+ lines. While gaps exist, Silver's arguments (Segment A), Copper's arguments (Segment D), and the verdict (Segment I) are all substantially preserved."
+    recommended_fix: "Revise the LACUNA marker to state that while significant gaps exist, the core arguments and verdict are preserved. Specify which segments have the worst damage."
+
+  - claim_number: 1
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The composition survives in fewer copies than other debate poems, indicating more limited circulation in Old Babylonian scribal schools."
+    issue: "The claim itself is correct and well-supported by ETCSL and CDLI. However, the citation to 'Black et al. 2004, pp. 241–243' is likely wrong — this book probably does not include the composition."
+    evidence: "The claim is factually correct per CDLI (11 witnesses vs. 60–70 for Sheep and Grain). The citation source is wrong."
+    recommended_fix: "Change citation to ETCSL 5.3.6 manuscript list and CDLI P478959."

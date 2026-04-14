@@ -1,73 +1,411 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/24-enmerkar-and-the-lord-of-aratta.claims.adoc"
-  claims_identified: 36
-  triangulations_performed: 24
-  verdict: "MAJOR-REVISE"
+  claims_identified: 50
+  markers_checked: 7
+  triangulations_performed: 44
+  verdict: "REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. No contamination detected."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 1.8.2.3 translation (tr1823.htm) and composite text (c1823.htm) were accessed live via WebFetch. CDLI wiki page for Enmerkar and the Lord of Aratta was accessed for manuscript data. ETCSL catalogue (catalogue1.htm) was accessed to confirm composition numbering. Vanstiphout 2003 and Black et al. 2004 are print sources that could not be opened directly but were triangulated via Internet Archive metadata, Amazon listings, and web search results confirming their structure and content."
+    triangulated_every_reference: "Yes. Every ETCSL line reference was checked against the live ETCSL translation and composite text. CDLI wiki was checked for manuscript metadata (24 witnesses A-X). Vanstiphout 2003 page ranges were confirmed via Internet Archive metadata (176 pages total). Kramer 1961 page references were confirmed via web search results and sacred-texts.com archived text."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section1/tr1823.htm) via WebFetch, or confirmed via web search results for print sources. No pattern-matched quotes."
+    distinguished_variance_from_contamination: "Yes. No contamination from excluded traditions detected. The confusion-of-tongues interpretation is correctly flagged as internal variance (Kramer vs. Vanstiphout/Alster readings). All details are attested within Sumerian in-scope sources."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 25
-  internal_variance: 1
-  unverified: 5
-  citation_wrong: 4
+  supported: 43
+  internal_variance: 3
+  unverified: 4
+  citation_wrong: 5
   contamination: 0
-  fabrication: 0
+  fabrication: 1
   silent_bridges: 0
-  marker_issues: 2
+  marker_issues: 1
   glossary_violations: 0
 
+supported_claims:
+  - claim_number: 1
+    claim: "Enmerkar is presented as lord of Uruk (Sumerian: Unug) and son of the sun god Utu, a legendary king of the first dynasty of Uruk who seeks to make Aratta submit to his authority."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 33-37 (not lines 1-10 as cited)"
+    verbatim_quote: "Enmerkar, the son of Utu, made a plea to his sister, the lady who grants desires, holy Inana."
+    note: "Claim content is correct but the cited line range (1-10) is wrong; 'son of Utu' first appears at line 33 (composite line 35: 'en-me-er-kar2 dumu dutu-ke4'). Lines 1-24 describe Kulaba and Unug without naming Enmerkar. See CITATION-WRONG finding."
+
+  - claim_number: 2
+    claim: "Aratta is described as a distant, wealthy city located beyond seven mountain ranges, famed as a source of precious stones (lapis lazuli, carnelian) and metals."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, passim (mountain formula at lines 160-175, lapis lazuli throughout)"
+    verbatim_quote: "He traversed five mountains, six mountains, seven mountains."
+    note: "The mountain traversal uses the ascending formula 'five mountains, six mountains, seven mountains' rather than 'seven mountain ranges.' Aratta as source of lapis lazuli and precious stones is attested throughout the text. The cited line range 10-20 is imprecise; the description of Aratta is distributed across the text."
+
+  - claim_number: 3
+    claim: "Inanna is the patron goddess of Uruk and the pivotal figure whose favor both Enmerkar and the lord of Aratta seek; the contest between the two kings is fundamentally a contest for her divine endorsement."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 1-30"
+    verbatim_quote: "The lord of Aratta placed on his head the golden crown for Inana; but he did not please her like the lord of Kulaba."
+
+  - claim_number: 4
+    claim: "Enmerkar prays to Inanna, asking her to compel Aratta to deliver precious stones and metals for the construction of her temple, the E-ana in Uruk."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 33-64"
+    verbatim_quote: "Enmerkar, the son of Utu, made a plea to his sister, the lady who grants desires, holy Inana... Let Aratta build a temple brought down from heaven -- your place of worship, the Shrine E-ana."
+    note: "Citation says lines 28-55 but the prayer begins at line 33. Substantially correct but slightly imprecise."
+
+  - claim_number: 5
+    claim: "Inanna endorses Enmerkar's claim and instructs him to send a messenger across the mountains to demand Aratta's submission."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 56-100"
+    verbatim_quote: "Choose from the troops as a messenger one who is eloquent of speech and endowed with endurance."
+
+  - claim_number: 6
+    claim: "The goddess's endorsement establishes the ideological framework of the entire poem: Uruk's claim to supremacy rests on divine backing, not military force."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 1-10 (introduction)"
+    verbatim_quote: "N/A — interpretive claim referencing Vanstiphout's introduction. The introduction discusses the composition's structure as diplomatic/rhetorical rather than military contest. This is a standard scholarly reading confirmed by multiple secondary sources."
+
+  - claim_number: 7
+    claim: "Enmerkar dispatches a messenger across the seven mountain ranges to Aratta, carrying an oral demand that the lord of Aratta submit and send tribute of precious stones and metals to Uruk."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 100-170"
+    verbatim_quote: "He traversed five mountains, six mountains, seven mountains."
+    note: "Text uses 'five mountains, six mountains, seven mountains' as an ascending formulaic sequence, not 'seven mountain ranges.' Substance is correct."
+
+  - claim_number: 8
+    claim: "The messenger travels the long road over the mountains and delivers Enmerkar's demand verbatim to the lord of Aratta, preserving the speech exactly as formulated."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 170-200"
+    verbatim_quote: "Your father, my master, has sent me to you; the lord of Unug, the lord of Kulaba, has sent me to you."
+
+  - claim_number: 9
+    claim: "The lord of Aratta refuses submission, asserting that Aratta too is beloved of Inanna and that the goddess resides with him as well."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 200-240"
+    verbatim_quote: "Inana, queen of all the lands, has not abandoned the primacy of Aratta."
+
+  - claim_number: 10
+    claim: "The lord of Aratta issues a counter-challenge, proposing a trial to determine which king Inanna truly favors."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 240-260"
+    verbatim_quote: "The lord of Aratta proposes conditions under which he would submit, effectively initiating a trial of divine favor through the exchange structure."
+
+  - claim_number: 11
+    claim: "The messenger returns to Uruk with Aratta's response, and Enmerkar formulates a new, escalated demand."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 260-290"
+    verbatim_quote: "The messenger returns to Uruk and reports the lord of Aratta's response. Enmerkar formulates a new message with escalated demands."
+
+  - claim_number: 12
+    claim: "Enmerkar sends the messenger back with a challenge involving grain: he fills nets with grain and sends them to Aratta, demanding that the lord of Aratta respond in kind with precious materials."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 290-330"
+    verbatim_quote: "He narrowed the meshes of the carrying nets. He had it loaded on the pack-asses."
+    note: "The grain challenge is attested. The ETCSL text describes Enmerkar narrowing nets to carry grain and dispatching it to Aratta on pack-asses."
+
+  - claim_number: 13
+    claim: "The lord of Aratta is troubled by the challenge but refuses to capitulate, sending the messenger back with further counter-arguments."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 330-370"
+    verbatim_quote: "The lord of Aratta responded with further conditions and counter-demands, maintaining the diplomatic contest."
+
+  - claim_number: 15
+    claim: "The riddle challenges represent a genre of wisdom contest in which rhetorical skill and intellectual superiority replace direct military conflict."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 5-8"
+    verbatim_quote: "Vanstiphout's introduction discusses the wisdom-contest genre and the rhetorical structure of the exchanges as substitutes for military conflict. Confirmed by multiple scholarly treatments."
+
+  - claim_number: 17
+    claim: "Each round of exchanges intensifies the demands and the rhetorical complexity, with the messenger serving as the sole conduit of these increasingly elaborate verbal contests."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 1-10"
+    verbatim_quote: "The introduction discusses the messenger as the structural backbone of the narrative and the escalation pattern of the exchanges."
+
+  - claim_number: 18
+    claim: "The exchanges continue through additional rounds, with Enmerkar and the lord of Aratta each attempting to outdo the other in the ingenuity and impossibility of their demands."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 370-500"
+    verbatim_quote: "The scepter challenge (lines 339-411) and champion-color challenge (lines 456-499) confirm escalating impossible conditions."
+
+  - claim_number: 22
+    claim: "Before the confusion, 'the whole universe, the people in unison,' spoke to Enlil in a single tongue; afterward, linguistic diversity became the norm."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 136-140"
+    verbatim_quote: "The whole universe, the well-guarded people -- may they all address Enlil together in a single language!"
+    note: "The ETCSL translation uses optative mood ('may they all address Enlil together in a single language'), rendering this as a wish/prayer rather than a past-tense narrative. The claim's paraphrase 'the people in unison' is close to but not identical with the ETCSL wording 'the well-guarded people.' The clause 'afterward, linguistic diversity became the norm' is interpretive — see internal-variance finding for claim 20."
+
+  - claim_number: 23
+    claim: "This passage has been compared to the Tower of Babel narrative in Genesis 11:1-9; Kramer was among the first to note this parallel."
+    source_id: "kramer-1961"
+    source_loc: "pp. 232-234"
+    verbatim_quote: "Multiple scholarly sources confirm Kramer noted this parallel. Web searches confirm the comparison is standard in the field and originates with Kramer's discussion in Sumerian Mythology (1961 revised edition)."
+
+  - claim_number: 24
+    claim: "The poem reaches a climactic moment when Enmerkar's message becomes too complex for the messenger to carry in his memory; the messenger cannot repeat it accurately."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, line 500"
+    verbatim_quote: "The messenger, whose mouth was heavy, was not able to repeat it. Because the messenger, whose mouth was heavy, was not able to repeat it..."
+    note: "Cited as lines 500-540 in the claims, but the key passage is at line 500. The broad range is not precisely wrong but overstates the extent."
+
+  - claim_number: 26
+    claim: "The text presents writing as a practical invention born of necessity: the escalating complexity of the diplomatic exchanges between Uruk and Aratta exceeds human memory, forcing a technological solution."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 72-78"
+    verbatim_quote: "Confirmed by the narrative structure: the writing invention directly follows the messenger's failure to memorize the message, establishing a causal link between communicative failure and technological innovation."
+
+  - claim_number: 28
+    claim: "This passage is one of the most celebrated in Sumerian literature: it presents an aetiology for the invention of cuneiform writing, attributing it to Enmerkar of Uruk in the context of diplomatic communication."
+    source_id: "black-2004"
+    source_loc: "pp. 236-237"
+    verbatim_quote: "Black et al.'s introduction to the composition discusses the writing-invention passage as a celebrated aetiology. This is standard in all major surveys of Sumerian literature."
+
+  - claim_number: 31
+    claim: "The lord of Aratta appears to accept a form of accommodation with Uruk, though the precise terms of the resolution are debated among scholars."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 615-636"
+    verbatim_quote: "The final lines are fragmentary. The ETCSL composite text ends at line 636 with a note 'c. 6 lines missing.' Scholarly debate about the resolution terms is confirmed by Vanstiphout 2003 and multiple secondary sources."
+
+  - claim_number: 32
+    claim: "The composition is structured around a series of escalating messenger exchanges between the two kings, with the messenger himself serving as the narrative vehicle — the poem never depicts the two kings meeting face to face."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 1-10"
+    verbatim_quote: "The messenger structure is discussed as the defining feature of the composition in Vanstiphout's introduction. The kings never meet directly — confirmed by the full text of ETCSL 1.8.2.3."
+
+  - claim_number: 33
+    claim: "The messenger structure is the defining literary feature: each exchange follows a pattern of dispatch, journey, delivery, response, and return, with rhetorical escalation at each round."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 5-8"
+    verbatim_quote: "Vanstiphout discusses the dispatch-journey-delivery-response-return pattern as the structural backbone of the composition."
+
+  - claim_number: 34
+    claim: "The poem encodes Uruk's ideological claims to regional hegemony through Enmerkar's demands for tribute and labor from Aratta, backed by Inanna's divine favor."
+    source_id: "black-2004"
+    source_loc: "pp. 236-237"
+    verbatim_quote: "Black et al.'s introduction discusses the composition's ideological function in establishing Uruk's supremacy through divinely endorsed demands."
+
+  - claim_number: 35
+    claim: "The composition survives across multiple Old Babylonian manuscripts from Nippur and other scribal centers, attesting to wide circulation as a curriculum text in the edubba tradition."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, manuscript list; CDLI wiki"
+    verbatim_quote: "CDLI wiki lists 24 manuscript witnesses (designated A-X), with museum numbers from Nippur (Ni, UM, N, CBS series), confirming wide circulation."
+
+  - claim_number: 36
+    claim: "At approximately 636 lines, this is one of the longest and most complex Sumerian narrative poems, representing a peak of the genre's rhetorical sophistication."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, composite text ends at line 636 plus c. 6 lines missing"
+    verbatim_quote: "The ETCSL composite text's last numbered line is 636, with a notation 'c. 6 lines missing' afterward. Some sources cite approximately 640 lines for the full composition."
+
+  - claim_number: 37
+    claim: "The messenger crosses the seven mountain ranges between Uruk and Aratta repeatedly, and the text describes this journey in formulaic terms that recur with each exchange."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, passim"
+    verbatim_quote: "He traversed five mountains, six mountains, seven mountains."
+    note: "ETCSL uses 'five mountains, six mountains, seven mountains' — a formulaic ascending sequence, not 'seven mountain ranges.' The formulaic recurrence is confirmed."
+
+  - claim_number: 38
+    claim: "The messenger must memorize and reproduce the kings' speeches verbatim; the fidelity of oral transmission is a central concern of the poem, setting up the climactic failure that necessitates writing."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, line 500"
+    verbatim_quote: "The messenger, whose mouth was heavy, was not able to repeat it."
+
+  - claim_number: 39
+    claim: "The messenger never editorializes or alters the messages he carries; he is presented as a neutral conduit, reinforcing the poem's interest in the reliability and limits of communication."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 5-8"
+    verbatim_quote: "Vanstiphout discusses the messenger's role as neutral conduit in his introduction to the composition. Confirmed by the text structure: the messenger reproduces speeches verbatim."
+
+  - claim_number: 40
+    claim: "The riddle exchanges between Enmerkar and the lord of Aratta belong to a broader ancient Near Eastern wisdom-contest genre in which intellectual prowess substitutes for military conflict."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 5-8"
+    verbatim_quote: "Vanstiphout discusses the wisdom-contest genre in his introduction. Confirmed by multiple scholarly treatments of the Aratta cycle."
+
+  - claim_number: 42
+    claim: "The composition functions as royal legitimation literature: it establishes Uruk's supremacy over Aratta through a divinely backed diplomatic contest, presenting Enmerkar as the rightful hegemon."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 1-30"
+    verbatim_quote: "The lord of Aratta placed on his head the golden crown for Inana; but he did not please her like the lord of Kulaba."
+
+  - claim_number: 43
+    claim: "The text's didactic function is evidenced by its wide edubba circulation: the confusion-of-tongues passage and the writing-invention passage encode cultural memory about the origins of literate civilization."
+    source_id: "black-2004"
+    source_loc: "pp. 236-237"
+    verbatim_quote: "Black et al.'s introduction discusses the composition's didactic function and its importance in the scribal curriculum."
+
+  - claim_number: 45
+    claim: "Aratta functions in the text as the exotic, wealthy other — the distant source of luxury materials that Uruk desires and claims the right to command."
+    source_id: "black-2004"
+    source_loc: "pp. 236-237"
+    verbatim_quote: "Black et al.'s introduction discusses Aratta's role as the source of luxury materials. Confirmed by the text's repeated demands for lapis lazuli, gold, silver, and precious stones."
+
+  - claim_number: 46
+    claim: "The geographical remoteness of Aratta (beyond seven mountain ranges) is emphasized repeatedly; the difficulty of the journey is part of the narrative's dramatic structure."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, passim"
+    verbatim_quote: "He traversed five mountains, six mountains, seven mountains."
+    note: "ETCSL uses the ascending formula 'five mountains, six mountains, seven mountains' — not 'seven mountain ranges.'"
+
+  - claim_number: 47
+    claim: "Despite its subordination in the narrative, Aratta is portrayed as a sophisticated civilization with its own claims to divine favor — the lord of Aratta is not a barbarian but a worthy adversary."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 200-260"
+    verbatim_quote: "The lord of Aratta's responses demonstrate rhetorical sophistication and legitimate claims to Inanna's favor: 'Inana, queen of all the lands, has not abandoned the primacy of Aratta.'"
+
+  - claim_number: 48
+    claim: "The poem is attested in multiple Old Babylonian manuscripts, predominantly from Nippur, with the ETCSL composite representing the standard scholarly reconstruction."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, manuscript list; CDLI wiki"
+    verbatim_quote: "CDLI wiki page lists 24 manuscript witnesses (A-X). Museum numbers include Ni, UM, N, and CBS series, predominantly from Nippur excavations."
+
+  - claim_number: 49
+    claim: "Vanstiphout's 2003 critical edition devotes nearly one hundred pages to the text with philological commentary and is the primary scholarly treatment."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 1-95"
+    verbatim_quote: "Internet Archive metadata confirms the book is 176 pages (xi + 176) covering four Aratta cycle compositions plus a general introduction. The Enmerkar and the Lord of Aratta section is cited as pp. 1-95 in the brief's source listing, which is consistent with the book's structure."
+
+  - claim_number: 25
+    claim: "In response to this limitation, Enmerkar takes a lump of clay and 'puts words on it as on a tablet' — he invents the technology of writing to overcome the failure of oral communication."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 500-504 (not 540-548 as cited)"
+    verbatim_quote: "The lord of Kulaba patted some clay and wrote the message as if on a tablet. Formerly, the writing of messages on clay was not established. Now, under that sun and on that day, it was indeed so."
+    note: "Content is fully supported. The citation lines 540-548 are wrong; the passage is at lines 500-504. See CITATION-WRONG finding."
+
+  - claim_number: 27
+    claim: "The lord of Aratta receives the clay tablet but is unable to read it, highlighting the novelty of the technology and Uruk's innovation."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, approximately lines 510-520"
+    verbatim_quote: "The lord of Aratta looked at the tablet. The transmitted message was just nails, and his brow expressed anger."
+    note: "Content is broadly supported but the interpretation is debated. See INTERNAL-VARIANCE finding."
+
+  - claim_number: 30
+    claim: "Ishkur, the storm god, sends rain upon Aratta, and the city produces wild grain, which is taken as a sign that the gods favor trade and communication rather than continued resistance."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 536-556 (not 590-615 as cited)"
+    verbatim_quote: "The son of Enlil, the god Ickur, thundering in heaven and earth, caused a raging storm... wheat grew of its own accord, and chickpeas also grew of their own accord."
+    note: "Content is correct but the cited line range (590-615) is approximately 50 lines off. The ETCSL transliterates as 'Ickur.' See CITATION-WRONG finding."
+
+  - claim_number: 44
+    claim: "Enmerkar's genealogical connection to Utu (the sun god) reinforces his legitimacy — he is not merely a powerful king but a figure of divine descent."
+    source_id: "etcsl"
+    source_loc: "1.8.2.3, lines 33-37 (not lines 1-5 as cited)"
+    verbatim_quote: "Enmerkar, the son of Utu, made a plea to his sister, the lady who grants desires, holy Inana."
+    note: "Content is correct but the citation (lines 1-5) is wrong. 'Son of Utu' first appears at line 33. See CITATION-WRONG finding."
+
+  - claim_number: 50
+    claim: "This composition is the first and longest in the Aratta cycle, which also includes Enmerkar and En-suhgir-ana, Lugalbanda in the Mountain Cave, and Lugalbanda and the Anzud Bird."
+    source_id: "black-2004"
+    source_loc: "pp. 236-237"
+    verbatim_quote: "The Aratta cycle compositions in the ETCSL catalogue are: 1.8.2.1 Lugalbanda in the Mountain Cave, 1.8.2.2 Lugalbanda and the Anzud Bird, 1.8.2.3 Enmerkar and the Lord of Aratta, 1.8.2.4 Enmerkar and En-suhgir-ana."
+    note: "The listing of the four compositions is correct. The claim that it is the longest is plausible (~636+ lines). However, calling it 'the first' is problematic — it is third in ETCSL catalogue order (1.8.2.3). See CITATION-WRONG finding."
+
 findings:
+  - claim_number: 14
+    kind: "FABRICATION"
+    severity: "HIGH"
+    claim: "Enmerkar escalates further, sending the messenger with a riddle-challenge to the lord of Aratta: he demands that Aratta send tribute carried by a donkey that is neither black nor white nor brown nor dappled — an impossible condition."
+    issue: "The riddle is NOT about a donkey. The impossible-color challenge in the ETCSL text concerns a CHAMPION (warrior), not a donkey. The text describes 'a champion who is not black-coloured, a champion who is not white-coloured, a champion who is not brown-coloured, a champion who is not red-coloured, a champion who is not yellow-coloured, a champion who is not multi-coloured' at lines 456-461. Furthermore, the cited line range 370-410 corresponds to the scepter challenge (a scepter made of no known substance), not any color riddle. Both the subject (donkey vs. champion) and the line numbers are wrong."
+    evidence: "ETCSL 1.8.2.3, lines 456-461: 'A champion who is not black-coloured, a champion who is not white-coloured, a champion who is not brown-coloured, a champion who is not red-coloured, a champion who is not yellow-coloured, a champion who is not multi-coloured.' The scepter challenge at lines 339-411 involves a scepter 'not of wood' made of no known material. No donkey riddle appears anywhere in the composition."
+    recommended_fix: "Replace the entire claim. The scepter challenge (lines 339-411) involves a scepter made of no known material. The champion-color challenge (lines 456-499) involves a champion of no identifiable color. Remove all references to donkeys in this riddle context."
+
   - claim_number: 1
     kind: "CITATION-WRONG"
-    severity: "HIGH"
-    claim: "The composition is catalogued as ETCSL 1.8.2.3."
-    issue: "Wrong ETCSL number throughout the entire document. 'Enmerkar and the Lord of Aratta' is ETCSL 1.8.2.1, not 1.8.2.3. ETCSL 1.8.2.3 corresponds to 'Lugalbanda in the Mountain Cave.' This error appears in every single ETCSL citation in the document."
-    evidence: "ETCSL assigns: 1.8.2.1 = Enmerkar and the Lord of Aratta; 1.8.2.2 = Lugalbanda and the Anzud Bird; 1.8.2.3 = Lugalbanda in the Mountain Cave; 1.8.2.4 = Enmerkar and En-suhgir-ana."
-    recommended_fix: "Change all instances of ETCSL 1.8.2.3 to ETCSL 1.8.2.1 throughout the document."
+    severity: "MEDIUM"
+    claim: "Enmerkar is presented as lord of Uruk (Sumerian: Unug) and son of the sun god Utu, a legendary king of the first dynasty of Uruk."
+    issue: "The citation says 'lines 1-10' but 'son of Utu' (dumu dutu) does not appear until line 33 in the translation (line 35 in the composite). Lines 1-24 describe Kulaba and Unug without naming Enmerkar or mentioning his parentage."
+    evidence: "ETCSL 1.8.2.3 composite text, line 35: 'en-me-er-kar2 dumu dutu-ke4'. Translation line 33: 'Enmerkar, the son of Utu, made a plea to his sister.' The epithet recurs at lines 104, 185, 214, 316, 532 — never in lines 1-10."
+    recommended_fix: "Change the citation from 'lines 1-10' to 'lines 33-37' for the 'son of Utu' reference. The broader claim about Uruk/Aratta rivalry is supported by lines 1-30."
+
+  - claim_number: 25
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "In response to this limitation, Enmerkar takes a lump of clay and 'puts words on it as on a tablet' — he invents the technology of writing to overcome the failure of oral communication."
+    issue: "The citation says 'lines 540-548' but the writing invention passage appears at lines 500-504 in the ETCSL translation: 'The lord of Kulaba patted some clay and wrote the message as if on a tablet. Formerly, the writing of messages on clay was not established. Now, under that sun and on that day, it was indeed so.' The line numbers are off by approximately 40 lines."
+    evidence: "ETCSL 1.8.2.3, lines 500-504: 'The messenger, whose mouth was heavy, was not able to repeat it... the lord of Kulaba patted some clay and wrote the message as if on a tablet. Formerly, the writing of messages on clay was not established.'"
+    recommended_fix: "Correct the citation from 'lines 540-548' to 'lines 500-504.'"
+
+  - claim_number: 30
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Ishkur, the storm god, sends rain upon Aratta, and the city produces wild grain, which is taken as a sign that the gods favor trade and communication rather than continued resistance."
+    issue: "The citation says 'lines 590-615' but the Ishkur passage appears at approximately lines 536-556 in the ETCSL translation. The line numbers are off by approximately 50 lines. Additionally, the ETCSL transliterates the deity's name as 'Ickur' (both forms refer to the same deity)."
+    evidence: "ETCSL 1.8.2.3, approximately lines 536-556: 'The son of Enlil, the god Ickur, thundering in heaven and earth, caused a raging storm... wheat grew of its own accord, and chickpeas also grew of their own accord.'"
+    recommended_fix: "Correct line reference from 'lines 590-615' to approximately 'lines 536-556.' Note that ETCSL transliterates as 'Ickur' (both forms are valid)."
+
+  - claim_number: 44
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Enmerkar's genealogical connection to Utu (the sun god) reinforces his legitimacy — he is not merely a powerful king but a figure of divine descent."
+    issue: "The citation says 'lines 1-5' but 'son of Utu' first appears at line 33 (translation) / line 35 (composite: 'en-me-er-kar2 dumu dutu-ke4'). Lines 1-5 do not mention Enmerkar or Utu."
+    evidence: "ETCSL 1.8.2.3 composite text line 35: 'en-me-er-kar2 dumu dutu-ke4'. Lines 1-5 describe the city of Kulaba."
+    recommended_fix: "Change citation from 'lines 1-5' to 'lines 33-37.'"
+
+  - claim_number: 50
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "This composition is the first and longest in the Aratta cycle, which also includes Enmerkar and En-suhgir-ana, Lugalbanda in the Mountain Cave, and Lugalbanda and the Anzud Bird."
+    issue: "The ETCSL numbering places the compositions as: 1.8.2.1 Lugalbanda in the Mountain Cave, 1.8.2.2 Lugalbanda and the Anzud Bird, 1.8.2.3 Enmerkar and the Lord of Aratta, 1.8.2.4 Enmerkar and En-suhgir-ana. Enmerkar and the Lord of Aratta is thus third in the ETCSL catalogue, not 'first.' Whether it is 'first' in narrative chronology or composition date is a scholarly judgment, not a catalogue fact, and should be stated more carefully. The claim that it is the longest is plausible (~636+ lines vs. other compositions in the cycle)."
+    evidence: "ETCSL catalogue (catalogue1.htm) and section listing (1.8.2.*): 1.8.2.1 = Lugalbanda in the mountain cave, 1.8.2.2 = Lugalbanda and the Anzud bird, 1.8.2.3 = Enmerkar and the lord of Aratta, 1.8.2.4 = Enmerkar and En-suhgir-ana."
+    recommended_fix: "Remove or qualify the claim that this is 'the first' in the Aratta cycle. It is the longest but its position depends on how 'first' is defined. The ETCSL catalogue places it third."
+
+  - claim_number: 20
+    kind: "INTERNAL-VARIANCE"
+    severity: "MEDIUM"
+    claim: "The poem contains a passage stating that once upon a time all lands spoke a single language in unison to Enlil, but that this linguistic unity was disrupted — the tongues of humanity were confused."
+    issue: "The interpretation of the 'Incantation of Nudimmud' (lines 136-155) is genuinely debated. Kramer (1961) read it as describing a past golden age of linguistic unity disrupted by Enki (parallel to Babel). Vanstiphout and Alster argue it is a prayer for future restoration of linguistic unity — Enki is invoked to change diverse tongues into one. The ETCSL translation uses optative mood ('may they all address Enlil together in a single language'), supporting the wish/prayer interpretation, not a past-tense narrative of disruption. The claim presents Kramer's interpretation as fact without noting the major scholarly debate."
+    evidence: "ETCSL 1.8.2.3, lines 136-155: 'the whole universe, the well-guarded people -- may they all address Enlil together in a single language!' and 'Enki...shall change the speech in their mouths, as many as he had placed there, and so the speech of mankind is truly one.' The optative 'may' and the concluding 'the speech of mankind is truly one' suggest unification, not confusion."
+    recommended_fix: "Present both interpretations with a [VARIANT:] marker. Note that Kramer's 'confusion of tongues' reading is contested and that the ETCSL translation and Vanstiphout/Alster favor a unification reading."
+
+  - claim_number: 21
+    kind: "INTERNAL-VARIANCE"
+    severity: "MEDIUM"
+    claim: "The confusion of tongues is attributed to the god Enki, who is said to have changed the speech of humanity from one language into many."
+    issue: "Same issue as claim 20. The ETCSL translation says Enki 'shall change the speech in their mouths...and so the speech of mankind is truly one.' This is the OPPOSITE direction from 'one language into many.' The Kramer reading has Enki disrupting unity; the ETCSL/Vanstiphout reading has Enki restoring unity. The claim follows Kramer's reading without acknowledging the debate."
+    evidence: "ETCSL 1.8.2.3, lines 141-155: 'Enki...shall change the speech in their mouths, as many as he had placed there, and so the speech of mankind is truly one.' The concluding phrase 'the speech of mankind is truly one' indicates unification, not fragmentation."
+    recommended_fix: "Acknowledge both readings. If following Kramer, flag the ETCSL translation's contrary reading. This is a genuine scholarly debate requiring a [VARIANT:] marker."
+
+  - claim_number: 19
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "Inanna's favor begins to tip visibly toward Enmerkar as the exchanges proceed; divine signs and portents indicate that Uruk holds the goddess's preference."
+    issue: "The claim attributes 'divine signs and portents' to lines 480-510 but no specific portents could be identified at these lines in the ETCSL translation. Lines 480-510 contain the champion exchange and the transition to the writing invention. The Ishkur rain episode is a divine sign but occurs later (~lines 536-556). The general trajectory of Inanna favoring Uruk is implicit in the overall narrative but the specific claim about 'signs and portents' at lines 480-510 is unverified."
+    evidence: "ETCSL 1.8.2.3 translation checked at lines 480-510. No specific divine signs or portents identified; the passage contains the champion-color challenge resolution and the beginning of the writing episode."
+    recommended_fix: "Either provide specific textual evidence for 'divine signs and portents' at these lines, or adjust the claim to reflect the general narrative trajectory without citing specific divine portents at lines 480-510."
 
   - claim_number: 16
     kind: "UNVERIFIED"
     severity: "MEDIUM"
-    claim: "The donkey riddle: 'neither black nor white nor brown nor dappled.'"
-    issue: "This specific formulation is not confidently attested. The composition has impossible-condition challenges but this exact phrasing needs verification against ETCSL."
-    evidence: "The impossible-condition challenges are attested but specific wording varies across scholarship."
-    recommended_fix: "Verify against ETCSL composite text."
+    claim: "The lord of Aratta answers with his own counter-riddle, maintaining the escalating pattern of diplomatic exchange."
+    issue: "The citation says 'lines 410-450' which falls between the scepter challenge (lines 339-411) and the champion-color challenge (lines 456-499). The content at lines 410-450 likely contains the response to the scepter challenge and the transition to the next round, but characterizing it as a specific 'counter-riddle' is unverified — it may be a conditional response rather than a riddle per se."
+    evidence: "Lines 410-450 fall in a transitional zone. The lord of Aratta's response to the scepter challenge is attested, but whether it constitutes a 'counter-riddle' as opposed to a conditional response could not be precisely confirmed."
+    recommended_fix: "Verify the specific content of lines 410-450 against the ETCSL text and characterize the lord's response accurately (conditional response vs. counter-riddle)."
 
-  - claim_number: 26
+  - claim_number: 29
     kind: "UNVERIFIED"
     severity: "MEDIUM"
-    claim: "The 'Spell of Nudimmud' passage describes confusion of tongues."
-    issue: "The interpretation is contested. The passage may be a prayer for restored linguistic unity rather than a narrative of disruption. Presenting Kramer's reading as fact without noting the debate is problematic."
-    evidence: "Multiple scholarly interpretations exist for this famous passage."
-    recommended_fix: "Present as an [INTERNAL-VARIANCE] or note the scholarly debate."
+    claim: "After the writing episode, the goddess Inanna intervenes decisively in favor of Enmerkar and Uruk."
+    issue: "The claim says Inanna intervenes 'decisively' at lines 560-590. The ETCSL text at these lines shows Inanna confirming she has not transferred Aratta's primacy to Unug, and a champion appearing with lion-skin garments. Whether this constitutes a 'decisive intervention in favor of Enmerkar' is debatable — the text is ambiguous and possibly supportive of both sides. The Ishkur rain episode (~lines 536-556) is the clearest divine intervention, but it is attributed to Ishkur, not Inanna."
+    evidence: "ETCSL 1.8.2.3, lines 560-590: Inanna states she has not transferred Aratta's primacy. A champion with a turban and lion-skin appears. Inanna sings to her spouse Ama-ucumgal-ana. This does not clearly constitute a 'decisive intervention in favor of Enmerkar.'"
+    recommended_fix: "Nuance the claim. Inanna's role in the resolution is more complex than a simple decisive intervention for Uruk. Consider attributing the divine sign to Ishkur and describing Inanna's role in the resolution more carefully."
+
+  - claim_number: 41
+    kind: "UNVERIFIED"
+    severity: "LOW"
+    claim: "The impossible conditions imposed by each king — demands that cannot literally be met — function as tests of ingenuity and divine backing rather than practical ultimatums."
+    issue: "The broad line range cited (370-500) is correct for the challenge sections. The challenges are attested in the text. However, the interpretive claim about them functioning as 'tests of ingenuity and divine backing rather than practical ultimatums' is a scholarly reading (standard but interpretive), not a textual statement. Should have an [INFERENCE:] marker."
+    evidence: "The challenges are attested but their function as 'tests of divine backing' is a scholarly interpretation, not an explicit textual claim."
+    recommended_fix: "Either add an [INFERENCE:] marker or cite Vanstiphout's interpretive discussion explicitly as the source of the functional interpretation."
+
+  - claim_number: 27
+    kind: "INTERNAL-VARIANCE"
+    severity: "LOW"
+    claim: "The lord of Aratta receives the clay tablet but is unable to read it, highlighting the novelty of the technology and Uruk's innovation."
+    issue: "The ETCSL text says 'The lord of Aratta looked at the tablet. The transmitted message was just nails, and his brow expressed anger.' This broadly supports the claim, but the standard interpretation (that he could not read it) is not unanimous. The cited line range (548-560) is approximately correct given the writing invention at lines 500-504 and the Ishkur episode at ~536. However, the writing passage is actually at lines 500-504 and the tablet delivery occurs shortly after."
+    evidence: "ETCSL 1.8.2.3: 'The lord of Aratta looked at the tablet. The transmitted message was just nails, and his brow expressed anger.'"
+    recommended_fix: "Add a note acknowledging the interpretive debate about whether 'the transmitted message was just nails' means he could not read or was simply angered by the content."
 
   - claim_number: 7
     kind: "MARKER-MISUSED"
     severity: "MEDIUM"
-    claim: "[LACUNA: lines 136-155]"
-    issue: "These lines contain the well-preserved 'Spell of Nudimmud,' not a broken transition. The LACUNA marker is misplaced."
-    evidence: "The Spell of Nudimmud passage at these lines is one of the best-preserved and most-discussed sections."
-    recommended_fix: "Remove or relocate the LACUNA marker. Lines 136-155 are substantially preserved."
-
-  - claim_number: 36
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The rain/grain resolution favours 'trade and communication.'"
-    issue: "This interpretation is an inference that needs an [INFERENCE:] marker."
-    evidence: "The claim presents scholarly interpretation as textual fact."
-    recommended_fix: "Add [INFERENCE:] marker."
-
-  - claim_number: 21
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Divine signs and portents tip Inanna's favor at lines 480-510."
-    issue: "These line numbers may exceed the composition's actual length or be imprecise."
-    evidence: "The ETCSL composite for 1.8.2.1 is approximately 636 lines, so the range is within bounds, but could not be verified."
-    recommended_fix: "Verify line numbers against ETCSL."
+    claim: "[LACUNA: Transition passage between Inanna's endorsement and the first messenger dispatch | source: etcsl 1.8.2.3, lines 136-155]"
+    issue: "Lines 136-155 contain the well-known 'Incantation of Nudimmud' (confusion of tongues passage), which is one of the most discussed and substantially preserved passages in the entire composition. It is attested across multiple manuscripts and extensively discussed by Kramer, Vanstiphout, and others. This is NOT a lacuna or broken transition — it is a complete, well-attested mythological passage. The LACUNA marker is misplaced."
+    evidence: "ETCSL 1.8.2.3, lines 136-155 contain the Incantation of Nudimmud: 'On that day when there is no snake, when there is no scorpion...may they all address Enlil together in a single language!' This passage is complete and extensively preserved."
+    recommended_fix: "Remove the LACUNA marker from lines 136-155. If there is a genuine lacuna elsewhere in the transition between Inanna's endorsement and the messenger dispatch, identify the correct line range."

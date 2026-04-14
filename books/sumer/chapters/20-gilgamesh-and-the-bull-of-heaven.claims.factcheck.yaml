@@ -1,80 +1,102 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/20-gilgamesh-and-the-bull-of-heaven.claims.adoc"
   claims_identified: 8
-  triangulations_performed: 6
+  markers_checked: 4
+  triangulations_performed: 8
   verdict: "REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. All verification from training-data knowledge."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. No contamination detected."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 1.8.1.2 translation (tr1812.htm) and composite text (c1812.htm) were accessed live via WebFetch. ETCSL bibliography (b1812.htm) was also accessed. CDLI was searched for cylinder seal and tablet records. George 2003 could not be opened directly but was triangulated via the Bryn Mawr Classical Review (2004.04.21) by Eleanor Robson, which confirms the Sumerian poems are discussed on pp. 7-17 (making pp. 10-12 plausible). George's academia.edu paper 'Bilgames and the Bull of Heaven: Cuneiform texts, collations and textual reconstruction' was accessed for manuscript details. Kramer 1961 was confirmed as xxii + 130 pp. via multiple sources (Penn Press, Internet Archive, Goodreads), making the cited pp. 192-193 impossible."
+    triangulated_every_reference: "Yes. ETCSL 1.8.1.2 was verified live (translation, composite text, bibliography). George 2003 page range was triangulated via BMCR review confirming Sumerian poems on pp. 7-17. Kramer 1961 page count was verified as 130 pp. (main text), making pp. 192-193 non-existent. CDLI was searched for cylinder seal bull-slaying evidence. Museum collections (Walters, Met, British Museum) were searched for specific bull-slaying cylinder seals."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section1/tr1812.htm) via WebFetch. George 2003 characterization is paraphrased from the BMCR review and academia.edu paper, not direct book access."
+    distinguished_variance_from_contamination: "Yes. No contamination from the Akkadian tradition was found; the claims document is carefully scoped to the Sumerian composition and explicitly marks the boundary with the Akkadian Tablet VI tradition. One glossary issue (gudanna vs. gud an-na / gugalanna) was flagged."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
   supported: 5
   internal_variance: 0
-  unverified: 2
-  citation_wrong: 1
+  unverified: 1
+  citation_wrong: 2
   contamination: 0
   fabrication: 0
   silent_bridges: 0
-  marker_issues: 0
-  glossary_violations: 0
+  marker_issues: 1
+  glossary_violations: 1
 
 supported_claims:
   - claim_number: 1
-    claim: "The composition is catalogued as ETCSL 1.8.1.2 and survives in fragmentary Old Babylonian copies."
+    claim: "The composition ETCSL 1.8.1.2 is a heavily damaged Sumerian text narrating the episode in which Inanna sends the Bull of Heaven against Uruk, and Gilgamesh and Enkidu slay it."
     source_id: "etcsl"
-    source_loc: "1.8.1.2, composite text"
-    verbatim_quote: "ETCSL catalogues this composition under 1.8.1.2, 'Gilgamesh and the Bull of Heaven.'"
-
-  - claim_number: 2
-    claim: "Inanna sends the Bull of Heaven against Uruk after a slight or rejection by Gilgamesh."
-    source_id: "etcsl"
-    source_loc: "1.8.1.2, opening section"
-    verbatim_quote: "Inanna dispatches the Bull of Heaven against Uruk in response to a perceived slight"
+    source_loc: "1.8.1.2, translation and composite text"
+    verbatim_quote: "ETCSL catalogue lists '1.8.1.2 Gilgameš and the bull of heaven'. The translation header reads: 'A version of unknown provenance, supplemented from Nibru mss.' Three versions are preserved (unknown provenance, Me-Turan, Nibru Ur III fragment), all substantially fragmentary. Key lines: B42 'let my father give me the Bull of Heaven, so I can kill the lord, so I can kill the lord, lord Gilgamec!' and D45 'Gilgamec himself smote its skull with his axe weighing seven talents.'"
+    note: "The ETCSL number, fragmentary state, and core narrative are all correctly identified. However, the Sumerian term for Bull of Heaven is 'gud an-na' (ETCSL composite) or 'gugalanna' (standard scholarly form), not 'gudanna' as stated. See glossary violation finding."
 
   - claim_number: 3
-    claim: "Gilgamesh and Enkidu together defeat the Bull of Heaven."
+    claim: "Inanna, goddess of love and war, patron of Uruk, sends the Bull of Heaven against the city, apparently in response to a perceived affront or rejection by Gilgamesh."
     source_id: "etcsl"
-    source_loc: "1.8.1.2, combat section"
-    verbatim_quote: "Gilgamesh and Enkidu slay the Bull of Heaven together"
+    source_loc: "1.8.1.2, version of unknown provenance, Segment B, lines B7-B51"
+    verbatim_quote: "Inana's dialogue: 'I shall not let you go!' (B7-B12). Gilgamec responds he will not encroach on her domain (B13-B18). Inana petitions An: 'let my father give me the Bull of Heaven, so I can kill the lord, so I can kill the lord, lord Gilgamec!' (B42). An initially refuses (B46-B49); Inana threatens 'I will make my voice reach heaven and earth' (B50-B51) and An relents."
+    note: "SUPPORTED. The ETCSL text shows Inanna sending the Bull as a response to a conflict with Gilgamesh. The Me-Turan version (A22-A27) also preserves Inanna's refusal formula. George's academia.edu paper confirms: 'The celestial goddess Inanna, spurned by Gilgames, is discovered weeping by her father An. She persuades him to release the Bull of Heaven.' The George 2003 page reference (vol. 1, pp. 10-12) falls within the confirmed range of pp. 7-17 for Sumerian poem discussion (per BMCR review)."
+
+  - claim_number: 4
+    claim: "The Bull of Heaven descends upon Uruk and causes devastation, though the specific details of the destruction are largely lost in the Sumerian witnesses."
+    source_id: "etcsl"
+    source_loc: "1.8.1.2, version of unknown provenance, Segment B, lines B55-B63"
+    verbatim_quote: "'the Bull devoured the pasture, and drank the water of the river in great slurps... It broke up the palm trees of Unug... the Bull of Heaven submerged Kulaba.' (B55-B63)"
+    note: "SUPPORTED. The ETCSL translation preserves substantial details of the Bull's devastation. The claim that 'specific details of the destruction are largely lost' is somewhat overstated — the version of unknown provenance preserves a recognizable destruction sequence. See marker-issues finding."
 
   - claim_number: 5
-    claim: "The text is extremely fragmentary, making continuous narrative reconstruction difficult."
-    source_id: "george-2003"
-    source_loc: "vol. 1, pp. 10-12"
-    verbatim_quote: "George notes the highly fragmentary state of the Sumerian Bull of Heaven text"
+    claim: "Gilgamesh and Enkidu confront and slay the Bull of Heaven together, though the battle sequence itself is heavily fragmentary in the surviving Sumerian tablets."
+    source_id: "etcsl"
+    source_loc: "1.8.1.2, version of unknown provenance B84-B103; Me-Turan version D33-D52"
+    verbatim_quote: "Version of unknown provenance: 'The Bull bellowed in the dust, and Gilgamec walked (?) at its head as Enkidu climbed up the rope' (B84). Me-Turan version: 'Gilgamec himself smote its skull with his axe weighing seven talents. The Bull reared up so high' (D45). 'He hit Inana with a haunch, he made her flee away like a pigeon' (D49). 'consigned its hide to the streets, he consigned its intestines to the broad square' (D53)."
+    note: "SUPPORTED from ETCSL. The combat is less lost than claimed — the Me-Turan version (Cavigneaux and Al-Rawi 1993) preserves the killing blow, the haunch-throwing at Inanna, and the dismemberment. However, the co-citation of 'Kramer 1961, pp. 192-193' is CITATION-WRONG — see findings."
 
   - claim_number: 8
-    claim: "The Sumerian poem is distinct from the Bull of Heaven episode in the Standard Babylonian Epic."
+    claim: "The Akkadian Gilgamesh epic (Standard Babylonian Tablet VI) contains a fully developed version of the Bull of Heaven episode, but George identifies this as a separate literary tradition that developed from, but is not identical to, the Sumerian composition."
     source_id: "george-2003"
-    source_loc: "vol. 1"
-    verbatim_quote: "The Sumerian Gilgamesh poems are independent compositions, not sources for the later Akkadian epic"
+    source_loc: "vol. 1, pp. 5-17 (introductory discussion of Sumerian poems)"
+    verbatim_quote: "BMCR review (Robson 2004) states George characterizes the Sumerian poems as 'related only tangentially to the Babylonian epic (p. 5)'. Robson notes Gilgamesh and the Bull of Heaven was one of three 'curricular' Sumerian poems whose 'episodes become key episodes in the Babylonian epic.' George treats them as 'secondary rather than primary sources for the mature Babylonian Epic' (BMCR)."
+    note: "SUPPORTED via triangulation. George's exact wording on pp. 10-12 could not be verified directly, but the BMCR review confirms the characterization. George calls the Sumerian poems 'tangentially' related (p. 5), which is actually a stronger separation than the claims document implies. The claims document's characterization that they share 'a common narrative kernel' but represent 'independent literary development, not a translation' is consistent with scholarly consensus."
 
 findings:
-  - claim_number: 4
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The Bull's rampage causes destruction across the land."
-    issue: "The specific details of the Bull's rampage cannot be confirmed due to the text's fragmentary state. The ETCSL composite has major gaps in this section."
-    evidence: "ETCSL 1.8.1.2 has extensive lacunae in the combat narrative."
-    recommended_fix: "Add [LACUNA:] marker for the damaged sections and qualify what is reconstructed vs. attested."
+  - claim_number: 1
+    kind: GLOSSARY-VIOLATION
+    severity: MEDIUM
+    claim: "The composition refers to 'gudanna — the Bull of Heaven' as the Sumerian term."
+    issue: "The ETCSL composite text uses 'gud an-na' (two elements: gud = bull, an-na = of heaven). The standard scholarly name for the figure is Gugalanna (gu4.gal.an.na = great bull of heaven). The form 'gudanna' used in the claims document does not match standard scholarship or the ETCSL transliteration."
+    evidence: "ETCSL composite text c1812.htm, e.g. line B43: 'a-a-ju10 gud an-na ha-ma-ze2'. Scholarly sources (Wikipedia 'Gugalanna', George's academia.edu paper) consistently use 'Gugalanna' or 'Bull of Heaven' as the standard English rendering. The brief's entities_glossary also uses 'gudanna (gud-an-na)' which conflates the elements."
+    recommended_fix: "Replace 'gudanna' with 'gud an-na' for the transliterated Sumerian form, or use the standard scholarly English name 'Gugalanna' (gu4.gal.an.na). Update the brief's entities_glossary accordingly. Note that in Inanna's Descent (ETCSL 1.4.1), the figure is called 'Gugalanna' (husband of Ereshkigal), and the relationship between that figure and this bull is a separate scholarly question."
+
+  - claim_number: 5
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Gilgamesh and Enkidu confront and slay the Bull of Heaven together (cites 'Kramer 1961, pp. 192-193')."
+    issue: "Kramer 1961 'Sumerian Mythology' is xxii + 130 pages. Pages 192-193 do not exist in this book. The citation is fabricated or confused with a different Kramer work."
+    evidence: "Penn Press listing (ISBN 9780812210477) confirms xxii + 130 pp. Internet Archive metadata and Goodreads confirm the same page count. The sources.yaml registry lists 'kramer-1961' as 'Sumerian Mythology' (ISBN 9780812210477). No edition of this specific title reaches page 192. If the intended reference is Kramer 1963 'The Sumerians: Their History, Culture, and Character' (xiv + 355 pp., University of Chicago Press), pages 192-193 would exist, but that is a different book not in the sources registry."
+    recommended_fix: "Remove the Kramer 1961 citation or replace with correct source. If the intended reference is Kramer 1963, add that work to sources.yaml and update the citation. Alternatively, cite ETCSL 1.8.1.2 directly, which is the primary source already used."
 
   - claim_number: 6
-    kind: "CITATION-WRONG"
-    severity: "MEDIUM"
-    claim: "The aftermath of the Bull's defeat includes offerings to the gods."
-    issue: "The post-combat offerings section is largely broken in the surviving tablets. Citation to specific ETCSL line numbers may reference non-extant portions."
-    evidence: "The text's fragmentary state makes line-level citation unreliable for the post-combat section."
-    recommended_fix: "Verify line references against ETCSL composite. Mark uncertain portions with [LACUNA:]."
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "The bull-slaying motif is among the most widely attested Mesopotamian mythological scenes in visual art: it appears on cylinder seals from the Early Dynastic through Old Babylonian periods."
+    issue: "The claim conflates two distinct iconographic traditions: (1) the generic 'contest scene' (hero vs. animals), which IS among the most common cylinder seal motifs from Early Dynastic III onward, and (2) the specific Bull of Heaven slaying (identifiable Gilgamesh and Enkidu killing a divine bull), which is much rarer. The generic contest scene is widespread but cannot be confidently identified as the Bull of Heaven episode. The specifically identifiable Bull of Heaven slaying is best attested in Akkadian-period glyptic art (c. 2334-2154 BC), not spanning the full 'Early Dynastic through Old Babylonian' range as claimed."
+    evidence: "Walters Art Museum seal 42.786 (Early Old Babylonian / Isin-Larsa, 20th-17th c. BCE) is explicitly labeled 'Enkidu Vanquishing the Bull of Heaven'. Metropolitan Museum seal 324421 (Early Dynastic III) shows 'bull-man, bearded hero, and lion contest frieze' — a generic contest scene, not specifically the Bull of Heaven. CDLI Glyptic wiki (cdli.ox.ac.uk) describes contest scenes as a major motif category but does not equate all bull-combat scenes with the Bull of Heaven narrative."
+    recommended_fix: "Distinguish between the widespread 'contest scene' motif and the specifically identifiable Bull of Heaven episode. Revise to note that hero-vs-bull combat imagery is a common Mesopotamian seal motif, but identification with the specific Gilgamesh narrative is debated except in a small number of explicitly labeled or contextually clear cases."
 
-  - claim_number: 7
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The composition's relationship to the Akkadian Bull of Heaven episode reflects a shared mythological tradition."
-    issue: "While the shared tradition is scholarly consensus, the specific claim about 'relationship' needs an [INFERENCE:] marker since the direction of influence is debated."
-    evidence: "George 2003 discusses the Sumerian poems as independent compositions, not direct sources."
-    recommended_fix: "Add [INFERENCE:] marker or qualify the nature of the relationship."
+  - claim_number: 6
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The bull-slaying motif appears on cylinder seals (cites 'CDLI; George 2003, vol. 1, pp. 10-12')."
+    issue: "CDLI is cited with location 'cylinder seal corpus, bull-slaying motifs' — this is not a valid CDLI reference. CDLI catalogs individual objects by P-number; there is no consolidated 'cylinder seal corpus, bull-slaying motifs' entry. The reference does not resolve to any specific CDLI record."
+    evidence: "CDLI search at cdli.ucla.edu returned no consolidated 'bull-slaying motifs' corpus entry. CDLI's seal project exists (cdli.ucla.edu/projects/seals/) but does not provide a single searchable catalogue organized by iconographic motif in this manner."
+    recommended_fix: "Either cite specific cylinder seal P-numbers from CDLI or cite a published iconographic study such as Collon 1987 'First Impressions: Cylinder Seals in the Ancient Near East' or Frankfort 1955 'Cylinder Seals'. The vague CDLI reference is not verifiable."
+
+  - claim_number: 4
+    kind: MARKER-MISUSED
+    severity: LOW
+    claim: "The first LACUNA marker states the majority of lines are damaged or lost and 'the specific details of the destruction are largely lost in the Sumerian witnesses.'"
+    issue: "While the composition is indeed heavily damaged overall, the ETCSL translation preserves substantial detail about the Bull's devastation (devouring pasture, drinking the river, breaking palm trees, submerging Kulaba in B55-B63) and the combat conclusion (axe blow, haunch-throwing, dismemberment in Me-Turan D45-D53). The LACUNA markers overstate the degree of loss. The second LACUNA on the combat sequence is more justified but still overstated given the Me-Turan evidence."
+    evidence: "ETCSL tr1812.htm preserves recognizable narrative in both the destruction sequence (B55-B63) and the combat conclusion (Me-Turan D33-D53). The bibliography notes 26 cuneiform tablets/fragments documented, including important Me-Turan manuscripts published by Cavigneaux and Al-Rawi (1993)."
+    recommended_fix: "Revise LACUNA markers to acknowledge the Me-Turan version's contributions. The first LACUNA should note that destruction details ARE preserved in B55-B63. The second LACUNA (combat) should note that while the unknown-provenance version is fragmentary in the combat section, the Me-Turan version preserves the combat conclusion including the killing blow and aftermath."

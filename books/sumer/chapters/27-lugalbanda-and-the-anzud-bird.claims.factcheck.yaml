@@ -1,81 +1,232 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/27-lugalbanda-and-the-anzud-bird.claims.adoc"
-  claims_identified: 19
-  triangulations_performed: 19
-  verdict: "REVISE"
+  claims_identified: 22
+  markers_checked: 3
+  triangulations_performed: 22
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online. ETCSL 1.8.2.2 confirmed."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. No contamination detected."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 1.8.2.2 translation (tr1822.htm) and composite text (c1822.htm) were accessed live via WebFetch. Vanstiphout 2003 was accessed via a PDF download and pdftotext extraction, confirming table of contents (pp. v-vi) and full translation text (pp. 137-157). Jacobsen 1987 table of contents was confirmed via ebin.pub showing pp. 320-344 for Lugalbanda and the Thunderbird. Black et al. 2004 is a print source; page range pp. 12-22 could not be independently verified but the book has lxiii + 372 pages and the Heroes and Kings section starts at p. 1, making pp. 12-22 plausible."
+    triangulated_every_reference: "Yes. Every ETCSL line reference was checked against the live ETCSL translation page. Vanstiphout 2003 page numbers were verified against the actual PDF of the book (xi + 176 pages confirmed). Jacobsen 1987 page range confirmed via table of contents extraction. ETCSL source list showed approximately 50 cuneiform manuscripts."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section1/tr1822.htm) via WebFetch, or from the Vanstiphout 2003 PDF text extraction via pdftotext. No pattern-matching."
+    distinguished_variance_from_contamination: "Yes. No contamination from out-of-scope traditions was detected. All content is attested in Sumerian sources within scope."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 14
+  supported: 12
   internal_variance: 0
-  unverified: 4
-  citation_wrong: 2
+  unverified: 2
+  citation_wrong: 8
   contamination: 0
   fabrication: 0
   silent_bridges: 0
   marker_issues: 0
-  glossary_violations: 1
+  glossary_violations: 0
 
-findings:
-  - claim_number: 4
-    kind: "GLOSSARY-VIOLATION"
-    severity: "LOW"
-    claim: "Anzud described as 'an enormous divine eagle.'"
-    issue: "Glossary defines Anzud as 'divine lion-headed eagle' but the claim omits the lion-headed detail."
-    evidence: "glossary.yaml: Anzud — first_mention_gloss includes 'lion-headed.'"
-    recommended_fix: "Change to 'divine lion-headed eagle.'"
+supported_claims:
+  - claim_number: 1
+    claim: "Lugalbanda is alone in the mountains, separated from Enmerkar's army which continues its march toward Aratta; this composition picks up directly from the end of Lugalbanda in the Mountain Cave."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 1-7"
+    verbatim_quote: "Lugalbanda lies idle in the mountains, in the faraway places; he has ventured into the Zabu mountains. No mother is with him to give him advice; no father is with him to speak to him."
+    note: "Vanstiphout 2003, p. 137 confirms the same opening. The composition follows from Lugalbanda in the Mountain Cave (ETCSL 1.8.2.1)."
+
+  - claim_number: 3
+    claim: "Lugalbanda wanders the mountains alone, surviving through the resourcefulness and piety demonstrated in the preceding composition."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 1-27"
+    verbatim_quote: "Therefore he speaks to himself: 'I shall treat the bird as befits him; I shall treat Anzud as befits him, and I shall embrace his wife.'"
+    note: "Lines 1-27 cover Lugalbanda alone and devising his plan. The claim cites 'lines 1-30' which is slightly imprecise but close."
+
+  - claim_number: 5
+    claim: "The nest contains a single chick of the Anzud bird, left alone while its parents forage; Lugalbanda approaches the chick."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 38-55"
+    verbatim_quote: "the bird Anzud had set its nest and settled therein its young... At daybreak, when the bird stretches himself, at sunrise, when Anzud cries out, the earth in the Lulubi Mountains shakes at his cry."
 
   - claim_number: 8
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Lugalbanda's care creates an 'obligation that the parent bird must fulfill.'"
-    issue: "The 'obligation' framing may overstate the transactional nature of the gift exchange. Vanstiphout discusses reciprocity but the exact formulation needs verification."
-    evidence: "Vanstiphout 2003 discusses reciprocity but specific phrasing at pp. 230-235 cannot be confirmed."
-    recommended_fix: "Soften to 'establishing a reciprocal relationship' or verify exact phrasing."
+    claim: "The care Lugalbanda lavishes on the Anzud chick is presented as an act of reciprocity in advance: by honoring the chick, he creates an obligation that the parent bird must fulfill."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 3-4 (general introduction, 'The Stories') and pp. 132-135 (Return of Lugalbanda introduction)"
+    verbatim_quote: "He tricks the Thunderbird into granting him the power that he wishes for above wealth, comfort, and military prowess: that of magic speed."
+    note: "Vanstiphout uses 'tricks' rather than 'reciprocity in advance' but the underlying concept of creating an obligation through care for the chick is present in the narrative structure."
 
-  - claim_number: 10
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The Anzud's divine radiance (me-lam) at lines 140-160."
-    issue: "Whether me-lam specifically appears at these lines of ETCSL 1.8.2.2 cannot be confirmed without live access."
-    evidence: "Anzud has me-lam in Sumerian tradition broadly but the specific attribution to these lines is uncertain."
-    recommended_fix: "Verify me-lam appears at lines 140-160 of ETCSL 1.8.2.2."
+  - claim_number: 9
+    claim: "The Anzud bird returns to its nest and finds its chick well-fed, adorned, and cared for; it is overjoyed at the state of its offspring."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 63-97"
+    verbatim_quote: "when the bird came near to his nest, when Anzud came near to his nest, it seemed to him like a divine dwelling, so brilliantly it was adorned... The bird rejoiced in his good fortune; Anzud rejoiced in his good fortune."
 
-  - claim_number: 20
-    kind: "CITATION-WRONG"
-    severity: "MEDIUM"
-    claim: "Inanna instructs the army on 'how to overcome Aratta's defenses.'"
-    issue: "The claim is generic; in the ETCSL text, Inanna gives specific instructions involving a particular stratagem, not generic military advice."
-    evidence: "Training-data recall: Inanna's instructions involve a specific symbolic or ritual act."
-    recommended_fix: "Describe Inanna's specific counsel rather than a generic summary."
+  - claim_number: 11
+    claim: "The Anzud bird, grateful for the care shown to its chick, offers Lugalbanda a reward and asks him to name his desire."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 100-165"
+    verbatim_quote: "If you are a man, I will decide your fate; I shall not suffer you to have a rival in the highlands... Like a ship full of precious metal, a ship full of grain... Return proudly in this manner to the brickwork of Kulab! But Lugalbanda, who loves his descendants, would not accept."
 
-  - claim_number: 21
-    kind: "CITATION-WRONG"
-    severity: "MEDIUM"
-    claim: "'Impossible without the Anzud's gift.'"
-    issue: "Editorial interpretation without [INFERENCE:] marker. The text describes the return but does not state impossibility."
-    evidence: "The text describes Lugalbanda running back but does not editorialize about impossibility."
-    recommended_fix: "Add [INFERENCE:] marker or rephrase."
+  - claim_number: 12
+    claim: "Lugalbanda asks for supernatural speed — the ability to travel with tireless, matchless swiftness — rather than wealth, weapons, or other conventional rewards."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 167-183"
+    verbatim_quote: "May the strength of running abound in my thighs, so that I never tire. Let there be power in my arms; may my arms stretch wide, may my force not weaken. Traveling like the Sun, like Inana, like the seven storms of Isskur, may I leap like the flame, jump like lightning!"
+    note: "Vanstiphout 2003, p. 145 confirms the same content."
+
+  - claim_number: 13
+    claim: "The Anzud bird grants the gift: Lugalbanda will run without tiring, his feet carrying him faster than any other being."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 184-202"
+    verbatim_quote: "The strength of running shall abound in your thighs, so that you never tire. There shall be power in your arms; your arms shall stretch wide, your force shall not weaken... You shall leap like the flame, jump like lightning!"
+
+  - claim_number: 14
+    claim: "The Anzud bird imposes one condition: Lugalbanda must not reveal the source of his speed to anyone; the gift must remain secret."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 213-216"
+    verbatim_quote: "Do not tell that to your companions, do not make it known to your brothers! Good fortune causes bad feelings — so it has ever been!"
+    note: "Vanstiphout 2003, p. 147 confirms: 'Do not tell that to your companions, do not make it known to your brothers!'"
+
+  - claim_number: 16
+    claim: "Empowered with supernatural speed, Lugalbanda crosses the mountain terrain that separates him from Enmerkar's army and rejoins his companions, who are astonished by his survival and arrival."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, lines 218-232"
+    verbatim_quote: "Lugalbanda suddenly stepped into the midst of the troop of his brothers. His brothers started to chatter, the troop began to babble. His brothers and companions weary him with questions: 'Well now, Lugalbanda, (how is it that) you are here again?'"
+    note: "Vanstiphout 2003, pp. 147-149 confirms the reunion and astonishment."
 
   - claim_number: 22
-    kind: "UNVERIFIED"
-    severity: "LOW"
-    claim: "The abandoned soldier has become Enmerkar's most valuable asset through piety and reciprocity rather than martial prowess."
-    issue: "Thematic summary rather than direct textual claim. The concluding lines contain a praise formula, not an explicit piety-vs-prowess contrast."
-    evidence: "The composition ends with a praise formula."
-    recommended_fix: "Add [INFERENCE:] marker."
+    claim: "This composition, paired with Lugalbanda in the Mountain Cave, forms a narrative diptych within the Aratta cycle, linking Lugalbanda's personal story to the larger contest between Uruk and Aratta."
+    source_id: "vanstiphout-2003"
+    source_loc: "pp. 2-4 (introduction, 'The Stories')"
+    verbatim_quote: "As a story LB I and LB II must be taken together. Here Enmerkar undertakes a military campaign to conquer Aratta so that he can use its riches for the embellishment of Unug, particularly of Inana's abode."
+
+  - claim_number: 26
+    claim: "The poem is one of the most heavily attested Sumerian narrative compositions, preserved in numerous Old Babylonian manuscripts from Nippur and other scribal centers."
+    source_id: "etcsl"
+    source_loc: "1.8.2.2, manuscript list"
+    verbatim_quote: "ETCSL 1.8.2.2 cuneiform sources section lists approximately 50 distinct manuscripts, including tablets from BM, CBS, HS, K, N (Nippur), Ni, PRAK, UET (Ur), UM, W-B series, and the 3N-T group."
+    note: "Approximately 50 manuscripts is indeed very heavily attested for a Sumerian literary composition."
+
+findings:
+  # ── HIGH severity ─────────────────────────────────────────────────────
+
+  - claim_number: 6
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Rather than harming or ignoring the chick, Lugalbanda treats it with elaborate care: he feeds it, decorates its face with kohl, and places a crown upon its head, honoring it as a divine being."
+    issue: "No source mentions a crown on the chick's head. ETCSL says 'dabbed white cedar scent onto its head' and Vanstiphout says 'Dabbed its head with cedar scent.' The 'crown' detail is fabricated. Additionally, the cited line range 'lines 90-140' is wrong; actual content is at lines 50-60."
+    evidence: "ETCSL 1.8.2.2, lines 53-58: 'He painted its eyes with kohl, dabbed white cedar scent onto its head, put up a twisted roll of salt meat.' Vanstiphout p. 139: 'Painted its eyes with kohl, Dabbed its head with cedar scent, And set out spicy sausages at its head.' No crown in any source."
+    recommended_fix: "Remove 'places a crown upon its head' and replace with 'dabbed its head with white cedar scent and set out spiced meat offerings.' Fix line reference to lines 50-60."
+
+  - claim_number: 10
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "The parent Anzud is described with its terrifying divine radiance (me-lam), emphasizing the enormous power of the being whose favor Lugalbanda has won."
+    issue: "The term me-lam does not appear in the ETCSL transliteration of 1.8.2.2. The Sumerian text uses ni2 (fear/awe) at lines 47-48 but not me-lam. The Anzud's terrifying nature is conveyed through physical description (shark's teeth, eagle claws, earth-shaking cry), not through me-lam radiance. The cited line range 'lines 140-160' is also wrong; the bird's return and terrifying description are at lines 40-97."
+    evidence: "Full ETCSL transliteration c1822.htm shows no occurrence of 'me-lam' or 'me-lam2'. Line 47: 'ni2-bi-ta am-e kur-ur2-sse3 ni2-bi im-sar-re' = 'in terror of him buffaloes scatter into the foothills.' This is ni2, not me-lam."
+    recommended_fix: "Remove the me-lam claim. Describe the Anzud's terrifying nature through its actual attributes in the text: shark's teeth, eagle claws, and earth-shaking cry that makes the mountains tremble. Fix line reference."
+
+  - claim_number: 7
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "Lugalbanda prepares choice foods for the chick and sets out offerings of fat, honey, and bread, treating the young bird with the ritual deference due to a god's offspring."
+    issue: "Food items are inaccurate. The text describes honey kneaded into dough (gizi-eshta cakes), salt meat, and sheep's fat — not separate items of 'fat, honey, and bread.' There is no 'bread' in the text. Also, the Jacobsen page reference pp. 326-329 needs verification against the pp. 320-344 range."
+    evidence: "ETCSL tr1822.htm: 'He kneaded the dough with honey... He gave the young salted meat to eat, fed it on sheep's fat; He set out more cakes at its beak.' Vanstiphout p. 139: 'Into the gizi-eshta dough he kneaded honey... He gave the young salted meat to eat, fed it on sheep's fat.'"
+    recommended_fix: "Replace 'offerings of fat, honey, and bread' with 'cakes of honey-dough (gizi-eshta), salt meat, and sheep's fat.'"
+
+  - claim_number: 23
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "The narrative arc — from abandoned soldier to indispensable messenger — is driven by the reciprocity theme."
+    issue: "The cited Vanstiphout page range 'pp. 215-220 (introduction)' does not exist. Vanstiphout 2003 has only xi + 176 pages. The actual introduction is at pp. 1-15 (general) and pp. 132-135 (Return of Lugalbanda)."
+    evidence: "Vanstiphout 2003 confirmed as xi + 176 pages via Internet Archive metadata, Amazon, and direct PDF extraction. Pages 215-220 are non-existent."
+    recommended_fix: "Fix page reference to pp. 2-4 (general introduction, 'The Stories' section) and pp. 132-135 (Return of Lugalbanda introduction)."
+
+  - claim_number: 25
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: "The composition teaches that piety and reciprocity toward the divine are rewarded with supernatural gifts."
+    issue: "The cited Vanstiphout page range 'pp. 215-220' does not exist in the 176-page book. Same fabricated page range as claim 23."
+    evidence: "Vanstiphout 2003 has only xi + 176 pages."
+    recommended_fix: "Fix page reference to pp. 1-4 (general introduction) and pp. 97-98, 132-135 (Lugalbanda poems introductions)."
+
+  # ── MEDIUM severity ───────────────────────────────────────────────────
+
+  - claim_number: 4
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Lugalbanda discovers the nest of the Anzud bird — an enormous divine eagle — high in the mountains, while the parent birds are away hunting."
+    issue: "The cited line range 'lines 30-70' is imprecise; actual nest discovery is at lines 28-49. The Anzud is not specifically an 'eagle' — it is a mythical bird. Vanstiphout glossary (p. 173): 'Lion-faced mythical bird.' The glossary.yaml defines it as 'divine lion-headed eagle.'"
+    evidence: "ETCSL 1.8.2.2, lines 28-49. Vanstiphout 2003 glossary p. 173: 'Anzud. Lion-faced mythical bird; guardian of the mountain ranges between Sumer and Aratta.'"
+    recommended_fix: "Change 'divine eagle' to 'divine lion-headed eagle' per glossary.yaml, or 'mythical bird.' Tighten line range to lines 28-49."
+
+  - claim_number: 5
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The nest contains a single chick of the Anzud bird, left alone while its parents forage."
+    issue: "The cited ETCSL line range 'lines 70-90' is wrong; the chick is described at lines 38-55. The cited Vanstiphout page range 'pp. 225-230' does not exist in the 176-page book. Actual pages: pp. 137-139."
+    evidence: "ETCSL 1.8.2.2, lines 38-55. Vanstiphout 2003 has only 176 pages; Return of Lugalbanda translation starts at p. 137."
+    recommended_fix: "Fix ETCSL line range to lines 38-55. Fix Vanstiphout page range to pp. 137-139."
+
+  - claim_number: 17
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The army of Uruk is stalled before Aratta, unable to complete its campaign; Enmerkar needs a messenger to travel to Uruk and consult Inanna about how to proceed."
+    issue: "The cited ETCSL line range 'lines 330-360' is wrong; the army's stalling and need for a messenger is at approximately lines 250-285. The cited Vanstiphout page range 'pp. 252-258' does not exist in the 176-page book. Also, the text says the messenger needs to go to Kulaba (= Kulab, part of Uruk/Unug), not 'Uruk' generically."
+    evidence: "ETCSL 1.8.2.2, lines 250-285. Vanstiphout pp. 149-151. Vanstiphout 2003 has only 176 pages."
+    recommended_fix: "Fix ETCSL line range to lines 250-285. Fix Vanstiphout page reference to pp. 149-151. Use 'Kulaba' or note Kulab is part of Uruk."
+
+  - claim_number: 18
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Lugalbanda volunteers for the mission, and his supernatural speed makes him the only soldier capable of making the journey in time."
+    issue: "The cited ETCSL line range 'lines 360-400' is wrong. Lugalbanda volunteers at lines 284-289; the journey is at lines 337-353. The text says he delivers the message to Inana in Kulaba, not 'Uruk.'"
+    evidence: "ETCSL 1.8.2.2, lines 284-289 (volunteer), 337-353 (journey and arrival). Vanstiphout pp. 151-155."
+    recommended_fix: "Fix ETCSL line range to lines 284-353. Use 'Kulaba' rather than 'Uruk.'"
+
+  - claim_number: 19
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Inanna receives Lugalbanda and gives him counsel for Enmerkar: she instructs the army on how to overcome Aratta's defenses."
+    issue: "The cited ETCSL line range 'lines 400-430' overshoots the text (which has only 417 lines). Inana's counsel is at approximately lines 388-411. Her instructions are cryptic and ritualistic (involving a tamarisk tree, a specific fish, and sacrifice), not conventional military advice about 'how to overcome Aratta's defenses.'"
+    evidence: "ETCSL 1.8.2.2, lines 388-411. Vanstiphout pp. 156-157. The poem ends at line 417."
+    recommended_fix: "Fix ETCSL line range to lines 388-411. Revise characterization: Inana gives cryptic ritual instructions involving a tamarisk and a fish sacrifice, not straightforward military strategy."
+
+  - claim_number: 20
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Lugalbanda races back to the army with Inanna's message, completing the round trip that would have been impossible without the Anzud's gift."
+    issue: "The cited ETCSL line range 'lines 430-460' is non-existent; the poem has only 417 lines. The return trip is not narrated in detail within this text. The cited Vanstiphout page range 'pp. 262-268' does not exist in the 176-page book."
+    evidence: "ETCSL 1.8.2.2 has 417 lines total (confirmed via transliteration). Lines 430-460 do not exist. Vanstiphout 2003 has only xi + 176 pages."
+    recommended_fix: "Remove the false line reference. The composition ends around line 417 with a closing formula. Acknowledge that the return trip is implied but not narrated. Fix Vanstiphout page reference."
+
+  - claim_number: 21
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The composition concludes with Lugalbanda's indispensable role confirmed: the abandoned soldier has become Enmerkar's most valuable asset through piety and reciprocity rather than martial prowess."
+    issue: "The cited Vanstiphout page range 'pp. 268-275' does not exist in the 176-page book. The conclusion at lines 411-417 contains a closing formula, not an explicit statement about Lugalbanda's 'indispensable role.' The interpretive framing is valid but comes from scholarly commentary."
+    evidence: "Vanstiphout 2003 has only 176 pages. The Return of Lugalbanda translation ends around p. 157."
+    recommended_fix: "Fix Vanstiphout page reference to pp. 155-157. Acknowledge the 'indispensable role' framing is scholarly interpretation, or add an INFERENCE marker."
+
+  - claim_number: 27
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Jacobsen's literary translation (pp. 320-344) emphasizes the poetic dimension of the encounter, while Vanstiphout's critical edition (pp. 215-275) documents minor variant readings."
+    issue: "Jacobsen pp. 320-344 is confirmed correct. However, Vanstiphout pp. 215-275 is fabricated — the book has only 176 pages. The actual Return of Lugalbanda section runs pp. 132-166 (before the bibliography at p. 167)."
+    evidence: "Jacobsen 1987 table of contents confirms 'Lugalbanda and the Thunderbird' at p. 320 with 'Gilgamesh and Aka' at p. 345. Vanstiphout 2003 PDF extraction confirms xi + 176 pages, with Return of Lugalbanda at pp. 132-157 (bibliography begins at p. 167)."
+    recommended_fix: "Fix Vanstiphout page range from 'pp. 215-275' to 'pp. 132-166.'"
+
+  # ── LOW severity ──────────────────────────────────────────────────────
+
+  - claim_number: 2
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "LACUNA marker: Opening lines (1-15) partially damaged."
+    issue: "The ETCSL translation for lines 1-27 is substantially intact and readable. The LACUNA marker may overstate the damage, though some physical tablets may indeed be damaged even if the composite text is reconstructable from overlapping manuscripts."
+    evidence: "ETCSL tr1822.htm shows coherent, readable translation from line 1 onward."
+    recommended_fix: "Verify actual damage extent against individual manuscripts. If the composite text is substantially intact due to overlapping sources, revise the LACUNA marker to indicate the damage is resolved by composite reconstruction."
 
   - claim_number: 24
-    kind: "UNVERIFIED"
-    severity: "LOW"
-    claim: "The text valorizes 'practical humility over conventional heroic ambition.'"
-    issue: "The specific phrase is the claims author's formulation. Jacobsen discusses the significance but may not use this exact framing."
-    evidence: "Jacobsen 1987 discusses Lugalbanda's choice but exact formulation is uncertain."
-    recommended_fix: "Add [INFERENCE:] marker or verify Jacobsen's language."
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "Lugalbanda's choice to request speed rather than wealth or power demonstrates the text's valorization of practical humility over conventional heroic ambition."
+    issue: "This is a scholarly interpretation. The text does show Lugalbanda refusing multiple conventional rewards in favor of speed (confirmed at lines 135-167), but 'practical humility' is an interpretive framing. Vanstiphout (p. 3) describes the scheme as 'the youngest and weakest who becomes the greatest.'"
+    evidence: "Vanstiphout 2003, pp. 3-4. ETCSL 1.8.2.2, lines 135-167."
+    recommended_fix: "Add INFERENCE marker or cite a specific scholarly source that uses this formulation."

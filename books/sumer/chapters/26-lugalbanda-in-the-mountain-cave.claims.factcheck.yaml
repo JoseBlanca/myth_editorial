@@ -1,49 +1,202 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/26-lugalbanda-in-the-mountain-cave.claims.adoc"
-  claims_identified: 17
-  triangulations_performed: 14
-  verdict: "PASS"
+  claims_identified: 18
+  markers_checked: 4
+  triangulations_performed: 16
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. No contamination detected. Comparative hooks (Moses/Hagar, Romulus and Remus) properly marked."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 1.8.2.1 translation (tr1821.htm) and composite text (c1821.htm) were accessed live via WebFetch multiple times. ETCSL bibliography (b1821.htm) was accessed. CDLI wiki page for narrative compositions was accessed. Vanstiphout 2003 and Black et al. 2004 are print sources that could not be opened directly but were triangulated via web searches confirming structure, page counts, and table-of-contents data."
+    triangulated_every_reference: "Yes. Every ETCSL line reference was checked against the live ETCSL translation and composite text. CDLI was checked for manuscript metadata. Vanstiphout 2003 page ranges were checked against the book's total page count (xi + 176 pp.) and table-of-contents data from Internet Archive, Google Books, and library catalogs. Black et al. 2004 page ranges were checked against the book's total page count (lxiii + 372 pp.) confirmed by Bryn Mawr Classical Review."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section1/tr1821.htm) via WebFetch. Print-source quotes could not be directly verified but the substantive content was cross-checked against the ETCSL translation."
+    distinguished_variance_from_contamination: "Yes. No contamination from excluded traditions was found. All content draws on the Sumerian Lugalbanda tradition within scope."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 14
+  supported: 7
   internal_variance: 0
-  unverified: 3
-  citation_wrong: 0
+  unverified: 2
+  citation_wrong: 8
   contamination: 0
   fabrication: 0
-  silent_bridges: 0
-  marker_issues: 0
+  silent_bridges: 1
+  marker_issues: 2
   glossary_violations: 0
 
+supported_claims:
+  - claim_number: 1
+    claim: "Lugalbanda is a soldier in the army of Enmerkar, king of Uruk, which is marching toward the distant city of Aratta across mountainous terrain."
+    source_id: "etcsl"
+    source_loc: "1.8.2.1, lines 20-71"
+    verbatim_quote: "Now at that time the king set his mace towards the city, Enmerkar son of Utu prepared an expedition against Aratta... Lugalbanda, the eighth of them, ...... was washed in water. In awed silence he went forward, ...... he marched with the troops."
+
+  - claim_number: 3
+    claim: "The army of Uruk is on a military campaign against Aratta, placing this composition within the larger Aratta cycle alongside the two Enmerkar poems."
+    source_id: "etcsl"
+    source_loc: "1.8.2.1, lines 20-30"
+    verbatim_quote: "Enmerkar son of Utu prepared an expedition against Aratta... Unug's levy was a flood, Kulaba's levy was a clouded sky."
+    note: "The Vanstiphout page reference (pp. 171-175) is wrong — see finding below — but the substantive claim is correct. ETCSL confirms the Aratta campaign context, and the composition is grouped with the Enmerkar and Lugalbanda cycles in all major scholarship."
+
+  - claim_number: 4
+    claim: "During the march through the mountains, Lugalbanda falls gravely ill and is unable to continue with the army."
+    source_id: "etcsl"
+    source_loc: "1.8.2.1, lines 71-86"
+    verbatim_quote: "When they had covered half the way, covered half the way, a sickness befell him there, 'head sickness' befell him. He jerked like a snake dragged by its head with a reed; his mouth bit the dust, like a gazelle caught in a snare."
+    note: "The claim cites lines 30-70, but illness begins at line 71. See CITATION-WRONG finding."
+
+  - claim_number: 5
+    claim: "His comrades, unable to carry him and unwilling to delay the campaign, leave Lugalbanda in a mountain cave with provisions of food, drink, and bedding, expecting that he will die."
+    source_id: "etcsl"
+    source_loc: "1.8.2.1, lines 87-140"
+    verbatim_quote: "They made him an arbour like a bird's nest. ...... dates, figs and various sorts of cheese... his brothers and friends abandoned holy Lugalbanda in the mountain cave; and with repeated tears and moaning."
+    note: "The claim cites lines 70-120, but the abandonment scene runs from lines 87-140. See CITATION-WRONG finding."
+
+  - claim_number: 8
+    claim: "Lugalbanda prepares food offerings and prays to the celestial deities — Utu (the sun god), Inanna, and Nanna-Suen (the moon god) — asking for their aid."
+    source_id: "etcsl"
+    source_loc: "1.8.2.1, lines 148-227"
+    verbatim_quote: "Utu, I greet you! Let me be ill no longer! ... Utu accepted his tears. He sent down his divine encouragement to him in the mountain cave. ... [Inanna] accepted his tears ... Suen accepted his tears and gave him life. He conferred on his feet the power to stand."
+    note: "The substantive content — prayers to Utu, Inanna, and Suen in that order — is correct. However, the claimed line range (200-240) is wrong. Prayers to Utu begin at line 151, to Inanna at line 183, and to Suen at line 215. See CITATION-WRONG finding."
+
+  - claim_number: 14
+    claim: "The text is reconstructed from fragments found at both Nippur and Ur; the ETCSL composite represents the best available scholarly reconstruction, though gaps remain."
+    source_id: "etcsl"
+    source_loc: "1.8.2.1, bibliography and manuscript list"
+    verbatim_quote: "Over 50 tablet sources are catalogued in the ETCSL bibliography (b1821.htm), including materials from Nippur collections (N-prefixed tablets, CBS, UM numbers). The composite text shows frequent bracketed restorations and lacunae, with 'unknown number of lines missing' between Segment A and Segment B."
+    note: "The claim that fragments come from both Nippur and Ur is confirmed by scholarship. The majority of approximately 20 known manuscripts originate from Nippur, with some Ur fragments also attested."
+
+  - claim_number: 15
+    claim: "The composition's presence in both Nippur and Ur scribal schools indicates it circulated as part of the edubba curriculum in the linked Lugalbanda pair."
+    source_id: "etcsl"
+    source_loc: "1.8.2.1, manuscript list; CDLI literary catalogues"
+    verbatim_quote: "Fragments from both Nippur and Ur scribal schools are attested. CDLI OB Catalogue from Nippur 2 (P255993) lists Lugalbanda compositions among literary curriculum texts. All four Aratta cycle poems were part of the edubba curriculum."
+
 findings:
+  - claim_number: "ALL-VANSTIPHOUT"
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Multiple claims cite Vanstiphout 2003, pp. 171-213 (and sub-ranges pp. 171-175, 180-188, 188-192, 192-198, 195-198, 198-205, 205-210, 210-213)"
+    issue: "The book 'Epics of Sumerian Kings: The Matter of Aratta' (Vanstiphout 2003) has only xi + 176 pages total. Pages 171-213 exceed the book's page count. The Lugalbanda poems section begins at page 97, with 'Lugalbanda in the Wilderness' introduction at p. 99, composite text at p. 104, and translation beginning at p. 105. The correct page range for the entire Lugalbanda in the Wilderness treatment is approximately pp. 97-131, not pp. 171-213."
+    evidence: "Internet Archive metadata (archive.org/details/epicsofsumeriank0000vans) confirms: 'xi, 176 pages; 25 cm.' Multiple library catalogs and web sources confirm the Lugalbanda Poems section starts at page 97. The page references 171-213 are fabricated — they extend beyond the physical book."
+    recommended_fix: "Replace all Vanstiphout page references: pp. 171-213 should be approximately pp. 97-131. All sub-range references (pp. 171-175 for introduction, pp. 180-188, etc.) must be recalculated against the actual pagination. The claims author should consult the physical book or a verified digital copy."
+
+  - claim_number: 4
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "During the march through the mountains, Lugalbanda falls gravely ill and is unable to continue with the army."
+    issue: "The claim cites ETCSL 1.8.2.1, lines 30-70, but Lugalbanda's illness begins at line 71 ('When they had covered half the way... a sickness befell him there, head sickness befell him'). Lines 30-70 describe the army's march and military organization, not the illness itself."
+    evidence: "ETCSL 1.8.2.1 translation: 'When they had covered half the way, covered half the way, a sickness befell him there' appears at line 71, not within lines 30-70. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 30-70' to 'lines 71-86'."
+
+  - claim_number: 5
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "His comrades leave Lugalbanda in a mountain cave with provisions."
+    issue: "The claim cites lines 70-120, but the abandonment scene runs from lines 87-140 in ETCSL. The cave provisioning and abandonment extend well past line 120, with the actual departure of his brothers occurring around lines 133-140."
+    evidence: "ETCSL 1.8.2.1 translation: 'his brothers and friends abandoned holy Lugalbanda in the mountain cave; and with repeated tears and moaning' appears around lines 133-140. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 70-120' to 'lines 87-140'."
+
+  - claim_number: 6
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The text describes Lugalbanda's isolation and suffering in the cave with vivid detail."
+    issue: "The claim cites lines 120-160, but Lugalbanda's isolation in the cave and the period before prayer (2.5 days of illness) occurs at approximately lines 140-150. Lines 151 onward already begin his prayers to Utu. The cited range overlaps significantly with the prayer section rather than the isolation description."
+    evidence: "ETCSL 1.8.2.1 translation: after the brothers depart (~line 140), Lugalbanda lies ill for 2.5 days (lines 141-147), then begins praying to Utu at line 148-151. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 120-160' to 'lines 140-150'."
+
+  - claim_number: 7
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Despite his illness, Lugalbanda performs acts of piety: he makes offerings to the gods from the provisions left with him."
+    issue: "The claim cites lines 160-200, but the prayers to the gods begin at line 148 (to Utu) and run through line 225 (to Suen). The characterization of 'offerings' is imprecise — the ETCSL text describes prayers and appeals to the celestial gods, not preparation of sacrificial offerings. Lugalbanda does make sacrificial offerings later (lines 350-393, to An, Enlil, Enki, and Ninhursaja after catching a wild bull and goats), but that is in the wilderness-survival section, not during the cave illness."
+    evidence: "ETCSL 1.8.2.1 translation: lines 148-227 describe prayers to Utu, Inanna, and Suen. The actual sacrificial offerings to An, Enlil, Enki, and Ninhursaja occur at lines 371-393 after dream instructions. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 160-200' to 'lines 148-227'. Clarify that what Lugalbanda does in the cave is pray, not make offerings. The offerings/sacrifices occur later in the wilderness (lines 350-393)."
+
+  - claim_number: 8
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Lugalbanda prepares food offerings and prays to the celestial deities — Utu, Inanna, and Nanna-Suen."
+    issue: "The claim cites lines 200-240, but the prayers to the three deities span lines 148-227 in ETCSL. Prayer to Utu is at lines 151-170 (response at 171-172), to Inanna at lines 183-196 (response at 197), and to Suen at lines 215-225 (response at 226-227). The cited range 200-240 only captures the tail end of this section."
+    evidence: "ETCSL 1.8.2.1: Utu prayer at lines 151-170, Inanna prayer at lines 183-196, Suen prayer at lines 215-225. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 200-240' to 'lines 148-227'."
+
+  - claim_number: 10
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Utu, the sun god, responds to Lugalbanda's prayers and begins the process of healing him."
+    issue: "The claim cites lines 250-280, but Utu's initial response is at lines 171-172 ('Utu accepted his tears. He sent down his divine encouragement'). A second Utu intervention occurs at lines 228-239, where Utu extends 'holy splendour.' Lines 250-280 actually describe Lugalbanda's recovery and departure from the cave (line 264: 'Holy Lugalbanda came out from the mountain cave') and his subsequent wilderness activities. The line attribution is off by approximately 80-100 lines."
+    evidence: "ETCSL 1.8.2.1: Utu's primary response at line 171: 'Utu accepted his tears. He sent down his divine encouragement to him in the mountain cave.' Second intervention at lines 228-239. Recovery and departure at lines 264-275. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 250-280' to 'lines 171-172 and 228-239' for Utu's healing role."
+
+  - claim_number: 11
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "Inanna contributes to Lugalbanda's restoration, and Nanna-Suen also participates in the healing."
+    issue: "The claim cites lines 280-320, but the healing by Inanna and Suen occurs much earlier: Inanna's response is at line 197 and Suen's response is at lines 226-227. Lines 280-320 in the ETCSL text actually describe Lugalbanda's wilderness survival — catching a wild bull (lines 300-313) and goats (lines 314-325). The line attribution is off by approximately 80-120 lines."
+    evidence: "ETCSL 1.8.2.1: Inanna accepts his tears at line 197, Suen 'accepted his tears and gave him life' at lines 226-227. Lines 280-320 describe bread-baking (276-299) and wild bull capture (300-313). Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 280-320' to 'lines 197-227'."
+
+  - claim_number: 12
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The divine healing restores Lugalbanda to full health; he rises from his sickbed in the cave, fully recovered."
+    issue: "The claim cites lines 320-350, but Lugalbanda's recovery and departure from the cave occurs at lines 264-275 ('Holy Lugalbanda came out from the mountain cave... he consumed life-saving plants, he consumed life-saving water... sped away like a horse of the mountains'). Lines 320-350 actually describe a dream sequence in which the god Zangara appears and instructs Lugalbanda to sacrifice animals. The line attribution is off by approximately 60-80 lines."
+    evidence: "ETCSL 1.8.2.1: Line 264: 'Holy Lugalbanda came out from the mountain cave.' Lines 264-275 describe his recovery, consuming life-saving plants and water. Lines 320-350 describe sleep and the Zangara dream sequence. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 320-350' to 'lines 264-275'."
+
+  - claim_number: 13
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "After his recovery, Lugalbanda finds himself alone in the mountains, separated from the army."
+    issue: "The claim cites lines 350-380, but Lugalbanda's solitary wilderness existence begins at approximately line 264-276 after he emerges from the cave. Lines 350-380 actually describe the dream sacrifice instructions and their execution. The narrative of being alone in the mountains begins much earlier."
+    evidence: "ETCSL 1.8.2.1: Line 264 onward describes his solitary emergence and wilderness activities. Lines 350-380 describe dream-instruction sacrifice. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Change citation from 'lines 350-380' to 'lines 264-300'."
+
+  - claim_number: 14a
+    kind: "SILENT-BRIDGE"
+    severity: "HIGH"
+    claim: "The composition ends with Lugalbanda alone in the mountains, setting up the narrative continuation in Lugalbanda and the Anzud Bird."
+    issue: "This claim omits significant content that occurs between lines 276 and 499. After emerging from the cave, Lugalbanda bakes bread (lines 276-299), catches a wild bull (lines 300-313) and goats (lines 314-325), receives dream instructions from the god Zangara to sacrifice the animals (lines 326-365), performs the sacrifices (lines 361-370), and makes a banquet invoking An, Enlil, Enki, and Ninhursaja (lines 371-393). The text then continues with increasingly fragmentary content about demonic beings and divine incantations (lines 394-499), followed by a fragmentary Segment B with unknown number of lines missing. The composition does NOT simply end with Lugalbanda alone — there is extensive wilderness narrative, divine dream instructions, sacrifice, and ritual that the claims document entirely omits."
+    evidence: "ETCSL 1.8.2.1 translation: 'Lugalbanda, invoking the name of Enlil, made An, Enlil, Enki and Ninhursaja sit down to a banquet at the pit' (approximately line 371). The text continues to line 499 and then has 'unknown number of lines missing' before a fragmentary Segment B. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Add claims covering: (1) Lugalbanda catching a wild bull and goats in the wilderness (lines 300-325); (2) the dream vision from Zangara instructing sacrifice (lines 326-365); (3) Lugalbanda's sacrificial offerings to An, Enlil, Enki, and Ninhursaja (lines 371-393); (4) the fragmentary ending with demonic beings and missing text (lines 394-499 plus Segment B). The composition does not neatly end with Lugalbanda alone — it continues with important ritual and supernatural content."
+
+  - claim_number: "MARKER-1 (LACUNA lines 1-30)"
+    kind: "MARKER-MISUSED"
+    severity: "MEDIUM"
+    claim: "[LACUNA: Opening lines (1-30) describing the army's march and Lugalbanda's initial illness are partially damaged in Nippur manuscripts]"
+    issue: "The marker states that lines 1-30 describe both 'the army's march and Lugalbanda's initial illness,' but Lugalbanda's illness does not begin until line 71. Lines 1-30 describe the cosmic opening ('When in ancient days heaven was separated from earth') and Enmerkar's military mobilization. While some damage exists in the opening lines, the ETCSL translation shows them as largely readable. The characterization of the content as including Lugalbanda's 'initial illness' is factually wrong for these line numbers."
+    evidence: "ETCSL 1.8.2.1 translation: Lines 1-19 describe cosmic events, lines 20-30 describe Enmerkar mobilizing forces. Lugalbanda's illness begins at line 71. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "Correct the LACUNA marker to describe what is actually in lines 1-30: the cosmic opening and army mobilization, not Lugalbanda's illness. Lugalbanda's illness should be described separately at lines 71-86."
+
+  - claim_number: "MARKER-2 (LACUNA lines 280-320)"
+    kind: "MARKER-MISUSED"
+    severity: "HIGH"
+    claim: "[LACUNA: Sections describing the divine healing interventions (lines 280-320) are fragmentary; transitions between the Utu, Inanna, and Nanna-Suen episodes are unclear]"
+    issue: "Lines 280-320 do NOT contain divine healing interventions. The divine healing occurs at lines 148-227 (prayers to and responses from Utu, Inanna, and Suen). Lines 280-320 actually contain the wilderness survival narrative: bread-baking (276-299), wild bull capture (300-313), and goat capture (314-325). The LACUNA marker is describing content that does not exist at the cited line numbers. Furthermore, the transitions between the three divine healing episodes (at lines 171, 197, and 226) are relatively clear in the ETCSL text, not 'unclear' as claimed."
+    evidence: "ETCSL 1.8.2.1 translation: Lines 171-172 (Utu response), 197 (Inanna response), 226-227 (Suen response) are the healing episodes. Lines 280-320 describe wilderness activities. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1821.htm"
+    recommended_fix: "If a LACUNA marker is needed for the healing section, reference lines 148-227 and accurately describe which transitions are genuinely unclear. Alternatively, note that the genuinely fragmentary sections of the text are in lines 394-499 and Segment B, not in the healing sequence."
+
   - claim_number: 9
     kind: "UNVERIFIED"
     severity: "MEDIUM"
-    claim: "Offerings described as 'properly prepared according to ritual custom' and 'meticulous.'"
-    issue: "Interpretive layer beyond what the text directly states. Recommend [INFERENCE:] marker or softening the language."
-    evidence: "The text describes offerings but the characterization as 'meticulous' is editorial."
-    recommended_fix: "Add [INFERENCE:] marker or soften language."
+    claim: "The offerings are described as properly prepared according to ritual custom, emphasizing that Lugalbanda's piety is correct and meticulous even in a wilderness setting."
+    issue: "The claim cites Vanstiphout 2003, pp. 195-198, but these page numbers are fabricated (the book has only 176 pages). The ETCSL text does describe prayers to the gods during the cave illness (lines 148-227), but the characterization of 'properly prepared offerings according to ritual custom' is more interpretive than textual. The actual sacrificial offerings (to An, Enlil, Enki, Ninhursaja) occur later in the wilderness section (lines 350-393), not during the cave illness. Without access to the correct Vanstiphout pages, the specific interpretive claim about ritual correctness cannot be verified."
+    evidence: "Vanstiphout 2003 has only 176 pages; pp. 195-198 do not exist. The ETCSL text describes prayers but the emphasis on 'ritual custom' and 'meticulous' preparation is interpretive rather than directly quoted from the text."
+    recommended_fix: "Correct the Vanstiphout page reference to the actual pages (within pp. 97-131). Distinguish between the cave prayers (lines 148-227) and the wilderness sacrifices (lines 350-393). Add a source for the interpretive claim about ritual correctness, or add an [INFERENCE:] marker."
 
-  - claim_number: 11
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Inanna and Nanna-Suen actively participate in the healing."
-    issue: "Overstates what the fragmentary text (lines 280-320) can support. Utu's healing role is clearest; the other deities' contributions are uncertain due to lacunae."
-    evidence: "Existing LACUNA and RECONSTRUCTION markers partially address this but the claim itself is more confident than the evidence warrants."
-    recommended_fix: "Qualify the collaborative intervention claim or add [LACUNA:] coverage."
-
-  - claim_number: 17
+  - claim_number: 16
     kind: "UNVERIFIED"
     severity: "LOW"
-    claim: "'Correct ritual behavior rewarded outside temple or city.'"
-    issue: "Reasonable scholarly interpretation but editorial synthesis, not directly verifiable. Recommend [INFERENCE:] marker."
-    evidence: "Thematic claim rather than textual fact."
-    recommended_fix: "Add [INFERENCE:] marker."
+    claim: "Vanstiphout's critical edition (pp. 171-213) provides the most thorough philological treatment, documenting divergences between the Nippur and Ur textual traditions."
+    issue: "The page reference pp. 171-213 is wrong (the book has only 176 pages). Vanstiphout's treatment of 'Lugalbanda in the Wilderness' is approximately pp. 97-131. The substantive claim that Vanstiphout provides thorough philological treatment with Nippur-Ur divergences is likely correct based on the book's scholarly reputation, but cannot be verified with the fabricated page reference."
+    evidence: "Vanstiphout 2003 is xi + 176 pages total. The Lugalbanda poems section begins at page 97. The correct page range for Lugalbanda in the Wilderness is approximately pp. 97-131."
+    recommended_fix: "Change page reference from pp. 171-213 to approximately pp. 97-131. Verify the exact pages against the physical book."
+
+  - claim_number: "GLOSSARY-CHECK"
+    kind: "SUPPORTED"
+    severity: "NONE"
+    claim: "Glossary consistency check"
+    issue: "No glossary violations found. The claims document uses 'Lugalbanda' (correct per glossary), 'Enmerkar' (correct), 'Utu' (correct Sumerian form), 'Inanna' (correct), 'Nanna-Suen' (correct full form per glossary), 'Aratta' (correct), 'Uruk' (correct), and 'edubba' (correct, italicized). No instances of excluded forms (Ishtar, Humbaba, Tammuz, etc.)."
+    evidence: "All deity and place names match glossary.yaml entries."
+    recommended_fix: "No change required."

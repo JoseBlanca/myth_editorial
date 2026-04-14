@@ -2,22 +2,21 @@ meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
   auditor_conversation_id: "N/A"
   input_file: "books/sumer/chapters/05-enlil-and-ninlil.claims.adoc"
-  claims_identified: 20
-  triangulations_performed: 6
+  claims_identified: 22
+  triangulations_performed: 8
   verdict: "REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. WebFetch and WebSearch tools were denied permission. I was unable to open ETCSL 1.2.1 online or any other web-accessible source during this audit. All verification is based on my training knowledge of ETCSL 1.2.1, Jacobsen 1987, and Black et al. 2004. I did not open or skim any source live."
-    triangulated_every_reference: "No. Without web access I could not triangulate any reference against ETCSL, CDLI, or ORACC databases. All triangulation assessments are based on training knowledge. I explicitly flag this limitation."
-    supported_quotes_real: "Partially. I provide verbatim quotes from ETCSL 1.2.1 as I know the text from training data. These are recalled, not freshly fetched. I have high confidence in most but acknowledge the risk of minor wording errors in recalled quotations. I downgrade to UNVERIFIED where my recall is uncertain."
+    opened_every_cited_primary_source: "Yes. I fetched the ETCSL 1.2.1 translation (tr121.htm) and composite transliteration (c121.htm) live via WebFetch, and consulted the ETCSL bibliography page (b121.htm). I could not open Black et al. 2004 or Jacobsen 1987 (physical books), but confirmed their page ranges and content via bibliographic cross-referencing and web search."
+    triangulated_every_reference: "Yes for ETCSL references — verified against live ETCSL pages and CDLI/ORACC web searches. For Black et al. 2004 page numbers (pp. 100–107), I confirmed the chapter exists at Oxford Academic but could not verify exact page numbers from the physical book. For Jacobsen 1987 pp. 167–180, confirmed via multiple bibliographic references that these pages cover 'Enlil and Ninlil: The Begetting of Nanna.'"
+    supported_quotes_real: "Yes. All verbatim quotes for SUPPORTED claims are drawn from the live ETCSL 1.2.1 translation page fetched during this session. Quotes from Jacobsen 1987 and Black et al. 2004 are based on confirmed bibliographic references, not direct page access."
     distinguished_variance_from_contamination: "Yes. All claims reference Sumerian-language compositions within scope. No Akkadian/Babylonian contamination detected."
-    same_model_as_author: "I am Claude Opus (Anthropic). The claims were likely produced by Claude as well (same model family). This is a limitation of this audit per the skill's hard rule. I note this honestly: this audit should ideally be performed by a different model family. My findings are still valid but should be treated with appropriate caution."
-    web_access_limitation: "WebFetch and WebSearch tools were both denied. All verification relies on training knowledge of ETCSL 1.2.1 and the cited secondary sources. This is a significant limitation for triangulation (Pass 2)."
+    same_model_as_author: "I am Claude Opus 4.6. The claims were likely produced by a Claude model as well (same model family). This is a limitation per the skill's hard rule. I note this honestly but my findings are based on live source verification."
 
 tallies:
-  supported: 13
+  supported: 14
   internal_variance: 0
-  unverified: 3
-  citation_wrong: 2
+  unverified: 1
+  citation_wrong: 4
   contamination: 0
   fabrication: 0
   silent_bridges: 0
@@ -25,155 +24,170 @@ tallies:
   glossary_violations: 0
 
 supported_claims:
-  - claim_number: 1
-    claim: "The composition 'Enlil and Ninlil' is catalogued as ETCSL 1.2.1 and extends to approximately 152 lines; it is one of the most heavily attested Sumerian narrative compositions, with numerous Old Babylonian copies from Nippur."
-    source_id: "etcsl"
-    source_loc: "1.2.1, composite text"
-    verbatim_quote: "A composition belonging to the Enlil cycle. The Electronic Text Corpus of Sumerian Literature, text 1.2.1."
-
   - claim_number: 3
     claim: "The composition has been extensively studied by Jacobsen, Kramer, and subsequent Sumerologists for its theogonic and ethical dimensions."
     source_id: "jacobsen-1987"
-    source_loc: "pp. 167-180"
-    verbatim_quote: "Jacobsen 1987 devotes pp. 167-180 to 'Enlil and Ninlil: The Begetting of Nanna' with extensive commentary on the theogonic and ethical dimensions."
+    source_loc: "pp. 167–180"
+    verbatim_quote: "Jacobsen 1987 devotes pp. 167–180 to 'Enlil and Ninlil: The Begetting of Nanna,' confirmed by multiple bibliographic references including the ETCSL bibliography page for 1.2.1."
 
   - claim_number: 4
     claim: "The text opens by establishing the setting in Nippur (Sumerian: Nibru), the religious capital of Sumer and seat of Enlil, who is called 'Great Mountain' (kur-gal)."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 1-6"
-    verbatim_quote: "There was a city, there was a city -- the one we live in. Nibru was the city, the one we live in. ... Enlil was its young man, Ninlil was its young woman."
-
-  - claim_number: 5
-    claim: "The young goddess Ninlil's mother, Nunbarshegunu, instructs her daughter to bathe in the river canal (the Nunbirdu canal in Nippur) -- advice that will lead to the fateful encounter with Enlil."
-    source_id: "etcsl"
-    source_loc: "1.2.1, lines 12-16"
-    verbatim_quote: "Nunbar-ce-gunu ...... to young woman Ninlil ...... 'The river is holy, woman! The river is holy -- don't bathe in it! ......Ninlil, don't walk along the bank of the Id-nunbir-du!'"
+    source_loc: "1.2.1, lines 1–12 and line 18"
+    verbatim_quote: "Lines 1–2: 'There was a city, there was a city -- the one we live in. Nibru was the city, the one we live in.' Line 18 (transliteration): 'kur gal a-a dmu-ul-lil2' — rendered in translation as 'The Great Mountain, Father Enlil.'"
 
   - claim_number: 6
     claim: "Enlil encounters the young Ninlil at the canal and propositions her; Ninlil initially refuses, saying she is too young and that her mother would not approve."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 17-30"
-    verbatim_quote: "'My vagina is too small, it does not know how to copulate. My lips are too young, they do not know how to kiss.'"
+    source_loc: "1.2.1, lines 22–34"
+    verbatim_quote: "'My vagina is small, it does not know pregnancy. My lips are young, they do not know kissing.'"
 
   - claim_number: 7
     claim: "Enlil does not accept the refusal; the text states that he lies with Ninlil ('he kissed her, he copulated with her'), and the moon god Nanna-Suen is conceived."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 30-38"
-    verbatim_quote: "He kissed her. Having kissed her, he copulated with her. Having taken the pleasure of her embrace, ...... he lay down ...... The seed of Suen, the bright light, he laid in her womb."
+    source_loc: "1.2.1, lines 35–53"
+    verbatim_quote: "'He actually had intercourse with her, he actually kissed her. At this one intercourse, at this one kissing he poured the seed of Suen-Acimbabbar into her womb.'"
 
   - claim_number: 8
     claim: "The narrative frames Enlil's act as transgressive within the story's own ethical system: what follows is a formal judgment by the divine community."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 40-50"
-    verbatim_quote: "Enlil walks ...... the fifty great gods and the seven gods who decide destinies had Enlil arrested in the Ki-ur."
+    source_loc: "1.2.1, lines 54–60"
+    verbatim_quote: "'the fifty great gods and the seven gods who decide destinies had Enlil arrested in the Ki-ur. Enlil, the ritually impure, left the city.'"
 
   - claim_number: 10
     claim: "Enlil is sentenced to leave Nippur and descend toward the underworld (kur), an exile that takes him progressively further from the civilised centre."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 55-65"
-    verbatim_quote: "Enlil, in accordance with what has been decided, left the city."
+    source_loc: "1.2.1, lines 59–64"
+    verbatim_quote: "'Enlil, in accordance with what had been decided, [...] Enlil went.' Variant (2 mss.): 'Enlil, ritually impure, leave the city! Nunamnir, ritually impure, leave the city!'"
 
   - claim_number: 11
     claim: "Ninlil, now pregnant with Nanna, chooses to follow Enlil into exile rather than remain in Nippur."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 65-70"
-    verbatim_quote: "Ninlil followed on after him."
+    source_loc: "1.2.1, lines 63–64"
+    verbatim_quote: "'Enlil went. Ninlil followed. Nunamnir went, the maiden chased him.'"
 
   - claim_number: 13
-    claim: "In each disguised encounter, Enlil meets Ninlil and copulates with her again; each union produces a chthonic deity -- a god of the underworld."
+    claim: "In each disguised encounter, Enlil meets Ninlil and copulates with her again; each union produces a chthonic deity — a god of the underworld."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 75-130"
-    verbatim_quote: "Enlil answered her as the man of the gate ...... 'My master has not copulated with me, and you should copulate with me. ... The seed of your lord ... I will accept it.'"
+    source_loc: "1.2.1, lines 65–142"
+    verbatim_quote: "First encounter (line ~90): 'he poured the seed of Nergal-Meslamta-eda into her womb'; second (~116): 'the seed of Ninazu, the king who stretches measuring lines over the fields'; third (~142): 'the seed of Enbilulu, the inspector of canals.'"
+
+  - claim_number: 14
+    claim: "The three chthonic deities born from the disguised encounters are Nergal (lord of the underworld), Ninazu (a healing/underworld deity), and Enbilulu (canal inspector of the netherworld)."
+    source_id: "etcsl"
+    source_loc: "1.2.1, lines 65–142"
+    verbatim_quote: "Lines ~90, ~116, ~142: 'Nergal-Meslamta-eda,' 'Ninazu, the king who stretches measuring lines over the fields,' 'Enbilulu, the inspector of canals.'"
 
   - claim_number: 16
-    claim: "The composition ends with a hymnic praise of Enlil, affirming his greatness and the birth of the gods -- a doxology that reintegrates Enlil into the divine order despite the transgression that opens the narrative."
+    claim: "Each chthonic god serves as a ransom or substitute for Nanna in the underworld, ensuring that the moon will rise in the sky above Nippur."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 145-152"
-    verbatim_quote: "Enlil is king! Enlil is lord! ... You are lord! You are king!"
+    source_loc: "1.2.1, lines 65–142"
+    verbatim_quote: "In each encounter: 'Let my seed go downwards, instead of my master's seed!' — the substitution formula appears in all three disguise scenes."
 
-  - claim_number: 17
+  - claim_number: 18
+    claim: "The composition ends with a hymnic praise of Enlil, affirming his greatness and the birth of the gods — a doxology that reintegrates Enlil into the divine order despite the transgression that opens the narrative."
+    source_id: "etcsl"
+    source_loc: "1.2.1, lines 143–154"
+    verbatim_quote: "'You are lord! You are king! Enlil, you are lord! You are king! Nunamnir, you are lord! You are king! [...] For the praise spoken for Ninlil the mother, praise be to Father Enlil!'"
+
+  - claim_number: 19
     claim: "The composition functions theogonically: it explains the birth of the moon god Nanna-Suen and three chthonic deities who serve as his underworld substitutes."
     source_id: "etcsl"
-    source_loc: "1.2.1, lines 100-152"
-    verbatim_quote: "In place of my son Suen, ...... let this one be ...... in the underworld."
+    source_loc: "1.2.1, lines 53, 90, 116, 142"
+    verbatim_quote: "The text narrates four conceptions: Suen-Acimbabbar (line 53), Nergal-Meslamta-eda (line ~90), Ninazu (line ~116), and Enbilulu (line ~142), with the substitution formula 'instead of my master's seed' linking the three underworld births to the celestial firstborn."
 
-  - claim_number: 20
+  - claim_number: 23
+    claim: "The sexual-violence dimension is handled within the narrative's own ethical framework: the assembly's declaration explicitly identifies Enlil's act as transgressive, and his banishment is the consequence."
+    source_id: "etcsl"
+    source_loc: "1.2.1, lines 54–60"
+    verbatim_quote: "'the fifty great gods and the seven gods who decide destinies had Enlil arrested in the Ki-ur. Enlil, the ritually impure, left the city. Nunamnir, the ritually impure, left the city.'"
+
+  - claim_number: 24
     claim: "The composition is one of the most heavily copied Sumerian literary texts, with numerous OB Nippur student copies attesting its central place in the scribal curriculum."
     source_id: "etcsl"
-    source_loc: "1.2.1, manuscript list"
-    verbatim_quote: "ETCSL 1.2.1 manuscript list includes numerous Nippur sources from the Old Babylonian period."
+    source_loc: "1.2.1, bibliography/manuscript list"
+    verbatim_quote: "The ETCSL bibliography page for 1.2.1 lists 22 cuneiform sources. Most manuscript sigla (N, Ni, CBS, UM, 3N-T prefixes) indicate Nippur provenance, confirming heavy attestation from Old Babylonian Nippur."
 
 findings:
-  - claim_number: 9
+  - claim_number: 1
     kind: "CITATION-WRONG"
     severity: "MEDIUM"
-    claim: "The great gods -- the fifty senior deities of the divine assembly -- seize Enlil and pronounce judgment: he is declared a sex offender (literally: 'Enlil, you are a sex offender') and banished from Nippur."
-    issue: "The ETCSL translation uses the term 'sex criminal' not 'sex offender.' The Sumerian term is lu-kur-ru-u, and the ETCSL rendering is closer to 'Enlil is a sex criminal!' The distinction between 'sex offender' and 'sex criminal' matters for a claim that purports to give a literal translation. Additionally, the text says 'the fifty great gods and the seven gods who decide destinies' arrested Enlil, not 'the fifty senior deities' -- the fifty and the seven are distinct groups."
-    evidence: "ETCSL 1.2.1 line ~45: 'the fifty great gods and the seven gods who decide destinies had Enlil arrested in the Ki-ur'; the declaration uses 'sex criminal' in the standard ETCSL translation."
-    recommended_fix: "Change 'sex offender' to 'sex criminal' (matching ETCSL translation) and change 'fifty senior deities of the divine assembly' to 'the fifty great gods and the seven gods who decide destinies' to match the text accurately."
-
-  - claim_number: 12
-    kind: "CITATION-WRONG"
-    severity: "HIGH"
-    claim: "As Enlil descends toward the underworld, he takes on three successive disguises -- appearing as the gatekeeper of the city gate, as the 'man of the river' (the ferryman of the underworld river), and as the ferryman of the river of the dead."
-    issue: "The description of the second and third disguises is conflated. In ETCSL 1.2.1, Enlil's three disguises are: (1) the 'man of the gate' (en-du/Id-kur-ra gatekeeper), (2) the 'man of the river of the nether world' (Id-kur-ra), and (3) the 'man of the boat' (SI.A-tur, the ferryman). The claims document describes the second disguise as 'the man of the river (the ferryman of the underworld river)' and the third as 'the ferryman of the river of the dead,' which makes the second and third sound nearly identical. The actual distinction is that the second is the man of the river of the underworld and the third is the ferryman/boatman -- these are different functionaries at different thresholds."
-    evidence: "ETCSL 1.2.1: first encounter 'Enlil answered her as the man of the gate'; second encounter 'Enlil answered her as the man of the river of the nether world'; third encounter 'Enlil answered her as the man of the boat.' Three distinct roles, not two types of ferryman."
-    recommended_fix: "Revise to: 'appearing as the man of the gate (the gatekeeper), as the man of the river of the nether world, and as the man of the boat (the ferryman)' -- preserving the three distinct functional identities from the ETCSL text."
+    claim: "The composition 'Enlil and Ninlil' is catalogued as ETCSL 1.2.1 and extends to approximately 152 lines."
+    issue: "The ETCSL composite text and translation both contain 154 lines, not 152. The claim says 'approximately 152 lines,' but the actual count is 154. The ETCSL catalogue number 1.2.1 is correct."
+    evidence: "ETCSL 1.2.1 translation (https://etcsl.orinst.ox.ac.uk/section1/tr121.htm) covers lines 1–154 in seven numbered sections (1–12, 13–21, 22–34, 35–53, 54–64, 65–90, 91–116, 117–142, 143–154). The composite transliteration (https://etcsl.orinst.ox.ac.uk/section1/c121.htm) also ends at line 154."
+    recommended_fix: "Change '152 lines' to '154 lines' throughout the claims document."
 
   - claim_number: 2
     kind: "UNVERIFIED"
     severity: "LOW"
     claim: "Minor word-level variants exist across fragments, but these do not constitute a separate recension; the ETCSL composite is the standard text."
-    issue: "The claim is plausible and consistent with ETCSL editorial practice, but the evidence line cites 'ETCSL 1.2.1, editorial notes' which is a general reference. Without web access I cannot verify the specific editorial notes. The claim itself is a reasonable scholarly characterization of a heavily attested Nippur curriculum text."
-    evidence: "No verbatim quote available; unable to access ETCSL editorial notes."
-    recommended_fix: "No action needed if ETCSL editorial notes confirm this. Verify by opening the ETCSL editorial notes page for 1.2.1."
+    issue: "The claim is plausible and consistent with ETCSL editorial practice for a heavily attested curriculum text. The ETCSL translation does show variant readings in braces (e.g., '2 mss. have instead:' for lines 59–60), confirming word-level variants exist. However, the specific editorial notes page cited ('ETCSL 1.2.1, editorial notes') is a general reference — the ETCSL does not have a dedicated editorial notes page for this text."
+    evidence: "ETCSL 1.2.1 translation shows variant readings inline (e.g., 'Enlil, ritually impure, leave the city!' as variant of 'Enlil, the ritually impure, left the city'). No separate recension is apparent from the manuscript tradition."
+    recommended_fix: "Change the citation from 'ETCSL 1.2.1, editorial notes' to 'ETCSL 1.2.1, composite text and translation, variant readings' — since the variants are visible in the translation itself, not a separate editorial notes page."
+
+  - claim_number: 5
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "The young goddess Ninlil's mother, Nunbarshegunu, instructs her daughter to bathe in the river canal (the Nunbirdu canal in Nippur)."
+    issue: "The canal name in the ETCSL text is 'Id-nunbir-tum' (Sumerian transliteration: id2-nun-bi-ir-tum2), not 'Nunbirdu.' The claims document uses 'Nunbirdu canal' which is an older or informal anglicization. Additionally, the mother does not instruct Ninlil TO bathe — she warns her NOT to bathe: 'The river is holy, woman! The river is holy -- don't bathe in it! Ninlil, don't walk along the bank of the Id-nunbir-tum!' The claim's phrasing ('instructs her daughter to bathe in the river canal — advice that will lead to the fateful encounter') is ambiguous but can be read as saying the mother told her to bathe, which inverts the actual content."
+    evidence: "ETCSL 1.2.1, lines 13–21: 'The river is holy, woman! The river is holy -- don't bathe in it! Ninlil, don't walk along the bank of the Id-nunbir-tum! His eye is bright, the lord's eye is bright, he will look at you! The Great Mountain, Father Enlil -- his eye is bright, he will look at you!' Sumerian transliteration line 8: 'id2-nun-bi-ir-tum2.'"
+    recommended_fix: "Change 'Nunbirdu canal' to 'Id-nunbir-tum canal' (matching ETCSL). Clarify that the mother warns Ninlil NOT to bathe, and that Ninlil disregards this warning — the encounter follows from Ninlil's disobedience, not from following maternal advice."
+
+  - claim_number: 9
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The great gods — the fifty senior deities of the divine assembly — seize Enlil and pronounce judgment: he is declared a sex offender (literally: 'Enlil, you are a sex offender') and banished from Nippur."
+    issue: "Multiple errors. (1) The ETCSL translation does NOT use 'sex offender' or 'sex criminal.' The term used is 'ritually impure' (Sumerian: u2-zug4-ge). The claim purports to give a literal translation ('literally: Enlil, you are a sex offender') but this phrase does not appear in the ETCSL text at all. (2) The text says 'the fifty great gods and the seven gods who decide destinies' — these are two distinct groups, not 'the fifty senior deities of the divine assembly.' (3) The declaration in the text is 'Enlil, the ritually impure, left the city' (variant: 'Enlil, ritually impure, leave the city!') — not a declaration of sexual offense."
+    evidence: "ETCSL 1.2.1, lines 56–60: 'dijir gal-gal 50-ne-ne / dijir nam-tar-ra 7-na-ne-ne / den-lil2 ki-ur3-ra im-ma-ni-in-dab5-be2-ne / den-lil2 u2-zug4-ge iri-ta ba-ra-ed2 / dnu-nam-nir u2-zug4-ge iri-ta ba-ra-ed2' — translated: 'the fifty great gods and the seven gods who decide destinies had Enlil arrested in the Ki-ur. Enlil, the ritually impure, left the city. Nunamnir, the ritually impure, left the city.' URL: https://etcsl.orinst.ox.ac.uk/section1/tr121.htm"
+    recommended_fix: "Replace 'sex offender' with 'ritually impure' (matching ETCSL u2-zug4-ge). Remove the false 'literally:' parenthetical. Change 'the fifty senior deities of the divine assembly' to 'the fifty great gods and the seven gods who decide destinies.' The Sumerian term u2-zug4 designates ritual impurity, not a sexual-offense category."
+
+  - claim_number: 12
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "As Enlil descends toward the underworld, he takes on three successive disguises — appearing as the gatekeeper of the city gate, as the 'man of the river' (the ferryman of the underworld river), and as the ferryman of the river of the dead."
+    issue: "The description of the three disguises conflates the second and third. In ETCSL 1.2.1, Enlil's three disguises are: (1) 'the city gatekeeper' (lu2 abul-la), (2) 'the man of the Id-kura, the man-eating river' — a river guardian, NOT a ferryman, and (3) 'SI.LU.IGI, the man of the ferryboat' — the actual ferryman. The claims document describes the second as 'the man of the river (the ferryman of the underworld river)' and the third as 'the ferryman of the river of the dead,' making them sound nearly identical. The actual ETCSL text distinguishes the second (river-man) from the third (boatman/ferryman) as different functionaries."
+    evidence: "ETCSL 1.2.1: First encounter (lines 65–90): 'Enlil answered as the city gatekeeper'; second (lines 91–116): 'Enlil answered as the man of the Id-kura, the man-eating river'; third (lines 117–142): 'Enlil answered as the man SI.LU.IGI, the man of the ferryboat.' Three distinct roles: gatekeeper, river-man, and boatman. URL: https://etcsl.orinst.ox.ac.uk/section1/tr121.htm"
+    recommended_fix: "Revise to: 'appearing as the city gatekeeper, as the man of the Id-kura (the man-eating river of the underworld), and as SI.LU.IGI (the man of the ferryboat)' — preserving the three distinct identities from the ETCSL text."
 
   - claim_number: 15
-    kind: "UNVERIFIED"
+    kind: "MARKER-MISUSED"
     severity: "MEDIUM"
     claim: "The theological core of the narrative is a substitution logic: three underworld deities are born so that Nanna-Suen, the firstborn moon god, can ascend to heaven rather than remaining in the netherworld."
-    issue: "This is primarily Jacobsen's interpretive reading (Jacobsen 1987, pp. 177-179). While the text does contain language about substitution, describing this as 'the theological core' is an interpretive claim. Not all scholars agree that the substitution motif is the central purpose rather than, for example, the theogonic cataloguing of the Enlil-Ninlil offspring. The ETCSL text itself does present the substitution formula ('in place of my son Suen...') but whether this constitutes the 'theological core' is scholarly interpretation, not textual fact."
-    evidence: "Jacobsen 1987 pp. 177-179 argues for the substitution logic as central; ETCSL 1.2.1 contains the substitution formula in the text. But labeling it 'the theological core' is interpretive."
-    recommended_fix: "Qualify as 'A central interpretive reading of the narrative, following Jacobsen (1987), identifies a substitution logic...' or add an INFERENCE marker since this is a scholarly interpretation, not a directly quotable textual fact."
+    issue: "This claim presents an interpretive reading (primarily Jacobsen's) as a straightforward textual fact. The ETCSL text does contain the substitution formula ('Let my seed go downwards, instead of my master's seed!') in each encounter, but labeling it 'the theological core' is a scholarly interpretation, not a directly quotable textual fact. This should bear an [INFERENCE:] marker or be explicitly attributed to Jacobsen's reading."
+    evidence: "ETCSL 1.2.1 contains the substitution formula; Jacobsen 1987 pp. 177–179 develops the 'substitution logic' interpretation. But other scholars read the text differently (e.g., as primarily theogonic rather than soteriological)."
+    recommended_fix: "Add [INFERENCE:] marker or rephrase as 'A central interpretive reading, following Jacobsen (1987), identifies a substitution logic...'"
 
-  - claim_number: 18
-    kind: "UNVERIFIED"
+  - claim_number: 20
+    kind: "MARKER-MISUSED"
     severity: "MEDIUM"
-    claim: "The composition maps the vertical cosmos: Enlil's descent from Nippur toward the underworld generates deities for each cosmic level -- the celestial (Nanna), the liminal (Nergal), and the chthonic (Ninazu, Enbilulu)."
-    issue: "The tripartite cosmological mapping (celestial/liminal/chthonic) is Jacobsen's interpretive framework, not a direct claim from the text. The ETCSL text does not explicitly assign 'cosmic levels' to the deities born. Furthermore, classifying Nergal as 'liminal' rather than fully chthonic is a specific interpretive choice -- Nergal/Meslamtaea is generally regarded as a full underworld deity, not a liminal one. The cited source (Jacobsen 1987 pp. 167-180) supports the progressive descent reading but the specific three-tier labeling as presented here may over-schematize Jacobsen's nuanced argument."
-    evidence: "Jacobsen 1987 discusses progressive descent but the specific 'celestial/liminal/chthonic' trichotomy as applied to these specific deities is not a direct quotation from Jacobsen."
-    recommended_fix: "Add an INFERENCE marker or attribute more explicitly to Jacobsen's reading. Consider whether classifying Nergal as 'liminal' is accurate -- most scholarship treats Nergal/Meslamtaea as a full underworld deity."
+    claim: "The composition maps the vertical cosmos: Enlil's descent from Nippur toward the underworld generates deities for each cosmic level — the celestial (Nanna), the liminal (Nergal), and the chthonic (Ninazu, Enbilulu)."
+    issue: "The tripartite cosmological mapping (celestial/liminal/chthonic) is an interpretive framework, not a direct textual claim. Classifying Nergal/Meslamtaea as 'liminal' is particularly questionable — Nergal is consistently treated as a full underworld deity in Sumerian and Akkadian sources, not a liminal figure. The ETCSL text does not assign 'cosmic levels' to the deities. This should bear an [INFERENCE:] marker."
+    evidence: "ETCSL 1.2.1 names the deities but does not assign them to cosmic tiers. Jacobsen 1987 pp. 167–180 discusses progressive descent but does not use the specific 'celestial/liminal/chthonic' trichotomy as presented here. Nergal/Meslamtaea is widely attested as a full underworld deity (ORACC AMGG entry for Nergal)."
+    recommended_fix: "Add [INFERENCE:] marker. Reconsider classifying Nergal as 'liminal' — 'chthonic' would be more accurate for all three underworld deities. If the three-tier mapping is retained, attribute it explicitly as an interpretive framework."
 
-  - claim_number: 19
+  - claim_number: 22
     kind: "MARKER-MISUSED"
     severity: "MEDIUM"
     claim: "The divine assembly's judgment of Enlil represents one of the earliest narrative depictions of a formal legal proceeding against a god by his own divine community."
-    issue: "This is an interpretive and comparative claim (claiming 'one of the earliest') that should bear an INFERENCE marker. The text itself depicts the arrest and judgment, but the comparative-historical claim about being 'one of the earliest' is a scholarly assessment, not something directly verifiable from ETCSL 1.2.1 alone. It requires cross-referencing against all known ancient Near Eastern literary corpora."
-    evidence: "The text does depict a divine assembly judgment. The 'one of the earliest' superlative is an interpretive claim not directly supported by the ETCSL text citation."
-    recommended_fix: "Add [INFERENCE: ...] marker noting this is a scholarly assessment based on the relative dating of Sumerian compositions, or soften to 'an early narrative depiction' without the superlative."
-
-  - claim_number: 14
-    kind: "MARKER-MISUSED"
-    severity: "LOW"
-    claim: "[INFERENCE: The tripled disguise-encounter structure is not mere repetition but a ritual logic of graduated descent...]"
-    issue: "The INFERENCE marker is correctly applied here (this is Jacobsen's interpretation). However, the marker's risk statement could be more precise: it says 'others see the repetition as formulaic literary convention without strict cosmological mapping' but does not name any specific scholars who hold this alternative view. For an INFERENCE marker to be maximally useful, it should cite at least one alternative scholarly source."
-    evidence: "The INFERENCE marker is structurally correct. The risk assessment is reasonable but lacks specific alternative citations."
-    recommended_fix: "Consider adding a specific scholarly reference for the alternative 'formulaic literary convention' reading, e.g., Civil or Cooper's work on Sumerian literary repetition patterns."
+    issue: "The superlative 'one of the earliest' is a comparative-historical claim requiring cross-referencing against all known ancient Near Eastern literary corpora. This is an interpretive/scholarly assessment, not something verifiable from ETCSL 1.2.1 alone. It should bear an [INFERENCE:] marker."
+    evidence: "The text does depict a divine assembly arresting and banishing Enlil. The 'earliest' superlative is not directly supported by the cited ETCSL text alone."
+    recommended_fix: "Add [INFERENCE:] marker or soften to 'an early narrative depiction' without the superlative."
 
 findings_notes: |
-  Pass 1 (forward): All 20 substantive claims examined. 13 supported with verbatim quotes (from training knowledge of ETCSL 1.2.1 and secondary sources). 2 citation issues found. 3 unverified (1 low, 2 medium). 2 marker issues.
+  Pass 1 (forward): All 22 substantive claims examined (excluding LACUNA markers and the correctly applied INFERENCE marker at claim 17). 14 supported with verbatim quotes from live ETCSL fetch. 4 citation errors found (line count 152→154, canal name Nunbirdu→Id-nunbir-tum, 'sex offender'→'ritually impure', disguise descriptions conflated). 1 unverified (editorial notes reference). 3 marker issues (claims 15, 20, 22 need INFERENCE markers).
 
-  Pass 2 (triangulation): Unable to perform live triangulation against ETCSL, CDLI, or ORACC databases due to denied WebFetch/WebSearch permissions. ETCSL 1.2.1 composition number is correct and known from training data. Line number ranges are broadly consistent with the known text structure but could not be individually verified against the live database.
+  Pass 2 (triangulation): Triangulated ETCSL 1.2.1 composition number against live ETCSL translation and composite text pages — confirmed. Verified Q000336 identifier via CDLI wiki cross-reference. Confirmed 22 manuscripts listed on ETCSL bibliography page. Line number ranges verified against live ETCSL section structure (1–12, 13–21, 22–34, 35–53, 54–64, 65–90, 91–116, 117–142, 143–154 = 154 lines total). Jacobsen 1987 pp. 167–180 confirmed via multiple bibliographic databases. Black et al. 2004 page range (pp. 100–107) could not be independently verified from web sources but the chapter's existence in the book is confirmed via Oxford Academic.
 
-  Pass 3 (contamination scan): No contamination detected. All claims reference Sumerian-language compositions within the defined scope (ETCSL 1.x category). No Akkadian, Elamite, Hurrian, or post-OB sources cited. Nergal is a deity name used in both Sumerian and Akkadian contexts, but ETCSL 1.2.1 uses the Sumerian form Meslamtaea; the claims document uses "Nergal" which is acceptable as an identifying gloss but this should be noted. No blacklisted sources referenced.
+  Pass 3 (contamination scan): No contamination detected. All claims reference Sumerian-language compositions within the defined scope (ETCSL 1.x category). The deity name 'Nergal' is used alongside the Sumerian form 'Meslamtaea' — the ETCSL text uses the combined form 'Nergal-Meslamta-eda,' so using 'Nergal' as a gloss is acceptable. No blacklisted sources referenced.
 
   Pass 4 (marker integrity):
-    - Two LACUNA markers present (lines 77-85, lines 118-123). These are plausible locations for textual damage in ETCSL 1.2.1 but could not be verified against the live composite text.
-    - One INFERENCE marker present (graduated descent interpretation). Correctly applied; risk statement reasonable.
-    - No RECONSTRUCTION markers present (appropriate -- no cross-composition fills claimed).
-    - No VARIANT markers present (appropriate -- single-prevalent classification).
+    - Two LACUNA markers present (lines 77–85, lines 118–123). The ETCSL text does show lacunae (marked with ellipses) in these regions, confirmed from live fetch. These are plausible locations.
+    - One INFERENCE marker present (claim 17: graduated descent interpretation). Correctly applied; risk statement is reasonable but lacks a specific alternative scholarly citation.
+    - No RECONSTRUCTION markers present (appropriate — no cross-composition fills claimed).
+    - No VARIANT markers present (appropriate — single-prevalent classification).
     - No silent bridges detected. All substantive claims have footnote citations.
+    - Three claims (15, 20, 22) should bear INFERENCE markers but do not — flagged as MARKER-MISUSED.
 
-  Pass 5 (reverse order): Re-examined claims 20 through 1 in reverse. No additional findings beyond those identified in Pass 1. Claim 20 (attestation volume) is well-supported. Claim 19 (earliest legal proceeding) flagged in Pass 1 for superlative. Claim 18 (cosmic mapping) flagged in Pass 1 for interpretive over-schematization. All other claims consistent on second reading.
+  Pass 5 (reverse order): Re-examined claims 24 through 1 in reverse. Confirmed all findings from Pass 1. Claim 24 (attestation volume) well-supported by 22 manuscripts on ETCSL bibliography. Claim 23 (sexual-violence ethical framework) supported by the arrest/banishment text. Claim 9 (sex offender) confirmed as the most significant error — HIGH severity because the fabricated 'literally:' parenthetical misrepresents the ETCSL text. Claim 5 (canal name and maternal instruction inversion) confirmed as MEDIUM — the mother warns AGAINST bathing, not for it.
 
-  Glossary check: Enlil, Ninlil, Nanna-Suen, Nippur/Nibru, kur all used consistently with glossary.yaml entries. No glossary violations detected.
+  Glossary check: Enlil, Ninlil, Nanna-Suen, Nippur/Nibru, kur all used consistently with glossary.yaml entries. The canal name 'Nunbirdu' does not appear in the glossary but is an incorrect form of the ETCSL 'Id-nunbir-tum.' No glossary violations detected in deity/place naming conventions.

@@ -1,65 +1,184 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/34-debate-bird-and-fish.claims.adoc"
-  claims_identified: 19
-  triangulations_performed: 12
+  claims_identified: 18
+  markers_checked: 2
+  triangulations_performed: 16
   verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. No contamination detected."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 5.3.5 translation (tr535.htm) and composite text (c535.htm) were accessed live via WebFetch. ETCSL bibliography page (b535.htm) was accessed. CDLI was searched for Q000764 composite and individual manuscripts. Kramer 1961 was checked via web search and partial PDF access — pp. 72-73 confirmed to discuss Lahar and Ashnan (Cattle and Grain), not Bird and Fish. Black et al. 2004 and Civil 1994 are print sources triangulated via web searches."
+    triangulated_every_reference: "Yes. Every ETCSL line reference was checked against the live ETCSL translation and composite text. CDLI Q000764 was searched. Kramer 1961 page references were verified. Civil 1994 content was confirmed via web search. All key narrative claims were verified against the ETCSL translation."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section5/tr535.htm) via WebFetch. No pattern-matching was used."
+    distinguished_variance_from_contamination: "Yes. All findings involve factual errors within the Sumerian tradition (FABRICATION, CITATION-WRONG) rather than cross-tradition contamination."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 11
+  supported: 7
   internal_variance: 0
-  unverified: 1
-  citation_wrong: 0
+  unverified: 2
+  citation_wrong: 3
   contamination: 0
-  fabrication: 3
+  fabrication: 4
   silent_bridges: 0
-  marker_issues: 1
+  marker_issues: 2
   glossary_violations: 0
 
-findings:
+supported_claims:
+  - claim_number: 1
+    claim: "The composition 'The Debate between Bird and Fish' is catalogued as ETCSL 5.3.5 and survives in multiple Old Babylonian copies."
+    source_id: "etcsl"
+    source_loc: "5.3.5, composite text; bibliography page b535.htm"
+    verbatim_quote: "The ETCSL bibliography lists twenty-six manuscript sources for composition 5.3.5. CDLI composite Q000764 catalogues multiple OB witnesses from Nippur and other sites."
+    note: "The claim that the text is 'well-preserved' is an overstatement — the text has significant lacunae, especially in the final third (lines 131-136, 159-166, 175-187 are fragmentary or missing). The description 'exceptionally well-preserved' in the claims header is inaccurate; see finding on claim 1."
+
   - claim_number: 2
-    kind: "FABRICATION"
-    severity: "HIGH"
-    claim: "Bird and Fish argue before the god Enki, who renders the final verdict."
-    issue: "The judge in ETCSL 5.3.5 is Enlil, not Enki. All other major Sumerian debate poems (Ewe and Grain, Winter and Summer, Hoe and Plough) have Enlil as judge. This error pervades claims 2, 3, 15, and 16."
-    evidence: "ETCSL 5.3.5: Enlil is the standard judge in Sumerian debate poems. Training-data recall strongly indicates Enlil, not Enki."
-    recommended_fix: "Change all references from 'Enki' to 'Enlil' as judge. Remove claim 3's fabricated rationale about the 'aquatic domain.'"
+    claim: "The text belongs to the Sumerian debate genre and features two divine personifications — Bird (Sumerian mushen) and Fish (Sumerian ku6) — who argue their relative merits."
+    source_id: "etcsl"
+    source_loc: "5.3.5, lines 1-190"
+    verbatim_quote: "Fish took up a stand and cried out. Grandiosely it initiated hostilities ... Bird, with multicoloured plumage and multicoloured face, was convinced of its own beauty."
+    note: "The claim that Enki 'renders the final verdict' is addressed separately under claim 15 — it is King Culgi (Shulgi) who delivers the judgment, not Enki directly. This claim is supported for its core content about the genre and personifications."
+
+  - claim_number: 4
+    claim: "The composition opens with a description of the natural order established by the gods."
+    source_id: "etcsl"
+    source_loc: "5.3.5, lines 1-21"
+    verbatim_quote: "In those ancient days ... the third of them, the lord of broad wisdom, Enki, the master of destinies ... filled the reed-beds and marshes with Fish and Bird, indicated to them their positions, and instructed them in their divine rules."
+
+  - claim_number: 8
+    claim: "Fish responds by claiming superiority through purity, abundance, and its association with sacred waters — fish are offerings fit for the gods."
+    source_id: "etcsl"
+    source_loc: "5.3.5, lines 86-101"
+    verbatim_quote: "I am Fish. I am responsibly charged with providing abundance for the pure shrines ... Just like Ashnan I am here to satisfy the hunger of the Land."
+
+  - claim_number: 10
+    claim: "The debate escalates from polite self-praise to increasingly personal and aggressive insults."
+    source_id: "etcsl"
+    source_loc: "5.3.5, lines 29-140"
+    verbatim_quote: "Fish addressed Bird murderously ... Your smell is awful; you make people throw up ... Gluttonous, malformed, filling the courtyard with droppings!"
+
+  - claim_number: 16
+    claim: "After the verdict, Fish accepts Bird's superiority, and the two creatures are reconciled."
+    source_id: "etcsl"
+    source_loc: "5.3.5, lines 178-190"
+    verbatim_quote: "Because Bird was victorious over Fish in the dispute between Fish and Bird, Father Enki be praised!"
+    note: "The final lines are fragmentary (6 lines missing between 177-183), so the reconciliation is partially reconstructed, but the concluding doxology confirms Bird's victory."
+
+  - claim_number: 18
+    claim: "The text is praised by modern scholars for its vivid imagery, escalating rhetoric, and dramatic intensity."
+    source_id: "black-2004"
+    source_loc: "pp. 234-240"
+    verbatim_quote: "Black et al. 2004 includes the composition in The Literature of Ancient Sumer with introductory discussion praising its literary qualities. Web searches confirm scholarly recognition of the text's vivid imagery and rhetorical escalation."
+
+findings:
+  - claim_number: 1
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "The composition survives in multiple well-preserved Old Babylonian copies, indicating active use in the edubba scribal schools."
+    issue: "The text is described as 'exceptionally well-preserved' in the claims header and as 'well-preserved' here, but the ETCSL composite shows significant lacunae: lines 131-136 are fragmentary, lines 159-166 heavily damaged, lines 175-187 fragmentary with 6 lines missing, plus additional fragmentary individual lines throughout. 'Well-preserved' overstates the condition."
+    evidence: "ETCSL 5.3.5 composite text shows: '1 line fragmentary' notations, '6 lines missing or fragmentary' between lines 177-183, and multiple bracketed restorations [X] and [...] throughout the final third. The ETCSL translation marks multiple sections with ellipses indicating damage."
+    recommended_fix: "Replace 'well-preserved' and 'exceptionally well-preserved' with 'partially well-preserved with significant lacunae in the later sections' or 'preserved in multiple copies with some fragmentary passages, especially toward the end.'"
+
+  - claim_number: 2
+    kind: FABRICATION
+    severity: HIGH
+    claim: "Bird and Fish argue their relative merits before the god Enki, who renders the final verdict."
+    issue: "The verdict is rendered by King Culgi (Shulgi), son of Enlil — NOT by Enki. Enki is praised in the closing doxology, but the actual judgment speech is delivered by Culgi at lines 168-177. Fish proposes going to Enki, but the case is ultimately brought before Culgi."
+    evidence: "ETCSL 5.3.5 translation, lines 141-147: 'They requested a verdict ... from King Culgi, son of Enlil.' Lines 168-177: Culgi speaks the judgment, declaring Bird's supremacy. Closing doxology (line 190): 'Father Enki be praised!' — praise to Enki, but he does not speak the judgment."
+    recommended_fix: "Correct to: 'Bird and Fish argue their relative merits and bring their case before King Culgi (Shulgi), who renders the final verdict in favour of Bird. The composition closes with praise to Father Enki.' Note that this is a distinctive feature of this debate — a human king renders judgment rather than a deity."
 
   - claim_number: 3
-    kind: "FABRICATION"
-    severity: "HIGH"
-    claim: "The choice of Enki reflects the aquatic domain of the dispute."
-    issue: "This entire claim is fabricated to justify the incorrect attribution of Enki as judge. Since the judge is Enlil, the 'aquatic domain' rationale is baseless."
-    evidence: "The premise (Enki as judge) is wrong, making the entire interpretive rationale invalid."
-    recommended_fix: "Delete this claim entirely."
+    kind: FABRICATION
+    severity: HIGH
+    claim: "The choice of Enki rather than Enlil as judge distinguishes this debate from others in the genre and reflects the aquatic domain of the dispute."
+    issue: "This entire claim is based on the false premise that Enki is the judge. The actual judge is King Culgi (Shulgi), making this the most distinctive debate in the genre — the only one where a human king rather than a god renders judgment. The analytical reasoning about the 'aquatic domain' explaining Enki's role is therefore groundless."
+    evidence: "ETCSL 5.3.5 translation, lines 141-177: King Culgi delivers the verdict. Line 146: 'King Culgi, son of Enlil.' No passage in the ETCSL text has Enki delivering a judgment speech."
+    recommended_fix: "Delete this claim entirely and replace with: 'The choice of King Culgi (Shulgi) as judge, rather than a deity, is distinctive within the debate genre and reflects the Ur III political context in which the text was composed. The closing doxology to Enki frames the king's wisdom as divinely inspired.'"
 
-  - claim_number: 15
-    kind: "FABRICATION"
-    severity: "HIGH"
-    claim: "Enki renders the final verdict in favour of Bird."
-    issue: "The judge is Enlil, not Enki."
-    evidence: "Same deity misidentification as claims 2 and 3."
-    recommended_fix: "Change 'Enki' to 'Enlil.'"
+  - claim_number: 5
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Bird is described in its natural habitat: nesting in the reeds, singing at dawn, filling the marshes with its cries."
+    issue: "Lines 10-20 of the ETCSL text do not contain these specific descriptions. The prologue (lines 1-21) describes Enki establishing the cosmic order and placing Fish and Bird in the marshes, but does not elaborate on Bird 'nesting in the reeds, singing at dawn, filling the marshes with its cries.' These descriptive details appear to be invented or drawn from a source that cannot be verified."
+    evidence: "ETCSL 5.3.5, lines 13-21: 'filled the reed-beds and marshes with Fish and Bird, indicated to them their positions, and instructed them in their divine rules.' No mention of nesting, singing at dawn, or filling marshes with cries in these lines."
+    recommended_fix: "Revise to reflect what the text actually says in lines 1-21: Enki placed Bird and Fish in the marshes and instructed them in their divine rules. Bird's self-descriptions of its qualities appear later in Bird's own speeches (lines 51-79), not in the prologue."
+
+  - claim_number: 6
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim: "Fish is described in its domain: swimming in the deep waters, abundant in the rivers and canals, a source of purity and sustenance."
+    issue: "Lines 20-30 do not contain these descriptions. The prologue simply places Fish and Bird together. Fish's claims about purity and sustenance appear in Fish's own speech (lines 86-101), not in the prologue section."
+    evidence: "ETCSL 5.3.5, lines 20-30: The transition from prologue to dispute begins at line 22 with 'Fish took up a stand and cried out.' No independent narrator description of Fish 'swimming in the deep waters' appears in lines 20-30."
+    recommended_fix: "Revise to reflect the actual content: the prologue places both creatures in the marshes, and Fish's self-descriptions appear in Fish's speeches. Adjust line references accordingly."
+
+  - claim_number: 7
+    kind: FABRICATION
+    severity: HIGH
+    claim: "Bird initiates the dispute by claiming superiority through flight, song, and beauty."
+    issue: "Fish initiates the dispute, not Bird. The ETCSL text is explicit: 'Fish took up a stand and cried out. Grandiosely it initiated hostilities.' Fish speaks first (lines 29-53), and Bird responds (lines 51-79). The claim reverses the order of speakers."
+    evidence: "ETCSL 5.3.5 translation, lines 22-28: 'Fish took up a stand and cried out. Grandiosely it initiated hostilities ... Fish addressed Bird murderously.' Bird's first speech begins later, after Fish's opening salvo."
+    recommended_fix: "Correct to: 'Fish initiates the dispute by addressing Bird murderously, accusing it of being noisy, gluttonous, and a pest caught by farmers and fowlers. Bird responds by claiming superiority through beauty, song, and its role in the royal palace.'"
+
+  - claim_number: 11
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Bird mocks Fish as a cold, slimy, mute creature trapped in the water, unable to see the sky."
+    issue: "The specific insults attributed to Bird are partly fabricated. Bird mocks Fish's smell and appearance ('Your smell is awful; you make people throw up'), but the epithets 'cold, slimy, mute' and the idea of being 'unable to see the sky' are not found in these terms in the ETCSL text. The line range 100-120 does not match this content."
+    evidence: "ETCSL 5.3.5, lines 57-69 (Bird's insults of Fish): 'Your smell is awful; you make people throw up, they bare their teeth at you! Your mouth is flabby (?).' No mention of 'cold,' 'slimy,' 'mute,' or 'unable to see the sky.'"
+    recommended_fix: "Replace with Bird's actual insults from ETCSL and correct line references to approximately lines 57-69 for Bird's mockery of Fish."
+
+  - claim_number: 12
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Fish mocks Bird as a screeching, filthy creature that scratches in the dirt, devours worms, and fouls its own nest."
+    issue: "The line reference (120-140) is wrong. Fish's mockery of Bird appears in lines 29-53 and 86-94. The specific insults are partially correct but somewhat embellished. Fish calls Bird 'Gluttonous, malformed, filling the courtyard with droppings' and complains about nets being set for Bird."
+    evidence: "ETCSL 5.3.5, lines 86-94: 'Gluttonous, malformed, filling the courtyard with droppings! The little sweeper-boy sets nets in the house and chases you with ropes.'"
+    recommended_fix: "Correct line references to lines 86-94 for Fish's second-round insults. Adjust the paraphrase to match the actual ETCSL language more closely."
 
   - claim_number: 13
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Bird attacks Fish's nest and destroys Fish's eggs."
-    issue: "Cannot confirm this specific detail without live ETCSL access. The escalation to physical violence is attested but the exact nature (egg destruction) needs verification."
-    evidence: "Training-data recall is uncertain on this specific detail."
-    recommended_fix: "Verify against ETCSL 5.3.5."
+    kind: FABRICATION
+    severity: HIGH
+    claim: "The debate transcends verbal argument and escalates into physical violence: Bird attacks Fish's nest and destroys Fish's eggs."
+    issue: "This claim reverses the aggressor. According to ETCSL, FISH destroys BIRD's nest and eggs, not the other way around. Fish attacks first: 'It turned her well-built nest of brushwood into a haunted house. It destroyed her well-built house ... smashed the eggs she had laid and threw them into the sea.' Bird then retaliates by gathering Fish's spawn from the water."
+    evidence: "ETCSL 5.3.5, lines 102-116: Fish destroys Bird's nest ('It turned her well-built nest of brushwood into a haunted house ... smashed the eggs she had laid and threw them into the sea'). Bird retaliates: 'just snatched from the water Fish's tiny fish-spawn, gathering them all together.'"
+    recommended_fix: "Correct to: 'Fish attacks Bird's nest, destroying it and smashing Bird's eggs, throwing them into the sea. Bird retaliates by snatching Fish's spawn from the water. This mutual destruction prompts both parties to seek formal judgment.'"
+
+  - claim_number: 14
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "This escalation from rhetoric to physical destruction is exceptional within the debate genre."
+    issue: "The underlying observation may be correct — most Sumerian debates are verbal — but the citation to Kramer 1961, pp. 72-73 is wrong. Those pages discuss the debate between Lahar and Ashnan (Cattle/Ewe and Grain), not Bird and Fish. Kramer's Sumerian Mythology (1961) does not discuss Bird and Fish on pp. 72-73."
+    evidence: "Kramer 1961 pp. 72-73 contain the introductory passage about Lahar and Ashnan, confirmed via web search: 'Lahar, the cattle-god, and his sister Ashnan, the grain-goddess ... created in the creation chamber of the gods.' Bird and Fish is discussed in Kramer's The Sumerians (1963), pp. 217-222, a different book not in the sources.yaml registry."
+    recommended_fix: "Remove the Kramer 1961 pp. 72-73 citation. If referencing Kramer's discussion of the debate genre, use Kramer 1963 (The Sumerians), pp. 217-222, which is a different book and not in the sources.yaml registry. Alternatively, cite only Black et al. 2004."
+
+  - claim_number: 15
+    kind: FABRICATION
+    severity: HIGH
+    claim: "Enki renders the final verdict in favour of Bird, declaring Bird the winner of the contest."
+    issue: "King Culgi (Shulgi), son of Enlil, renders the verdict — not Enki. Culgi's judgment speech occupies lines 168-177. The closing doxology praises Enki, but Enki does not speak the judgment. This is consistent with the Ur III context where the king acts as a divinely inspired judge."
+    evidence: "ETCSL 5.3.5, lines 141-147: 'They requested a verdict ... from King Culgi, son of Enlil.' Lines 168-177: Culgi speaks: 'To strut about in the E-kur is a glory for Bird, as its singing is sweet ... At Enlil's holy table, Bird ... precedence over you!' Line 190: 'Because Bird was victorious over Fish in the dispute between Fish and Bird, Father Enki be praised!'"
+    recommended_fix: "Correct to: 'King Culgi (Shulgi), son of Enlil, renders the final verdict in favour of Bird, declaring Bird the winner of the contest. The composition closes with a doxology praising Father Enki, whose wisdom is understood to have guided the king's judgment.'"
 
   - claim_number: 17
-    kind: "MARKER-MISUSED"
-    severity: "LOW"
-    claim: "Civil 1994 cited for didactic function."
-    issue: "Civil 1994 is about The Farmer's Instructions, not debate poems. Weak citation."
-    evidence: "Civil 1994 is an edition of ETCSL 5.6.1."
-    recommended_fix: "Replace or supplement with more relevant source."
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The composition served a didactic function in the edubba, teaching scribal students the rich vocabulary of natural history through the competitive debate structure."
+    issue: "The citation to Civil 1994 'passim' is weak. Civil 1994 (The Farmer's Instructions) is a separate composition (ETCSL 5.6.3) about agricultural practices, not about Bird and Fish. While Civil's work discusses Sumerian agricultural vocabulary broadly, it is not a primary source for the didactic function of the Bird and Fish debate specifically."
+    evidence: "Civil 1994 is titled 'The Farmer's Instructions: A Sumerian Agricultural Manual' and concerns ETCSL 5.6.3, not 5.3.5. While the edubba context for debate poems is well-attested in scholarship (Vanstiphout 1991, Black et al. 2004), citing Civil 1994 'passim' implies broader coverage than exists."
+    recommended_fix: "Replace Civil 1994 citation with Black et al. 2004, pp. 234-240, or Vanstiphout 1991 (listed in ETCSL bibliography for 5.3.5), which directly discusses the didactic function of Sumerian debate poems."
+
+  - claim_number: 9
+    kind: MARKER-MISUSED
+    severity: MEDIUM
+    claim: "[LACUNA: Minor damage to a few lines in the central exchange (lines 85-90)]"
+    issue: "The lacuna marker underrepresents the actual textual damage. While some damage exists around lines 85-90, the far more significant lacunae are in the later sections: lines 131-136 (fragmentary), 159-166 (heavily damaged), and 175-187 (6 lines missing or fragmentary). Claiming the text is 'exceptionally well-preserved' with 'overlapping copies fill[ing] almost all gaps' is misleading."
+    evidence: "ETCSL 5.3.5 composite text shows: multiple [X] gaps, '1 line fragmentary' notations, and '6 lines missing or fragmentary' between lines 177-183. The translation marks numerous passages with ellipses indicating damage in the final third of the text."
+    recommended_fix: "Add additional LACUNA markers for the significant gaps in lines 131-136, 159-166, and 175-187. Remove the characterization 'exceptionally well-preserved' and the claim that 'overlapping copies fill almost all gaps.'"
+
+  - claim_number: 14b
+    kind: MARKER-MISUSED
+    severity: LOW
+    claim: "[INFERENCE: The escalation to violence may serve a literary purpose — demonstrating what happens when debate fails]"
+    issue: "The inference marker is correctly used — this is genuinely interpretive. However, the premise is partially wrong: the claim states the inference is about violence triggering divine intervention, but it is actually Fish who attacks Bird's nest first, and the judgment is rendered by King Culgi, not by a god directly. The inference itself (violence necessitating judicial intervention) is reasonable but must be corrected for the direction of aggression and the identity of the judge."
+    evidence: "ETCSL 5.3.5, lines 102-116: Fish initiates the physical violence by destroying Bird's nest and eggs. Lines 141-177: King Culgi renders judgment, not a deity directly."
+    recommended_fix: "Correct the factual basis of the inference: Fish initiates violence, Bird retaliates, and this mutual destruction necessitates judicial intervention by King Culgi (Shulgi)."

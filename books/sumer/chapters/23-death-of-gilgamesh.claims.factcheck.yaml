@@ -1,65 +1,115 @@
 meta:
   auditor_model: "Claude Opus 4.6 (1M context)"
-  auditor_conversation_id: "N/A"
+  auditor_conversation_id: "N/A — fresh conversation, independent of claims author"
   input_file: "books/sumer/chapters/23-death-of-gilgamesh.claims.adoc"
-  claims_identified: 12
-  triangulations_performed: 10
-  verdict: "REVISE"
+  claims_identified: 11
+  markers_checked: 5
+  triangulations_performed: 11
+  verdict: "MAJOR-REVISE"
   honesty_self_check:
-    opened_every_cited_primary_source: "No. Web access denied. Training-data knowledge only."
-    triangulated_every_reference: "No. Could not access ETCSL/CDLI/ORACC online."
-    supported_quotes_real: "Partial. Training-data recall, approximate."
-    distinguished_variance_from_contamination: "Yes. One potential contamination concern flagged (claim 5 phrasing)."
-    same_model_as_author: "Yes — Claude Opus. Lower-confidence audit."
+    opened_every_cited_primary_source: "Yes. ETCSL 1.8.1.3 translation (tr1813.htm) and composite text (c1813.htm) were accessed live via WebFetch. ETCSL bibliography (b1813.htm) was accessed. CDLI was searched for tablet metadata (P256692 confirmed for Nippur witness). George 2003 and George 1999 are print sources that could not be opened directly; their content was triangulated via the BMCR review (bmcr.brynmawr.edu/2004/2004.04.21), Veldhuis 2001 (JCS 53), ETCSL bibliography, and multiple web searches. Kramer 1961 is a print source; page-level content was triangulated via web searches but specific pp. 205-207 could not be independently verified."
+    triangulated_every_reference: "Yes. ETCSL 1.8.1.3 was checked against the live translation and composite text. George 2003 page references were cross-checked against the BMCR review, which confirms vol. 1 pp. 7-17 cover Sumerian poems briefly and pp. 159-286 cover OB Akkadian manuscripts. The cited page range 'vol. 1, pp. 195-208' does not correspond to the Sumerian Death of Gilgamesh in George 2003; it corresponds to George 1999 (Penguin edition). Kramer 1961 pp. 205-207 could not be independently verified at that page range. CDLI P256692 confirmed as Nippur witness."
+    supported_quotes_real: "Yes. All verbatim quotes under supported_claims were extracted from the live ETCSL translation page (etcsl.orinst.ox.ac.uk/section1/tr1813.htm) via WebFetch. The George 1999 quote about destiny of kingship was confirmed via a secondary source citing that edition."
+    distinguished_variance_from_contamination: "Yes. No contamination from Akkadian traditions was detected. The composition is properly treated as a Sumerian text distinct from the Standard Babylonian Epic of Gilgamesh."
+    same_model_as_author: "Same model family (Claude), but different conversation instance, as required. I have no memory of producing the claims document."
 
 tallies:
-  supported: 7
+  supported: 5
   internal_variance: 0
-  unverified: 3
-  citation_wrong: 1
+  unverified: 2
+  citation_wrong: 4
   contamination: 0
   fabrication: 0
   silent_bridges: 0
-  marker_issues: 1
+  marker_issues: 0
   glossary_violations: 0
 
-findings:
-  - claim_number: 5
-    kind: "CITATION-WRONG"
-    severity: "HIGH"
-    claim: "The divine decree that immortality is not granted to mortals."
-    issue: "Cites Kramer 1961 pp. 205-207 alone without ETCSL cross-check, violating blacklist. The phrasing 'the gods have reserved eternal life for themselves' may echo the Akkadian Epic (Tablet X, barmaid's speech) more than the surviving Sumerian text, raising a contamination concern."
-    evidence: "sources.yaml blacklist violation. Phrasing parallels Akkadian Epic of Gilgamesh Tablet X."
-    recommended_fix: "Add ETCSL 1.8.1.3 as co-citation. Verify phrasing derives from Sumerian text, not Akkadian tradition."
+supported_claims:
+  - claim_number: 1
+    claim: "The composition ETCSL 1.8.1.3 narrates the death of Gilgamesh (Sumerian: Bilgames) and his reception in the nether world as a judge among the dead."
+    source_id: "etcsl"
+    source_loc: "1.8.1.3, translation and composite text"
+    verbatim_quote: "ETCSL catalogue lists composition 1.8.1.3 as 'The death of Gilgamec'. The Me-Turan version, Segment F states: 'Let Gilgamec as a ghost, below among the dead, be the governor of the nether world. Let him be pre-eminent among the ghosts, so that he will pass judgments and render verdicts, and what he says will be as weighty as the words of Ninjiczida and Dumuzid.'"
+
+  - claim_number: 4
+    claim: "Gilgamesh, having achieved great deeds during his life, is confronted with the inevitability of his own death -- the gods have decreed that even the greatest hero must die."
+    source_id: "etcsl"
+    source_loc: "1.8.1.3, Nibru version, Segment E"
+    verbatim_quote: "Enlil, the Great Mountain, the father of gods, has made kingship your destiny, but not eternal life."
 
   - claim_number: 8
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "The gift-giving sequence 'parallels protocols in other Sumerian literary and liturgical texts.'"
-    issue: "Vague parallel assertion. Should specify which texts — particularly The Death of Ur-Namma (ETCSL 2.4.1.1)."
-    evidence: "George 2003 discusses parallels with The Death of Ur-Namma specifically."
-    recommended_fix: "Specify parallel text(s). Add [INFERENCE:] if author's synthesis."
+    claim: "The Tell Haddad version preserves substantially more detail about the funerary ritual: offerings are presented to major underworld deities including Ereshkigal (queen of the nether world), Ningishzida, and other divine figures, in what appears to be a formal protocol for the reception of a dead king."
+    source_id: "etcsl"
+    source_loc: "1.8.1.3, second Nibru version and Me-Turan version"
+    verbatim_quote: "The ETCSL translation (second Nibru version) describes Gilgamesh setting out 'audience-gifts for Ereckigala' and 'presents for Ninjiczida and Dumuzid' as well as gifts for Namtar, Dimpikug, and Neti."
+    note: "The ETCSL composite attributes the detailed gift-giving sequence to the second Nibru version as well as the Me-Turan version. The claim's attribution specifically to the 'Tell Haddad version' alone is slightly imprecise — both versions contain offering material — but not incorrect since the Me-Turan version does contain this material."
 
   - claim_number: 10
-    kind: "UNVERIFIED"
-    severity: "MEDIUM"
-    claim: "Gilgamesh placed 'alongside Ningishzida' as co-judges."
-    issue: "Conflates two distinct roles. Ningishzida is a chthonic deity/guide, while Gilgamesh is elevated specifically as judge. Also cites Kramer 1961 alone."
-    evidence: "ETCSL 1.8.1.3 attests Gilgamesh as judge; Ningishzida's role is separate."
-    recommended_fix: "Distinguish roles. Remove or supplement Kramer-alone citation."
+    claim: "After death, Gilgamesh is received in the nether world not as an ordinary shade but as a figure of authority: he is granted the status of a judge among the dead."
+    source_id: "etcsl"
+    source_loc: "1.8.1.3, Me-Turan version, Segment F"
+    verbatim_quote: "Let Gilgamec as a ghost, below among the dead, be the governor of the nether world. Let him be pre-eminent among the ghosts, so that he will pass judgments and render verdicts, and what he says will be as weighty as the words of Ninjiczida and Dumuzid."
 
   - claim_number: 11
+    claim: "Gilgamesh's elevation to judge of the dead places him alongside Ningishzida and other underworld deities, transforming him from a mortal hero into a figure with a permanent divine function in the afterlife."
+    source_id: "etcsl"
+    source_loc: "1.8.1.3, Me-Turan version, Segment F"
+    verbatim_quote: "Let him be pre-eminent among the ghosts, so that he will pass judgments and render verdicts, and what he says will be as weighty as the words of Ninjiczida and Dumuzid."
+    note: "The claim says Gilgamesh is placed 'alongside' Ningishzida. The ETCSL text says his words will be 'as weighty as' those of Ningishzida and Dumuzid — a comparison of authority, not necessarily a co-equal station. The ETCSL text also uses 'governor of the nether world' rather than 'judge', though Gilgamesh does 'pass judgments and render verdicts'. The secondary citation of Kramer 1961 pp. 205-207 could not be independently verified at that precise page range."
+
+findings:
+  - claim_number: 2
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The text survives in two co-equal witnesses: a Nippur version known from fragmentary Old Babylonian tablets, and a Tell Haddad (ancient Me-Turan) version published and analysed by George."
+    issue: "The citation 'George 2003, vol. 1, pp. 195-196' does not correspond to the Sumerian Death of Gilgamesh in George 2003. Per the BMCR review, George 2003 vol. 1 discusses the Sumerian poems briefly on pp. 7-17 and the OB Akkadian manuscripts on pp. 159-286. Pages 195-196 fall within the Akkadian section. The page range pp. 195-208 instead corresponds to George 1999 (Penguin Classics edition), which contains Sumerian poem translations in an appendix. Furthermore, the principal critical edition of the Tell Haddad tablets is Cavigneaux and Al-Rawi 2000 (Cuneiform Monographs 19), not George. The underlying factual claim is correct — ETCSL confirms versions from both Nibru and Me-Turan."
+    evidence: "ETCSL bibliography (b1813.htm) cites 'George (1999) pp. 195-208' for the translation. BMCR review of George 2003 confirms vol. 1 structure. Cavigneaux and Al-Rawi 2000 is the critical edition. Verified at https://etcsl.orinst.ox.ac.uk/section1/b1813.htm and https://bmcr.brynmawr.edu/2004/2004.04.21/"
+    recommended_fix: "Change citation from 'George 2003, vol. 1, pp. 195-196' to 'George 1999, pp. 195-196' (Penguin translation). Add Cavigneaux and Al-Rawi 2000 as the critical edition of the Tell Haddad tablets. Consider adding Cavigneaux and Al-Rawi 2000 to sources.yaml."
+
+  - claim_number: 3
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The discovery of the Tell Haddad tablets significantly expanded scholarly knowledge of this composition, adding ritual and funerary content not attested in the Nippur fragments."
+    issue: "Same citation problem: 'George 2003, vol. 1, pp. 195-196' does not correspond to the Death of Gilgamesh in that edition. The page range matches George 1999 (Penguin), not the 2003 Oxford critical edition. The factual content is correct — the Tell Haddad discovery did expand knowledge of the composition, as confirmed by Cavigneaux and Al-Rawi 2000 and ETCSL bibliography."
+    evidence: "ETCSL bibliography cites George 1999 pp. 195-208, not George 2003 at those pages. Verified at https://etcsl.orinst.ox.ac.uk/section1/b1813.htm"
+    recommended_fix: "Change citation to 'George 1999, pp. 195-196' or 'Cavigneaux and Al-Rawi 2000'."
+
+  - claim_number: 5
     kind: "UNVERIFIED"
     severity: "MEDIUM"
-    claim: "The composition asserts that extraordinary merit can earn elevated status within death's domain."
-    issue: "Scholarly interpretation presented as factual claim without [INFERENCE:] marker."
-    evidence: "George 2003 discusses this but the specific formulation is interpretive synthesis."
-    recommended_fix: "Add [INFERENCE:] marker."
+    claim: "The text appears to include a dream or divine communication in which Gilgamesh is told that immortality is not granted to mortals, however great their accomplishments -- the gods have reserved eternal life for themselves."
+    issue: "The ETCSL text confirms the dream/divine communication and the decree that Gilgamesh receives kingship but not eternal life. However, the specific formulation 'the gods have reserved eternal life for themselves' is not attested in the surviving Sumerian text. The ETCSL says 'Enlil, the Great Mountain, the father of gods, has made kingship your destiny, but not eternal life.' This denies eternal life to Gilgamesh but does not explicitly state it is reserved for the gods. The phrasing may echo the Akkadian Epic of Gilgamesh Tablet X (barmaid scene), which would be a contamination risk per scope.md. Additionally, Kramer 1961 is cited alone (pp. 205-207) without an ETCSL cross-check, violating the sources.yaml blacklist rule."
+    evidence: "ETCSL 1.8.1.3, Nibru Segment E: 'Enlil, the Great Mountain, the father of gods, has made kingship your destiny, but not eternal life.' Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1813.htm. The phrase 'reserved eternal life for themselves' is not attested."
+    recommended_fix: "Revise to match attested text: 'Gilgamesh is told that kingship is his destiny, but not eternal life.' Remove the unattested formulation 'the gods have reserved eternal life for themselves.' Add ETCSL 1.8.1.3 as co-citation alongside Kramer 1961 to comply with blacklist rules."
+
+  - claim_number: 6
+    kind: "CITATION-WRONG"
+    severity: "HIGH"
+    claim: "The text describes elaborate funeral preparations for Gilgamesh, including offerings to the gods of the nether world."
+    issue: "Same edition-confusion: 'George 2003, vol. 1, pp. 200-204' does not correspond to the Death of Gilgamesh in the 2003 Oxford edition. Those pages fall within the OB Akkadian manuscripts section. The page range matches George 1999 (Penguin). The factual content is correct — ETCSL confirms elaborate funeral preparations with offerings to Ereshkigal, Ningishzida, Dumuzid, Namtar, Dimpikug, and Neti."
+    evidence: "ETCSL 1.8.1.3 second Nibru version: audience-gifts for Ereckigala, presents for Ninjiczida and Dumuzid, gifts for Namtar, Dimpikug, and Neti. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1813.htm"
+    recommended_fix: "Change citation to 'George 1999, pp. 200-204' or replace with ETCSL 1.8.1.3 as primary citation."
+
+  - claim_number: 9
+    kind: "CITATION-WRONG"
+    severity: "MEDIUM"
+    claim: "Gilgamesh presents gifts to the underworld deities -- a ritual sequence that parallels the gift-giving protocols attested in other Sumerian literary and liturgical texts concerning the nether world."
+    issue: "The citation 'George 2003, vol. 1, pp. 202-206' has the same edition-confusion problem. Additionally, the parallel to 'other Sumerian literary and liturgical texts' is stated without specifying which texts."
+    evidence: "ETCSL 1.8.1.3 confirms the gift-giving. The parallel claim is reasonable (cf. The Death of Ur-Namma, ETCSL 2.4.1.1) but no specific cross-reference is given. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1813.htm"
+    recommended_fix: "Change citation to 'George 1999, pp. 202-206' or cite ETCSL directly. Add specific cross-references to the parallel texts (e.g., ETCSL 2.4.1.1, The Death of Ur-Namma)."
 
   - claim_number: 12
-    kind: "MARKER-MISUSED"
-    severity: "LOW"
-    claim: "The text legitimises the cult of dead kings."
-    issue: "Scholarly interpretation requiring [INFERENCE:] marker."
-    evidence: "George 2003 discusses the cult relationship but this is interpretation."
-    recommended_fix: "Add [INFERENCE:] marker."
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The composition's eschatological function is to assert that even for the greatest hero, death is absolute -- but that extraordinary merit can earn an elevated status within death's domain, as a judge and authority among the dead rather than a mere shade."
+    issue: "This is a scholarly interpretation rather than a direct textual claim. The ETCSL text supports both constituent elements: mortality is absolute ('has made kingship your destiny, but not eternal life') and elevated status is granted ('governor of the nether world ... pre-eminent among the ghosts'). However, the citation 'George 2003, vol. 1, pp. 206-208' has the edition-confusion problem. The interpretive synthesis (connecting these two elements as 'eschatological function') is reasonable but should carry an [INFERENCE:] marker."
+    evidence: "ETCSL 1.8.1.3 supports both textual elements independently. Verified at https://etcsl.orinst.ox.ac.uk/section1/tr1813.htm"
+    recommended_fix: "Change citation to 'George 1999, pp. 206-208' or cite ETCSL directly. Consider adding an [INFERENCE:] marker since this synthesizes the composition's thematic function."
+
+  - claim_number: 13
+    kind: "UNVERIFIED"
+    severity: "MEDIUM"
+    claim: "The royal-legitimation function is significant: by showing Gilgamesh received as a divine judge in the nether world, the text legitimises the cult of dead kings and the ongoing ritual obligations of the living toward deceased rulers."
+    issue: "This is a scholarly interpretation. The ETCSL text confirms Gilgamesh's appointment as governor/judge. The connection to 'cult of dead kings' and 'ritual obligations of the living' is a reasonable scholarly interpretation but is not directly stated in the Sumerian text. The citation 'George 2003, vol. 1, pp. 200-208' has the edition-confusion problem. The concept of the cult of dead kings is well-attested in Ur III period sources but attributing this specific 'royal-legitimation function' to the text is interpretive."
+    evidence: "ETCSL 1.8.1.3 confirms Gilgamesh's appointment. Veldhuis 2001 (JCS 53) discusses 'Bilgames' destined role as a governor in the underworld.' The cult of dead kings is attested in Ur III sources."
+    recommended_fix: "Change citation to 'George 1999, pp. 200-208' or cite ETCSL directly. Add [INFERENCE:] marker and cite supporting scholarly references for the cult-of-dead-kings interpretation."
