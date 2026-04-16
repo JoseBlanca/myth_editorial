@@ -288,9 +288,25 @@ Paste all chapter files (intro, story chapters, comparative) into the conversati
 
 ---
 
+### 15b. grammar-check
+
+**Goal:** Fix grammar errors, awkward sentences, and readability issues. Runs after marker-resolve, before line-edit.
+
+```
+python assemble_prompt.py grammar-check sumer
+```
+
+Paste all `.resolved.adoc` files.
+
+- Any AI
+- **Save to:** `books/sumer/chapters/NN-<slug>.grammar-checked.adoc` + `.grammar-diff.md`
+- Skim the diffs to approve
+
+---
+
 ### 16. line-edit
 
-**Goal:** Final prose polish. Runs on ALL resolved chapters.
+**Goal:** Final prose polish. Runs on ALL grammar-checked chapters.
 
 ```
 python assemble_prompt.py line-edit sumer
