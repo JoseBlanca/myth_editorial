@@ -1,0 +1,10 @@
+stage: "grammar-check"
+timestamp: "2026-04-17T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/00-introduction.grammar-checked.adoc"
+    lines: 232
+  - file: "chapters/00-introduction.grammar-diff.md"
+    lines: 201
+summary: "Grammar-check of chapter 00 (introduction): seven long/overloaded sentences split or flattened, one AsciiDoc line-structure bug fixed (EVIDENCE comment swallowing a sentence); twelve marker-resolved footnote/bracket artefacts flagged rather than fixed per marker-preservation rules."

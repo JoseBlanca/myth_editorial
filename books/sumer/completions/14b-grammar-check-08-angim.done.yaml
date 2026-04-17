@@ -1,0 +1,10 @@
+stage: "grammar-check"
+timestamp: "2026-04-17T13:15:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/08-angim.grammar-checked.adoc"
+    lines: 96
+  - file: "chapters/08-angim.grammar-diff.md"
+    lines: 45
+summary: "Grammar-check of chapter 08 (Angim, 208-line Ninurta homecoming composition): one mechanical fix — added a missing comma after the introductory prepositional phrase 'In the Sumerian theological framework' on line 73. No sentences over 50 words, no nested parentheticals, no subject-verb mismatches found in the main body. Several items noted but deliberately left for downstream stages: footnote-internal fragments (forbidden by skill), an orphaned 'partial;' token inside a marker-resolved lacuna block (forbidden), tense shift in a conditional construction on line 63 (ambiguous meaning, flagged for line-edit), and minor preposition/style questions (word choice, line-edit's job). Footnote count preserved at 19, line count preserved at 96, all EVIDENCE tokens, COMPARATIVE-HOOK comments, and AsciiDoc structure intact."
