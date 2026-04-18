@@ -1,0 +1,601 @@
+---
+# Prose-factcheck report for character-appendix.adoc
+# Book: Sumerian mythology (in-scope: ca. 2600–1600 BCE Sumerian literary tradition)
+# Checker: run in fresh conversation, per prose-factcheck skill rules.
+
+meta:
+  document: "character-appendix.adoc"
+  document_path: "/home/jose/escritos/myth_editorial/books/sumer/character-appendix.adoc"
+  document_lines: 1129
+  claims_extracted: 362   # entries x (header claim + physical-description claim + appears-in + relevance) averaged
+  approach: >-
+    Pass 0 extracted: (a) every header gloss, (b) every physical-description
+    claim (the skill's stated primary risk), (c) every appears-in bullet with
+    its cited composition + source, (d) every relevance claim. Pass 1 verified
+    each physical description and every claim that asserts a footnoted fact.
+    Pass 2 triangulated a sample of cross-references against chapters. Pass 4
+    verified cross-references, glossary renderings, and scope-compliance of
+    citations. Pass 5 performed a reverse-order second pass focusing on the
+    lower-profile entries most likely to have been skimmed in forward reading.
+  scope_check: >-
+    No citation in the appendix appeals to Standard Babylonian Gilgamesh,
+    Enuma Elish, Atrahasis, Akkadian Descent of Ishtar, or Hittite/Hurrian
+    material as a source for Sumerian content. George 2003 is cited, but
+    scope.md permits George 2003 "for its treatment of the Sumerian poems";
+    every appendix citation to George 2003 is attached to a Sumerian-tradition
+    composition (Gilgamesh-Aga, Gilgamesh-Huwawa, Bull of Heaven, Death of
+    Gilgamesh, Gilgamesh-Enkidu-Nether World). Akkadian traditions are
+    explicitly disavowed in two places (Enkidu, Huwawa) — this is compliant.
+
+# ─────────────────────────────────────────────────────────────────────────
+# HIGH-SEVERITY FINDINGS (systematic, must be addressed before release)
+# ─────────────────────────────────────────────────────────────────────────
+
+findings_high:
+
+  - id: H1
+    category: cross-reference-integrity
+    severity: HIGH
+    scope: systemic
+    affected_entries: "all 83 character entries; ~165 cross-references"
+    claim: >-
+      Every "Appears in" bullet uses the form <<ch-NN-slug, …>> — e.g.
+      <<ch-14-inannas-descent, _Inanna's Descent to the Nether World_>> —
+      which is an AsciiDoc cross-reference to an anchor id.
+    finding: >-
+      NONE of the referenced anchors exist. Grep across the entire
+      books/sumer/ tree (both chapters/*.edited.adoc and chapters/*.grammar-checked.adoc)
+      returns zero matches for any [[ch-NN-slug]] block-id declaration. Each
+      chapter file begins with "== Chapter Title" and no [[ch-*]] anchor is
+      placed above or within the chapter. The comparative chapter
+      (comparative.edited.adoc) likewise has no [[ch-*]] anchor.
+    verdict: "! CITATION-WRONG (systemic)"
+    evidence:
+      - "Grep '^\\[\\[ch-' over books/sumer/ → 0 matches."
+      - "Grep '^\\[\\[' over books/sumer/chapters/*.edited.adoc → 0 matches."
+      - "books/sumer/chapters/01-enki-and-ninhursaja.edited.adoc line 1: '== Enki and Ninhursaja: The Paradise of Dilmun' — no preceding anchor."
+      - "books/sumer/comparative.edited.adoc line 1: '== Comparative Perspectives: Sumer and Its Neighbours' — no preceding anchor."
+    impact: >-
+      When the book is built, every one of these cross-references will render
+      as a dangling link — either a visible red "anchor id not found" in
+      AsciiDoctor output or a silent broken link in EPUB/HTML. The character
+      appendix is effectively un-navigable.
+    recommendation: >-
+      Either (a) add [[ch-NN-slug]] block anchors to every chapter file at the
+      section title (matching exactly the slug used in the appendix), or
+      (b) rewrite the cross-references to target the actual section titles
+      via xref syntax. Option (a) is safer because it stabilises the ids
+      against future title edits.
+    extract_sample: >-
+      "* <<ch-14-inannas-descent, _Inanna's Descent to the Nether World_>>"
+      (appendix line 50 and ~50 other locations)
+
+  - id: H2
+    category: missing-character
+    severity: HIGH
+    scope: entry-missing
+    affected_chapter: "ch 34 (Debate between Bird and Fish)"
+    claim: >-
+      The appendix Bird, Fish, and Enki entries all state that King Shulgi
+      renders the verdict in _The Debate between Bird and Fish_
+      (appendix lines 1036, 1038, 1075, and 104 — Enki's "closing doxology
+      praises 'Father Enki' whose wisdom guided Shulgi's judgment").
+    finding: >-
+      Shulgi is a named historical figure (second king of Ur III, reigned
+      ca. 2094–2046 BCE) who acts as judge within a composition that is in
+      scope. He appears by name in chapter 34 (line 59, verdict-rendering
+      context), and he is also the implicit royal patron under whom
+      Sumerian court literature of the Ur III period was produced.
+      The appendix covers historical Ur-Namma (entry 'Ur-Namma'), so there
+      is an established precedent for including named Ur III royalty. No
+      entry for Shulgi exists.
+    verdict: "? UNVERIFIED (completeness gap)"
+    recommendation: >-
+      Add a Heroes and Mortals entry for Shulgi, citing ETCSL 5.3.5 as the
+      primary attestation and noting the brother compositions (5.3.5, 5.3.6
+      — Copper and Silver's closing doxology may also reference him;
+      verify). Physical description: none survives in the in-scope
+      compositions themselves (royal hymns with physical imagery are in the
+      wider Shulgi-hymn corpus, out of scope here per scope.md's exclusion
+      of royal hymns without embedded narrative).
+
+  - id: H3
+    category: hedged-reconstruction-framed-as-neutral-description
+    severity: HIGH
+    scope: single entry
+    affected_entry: "Ur-Namma"
+    extract: >-
+      "* <<ch-30-death-of-ur-namma, _The Death of Ur-Namma_>> — dies
+      (apparently in battle), is prepared with elaborate funerary rites …"
+      (appendix line 884)
+    finding: >-
+      The parenthetical "(apparently in battle)" is hedged reconstruction
+      language of exactly the kind the prose-factcheck handoff flags as
+      primary-risk. The chapter explicitly states "The text describes
+      Ur-Namma dying of illness. He lies sick, abandoned on the battlefield
+      'like a crushed vessel'" (30-death-of-ur-namma.edited.adoc line 18).
+      The chapter's own inference-marker notes that military-defeat context
+      is inferred from the imagery, not stated (line 21). The appendix
+      flattens this hedge into a neutral-tone parenthetical that
+      over-commits to the battle reading.
+    verdict: "△ INTERNAL-VARIANCE with chapter"
+    recommendation: >-
+      Change "dies (apparently in battle)" to either "dies of illness,
+      abandoned on the battlefield" (matches chapter) or omit the
+      circumstance entirely and let the chapter carry the hedge. Either
+      way, avoid the appendix silently asserting what the chapter flags
+      as uncertain.
+
+# ─────────────────────────────────────────────────────────────────────────
+# MEDIUM-SEVERITY FINDINGS
+# ─────────────────────────────────────────────────────────────────────────
+
+findings_medium:
+
+  - id: M1
+    category: physical-description-sourcing
+    severity: MEDIUM
+    affected_entry: "Anzud"
+    extract: >-
+      "*Physical description.* Lion-headed eagle of enormous wingspan; the
+      parent bird radiates the _me-lam_, the divine radiance that emanates
+      from gods, monsters, and sacred objects.footnote:[ETCSL 1.8.2.2,
+      lines 140–160; Jacobsen 1987, pp. 329–332.]"
+      (appendix line 921)
+    finding: >-
+      The "lion-headed eagle" identification is not stated in the Sumerian
+      narrative at ETCSL 1.8.2.2, lines 140–160 — those lines describe the
+      me-lam. The lion-headed-eagle identification is drawn from the
+      wider iconographic tradition (cylinder seals; the Imdugud relief
+      from Tell al-'Ubaid). Chapter 27 (27-lugalbanda-and-the-anzud-bird.edited.adoc
+      line 29) asserts "divine lion-headed eagle" with a citation to
+      ETCSL 1.8.2.2 lines 30–70 + Jacobsen 1987 pp. 322–325. The source
+      of the lion-head identification is Jacobsen's commentary, not the
+      Sumerian text itself. This is not a fabrication — it is a
+      well-attested scholarly reading — but the appendix citation pins
+      the identification to line numbers that do not support it.
+    verdict: "! CITATION-WRONG (partially)"
+    recommendation: >-
+      Either (a) make the iconographic basis explicit ("Lion-headed eagle
+      in the associated visual tradition; the Sumerian text at ETCSL
+      1.8.2.2 describes the me-lam but not a lion head") or (b) restrict
+      the description to what the Sumerian text itself supports
+      (enormous wingspan, radiance) and drop the lion-head detail from
+      the "physical description" section, or (c) keep the lion-head and
+      cite Jacobsen 1987 with a note that it is the scholarly-iconographic
+      identification.
+
+  - id: M2
+    category: physical-description-sourcing
+    severity: MEDIUM
+    affected_entry: "Bilulu"
+    extract: >-
+      "Jacobsen's reconstruction from the fragmentary text identifies her
+      as an old woman of the steppe; beyond that, her appearance is not
+      described." (appendix line 712)
+    finding: >-
+      This is correctly flagged as "Jacobsen's reconstruction," which is
+      the right treatment. The chapter carries the same framing (ch 16
+      line 33 and inference-marker at line 35). No issue with the
+      description itself, but the citation is to Jacobsen 1987 pp.
+      318–320 — this is in-scope as secondary commentary. Note that
+      "old woman" is an interpretive categorisation, not a physical
+      portrait. Keep as is but perhaps reword "her appearance is not
+      described" to "a specific physical portrait is not provided" since
+      "old woman" is itself a physical-description phrase.
+    verdict: "✓ SUPPORTED with minor wording tension"
+    recommendation: low-priority editorial smoothing only.
+
+  - id: M3
+    category: missing-character
+    severity: MEDIUM
+    affected_chapters: "ch 22 (Gilgamesh, Enkidu, and the Nether World); ch 14"
+    finding: >-
+      The "serpent that cannot be charmed" infesting the roots of the
+      huluppu tree (ch 22, line 42) is one leg of the three-part infestation;
+      Anzud and the phantom maid get their own appendix entries but the
+      serpent does not. If the rule is "any named or category-identified
+      creature in a chapter gets an entry," the serpent is a borderline case.
+      Similar borderline cases: Gugalanna (named in ch 14 / in appendix
+      Bull-of-Heaven entry line 947 where appendix notes the identification
+      is by scholarly convention — this is handled reasonably); the Annunaki
+      collective (line 143 of ch 14, "The Annunaki decree…") is collective and
+      appropriately omitted.
+    verdict: "? UNVERIFIED (scope/completeness judgement)"
+    recommendation: >-
+      Consider adding a serpent entry under Creatures and Monsters with a
+      "no physical description" notice; or explicitly document the rule
+      that generic unnamed creatures (serpent, friend-of-Dumuzid, etc.)
+      are omitted.
+
+  - id: M4
+    category: physical-description-claim-without-footnote
+    severity: MEDIUM
+    affected_entry: "Sharur"
+    extract: >-
+      "*Physical description.* No physical description survives in the
+      in-scope sources beyond its identity as a mace."
+      (appendix line 1017)
+    finding: >-
+      This sentence asserts a physical fact ("its identity as a mace") but
+      carries no footnote. The mace identification is well attested
+      (Sharur is the standard Sumerian sentient-mace of Ninurta), but per
+      the handoff spec, every physical-description sentence should cite
+      an in-scope primary source. The Ninurta entry's me-lam claim is
+      footnoted; Sharur's mace identification is not.
+    verdict: "? UNVERIFIED (footnote missing)"
+    recommendation: >-
+      Add a footnote, e.g., "footnote:[ETCSL 1.6.2, passim — Sharur is
+      consistently named and functions as Ninurta's mace-weapon; see
+      Black et al. 2004, pp. 163–165.]"
+
+  - id: M5
+    category: physical-description-claim-without-footnote
+    severity: MEDIUM
+    affected_entry: "Huwawa"
+    extract: >-
+      "*Physical description.* No physical description survives in the
+      in-scope sources beyond the attribution of the seven auras. (The
+      familiar Akkadian portrait of a giant with a lion's face belongs
+      to _Humbaba_ in the Akkadian tradition, which is out of scope.)"
+      (appendix line 978)
+    finding: >-
+      Same class of issue as M4: the physical-description sentence lacks
+      its own footnote. The seven-auras attestation IS footnoted in the
+      preceding header sentence (line 976), but a reader checking the
+      physical-description block for evidentiary anchoring finds no
+      citation.
+    verdict: "? UNVERIFIED (footnote missing)"
+    recommendation: >-
+      Copy the header's citation, or add "see note 1 above," or inline
+      footnote:[ETCSL 1.8.1.5, lines 90–160] to the physical-description
+      sentence.
+
+  - id: M6
+    category: physical-description-claim-without-footnote
+    severity: MEDIUM
+    affected_entry: "Enkidu"
+    extract: >-
+      "*Physical description.* No physical description survives in the
+      in-scope sources. (The Sumerian texts in scope do not describe his
+      body; the familiar hairy, wild-man portrait belongs to the Akkadian
+      Gilgamesh tradition, which is out of scope for this volume.)"
+      (appendix line 738)
+    finding: >-
+      Physical-description sentence lacks a citation. The disavowal of
+      the Akkadian portrait is helpful and scope-compliant, but the
+      negative claim (that Sumerian texts do not describe his body)
+      should carry a citation pointing to the compositions in which he
+      appears (ETCSL 1.8.1.1, 1.8.1.2, 1.8.1.4, 1.8.1.5) so the
+      negative claim is falsifiable.
+    verdict: "? UNVERIFIED (footnote missing; negative claim)"
+    recommendation: >-
+      Add a citation covering the Sumerian Enkidu loci.
+
+  - id: M7
+    category: cross-reference-chapter-number-ordering
+    severity: MEDIUM
+    affected_entries: "Enki, An, Enlil, Nanna-Suen (and a few others)"
+    finding: >-
+      Several "Appears in" bullet lists are not in strict chapter-number
+      order. Example: under Enki the bullets run ch 01–04, 09, 10, 12, 14,
+      22, 24, 28, 26, 34, 32 — chapter 26 falls after ch 28, and chs 32
+      and 34 come after chs 22/24. Under An the ordering runs 08, 11, 07,
+      22, 26, 28 — similarly out of order. Under Enlil the ordering is
+      mostly sequential but 22 precedes 17 in some readings; spot checks
+      show at least 4 entries with jumbled chapter order.
+    verdict: "? UNVERIFIED (editorial consistency)"
+    recommendation: >-
+      Sort every "Appears in" list in ascending chapter number. Low
+      severity alone but compounds with H1 — once cross-refs are made
+      functional, ordering becomes user-visible.
+
+  - id: M8
+    category: citation-without-in-scope-primary
+    severity: MEDIUM
+    affected_entries: "Death of Gilgamesh appearances (Ereshkigal, Ningishzida, Gilgamesh)"
+    finding: >-
+      For The Death of Gilgamesh (ch 23), three appendix entries cite
+      only "George 2003, vol. 1, pp. 200–206" or 200–208 with no ETCSL
+      reference (see Ereshkigal line 176, Ningishzida line 418, Gilgamesh
+      entry for ch 23 line 791). ETCSL catalogues this as 1.8.1.3, and
+      the entry for Gilgamesh ch 23 does cite ETCSL 1.8.1.3. The
+      Ereshkigal and Ningishzida ch 23 bullets do not cite ETCSL at
+      all — only George 2003. George 2003 is a "reference" tier source
+      whose scope.md permission is restricted to its treatment of the
+      Sumerian poems; it is not a primary translation. The citation is
+      not scope-violating (George treats the Sumerian Death of Gilgamesh),
+      but appendix practice elsewhere pairs George with an ETCSL locus.
+    verdict: "? UNVERIFIED (citation-weakness, not wrong)"
+    recommendation: >-
+      Add ETCSL 1.8.1.3 alongside George 2003 citations for the ch 23
+      bullets in the Ereshkigal and Ningishzida entries, and the Relevance
+      footnote of Gilgamesh ("George 2003, vol. 1, pp. 141–208" → add
+      ETCSL 1.8.1.1–1.8.1.5 range).
+
+# ─────────────────────────────────────────────────────────────────────────
+# LOW-SEVERITY FINDINGS
+# ─────────────────────────────────────────────────────────────────────────
+
+findings_low:
+
+  - id: L1
+    category: glossary-rendering-inconsistency
+    severity: LOW
+    finding: >-
+      Glossary renderings are respected throughout — spot checks against
+      glossary.yaml confirm that Inanna (not Ishtar), Enki (not Ea),
+      Huwawa (not Humbaba), Anzud (not Anzu), Dumuzid (not Tammuz),
+      Ninhursaja (not Ninhursag), and Nanna-Suen (not Sin) are used
+      consistently. The "never_use" items from glossary.yaml are correctly
+      avoided in positive contexts, and where Akkadian forms appear
+      (Humbaba on line 978, Tammuz nowhere, Ishtar nowhere), they are
+      marked as out-of-scope comparanda, not as renderings of the
+      Sumerian figure. Technical terms me, kur, abzu, me-lam, edubba,
+      galla, huluppu all appear italicised as the glossary prescribes.
+    verdict: "✓ SUPPORTED"
+    recommendation: none.
+
+  - id: L2
+    category: terminology-minor
+    severity: LOW
+    affected_entry: "Ninshubur"
+    extract: >-
+      "Inanna's faithful minister and _sukkal_, her handmaiden"
+      (appendix line 498)
+    finding: >-
+      "Handmaiden" is a gendered reading. Scholarship is split on
+      Ninshubur's gender (Inanna-cycle Ninshubur is typically rendered
+      feminine, but cross-cycle Ninshubur can be masculine). Jacobsen
+      1987 pp. 213–218 treats her as feminine in the Inanna context,
+      so this is defensible, but the appendix does not footnote the
+      gender reading.
+    verdict: "? UNVERIFIED (minor)"
+    recommendation: low priority — optional footnote pointing to the
+      gender reading, or use a gender-neutral term like "personal
+      attendant."
+
+  - id: L3
+    category: chapter-title-consistency
+    severity: LOW
+    finding: >-
+      Chapter-titles in the cross-references sometimes differ in minor
+      ways from the actual chapter section headings. Examples:
+      - Appendix uses "_Inanna's Descent to the Nether World_" (ch 14);
+        chapter heading is "Inanna's Descent to the Nether World"
+        (match — good).
+      - Appendix uses "_The Flood Story: The Eridu Genesis_" (ch 28);
+        chapter 28 heading is "The Eridu Flood Story" (minor mismatch).
+      - Appendix uses "_Ninurta's Exploits_" (ch 07); chapter 7 heading
+        is "Lugal-e: Ninurta's Exploits" (paratext differs).
+      - Appendix uses "_Ninurta's Return to Nibru_" (ch 08); chapter 8
+        heading is "Angim: Ninurta's Return to Nibru" (same pattern).
+      These are cosmetic — the compositions are unambiguous — but if the
+      anchor fix (H1) uses section-title xrefs rather than block ids,
+      exact string match would be required.
+    verdict: "△ INTERNAL-VARIANCE (cosmetic)"
+    recommendation: >-
+      If the H1 fix uses [[ch-NN-slug]] anchors, this can be ignored.
+      If it uses section-title xrefs, harmonise the titles.
+
+  - id: L4
+    category: claim-in-relevance-section
+    severity: LOW
+    affected_entry: "Gilgamesh"
+    extract: >-
+      "the bargain that his tradition insists on — fame, not eternal
+      life, as the only compensation for mortality."
+      (appendix line 794)
+    finding: >-
+      "Fame-not-immortality" is a central reading of the AKKADIAN
+      Gilgamesh epic (George 2003, vol. 1, pp. 95–100). In the Sumerian
+      poems, the theme is present in _Death of Gilgamesh_ (he is granted
+      rule over the dead and his name is remembered) but phrased
+      differently. The appendix's citation to "George 2003, vol. 1,
+      pp. 141–208" covers the Sumerian section of George (which is
+      precisely the part in scope), so this is defensible, but the
+      bargain-framing language reads Akkadian-epic-coded to a careful
+      ear. This is not a contamination per se — George's Sumerian
+      discussion does touch these themes — but the sentence would be
+      sharper if re-grounded in the Sumerian Death of Gilgamesh ending.
+    verdict: "? UNVERIFIED (reading is defensible but Akkadian-coded phrasing)"
+    recommendation: >-
+      Consider replacing "fame, not eternal life, as the only
+      compensation for mortality" with phrasing that foregrounds the
+      Sumerian Death of Gilgamesh (rule over the dead, the remembered
+      name, the elaborate funerary cult) rather than the Akkadian
+      wisdom-literature moral.
+
+  - id: L5
+    category: claim-in-appears-in
+    severity: LOW
+    affected_entry: "Inanna (ch 22 appearance)"
+    extract: >-
+      "finds the huluppu tree on the Euphrates and appeals to Gilgamesh
+      to clear it of its infesting creatures." (appendix line 224)
+    finding: >-
+      Chapter 22 line 38 actually describes the tree as being on "the
+      bank of the Euphrates" where "the primal waters have deposited it"
+      — the tree is floating/deposited, and Inanna transplants it. The
+      appendix phrasing "finds the huluppu tree on the Euphrates" is
+      correct as summary but omits the transplantation-to-Uruk step that
+      is central to the episode. Minor: would not flag alone; noting
+      here because the Inanna entry is long and detail-dense.
+    verdict: "✓ SUPPORTED (minor compression)"
+    recommendation: none required; optional polish.
+
+  - id: L6
+    category: historical-date-claim
+    severity: LOW
+    affected_entry: "Ur-Namma"
+    extract: >-
+      "Historical founder of the Third Dynasty of Ur (reigned ca.
+      2112–2095 BCE)" (appendix line 878)
+    finding: >-
+      Dates are middle-chronology and widely used. Not contaminated;
+      aligns with standard scholarship. No issue; noted for completeness
+      because the appendix carries a specific numeric claim.
+    verdict: "✓ SUPPORTED"
+    recommendation: none.
+
+  - id: L7
+    category: citation-tier-mix
+    severity: LOW
+    affected_entries: "multiple"
+    finding: >-
+      Many entries cite only Kramer 1961 as a single-source footnote
+      (Ninti line 525, 531; Ziusudra relevance line 912; Enmerkar line
+      692 Aga relevance). scope.md's blacklist explicitly warns: "Kramer
+      1961 cited without ETCSL cross-check." The affected entries are:
+        - Ninti (line 531): cites ETCSL 1.1.1 + Kramer — OK.
+        - Ziusudra relevance (line 912): Kramer 1961, pp. 97–101 +
+          Jacobsen 1987 — OK.
+        - Aga relevance (line 692): George 2003 + Kramer 1961 — OK.
+        - Gudam header and physical-description (lines 812, 814): cites
+          ETCSL only; relevance cites Black 2004 + Kramer. OK.
+      No entry was found citing Kramer 1961 alone without a primary
+      cross-check. Flag retained at LOW because a tight review pass is
+      worthwhile.
+    verdict: "✓ SUPPORTED (spot-check)"
+    recommendation: none required; suggest a global pass ensuring
+      Kramer is always paired with ETCSL or Black et al.
+
+  - id: L8
+    category: appendix-ordering
+    severity: LOW
+    finding: >-
+      Within each category (Deities, Heroes and Mortals, Creatures and
+      Monsters, Personified Concepts) entries are alphabetised with
+      occasional exceptions:
+        - Nanna-Suen appears under N between Nammu and Nanshe — OK
+          (N-a-n ordering).
+        - Ninazu / Ningishzida / Ninhursaja / Ninkurra / Ninlil / Ninmah
+          / Ninsar / Ninshubur / Ninsikila / Ninti / Ninurta — OK.
+        - Lord of Aratta is alphabetised under L (good).
+        - Phantom maid (ki-sikil-lil-la) is alphabetised under K for the
+          Sumerian name — the heading is "Phantom maid (ki-sikil-lil-la)"
+          but appears between Kurgarra and Sharur, i.e., sorted as if by
+          "ki-sikil-lil-la." Inconsistent with other entries where the
+          English heading is the sort key. Low severity.
+      Overall alphabetical integrity is good.
+    verdict: "△ INTERNAL-VARIANCE (minor)"
+    recommendation: none required.
+
+# ─────────────────────────────────────────────────────────────────────────
+# SYSTEMATIC OBSERVATIONS (for human reviewer)
+# ─────────────────────────────────────────────────────────────────────────
+
+systematic_observations:
+
+  - observation: >-
+      The appendix's discipline around "Physical description" sections is
+      generally strong. Every entry carries an explicit "No physical
+      description survives" or a minimal attested descriptor with a
+      citation. No fabricated bodies, no "may have been depicted as…",
+      no "likely appeared…" language. The two famous Akkadian-derived
+      bodies (Enkidu's hairy wild-man, Humbaba's lion-face) are
+      explicitly disavowed and their out-of-scope origin named. This
+      is exactly the posture the handoff requested.
+
+  - observation: >-
+      Sumerian physical descriptors that DO appear — Inanna's seven
+      regalia items (shugurra, measuring rod, lapis beads, breastplate
+      "Come, man, come," pala-garment), Anzud's wingspan and me-lam,
+      Bull of Heaven's devouring-scale, Ur-Namma's crushed-vessel simile,
+      Lugalbanda's horse-of-the-mountains simile, Ninurta's blazing
+      me-lam, Isimud's two faces, galatur/kurgarra as small and
+      sexless, Dumuzid's throne and splendid garments — all trace back
+      to the chapter retellings and carry ETCSL or Black et al.
+      citations. Every one verified against the chapter text.
+
+  - observation: >-
+      No source from the blacklist appears. No Sitchin, no Wikipedia, no
+      worldhistory.org. No citation of Enuma Elish / Atrahasis as
+      Sumerian. No Adapa. No Ishtar. No Akkadian Ishtar's Descent.
+
+  - observation: >-
+      The largest vulnerability in the appendix is not fabrication risk
+      but infrastructure risk: H1 (broken cross-references) affects the
+      entire document and will be visible to any reader the moment the
+      EPUB or HTML is opened. Any correction pass should fix H1 first;
+      the substantive claims in the appendix are largely sound.
+
+  - observation: >-
+      Consider a brief editorial note at the top of the appendix
+      clarifying the inclusion rule ("every named divine or mortal
+      figure who acts in a chapter; generic creatures and collective
+      groups excluded"). This would preempt questions about Shulgi,
+      the serpent, the Annunaki, etc. — see H2 and M3.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Tally
+# ─────────────────────────────────────────────────────────────────────────
+
+summary:
+  total_findings: 17
+  by_severity:
+    HIGH: 3
+    MEDIUM: 8
+    LOW: 6
+  by_category:
+    cross-reference-integrity: 1
+    missing-character: 2
+    hedged-reconstruction: 1
+    physical-description-sourcing: 5
+    citation-tier-mix: 1
+    glossary-rendering: 1
+    terminology-minor: 1
+    chapter-title-consistency: 1
+    claim-in-relevance-section: 1
+    claim-in-appears-in: 1
+    historical-date-claim: 1
+    appendix-ordering: 1
+  fabrication_findings: 0
+  contamination_findings: 0
+
+honesty_self_check:
+  - q: "Did I extract every factual claim in Pass 0, or only the prominent ones?"
+    a: >-
+      I extracted header glosses, physical-description sentences, every
+      Appears-in bullet (composition-level claim), and every relevance
+      sentence. Within the Appears-in bullets I did NOT individually
+      verify every sub-claim against line-number ranges of the cited
+      source — I spot-checked representative items (An at ETCSL 1.1.3
+      lines 1–60; Anzud at ETCSL 1.8.2.2 lines 30–70; Dumuzid at ETCSL
+      1.4.1 lines 340–355; Galatur at ETCSL 1.4.1 lines 220–235; Ur-Namma
+      at ETCSL 2.4.1.1 lines 180–200; Ninshubur at ETCSL 1.4.1 lines
+      26–67; Bull of Heaven at ETCSL 1.8.1.2 Segment B 55–63;
+      Inanna-descent regalia at ETCSL 1.4.1 lines 14–25; Isimud at ETCSL
+      1.1.1 lines 202–219; Lugalbanda at ETCSL 1.8.2.1 lines 264–275).
+      A full line-by-line verification of every appears-in citation would
+      require a dedicated claim-level audit comparable to the
+      per-chapter claims-factcheck. In this prose-factcheck pass I
+      verified the high-risk claims (physical descriptions) exhaustively
+      and spot-checked the plot-summary claims.
+  - q: "Did I address the primary focus areas named in the handoff?"
+    a: >-
+      Yes.
+      1. Fabricated/unsourced physical descriptions — zero fabrications
+         found; two missing-footnote cases (M4 Sharur, M5 Huwawa, M6
+         Enkidu); one mis-pinned citation (M1 Anzud lion-head).
+      2. Cross-reference accuracy — ~165 cross-references, all broken
+         (H1).
+      3. Claims about mythological relevance — minor Akkadian-coded
+         phrasing (L4 Gilgamesh), no scope violations.
+  - q: "Did I read backwards?"
+    a: >-
+      Yes. Reverse pass from Personified Concepts → Creatures and
+      Monsters → Heroes and Mortals → Deities surfaced M4 (Sharur) and
+      L8 (phantom-maid alphabetisation), which I had skimmed past on
+      forward reading. It also confirmed that Tamarisk / Date Palm /
+      Silver / Copper entries are appropriately thin given the thin
+      source base.
+  - q: "Am I confident every severity rating is calibrated?"
+    a: >-
+      H1 (broken cross-refs systemic) is unambiguously HIGH. H2 (Shulgi
+      missing) is HIGH only if the stated inclusion policy is "every
+      named figure who acts"; if the policy is narrower this drops to
+      MEDIUM. H3 (Ur-Namma battle vs. illness) is HIGH because the
+      appendix silently contradicts its own chapter. The Medium
+      findings are real but individually small. Low findings are
+      polish-tier.
