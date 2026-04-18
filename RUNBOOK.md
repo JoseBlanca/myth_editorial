@@ -352,6 +352,35 @@ Paste all final files.
 
 ---
 
+### 19. translate-spanish
+
+**Goal:** Produce a parallel Spanish edition. Only after `format-finalize` — the English book must be finished.
+
+```
+python assemble_prompt.py translate-spanish sumer
+```
+
+Paste `glossary.yaml`, all `chapters/NN-*.edited.adoc`, `chapters/00-introduction.edited.adoc`, `comparative.edited.adoc`, `character-appendix.adoc`, `book.adoc`, and `bibliography.bib` into the conversation.
+
+**How to run:**
+- Any strong writing AI with Spanish competence
+- Pass 0 is **interactive**: the AI proposes `glossary.es.yaml`; you confirm each term (Sumerian deity names stay, Sumerian place names usually Akkadianized — Nippur, Uruk, Eridu — technical terms like *me* and *edubba* stay italicized)
+- Passes 1–3 (draft → reflect → revise) run per chapter
+- Pass 4 assembles `book.es.adoc`; Pass 5 validates with asciidoctor dry-runs
+
+**Save output to:**
+- `books/sumer/glossary.es.yaml`
+- `books/sumer/chapters/NN-<slug>.es.adoc` + `.es-diff.md` (one per chapter, plus intro)
+- `books/sumer/comparative.es.adoc` + `.es-diff.md`
+- `books/sumer/character-appendix.es.adoc` + `.es-diff.md`
+- `books/sumer/book.es.adoc`
+- `books/sumer/validation-report.es.md`
+- Rendered `book.es.pdf` and `book.es.epub`
+
+**Skim the `.es-diff.md` files** to approve translation decisions in bulk. The diffs flag glossary terms on first mention, ambiguous passages, and translator-note footnotes.
+
+---
+
 ## Verifying stage completion
 
 Every skill instructs the agent to write a completion record as its very last action:
@@ -397,4 +426,7 @@ scope.md + sources.yaml                          ← scope-lock
               → character-appendix.adoc           ← character-appendix
                 → (factchecked, reviewed, normalized)
                   → book.adoc + book.pdf/epub     ← format-finalize
+                    → glossary.es.yaml            ← translate-spanish (Pass 0)
+                      → *.es.adoc (per chapter)   ← translate-spanish (Pass 1-3)
+                        → book.es.adoc + .pdf/epub ← translate-spanish (Pass 4-5)
 ```

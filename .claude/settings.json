@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash)",
+      "Bash(ls /home/jose/escritos/myth_editorial/books/sumer/chapters/26-*)",
+      "Bash(grep -v \"^$\")",
+      "Bash(ebook-convert book-preview.html book-preview.epub --title \"The Myths of Sumer: Stories from the First Scribes\" --authors \"Jose Blanca\" --language en --cover cover_image.png --level1-toc \"//h:h2\" --level2-toc \"//h:h3\" --no-default-epub-cover)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(ls /home/jose/escritos/myth_editorial/books/sumer/chapters/*.fidelity.yaml)",
+      "Bash(asciidoctor -b html5 -o book-preview.html book-preview.adoc)",
+      "Bash(ebook-convert book-preview.html book-preview.epub --title \"The Myths of Sumer\" --authors \"Jose Blanca\" --language en --level1-toc \"//h:h2\")",
+      "Bash(awk '{print \"HTML word count:\", $1}')",
+      "Bash(awk '{print \"Total adoc words:\", $1}')",
+      "Bash(awk 'NR==3' /home/jose/escritos/myth_editorial/books/sumer/chapters/01-enki-and-ninhursaja.resolved.adoc)",
+      "Bash(awk 'BEGIN{RS=\"[.!?]\"} {gsub\\(/[[:space:]]+/,\" \"\\); n=split\\($0, w, \" \"\\); if \\(n > 45\\) print NR\": \\(\"n\" words\\) \"$0}' /home/jose/escritos/myth_editorial/books/sumer/chapters/16-inanna-and-bilulu.resolved.adoc)",
+      "Bash(awk 'BEGIN{RS=\".\"} {n=split\\($0,a,\" \"\\); if\\(n>50\\) print \"WORDS=\"n\": \"$0}' /home/jose/escritos/myth_editorial/books/sumer/chapters/20-gilgamesh-and-the-bull-of-heaven.resolved.adoc)",
+      "Bash(python3)",
+      "Bash(python3 -c ' *)",
+      "Bash(awk 'NR==191' /home/jose/escritos/myth_editorial/books/sumer/chapters/00-introduction.resolved.adoc)",
+      "Bash(awk 'NR==5' /home/jose/escritos/myth_editorial/books/sumer/chapters/00-introduction.resolved.adoc)",
+      "Bash(python assemble_prompt.py line-edit sumer)",
+      "Bash(grep -c \"^'''$\" /home/jose/escritos/myth_editorial/books/sumer/chapters/05-enlil-and-ninlil.grammar-checked.adoc)",
+      "Bash(grep -c \"^'''$\" /home/jose/escritos/myth_editorial/books/sumer/chapters/05-enlil-and-ninlil.edited.adoc)",
+      "Bash(grep -c \"^'''$\" /home/jose/escritos/myth_editorial/books/sumer/chapters/14-inannas-descent.grammar-checked.adoc)",
+      "Bash(grep -c \"^'''$\" /home/jose/escritos/myth_editorial/books/sumer/chapters/14-inannas-descent.edited.adoc)",
+      "Bash(sed -n '52p' /home/jose/escritos/myth_editorial/books/sumer/chapters/16-inanna-and-bilulu.edited.adoc)",
+      "Bash(sed -n '52p' /home/jose/escritos/myth_editorial/books/sumer/chapters/16-inanna-and-bilulu.grammar-checked.adoc)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}
