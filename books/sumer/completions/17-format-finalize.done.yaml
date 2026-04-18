@@ -1,0 +1,25 @@
+stage: "format-finalize"
+timestamp: "2026-04-18T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "bibliography.bib"
+    lines: 506
+  - file: "book.adoc"
+    lines: 90
+  - file: "validation-report.md"
+    lines: 92
+  - file: "book.pdf"
+    lines: 0
+    bytes: 6370075
+  - file: "book.epub"
+    lines: 0
+    bytes: 1280576
+summary: "Assembled master book.adoc for Sumerian mythology book (37 edited chapters + comparative + appendix), built bibliography.bib (55 unique source_ids: 11 in-scope + 44 external comparative), produced clean PDF and EPUB (both asciidoctor runs exit 0 with no WARN/ERROR). HIGH finding recorded: external-* comparative source_ids live outside sources.yaml by design; full citations reconstructed from footnote text. See validation-report.md."
+findings:
+  - severity: HIGH
+    category: bibliography
+    summary: "44 external-* source_ids in comparative.edited.adoc are not in sources.yaml registry; by design per comparative-chapter brief. Full citations included in bibliography.bib from footnote prose."
+  - severity: LOW
+    category: bibliography
+    summary: "attinger-glossaire registered but never cited."
