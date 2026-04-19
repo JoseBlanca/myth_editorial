@@ -25,6 +25,7 @@ This chapter is inherently more speculative than the story chapters. It uses an 
 - Structural parallels (tripartite function, sky-father motif, etc.) cite scholarly methodology, not invented frameworks.
 - Speculation is allowed but must be marked: `[SPECULATION: claim | basis: X | counterargument: Y]`.
 - Do not retell out-of-scope myths at length — one-paragraph summaries, then the comparison.
+- `// EVIDENCE: source_id=X ; loc=Y` tokens go on their own line (column 0), never appended after paragraph text. AsciiDoc only treats `//` as a comment at line start — a trailing marker renders as literal text in the final PDF/EPUB. Same rule as `chapter-claims`.
 
 ## Style
 Asimov register, extended for comparative nuance. Signal uncertainty: "One might observe...", "Scholars such as X have argued...". Avoid grand unifying claims; stay close to specific parallels.

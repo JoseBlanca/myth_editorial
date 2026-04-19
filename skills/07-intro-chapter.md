@@ -79,6 +79,19 @@ Same marker discipline as `chapter-draft`:
 - `[LACUNA:]` if evidence for a myth's cultural role is missing due to gaps in the record.
 - No `[RECONSTRUCTION:]` or `[VARIANT:]` — these apply to narrative content, not to cultural-relevance framing.
 
+**Marker placement — MUST be on its own line.** Both `// EVIDENCE: ...` and `// COMPARATIVE-HOOK: ...` must start at column 0 on a line by themselves, not appended after paragraph text. AsciiDoc only treats `//` as a comment when it starts the line; a marker appended after `footnote:[...]` renders as literal text in the output. Same rule as `chapter-claims` and `chapter-draft`.
+
+```
+Correct:
+
+The composition is catalogued as ETCSL 1.1.1.footnote:[ETCSL 1.1.1.]
+// EVIDENCE: source_id=etcsl ; loc=1.1.1
+
+Wrong (marker renders as visible text):
+
+The composition is catalogued as ETCSL 1.1.1.footnote:[ETCSL 1.1.1.] // EVIDENCE: source_id=etcsl ; loc=1.1.1
+```
+
 ### Length
 
 Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words. For a larger book (15+ chapters): 6000–10000 words. Do not pad.
@@ -117,6 +130,7 @@ Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words
 6. Length proportional to the number of myths — not padded, not skeletal.
 7. Every marker has all required sub-fields.
 8. `// COMPARATIVE-HOOK:` comments present for every cross-cultural note.
+9. Every `// EVIDENCE:` and `// COMPARATIVE-HOOK:` marker starts at column 0 on its own line. None appended to paragraph lines.
 
 ## Completion protocol
 

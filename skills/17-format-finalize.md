@@ -31,7 +31,21 @@ Scan all files for `// EVIDENCE: source_id=<id> ; loc=<loc>` tokens. Collect all
 
 Cross-check: any `source_id` in an evidence token that does not resolve to a `sources.yaml` registry entry is a HIGH finding — stop and report. Any registry entry never referenced by any evidence token is noted (unused source — not an error, but worth flagging).
 
-### 2. Master assembly
+### 2. Marker strip (critical — do this AFTER bibliography extraction, BEFORE assembly)
+
+The `// EVIDENCE:` and `// COMPARATIVE-HOOK:` markers are production metadata for the pipeline, not for readers. AsciiDoc only treats `//` as a comment when it starts the line — any marker appended to a paragraph line (e.g., after `footnote:[...]`) renders as literal text in the final PDF/EPUB. This has happened before; do not skip this step.
+
+For each of `chapters/00-introduction.edited.adoc`, every `chapters/NN-<slug>.edited.adoc`, and `comparative.edited.adoc`:
+
+- Strip everything matching the regex `\s*//\s*(EVIDENCE|COMPARATIVE-HOOK):.*$` from every line.
+- If the strip empties a line (whole-line marker), delete the line.
+- If the strip leaves content (mid-line marker), keep the preceding content.
+
+Upstream `.resolved.adoc` and `.grammar-checked.adoc` files preserve the markers as an audit trail — the strip is safe.
+
+After stripping, grep each target file for `EVIDENCE` and `COMPARATIVE-HOOK`. Zero matches expected. If any remain, stop and report.
+
+### 3. Master assembly
 Produce `book.adoc`:
 ```asciidoc
 = <Book Title>
@@ -58,14 +72,16 @@ include::character-appendix.adoc[]
 // include::back-matter.adoc[]    ← include only if file exists
 ```
 
-### 3. Validation
+### 4. Validation
 Dry-run both rendering paths:
 - `asciidoctor-pdf --verbose --failure-level=WARN -o /tmp/validate.pdf book.adoc`
 - `asciidoctor-epub3 --verbose --failure-level=WARN -o /tmp/validate.epub book.adoc`
 
 Any warning or error is reported.
 
-### 4. Output
+After rendering, unzip `/tmp/validate.epub` and grep for `EVIDENCE` and `COMPARATIVE-HOOK` in the `.xhtml` files. Zero matches expected. If any remain, the marker strip (step 2) failed — stop and report.
+
+### 5. Output
 - `book.adoc` (master)
 - `bibliography.bib`
 - `validation-report.md` (asciidoctor output, any findings)
@@ -73,6 +89,7 @@ Any warning or error is reported.
 
 ## Self-check
 - No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all `.edited.adoc` files, `comparative.edited.adoc`, and `character-appendix.adoc`.)
+- No `// EVIDENCE:` or `// COMPARATIVE-HOOK:` remain in the `.edited.adoc` files after step 2. Grep the rendered EPUB's `.xhtml` contents for both strings — must be zero.
 - Every footnote citation resolves to a bibliography entry.
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
