@@ -362,7 +362,7 @@ Paste all `.edited.adoc` files and briefs.
 
 ### 18. format-finalize
 
-**Goal:** Assemble the book and build the bibliography.
+**Goal:** Assemble the book, build the bibliography, and render the final PDF + EPUB.
 
 ```
 python assemble_prompt.py format-finalize sumer
@@ -371,8 +371,15 @@ python assemble_prompt.py format-finalize sumer
 Paste all final files.
 
 - Any AI
-- **Save to:** `books/sumer/book.adoc`, `books/sumer/bibliography.bib`, `books/sumer/validation-report.md`
-- Run the asciidoctor commands to produce `book.pdf` and `book.epub`
+- The stage first fixes the book slug, either from an explicit `slug:` field in `scope.md` or by deriving it from the book title. For Sumer the slug is `the_myths_of_sumer`.
+- **Save to:** `books/sumer/the_myths_of_sumer.adoc` (master) and `books/sumer/bibliography.bib` (both at the book root, so relative `include::`, `:bibtex-file:`, and cover-image paths resolve without `../` rewrites)
+- Render via the container helper, from the repo root:
+
+  ```
+  ./container/render_book.sh books/sumer the_myths_of_sumer
+  ```
+
+  This produces `books/sumer/output/the_myths_of_sumer.pdf`, `books/sumer/output/the_myths_of_sumer.epub`, and `books/sumer/reports/validation-report.md`. The helper runs the asciidoctor commands with `-r asciidoctor-bibtex --verbose --failure-level=WARN`, then scans the rendered EPUB for anti-patterns (EVIDENCE/COMPARATIVE-HOOK leftovers, `(. ` empty-paren artefacts, `_(.footnote` artefacts) and exits non-zero on any WARN/ERROR or hit.
 
 ---
 
@@ -384,22 +391,29 @@ Paste all final files.
 python assemble_prompt.py translate-spanish sumer
 ```
 
-Paste `glossary.yaml`, all `chapters/NN-*.edited.adoc`, `chapters/00-introduction.edited.adoc`, `comparative.edited.adoc`, `character-appendix.adoc`, `book.adoc`, and `bibliography.bib` into the conversation.
+Paste `glossary.yaml`, all `chapters/NN-*.edited.adoc`, `chapters/00-introduction.edited.adoc`, `comparative.edited.adoc`, `character-appendix.adoc`, `the_myths_of_sumer.adoc`, and `bibliography.bib` into the conversation.
 
 **How to run:**
 - Any strong writing AI with Spanish competence
 - Pass 0 is **interactive**: the AI proposes `glossary.es.yaml`; you confirm each term (Sumerian deity names stay, Sumerian place names usually Akkadianized — Nippur, Uruk, Eridu — technical terms like *me* and *edubba* stay italicized)
 - Passes 1–3 (draft → reflect → revise) run per chapter
-- Pass 4 assembles `book.es.adoc`; Pass 5 validates with asciidoctor dry-runs
+- Pass 4 assembles `the_myths_of_sumer.es.adoc` at the book root
+- Pass 5 renders via the same container helper with `--es`:
+
+  ```
+  ./container/render_book.sh books/sumer the_myths_of_sumer --es
+  ```
 
 **Save output to:**
 - `books/sumer/glossary.es.yaml`
-- `books/sumer/chapters/NN-<slug>.es.adoc` + `.es-diff.md` (one per chapter, plus intro)
+- `books/sumer/chapters/NN-<chapter-slug>.es.adoc` + `.es-diff.md` (one per chapter, plus intro)
 - `books/sumer/comparative.es.adoc` + `.es-diff.md`
 - `books/sumer/character-appendix.es.adoc` + `.es-diff.md`
-- `books/sumer/book.es.adoc`
-- `books/sumer/validation-report.es.md`
-- Rendered `book.es.pdf` and `book.es.epub`
+- `books/sumer/the_myths_of_sumer.es.adoc` (master, at book root)
+- `books/sumer/bibliography.es.bib` (only if translator-note footnotes introduced new citations)
+- `books/sumer/output/the_myths_of_sumer.es.pdf`
+- `books/sumer/output/the_myths_of_sumer.es.epub`
+- `books/sumer/reports/validation-report.es.md`
 
 **Skim the `.es-diff.md` files** to approve translation decisions in bulk. The diffs flag glossary terms on first mention, ambiguous passages, and translator-note footnotes.
 
@@ -449,8 +463,8 @@ scope.md + sources.yaml                          ← scope-lock
             → *.edited.adoc                       ← line-edit
               → character-appendix.adoc           ← character-appendix
                 → (factchecked, reviewed, normalized)
-                  → book.adoc + book.pdf/epub     ← format-finalize
-                    → glossary.es.yaml            ← translate-spanish (Pass 0)
-                      → *.es.adoc (per chapter)   ← translate-spanish (Pass 1-3)
-                        → book.es.adoc + .pdf/epub ← translate-spanish (Pass 4-5)
+                  → <slug>.adoc + output/<slug>.pdf/epub     ← format-finalize
+                    → glossary.es.yaml                        ← translate-spanish (Pass 0)
+                      → *.es.adoc (per chapter)               ← translate-spanish (Pass 1-3)
+                        → <slug>.es.adoc + output/<slug>.es.pdf/epub  ← translate-spanish (Pass 4-5)
 ```
