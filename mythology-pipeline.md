@@ -1,18 +1,18 @@
 # Mythology Book Pipeline — Full Pack for Review
 
-This document contains the full pipeline: the README (overview and principles), the CHANGELOG, and all seventeen skill files (step-by-step instructions for each stage). Each section is marked with a `FILE N of 19` header. This is v2.1, incorporating improvements from external review (ChatGPT).
+This document contains the full pipeline: the README (overview and principles), the CHANGELOG, and all 19 skill files (step-by-step instructions for each stage). Each section is marked with a `FILE N of 21` header. This bundle is a HEAD snapshot as of 2026-04-23.
 
 ---
 
-# FILE 1 of 19: README.md
+# FILE 1 of 21: README.md
 
 # Mythology Book Pipeline
 
-A step-by-step process for producing mythology books in the style of Isaac Asimov's non-fiction: clear, plain-English retellings of myths, one culture per book, with every factual claim traced to a scholarly source. The process uses multiple AI agents (Claude, GPT, Gemini, etc.) working in sequence, each doing one job and being checked by a different AI. It handles the hard parts of mythology writing: gaps in ancient texts, contradictory versions of the same story, and the constant risk of mixing up material from neighboring cultures.
+A step-by-step process for producing mythology books in the style of Isaac Asimov's non-fiction: clear, plain-English retellings of myths, one culture per book, with every factual claim traced to a scholarly source. The process uses AI agents (Claude, GPT, Gemini, etc.) working in sequence, each doing one job and checked in a fresh conversation with no memory of the writing — ideally by a different AI model, but the same model is acceptable when running a different one is impractical. It handles the hard parts of mythology writing: gaps in ancient texts, contradictory versions of the same story, and the constant risk of mixing up material from neighboring cultures.
 
 ## Core principles
 
-1. **The writer and the checker must be different AIs.** The AI that writes a chapter must not be the one that checks it. Use a different AI model (e.g., Claude writes, GPT checks), and start a fresh conversation for the check so the checker has no memory of the writing process. Self-review catches almost nothing.
+1. **The checker must have no memory of the writing.** Every check runs in a fresh conversation (or a fresh process, for autonomous runs) so the checker cannot rely on anything but the artefacts in front of it. Using a different AI model for the check is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a second model is not available. What never works is self-review in the same conversation: it catches almost nothing.
 
 2. **Three files govern the entire book.** Three files are created early and must be read by every AI and every human before starting any later stage:
    - `scope.md` — what culture, period, and sources the book covers, and what it explicitly excludes.
@@ -45,6 +45,14 @@ These rules apply across all stages. They are not repeated in each skill, but ev
 
 **Negative-evidence discipline.** When a source does not attest something (e.g., no physical description survives), this must be stated explicitly and scoped: "No physical description survives in the in-scope sources" — not "No description exists." Absence of evidence in the in-scope corpus is not the same as universal absence.
 
+**Template discipline.** Any skill that tells an agent to render a marker, claim, footnote, or other structured element into prose using a template with `<placeholder>` slots must follow three rules:
+
+1. *Every template ships with at least one worked input→output example.* A template without an example is a specification, not an instruction — agents will guess at the slot-filling rule and guess differently each time.
+2. *Every template specifies a trailing-punctuation rule.* If a slot value may end with `.`, `?`, `!`, or `…`, the template must say explicitly whether to suppress its own following separator. Past runs have shipped "..]_" and ".. Risk:" into the final PDF because this was implicit.
+3. *Every template specifies fallback behaviour for empty, missing, or sentinel-valued slots* (`none`, `n/a`, `—`, etc.). The renderer must never emit a literal `<placeholder>` token, an empty paren `(. [n])`, or a leaked sentinel word. When a required slot is missing, the skill must describe a concrete fallback (e.g. "render the claim as plain prose without a footnote") rather than letting the agent improvise.
+
+The corresponding skill's self-check must include grep-based anti-pattern checks for each of the three failure modes (placeholder leaks, empty slots, sentinel leaks), and the downstream stage that assembles final artefacts must mirror those checks as a safety net.
+
 ## Stage order
 
 The book is built in stages. Each stage produces a file that the next stage consumes. `[HUMAN]` marks points where you review and approve before continuing. The arrows show what feeds into what:
@@ -68,7 +76,7 @@ scope-lock → story-inventory → inventory-audit →
   format-finalize
 ```
 
-**In plain English:** First you define what the book covers and what sources are allowed (scope-lock). Then an AI researches all the stories (story-inventory), and a different AI checks the list (inventory-audit). You review, the result is validated (post-human-normalize), then turned into one planning document per chapter (chapter-briefs) and a locked glossary (glossary-lock). An introductory chapter on cultural context is written and fact-checked by a different AI (prose-factcheck); you review; the result is validated. Then, for each story chapter: the facts are written out one by one (chapter-claims), checked by a different AI (claims-factcheck), you review, the result is validated, then the facts are turned into narrative prose (chapter-draft), and yet another AI confirms the prose faithfully represents the facts (narrative-fidelity) — if it finds problems, you review and the result is validated. After all story chapters are done, a cross-cultural comparison chapter is written and fact-checked (prose-factcheck); you review; validated. Then all chapters get their placeholder markers converted to final text (marker-resolve) and a prose-quality polish (line-edit). A character reference appendix is compiled and fact-checked (prose-factcheck); you review; validated. Finally, everything is assembled into a book with a bibliography and validated (format-finalize).
+**In plain English:** First you define what the book covers and what sources are allowed (scope-lock). Then an AI researches all the stories (story-inventory), and the list is checked in a fresh conversation (inventory-audit) — ideally by a different AI, but the same model in a fresh conversation is fine. You review, the result is validated (post-human-normalize), then turned into one planning document per chapter (chapter-briefs) and a locked glossary (glossary-lock). An introductory chapter on cultural context is written and fact-checked in a fresh conversation (prose-factcheck); you review; the result is validated. Then, for each story chapter: the facts are written out one by one (chapter-claims), checked in a fresh conversation (claims-factcheck), you review, the result is validated, then the facts are turned into narrative prose (chapter-draft), and a fresh conversation confirms the prose faithfully represents the facts (narrative-fidelity) — if it finds problems, you review and the result is validated. After all story chapters are done, a cross-cultural comparison chapter is written and fact-checked (prose-factcheck); you review; validated. Then all chapters get their placeholder markers converted to final text (marker-resolve) and a prose-quality polish (line-edit). A character reference appendix is compiled and fact-checked (prose-factcheck); you review; validated. Finally, everything is assembled into a book with a bibliography and validated (format-finalize).
 
 ## Artifact layout per book
 
@@ -122,7 +130,7 @@ See `CHANGELOG.md`.
 
 ---
 
-# FILE 2 of 19: CHANGELOG.md
+# FILE 2 of 21: CHANGELOG.md
 
 # Changelog
 
@@ -182,7 +190,7 @@ Initial pipeline: scope-lock, story-inventory, inventory-audit, chapter-briefs, 
 
 ---
 
-# FILE 3 of 19: skills/scope-lock/SKILL.md
+# FILE 3 of 21: skills/01-scope-lock.md
 
 ---
 name: scope-lock
@@ -296,12 +304,39 @@ triangulation_databases:
 
 The `full_citation` and `short_citation` fields are used directly by `format-finalize` to build the bibliography — no parsing of free-text footnotes required.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 Pass `scope.md` and `sources.yaml` to `story-inventory`. These files are re-read by every subsequent skill.
 
 ---
 
-# FILE 4 of 19: skills/story-inventory/SKILL.md
+# FILE 4 of 21: skills/02-story-inventory.md
 
 ---
 name: story-inventory
@@ -371,16 +406,43 @@ cycles:
 3. Every `scope_uncertain: true` entry has a note explaining the uncertainty.
 4. Internal variants (multiple in-scope sources giving different versions) are recorded in the `variants` field, not flagged as problems.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
-To `inventory-audit`, which must be run in a fresh conversation with a different model.
+To `inventory-audit`, which must be run in a fresh conversation — preferably with a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical.
 
 ---
 
-# FILE 5 of 19: skills/inventory-audit/SKILL.md
+# FILE 5 of 21: skills/03-inventory-audit.md
 
 ---
 name: inventory-audit
-description: Checks the story inventory for errors before any writing begins. Must be run by a different AI model than the one that produced the inventory, in a fresh conversation. Catches material from wrong cultures, made-up references, missing well-known stories, and silently merged variants.
+description: Checks the story inventory for errors before any writing begins. Must be run in a fresh conversation with no memory of producing the inventory — preferably by a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical. Catches material from wrong cultures, made-up references, missing well-known stories, and silently merged variants.
 ---
 
 # inventory-audit
@@ -399,10 +461,10 @@ The audit checks four things:
 
 4. **Silently merged variants.** When multiple versions of a story exist, the inventory should list them separately. If it quietly combined two versions into one summary, that's a problem.
 
-This audit must be run by a different AI model than the one that produced the inventory, in a fresh conversation (so the auditor has no memory of the work it's checking). An AI reviewing its own work in the same conversation catches almost nothing.
+This audit must be run in a fresh conversation so the auditor has no memory of the work it's checking. An AI reviewing its own work in the same conversation catches almost nothing. Using a different AI model from the one that produced the inventory is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a different model is impractical. The fresh context is the load-bearing requirement; the model identity is a preference.
 
 ## Hard rule
-If you are the model that produced `inventory.yaml`, or if you are in the same conversation in which it was produced, refuse and tell the user to start a fresh conversation with a different model.
+If you are in the same conversation in which `inventory.yaml` was produced, refuse and tell the user to start a fresh conversation. (A different AI model is preferred but not required; the fresh conversation is.)
 
 ## Inputs
 - `scope.md`, `sources.yaml`
@@ -480,12 +542,39 @@ Answer these in `meta` explicitly:
 ## Human review protocol
 Tell the user: review HIGH findings (~10 minutes), skim MEDIUM, ignore LOW unless maximum rigor is desired. Mark each finding's `recommended_action` field as `ACCEPTED` or `REJECTED`. Apply accepted changes to produce `inventory.approved.yaml` for the next stage.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 `inventory.approved.yaml` to `post-human-normalize`, then to `chapter-briefs`.
 
 ---
 
-# FILE 6 of 19: skills/post-human-normalize/SKILL.md
+# FILE 6 of 21: skills/04-post-human-normalize.md
 
 ---
 name: post-human-normalize
@@ -546,12 +635,39 @@ The validated file, with a provenance comment block appended:
 
 If any check fails, the file is returned to the human with a specific error report. The pipeline does not proceed until all checks pass.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 The validated file proceeds to the next stage as defined in the stage order.
 
 ---
 
-# FILE 7 of 19: skills/chapter-briefs/SKILL.md
+# FILE 7 of 21: skills/05-chapter-briefs.md
 
 ---
 name: chapter-briefs
@@ -699,12 +815,39 @@ special_instructions: <any — e.g., "Preserve the dialogue structure of the ori
 - Every brief has a triangulation database list (at least one).
 - `toc.yaml` contains all chapters in order, starting with `00-introduction`.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 To `glossary-lock`, which runs once over all briefs before any drafting. The `cultural_relevance` fields also feed `intro-chapter`.
 
 ---
 
-# FILE 8 of 19: skills/glossary-lock/SKILL.md
+# FILE 8 of 21: skills/06-glossary-lock.md
 
 ---
 name: glossary-lock
@@ -763,12 +906,39 @@ terms:
 
 If a later stage (e.g., `chapter-claims`) encounters a recurring term that should be in the glossary but isn't, the AI should stop and flag it. The human then adds the term to `glossary.yaml` using the same process (survey renderings, pick one, add `never_use` entries). This does not require re-running `glossary-lock` from scratch — just append the new entry and confirm consistency with existing entries.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 `glossary.yaml` to `intro-chapter` and `chapter-claims`.
 
 ---
 
-# FILE 9 of 19: skills/intro-chapter/SKILL.md
+# FILE 9 of 21: skills/07-intro-chapter.md
 
 ---
 name: intro-chapter
@@ -789,7 +959,7 @@ The chapter answers three questions for each myth, based on scholarly evidence:
 
 3. **Where else does this theme appear?** A brief preview — not the full analysis, which comes in the comparative chapter at the end — of where this myth's themes show up in other cultures. This gives the reader something to watch for as they read, and prepares them for the cross-cultural discussion later.
 
-This chapter makes factual claims about cultural significance, so it goes through the same fact-checking process as any other chapter: a different AI checks every claim against sources.
+This chapter makes factual claims about cultural significance, so it goes through the same fact-checking process as any other chapter: every claim is checked against sources in a fresh conversation (ideally by a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical).
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
@@ -851,6 +1021,19 @@ Same marker discipline as `chapter-draft`:
 - `[LACUNA:]` if evidence for a myth's cultural role is missing due to gaps in the record.
 - No `[RECONSTRUCTION:]` or `[VARIANT:]` — these apply to narrative content, not to cultural-relevance framing.
 
+**Marker placement — MUST be on its own line.** Both `// EVIDENCE: ...` and `// COMPARATIVE-HOOK: ...` must start at column 0 on a line by themselves, not appended after paragraph text. AsciiDoc only treats `//` as a comment when it starts the line; a marker appended after `footnote:[...]` renders as literal text in the output. Same rule as `chapter-claims` and `chapter-draft`.
+
+```
+Correct:
+
+The composition is catalogued as ETCSL 1.1.1.footnote:[ETCSL 1.1.1.]
+// EVIDENCE: source_id=etcsl ; loc=1.1.1
+
+Wrong (marker renders as visible text):
+
+The composition is catalogued as ETCSL 1.1.1.footnote:[ETCSL 1.1.1.] // EVIDENCE: source_id=etcsl ; loc=1.1.1
+```
+
 ### Length
 
 Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words. For a larger book (15+ chapters): 6000–10000 words. Do not pad.
@@ -889,13 +1072,41 @@ Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words
 6. Length proportional to the number of myths — not padded, not skeletal.
 7. Every marker has all required sub-fields.
 8. `// COMPARATIVE-HOOK:` comments present for every cross-cultural note.
+9. Every `// EVIDENCE:` and `// COMPARATIVE-HOOK:` marker starts at column 0 on its own line. None appended to paragraph lines.
+
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
-To `prose-factcheck`, fresh conversation, different model.
+To `prose-factcheck`, in a fresh conversation (a different AI model is preferred but not required).
 
 ---
 
-# FILE 10 of 19: skills/chapter-claims/SKILL.md
+# FILE 10 of 21: skills/08-chapter-claims.md
 
 ---
 name: chapter-claims
@@ -952,6 +1163,19 @@ Enlil separated heaven (An) from earth (Ki), creating the space in which the atm
 
 The footnote is for the reader. The evidence token is for the machine. `format-finalize` builds the bibliography from evidence tokens, not from parsing footnote prose — this avoids ambiguity between bibliographic and editorial footnotes.
 
+## Source overview section
+
+Before the narrative claims, begin with a `=== Source overview` section. This grounds the reader in the physical evidence — the actual artifacts, documents, or traditions through which we know this story. Each claim in this section is a factual assertion about a source, not about the myth's content.
+
+Include claims covering:
+1. **What survives.** Name the specific tablets, manuscripts, or attestations (with museum numbers or corpus IDs where known). How many witnesses exist? From which sites?
+2. **State of preservation.** Is the text complete, fragmentary, or heavily damaged? Where are the major gaps?
+3. **Composite or single witness?** Is the "text" scholars read a composite stitched from many tablets, or does it survive on a single artifact?
+4. **Discovery context.** When and where was the primary tablet found, if known? (e.g., "recovered from the Nippur scribal quarter during the University of Pennsylvania excavations")
+5. **Scholarly edition.** Which critical edition or translation is the basis for this chapter?
+
+This section is factual and citeable — every claim about a tablet's provenance, museum number, or preservation state must have a footnote. It feeds directly into the chapter-draft's opening passage, which orients the reader before the story begins.
+
 ## Ordering
 
 Follow the narrative order of the myth as attested in the primary source(s). Where the brief specifies an ordering (e.g., following the tablet sequence), follow it. The claims should form a complete, ordered skeleton of the story — everything the narrative will need.
@@ -986,6 +1210,16 @@ End the claims document with a section of `// COMPARATIVE-HOOK:` comments collec
 // This is a claims document, not final prose. Each paragraph is one verifiable claim.
 // After fact-check and human review, chapter-draft will transform this into narrative.
 
+=== Source overview
+
+<Claim about physical artifacts — tablets, museum numbers, sites of discovery.>
+
+<Claim about state of preservation — complete, fragmentary, lacunae.>
+
+<Claim about the composite nature of the text, if applicable.>
+
+<Claim about the critical edition or translation used as basis.>
+
 === Setting and context
 
 <Claim 1 — one paragraph, one citation.>
@@ -1015,25 +1249,53 @@ End the claims document with a section of `// COMPARATIVE-HOOK:` comments collec
 ```
 
 ## Self-check before returning
-1. Every claim is a single factual assertion — no bundled claims, no narrative connective tissue.
-2. Every claim has footnote coverage citing a source provided in this conversation. Nothing from memory.
-3. Claims follow the narrative order of the myth.
+1. The `=== Source overview` section is present and contains at least 3 claims about the physical artifacts, preservation state, and scholarly edition.
+2. Every claim is a single factual assertion — no bundled claims, no narrative connective tissue.
+3. Every claim has footnote coverage citing a source provided in this conversation. Nothing from memory.
+4. Claims follow the narrative order of the myth.
 4. The claims skeleton is complete — everything the narrative will need is here.
 5. Every marker has all required sub-fields.
 6. No out-of-scope material.
 7. Variant handling matches the brief's classification.
 8. `glossary.yaml` renderings used throughout.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
-To `claims-factcheck`, fresh conversation, different model. The fact-checker's job is dramatically simplified: each claim is isolated and individually cited.
+To `claims-factcheck`, in a fresh conversation (a different AI model is preferred but not required). The fact-checker's job is dramatically simplified: each claim is isolated and individually cited.
 
 ---
 
-# FILE 11 of 19: skills/claims-factcheck/SKILL.md
+# FILE 11 of 21: skills/09-claims-factcheck.md
 
 ---
 name: claims-factcheck
-description: Checks the factual claims document for a story chapter — one fact per paragraph, each individually cited. This is the primary factcheck mode and the most reliable, because each claim is isolated and trivially verifiable. Must be run by a different AI model in a fresh conversation.
+description: Checks the factual claims document for a story chapter — one fact per paragraph, each individually cited. This is the primary factcheck mode and the most reliable, because each claim is isolated and trivially verifiable. Must be run in a fresh conversation with no memory of producing the claims (a different AI model is preferred but not required).
 ---
 
 # claims-factcheck
@@ -1053,7 +1315,7 @@ This step enforces four disciplines:
 4. **Read it backwards too.** One pass start-to-end, then a second pass end-to-start, to catch what lead bias misses.
 
 ## Hard rule
-Must be run in a fresh conversation with a different AI model than produced the claims. If you have any memory of producing the input, refuse.
+Must be run in a fresh conversation with no memory of producing the claims. If you have any memory of producing the input, refuse. Using a different AI model is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a different model is impractical; the fresh context is the load-bearing requirement.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
@@ -1149,16 +1411,43 @@ Answer in `meta`:
 ## Human review protocol
 Review HIGH findings (~10 minutes), skim MEDIUM. Apply accepted fixes to produce `chapters/NN-<slug>.claims.approved.adoc`. Run `post-human-normalize` before proceeding to `chapter-draft`.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 After human review and normalization: `chapters/NN-<slug>.claims.approved.adoc` to `chapter-draft`.
 
 ---
 
-# FILE 12 of 19: skills/prose-factcheck/SKILL.md
+# FILE 12 of 21: skills/10-prose-factcheck.md
 
 ---
 name: prose-factcheck
-description: Checks factual claims embedded in prose — for the intro chapter, comparative chapter, and character appendix. Unlike claims-factcheck which operates on isolated claims, this skill must first extract claims from flowing prose before verifying them. Must be run by a different AI model in a fresh conversation.
+description: Checks factual claims embedded in prose — for the intro chapter, comparative chapter, and character appendix. Unlike claims-factcheck which operates on isolated claims, this skill must first extract claims from flowing prose before verifying them. Must be run in a fresh conversation with no memory of producing the content (a different AI model is preferred but not required).
 ---
 
 # prose-factcheck
@@ -1170,7 +1459,7 @@ This is the factcheck for prose content that wasn't written through the claims-f
 The same four disciplines apply (show evidence, verify references, distinguish contradictions from errors, read backwards), but with an added initial step: claim extraction.
 
 ## Hard rule
-Must be run in a fresh conversation with a different AI model than produced the content.
+Must be run in a fresh conversation with no memory of producing the content. A different AI model is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a different model is impractical; the fresh context is the load-bearing requirement.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
@@ -1233,12 +1522,39 @@ Review HIGH findings. Apply accepted fixes directly to the prose file. Run `post
 - **Comparative chapter** → corrected `comparative.adoc` proceeds to `post-human-normalize`, then `marker-resolve`.
 - **Character appendix** → corrected `character-appendix.adoc` proceeds to `post-human-normalize`, then `format-finalize`.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 After human review and normalization: the corrected file proceeds to the next stage as defined in the stage order.
 
 ---
 
-# FILE 13 of 19: skills/chapter-draft/SKILL.md
+# FILE 13 of 21: skills/11-chapter-draft.md
 
 ---
 name: chapter-draft
@@ -1301,12 +1617,26 @@ These are **not** factual claims — they are prose scaffolding. They must not i
 
 Per brief's `target_length_words`, driven by source volume. If you find yourself padding, stop and return the shorter version with a note.
 
+## Source overview opening
+
+Every chapter begins with a short prose passage (2–5 paragraphs) that orients the reader in the physical evidence before the story begins. This passage is built from the `=== Source overview` claims in the approved claims document and covers:
+
+- **What we have**: the tablets, fragments, or manuscripts — named by museum number or corpus ID where possible — and where they were found.
+- **What condition it is in**: complete, fragmentary, or composite. Where the major gaps are.
+- **How we read it**: which critical edition or translation the retelling follows.
+
+This passage sets the Asimov register immediately: the reader understands they are about to hear a story reconstructed from physical artifacts, not received from some mystical tradition. It is the scholarly equivalent of "here is the evidence, now here is the story it tells."
+
+The source overview is separated from the narrative body by a blank line or a section transition (e.g., "The story, as the tablets preserve it, goes as follows."). It is not a dry bibliography — it is narrative prose about artifacts, written in the same Asimov register as the rest of the chapter.
+
 ## Output: `chapters/NN-<slug>.adoc`
 
 ```asciidoc
 == <Chapter Title>
 
-<Opening — orient the reader in time, place, and source situation.>
+<Source overview — 2-5 paragraphs on the physical evidence: tablets, sites, preservation, edition. Built from the Source overview claims.>
+
+<Transition to narrative.>
 
 <Body — the verified claims, woven into narrative prose. Every claim present, no claims added.>
 
@@ -1314,8 +1644,9 @@ Per brief's `target_length_words`, driven by source volume. If you find yourself
 ```
 
 ## Self-check before returning
-1. **Completeness**: walk the approved claims document claim by claim. Is every claim represented in the narrative? List any you cannot find — they are bugs.
-2. **No additions**: scan the narrative for any factual assertion that does not correspond to a claim in the approved document. Flag it.
+1. **Source overview present**: the chapter opens with 2–5 paragraphs on the physical evidence, built from the Source overview claims. No source overview = incomplete chapter.
+2. **Completeness**: walk the approved claims document claim by claim — including Source overview claims. Is every claim represented in the narrative? List any you cannot find — they are bugs.
+3. **No additions**: scan the narrative for any factual assertion that does not correspond to a claim in the approved document. Flag it.
 3. Scan for forbidden words — each hit is a drift signal; revise.
 4. Every proper noun was glossed on first mention using `glossary.yaml`.
 5. Variant handling matches the brief's classification.
@@ -1324,16 +1655,43 @@ Per brief's `target_length_words`, driven by source volume. If you find yourself
 8. Length matches the brief's target. Not padded.
 9. `// COMPARATIVE-HOOK:` comments carried over.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
-To `narrative-fidelity`, fresh conversation, different model.
+To `narrative-fidelity`, in a fresh conversation (a different AI model is preferred but not required).
 
 ---
 
-# FILE 14 of 19: skills/narrative-fidelity/SKILL.md
+# FILE 14 of 21: skills/12-narrative-fidelity.md
 
 ---
 name: narrative-fidelity
-description: Checks that the narrative prose faithfully represents the verified facts — nothing dropped, nothing added, nothing distorted. Must be run by a different AI model in a fresh conversation.
+description: Checks that the narrative prose faithfully represents the verified facts — nothing dropped, nothing added, nothing distorted. Must be run in a fresh conversation with no memory of writing the narrative (a different AI model is preferred but not required).
 ---
 
 # narrative-fidelity
@@ -1348,10 +1706,10 @@ This is not a fact-check — the facts were already checked in the previous step
 2. **Added facts.** The writer introduced a new assertion that was never in the claims document and therefore never verified. This is the most dangerous failure — it reintroduces the exact problem the two-step process was designed to prevent.
 3. **Distorted facts.** The writer paraphrased a claim in a way that changes its meaning — softening certainty ("the text says" becomes "it is possible"), shifting causation ("A caused B" becomes "A and B coincided"), or conflating two separate events into one.
 
-This check must be done by a different AI model in a fresh conversation. The AI that wrote the narrative cannot reliably judge whether it drifted from the source material.
+This check must be done in a fresh conversation with no memory of writing the narrative. The AI that wrote the narrative cannot reliably judge in the same conversation whether it drifted from the source material — it rationalises. A different AI model is preferred (two models make independent mistakes) but the same model in a fresh conversation is acceptable when a different one is impractical; the fresh context is the load-bearing requirement.
 
 ## Hard rule
-Must be run in a fresh conversation with a different model than produced the narrative. If you produced the narrative, refuse.
+Must be run in a fresh conversation with no memory of producing the narrative. If you produced the narrative, refuse. (A different AI model is preferred but not required.)
 
 ## Inputs
 - `chapters/NN-<slug>.claims.approved.adoc` (the verified claims — the ground truth)
@@ -1455,12 +1813,39 @@ If the verdict is **REVISE**: review the findings. For each finding, either:
 
 The corrected narrative does not need to go through `claims-factcheck` again (the facts haven't changed — only the prose representation). But it should go through `narrative-fidelity` again to confirm the fixes resolved the findings.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 After PASS (or PASS on re-review): the chapter waits until all story chapters are complete, then proceeds with the comparative chapter and marker-resolve.
 
 ---
 
-# FILE 15 of 19: skills/marker-resolve/SKILL.md
+# FILE 15 of 21: skills/13-marker-resolve.md
 
 ---
 name: marker-resolve
@@ -1487,36 +1872,217 @@ This step does not change any prose outside the markers. It is a mechanical conv
 
 Resolve each marker per these rules. Do not alter any other prose.
 
+### Universal rendering rules
+
+These four rules apply to every marker type below. They exist because past runs of this stage have shipped broken prose to readers — literal `none` labels, empty parentheses that print as `(. [n])` in the PDF, double periods, and placeholder tokens like `<basis>` leaking into the final text. Follow them without exception.
+
+1. **Placeholder values must be rendered as prose, never as literals.** The templates use `<placeholder>` notation (e.g. `<claim>`, `<basis>`, `<reconstruction>`, `<what>`). These are **slots to be filled from the marker's input, as natural prose**. If you find yourself emitting the literal string `<basis>` or `<reconstruction>` in the output, stop — you have misread the template. Every `<...>` token must be replaced with the value from the input marker.
+
+2. **No empty or sentinel-valued slots.** A slot cannot be rendered as empty, as a bare period, as `none`, as `n/a`, or as any other sentinel. If the input marker does not supply a value for a mandatory slot, do **not** fit it into the template — flag the marker in the stage report so upstream can be tightened, and render a fallback that does not produce broken prose. Each marker section below specifies its own fallback.
+
+3. **Do not double up terminal punctuation.** If a placeholder value ends with `.`, `?`, `!`, or `…`, the template's following `.` separator is redundant. Use the existing terminator instead of appending another period. Never emit `..` inside a rendered bracket or paragraph. Never emit `..]_` at the close of a bracket. If a slot ends with a comma or semicolon, convert it to a period before the next sentence boundary.
+
+4. **Sentinel hedges (e.g. `none`, `n/a`, `partial,`, `insufficient`, `—`) must never leak into reader-facing text.** Some input fields (notably `scholarly_reconstruction`) accept meta-notes that start with a hedge. Strip the hedge, capitalise the informative tail if any, and render the tail as a stand-alone sentence — or drop the sentence entirely if the tail is empty. See LACUNA Shape B below for the canonical worked examples.
+
+When in doubt, **prefer under-rendering (omit a slot / drop a sentence) over broken-rendering (leaked sentinel / empty paren / double period)**. It is always safer to lose one sentence than to ship text that reads as a bug to the reader.
+
 ### `[INFERENCE: claim | basis: X | risk: Y]`
-Render as an italicized parenthetical with a footnote containing the basis and risk:
+Render as an italicized parenthetical whose body is the **claim rendered as prose**, followed by a footnote carrying the basis and risk:
 ```
-_(The text does not state this explicitly, but the following episode requires it.footnote:[Inference: <basis>. Risk: <risk>.])_
+_(<claim rendered as prose>.footnote:[Inference: <basis>. Risk: <risk>.])_
 ```
+
+All three slots — claim, basis, risk — are **mandatory** in the output. None may be empty, a lone period, or a copy of the template placeholder text.
+
+**Worked example.**
+
+Input (in `chapters/NN.adoc`):
+```
+[INFERENCE: The redistribution of Huwawa's auras to the natural world after his death suggests an aetiological function: the text explains why certain natural phenomena possess a numinous, fearsome quality. | basis: The list of recipients — field, river, lion, forest — corresponds to naturally fearsome aspects of the Mesopotamian landscape. | risk: The aetiological reading is plausible but not explicitly stated in the text.]
+```
+
+Output (in `chapters/NN.resolved.adoc`):
+```
+_(The redistribution of Huwawa's auras to the natural world after his death suggests an aetiological function: the text explains why certain natural phenomena possess a numinous, fearsome quality.footnote:[Inference: The list of recipients — field, river, lion, forest — corresponds to naturally fearsome aspects of the Mesopotamian landscape. Risk: The aetiological reading is plausible but not explicitly stated in the text.])_
+```
+
+Note that the claim text sits between `_(` and `.footnote:[`. A rendering that produces `_(.footnote:[...])_` (open paren, bare period, footnote) is a **bug** — it prints as `(. [n])` in the PDF and must never be emitted.
+
+**Short form.** If the marker arrives with no `| basis:` / `| risk:` segments (i.e. `[INFERENCE: claim]` only), do **not** fit it into the template above. Render the claim as plain prose with no parenthetical and no footnote — the basis/risk slots would be empty and would produce the `(. [n])` bug. Flag the missing basis/risk in the stage report so upstream (stage 11) can be tightened.
 
 ### `[LACUNA: what | source: ref | scholarly_reconstruction: X]`
-Render as a bracketed editorial note, italicized:
+Render as a bracketed editorial note, italicized. The `<what>` field is rendered first, as a prose description of the gap. How `<X>` is rendered depends on what it describes.
+
+**Shape A — `X` is a real proposed reading.** A concrete statement of what scholars think was in the gap. Use the full template frame:
+
 ```
-_[At this point the tablet breaks. Approximately 20 lines are lost. Scholars such as <ref> have proposed the narrative resumed with <reconstruction>.]_
+_[At this point the tablet breaks. <what rendered as prose>. Scholars such as <ref> have proposed the narrative resumed with <X rendered as prose>.]_
 ```
-If no scholarly reconstruction is given, omit the second sentence.
+
+**Shape B — `X` is a meta-note about the absence, inadequacy, or partial nature of reconstructions.** It begins with one of the following sentinel hedges (case-insensitive):
+
+- `none`, `n/a`, `N/A`, `—` (em-dash)
+- `none available`, `none sufficient`, `none suffices`
+- `no <word>` — e.g. `no parallels`, `no witnesses`, `no reconstruction`
+- `insufficient`, `limited`
+- `partial,`, `partial;`, `partial ` (followed by a descriptor)
+- `Partial,`, `Partial;`, `Partial ` (same, capitalised)
+
+The sentinel may be followed by a dash (`—` or `--`), semicolon, or comma and an **informative tail** describing what (if anything) *is* known. Render:
+
+```
+_[At this point the tablet breaks. <what>. <Informative tail of X rendered as prose, capitalised>.]_
+```
+
+If the informative tail is empty (the value is just `none available` or `n/a` or similar with nothing else), drop the second sentence entirely:
+
+```
+_[At this point the tablet breaks. <what>.]_
+```
+
+**Hard rules for Shape B:**
+
+1. The literal sentinel words — `none`, `n/a`, `partial,`, `insufficient`, etc. — must **never** appear in the rendered text. Strip them and capitalise what follows.
+2. Do not emit `..` (double period). If `<what>` already ends with a period, do not append another before the second sentence.
+3. Never output an empty `<what>` (a bracket that starts with `_[At this point the tablet breaks. .`). If the input `<what>` is empty or unclear, flag the marker in the stage report rather than render something broken.
+
+**Worked examples.**
+
+Example 1 — Shape A (real reconstruction):
+
+Input:
+```
+[LACUNA: Lines 80–95 are lost | source: etcsl 1.2.3 | scholarly_reconstruction: the pursuit sequence continued with three further encounters, as preserved in the Ur III duplicate]
+```
+Output:
+```
+_[At this point the tablet breaks. Lines 80–95 are lost. Scholars such as etcsl 1.2.3 have proposed the narrative resumed with the pursuit sequence continuing through three further encounters, as preserved in the Ur III duplicate.]_
+```
+
+Example 2 — Shape B, tail after em-dash:
+
+Input:
+```
+[LACUNA: Approximately nine lines (68–76) damaged in the middle of the impaired-humans sequence | source: etcsl 1.1.2 | scholarly_reconstruction: none — no parallel witnesses fill this gap]
+```
+Output:
+```
+_[At this point the tablet breaks. Approximately nine lines (68–76) damaged in the middle of the impaired-humans sequence. No parallel witnesses fill this gap.]_
+```
+
+Example 3 — Shape B, tail after semicolon:
+
+Input:
+```
+[LACUNA: Several lines damaged | source: etcsl 1.3.3 | scholarly_reconstruction: none sufficient; Black et al. mark these sections as heavily fragmentary and offer only cautious partial translation]
+```
+Output:
+```
+_[At this point the tablet breaks. Several lines damaged. Black et al. mark these sections as heavily fragmentary and offer only cautious partial translation.]_
+```
+
+Example 4 — Shape B, "partial" hedge with tail after comma:
+
+Input:
+```
+[LACUNA: Opening lines 1–15 damaged | source: etcsl 1.3.3 | scholarly_reconstruction: partial, some manuscripts preserve fragments of the opening]
+```
+Output:
+```
+_[At this point the tablet breaks. Opening lines 1–15 damaged. Some manuscripts preserve fragments of the opening.]_
+```
+
+Example 5 — Shape B, empty tail:
+
+Input:
+```
+[LACUNA: Conclusion is fragmentary | source: etcsl 1.3.4 | scholarly_reconstruction: none available]
+```
+Output:
+```
+_[At this point the tablet breaks. Conclusion is fragmentary.]_
+```
 
 ### `[RECONSTRUCTION: content | gap_source: X | fill_source: Y | confidence: Z]`
-Render the content in prose, with a footnote flagging it as reconstruction:
+Render the content as normal prose, followed by a footnote flagging the reconstruction:
 ```
-<content rendered as normal prose>.footnote:[This passage reconstructs the lacuna at <gap_source> from the parallel account in <fill_source>; confidence: <Z>.]
+<content rendered as prose>.footnote:[This passage reconstructs the lacuna at <gap_source> from the parallel account in <fill_source>; confidence: <Z>.]
 ```
 
-### `[VARIANT: primary=A | alt=B | chosen: A | reason: R]`
-Only appears in single-prevalent cases (co-equal variants are already inline without markers). Render as the prevalent version in body, with a footnote giving the alternate:
+All four slots — content, gap_source, fill_source, confidence — are **mandatory**. If any is missing or empty, flag the marker and render only the content in prose (no footnote) rather than emit `<gap_source>` / `<fill_source>` / `<Z>` as literals.
+
+Per rule 3, if `<content>` ends with a period, do not add another before `.footnote:[`.
+
+**Worked example.**
+
+Input:
 ```
-<prevalent version text>.footnote:[An alternate tradition in <B source> gives: "<alt phrase>". The prevalent version is chosen here because <reason>.]
+[RECONSTRUCTION: Inanna asked her minister Ninshubur to go to Enlil for help, then to Nanna, then to Enki. | gap_source: ETCSL 1.4.1, lines 180–195 (Nippur) | fill_source: UM 29-16-37 fragment | confidence: high]
+```
+
+Output:
+```
+Inanna asked her minister Ninshubur to go to Enlil for help, then to Nanna, then to Enki.footnote:[This passage reconstructs the lacuna at ETCSL 1.4.1, lines 180–195 (Nippur) from the parallel account in UM 29-16-37 fragment; confidence: high.]
+```
+
+Note that `<content>` here ended with a period, so the template's leading `.` before `.footnote:[` is dropped — the existing period serves.
+
+### `[VARIANT: primary=A | alt=B | chosen: A | reason: R]`
+Only appears in single-prevalent cases (co-equal variants are already inline without markers). The marker's four fields map to the rendering as follows:
+
+- `primary` — the prevalent version, rendered in the body as prose.
+- `alt` — an object with a source name and the alternate phrase (typically `alt=<source>: "<phrase>"` or similar; read as `<B source>` and `<alt phrase>`).
+- `chosen` — which of `primary`/`alt` is in the body. In this stage `chosen` is always `A` (`primary`); if the input says `chosen: B`, swap the semantics so `primary` becomes the body and `alt` the footnote.
+- `reason` — why the chosen version is in the body.
+
+Rendering:
+```
+<prevalent version text rendered as prose>.footnote:[An alternate tradition in <B source> gives: "<alt phrase>". The prevalent version is chosen here because <reason rendered as prose>.]
+```
+
+All four fields are **mandatory**. If `<reason>` is missing, flag the marker and render only the prevalent version in prose (no footnote). Never emit the literal `<B source>`, `<alt phrase>`, or `<reason>` in the output.
+
+Per rule 3, if `<prevalent version text>` ends with a period, drop the template's leading `.` before `.footnote:[`. If `<alt phrase>` already ends with a terminator, do not add another before `"` closes. If `<reason>` ends with a period, do not add another before `]`.
+
+**Worked example.**
+
+Input:
+```
+[VARIANT: primary=Nippur | alt=Ur: "the bull drank water from the Tigris and Euphrates" | chosen: A | reason: Nippur manuscripts are older and more widely attested]
+```
+
+Output (assuming the prevalent version as rendered in the body reads "The bull drank water from the Tigris"):
+```
+The bull drank water from the Tigris.footnote:[An alternate tradition in the Ur manuscript gives: "the bull drank water from the Tigris and Euphrates". The prevalent version is chosen here because Nippur manuscripts are older and more widely attested.]
 ```
 
 ### `[SPECULATION: claim | basis: X | counterargument: Y]`
-Only appears in the comparative chapter. Render as the claim in prose, with a footnote presenting both sides:
+Only appears in the comparative chapter. Render as the claim in prose, followed by a footnote presenting both sides:
 ```
-<claim rendered as normal prose>.footnote:[This parallel is speculative. Basis: <basis>. The main counterargument: <counterargument>.]
+<claim rendered as prose>.footnote:[This parallel is speculative. Basis: <basis>. The main counterargument: <counterargument>.]
 ```
+
+All three slots — claim, basis, counterargument — are **mandatory**. If `<basis>` or `<counterargument>` is missing, flag the marker and render the claim as plain prose without a footnote (do not emit empty `Basis:` / `counterargument:` slots).
+
+Per rule 3:
+
+- If `<claim>` ends with a period, drop the template's leading `.` before `.footnote:[`.
+- If `<basis>` ends with a period, do not add another before ` The main counterargument:`.
+- If `<counterargument>` ends with a period, do not add another before `]`.
+
+**Worked example.**
+
+Input:
+```
+[SPECULATION: The Gilgamesh-Enkidu friendship may reflect a wider ancient-Near-Eastern motif of the "hero and his wild double" also seen in Samson-and-Delilah and early Greek narratives. | basis: Structural parallel of a civilised hero paired with an untamed companion who civilises through contact with the hero. | counterargument: The parallels are structurally loose and could arise independently in any heroic tradition.]
+```
+
+Output:
+```
+The Gilgamesh-Enkidu friendship may reflect a wider ancient-Near-Eastern motif of the "hero and his wild double" also seen in Samson-and-Delilah and early Greek narratives.footnote:[This parallel is speculative. Basis: Structural parallel of a civilised hero paired with an untamed companion who civilises through contact with the hero. The main counterargument: The parallels are structurally loose and could arise independently in any heroic tradition.]
+```
+
+Note how the trailing periods of `<claim>`, `<basis>`, and `<counterargument>` serve double duty — they terminate their own content and stand in for the template's separator periods, so no `..` appears anywhere.
 
 ## Output
 
@@ -1525,15 +2091,85 @@ Only appears in the comparative chapter. Render as the claim in prose, with a fo
 - Comparative chapter: `comparative.resolved.adoc`
 
 ## Self-check
-- Grep all output files for `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` — must be zero matches.
-- No prose outside of marker-replaced sections has changed.
+
+Every check below must return zero matches on every output file. If any match, stop and fix before handoff — the cost of shipping a broken rendering into the next stage is much higher than the cost of re-running this one.
+
+**Raw markers.** Zero matches for `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:`.
+
+**Placeholder-literal leaks** (rule 1). These indicate the renderer emitted the template's `<…>` token instead of filling it from the input. Zero matches for any of:
+
+`<claim>`, `<basis>`, `<risk>`, `<reconstruction>`, `<what>`, `<ref>`, `<content>`, `<gap_source>`, `<fill_source>`, `<Z>`, `<confidence>`, `<prevalent version text>`, `<alt phrase>`, `<B source>`, `<reason>`, `<counterargument>`
+
+**Empty-slot artefacts** (rule 2). These indicate a mandatory slot was rendered as empty or as a bare period.
+
+- `_(\.footnote:` — INFERENCE rendered with an empty claim; prints as `(. [n])` in the PDF.
+- `Inference: *\.` — empty INFERENCE basis.
+- `Risk: *\.` — empty INFERENCE risk.
+- `Basis: *\.` — empty SPECULATION basis.
+- `counterargument: *\.` — empty SPECULATION counterargument.
+- `_\[At this point the tablet breaks\. *\.` — LACUNA rendered with an empty `<what>`.
+- `An alternate tradition in  gives:` (note the double space) — VARIANT with an empty `<B source>`.
+- `reconstructs the lacuna at  from the parallel account in` — RECONSTRUCTION with an empty `<gap_source>`.
+
+**Leaked sentinel hedges** (rule 4). Zero matches inside any rendered italic bracket `_[...]_` or `_(...)_` for:
+
+- `none —`, `none --`, `none-`, `none—`
+- `none available`, `none sufficient`, `none suffices`, `none yet`
+- `n/a —`, `n/a -`, `N/A —`
+- `partial,` or `partial;` at the start of a clause (after `. `)
+- `Partial,` or `Partial;` at the start of a clause
+- `insufficient;` at the start of a clause
+- `no reconstruction —`, `no witnesses —`, `no parallels —`
+
+**Double-period artefacts** (rule 3). Zero matches for:
+
+- `..footnote:` — placeholder value ended in `.` and the template's separator `.` was appended.
+- `.. Risk:` — INFERENCE basis ended in `.` and the template's separator was appended.
+- `.. The main counterargument:` — SPECULATION basis ended in `.`.
+- `.. Scholars such as` — LACUNA `<what>` ended in `.` before the Shape A suffix.
+- `..]_` — any italic bracket closing with two periods.
+- `.. —` — any double period followed by an em-dash inside rendered prose.
+- `..])_` — INFERENCE or SPECULATION risk/counterargument ended in `.`, doubling at the bracket close.
+
+**Per-marker round-trip count.** For every `[INFERENCE: ...]`, `[LACUNA: ...]`, `[RECONSTRUCTION: ...]`, `[VARIANT: ...]`, `[SPECULATION: ...]` in the input `.adoc`, confirm exactly one rendered equivalent appears in the corresponding `.resolved.adoc`. Mismatches — input markers with no output, or outputs with no input — are findings.
+
+For every INFERENCE input whose claim is non-empty, confirm the `.resolved.adoc` contains non-trivial prose between `_(` and `.footnote:[`. If the input was a short-form `[INFERENCE: claim]` (no `| basis:` / `| risk:`), confirm the output renders the claim as plain prose instead (no paren, no footnote).
+
+**Prose boundary.** No prose outside of marker-replaced sections has changed. A line-by-line diff against the input should show changes only on lines that held markers.
+
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
 To `line-edit`.
 
 ---
 
-# FILE 16 of 19: skills/comparative-chapter/SKILL.md
+# FILE 16 of 21: skills/14-comparative-chapter.md
 
 ---
 name: comparative-chapter
@@ -1562,6 +2198,7 @@ This chapter is inherently more speculative than the story chapters. It uses an 
 - Structural parallels (tripartite function, sky-father motif, etc.) cite scholarly methodology, not invented frameworks.
 - Speculation is allowed but must be marked: `[SPECULATION: claim | basis: X | counterargument: Y]`.
 - Do not retell out-of-scope myths at length — one-paragraph summaries, then the comparison.
+- `// EVIDENCE: source_id=X ; loc=Y` tokens go on their own line (column 0), never appended after paragraph text. AsciiDoc only treats `//` as a comment at line start — a trailing marker renders as literal text in the final PDF/EPUB. Same rule as `chapter-claims`.
 
 ## Style
 Asimov register, extended for comparative nuance. Signal uncertainty: "One might observe...", "Scholars such as X have argued...". Avoid grand unifying claims; stay close to specific parallels.
@@ -1578,12 +2215,146 @@ Structured as:
 - Every `[SPECULATION:]` has both basis and counterargument sub-fields.
 - No claim presented as consensus unless it actually is.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
-To `prose-factcheck` (fresh conversation, different model). After factcheck, human review, and `post-human-normalize`, to `marker-resolve` along with all other chapters.
+To `prose-factcheck` in a fresh conversation (a different AI model is preferred but not required). After factcheck, human review, and `post-human-normalize`, to `marker-resolve` along with all other chapters.
 
 ---
 
-# FILE 17 of 19: skills/line-edit/SKILL.md
+# FILE 17 of 21: skills/14b-grammar-check.md
+
+---
+name: grammar-check
+description: Catches grammar errors, awkward sentence constructions, and readability issues before the line-edit stage. Fixes only mechanical problems — does not change style, tone, or content. Runs after marker-resolve, before line-edit.
+---
+
+# grammar-check
+
+## For the human
+
+This step catches mechanical writing problems that slip through the drafting process: subject-verb disagreement, dangling modifiers, run-on sentences, ambiguous pronoun references, missing articles, and sentences that are grammatically correct but hard to parse on first reading.
+
+It does not change the book's style or tone — that is the line-edit stage's job. It does not change facts — those are locked. It fixes only the kind of errors a copy editor catches: grammar, syntax, punctuation, and sentence clarity.
+
+The AI tends to produce sentences that are technically correct but overloaded — too many subordinate clauses, too many parenthetical asides, or too many items in a single sentence. This step simplifies those without changing meaning.
+
+## When to run
+
+After `marker-resolve` (stage 13), before `line-edit` (stage 15). The input is the resolved text — all markers have been converted to final prose, so the grammar checker sees what the reader will see.
+
+## Hard rules
+
+1. **No factual changes.** If a grammar fix would change the meaning of a sentence, flag it for human review instead of fixing it.
+2. **No footnote changes.** Do not modify, add, or remove footnotes or EVIDENCE tokens.
+3. **No style changes.** Do not change the Asimov register. Do not add formality or informality. Do not rewrite sentences that are clear but plain.
+4. **No content changes to resolved marker passages.** These were reviewed and locked.
+5. **Preserve AsciiDoc structure** (headings, section breaks, include directives).
+
+## What to fix
+
+### Grammar errors
+- Subject-verb agreement
+- Tense consistency within paragraphs
+- Dangling or misplaced modifiers
+- Incorrect pronoun reference (ambiguous "it", "they", "this")
+- Missing or incorrect articles (a/an/the)
+- Comma splices and run-on sentences
+- Sentence fragments (unless clearly intentional for effect)
+
+### Readability issues
+- Sentences over 50 words: split or restructure unless the length is essential for meaning
+- Nested parenthetical asides: flatten (move to a separate sentence or footnote)
+- Three or more subordinate clauses in a single sentence: simplify
+- Ambiguous sentence structure where the reader must re-read to parse correctly
+- Lists embedded in prose that would be clearer as an actual list or as separate sentences
+
+### Punctuation
+- Correct em-dash, en-dash, and hyphen usage
+- Consistent serial comma (use it)
+- Quotation marks and apostrophes in non-English terms
+
+## What NOT to fix
+
+- Word choice (that is line-edit's job)
+- Sentence rhythm and flow (line-edit)
+- Paragraph transitions (line-edit)
+- Nominalizations and zombie nouns (line-edit)
+- The academic tone of source overview sections (this is a deliberate register choice)
+
+## Output
+
+For each chapter:
+- `chapters/NN-<slug>.grammar-checked.adoc` — the corrected text
+- `chapters/NN-<slug>.grammar-diff.md` — a list of every change, showing original and corrected sentence
+
+The diff file allows the human to skim and approve in bulk.
+
+## Self-check
+
+1. No factual content has changed — compare factual claims between original and corrected.
+2. Footnote count and content unchanged.
+3. All AsciiDoc structure intact.
+4. Every change is logged in the diff file — no silent changes.
+
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
+## Handoff
+To `line-edit`, which handles style polish after grammar is clean.
+
+---
+
+# FILE 18 of 21: skills/15-line-edit.md
 
 ---
 name: line-edit
@@ -1636,12 +2407,39 @@ Each diff file shows original sentence vs edited sentence for every non-trivial 
 - Footnote count and content unchanged.
 - Resolved marker passages unchanged.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
 To `character-appendix` and `format-finalize`.
 
 ---
 
-# FILE 18 of 19: skills/character-appendix/SKILL.md
+# FILE 19 of 21: skills/16-character-appendix.md
 
 ---
 name: character-appendix
@@ -1656,7 +2454,7 @@ This appendix is the reader's reference companion. Halfway through a chapter on 
 
 The hardest discipline here is restraint on physical descriptions. AI models asked to describe a mythological character will readily produce vivid physical portraits drawn from cultural stereotypes, later artistic traditions, or pure invention. For most ancient characters, the sources say very little about physical appearance — sometimes nothing at all. The correct entry is an honest "No physical description survives in the in-scope sources," not a fabricated portrait. Accuracy is more important than completeness: it is better to leave a field empty than to fill it with something the sources don't support.
 
-This step runs after all chapters are finalized because it needs the final text to build accurate cross-references ("Siduri appears in Chapter 5, where she..."). It goes through fact-checking by a different AI before the book is assembled.
+This step runs after all chapters are finalized because it needs the final text to build accurate cross-references ("Siduri appears in Chapter 5, where she..."). It goes through fact-checking in a fresh conversation (ideally a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical) before the book is assembled.
 
 **Note on markers and line-edit:** The character appendix is a reference section, not narrative prose. It does not use `[INFERENCE:]`, `[LACUNA:]`, or other markers — all claims must be directly sourced or explicitly noted as absent. It does not go through `marker-resolve` or `line-edit`. The Asimov register and citation discipline are enforced at writing time; the factcheck catches any problems.
 
@@ -1766,8 +2564,35 @@ A reference guide to the named characters who appear in this book. Physical desc
 6. Entries are sorted alphabetically within their category.
 7. No out-of-scope source cited for physical descriptions or character details.
 
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
 ## Handoff
-To `prose-factcheck` (fresh conversation, different model) for a factcheck pass focused on:
+To `prose-factcheck` in a fresh conversation (a different AI model is preferred but not required) for a factcheck pass focused on:
 - Fabricated or unsourced physical descriptions (the primary risk).
 - Cross-reference accuracy.
 - Claims about mythological relevance.
@@ -1776,7 +2601,7 @@ After factcheck passes, to `format-finalize`.
 
 ---
 
-# FILE 19 of 19: skills/format-finalize/SKILL.md
+# FILE 20 of 21: skills/17-format-finalize.md
 
 ---
 name: format-finalize
@@ -1790,19 +2615,31 @@ description: Final mechanical assembly. Compiles the bibliography, assembles all
 This is a purely mechanical step — no writing, no editing, no judgment calls. All prose is final. This step:
 
 - **Builds the bibliography.** Scans every footnote across all chapters and produces a single bibliography file listing every source cited in the book. If any footnote cites a source that isn't on the approved list (`sources.yaml`), this is flagged as a problem.
-- **Assembles the book.** Combines the introduction, all story chapters, the comparative chapter, and the character appendix into one master file (`book.adoc`) in the correct order.
-- **Runs a test build.** Generates a test PDF and EPUB to catch formatting errors (broken cross-references, missing files, syntax problems) before the final render.
+- **Assembles the book.** Combines the introduction, all story chapters, the comparative chapter, and the character appendix into one master file (`<book-slug>.adoc`) in the correct order.
+- **Renders the final artifacts.** Builds the final PDF and EPUB into `output/` and writes any warnings from the build to `reports/validation-report.md`.
 
 No prose is changed. If this step finds a problem that requires changing text (e.g., a broken cross-reference), it reports the problem and stops — it does not attempt to fix it.
 
+## Book slug
+
+The outputs of this stage are named after the book, not `book.*`. Determine the slug once, at the start of the stage, and reuse it consistently.
+
+- If `scope.md` defines a `slug:` field, use it verbatim.
+- Otherwise, derive the slug from the book title (the first `= <Book Title>` line of what will become the master adoc). Take the portion before any `:`, lowercase it, strip punctuation, replace runs of non-alphanumeric characters with a single `_`, and trim leading/trailing `_`.
+  - Example: `= The Myths of Sumer: Stories from the First Scribes` → `the_myths_of_sumer`.
+- The slug must match `^[a-z0-9][a-z0-9_]*$`. If the derived slug is awkward or collides with pipeline filenames (`book`, `comparative`, `character-appendix`, `frontmatter`, `note-on-making`), stop and ask the human to set `slug:` in `scope.md` explicitly.
+
+Throughout this document, `<slug>` refers to the book slug.
+
 ## Inputs
 - `chapters/00-introduction.edited.adoc` (intro chapter)
-- All `chapters/NN-<slug>.edited.adoc` (story chapters)
+- All `chapters/NN-<chapter-slug>.edited.adoc` (story chapters)
 - `comparative.edited.adoc` (comparative chapter)
 - `character-appendix.adoc` (fact-checked — this is a reference appendix and does not go through marker-resolve or line-edit)
 - `sources.yaml`
+- `scope.md` (may carry an explicit `slug:` field — see "Book slug" above)
 - `cover.jpg` or `cover.png` — the cover image, provided by the user. Used by Asciidoctor-PDF for the front cover and by Asciidoctor-EPUB3 for the EPUB cover.
-- `front-matter.adoc` and `back-matter.adoc` (dedication, preface, index, etc. — optional; if absent, omit the corresponding `include::` directives from `book.adoc`)
+- `front-matter.adoc` and `back-matter.adoc` (dedication, preface, index, etc. — optional; if absent, omit the corresponding `include::` directives from the master adoc)
 
 ## Agent instructions
 
@@ -1811,8 +2648,23 @@ Scan all files for `// EVIDENCE: source_id=<id> ; loc=<loc>` tokens. Collect all
 
 Cross-check: any `source_id` in an evidence token that does not resolve to a `sources.yaml` registry entry is a HIGH finding — stop and report. Any registry entry never referenced by any evidence token is noted (unused source — not an error, but worth flagging).
 
-### 2. Master assembly
-Produce `book.adoc`:
+### 2. Marker strip (critical — do this AFTER bibliography extraction, BEFORE assembly)
+
+The `// EVIDENCE:` and `// COMPARATIVE-HOOK:` markers are production metadata for the pipeline, not for readers. AsciiDoc only treats `//` as a comment when it starts the line — any marker appended to a paragraph line (e.g., after `footnote:[...]`) renders as literal text in the final PDF/EPUB. This has happened before; do not skip this step.
+
+For each of `chapters/00-introduction.edited.adoc`, every `chapters/NN-<slug>.edited.adoc`, and `comparative.edited.adoc`:
+
+- Strip everything matching the regex `\s*//\s*(EVIDENCE|COMPARATIVE-HOOK):.*$` from every line.
+- If the strip empties a line (whole-line marker), delete the line.
+- If the strip leaves content (mid-line marker), keep the preceding content.
+
+Upstream `.resolved.adoc` and `.grammar-checked.adoc` files preserve the markers as an audit trail — the strip is safe.
+
+After stripping, grep each target file for `EVIDENCE` and `COMPARATIVE-HOOK`. Zero matches expected. If any remain, stop and report.
+
+### 3. Master assembly
+Produce `<slug>.adoc` at the book root. Keep it at the book root (not under `output/`) so the relative `include::chapters/...`, `:bibtex-file:`, and cover-image paths resolve without `../` rewrites.
+
 ```asciidoc
 = <Book Title>
 <Author>
@@ -1827,8 +2679,8 @@ Produce `book.adoc`:
 
 include::chapters/00-introduction.edited.adoc[]
 
-include::chapters/01-<slug>.edited.adoc[]
-include::chapters/02-<slug>.edited.adoc[]
+include::chapters/01-<chapter-slug>.edited.adoc[]
+include::chapters/02-<chapter-slug>.edited.adoc[]
 // ... in toc.yaml order ...
 
 include::comparative.edited.adoc[]
@@ -1838,27 +2690,311 @@ include::character-appendix.adoc[]
 // include::back-matter.adoc[]    ← include only if file exists
 ```
 
-### 3. Validation
-Dry-run both rendering paths:
-- `asciidoctor-pdf --verbose --failure-level=WARN -o /tmp/validate.pdf book.adoc`
-- `asciidoctor-epub3 --verbose --failure-level=WARN -o /tmp/validate.epub book.adoc`
+### 4. Render
+Render via the container helper, invoked from the repo root:
 
-Any warning or error is reported.
+```
+./container/render_book.sh <book-dir> <slug>
+```
 
-### 4. Output
-- `book.adoc` (master)
-- `bibliography.bib`
-- `validation-report.md` (asciidoctor output, any findings)
-- Rendered `book.pdf` and `book.epub` as build artifacts.
+The helper creates `<book-dir>/output/` and `<book-dir>/reports/` if they do not exist, runs both asciidoctor commands inside the myth-claude container (where `asciidoctor-bibtex` is installed), captures stdout/stderr from both runs into `<book-dir>/reports/validation-report.md` (with a stage/slug/timestamp header), then unzips the EPUB and greps the `.xhtml` files for `EVIDENCE`, `COMPARATIVE-HOOK`, the empty-paren `(. ` artefact, and the `_(.footnote` stage-13 artefact. It exits non-zero on any WARN/ERROR from asciidoctor or any anti-pattern hit — treat a non-zero exit as a finding and stop.
+
+The underlying commands (for local debugging without the container, assuming `asciidoctor-bibtex` is available on the host) are:
+
+```
+asciidoctor-pdf   -r asciidoctor-bibtex --verbose --failure-level=WARN -o output/<slug>.pdf  <slug>.adoc
+asciidoctor-epub3 -r asciidoctor-bibtex --verbose --failure-level=WARN -o output/<slug>.epub <slug>.adoc
+```
+
+Both commands must be run from `<book-dir>` (not from the repo root) — `asciidoctor-bibtex` resolves the `:bibtex-file:` attribute relative to the current working directory, not the source document's directory.
+
+### 5. Output
+Final deliverables (the reader-facing artifacts) are gathered under `output/`. Build logs are written to `reports/`. Everything else stays at the book root.
+
+- `<slug>.adoc` — master, at book root.
+- `bibliography.bib` — at book root (referenced by the master adoc).
+- `output/<slug>.pdf` — rendered PDF.
+- `output/<slug>.epub` — rendered EPUB.
+- `reports/validation-report.md` — asciidoctor build log, any findings.
 
 ## Self-check
+
+The marker-resolve stage (13) is the upstream producer of the rendered brackets and parentheticals. The checks below are a safety net for bugs that stage missed. Each must return zero matches on every `.edited.adoc` file at the book root. If any match, stop and re-run stage 13 — do not attempt to patch the output in this stage.
+
 - No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all `.edited.adoc` files, `comparative.edited.adoc`, and `character-appendix.adoc`.)
+- No `// EVIDENCE:` or `// COMPARATIVE-HOOK:` remain in the `.edited.adoc` files after step 2. Grep the rendered EPUB's `.xhtml` contents for both strings — must be zero.
+- No placeholder-literal leaks from stage 13: zero matches for `<claim>`, `<basis>`, `<risk>`, `<reconstruction>`, `<what>`, `<ref>`, `<content>`, `<gap_source>`, `<fill_source>`, `<Z>`, `<confidence>`, `<prevalent version text>`, `<alt phrase>`, `<B source>`, `<reason>`, `<counterargument>`. These indicate the renderer copied the template verbatim instead of filling a slot.
+- No empty-slot artefacts. Grep for `_(\.footnote:` (empty INFERENCE claim — prints as `(. [n])` in the PDF), `Inference: *\.`, `Risk: *\.`, `Basis: *\.`, `counterargument: *\.`, `_\[At this point the tablet breaks\. *\.` (empty LACUNA `<what>`).
+- No leaked sentinels (case-insensitive) anywhere inside italic brackets `_[…]_` or `_(…)_`: `none —`, `none --`, `none-`, `none—`, `none available`, `none sufficient`, `n/a —`, `n/a -`, `Partial,` or `Partial;` at the start of a clause, `partial,` or `partial;` at the start of a clause, `insufficient;` at the start of a clause.
+- No double-period artefacts. Grep for `..]_`, `.. —`, `..footnote:`, `.. Risk:`, `.. The main counterargument:`, `.. Scholars such as`, `..])_`. These indicate a placeholder value ended with `.` and the template's separator `.` was appended.
 - Every footnote citation resolves to a bibliography entry.
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
 - Cover image file exists and is referenced correctly in `:front-cover-image:`.
-- `front-matter.adoc` and `back-matter.adoc`: if referenced in `book.adoc`, confirm the files exist. If absent, confirm the include directives are removed.
-- Asciidoctor dry runs exit clean.
+- `front-matter.adoc` and `back-matter.adoc`: if referenced in `<slug>.adoc`, confirm the files exist. If absent, confirm the include directives are removed.
+- `output/<slug>.pdf` and `output/<slug>.epub` exist and are non-empty.
+- `reports/validation-report.md` exists. Asciidoctor runs exit clean (no WARN/ERROR recorded).
+- No legacy `book.adoc`, `book.pdf`, `book.epub` at the book root left over from prior runs — either remove or rename them before starting.
+
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
+## Handoff
+This is the final stage. The book is complete.
 
 ---
+
+# FILE 21 of 21: skills/18-translate-spanish.md
+
+---
+name: translate-spanish
+description: Produces a parallel Spanish edition of the finished book. Three-pass reflection workflow (translate → critique → revise) per chapter. Runs after format-finalize. AsciiDoc structure, footnotes, anchors, xrefs, EVIDENCE tokens, and include paths are preserved byte-for-byte; only visible prose is translated.
+---
+
+# translate-spanish
+
+## For the human
+
+This is the final stage. The English book is done — every chapter is fact-checked, line-edited, formatted, and built into `output/<slug>.pdf` / `output/<slug>.epub`. This step produces a parallel Spanish edition: `<slug>.es.adoc` → `output/<slug>.es.pdf` / `output/<slug>.es.epub`. The slug is the one fixed in `format-finalize` (stage 17); do not re-derive it.
+
+Translation of a non-fiction book by LLM has a few characteristic failure modes that this skill is designed around:
+
+- **AsciiDoc collateral damage.** An LLM will "helpfully" translate an anchor like `[[dilmun-section]]` to `[[seccion-dilmun]]`, silently breaking every cross-reference elsewhere. The hard rules below forbid this, and the self-check does a regex diff to catch it.
+- **Terminology drift across chapters.** The same deity or technical term can end up rendered three different ways across 36 chapters. The fix is to lock a Spanish glossary (`glossary.es.yaml`) before any prose is translated, in the same spirit as `glossary-lock`.
+- **Academic Spanish creep.** Spanish popular-science prose is prone to nominalization pile-ups, passive "se ha observado que…" constructions, and latinate vocabulary that turn an Asimov-voice English original into a stiff treatise. The register section below keeps the divulgación tone.
+- **False friends.** *Eventually*, *actually*, *realize*, *library*, *assist*, *sensible*, *sympathetic* — the usual suspects. Checklist below.
+- **Chunk-too-small translation.** Translating paragraph-by-paragraph destroys pronoun chains ("the god" / "this composition" / "she") that span paragraphs. Translate chapter-by-chapter.
+
+The method follows Andrew Ng's `translation-agent` reflection workflow: draft, self-critique, apply critique. Per chapter, not per paragraph.
+
+## When to run
+
+After `format-finalize` (stage 17). The inputs are the finished, fact-checked, line-edited chapters plus the assembled `<slug>.adoc` and `bibliography.bib`. This is the final stage.
+
+## Target dialect and register
+
+**Dialect**: Peninsular Spanish (uses *vosotros*, *ordenador*, *vale*). Register-neutral enough for Latin American readers in an academic/popular-science context, but do not mix dialects within the book.
+
+**Register**: divulgación científica, Asimov-style. Plain, clear, lightly conversational. Active voice by default. Concrete verbs. Avoid:
+
+- Nominalization chains ("la realización de la verificación de" → "verificar").
+- Agentless passives where an active form is natural ("se ha observado" → "observamos" or reword).
+- Latinate register pile-ups ("con el objeto de proceder a" → "para").
+- Formal throat-clearing ("Cabe destacar que" — cut unless it carries meaning).
+
+Punctuation conventions:
+
+- Em-dash for asides: `—así—` (no inner spaces, outer spaces). Same character as the English em-dash.
+- Quotes: prefer RAE guillemets «...» for quoted speech and titles; accept "curly quotes" only if already used consistently in the source and their swap would create ambiguity.
+- Spanish opens questions and exclamations with `¿` and `¡`.
+- Italicize transliterated foreign terms (*me*, *edubba*, *abzu*, *en*, *ensi*, *lugal*).
+
+If the user specifies a different dialect (e.g., español neutro internacional) before the stage runs, switch and stay consistent throughout.
+
+## Hard rules
+
+1. **No factual changes.** If a rendering would alter a factual claim, choose a different rendering. Never edit content.
+2. **No AsciiDoc structure changes.** The translated file must have the same anchors, xref targets, include paths, footnote structure, image paths, attribute names, and block delimiters as the source.
+3. **Never translate machine-readable identifiers.** This includes:
+   - `[[anchor-id]]`, `[#section-id]` — the ID stays in English.
+   - `<<xref-target>>` — the target stays in English; if there is visible text `<<target, text>>`, translate only the text after the comma.
+   - `xref:other.adoc#id[text]` — path and ID unchanged; translate bracketed text only.
+   - `include::path/file.adoc[]` — unchanged. Paths stay English (see §Output for how Spanish chapter files are named and included).
+   - `// EVIDENCE: source_id=... ; loc=...` — comment lines unchanged. These are pipeline machinery.
+   - `footnote:name[...]` — the `name` ref ID unchanged; translate the content inside `[...]`.
+   - `image::path[alt]` — path unchanged; translate `alt` text.
+   - Attribute entries like `:doctype:`, `:toc:`, `:sectnums:` — names unchanged; values translated only where the value is user-facing text (e.g., `:author:`).
+   - BibTeX citation keys in `bibliography.bib` — unchanged.
+4. **No footnote content changes beyond translation.** Do not add, remove, merge, or renumber footnotes.
+5. **No changes inside resolved marker passages' factual content.** These were reviewed and locked upstream. Translate the prose, do not reinterpret.
+6. **Bibliography titles stay in the original language.** Chicago-author-date convention: do not translate the titles of cited works. Only translate publisher-location strings if absolutely necessary for clarity (usually leave untouched).
+
+## Inputs
+
+- `glossary.yaml` (English glossary — basis for the Spanish glossary)
+- `scope.md`, `sources.yaml`
+- All `chapters/NN-<slug>.edited.adoc` (story chapters)
+- `chapters/00-introduction.edited.adoc`
+- `comparative.edited.adoc`
+- `character-appendix.adoc`
+- `<slug>.adoc` (master assembly — gives include order)
+- `bibliography.bib`
+
+## Method
+
+### Pass 0 — Spanish glossary (interactive, once)
+
+Before any prose is translated, produce `glossary.es.yaml`.
+
+For every entry in `glossary.yaml`, propose a Spanish rendering plus alternatives, applying the conventions from Spanish academic Sumerology:
+
+| Term type | Spanish convention |
+|---|---|
+| Sumerian deity names (Enki, Enlil, Inanna, Utu, Nanna, Ninhursaja, Ninlil, Ninmah) | Unchanged. Never substitute Akkadian equivalents (Ea, Anu) unless the source explicitly does. |
+| Sumerian place names that have a standard Akkadian/modern form (Nibru → Nippur, Unug → Uruk, Eridug → Eridu, Urim → Ur, Zimbir → Sippar) | Prefer the Akkadian/standard form for reader recognition; gloss the Sumerian form in italics on first mention. |
+| Sumerian place names without a widespread Spanish form (Keš, Kuara, Šuruppak) | Transliterate with standard diacritics (š, ĝ). |
+| Technical terms (*me*, *edubba*, *abzu*, *giguna*, *kur*) | Keep in italics, untranslated. Gloss on first mention. Plural forms: *los me*, *los edubba* (invariable). |
+| Titles (*en*, *ensi*, *lugal*, *abgal*, *lukur*) | Keep in italics, untranslated. Gloss on first mention. |
+| Scholar names (Kramer, Jacobsen, Black, Bottéro) | Unchanged. |
+| Scholarly-edition titles in footnotes | Unchanged (original language). |
+
+Present the proposed `glossary.es.yaml` to the user. For each entry the user accepts, picks an alternate, or supplies their own. No silent choices.
+
+Format:
+
+```yaml
+terms:
+  - native: <transliteration>
+    english_chosen: <from glossary.yaml>
+    spanish_renderings_considered:
+      - { form: <rendering>, rationale: <source/precedent> }
+    spanish_chosen: <final locked rendering>
+    first_mention_gloss_es: <short functional gloss in Spanish, Asimov-style>
+    never_use_es: [<Spanish forms that must never appear — e.g., Akkadian substitutions>]
+```
+
+### Pass 1 — Draft translation (per chapter)
+
+For each chapter file, produce `chapters/NN-<slug>.es.draft.adoc` (intermediate — not a final output; may be discarded after Pass 3).
+
+Instructions to follow during Pass 1:
+
+- Translate the entire chapter in a single pass, keeping the full chapter in context. Do not split into paragraphs.
+- Apply the Spanish glossary: every term with a `spanish_chosen` entry must use that rendering.
+- Preserve every `[[anchor]]`, `<<xref>>`, `include::`, `footnote:[...]`, `// EVIDENCE:` token, `image::`, and attribute line byte-for-byte in its position.
+- Italicize transliterated foreign terms using AsciiDoc `_italics_` or `+++<em>...</em>+++` per the source's convention.
+- Handle direct quotations of primary source translations: if the English quotes a scholar's translation (e.g., Black/Cunningham/Robson/Zólyomi), translate the quotation into Spanish and add a translator's note in a footnote of the form `footnote:[Traducción propia del inglés de <author> <year>.]` — unless a published Spanish translation of that exact passage exists in `glossary.es.yaml`'s `published_translations:` section (see Pass 0 if applicable).
+- Do not translate BibTeX keys in footnote citations; `cite:[kramer1961]` stays `cite:[kramer1961]`.
+
+### Pass 2 — Reflection (per chapter)
+
+On the Pass 1 draft, produce a structured self-critique. Do not rewrite yet. Cover, in order:
+
+1. **Accuracy.** Sentence-by-sentence, are there any factual shifts, omissions, or additions? List each as `line N: <issue>`.
+2. **AsciiDoc integrity.** List every anchor, xref, include, footnote ref ID, EVIDENCE token, and image path in the draft. Compare against the source. Any divergence is a finding.
+3. **Terminology.** Every glossary term used — is the Spanish rendering the locked one? Any drift? Any English term leaked (untranslated noun phrase still in English)?
+4. **Register.** Flag nominalization chains, agentless passives where active is natural, latinate pile-ups, throat-clearing, and calques of English idiom.
+5. **False friends.** Check at minimum: *eventually*, *actually*, *eventually*, *actually*, *actually*, *realize*, *library*, *assist*, *sensible*, *sympathetic*, *fabric*, *discuss*, *pretend*, *argument*, *apology*, *attend*, *character* (people vs letters), *support* (endorse vs stand under), *exit*, *fact* (≠ *facto*). Search and verify each occurrence.
+6. **Punctuation.** ¿/¡ on questions/exclamations. Em-dashes rendered correctly. Italics preserved on transliterated terms.
+7. **Anaphora and cohesion.** Pronoun chains, "the god", "this composition" — do they resolve correctly across paragraphs in the Spanish version?
+
+### Pass 3 — Apply reflections (per chapter)
+
+Rewrite the chapter applying every accepted reflection. Produce the final output `chapters/NN-<slug>.es.adoc` and a `chapters/NN-<slug>.es-diff.md` showing original English sentence vs Spanish sentence for a representative sample plus every non-trivial rendering decision (glossary terms on first mention, ambiguous passages, translator-note footnotes). The human skims the diff to approve in bulk.
+
+Repeat Pass 1 → Pass 2 → Pass 3 for each chapter. Also for: `chapters/00-introduction.edited.adoc` → `chapters/00-introduction.es.adoc`, `comparative.edited.adoc` → `comparative.es.adoc`, `character-appendix.adoc` → `character-appendix.es.adoc`.
+
+### Pass 4 — Assembly
+
+Produce `<slug>.es.adoc` at the book root, a mirror of `<slug>.adoc` with:
+
+- Translated title, author, subtitle.
+- Spanish document attributes where user-facing (`:doctype: book` stays; `:toc-title: Índice` added; `:appendix-caption: Apéndice`; `:figure-caption: Figura`; `:table-caption: Tabla`; `:note-caption: Nota`; `:tip-caption: Consejo`; `:important-caption: Importante`; `:caution-caption: Precaución`; `:warning-caption: Advertencia`; `:lang: es`; `:locale: es_ES` — or `es` for neutro).
+- `include::` directives pointing at the `.es.adoc` files, in the same order as `<slug>.adoc`.
+- `:bibtex-file: bibliography.bib` unchanged (same bib file, same keys).
+
+Produce `bibliography.es.bib` (at book root) only if translator-note footnotes add any new citations; otherwise reuse `bibliography.bib` as-is.
+
+### Pass 5 — Render
+
+Render the Spanish variant via the container helper (same wrapper used by stage 17, with `--es`):
+
+```
+./container/render_book.sh <book-dir> <slug> --es
+```
+
+The helper writes `<book-dir>/output/<slug>.es.pdf`, `<book-dir>/output/<slug>.es.epub`, and `<book-dir>/reports/validation-report.es.md`. It runs the same anti-pattern scan on the produced EPUB as stage 17 (EVIDENCE/COMPARATIVE-HOOK leftovers, `(. ` empty-paren artefact, `_(.footnote` artefact) and exits non-zero on any WARN/ERROR or hit — treat a non-zero exit as a finding and stop.
+
+## Output
+
+Per chapter:
+- `chapters/NN-<chapter-slug>.es.adoc`
+- `chapters/NN-<chapter-slug>.es-diff.md`
+
+At book root:
+- `chapters/00-introduction.es.adoc` + `.es-diff.md`
+- `comparative.es.adoc` + `comparative.es-diff.md`
+- `character-appendix.es.adoc` + `character-appendix.es-diff.md`
+- `glossary.es.yaml`
+- `<slug>.es.adoc` (master)
+- `bibliography.es.bib` (only if new citations were introduced)
+
+Under `output/` (final deliverables):
+- `output/<slug>.es.pdf`
+- `output/<slug>.es.epub`
+
+Under `reports/` (build logs):
+- `reports/validation-report.es.md`
+
+## Self-check
+
+1. **ID/anchor/path diff.** For every source chapter and its translation, extract the set of `[[anchors]]`, `<<xref targets>>`, `include::` paths, `footnote:name[...]` ref IDs, `// EVIDENCE:` tokens, `image::` paths, and `cite:[key]` keys. The two sets must be identical. Any divergence is a HIGH finding.
+2. **Footnote count match.** Per chapter, number of footnote definitions and number of footnote references must match between source and translation.
+3. **No English paragraphs leaked.** Sample every chapter; no paragraph should remain in English (except unchanged machine-readable lines and bibliography titles).
+4. **Glossary compliance.** Every term in `glossary.es.yaml` — its `spanish_chosen` rendering appears in the translated corpus; its `never_use_es` forms do not.
+5. **Asciidoctor dry-runs exit clean** (no WARN/ERROR).
+6. **No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers** have been reintroduced (marker-resolve already removed them from the English source; they must not come back).
+7. **Bibliography keys unchanged.** `cite:[...]` keys in Spanish files match those in English files.
+
+## Failure modes and recovery
+
+- **Context overflow on a long chapter.** Split the chapter at a natural section break (`==` heading) for Pass 1 only; stitch before Pass 2. Never split mid-paragraph.
+- **Glossary term missing from `glossary.es.yaml`.** If Pass 1 encounters a recurring term not in the Spanish glossary, stop and flag. The user adds the entry using the Pass 0 procedure. Do not silently invent a rendering.
+- **AsciiDoc structure diff fails.** Do not "fix" by reverting — report the specific anchor/xref/path that diverged and which chapter. The user decides.
+- **Register regression** (output reads as academic Spanish). Re-run Pass 2 with the register checklist as the primary focus, and apply in Pass 3.
+
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
+## Handoff
+
+This is the final stage. The Spanish edition is complete.
 
