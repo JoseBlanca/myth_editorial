@@ -103,18 +103,40 @@ check_anti_pattern() {
     echo
     if [[ $epub_rc -eq 0 && -s "$epub_file" ]] && unzip -q "$epub_file" -d "$tmp" 2>/dev/null; then
         clean=0
+        # Pipeline metadata leftovers.
         check_anti_pattern "EVIDENCE leftover" "EVIDENCE" || clean=1
         check_anti_pattern "COMPARATIVE-HOOK leftover" "COMPARATIVE-HOOK" || clean=1
-        check_anti_pattern "empty-paren '(. [n])' artefact" "(. " || clean=1
-        check_anti_pattern "'_(.footnote' artefact" "(.footnote" || clean=1
+
+        # Stage-13 placeholder-literal leaks. In rendered xhtml, `<` is
+        # HTML-encoded to `&lt;`, so grep the encoded form.
+        for ph in "&lt;claim&gt;" "&lt;basis&gt;" "&lt;risk&gt;" \
+                  "&lt;reconstruction&gt;" "&lt;what&gt;" "&lt;ref&gt;" \
+                  "&lt;content&gt;" "&lt;gap_source&gt;" \
+                  "&lt;fill_source&gt;" "&lt;confidence&gt;" \
+                  "&lt;alt phrase&gt;" "&lt;B source&gt;" "&lt;reason&gt;" \
+                  "&lt;counterargument&gt;"; do
+            check_anti_pattern "placeholder-literal leak ('${ph}')" "$ph" || clean=1
+        done
+
+        # Stage-13 empty-slot artefacts.
+        check_anti_pattern "empty-paren '(. [n])' INFERENCE artefact" "(. " || clean=1
+        check_anti_pattern "'_(.footnote' INFERENCE artefact" "(.footnote" || clean=1
+        check_anti_pattern "empty-what LACUNA ('At this point the tablet breaks. .')" "the tablet breaks. ." || clean=1
+
+        # Stage-13 leaked sentinels.
         check_anti_pattern "leaked LACUNA sentinel ('none — ...')" "none —" || clean=1
         check_anti_pattern "leaked LACUNA sentinel ('none -- ...')" "none --" || clean=1
         check_anti_pattern "leaked LACUNA sentinel ('none available')" "none available" || clean=1
         check_anti_pattern "leaked LACUNA sentinel ('none sufficient')" "none sufficient" || clean=1
         check_anti_pattern "leaked LACUNA sentinel ('n/a — ...')" "n/a —" || clean=1
+
+        # Stage-13 double-period artefacts. Narrow to contexts that only
+        # arise from the bug (not from legitimate ellipsis-adjacent prose).
         check_anti_pattern "double-period artefact ('..]')" "..]" || clean=1
         check_anti_pattern "double-period artefact ('.. —')" ".. —" || clean=1
-        check_anti_pattern "empty-what LACUNA ('At this point the tablet breaks. .')" "the tablet breaks. ." || clean=1
+        check_anti_pattern "double-period after INFERENCE basis ('.. Risk:')" ".. Risk:" || clean=1
+        check_anti_pattern "double-period after SPECULATION basis ('.. The main counterargument:')" ".. The main counterargument:" || clean=1
+        check_anti_pattern "double-period before LACUNA reconstruction suffix ('.. Scholars such as')" ".. Scholars such as" || clean=1
         if [[ $clean -eq 0 ]]; then
             echo "clean — no anti-patterns in EPUB."
         else

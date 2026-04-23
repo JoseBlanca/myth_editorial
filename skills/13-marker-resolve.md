@@ -23,6 +23,20 @@ This step does not change any prose outside the markers. It is a mechanical conv
 
 Resolve each marker per these rules. Do not alter any other prose.
 
+### Universal rendering rules
+
+These four rules apply to every marker type below. They exist because past runs of this stage have shipped broken prose to readers — literal `none` labels, empty parentheses that print as `(. [n])` in the PDF, double periods, and placeholder tokens like `<basis>` leaking into the final text. Follow them without exception.
+
+1. **Placeholder values must be rendered as prose, never as literals.** The templates use `<placeholder>` notation (e.g. `<claim>`, `<basis>`, `<reconstruction>`, `<what>`). These are **slots to be filled from the marker's input, as natural prose**. If you find yourself emitting the literal string `<basis>` or `<reconstruction>` in the output, stop — you have misread the template. Every `<...>` token must be replaced with the value from the input marker.
+
+2. **No empty or sentinel-valued slots.** A slot cannot be rendered as empty, as a bare period, as `none`, as `n/a`, or as any other sentinel. If the input marker does not supply a value for a mandatory slot, do **not** fit it into the template — flag the marker in the stage report so upstream can be tightened, and render a fallback that does not produce broken prose. Each marker section below specifies its own fallback.
+
+3. **Do not double up terminal punctuation.** If a placeholder value ends with `.`, `?`, `!`, or `…`, the template's following `.` separator is redundant. Use the existing terminator instead of appending another period. Never emit `..` inside a rendered bracket or paragraph. Never emit `..]_` at the close of a bracket. If a slot ends with a comma or semicolon, convert it to a period before the next sentence boundary.
+
+4. **Sentinel hedges (e.g. `none`, `n/a`, `partial,`, `insufficient`, `—`) must never leak into reader-facing text.** Some input fields (notably `scholarly_reconstruction`) accept meta-notes that start with a hedge. Strip the hedge, capitalise the informative tail if any, and render the tail as a stand-alone sentence — or drop the sentence entirely if the tail is empty. See LACUNA Shape B below for the canonical worked examples.
+
+When in doubt, **prefer under-rendering (omit a slot / drop a sentence) over broken-rendering (leaked sentinel / empty paren / double period)**. It is always safer to lose one sentence than to ship text that reads as a bug to the reader.
+
 ### `[INFERENCE: claim | basis: X | risk: Y]`
 Render as an italicized parenthetical whose body is the **claim rendered as prose**, followed by a footnote carrying the basis and risk:
 ```
@@ -141,22 +155,85 @@ _[At this point the tablet breaks. Conclusion is fragmentary.]_
 ```
 
 ### `[RECONSTRUCTION: content | gap_source: X | fill_source: Y | confidence: Z]`
-Render the content in prose, with a footnote flagging it as reconstruction:
+Render the content as normal prose, followed by a footnote flagging the reconstruction:
 ```
-<content rendered as normal prose>.footnote:[This passage reconstructs the lacuna at <gap_source> from the parallel account in <fill_source>; confidence: <Z>.]
+<content rendered as prose>.footnote:[This passage reconstructs the lacuna at <gap_source> from the parallel account in <fill_source>; confidence: <Z>.]
 ```
 
-### `[VARIANT: primary=A | alt=B | chosen: A | reason: R]`
-Only appears in single-prevalent cases (co-equal variants are already inline without markers). Render as the prevalent version in body, with a footnote giving the alternate:
+All four slots — content, gap_source, fill_source, confidence — are **mandatory**. If any is missing or empty, flag the marker and render only the content in prose (no footnote) rather than emit `<gap_source>` / `<fill_source>` / `<Z>` as literals.
+
+Per rule 3, if `<content>` ends with a period, do not add another before `.footnote:[`.
+
+**Worked example.**
+
+Input:
 ```
-<prevalent version text>.footnote:[An alternate tradition in <B source> gives: "<alt phrase>". The prevalent version is chosen here because <reason>.]
+[RECONSTRUCTION: Inanna asked her minister Ninshubur to go to Enlil for help, then to Nanna, then to Enki. | gap_source: ETCSL 1.4.1, lines 180–195 (Nippur) | fill_source: UM 29-16-37 fragment | confidence: high]
+```
+
+Output:
+```
+Inanna asked her minister Ninshubur to go to Enlil for help, then to Nanna, then to Enki.footnote:[This passage reconstructs the lacuna at ETCSL 1.4.1, lines 180–195 (Nippur) from the parallel account in UM 29-16-37 fragment; confidence: high.]
+```
+
+Note that `<content>` here ended with a period, so the template's leading `.` before `.footnote:[` is dropped — the existing period serves.
+
+### `[VARIANT: primary=A | alt=B | chosen: A | reason: R]`
+Only appears in single-prevalent cases (co-equal variants are already inline without markers). The marker's four fields map to the rendering as follows:
+
+- `primary` — the prevalent version, rendered in the body as prose.
+- `alt` — an object with a source name and the alternate phrase (typically `alt=<source>: "<phrase>"` or similar; read as `<B source>` and `<alt phrase>`).
+- `chosen` — which of `primary`/`alt` is in the body. In this stage `chosen` is always `A` (`primary`); if the input says `chosen: B`, swap the semantics so `primary` becomes the body and `alt` the footnote.
+- `reason` — why the chosen version is in the body.
+
+Rendering:
+```
+<prevalent version text rendered as prose>.footnote:[An alternate tradition in <B source> gives: "<alt phrase>". The prevalent version is chosen here because <reason rendered as prose>.]
+```
+
+All four fields are **mandatory**. If `<reason>` is missing, flag the marker and render only the prevalent version in prose (no footnote). Never emit the literal `<B source>`, `<alt phrase>`, or `<reason>` in the output.
+
+Per rule 3, if `<prevalent version text>` ends with a period, drop the template's leading `.` before `.footnote:[`. If `<alt phrase>` already ends with a terminator, do not add another before `"` closes. If `<reason>` ends with a period, do not add another before `]`.
+
+**Worked example.**
+
+Input:
+```
+[VARIANT: primary=Nippur | alt=Ur: "the bull drank water from the Tigris and Euphrates" | chosen: A | reason: Nippur manuscripts are older and more widely attested]
+```
+
+Output (assuming the prevalent version as rendered in the body reads "The bull drank water from the Tigris"):
+```
+The bull drank water from the Tigris.footnote:[An alternate tradition in the Ur manuscript gives: "the bull drank water from the Tigris and Euphrates". The prevalent version is chosen here because Nippur manuscripts are older and more widely attested.]
 ```
 
 ### `[SPECULATION: claim | basis: X | counterargument: Y]`
-Only appears in the comparative chapter. Render as the claim in prose, with a footnote presenting both sides:
+Only appears in the comparative chapter. Render as the claim in prose, followed by a footnote presenting both sides:
 ```
-<claim rendered as normal prose>.footnote:[This parallel is speculative. Basis: <basis>. The main counterargument: <counterargument>.]
+<claim rendered as prose>.footnote:[This parallel is speculative. Basis: <basis>. The main counterargument: <counterargument>.]
 ```
+
+All three slots — claim, basis, counterargument — are **mandatory**. If `<basis>` or `<counterargument>` is missing, flag the marker and render the claim as plain prose without a footnote (do not emit empty `Basis:` / `counterargument:` slots).
+
+Per rule 3:
+
+- If `<claim>` ends with a period, drop the template's leading `.` before `.footnote:[`.
+- If `<basis>` ends with a period, do not add another before ` The main counterargument:`.
+- If `<counterargument>` ends with a period, do not add another before `]`.
+
+**Worked example.**
+
+Input:
+```
+[SPECULATION: The Gilgamesh-Enkidu friendship may reflect a wider ancient-Near-Eastern motif of the "hero and his wild double" also seen in Samson-and-Delilah and early Greek narratives. | basis: Structural parallel of a civilised hero paired with an untamed companion who civilises through contact with the hero. | counterargument: The parallels are structurally loose and could arise independently in any heroic tradition.]
+```
+
+Output:
+```
+The Gilgamesh-Enkidu friendship may reflect a wider ancient-Near-Eastern motif of the "hero and his wild double" also seen in Samson-and-Delilah and early Greek narratives.footnote:[This parallel is speculative. Basis: Structural parallel of a civilised hero paired with an untamed companion who civilises through contact with the hero. The main counterargument: The parallels are structurally loose and could arise independently in any heroic tradition.]
+```
+
+Note how the trailing periods of `<claim>`, `<basis>`, and `<counterargument>` serve double duty — they terminate their own content and stand in for the template's separator periods, so no `..` appears anywhere.
 
 ## Output
 
@@ -165,23 +242,51 @@ Only appears in the comparative chapter. Render as the claim in prose, with a fo
 - Comparative chapter: `comparative.resolved.adoc`
 
 ## Self-check
-- Grep all output files for `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` — must be zero matches.
-- Grep all output files for the empty-claim/empty-slot anti-patterns below — must be zero matches. These indicate a marker was stripped without its content being carried through.
-  - `_(\.footnote:` — INFERENCE rendered with an empty claim (prints as `(. [n])` in the PDF).
-  - `Inference: \.` or `Inference: *\.` — empty basis.
-  - `Risk: \.` or `Risk: *\.` — empty risk.
-  - `Basis: \.` — empty SPECULATION basis.
-  - `counterargument: \.` — empty SPECULATION counterargument.
-- Grep all output files for leaked LACUNA sentinels — must be zero matches inside italic brackets `_[...]_`. These indicate a `scholarly_reconstruction:` sentinel value was dropped verbatim instead of converted per Shape B above.
-  - `none —`, `none --`, `none-`, `none—` (em-dash or hyphen variants)
-  - `none available`, `none sufficient`, `none suffices`
-  - `n/a —`, `n/a —`, `n/a -`
-  - `partial,` or `partial;` appearing mid-sentence inside a `_[At this point…]_` bracket
-  - `insufficient;` appearing mid-sentence inside a `_[…]_` bracket
-- Grep all output files for the double-period artefact: `..]_`, `.. —`, `.. ]` — must be zero matches. This indicates the renderer appended a period after a `<what>` that already ended in one.
-- Grep all output files for empty-what LACUNAs: `_\[At this point the tablet breaks\. \.` — must be zero matches. This indicates the renderer lost the `<what>` field.
-- For every `[INFERENCE: ...]` marker in the input `.adoc`, confirm the corresponding line in the `.resolved.adoc` contains non-trivial prose between `_(` and `.footnote:[`. If the input was a short-form `[INFERENCE: claim]` (no basis/risk), confirm the output renders the claim as plain prose instead.
-- No prose outside of marker-replaced sections has changed.
+
+Every check below must return zero matches on every output file. If any match, stop and fix before handoff — the cost of shipping a broken rendering into the next stage is much higher than the cost of re-running this one.
+
+**Raw markers.** Zero matches for `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:`.
+
+**Placeholder-literal leaks** (rule 1). These indicate the renderer emitted the template's `<…>` token instead of filling it from the input. Zero matches for any of:
+
+`<claim>`, `<basis>`, `<risk>`, `<reconstruction>`, `<what>`, `<ref>`, `<content>`, `<gap_source>`, `<fill_source>`, `<Z>`, `<confidence>`, `<prevalent version text>`, `<alt phrase>`, `<B source>`, `<reason>`, `<counterargument>`
+
+**Empty-slot artefacts** (rule 2). These indicate a mandatory slot was rendered as empty or as a bare period.
+
+- `_(\.footnote:` — INFERENCE rendered with an empty claim; prints as `(. [n])` in the PDF.
+- `Inference: *\.` — empty INFERENCE basis.
+- `Risk: *\.` — empty INFERENCE risk.
+- `Basis: *\.` — empty SPECULATION basis.
+- `counterargument: *\.` — empty SPECULATION counterargument.
+- `_\[At this point the tablet breaks\. *\.` — LACUNA rendered with an empty `<what>`.
+- `An alternate tradition in  gives:` (note the double space) — VARIANT with an empty `<B source>`.
+- `reconstructs the lacuna at  from the parallel account in` — RECONSTRUCTION with an empty `<gap_source>`.
+
+**Leaked sentinel hedges** (rule 4). Zero matches inside any rendered italic bracket `_[...]_` or `_(...)_` for:
+
+- `none —`, `none --`, `none-`, `none—`
+- `none available`, `none sufficient`, `none suffices`, `none yet`
+- `n/a —`, `n/a -`, `N/A —`
+- `partial,` or `partial;` at the start of a clause (after `. `)
+- `Partial,` or `Partial;` at the start of a clause
+- `insufficient;` at the start of a clause
+- `no reconstruction —`, `no witnesses —`, `no parallels —`
+
+**Double-period artefacts** (rule 3). Zero matches for:
+
+- `..footnote:` — placeholder value ended in `.` and the template's separator `.` was appended.
+- `.. Risk:` — INFERENCE basis ended in `.` and the template's separator was appended.
+- `.. The main counterargument:` — SPECULATION basis ended in `.`.
+- `.. Scholars such as` — LACUNA `<what>` ended in `.` before the Shape A suffix.
+- `..]_` — any italic bracket closing with two periods.
+- `.. —` — any double period followed by an em-dash inside rendered prose.
+- `..])_` — INFERENCE or SPECULATION risk/counterargument ended in `.`, doubling at the bracket close.
+
+**Per-marker round-trip count.** For every `[INFERENCE: ...]`, `[LACUNA: ...]`, `[RECONSTRUCTION: ...]`, `[VARIANT: ...]`, `[SPECULATION: ...]` in the input `.adoc`, confirm exactly one rendered equivalent appears in the corresponding `.resolved.adoc`. Mismatches — input markers with no output, or outputs with no input — are findings.
+
+For every INFERENCE input whose claim is non-empty, confirm the `.resolved.adoc` contains non-trivial prose between `_(` and `.footnote:[`. If the input was a short-form `[INFERENCE: claim]` (no `| basis:` / `| risk:`), confirm the output renders the claim as plain prose instead (no paren, no footnote).
+
+**Prose boundary.** No prose outside of marker-replaced sections has changed. A line-by-line diff against the input should show changes only on lines that held markers.
 
 ## Completion protocol
 

@@ -37,6 +37,14 @@ These rules apply across all stages. They are not repeated in each skill, but ev
 
 **Negative-evidence discipline.** When a source does not attest something (e.g., no physical description survives), this must be stated explicitly and scoped: "No physical description survives in the in-scope sources" — not "No description exists." Absence of evidence in the in-scope corpus is not the same as universal absence.
 
+**Template discipline.** Any skill that tells an agent to render a marker, claim, footnote, or other structured element into prose using a template with `<placeholder>` slots must follow three rules:
+
+1. *Every template ships with at least one worked input→output example.* A template without an example is a specification, not an instruction — agents will guess at the slot-filling rule and guess differently each time.
+2. *Every template specifies a trailing-punctuation rule.* If a slot value may end with `.`, `?`, `!`, or `…`, the template must say explicitly whether to suppress its own following separator. Past runs have shipped "..]_" and ".. Risk:" into the final PDF because this was implicit.
+3. *Every template specifies fallback behaviour for empty, missing, or sentinel-valued slots* (`none`, `n/a`, `—`, etc.). The renderer must never emit a literal `<placeholder>` token, an empty paren `(. [n])`, or a leaked sentinel word. When a required slot is missing, the skill must describe a concrete fallback (e.g. "render the claim as plain prose without a footnote") rather than letting the agent improvise.
+
+The corresponding skill's self-check must include grep-based anti-pattern checks for each of the three failure modes (placeholder leaks, empty slots, sentinel leaks), and the downstream stage that assembles final artefacts must mirror those checks as a safety net.
+
 ## Stage order
 
 The book is built in stages. Each stage produces a file that the next stage consumes. `[HUMAN]` marks points where you review and approve before continuing. The arrows show what feeds into what:

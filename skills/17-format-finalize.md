@@ -113,12 +113,15 @@ Final deliverables (the reader-facing artifacts) are gathered under `output/`. B
 - `reports/validation-report.md` — asciidoctor build log, any findings.
 
 ## Self-check
+
+The marker-resolve stage (13) is the upstream producer of the rendered brackets and parentheticals. The checks below are a safety net for bugs that stage missed. Each must return zero matches on every `.edited.adoc` file at the book root. If any match, stop and re-run stage 13 — do not attempt to patch the output in this stage.
+
 - No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all `.edited.adoc` files, `comparative.edited.adoc`, and `character-appendix.adoc`.)
 - No `// EVIDENCE:` or `// COMPARATIVE-HOOK:` remain in the `.edited.adoc` files after step 2. Grep the rendered EPUB's `.xhtml` contents for both strings — must be zero.
-- No empty-claim resolution artefacts remain from stage 13. Grep all `.edited.adoc` files for `_(\.footnote:` (INFERENCE rendered without its claim — prints as `(. [n])` in the PDF), `Inference: *\.`, and `Risk: *\.`. Zero matches expected. If any remain, stop and report — the upstream marker-resolve stage produced bad output and must be re-run.
-- No leaked LACUNA sentinels remain from stage 13. Grep all `.edited.adoc` files (case-insensitive) for `none —`, `none --`, `none-`, `none available`, `none sufficient`, `n/a —`, `n/a -`, and (inside italic `_[…]_` brackets) `partial,`, `partial;`, `insufficient;`. Zero matches expected. If any remain, stop and report — the marker-resolve stage dropped a `scholarly_reconstruction:` sentinel value verbatim into the rendered prose instead of converting it per the rule.
-- No double-period artefact (`..]_`, `.. —`, `.. ]`) appears in any `.edited.adoc` file. Zero matches expected.
-- No empty-what LACUNAs (`_\[At this point the tablet breaks\. \.`) appear in any `.edited.adoc` file. Zero matches expected.
+- No placeholder-literal leaks from stage 13: zero matches for `<claim>`, `<basis>`, `<risk>`, `<reconstruction>`, `<what>`, `<ref>`, `<content>`, `<gap_source>`, `<fill_source>`, `<Z>`, `<confidence>`, `<prevalent version text>`, `<alt phrase>`, `<B source>`, `<reason>`, `<counterargument>`. These indicate the renderer copied the template verbatim instead of filling a slot.
+- No empty-slot artefacts. Grep for `_(\.footnote:` (empty INFERENCE claim — prints as `(. [n])` in the PDF), `Inference: *\.`, `Risk: *\.`, `Basis: *\.`, `counterargument: *\.`, `_\[At this point the tablet breaks\. *\.` (empty LACUNA `<what>`).
+- No leaked sentinels (case-insensitive) anywhere inside italic brackets `_[…]_` or `_(…)_`: `none —`, `none --`, `none-`, `none—`, `none available`, `none sufficient`, `n/a —`, `n/a -`, `Partial,` or `Partial;` at the start of a clause, `partial,` or `partial;` at the start of a clause, `insufficient;` at the start of a clause.
+- No double-period artefacts. Grep for `..]_`, `.. —`, `..footnote:`, `.. Risk:`, `.. The main counterargument:`, `.. Scholars such as`, `..])_`. These indicate a placeholder value ended with `.` and the template's separator `.` was appended.
 - Every footnote citation resolves to a bibliography entry.
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
