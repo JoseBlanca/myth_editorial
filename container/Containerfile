@@ -1,0 +1,82 @@
+# Container for running Claude Code + the mythology-book pipeline in isolation.
+#
+# Base matches the host (Debian 13 / trixie) so toolchain versions are
+# predictable. The image bundles:
+#   - Claude Code CLI (installed via npm)
+#   - Python 3 (assemble_prompt.py)
+#   - Ruby + asciidoctor/pdf/epub3/bibtex (book rendering)
+#   - Pandoc (fallback converter)
+#   - Git (commits + diffs)
+#
+# A non-root user "myth" is created with UID/GID 1000 so that, combined with
+# `podman --userns=keep-id`, files written inside the container are owned by
+# the host user on the bind mount.
+FROM docker.io/library/debian:trixie-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    NODE_MAJOR=22
+
+# --- System packages ---------------------------------------------------------
+# build-essential + ruby-dev are needed for native gem extensions
+# (nokogiri, prawn, etc.). fonts-dejavu keeps asciidoctor-pdf rendering sane
+# for the default theme. git is required by the pipeline for commits.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        git \
+        gnupg \
+        locales \
+        make \
+        g++ \
+        build-essential \
+        python3 \
+        python3-pip \
+        python3-venv \
+        ruby \
+        ruby-dev \
+        pandoc \
+        fonts-dejavu \
+        fonts-liberation \
+        xz-utils \
+        unzip \
+    && rm -rf /var/lib/apt/lists/*
+
+# --- Node.js (for Claude Code CLI) ------------------------------------------
+RUN curl -fsSL https://deb.nodesource.com/setup_${NODE_MAJOR}.x | bash - \
+    && apt-get install -y --no-install-recommends nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
+# --- Asciidoctor toolchain ---------------------------------------------------
+RUN gem install --no-document \
+        asciidoctor \
+        asciidoctor-pdf \
+        asciidoctor-epub3 \
+        asciidoctor-bibtex \
+        rouge
+
+# --- Claude Code CLI ---------------------------------------------------------
+RUN npm install -g @anthropic-ai/claude-code
+
+# --- Non-root user -----------------------------------------------------------
+# UID/GID 1000 matches a typical host user. With `podman --userns=keep-id` the
+# namespace is remapped so the container's 1000 is the host's 1000, and files
+# on the bind mount are owned correctly outside.
+ARG USER_UID=1000
+ARG USER_GID=1000
+RUN groupadd --gid ${USER_GID} myth \
+    && useradd --uid ${USER_UID} --gid ${USER_GID} --create-home --shell /bin/bash myth \
+    && mkdir -p /home/myth/.claude /workspace \
+    && chown -R myth:myth /home/myth /workspace
+
+USER myth
+WORKDIR /workspace
+
+# Claude Code state persists in /home/myth/.claude — mount a named volume
+# there to keep authentication across runs.
+ENV PATH=/home/myth/.local/bin:/usr/local/bin:/usr/bin:/bin \
+    HOME=/home/myth
+
+# Default to an interactive shell; run.sh overrides with the Claude command.
+CMD ["/bin/bash"]
