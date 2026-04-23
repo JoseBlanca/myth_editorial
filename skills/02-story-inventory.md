@@ -94,4 +94,4 @@ summary: "<one-line description of what was produced>"
 4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
-To `inventory-audit`, which must be run in a fresh conversation with a different model.
+To `inventory-audit`, which must be run in a fresh conversation — preferably with a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical.

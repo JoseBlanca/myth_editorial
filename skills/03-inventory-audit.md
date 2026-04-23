@@ -1,6 +1,6 @@
 ---
 name: inventory-audit
-description: Checks the story inventory for errors before any writing begins. Must be run by a different AI model than the one that produced the inventory, in a fresh conversation. Catches material from wrong cultures, made-up references, missing well-known stories, and silently merged variants.
+description: Checks the story inventory for errors before any writing begins. Must be run in a fresh conversation with no memory of producing the inventory — preferably by a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical. Catches material from wrong cultures, made-up references, missing well-known stories, and silently merged variants.
 ---
 
 # inventory-audit
@@ -19,10 +19,10 @@ The audit checks four things:
 
 4. **Silently merged variants.** When multiple versions of a story exist, the inventory should list them separately. If it quietly combined two versions into one summary, that's a problem.
 
-This audit must be run by a different AI model than the one that produced the inventory, in a fresh conversation (so the auditor has no memory of the work it's checking). An AI reviewing its own work in the same conversation catches almost nothing.
+This audit must be run in a fresh conversation so the auditor has no memory of the work it's checking. An AI reviewing its own work in the same conversation catches almost nothing. Using a different AI model from the one that produced the inventory is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a different model is impractical. The fresh context is the load-bearing requirement; the model identity is a preference.
 
 ## Hard rule
-If you are the model that produced `inventory.yaml`, or if you are in the same conversation in which it was produced, refuse and tell the user to start a fresh conversation with a different model.
+If you are in the same conversation in which `inventory.yaml` was produced, refuse and tell the user to start a fresh conversation. (A different AI model is preferred but not required; the fresh conversation is.)
 
 ## Inputs
 - `scope.md`, `sources.yaml`

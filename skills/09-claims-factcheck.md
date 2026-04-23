@@ -1,6 +1,6 @@
 ---
 name: claims-factcheck
-description: Checks the factual claims document for a story chapter — one fact per paragraph, each individually cited. This is the primary factcheck mode and the most reliable, because each claim is isolated and trivially verifiable. Must be run by a different AI model in a fresh conversation.
+description: Checks the factual claims document for a story chapter — one fact per paragraph, each individually cited. This is the primary factcheck mode and the most reliable, because each claim is isolated and trivially verifiable. Must be run in a fresh conversation with no memory of producing the claims (a different AI model is preferred but not required).
 ---
 
 # claims-factcheck
@@ -20,7 +20,7 @@ This step enforces four disciplines:
 4. **Read it backwards too.** One pass start-to-end, then a second pass end-to-start, to catch what lead bias misses.
 
 ## Hard rule
-Must be run in a fresh conversation with a different AI model than produced the claims. If you have any memory of producing the input, refuse.
+Must be run in a fresh conversation with no memory of producing the claims. If you have any memory of producing the input, refuse. Using a different AI model is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a different model is impractical; the fresh context is the load-bearing requirement.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`

@@ -70,4 +70,4 @@ summary: "<one-line description of what was produced>"
 4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
-To `prose-factcheck` (fresh conversation, different model). After factcheck, human review, and `post-human-normalize`, to `marker-resolve` along with all other chapters.
+To `prose-factcheck` in a fresh conversation (a different AI model is preferred but not required). After factcheck, human review, and `post-human-normalize`, to `marker-resolve` along with all other chapters.

@@ -1,6 +1,6 @@
 ---
 name: prose-factcheck
-description: Checks factual claims embedded in prose — for the intro chapter, comparative chapter, and character appendix. Unlike claims-factcheck which operates on isolated claims, this skill must first extract claims from flowing prose before verifying them. Must be run by a different AI model in a fresh conversation.
+description: Checks factual claims embedded in prose — for the intro chapter, comparative chapter, and character appendix. Unlike claims-factcheck which operates on isolated claims, this skill must first extract claims from flowing prose before verifying them. Must be run in a fresh conversation with no memory of producing the content (a different AI model is preferred but not required).
 ---
 
 # prose-factcheck
@@ -12,7 +12,7 @@ This is the factcheck for prose content that wasn't written through the claims-f
 The same four disciplines apply (show evidence, verify references, distinguish contradictions from errors, read backwards), but with an added initial step: claim extraction.
 
 ## Hard rule
-Must be run in a fresh conversation with a different AI model than produced the content.
+Must be run in a fresh conversation with no memory of producing the content. A different AI model is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a different model is impractical; the fresh context is the load-bearing requirement.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`

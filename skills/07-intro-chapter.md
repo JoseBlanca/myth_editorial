@@ -17,7 +17,7 @@ The chapter answers three questions for each myth, based on scholarly evidence:
 
 3. **Where else does this theme appear?** A brief preview — not the full analysis, which comes in the comparative chapter at the end — of where this myth's themes show up in other cultures. This gives the reader something to watch for as they read, and prepares them for the cross-cultural discussion later.
 
-This chapter makes factual claims about cultural significance, so it goes through the same fact-checking process as any other chapter: a different AI checks every claim against sources.
+This chapter makes factual claims about cultural significance, so it goes through the same fact-checking process as any other chapter: every claim is checked against sources in a fresh conversation (ideally by a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical).
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
@@ -160,4 +160,4 @@ summary: "<one-line description of what was produced>"
 4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
-To `prose-factcheck`, fresh conversation, different model.
+To `prose-factcheck`, in a fresh conversation (a different AI model is preferred but not required).

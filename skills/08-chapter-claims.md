@@ -177,4 +177,4 @@ summary: "<one-line description of what was produced>"
 4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
-To `claims-factcheck`, fresh conversation, different model. The fact-checker's job is dramatically simplified: each claim is isolated and individually cited.
+To `claims-factcheck`, in a fresh conversation (a different AI model is preferred but not required). The fact-checker's job is dramatically simplified: each claim is isolated and individually cited.

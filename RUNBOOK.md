@@ -37,17 +37,17 @@ The `python assemble_prompt.py ...` examples below are written in their plain fo
 
 ## Which AI for which stage?
 
-The rule is: **the writer and the checker must be different AIs.** Beyond that, use whatever works best. A reasonable default rotation:
+The rule is: **every check runs in a fresh conversation (or fresh autonomous process) with no memory of the writing.** Using a different AI model for the check is preferred — two models make independent mistakes — but the same model in a fresh conversation is acceptable when a second model is not practical to run. The load-bearing constraint is the fresh context, not the model identity. A reasonable default rotation:
 
 | Role | Suggested AI | Why |
 |------|-------------|-----|
 | Research (story-inventory) | Gemini Deep Research | Best at searching many sources |
 | Interactive (scope-lock, glossary-lock) | Any — your preference | These are conversations with you |
 | Writing (intro-chapter, chapter-claims, chapter-draft, comparative, character-appendix) | Claude | Strong at structured writing |
-| Checking (inventory-audit, claims-factcheck, prose-factcheck, narrative-fidelity) | GPT | Different model from writer |
+| Checking (inventory-audit, claims-factcheck, prose-factcheck, narrative-fidelity) | Ideally a different model from the writer; otherwise the same model in a fresh conversation | Independence preferred; fresh context is the hard requirement |
 | Mechanical (post-human-normalize, marker-resolve, line-edit, format-finalize) | Any | No audit independence needed |
 
-The key constraint: the AI that **produced** content must not be the AI that **checks** it, and the check must be in a **fresh conversation** (no memory of the writing).
+The key constraint: the check must be in a **fresh conversation** (no memory of the writing). A different AI model is preferred but not required.
 
 ---
 
@@ -107,7 +107,7 @@ python assemble_prompt.py inventory-audit sumer inventory.yaml
 ```
 
 **How to run:**
-- **Must be a different AI than story-inventory, fresh conversation**
+- **Must be a fresh conversation** (ideally a different AI model than story-inventory, but the same model is acceptable if running a different one is impractical)
 - Paste the prompt (includes scope.md, sources.yaml, and inventory.yaml)
 - The AI checks for wrong-culture material, fake references, missing stories, merged variants
 - Wait for the full audit report
@@ -216,7 +216,7 @@ python assemble_prompt.py prose-factcheck sumer chapters/00-introduction.adoc
 ```
 
 **How to run:**
-- **Different AI from intro-chapter writer, fresh conversation**
+- **Fresh conversation** (ideally a different AI model from the intro-chapter writer; the same model is acceptable if a different one is impractical)
 - Paste the prompt
 - Also paste or provide access to the primary source texts
 
@@ -247,7 +247,7 @@ python assemble_prompt.py chapter-claims sumer briefs/01-descent-of-inanna.yaml
 python assemble_prompt.py claims-factcheck sumer chapters/01-descent-of-inanna.claims.adoc briefs/01-descent-of-inanna.yaml
 ```
 
-- **Different AI, fresh conversation**
+- **Fresh conversation** (ideally a different AI model; the same model is acceptable if impractical)
 - Also paste primary source texts
 - **Save to:** `books/sumer/chapters/01-descent-of-inanna.claims.factcheck.yaml`
 
@@ -272,7 +272,7 @@ python assemble_prompt.py chapter-draft sumer chapters/01-descent-of-inanna.clai
 python assemble_prompt.py narrative-fidelity sumer chapters/01-descent-of-inanna.claims.approved.adoc chapters/01-descent-of-inanna.adoc
 ```
 
-- **Different AI, fresh conversation**
+- **Fresh conversation** (ideally a different AI model; the same model is acceptable if impractical)
 - **Save to:** `books/sumer/chapters/01-descent-of-inanna.fidelity.yaml`
 - If verdict is REVISE: review findings, fix the narrative, re-run narrative-fidelity
 - If PASS: this chapter is done — move to the next one
@@ -293,7 +293,7 @@ Also pass the briefs (for comparative hooks).
 
 - Writing AI
 - **Save to:** `books/sumer/comparative.adoc`
-- Then run prose-factcheck on it (different AI), HUMAN REVIEW, post-human-normalize
+- Then run prose-factcheck on it (fresh conversation, ideally a different AI model), HUMAN REVIEW, post-human-normalize
 
 ---
 
@@ -356,7 +356,7 @@ Paste all `.edited.adoc` files and briefs.
 
 - Writing AI
 - **Save to:** `books/sumer/character-appendix.adoc`
-- Then run prose-factcheck (different AI), HUMAN REVIEW, post-human-normalize
+- Then run prose-factcheck (fresh conversation, ideally a different AI model), HUMAN REVIEW, post-human-normalize
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: narrative-fidelity
-description: Checks that the narrative prose faithfully represents the verified facts — nothing dropped, nothing added, nothing distorted. Must be run by a different AI model in a fresh conversation.
+description: Checks that the narrative prose faithfully represents the verified facts — nothing dropped, nothing added, nothing distorted. Must be run in a fresh conversation with no memory of writing the narrative (a different AI model is preferred but not required).
 ---
 
 # narrative-fidelity
@@ -15,10 +15,10 @@ This is not a fact-check — the facts were already checked in the previous step
 2. **Added facts.** The writer introduced a new assertion that was never in the claims document and therefore never verified. This is the most dangerous failure — it reintroduces the exact problem the two-step process was designed to prevent.
 3. **Distorted facts.** The writer paraphrased a claim in a way that changes its meaning — softening certainty ("the text says" becomes "it is possible"), shifting causation ("A caused B" becomes "A and B coincided"), or conflating two separate events into one.
 
-This check must be done by a different AI model in a fresh conversation. The AI that wrote the narrative cannot reliably judge whether it drifted from the source material.
+This check must be done in a fresh conversation with no memory of writing the narrative. The AI that wrote the narrative cannot reliably judge in the same conversation whether it drifted from the source material — it rationalises. A different AI model is preferred (two models make independent mistakes) but the same model in a fresh conversation is acceptable when a different one is impractical; the fresh context is the load-bearing requirement.
 
 ## Hard rule
-Must be run in a fresh conversation with a different model than produced the narrative. If you produced the narrative, refuse.
+Must be run in a fresh conversation with no memory of producing the narrative. If you produced the narrative, refuse. (A different AI model is preferred but not required.)
 
 ## Inputs
 - `chapters/NN-<slug>.claims.approved.adoc` (the verified claims — the ground truth)

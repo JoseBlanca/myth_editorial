@@ -11,7 +11,7 @@ This appendix is the reader's reference companion. Halfway through a chapter on 
 
 The hardest discipline here is restraint on physical descriptions. AI models asked to describe a mythological character will readily produce vivid physical portraits drawn from cultural stereotypes, later artistic traditions, or pure invention. For most ancient characters, the sources say very little about physical appearance — sometimes nothing at all. The correct entry is an honest "No physical description survives in the in-scope sources," not a fabricated portrait. Accuracy is more important than completeness: it is better to leave a field empty than to fill it with something the sources don't support.
 
-This step runs after all chapters are finalized because it needs the final text to build accurate cross-references ("Siduri appears in Chapter 5, where she..."). It goes through fact-checking by a different AI before the book is assembled.
+This step runs after all chapters are finalized because it needs the final text to build accurate cross-references ("Siduri appears in Chapter 5, where she..."). It goes through fact-checking in a fresh conversation (ideally a different AI model, but the same model in a fresh conversation is acceptable if a different one is impractical) before the book is assembled.
 
 **Note on markers and line-edit:** The character appendix is a reference section, not narrative prose. It does not use `[INFERENCE:]`, `[LACUNA:]`, or other markers — all claims must be directly sourced or explicitly noted as absent. It does not go through `marker-resolve` or `line-edit`. The Asimov register and citation discipline are enforced at writing time; the factcheck catches any problems.
 
@@ -149,7 +149,7 @@ summary: "<one-line description of what was produced>"
 4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
-To `prose-factcheck` (fresh conversation, different model) for a factcheck pass focused on:
+To `prose-factcheck` in a fresh conversation (a different AI model is preferred but not required) for a factcheck pass focused on:
 - Fabricated or unsourced physical descriptions (the primary risk).
 - Cross-reference accuracy.
 - Claims about mythological relevance.

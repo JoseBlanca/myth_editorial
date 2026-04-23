@@ -125,4 +125,4 @@ summary: "<one-line description of what was produced>"
 4. Never write `status: "completed"` if any output file is missing or truncated.
 
 ## Handoff
-To `narrative-fidelity`, fresh conversation, different model.
+To `narrative-fidelity`, in a fresh conversation (a different AI model is preferred but not required).
