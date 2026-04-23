@@ -24,10 +24,28 @@ This step does not change any prose outside the markers. It is a mechanical conv
 Resolve each marker per these rules. Do not alter any other prose.
 
 ### `[INFERENCE: claim | basis: X | risk: Y]`
-Render as an italicized parenthetical with a footnote containing the basis and risk:
+Render as an italicized parenthetical whose body is the **claim rendered as prose**, followed by a footnote carrying the basis and risk:
 ```
-_(The text does not state this explicitly, but the following episode requires it.footnote:[Inference: <basis>. Risk: <risk>.])_
+_(<claim rendered as prose>.footnote:[Inference: <basis>. Risk: <risk>.])_
 ```
+
+All three slots — claim, basis, risk — are **mandatory** in the output. None may be empty, a lone period, or a copy of the template placeholder text.
+
+**Worked example.**
+
+Input (in `chapters/NN.adoc`):
+```
+[INFERENCE: The redistribution of Huwawa's auras to the natural world after his death suggests an aetiological function: the text explains why certain natural phenomena possess a numinous, fearsome quality. | basis: The list of recipients — field, river, lion, forest — corresponds to naturally fearsome aspects of the Mesopotamian landscape. | risk: The aetiological reading is plausible but not explicitly stated in the text.]
+```
+
+Output (in `chapters/NN.resolved.adoc`):
+```
+_(The redistribution of Huwawa's auras to the natural world after his death suggests an aetiological function: the text explains why certain natural phenomena possess a numinous, fearsome quality.footnote:[Inference: The list of recipients — field, river, lion, forest — corresponds to naturally fearsome aspects of the Mesopotamian landscape. Risk: The aetiological reading is plausible but not explicitly stated in the text.])_
+```
+
+Note that the claim text sits between `_(` and `.footnote:[`. A rendering that produces `_(.footnote:[...])_` (open paren, bare period, footnote) is a **bug** — it prints as `(. [n])` in the PDF and must never be emitted.
+
+**Short form.** If the marker arrives with no `| basis:` / `| risk:` segments (i.e. `[INFERENCE: claim]` only), do **not** fit it into the template above. Render the claim as plain prose with no parenthetical and no footnote — the basis/risk slots would be empty and would produce the `(. [n])` bug. Flag the missing basis/risk in the stage report so upstream (stage 11) can be tightened.
 
 ### `[LACUNA: what | source: ref | scholarly_reconstruction: X]`
 Render as a bracketed editorial note, italicized:
@@ -62,6 +80,13 @@ Only appears in the comparative chapter. Render as the claim in prose, with a fo
 
 ## Self-check
 - Grep all output files for `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` — must be zero matches.
+- Grep all output files for the empty-claim/empty-slot anti-patterns below — must be zero matches. These indicate a marker was stripped without its content being carried through.
+  - `_(\.footnote:` — INFERENCE rendered with an empty claim (prints as `(. [n])` in the PDF).
+  - `Inference: \.` or `Inference: *\.` — empty basis.
+  - `Risk: \.` or `Risk: *\.` — empty risk.
+  - `Basis: \.` — empty SPECULATION basis.
+  - `counterargument: \.` — empty SPECULATION counterargument.
+- For every `[INFERENCE: ...]` marker in the input `.adoc`, confirm the corresponding line in the `.resolved.adoc` contains non-trivial prose between `_(` and `.footnote:[`. If the input was a short-form `[INFERENCE: claim]` (no basis/risk), confirm the output renders the claim as plain prose instead.
 - No prose outside of marker-replaced sections has changed.
 
 ## Completion protocol

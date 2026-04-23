@@ -90,6 +90,7 @@ After rendering, unzip `/tmp/validate.epub` and grep for `EVIDENCE` and `COMPARA
 ## Self-check
 - No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all `.edited.adoc` files, `comparative.edited.adoc`, and `character-appendix.adoc`.)
 - No `// EVIDENCE:` or `// COMPARATIVE-HOOK:` remain in the `.edited.adoc` files after step 2. Grep the rendered EPUB's `.xhtml` contents for both strings — must be zero.
+- No empty-claim resolution artefacts remain from stage 13. Grep all `.edited.adoc` files for `_(\.footnote:` (INFERENCE rendered without its claim — prints as `(. [n])` in the PDF), `Inference: *\.`, and `Risk: *\.`. Zero matches expected. If any remain, stop and report — the upstream marker-resolve stage produced bad output and must be re-run.
 - Every footnote citation resolves to a bibliography entry.
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
