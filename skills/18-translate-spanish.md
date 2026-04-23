@@ -7,7 +7,7 @@ description: Produces a parallel Spanish edition of the finished book. Three-pas
 
 ## For the human
 
-This is the final stage. The English book is done — every chapter is fact-checked, line-edited, formatted, and built into `book.pdf` / `book.epub`. This step produces a parallel Spanish edition: `book.es.adoc` → `book.es.pdf` / `book.es.epub`.
+This is the final stage. The English book is done — every chapter is fact-checked, line-edited, formatted, and built into `output/<slug>.pdf` / `output/<slug>.epub`. This step produces a parallel Spanish edition: `<slug>.es.adoc` → `output/<slug>.es.pdf` / `output/<slug>.es.epub`. The slug is the one fixed in `format-finalize` (stage 17); do not re-derive it.
 
 Translation of a non-fiction book by LLM has a few characteristic failure modes that this skill is designed around:
 
@@ -21,7 +21,7 @@ The method follows Andrew Ng's `translation-agent` reflection workflow: draft, s
 
 ## When to run
 
-After `format-finalize` (stage 17). The inputs are the finished, fact-checked, line-edited chapters plus the assembled `book.adoc` and `bibliography.bib`. This is the final stage.
+After `format-finalize` (stage 17). The inputs are the finished, fact-checked, line-edited chapters plus the assembled `<slug>.adoc` and `bibliography.bib`. This is the final stage.
 
 ## Target dialect and register
 
@@ -69,7 +69,7 @@ If the user specifies a different dialect (e.g., español neutro internacional) 
 - `chapters/00-introduction.edited.adoc`
 - `comparative.edited.adoc`
 - `character-appendix.adoc`
-- `book.adoc` (master assembly — gives include order)
+- `<slug>.adoc` (master assembly — gives include order)
 - `bibliography.bib`
 
 ## Method
@@ -138,38 +138,44 @@ Repeat Pass 1 → Pass 2 → Pass 3 for each chapter. Also for: `chapters/00-int
 
 ### Pass 4 — Assembly
 
-Produce `book.es.adoc`, a mirror of `book.adoc` with:
+Produce `<slug>.es.adoc` at the book root, a mirror of `<slug>.adoc` with:
 
 - Translated title, author, subtitle.
 - Spanish document attributes where user-facing (`:doctype: book` stays; `:toc-title: Índice` added; `:appendix-caption: Apéndice`; `:figure-caption: Figura`; `:table-caption: Tabla`; `:note-caption: Nota`; `:tip-caption: Consejo`; `:important-caption: Importante`; `:caution-caption: Precaución`; `:warning-caption: Advertencia`; `:lang: es`; `:locale: es_ES` — or `es` for neutro).
-- `include::` directives pointing at the `.es.adoc` files, in the same order as `book.adoc`.
+- `include::` directives pointing at the `.es.adoc` files, in the same order as `<slug>.adoc`.
 - `:bibtex-file: bibliography.bib` unchanged (same bib file, same keys).
 
-Produce `bibliography.es.bib` only if translator-note footnotes add any new citations; otherwise reuse `bibliography.bib` as-is.
+Produce `bibliography.es.bib` (at book root) only if translator-note footnotes add any new citations; otherwise reuse `bibliography.bib` as-is.
 
-### Pass 5 — Build validation
+### Pass 5 — Render
 
-Dry-run both rendering paths:
+Create `output/` and `reports/` at the book root if they do not exist. Render both artifacts directly to `output/`:
 
-- `asciidoctor-pdf --verbose --failure-level=WARN -o /tmp/validate.es.pdf book.es.adoc`
-- `asciidoctor-epub3 --verbose --failure-level=WARN -o /tmp/validate.es.epub book.es.adoc`
+- `asciidoctor-pdf --verbose --failure-level=WARN -o output/<slug>.es.pdf <slug>.es.adoc`
+- `asciidoctor-epub3 --verbose --failure-level=WARN -o output/<slug>.es.epub <slug>.es.adoc`
 
-Any warning or error is reported in `validation-report.es.md` and halts the stage.
+Capture both commands' stdout/stderr into `reports/validation-report.es.md` with a short header naming the stage, the slug, and the UTC timestamp. Any WARN or ERROR line is a finding — stop and report after both commands have run.
 
 ## Output
 
 Per chapter:
-- `chapters/NN-<slug>.es.adoc`
-- `chapters/NN-<slug>.es-diff.md`
+- `chapters/NN-<chapter-slug>.es.adoc`
+- `chapters/NN-<chapter-slug>.es-diff.md`
 
-Plus:
+At book root:
 - `chapters/00-introduction.es.adoc` + `.es-diff.md`
 - `comparative.es.adoc` + `comparative.es-diff.md`
 - `character-appendix.es.adoc` + `character-appendix.es-diff.md`
 - `glossary.es.yaml`
-- `book.es.adoc`
-- `validation-report.es.md`
-- Rendered `book.es.pdf` and `book.es.epub` as build artifacts.
+- `<slug>.es.adoc` (master)
+- `bibliography.es.bib` (only if new citations were introduced)
+
+Under `output/` (final deliverables):
+- `output/<slug>.es.pdf`
+- `output/<slug>.es.epub`
+
+Under `reports/` (build logs):
+- `reports/validation-report.es.md`
 
 ## Self-check
 

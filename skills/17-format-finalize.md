@@ -10,19 +10,31 @@ description: Final mechanical assembly. Compiles the bibliography, assembles all
 This is a purely mechanical step — no writing, no editing, no judgment calls. All prose is final. This step:
 
 - **Builds the bibliography.** Scans every footnote across all chapters and produces a single bibliography file listing every source cited in the book. If any footnote cites a source that isn't on the approved list (`sources.yaml`), this is flagged as a problem.
-- **Assembles the book.** Combines the introduction, all story chapters, the comparative chapter, and the character appendix into one master file (`book.adoc`) in the correct order.
-- **Runs a test build.** Generates a test PDF and EPUB to catch formatting errors (broken cross-references, missing files, syntax problems) before the final render.
+- **Assembles the book.** Combines the introduction, all story chapters, the comparative chapter, and the character appendix into one master file (`<book-slug>.adoc`) in the correct order.
+- **Renders the final artifacts.** Builds the final PDF and EPUB into `output/` and writes any warnings from the build to `reports/validation-report.md`.
 
 No prose is changed. If this step finds a problem that requires changing text (e.g., a broken cross-reference), it reports the problem and stops — it does not attempt to fix it.
 
+## Book slug
+
+The outputs of this stage are named after the book, not `book.*`. Determine the slug once, at the start of the stage, and reuse it consistently.
+
+- If `scope.md` defines a `slug:` field, use it verbatim.
+- Otherwise, derive the slug from the book title (the first `= <Book Title>` line of what will become the master adoc). Take the portion before any `:`, lowercase it, strip punctuation, replace runs of non-alphanumeric characters with a single `_`, and trim leading/trailing `_`.
+  - Example: `= The Myths of Sumer: Stories from the First Scribes` → `the_myths_of_sumer`.
+- The slug must match `^[a-z0-9][a-z0-9_]*$`. If the derived slug is awkward or collides with pipeline filenames (`book`, `comparative`, `character-appendix`, `frontmatter`, `note-on-making`), stop and ask the human to set `slug:` in `scope.md` explicitly.
+
+Throughout this document, `<slug>` refers to the book slug.
+
 ## Inputs
 - `chapters/00-introduction.edited.adoc` (intro chapter)
-- All `chapters/NN-<slug>.edited.adoc` (story chapters)
+- All `chapters/NN-<chapter-slug>.edited.adoc` (story chapters)
 - `comparative.edited.adoc` (comparative chapter)
 - `character-appendix.adoc` (fact-checked — this is a reference appendix and does not go through marker-resolve or line-edit)
 - `sources.yaml`
+- `scope.md` (may carry an explicit `slug:` field — see "Book slug" above)
 - `cover.jpg` or `cover.png` — the cover image, provided by the user. Used by Asciidoctor-PDF for the front cover and by Asciidoctor-EPUB3 for the EPUB cover.
-- `front-matter.adoc` and `back-matter.adoc` (dedication, preface, index, etc. — optional; if absent, omit the corresponding `include::` directives from `book.adoc`)
+- `front-matter.adoc` and `back-matter.adoc` (dedication, preface, index, etc. — optional; if absent, omit the corresponding `include::` directives from the master adoc)
 
 ## Agent instructions
 
@@ -46,7 +58,8 @@ Upstream `.resolved.adoc` and `.grammar-checked.adoc` files preserve the markers
 After stripping, grep each target file for `EVIDENCE` and `COMPARATIVE-HOOK`. Zero matches expected. If any remain, stop and report.
 
 ### 3. Master assembly
-Produce `book.adoc`:
+Produce `<slug>.adoc` at the book root. Keep it at the book root (not under `output/`) so the relative `include::chapters/...`, `:bibtex-file:`, and cover-image paths resolve without `../` rewrites.
+
 ```asciidoc
 = <Book Title>
 <Author>
@@ -61,8 +74,8 @@ Produce `book.adoc`:
 
 include::chapters/00-introduction.edited.adoc[]
 
-include::chapters/01-<slug>.edited.adoc[]
-include::chapters/02-<slug>.edited.adoc[]
+include::chapters/01-<chapter-slug>.edited.adoc[]
+include::chapters/02-<chapter-slug>.edited.adoc[]
 // ... in toc.yaml order ...
 
 include::comparative.edited.adoc[]
@@ -72,20 +85,23 @@ include::character-appendix.adoc[]
 // include::back-matter.adoc[]    ← include only if file exists
 ```
 
-### 4. Validation
-Dry-run both rendering paths:
-- `asciidoctor-pdf --verbose --failure-level=WARN -o /tmp/validate.pdf book.adoc`
-- `asciidoctor-epub3 --verbose --failure-level=WARN -o /tmp/validate.epub book.adoc`
+### 4. Render
+Create `output/` and `reports/` at the book root if they do not exist. Then render both artifacts directly to `output/`:
+- `asciidoctor-pdf --verbose --failure-level=WARN -o output/<slug>.pdf <slug>.adoc`
+- `asciidoctor-epub3 --verbose --failure-level=WARN -o output/<slug>.epub <slug>.adoc`
 
-Any warning or error is reported.
+Capture both commands' stdout/stderr into `reports/validation-report.md` along with a short header naming the stage, the slug, and the UTC timestamp. Any WARN or ERROR line is a finding — stop and report after both commands have run (do not short-circuit; build both so the human sees the full picture).
 
-After rendering, unzip `/tmp/validate.epub` and grep for `EVIDENCE` and `COMPARATIVE-HOOK` in the `.xhtml` files. Zero matches expected. If any remain, the marker strip (step 2) failed — stop and report.
+After rendering, unzip `output/<slug>.epub` into a temporary directory and grep for `EVIDENCE` and `COMPARATIVE-HOOK` in the `.xhtml` files. Zero matches expected. If any remain, the marker strip (step 2) failed — stop and report.
 
 ### 5. Output
-- `book.adoc` (master)
-- `bibliography.bib`
-- `validation-report.md` (asciidoctor output, any findings)
-- Rendered `book.pdf` and `book.epub` as build artifacts.
+Final deliverables (the reader-facing artifacts) are gathered under `output/`. Build logs are written to `reports/`. Everything else stays at the book root.
+
+- `<slug>.adoc` — master, at book root.
+- `bibliography.bib` — at book root (referenced by the master adoc).
+- `output/<slug>.pdf` — rendered PDF.
+- `output/<slug>.epub` — rendered EPUB.
+- `reports/validation-report.md` — asciidoctor build log, any findings.
 
 ## Self-check
 - No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all `.edited.adoc` files, `comparative.edited.adoc`, and `character-appendix.adoc`.)
@@ -95,8 +111,10 @@ After rendering, unzip `/tmp/validate.epub` and grep for `EVIDENCE` and `COMPARA
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
 - Cover image file exists and is referenced correctly in `:front-cover-image:`.
-- `front-matter.adoc` and `back-matter.adoc`: if referenced in `book.adoc`, confirm the files exist. If absent, confirm the include directives are removed.
-- Asciidoctor dry runs exit clean.
+- `front-matter.adoc` and `back-matter.adoc`: if referenced in `<slug>.adoc`, confirm the files exist. If absent, confirm the include directives are removed.
+- `output/<slug>.pdf` and `output/<slug>.epub` exist and are non-empty.
+- `reports/validation-report.md` exists. Asciidoctor runs exit clean (no WARN/ERROR recorded).
+- No legacy `book.adoc`, `book.pdf`, `book.epub` at the book root left over from prior runs — either remove or rename them before starting.
 
 ## Completion protocol
 
