@@ -2,9 +2,33 @@
 
 Step-by-step operational instructions. For each stage: what to run, which AI to use, what to paste, and where to save the output.
 
+## Execution environment (preferred: container)
+
+Run the pipeline **inside the myth-claude container** whenever possible. It bundles Claude Code, Python, the full Asciidoctor toolchain (including `asciidoctor-bibtex`), Pandoc, and Git, and only sees this project's directory as `/workspace` — nothing outside. That lets Claude Code run with `--dangerously-skip-permissions` without any risk of touching files elsewhere on the host.
+
+Setup (once):
+
+```bash
+./container/build.sh
+./container/run_claude.sh     # first run: authenticate via /login
+```
+
+Daily use:
+
+| Task | Command |
+|------|---------|
+| Interactive Claude Code session | `./container/run_claude.sh` |
+| One-off command (`python assemble_prompt.py ...`, a render, a grep) | `./container/exec_cmd.sh <cmd> [args...]` |
+| Plain shell inside the container | `./container/shell.sh` |
+| Render a finished book to PDF + EPUB | `./container/render_book.sh <book-dir> <slug> [--es]` |
+
+Browser-based AI conversations (ChatGPT, Gemini Deep Research, claude.ai) still happen outside the container — they don't touch the filesystem and don't benefit from the isolation. The container only matters for locally-executed tooling: Claude Code sessions and every shell command in this runbook. Full isolation-model details and troubleshooting: [`container/README.md`](container/README.md).
+
+The `python assemble_prompt.py ...` examples below are written in their plain form for readability; prefix them with `./container/exec_cmd.sh` (or run them from inside a `./container/shell.sh` session) when using the container.
+
 ## General workflow
 
-1. Run `python assemble_prompt.py <stage> <book> [input-files...]` to generate the prompt
+1. Run `python assemble_prompt.py <stage> <book> [input-files...]` to generate the prompt (via the container — see above)
 2. Open a conversation with the appropriate AI
 3. Paste the prompt (it's already on your clipboard)
 4. For some stages, also paste primary source texts into the conversation
