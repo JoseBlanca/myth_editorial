@@ -116,6 +116,9 @@ Final deliverables (the reader-facing artifacts) are gathered under `output/`. B
 - No `[INFERENCE:`, `[LACUNA:`, `[RECONSTRUCTION:`, `[VARIANT:`, `[SPECULATION:` markers remain anywhere. (Grep all `.edited.adoc` files, `comparative.edited.adoc`, and `character-appendix.adoc`.)
 - No `// EVIDENCE:` or `// COMPARATIVE-HOOK:` remain in the `.edited.adoc` files after step 2. Grep the rendered EPUB's `.xhtml` contents for both strings — must be zero.
 - No empty-claim resolution artefacts remain from stage 13. Grep all `.edited.adoc` files for `_(\.footnote:` (INFERENCE rendered without its claim — prints as `(. [n])` in the PDF), `Inference: *\.`, and `Risk: *\.`. Zero matches expected. If any remain, stop and report — the upstream marker-resolve stage produced bad output and must be re-run.
+- No leaked LACUNA sentinels remain from stage 13. Grep all `.edited.adoc` files (case-insensitive) for `none —`, `none --`, `none-`, `none available`, `none sufficient`, `n/a —`, `n/a -`, and (inside italic `_[…]_` brackets) `partial,`, `partial;`, `insufficient;`. Zero matches expected. If any remain, stop and report — the marker-resolve stage dropped a `scholarly_reconstruction:` sentinel value verbatim into the rendered prose instead of converting it per the rule.
+- No double-period artefact (`..]_`, `.. —`, `.. ]`) appears in any `.edited.adoc` file. Zero matches expected.
+- No empty-what LACUNAs (`_\[At this point the tablet breaks\. \.`) appear in any `.edited.adoc` file. Zero matches expected.
 - Every footnote citation resolves to a bibliography entry.
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.

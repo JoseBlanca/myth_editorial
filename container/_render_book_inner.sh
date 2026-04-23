@@ -107,6 +107,14 @@ check_anti_pattern() {
         check_anti_pattern "COMPARATIVE-HOOK leftover" "COMPARATIVE-HOOK" || clean=1
         check_anti_pattern "empty-paren '(. [n])' artefact" "(. " || clean=1
         check_anti_pattern "'_(.footnote' artefact" "(.footnote" || clean=1
+        check_anti_pattern "leaked LACUNA sentinel ('none — ...')" "none —" || clean=1
+        check_anti_pattern "leaked LACUNA sentinel ('none -- ...')" "none --" || clean=1
+        check_anti_pattern "leaked LACUNA sentinel ('none available')" "none available" || clean=1
+        check_anti_pattern "leaked LACUNA sentinel ('none sufficient')" "none sufficient" || clean=1
+        check_anti_pattern "leaked LACUNA sentinel ('n/a — ...')" "n/a —" || clean=1
+        check_anti_pattern "double-period artefact ('..]')" "..]" || clean=1
+        check_anti_pattern "double-period artefact ('.. —')" ".. —" || clean=1
+        check_anti_pattern "empty-what LACUNA ('At this point the tablet breaks. .')" "the tablet breaks. ." || clean=1
         if [[ $clean -eq 0 ]]; then
             echo "clean — no anti-patterns in EPUB."
         else

@@ -48,11 +48,97 @@ Note that the claim text sits between `_(` and `.footnote:[`. A rendering that p
 **Short form.** If the marker arrives with no `| basis:` / `| risk:` segments (i.e. `[INFERENCE: claim]` only), do **not** fit it into the template above. Render the claim as plain prose with no parenthetical and no footnote — the basis/risk slots would be empty and would produce the `(. [n])` bug. Flag the missing basis/risk in the stage report so upstream (stage 11) can be tightened.
 
 ### `[LACUNA: what | source: ref | scholarly_reconstruction: X]`
-Render as a bracketed editorial note, italicized:
+Render as a bracketed editorial note, italicized. The `<what>` field is rendered first, as a prose description of the gap. How `<X>` is rendered depends on what it describes.
+
+**Shape A — `X` is a real proposed reading.** A concrete statement of what scholars think was in the gap. Use the full template frame:
+
 ```
-_[At this point the tablet breaks. Approximately 20 lines are lost. Scholars such as <ref> have proposed the narrative resumed with <reconstruction>.]_
+_[At this point the tablet breaks. <what rendered as prose>. Scholars such as <ref> have proposed the narrative resumed with <X rendered as prose>.]_
 ```
-If no scholarly reconstruction is given, omit the second sentence.
+
+**Shape B — `X` is a meta-note about the absence, inadequacy, or partial nature of reconstructions.** It begins with one of the following sentinel hedges (case-insensitive):
+
+- `none`, `n/a`, `N/A`, `—` (em-dash)
+- `none available`, `none sufficient`, `none suffices`
+- `no <word>` — e.g. `no parallels`, `no witnesses`, `no reconstruction`
+- `insufficient`, `limited`
+- `partial,`, `partial;`, `partial ` (followed by a descriptor)
+- `Partial,`, `Partial;`, `Partial ` (same, capitalised)
+
+The sentinel may be followed by a dash (`—` or `--`), semicolon, or comma and an **informative tail** describing what (if anything) *is* known. Render:
+
+```
+_[At this point the tablet breaks. <what>. <Informative tail of X rendered as prose, capitalised>.]_
+```
+
+If the informative tail is empty (the value is just `none available` or `n/a` or similar with nothing else), drop the second sentence entirely:
+
+```
+_[At this point the tablet breaks. <what>.]_
+```
+
+**Hard rules for Shape B:**
+
+1. The literal sentinel words — `none`, `n/a`, `partial,`, `insufficient`, etc. — must **never** appear in the rendered text. Strip them and capitalise what follows.
+2. Do not emit `..` (double period). If `<what>` already ends with a period, do not append another before the second sentence.
+3. Never output an empty `<what>` (a bracket that starts with `_[At this point the tablet breaks. .`). If the input `<what>` is empty or unclear, flag the marker in the stage report rather than render something broken.
+
+**Worked examples.**
+
+Example 1 — Shape A (real reconstruction):
+
+Input:
+```
+[LACUNA: Lines 80–95 are lost | source: etcsl 1.2.3 | scholarly_reconstruction: the pursuit sequence continued with three further encounters, as preserved in the Ur III duplicate]
+```
+Output:
+```
+_[At this point the tablet breaks. Lines 80–95 are lost. Scholars such as etcsl 1.2.3 have proposed the narrative resumed with the pursuit sequence continuing through three further encounters, as preserved in the Ur III duplicate.]_
+```
+
+Example 2 — Shape B, tail after em-dash:
+
+Input:
+```
+[LACUNA: Approximately nine lines (68–76) damaged in the middle of the impaired-humans sequence | source: etcsl 1.1.2 | scholarly_reconstruction: none — no parallel witnesses fill this gap]
+```
+Output:
+```
+_[At this point the tablet breaks. Approximately nine lines (68–76) damaged in the middle of the impaired-humans sequence. No parallel witnesses fill this gap.]_
+```
+
+Example 3 — Shape B, tail after semicolon:
+
+Input:
+```
+[LACUNA: Several lines damaged | source: etcsl 1.3.3 | scholarly_reconstruction: none sufficient; Black et al. mark these sections as heavily fragmentary and offer only cautious partial translation]
+```
+Output:
+```
+_[At this point the tablet breaks. Several lines damaged. Black et al. mark these sections as heavily fragmentary and offer only cautious partial translation.]_
+```
+
+Example 4 — Shape B, "partial" hedge with tail after comma:
+
+Input:
+```
+[LACUNA: Opening lines 1–15 damaged | source: etcsl 1.3.3 | scholarly_reconstruction: partial, some manuscripts preserve fragments of the opening]
+```
+Output:
+```
+_[At this point the tablet breaks. Opening lines 1–15 damaged. Some manuscripts preserve fragments of the opening.]_
+```
+
+Example 5 — Shape B, empty tail:
+
+Input:
+```
+[LACUNA: Conclusion is fragmentary | source: etcsl 1.3.4 | scholarly_reconstruction: none available]
+```
+Output:
+```
+_[At this point the tablet breaks. Conclusion is fragmentary.]_
+```
 
 ### `[RECONSTRUCTION: content | gap_source: X | fill_source: Y | confidence: Z]`
 Render the content in prose, with a footnote flagging it as reconstruction:
@@ -86,6 +172,14 @@ Only appears in the comparative chapter. Render as the claim in prose, with a fo
   - `Risk: \.` or `Risk: *\.` — empty risk.
   - `Basis: \.` — empty SPECULATION basis.
   - `counterargument: \.` — empty SPECULATION counterargument.
+- Grep all output files for leaked LACUNA sentinels — must be zero matches inside italic brackets `_[...]_`. These indicate a `scholarly_reconstruction:` sentinel value was dropped verbatim instead of converted per Shape B above.
+  - `none —`, `none --`, `none-`, `none—` (em-dash or hyphen variants)
+  - `none available`, `none sufficient`, `none suffices`
+  - `n/a —`, `n/a —`, `n/a -`
+  - `partial,` or `partial;` appearing mid-sentence inside a `_[At this point…]_` bracket
+  - `insufficient;` appearing mid-sentence inside a `_[…]_` bracket
+- Grep all output files for the double-period artefact: `..]_`, `.. —`, `.. ]` — must be zero matches. This indicates the renderer appended a period after a `<what>` that already ended in one.
+- Grep all output files for empty-what LACUNAs: `_\[At this point the tablet breaks\. \.` — must be zero matches. This indicates the renderer lost the `<what>` field.
 - For every `[INFERENCE: ...]` marker in the input `.adoc`, confirm the corresponding line in the `.resolved.adoc` contains non-trivial prose between `_(` and `.footnote:[`. If the input was a short-form `[INFERENCE: claim]` (no basis/risk), confirm the output renders the claim as plain prose instead.
 - No prose outside of marker-replaced sections has changed.
 
