@@ -3,7 +3,7 @@
 - book-dir: /workspace/books/sumer
 - slug: the_myths_of_sumer
 - variant: en
-- timestamp (UTC): 2026-04-23T13:30:19Z
+- timestamp (UTC): 2026-04-23T14:13:22Z
 
 ## asciidoctor-pdf
 
