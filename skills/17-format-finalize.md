@@ -86,13 +86,22 @@ include::character-appendix.adoc[]
 ```
 
 ### 4. Render
-Create `output/` and `reports/` at the book root if they do not exist. Then render both artifacts directly to `output/`:
-- `asciidoctor-pdf --verbose --failure-level=WARN -o output/<slug>.pdf <slug>.adoc`
-- `asciidoctor-epub3 --verbose --failure-level=WARN -o output/<slug>.epub <slug>.adoc`
+Render via the container helper, invoked from the repo root:
 
-Capture both commands' stdout/stderr into `reports/validation-report.md` along with a short header naming the stage, the slug, and the UTC timestamp. Any WARN or ERROR line is a finding — stop and report after both commands have run (do not short-circuit; build both so the human sees the full picture).
+```
+./container/render_book.sh <book-dir> <slug>
+```
 
-After rendering, unzip `output/<slug>.epub` into a temporary directory and grep for `EVIDENCE` and `COMPARATIVE-HOOK` in the `.xhtml` files. Zero matches expected. If any remain, the marker strip (step 2) failed — stop and report.
+The helper creates `<book-dir>/output/` and `<book-dir>/reports/` if they do not exist, runs both asciidoctor commands inside the myth-claude container (where `asciidoctor-bibtex` is installed), captures stdout/stderr from both runs into `<book-dir>/reports/validation-report.md` (with a stage/slug/timestamp header), then unzips the EPUB and greps the `.xhtml` files for `EVIDENCE`, `COMPARATIVE-HOOK`, the empty-paren `(. ` artefact, and the `_(.footnote` stage-13 artefact. It exits non-zero on any WARN/ERROR from asciidoctor or any anti-pattern hit — treat a non-zero exit as a finding and stop.
+
+The underlying commands (for local debugging without the container, assuming `asciidoctor-bibtex` is available on the host) are:
+
+```
+asciidoctor-pdf   -r asciidoctor-bibtex --verbose --failure-level=WARN -o output/<slug>.pdf  <slug>.adoc
+asciidoctor-epub3 -r asciidoctor-bibtex --verbose --failure-level=WARN -o output/<slug>.epub <slug>.adoc
+```
+
+Both commands must be run from `<book-dir>` (not from the repo root) — `asciidoctor-bibtex` resolves the `:bibtex-file:` attribute relative to the current working directory, not the source document's directory.
 
 ### 5. Output
 Final deliverables (the reader-facing artifacts) are gathered under `output/`. Build logs are written to `reports/`. Everything else stays at the book root.

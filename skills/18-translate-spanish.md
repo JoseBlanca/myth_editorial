@@ -149,12 +149,13 @@ Produce `bibliography.es.bib` (at book root) only if translator-note footnotes a
 
 ### Pass 5 — Render
 
-Create `output/` and `reports/` at the book root if they do not exist. Render both artifacts directly to `output/`:
+Render the Spanish variant via the container helper (same wrapper used by stage 17, with `--es`):
 
-- `asciidoctor-pdf --verbose --failure-level=WARN -o output/<slug>.es.pdf <slug>.es.adoc`
-- `asciidoctor-epub3 --verbose --failure-level=WARN -o output/<slug>.es.epub <slug>.es.adoc`
+```
+./container/render_book.sh <book-dir> <slug> --es
+```
 
-Capture both commands' stdout/stderr into `reports/validation-report.es.md` with a short header naming the stage, the slug, and the UTC timestamp. Any WARN or ERROR line is a finding — stop and report after both commands have run.
+The helper writes `<book-dir>/output/<slug>.es.pdf`, `<book-dir>/output/<slug>.es.epub`, and `<book-dir>/reports/validation-report.es.md`. It runs the same anti-pattern scan on the produced EPUB as stage 17 (EVIDENCE/COMPARATIVE-HOOK leftovers, `(. ` empty-paren artefact, `_(.footnote` artefact) and exits non-zero on any WARN/ERROR or hit — treat a non-zero exit as a finding and stop.
 
 ## Output
 
