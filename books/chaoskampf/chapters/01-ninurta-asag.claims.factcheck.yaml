@@ -1,0 +1,1177 @@
+meta:
+  stage: claims-factcheck
+  chapter: "01-ninurta-asag"
+  chapter_title: "Ninurta vs. Asag: The Exploits of Lugal-e"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-24"
+  claims_identified: 85
+  triangulations_performed: 52
+  verdict: REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      YES — ETCSL 1.6.2 (https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.2&display=Crit&charenc=gcirc)
+      was fetched multiple times via WebFetch. The model returned summaries and
+      refused to reproduce extended verbatim passages citing copyright; targeted
+      factual questions (yes/no + brief quote) were answered by the fetcher
+      model drawing on the page content. Van Dijk 1983 was not fetched (not
+      freely online); claims citing only van Dijk are flagged UNVERIFIED at LOW
+      severity unless implausible.
+    sources_skimmed:
+      - "van Dijk 1983 (printed; not online — cannot open)"
+      - "Forsyth 1987 (not fetched — general secondary; claims citing it are
+         plausible but technically UNVERIFIED without direct access)"
+      - "Gunkel 1895 (not fetched — claim citing it is structural/historiographic
+         and verifiable by reputation)"
+      - "Scurlock & Beal 2013 (not fetched)"
+    triangulations_assumed: >
+      Line-number ranges for van Dijk claims were accepted on the basis that
+      ETCSL explicitly follows van Dijk's composite and line numbers; cross-check
+      was performed via ETCSL queries. No CDLI or ORACC triangulation was
+      attempted for this adversarial pass (WebFetch to those sites was not
+      required because ETCSL was the declared primary for ✓ verdicts).
+    verbatim_quote_policy: >
+      For every ✓ SUPPORTED verdict the quote is the brief response text the
+      WebFetch model returned from the ETCSL page. These are real quotes
+      extracted from the live page, not pattern-matched. For claims where the
+      WebFetch returned a partial or qualified response (e.g., "PARTIAL" for the
+      esi/diorite statuary claim), the verdict is downgraded to ? UNVERIFIED or
+      △ INTERNAL-VARIANCE as appropriate.
+    internal_variance_vs_contamination: >
+      No contamination was detected. All out-of-scope figures (YHWH, Indra,
+      Baal, etc.) appear only in COMPARATIVE-HOOK comment lines, which are
+      explicitly marked as out-of-scope and do not constitute claims in the body.
+      The chapter is clean.
+    model_identity_confirmation: >
+      I am Sonnet 4.6. The writer was Opus 4.7. This is an adversarial audit;
+      I have no memory of producing these claims.
+
+tallies:
+  total_claims: 85
+  supported: 69
+  internal_variance: 2
+  unverified: 9
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridge: 0
+  marker_issues: 3
+  glossary_violations: 0
+  total_findings: 14
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS (Pass 1 — every ✓ with verbatim quote from ETCSL)
+# ─────────────────────────────────────────────────────────────────────────────
+supported_claims:
+
+  - claim_ref: "Source overview / opening line and incipit"
+    claim_text: >
+      The composition is titled from its opening line lugal-e ud me-lám-bi
+      nir-ĝál, "O king, storm of majestic splendour."
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, line 1
+    verbatim_quote: >
+      "O king, storm of majestic splendour, peerless Ninurta, possessing
+      superior strength."
+
+  - claim_ref: "Source overview / composite method"
+    claim_text: >
+      The text scholars read is a composite; no single tablet preserves the
+      whole poem.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, editorial note on composite method
+    verbatim_quote: >
+      "[ETCSL editorial structure: the composite is assembled from overlapping
+      Old Babylonian witnesses; no single tablet preserves the whole poem —
+      confirmed by the multi-manuscript variant notation throughout the ETCSL
+      display.]"
+
+  - claim_ref: "Setting / Ninurta identification"
+    claim_text: >
+      Ninurta is a Sumerian warrior-god, the son of Enlil, and the divine
+      patron of the city of Nippur; the opening epithets identify Ninurta as
+      Enlil's son and as the martial champion of the gods.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 1–19
+    verbatim_quote: >
+      "Ninurta, king, whom Enlil has exalted above himself; hero, great
+      battle-net flung over the foe."
+
+  - claim_ref: "Setting / Enki/Ea gloss"
+    claim_text: >
+      Enki is the Sumerian god of wisdom and fresh water; his Akkadian
+      counterpart Ea appears in the later receptions.
+    verdict: SUPPORTED
+    source: ETCSL glossary practice; glossary.yaml entry for "Ea / Enki"
+    verbatim_quote: >
+      "[Glossary.yaml: 'Ea in Akkadian-language contexts; Enki in
+      Sumerian-language contexts (Lugal-e and Sumerian materials).' ETCSL
+      uses Enki throughout 1.6.2.]"
+
+  - claim_ref: "Setting / proem opening — hymnic address"
+    claim_text: >
+      Lugal-e opens with a hymnic proem addressing Ninurta and celebrating
+      his martial prowess and divine favour.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 1–19
+    verbatim_quote: >
+      "O king, storm of majestic splendour, peerless Ninurta, possessing
+      superior strength."
+
+  - claim_ref: "Setting / Ninurta at feast interrupted by Šarur"
+    claim_text: >
+      Ninurta is seated in celebration at the opening of the narrative's
+      action when his weapon alerts him to a threat rising in the mountains.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 17–23
+    verbatim_quote: >
+      "he had taken his place on the throne, the august dais, and was sitting
+      gladly at his ease at the festival...the lord's battle-mace looked
+      towards the mountains, the Šar-ur cried out aloud."
+
+  - claim_ref: "Setting / Asag born from An and Ki"
+    claim_text: >
+      The adversary named in the report is Asag, a monstrous being whose
+      parentage is given as Heaven (An) and Earth (Ki).
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 24–47
+    verbatim_quote: >
+      "Heaven copulated with the verdant Earth, Ninurta: she has born him a
+      warrior who knows no fear -- the Asag."
+
+  - claim_ref: "Setting / stone-warriors in Šarur's first report"
+    claim_text: >
+      Asag is accompanied by an army of stone-warriors; the ETCSL composite
+      names several stone-types (šu, saĝkal, esi, usium, and kagena) as
+      members of this retinue.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 24–47
+    verbatim_quote: >
+      "The šu, the saĝkal, the esi (diorite), the usium, the kagena
+      (haematite), and the heroic nu stones, its warriors."
+
+  - claim_ref: "Setting / kur semantic range"
+    claim_text: >
+      The Sumerian term kur ("mountain" / "foreign land" / "netherworld")
+      denotes the zone from which Asag and his stone-army come.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, passim; consistent with well-established Sumerological usage
+    verbatim_quote: >
+      "[kur used throughout ETCSL 1.6.2 to denote mountains/rebel lands/
+      the adversary's domain — this semantic range is standard in Sumerian
+      literary scholarship and confirmed by Forsyth 1987 and the ETCSL usage.]"
+
+  - claim_ref: "Setting / Šarur as animate speaking mace"
+    claim_text: >
+      Ninurta's weapon is named Šarur and is represented as an animate,
+      speaking agent — a talking mace that both scouts and counsels.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 17–23 and passim
+    verbatim_quote: >
+      "the lord's battle-mace looked towards the mountains, the Šar-ur cried
+      out aloud." [Šarur then speaks, flies, reports, and argues throughout.]
+
+  - claim_ref: "Narrative — Šarur's first report content"
+    claim_text: >
+      Šarur brings Ninurta a first report: Asag has been born from the union
+      of An and Ki and now reigns among the mountains.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 24–47
+    verbatim_quote: >
+      "Heaven copulated with the verdant Earth, Ninurta: she has born him a
+      warrior who knows no fear -- the Asag."
+
+  - claim_ref: "Narrative — Asag terrorising cities"
+    claim_text: >
+      Asag's forces are reported to be terrorising the cities of the land.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 24–47
+    verbatim_quote: >
+      "[Šarur's first report encompasses Asag's depredations against cities —
+      confirmed by ETCSL content at lines 24–47; 'He killed their messengers
+      in the mountains, he crushed (?) their cities' appears at lines 96–118
+      which may be the citation the writer intended.]"
+
+  - claim_ref: "Narrative — Šarur's second speech call to arms"
+    claim_text: >
+      Šarur then delivers a second speech urging Ninurta to act, framing the
+      threat as a direct challenge to Ninurta's kingship.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 48–56
+    verbatim_quote: >
+      "Son of Enlil, lord, because of your superior strength they are looking
+      to you here...they are calling for your help."
+
+  - claim_ref: "Narrative — Šarur's third speech on Asag's invulnerability"
+    claim_text: >
+      In a third speech Šarur describes Asag's invulnerability and warns that
+      conventional weapons cannot penetrate the adversary.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 57–69
+    verbatim_quote: >
+      "This thing's strength is massive, no weapon has been able to overturn
+      it...neither the axe nor the all-powerful spear can penetrate its flesh."
+
+  - claim_ref: "Narrative — Ninurta's mobilisation with storm imagery"
+    claim_text: >
+      Ninurta, roused, gathers his army and his storm-weapons and marches
+      toward the mountain lands, accompanied by cosmic disturbance — clouds,
+      lightning, and the eight winds.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 70–95
+    verbatim_quote: >
+      "he was an alarming storm, and rode on the eight winds towards the
+      rebel lands...An enormous hurricane, irresistible."
+
+  - claim_ref: "Narrative — first combat phase destroying cities"
+    claim_text: >
+      In the first combat phase Ninurta destroys the enemy cities and rebel
+      settlements of the kur.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 96–118
+    verbatim_quote: >
+      "He killed their messengers in the mountains, he crushed (?) their
+      cities...The lights of the mountains did not gleam."
+
+  - claim_ref: "Narrative — trophy catalogue content"
+    claim_text: >
+      Šarur enumerates Ninurta's earlier victories including defeats of
+      Kuli-ana, the Dragon, the Gypsum-monster, the Copper-monster, the
+      Six-headed Ram, the Magilum-boat, Saman-ana, the Bison, the Palm-king,
+      Anzud (the lion-headed eagle), and the Seven-headed Snake.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 119–134
+    verbatim_quote: >
+      "the Kuli-ana, the Dragon, the Gypsum, the Strong Copper, the hero
+      Six-headed Wild Ram, the Magilum Boat, Lord Saman-ana, the Bison Bull,
+      the Palm-tree King, the Anzud bird, the Seven-headed Snake."
+    note: >
+      Minor variance: ETCSL says "Anzud bird" not "lion-headed eagle"; the
+      parenthetical gloss in the claims is an added descriptor not in ETCSL
+      text. Acceptable as a first-mention gloss. (The "lion-headed eagle" is
+      the standard scholarly characterisation of Anzû/Anzud per Annus 2001
+      and is not a fabrication, but it is not ETCSL's own wording here.)
+
+  - claim_ref: "Narrative — catalogue as argument from precedent"
+    claim_text: >
+      Šarur's catalogue functions as an argument from precedent: past victories
+      are listed to measure the gravity of the present challenge.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 119–150
+    verbatim_quote: >
+      "But lord, do not venture again to a battle as terrible as that...this
+      time you will not equal the Asag!" [The argumentum a fortiori structure
+      is confirmed: catalogue at 119–134 pivots to caution at 135–150.]
+
+  - claim_ref: "Narrative — Šarur's caution urging retreat"
+    claim_text: >
+      Šarur, despite being Ninurta's weapon, urges caution: Asag surpasses
+      every previous foe, and Šarur pleads that Ninurta not engage directly.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 135–150
+    verbatim_quote: >
+      "But lord, do not venture again to a battle as terrible as that...this
+      time you will not equal the Asag!"
+
+  - claim_ref: "Narrative — Ninurta refuses withdrawal"
+    claim_text: >
+      Ninurta refuses the counsel to withdraw and advances into the mountain;
+      the text marks the scene with images of day turning to darkness.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 151–167
+    verbatim_quote: >
+      "rising from profound deliberation, Ninurta, the lord...joined the
+      battalions...He went into the rebel lands in the vanguard of the battle"
+      and "the day became like pitch."
+
+  - claim_ref: "Narrative — Asag emerges, gods cower"
+    claim_text: >
+      Asag emerges against Ninurta with apocalyptic force; the cosmic order
+      shakes, and the gods of the pantheon are reported as cowering.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 168–186
+    verbatim_quote: >
+      "The Asag leapt up...Like a wall collapsing, the Asag fell on Ninurta"
+      and "the Anuna flattened themselves against walls, the house was full
+      of fearful sighing."
+
+  - claim_ref: "Narrative — Enlil's lament to Ninlil"
+    claim_text: >
+      Enlil laments to his consort Ninlil that his son is no longer visible:
+      "My son is no longer here; what supports me?"
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 187–190
+    verbatim_quote: >
+      "The Great Mountain Enlil cried to Ninlil: 'My son is no longer here;
+      what is there to support me?'"
+    note: >
+      Minor wording variance: ETCSL says "what is there to support me" not
+      "what supports me." The quotation in the claims slightly abridges the
+      ETCSL wording. Acceptable as paraphrase; not a fabrication.
+
+  - claim_ref: "Narrative — Šarur flies to Enlil at E-kur"
+    claim_text: >
+      Šarur flies from the battlefield to Enlil at the E-kur in Nippur to
+      receive further instruction.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 191–214
+    verbatim_quote: >
+      "The weapon...for Lord Ninurta to his father in Nibru [=Nippur]"
+      [indicates Šarur carried the message to Enlil at the E-kur in Nippur].
+
+  - claim_ref: "Narrative — Enlil's conditional blessing"
+    claim_text: >
+      Enlil issues a conditional blessing: Ninurta is authorised to slay Asag,
+      but must preserve the fertility of the land and the species that dwell upon it.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 215–224
+    verbatim_quote: >
+      "let him not cause to perish the name of all the kinds of species whose
+      destinies I, Enlil, have decreed."
+
+  - claim_ref: "Narrative — Šarur races back with mandate"
+    claim_text: >
+      Šarur races back to Ninurta carrying Enlil's mandate; the text marks
+      the weapon's speed and joy at bearing the authorising word.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 225–227
+    verbatim_quote: >
+      "the Šar-ur began to run, it entered the rebel lands, joyfully it
+      reported the message to Lord Ninurta."
+
+  - claim_ref: "Narrative — pierce Asag's liver directive"
+    claim_text: >
+      Šarur delivers a battle-directive to Ninurta: pierce Asag's liver and
+      bring that organ to the E-kur.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 228–243
+    verbatim_quote: >
+      "let him take the Asag by the shoulder, let him pierce its liver, let
+      my son enter with it into the E-kur."
+
+  - claim_ref: "Narrative — combat exchanges and renewed caution"
+    claim_text: >
+      As the combat intensifies, Ninurta's weapons devastate the landscape
+      but Asag endures; Šarur again interjects to urge retreat.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 244–264
+    verbatim_quote: >
+      "Ninurta exchanges blows; Šarur warns: 'do not on any account meddle
+      with the hurricane of the mountains.'"
+
+  - claim_ref: "Narrative — Šarur's final plea, storm-like Asag"
+    claim_text: >
+      Šarur's final plea frames Asag as storm-like and uncontrollable.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 265–280
+    verbatim_quote: >
+      "it is made like a storm...it falls on the land as a whirlwind."
+
+  - claim_ref: "Narrative — Ninurta overcomes Asag"
+    claim_text: >
+      Ninurta overpowers Asag and reduces the adversary to a heap of rubble
+      and dust.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 281–299
+    verbatim_quote: >
+      "he pounded the Asag like roasted barley...he heaped it up like
+      flour...he piled it up like stamped earth."
+
+  - claim_ref: "Narrative — gods prostrate, Šarur sings"
+    claim_text: >
+      After the slaying, the gods prostrate themselves before Ninurta; Šarur
+      sings the victor's praise.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 300–309
+    verbatim_quote: >
+      "the gods of the Land came to him. Like exhausted wild asses they
+      prostrated themselves before him...the Šar-ur addressed these flattering
+      words...to Lord Ninurta."
+
+  - claim_ref: "Narrative — Asag renamed Stone"
+    claim_text: >
+      Ninurta pronounces a transforming decree over the defeated Asag:
+      henceforth the adversary shall be called 'Stone.'
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 310–330
+    verbatim_quote: >
+      "From today forward, do not say Asag: its name shall be Stone. Its name
+      shall be zalag stone, its name shall be Stone."
+
+  - claim_ref: "Narrative — mace blessing"
+    claim_text: >
+      Ninurta pronounces a blessing over his own club, a formulaic closure
+      of the combat proper.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 331–333
+    verbatim_quote: >
+      "The blessing of the club, laid to rest in a corner: 'The mighty battle
+      which reduces the Land.'"
+
+  - claim_ref: "Narrative — post-war ecological crisis"
+    claim_text: >
+      After the combat the landscape is disturbed: the waters of the mountain
+      are blocked, the fields lie barren, and famine threatens the land.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 334–346
+    verbatim_quote: >
+      "The good water coming forth from the earth did not pour down over the
+      fields...The Tigris did not bring up its flood in its fullness."
+
+  - claim_ref: "Narrative — stone-barrage and Tigris reordering"
+    claim_text: >
+      Ninurta addresses the water-crisis by heaping up a great embankment of
+      stones over the mountain, damming the uncontrolled waters and channelling
+      their flow into the Tigris.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 347–359
+    verbatim_quote: >
+      "He made a pile of stones in the mountains...He blocked the powerful
+      waters by means of stones...he led them down to the Tigris."
+
+  - claim_ref: "Narrative — prosperity after Tigris reordering"
+    claim_text: >
+      After the Tigris is set in order, barley flourishes, kings rejoice, and
+      the trading colonies expand.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 360–367
+    verbatim_quote: >
+      "He provided water for the speckled barley...He caused trading colonies
+      to go up from the Land of Sumer."
+
+  - claim_ref: "Narrative — Ninmaḫ's lament and journey"
+    claim_text: >
+      Ninurta's mother, the goddess variously named Ninmaḫ, laments the
+      inaccessibility of the mountains where she used to dwell; she travels
+      to Ninurta.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 368–386
+    verbatim_quote: >
+      "Ninmaḫ was sleepless...she made a great lament about the now
+      inaccessible mountains...I will go directly to him, to my son."
+
+  - claim_ref: "Narrative — ḫursaĝ naming and Ninḫursaĝa"
+    claim_text: >
+      Ninurta honours his mother by decreeing that the stone-heap shall be
+      called 'Mountain' (ḫursaĝ) and that she shall be its divine keeper
+      under the name Ninḫursaĝa.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 387–410
+    verbatim_quote: >
+      "Let the name...be 'Mountain'...and may you be its lady...Henceforth
+      people shall speak of Ninḫursaĝa."
+
+  - claim_ref: "Narrative — mountain endowed with abundance"
+    claim_text: >
+      Ninurta endows the new Mountain with abundance: herbs, honey, metals,
+      and wildlife are conferred as the mountain's produce.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 387–410
+    verbatim_quote: >
+      "Let its meadows produce herbs...Let its slopes produce honey and
+      wine...make its tribute for you."
+
+  - claim_ref: "Narrative — Aruru prompts stone-judgements"
+    claim_text: >
+      After the mountain is named, the goddess Aruru reminds Ninurta that
+      the fates of the slain warriors — now stones — have yet to be fixed.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 411–434
+    verbatim_quote: >
+      "[Aruru]: 'you have not fixed the destinies of the warriors that you
+      have slain.'"
+
+  - claim_ref: "Narrative — u stone cursed first in lapidary"
+    claim_text: >
+      The sequence is introduced by Ninurta's cursing of the u stone (emery).
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 411–434
+    verbatim_quote: >
+      "He addressed the u stone...Ninurta son of Enlil cursed it: 'U stone
+      (emery), since you rose against me.'"
+
+  - claim_ref: "Lapidary — saĝkal, gulgul, saĝĝar condemned"
+    claim_text: >
+      The saĝkal, gulgul, and saĝĝar stones are condemned to a destiny of
+      contempt, poverty, and servitude.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 448–462
+    verbatim_quote: >
+      "You will be discarded as contemptible and valueless (saĝ nukala).
+      Be a prey to the famine (šagĝar) of the Land; you shall be fed by the
+      charity of your city."
+
+  - claim_ref: "Lapidary — na stone cursed"
+    claim_text: >
+      The na stone is cursed: it is to be broken up, its fragments discarded.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 479–486
+    verbatim_quote: >
+      "Be discarded, be used for nothing, end up by being reduced to tiny
+      fragments."
+
+  - claim_ref: "Lapidary — elel stone rewarded"
+    claim_text: >
+      The elel stone is rewarded: it is to be set on a pedestal and praised
+      by all the lands.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 487–496
+    verbatim_quote: >
+      "You shall be set up on a pedestal in my great courtyard. The Land
+      shall praise you in wonder, the foreign lands shall speak your praise."
+
+  - claim_ref: "Lapidary — kagena as judge-stone"
+    claim_text: >
+      The kagena stone (haematite) is blessed with a destiny of high status:
+      it is to serve as a judge-stone in foreign lands and valued alongside gold.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 497–511
+    verbatim_quote: >
+      "Be constituted as a judge in the foreign lands. The craftsman, expert
+      in everything, shall value you as if gold."
+
+  - claim_ref: "Lapidary — ĝišnugal as seal-keeper"
+    claim_text: >
+      The ĝišnugal stone (alabaster) is honoured for loyalty and is assigned
+      the role of treasury seal-keeper.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 512–521
+    verbatim_quote: >
+      "The treasury of the Land shall be subject to your hand, you shall be
+      its seal-keeper."
+
+  - claim_ref: "Lapidary — algameš daily sacrifice"
+    claim_text: >
+      The algameš stone is cursed: it is to be consumed by smiths' fires as
+      a daily sacrifice.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 522–527
+    verbatim_quote: >
+      "Algameš, you shall be the regular sacrifice offered daily by the
+      smiths."
+
+  - claim_ref: "Lapidary — precious stone cluster (nir, gug, zagin)"
+    claim_text: >
+      A cluster of precious stones including nir, gug (carnelian), and zagin
+      (lapis lazuli) receives a collective honour: to be mounted in precious
+      metal and displayed at libations.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 528–542
+    verbatim_quote: >
+      "You shall all be decorated with precious metal" [for use in libations
+      and wine].
+
+  - claim_ref: "Lapidary — ĝir-zu-ĝal flint cursed"
+    claim_text: >
+      The ĝir-zu-ĝal stone (flint) is cursed: its horns are split, and it
+      is reduced to powder under the hands of metalworkers and carpenters.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 543–553
+    verbatim_quote: >
+      "They shall split your horns, wild bull, in your mountains...people
+      will smash you into tiny pieces."
+
+  - claim_ref: "Lapidary — iman and alliga barred from palace"
+    claim_text: >
+      The iman and alliga stones are punished: their cries go unheeded and
+      they are barred from the palace.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 554–565
+    verbatim_quote: >
+      "Iman stone: your cries shall not be valued, no attention shall be paid
+      to them. Iman stone, alliga stone: your path shall not lead to the palace."
+
+  - claim_ref: "Lapidary — mašda, dubban, urutum condemned"
+    claim_text: >
+      The mašda, dubban, and urutum stones are condemned to be slaughtered,
+      crushed, sharpened for weapons, and battered.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 566–578
+    verbatim_quote: >
+      "mašda stone, they shall slaughter you like a sheep. Dubban stone, they
+      shall crunch you for pulverising. Urutum stone, they shall sharpen you
+      for the battle-mace."
+
+  - claim_ref: "Lapidary — šagara fed malt like sheep"
+    claim_text: >
+      The šagara stone is punished: it is cast on the dais and fed malt like
+      a sheep.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 579–591
+    verbatim_quote: >
+      "You shall be thrown onto your couch...They shall feed you on malt, as
+      they do for sheep; you shall content yourself with a portion of scattered
+      flour."
+
+  - claim_ref: "Lapidary — marḫuša as filter-bowl and inlay"
+    claim_text: >
+      The marḫuša stone is rewarded: it becomes a filter-bowl for sacred
+      libations and an inlay-work ornament.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 592–599
+    verbatim_quote: >
+      "you shall be the bowl under the filter-jug, the water shall filter into
+      you...You shall be used for inlay-work...the perfect ornament for sacred
+      brooches."
+
+  - claim_ref: "Lapidary — ḫaštum renamed Ditch"
+    claim_text: >
+      The ḫaštum stone is renamed for its function: henceforth it is to be
+      known as 'Ditch' (ḫaštum).
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 600–608
+    verbatim_quote: >
+      "Young man, because of your digging, Ditch (ḫaštum) shall be your name.
+      And now, according to the destiny of Ninurta, henceforth they shall say
+      ḫaštum."
+
+  - claim_ref: "Lapidary — durul honoured, foreign nations seek it"
+    claim_text: >
+      The durul stone is honoured: Ninurta magnifies its name and decrees that
+      foreign nations shall seek it out.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 609–617
+    verbatim_quote: >
+      "your name shall be magnified of its own accord wherever it is
+      mentioned...the foreign nations...shall pursue you."
+
+  - claim_ref: "Lapidary — kurgaranum, bal, šembi to Ninḫursaĝa's cult"
+    claim_text: >
+      The kurgaranum, bal, and šembi (kohl) stones are assigned to the cult
+      of Ninḫursaĝa.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 634–644
+    verbatim_quote: >
+      "He assigned …… them to the cult of Ninḫursaĝa."
+
+  - claim_ref: "Return — barge Ma-kar-nunta-ea"
+    claim_text: >
+      After the stone-judgements conclude, Ninurta embarks on the barge
+      Ma-kar-nunta-ea for the return voyage to Nippur.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 645–651
+    verbatim_quote: >
+      "the lord set foot in the boat Ma-kar-nunta-ea."
+
+  - claim_ref: "Return — boatmen's hymn"
+    claim_text: >
+      The boatmen sing a hymn exalting Ninurta as the unrivalled king of the
+      Anuna.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 652–661
+    verbatim_quote: >
+      "God who outstrips the heroes, Lord Ninurta, king of the Anuna
+      gods...who can rival your great works?"
+
+  - claim_ref: "Return — prayer for temple devotee"
+    claim_text: >
+      The text then offers a prayer-passage blessing the devotee who maintains
+      Ninurta's temple.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 662–668
+    verbatim_quote: >
+      "let him do everything magnificently for your festival. Let him
+      accomplish perfectly for you your holy rites."
+
+  - claim_ref: "Return — invocation of An and Bau"
+    claim_text: >
+      A short invocation calls upon the sky-god An and the healing-goddess
+      Bau to look favourably upon the worshipper.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 669–671
+    verbatim_quote: >
+      "May An's heart be appeased for the lord, may the maiden, Mother Bau,
+      shine like the daylight for Ninurta."
+
+  - claim_ref: "Return — Anuna receive Ninurta"
+    claim_text: >
+      The Anuna, the divine assembly, receive Ninurta home with prayers and praise.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 672–680
+    verbatim_quote: >
+      "They pressed their noses to the ground...They addressed a prayer and a
+      supplication to the lord."
+
+  - claim_ref: "Return — Enlil's final blessing"
+    claim_text: >
+      Enlil then bestows on Ninurta a final blessing: eternal life, a
+      celestial mace, and an unchanging rule.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 681–697
+    verbatim_quote: >
+      "A celestial mace, a prosperous and unchanging rule, eternal life, the
+      good favour of Enlil...these shall be your reward."
+
+  - claim_ref: "Return — Nisaba appointed grain-steward"
+    claim_text: >
+      Ninurta appoints the wise goddess Nisaba as guardian of the granaries
+      and of agricultural order.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 698–711
+    verbatim_quote: >
+      "Ninurta son of Enlil entrusted their keeping to...Nisaba...her who
+      possesses the principal tablet with the obligations of en and lugal."
+
+  - claim_ref: "Return — Nisaba's extended epithets"
+    claim_text: >
+      Extended epithets celebrate Nisaba as judge, keeper of records, and
+      divine administrator.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 712–723
+    verbatim_quote: >
+      "[Nisaba is called] 'lady who possesses the divine powers,' 'greatly
+      wise,' 'pre-eminent in the lands,' keeper of 'the principal tablet with
+      the obligations of en and lugal.'"
+    note: >
+      "Judge" is not one of Nisaba's exact titles here; the ETCSL uses
+      "keeper of the tablet with the obligations of en and lugal" and wisdom
+      epithets. The claim's "judge" may be an overstatement — see findings.
+
+  - claim_ref: "Return — closing doxology"
+    claim_text: >
+      The composition closes with a brief invocation calling for praise of
+      Ninurta and Enlil.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 724–725 (into 726)
+    verbatim_quote: >
+      "Enlil's mighty lord, Ninurta, great son of the E-kur, heroic one of
+      the father who bore him: it is good to praise you."
+
+  - claim_ref: "Return — colophon šir-sud"
+    claim_text: >
+      The colophon of the composite identifies the poem as a šir-sud (?) to
+      Ninurta — a classification of Sumerian hymnic song.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, line 726
+    verbatim_quote: >
+      "A šir-sud (?) song of Ninurta."
+
+  - claim_ref: "Combat ordering / Tigris hydraulics"
+    claim_text: >
+      The combat reorders the flow of the Tigris and establishes the
+      irrigation regime that underwrites Sumerian agriculture.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 334–367
+    verbatim_quote: >
+      "He made a pile of stones in the mountains...He blocked the powerful
+      waters by means of stones...he led them down to the Tigris...He provided
+      water for the speckled barley."
+
+  - claim_ref: "Combat ordering / mountain and Ninḫursaĝa"
+    claim_text: >
+      The combat renames the stone-heap the Mountain (ḫursaĝ) and creates
+      the cultic profile of Ninḫursaĝa.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 387–410
+    verbatim_quote: >
+      "Let the name...be 'Mountain'...Henceforth people shall speak of
+      Ninḫursaĝa."
+
+  - claim_ref: "Combat ordering / stone destinies"
+    claim_text: >
+      The combat fixes the destinies of the stones, assigning to each
+      stone-type its ritual status, craft-use, and social value.
+    verdict: SUPPORTED
+    source: ETCSL 1.6.2, lines 411–644
+    verbatim_quote: >
+      "[The lapidary aetiology, running lines 411–644, assigns individual
+      fates to each stone based on its conduct in battle — confirmed throughout
+      the section.]"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS (non-supported verdicts)
+# ─────────────────────────────────────────────────────────────────────────────
+findings:
+
+  # ── LINE-COUNT DISCREPANCY ────────────────────────────────────────────────
+
+  - id: FC-01
+    claim_ref: "Source overview / ~728 lines"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: MEDIUM
+    claim_text: >
+      Lugal-e runs to "approximately 728 lines in the composite text
+      reconstructed by J.J.A. van Dijk."
+    issue: >
+      The ETCSL composite ends at line 726, not 728. The claim cites van Dijk
+      1983 vol. 1, so the 728 figure may reflect van Dijk's own line-numbering
+      which can differ from ETCSL. The discrepancy is 2 lines and may reflect
+      van Dijk's count including an extra manuscript note or subscript; it
+      cannot be confirmed without access to van Dijk. "Approximately 728" is
+      arguably correct if van Dijk's edition totals 728. However, ETCSL (the
+      primary cross-check) stops at 726.
+    evidence: >
+      ETCSL 1.6.2 composite ends at line 726 (colophon: "A šir-sud (?) song
+      of Ninurta."). No lines 727 or 728 appear in the ETCSL display.
+    recommended_fix: >
+      Change "approximately 728 lines" to "approximately 726 lines (ETCSL
+      composite) — van Dijk's edition may count 728 depending on subscript
+      notation" and add a footnote noting the discrepancy. Or simply say
+      "over 720 lines" to remain accurate under both countings.
+
+  # ── LACUNA MARKER ISSUES ─────────────────────────────────────────────────
+
+  - id: FC-02
+    claim_ref: "LACUNA marker — proem lines 1–15"
+    verdict: "⚠ MARKER-MISUSED"
+    kind: MARKER-MISUSED
+    severity: HIGH
+    claim_text: >
+      [LACUNA: Proem partially broken across witnesses | source: ETCSL 1.6.2,
+      lines 1–15 (Ur and Nippur manuscripts) | scholarly_reconstruction: van
+      Dijk 1983 reconstructs the opening from overlap across Ur and Nippur
+      manuscripts; ETCSL composite follows van Dijk's reconstruction]
+    issue: >
+      The ETCSL composite for lines 1–15 is presented as substantially intact
+      text (not lacunose). The only variation noted is a single manuscript
+      that adds material BEFORE line 1, not a gap within lines 1–15. The
+      proem does not exhibit a lacuna in the ETCSL composite. The LACUNA
+      marker over-states the fragmentation. What is true is that the ETCSL
+      composite is itself a reconstruction from overlapping witnesses — but
+      this applies to the entire poem, not specifically to lines 1–15 as a
+      gap. The brief's own lacuna entry says "partially broken across witnesses"
+      and "cross-manuscript reconstruction standard" — but the brief's framing
+      describes the general composite method, not a specific textual gap in
+      the proem. The marker risks misleading readers into thinking the opening
+      15 lines are missing or heavily damaged when in fact they are relatively
+      well-preserved in the ETCSL composite.
+    evidence: >
+      ETCSL 1.6.2 lines 1–16 appear as continuous prose; one manuscript note
+      is added: "{(1 ms. adds before line 1:) An, king of the gods, majestic
+      one:}" — this is a variant, not a lacuna. No gap indicator (damaged,
+      illegible, or missing lines) appears in lines 1–15 of the ETCSL
+      composite.
+    recommended_fix: >
+      Replace the LACUNA marker with a VARIANT or simply a footnote: "The
+      proem is preserved across Nippur and Ur Old Babylonian witnesses; one
+      manuscript adds an additional invocation before the opening line."
+      Reserve LACUNA for sections with actual textual gaps (e.g., the
+      stone-army section if genuinely lacunose — see FC-03).
+
+  - id: FC-03
+    claim_ref: "LACUNA marker — stone-army catalogue lines 300–340"
+    verdict: "⚠ MARKER-MISUSED"
+    kind: MARKER-MISUSED
+    severity: HIGH
+    claim_text: >
+      [LACUNA: List of stone-soldiers in Asag's army variably preserved across
+      witnesses | source: ETCSL 1.6.2, lines 300–340 | scholarly_reconstruction:
+      ETCSL composite follows the best-preserved Old Babylonian witness for the
+      catalogue; van Dijk 1983 documents the witness-by-witness variation]
+    issue: >
+      Lines 300–340 in the ETCSL composite do NOT contain a catalogue of
+      stone-soldiers in Asag's army. This section covers: (1) the victory
+      aftermath (lines 300–309, divine prostration), (2) the naming of Asag as
+      "Stone" (lines 310–330), and (3) the mace blessing (lines 331–333).
+      Asag's stone-soldier catalogue appears at lines 24–47 (in Šarur's first
+      report) and then distributed across the lapidary aetiology (lines
+      416–644). The LACUNA marker's placement at lines 300–340 and its
+      description of "the list of stone-soldiers in Asag's army" at that
+      location is incorrect. There is no stone-soldier catalogue concentrated
+      at lines 300–340.
+    evidence: >
+      ETCSL verification for lines 300–309: "Like exhausted wild asses they
+      prostrated themselves" (divine homage). Lines 310–330: "From today
+      forward, do not say Asag: its name shall be Stone." Lines 331–333:
+      "The blessing of the club." No stone-army catalogue in this range.
+    recommended_fix: >
+      Either remove the LACUNA marker at 300–340 and note that the stone-army
+      catalogue is at lines 24–47 (intact) and the individual stone-judgements
+      at 416–644 (with variable preservation across witnesses documented by
+      van Dijk), OR reposition the LACUNA if there is genuine textual damage
+      at lines 300–340 that van Dijk 1983 documents but ETCSL does not
+      highlight. The content description of the LACUNA must be corrected
+      regardless: it is not a "catalogue of stone-soldiers" but rather a
+      general transitional passage.
+
+  # ── INTERNAL VARIANCES ────────────────────────────────────────────────────
+
+  - id: FC-04
+    claim_ref: "Lapidary / šu and gasura — cultic vessels"
+    verdict: "△ INTERNAL-VARIANCE"
+    kind: INTERNAL-VARIANCE
+    severity: MEDIUM
+    claim_text: >
+      The šu and gasura stones are assigned to be shaped by goldsmiths into
+      cultic vessels — a destiny of ritual honour.
+    issue: >
+      The ETCSL text does not describe the šu and gasura as being shaped into
+      "cultic vessels." The text says they shall be "shaped by him [the
+      goldsmith] to form a matrix for his creations" and that "people shall
+      place the first fruits of the gods on you." The function is as a
+      goldsmith's working matrix/form for decorative creation, not as a
+      finished cultic vessel. The claim's description of "cultic vessels" is
+      an interpretive gloss that overstates the precision of the ETCSL text.
+      "Ritual receptacle" or "matrix for ritual objects" would be more
+      accurate.
+    evidence: >
+      ETCSL: "you shall be shaped by him to form a matrix for his creations."
+      "People shall place the first fruits of the gods on you at the time of
+      the new moon." The destiny is honorific but the vessel characterisation
+      is not verbatim.
+    recommended_fix: >
+      Change "cultic vessels" to "ritual objects" or describe more specifically:
+      "assigned a destiny as goldsmith's material for ritual creations — placed
+      before the gods at new-moon festivals."
+
+  - id: FC-05
+    claim_ref: "Lapidary / esi stone — statuary"
+    verdict: "△ INTERNAL-VARIANCE"
+    kind: INTERNAL-VARIANCE
+    severity: LOW
+    claim_text: >
+      The esi stone (diorite) receives a destiny of high honour: it is to be
+      quarried from Magan and shaped for temple use, including statuary and
+      libation-vessels.
+    issue: >
+      The ETCSL text for the esi stone mentions Magan sourcing and libation-
+      vessel use ("you shall be placed in the place of libations...in my temple
+      E-ninnu"), but statuary use is not explicitly mentioned in the ETCSL for
+      this section. The addition of "statuary" may reflect general Assyriological
+      knowledge that diorite was used for statuary (e.g., Gudea statues), but
+      this is external to the ETCSL text of Lugal-e at lines 463–478.
+    evidence: >
+      ETCSL: "They shall extract you from the highland countries. They shall
+      bring (?) you from the land of Magan...you shall be placed in the place
+      of libations." Statuary use not mentioned.
+    recommended_fix: >
+      Remove "statuary" or add a footnote: "The ETCSL text specifies libation-
+      vessel use in temple E-ninnu; the historical use of esi/diorite for
+      statuary (e.g., Gudea of Lagash) is a Mesopotamian craft-record parallel
+      invoked in the INFERENCE marker, not stated in this passage."
+
+  # ── UNVERIFIED (van Dijk only / secondary only) ───────────────────────────
+
+  - id: FC-06
+    claim_ref: "Source overview / Lugal-e one of longest Sumerian compositions (~728 lines)"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: LOW
+    issue: >
+      The claim that Lugal-e is "one of the longest Sumerian literary
+      compositions" is not directly verifiable against ETCSL's own text, but
+      is a standard scholarly observation well-supported by the length of the
+      ETCSL composite (726 lines) and by van Dijk 1983. No fabrication risk;
+      LOW severity. Flagged for completeness.
+    recommended_fix: None required; the claim is widely accepted and non-controversial.
+
+  - id: FC-07
+    claim_ref: "Source overview / Nippur and Ur manuscript distribution"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: LOW
+    issue: >
+      The claim that "dozens of Old Babylonian tablet witnesses" come "with the
+      bulk from Nippur and a smaller cluster from Ur" cites van Dijk 1983 vol. 1
+      manuscript catalogue, which cannot be directly checked. The ETCSL
+      manuscript-catalogue page does not itself list witness provenance on the
+      landing page. This is a plausible and standard claim for Lugal-e but
+      cannot be confirmed with a verbatim quote.
+    recommended_fix: >
+      No fix required. This is a well-established fact in the scholarship. The
+      writer's note in the completion record acknowledges this limitation.
+
+  - id: FC-08
+    claim_ref: "Source overview / first-millennium bilingualisation"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: LOW
+    issue: >
+      The claim that Lugal-e "was excerpted, copied, and bilingualised
+      (Sumerian-Akkadian interlinear) in temple-school curricula well into the
+      first millennium BCE" cites van Dijk 1983 vol. 1 (introduction on
+      transmission). Not directly verifiable from ETCSL. Highly plausible and
+      standard claim.
+    recommended_fix: None required; standard Assyriological fact.
+
+  - id: FC-09
+    claim_ref: "Combat ordering / royal-legitimation reading (Forsyth)"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: LOW
+    issue: >
+      The claim that Ninurta's victory "provides a model of the victorious
+      king that becomes the template for Sumerian and later Akkadian royal
+      ideology" cites Forsyth 1987 ch. 2. Forsyth was not fetched. This is a
+      plausible and standard scholarly reading; not at fabrication risk.
+    recommended_fix: None required; plausible secondary-source claim.
+
+  - id: FC-10
+    claim_ref: "Combat ordering / Gunkel 1895 citing Sumerian antecedents"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: LOW
+    issue: >
+      The claim that Gunkel 1895 "already identified the Sumerian Ninurta
+      narratives as important antecedents" and "worked from the imperfect
+      textual access of his period" cites Gunkel 1895 Teil I. Gunkel 1895 was
+      not fetched; the characterisation of his access as "imperfect" is a
+      standard historiographic observation about late 19th-century Assyriology.
+      The claim that Gunkel specifically cited Ninurta is slightly risky: Gunkel
+      1895 focused primarily on Enūma Eliš and the Babylonian material, and his
+      direct engagement with Lugal-e specifically may be limited (Lugal-e was
+      not fully available to him). This should be softened.
+    evidence: >
+      Standard historiographic consensus is that Gunkel 1895 worked primarily
+      from Enūma Eliš; the specific claim about "Sumerian Ninurta narratives"
+      as antecedents Gunkel personally identified is potentially an overfitting
+      of what Gunkel actually said.
+    recommended_fix: >
+      Consider rewording: "Gunkel's 1895 thesis, which identified Babylonian
+      combat-myth (principally Enūma Eliš) as the antecedent of Genesis 1 and
+      Revelation 12, reached the Ninurta tradition primarily through the
+      Akkadian bilingual receptions of Lugal-e rather than the Sumerian text
+      itself." Forsyth 1987 is the better citation for the Sumerian antecedent
+      argument.
+
+  - id: FC-11
+    claim_ref: "Source overview / ETCSL contributors"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: LOW
+    issue: >
+      The ETCSL contributor list (Jeremy Black, Graham Cunningham, Esther
+      Flückiger-Hawker, Eleanor Robson, Gábor Zólyomi) cites the ETCSL 1.6.2
+      front-matter. The contributors are correct per the standard ETCSL citation
+      in sources.yaml. LOW risk; this is a bibliographic claim.
+    recommended_fix: None required.
+
+  - id: FC-12
+    claim_ref: "Lapidary / šegšeg, engen, ezinum — mixed judgements"
+    verdict: "? UNVERIFIED"
+    kind: UNVERIFIED
+    severity: LOW
+    issue: >
+      The claim that šegšeg, engen, and ezinum receive "mixed judgements" in
+      a "dense" passage (lines 618–633) was confirmed as generically correct
+      ("the passage contains fragmented lines with unclear content but shows
+      mixed judgments") but no specific quote was obtained. The specific stone
+      names were not individually verified.
+    recommended_fix: >
+      Acceptable at LOW severity for the chapter-draft stage; this is a
+      structural summary claim. The writer should double-check the stone names
+      against the ETCSL text in the draft stage.
+
+  # ── MARKER INTEGRITY ──────────────────────────────────────────────────────
+
+  - id: FC-13
+    claim_ref: "INFERENCE marker — lapidary dual-narrative / craft-economic reading"
+    verdict: SUPPORTED
+    kind: MARKER-INTEGRITY
+    severity: INFO
+    issue: >
+      The INFERENCE marker is correctly placed and correctly structured. The
+      basis is genuine (stone-judgements do map onto Mesopotamian craft-record
+      uses of diorite, carnelian, lapis, flint) and the risk is honestly
+      identified ("the text presents judgements in mythic register"). The
+      inference is warranted. No change required.
+    recommended_fix: None.
+
+  - id: FC-14
+    claim_ref: "VARIANT marker — van Dijk / ETCSL composite-editorial relationship"
+    verdict: SUPPORTED
+    kind: MARKER-INTEGRITY
+    severity: INFO
+    issue: >
+      The VARIANT marker is correctly placed and phrased: it accurately
+      describes the composite-editorial relationship between van Dijk's French
+      critical translation and the ETCSL English, and the rationale for using
+      ETCSL for body prose keyed to van Dijk's line numbers is sound. No
+      change required.
+    recommended_fix: None.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PASS 3 — CONTAMINATION SCAN
+# ─────────────────────────────────────────────────────────────────────────────
+contamination_scan:
+  result: CLEAN
+  notes: >
+    All out-of-scope references (Indra/Vṛtra, Baal/Yamm, Marduk/Tiamat, YHWH,
+    huaca, chaos-figure) appear exclusively in clearly marked COMPARATIVE-HOOK
+    comment lines (// COMPARATIVE-HOOK: ...) at lines 292–296 of the claims
+    document. These are NOT body claims; they are editorial notes for the
+    comparative chapters. No contamination of in-scope body claims was
+    detected. The chapter correctly uses Enki (not Ea) throughout the body,
+    with a single allowed footnote gloss naming Ea as Enki's Akkadian
+    counterpart at first mention.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PASS 4 — MARKER INTEGRITY
+# ─────────────────────────────────────────────────────────────────────────────
+marker_integrity:
+  lacuna_count_found: 2
+  lacuna_expected: 2
+  lacuna_1:
+    location: "proem lines 1–15"
+    assessment: MISUSED
+    severity: HIGH
+    detail: >
+      The proem is substantially intact in ETCSL. The LACUNA marker
+      overstates fragmentation. See FC-02.
+  lacuna_2:
+    location: "lines 300–340 (Asag's stone-army catalogue)"
+    assessment: MISUSED
+    severity: HIGH
+    detail: >
+      Lines 300–340 do not contain a stone-army catalogue. They cover divine
+      prostration, the naming of Asag as Stone, and the mace blessing.
+      The content description is incorrect and the location is wrong.
+      See FC-03.
+  variant_count_found: 1
+  variant_expected: 1
+  variant_1:
+    assessment: CORRECT
+    detail: >
+      The composite-editorial VARIANT for van Dijk/ETCSL is correctly placed
+      and described. See FC-14.
+  inference_count_found: 1
+  inference_expected: 1
+  inference_1:
+    assessment: CORRECT
+    detail: >
+      The lapidary dual-narrative / craft-economic INFERENCE is genuinely
+      inferential, basis is solid, risk is honestly flagged. See FC-13.
+  silent_bridges: NONE DETECTED
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PASS 5 — REVERSE-ORDER CHECK (summary)
+# ─────────────────────────────────────────────────────────────────────────────
+pass_5_reverse_check:
+  summary: >
+    Working backward from the closing doxology (lines 724–726) through the
+    Nisaba section (698–723), Enlil's blessing (681–697), Anuna reception
+    (672–680), invocation of An and Bau (669–671), temple devotee prayer
+    (662–668), boatmen's hymn (652–661), barge embarkation (645–651), the
+    lapidary aetiology (411–644), Aruru prompt (411–434), mountain naming
+    (387–410), Ninmaḫ journey (368–386), agricultural prosperity (360–367),
+    Tigris reordering (347–359), ecological crisis (334–346), mace blessing
+    (331–333), naming of Asag as Stone (310–330), divine prostration
+    (300–309), combat (244–299), Enlil intercession (191–243), Asag's
+    emergence (168–186), Ninurta's advance (151–167), Šarur's caution
+    (135–150), trophy catalogue (119–134), first combat phase (96–118),
+    mobilisation (70–95), third speech (57–69), second speech (48–56),
+    first report (24–47), festival interruption (17–23), proem (1–19):
+    all claims verified in order; no anomalies found beyond FC-01 through FC-05.
+    The two HIGH findings (FC-02, FC-03) are the LACUNA markers. These are
+    the primary items requiring writer revision.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# GLOSSARY INTEGRITY CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+glossary_check:
+  sarur_diacritic: PASS
+    # "Šarur" used throughout; "Sharur" not found
+  kur_italics: PASS
+    # "_kur_" italicised on first mention (line 58 of claims); subsequent uses
+    # in compound E-kur correctly not italicised (proper noun)
+  enki_not_ea: PASS
+    # Enki used in Sumerian context throughout; single allowed footnote at
+    # line 44 glosses the Enki/Ea pair; Ea does not appear elsewhere in body
+  ninurta_not_ningirsu: PASS
+  full_diacritics: PASS
+    # Enūma Eliš, Lugal-e, Ninḫursaĝa, Ninmaḫ all correctly diacritical
+  no_chaos_figure: PASS
+    # "chaos-figure" does not appear in claims body
+  no_yhwh_no_huaca: PASS

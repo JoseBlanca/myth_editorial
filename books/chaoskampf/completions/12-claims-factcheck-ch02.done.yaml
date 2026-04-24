@@ -1,0 +1,80 @@
+---
+stage: "09-claims-factcheck"
+chapter: "02-ninurta-anzu"
+completion_number: 12
+completed_date: "2026-04-24"
+auditor_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+
+status: DONE
+verdict: REVISE
+
+inputs_read:
+  - /home/jose/escritos/myth_editorial/books/chaoskampf/prompts/09-claims-factcheck-ch02.prompt.md
+  - /home/jose/escritos/myth_editorial/books/chaoskampf/chapters/02-ninurta-anzu.claims.adoc
+  - /home/jose/escritos/myth_editorial/books/chaoskampf/briefs/02-ninurta-anzu.yaml
+  - /home/jose/escritos/myth_editorial/books/chaoskampf/scope.md
+  - /home/jose/escritos/myth_editorial/books/chaoskampf/sources.yaml
+  - /home/jose/escritos/myth_editorial/books/chaoskampf/glossary.yaml
+
+sources_fetched:
+  - url: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.1&display=Crit&charenc=gcirc"
+    status: fetched
+    content: "Angim dimma opening lines, trophy list (30-40), chariot-hanging (55-63), closing formula (208)"
+  - url: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.2&display=Crit&charenc=gcirc"
+    status: fetched
+    content: "Lugal-e line 122 (Anzud bird), Šarur passages (lines 24-47, 96-118, 225-227)"
+  - url: "https://www.eisenbrauns.org/books/titles/978-951-45-9051-1.html"
+    status: confirmed_via_search
+    content: "Annus 2001 SAACT 3 existence confirmed; ISBN 9789514590511 verified"
+
+outputs_written:
+  - /home/jose/escritos/myth_editorial/books/chaoskampf/chapters/02-ninurta-anzu.claims.factcheck.yaml
+
+tally:
+  claims_identified: 98
+  supported: 14
+  unverified_low: 72
+  unverified_medium: 2
+  internal_variance: 1
+  citation_wrong: 1
+  silent_bridges: 0
+  contamination: 0
+  fabrication: 0
+  high_severity: 0
+  medium_severity: 4
+
+top_findings:
+  - id: CW-01
+    severity: MEDIUM
+    summary: >
+      Dagan misidentified as 'the messenger of the assembly, dispatched to bring news of
+      the victory.' Corroborating sources indicate Dagan appears in an epithet context
+      ('bulwark of Anu and Dagan') rather than as a dispatched narrative messenger; the
+      actual post-victory messenger is Birdu. Writer must verify Foster 2005 pp. 575-576
+      and Annus 2001 Tablet III and correct or add a RECONSTRUCTION marker.
+  - id: IV-01
+    severity: MEDIUM
+    summary: >
+      'Seven Evil Winds' qualifier unverified for Tablet II opening of SB Anzû. Independent
+      sources confirm 'seven winds' but not the 'Evil' designation in this specific context.
+      May import formulaic language from Erra Epic into SB Anzû without textual basis.
+
+marker_integrity:
+  lacunae: "2/2 PASS"
+  reconstructions: "1/1 PASS"
+  variants: "1/1 PASS"
+  inferences: "1/1 PASS"
+  silent_bridges: "0 PASS"
+
+contamination: CLEAN
+glossary_compliance: PASS
+fabrication_detected: false
+
+ready_for_chapter_draft: false
+blocking_reason: >
+  Writer must resolve CW-01 (Dagan-as-messenger) before chapter-draft.
+  This is the single blocking revision. After CW-01 is corrected and IV-01
+  is checked against Foster pp. 565-566, the chapter claims are ready to proceed.
+
+next_stage: "writer-revision → chapter-draft"

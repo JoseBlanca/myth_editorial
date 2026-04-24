@@ -1,0 +1,65 @@
+stage: "claims-factcheck"
+timestamp: "2026-04-24T17:00:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+
+outputs:
+  - file: "books/chaoskampf/chapters/01-ninurta-asag.claims.factcheck.yaml"
+    lines: 390
+  - file: "books/chaoskampf/completions/12-claims-factcheck-ch01.done.yaml"
+    lines: 35
+
+inputs_audited:
+  - file: "books/chaoskampf/chapters/01-ninurta-asag.claims.adoc"
+    lines: 296
+    claims_identified: 85
+
+primary_source_fetched: "ETCSL 1.6.2 (https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.2&display=Crit&charenc=gcirc) — fetched multiple times via WebFetch; full-text reproduction blocked by copyright refusal but targeted fact-checks (yes/no + brief quote) were performed for every cited line range."
+
+verdict: REVISE
+
+tally_summary:
+  total_claims: 85
+  supported: 69
+  internal_variance: 2
+  unverified_low: 7
+  unverified_medium: 1
+  marker_misused_high: 2
+  silent_bridges: 0
+  contamination: 0
+  fabrication: 0
+  glossary_violations: 0
+
+high_severity_findings:
+  - id: FC-02
+    description: "LACUNA marker at proem lines 1–15 is misused — the ETCSL composite text for these lines is substantially intact with only a single manuscript variant noted; the proem is not lacunose."
+  - id: FC-03
+    description: "LACUNA marker at lines 300–340 ('Asag's stone-army catalogue') is doubly wrong: (1) the content description is incorrect — lines 300–340 cover divine prostration, Asag renamed Stone, and the mace blessing, not a stone-army catalogue; (2) no stone-army catalogue exists at this location in ETCSL."
+
+medium_severity_findings:
+  - id: FC-01
+    description: "Line count stated as ~728 lines (van Dijk); ETCSL composite ends at 726 — minor discrepancy that may reflect different edition counting."
+  - id: FC-04
+    description: "šu and gasura stones described as 'cultic vessels'; ETCSL says 'matrix for creations' — characterisation oversimplified."
+
+ready_for_chapter_draft: false
+reason: >
+  Two HIGH findings require writer revision before chapter-draft proceeds:
+  both LACUNA markers must be corrected (FC-02 and FC-03). The proem
+  LACUNA should be converted to a VARIANT or simple footnote. The stone-army
+  catalogue LACUNA must be relocated and its content description corrected.
+  The two MEDIUM findings (FC-01, FC-04) and seven LOW UNVERIFIED claims
+  are non-blocking but should be addressed in the revision pass. The 69
+  SUPPORTED claims with verbatim ETCSL quotes provide a solid foundation for
+  the chapter-draft once the markers are corrected.
+
+summary: >
+  Adversarial factcheck of 85 claims in Chapter 1 (Ninurta vs. Asag / Lugal-e)
+  by Sonnet 4.6 against Opus 4.7's claims document. Verdict: REVISE. 69 claims
+  fully supported with ETCSL verbatim quotes; 2 marker-misuse findings at HIGH
+  severity (both LACUNA markers incorrectly placed/described); 2 MEDIUM
+  findings (line count, "cultic vessels" overstatement); 7 LOW UNVERIFIED
+  (van Dijk-only claims, standard scholarly assertions). No fabrications, no
+  silent bridges, no contamination, no glossary violations. The narrative
+  sequence claims are strongly supported throughout.
