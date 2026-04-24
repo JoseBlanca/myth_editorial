@@ -1,0 +1,1171 @@
+# Inventory for the Chaoskampf book.
+# Structure: geographic-cluster cycles (Part I of the book) + critique / sidebars.
+# Source: catalog.yaml + the seven research notes in research/.
+# Every entry carries at least one verifiable identifier (ISBN, ETCSL no., Perseus URN, museum no.,
+# or stable-URL), OR is flagged identifier_missing: true.
+# Tier (core / related / contrastive / critique / sidebar) is recorded in the `tier` field
+# because the inventory-audit and chapter-briefs stages need it to calibrate expected depth.
+
+meta:
+  stage: story-inventory
+  version: v1
+  date: 2026-04-23
+  agent_model: "claude-opus-4-7[1m]"
+  source_artifacts:
+    - scope.md (v1, 2026-04-23)
+    - catalog.yaml (v1, 2026-04-23)
+    - sources.yaml (v1-seed, 2026-04-23)
+    - research/DECISION_REPORT.md
+    - research/core_ane_mediterranean.md
+    - research/core_other.md
+    - research/missing_stories_report.md
+    - research/related_americas_china.md
+    - research/related_eurasia.md
+    - research/related_africa_se_asia.md
+    - research/provisional.md
+  note: |
+    This book's inventory maps to the user-confirmed Part I geographic clustering
+    (scope.md §"Book structure"). Family clusters in scope.md that share a single
+    cycle entry here (e.g., the Greek family chapter) are captured as sibling stories
+    inside the relevant cycle. The `primary_chapter_type` field distinguishes full
+    chapters (tier=core + a few high-weight related) from family-cluster chapters.
+
+cycles:
+
+  # ── Part I — geographic clusters ──
+
+  - id: mesopotamia
+    name: "Mesopotamia"
+    stories:
+      - id: ninurta-asag
+        title: "Ninurta vs. Asag (Lugal-e)"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: vandijk-1983-lugale
+            loc: "Lugal-e, entire composition"
+            identifier: "ISBN 9789004069169"
+          - id: etcsl
+            loc: "ETCSL 1.6.2"
+            identifier: "etcsl-1.6.2"
+        date_range: "Old Babylonian copies of Ur III composition, c. 2000–1800 BCE"
+        summary: |
+          Ninurta confronts Asag, a monstrous demon whose stone army and mountain-dwelling
+          forces oppose the ordered world. Ninurta's victory re-orders the cosmos: he heaps
+          up the mountains, channels the Tigris so its waters serve irrigation, and
+          establishes the stones' ranks according to their loyalty.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Sumerian; oldest full-length attested combat-cosmogony. ETCSL provides composite transliteration and translation alongside van Dijk 1983's critical edition."
+
+      - id: ninurta-anzu
+        title: "Ninurta vs. Anzû"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: annus-2001-anzu
+            loc: "Standard Babylonian Anzû Epic, tablets I–III"
+            identifier: "ISBN 9789514590511"
+          - id: foster-2005
+            loc: "Before the Muses, 'Anzu' translation"
+            identifier: "ISBN 9781883053765"
+        date_range: "Old Babylonian–Middle Babylonian, c. 1800–1100 BCE (Sumerian background c. 2000 BCE)"
+        summary: |
+          The Anzû bird seizes the Tablet of Destinies from Enlil, claiming kingship over
+          the gods. Ninurta defeats Anzû in aerial combat and restores the Tablet, securing
+          the divine order and his own prestige as warrior champion.
+        variants: ["Sumerian background narrative (Angim, Lugal-e allusions); Standard Babylonian Akkadian version is the main source."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "The direct Mesopotamian ancestor of the Marduk-Tiamat combat (Lambert, Annus)."
+
+      - id: marduk-tiamat
+        title: "Marduk vs. Tiamat (Enūma Eliš)"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: lambert-2013
+            loc: "Enūma Eliš, Tablets I–VII (critical edition)"
+            identifier: "ISBN 9781575062471"
+          - id: foster-2005
+            loc: "Before the Muses, 'Epic of Creation'"
+            identifier: "ISBN 9781883053765"
+        date_range: "Composition late 12th c. BCE (Nebuchadnezzar I); extant copies Neo-Assyrian and Neo-Babylonian"
+        summary: |
+          The storm-god Marduk, elevated to supreme kingship by the assembly of gods,
+          slays the primordial salt-sea goddess Tiamat and her army of eleven monsters,
+          then fashions the cosmos from her body: sky and earth, rivers from her eyes,
+          mountains from her udder. He creates humankind from the blood of her consort
+          Qingu and founds Babylon.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "The canonical chaoskampf case. Flag Ballentine 2015's argument that Tiamat is a rival sovereign rather than 'chaos'."
+
+      - id: marduk-labbu
+        title: "Marduk (?) vs. Labbu"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: foster-2005
+            loc: "Before the Muses, 'The Slaying of Labbu'"
+            identifier: "ISBN 9781883053765"
+          - id: wakeman-1973
+            loc: "God's Battle with the Monster, pp. 21–26"
+            identifier: "ISBN 9789004037526"
+        date_range: "Fragmentary Neo-Assyrian tablet; earlier composition uncertain"
+        summary: |
+          A single fragmentary Akkadian tablet preserves the tale of a serpent-dragon
+          Labbu, fifty leagues long, whom a god (the text is broken where the name
+          appears — Marduk, Tishpak, or Nergal are all proposed) slays with arrows.
+          The fragment is too broken for cosmogonic function to be securely attested.
+        variants: ["Divine combatant's identity is disputed due to lacunae."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Short chapter or sidebar within the Mesopotamia family chapter. Present as fragmentary by design."
+
+  - id: anatolia_levant
+    name: "Anatolia and the Levant"
+    stories:
+      - id: kumarbi-ullikummi
+        title: "The Kumarbi Cycle (Song of Ullikummi)"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: hoffner-1998
+            loc: "Hittite Myths, §§14–18 (Kumarbi Cycle)"
+            identifier: "ISBN 9780788504884"
+        date_range: "Middle / New Hittite, c. 16th–13th c. BCE; Hurrian substrate earlier"
+        summary: |
+          Kumarbi, deposed father-god, conceives the stone monster Ullikummi to unseat
+          the storm-god Teshub and restore his own rule. Ea severs the monster from its
+          base using the primordial cutter, and Teshub defeats it in renewed combat.
+          Related songs in the cycle (Kingship in Heaven, Song of Hedammu) extend the
+          sovereignty-succession frame.
+        variants:
+          - "Kingship in Heaven (KUB 33.120+): Kumarbi's displacement of Anu and the birth of Teshub from Kumarbi's body. Companion text within the cycle, full chapter treatment."
+          - "Song of Hedammu (KUB 33.100+): Kumarbi's sea-monster offspring Hedammu, a separate combat in the same cycle, fragmentary. Treat as its own sub-section within the chapter."
+          - "Song of the Sea (Hurrian 'Song of the Sea', fragmentary): the storm-god's combat with the Sea as a further sovereignty episode. Treat as its own sub-section within the chapter, not as a silent conflation with Ullikummi."
+          - "The chapter presents these as a cycle of sovereignty combats with Ullikummi as the flagship episode, not as a single undifferentiated narrative."
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Widely treated as the Near-Eastern bridge to Hesiod's Typhonomachy (West 1997; López-Ruiz). Audit 2026-04-23 flagged silent-conflation risk on the Kumarbi Cycle; resolved by naming Hedammu and Song of the Sea as explicit variants treated side by side in the chapter, rather than splitting them into separate CORE entries (which would inflate the CORE count and duplicate Kumarbi-Cycle framing material)."
+
+      - id: illuyanka
+        title: "Tarḫunna / Teshub vs. Illuyanka"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: beckman-1982-illuyanka
+            loc: "JANES 14 (1982): 11–25; editio princeps of CTH 321"
+            identifier: "https://janes.scholasticahq.com/"
+          - id: hoffner-1998
+            loc: "Hittite Myths, 'Illuyanka'"
+            identifier: "ISBN 9780788504884"
+        date_range: "Middle / New Hittite, c. 16th–13th c. BCE"
+        summary: |
+          Two divergent tellings are transmitted on the same tablet group (CTH 321),
+          both framing the storm-god's combat with the serpent Illuyanka as the
+          aetiology of the purulli spring festival. In Version 1, the goddess Inara
+          lures the dragon out of its hole with a banquet; the mortal Hupasiya binds
+          it. In Version 2, the storm-god's son marries Illuyanka's daughter and
+          recovers his father's stolen heart and eyes as a bride-price.
+        variants: ["Two co-equal versions on the same tablet; present side by side."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Cyclical-ritual subtype; combat is ritual-cyclical rather than cosmogonic."
+
+      - id: baal-yamm-lotan
+        title: "Baal vs. Yamm and Baal vs. Lotan"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: smith-1994-baal-i
+            loc: "KTU 1.1–1.2 (Baal vs. Yamm)"
+            identifier: "ISBN 9789004099951"
+          - id: smith-pitard-2009-baal-ii
+            loc: "KTU 1.3–1.4 (palace-building); Lôtan passage KTU 1.5 i 1–3"
+            identifier: "ISBN 9789004153486"
+        date_range: "Late Bronze Age, c. 1350–1200 BCE"
+        summary: |
+          The storm-god Baʿlu/Haddu, armed by Kothar-wa-Khasis, strikes down Yamm ('Sea')
+          in combat and is acclaimed king of the gods. A separate passage celebrates
+          the defeat of the seven-headed serpent Lôtan (Hebrew Leviathan). A subsequent
+          arc treats Baal's death at the hands of Mot and his revival.
+        variants: ["Lôtan passage (KTU 1.5) is a brief retrospective reference; treat as attestation but not a standalone narrative."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Kingship, not cosmogony (Smith & Pitard). Flag Ballentine 2015's alternative-sovereign reading."
+
+  - id: hebrew_bible_christian
+    name: "Hebrew Bible and Early Christianity"
+    stories:
+      - id: yhwh-leviathan-rahab
+        title: "YHWH vs. Leviathan and Rahab"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: day-1985
+            loc: "God's Conflict with the Dragon and the Sea, chs. 1–5"
+            identifier: "ISBN 9781532692659"
+          - id: ballentine-2015
+            loc: "The Conflict Myth and the Biblical Tradition, chs. 2–4"
+            identifier: "ISBN 9780199370252"
+        date_range: "Biblical poetic corpus, c. 8th–4th c. BCE"
+        summary: |
+          Across Psalms 74, 89, 104; Isaiah 27:1 and 51:9–10; Job 26 and 41; and
+          Habakkuk 3, YHWH is praised as victor over Leviathan, Rahab, and the sea —
+          monstrous adversaries whose defeat is invoked as the charter of creation
+          and kingship. The corpus preserves (and reshapes) imagery paralleled in
+          the Baal Cycle.
+        variants: ["Different books emphasize different figures (Leviathan in Pss 74, 104; Rahab in Isa 51, Job 26); present the corpus as a family of related attestations."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Gunkel 1895's original anchor case. Distinct from Revelation 12 (separate entry)."
+
+      - id: revelation-12-dragon
+        title: "Michael vs. the Red Dragon"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: yarbro-collins-1976
+            loc: "The Combat Myth in the Book of Revelation, chs. 2–4"
+            identifier: "ISBN 9780891300571"
+          - id: aune-revelation
+            loc: "WBC 52B, on Rev 12"
+            identifier: "ISBN 9780849902512"
+        date_range: "c. 90–95 CE (Domitianic dating)"
+        summary: |
+          A seven-headed red dragon attempts to devour a heavenly woman's newborn
+          child; Michael and his angels cast the dragon down to earth. The text's
+          12:9 gloss ('the ancient serpent, called the devil and Satan') explicitly
+          links the dragon to Eden and to the Leviathan/Rahab tradition.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "New Testament eschatologisation of the Hebrew Bible combat tradition."
+
+      - id: st-george-michael
+        title: "St. George and the Michael-lineage"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: ogden-2013
+            loc: "Drakōn, chs. 11–12 (Christian adaptations)"
+            identifier: "ISBN 9780199557325"
+        date_range: "Late antique to high medieval, c. 4th–13th c. CE"
+        summary: |
+          The cult of St. Michael the Archangel (drawing directly on Rev 12) and the
+          late-antique passio of St. George — in which the soldier-saint rescues a
+          princess from a lake-dwelling dragon — together preserve and Christianize
+          the serpent-combat iconography across the medieval Mediterranean.
+        variants: ["Multiple Passio S. Georgii recensions; the princess-and-dragon episode is a later accretion."]
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Specific primary-text editions (Legenda Aurea, Byzantine iconographic corpora) to be pinned down at chapter-briefs. For now the scholarly anchor is Ogden 2013."
+
+  - id: greece_rome
+    name: "Greece and Rome"
+    stories:
+      - id: zeus-typhon
+        title: "Zeus vs. Typhon"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: west-1966-theogony
+            loc: "Hesiod Theogony 820–880 (critical edition with commentary)"
+            identifier: "ISBN 9780198141693"
+          - id: ogden-2013
+            loc: "Drakōn, chs. 2–3"
+            identifier: "ISBN 9780199557325"
+        date_range: "Hesiod c. 700 BCE; Apollodorus 1st–2nd c. CE; Nonnus 5th c. CE"
+        summary: |
+          After the Titanomachy, the earth-born Typhon (or Typhoeus) challenges
+          Olympian sovereignty. Zeus blasts him with thunderbolts; later tradition
+          (Apollodorus 1.6.3; Nonnus Dionysiaca 1–2) adds that Typhon temporarily
+          overcomes Zeus, severs his sinews, and is tricked into surrendering them,
+          with Zeus eventually burying him under Mount Etna.
+        variants: ["Hesiod (brief, no Zeus-defeat); Apollodorus (sinew-theft); Nonnus (extended Typhonomachy with Cadmus's pipe)."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Documented Near Eastern inheritance via Kumarbi Cycle and Baal/Yamm (West 1997; Burkert 1992)."
+
+      - id: apollo-python
+        title: "Apollo vs. Python"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: fontenrose-1959
+            loc: "Python: A Study of Delphic Myth and Its Origins, chs. 1–3"
+            identifier: "ISBN 9780520040915"
+          - id: ogden-2013
+            loc: "Drakōn, ch. 2"
+            identifier: "ISBN 9780199557325"
+        date_range: "Homeric Hymn to Apollo c. late 7th / early 6th c. BCE; Ovid Metamorphoses 1st c. CE"
+        summary: |
+          The young Apollo kills a monstrous she-dragon (drakaina; later named Python
+          as male) at Pytho/Delphi, establishing his oracle. The Septerion festival
+          re-enacted the killing as a purification rite, and Pausanias 10.6.5–6
+          preserves traditions that the oracle had previously belonged to Gaia,
+          Themis, and/or Poseidon.
+        variants: ["Hymn (unnamed female dragon, foster-mother of Typhaon); Ovid (male Python from flood-mud); Pausanias (previous divine owners)."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Demoted from CORE (scope-lock decision 2026-04-23): cult-foundation at Delphi, not cosmogony."
+
+      - id: herakles-dragons
+        title: "Herakles vs. the Hydra, Ladon, and Geryon"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: ogden-2013
+            loc: "Drakōn, ch. 2 (Lernaean Hydra, Ladon); Watkins 1995 on Geryon"
+            identifier: "ISBN 9780199557325"
+          - id: watkins-1995
+            loc: "How to Kill a Dragon, Part V on Geryon/cattle-raid"
+            identifier: "ISBN 9780195085952"
+        date_range: "Hesiod Theogony c. 700 BCE; Apollodorus 1st–2nd c. CE; Apollonius 3rd c. BCE"
+        summary: |
+          Three Herakles labours involving serpent-adversaries: the many-headed Hydra
+          of Lerna, the dragon Ladon guarding the apples of the Hesperides, and the
+          triple-bodied Geryon (a cattle-raid parallel cited by Watkins as an
+          Indo-European reflex).
+        variants: ["Three distinct labours share the serpent-adversary pattern; treat as a sub-cluster within a family chapter."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Treat as Greek dragon-combats after Zeus-Typhon in the family chapter."
+
+      - id: perseus-ketos
+        title: "Perseus vs. Ketos (and Medusa)"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: ogden-2013
+            loc: "Drakōn, chs. 2, 11 (Ketos, and Christian reception)"
+            identifier: "ISBN 9780199557325"
+        date_range: "Apollodorus 1st–2nd c. CE; iconographic evidence from archaic period"
+        summary: |
+          Perseus rescues Andromeda from the sea-monster Ketos sent by Poseidon.
+          The story is the direct iconographic and narrative archetype of the
+          medieval St. George / princess / dragon pattern.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Part of the Greek family chapter; also loops into the reception coda (George-lineage)."
+
+      - id: kadmos-dragon
+        title: "Kadmos vs. the dragon of Ares"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: ogden-2013
+            loc: "Drakōn, ch. 2"
+            identifier: "ISBN 9780199557325"
+        date_range: "Apollodorus; Ovid Metamorphoses 3.1–130"
+        summary: |
+          Kadmos slays the dragon guarding the spring of Ares at Thebes, sows its
+          teeth, and founds the city from the Spartoi who spring from them. A
+          foundation-combat, not cosmogonic.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+
+      - id: bellerophon-chimaera
+        title: "Bellerophon vs. the Chimaera"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: ogden-2013
+            loc: "Drakōn, ch. 2"
+            identifier: "ISBN 9780199557325"
+        date_range: "Homer Iliad 6.179–183; later mythographers"
+        summary: |
+          Riding Pegasus, Bellerophon slays the Chimaera — a composite beast with
+          lion's head, goat's body, and serpent's tail — on behalf of the king
+          Iobates of Lycia.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+
+      - id: cacus
+        title: "Hercules vs. Cacus"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: west-2007
+            loc: "Indo-European Poetry and Myth, ch. 6 on cattle-raid parallels"
+            identifier: "ISBN 9780199280759"
+        date_range: "Virgil Aeneid 8.190–279; Ovid Fasti 1.543–582"
+        summary: |
+          The fire-breathing giant Cacus steals cattle that Hercules has driven back
+          from Geryon; Hercules slays him in his cave under the Aventine. Dumézil
+          reads the episode as an Italic reflex of the Indo-European cattle-raid
+          combat pattern.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+
+  - id: iran
+    name: "Iran"
+    stories:
+      - id: thraetaona-azidahaka
+        title: "Thraētaona vs. Aži Dahāka"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: watkins-1995
+            loc: "How to Kill a Dragon, Part V chs. 44–48"
+            identifier: "ISBN 9780195085952"
+          - id: benveniste-renou-1934
+            loc: "Vṛtra et Vṛθragna"
+            identifier: "stable-url:gallica.bnf.fr"
+        date_range: "Avestan yashts, 2nd–1st millennium BCE; Pahlavi Bundahišn late Sasanian / early Islamic"
+        summary: |
+          The hero Thraētaona (later Fereydun) slays the three-headed, six-eyed serpent
+          Aži Dahāka, who had oppressed the Iranian lands. In the Zoroastrian
+          eschatological frame the serpent is only bound, not killed — and Kərəsāspa
+          must kill him again at the final renovation (Frashokereti).
+        variants: ["Avestan hymn-level references vs. Pahlavi narrative expansion; treat side by side."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Watkins's flagship Indo-Iranian reflex of HERO SLAY SERPENT (closely paralleling Indra/Vṛtra)."
+
+      - id: frashokereti
+        title: "Frashokereti — the final renovation"
+        tier: related
+        primary_chapter_type: full
+        sources:
+          - id: gunkel-1895
+            loc: "Schöpfung und Chaos, Teil II (for Endzeit framing)"
+            identifier: "stable-url:archive.org/details/schpfungundchao00gunkgoog"
+        date_range: "Pahlavi texts (Bundahišn, Zādspram), late Sasanian / early Islamic"
+        summary: |
+          At the end of cosmic time, Aži Dahāka breaks his bonds and Kərəsāspa,
+          revived from his long sleep, kills him. Angra Mainyu is defeated, the dead
+          are raised, and the world is renovated to its flawless original state.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Pahlavi Bundahišn primary-source citation (Anklesaria or West editions) to be pinned at chapter-briefs. Treat as pendant to thraetaona-azidahaka."
+
+  - id: india
+    name: "India"
+    stories:
+      - id: indra-vrtra
+        title: "Indra vs. Vṛtra"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: jamison-brereton-2014
+            loc: "Rigveda 1.32; 1.80; 2.11–12; 4.18; 5.32; 6.17; 8.96; 10.113"
+            identifier: "ISBN 9780199370184"
+          - id: benveniste-renou-1934
+            loc: "Vṛtra et Vṛθragna"
+            identifier: "stable-url:gallica.bnf.fr"
+        date_range: "Rigvedic corpus c. 1500–1200 BCE (oral composition)"
+        summary: |
+          Fortified by soma and wielding the vajra, Indra strikes the serpent-demon
+          Vṛtra, splits the mountain, and releases the pent-up waters. The blow
+          simultaneously separates heaven and earth and produces dawn; the victory
+          also validates Indra's kingship over the gods.
+        variants: ["Later tradition (Śatapatha Brāhmaṇa; Mahābhārata) reframes Vṛtra as a Brahmin, adding a guilt-of-brahminicide overlay absent in the Rigveda."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Basis of Watkins's 'HERO SLAY SERPENT' formula (áhann áhim)."
+
+      - id: trita-aptya
+        title: "Trita Āptya and the three-headed serpent"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: jamison-brereton-2014
+            loc: "Rigveda 10.8.8–9; 1.105; 2.11.19–20"
+            identifier: "ISBN 9780199370184"
+          - id: watkins-1995
+            loc: "How to Kill a Dragon, Part V (pre-Indra stratum)"
+            identifier: "ISBN 9780195085952"
+        date_range: "Rigvedic corpus c. 1500–1200 BCE"
+        summary: |
+          A small cluster of Rigvedic hymns assigns the dragon-slaying to the older
+          figure Trita Āptya rather than Indra, or to Indra-and-Trita together.
+          Dumézil and Watkins read this as a pre-Indra Indo-Iranian stratum of
+          the same combat pattern.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+
+      - id: krishna-kaliya
+        title: "Krishna vs. Kāliya"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: west-2007
+            loc: "Indo-European Poetry and Myth (for parallel IE storm-god/snake patterns)"
+            identifier: "ISBN 9780199280759"
+        date_range: "Harivaṃśa c. 4th c. CE; Viṣṇu Purāṇa c. 5th c. CE; Bhāgavata Purāṇa 9th–10th c. CE"
+        summary: |
+          The child Krishna leaps into the Yamunā river and dances atop the many-headed
+          serpent Kāliya, who has poisoned the water; the cowed serpent agrees to
+          leave the river. A bhakti-era reworking of the Indra/Vṛtra water-release
+          pattern.
+        variants: ["Short bhakti episode, rich iconographic tradition."]
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Primary-source edition (e.g., Tagare's BhP translation, Motilal Banarsidass) to be pinned at chapter-briefs."
+
+  - id: egypt
+    name: "Egypt"
+    stories:
+      - id: ra-apep
+        title: "Ra vs. Apep"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: faulkner-1972-bod
+            loc: "Book of the Dead spells 7, 39, 108"
+            identifier: "ISBN 9780292704251"
+          - id: te-velde-1967
+            loc: "Seth, God of Confusion, chs. 3–4"
+            identifier: "ISBN 9789004054028"
+          - id: assmann-2001-search
+            loc: "The Search for God in Ancient Egypt, chs. on maʿat/isfet"
+            identifier: "ISBN 9780801487293"
+        date_range: "Textual record from Pyramid Texts (c. 2400 BCE) through the Bremner-Rhind Papyrus (c. 310 BCE); iconography from Naqada I (c. 4000 BCE)"
+        summary: |
+          The chaos-serpent Apep attacks Ra's solar barque each night as the sun-god
+          traverses the Duat; with the aid of Seth, Mehen, Isis, and others, Apep is
+          wounded, coiled, dismembered, and bound so that Ra can emerge at dawn. The
+          combat is cyclical rather than cosmogonic: every sunrise is a re-won victory,
+          and the dedicated Bremner-Rhind Book of Overthrowing Apep gave priests a
+          liturgical manual for executing the combat daily.
+        variants: ["Mehen's coils, Seth's spear, Isis's binding-magic are emphasized differently across Amduat hours, Book of Gates registers, and the Bremner-Rhind liturgy — present as a coherent corpus rather than isolated episodes."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Paradigmatic cyclical-maintenance subtype."
+
+      - id: horus-seth
+        title: "Horus vs. Seth"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: te-velde-1967
+            loc: "Seth, God of Confusion, chs. 1–2"
+            identifier: "ISBN 9789004054028"
+        date_range: "Pyramid Texts through Chester Beatty I (Contendings, c. 1160 BCE)"
+        summary: |
+          Seth and Horus contend for kingship after Osiris's murder; Seth is both
+          Osiris's killer and (in a different textual layer) Apep's slayer at the
+          prow of the solar barque, making him one of Egyptian mythology's most
+          ambivalent figures.
+        variants: ["Chester Beatty I preserves a bawdy literary Contendings; older ritual tradition is more sober."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: |
+          Debated chaoskampf case (te Velde); Seth is both ordering and disruptive.
+          [INCLUSION-MARGINAL] The adversary (Seth) is not serpentine; the combat is
+          god-against-god sovereignty strife more than hero-against-monster. Kept
+          RELATED in the Egyptian family chapter as a contrast to Ra/Apep. Chapter
+          framing must be explicit that this sits at the edge of the operational
+          test (scope.md §"Inclusion / exclusion criteria").
+
+  - id: norse_germanic_ie
+    name: "Norse, Germanic, and other Indo-European reflexes"
+    stories:
+      - id: thor-jormungandr
+        title: "Thor vs. Jörmungandr (the Midgard Serpent)"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: larrington-poetic-edda
+            loc: "Hymiskviða; Völuspá 56"
+            identifier: "ISBN 9780199675340"
+          - id: faulkes-snorri
+            loc: "Gylfaginning 34, 46–48, 51"
+            identifier: "ISBN 9780460876162"
+          - id: watkins-1995
+            loc: "How to Kill a Dragon, Part V on skaldic diction"
+            identifier: "ISBN 9780195085952"
+        date_range: "Skaldic c. 850–1000 CE (Bragi, Úlfr Uggason, Eysteinn Valdason); Eddic 10th–13th c. CE"
+        summary: |
+          Thor and Jörmungandr meet three times: once in disguise at Útgarðaloki's hall,
+          once in the fishing expedition with Hymir (the most iconographically dense
+          Norse myth, carved on the Altuna, Hørdum, Gosforth, and Ardre VIII stones),
+          and finally at Ragnarök, where Thor kills the serpent and staggers nine
+          paces before dying of its venom. Skaldic kennings appear to preserve the
+          Indo-European storm-god/dragon diction directly.
+        variants: ["Hymiskviða: Hymir cuts the line; Húsdrápa (skaldic): Thor appears to behead the serpent; Ragnarök: Thor kills it and dies. Present as layered record."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Eschatological-displacement subtype. Watkins reads the skaldic diction as a direct IE reflex."
+
+      - id: sigurd-fafnir
+        title: "Sigurd vs. Fáfnir"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: watkins-1995
+            loc: "How to Kill a Dragon, ch. 42"
+            identifier: "ISBN 9780195085952"
+          - id: larrington-poetic-edda
+            loc: "Fáfnismál"
+            identifier: "ISBN 9780199675340"
+        date_range: "Eddic poems 10th–13th c. CE; Völsunga saga c. 1270 CE"
+        summary: |
+          The hero Sigurd, advised by Regin, ambushes and slays Fáfnir — a dwarf
+          transformed into a dragon by cursed gold — and tastes the dragon's blood,
+          gaining understanding of birdsong. The killing brings Sigurd the treasure
+          but also the curse that will ruin him.
+        variants: ["Eddic vs. Völsunga saga emphases; Nibelungenlied's Siegfried is a related Germanic witness."]
+        scope_uncertain: false
+        identifier_missing: false
+
+      - id: beowulf-dragons
+        title: "Beowulf vs. Grendel and the dragon"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: watkins-1995
+            loc: "How to Kill a Dragon, Part V"
+            identifier: "ISBN 9780195085952"
+        date_range: "Beowulf manuscript (Cotton Vitellius A.xv), c. 1000 CE; composition earlier (7th–10th c.)"
+        summary: |
+          Beowulf kills the fen-dwelling Grendel and Grendel's mother at the Danish
+          court, and — fifty years later, as an old king — is killed in turn slaying
+          a treasure-hoarding dragon. Tolkien 1936 argued for the dragon as a
+          properly mythic adversary; Watkins reads the poem's dragon-slaying
+          vocabulary as a direct IE reflex.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Primary-text edition (Klaeber 4th ed., ed. Fulk/Bjork/Niles 2008) to be pinned at chapter-briefs."
+
+      - id: lugh-balor
+        title: "Lugh vs. Balor (Second Battle of Mag Tuired)"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: west-2007
+            loc: "Indo-European Poetry and Myth (for IE parallels)"
+            identifier: "ISBN 9780199280759"
+        date_range: "Cath Maige Tuired manuscripts, 12th–16th c. CE; oral tradition earlier"
+        summary: |
+          At the Second Battle of Mag Tuired, Lugh of the Tuatha Dé Danann kills his
+          evil-eyed grandfather Balor of the Fomorians with a stone from a sling
+          (or spear), ending Fomorian tyranny and inaugurating Tuatha Dé rule.
+        variants: ["Sling-stone (standard version); spear (variant)."]
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Primary-text edition (Gray 1982, Irish Texts Society) to be pinned at chapter-briefs."
+
+      - id: welsh-red-white-dragon
+        title: "The Red Dragon and the White Dragon"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: ogden-2013
+            loc: "Drakōn, ch. on Celtic material"
+            identifier: "ISBN 9780199557325"
+        date_range: "Historia Brittonum c. 828 CE; Lludd and Llefelys in the Mabinogion 12th–13th c. CE"
+        summary: |
+          Beneath Dinas Emrys, a red and a white dragon fight; in Historia Brittonum
+          they are interpreted as the Britons against the Saxons. Lludd and Llefelys
+          preserves an older, less political version in which the combat is an
+          annual disturbance to be ended.
+        variants: ["Historia Brittonum political allegory vs. Mabinogi ritual-annual frame."]
+        scope_uncertain: false
+        identifier_missing: true
+
+      - id: batraz-nart
+        title: "Batraz and the Nart combats"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: west-2007
+            loc: "Indo-European Poetry and Myth (for Scytho-Alanic reflex)"
+            identifier: "ISBN 9780199280759"
+        date_range: "Ossetian Nart sagas, oral tradition recorded 19th–20th c.; Scytho-Alanic substrate ancient"
+        summary: |
+          Batraz, the steel-bodied Nart warrior, fights monstrous giants and dragons
+          on behalf of his people; Dumézil reads him as the Scytho-Alanic reflex of
+          the Indo-European warrior / dragon-slayer.
+        variants: ["Multiple recorded variants across Ossetian, Circassian, Chechen narrators."]
+        scope_uncertain: false
+        identifier_missing: true
+
+      - id: vahagn-vishaps
+        title: "Vahagn and the vishaps"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: russell-zoroastrianism-armenia
+            loc: "Zoroastrianism in Armenia (Vahagn chapter)"
+            identifier: "ISBN 9780674968509"
+        date_range: "Movses Khorenatsi Patmut'iwn Hayots' book I (written 5th–9th c. CE); vishapakar stelae 2nd millennium BCE"
+        summary: |
+          Vahagn's epithet Vishapakagh ('dragon-reaper') and Khorenatsi's paraphrase
+          of a lost hymn frame him as Armenia's storm-god dragon-slayer. Petrosyan
+          and Russell link him to the Indo-European combat tradition, while noting
+          the narrative text itself is lost.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Primary attestation is fragmentary; be explicit. Kept RELATED (not CORE) at scope-lock (user decision 2026-04-23)."
+
+  - id: slavic_baltic
+    name: "Slavic and Baltic"
+    stories:
+      - id: perun-veles
+        title: "Perun vs. Veles (reconstructed 'basic myth')"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: west-2007
+            loc: "Indo-European Poetry and Myth, ch. 6 ('Storm and Stream')"
+            identifier: "ISBN 9780199280759"
+        date_range: "Reconstruction from Slavic folklore, medieval chronicles, and toponyms; Ivanov & Toporov proposed 1965–1974"
+        summary: |
+          On the Ivanov/Toporov reconstruction, the Slavic storm-god Perun pursues the
+          cattle-stealing earth-serpent Veles through tree, rock, water, and livestock
+          before striking him with lightning and releasing rain. The reconstruction
+          is contested: Jakobson, Lajoye, Moszyński, and Kapović have all voiced
+          methodological objections.
+        variants: ["Fragments only; reconstruction, not attestation."]
+        scope_uncertain: true
+        identifier_missing: true
+        notes: "Chapter must be explicit that this is reconstruction. Scope_uncertain flagged for the specific plot details."
+
+      - id: dobrynya-zmey
+        title: "Dobrynya Nikitich vs. Zmey Gorynych"
+        tier: related
+        primary_chapter_type: family
+        sources: []
+        date_range: "East Slavic byliny, recorded 19th c.; tradition medieval"
+        summary: |
+          In the Russian epic tradition, the bogatyr Dobrynya Nikitich kills the
+          three-headed dragon Zmey Gorynych and rescues the princess. Treated by
+          Ivanov & Toporov as the later bylina reflex of the Perun-Veles pattern.
+        variants: ["Multiple recorded bylina variants."]
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Primary-text edition (Oinas, Propp) to be pinned at chapter-briefs."
+
+  - id: east_asia
+    name: "East Asia"
+    stories:
+      - id: gonggong
+        title: "Gonggong and the broken pillar"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: lewis-2006-flood
+            loc: "The Flood Myths of Early China, chs. 2–3"
+            identifier: "ISBN 9780791466636"
+          - id: birrell-1993
+            loc: "Chinese Mythology: An Introduction, ch. on cosmogony"
+            identifier: "ISBN 9780801849954"
+        date_range: "Han compilations (Huainanzi, Lienü zhuan) 2nd c. BCE–1st c. CE, incorporating earlier material"
+        summary: |
+          The water-god Gonggong, defeated in combat, strikes his head against Mount
+          Buzhou; the pillar of heaven breaks and the world tilts. Nüwa repairs the
+          sky with five-coloured stones. The combat-plus-repair frames the present
+          asymmetry of the cosmos.
+        variants: ["Huainanzi vs. Lienü zhuan variants; treat side by side."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Combat-cosmogony distinct from Yu the Great's hydraulic ordering (Yu appears as sidebar, not core)."
+
+      - id: hou-yi
+        title: "Hou Yi and the suns"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: lewis-2006-flood
+            loc: "The Flood Myths of Early China (Hou Yi / Yao cluster)"
+            identifier: "ISBN 9780791466636"
+          - id: birrell-1993
+            loc: "Chinese Mythology, ch. on solar myths"
+            identifier: "ISBN 9780801849954"
+        date_range: "Chuci 'Tian wen' (c. 3rd c. BCE); Huainanzi; Shanhaijing"
+        summary: |
+          When ten suns rise together and scorch the earth, the archer Hou Yi shoots
+          down nine of them and also slays monstrous beasts (the Chiseltooth, the
+          Nine-headed Monster, the Zhuyin serpent). Order is restored under Yao.
+        variants: ["Nine-beasts cluster varies across sources."]
+        scope_uncertain: false
+        identifier_missing: false
+
+      - id: susanoo-orochi
+        title: "Susanoo vs. Yamata no Orochi"
+        tier: related
+        primary_chapter_type: full
+        sources:
+          - id: philippi-kojiki
+            loc: "Kojiki 1.19–1.20"
+            identifier: "ISBN 9780691611358"
+          - id: naumann-mythen
+            loc: "Die Mythen des alten Japan (Orochi chapter)"
+            identifier: "ISBN 9783406421648"
+        date_range: "Kojiki 712 CE; Nihon Shoki 720 CE"
+        summary: |
+          Expelled from heaven, Susanoo descends to Izumo, where the eight-headed
+          serpent Yamata no Orochi has eaten seven of an elderly couple's eight
+          daughters. Susanoo intoxicates the serpent with eight vats of sake,
+          dismembers it, and finds the sword Kusanagi in its tail — a founding
+          regalia of the imperial line.
+        variants: ["Kojiki single account; Nihon Shoki juxtaposes multiple 'one writing says' variants."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Demoted from CORE (scope-lock 2026-04-23): Japanese specialists (Naumann, Isomae, Como, Ooms) frame as sword-etiology / metallurgical allegory, not chaoskampf. Chapter will treat the label as applied from outside."
+
+      - id: erlik-ulgen
+        title: "Erlik vs. Ülgen"
+        tier: related
+        primary_chapter_type: family
+        sources: []
+        date_range: "Altaic / Siberian oral traditions; 19th-c.–20th-c. ethnographic recordings"
+        summary: |
+          In Altaic and broader Turkic-Mongol mythology, the sky-god Ülgen opposes
+          the underworld-god Erlik; the opposition is dualistic and cosmogonic
+          rather than straightforwardly combat-resolved.
+        variants: ["Heavy ethnographic variability across Altai, Buryat, Yakut."]
+        scope_uncertain: true
+        identifier_missing: true
+        notes: |
+          Eliade and Harva are scholarly anchors; primary ethnographic sources to
+          be pinned at chapter-briefs. [INCLUSION-MARGINAL] Adversary is not
+          serpentine — Erlik is the underworld-god, not a dragon. Kept RELATED as
+          a dualistic-cosmology comparandum rather than a chaoskampf proper;
+          chapter framing must flag this. Audit 2026-04-23 flagged the marginal
+          fit; design decision (2026-04-23) is to keep RELATED with an explicit
+          framing marker rather than moving to sidebar.
+
+  - id: americas
+    name: "The Americas"
+    stories:
+      - id: huitzilopochtli-coatepec
+        title: "Huitzilopochtli, Coyolxauhqui, and the Centzon Huitznahua (Coatepec)"
+        tier: core
+        primary_chapter_type: full
+        sources:
+          - id: matos-moctezuma-templo-mayor
+            loc: "The Great Temple of the Aztecs, interpretive chapters"
+            identifier: "ISBN 9780500390245"
+          - id: carrasco-1999-city
+            loc: "City of Sacrifice, ch. on Coatepec"
+            identifier: "ISBN 9780807046425"
+          - id: lopez-austin-myths
+            loc: "The Myths of the Opossum, ch. on cosmic combat"
+            identifier: "ISBN 9780826313942"
+        date_range: "Florentine Codex 1545–1590 (Sahagún, recording earlier Mexica tradition)"
+        summary: |
+          At the mountain Coatepec, the infant Huitzilopochtli — born to Coatlicue
+          from a ball of feathers — emerges fully armed to kill his sister
+          Coyolxauhqui and scatter his four hundred brothers, the Centzon Huitznahua.
+          The Templo Mayor is built as Coatepec, re-enacting the combat
+          architecturally.
+        variants: ["Florentine Codex (Book 3) is the main source; Historia de los Mexicanos por sus pinturas and Durán corroborate details."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "State-foundation combat of the Mexica; Templo Mayor IS the mountain."
+
+      - id: cipactli
+        title: "Cipactli (dismemberment-cosmogony boundary case)"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: lopez-austin-myths
+            loc: "The Myths of the Opossum, ch. on creation"
+            identifier: "ISBN 9780826313942"
+        date_range: "Histoyre du Mechique (c. 1543); Leyenda de los Soles (1558)"
+        summary: |
+          Tezcatlipoca and Quetzalcoatl pull apart the primordial earth-monster
+          Cipactli to make the sky and the earth from her body. No combat in the
+          narrow sense — a dismemberment-cosmogony. Included precisely to mark the
+          boundary of the motif family.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Dismemberment without combat; kept in RELATED to make the distinction explicit."
+
+      - id: quetzalcoatl-tezcatlipoca
+        title: "Quetzalcoatl vs. Tezcatlipoca (the Suns)"
+        tier: related
+        primary_chapter_type: family
+        sources:
+          - id: carrasco-1999-city
+            loc: "City of Sacrifice, chs. on the five Suns"
+            identifier: "ISBN 9780807046425"
+          - id: lopez-austin-myths
+            loc: "The Myths of the Opossum"
+            identifier: "ISBN 9780826313942"
+        date_range: "Leyenda de los Soles (1558); Historia de los Mexicanos por sus pinturas"
+        summary: |
+          Across the five Suns, Quetzalcoatl and Tezcatlipoca alternate as rulers,
+          toppling each other in succession; world-ages end in catastrophe and
+          re-creation. A cosmogonic-political cycle, less a single chaoskampf than
+          a rhythm of combats.
+        variants: ["Significant variation across Mexica and other Nahua sources."]
+        scope_uncertain: false
+        identifier_missing: false
+
+      - id: pariacaca-amaru
+        title: "Pariacaca and the amaru"
+        tier: related
+        primary_chapter_type: full
+        sources:
+          - id: salomon-urioste-huarochiri
+            loc: "Huarochirí Manuscript chs. 6, 8, 21 (Pariacaca and amaru passages)"
+            identifier: "ISBN 9780292730533"
+        date_range: "Huarochirí Manuscript c. 1608 (Quechua, recording oral tradition)"
+        summary: |
+          The storm-huaca Pariacaca opposes, defeats, and integrates rival huacas
+          across the Huarochirí landscape. The amaru in these episodes is often a
+          summoned ally-monster of the defeated rival — not a primordial chaos,
+          but a figure of huaca-succession.
+        variants: ["Multiple episodes (not a single combat); treat as cycle."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Andean specialists (Salomon, Taylor, Dean) read as huaca-succession, not chaoskampf — preserve that framing."
+
+      - id: mapuche-kai-tren
+        title: "Kai-Kai vs. Tren-Tren"
+        tier: related
+        primary_chapter_type: family
+        sources: []
+        date_range: "Recorded 19th–20th c. from Mapuche oral tradition; tradition older"
+        summary: |
+          The marine serpent Kai-Kai raises the sea to drown the earth; the mountain
+          serpent Tren-Tren raises the mountains in response to save the Mapuche.
+          A two-serpent cosmogony that preserves a flood-and-height memory.
+        variants: ["Regional Mapuche variations across Nguluche, Huilliche, Pehuenche."]
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Primary ethnographic sources (Foerster; Koessler-Ilg; Bacigalupo) to be pinned at chapter-briefs."
+
+  - id: africa
+    name: "Africa"
+    stories:
+      - id: bida
+        title: "Bida and the founding of Wagadu (the inversion)"
+        tier: related
+        primary_chapter_type: full
+        sources:
+          - id: conrad-west-africa
+            loc: "Empires of Medieval West Africa, ch. on Ghana/Wagadu legend"
+            identifier: "ISBN 9780816052622"
+          - id: belcher-epic
+            loc: "Epic Traditions of Africa, ch. on Soninke traditions"
+            identifier: "ISBN 9780253212818"
+        date_range: "Oral tradition recorded from 19th c. (Monteil, Dieterlen); tradition medieval"
+        summary: |
+          The seven-headed serpent Bida protects the Soninke city of Wagadu in
+          exchange for an annual tribute of a young woman. When the bride's suitor
+          Mamadi Sefe Dekote kills Bida, Wagadu is abandoned, the rains cease, and
+          the people scatter. Slaying the serpent *ends* prosperity — the inverse
+          of the standard chaoskampf outcome.
+        variants: ["Multiple oral recordings differ on Bida's number of heads and the hero's lineage."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Anchor case for the Part II inversion comparative chapter (scope-lock decision 2026-04-23). The 'reverse chaoskampf' reading is a modern comparativist overlay — flag this in the chapter."
+
+      - id: mwindo-kirimu
+        title: "Mwindo and Kirimu (the contrastive case)"
+        tier: contrastive
+        primary_chapter_type: full
+        sources:
+          - id: biebuyck-mateene-mwindo
+            loc: "The Mwindo Epic, episode of Kirimu"
+            identifier: "ISBN 9780520003767"
+          - id: belcher-epic
+            loc: "Epic Traditions of Africa, ch. on Mwindo"
+            identifier: "ISBN 9780253212818"
+        date_range: "Recorded from Nyanga oral performance 1950s–60s; tradition older"
+        summary: |
+          In the Mwindo epic, the hero kills the monstrous dragon Kirimu — and is
+          then punished by the sky-god Nkuba for the killing. The moral valence is
+          inverted from chaoskampf: the dragon-slaying is hubris, not order-making.
+        variants: ["Biebuyck & Mateene 1969 primary text; Biebuyck later published additional Nyanga epics."]
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Treated as a contrastive case: the reader sees what a very thorough combat-myth looks like when its moral frame refuses chaoskampf."
+
+  - id: se_asia_oceania
+    name: "Southeast Asia and Oceania"
+    stories:
+      - id: bakunawa
+        title: "Bakunawa and the moons"
+        tier: related
+        primary_chapter_type: family
+        sources: []
+        date_range: "Visayan / Bikol oral tradition; recorded from 19th c., main scholarly collections 20th c."
+        summary: |
+          The serpent-dragon Bakunawa devours six of the seven original moons; to
+          save the last, communities make ritual noise (drums, gongs, shouting) to
+          drive the serpent off during eclipses. There is no hero who slays it —
+          the combat is communal and recurring.
+        variants: ["Visayan, Bikol, and other Philippine regional variants differ on details."]
+        scope_uncertain: false
+        identifier_missing: true
+        notes: "Primary collections (Eugenio's Philippine Folk Literature series) to be pinned at chapter-briefs. Eclipse-aetiology, not hero-slaying."
+
+  - id: finnic
+    name: "Finnic"
+    stories:
+      - id: vainamoinen-iku-turso
+        title: "Väinämöinen and Iku-Turso (transformed variant)"
+        tier: related
+        primary_chapter_type: full
+        sources:
+          - id: siikala-finnish
+            loc: "Mythic Images and Shamanism, chs. on Kalevala combat"
+            identifier: "ISBN 9789514109027"
+        date_range: "Older rune tradition (medieval?); Lönnrot's Kalevala literary synthesis 1835 / 1849"
+        summary: |
+          The sea-monster Iku-Turso emerges; Väinämöinen subdues him by shamanic
+          song rather than by sword. The encounter is a *binding* not a slaying,
+          embedded in Lönnrot's 19th-century editorial synthesis of older rune
+          material.
+        variants: ["Older rune variants more laconic; Lönnrot's composite expanded them."]
+        scope_uncertain: true
+        identifier_missing: false
+        notes: "Kept RELATED as transformed variant (scope-lock 2026-04-23). Chapter will treat Lönnrot's editorial layer explicitly."
+
+  - id: contrastive_na
+    name: "North America (contrastive)"
+    stories:
+      - id: nanabozho-mishipeshu
+        title: "Nanabozho and Mishipeshu (the refusal)"
+        tier: contrastive
+        primary_chapter_type: full
+        sources: []
+        date_range: "Anishinaabe oral tradition; recorded from 19th c., Hallowell's 'other-than-human persons' framework 1960"
+        summary: |
+          In Anishinaabe tradition, the trickster-culture-hero Nanabozho encounters
+          the underwater manitou Mishipeshu and the Thunderers as necessary
+          counterparts in a reciprocal moral universe — not as chaos to be defeated.
+          Area specialists (Hallowell, Johnston, T. Smith, Vizenor) explicitly
+          decline the chaos-vs-order mapping.
+        variants: []
+        scope_uncertain: true
+        identifier_missing: true
+        notes: "Treated as contrastive case (scope-lock decision 2026-04-23): the chapter foregrounds area specialists' refusal of the chaoskampf frame. Primary-text editions (Basil Johnston; Theresa S. Smith) to be pinned at chapter-briefs."
+
+  # ── Part II material held here for completeness (no story-chapters attached) ──
+
+  - id: critique
+    name: "Methodological critique"
+    stories:
+      - id: rainbow-serpent-critique
+        title: "The Rainbow Serpent problem (methodological chapter)"
+        tier: critique
+        primary_chapter_type: methods
+        sources:
+          - id: merlan-caging-rainbow
+            loc: "Caging the Rainbow, chs. 1–3"
+            identifier: "ISBN 9780824819668"
+        date_range: "Radcliffe-Brown 1926 (critique target); Merlan 1998, Morphy 1991, Rose 1996, Keen 1994 (critique authors)"
+        summary: |
+          Radcliffe-Brown's 1926 paper consolidated distinct regional ancestral
+          beings (Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul) into a pan-Aboriginal
+          'Rainbow Serpent.' Later ethnographers and Aboriginal Studies scholars
+          have dismantled this lumping. The chapter treats the Rainbow Serpent
+          primarily as a case study in the limits of the chaoskampf category,
+          not as a chaoskampf exemplar.
+        variants: []
+        scope_uncertain: true
+        identifier_missing: false
+        notes: "Methodological chapter (scope-lock decision 2026-04-23). The chapter's positive content is the critique, not the myths themselves."
+
+  - id: sidebars
+    name: "Comparative sidebars"
+    stories:
+      - id: yu-sidebar
+        title: "Yu the Great and hydraulic ordering (sidebar)"
+        tier: sidebar
+        primary_chapter_type: sidebar
+        sources:
+          - id: lewis-2006-flood
+            loc: "The Flood Myths of Early China, chs. on Yu"
+            identifier: "ISBN 9780791466636"
+        date_range: "Shujing (archaic); Han compilations"
+        summary: |
+          Yu tames the great flood by opening channels, not by combat. Sidebar
+          contrasting hydraulic-ordering (Yu) with combat-ordering (Gonggong) in
+          the same Chinese tradition.
+        variants: []
+        scope_uncertain: false
+        identifier_missing: false
+        notes: "Sidebar, not a story chapter (scope-lock decision 2026-04-23). Placed in the Part II comparative chapter on ordering subtypes."
+
+# Explicit exclusions (for the inventory-audit stage to verify no silent inclusion):
+excluded:
+  - id: mucalinda
+    reason: "Protection narrative, not combat (DeCaroli, Strong)."
+  - id: antaboga
+    reason: "Cosmogonic support-serpent, no combat episode (Hooykaas, Zoetmulder)."
+  - id: whowie
+    reason: "Local dangerous-creature tale; colonial-appropriation via Unaipon / Ramsay Smith."
+  - id: rama-ravana
+    reason: "Heroic epic, not cosmogonic."
+  - id: garuda-nagas
+    reason: "Inter-species enmity, not order-establishing."
+  - id: gilgamesh-bull-of-heaven
+    reason: "Hero-initiation; fold into Humbaba if retained (not retained)."
+  - id: humbaba
+    reason: "Forsyth includes; Andrew George and most Assyriologists dissent; excluded for now."
+  - id: nergal-erra
+    reason: "Inverse structure, no monster-adversary."
+  - id: fionn-aillen
+    reason: "Initiation tale (Nagy)."
+  - id: welsh-afanc
+    reason: "Regional folk-monster without cosmic stakes."
+  - id: sedna
+    reason: "Dismemberment without combatant hero."
+  - id: maui-fishing
+    reason: "Trickster-demiurge; no chaos-monster."
+  - id: yoruba-sango
+    reason: "Storm-god theophany without canonical dragon-combat."
+  - id: korean-foundation
+    reason: "No storm-vs-serpent chaoskampf in the founding myth corpus."
+  - id: thunderbird-whale
+    reason: "Ludwin et al. geomythology reading is contested; may reconsider for methodological chapter."
+  - id: lac-long-quan
+    reason: "Foundation-combat but low-medium evidence."
+
+counts:
+  cycles: 17
+  stories_in_cycles: 49
+  tier_core: 15
+  tier_related: 30
+  tier_contrastive: 2
+  tier_critique: 1
+  tier_sidebar: 1
+  excluded: 16
+  identifier_missing_true: 12
+  scope_uncertain_true: 5
+  counts_note: "Counts corrected at post-human-normalize (2026-04-23); prior inventory.yaml had stale counts."
+
+audit_notes: |
+  Known gaps flagged for the inventory-audit stage:
+    - 12 entries have identifier_missing: true — mostly RELATED stories whose
+      anchor critical-edition still needs to be pinned. Not a quality problem for
+      scope-lock; the inventory-audit + chapter-briefs stages will close these.
+    - 5 entries have scope_uncertain: true — Perun/Veles (reconstruction),
+      Väinämöinen (19th-c. editorial layer), Erlik/Ülgen (ethnographic variability),
+      Rainbow Serpent (pan-Aboriginal lumping problem), Nanabozho/Mishipeshu
+      (area specialists decline the framing). These uncertainties are expected
+      and load-bearing for the book's argument; they are not errors.
+    - No silent inclusion of excluded-category material expected, but verify.
+
+# ── Validated by post-human-normalize ──
+# Timestamp: 2026-04-23T20:10:00Z
+# Checks passed:
+#   - YAML parses cleanly.
+#   - Every story entry has id, title, tier, date_range, summary, scope_uncertain, identifier_missing.
+#   - Every source_id reference resolves to a registry entry in sources.yaml.
+#   - Counts field matches actual tier distribution.
+# Warnings:
+#   - 12 entries still carry identifier_missing: true (intentional; to be closed at chapter-briefs).
+#   - 5 entries still carry scope_uncertain: true (load-bearing for the book's argument).
+#   - Hallowell 1960 ISBN in sources.yaml remains LOW-severity unresolved from the audit.

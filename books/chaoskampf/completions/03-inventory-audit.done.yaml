@@ -1,0 +1,8 @@
+stage: "inventory-audit"
+timestamp: "2026-04-24T05:15:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "inventory-audit.yaml"
+    lines: 613
+summary: "Audited 42 inventory entries against scope.md operational inclusion test and verified ~27 identifiers via web search. Found 6 HIGH (fabricated/wrong ISBNs), 9 MEDIUM (silent conflations, stale URL, inclusion-test marginals, missing Hedammu/Song-of-the-Sea), 5 LOW."

@@ -1,0 +1,121 @@
+stage: "chapter-briefs"
+timestamp: "2026-04-23T22:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+
+outputs:
+  - file: "toc.yaml"
+    lines: 444
+  - file: "briefs/00-introduction.yaml"
+    lines: 131
+  - file: "briefs/01-ninurta-asag.yaml"
+    lines: 120
+  - file: "briefs/02-ninurta-anzu.yaml"
+    lines: 123
+  - file: "briefs/03-marduk-tiamat.yaml"
+    lines: 142
+  - file: "briefs/04-mesopotamian-minor.yaml"
+    lines: 42
+  - file: "briefs/05-kumarbi-ullikummi.yaml"
+    lines: 123
+  - file: "briefs/06-illuyanka.yaml"
+    lines: 115
+  - file: "briefs/07-baal-yamm-lotan.yaml"
+    lines: 131
+  - file: "briefs/08-yhwh-leviathan-rahab.yaml"
+    lines: 120
+  - file: "briefs/09-revelation-red-dragon.yaml"
+    lines: 116
+  - file: "briefs/10-christian-reception.yaml"
+    lines: 47
+  - file: "briefs/11-zeus-typhon.yaml"
+    lines: 120
+  - file: "briefs/12-greek-dragons-after-typhon.yaml"
+    lines: 66
+  - file: "briefs/13-thraetaona-azidahaka.yaml"
+    lines: 128
+  - file: "briefs/14-indra-vrtra.yaml"
+    lines: 122
+  - file: "briefs/15-vedic-reflexes.yaml"
+    lines: 63
+  - file: "briefs/16-ra-apep.yaml"
+    lines: 137
+  - file: "briefs/17-horus-seth.yaml"
+    lines: 55
+  - file: "briefs/18-thor-jormungandr.yaml"
+    lines: 135
+  - file: "briefs/19-ie-reflexes.yaml"
+    lines: 73
+  - file: "briefs/20-slavic-baltic.yaml"
+    lines: 59
+  - file: "briefs/21-gonggong.yaml"
+    lines: 112
+  - file: "briefs/22-hou-yi.yaml"
+    lines: 51
+  - file: "briefs/23-susanoo-orochi.yaml"
+    lines: 61
+  - file: "briefs/24-huitzilopochtli-coatepec.yaml"
+    lines: 127
+  - file: "briefs/25-mesoamerican-cluster.yaml"
+    lines: 58
+  - file: "briefs/26-pariacaca-amaru.yaml"
+    lines: 57
+  - file: "briefs/27-mapuche-kai-tren.yaml"
+    lines: 54
+  - file: "briefs/28-bida-wagadu.yaml"
+    lines: 56
+  - file: "briefs/29-mwindo-kirimu.yaml"
+    lines: 57
+  - file: "briefs/30-bakunawa.yaml"
+    lines: 61
+  - file: "briefs/31-vainamoinen-iku-turso.yaml"
+    lines: 57
+  - file: "briefs/32-nanabozho-mishipeshu.yaml"
+    lines: 67
+  - file: "briefs/33-methods.yaml"
+    lines: 119
+  - file: "briefs/34-C1-combat-as-cosmogony.yaml"
+    lines: 68
+  - file: "briefs/35-C2-combat-as-sovereignty.yaml"
+    lines: 76
+  - file: "briefs/36-C3-cyclical-maintenance.yaml"
+    lines: 66
+  - file: "briefs/37-C4-eschatological-displacement.yaml"
+    lines: 70
+  - file: "briefs/38-C5-ie-hero-slay-serpent-formula.yaml"
+    lines: 65
+  - file: "briefs/39-C6-near-eastern-mediterranean-transmission.yaml"
+    lines: 77
+  - file: "briefs/40-C7-inversion-problem.yaml"
+    lines: 72
+  - file: "briefs/41-C8-refusal-and-appropriation.yaml"
+    lines: 73
+  - file: "briefs/42-reception-coda.yaml"
+    lines: 53
+  - file: "briefs/43-adversaries-champions-appendix.yaml"
+    lines: 129
+
+summary: |
+  Produced toc.yaml (44 chapters in final reading order) plus 44 chapter briefs:
+  1 introduction brief, 15 CORE full briefs, 8 Part II comparative chapter briefs (C1–C8),
+  11 RELATED family/short briefs, 2 contrastive briefs (Mwindo, Nanabozho), 1 methods
+  sidebar brief, and 2 back-matter briefs (reception coda, adversaries/champions appendix).
+  All audit-review-log.md decisions respected (Kumarbi bundled with Hedammu + Song of the
+  Sea as sub-sections; horus-seth and erlik-ulgen RELATED with INCLUSION-MARGINAL markers;
+  yhwh-leviathan-rahab bundled). Every inventory story represented in at least one brief
+  (mapping recorded in toc.yaml self_checks). Sources cite only IDs from the
+  sources.yaml registry. One documented deviation: Erlik/Ülgen placed in 30-bakunawa
+  (communal/non-slaying combat theme) rather than 19-ie-reflexes, as permitted by stage
+  instructions and documented in toc.yaml deviations_from_instructions.
+
+self_checks_passed:
+  - every_inventory_story_represented: true
+  - every_brief_uses_only_sources_yaml_ids: true
+  - every_core_brief_has_cultural_relevance_centrality_function_and_at_least_one_parallel: true
+  - every_comparative_brief_has_chapters_drawn_from_and_comparative_argument: true
+  - toc_yaml_contains_all_chapters_in_final_order: true
+
+known_deferred_items:
+  - note: "Several RELATED briefs (10-christian-reception, 15-vedic-reflexes, 19-ie-reflexes for Beowulf/Lugh/Vahagn, 20-slavic-baltic for Dobrynya, 27-mapuche-kai-tren, 30-bakunawa, 32-nanabozho-mishipeshu) carry identifier_missing flags from inventory.approved.yaml for specific primary-text editions. These briefs explicitly flag the deferrals for glossary-lock."
+  - note: "Frashokereti primary-source Pahlavi edition (Anklesaria or West) pinning deferred to glossary-lock per inventory notes; addressed in 13-thraetaona-azidahaka brief."
+  - note: "Hallowell 1960 ISBN carried forward as LOW-severity from audit per audit-review-log.md; addressed in 32-nanabozho-mishipeshu brief."

@@ -1,0 +1,613 @@
+# Inventory audit — Chaoskampf book
+# Fresh-conversation audit of inventory.yaml (v1, 2026-04-23).
+
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  auditor_conversation: fresh
+  same_model_as_inventory: true
+  same_model_note: |
+    The inventory was also produced by claude-opus-4-7[1m]. The skill permits
+    same-model audit in a fresh conversation; a different model would be
+    preferred. No memory of the inventory-production session is present.
+  entries_reviewed: 42
+  triangulations_performed: 27
+  time_to_review_estimate_minutes: 45
+  status: completed
+
+  honesty_self_check:
+    q1_resolved_each_identifier: |
+      I resolved every CORE-story ISBN, every anchor critical-edition ISBN,
+      and every tier=related ISBN that was not flagged identifier_missing:true.
+      I resolved the Beckman 1982 JANES PDF URL (it 404s under the cited path).
+      I did NOT independently resolve: the ETCSL 1.6.2 URL fingerprint, every
+      Perseus URN (none are in the inventory — the inventory uses ISBN
+      identifiers, not Perseus URNs), or the stable-url for
+      benveniste-renou-1934 (gallica.bnf.fr root, which exists but I did not
+      fetch the specific scan). These were treated as plausibly valid because
+      the underlying works are well-attested in the literature; treat as
+      an audit gap.
+      For ISBNs in sources.yaml that do not correspond to inventory.yaml
+      per-story identifier fields (Hallowell 1960, Fontenrose 1959, Gunkel
+      1895, Burkert 1992, West 1997, Naumann 1996 ISBN edition), I did search
+      but these are not in the inventory's identifier fields and are therefore
+      out of strict audit scope. Hallowell ISBN 9780231024853 appears not to
+      resolve to the Diamond 1960 volume; flagging as LOW.
+    q2_every_plot_detail_provenance: |
+      I did NOT verify every plot detail. Checks focused on: major plot claims
+      in CORE entries; the operational-inclusion-test fit for each
+      tier=related entry; variants-field completeness for stories with
+      known multi-version traditions. Skipped: verbatim textual checks of
+      Jamison-Brereton RV hymn numbers; verbatim checks of every KTU/CAT
+      locus in the Baal Cycle entry; verbatim checks of every Florentine
+      Codex book/chapter claim in huitzilopochtli-coatepec. Treat these
+      as open at chapter-briefs stage.
+    q3_high_findings_have_quotes: |
+      HIGH findings below each include a verification search result or
+      URL fingerprint demonstrating the problem. Findings originally drafted
+      as HIGH but lacking a verbatim quote have been downgraded to MEDIUM
+      per the skill's quote-to-evidence rule; these are explicitly noted.
+    q4_cross_cultural_adaptation_applied: |
+      Confirmed. I applied the operational inclusion test from scope.md
+      §"Inclusion / exclusion criteria" (serpentine/monstrous adversary +
+      explicitly attested combat + cosmogonic/kingship/cyclical/eschatological
+      order-making work + robust area-specialist reception). I also applied
+      scope.md §"Excluded adjacent motifs" (dismemberment-cosmogony without
+      combat, hero-initiation monster fights, inter-species enmity,
+      trickster-demiurge tales, storm-god theophanies without dragon combat,
+      post-medieval reworkings). I did NOT apply a default
+      "excluded neighboring cultures" test — this is a cross-cultural book
+      and that test is not appropriate per the adaptation note in the prompt.
+
+summary:
+  high: 6
+  medium: 9
+  low: 5
+
+findings:
+
+  # ── HIGH: fabricated / wrong identifiers (verified via web search) ─────
+
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: revelation-12-dragon
+    entity_or_detail: "Aune Revelation WBC ISBN"
+    issue: |
+      The inventory cites ISBN 9780849902536 for Aune, *Revelation* (WBC 52B).
+      That ISBN does not belong to Aune's Revelation commentary at all; it
+      belongs to Craig A. Evans and Robert Guelich, *Mark 8:27-16:20*
+      (Word Biblical Commentary Vol. 34B). Aune Revelation Vol. 52A is
+      9780849902512; 52B and 52C have different ISBNs.
+    evidence_quote: |
+      "Word Biblical Commentary Vol. 34b, 'Mark 8:27-16:20' by Craig A.
+      Evans and Robert Guelich, published by Thomas Nelson Inc in 2001.
+      The hardcover edition has 594 pages."
+    evidence_source: "AbeBooks / WorldCat lookup of ISBN 9780849902536"
+    recommended_action: |
+      Replace with Aune Vol. 52A ISBN 9780849902512 (or, for the Rev 12
+      passage specifically, Aune Vol. 52B — verify the actual SBN for 52B
+      at chapter-briefs).
+
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: huitzilopochtli-coatepec
+    entity_or_detail: "Matos Moctezuma 'Great Temple of the Aztecs' ISBN"
+    issue: |
+      The inventory cites ISBN 9780500390160 for Matos Moctezuma's
+      *The Great Temple of the Aztecs* (Thames & Hudson, 1988). That
+      ISBN does not belong to that book; it resolves to Christos Doumas,
+      *Thera: Pompeii of the Ancient Aegean* (also Thames & Hudson,
+      New Aspects of Antiquity series). The actual Matos Moctezuma 1988
+      hardback is 0500390245 / 9780500390245.
+    evidence_quote: |
+      "Thera: Pompeii of the Ancient Aegean (New Aspects of Antiquity):
+      Doumas, Christos: 9780500390160: Books" (Amazon UK listing)
+      — and: "Eduardo Matos Moctezuma. The Great Temple of the Aztecs...
+      1988. London & New York: Thames & Hudson; ISBN 0-500-39024-X"
+      (Cambridge Antiquity review).
+    evidence_source: "Cambridge Core / Amazon ISBN lookup"
+    recommended_action: |
+      Replace with 9780500390245 (or verify the Cambridge review's
+      0-500-39024-X = 9780500390245 at chapter-briefs against WorldCat).
+
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: cipactli, quetzalcoatl-tezcatlipoca, huitzilopochtli-coatepec
+    entity_or_detail: "López Austin 'Myths of the Opossum' ISBN"
+    issue: |
+      The inventory cites ISBN 9780826313980 for López Austin's
+      *The Myths of the Opossum*. That ISBN does not resolve to this
+      book; it returns Dan True, *Hummingbirds of North America*
+      (University of New Mexico Press, 1993). The correct 1993 first
+      edition of López Austin is 9780826313942; a 2015 reprint is
+      9780826350350.
+    evidence_quote: |
+      "Hummingbirds of North America by True, Dan ... University of
+      New Mexico Press ... 1993" (AbeBooks ISBN-lookup result for
+      9780826313980). The López Austin book actually has "ISBN
+      9780826313942: 0826313949" per Amazon's listing.
+    evidence_source: "AbeBooks / Amazon ISBN lookups"
+    recommended_action: |
+      Replace with 9780826313942 across the three stories that cite
+      lopez-austin-myths (cipactli, quetzalcoatl-tezcatlipoca, and
+      the supporting citation in huitzilopochtli-coatepec). Also
+      correct sources.yaml registry entry lopez-austin-myths.
+
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: ninurta-anzu
+    entity_or_detail: "Annus 2001 Anzu ISBN"
+    issue: |
+      The inventory cites ISBN 9789514590535 for Annus, *The Standard
+      Babylonian Epic of Anzu* (SAACT 3, Helsinki 2001). The ISBN
+      resolved by multiple databases for this exact book is
+      9789514590511 (ISBN-10 9514590511). 9789514590535 does not
+      correspond to a book in standard catalogs.
+    evidence_quote: |
+      "The Standard Babylonian Epic of Anzu: Introduction, Cuneiform
+      Text, Transliteration, Score, Glossary, Indices and Sign List
+      (State Archives of Assyria Cuneiform Texts): Annus, Amar:
+      9789514590511"
+    evidence_source: "Amazon / Hudson Booksellers / Eisenbrauns catalogs"
+    recommended_action: |
+      Replace 9789514590535 with 9789514590511 in both inventory.yaml
+      (ninurta-anzu, Annus source line) and sources.yaml
+      (annus-2001-anzu registry entry; note: sources.yaml already flags
+      "Verify format before final citation" — the verification failed).
+
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: vainamoinen-iku-turso
+    entity_or_detail: "Siikala 2002 Mythic Images FFC 280 ISBN"
+    issue: |
+      The inventory cites ISBN 9789514110214 for Siikala, *Mythic Images
+      and Shamanism* (FFC 280, Helsinki 2002). That ISBN does not
+      resolve to this work. The published ISBNs are 9789514109027
+      (hardback, ISBN-10 9514109023) and 9789514109034 (paperback).
+    evidence_quote: |
+      "Mythic Images & Shamanism: A Perspective on Kalevala Poetry
+      (Ff Communications, 28): Siikala, Anna-Leena: 9789514109027:
+      Amazon.com"
+      "The ISBNs listed are 951-41-0901-5 (hardback) and 951-41-0902-3
+      (paperback). The ISBN you provided (9789514110214) does not
+      appear in the search results."
+    evidence_source: "Amazon / Folklore Fellows catalog / ProQuest"
+    recommended_action: |
+      Replace 9789514110214 with 9789514109027 (or 9789514109034 for
+      paperback).
+
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: "[sources.yaml — scurlock-beal-2013 — indirectly affects framing chapter]"
+    entity_or_detail: "Scurlock & Beal 2013 ISBN"
+    issue: |
+      sources.yaml cites ISBN 9781575062532 for Scurlock & Beal 2013.
+      The correct ISBN is 9781575062792. The inventory uses Scurlock
+      & Beal as a framing anchor in the introductory / terminology
+      chapter even though no story entry cites the ISBN directly; the
+      wrong ISBN will propagate into the bibliography if not fixed now.
+    evidence_quote: |
+      "Creation and Chaos: A Reconsideration of Hermann Gunkel's
+      Chaoskampf Hypothesis: Scurlock, JoAnn, Beal, Richard H.:
+      9781575062792: Amazon.com" (and Eisenbrauns catalog page
+      "978-1-57506-279-2").
+    evidence_source: "Amazon / Eisenbrauns catalog"
+    recommended_action: |
+      Fix sources.yaml registry entry scurlock-beal-2013.identifier_value
+      to 9781575062792.
+
+  # ── MEDIUM: identifier resolves weakly or doesn't verify cleanly ──────
+
+  - severity: MEDIUM
+    kind: FABRICATED-IDENTIFIER
+    story_id: marduk-labbu
+    entity_or_detail: "Wakeman 1973 ISBN"
+    issue: |
+      sources.yaml / inventory cite ISBN 9789004035973 for Wakeman
+      1973, *God's Battle with the Monster*. This ISBN does not
+      resolve in Amazon / Brill / WorldCat lookups. The ISBN that
+      does resolve is 9789004037526 (Brill, 1973). The given ISBN
+      could be a slightly corrupted transcription but is not valid.
+      Downgraded from HIGH because the book exists and is correctly
+      attributed — only the identifier is wrong, and the error is
+      one digit from a nearby Brill ISBN block.
+    evidence_quote: |
+      "God's Battle with the Monster: A Study in Biblical Imagery:
+      Wakeman: 9789004037526: Amazon.com" — searches for the given
+      9789004035973 return no book metadata.
+    evidence_source: "Amazon / Brill ISBN lookup"
+    recommended_action: |
+      Replace 9789004035973 with 9789004037526 in both inventory.yaml
+      (marduk-labbu) and sources.yaml (wakeman-1973).
+
+  - severity: MEDIUM
+    kind: FABRICATED-IDENTIFIER
+    story_id: illuyanka
+    entity_or_detail: "Beckman 1982 JANES PDF URL"
+    issue: |
+      The inventory cites
+      https://www.jtsa.edu/wp-content/uploads/2021/05/JANES_14_1982_Beckman.pdf
+      as the stable-url identifier for Beckman 1982. That URL returns
+      HTTP 404. The article is actually hosted at
+      https://janes.scholasticahq.com/article/2304.pdf (JANES
+      journal moved to Scholastica).
+      Downgraded to MEDIUM because the article does exist and is
+      readily findable — only the cited URL is stale.
+    evidence_quote: |
+      "Request failed with status code 404" (WebFetch of the cited
+      JTSA URL, 2026-04-24).
+      Correct: "The Anatolian Myth of Illuyanka* GARY BECKMAN Yale
+      University" at https://janes.scholasticahq.com/article/2304.pdf
+    evidence_source: "Live HTTP check 2026-04-24"
+    recommended_action: |
+      Replace stable-url with https://janes.scholasticahq.com/article/2304.pdf
+      or with the Scholastica landing page
+      https://janes.scholasticahq.com/article/2304-the-anatolian-myth-of-illuyanka .
+
+  - severity: MEDIUM
+    kind: SILENT-CONFLATION
+    story_id: kumarbi-ullikummi
+    entity_or_detail: "Song of Hedammu + Song of the Sea inside one Kumarbi Cycle entry"
+    issue: |
+      The entry bundles *Song of Ullikummi* (the title-piece), *Kingship
+      in Heaven*, and *Song of Hedammu* under one CORE chapter. The
+      variants field acknowledges Kingship in Heaven and Hedammu as
+      "companion texts." However, the cycle also includes the *Song of
+      the Sea* (a separate combat between Teshub and Kiaše / Aruna,
+      attested in summary in other Hurro-Hittite material) and the
+      *Song of LAMMA* — the *Song of the Sea* is in fact a distinct
+      combat-myth candidate which the Beckman / Rutherford scholarship
+      treats as a separate Teshub-vs-chaos episode. Bundling it
+      silently inside "Kumarbi Cycle" risks losing that distinction,
+      particularly when Part II C6 (Near East → Mediterranean
+      transmission) will want to engage it.
+    evidence_quote: |
+      "The Song of the Sea no longer survives but was summarized in
+      another text. It has been proposed that Song of the Sea was
+      a part of the Kumarbi cycle, but this remains uncertain...
+      The Song of the Sea appears to depict a battle between the
+      storm god Teshub and the sea deity." (Wikipedia summary of
+      Rutherford / Archi scholarship; see also Rutherford,
+      "The Hittite 'Song of Emergence' and the Theogony").
+    evidence_source: "ResearchGate / Wikipedia / Rutherford articles"
+    recommended_action: |
+      Expand the variants field to list Hedammu, Kingship in Heaven,
+      LAMMA, and Song of the Sea as explicitly separate companion
+      texts; at chapter-briefs, decide whether Song of the Sea gets
+      its own short treatment or is a sidebar. The comparative C6
+      chapter must not silently elide it.
+
+  - severity: MEDIUM
+    kind: SILENT-CONFLATION
+    story_id: yhwh-leviathan-rahab
+    entity_or_detail: "Multi-book biblical corpus treated as single entry"
+    issue: |
+      The entry bundles Ps 74, Ps 89, Ps 104, Isa 27:1, Isa 51:9-10,
+      Job 26, Job 41, and Hab 3 under one CORE entry. Variants field
+      acknowledges that different books emphasize different figures.
+      This is acceptable for an inventory entry but risks masking that
+      Job 26 vs. Job 41 are generically very different (wisdom-didactic
+      vs. divine speech) and that Isa 27:1 is a distinct eschatological
+      use of the imagery. At chapter-briefs, the chapter will need to
+      disaggregate. Flag MEDIUM: the inventory is not wrong, but the
+      "one story" framing understates the corpus's internal variance.
+    evidence_quote: |
+      Day 1985 (*God's Conflict*) devotes separate chapters to the
+      Psalms corpus, to Isaiah 27, to Job, and to Daniel 7 — his
+      section divisions are not captured in the single
+      yhwh-leviathan-rahab entry.
+    evidence_source: "Day 1985, table of contents"
+    recommended_action: |
+      Before chapter-briefs, split into at least three sub-entries:
+      (a) Psalms + Job creation-combat corpus (cosmogonic frame);
+      (b) Isa 27:1 + Isa 51 (eschatological / exodus-redemption
+      frame); (c) Hab 3 (theophany). Keep one chapter but record the
+      sub-structure explicitly.
+
+  - severity: MEDIUM
+    kind: SILENT-CONFLATION
+    story_id: ra-apep
+    entity_or_detail: "Multiple Apep-combat textual sources treated as one tradition"
+    issue: |
+      The entry covers Pyramid Texts, Coffin Texts, Book of the Dead
+      spells 7/39/108, the Amduat hours, the Book of Gates, and the
+      Bremner-Rhind "Overthrowing Apep" liturgy across ~2000 years
+      (c. 2400 BCE - c. 310 BCE). The variants field acknowledges
+      Mehen / Seth / Isis role variations across sources, but does
+      not explicitly separate the Old Kingdom (Pyramid Texts) from
+      the New Kingdom (Amduat, Book of Gates) from the late-period
+      (Bremner-Rhind) — these reflect different ritual contexts and
+      different theological framings, and Assmann's maʿat/isfet
+      reading is not uniformly applicable across all of them.
+      Downgraded to MEDIUM because the date_range field correctly
+      flags the span; the inventory is not conflating, but summarising.
+    evidence_quote: |
+      "Textual record from Pyramid Texts (c. 2400 BCE) through the
+      Bremner-Rhind Papyrus (c. 310 BCE); iconography from Naqada I
+      (c. 4000 BCE)" — the inventory itself acknowledges the 2000-year
+      span but frames the combat as if it were a single narrative.
+    evidence_source: "inventory.yaml:530"
+    recommended_action: |
+      At chapter-briefs, split the body treatment into (a) royal-mortuary
+      Pyramid Texts; (b) netherworld books (Amduat / Book of Gates /
+      Book of Caverns); (c) the Bremner-Rhind liturgical/priestly
+      material. Preserve the single chapter but make the period
+      stratification visible.
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW — song-of-hedammu-fragmentary
+    entity_or_detail: "Song of Hedammu as fragmentary separate chaos-combat"
+    issue: |
+      The inventory folds Hedammu into kumarbi-ullikummi as a
+      companion text. The prompt specifically flagged "Hittite Song
+      of Hedammu (separate from Ullikummi?)" as a missing-story
+      candidate. Hedammu is a sea-serpent begotten by Kumarbi
+      specifically to oppose Teshub; it is a distinct combat,
+      attested in KUB 33.100+ (CTH 348). Scholarly treatment
+      (Hoffner 1998, Rutherford, Beckman) routinely presents it as
+      a separate combat myth, not a scene in Ullikummi.
+    evidence_quote: |
+      "Hedammu (Hoffner 17), a very fragmentary text, narrates the
+      story of the sea monster Hedammu, child of Kumarbi and a
+      daughter of the Sea god, who is described as a 'tarpanalli'
+      ('substitute' or 'challenger') against the Storm gods."
+      (Summary of Siegelova 1971 edition + Hoffner 1998.)
+    evidence_source: "Rutherford / Siegelova summary / Hoffner 1998a: 50-55"
+    recommended_action: |
+      Add a separate RELATED entry: song-of-hedammu (fragmentary;
+      treat alongside Marduk-Labbu as a fragmentary chaos-sea-monster
+      combat). Primary source: KUB 33.100+ / CTH 348 (Hoffner 1998
+      Myth 17). Scholar anchors: Hoffner 1998, Rutherford, Siegelova.
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW — song-of-the-sea
+    entity_or_detail: "Hittite-Hurrian Song of the Sea as distinct combat"
+    issue: |
+      The *Song of the Sea* (Teshub vs. Kiaše/Aruna) is not in the
+      inventory. It survives only in summary within other Hurro-Hittite
+      texts (notably the Shaushka-Pišaišapḫi myth) and its placement
+      within the Kumarbi Cycle is disputed. The prompt did not
+      specifically flag it, but the missing-stories sweep did not
+      capture it either. It is a genuine Anatolian Teshub-vs-sea
+      combat distinct from the Illuyanka material.
+    evidence_quote: |
+      "Further allusions to conflict between Teshub and the sea are
+      present elsewhere in Hurro-Hittite literature: in the myth of
+      Shaushka and Pišaišapḫi, the latter god in return for sparing
+      him in spite of his misdeeds promises to tell her the story of
+      Teshub's victory over the sea and the subsequent rebellion of
+      the mountain gods against him."
+    evidence_source: "Wikipedia / Rutherford on Song of the Sea"
+    recommended_action: |
+      Add as provisional RELATED entry or as a footnote / sidebar
+      within the anatolia_levant cycle. Not required for scope-lock
+      but should be acknowledged before chapter-briefs.
+
+  - severity: MEDIUM
+    kind: CONTAMINATION
+    story_id: horus-seth
+    entity_or_detail: "Inclusion test fit"
+    issue: |
+      Horus vs. Seth meets criteria (1) adversary is monstrous/other
+      (Seth is not serpentine, though he is storm-chaotic) and (2)
+      combat is attested. However, criterion (3) is weak: the
+      scholarly consensus (te Velde 1967, Assmann, Wilkinson) is that
+      Horus vs. Seth is dynastic / judicial, not cosmogonic or
+      kingship-in-the-chaoskampf-sense. scope.md §"Excluded adjacent
+      motifs" does not name this case explicitly, but the research
+      notes (missing_stories_report.md §"Horus vs. Seth") flag it as
+      "RELATED (include as a 'domesticated' Egyptian variant ... with
+      the caveat that most scholarship treats Horus-Seth as
+      dynastic/judicial rather than cosmogonic combat)." The inventory
+      correctly retains the ambivalence in notes. Flag MEDIUM because
+      the case is genuinely marginal and its inclusion requires that
+      the chapter-briefs treat it under the "debated" frame
+      explicitly; otherwise it will function as silent contamination.
+    evidence_quote: |
+      "Gunkel and Wakeman did NOT include Horus-Seth in chaoskampf
+      proper; they reserved that label for Ra-Apep, which is already
+      in the catalog." (missing_stories_report.md, Horus-Seth section.)
+    evidence_source: "missing_stories_report.md + te Velde 1967 ch. 2"
+    recommended_action: |
+      Retain horus-seth as RELATED but strengthen the notes field to
+      record the *framing constraint*: the chapter must treat this as
+      a debated / marginal case, not as a chaoskampf exemplar. Add
+      an explicit `[APPROPRIATION-FLAG:]`-style marker field to
+      ensure chapter-briefs does not drift.
+
+  - severity: MEDIUM
+    kind: CONTAMINATION
+    story_id: erlik-ulgen
+    entity_or_detail: "Inclusion test fit"
+    issue: |
+      Erlik vs. Ülgen (Altaic / Siberian dualistic creation) meets
+      criteria (2) and possibly (3), but criterion (1) — serpentine /
+      monstrous adversary — is weak: Erlik is a god, not a serpent or
+      dragon; and criterion (2) is itself weak because the tradition
+      is 19th-/20th-c. ethnographic, not a coherent medieval or
+      ancient corpus. The inventory flags scope_uncertain:true, which
+      is correct. Flag MEDIUM rather than HIGH because the research
+      notes acknowledge this is "RELATED (brother-deity cosmogonic
+      dualism; worth including as a Central Asian variant)." The risk
+      is that the chapter will treat this as a chaoskampf when the
+      primary framing (Eliade) is dualistic cosmogony.
+    evidence_quote: |
+      "This is a binary-creation, not a single dragon-slaying, but
+      it is structurally an order-vs.-chaos agonic cosmogony."
+      (missing_stories_report.md, Erlik section — author's own note.)
+    evidence_source: "missing_stories_report.md"
+    recommended_action: |
+      Either downgrade erlik-ulgen to a contrastive sidebar in the
+      Part II "non-serpent cosmogonic duals" section, or keep RELATED
+      but record in notes that the serpent-adversary criterion is
+      not met and that this is a *structural* inclusion, not a
+      motif-match. The chapter-briefs stage must not paper over this.
+
+  # ── LOW: minor / technical ────────────────────────────────────────────
+
+  - severity: LOW
+    kind: FABRICATED-IDENTIFIER
+    story_id: "[sources.yaml — hallowell-ojibwa-world]"
+    entity_or_detail: "Hallowell 1960 ISBN"
+    issue: |
+      sources.yaml cites ISBN 9780231024853 for the Diamond 1960
+      *Culture in History* volume containing Hallowell's essay.
+      That ISBN does not resolve in standard lookups. The 1960
+      volume predates 13-digit ISBNs; citing an ISBN for it at all
+      is awkward. Only LOW because (a) the inventory nanabozho-mishipeshu
+      entry does not itself cite this ISBN; (b) the chapter anchor
+      can equally point to the later Hallowell anthology
+      (*Contributions to Anthropology*, 1976, ISBN 9780226313702).
+    evidence_quote: |
+      "The specific ISBN you provided (9780231024853) does not appear
+      in these search results."
+    evidence_source: "ScirP / Cambridge Core / WorldCat search"
+    recommended_action: |
+      Replace the ISBN in sources.yaml with either the Diamond volume's
+      actual OCLC (OCLC 1451823) as identifier_type: OCLC, or cite
+      Hallowell 1976 *Contributions to Anthropology* (9780226313702)
+      which reprints the essay.
+
+  - severity: LOW
+    kind: SILENT-CONFLATION
+    story_id: thor-jormungandr
+    entity_or_detail: "Three Thor-Jörmungandr encounters"
+    issue: |
+      The entry's variants field correctly lists Hymiskviða /
+      Húsdrápa / Ragnarök. However, a fourth encounter (Útgarða-Loki's
+      cat trick in Gylfaginning 46) is mentioned in the summary but
+      not in variants. Downgraded to LOW because the summary does
+      include it and Faulkes is cited.
+    evidence_quote: ""
+    evidence_source: ""
+    recommended_action: |
+      Add "Gylfaginning 46-47 (Útgarða-Loki, the lifted cat)" to the
+      variants list for tidiness.
+
+  - severity: LOW
+    kind: SILENT-CONFLATION
+    story_id: apollo-python
+    entity_or_detail: "Variants completeness"
+    issue: |
+      The inventory's variants field lists Hymn, Ovid, Pausanias.
+      It does not mention Euripides *Iphigenia in Tauris* 1245-1283
+      (the primary earliest Greek dramatic reworking) or the
+      Septerion inscriptional corpus. The case is complete enough
+      for a RELATED tier, and Ogden 2013 is the anchor, which
+      covers these — but the variants field as-written under-specifies.
+    evidence_quote: ""
+    evidence_source: ""
+    recommended_action: |
+      At chapter-briefs, expand variants to mention Euripides IT
+      and the Septerion cult material (Plutarch *De defectu
+      oraculorum*). Not required at scope-lock.
+
+  - severity: LOW
+    kind: MISSING
+    story_id: NEW — tishpak-labbu-clarification
+    entity_or_detail: "Labbu attested slayer is Tishpak, not Marduk"
+    issue: |
+      The inventory's marduk-labbu entry correctly flags the divine
+      combatant as disputed, with Marduk / Tishpak / Nergal all
+      proposed. In the *surviving* extant text (CT 13, 33-34) the
+      actual name preserved is Tishpak of Eshnunna. Downgraded to LOW
+      because the inventory acknowledges the lacuna; recommendation
+      is to make the extant-text-names-Tishpak point explicit in the
+      summary field.
+    evidence_quote: |
+      "The known version of the myth from CT 13.33–34 is associated
+      with the Eshnunna tradition and features Tišpak, the city's
+      patron deity, who is tasked with slaying the monster."
+    evidence_source: "Recent Labbu scholarship summary"
+    recommended_action: |
+      Retitle entry to "Tishpak (?) vs. Labbu" or "God (Tishpak) vs.
+      Labbu," with Marduk as an earlier-proposed identification in
+      the notes.
+
+  - severity: LOW
+    kind: SILENT-CONFLATION
+    story_id: frashokereti
+    entity_or_detail: "Primary source not pinned"
+    issue: |
+      Frashokereti entry has identifier_missing:true and relies only
+      on Gunkel 1895 as an anchor, which is a 19th-c. Protestant Old
+      Testament reconstruction — not an appropriate primary anchor
+      for a Zoroastrian Pahlavi tradition. The Pahlavi Bundahišn
+      (Anklesaria 1956 or West 1880 SBE) is the needed anchor.
+      Downgraded to LOW because the notes field acknowledges this:
+      "Pahlavi Bundahišn primary-source citation ... to be pinned at
+      chapter-briefs."
+    evidence_quote: ""
+    evidence_source: "inventory.yaml:446"
+    recommended_action: |
+      Already acknowledged. Pin Anklesaria 1956 (TITUS Iranica or
+      hard-copy) before chapter-briefs.
+
+clean_entries:
+  # Stories that passed all four audit checks without requiring action.
+  - ninurta-asag
+  - marduk-tiamat
+  - thraetaona-azidahaka
+  - indra-vrtra
+  - trita-aptya
+  - krishna-kaliya
+  - zeus-typhon
+  - herakles-dragons
+  - perseus-ketos
+  - kadmos-dragon
+  - bellerophon-chimaera
+  - cacus
+  - st-george-michael
+  - sigurd-fafnir
+  - beowulf-dragons
+  - lugh-balor
+  - welsh-red-white-dragon
+  - batraz-nart
+  - vahagn-vishaps
+  - perun-veles           # correctly flagged scope_uncertain:true
+  - dobrynya-zmey
+  - gonggong
+  - hou-yi
+  - susanoo-orochi
+  - pariacaca-amaru
+  - mapuche-kai-tren
+  - bida
+  - mwindo-kirimu
+  - bakunawa
+  - nanabozho-mishipeshu  # correctly flagged scope_uncertain:true
+  - rainbow-serpent-critique  # correctly treated as methods chapter
+  - yu-sidebar            # correctly treated as sidebar, not chaoskampf
+  - cipactli              # correctly kept as boundary-marker RELATED
+
+  # Stories with HIGH/MEDIUM findings are NOT in clean_entries:
+  # ninurta-anzu (annus ISBN wrong — HIGH)
+  # marduk-labbu (Wakeman ISBN wrong — MEDIUM; Tishpak clarification — LOW)
+  # kumarbi-ullikummi (Song of the Sea / Hedammu split — MEDIUM silent-conflation)
+  # illuyanka (Beckman URL stale — MEDIUM)
+  # yhwh-leviathan-rahab (multi-book corpus conflation — MEDIUM)
+  # revelation-12-dragon (Aune ISBN wrong — HIGH)
+  # apollo-python (variants underspecified — LOW)
+  # ra-apep (Old/New/Late Egyptian strata conflated — MEDIUM)
+  # horus-seth (inclusion-test marginal — MEDIUM)
+  # thor-jormungandr (Útgarðaloki variant missing from list — LOW)
+  # quetzalcoatl-tezcatlipoca, huitzilopochtli-coatepec (López Austin ISBN wrong — HIGH)
+  # vainamoinen-iku-turso (Siikala ISBN wrong — HIGH)
+  # erlik-ulgen (inclusion-test marginal — MEDIUM)
+  # frashokereti (Pahlavi primary source not pinned — LOW)
+
+human_review:
+  protocol: |
+    Review HIGH findings first (6 items, ~10 min). All six HIGH items
+    are fabricated / wrong ISBNs that will propagate into the final
+    bibliography if not fixed. These are mechanical fixes — accept and
+    apply.
+    MEDIUM findings (9 items) require editorial judgment on framing
+    (kumarbi-ullikummi split; yhwh corpus disaggregation; ra-apep
+    period stratification; horus-seth framing constraint; erlik-ulgen
+    inclusion).
+    LOW findings (5 items) can be deferred to chapter-briefs.
+  user_decision_required:
+    - "Whether to split kumarbi-ullikummi entry so Song of Hedammu (and possibly Song of the Sea) get their own RELATED entries, or keep the bundled one-chapter CORE treatment and flag the distinction in chapter-briefs."
+    - "Whether to retain horus-seth and erlik-ulgen in RELATED tier (with appropriation-style framing markers), or move them to a contrastive / sidebar slot."
+    - "Whether the yhwh-leviathan-rahab single-entry treatment is preferred, or whether to split by sub-corpus now."

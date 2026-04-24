@@ -1,0 +1,25 @@
+stage: "glossary-lock"
+timestamp: "2026-04-23T00:00:00Z"
+status: "partial"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "glossary.yaml"
+    lines: 1710
+  - file: "DECIDE_GLOSSARY.md"
+    lines: 121
+summary: "Autonomous draft of glossary-lock for Chaoskampf Across Cultures: 181 terms covering category vocabulary, methodological terms, deities/champions across 15+ traditions, ritual/cultic/technical terms, place names, and Indo-European philological vocabulary. Includes DECIDE_GLOSSARY.md flagging 15 decisions needing user judgement."
+partial_reason: |
+  Stage is normally interactive — the user decides each term's locked rendering. This draft
+  is produced in autonomous mode while the user is unavailable. Status cannot be "completed"
+  until the user reviews the draft, confirms or redirects the recommended renderings, and
+  resolves the 15 items flagged in DECIDE_GLOSSARY.md. On re-entry, the user should:
+    1. Walk through DECIDE_GLOSSARY.md and mark each flagged item as accepted / redirected.
+    2. Scan the remaining ~166 terms and accept or redirect each.
+    3. Optionally trim the single-chapter proper nouns if the 181-term count feels too large
+       (the scope justifies overshoot of the 60–120 target but some terms could be pruned).
+    4. Update `meta.status` to `confirmed` and re-run the completion record with status
+       "completed".
+missing:
+  - "User confirmation of every locked rendering"
+  - "Resolution of the 15 DECIDE_GLOSSARY.md flagged choices"
+  - "Potential trim of the 181-term count if it exceeds user's appetite"

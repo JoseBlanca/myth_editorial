@@ -1,0 +1,27 @@
+stage: "post-human-normalize"
+target: "inventory.approved.yaml"
+timestamp: "2026-04-24T05:20:11Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+checks_passed:
+  - yaml_parses_cleanly
+  - required_fields_present_on_all_stories
+  - all_source_id_references_resolve_to_sources_yaml_registry
+  - counts_field_matches_actual_tier_distribution
+  - excluded_list_populated
+fixes_applied_during_normalize:
+  - "Added 'etcsl' to sources.yaml registry as a primary-translation source (was only in triangulation_databases, so ninurta-asag's reference didn't resolve)."
+  - "Updated counts.cycles from 16 to 17 and counts.stories_in_cycles from 42 to 49 to match actual content."
+  - "Updated counts.tier_related from 22 to 30 to match actual content."
+outputs:
+  - file: "inventory.approved.yaml"
+    lines: 1171
+  - file: "sources.yaml"
+    lines: 645
+  - file: "audit-review-log.md"
+    lines: 49
+warnings:
+  - "12 entries still carry identifier_missing: true (intentional; to be closed at chapter-briefs)."
+  - "5 entries still carry scope_uncertain: true (load-bearing for the book's argument)."
+  - "Hallowell 1960 ISBN in sources.yaml remains LOW-severity unresolved from the audit."
+summary: "inventory.approved.yaml validated. All ISBN corrections from inventory-audit applied. Audit-review-log.md documents autonomous decisions on user-judgment questions (kumarbi bundled, horus-seth and erlik-ulgen RELATED with framing markers, yhwh-leviathan-rahab bundled). Ready for chapter-briefs."

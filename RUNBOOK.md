@@ -26,6 +26,12 @@ Browser-based AI conversations (ChatGPT, Gemini Deep Research, claude.ai) still 
 
 The `python assemble_prompt.py ...` examples below are written in their plain form for readability; prefix them with `./container/exec_cmd.sh` (or run them from inside a `./container/shell.sh` session) when using the container.
 
+## Parallel agents: at most two at a time
+
+Launching sub-agents in parallel is a good way to run research or pipeline stages unattended, especially when they work inside the container. But **do not launch more than two agents at a time.** The Anthropic account's token/rate limit is shared across all concurrent agents: if the limit is hit mid-run, every in-flight agent is killed and any work that was not already written to disk is lost. Running two at a time keeps throughput reasonable while leaving headroom for the agents to actually finish and save their output.
+
+Practical rule: queue remaining agents and start the next pair only after the previous pair has completed (and saved its files). If a batch of agents is mostly short-running research but one is unusually large, run the large one alone.
+
 ## General workflow
 
 1. Run `python assemble_prompt.py <stage> <book> [input-files...]` to generate the prompt (via the container — see above)
