@@ -1,0 +1,25 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-24T12:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/01-ninurta-asag.claims.approved.adoc"
+    lines: 299
+  - file: "chapters/02-ninurta-anzu.claims.approved.adoc"
+    lines: 340
+summary: "Validated the post-factcheck revisions on both Mesopotamia claims documents; all checks pass (footnote+evidence pairing, source_id whitelist, glossary discipline, markers valid)."
+notes: |
+  Ch01 (85 claims, 85 evidence tokens):
+  - FC-01 (MEDIUM): line-count corrected from "approximately 728" to "over seven hundred and twenty lines in the ETCSL composite (ending at line 726)"
+  - FC-02 (HIGH, MARKER-MISUSED): LACUNA at proem lines 1–15 replaced with a proper VARIANT noting the single-witness invocation-before-line-1 addition
+  - FC-03 (HIGH, MARKER-MISUSED): LACUNA at lines 300–340 removed entirely; that range does not contain a stone-army catalogue (it covers divine prostration and the renaming of Asag)
+  - FC-04 (MEDIUM): šu/gasura "cultic vessels" corrected to "matrix for ritual creations" with the verbatim ETCSL phrasing quoted in the footnote
+
+  Ch02 (98 claims, 98 evidence tokens):
+  - CW-01 (MEDIUM, blocking): Dagan-as-messenger claim rewritten to make Birdu the dispatched messenger and to flag Dagan as part of the "bulwark of Anu and Dagan" epithet applied to Ninurta
+  - IV-01 (MEDIUM, non-blocking): "Seven Evil Winds" qualifier dropped; now reads "seven winds" with the verbatim "the weapon of chaos, the seven winds" phrasing in the footnote
+  - UV-M-02: arrow-dissolution paraphrase corrected to the attested "shaft/reed-thicket, bow frame/copse, bowstring/ram's gut, feathers/birds" sequence (the unattested "arrowhead to its flint" clause removed)
+
+  UNVERIFIED LOW findings against Annus 2001 and Foster 2005 (print-only
+  critical edition and translation) are an inherent verification limit
+  and do not block progression to chapter-draft.
