@@ -1,0 +1,73 @@
+stage: "chapter-claims"
+timestamp: "2026-04-24T13:40:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+
+outputs:
+  - file: "chapters/01-ninurta-asag.claims.adoc"
+    lines: 296
+
+summary: |
+  Produced the claims skeleton for Chapter 1 (Ninurta vs. Asag: The Exploits of
+  Lugal-e). 85 claim paragraphs distributed across Source overview (8 claims),
+  Setting and context (7 claims), Narrative sequence — scouting and challenge
+  (10 claims), Narrative sequence — combat (6 claims), Narrative sequence —
+  ordering of the waters (4 claims), Narrative sequence — naming of the mountain
+  (3 claims), Narrative sequence — lapidary aetiology (20 claims including per-
+  stone judgements from _u_ through _kurgaranum_/_bal_/_šembi_ and a structural-
+  logic summary), Narrative sequence — triumphant return (9 claims), and The
+  combat's order-making work (6 claims). Two LACUNA markers (proem 1–15; Asag's
+  stone-army catalogue 300–340) match the brief. One VARIANT marker for the
+  van Dijk / ETCSL composite-editorial relationship. One INFERENCE marker for
+  the lapidary aetiology's dual narrative/craft-economic reading. Five
+  COMPARATIVE-HOOK comments at end (Annus on Anzû/Enūma Eliš lineage; Rigvedic
+  mountain-splitting / Watkins IE; Ugaritic Ayyamur/Yagrush animate-weapon
+  parallel; Day 1985 on Hebrew Bible descent; lapidary aetiology's
+  distinctiveness within the combat-cosmogony corpus). Every source_id is
+  drawn from sources.yaml: etcsl, vandijk-1983-lugale, forsyth-1987,
+  gunkel-1895, scurlock-beal-2013. Glossary discipline observed: Šarur with
+  háček throughout; Enki used in Sumerian context with a single glossary-gloss
+  footnote flagging the Enki/Ea language-conditional pair per scope.md policy;
+  _kur_ italicised on first mention; "combat myth" in body-adjacent claims with
+  "Chaoskampf" reserved for the Scurlock-Beal discussion in that claim.
+
+self_checks_passed:
+  - every_claim_paragraph_has_footnote_and_evidence_token: true
+  - every_source_id_exists_in_sources_yaml: true
+  - one_claim_per_paragraph_no_bundling: true
+  - glossary_discipline_enki_sarur_kur: true
+  - no_forbidden_words_indeed_simply_merely_arguably_clearly_obviously: true
+  - markers_have_all_required_subfields: true
+  - lacuna_markers_match_brief: true
+  - comparative_hooks_at_end_not_inline: true
+  - narrative_order_follows_lugal_e: true
+
+notes:
+  fetched_sections: |
+    ETCSL 1.6.2 composite English translation was fetched section-by-section
+    (proem 1–16; Šarur's reports 17–69; mobilisation and first combat 70–118;
+    Šarur's trophy catalogue 119–134; caution 135–150; advance 151–167; Asag's
+    emergence 168–190; Šarur-Enlil-Šarur intercession 191–243; combat 244–299;
+    naming of Stone 310–333; water-ordering 334–367; Ninmaḫ/Ninḫursaĝa 368–410;
+    lapidary aetiology 411–644; return and doxology 645–726). The ETCSL
+    manuscript-catalogue page (c.1.6.2*) was attempted but the landing page
+    does not itself list witnesses; attestation claims about Nippur/Ur
+    manuscript distribution are therefore cited to van Dijk 1983 vol. 1
+    (introduction) rather than to a specific ETCSL manuscript listing.
+  reconstruction_vs_lacuna: |
+    Both brief-listed lacunae (proem 1–15; Asag's army 300–340) are retained
+    as explicit LACUNA markers rather than being filled via RECONSTRUCTION,
+    because the ETCSL composite itself is the reconstruction and the in-tradition
+    fill is already embedded in the cited composite line-numbers.
+  decisions_that_might_surprise: |
+    (1) The "E-kur" temple-name retains "kur" without italics — the italicised
+    _kur_ marker is reserved for the free-standing Sumerian term and the
+    compound E-kur is a proper noun. (2) A single glossary-gloss footnote
+    explicitly names "Ea" as the Akkadian counterpart of Enki at first
+    mention of the latter, per glossary.yaml's instruction to "Flag dual
+    identity at first mention of each"; this is the only appearance of "Ea"
+    in the document. (3) The lapidary aetiology's total line-range is cited
+    in summary as 411–644 (corresponding to stone-judgements proper and the
+    Ninḫursaĝa-cult cluster at 634–644), with the brief's stated range of
+    416–620 preserved in narrative footnote and the broader span attested
+    from Aruru's prompt through the Ninḫursaĝa-cult assignment.
