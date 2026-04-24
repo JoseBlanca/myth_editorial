@@ -1,9 +1,9 @@
 meta:
   stage: glossary-lock
-  version: v1-draft
-  status: draft-awaiting-user-confirmation
-  date: 2026-04-23
-  note: "Autonomous draft. User must review and confirm before this glossary becomes the locked reference for chapter writing. See DECIDE_GLOSSARY.md for the specific choices that need human judgment."
+  version: v1-locked
+  status: user-confirmed
+  date: 2026-04-24
+  note: "User-confirmed on 2026-04-24. All DECIDE_GLOSSARY.md items resolved. Changes from v1-draft: (3) Yahweh replaces YHWH as primary form; (7) wak'a replaces huaca; (13) tehôm kept italicised throughout body prose rather than switching to 'the deep'; (15) 'the adversary' added as the neutral category term, with 'the dragon' reserved for morphologically draconic figures and 'chaos-figure' banned. All other draft choices confirmed. Meta-diacritics policy: full scholarly diacritics across the glossary (option A)."
   agent_model: "claude-opus-4-7[1m]"
 
 terms:
@@ -113,6 +113,17 @@ terms:
     rationale: "Locked by scope.md; the contrast area-specialist / comparativist is load-bearing throughout."
     first_mention_gloss: "a scholar whose primary expertise is a single tradition (language, texts, ritual context); the book's appropriation protocol requires area-specialist citations before invoking any comparative frame for non-Eurasian traditions"
     never_use: []
+
+  - native: "the adversary (category term)"
+    renderings_considered:
+      - { form: "the adversary", source: "book-internal; neutral category term" }
+      - { form: "the dragon", source: "book-internal; morphological descriptor" }
+      - { form: "the monstrous adversary", source: "book-internal" }
+      - { form: "the chaos-figure", source: "popularising usage" }
+    chosen: "'the adversary' as the default neutral category term; 'the dragon' only where the figure is visually or morphologically draconic (Leviathan, Aži Dahāka, Fáfnir, Zmey Gorynych, Typhon, etc.)"
+    rationale: "Cross-chapter consistency benefits from one general term for the class of figure the champion confronts. 'The adversary' is the neutral choice and fits every case including those (Anzû the lion-headed eagle, Asag the stone-demon, Mishipeshu the underwater manitou) where 'dragon' would misrepresent the figure. 'Chaos-figure' is banned because it begs the very question the book is investigating (Ballentine 2015's critique)."
+    first_mention_gloss: "the book's umbrella term for the class of figure the champion confronts in a combat myth; the term is deliberately neutral between dragon, serpent, sea-monster, stone-demon, rebel deity, and other morphologies"
+    never_use: ["chaos-figure (begs the question); chaos-monster (same reason; the corpus is not uniformly 'chaos')"]
 
   # ══════════════════════════════════════════════════════════════════════
   # METHODOLOGICAL TERMS
@@ -492,14 +503,14 @@ terms:
 
   # ── Hebrew Bible and New Testament ──────────────────────────────────
 
-  - native: "YHWH"
+  - native: "Yahweh"
     renderings_considered:
-      - { form: "YHWH", source: "standard unvocalized; Day 1985" }
-      - { form: "Yahweh", source: "vocalized reconstruction" }
+      - { form: "Yahweh", source: "vocalized reconstruction; Day 1985 uses this form" }
+      - { form: "YHWH", source: "standard unvocalized tetragrammaton" }
       - { form: "the LORD", source: "translation convention" }
-    chosen: "YHWH"
-    rationale: "Scholarly neutral and preserves the unvocalised tetragrammaton; avoids the vocalised 'Yahweh' which exceeds what Hebrew writing attests."
-    first_mention_gloss: "the God of Israel; depicted in the combat-myth passages as storm-god who defeats the sea, Leviathan, and Rahab"
+    chosen: "Yahweh"
+    rationale: "The vocalised form is common enough in academic and general English that the unvocalised YHWH becomes awkward in sustained body prose; 'Yahweh' reads naturally in narrative discussion of the deity as a character. YHWH may still appear in direct quotation of sources that use the unvocalised form."
+    first_mention_gloss: "the God of Israel (Hebrew tetragrammaton YHWH, vocalised Yahweh); depicted in the combat-myth passages as storm-god who defeats the sea, Leviathan, and Rahab"
     never_use: ["Jehovah"]
 
   - native: "Leviathan"
@@ -533,9 +544,9 @@ terms:
     renderings_considered:
       - { form: "tehôm", source: "Day 1985" }
       - { form: "tehom", source: "non-diacritical" }
-      - { form: "the deep", source: "translation" }
-    chosen: "tehôm (italicized, on first mention); 'the deep' in English rendering thereafter"
-    rationale: "The Hebrew term is load-bearing for Gunkel's cognancy argument (tehôm / Tiamat); the English rendering suffices afterwards."
+      - { form: "the deep", source: "English translation" }
+    chosen: "tehôm (italicised) throughout body prose; 'the deep' reserved for direct Bible quotations where English translation is required"
+    rationale: "Genesis 1:2 is quoted and referenced repeatedly across Ch. 8, the introduction, and the Gunkel–Ballentine discussions; keeping tehôm as the technical term through every mention preserves the philological cognancy argument (tehôm / Tiamat) without switching registers mid-paragraph."
     first_mention_gloss: "'the deep' (Genesis 1:2); the primordial waters; linguistically cognate with Akkadian Tiamat, the cornerstone of Gunkel's 1895 argument"
     never_use: []
 
@@ -1280,16 +1291,16 @@ terms:
       - { form: "Pariaqaqa", source: "modern Quechua orthography" }
     chosen: "Pariacaca"
     rationale: "Matches the Huarochirí Manuscript's 1608 spelling as edited by Salomon & Urioste."
-    first_mention_gloss: "Andean storm-huaca of the Huarochirí region; defeats rival huacas and their summoned amaru"
+    first_mention_gloss: "Andean storm-wak'a of the Huarochirí region; defeats rival wak'as and their summoned amaru"
     never_use: []
 
-  - native: "huaca"
+  - native: "wak'a"
     renderings_considered:
-      - { form: "huaca", source: "Salomon & Urioste 1991; Andean studies" }
-      - { form: "wak'a", source: "modern Quechua orthography" }
-    chosen: "huaca (lowercase, italicised on first mention)"
-    rationale: "Huarochirí-Manuscript-era spelling; wak'a is the preferred modern Quechua orthography but is less reader-familiar."
-    first_mention_gloss: "Andean 'sacred power-being' (Quechua); the Huarochirí Manuscript records a landscape populated with huacas in hierarchical and combative relationships — the pattern is huaca-succession, not chaos-versus-order"
+      - { form: "wak'a", source: "modern Quechua orthography; post-2010 decolonial Andean scholarship" }
+      - { form: "huaca", source: "Salomon & Urioste 1991; Huarochirí-Manuscript-era Spanish-derived spelling" }
+    chosen: "wak'a (lowercase, italicised on first mention)"
+    rationale: "Modern Quechua orthography, now standard in post-2010 decolonial Andean scholarship; lay English readers are not heavily invested in the older 'huaca' form, so adopting the Quechua-native spelling comes at low cost. First-mention parenthetical may note the older Spanish-colonial form 'huaca' where helpful for readers consulting Salomon & Urioste 1991."
+    first_mention_gloss: "Andean 'sacred power-being' (Quechua; older Spanish-derived spelling: huaca); the Huarochirí Manuscript records a landscape populated with wak'as in hierarchical and combative relationships — the pattern is wak'a-succession, not chaos-versus-order"
     never_use: []
 
   - native: "amaru"
@@ -1298,7 +1309,7 @@ terms:
       - { form: "amaro", source: "variant" }
     chosen: "amaru (lowercase, italicised on first mention)"
     rationale: "Andean serpent-figure; common noun."
-    first_mention_gloss: "Andean serpent-figure; often summoned as an ally-monster by a defeated rival huaca, rather than a primordial chaos"
+    first_mention_gloss: "Andean serpent-figure; often summoned as an ally-monster by a defeated rival wak'a, rather than a primordial chaos"
     never_use: []
 
   - native: "Kai-Kai / Tren-Tren"

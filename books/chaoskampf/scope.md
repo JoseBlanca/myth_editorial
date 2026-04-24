@@ -62,7 +62,7 @@ A story is PROVISIONAL / CRITIQUE if area specialists explicitly reject the chao
 Given scholarly warnings about forcing Near Eastern / Indo-European templates onto non-Eurasian traditions (explicitly flagged for Rainbow Serpent, Nanabozho, Mwindo in the research notes), every RELATED chapter on a non-Eurasian tradition must:
 1. Cite at least two area specialists **by name** in the first factual pass.
 2. Record any specialist objection to the chaoskampf framing in an `[APPROPRIATION-FLAG:]` marker, which the `comparative` chapter must address rather than paper over.
-3. Open with the tradition's own framing (*maʿat*/*isfet*, *vṛ-*/"obstruction," *huaca* succession, etc.) before invoking the comparative category.
+3. Open with the tradition's own framing (*maʿat*/*isfet*, *vṛ-*/"obstruction," *wak'a* succession, etc.) before invoking the comparative category.
 
 ## Excluded adjacent motifs (contamination risks)
 A cross-cultural book does not exclude neighboring *cultures* (that would defeat its purpose); it excludes *adjacent motifs* that readers and lazy comparativists conflate with chaoskampf. The book explicitly excludes:
@@ -93,7 +93,7 @@ Part I is organised geographically, in a sequence that respects the known Near-E
 Provisional geographic clusters:
 1. Mesopotamia — Ninurta/Asag, Ninurta/Anzû, Marduk/Tiamat (full chapters each); family chapter on minor Mesopotamian combats (Marduk/Labbu).
 2. Anatolia & Levant — Kumarbi Cycle / Ullikummi, Illuyanka, Baal/Yamm-Lotan (full chapters each).
-3. Hebrew Bible & Early Christianity — YHWH vs. Leviathan/Rahab (full); Revelation 12 Red Dragon (full); family chapter on Christian reception (St. George / Michael lineage, Ogden 2021).
+3. Hebrew Bible & Early Christianity — Yahweh vs. Leviathan/Rahab (full); Revelation 12 Red Dragon (full); family chapter on Christian reception (St. George / Michael lineage, Ogden 2021).
 4. Greece & Rome — Zeus vs. Typhon (full); family chapter "Greek dragon-combats after Zeus-Typhon" (Apollo/Python, Herakles/Hydra-Ladon-Geryon, Perseus/Ketos, Kadmos, Bellerophon, Cacus).
 5. Iran — Thraētaona vs. Aži Dahāka (full); Frashokereti as its eschatological pendant.
 6. India — Indra vs. Vṛtra (full); family chapter on Vedic and post-Vedic reflexes (Trita Āptya; Krishna/Kāliya as bhakti reworking).
