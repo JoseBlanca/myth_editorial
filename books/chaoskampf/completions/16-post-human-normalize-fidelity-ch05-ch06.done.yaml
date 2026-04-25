@@ -1,0 +1,38 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-25T15:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/06-illuyanka.adoc"
+    lines: 260
+  - file: "chapters/06-illuyanka.claims.approved.adoc"
+    lines: 326
+summary: "Applied the one Ch6 italics fix surfaced by narrative-fidelity (LOW); both chapters PASSed without other revisions needed."
+notes: |
+  Both chapters PASSed narrative-fidelity. Ch5 had 4 LOW findings, none
+  blocking and none requiring revision (Ch. 6 cross-reference is
+  factually correct given the actual sequence; Sanchuniathon
+  elaboration is consistent with the comparative hook and accepted in
+  place). Ch6 had 2 LOW findings; one is a non-blocking editorial
+  summary paragraph at line 41, the other is a one-occurrence missing
+  italics on `purulli` at line 24 that mirrored the upstream claims
+  doc.
+
+  Ch6 fix:
+  - Line 24 narrative: "the recitation of the purulli festival" →
+    "the recitation of the _purulli_ festival" — restoring the
+    glossary-locked italics rule.
+  - The same line in chapters/06-illuyanka.claims.approved.adoc was
+    fixed in lockstep so the upstream claims document is consistent
+    with the narrative.
+
+  Ch5 stays as drafted — no fixes needed, audit findings are LOW and
+  the contested passages either match the actual chapter sequence
+  (the Ch. 6 cross-reference) or extend the claims faithfully (the
+  Sanchuniathon framing is the same content the comparative hook
+  authorises).
+
+  Counts unchanged: Ch5 = 462 lines, 130/130 footnotes/evidence, 5
+  LACUNA + 1 INFERENCE + 2 VARIANT, 5 comparative hooks. Ch6 = 260
+  lines, 97/97 footnotes/evidence, 2 LACUNA + 1 INFERENCE, 4
+  comparative hooks. Both render cleanly.
