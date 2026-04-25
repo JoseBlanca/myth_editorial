@@ -1,0 +1,51 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-24T13:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/01-ninurta-asag.adoc"
+    lines: 333
+  - file: "chapters/02-ninurta-anzu.adoc"
+    lines: 332
+summary: "Applied accepted narrative-fidelity findings (5 MEDIUM Ch1, 6 MEDIUM Ch2) and re-validated; both chapters render cleanly and preserve all claim/footnote/marker/comparative-hook counts."
+notes: |
+  Ch01 trims (5 MEDIUM accepted, all surgical sentence deletions or reductions):
+  - FH-03 line 36: removed the unsupported Nippur-as-religious-centre /
+    royal-legitimation gloss; kept Enlil's profile.
+  - FH-01 line 50: removed the Sumerian-theogonic-family-tree inference
+    that placed Asag as Enlil's sibling/uncle; kept the An+Ki parentage.
+  - FH-02 line 123: removed the hepatoscopy-divinatory-culture gloss on
+    the liver; kept the strike-the-centre and trophy-to-temple framing.
+  - FH-04 line 284: removed the Nisaba-as-goddess-of-writing-and-barley
+    gloss; kept the granary-stewardship appointment.
+  - FH-05 line 314: replaced "two thousand years" with "many centuries".
+  - FH-06 line 321: removed the chapter-verdict-style Asag-as-rival-
+    sovereign assertion; kept the Scurlock-Beal political/cultic
+    relocation observation.
+
+  Ch02 trims (6 MEDIUM accepted):
+  - F1 line 24: removed the Ashurbanipal-also-gave-us-Gilgamesh-and-
+    Enūma-Eliš gloss; kept the Nineveh library provenance.
+  - F7 line 48: corrected Qingu's role from "general" to "consort and
+    champion" (matching Enūma Eliš and the brief).
+  - F2 line 51: removed the Forsyth scope expansion to "Hebrew Leviathan
+    passages and the red dragon of Revelation 12"; kept Forsyth's
+    Mesopotamia-to-Judeo-Christian bridge framing.
+  - F3 line 54: removed the Scurlock-Beal cross-reference to "this
+    book's front matter"; kept the volume's role as a Mesopotamian
+    combat-myth engagement.
+  - F5 line 71: removed the Akkadian *dup šīmāti* "tablet of fates"
+    gloss; kept the Tablet-of-Destinies definition.
+  - F8 line 314: removed the "warrior becomes younger, adversary becomes
+    larger, stakes become more cosmic" interpretive escalation;
+    replaced "outbids" with the more neutral "reshapes".
+
+  Counts after revision (unchanged from pre-fix): Ch1 — 85 footnotes,
+  85 evidence tokens, 5 comparative hooks, 2 VARIANT + 1 INFERENCE.
+  Ch2 — 98 footnotes, 98 evidence tokens, 7 comparative hooks, 2 LACUNA
+  + 1 RECONSTRUCTION + 1 VARIANT + 1 INFERENCE. Word counts dropped
+  modestly from the trims (Ch1 10678 → 10425; Ch2 5559 → 5476). Both
+  files re-render cleanly via asciidoctor. Skipping a re-run of stage
+  12 narrative-fidelity since the fixes are surgical sentence deletions
+  with no new factual content; if the line-edit or marker-resolve stages
+  surface residual drift, we revisit.
