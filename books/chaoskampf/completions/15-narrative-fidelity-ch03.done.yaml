@@ -1,0 +1,34 @@
+stage: narrative-fidelity
+chapter: "03-marduk-tiamat"
+chapter_number: 3
+completion_date: "2026-04-25"
+auditor_model: "claude-sonnet-4-6"
+author_model: "claude-opus-4-7[1m]"
+
+verdict: PASS
+total_claims: 178
+claims_covered: 178
+claims_dropped_high: 0
+claims_added_high: 0
+claim_distorted_high: 0
+total_medium: 4
+total_low: 1
+
+output_files:
+  fidelity_yaml: "chapters/03-marduk-tiamat.fidelity.yaml"
+
+findings_summary:
+  - { id: F1, type: CLAIM-ADDED, severity: MEDIUM, location: "narrative line 152", summary: "bind-strip-kill parallel to Marduk/Tiamat added without claims-doc backing" }
+  - { id: F2, type: CLAIM-ADDED, severity: MEDIUM, location: "narrative line 167", summary: "'standard portrait in later iconography' — unsupported iconographic reception claim" }
+  - { id: F3, type: CLAIM-ADDED, severity: LOW,    location: "narrative line 292", summary: "cloth-test foreshadowing of cosmogony — interpretive addition not in claims doc" }
+  - { id: F4, type: CLAIM-DISTORTED, severity: MEDIUM, location: "narrative lines 42/104/443", summary: "Esagil and Esarra not italicised on first mention — glossary formatting breach" }
+  - { id: F5, type: CLAIM-ADDED, severity: MEDIUM, location: "narrative line 528", summary: "'works with both registers at once' synthesis — new interpretive claim beyond VARIANT marker scope" }
+
+ready_for_marker_resolve: true
+marker_resolve_note: |
+  Chapter is PASS. The four MEDIUM findings and one LOW finding are all fixable by
+  targeted sentence deletions or a single formatting pass (Esagil/Esarra italics).
+  No section requires re-drafting. Recommend passing to post-human normalise / marker
+  resolve stage. The marker-resolve operator should address: F4 (formatting — add
+  italics to Esagil and Esarra at first mention), and may at their discretion remove
+  or footnote F1, F2, F3, F5 as editorial additions.

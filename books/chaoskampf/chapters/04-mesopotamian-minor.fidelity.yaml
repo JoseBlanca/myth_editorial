@@ -1,0 +1,213 @@
+meta:
+  stage: "narrative-fidelity"
+  auditor_model: "claude-sonnet-4-6"
+  input_claims: "chapters/04-mesopotamian-minor.claims.approved.adoc"
+  input_narrative: "chapters/04-mesopotamian-minor.adoc"
+  claims_count: 31
+  narrative_paragraphs_audited: 107
+  verdict: PASS
+  honesty_self_check: |
+    I am Sonnet 4.6. I did not write this narrative; Opus 4.7 did.
+
+    Check 1 (Completeness): I walked all 31 claims in order, mapped each to a
+    passage in the narrative, and confirmed the footnote count matches on both
+    sides (31 each). The LACUNA block and VARIANT block are reproduced verbatim.
+    All five comparative hooks appear as comment lines (lines 103–107).
+    No claims are dropped.
+
+    Check 2 (No additions): I walked the narrative paragraph by paragraph.
+    One editorial framing sentence at line 62 ("They are not equally weighted,
+    and the order in which they are sometimes mentioned in older surveys can
+    mislead") is not anchored to an explicit claim, but it functions as a
+    contextual signpost rather than a standalone factual assertion and is
+    directly consistent with the VARIANT block's weighting rubric. I flag it
+    LOW. No HIGH or MEDIUM additions detected. The Tishpak/Nergal/Marduk
+    hierarchy is correctly maintained throughout: Tishpak is primary, Nergal
+    is earlier proposal, Marduk is structural parallel only — the narrative
+    does not revert to a Wakeman-favours-Marduk reading. The bašmu/mušḫuššu
+    species reading variation is faithfully reproduced (line 30). The divine-
+    name lacuna is correctly handled (lines 40–44). The closing coda (line 101)
+    is an authorial peroration summarising approved content, not a new factual
+    claim.
+
+    Check 3 (Fidelity): All 31 claim-to-narrative mappings preserve meaning.
+    "clearly preserved" at line 55 reproduces the claims doc wording exactly
+    ("no clearly preserved cult-foundation passage") and is a technical modifier
+    indicating the surviving text is not intact enough to read as a cult-
+    foundation passage — not a hedge. No distortions detected.
+
+    Glossary: Labbu is in the glossary with correct definition. Tishpak, Nergal,
+    bašmu, and mušḫuššu are absent from the glossary; this is a glossary gap,
+    not a narrative error. Marduk and Tiamat are in the glossary. Full
+    diacritics are used correctly throughout (bašmu, mušḫuššu, Enūma Eliš,
+    Anzû, mušḫuššu). No forbidden-word hits.
+
+    Footnote integrity: 31 footnotes in narrative, 31 claims. All footnote
+    texts match the claims-doc footnotes verbatim or with trivial paraphrase
+    that preserves citation data.
+
+tallies:
+  dropped: 0
+  partial: 0
+  added: 0
+  implicit_additions: 1
+  distorted_high: 0
+  distorted_medium: 0
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  footnote_mismatches: 0
+
+claim_coverage:
+  - claim: 1
+    location_in_narrative: "line 6 (§Source overview, para 1 — Foster title/pagination)"
+    status: COVERED
+  - claim: 2
+    location_in_narrative: "line 8 (§Source overview, para 2 — Foster headnote)"
+    status: COVERED
+  - claim: 3
+    location_in_narrative: "line 11 (§Source overview, para 3 — Wakeman classical treatment)"
+    status: COVERED
+  - claim: 4
+    location_in_narrative: "line 13 (§Source overview, para 4 — Wakeman method)"
+    status: COVERED
+  - claim: 5
+    location_in_narrative: "line 16 (§Source overview, para 5 — fragment length)"
+    status: COVERED
+  - claim: 6
+    location_in_narrative: "line 18 (§Source overview, para 6 — chapter reliance)"
+    status: COVERED
+  - claim: 7
+    location_in_narrative: "line 25 (§Fragment as it survives, para 1 — cosmological opening)"
+    status: COVERED
+  - claim: 8
+    location_in_narrative: "line 27 (§Fragment, para 2 — Labbu named adversary)"
+    status: COVERED
+  - claim: 9
+    location_in_narrative: "line 30 (§Fragment, para 3 — measurement + bašmu/mušḫuššu)"
+    status: COVERED
+  - claim: 10
+    location_in_narrative: "line 32 (§Fragment, para 4 — Labbu name etymology)"
+    status: COVERED
+  - claim: 11
+    location_in_narrative: "line 35 (§Fragment, para 5 — serpentine description)"
+    status: COVERED
+  - claim: 12
+    location_in_narrative: "line 38 (§Fragment, para 6 — divine council)"
+    status: COVERED
+  - claim: 13
+    location_in_narrative: "line 40 (§Fragment, para 7 — lacuna at divine name)"
+    status: COVERED
+  - claim: LACUNA-1
+    location_in_narrative: "line 43 (LACUNA block — reproduced verbatim)"
+    status: COVERED
+  - claim: 14
+    location_in_narrative: "line 45 (§Fragment, para 8 — storm-wind instructions)"
+    status: COVERED
+  - claim: 15
+    location_in_narrative: "line 47 (§Fragment, para 9 — storm-cloud riding)"
+    status: COVERED
+  - claim: 16
+    location_in_narrative: "line 50 (§Fragment, para 10 — combat from storm)"
+    status: COVERED
+  - claim: 17
+    location_in_narrative: "line 52 (§Fragment, para 11 — blood duration)"
+    status: COVERED
+  - claim: 18
+    location_in_narrative: "line 55 (§Fragment, para 12 — no aftermath preserved)"
+    status: COVERED
+  - claim: 19
+    location_in_narrative: "line 57 (§Fragment, para 13 — multiple breaks)"
+    status: COVERED
+  - claim: 20
+    location_in_narrative: "line 64 (§Identification, para 2 — Marduk as structural parallel)"
+    status: COVERED
+  - claim: 21
+    location_in_narrative: "line 66 (§Identification, para 3 — Marduk case comparative not textual)"
+    status: COVERED
+  - claim: 22
+    location_in_narrative: "line 69 (§Identification, para 4 — Tishpak leading candidate)"
+    status: COVERED
+  - claim: 23
+    location_in_narrative: "line 71 (§Identification, para 5 — Nergal third proposal)"
+    status: COVERED
+  - claim: 24
+    location_in_narrative: "line 74 (§Identification, para 6 — three identifications unequal)"
+    status: COVERED
+  - claim: VARIANT-1
+    location_in_narrative: "line 77 (VARIANT block — reproduced verbatim)"
+    status: COVERED
+  - claim: 25
+    location_in_narrative: "line 79 (§Identification, para 7 — methodological caution)"
+    status: COVERED
+  - claim: 26
+    location_in_narrative: "line 85 (§Corpus placement, para 1 — shared combat pattern)"
+    status: COVERED
+  - claim: 27
+    location_in_narrative: "line 88 (§Corpus placement, para 2 — differs: no cosmogonic outcome)"
+    status: COVERED
+  - claim: 28
+    location_in_narrative: "line 91 (§Corpus placement, para 3 — Forsyth secondary witness)"
+    status: COVERED
+  - claim: 29
+    location_in_narrative: "line 93 (§Corpus placement, para 4 — Lambert adjacent witness)"
+    status: COVERED
+  - claim: 30
+    location_in_narrative: "line 96 (§Corpus placement, para 5 — reminder of wider corpus)"
+    status: COVERED
+  - claim: 31
+    location_in_narrative: "line 98 (§Corpus placement, para 6 — testimonial value)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-1
+    location_in_narrative: "line 103 (comment block — storm-god instrumentation)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-2
+    location_in_narrative: "line 104 (comment block — attribution debate as method case)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-3
+    location_in_narrative: "line 105 (comment block — leonine name / hybrid monster)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-4
+    location_in_narrative: "line 106 (comment block — absent cosmogonic outcome)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-5
+    location_in_narrative: "line 107 (comment block — Forsyth genealogical line)"
+    status: COVERED
+
+findings:
+  - id: FH-01
+    kind: IMPLICIT-ADDITION
+    severity: LOW
+    claim_or_passage: |
+      "Three candidates have been put forward in the scholarship for the god
+      whose name the manuscript no longer preserves. They are not equally
+      weighted, and the order in which they are sometimes mentioned in older
+      surveys can mislead." (line 62)
+    issue: >
+      The second sentence ("the order in which they are sometimes mentioned in
+      older surveys can mislead") is an editorial signpost not backed by an
+      explicit approved claim. It is consistent with the VARIANT block's
+      weighting rubric and functions as a contextual warning rather than a
+      standalone factual assertion. No claim states that older surveys present
+      the identifications in a misleading order.
+    recommended_fix: >
+      No action required for publication; severity is LOW. If the editorial
+      team prefers strict claim anchoring, the sentence can be trimmed to
+      "Three candidates have been put forward in the scholarship for the god
+      whose name the manuscript no longer preserves. They are not equally
+      weighted." without loss of meaning.
+
+  - id: FH-02
+    kind: GLOSSARY-GAP
+    severity: LOW
+    claim_or_passage: "Terms: Tishpak, Nergal, bašmu, mušḫuššu"
+    issue: >
+      These four terms appear in the narrative and the claims doc but are
+      absent from glossary.yaml. This is a glossary gap, not a narrative
+      error — the narrative uses them correctly with appropriate context and
+      italicisation. The gap means a reader consulting the glossary will not
+      find definitions for these terms.
+    recommended_fix: >
+      Add glossary entries for Tishpak (patron deity of Eshnunna, proposed
+      slayer of Labbu), Nergal (god of plague, war, and underworld violence),
+      bašmu (Akkadian serpent species), and mušḫuššu (Akkadian horned serpent-
+      dragon). These can be added at the next glossary update pass.
