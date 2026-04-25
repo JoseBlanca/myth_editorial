@@ -1,0 +1,378 @@
+meta:
+  stage: narrative-fidelity
+  chapter: "02-ninurta-anzu"
+  title: "Ninurta vs. Anzû: The Theft of the Tablet of Destinies"
+  auditor_model: "claude-sonnet-4-6"
+  author_model: "claude-opus-4-7[1m]"
+  claims_file: "chapters/02-ninurta-anzu.claims.approved.adoc"
+  narrative_file: "chapters/02-ninurta-anzu.adoc"
+  audit_date: "2026-04-25"
+  note: "Auditor (Sonnet 4.6) did not write the narrative. Fidelity check is against the approved claims document only — not against primary sources."
+
+tallies:
+  total_claims: 98
+  claims_covered: 98
+  claims_dropped_high: 0
+  claims_partial_medium: 0
+  claims_added_high: 0
+  implicit_addition_medium: 5
+  implicit_addition_low: 2
+  claim_distorted_high: 0
+  claim_distorted_medium: 1
+  total_high: 0
+  total_medium: 6
+  total_low: 2
+
+verdict: "REVISE"
+verdict_rule_triggered: ">=5 MEDIUM total (6 MEDIUM findings)"
+
+glossary_check:
+  Ea_not_Enki: PASS
+  Anzû_circumflex_body_prose: PASS
+  Anzu_no_circumflex_acceptable_uses: |
+    Two acceptable appearances: title citation "The Standard Babylonian Epic of Anzu" (scholarly title),
+    and footnote references "Anzu as a bridge to Enūma Eliš" / "the Anzu-bridge argument".
+    All body-prose occurrences use Anzû correctly.
+  Sarur_hacek: PASS
+  Apsû: PASS
+  Tablet_of_Destinies_title_case: PASS
+  Tablet_of_Fates_banned_form: PASS
+    # Note: narrative uses "tablet of fates" in lowercase as apposition in an Akkadian gloss
+    # ("Akkadian *dup šīmāti*, 'tablet of fates'") — this is acceptable as a transliteration gloss,
+    # not the proscribed "Tablet of Fates" substitution.
+
+forbidden_words_check:
+  chaos_figure: PASS
+  chaos_monster: PASS
+  dragon_myth: PASS
+  dragon_slaying_myth: PASS
+  primordial_contrastive_uses:
+    - location: "narrative line 80"
+      text: "not as a primordial adversary"
+      verdict: DEFENSIBLE
+      note: "Mirrors claims-doc language exactly. Contrastive use distinguishing Anzû from a cosmogonic monster. Corresponds to claims claim 'Anzû is introduced as a minor divine servitor originally attached to Enlil, not as a primordial adversary.'"
+    - location: "narrative line 86"
+      text: "rather than in a primordial, pre-cosmic setting"
+      verdict: DEFENSIBLE
+      note: "Mirrors claims-doc language exactly. Contrastive use distinguishing the Anzû Epic's setting from a cosmogony. Corresponds to claims claim 'The opening of Tablet I situates the narrative in a divine palace-and-assembly world rather than in a primordial, pre-cosmic setting.'"
+
+footnote_integrity:
+  verdict: PASS
+  note: |
+    All 98 footnotes in the narrative match the approved claims-document footnotes exactly.
+    No footnote text has been altered, abbreviated, or supplemented.
+
+markers_check:
+  LACUNA_markers: 2 # both present, text matches claims doc
+  RECONSTRUCTION_marker: 1 # present, text matches claims doc
+  INFERENCE_marker: 1 # present, text matches claims doc
+  VARIANT_marker: 1 # present, text matches claims doc
+  COMPARATIVE_HOOK_comments: 7 # all 7 present, text matches claims doc
+
+claim_coverage:
+  # Format: claim_index (1-based per section order) | claims_doc_line | narrative_line | status | note
+  # Source overview (claims 1–16)
+  - { idx: 1,  claims_line: 9,   narrative_line: 5,   status: COVERED }
+  - { idx: 2,  claims_line: 12,  narrative_line: 8,   status: COVERED }
+  - { idx: 3,  claims_line: 15,  narrative_line: 11,  status: COVERED }
+  - { idx: 4,  claims_line: 18,  narrative_line: 14,  status: COVERED }
+  - { idx: 5,  claims_line: 21,  narrative_line: 17,  status: COVERED }
+  - { idx: 6,  claims_line: 24,  narrative_line: 20,  status: COVERED }
+  - { idx: 7,  claims_line: 27,  narrative_line: 23,  status: COVERED }
+  - { idx: 8,  claims_line: 30,  narrative_line: 26,  status: COVERED }
+  - { idx: 9,  claims_line: 33,  narrative_line: 29,  status: COVERED }
+  - { idx: 10, claims_line: 36,  narrative_line: 32,  status: COVERED }
+  - { idx: 11, claims_line: 39,  narrative_line: 35,  status: COVERED }
+  - { idx: 12, claims_line: 42,  narrative_line: 38,  status: COVERED }
+  - { idx: 13, claims_line: 45,  narrative_line: 41,  status: COVERED }
+  - { idx: 14, claims_line: 48,  narrative_line: 44,  status: COVERED }
+  - { idx: 15, claims_line: 51,  narrative_line: 47,  status: COVERED, note: "See CLAIM-DISTORTED finding F7 — 'Tiamat's general Qingu' not in claims doc" }
+  - { idx: 16, claims_line: 54,  narrative_line: 50,  status: COVERED, note: "See IMPLICIT-ADDITION finding F2 — Leviathan/Revelation 12 detail added" }
+  - { idx: 17, claims_line: 57,  narrative_line: 53,  status: COVERED, note: "See IMPLICIT-ADDITION finding F3 — 'front matter' and 'two landmarks' characterization added" }
+  # Setting and context (claims 17–27)
+  - { idx: 18, claims_line: 62,  narrative_line: 58,  status: COVERED }
+  - { idx: 19, claims_line: 65,  narrative_line: 62,  status: COVERED }
+  - { idx: 20, claims_line: 68,  narrative_line: 65,  status: COVERED }
+  - { idx: 21, claims_line: 71,  narrative_line: 68,  status: COVERED }
+  - { idx: 22, claims_line: 74,  narrative_line: 71,  status: COVERED, note: "See IMPLICIT-ADDITION finding F5 — Akkadian gloss 'dup šīmāti' added" }
+  - { idx: 23, claims_line: 77,  narrative_line: 74,  status: COVERED }
+  - { idx: 24, claims_line: 80,  narrative_line: 77,  status: COVERED }
+  - { idx: 25, claims_line: 83,  narrative_line: 80,  status: COVERED }
+  - { idx: 26, claims_line: 86,  narrative_line: 83,  status: COVERED }
+  - { idx: 27, claims_line: 89,  narrative_line: 86,  status: COVERED }
+  - { idx: 28, claims_line: 92,  narrative_line: 89,  status: COVERED }
+  # Tablet I (claims 28–45)
+  - { idx: 29, claims_line: 99,  narrative_line: 96,  status: COVERED }
+  - { idx: 30, claims_line: 102, narrative_line: 99,  status: COVERED }
+  - { idx: 31, claims_line: 105, narrative_line: 102, status: COVERED }
+  - { idx: 32, claims_line: 108, narrative_line: 105, status: COVERED }
+  - { idx: 33, claims_line: 111, narrative_line: 108, status: COVERED }
+  - { idx: 34, claims_line: 114, narrative_line: 111, status: COVERED }
+  - { idx: 35, claims_line: 117, narrative_line: 114, status: COVERED }
+  - { idx: 36, claims_line: 120, narrative_line: 117, status: COVERED }
+  - { idx: 37, claims_line: 123, narrative_line: 120, status: COVERED }
+  - { idx: 38, claims_line: 126, narrative_line: 123, status: COVERED }
+  - { idx: 39, claims_line: 129, narrative_line: 126, status: COVERED }
+  - { idx: 40, claims_line: 132, narrative_line: 129, status: COVERED }
+  - { idx: 41, claims_line: 135, narrative_line: 132, status: COVERED }
+  - { idx: 42, claims_line: 138, narrative_line: 135, status: COVERED }
+  - { idx: 43, claims_line: 141, narrative_line: 138, status: COVERED }
+  - { idx: 44, claims_line: 144, narrative_line: 141, status: COVERED }
+  - { idx: 45, claims_line: 147, narrative_line: 144, status: COVERED }
+  - { idx: 46, claims_line: 150, narrative_line: 147, status: COVERED }
+  - { idx: 47, claims_line: 153, narrative_line: 150, status: COVERED }
+  - { idx: 48, claims_line: 156, narrative_line: 153, status: COVERED }
+  # Tablet II (claims 46–60)
+  - { idx: 49, claims_line: 161, narrative_line: 158, status: COVERED }
+  - { idx: 50, claims_line: 164, narrative_line: 161, status: COVERED }
+  - { idx: 51, claims_line: 167, narrative_line: 164, status: COVERED }
+  - { idx: 52, claims_line: 170, narrative_line: 167, status: COVERED }
+  - { idx: 53, claims_line: 173, narrative_line: 170, status: COVERED }
+  - { idx: 54, claims_line: 176, narrative_line: 173, status: COVERED }
+  - { idx: 55, claims_line: 179, narrative_line: 176, status: COVERED }
+  - { idx: 56, claims_line: 182, narrative_line: 179, status: COVERED }
+  - { idx: 57, claims_line: 185, narrative_line: 182, status: COVERED }
+  # LACUNA marker present
+  - { idx: 58, claims_line: 190, narrative_line: 187, status: COVERED }
+  - { idx: 59, claims_line: 193, narrative_line: 190, status: COVERED }
+  - { idx: 60, claims_line: 196, narrative_line: 193, status: COVERED }
+  - { idx: 61, claims_line: 199, narrative_line: 196, status: COVERED }
+  - { idx: 62, claims_line: 202, narrative_line: 199, status: COVERED }
+  - { idx: 63, claims_line: 205, narrative_line: 202, status: COVERED }
+  - { idx: 64, claims_line: 208, narrative_line: 205, status: COVERED }
+  # INFERENCE marker present
+  - { idx: 65, claims_line: 213, narrative_line: 210, status: COVERED }
+  # Tablet III (claims 63–77)
+  - { idx: 66, claims_line: 218, narrative_line: 215, status: COVERED }
+  - { idx: 67, claims_line: 221, narrative_line: 218, status: COVERED }
+  - { idx: 68, claims_line: 224, narrative_line: 221, status: COVERED }
+  - { idx: 69, claims_line: 227, narrative_line: 224, status: COVERED }
+  - { idx: 70, claims_line: 230, narrative_line: 227, status: COVERED }
+  - { idx: 71, claims_line: 233, narrative_line: 230, status: COVERED }
+  - { idx: 72, claims_line: 236, narrative_line: 233, status: COVERED }
+  - { idx: 73, claims_line: 239, narrative_line: 236, status: COVERED }
+  - { idx: 74, claims_line: 242, narrative_line: 239, status: COVERED }
+  - { idx: 75, claims_line: 245, narrative_line: 242, status: COVERED }
+  - { idx: 76, claims_line: 248, narrative_line: 245, status: COVERED }
+  - { idx: 77, claims_line: 251, narrative_line: 248, status: COVERED }
+  - { idx: 78, claims_line: 254, narrative_line: 251, status: COVERED }
+  # LACUNA + RECONSTRUCTION markers present
+  - { idx: 79, claims_line: 261, narrative_line: 258, status: COVERED }
+  # Function and interpretation (claims 78–85)
+  - { idx: 80, claims_line: 266, narrative_line: 263, status: COVERED }
+  - { idx: 81, claims_line: 269, narrative_line: 266, status: COVERED, note: "See IMPLICIT-ADDITION finding F6 — forward-reference to Marduk chapter added" }
+  - { idx: 82, claims_line: 272, narrative_line: 269, status: COVERED }
+  - { idx: 83, claims_line: 275, narrative_line: 272, status: COVERED }
+  - { idx: 84, claims_line: 278, narrative_line: 275, status: COVERED }
+  - { idx: 85, claims_line: 281, narrative_line: 278, status: COVERED }
+  - { idx: 86, claims_line: 284, narrative_line: 281, status: COVERED }
+  - { idx: 87, claims_line: 287, narrative_line: 284, status: COVERED }
+  # Variants and transmission (claims 86–92)
+  # VARIANT marker present
+  - { idx: 88, claims_line: 294, narrative_line: 291, status: COVERED }
+  - { idx: 89, claims_line: 297, narrative_line: 294, status: COVERED }
+  - { idx: 90, claims_line: 300, narrative_line: 297, status: COVERED }
+  - { idx: 91, claims_line: 303, narrative_line: 300, status: COVERED }
+  - { idx: 92, claims_line: 306, narrative_line: 303, status: COVERED }
+  - { idx: 93, claims_line: 309, narrative_line: 306, status: COVERED }
+  - { idx: 94, claims_line: 312, narrative_line: 309, status: COVERED }
+  # Reception within the Mesopotamian tradition (claims 93–98)
+  - { idx: 95, claims_line: 317, narrative_line: 314, status: COVERED, note: "See IMPLICIT-ADDITION finding F7 — 'The warrior becomes younger...' sentence added" }
+  - { idx: 96, claims_line: 320, narrative_line: 317, status: COVERED }
+  - { idx: 97, claims_line: 323, narrative_line: 320, status: COVERED }
+  - { idx: 98, claims_line: 326, narrative_line: 323, status: COVERED }
+
+findings:
+  - id: F1
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    location: "narrative line 23-24"
+    section: "Source overview"
+    narrative_text: |
+      "the same royal collection that gave back to modern scholarship the bulk of the Standard
+      Babylonian *Gilgamesh* and substantial parts of *Enūma Eliš*"
+    claims_doc_text: |
+      "The Standard Babylonian copies cluster heavily in the Nineveh libraries of the seventh
+      century BCE, including the library of Ashurbanipal."
+      (claims line 27)
+    issue: |
+      The narrative adds that Ashurbanipal's library also contained Gilgamesh and Enūma Eliš.
+      This is accurate background knowledge but is not an approved claim. It introduces two
+      named compositions (Gilgamesh, Enūma Eliš) in a context where the claims doc makes no
+      such assertion. A reader could infer a source-relationship not established in this chapter.
+    fix: "Remove the parenthetical from 'including the library of Ashurbanipal.' and stop there,
+      or obtain a claims-doc amendment supporting the addition."
+
+  - id: F2
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    location: "narrative line 50-51"
+    section: "Source overview"
+    narrative_text: |
+      "— the long line that runs from Ninurta through Marduk, the Hebrew Leviathan passages,
+      and ultimately the red dragon of Revelation 12"
+    claims_doc_text: |
+      "Forsyth's *The Old Enemy* treats the Anzû narrative as a structural bridge between the
+      Sumerian Ninurta cycle and the later Judeo-Christian combat tradition."
+      (claims line 54)
+    issue: |
+      The narrative expands Forsyth's claim by naming specific downstream destinations —
+      Leviathan, Revelation 12 — that are not in the approved claims. While Forsyth ch. 2
+      does cover this material (and the book treats Revelation 12 in a later chapter), the
+      claims doc for this chapter does not name these specifics. The additions cross from
+      narrative expansion into unsupported factual assertion about what Forsyth's chapter argues.
+    fix: "Truncate after 'Judeo-Christian combat tradition' to match the claims-doc scope,
+      or add a claims-doc amendment naming Leviathan and Revelation 12 as Forsyth ch. 2 contents."
+
+  - id: F3
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    location: "narrative line 53-55"
+    section: "Source overview"
+    narrative_text: |
+      "JoAnn Scurlock and Richard Beal's 2013 volume on the Chaoskampf hypothesis — introduced
+      in this book's front matter as one of the two landmarks of the recent critique — contains
+      chapters that engage the Anzû Epic as part of the Mesopotamian combat-myth corpus."
+    claims_doc_text: |
+      "Scurlock and Beal's volume on the Chaoskampf hypothesis includes chapters that engage the
+      Anzû Epic as part of the Mesopotamian combat-myth corpus."
+      (claims line 57-58)
+    issue: |
+      The narrative adds "introduced in this book's front matter as one of the two landmarks
+      of the recent critique." This is an editorial cross-reference to the book's introduction
+      chapter — not an approved claim about the Scurlock & Beal volume. It may be accurate (the
+      introduction does treat Scurlock & Beal as a landmark), but it is not in the claims doc
+      for this chapter.
+    fix: "Remove the parenthetical cross-reference or add an approved claims-doc amendment."
+
+  - id: F4
+    type: IMPLICIT-ADDITION
+    severity: LOW
+    location: "narrative line 17"
+    section: "Source overview"
+    narrative_text: |
+      "Witnesses to the composition span the Old Babylonian, Middle Babylonian, and Neo-Assyrian
+      periods, a spread of roughly a thousand years."
+    claims_doc_text: |
+      "Witnesses to the composition span the Old Babylonian, Middle Babylonian, and Neo-Assyrian
+      periods, with the bulk of the Standard Babylonian text reconstructed from the Neo-Assyrian
+      royal libraries."
+      (claims line 21)
+    issue: |
+      "A spread of roughly a thousand years" is arithmetic (OB ~2000–1600 BCE to Neo-Assyrian
+      ~900–600 BCE) not in the claims doc. It is likely accurate but is an unsupported addition.
+      Severity LOW because it is a logically derived summary, not a new factual claim.
+    fix: "Delete 'a spread of roughly a thousand years' or verify and add to claims doc."
+
+  - id: F5
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    location: "narrative line 71"
+    section: "Setting and context"
+    narrative_text: |
+      "The Tablet of Destinies — Akkadian *dup šīmāti*, 'tablet of fates' — is the divinely
+      held object that confers universal decree-power."
+    claims_doc_text: |
+      "The Tablet of Destinies is the divinely held object that confers universal decree-power;
+      possession of it is, functionally, kingship over the cosmos."
+      (claims line 74)
+    issue: |
+      The Akkadian term and gloss "Akkadian *dup šīmāti*, 'tablet of fates'" is not in the
+      approved claims. It is linguistically accurate but constitutes an unsupported factual
+      addition (a philological claim about the Akkadian title). "Tablet of fates" in lowercase
+      as a gloss is not the proscribed "Tablet of Fates" substitution, but its addition as an
+      etymology-claim is not approved.
+    fix: "Remove the Akkadian gloss or add an approved claims-doc amendment citing the Akkadian
+      term (with a source, e.g., Annus 2001 glossary)."
+
+  - id: F6
+    type: IMPLICIT-ADDITION
+    severity: LOW
+    location: "narrative line 266"
+    section: "Function and interpretation"
+    narrative_text: |
+      "This is the Ninurta whom the Marduk chapter will meet again, translated into a new pantheon."
+    claims_doc_text: |
+      "The narrative establishes Ninurta as model king: the warrior who defends the order of the
+      assembly, follows the counsel of the wise god, and restores the instruments of rule to their
+      rightful place."
+      (claims line 269)
+    issue: |
+      The forward-reference to the Marduk chapter is an editorial addition not in the claims doc.
+      It is an intra-book navigation sentence, not a factual claim, so severity is LOW.
+    fix: "Remove or quarantine as an editorial comment."
+
+  - id: F7
+    type: CLAIM-DISTORTED
+    severity: MEDIUM
+    location: "narrative line 47-48"
+    section: "Source overview"
+    narrative_text: |
+      "Scholarship treats the Anzû Epic as the direct Mesopotamian antecedent of the combat in
+      *Enūma Eliš*, the Babylonian creation epic in which Marduk will defeat Tiamat's general
+      Qingu and reclaim the Tablet of Destinies."
+    claims_doc_text: |
+      "Scholarship treats the Anzû Epic as the direct Mesopotamian antecedent of the combat in
+      *Enūma Eliš*, in which Marduk will defeat Qingu and reclaim the Tablet of Destinies."
+      (claims line 51)
+    issue: |
+      The narrative inserts "Tiamat's general" as a descriptor for Qingu. In Enūma Eliš, Qingu
+      is more accurately Tiamat's consort / champion (not 'general'), and more importantly this
+      characterization is not in the approved claims. The claims doc names Qingu without a role
+      descriptor; the narrative adds one that may not be textually accurate for an Akkadian text
+      not yet treated in this chapter. Severity MEDIUM because it introduces a role characterization
+      (general vs. consort/champion) that diverges from standard Assyriology usage.
+    fix: "Remove 'Tiamat's general' and restore to plain 'Qingu' as in the claims doc."
+
+  - id: F8
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    location: "narrative line 314"
+    section: "Reception within the Mesopotamian tradition"
+    narrative_text: |
+      "The warrior becomes younger, the adversary becomes larger, the stakes become more cosmic."
+    claims_doc_text: |
+      "Scholarship traces a deliberate literary line from *Lugal-e* (Ninurta vs. Asag) to the
+      Anzû Epic (Ninurta vs. Anzû) to *Enūma Eliš* (Marduk vs. Tiamat and Qingu), with each
+      composition reusing and outbidding its predecessor."
+      (claims line 317-318)
+    issue: |
+      The narrative adds an interpretive sentence summarising the escalation ("warrior becomes
+      younger, adversary becomes larger, stakes become more cosmic") that is not in the claims doc.
+      This is a substantive scholarly interpretation — an additional claim about the trajectory of
+      the literary genealogy — without an approved-claims basis. It may be supportable from Annus
+      2001 or Lambert 2013, but it is not in the approved claims for this chapter.
+    fix: "Remove the interpretive sentence or add an approved claims-doc amendment with a specific
+      source citation."
+
+honesty_self_check:
+  q1_all_98_claims_walked: |
+    Yes. All 98 EVIDENCE-tagged paragraphs were walked in order. The Evidence-line count was
+    verified by file comparison (claims doc: 98, narrative: 98). No section was under-checked.
+    All markers (LACUNA x2, RECONSTRUCTION, INFERENCE, VARIANT) were verified as present and
+    text-matching. All 7 COMPARATIVE-HOOK comments were verified.
+  q2_covered_verdict_basis: |
+    All 98 "COVERED" verdicts are based on locating the actual passage in both files and comparing
+    text, not on pattern-matching. Line numbers are cited for both source and narrative.
+  q3_additions_paragraph_by_paragraph: |
+    Yes. The narrative was walked paragraph by paragraph. All 8 findings (F1–F8) were identified
+    by paragraph-level comparison. No section was only spot-checked.
+  q4_model_identity: |
+    Confirmed: this auditor is claude-sonnet-4-6. The narrative was written by claude-opus-4-7[1m].
+    This auditor has no memory of writing the narrative.
+
+notes:
+  length_assessment: |
+    The narrative is 5,559 words against a brief target of 8,000. The skill governing note
+    allows the tighter version if all 98 claims are present. All 98 claims are present;
+    the shorter length is therefore a virtue, not a deficiency.
+  primordial_uses: |
+    "Primordial" survives twice in the narrative. Both occurrences are contrastive ("not as
+    a primordial adversary"; "rather than in a primordial, pre-cosmic setting") and mirror
+    the claims-doc language exactly. Both are defensible: they serve a functional purpose in
+    distinguishing the Anzû Epic's type from cosmogonic combats. No forbidden-word violation.
+  overall_quality: |
+    The narrative is structurally sound and highly faithful. Of the 8 findings, none is a
+    HIGH-severity issue. The REVISE verdict is triggered by 6 MEDIUM findings (≥5 threshold).
+    All findings are fixable by targeted sentence deletions or claims-doc amendments; no
+    section requires re-drafting.

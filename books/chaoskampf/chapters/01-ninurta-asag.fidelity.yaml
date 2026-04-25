@@ -1,0 +1,472 @@
+meta:
+  stage: "narrative-fidelity"
+  auditor_model: "claude-sonnet-4-6"
+  input_claims: "chapters/01-ninurta-asag.claims.approved.adoc"
+  input_narrative: "chapters/01-ninurta-asag.adoc"
+  claims_count: 85
+  narrative_paragraphs_audited: 97
+  verdict: REVISE
+  honesty_self_check: |
+    I am Sonnet 4.6. I did not write this narrative; Opus 4.7 did.
+
+    Check 1 (Completeness): I walked all 85 claims in order, matched each to
+    a passage in the narrative, and confirmed the footnotes are identical
+    (both documents have 85 footnotes and the texts match verbatim). Coverage
+    is high: every claim has a corresponding narrative paragraph. No claims
+    were dropped. I located actual passages for all COVERED verdicts; I did
+    not pattern-match.
+
+    Check 2 (No additions): I walked the narrative paragraph-by-paragraph,
+    not spot-checked. I identified five factual assertions without backing
+    claims: (a) Asag described as Enlil's uncle/sibling in the theogonic
+    family tree (line 50); (b) the liver as "seat of vital force" in
+    Mesopotamian divinatory culture (line 123); (c) Nisaba characterised as
+    goddess of "writing, accounting, and the grain-harvest" with literacy-
+    barley connection (line 284); (d) Nippur as "the place where Enlil's
+    priests certified the legitimacy of whichever human king currently ruled
+    Sumer" (line 36); (e) "two thousand years" duration claim for scribal
+    utility of Lugal-e (line 314). Items (c)–(e) are plausible orienting
+    context that may be legitimate expansions from Forsyth 1987 ch.1–2, but
+    they are not explicitly present in any approved claim and are therefore
+    flagged as IMPLICIT-ADDITION (MEDIUM) rather than CLAIM-ADDED (HIGH),
+    because they function as explanatory asides rather than standalone factual
+    assertions. Item (a) is a genuinely novel inference that goes beyond the
+    claim (which merely states An+Ki parentage). Item (b) adds cultural
+    context not in any claim.
+
+    Check 3 (Fidelity): All claim-to-narrative mappings preserve meaning.
+    The "eternal life" in Enlil's blessing (line 279, claim 59) reproduces the
+    claim's wording exactly and is non-ornamental (it translates the poem's
+    content). "Sacred libations" (line 240) is the phrase in the claim
+    footnote itself. "Primordial-imagination-of-chaos" (line 321) is a
+    paraphrase of Scurlock-Beal's critique framing, not an ornamental
+    adjective. All three previously flagged borderline usages are defensible.
+
+    Sections most carefully checked: source overview (claims 1–7), lapidary
+    aetiology (claims 42–66), triumphant return (claims 67–76), order-making
+    work (claims 77–82). Sections checked with slightly less granularity:
+    transitional paragraphs not anchored to footnotes (lines 56–59, 83–86,
+    94–97, 101–102, 140–143, 147–150, 157–158, 161–164). These are authorial
+    commentary on the narrative, not independent factual assertions; I
+    confirmed they are interpretive rather than factual in character.
+
+tallies:
+  dropped: 0
+  partial: 0
+  added: 0
+  implicit_additions: 5
+  distorted_high: 0
+  distorted_medium: 1
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  footnote_mismatches: 0
+
+claim_coverage:
+  - claim: 1
+    location_in_narrative: "line 6 (§The physical evidence, para 1)"
+    status: COVERED
+  - claim: 2
+    location_in_narrative: "line 9 (§The physical evidence, para 2)"
+    status: COVERED
+  - claim: 3
+    location_in_narrative: "line 12 (§The physical evidence, para 3)"
+    status: COVERED
+  - claim: 4
+    location_in_narrative: "line 15 (§The physical evidence, para 4)"
+    status: COVERED
+  - claim: 5
+    location_in_narrative: "line 18 (§The physical evidence, para 5)"
+    status: COVERED
+  - claim: 6
+    location_in_narrative: "line 21 (§The physical evidence, para 6)"
+    status: COVERED
+  - claim: 7
+    location_in_narrative: "line 24 (§The physical evidence, para 7)"
+    status: COVERED
+  - claim: VARIANT-1
+    location_in_narrative: "line 27 (VARIANT block)"
+    status: COVERED
+  - claim: 8
+    location_in_narrative: "line 33 (§Setting, para 1)"
+    status: COVERED
+  - claim: 9
+    location_in_narrative: "line 36 (§Setting, para 2)"
+    status: COVERED
+  - claim: 10
+    location_in_narrative: "line 39 (§Setting, para 3)"
+    status: COVERED
+  - claim: 11
+    location_in_narrative: "line 42 (§Setting, para 4)"
+    status: COVERED
+  - claim: VARIANT-2
+    location_in_narrative: "line 45 (VARIANT block)"
+    status: COVERED
+  - claim: 12
+    location_in_narrative: "line 47 (§Setting, para 5)"
+    status: COVERED
+  - claim: 13
+    location_in_narrative: "line 50 (§Setting, para 6)"
+    status: COVERED
+  - claim: 14
+    location_in_narrative: "line 53 (§Setting, para 7 — kur)"
+    status: COVERED
+  - claim: 15
+    location_in_narrative: "lines 56–59 (§Setting, paras 8–9 — Šarur)"
+    status: COVERED
+  - claim: 16
+    location_in_narrative: "line 63 (§Scouting, para 1)"
+    status: COVERED
+  - claim: 17
+    location_in_narrative: "line 66 (§Scouting, para 2 — stone catalogue)"
+    status: COVERED
+  - claim: 18
+    location_in_narrative: "line 69 (§Scouting, para 3 — cities terrorised)"
+    status: COVERED
+  - claim: 19
+    location_in_narrative: "lines 72–74 (§Scouting, paras 4–5 — second speech)"
+    status: COVERED
+  - claim: 20
+    location_in_narrative: "line 77 (§Scouting, para 6 — third speech)"
+    status: COVERED
+  - claim: 21
+    location_in_narrative: "line 80 (§Scouting, para 7 — mobilisation)"
+    status: COVERED
+  - claim: 22
+    location_in_narrative: "lines 83–86 (§Scouting, paras 8–9 — first combat phase)"
+    status: COVERED
+  - claim: 23
+    location_in_narrative: "line 88 (§Scouting, para 10 — trophy list)"
+    status: COVERED
+  - claim: 24
+    location_in_narrative: "line 91 (§Scouting, para 11 — catalogue as argument)"
+    status: COVERED
+  - claim: 25
+    location_in_narrative: "lines 94–96 (§Scouting, paras 12–13 — Šarur caution)"
+    status: COVERED
+  - claim: 26
+    location_in_narrative: "lines 99–102 (§Scouting, paras 14–15 — Ninurta refuses)"
+    status: COVERED
+  - claim: 27
+    location_in_narrative: "line 104 (§Scouting, para 16 — Asag emerges)"
+    status: COVERED
+  - claim: 28
+    location_in_narrative: "lines 107–109 (§Scouting, paras 17–18 — Enlil lament)"
+    status: COVERED
+  - claim: 29
+    location_in_narrative: "line 112 (§Scouting, para 19 — Šarur to E-kur)"
+    status: COVERED
+  - claim: 30
+    location_in_narrative: "lines 115–117 (§Scouting, paras 20–21 — Enlil conditional blessing)"
+    status: COVERED
+  - claim: 31
+    location_in_narrative: "lines 120–121 (§Scouting, paras 22–23 — Šarur returns)"
+    status: COVERED
+  - claim: 32
+    location_in_narrative: "lines 123–125 (§Scouting, paras 24–25 — battle directive)"
+    status: COVERED
+  - claim: 33
+    location_in_narrative: "line 130 (§The combat, para 1)"
+    status: COVERED
+  - claim: 34
+    location_in_narrative: "line 133 (§The combat, para 2 — Šarur final plea)"
+    status: COVERED
+  - claim: 35
+    location_in_narrative: "lines 136–139 (§The combat, paras 3–4 — Ninurta overpowers)"
+    status: COVERED
+  - claim: 36
+    location_in_narrative: "lines 141–143 (§The combat, paras 5–6 — divine homage)"
+    status: COVERED
+  - claim: 37
+    location_in_narrative: "lines 146–149 (§The combat, paras 7–8 — naming as Stone)"
+    status: COVERED
+  - claim: 38
+    location_in_narrative: "lines 151–152 (§The combat, para 9 — mace blessing)"
+    status: COVERED
+  - claim: 39
+    location_in_narrative: "lines 156–159 (§Ordering the waters, paras 1–2)"
+    status: COVERED
+  - claim: 40
+    location_in_narrative: "lines 161–164 (§Ordering the waters, paras 3–4)"
+    status: COVERED
+  - claim: 41
+    location_in_narrative: "line 166 (§Ordering the waters, para 5 — Tigris)"
+    status: COVERED
+  - claim: 42
+    location_in_narrative: "line 169 (§Ordering the waters, para 6 — prosperity)"
+    status: COVERED
+  - claim: 43
+    location_in_narrative: "line 174 (§Naming the mountain, para 1 — Ninmaḫ)"
+    status: COVERED
+  - claim: 44
+    location_in_narrative: "line 179 (§Naming the mountain, para 2 — Ninḫursaĝa)"
+    status: COVERED
+  - claim: 45
+    location_in_narrative: "line 182 (§Naming the mountain, para 3 — endowment)"
+    status: COVERED
+  - claim: 46
+    location_in_narrative: "line 185 (§Naming the mountain, para 4 — cultic profile)"
+    status: COVERED
+  - claim: 47
+    location_in_narrative: "line 190 (§The judgement of the stones, para 1 — Aruru)"
+    status: COVERED
+  - claim: 48
+    location_in_narrative: "lines 193–195 (§The judgement, para 2 — lapidary aetiology overview)"
+    status: COVERED
+  - claim: 49
+    location_in_narrative: "line 198 (§The judgement, para 3 — u stone / emery)"
+    status: COVERED
+  - claim: 50
+    location_in_narrative: "line 201 (§The judgement, para 4 — šu and gasura)"
+    status: COVERED
+  - claim: 51
+    location_in_narrative: "line 204 (§The judgement, para 5 — saĝkal, gulgul, saĝĝar)"
+    status: COVERED
+  - claim: 52
+    location_in_narrative: "line 207 (§The judgement, para 6 — esi / diorite)"
+    status: COVERED
+  - claim: 53
+    location_in_narrative: "line 210 (§The judgement, para 7 — na)"
+    status: COVERED
+  - claim: 54
+    location_in_narrative: "line 213 (§The judgement, para 8 — elel)"
+    status: COVERED
+  - claim: 55
+    location_in_narrative: "line 216 (§The judgement, para 9 — kagena / haematite)"
+    status: COVERED
+  - claim: 56
+    location_in_narrative: "line 219 (§The judgement, para 10 — ĝišnugal / alabaster)"
+    status: COVERED
+  - claim: 57
+    location_in_narrative: "line 222 (§The judgement, para 11 — algameš)"
+    status: COVERED
+  - claim: 58
+    location_in_narrative: "line 225 (§The judgement, para 12 — nir, gug, zagin)"
+    status: COVERED
+  - claim: 59
+    location_in_narrative: "line 228 (§The judgement, para 13 — ĝir-zu-ĝal / flint)"
+    status: COVERED
+  - claim: 60
+    location_in_narrative: "line 231 (§The judgement, para 14 — iman and alliga)"
+    status: COVERED
+  - claim: 61
+    location_in_narrative: "line 234 (§The judgement, para 15 — mašda, dubban, urutum)"
+    status: COVERED
+  - claim: 62
+    location_in_narrative: "line 237 (§The judgement, para 16 — šagara)"
+    status: COVERED
+  - claim: 63
+    location_in_narrative: "line 240 (§The judgement, para 17 — marḫuša)"
+    status: COVERED
+  - claim: 64
+    location_in_narrative: "line 243 (§The judgement, para 18 — ḫaštum)"
+    status: COVERED
+  - claim: 65
+    location_in_narrative: "line 246 (§The judgement, para 19 — durul)"
+    status: COVERED
+  - claim: 66
+    location_in_narrative: "line 249 (§The judgement, para 20 — šegšeg, engen, ezinum)"
+    status: COVERED
+  - claim: 67
+    location_in_narrative: "line 252 (§The judgement, para 21 — kurgaranum, bal, šembi)"
+    status: COVERED
+  - claim: 68
+    location_in_narrative: "lines 255–258 (§The judgement, paras 22–23 — lapidary logic)"
+    status: COVERED
+  - claim: INFERENCE-1
+    location_in_narrative: "line 260 (INFERENCE block)"
+    status: COVERED
+  - claim: 69
+    location_in_narrative: "line 264 (§The triumphant return, para 1 — barge)"
+    status: COVERED
+  - claim: 70
+    location_in_narrative: "line 267 (§The triumphant return, para 2 — boatmen's hymn)"
+    status: COVERED
+  - claim: 71
+    location_in_narrative: "line 270 (§The triumphant return, para 3 — prayer)"
+    status: COVERED
+  - claim: 72
+    location_in_narrative: "line 273 (§The triumphant return, para 4 — An and Bau)"
+    status: COVERED
+  - claim: 73
+    location_in_narrative: "line 276 (§The triumphant return, para 5 — Anuna reception)"
+    status: COVERED
+  - claim: 74
+    location_in_narrative: "lines 279–281 (§The triumphant return, paras 6–7 — Enlil blessing)"
+    status: COVERED
+  - claim: 75
+    location_in_narrative: "lines 284–286 (§The triumphant return, paras 8–9 — Nisaba)"
+    status: COVERED
+  - claim: 76
+    location_in_narrative: "line 289 (§The triumphant return, para 10 — Nisaba epithets)"
+    status: COVERED
+  - claim: 77
+    location_in_narrative: "line 292 (§The triumphant return, para 11 — closing doxology)"
+    status: COVERED
+  - claim: 78
+    location_in_narrative: "line 295 (§The triumphant return, para 12 — colophon)"
+    status: COVERED
+  - claim: 79
+    location_in_narrative: "line 302 (§What the combat makes, para 2 — Tigris cosmogony)"
+    status: COVERED
+  - claim: 80
+    location_in_narrative: "line 305 (§What the combat makes, para 3 — Mountain naming)"
+    status: COVERED
+  - claim: 81
+    location_in_narrative: "line 308 (§What the combat makes, para 4 — stone destinies)"
+    status: COVERED
+  - claim: 82
+    location_in_narrative: "lines 311–313 (§What the combat makes, paras 5–6 — royal model)"
+    status: COVERED
+  - claim: 83
+    location_in_narrative: "lines 318–319 (§Place in the corpus, paras 1–2 — Gunkel)"
+    status: COVERED
+  - claim: 84
+    location_in_narrative: "lines 321–322 (§Place in the corpus, para 3 — Scurlock-Beal)"
+    status: COVERED
+  - claim: 85
+    location_in_narrative: "lines 324–325 (§Place in the corpus, para 4 — bilingual reception)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-1
+    location_in_narrative: "line 329 (comment block — correctly kept out of body)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-2
+    location_in_narrative: "line 330 (comment block)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-3
+    location_in_narrative: "line 331 (comment block)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-4
+    location_in_narrative: "line 332 (comment block)"
+    status: COVERED
+  - claim: COMPARATIVE-HOOK-5
+    location_in_narrative: "line 333 (comment block)"
+    status: COVERED
+
+findings:
+  - id: FH-01
+    kind: IMPLICIT-ADDITION
+    severity: MEDIUM
+    claim_or_passage: |
+      "That genealogy places him, in the Sumerian theogonic family tree, as a
+      sibling of Enlil's — his uncle, if the relationship is read literally,
+      and certainly his peer at the level of cosmic seniority." (line 50)
+    issue: >
+      The approved claim states only that Asag's parentage is An and Ki
+      (claim 13). The inference that this makes Asag a sibling-of-Enlil /
+      Ninurta's uncle is not present in any approved claim and is not marked
+      as an [INFERENCE] or [RECONSTRUCTION]. It is a factual genealogical
+      assertion about the Sumerian pantheon's family tree that goes beyond the
+      approved claims text.
+    recommended_fix: >
+      Either delete the genealogical aside ("That genealogy places him … cosmic
+      seniority") or mark it as an inline [INFERENCE] with a basis note
+      referencing the Sumerian theogony (An > Enlil lineage), and add a
+      corresponding entry to the claims doc before publishing.
+
+  - id: FH-02
+    kind: IMPLICIT-ADDITION
+    severity: MEDIUM
+    claim_or_passage: |
+      "The liver, in Mesopotamian divinatory culture, was the seat of vital
+      force, the organ read by priest-diviners for omens." (line 123)
+    issue: >
+      Claim 32 states only that Šarur delivers the battle-directive to pierce
+      Asag's liver and bring it to the E-kur. The cultural gloss on hepatoscopy
+      ("seat of vital force," "organ read by priest-diviners for omens") is
+      not in the approved claims and does not appear in the approved footnote.
+      It is added cultural context without a claim anchor.
+    recommended_fix: >
+      Either remove the hepatoscopy parenthesis, or add a brief claim to the
+      claims doc citing a standard Mesopotamian divination reference (e.g.,
+      Koch-Westenholz or Starr), or demote to a footnote flagged as authorial
+      commentary.
+
+  - id: FH-03
+    kind: IMPLICIT-ADDITION
+    severity: MEDIUM
+    claim_or_passage: |
+      "Nippur itself was not the political capital of any Sumerian kingdom. It
+      was a religious centre, the place where Enlil's priests certified the
+      legitimacy of whichever human king currently ruled Sumer." (line 36)
+    issue: >
+      Claim 9 covers Enlil as chief god, lord of air and command, resident at
+      Nippur's E-kur (sourced to Forsyth 1987 ch.1). The specific assertion
+      that Nippur was a religious rather than political capital, and that
+      Enlil's priests certified royal legitimacy, goes beyond what the approved
+      claim states. It is plausibly derivable from Forsyth 1987 ch.1 but is
+      not in the approved text.
+    recommended_fix: >
+      Add a sub-claim to claim 9 (or a new claim 9a) covering Nippur's
+      legitimation function, citing Forsyth 1987 ch.1, to give this
+      contextualisation a claims anchor.
+
+  - id: FH-04
+    kind: IMPLICIT-ADDITION
+    severity: MEDIUM
+    claim_or_passage: |
+      "Nisaba is the Sumerian goddess of writing, accounting, and the
+      grain-harvest — a surprisingly tight overlap, from a modern perspective,
+      but one that makes sense in a culture where literacy was first and most
+      durably a technology for recording barley-yields." (line 284)
+    issue: >
+      Claim 75 covers Ninurta's appointment of Nisaba as guardian of the
+      granaries and of agricultural order. Claim 76 notes Nisaba is celebrated
+      as judge, keeper of records, and divine administrator. The specific
+      characterisation of Nisaba as "goddess of writing, accounting, and the
+      grain-harvest" and the literacy-as-barley-technology gloss are not in
+      the approved claims.
+    recommended_fix: >
+      Add a claim anchoring Nisaba's profile (writing + grain + administration
+      overlap) to a standard Sumerological reference (e.g., Krebernik in RlA,
+      or Forsyth 1987), or trim to what the claims support: "judge, keeper of
+      records, divine administrator."
+
+  - id: FH-05
+    kind: IMPLICIT-ADDITION
+    severity: MEDIUM
+    claim_or_passage: |
+      "This multi-functionality is part of why the poem remained useful to
+      Mesopotamian scribal culture for two thousand years." (line 314)
+    issue: >
+      No approved claim quantifies the duration of Lugal-e's scribal utility
+      as "two thousand years." The transmission claim (claim 5) says the poem
+      was excerpted and bilingualised "well into the first millennium BCE" and
+      claim 85 covers the bilingual school-tablet afterlife. "Two thousand
+      years" is an authored inference not pinned to any approved claim or
+      source.
+    recommended_fix: >
+      Replace with a phrasing anchored to the approved claims: "for more than
+      a millennium" (Ur III originals c. 2000 BCE to first-millennium school
+      use) or add a claim quantifying the span with a source.
+
+  - id: FH-06
+    kind: CLAIM-DISTORTED
+    severity: MEDIUM
+    claim_or_passage: |
+      Claim 84: "The _Creation and Chaos_ volume edited by Scurlock and Beal
+      reassesses Gunkel's thesis for the Mesopotamian material, with essays on
+      the Ninurta corpus that relocate the combat-myth framework within the
+      specific politics and cultic logic of Sumerian and Babylonian religion."
+      Narrative (line 321): "The Ballentine-style critique — that these texts
+      are about rival sovereignty, not formlessness — applies to _Lugal-e_ as
+      cleanly as it does to _Enūma Eliš_. Asag is not an unstructured
+      adversary."
+    issue: >
+      The approved claim attributes the relocation argument to Scurlock and
+      Beal 2013, accurately. The narrative then imports Ballentine's specific
+      "rival sovereignty" framing and explicitly applies it as an analytical
+      verdict on Asag ("He is a rival sovereign … who commands an army,
+      controls a territory, and sets up a competing order"). The approved
+      claims do not include a claim asserting that the Ballentine critique
+      applies cleanly to Lugal-e as an analytical conclusion; that is an
+      authorial interpretive move beyond the claim. The claim covers what
+      Scurlock-Beal 2013 argues; the narrative goes further by independently
+      endorsing Ballentine's reading and applying it to the specific character
+      of Asag.
+    recommended_fix: >
+      Either add an approved claim stating that Ballentine 2015's rival-
+      sovereignty reading applies to Lugal-e with a source anchor, or rephrase
+      the passage to attribute the analytical verdict to Scurlock-Beal 2013
+      rather than asserting it as the chapter's own conclusion (e.g., "The
+      Scurlock-Beal essays argue that Asag is better read as a rival
+      sovereign…").

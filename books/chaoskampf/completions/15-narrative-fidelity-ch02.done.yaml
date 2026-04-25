@@ -1,0 +1,57 @@
+stage: "narrative-fidelity"
+chapter: "02-ninurta-anzu"
+timestamp: "2026-04-25T00:00:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+verdict: "REVISE"
+
+outputs:
+  - file: "chapters/02-ninurta-anzu.fidelity.yaml"
+    description: "Full fidelity audit: claim coverage table (98 claims), 8 findings, glossary check, footnote integrity check, markers check, honesty self-check."
+
+tallies:
+  claims_total: 98
+  claims_dropped_high: 0
+  claims_added_high: 0
+  claim_distorted_high: 0
+  claim_distorted_medium: 1
+  implicit_addition_medium: 5
+  implicit_addition_low: 2
+  total_high: 0
+  total_medium: 6
+
+verdict_rule: ">=5 MEDIUM total (6 MEDIUM findings)"
+
+top_findings:
+  - id: F7
+    type: CLAIM-DISTORTED
+    severity: MEDIUM
+    summary: |
+      Narrative line 47–48: 'Tiamat's general Qingu' — claims doc names Qingu without a role
+      descriptor; 'Tiamat's general' is not an approved characterisation and may misrepresent
+      Qingu's role in Enūma Eliš (consort/champion, not general).
+  - id: F2
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    summary: |
+      Narrative line 50–51: Forsyth scope expanded to name 'Hebrew Leviathan passages' and
+      'red dragon of Revelation 12' — not in claims doc; exceeds approved claim content.
+  - id: F3
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    summary: |
+      Narrative line 53–55: Scurlock & Beal described as 'one of the two landmarks of the
+      recent critique' introduced in 'this book's front matter' — cross-reference not in
+      claims doc.
+  - id: F8
+    type: IMPLICIT-ADDITION
+    severity: MEDIUM
+    summary: |
+      Narrative line 314: 'The warrior becomes younger, the adversary becomes larger, the stakes
+      become more cosmic' — interpretive claim about the literary genealogy not in claims doc.
+
+ready_for_marker_resolve: false
+action_required: |
+  Writer (or claims-doc amender) should address 8 findings before marker-resolve stage.
+  All fixes are targeted sentence deletions or claims-doc amendments; no section re-draft needed.
+  After fixes, re-run stage 12 or confirm manually that all findings are resolved.

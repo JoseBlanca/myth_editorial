@@ -1,0 +1,39 @@
+stage: "narrative-fidelity"
+chapter: "01-ninurta-asag"
+completed: "2026-04-25"
+auditor_model: "claude-sonnet-4-6"
+verdict: REVISE
+output_file: "chapters/01-ninurta-asag.fidelity.yaml"
+
+summary:
+  claims_count: 85
+  narrative_paragraphs_audited: 97
+  dropped: 0
+  partial: 0
+  added: 0
+  implicit_additions: 5
+  distorted_high: 0
+  distorted_medium: 1
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  footnote_mismatches: 0
+
+verdict_rationale: >
+  REVISE triggered by 5 IMPLICIT-ADDITION (MEDIUM) findings exceeding the
+  ≤4 MEDIUM threshold for PASS. No CLAIM-DROPPED, no CLAIM-ADDED HIGH, no
+  CLAIM-DISTORTED HIGH, and no footnote mismatches. Glossary and diacritics
+  are clean throughout. All 85 claim-to-narrative mappings are present and
+  intact. The chapter requires minor writer revision to anchor or trim five
+  explanatory additions before it can be marked PASS.
+
+high_priority_fixes:
+  - FH-01: Asag as Enlil's uncle (theogonic family tree inference, line 50) — add INFERENCE marker or trim
+  - FH-02: Liver as seat of vital force in Mesopotamian divination (line 123) — add claim/footnote or trim
+  - FH-06: Ballentine "rival sovereignty" verdict applied to Asag as chapter conclusion (line 321) — attribute to source or add claim
+
+ready_for_next_stage: false
+next_stage_condition: >
+  Writer to resolve 5 IMPLICIT-ADDITIONs and 1 CLAIM-DISTORTED MEDIUM;
+  re-run fidelity check after revision. Chapter is otherwise well-crafted:
+  zero dropped claims, zero footnote mismatches, zero forbidden words,
+  zero glossary violations.
