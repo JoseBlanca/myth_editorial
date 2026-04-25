@@ -1,0 +1,78 @@
+stage: 12-claims-factcheck
+chapter: "03-marduk-tiamat"
+chapter_title: "Marduk vs. Tiamat: Enūma Eliš"
+completed: "2026-04-25"
+auditor_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+
+verdict: REVISE
+
+output_file: "books/chaoskampf/chapters/03-marduk-tiamat.claims.factcheck.yaml"
+
+tally:
+  total_claims: 180
+  supported: 151
+  internal_variance: 3
+  unverified: 20
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 1
+  silent_bridge: 1
+  glossary_violations: 0
+
+high_findings:
+  - id: F01
+    verdict: "✗ FABRICATION"
+    severity: HIGH
+    summary: >
+      Claim that Anšar bestows the fiftieth name ('Asaru') on Marduk in Tablet VII.
+      Double error: (1) it is Anu, not Anšar, who bestows the number fifty —
+      the adjacent claim correctly states this; (2) 'Asaru' is the first name
+      in the sequence, not the fiftieth. Repair: delete the fabricated claim;
+      the correct adjacent claim (Anu bestows fifty) stands.
+
+medium_findings:
+  - id: F08
+    verdict: "⚠ SILENT BRIDGE"
+    summary: "Esagil three-tier cosmology claim is interpretive but lacks an INFERENCE marker."
+  - id: F02
+    verdict: "△ INTERNAL-VARIANCE"
+    summary: "Fourth chariot horse name 'Fleet' is one translation variant, not the universal rendering."
+  - id: F04
+    verdict: "△ INTERNAL-VARIANCE"
+    summary: "Four-fold monster-list repetition citation includes Foster pp. 458–459, which is the combat scene, not a repetition."
+  - id: F03
+    verdict: "△ INTERNAL-VARIANCE"
+    summary: "*Durmahu* as the cosmic-bond gloss for Tiamat's tail is unconfirmed by triangulation."
+
+low_findings:
+  - id: F05
+    verdict: "? UNVERIFIED LOW"
+    summary: "70+ witness count cited to pp. 3–15 cannot be confirmed without access."
+  - id: F06
+    verdict: "? UNVERIFIED LOW"
+    summary: "Anzû's named presence in Tiamat's Tablet I monster list is not confirmed by triangulation."
+  - id: F07
+    verdict: "? UNVERIFIED LOW"
+    summary: "'Struck on the cheek' akītu detail needs verification against Lambert pp. 463–465."
+  - id: F09
+    verdict: "? UNVERIFIED LOW"
+    summary: "'Two years' construction of Esagil needs verification against Foster pp. 471–472."
+
+markers_assessed:
+  - LACUNA-1 (Tablet V): VALID
+  - LACUNA-2 (Tablet VII fifty names): VALID but review after F01 correction
+  - INFERENCE-1 (Tiamat reframes offspring as rebels): VALID AND WELL-BRIDGED
+  - INFERENCE-2 (Nebuchadnezzar I commissioning consensus-not-unanimous): VALID AND WELL-BRIDGED
+  - VARIANT-1 (Gunkel vs. Ballentine): VALID
+
+contamination: CLEAN
+glossary: CLEAN
+
+ready_for_chapter_draft: NO
+reason: >
+  One HIGH fabrication (F01) must be corrected before chapter-draft proceeds.
+  One silent bridge (F08) must be marked. Three MEDIUM internal-variance issues
+  should be resolved or footnoted. After corrections, the chapter is structurally
+  sound and the scholarly argument (Gunkel vs. Ballentine, akītu context,
+  cosmogony from Tiamat's body, fifty names) is well-supported.

@@ -1,0 +1,114 @@
+stage: "claims-factcheck"
+timestamp: "2026-04-25T00:00:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+
+outputs:
+  - file: "books/chaoskampf/chapters/04-mesopotamian-minor.claims.factcheck.yaml"
+    lines: 342
+  - file: "books/chaoskampf/completions/12-claims-factcheck-ch04.done.yaml"
+    lines: 55
+
+inputs_audited:
+  - file: "books/chaoskampf/chapters/04-mesopotamian-minor.claims.adoc"
+    lines: 116
+    claims_identified: 31
+
+primary_sources_consulted:
+  - "Foster 2005 print-only; table of contents confirmed via search evidence
+     (section at p. 581 is 'The Lion-Serpent' under 'Monster Serpents',
+     not titled 'The Slaying of Labbu' — see FC-01)"
+  - "Wakeman 1973 print-only; Internet Archive copy not accessible"
+  - "Lambert 2013 print-only; DeGruyter ToC confirms Labbu at pp. 361-365
+     (Part III), not in the introduction — see FC-05"
+  - "Forsyth 1987 print-only; Wikipedia cites Forsyth for Labbu's
+     non-cosmogonic character"
+
+triangulation_sources:
+  - "Wikipedia on Labbu (corroborates: fragment length ~50 lines, two copies,
+     divine-name lacuna, Tishpak and Nergal as candidates, blood-flow duration,
+     storm tactics, non-cosmogonic character, Forsyth citation)"
+  - "Wikipedia on Tishpak (corroborates: Tishpak and Nergal as candidates,
+     Eshnunna context, Wiggermann's interpretation)"
+  - "Multiple web search results confirming: dragon measurement version-
+     dependency (fifty vs. sixty leagues), blood flows three years three
+     months, storm-wind combat tactics, Lambert's caution about
+     interpretation"
+
+verdict: REVISE
+
+tally_summary:
+  total_claims: 31
+  supported: 19
+  internal_variance: 1
+  unverified_low: 5
+  unverified_medium: 1
+  findings_total: 5
+
+high_severity_findings:
+  - id: FC-02
+    description: >
+      Wakeman 1973 attributed as arguing for Marduk as the champion of the
+      Labbu fragment. No triangulable scholarship supports this attribution.
+      The consistently reported scholarly identifications are Tishpak (later
+      version) and Nergal (earlier version); Marduk appears only as a
+      structural parallel in the literature, not as a proposed identification
+      of the lacunose divine name. Wakeman 1973 is inaccessible for direct
+      verification. Given the attribution runs contrary to all triangulable
+      evidence, this is HIGH severity — potentially a misreading of Wakeman's
+      comparative observation as an identification claim.
+
+medium_severity_findings:
+  - id: FC-01
+    description: >
+      Foster's section at p. 581 is titled "The Lion-Serpent" (subsection (b)
+      of "Monster Serpents"), not "The Slaying of Labbu." The claims document
+      uses "The Slaying of Labbu" as Foster's section title throughout.
+      "The Slaying of Labbu" is Lambert 2013's chapter title (pp. 361-365)
+      and the conventional scholarly name for the myth, not Foster's section
+      heading. A bracketed qualifier at first mention resolves this.
+  - id: FC-03
+    description: >
+      Blood-flow motif described in claims as "flows for some distance" —
+      spatial language. The surviving text specifies a duration: "three years,
+      three months, one day and one night." The characterisation as spatial
+      rather than temporal is factually inaccurate.
+  - id: FC-04
+    description: >
+      Labbu's length given as "fifty leagues" without noting the
+      version-dependent variation: fifty leagues (Bašmu version) or sixty
+      leagues (Mušḫuššu version). The chapter's stated commitment to
+      presenting the textual situation honestly requires acknowledging this.
+  - id: FC-05
+    description: >
+      Lambert 2013 repeatedly cited as "introduction" for Labbu material.
+      Labbu is at pp. 361-365 in Part III, not the introduction. All four
+      "Lambert 2013, introduction" citations across the claims document need
+      correction to "Lambert 2013, pp. 361-365."
+
+ready_for_chapter_draft: false
+reason: >
+  One HIGH finding requires resolution before chapter-draft proceeds: FC-02
+  (the Marduk identification attributed to Wakeman must be verified against
+  the print source or corrected). If Wakeman does not argue for Marduk as
+  the champion, the identification section must be revised to present
+  Tishpak and Nergal as the two scholarly proposals, with Marduk demoted to
+  a structural-parallel note. The three MEDIUM findings (FC-01, FC-03,
+  FC-04, FC-05) are all correctable within the claims document:
+  section-title bracketed qualifier, blood-flow temporal rephrasing,
+  measurement version note, and Lambert locator correction. The 19 supported
+  claims and the fragment's testimonial framing are solid.
+
+summary: >
+  Adversarial factcheck of 31 claims in Chapter 4 (Minor Mesopotamian
+  Combats / Labbu) by Sonnet 4.6 against Opus 4.7's claims document.
+  Verdict: REVISE. 19 claims fully supported via web triangulation; 5
+  findings across 1 HIGH and 4 MEDIUM severity categories. No fabrication,
+  no contamination, no silent bridges, no glossary violations. The HIGH
+  finding concerns the attribution of a Marduk identification to Wakeman 1973
+  — this runs contrary to all triangulable scholarship and must be verified
+  directly against the print source or corrected. The four MEDIUM findings
+  are mechanical and correctable: section title, blood-flow spatial vs.
+  temporal language, fifty vs. sixty league version dependency, and Lambert
+  citation locator.

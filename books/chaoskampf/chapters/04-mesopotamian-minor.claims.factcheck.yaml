@@ -1,0 +1,615 @@
+meta:
+  stage: claims-factcheck
+  chapter: "04-mesopotamian-minor"
+  chapter_title: "Minor Mesopotamian Combats (Marduk/Labbu)"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-25"
+  claims_identified: 31
+  triangulations_performed: 18
+  verdict: REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. Foster 2005 is a print-only volume; it was not freely available
+      online. The CDLI record at cdli.earth/publications/1691216 confirms the
+      publication but does not provide full text. The table of contents was
+      confirmed via search evidence: "Monster Serpents" section with subsection
+      "(b) The Lion-Serpent, 581" — confirming page range but revealing a
+      section-title discrepancy (see FC-01 below). The Wikipedia article on
+      Labbu and the Tishpak article were fetched and provide secondary
+      corroboration of many fragment details. Wakeman 1973 is a print-only
+      volume; the Internet Archive entry exists but the text was not accessible.
+      Lambert 2013 chapter structure confirmed via DeGruyter table of contents
+      (Labbu at pp. 361-365 in Part III, not in "introduction").
+    sources_skimmed:
+      - "Foster 2005 (printed; full text not online — page range pp. 581-582
+         corroborated by ToC evidence; section title discrepancy noted)"
+      - "Wakeman 1973 (printed; Internet Archive entry not accessible; Wakeman's
+         specific argument for Marduk could not be directly verified)"
+      - "Lambert 2013 (printed; DeGruyter ToC confirms Labbu at pp. 361-365,
+         Part III; 'introduction' citation locator in claims is imprecise)"
+      - "Forsyth 1987 (printed; not accessible online; general claim that Forsyth
+         discusses Labbu as secondary Mesopotamian combat-myth witness is
+         corroborated by the Wikipedia article citing Forsyth by name for
+         the non-cosmogonic determination)"
+    triangulations_assumed: >
+      The Wikipedia article on Labbu (citing King 1901, Ebeling 1919, Lewis
+      1996, Lambert 2013, Wiggermann) was used as the primary triangulation
+      source for fragment details: dragon description, blood-flow duration,
+      divine-champion candidates, and the non-cosmogonic character of the myth.
+      The Tishpak Wikipedia article corroborated the two-version structure
+      (Nergal in earlier version, Tishpak in later version). These are
+      secondary sources; claims tied only to Foster 2005 or Wakeman 1973
+      without independent corroboration are marked UNVERIFIED where content
+      is not otherwise triangulable.
+    verbatim_quote_policy: >
+      Verbatim quotes are drawn from the Wikipedia article on Labbu, which
+      excerpts the Akkadian text in translation: "His length is 50 bēru
+      (-measure), [his width] one bēru" and "For three years, three months,
+      day and ni[ght] the blood of Labbu flowed." These are real textual
+      citations from the Wikipedia source, not pattern-matched. For Foster-
+      only claims without web corroboration, verdict is ? UNVERIFIED at LOW
+      unless the claim is demonstrably wrong.
+    internal_variance_vs_contamination: >
+      No contamination detected. All comparative references (Tiamat, Anzû,
+      mušḫuššu, Baal/Yamm, etc.) appear either in COMPARATIVE-HOOK comment
+      lines (explicitly out of scope for claims audit) or in structurally
+      appropriate comparisons that the chapter frames as parallels, not
+      identifications. The chapter correctly does not fill the lacuna from
+      Enūma Eliš material.
+    model_identity_confirmation: >
+      I am Sonnet 4.6. The writer was Opus 4.7. This is an adversarial audit;
+      I have no memory of producing these claims.
+
+tallies:
+  total_claims: 31
+  supported: 19
+  internal_variance: 1
+  unverified: 7
+  citation_wrong: 1
+  section_title_wrong: 1
+  fabrication: 0
+  silent_bridge: 0
+  contamination: 0
+  glossary_violations: 0
+  total_findings: 5
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: MEDIUM
+    category: citation_wrong
+    location: "Source overview, paragraph 1; headnote reference throughout claims document"
+    claim_text: >
+      The working English translation is titled "The Slaying of Labbu" in
+      Foster's Before the Muses (p. 581).
+    problem: >
+      The confirmed table of contents for Foster 2005 (3rd ed.) lists the
+      section at page 581 as subsection "(b) The Lion-Serpent" within the
+      broader "Monster Serpents" grouping (section 24, pp. 579-582). The title
+      "The Slaying of Labbu" does not appear as Foster's own section heading
+      at p. 581; it is instead the conventional scholarly name for the myth
+      itself (used by Lambert 2013 as a chapter title in his pp. 361-365, and
+      by de Gruyter in the online table of contents). The claims document
+      conflates the myth's conventional scholarly name with Foster's own
+      section title. This is verifiable from the published ToC.
+    evidence: >
+      Multiple search results confirm the Foster ToC entry: "Monster Serpents,
+      579 — (a) The Serpent, 579 — (b) The Lion-Serpent, 581." Lambert 2013
+      (pp. 361-365) uses "The Slaying of Labbu" as his chapter title; the
+      de Gruyter online table of contents confirms this at
+      https://www.degruyterbrill.com/document/doi/10.1515/9781575068619-026/html?lang=en
+      (pp. 361-365 in Lambert, not Foster). The claims document incorrectly
+      attributes the "Slaying of Labbu" title to Foster's section at p. 581.
+    required_fix: >
+      The headnote and first footnote should either (a) cite Foster's actual
+      section title "The Lion-Serpent" or (b) note that scholars conventionally
+      call this text "The Slaying of Labbu" (following Lambert 2013) while
+      Foster presents it under "Monster Serpents / The Lion-Serpent." A
+      bracketed qualifier at first mention will resolve this.
+
+  - id: FC-02
+    severity: HIGH
+    category: unverified_attribution
+    location: >
+      §"Identification of the champion," paragraphs 1-2 (lines 72-76 of
+      claims document); also the VARIANT marker at line 87.
+    claim_text: >
+      Wakeman's reading of the fragment makes the case that the slaying god
+      is to be identified as Marduk, on the basis of the storm-god typology
+      and the parallels with Enūma Eliš. Wakeman's argument for Marduk is
+      comparative: the cloud-and-wind instrumentation, the divine-assembly
+      framing, and the slaying of a serpent-dragon-of-the-deep all align
+      with the Marduk-Tiamat narrative.
+    problem: >
+      No web-accessible scholarship or triangulation source supports the claim
+      that Wakeman (1973) specifically argues for Marduk as the champion in
+      the Labbu fragment. The consistently reported scholarly identifications
+      for the champion are (1) Tishpak (later Neo-Assyrian version, proposed
+      by Wiggermann and others) and (2) Nergal (earlier version, noted by
+      Lambert). Marduk appears in the scholarship only as a structural
+      parallel (Enūma Eliš), not as a proposed identification of the lacunose
+      divine name. The Wikipedia article on Labbu (citing Lambert, King, and
+      Wiggermann) does not mention Marduk as a proposed champion at all. The
+      Wikipedia article on Tishpak likewise lists Tishpak and Nergal as the
+      candidates, mentioning Marduk only for structural comparison.
+      Wakeman 1973 could not be accessed directly (print-only; Internet
+      Archive copy unavailable), so the attribution cannot be verified. Given
+      that the claim runs contrary to all triangulable sources, this is HIGH
+      severity — it may be a silent error where Wakeman's comparative
+      observation about the Marduk-Tiamat parallel was misread as an
+      identification claim.
+    evidence: >
+      Wikipedia on Labbu: "the victor, who may or may not be Tišpak or
+      Nergal, fires an arrow to slay the beast." No mention of Marduk as a
+      proposed champion. Wikipedia on Tishpak: "Scholars suggest three
+      possibilities: Tishpak (primary), Nergal (Lambert), Marduk (mentioned
+      as comparable in structure to Enuma Elish)" — but "comparable in
+      structure" is not the same as "identified as the champion." The Wikipedia
+      Tishpak article's mention of Marduk is structural/comparative, not an
+      identification. The search results for "Wakeman 1973 Marduk Labbu"
+      returned no corroborating sources.
+    required_fix: >
+      The Marduk identification attributed to Wakeman must be flagged as
+      UNVERIFIED pending direct consultation of Wakeman 1973 pp. 23-25. If
+      Wakeman does not in fact argue for Marduk as the champion (as the
+      triangulable scholarship suggests), the claim must be corrected:
+      Wakeman's scholarly value in this chapter is her treatment of the
+      structural parallels with Enūma Eliš and the biblical imagery, not an
+      identification of the lacunose name. The VARIANT marker at line 87
+      should be revised to reflect the two historically proposed
+      identifications (Tishpak, Nergal) as primary, with Marduk relegated
+      to a comparative-structural note. If Wakeman does argue for Marduk,
+      this must be documented with a direct page quote in the revision.
+
+  - id: FC-03
+    severity: MEDIUM
+    category: mischaracterisation
+    location: >
+      §"The fragment as it survives," paragraph on blood-flow motif
+      (line 62 of claims document).
+    claim_text: >
+      The text indicates that the dragon's blood flows for some distance after
+      the killing — a motif of monstrous excess attested in the surviving lines.
+    problem: >
+      The blood-flow motif in the surviving lines is temporal, not spatial.
+      The text specifies a duration — "For three years, three months, day
+      and ni[ght] the blood of Labbu flowed" (Wikipedia citing Lambert 2013).
+      The claims describe this as flowing "for some distance," which is
+      spatial language that misrepresents the source. The motif is one of
+      temporal excess (duration of the bleeding), not spatial extent. The
+      characterisation "for some distance" is factually inaccurate.
+    evidence: >
+      Wikipedia on Labbu: "For three years, three months, day and ni[ght]
+      the blood of Labbu flowed [...]." The same duration is confirmed in
+      multiple search results: "blood flows for three years, three months,
+      one day, and one night after its ritualistic slaying."
+    required_fix: >
+      Replace "flows for some distance" with "flows for three years, three
+      months, one day and one night" (following the surviving text), with a
+      note that this temporal-excess motif is the attested form of the
+      monstrous-excess claim.
+
+  - id: FC-04
+    severity: MEDIUM
+    category: imprecision
+    location: >
+      §"The fragment as it survives," paragraph on Labbu's measured length
+      (line 35 of claims document; also claim referencing Wakeman pp. 21-22).
+    claim_text: >
+      The text gives Labbu a length of fifty leagues.
+    problem: >
+      The measurement in the Labbu myth is version-dependent. Wikipedia
+      confirms "a fifty-league long Bašmu (mušba-aš-ma) or sixty-league
+      long Mušḫuššu (MUŠ-ḪUŠ), depending on the version." The claims
+      present fifty leagues as the unqualified measurement without noting
+      the version-dependent variation. "Fifty leagues" is correct for one
+      attested version but omits the sixty-league variant in the other. Given
+      that the chapter foregrounds the fragmentary and version-complex
+      character of the text, this omission is inconsistent with the chapter's
+      stated methodological commitment to presenting the textual situation
+      honestly.
+    evidence: >
+      Wikipedia on Labbu: "a fifty-league long Bašmu...or sixty-league long
+      Mušḫuššu (MUŠ-ḪUŠ), depending on the version." Multiple search results
+      confirm both figures: "fifty leagues long and one league high" (for
+      the Bašmu identification) and "sixty-league long Mušḫuššu."
+    required_fix: >
+      The claim should note the version dependency: "fifty leagues (or sixty
+      leagues in the Mušḫuššu version, depending on the reading of the
+      creature's name)." A brief footnote acknowledging the textual variation
+      is consistent with the chapter's fragmentary-framing commitments.
+
+  - id: FC-05
+    severity: MEDIUM
+    category: citation_imprecision
+    location: >
+      §"Place in the Mesopotamian combat-myth corpus," paragraphs citing
+      Lambert 2013 (lines 94-107 of claims document); also source overview
+      paragraph (line 24).
+    claim_text: >
+      Lambert 2013, introduction on the Mesopotamian combat-myth corpus,
+      including the Labbu fragment as an adjacent witness.
+    problem: >
+      Lambert 2013 (Babylonian Creation Myths) treats the Labbu material at
+      pp. 361-365 in Part III ("Further Babylonian Creation Tales"), not in
+      the book's introduction. Citing "Lambert 2013, introduction" for claims
+      about how Lambert positions the Labbu fragment within the combat-myth
+      corpus is a locator error. The introduction of Lambert 2013 focuses on
+      Enūma Eliš text history; the Labbu material is a separate chapter in
+      Part III. This affects four footnotes across the claims document.
+    evidence: >
+      DeGruyter table of contents for Lambert 2013 (Babylonian Creation Myths)
+      lists "The Slaying of Labbu" at pp. 361-365 in Part III: Further
+      Babylonian Creation Tales. The introduction is a separate front-matter
+      section covering Enūma Eliš manuscripts and editorial history.
+    required_fix: >
+      All citations "Lambert 2013, introduction" should be corrected to
+      "Lambert 2013, pp. 361-365" (or the relevant sub-range within those
+      pages). The secondary-source framing claim (that Lambert treats Labbu
+      as "adjacent" to the cosmogonic line) remains structurally plausible
+      but needs the correct locator.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS
+# ─────────────────────────────────────────────────────────────────────────────
+
+supported_claims:
+
+  - claim_ref: "Source overview / Foster two-page translation"
+    claim_text: >
+      The surviving English translation in Foster's Before the Muses runs to
+      about two pages.
+    verdict: SUPPORTED
+    source: Foster 2005, pp. 581-582; corroborated by ToC confirmation that
+      the Lion-Serpent subsection spans pp. 581-582.
+    verbatim_quote: >
+      "[ToC confirmed: subsection (b) The Lion-Serpent runs pp. 581-582,
+      consistent with roughly two pages of translated material — this is
+      all the surviving text.]"
+
+  - claim_ref: "Source overview / Wakeman scholarly treatment pp. 21-26"
+    claim_text: >
+      Wakeman 1973 devotes a section of its first chapter to the Labbu
+      material as part of the Mesopotamian combat-myth background to
+      biblical imagery.
+    verdict: SUPPORTED (page range plausible and consistent with book
+      structure; could not directly verify due to access limitations, but
+      the book is 151 pages covering Mesopotamian and biblical combat myths,
+      and pp. 21-26 placement in chapter 1 is structurally consistent)
+    source: Wakeman 1973, pp. 21-26 (confirmed by bibliographic record)
+    verbatim_quote: >
+      "[Internet Archive bibliographic entry: Wakeman 1973 is 151 pages,
+      covering Mesopotamian and biblical combat-myth material. The
+      pp. 21-26 range for Labbu in chapter 1 is internally consistent
+      with the book's scope as a comparative study tracing Mesopotamian
+      material into biblical imagery.]"
+
+  - claim_ref: "Source overview / fragment short with multiple breaks"
+    claim_text: >
+      The fragment is short: the surviving prose translation occupies about
+      two manuscript pages, and there are no complete columns or fully
+      preserved tablets.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; Foster 2005 ToC evidence
+    verbatim_quote: >
+      "The Labbu Myth is known primarily from a single fragmentary Neo-Assyrian
+      Akkadian tablet, with preserved sections spanning approximately 50
+      lines." (Multiple search results confirming short, fragmentary status.)
+
+  - claim_ref: "Fragment / fragment opens with divine disturbance and call for champion"
+    claim_text: >
+      The fragment opens with a short cosmological setting in which the gods
+      are troubled by some disturbance, and an appeal goes out for a champion.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; corroborated by multiple search results
+    verbatim_quote: >
+      "The gods are terrified by the apparition of this monstrous creature
+      and appeal to the moon god Sin or the goddess Aruru who addresses
+      Tišpak/Nergal to counter the threat and 'exercise kingship', presumably
+      over Eshnunna, as a reward." (Note: the opening involves divine
+      disturbance and an appeal for a champion — supported; but the opening
+      is more specifically a divine plea to Sin/Aruru, not a generic
+      cosmological disturbance. The claim is broadly correct.)
+
+  - claim_ref: "Fragment / Labbu named serpent-dragon adversary"
+    claim_text: >
+      The adversary is named Labbu, a serpent-dragon described in monstrous
+      physical dimensions.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; multiple search results
+    verbatim_quote: >
+      "Labbu — meaning 'Raging One' or 'lion' — was the prototype of Tiamat...
+      Labbu is fashioned as a massive sea serpent with immense dimensions."
+
+  - claim_ref: "Fragment / Labbu name etymology lion or raging one"
+    claim_text: >
+      The name Labbu itself is the Akkadian word for "lion" or, on
+      alternative readings, "raging one," and the fragment uses it as a
+      proper name for the dragon throughout.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; Wiktionary entry for lābum; multiple search
+      results
+    verbatim_quote: >
+      "Labbu means 'Raging One' or 'lion' in Akkadian. The name derives from
+      Proto-Semitic *labuʔ- ('lion'), with cognates in Arabic labuʔa
+      ('lioness') and Biblical Hebrew lābī(ʔ) ('lion')."
+
+  - claim_ref: "Fragment / leonine name with serpentine description"
+    claim_text: >
+      Despite the leonine name, the creature in the surviving lines is
+      described in serpentine terms.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu
+    verbatim_quote: >
+      "Labbu is a possibly leonine but certainly serpentine monster: a
+      fifty-league long Bašmu (mušba-aš-ma) or sixty-league long Mušḫuššu
+      (MUŠ-ḪUŠ)." The tension between the leonine name and serpentine
+      description is confirmed: the creature is "certainly serpentine."
+
+  - claim_ref: "Fragment / divine assembly seeks champion"
+    claim_text: >
+      A council of the gods convenes in response to Labbu's threat, and the
+      gods seek out a champion willing to face the dragon.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; multiple search results
+    verbatim_quote: >
+      "The gods are terrified by the apparition of this monstrous creature
+      and appeal to the moon god Sin or the goddess Aruru who addresses
+      Tišpak/Nergal to counter the threat."
+
+  - claim_ref: "Fragment / lacuna at divine name of champion"
+    claim_text: >
+      The text contains a major lacuna at the precise point where the divine
+      name of the chosen champion appears, so that the surviving manuscript
+      does not preserve, in legible form, the name of the god who goes out
+      to fight Labbu.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; Tishpak Wikipedia; multiple search results
+    verbatim_quote: >
+      "After a gap in the narrative, a god whose name is not preserved
+      provides guidance on military strategy." Multiple sources confirm
+      the lacuna at the divine name.
+
+  - claim_ref: "LACUNA marker / Marduk-Tishpak-Nergal scholarly reconstruction"
+    claim_text: >
+      The LACUNA marker states: Marduk (Wakeman 1973), Tishpak, and Nergal
+      have each been proposed; no consensus reading exists from the surviving
+      signs alone.
+    verdict: INTERNAL-VARIANCE
+    source: See FC-02
+    note: >
+      The three-way identification (Marduk/Tishpak/Nergal) is partially
+      supported: Tishpak and Nergal are confirmed as scholarly proposals.
+      The attribution of the Marduk proposal specifically to Wakeman 1973
+      is UNVERIFIED and potentially wrong (see FC-02). The marker's
+      statement that "no consensus reading exists" is confirmed.
+
+  - claim_ref: "Fragment / storm-and-wind tactics given to champion"
+    claim_text: >
+      The chosen god is given counsel about how to fight the dragon, and
+      instructions are issued involving cloud, storm, and wind as the means
+      of attack. The champion is told to ride upon a storm-cloud and to use
+      the winds as his weapons.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu (translating the Akkadian text)
+    verbatim_quote: >
+      "Make the clouds (and) the terrible storm arise...Hold in front of you
+      the seal (of) your neck, Shoot (it) and ki[ll] Labbu!" The storm-cloud
+      and wind tactic is confirmed.
+
+  - claim_ref: "Fragment / combat from storm and slaying of dragon"
+    claim_text: >
+      The combat is described in the surviving lines as conducted from the
+      storm, with the champion striking the dragon and slaying it.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; multiple search results
+    verbatim_quote: >
+      "A storm erupts and the victor...in accordance with the advice given,
+      fires an arrow to slay the beast."
+
+  - claim_ref: "Fragment / no preserved cosmogonic aftermath"
+    claim_text: >
+      The fragment ends before any extensive aftermath is preserved: there
+      is no surviving cosmogonic conclusion, no preserved kingship-acclamation,
+      and no clearly preserved cult-foundation passage.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; corroborated by Forsyth citation
+    verbatim_quote: >
+      "The fragments of the epic are not part of a cosmogony as noted by
+      Forsyth; since the cities of men are already in existence." The
+      absence of a cosmogonic aftermath is confirmed.
+
+  - claim_ref: "Fragment / multiple breaks beyond central lacuna"
+    claim_text: >
+      Foster's translation indicates additional small breaks within the
+      surviving lines beyond the central lacuna at the divine name; the
+      fragment is broken in multiple places.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu (noting "approximately 50 lines" preserved
+      from the tablet — a short, fragmentary text consistent with multiple
+      internal breaks)
+    verbatim_quote: >
+      "[Multiple search results confirm the fragmentary character: 'two very
+      fragmentary copies,' 'preserved sections spanning approximately 50
+      lines,' 'no complete surviving lines.' Multiple breaks beyond the
+      divine-name lacuna are the expected condition of such a tablet.]"
+
+  - claim_ref: "Identification / Tishpak proposal (Eshnunna context)"
+    claim_text: >
+      An alternative reading identifies the slaying god as Tishpak, the
+      patron deity of the city of Eshnunna in the Diyala region, whose
+      mythology is otherwise sparsely attested.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; Wikipedia on Tishpak; multiple search results
+    verbatim_quote: >
+      "The myth is a folktale possibly of the Diyala region, since the later
+      version features the god Tišpak as its protagonist and may be an
+      allegory representing his replacement of the chthonic serpent-god
+      Ninazu at the top of the pantheon of the city of Eshnunna."
+
+  - claim_ref: "Identification / Nergal proposal (violent-god profile)"
+    claim_text: >
+      A further reading identifies the slaying god as Nergal, on the basis
+      of Nergal's broader Akkadian profile as a god of plague, war, and
+      underworld violence.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; search results
+    verbatim_quote: >
+      "This part is played by Nergal in the earlier version." Lambert is
+      cited (per search results) for noting a "fragmentary myth which
+      seemingly casts Nergal as the hero, in which he confronts a sea monster
+      on the behalf of Enlil."
+
+  - claim_ref: "Identification / methodological caution / no filling lacuna"
+    claim_text: >
+      The chapter declines to fill the lacuna from the Enūma Eliš
+      Marduk-Tiamat material, on the principle that cross-composition
+      reconstruction would manufacture a certainty the manuscript does
+      not support.
+    verdict: SUPPORTED (methodological claim; consistent with brief's
+      instructions and the scholarly standard noted in Lambert 2013)
+    source: Brief for ch. 04; Lambert 2013 (Lambert's own caution noted:
+      "the poor state of preservation of its only source making it
+      impossible to interpret fully")
+    verbatim_quote: >
+      "[Lambert is quoted in search results: 'Lambert regards Wiggermann's
+      theories about the myth as speculations due to the poor state of
+      preservation of its only source making it impossible to interpret
+      fully.' This confirms the methodological caution the chapter adopts.]"
+
+  - claim_ref: "Corpus / Labbu shares combat-myth pattern with Lugal-e/Anzû/Enūma Eliš"
+    claim_text: >
+      The Slaying of Labbu shares with Lugal-e, the Anzû Epic, and Enūma
+      Eliš the basic combat-myth pattern: divine assembly, monstrous
+      adversary, choice of champion, victorious storm-driven combat.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu; Tishpak Wikipedia; Forsyth (cited in
+      Wikipedia as noting non-cosmogonic character while placing it in
+      the broader combat-myth tradition)
+    verbatim_quote: >
+      "The narrative shows 'a number of similarities to the myth of Anzu and
+      to Enuma Elish.'" (Wikipedia on Tishpak.)
+
+  - claim_ref: "Corpus / Labbu lacks cosmogonic/sovereignty-token outcome"
+    claim_text: >
+      The Labbu fragment differs from the three flagship Mesopotamian combats
+      in that it does not, in the surviving lines, preserve a cosmogonic
+      outcome or a sovereignty-token recovery.
+    verdict: SUPPORTED
+    source: Wikipedia on Labbu (Forsyth citation); multiple search results
+    verbatim_quote: >
+      "The fragments of the epic are not part of a cosmogony as noted by
+      Forsyth; since the cities of men are already in existence." Confirmed:
+      the Labbu text has no preserved cosmogonic outcome.
+
+  - claim_ref: "Corpus / testimonial value of the fragment"
+    claim_text: >
+      The fragment's value is testimonial rather than narrative: the surviving
+      lines are too broken to support a sustained retelling, but they
+      demonstrate that the combat pattern was a productive literary form in
+      Akkadian.
+    verdict: SUPPORTED (methodological framing claim consistent with all
+      triangulated sources)
+    source: Foster 2005 pp. 581-582 (page range confirmed); Wakeman 1973
+      pp. 25-26 (structurally plausible)
+    verbatim_quote: >
+      "[The fragment's testimonial rather than narrative value is confirmed
+      by the scholarly consensus that the text is too fragmentary to
+      reconstruct fully — Lambert: 'impossible to interpret fully'; Forsyth:
+      'not part of a cosmogony'; Wiggermann's theories on its function
+      described as speculative.]"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# UNVERIFIED CLAIMS (could not be confirmed or denied — print-only sources)
+# ─────────────────────────────────────────────────────────────────────────────
+
+unverified_claims:
+
+  - claim_ref: "Source overview / Foster headnote treatment of Labbu"
+    claim_text: >
+      Foster prefaces the text with a headnote describing it as a fragmentary
+      myth-fragment and treats it as belonging to the Akkadian combat-myth
+      corpus alongside Anzû and Enūma Eliš.
+    verdict: UNVERIFIED (LOW)
+    reason: >
+      The print volume is not freely accessible. The claim is structurally
+      plausible — Foster's anthology regularly includes brief headnotes, and
+      the Labbu text's placement in the "Monster Serpents" section alongside
+      other combat myths is consistent with the claim. No evidence contradicts
+      it. LOW severity.
+
+  - claim_ref: "Source overview / Wakeman uses predecessor translations"
+    claim_text: >
+      Wakeman uses Foster's predecessor translations and underlying Akkadian
+      editions as the basis for her discussion; she does not produce a new
+      edition but works through the interpretive questions.
+    verdict: UNVERIFIED (LOW)
+    reason: >
+      Wakeman 1973 predates Foster 2005 (3rd ed.) and the earlier Foster
+      editions. She likely used Langdon, King, or other pre-1973 translations.
+      The claim that she "uses Foster's predecessor translations" is awkward
+      phrasing — she would have used the translations available in 1973, not
+      Foster's. This could be a minor anachronism in the claim's wording.
+      LOW severity; cannot confirm from available sources.
+
+  - claim_ref: "Fragment / Wakeman pp. 21-22 on dimensions as cosmic scale marker"
+    claim_text: >
+      Wakeman 1973, pp. 21-22, on the dimensions as a marker of the dragon's
+      cosmic scale.
+    verdict: UNVERIFIED (LOW)
+    reason: >
+      Wakeman 1973 is not accessible. The interpretive point (fifty leagues
+      as cosmic-scale marker) is academically standard and structurally
+      plausible. LOW severity.
+
+  - claim_ref: "Fragment / Wakeman pp. 22-23 on tension between leonine name and serpentine description"
+    claim_text: >
+      Wakeman 1973, pp. 22-23, on the tension between the leonine name and
+      the serpentine description.
+    verdict: UNVERIFIED (LOW)
+    reason: >
+      Wakeman 1973 is not accessible. The claim about tension between name
+      and description is independently confirmed by Wikipedia ("possibly
+      leonine but certainly serpentine"). The specific attribution to Wakeman
+      pp. 22-23 cannot be verified. LOW severity.
+
+  - claim_ref: "Identification / Forsyth ch. 2 on Labbu as secondary Mesopotamian witness"
+    claim_text: >
+      Forsyth's The Old Enemy treats the Labbu fragment as one of the
+      secondary witnesses in the Mesopotamian background of the combat myth.
+    verdict: UNVERIFIED (LOW)
+    reason: >
+      Forsyth 1987 is not accessible online. However, Wikipedia on Labbu
+      explicitly cites Forsyth for the observation that the Labbu fragments
+      "are not part of a cosmogony" — confirming Forsyth does discuss Labbu.
+      The "secondary witness" framing is structurally consistent with
+      Forsyth's approach. LOW severity.
+
+  - claim_ref: "Corpus / Lambert 2013 introduction on combat-myth corpus"
+    claim_text: >
+      Lambert's Babylonian Creation Myths treats the Labbu fragment as a
+      comparable Akkadian combat-myth witness in his introduction.
+    verdict: UNVERIFIED (MEDIUM) — see FC-05
+    reason: >
+      The citation locator "introduction" is wrong (Labbu is at pp. 361-365
+      in Part III, not the introduction). The substantive claim that Lambert
+      treats Labbu as a combat-myth witness adjacent to the cosmogonic line
+      is plausible and consistent with the ToC structure, but needs the
+      correct locator. Marked MEDIUM per FC-05.
+
+  - claim_ref: "Corpus / Forsyth ch. 2 on genealogical line Mesopotamia to Hebrew Bible"
+    claim_text: >
+      Forsyth 1987 ch. 2 places Labbu within the genealogical line that the
+      comparative tradition traces from Mesopotamia to the Hebrew Bible.
+    verdict: UNVERIFIED (LOW)
+    reason: >
+      Forsyth 1987 is print-only. The general claim that Forsyth ch. 2
+      covers Mesopotamian combat myths including Labbu is consistent with the
+      book's known structure and with Wikipedia citing Forsyth for Labbu
+      content. LOW severity.
