@@ -1,0 +1,38 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-25T11:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/03-marduk-tiamat.adoc"
+    lines: 605
+  - file: "chapters/04-mesopotamian-minor.adoc"
+    lines: 107
+summary: "Applied four MEDIUM cleanups on Ch3 (the chapter PASSed but had four sub-threshold drift issues worth fixing); Ch4 PASSed cleanly with no fixes needed."
+notes: |
+  Ch3 cleanups (4 MEDIUM fixed; word count 13525 → 13468):
+  - F1 (line 152): removed the unsupported "bind, strip, kill" three-step
+    parallel between Ea's killing of Apsû and Marduk's killing of Tiamat.
+    The claims doc only credits Forsyth with reading the episode as a
+    general "structural rehearsal", not as a verbatim three-step echo.
+  - F2 (line 167): removed the unsupported iconography claim that
+    Marduk's four-eyes/four-ears description "becomes the standard
+    portrait of Marduk in later iconography". No approved-claims anchor.
+  - F4: italicised _Esagil_ at its first body-prose occurrence (line 42)
+    and italicised _Esagil_ + _Esarra_ at the cosmographic-reading
+    introduction (line 439), per the glossary rule for first mention.
+    Subsequent mentions remain un-italicised per convention.
+  - F5 (line 528): softened the Gunkel/Ballentine synthesis claim. The
+    line "Enūma Eliš works with both registers at once" was a bridge
+    that went beyond the VARIANT marker's "present-both" authorisation;
+    rewritten to "Both readings have been defended by the relevant
+    scholarship and the chapter presents them side by side without
+    adjudication" — which matches the marker's actual scope.
+
+  Ch4: no fixes required (PASS, 0 MEDIUM, 1 LOW, the LOW being a single
+  editorial signpost the auditor flagged as not blocking).
+
+  Counts after revision: Ch3 = 605 lines, 13,468 words, 178 footnotes,
+  178 evidence tokens, 6 comparative hooks, 2 LACUNA + 3 INFERENCE + 1
+  VARIANT markers — all preserved. Ch4 = 107 lines, 2,588 words, 31
+  footnotes / evidence tokens, 5 comparative hooks, 1 LACUNA + 1 VARIANT.
+  Both render cleanly via asciidoctor.
