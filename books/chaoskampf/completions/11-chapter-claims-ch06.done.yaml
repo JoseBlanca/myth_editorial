@@ -1,0 +1,55 @@
+stage: "chapter-claims"
+timestamp: "2026-04-25T19:55:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/06-illuyanka.claims.adoc"
+    lines: 321
+summary: "Chapter 6 (Tarḫunna vs. Illuyanka — Purulli Festival) claims skeleton: 97 claim paragraphs distributed as ~16 source overview, ~16 setting/context (storm-god of Nerik, purulli framing), ~25 Version 1 (Inara and Hupasiya), ~22 Version 2 (loss of heart and eyes / bride-price), ~11 ritual context, ~8 Watkins formula, ~5 closing. Co-equal Version 1 and Version 2 presented as parallel attributed claim sequences with no [VARIANT:] marker, per skill rule. Two [LACUNA:] markers (Version 1 closing of Hupasiya episode; Version 2 mid-narrative bride-price transitions). One [INFERENCE:] marker on the dual-recitation question. Four comparative hooks (Egyptian Ra-Apep, IE Watkins formula, Greek Septerion at Delphi, Norse Thor body-damage). Sources used: hoffner-1998, beckman-1982-illuyanka, watkins-1995, west-1997, forsyth-1987 — all whitelisted in sources.yaml."
+notes: |
+  Beckman 1982 fetch: WebFetch was denied permission for
+  https://janes.scholasticahq.com/, so the Beckman editio princeps is
+  cited at article level (JANES 14: 11–25) rather than at page-level
+  resolution. Hoffner 1998 carries the bulk of tablet-section citations
+  at §1 / §2 granularity per the brief's explicit fallback instruction.
+
+  Co-equal handling: per the skill rule, Versions 1 and 2 are presented
+  as separate attributed claim sequences (one === heading each) with no
+  [VARIANT:] marker between them. The shared backbone (initial defeat,
+  recruitment of indirect agent, second engagement) and the points of
+  divergence are summarised in three explicit comparative claims at the
+  hinge between the two sections, citing both versions side by side.
+
+  Glossary discipline: Tarḫunna with subscript-h-with-breve throughout
+  body prose; Teshub used only in the cross-reference noting the
+  Hurrian-language counterpart; Illuyanka, Inara, Hupasiya, Nerik,
+  Hattusa, Boğazköy, CTH 321 preserved per glossary v1-locked
+  2026-04-24; _purulli_ italicised on first mention and at subsequent
+  conceptual reintroductions; áhann áhim and HERO SLAY SERPENT
+  rendered per Watkins convention (italic Vedic, small-cap formula
+  name).
+
+  Tricky decisions: (1) The Hupasiya episode's closing — where Inara
+  reacts in anger to the transgression — is handled as a pre-LACUNA
+  attested narrative claim followed by an explicit lacuna marker on
+  the post-anger fate, rather than reconstructing his death. (2) The
+  dual-killing in Version 2 (storm-god kills both Illuyanka and his own
+  son) is presented straight, with the son's request-for-death claim
+  attributed to Hoffner's translation; the brief's "must be killed
+  alongside" framing is preserved. (3) The Watkins formula section is
+  kept to 8 claims per the brief's "keep brief, full treatment in
+  Part II C5" instruction.
+
+  Self-check:
+  - 97/97 claims have footnote AND // EVIDENCE: token on column 0.
+  - All 5 source_ids resolve to sources.yaml whitelist.
+  - No bundled claims; one factual assertion per paragraph.
+  - Glossary: Tarḫunna/Teshub split observed; _purulli_ italicised
+    first; Illuyanka, Inara, Hupasiya, Nerik, CTH 321, Hattusa,
+    Boğazköy correct.
+  - Co-equal: no [VARIANT:] marker; Version 1 and Version 2 each have
+    their own === section.
+  - Both LACUNAE present at the locations the brief specifies.
+  - Watkins-formula treatment is brief (8 claims) with explicit
+    cross-reference to Part II C5.
+  - Four COMPARATIVE-HOOKs at end (Egyptian, IE, Greek, Norse).

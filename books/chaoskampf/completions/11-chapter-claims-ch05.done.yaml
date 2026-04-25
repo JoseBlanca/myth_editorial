@@ -1,0 +1,63 @@
+stage: "chapter-claims"
+chapter: 5
+chapter_slug: "kumarbi-ullikummi"
+timestamp: "2026-04-25T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+inputs:
+  assembled_prompt: "books/chaoskampf/prompts/08-chapter-claims-ch05.prompt.md"
+  brief: "books/chaoskampf/briefs/05-kumarbi-ullikummi.yaml"
+outputs:
+  - file: "chapters/05-kumarbi-ullikummi.claims.adoc"
+    claim_paragraphs: 130
+sources_used:
+  - hoffner-1998
+  - west-1997
+  - burkert-1992
+  - forsyth-1987
+  - scurlock-beal-2013
+markers:
+  lacunae:
+    - "Teshub-birth passage (Kingship in Heaven) — partially broken in surviving manuscript"
+    - "Song of Ullikummi middle tablets — gap between Ullikummi's growth on Upelluri and consultation with Ea (brief-flagged)"
+    - "Song of Ullikummi closing passages — explicit narration of Teshub's final defeat of Ullikummi not preserved"
+    - "Song of Hedammu throughout — most continuous narrative lost (brief-flagged)"
+    - "Song of the Sea throughout — most storm-god-vs-sea narrative lost; explicitly NOT reconstructed from Ugaritic Baal-Yamm (brief-flagged)"
+  inferences:
+    - "Structural-typological inference about Kumarbi-cycle's tripartite cosmographic-domain pattern (stone / sea / sea-as-adversary) — flagged as structural not textual"
+  variants:
+    - "Song of the Sea song-boundaries: Hoffner §17 vs §18 — present-both"
+    - "Cycle versus aggregation classification — present-both"
+  reconstructions: []
+  comparative_hooks:
+    - "Greek (Hesiodic theogony and Zeus-Typhon)"
+    - "Mesopotamia (Anzû / Enūma Eliš background)"
+    - "Phoenician transmission"
+    - "Norse (typological Midgard-Serpent comparison)"
+    - "Ugaritic Baal-Yamm reservation"
+glossary_decisions:
+  teshub_vs_tarhunna: |
+    Teshub used throughout the cycle's narrative passages (Hurrian-substrate cycle, Hurrian
+    theonyms preserved in the Hittite-language scribal record). Tarḫunna appears once,
+    in the source-overview discussion of the Hittite-language equivalent, to record
+    the cross-language equivalence as required by glossary v1-locked. The chapter is
+    primarily Hurrian-Hittite Kumarbi-cycle material, so Teshub dominates per the
+    skill-08 instruction.
+  sauska_ishtar: "Paired as Šauška/Ishtar at first mention in Setting and context, then Šauška in subsequent narrative passages with Ishtar tag retained where the brief or source uses both."
+  ea_not_enki: "Ea used throughout (Akkadian-context per glossary; Hurro-Hittite tradition adopts the Akkadian form)."
+  bogazkoy_diacritics: "Boğazköy with cedilla and breve preserved throughout."
+  cuneiform_sigla: "KUB and KBo abbreviations preserved with their Boğazköy publication-series gloss at first mention."
+  anzu_circumflex: "Anzû with circumflex used in cross-references to Mesopotamian background."
+web_resources_fetched: []
+web_resources_skipped:
+  reason: "Hoffner 1998 is the printed anchor and the brief explicitly directs citation at song-level. Open transcriptions on TITUS / CDLI / ORACC were not pursued because: (a) the brief warns against pasting from training memory and against fabricating sub-page granularity; (b) Hoffner's chapter-level citation framework already provides the required precision; (c) the risk of importing unattested readings outweighs the marginal benefit of verbatim quotation in a claims skeleton."
+self_check:
+  every_claim_has_footnote_and_evidence: true
+  every_source_id_resolves: true
+  no_bundled_claims: true
+  glossary_discipline: true
+  no_forbidden_words: true
+  three_brief_lacunae_present: true
+  no_silent_reconstruction_from_ugaritic_or_greek: true
+  comparative_hooks_at_end: true
+summary: "Chapter 5 (The Kumarbi Cycle: Ullikummi, Hedammu, and the Song of the Sea) claims skeleton: 130 claim paragraphs across Source overview, Setting and context, Movement I (Kingship in Heaven), Movement II (Song of Ullikummi — flagship combat), Movement III (Song of Hedammu — fragmentary), Movement IV (Song of the Sea — fragmentary), Transmission argument (West / Burkert / Forsyth / Scurlock-Beal), and Variants and related songs. Five LACUNA markers (the three brief-flagged plus two adjacent broken passages in Kingship in Heaven and Ullikummi closing tablets); one INFERENCE marker (structural-typological cycle pattern); two VARIANT markers (Song of the Sea boundaries; cycle versus aggregation classification); no RECONSTRUCTION markers (the brief's no-cross-tradition-reconstruction directive is the controlling rule). Five comparative hooks (Greek, Mesopotamia, Phoenician, Norse, Ugaritic-reservation). Sources used: hoffner-1998 (anchor), west-1997, burkert-1992, forsyth-1987, scurlock-beal-2013. No web resources fetched."
