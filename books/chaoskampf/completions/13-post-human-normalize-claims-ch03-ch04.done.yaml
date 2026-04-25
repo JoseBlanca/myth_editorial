@@ -1,0 +1,74 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-25T08:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/03-marduk-tiamat.claims.approved.adoc"
+    lines: 593
+  - file: "chapters/04-mesopotamian-minor.claims.approved.adoc"
+    lines: 121
+summary: "Validated the post-factcheck revisions on Ch03 and Ch04 claims documents; all checks pass (footnote+evidence pairing, source_id whitelist, glossary discipline, markers valid)."
+notes: |
+  Ch03 (178 claims after revision, was 180):
+  - F01 (HIGH FABRICATION): the "Anšar bestows fiftieth name 'Asaru'"
+    claim deleted entirely; the adjacent "Anu bestows the number fifty
+    on Marduk" claim already had the correct attribution and now stands
+    as the sole fiftieth-name claim. (Asaru is the FIRST of the fifty
+    names, not the fiftieth, so the original statement was doubly
+    wrong.)
+  - F08 (MEDIUM SILENT-BRIDGE): the Esagil three-tier cosmology claim
+    converted from a silent inference into an explicit INFERENCE marker
+    with basis (Foster pp. 471–472 / Lambert Tablet VI describe the
+    cosmic counterpart-architecture; the Anšar/Anu/Ea three-tier
+    correspondence is a standard scholarly synthesis) and risk (the
+    text states the pairing but does not explicitly name the theogonic
+    three-tier).
+  - F02 (MEDIUM): the four chariot horses' names rewritten to flag
+    Foster's translation as one rendering among several rather than
+    the locked four-name list ("Killer / Pitiless / Trampler / Fleet").
+  - F03 (MEDIUM): the *durmahu* etymological gloss for the cosmic-bond
+    formed from Tiamat's tail removed, since the term's identification
+    in Tablet V is unconfirmed by independent triangulation.
+  - F04 (MEDIUM): the four-fold monster-list-repetition citation
+    corrected; Foster pp. 458–459 is the combat scene proper, not a
+    fourth list-repetition. The claim now cites the assembly's
+    confirmation passage (Foster pp. 450–453) and Anšar's / Ea's
+    earlier reports as the genuine repetition sites.
+  - All Akkadian-context glossary discipline preserved: Ea (not Enki),
+    Apsû with circumflex, Anšar with háček, Qingu (not Kingu), Tiamat
+    without length-mark, Anzû with circumflex.
+  - Marker counts after revision: 2 LACUNA (Tablet V astronomical,
+    Tablet VII fifty-names — both brief-flagged), 3 INFERENCE (the
+    original two on Tiamat-as-rebel-framing and Nebuchadnezzar I
+    commissioning, plus the new one on Esagil's three-tier
+    cosmology), 1 VARIANT (Lambert critical / Foster English).
+
+  Ch04 (31 claims, unchanged in count):
+  - FC-02 (HIGH UNVERIFIED-but-likely-wrong): the chain of claims that
+    Wakeman 1973 specifically argues for Marduk as the Labbu champion
+    rewritten throughout. The new framing presents Tishpak as the
+    leading Neo-Assyrian-context candidate, Nergal as the earlier
+    proposal on the violent-god profile, and Marduk as a structural
+    parallel rather than a textually-grounded reading. Wakeman 1973
+    is now cited as surveying all three rather than favouring Marduk.
+    The VARIANT marker re-keyed accordingly: primary=Tishpak, alt=
+    Nergal & Marduk.
+  - FC-01 (MEDIUM): Foster 2005's section title corrected from "The
+    Slaying of Labbu" to "The Lion-Serpent" (the Foster section title)
+    with a note that "Slaying of Labbu" is the title used by Lambert
+    2013 pp. 361–365 — preserving both attributions accurately.
+  - FC-03 (MEDIUM): the blood-flow motif corrected from spatial
+    ("flows for some distance") to durational ("three years, three
+    months, one day, and one night"), the language attested in the
+    surviving lines.
+  - FC-04 (MEDIUM): "fifty leagues" rewritten to flag the
+    witness-dependent variation — fifty leagues in the *bašmu* reading,
+    sixty leagues in the *mušḫuššu* reading.
+  - FC-05 (MEDIUM): every "Lambert 2013, introduction" citation
+    replaced with "Lambert 2013, pp. 361–365" (Part III), where the
+    Labbu fragment is actually treated.
+  - Marker counts unchanged: 1 LACUNA (the divine-name break), 1
+    VARIANT (now correctly keyed to Tishpak as primary).
+
+  Footnote / evidence pairing verified: Ch3 = 178 / 178 ; Ch4 = 31 / 31.
+  Both files render cleanly.
