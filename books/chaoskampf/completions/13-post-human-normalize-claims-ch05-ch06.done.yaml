@@ -1,0 +1,50 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-25T13:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/05-kumarbi-ullikummi.claims.approved.adoc"
+    lines: 472
+  - file: "chapters/06-illuyanka.claims.approved.adoc"
+    lines: 326
+  - file: "briefs/06-illuyanka.yaml"
+    lines: 116
+summary: "Validated post-factcheck revisions on Ch5 (3 MEDIUM, naming/attribution corrections) and Ch6 (8 systematic CITATION-WRONG corrections); brief 06 also corrected to keep the source registry consistent."
+notes: |
+  Ch5 (130 claims, unchanged in count):
+  - FC-01 (MEDIUM): Teshub's bull-team corrected from "Šeri and Tella"
+    to "Šeri and Ḫurri" with a parenthetical noting the Tilla variant
+    (regional Nuzi-attested form sometimes appearing in the Song of
+    Ullikummi tradition). The unattested "Tella" form replaced
+    everywhere it occurred.
+  - FC-02 (MEDIUM): the absolute "no liturgical or festival rubric"
+    claim qualified — KUB 44.7 associates the Song of the Sea with a
+    celebration at Mount Ḫazzi, and the corpus is now described as
+    "largely without an explicit liturgical rubric, with the partial
+    exception of KUB 44.7."
+  - FC-03 (MEDIUM): the tripartite-combat-structure attribution
+    softened from "the same structure that Annus 2001 identifies as
+    the standard pattern of the Mesopotamian combat-myth" to "a
+    pattern recognisable across the Mesopotamian combat corpus and
+    discussed in Annus's introduction to the Anzû Epic in similar
+    terms" — replacing the sub-section-granularity attribution with
+    a broader register that the print-only source can support.
+
+  Ch6 (97 claims, unchanged in count):
+  - All 19 occurrences of "Watkins 1995, ch. 26" / "loc=ch. 26"
+    corrected to "ch. 46" — both the footnote text and the EVIDENCE
+    tokens. Chapter 46 of How to Kill a Dragon is "Typhoeus and the
+    Illuyankas"; chapter 26 is "The Asvamedha or Horse Sacrifice",
+    an unrelated topic. The substantive Watkins-formula claims were
+    correct; only the chapter number was wrong.
+  - Brief 06 corrected in lockstep: the watkins-1995 source loc field
+    now reads "ch. 46 (Typhoeus and the Illuyankas — the HERO SLAY
+    SERPENT formula in Hittite)" instead of "ch. 26 (Illuyanka and
+    the HERO SLAY SERPENT formula in Hittite)".
+
+  Counts after revision: Ch5 = 472 lines (with provenance block), 130
+  footnotes / 130 evidence tokens, 5 LACUNA + 1 INFERENCE + 2 VARIANT
+  markers, 5 comparative hooks. Ch6 = 326 lines (with provenance
+  block), 97 footnotes / 97 evidence tokens, 2 LACUNA + 1 INFERENCE
+  markers (no [VARIANT:] per the co-equal handling rule), 4
+  comparative hooks. Both files render cleanly via asciidoctor.
