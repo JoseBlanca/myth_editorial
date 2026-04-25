@@ -1,0 +1,91 @@
+stage: "claims-factcheck"
+timestamp: "2026-04-25T18:30:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+
+outputs:
+  - file: "books/chaoskampf/chapters/05-kumarbi-ullikummi.claims.factcheck.yaml"
+    lines: ~280
+  - file: "books/chaoskampf/completions/12-claims-factcheck-ch05.done.yaml"
+    lines: ~60
+
+inputs_audited:
+  - file: "books/chaoskampf/chapters/05-kumarbi-ullikummi.claims.adoc"
+    lines: 467
+    claims_identified: 130
+
+primary_sources_consulted:
+  - "Hoffner 1998, Hittite Myths 2nd ed., §§14–18 — print-only; section-level
+     citations accepted as UNVERIFIED LOW per audit protocol unless implausible.
+     No sub-page granularity citations found in the claims document."
+  - "West 1997, East Face of Helicon — print-only; confirmed via Oxford UP
+     catalogue, Bryn Mawr Classical Review, and multiple scholarly summaries
+     as treating Kumarbi Cycle as central transmission case for Hesiod."
+  - "Burkert 1992, Orientalizing Revolution — print-only; confirmed via
+     Harvard UP catalogue and multiple scholarly citations for the
+     Phoenician-intermediary transmission hypothesis."
+
+triangulation_sources:
+  - "Wikipedia (Kumarbi, Ullikummi, Teshub, Upelluri, Aranzaḫ, Šeri and
+     Ḫurri, Ḫedammu, Sanchuniathon, Philo of Byblos) — corroborates all
+     major narrative claims"
+  - "Britannica (Song of Ullikummi, Teshub) — corroborates stone-monster
+     narrative and storm-god iconography"
+  - "Bryn Mawr Classical Review 2000.05.08 — confirms West 1997 content"
+  - "Harvard University Press catalogue — confirms Burkert 1992 content"
+  - "JANER 2021 (Brill) — confirms KUB 33.120 tablet siglum"
+  - "Academia.edu: Dijkstra 2011 'Ishtar seduces the Sea-serpent'
+     (Ugarit-Forschungen 43) — confirms Hedammu seduction"
+  - "Snakecult.net post on cosmological separation — confirms copper cutter"
+  - "Multiple educational/encyclopedia sources for Irširra transport,
+     Upelluri's right shoulder, bull names"
+
+verdict: REVISE
+
+tally_summary:
+  total_claims: 130
+  supported: 117
+  unverified_low: 9
+  unverified_medium: 1
+  high_severity_findings: 0
+  medium_severity_findings: 3
+  low_severity_notes: 4
+  silent_bridges: 0
+  contamination_flags: 0
+  glossary_violations: 1
+
+high_severity_findings: []
+
+medium_severity_findings:
+  - id: FC-01
+    description: >
+      Bull-name error: the claims document names Teshub's bulls 'Šeri and
+      Tella.' The standard pair is Šeri and Ḫurri. In the Song of Ullikummi
+      specifically, the second bull is Tilla (a regional variant attested in
+      Nuzi texts), not Tella. 'Tella' is not an attested form of either name.
+      This is a factual error requiring correction before chapter-draft.
+  - id: FC-02
+    description: >
+      The claim that the Kumarbi Cycle 'is preserved without an explicit
+      liturgical or festival rubric' is slightly overstated. A ritual text
+      (KUB 44.7) associates at least the Song of the Sea with performance at
+      Mount Ḫazzi. The comparison with Enūma Eliš/akītu remains valid but
+      the absolute statement needs qualification.
+  - id: FC-03
+    description: >
+      The attribution to Annus 2001 specifically of the label 'tripartite
+      combat structure as the standard pattern of the Mesopotamian combat-myth'
+      is sub-section granularity in a print-only cuneiform-text edition. The
+      structural observation is sound; the specific attribution to Annus needs
+      softening to avoid fabrication risk.
+
+ready_for_chapter_draft: false
+reason: >
+  Three MEDIUM findings require targeted fixes in the claims document before
+  chapter-draft. No HIGH findings. No contamination. No fabrication. After
+  three corrections (bull-name fix, ritual-context qualification, Annus
+  attribution softening), the document should proceed to human normalisation
+  and then chapter-draft. The overall claims quality is high: all major
+  load-bearing claims are supported, all lacunae are correctly marked, and
+  the document's reconstruction-discipline is exemplary.
