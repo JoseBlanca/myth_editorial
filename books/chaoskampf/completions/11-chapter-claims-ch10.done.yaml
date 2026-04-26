@@ -1,0 +1,200 @@
+stage: "chapter-claims"
+timestamp: "2026-04-26T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+chapter: "10-christian-reception"
+outputs:
+  - file: "chapters/10-christian-reception.claims.adoc"
+    lines: 228
+    claim_paragraphs: 67
+summary: |
+  Chapter 10 (St. George, St. Michael, and the Christian Reception) —
+  family-chapter (related-tier) claims skeleton: 67 claim paragraphs
+  across 6 === sub-sections. Section breakdown: source overview (12),
+  St. Michael the Archangel and Rev 12 (15, including 1 [INFERENCE:]),
+  St. George and the dragon (16, including 1 [VARIANT:] across the
+  Passio S. Georgii recensions), Christ's harrowing of hell (10), the
+  reception pattern (10, including 1 [INFERENCE:]), and forward links
+  (4). Three // COMPARATIVE-HOOK: comments at the file end (Greek /
+  Perseus-Andromeda → Ch12; NT / Rev 12 → Ch9; post-medieval reception
+  → Ch42).
+
+  Treatment of the three family members:
+  - St. Michael: 15 claims tracing the Rev 12 textual basis
+    (Yarbro Collins 1976 on Rev 12:7-9 and 12:9), the late-antique
+    cult development (Ogden 2013 ch. 11 on Monte Sant'Angelo / Monte
+    Gargano, Mont Saint-Michel, Castel Sant'Angelo), and the
+    iconographic codification (armoured warrior, spear, trampled
+    dragon underfoot). Cult centres named per brief: Monte Sant'Angelo
+    (Gargano), Mont Saint-Michel (Norman), Castel Sant'Angelo (Roman
+    plague-procession reidentification). The single [INFERENCE:]
+    flags the Rev-12-direct-derivation reading versus a Danielic /
+    Second-Temple-substrate alternative.
+  - St. George: 16 claims separating (i) the historical core /
+    Diocletianic martyr-narrative, (ii) the early dragon-less passio
+    stratum (BHL 3363, Acta Sanctorum Apr. III), (iii) the dragon-
+    fight episode as documented later 11th-12th-c. accretion, and
+    (iv) the Greco-Roman Perseus-Andromeda substrate of the rescue
+    pattern. The princess-and-dragon episode is registered explicitly
+    as a LATER ACCRETION onto the original passio (per brief
+    self-check #7) and as having a documented Greco-Roman substrate.
+    The single [VARIANT:] catalogues recensional differences across
+    BHL 3363, Acta Sanctorum Apr. III, and Voragine's Legenda Aurea
+    (later 13th c.) while affirming the standardised high-medieval
+    narrative shape. Crusader-era cult expansion (11th-13th c.) and
+    the iconographic codification (mounted soldier-saint with lance)
+    are registered.
+  - Christ's harrowing of hell: 10 claims on the Gospel of Nicodemus
+    (Acta Pilati / Descensus Christi ad Inferos), the patristic
+    homiletic tradition on the descensus, the draconic-devil
+    iconography of harrowing scenes, the Christ-as-dragon-slayer
+    typology, and the structural relation among Michael, George, and
+    the harrowing (saintly deputy / angelic deputy / Christ direct).
+    Forsyth 1987 is the principal anchor for this section.
+
+  Period-boundary decisions:
+  - The chapter holds itself strictly to the late-antique-to-high-
+    medieval window (per brief special_instructions and self-check
+    #6). The forward-links section explicitly defers post-medieval
+    reception (Renaissance painting — Raphael, Carpaccio, Uccello;
+    early-modern heraldry — cross of St. George, banner of England;
+    modern national iconography) to the Ch42 reception coda.
+  - The Crusader-era expansion (11th-13th c.) is included as the
+    historical context in which the dragon-fight episode reaches
+    its canonical form; this is in-window by the brief's
+    "high medieval" upper bound.
+  - Voragine's Legenda Aurea (later 13th c.) is included as the
+    standard medieval George vita; this is also in-window.
+
+  Sources used (all 3 source_ids resolve to sources.yaml):
+  - ogden-2013 (~70% of citations; chapter anchor for chs. 11-12,
+    cited at chapter level per brief; printed-only book)
+  - yarbro-collins-1976 (Rev 12 substrate; 8 citations)
+  - forsyth-1987 (Christian afterlife framing, harrowing section
+    anchor; ~14 citations)
+
+  Glossary discipline (v1-locked):
+  - "Michael" (the archangel; capital M) used throughout body prose
+  - "St. George" / "Saint George" — first mention "St. George"
+    (=== heading); "St." form maintained throughout body prose
+  - "the dragon" used in body prose (no "chaos-figure" — banned)
+  - Italicised at first mention: drakōn (with macron), passio,
+    Legenda Aurea, Acta Sanctorum, Gospel of Nicodemus,
+    descensus / descensus ad inferos, vita
+  - "Perseus", "Andromeda" used unmarked (Greco-Roman substrate)
+  - 0 occurrences of "YHWH" or "chaos-figure" (verified by grep)
+  - "Yahweh" used in the reception-pattern section for the
+    royal-legitimation contrast
+  - Diacritics retained throughout (Lôtan, drakōn, Passio, etc.)
+
+  Identifier-pinning treatment per brief: specific Passio editions
+  cited at "Legenda Aurea, Voragine" / "Acta Sanctorum, Apr. III" /
+  "Passio S. Georgii, BHL 3363" level; sub-page pinning deferred
+  to glossary-lock per inventory notes; no invented Latin.
+
+  Markers used: 2 [INFERENCE:] (Rev-12-direct-derivation reading of
+  Michaelic cult; coherent-iconographic-complex reading of the three
+  reception nodes); 1 [VARIANT:] (Passio S. Georgii recensional
+  differences); 0 [LACUNA:] (per brief — hagiographic corpus is
+  well-preserved); 0 [RECONSTRUCTION:] (per brief — none expected).
+
+  WebFetch use: WebFetch was attempted for Wikisource (Caxton
+  translation of the Legenda Aurea Life of Saint George) and was
+  DENIED in this environment, as in Ch08 (NRSV) and Ch06 (Beckman).
+  Per the brief instruction "Don't invent specific Latin readings,"
+  no verbatim Latin or English Legenda Aurea quotations are made;
+  the chapter cites the work at "Legenda Aurea, Voragine" level
+  through Ogden 2013 ch. 11 as the scholarly anchor.
+
+  Self-check:
+  - 67/67 claims have footnote AND // EVIDENCE: token at column 0
+  - All 3 source_ids resolve to sources.yaml whitelist
+  - No bundled claims; one factual assertion per paragraph
+  - Glossary v1-locked: Michael, St. George, the dragon, drakōn,
+    passio, Legenda Aurea, Acta Sanctorum, Gospel of Nicodemus all
+    italicised on first mention; Perseus/Andromeda; Yahweh; full
+    diacritics; no "chaos-figure"; no YHWH
+  - Late-antique-to-high-medieval window respected; post-medieval
+    material explicitly deferred to Ch42
+  - Princess-and-dragon episode registered as documented LATER
+    ACCRETION (per brief self-check #7), not as part of the
+    original passio
+  - 3 // COMPARATIVE-HOOK: comments at file end (Greek, NT,
+    Reception)
+
+notes: |
+  Tricky decisions:
+
+  (1) Citation-level discipline. Ogden 2013 chs. 11-12 are
+  printed-only and not online; per brief, citation is at chapter
+  level. WebFetch for Wikisource Legenda Aurea / Caxton was denied,
+  so no verbatim Latin or English quotation is made of the Legenda
+  Aurea text — the brief explicitly forbids inventing specific Latin
+  readings. The Legenda Aurea is therefore cited at work level
+  ("Legenda Aurea, Voragine, later 13th c.") through Ogden 2013
+  ch. 11 as the scholarly anchor.
+
+  (2) Princess-and-dragon as later accretion. The brief's
+  self-check #7 demands this be treated as a documented LATER
+  ACCRETION. The chapter handles this in three explicit claim
+  paragraphs in the George section: (i) the early stratum is a
+  pure martyr-narrative, dragon-less; (ii) the dragon-fight is
+  attached by the 11th-12th centuries; (iii) the dragon-fight is
+  not part of the historical or earliest-attested layer. The
+  Perseus-Andromeda substrate is registered in the next claim
+  paragraph as the documented Greco-Roman background.
+
+  (3) [VARIANT:] placement. The brief allows VARIANT for the
+  Passio S. Georgii recensions where they differ. One VARIANT
+  marker is placed in the George section, cataloguing the BHL
+  3363 / Acta Sanctorum Apr. III / Legenda Aurea recensional
+  differences while affirming convergence on the standard medieval
+  narrative shape. This is the cleanest place in the chapter to
+  register recensional plurality without dispersing it across
+  multiple claims.
+
+  (4) [INFERENCE:] markers. Two inference markers, both at points
+  where the chapter offers a synthetic reading that goes beyond
+  what any single source attests: (i) at end of Michael section,
+  flagging the Rev-12-direct-derivation reading versus the
+  Danielic / Second-Temple-substrate alternative; (ii) in the
+  reception-pattern section, flagging the coherent-iconographic-
+  complex synthesis versus a more dispersed reading of independent
+  iconographic developments.
+
+  (5) Period-boundary on the Crusader-era expansion. The Crusader
+  period (11th-13th centuries) is in-window by the brief's
+  "late-antique-to-high-medieval" window. The chapter explicitly
+  registers the Crusader-era spread of the cult of St. George as
+  the historical context for the canonical iconographic form.
+  Voragine's Legenda Aurea (later 13th c.) is also in-window;
+  Renaissance reception is explicitly out-of-window (deferred to
+  Ch42).
+
+  (6) Forsyth 1987 chapter-level citation. Per brief, Forsyth is
+  the secondary anchor for the Christian-afterlife framing.
+  Forsyth's full volume is structured around the long combat-myth
+  trajectory; the chapter cites Forsyth at "later chapters on the
+  Christian afterlife" level for the framing claims, and at
+  topic-specific levels for the harrowing section ("on the
+  *Gospel of Nicodemus*", "on the *descensus* homilies",
+  "on Christ-as-dragon-slayer", etc.). Forsyth's printed page
+  numbers are not pinned at the present stage; this matches the
+  brief's printed-source citation discipline.
+
+  (7) The royal-legitimation inversion claim. One claim in the
+  reception-pattern section names Marduk vs. Tiamat (Babylonian
+  kingship legitimation) and Yahweh vs. Leviathan/Rahab (covenant
+  theology) as the contrast cases against which the Christian
+  inversion is registered. The cross-reference to chapters 3 and
+  8 of the present volume is implicit; the claim is anchored to
+  Forsyth 1987's treatment of the inversion. "Yahweh" is used in
+  this passage per glossary v1.
+
+  (8) Length. 67 claim paragraphs, within the brief's 50-70
+  target. Distribution (overview 12 / Michael 15 / George 16 /
+  harrowing 10 / pattern 10 / forward 4) tracks the brief's
+  guidance (~10 / ~15 / ~15 / ~10 / ~10) closely with one extra
+  claim each in source overview and George (the latter justified
+  by the four-step accretion-and-substrate argument the section
+  must make).
