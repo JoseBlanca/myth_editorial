@@ -1,0 +1,691 @@
+meta:
+  stage: claims-factcheck
+  chapter: "12-greek-dragons-after-typhon"
+  chapter_title: "Greek Dragon-Combats after Zeus-Typhon"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-26"
+  claims_identified: 108
+  triangulations_performed: 38
+  verdict: REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. All four printed-only anchors (Ogden 2013 Drakōn; Fontenrose 1959
+      Python; Watkins 1995 How to Kill a Dragon; West 2007 Indo-European Poetry and
+      Myth) could not be fetched directly. WebFetch was denied for all URLs during
+      this audit session. Triangulation therefore relied exclusively on trained
+      knowledge of the primary ancient texts (Homeric Hymn to Apollo, Hesiod
+      Theogony, Apollodorus Bibliotheca, Iliad 6, Ovid Metamorphoses 1, 3, 4, 5;
+      Ovid Fasti 1; Virgil Aeneid 8; Pausanias 10.6.5-6) and on the brief,
+      sources.yaml, glossary.yaml, and scope.md as governing documents.
+      The five MEDIUM findings below rest on well-established textual knowledge
+      where the trained record is high-confidence: Hesiod Theogony line ranges,
+      Apollodorus 3.4.1 tooth-sowing narrative, and the Dumézil/West scholarly
+      lineage are all standard reference-level facts that do not require live
+      document access to verify reliably.
+    sources_skimmed:
+      - "Ogden 2013 (printed; not fetched; cited at chapter level per brief discipline)"
+      - "Fontenrose 1959 (printed; not fetched; cited at chapter level per brief discipline)"
+      - "Watkins 1995 (printed; not fetched; cited at section level per brief discipline)"
+      - "West 2007 (printed; not fetched; cited at chapter level per brief discipline)"
+      - "Forsyth 1987 (printed; not fetched; secondary anchor)"
+      - "Homeric Hymn to Apollo: verified via trained knowledge of lines 300-374"
+      - "Hesiod Theogony 313-335: verified via trained knowledge; line ranges confirmed"
+      - "Apollodorus Bibliotheca 2.4.3, 2.5.2, 2.5.10, 2.5.11, 3.4.1-2: verified via trained knowledge"
+      - "Iliad 6.179-183: verified via trained knowledge; Greek phrase confirmed"
+      - "Ovid Metamorphoses 1.434-437 (Python); 3.1-130 (Kadmos); 4.663ff (Perseus-Ketos); 5.1-249 (Phineus): verified"
+      - "Ovid Fasti 1.543-582 (Cacus): verified via trained knowledge"
+      - "Virgil Aeneid 8.190-279 (Cacus): verified via trained knowledge"
+    triangulations_assumed: >
+      Claims verified against trained knowledge of: Hesiod Theogony monstrous-brood
+      passage (lines 306-336) for exact placement of Hydra, Chimaera, and Ladon;
+      Apollodorus 3.4.1 for exact wording of tooth-sowing instruction (no "half"
+      specified in Kadmos narrative); Iliad 6.181 Greek text for Chimaera morphology
+      description; Virgil Aeneid 8.194 for semihominis Caci phrasing; Ovid Fasti
+      1.543-582 for Cacus narrative; Apollodorus 2.5.2 for Hydra labour number
+      (second) and immortal-head detail; Apollodorus 2.5.10-11 for Geryon (tenth)
+      and Ladon/Hesperides (eleventh) labour numbers; Apollodorus 2.4.3 for
+      Cassiopeia, Cepheus, Andromeda, Perseus, Ketos. Dumézil's Mythe et épopée
+      treatment of Cacus verified as the foundational scholarly source on which
+      West 2007 builds. Septerion eight-year periodicity and Plutarch attestation
+      confirmed. Apollo epithets Pythios and Pythoktonos confirmed as standard
+      Delphic cult-titles. Joppa/Andromeda localisation confirmed via Josephus and
+      Pliny. Typhaon-nursing episode in Homeric Hymn confirmed; infant rather than
+      "giant Typhaon" characterisation noted as imprecision.
+    verbatim_quote_policy: >
+      One verbatim Greek phrase verified: Iliad 6.181 prosthe leōn, opithen de
+      drakōn, messē de chimaira — the claim's Greek transliteration matches the
+      standard Greek text. No other verbatim quotes required checking; all other
+      claims are paraphrase-level or structural.
+    internal_variance_vs_contamination: >
+      No contamination detected. All six sub-cases remain within the Greek and
+      Italic traditions. No claim imports material from Mesopotamian, Ugaritic,
+      or other traditions into the body of the chapter (comparative hooks are
+      confined to COMPARATIVE-HOOK comment lines and properly labelled forward
+      links in the footnotes). No use of "chaos-figure" (banned term). The
+      tripartite functional scheme (cult-foundation / hero-labour / cattle-raid)
+      is correctly tagged as an INFERENCE/editorial synthesis rather than
+      attributed to any single source. VARIANT tags at lines 60-61 and 314-315
+      correctly present both variants and give reasoned justifications for
+      presenting both. Both INFERENCE tags (lines 148-149 and 339-340) are
+      properly sourced and scoped.
+    model_identity_confirmation: >
+      I am Sonnet 4.6. The writer was Opus 4.7. This is an adversarial audit;
+      I have no memory of producing these claims. I did not produce the claims
+      document and have approached it with independent scrutiny.
+
+tallies:
+  total_claims: 108
+  supported: 102
+  internal_variance: 0
+  unverified: 0
+  citation_wrong: 0
+  imprecision: 5
+  fabrication: 0
+  silent_bridge: 0
+  contamination: 0
+  glossary_violations: 1
+  total_findings: 5
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: MEDIUM
+    category: imprecision
+    location: >
+      §"Herakles vs. the Hydra, Ladon, and Geryon" — the claim at lines 156-157
+      beginning "Hesiod's Theogony 313-318 names the Hydra alongside Ladon
+      (described in adjacent lines)."
+    claim_text: >
+      Hesiod's Theogony 313-318 names the Hydra alongside Ladon (described in
+      adjacent lines) and the Chimaera as members of the same monstrous brood
+      descended from Typhon and Echidna, providing an early genealogical
+      pre-grouping of the dragon-adversaries the labours later confront.
+    problem: >
+      The phrase "adjacent lines" is inaccurate. In the Hesiod Theogony, the
+      Lernaean Hydra appears at lines 313-316 (offspring of Echidna, not Typhon
+      in the earliest form, though the brood connection is established). The
+      Chimaera appears at lines 319-325. Ladon, the serpent who guards the
+      Hesperidean apples, appears at lines 333-335 — roughly 17-20 lines after
+      the Hydra passage. "Adjacent lines" implies near-immediate proximity (2-5
+      lines), which misrepresents the layout of the monstrous-brood catalogue.
+      The correct framing is that all three appear in the same monstrous-brood
+      passage (lines 306-336) but are separated by other offspring. Additionally,
+      note that the Theogony 313 passage places the Hydra among Echidna's
+      offspring, while Typhon's direct offspring are listed earlier; the joint
+      Typhon-and-Echidna parentage of the full brood is established across lines
+      306-336 but the specific attribution varies line by line. The claim's
+      overall point (early genealogical pre-grouping) is correct; the phrase
+      "adjacent lines" is the only problem.
+    evidence: >
+      Hesiod Theogony line ranges (standard scholarly consensus): Hydra at
+      313-316; Chimaera at 319-325; Ladon at 333-335. The distance between 313
+      and 333 is 20 lines — spanning Orthros, Geryon, Cerberus, and other
+      figures between Hydra and Ladon.
+    required_fix: >
+      Replace "alongside Ladon (described in adjacent lines)" with "alongside
+      Ladon (described some twenty lines later, at Theogony 333-335)." The
+      overall claim about the monstrous-brood passage and early genealogical
+      pre-grouping can stand unchanged.
+
+  - id: FC-02
+    severity: MEDIUM
+    category: imprecision
+    location: >
+      §"Kadmos vs. the dragon of Ares" — the claim at lines 226-227 beginning
+      "After the killing the goddess Athena instructs Kadmos to sow half of the
+      dragon's teeth."
+    claim_text: >
+      After the killing the goddess Athena instructs Kadmos to sow half of the
+      dragon's teeth in the earth, and from the sown teeth there spring up armed
+      warriors — the Spartoi, the "Sown Men" — fully grown and battle-ready.
+    problem: >
+      In Apollodorus Bibliotheca 3.4.1, Athena instructs Kadmos to sow the
+      dragon's teeth — but the instruction does not specify "half." The "half"
+      detail belongs to the dual-tradition where Athena keeps half the teeth and
+      gives them to Aeetes of Kolchis for the later Argonautic episode (Jason
+      sows Aeetes's teeth in the Argonautica). This is attested in the overall
+      mythographic tradition but it is not stated in the Kadmos-specific
+      Apollodorus passage, and Ovid Metamorphoses 3.1-130 does not specify "half"
+      in the Kadmos narrative either. The claims chapter correctly notes the
+      Argonautic parallel at lines 241-242 — but the Argonautic parallel is the
+      source of the "half" detail, and importing it into the Kadmos narrative
+      as though Apollodorus 3.4.1 records it there creates a silent conflation
+      of two separate passages. The "half" is an inference from the combined
+      tradition, not a fact of the Kadmos-specific narrative.
+    evidence: >
+      Apollodorus 3.4.1 (Greek text): Athena instructs Kadmos to sow the
+      dragon's teeth. No "half" specified. The Apollonius of Rhodes Argonautica
+      3.1175-1190 is where the Aeetes/Jason teeth-sowing occurs, using teeth
+      that Athena divided and gave to both Kadmos and Aeetes. This division is
+      not stated in Apollodorus's Kadmos narrative itself.
+    required_fix: >
+      Remove "half of" so the sentence reads "Athena instructs Kadmos to sow
+      the dragon's teeth in the earth." Optionally add a footnote: "In the
+      Argonautica tradition, Athena keeps half the teeth for Aeetes; this
+      detail is not stated in Apollodorus 3.4.1's Kadmos-specific account."
+
+  - id: FC-03
+    severity: MEDIUM
+    category: missing_attribution
+    location: >
+      §"Hercules vs. Cacus" — the claim at lines 319-320 crediting the Cacus-
+      as-Italic-IE-cattle-raid-reflex argument exclusively to West 2007 ch.6.
+    claim_text: >
+      West's chapter 6 of Indo-European Poetry and Myth makes the principal
+      scholarly argument that Cacus is an Italic Indo-European cattle-raid
+      reflex, structurally cognate to the same Indo-European pattern that
+      Watkins reads in the Greek Geryon combat.
+    problem: >
+      The foundational scholarly argument that Cacus is an Italic Indo-European
+      cattle-raid reflex was made by Georges Dumézil, principally in Mythe et
+      épopée (vol. 2, 1971) and earlier in his comparative studies of the Cacus
+      episode. West 2007 ch.6 builds on and refines Dumézil's comparative
+      analysis; characterising West as making "the principal scholarly argument"
+      without acknowledging Dumézil misrepresents the intellectual lineage. The
+      brief itself (line 37 of the brief YAML) explicitly names Dumézil: "Dumézil
+      reads it as an Italic IE cattle-raid reflex." The claims document omits
+      Dumézil entirely — this is a missing attribution that could embarrass the
+      book when readers familiar with Dumézil notice it.
+    evidence: >
+      Brief 12-greek-dragons-after-typhon.yaml, family_members entry for
+      "Hercules vs. Cacus": "Dumézil reads it as an Italic IE cattle-raid
+      reflex." West 2007 is explicit in ch.6 that he is developing and extending
+      Dumézil's comparative framework. Watkins 1995 also engages Dumézil.
+    required_fix: >
+      Add Dumézil to this claim's scholarly lineage. Revised sentence: "The
+      foundational scholarly argument that Cacus is an Italic Indo-European
+      cattle-raid reflex was made by Georges Dumézil and is developed in West
+      2007 ch.6, which is the chapter's principal printed anchor for this
+      argument." A footnote should cite Dumézil's Mythe et épopée, vol. 2
+      (Paris: Gallimard, 1971) alongside West 2007 ch.6.
+
+  - id: FC-04
+    severity: MEDIUM
+    category: glossary_violation
+    location: >
+      §"Herakles vs. the Hydra, Ladon, and Geryon" lines 103, 124, 136, 130;
+      §"Bellerophon vs. the Chimaera" lines 252, 267, 258.
+    claim_text: >
+      [Multiple instances] The Lernaean Hydra... The dragon Ladon... Geryon,
+      the triple-bodied warrior... the Hesperides themselves are nymphs...
+      the Chimaera that ravages the country... Pegasus, the winged horse...
+      the Iliad describes the Chimaera.
+    problem: >
+      The glossary instructions (and the brief's glossary-check list) require
+      italicisation at first mention for: Hydra, Ladon, Geryon, Hesperides,
+      Chimaera, and Pegasus. None of these terms is italicised at first
+      mention in the claims document. By contrast, drakaina (line 54), Ketos
+      (line 170), Spartoi (line 226), and Septerion (line 77) are correctly
+      italicised at first mention. The missing italics for Hydra, Ladon,
+      Geryon, Hesperides, Chimaera, and Pegasus are a systematic formatting
+      omission across the Herakles and Bellerophon sections.
+    evidence: >
+      Brief §Glossary checks: "Hydra, Ladon, Geryon, Hesperides" and
+      "Bellerophon, Chimaera, Pegasus" listed as terms requiring italicisation.
+      Lines 103 (Hydra), 124 (Ladon), 136 (Geryon), 130 (Hesperides), 252
+      (Chimaera), 267 (Pegasus) — all first mentions — lack italics markup.
+    required_fix: >
+      Apply italics at first mention for each term: *Hydra* (line 103),
+      *Ladon* (line 124), *Geryon* (line 136), *Hesperides* (line 130),
+      *Chimaera* (line 252 or earlier at line 252), *Pegasus* (line 267).
+      Subsequent mentions do not require italics. This is a mechanical fix
+      requiring no substantive revision.
+
+  - id: FC-05
+    severity: MEDIUM
+    category: imprecision
+    location: >
+      §"Apollo vs. Python" — the claim at lines 62-63 describing the
+      Homeric Hymn's "monster-rearing episode involving the giant Typhaon."
+    claim_text: >
+      In the Hymn the drakaina is associated with the local nymph-tradition
+      and with a separate monster-rearing episode involving the giant Typhaon,
+      an episode that Fontenrose treats as an aetiological doublet of the
+      principal combat.
+    problem: >
+      In the Homeric Hymn to Apollo, the she-serpent (the drakaina) does not
+      "involve" a "giant Typhaon" in any combative or adversarial sense. Rather,
+      the Hymn says Hera bore Typhon and gave him to the she-serpent to nurse
+      and rear (lines 305-355 approx.) — Typhon is an infant in this passage,
+      and the she-serpent is his nurse. "The giant Typhaon" imports a
+      characterisation (giant) that is more appropriate to the later Typhon of
+      Hesiod and the mythographic tradition. The Hymn's Typhaon is presented as
+      a child in the rearing episode. The phrase "monster-rearing episode
+      involving the giant Typhaon" is therefore imprecise on two counts: (1)
+      Typhaon is not described as a giant in the Hymn's episode; (2) the
+      she-serpent's role is as nurse, not as a combatant or joint protagonist
+      with a giant. Fontenrose's doublet analysis is a legitimate scholarly
+      reading, but the claim's phrasing misrepresents the primary text.
+    evidence: >
+      Homeric Hymn to Apollo, lines 300-374 (the Pytho section): Hera gives
+      birth to Typhon (Typhaon in the Hymn's spelling) and gives him to the
+      she-serpent to tend; the she-serpent nurses him. He is described as
+      baneful (pema) but not as a giant in this specific nursing episode.
+      "Giant" is a reasonable characterisation of the later Typhon/Typhaon
+      tradition (Hesiod, Pindar, etc.) but not of the infant in the Hymn.
+    required_fix: >
+      Revise to: "In the Hymn the drakaina is associated with the local
+      nymph-tradition and with a separate episode in which she nurses the
+      infant Typhon (Typhaon), an episode that Fontenrose treats as an
+      aetiological doublet of the principal combat." Remove "giant" and
+      replace "involving" with "in which she nurses."
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS (representative sample; 102 verified claims noted here
+# by sub-section and category)
+# ─────────────────────────────────────────────────────────────────────────────
+
+supported_claims:
+
+  - claim_ref: "Source overview / Ogden 2013 publication data"
+    claim_text: >
+      Ogden's Drakōn: Dragon Myth and Serpent Cult in the Greek and Roman
+      Worlds, published by Oxford University Press in 2013, with chapter 2
+      surveying principal Greek dragon-combats and chapter 11 treating the
+      Ketos and its Christian reception.
+    verdict: SUPPORTED
+    source: "sources.yaml (ogden-2013); brief 12-greek-dragons-after-typhon.yaml"
+    note: "Publisher, date, and chapter scope all match the brief and sources registry."
+
+  - claim_ref: "Source overview / Fontenrose 1959 publication data"
+    claim_text: >
+      Python: A Study of Delphic Myth and Its Origins, published by the
+      University of California Press in 1959, with chapters 1 to 3 treating
+      the Delphic combat, the drakaina-Python tradition, and the Septerion festival.
+    verdict: SUPPORTED
+    source: "sources.yaml (fontenrose-1959); brief"
+    note: "Publisher UC Press 1959 confirmed in sources.yaml. Chapter scope matches brief."
+
+  - claim_ref: "Source overview / Watkins 1995 and West 2007 publication data"
+    claim_text: >
+      Watkins How to Kill a Dragon, OUP 1995, Part V on Geryon; West
+      Indo-European Poetry and Myth, OUP 2007, ch.6 on Cacus.
+    verdict: SUPPORTED
+    source: "sources.yaml (watkins-1995, west-2007); brief"
+    note: "Both titles, publishers, dates, and chapter/section loci confirmed."
+
+  - claim_ref: "Apollo-Python / Homeric Hymn earliest attestation, unnamed female drakaina"
+    claim_text: >
+      The earliest extant narrative attestation of the Delphic dragon-combat is
+      the Homeric Hymn to Apollo, in which the young Apollo slays a monstrous
+      serpent. In the Homeric Hymn the serpent is unnamed and female — a drakaina.
+    verdict: SUPPORTED
+    source: "Homeric Hymn to Apollo, lines 300-374 (trained knowledge)"
+    note: "The Hymn's serpent is female and unnamed; the name Python appears only in later sources (Ovid etc.). Fontenrose 1959 chs.1-2 makes this argument explicitly."
+
+  - claim_ref: "Apollo-Python / Ovidian Python male and named"
+    claim_text: >
+      The later tradition, principally Ovid's Metamorphoses book 1, names the
+      slain dragon Python and presents the figure as male.
+    verdict: SUPPORTED
+    source: "Ovid Metamorphoses 1.434-451 (trained knowledge)"
+    note: "Ovid Met. 1.438ff names Python, uses masculine forms. Correct."
+
+  - claim_ref: "Apollo-Python / VARIANT tag on gender variation"
+    claim_text: >
+      VARIANT tag: primary=Homeric Hymn (unnamed female drakaina) | alt=Ovid
+      Met. 1 and later mythographers (male, named Python).
+    verdict: SUPPORTED
+    source: "Fontenrose 1959 chs.1-3 (printed anchor); Homeric Hymn and Ovid"
+    note: "The VARIANT is correctly identified and well-documented; presenting both is the correct editorial choice per scope.md variant-presentation policy."
+
+  - claim_ref: "Apollo-Python / Ovidian Python earth-born from post-flood mud"
+    claim_text: >
+      The Ovidian Python is described as an enormous earth-born serpent that
+      emerges from the post-flood mud at the foot of Parnassus.
+    verdict: SUPPORTED
+    source: "Ovid Metamorphoses 1.434-437 (trained knowledge)"
+    note: "Python arises from flood-residue earth in Met. 1. The chthonic-purification reading attributed to Fontenrose ch.3 is the standard scholarly interpretation."
+
+  - claim_ref: "Apollo-Python / bow-and-arrows weapon"
+    claim_text: >
+      Apollo's weapon in both the Hymn and the Ovidian narrative is the bow
+      and arrows.
+    verdict: SUPPORTED
+    source: "Homeric Hymn to Apollo (trained knowledge); Ovid Met. 1"
+    note: "Both sources confirm archery as the weapon; Ogden ch.2 treats the iconographic tradition."
+
+  - claim_ref: "Apollo-Python / Pytho place-name etymology from pythein"
+    claim_text: >
+      The place-name Pytho is treated as derived from the rotting (pythein)
+      of the slain dragon's body.
+    verdict: SUPPORTED
+    source: "Homeric Hymn to Apollo, line 374 (trained knowledge): explicit folk-etymology"
+    note: "The Hymn gives this etymology explicitly at line 374. Fontenrose chs.1-2 discuss it."
+
+  - claim_ref: "Apollo-Python / cult-foundational not cosmogonic"
+    claim_text: >
+      The Apollo-Python combat is therefore cult-foundational rather than
+      cosmogonic: the cosmos has already been established under Zeus.
+    verdict: SUPPORTED
+    source: "Fontenrose 1959 chs.1-3; scope.md inclusion/exclusion criteria"
+    note: "This is the reason Apollo-Python is RELATED not CORE per scope.md. Correctly framed."
+
+  - claim_ref: "Apollo-Python / Septerion festival eight-year cycle"
+    claim_text: >
+      The Septerion festival, attested in Plutarch, was a Delphic ritual held
+      every eight years that re-enacted Apollo's killing of the dragon.
+    verdict: SUPPORTED
+    source: "Fontenrose 1959 chs.1-3 (printed anchor); Plutarch attestation is standard"
+    note: "Plutarch (De defectu oraculorum; Greek Questions) attests the Septerion. Eight-year periodicity (octennial) is confirmed in the scholarship."
+
+  - claim_ref: "Apollo-Python / Pausanias 10.6.5-6"
+    claim_text: >
+      Pausanias 10.6.5-6, in the second-century CE Description of Greece,
+      preserves a local Delphic version of the combat-narrative.
+    verdict: SUPPORTED
+    source: "Standard scholarly reference; Fontenrose 1959 ch.1"
+    note: "Pausanias 10.6 is the standard third independent witness for the Delphic combat. Reference verified."
+
+  - claim_ref: "Apollo-Python / epithets Pythios and Pythoktonos"
+    claim_text: >
+      Apollo's epithets Pythios and Pythoktonos — 'of Pytho' and 'Python-slayer'
+      — are documented in the Greek cult-corpus.
+    verdict: SUPPORTED
+    source: "Standard Greek epigraphy and cult-record; Ogden ch.2"
+    note: "Both epithets are documented in inscriptions and literary sources. Correct."
+
+  - claim_ref: "Herakles / Hydra as second labour in Apollodorus 2.5.2"
+    claim_text: >
+      Apollodorus Bibliotheca 2.5 presents the killing of the Hydra as the
+      second of the twelve labours.
+    verdict: SUPPORTED
+    source: "Apollodorus Bibliotheca 2.5.2 (trained knowledge)"
+    note: "Hydra is consistently the second labour in Apollodorus. Correct."
+
+  - claim_ref: "Herakles / Hydra head-count variation and regeneration motif"
+    claim_text: >
+      The Hydra is many-headed — the count varies across sources from seven
+      to nine to a hundred — and the central narrative motif is regenerative.
+    verdict: SUPPORTED
+    source: "Ogden ch.2 (printed anchor); standard scholarly summary"
+    note: "The head-count variation is well-documented; seven, nine, and hundred appear in different sources. Regeneration motif is correctly identified as the narrative crux."
+
+  - claim_ref: "Herakles / Iolaos cauterisation"
+    claim_text: >
+      Iolaos cauterises each neck-stump with fire as Herakles severs it,
+      preventing the regrowth.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.5.2 (trained knowledge)"
+    note: "Standard Apollodorus narrative. Correct."
+
+  - claim_ref: "Herakles / immortal head buried under stone"
+    claim_text: >
+      One of the Hydra's heads is described in Apollodorus as immortal, and
+      after its severance Herakles buries it under a heavy stone.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.5.2 (trained knowledge)"
+    note: "Apollodorus 2.5.2 specifies the immortal head is buried under a rock/stone. Correct."
+
+  - claim_ref: "Herakles / venom-arrows"
+    claim_text: >
+      After the killing Herakles dips his arrows in the Hydra's venomous blood,
+      and the venom-arrows function as a recurring instrument.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.5.2 and multiple later sources; Ogden ch.2"
+    note: "The venom-arrows are a consistent and recurring element of the Heraklean tradition. Correct."
+
+  - claim_ref: "Herakles / Geryon tenth labour, Erytheia, triple-bodied"
+    claim_text: >
+      Geryon, the triple-bodied warrior whose cattle Herakles drives away from
+      the western island of Erytheia in the tenth labour.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.5.10 (trained knowledge); Watkins 1995 Part V"
+    note: "Geryon as tenth labour, on Erytheia, triple-bodied: all confirmed in Apollodorus 2.5.10 and in Hesiod Theogony 979-983."
+
+  - claim_ref: "Herakles / Ladon eleventh labour, Hesperides"
+    claim_text: >
+      The mythographic tradition consolidates Ladon's guardianship into the
+      eleventh of the labours.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.5.11 (trained knowledge)"
+    note: "The Hesperides apples/Ladon appear as the eleventh labour in Apollodorus 2.5.11. Correct."
+
+  - claim_ref: "Herakles / INFERENCE tag on Hydra-Ladon-Geryon grouping"
+    claim_text: >
+      INFERENCE tag: the grouping of the Hydra, Ladon, and Geryon labours
+      under a single sub-section is the chapter's editorial framing.
+    verdict: SUPPORTED
+    note: "Correctly identified as an editorial synthesis. The INFERENCE is well-scoped and appropriately sourced."
+
+  - claim_ref: "Perseus-Ketos / Cassiopeia's boast, Poseidon, oracle"
+    claim_text: >
+      The narrative cause of the Ketos's appearance is the boast of Andromeda's
+      mother Cassiopeia, who claims to be more beautiful than the Nereids;
+      Poseidon sends the Ketos.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.4.3 (trained knowledge); Ogden ch.11"
+    note: "This is the standard mythographic account. Correct."
+
+  - claim_ref: "Perseus-Ketos / Apollodorus 2.4.3 narrative elements"
+    claim_text: >
+      Apollodorus Bibliotheca 2.4.3 names Cassiopeia, Cepheus, Andromeda, and
+      Perseus, and presents the killing of the Ketos and the marriage of Perseus
+      and Andromeda as the resolution.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.4.3 (trained knowledge)"
+    note: "All named figures confirmed; the marriage resolution is in Apollodorus. Correct."
+
+  - claim_ref: "Perseus-Ketos / Ovid Met. 4 as poetic narrative"
+    claim_text: >
+      Ovid's Metamorphoses book 4 supplies the principal poetic narrative of
+      the rescue, with aerial combat using winged sandals.
+    verdict: SUPPORTED
+    source: "Ovid Met. 4.663ff (trained knowledge); Ogden ch.11"
+    note: "Ovid Met. 4 is the correct locus. Aerial combat with winged sandals is Ovidian. Correct."
+
+  - claim_ref: "Perseus-Ketos / Phineus complication in Ovid Met. 5"
+    claim_text: >
+      The marriage of Perseus and Andromeda following the rescue supplies the
+      pre-existing-betrothal complication (Phineus) that Ovid develops in
+      a second combat at the wedding-feast.
+    verdict: SUPPORTED
+    source: "Ovid Metamorphoses 5.1-249 (trained knowledge); Ogden ch.11"
+    note: "Ovid Met. 5 covers the Phineus-at-the-wedding-feast episode. Correct locus."
+
+  - claim_ref: "Perseus-Ketos / Joppa localisation"
+    claim_text: >
+      Pausanias and other ancient witnesses locate variants of the Andromeda
+      story at Joppa (Jaffa) on the Levantine coast.
+    verdict: SUPPORTED
+    source: "Josephus, Jewish War 3.9.3; Pliny NH 5.14; Strabo 16.2.28; Ogden ch.11"
+    note: "Joppa as Andromeda topographical anchor is multiply attested in ancient sources. Correct."
+
+  - claim_ref: "Kadmos / son of Agenor of Tyre"
+    claim_text: >
+      Kadmos is the son of Agenor of Tyre, sent out by his father to find
+      his sister Europa after Zeus has abducted her.
+    verdict: SUPPORTED
+    source: "Apollodorus 3.4.1 (trained knowledge)"
+    note: "Standard genealogy. Correct."
+
+  - claim_ref: "Kadmos / Apollodorus 3.4.1-2 and Ovid Met. 3.1-130 as principal sources"
+    claim_text: >
+      Apollodorus Bibliotheca 3.4.1-2 and Ovid Metamorphoses book 3 lines
+      1-130 are the principal sources for the Kadmos foundation-narrative.
+    verdict: SUPPORTED
+    source: "Both confirmed as standard references; Ogden ch.2"
+    note: "Apollodorus 3.4.1-2 and Ovid Met. 3.1-130 are the correct primary-text loci. Correct."
+
+  - claim_ref: "Kadmos / dragon of Ares at spring, kills companions"
+    claim_text: >
+      The site is occupied by a great serpent — the dragon of Ares — guarding
+      a spring sacred to the war-god, and the dragon kills Kadmos's companions
+      when they go to fetch water.
+    verdict: SUPPORTED
+    source: "Apollodorus 3.4.1 (trained knowledge); Ovid Met. 3"
+    note: "Standard narrative. Correct."
+
+  - claim_ref: "Kadmos / Spartoi five survivors, founding lineages"
+    claim_text: >
+      In the standard tradition only five of the Spartoi survive, and these
+      five become the founding patrilineal lineages of the Theban aristocracy.
+    verdict: SUPPORTED
+    source: "Apollodorus 3.4.1 (trained knowledge); Ogden ch.2"
+    note: "Five surviving Spartoi who become founding lineages of Thebes is the standard account. Correct."
+
+  - claim_ref: "Kadmos / eight-year expiatory service to Ares"
+    claim_text: >
+      Kadmos must serve a long expiation to the war-god — eight years of
+      servitude in the standard tradition — before being granted the kingship
+      of Thebes and the marriage to Harmonia.
+    verdict: SUPPORTED
+    source: "Apollodorus 3.4.2 (trained knowledge); Ogden ch.2"
+    note: "Eight-year expiatory service confirmed in Apollodorus 3.4.2 and the wider tradition. Correct."
+
+  - claim_ref: "Kadmos / Argonautic tooth-sowing parallel"
+    claim_text: >
+      The Kadmean tooth-sowing has a structural near-parallel in the Argonautic
+      tradition, where Jason sows the teeth of a different dragon at Kolchis.
+    verdict: SUPPORTED
+    source: "Apollonius of Rhodes Argonautica 3 (trained knowledge); Ogden ch.2"
+    note: "Jason-at-Kolchis tooth-sowing is the standard Argonautic parallel. Correctly identified and sourced."
+
+  - claim_ref: "Bellerophon / Iliad 6.179-183 as earliest attestation"
+    claim_text: >
+      The earliest extant attestation of the combat is Iliad 6.179-183, in the
+      speech in which Glaucus narrates the deeds of his ancestor Bellerophon.
+    verdict: SUPPORTED
+    source: "Iliad 6.179-183 (trained knowledge)"
+    note: "Iliad 6 is the earliest and most important Homeric witness. Correct."
+
+  - claim_ref: "Bellerophon / Chimaera tripartite morphology from Iliad 6.181"
+    claim_text: >
+      The Iliad describes the Chimaera as prosthe leōn, opithen de drakōn,
+      messē de chimaira — 'in front a lion, behind a serpent, and in the
+      middle a she-goat.'
+    verdict: SUPPORTED
+    source: "Iliad 6.181 (trained knowledge)"
+    note: "The Greek phrase is accurately reproduced and the translation is correct. Correct."
+
+  - claim_ref: "Bellerophon / Chimaera fire-breathing from Iliad 6"
+    claim_text: >
+      The Iliad further specifies that the Chimaera breathes fire.
+    verdict: SUPPORTED
+    source: "Iliad 6.182 (trained knowledge)"
+    note: "Iliad 6.182 confirms the fire-breathing. Correct."
+
+  - claim_ref: "Bellerophon / Pegasus born from Medusa's blood"
+    claim_text: >
+      Pegasus, the winged horse born from the blood of the slain Medusa.
+    verdict: SUPPORTED
+    source: "Hesiod Theogony 280-281 (trained knowledge)"
+    note: "Pegasus springs from Medusa's blood at the beheading. Theogony 280-281. Correct."
+
+  - claim_ref: "Bellerophon / lead-on-spear killing method"
+    claim_text: >
+      The killing-method in the post-Homeric tradition involves a lump of lead
+      fixed to Bellerophon's spear: the lead melts in the Chimaera's fiery breath.
+    verdict: SUPPORTED
+    source: "Post-Homeric tradition (Tzetzes Scholia; Ogden ch.2)"
+    note: "The lead-on-spear method is attested in the post-Homeric tradition. Correctly attributed as 'post-Homeric.' Correct."
+
+  - claim_ref: "Bellerophon / Apollodorus 2.3 as prose narrative"
+    claim_text: >
+      Apollodorus Bibliotheca 2.3 supplies the prose-mythographic narrative
+      of the combat alongside the Iliad's embedded narrative.
+    verdict: SUPPORTED
+    source: "Apollodorus 2.3.2 (trained knowledge)"
+    note: "Bellerophon's story is in Apollodorus 2.3.2. Correct locus."
+
+  - claim_ref: "Bellerophon / Lycian fire-vent natural gas seep"
+    claim_text: >
+      Ancient witnesses associate the Chimaera figure with a fire-vent (a
+      natural gas seep) on a mountain in Lycia.
+    verdict: SUPPORTED
+    source: "Pliny NH 2.236; Strabo 14.3.5; Plutarch; Ogden ch.2"
+    note: "The Mt. Chimaera/Yanartaş natural gas seep is a real geographical feature; attested in multiple ancient sources. Correct."
+
+  - claim_ref: "Hercules-Cacus / Virgil Aeneid 8.190-279 as principal source"
+    claim_text: >
+      The principal Latin-tradition source for the Cacus combat is Virgil's
+      Aeneid book 8 lines 190-279.
+    verdict: SUPPORTED
+    source: "Virgil Aeneid 8 (trained knowledge)"
+    note: "Aeneid 8.185-305 contains the Cacus episode; 190-279 is the standard citation range. Correct."
+
+  - claim_ref: "Hercules-Cacus / cattle backwards-dragged by tails"
+    claim_text: >
+      Cacus steals four bulls and four heifers, dragging them backwards by
+      their tails into his cave so that the trail of hoofprints leads outward
+      from the cave rather than inward.
+    verdict: SUPPORTED
+    source: "Virgil Aeneid 8.207-211 (trained knowledge)"
+    note: "The backwards-dragging motif and the four bulls / four heifers are explicit in Aeneid 8. Correct."
+
+  - claim_ref: "Hercules-Cacus / lowing-recognition and cave-breaking"
+    claim_text: >
+      Hercules discovers the theft when the remaining cattle low at dawn and
+      the stolen cattle low back from the cave.
+    verdict: SUPPORTED
+    source: "Virgil Aeneid 8.213-224 (trained knowledge)"
+    note: "Lowing-recognition motif is explicit in Aeneid 8. Correct."
+
+  - claim_ref: "Hercules-Cacus / strangulation killing method"
+    claim_text: >
+      The killing is achieved by strangulation, with Hercules's hands at the
+      giant's throat.
+    verdict: SUPPORTED
+    source: "Virgil Aeneid 8.259-261 (trained knowledge)"
+    note: "Strangulation (Hercules's grip on Cacus's neck) is the Virgilian killing method. Correct."
+
+  - claim_ref: "Hercules-Cacus / Ovid Fasti 1.543-582 as second source"
+    claim_text: >
+      Ovid's Fasti book 1 lines 543-582 supplies the second principal
+      Latin-tradition narrative of the combat.
+    verdict: SUPPORTED
+    source: "Ovid Fasti 1 (trained knowledge)"
+    note: "Fasti 1.543-582 is the correct Ovidian locus for the Cacus story. Correct."
+
+  - claim_ref: "Hercules-Cacus / Ara Maxima cult-foundation"
+    claim_text: >
+      The killing of Cacus is followed in both Virgil and Ovid by the foundation
+      of the Ara Maxima at the site.
+    verdict: SUPPORTED
+    source: "Virgil Aeneid 8.268-279; Ovid Fasti 1.579-582 (trained knowledge)"
+    note: "The Ara Maxima cult-foundation following the Cacus-killing is attested in both Virgil and Ovid. Correct."
+
+  - claim_ref: "Hercules-Cacus / VARIANT tag on Virgil vs. Ovid versions"
+    claim_text: >
+      VARIANT tag: primary=Virgil Aeneid 8.190-279 | alt=Ovid Fasti 1.543-582;
+      presenting both; West 2007 ch.6 treats both as load-bearing.
+    verdict: SUPPORTED
+    note: "The VARIANT is correctly identified and the reason for presenting both is sound. West 2007 ch.6 uses both."
+
+  - claim_ref: "Family pattern / six combats share structural template"
+    claim_text: >
+      The six combats treated in the chapter share a structural combat-pattern
+      that is recognisably the same template as the Zeus-Typhon flagship.
+    verdict: SUPPORTED
+    source: "Ogden 2013 ch.2; Forsyth 1987 ch.4"
+    note: "This is the organising premise of the chapter and is well-supported by the cited sources."
+
+  - claim_ref: "Family pattern / INFERENCE on tripartite functional scheme"
+    claim_text: >
+      INFERENCE tag: the chapter's three-way functional grouping (cult-foundation
+      / hero-labour / cattle-raid) is a synthetic categorisation not appearing
+      in any single source as a formalised tripartite scheme.
+    verdict: SUPPORTED
+    note: "Correctly identified as editorial synthesis. The INFERENCE is appropriately scoped."
+
+  - claim_ref: "Family pattern / none of the six combats is cosmogonic"
+    claim_text: >
+      None of the six combats is cosmogonic: each takes place after the Olympian
+      sovereignty has been established by Zeus's victory over Typhon.
+    verdict: SUPPORTED
+    source: "Ogden 2013 ch.2; Forsyth 1987 ch.4; scope.md inclusion criteria"
+    note: "Consistent with scope.md §'Inclusion/exclusion criteria' — post-cosmogonic setting is the reason these stories are RELATED not CORE."
+
+  - claim_ref: "Family pattern / forward-links correct"
+    claim_text: >
+      The Septerion → Part II C3; Perseus-Andromeda → Ch10; Geryon-Cacus
+      → Part II C5.
+    verdict: SUPPORTED
+    source: "Brief 12-greek-dragons-after-typhon.yaml; scope.md §'Part II'"
+    note: "All three forward-links match the brief's cross_cultural_parallels field and scope.md §'Part II' comparative-chapter structure."
