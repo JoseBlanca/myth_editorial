@@ -1,0 +1,177 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  claims_file: chapters/12-greek-dragons-after-typhon.claims.approved.adoc
+  narrative_file: chapters/12-greek-dragons-after-typhon.adoc
+  total_claims: 108
+  claims_mapped: 108
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 108 claims were mapped individually to narrative locations.
+      Both INFERENCE markers and both VARIANT markers were compared character-by-character.
+      Footnote counts were verified programmatically (108 on each side — exact match).
+    q2_additions_check: >
+      Every narrative paragraph was checked against the claims document. One unfootnoted
+      transitional sentence at narrative line 40 was evaluated: "What follows takes the
+      six combats in turn — Apollo at Delphi, the three Heraklean serpent-labours, Perseus
+      at the sea-cliff, Kadmos at Thebes, Bellerophon in Lycia, and Hercules at the
+      Aventine — and then steps back to ask what the six episodes share and where each one
+      points forward in the volume." This introduces no factual claim and requires no
+      footnote; it is a legitimate chapter-navigation bridge. All factcheck-corrected facts
+      were checked: Hesiod Theogony 313–318 (Hydra) and 333–335 (Ladon) with "some twenty
+      lines later" preserved; Kadmos sows "the dragon's teeth" (not "half of"); Typhaon
+      is "the infant Typhaon" (not "giant"); Dumézil 1971 foundational + West 2007 building
+      on him — all preserved correctly. Authorised cross-references only: preceding chapter
+      (Ch11), Ch10, Part II C3, Part II C5.
+    q3_distortion_check: >
+      Both INFERENCE markers and both VARIANT markers were compared verbatim against the
+      claims; all four are verbatim identical. All prose claims are meaning-preserving
+      near-verbatim copies. The word "also" inserted into the Typhaon sentence (narrative
+      line 55 vs. claims line 62) is a prose connective that does not shift or weaken the
+      factual claim. No paraphrase was found to distort any factual claim.
+    q4_same_model: >
+      No. The narrative was produced by Opus 4.7 (1M context). This audit is conducted by
+      Sonnet 4.6. The review is valid.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: NOTE
+      category: addition-ok
+      description: >
+        One sentence at narrative line 40 has no footnote and does not appear in the claims
+        document: "What follows takes the six combats in turn — Apollo at Delphi, the three
+        Heraklean serpent-labours, Perseus at the sea-cliff, Kadmos at Thebes, Bellerophon
+        in Lycia, and Hercules at the Aventine — and then steps back to ask what the six
+        episodes share and where each one points forward in the volume." This is a
+        transitional chapter-navigation sentence added by the drafter. It introduces no
+        factual claims, accurately reflects the chapter structure authorised by the brief,
+        and needs no footnote. NOTE only; no action required.
+    - id: ISSUE-02
+      severity: NOTE
+      category: markup-improvement
+      description: >
+        The claims file consistently uses AsciiDoc bold markup (*word*) for Greek foreign-
+        language common nouns (drakaina, Spartoi, Septerion, Ketos, purulli) in body text.
+        The narrative correctly converts these to italic markup (_word_), which is the proper
+        AsciiDoc rendering for italics and conforms to the brief's requirement that "foreign-
+        language common nouns [be] italicised." The narrative is more correct than the claims
+        in this respect. No action required; the improvement is intentional and consistent.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 108 claims are mapped to narrative locations in order. The narrative preserves every
+    claim from the following sections:
+    - Source overview (claims 1–10): narrative lines 4–38, all 10 claims present.
+    - Apollo vs. Python (claims 11–26, including VARIANT-1): narrative lines 44–92, all 16
+      claims present including the VARIANT marker verbatim at line 53.
+    - Herakles vs. Hydra, Ladon, Geryon (claims 27–47, including INFERENCE-1): narrative
+      lines 96–153, all 21 claims present including the INFERENCE marker verbatim at line 141.
+    - Perseus vs. Ketos (claims 48–61): narrative lines 157–200, all 14 claims present.
+    - Kadmos vs. dragon of Ares (claims 62–74): narrative lines 204–241, all 13 claims present.
+    - Bellerophon vs. Chimaera (claims 75–86): narrative lines 245–276, all 12 claims present.
+    - Hercules vs. Cacus (claims 87–100, including VARIANT-2): narrative lines 280–322, all
+      14 claims present including the VARIANT marker verbatim at line 307.
+    - Family pattern and forward links (claims 101–108, including INFERENCE-2): narrative
+      lines 326–354, all 8 claims present including the INFERENCE marker verbatim at line 332.
+    Footnote count: 108 on both sides — exact match (verified programmatically).
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    factcheck_corrected_facts:
+      result: PASS
+      notes: >
+        All four factcheck-corrected facts are preserved correctly.
+        (1) Hesiod Theogony line references: Hydra at 313–318 and Ladon at 333–335 with
+        the phrase "some twenty lines later" at narrative line 149 — correct, not adjacent.
+        (2) Kadmos tooth-sowing: "sow the dragon's teeth" at narrative line 219 — no "half
+        of" reversion.
+        (3) Typhaon: "the infant Typhaon" at narrative line 55 — not "giant Typhaon."
+        (4) Cacus IE-cattle-raid attribution: Dumézil 1971 foundational + West 2007 building
+        on him, chained correctly in the footnote at narrative line 25.
+    family_chapter_brevity:
+      result: PASS
+      notes: >
+        Word count is 7,292, within the brief's 7,500-word target. Each sub-section is
+        approximately 500–1,000 words. Functional differentiation across the six combats
+        (cult-foundation, hero-labour, cattle-raid) is maintained throughout.
+    cross_references:
+      result: PASS
+      notes: >
+        Authorised cross-references only: "preceding chapter" (Zeus-Typhon, Ch11) at lines
+        4 and 326 and 37; Ch10 (Christian reception) at lines 181 and 196 and 340; Part II
+        C3 (cyclical-maintenance) at lines 82 and 337; Part II C5 (IE cattle-raid) at lines
+        138 and 318 and 343. No cross-references to any other chapter or part.
+    no_unauthorised_material:
+      result: PASS
+      notes: >
+        No sources are cited that do not appear in the claims. No new named scholars, rulers,
+        events, or iconographic examples are introduced beyond what the claims supply. The
+        narrative is a faithful transformation of the claims into continuous prose.
+    herakles_hercules_discipline:
+      result: PASS
+      notes: >
+        "Herakles" used throughout Greek-context sections (lines 94–153). "Hercules" used
+        exclusively in the Cacus section (lines 278–322) and in the section heading and in
+        the two summary paragraphs that name the Cacus combat. Two occurrences of "Hercules"
+        in the source overview (lines 19 and 25) are within the phrase "Hercules-Cacus"
+        referring to the Latin-tradition combat — acceptable. One occurrence at line 40 in
+        the transitional sentence ("Hercules at the Aventine") correctly names the Italic
+        figure. The discipline is clean.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    inference_markers:
+      result: PASS
+      notes: >
+        INFERENCE-1 (editorial grouping of Hydra, Ladon, Geryon labours under one section,
+        narrative line 141) is verbatim identical to claims file line 148. INFERENCE-2
+        (tripartite functional scheme as editorial synthesis, narrative line 332) is verbatim
+        identical to claims file line 339. Both markers retain their full text unchanged.
+    variant_markers:
+      result: PASS
+      notes: >
+        VARIANT-1 (drakaina vs. Python gender variation, narrative line 53) is verbatim
+        identical to claims file line 60. VARIANT-2 (Virgil Aeneid 8 vs. Ovid Fasti 1
+        Cacus tradition, narrative line 307) is verbatim identical to claims file line 314.
+        Both markers retain their full text unchanged.
+    meaning_preserving_paraphrases:
+      result: PASS
+      notes: >
+        The narrative is overwhelmingly a verbatim or near-verbatim lift from the claims.
+        The one added transitional sentence (line 40) does not distort any claim. The word
+        "also" added to the Typhaon sentence (line 55 vs. claims line 62) is a prose
+        connective with no factual impact. No meaning distortions identified across any of
+        the 108 claims.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        Foreign-language common nouns correctly italicised: _drakaina_ (lines 13, 47, 50,
+        55), _Septerion_ (lines 70, 73, 82, 337), _Ketos_ (lines 163, 166, 169, 172, 175,
+        178), _Spartoi_ (lines 219, 222, 240), _purulli_ (line 82), _semihominis Caci
+        facies_ (line 292), _prosthe leōn, opithen de drakōn, messē de chimaira_ (line 251).
+        Proper names not italicised: Hydra, Ladon, Geryon, Hesperides, Chimaera, Pegasus —
+        confirmed clean throughout. Herakles/Hercules discipline noted as PASS above.
+    footnote_integrity:
+      result: PASS
+      notes: >
+        108 footnotes in the narrative; 108 footnotes in the claims. Programmatic count
+        confirms exact match on both sides. All footnote texts match their corresponding
+        claims footnotes verbatim.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with no issues requiring revision. Check 1
+  (Completeness): all 108 claims are mapped to narrative locations in exact sequence, with
+  108 footnotes on each side verified programmatically. Check 2 (No additions): all four
+  factcheck-corrected facts are preserved correctly (Hesiod line references, Kadmos "the
+  dragon's teeth" not "half of," Typhaon as infant, Dumézil + West chain); family-chapter
+  brevity is within target at 7,292 words; cross-references are within authorised scope
+  (Ch11 backward, Ch10 / Part II C3 / Part II C5 forward); Herakles/Hercules discipline
+  is clean. Check 3 (Fidelity): all 4 markers (2 INFERENCE, 2 VARIANT) are verbatim
+  identical to the approved claims. Glossary italicisation is correct and in fact improved
+  over the claims (underscore = italic, not asterisk = bold). The two NOTE-severity items
+  (a single unfootnoted transitional sentence; markup improvement from bold to italic for
+  Greek terms) require no action. Verdict: PASS.

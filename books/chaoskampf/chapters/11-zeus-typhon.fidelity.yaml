@@ -1,0 +1,288 @@
+meta:
+  stage: narrative-fidelity
+  auditor_model: claude-sonnet-4-6
+  claims_file: chapters/11-zeus-typhon.claims.approved.adoc
+  narrative_file: chapters/11-zeus-typhon.adoc
+  total_claims: 127
+  claims_mapped: 127
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 127 claims were walked in sequence and each was located in the
+      narrative. Both INFERENCE markers and all three VARIANT markers were compared
+      character-by-character against the approved claims. Footnote counts were verified
+      programmatically: 127 in the narrative, 127 in the claims (exact match). The one
+      count anomaly flagged on the claims side (grep returned 128 before adjusting for
+      the title heading footnote style) resolved to 127 on careful re-count.
+    q2_additions_check: >
+      One unfootnoted transitional sentence at narrative line 49 ("What follows takes the
+      Greek combat in three movements...") does not appear in the claims document. It
+      introduces no factual claim, accurately summarises the three-movement structure
+      authorised by the brief's special_instructions, and requires no footnote. All
+      special-attention checks were conducted systematically: three-stage variant timeline
+      attribution discipline; sinew-theft Apollodoran attribution; Aigipan-as-Pan-epithet
+      identification; Prometheus Bound contested-authorship caveat; Kumarbi parallels
+      named-motif concreteness; cross-reference scope. No unauthorised additions found.
+    q3_distortion_check: >
+      All 5 markers (2 INFERENCE, 3 VARIANT) were compared verbatim; all are
+      character-for-character identical to the approved claims. The body prose is
+      overwhelmingly near-verbatim lifted from the claims; no paraphrase was found to
+      shift or weaken any factual claim. The "primordial" instances (narrative lines 56 and
+      68, describing Ouranos and Gaia respectively) are present in the approved claims at
+      identical locations and are functional cosmological-tier descriptors, not forbidden
+      hedges. The "clearly" at line 151 ("emerges most clearly in Pindar's Pythian
+      1.16-17") is verbatim from the claims and represents acceptable functional use.
+    q4_same_model: >
+      No. The narrative was produced by Opus 4.7 (1M context). This audit is conducted by
+      Sonnet 4.6. The review is valid.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: NOTE
+      category: addition-ok
+      description: >
+        One unfootnoted sentence at narrative line 49 is not in the claims document:
+        "What follows takes the Greek combat in three movements — Hesiod's sketch,
+        Apollodorus's sinew-theft expansion, and Nonnus's baroque elaboration — registers
+        the partial attestations that fill in the picture between them, and then asks how
+        the narrative looks once the Hurro-Hittite, Ugaritic, and Phoenician comparanda
+        are placed alongside it." This is a chapter-navigation bridge, introduces no
+        factual claims, and accurately reflects the three-movement structure mandated by
+        the brief. NOTE only; no action required.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 127 claims are mapped to narrative locations in order. Section-by-section coverage:
+
+    Source overview (claims 1–14): narrative lines 4–47 in exact sequence. All 14 claims
+    present, including the West 1997 and Burkert 1992 secondary-anchor claims, the
+    Fontenrose 1959 and Forsyth 1987 framing claims, and the transmission-test-case claim.
+
+    Setting and the Olympian succession (claims 15–24): narrative lines 53–81. All 10
+    claims present: three-generation succession, Ouranos castration, Kronos swallowing,
+    Titanomachy, Typhonomachy transition at line 820, Gaia-and-Tartarus parentage (both
+    Hesiodic and Apollodoran genealogy), theogonic function of the close, royal-legitimation
+    function (with comparative parallels to Ch. 3 and Ch. 7), and cosmic-geography claim.
+
+    Movement I — Hesiod (claims 25–47, including INFERENCE-1 and VARIANT-1): narrative
+    lines 85–159. All 23 claims present, including the synoptic-sketch characterisation,
+    the Typhoeus-vs-Typhon naming distinction, hundred-heads, polyphonic-voice, gods'-fear
+    conditional, Zeus's arming, thunderbolt-strike, cosmic-scale geophysical sequence,
+    burning-and-casting-down, Tartarus-placement, storm-wind aetiology (both the offspring
+    claim and the named-winds-vs-Typhonic-winds distinction), compressed-combat-sequence
+    claims (2), absence-of-sinew-theft claim, absence-of-Etna claim, Tartarus-vs-Etna
+    locus claim, serpent-limbed morphology, iconographic-afterlife claim, Cilician-anchorage-
+    absent claim. INFERENCE-1 (royal-legitimation structural reading) verbatim at narrative
+    line 154. VARIANT-1 (West 1966 interpolation-vs-continuous debate) verbatim at line 159.
+    Compression-as-transmission-evidence claim and West 1997 inherited-material argument
+    both present.
+
+    Movement II — Apollodorus (claims 48–70, including VARIANT-2): narrative lines 163–238.
+    All 23 claims present: Bibliotheca 1.6.3 date and scope; compendium-character caveat;
+    sinew-theft-as-Apollodoran (NOT retrojected to Hesiod); vengeance-for-Giants motive;
+    Apollodoran morphology; Olympian flight to Egypt and theriomorphic-disguise aetiology;
+    Mount Casius combat-site; first-phase combat and harpe-seizure; sinew-severing with
+    harpe; bear-skin / Delphyne / Corycian cave; Cilician geography; Hermes-and-Aigipan
+    recovery; Aigipan-as-Pan-under-goat-cult-epithet (majority scholarly position preserved
+    verbatim); Elkunirsa comparison with cross-ref forward-pointer; second-phase combat;
+    Mount Nysa and Fates episode; Etna casting; volcanic-aetiological resolution;
+    Apollodoran consolidation of Etna identification; tripartite-with-recovery structure;
+    Elkunirsa-as-principal-Hurro-Hittite-parallel; Apollodoran geographical itinerary;
+    Apollodorus as canonical-form source. VARIANT-2 (Apollodoran sinew-theft vs Hesiodic
+    sketch, co-equal presentation) verbatim at line 235. Two-readings-of-sinew-theft claim;
+    Pindar-as-chronological-intermediate claim; harpe-symmetry claim all present.
+
+    Movement III — Nonnus (claims 71–81): narrative lines 242–273. All 11 claims present:
+    Dionysiaca books 1–2 date and scope; Nonnus's structural placement; sinew-theft
+    inheritance with thunderbolt-seizure elaboration; Cadmus-as-recovery-trickster with
+    Latinised-form notation; pipe-music-trance recovery; pipe-playing-Cadmus as elaboration
+    on Hermes-Aigipan; Nonnian volcanic resolution; ekphrastic-descriptions claim; Nonnian-
+    as-terminal-attestation; Cadmus-with-pipes as Nonnian innovation; Kadmos-Greek-form
+    explanation with Ch. 12 cross-ref.
+
+    Partial attestations (claims 82–90, including VARIANT-3): narrative lines 277–295.
+    All 9 claims present: Homeric Hymn to Apollo 305–355 Hera-parthenogenesis; variant-
+    genealogy treatment; Pytho-Typhon-Python link (with Ch. 12 cross-ref); Pindar Pythian
+    1.16–28 Etna-and-Cilicia; Pindar-as-earliest-Etna-source; Prometheus Bound 351–372
+    with full Griffith 1977/West 1990 contested-authorship caveat verbatim. VARIANT-3
+    (three-source timeline plus partial attestations) verbatim at line 295.
+
+    Near-Eastern transmission (claims 91–117, including INFERENCE-2): narrative lines
+    299–377. All 27 claims present: West 1997 transmission argument; Kumarbi-Cycle succession
+    parallel (Alalu → Anu → Kumarbi → Teshub vs. Ouranos → Kronos → Zeus); castration-motif
+    correspondence; prophetic-declaration parallel; Ullikummi structural parallel with Hoffner
+    1998 citation; Ullikummi lithic/cosmographic specificity; Hedammu growth-from-sea
+    parallel with Hoffner 1998 citation; Hedammu marine-register concreteness; Elkunirsa-
+    and-Ašertu organ-theft parallel; Elkunirsa-as-principal-motif-level-parallel; Cilician
+    geography as transmission-corridor corollary; Pindar's fifth-century Cilician attestation;
+    Burkert Phoenician-mediation argument; Burkert's orientalizing-horizon support; Burkert's
+    positioning of Typhonomachy in orientalizing transmission; Phoenician-vs-Hurro-Hittite
+    not-strictly-alternatives; Baal-Yamm-Lôtan structural correspondences with Ch. 7 cross-ref;
+    Lôtan multi-headed morphology with Day 1985 Ch. 8 cross-ref; convergent-evidence structure;
+    Mesopotamian deep-substrate (Ch. 3 and Ch. 2 cross-refs); Marduk-Tiamat type-level vs
+    route-specific parallel; Forsyth longue durée chain; Forsyth royal-legitimation comparative
+    function (Ch. 3 and Ch. 7 cross-refs). INFERENCE-2 (Apollodoran-preserves-transmission-
+    material reading) verbatim at narrative line 368. Part II C6 forward-pointer; specificity-
+    not-generality self-acknowledgment; contested-vs-closed caveat all present.
+
+    Reception and forward links (claims 118–127): narrative lines 381–412. All 10 claims
+    present: Typhonomachy as model; Apollo-Python as closest reiteration (Ch. 12 cross-ref);
+    Fontenrose cult-foundation vs cosmographic-sovereignty variant-relationship; Herakles
+    cycle (Ch. 12 cross-ref); Perseus-Ketos as medieval St. George antecedent (Ch. 10
+    cross-ref); Kadmos dragon-of-Ares foundation narrative (Ch. 12 cross-ref); Bellerophon-
+    Chimaera heroic-test variant; Hercules-Cacus Latin terminal point (Ch. 12 cross-ref);
+    Typhonic-register cosmographic disorder; Ch. 12 and Part II C6 forward-pointers.
+    All 5 comparative-hook comments carried into the narrative's COMPARATIVE-HOOK lines.
+
+    Footnote count: 127 in narrative, 127 in claims — exact match.
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    three_stage_timeline_attribution:
+      result: PASS
+      notes: >
+        The three-stage timeline (Hesiod / Apollodorus / Nonnus) is rigorously attributed
+        throughout. The sinew-theft is explicitly labelled "Apollodoran" at every
+        occurrence (narrative lines 49, 136, 163, 169, 217, 220, 226, 229, 373) and is
+        never retrojected to Hesiod. Line 136 states explicitly: "These episodes belong
+        to the Apollodoran expansion (1st–2nd c. CE) and are not retrojected into the
+        Hesiodic narrative." Line 169 adds: "This episode is NOT present in Hesiod's
+        Theogony 820–880 and must not be retrojected into the Hesiodic version." These
+        are verbatim from the approved claims. No sentence in the narrative associates
+        the sinew-theft with Hesiod.
+    aigipan_epithet_correction:
+      result: PASS
+      notes: >
+        The Aigipan-as-Pan-under-goat-cult-epithet identification is preserved verbatim
+        at narrative line 199: "The majority scholarly position identifies Aigipan as Pan
+        under a goat-cult epithet rather than as a separate deity." This matches the
+        claims exactly. The factcheck-corrected reading is intact and correctly attributed
+        to the majority scholarly position.
+    prometheus_bound_caveat:
+      result: PASS
+      notes: >
+        The Prometheus Bound contested-authorship caveat is fully preserved. Narrative
+        line 139 uses the hedged descriptor "Aeschylean-attributed _Prometheus Bound_"
+        (first brief mention). Narrative line 292 gives the full caveat verbatim from
+        the claims: "attributed to Aeschylus by ancient tradition though authorship has
+        been contested in modern scholarship — Griffith 1977, West 1990 — and is not now
+        uncontroversially Aeschylean." Both occurrences match the approved claims.
+    kumarbi_parallels_concrete:
+      result: PASS
+      notes: >
+        The three named Kumarbi-Cycle parallels (Hedammu, Ullikummi, Elkunirsa-and-Ašertu)
+        are present and attributed with Hoffner 1998 citations at narrative lines 311–326.
+        Each parallel names its specific motif: Ullikummi's stone-body/growth-toward-heaven
+        (lithic/cosmographic register); Hedammu's growth-from-sea (marine register); Elkunirsa's
+        organ-theft/subordinate-deity recovery (most specific motif-level correspondence).
+        The claim at line 373 ("concrete and specific Kumarbi-Cycle parallels — Hedammu's
+        growth-from-sea, Ullikummi's stone-body, Elkunirsa's organ-theft — rather than with
+        generic comparisons to 'Near Eastern combat myth'") is verbatim from the claims.
+        No generic "Near Eastern combat myth" attribution appears without specific motif naming.
+    cross_references:
+      result: PASS
+      notes: >
+        Cross-references are confined to the five authorised hooks in the comparative hooks
+        section plus what the claims approve in body prose. Ch. 5 (Kumarbi Cycle): narrative
+        lines 46, 299, 305, 311, 317, 356 — all matching claims cross-refs. Ch. 7 (Baal-Yamm-
+        Lôtan): narrative lines 46, 77, 344, 347, 365 — all matching claims. Ch. 12 (later
+        Greek): narrative lines 272, 283, 384, 390, 393, 396, 402, 408 — all matching claims
+        forward-pointers. Part II C6: narrative lines 299 (implicit Ch. 5 cross-ref), 370,
+        373, 408 — all matching claims. Ch. 3 (Marduk): lines 77, 356, 365 — matching claims.
+        Ch. 2 (Ninurta): line 356 — matching claims. Ch. 8 (Day 1985 Lôtan): line 350 —
+        matching claims. Ch. 10 (St. George): line 393 — matching claims. No unauthorised
+        cross-references present.
+    forbidden_words:
+      result: PASS
+      notes: >
+        "Primordial" appears at narrative lines 56 and 68, both describing Ouranos as "the
+        primordial sky-sovereign" and Gaia as "the primordial earth-goddess." These are
+        verbatim from the approved claims at identical positions and represent functional
+        cosmological-tier descriptions designating the first-generation Theogonic figures,
+        not loose hedges. Acceptable per the brief note on two permitted uses. "Clearly"
+        appears once at line 151 ("emerges most clearly in Pindar's Pythian 1.16–17"),
+        verbatim from the claims, acceptable functional use designating the primary locus
+        of Cilician attestation. "Chaos-figure," "chaos-monster," and other banned category
+        terms are absent throughout.
+    no_unauthorised_material:
+      result: PASS
+      notes: >
+        Every source cited in the narrative appears in the claims: West 1966, Ogden 2013,
+        West 1997, Burkert 1992, Fontenrose 1959, Forsyth 1987, Hoffner 1998, Griffith 1977,
+        West 1990, Day 1985, Smith-and-Pitard 2009. No new scholars, rulers, events, or
+        iconographic examples are introduced beyond what the approved claims supply.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    inference_markers:
+      result: PASS
+      notes: >
+        INFERENCE-1 (royal-legitimation structural inference, narrative line 154) is
+        verbatim identical to claims file line 157, including full basis and risk fields.
+        INFERENCE-2 (Apollodoran-preserves-transmission-material reading, narrative line
+        368) is verbatim identical to claims file line 371, including full basis and risk
+        fields. Both markers are in their correct sequential positions relative to
+        surrounding claims.
+    variant_markers:
+      result: PASS
+      notes: >
+        VARIANT-1 (West 1966 interpolation-vs-continuous, narrative line 159) is verbatim
+        identical to claims file line 162. VARIANT-2 (Apollodoran sinew-theft vs Hesiodic
+        sketch, co-equal presentation, narrative line 235) is verbatim identical to claims
+        file line 238. VARIANT-3 (three-source timeline plus partial attestations, narrative
+        line 295) is verbatim identical to claims file line 298. All three markers retain
+        their full text and structural pipe-delimited fields.
+    meaning_preserving_paraphrases:
+      result: PASS
+      notes: >
+        The narrative is overwhelmingly a verbatim or near-verbatim lift from the claims.
+        The sole addition (transitional sentence at line 49) does not distort any claim.
+        No meaning distortions identified across any of the 127 claims. The harpe-symmetry
+        claim (lines 237–238) is verbatim from claims. The Apollodoran-canonical-form claim
+        (line 226) is verbatim. The two-readings-of-sinew-theft claim (line 229) is verbatim.
+        The Lôtan-multi-headed-morphology claim (line 350) with Day 1985 attribution is
+        verbatim. The contested-vs-closed-conclusion caveat (line 376) is verbatim.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        Greek terms: Ζεύς and Τυφῶν glossed in parentheses at first mention (line 4);
+        Τυφωεύς glossed at first mention (line 4); Γαῖα at line 56; Τάρταρος at line 62;
+        Κωρύκιον ἄντρον at line 190; Αἴτνη at line 139. Typhoeus used correctly for
+        Hesiodic name throughout Movement I; Typhon used for post-Hesiodic / Apollodoran
+        references. Naming discipline is clean and matches claims exactly.
+        Kadmos/Cadmus distinction: Cadmus used in the Nonnus reception context (lines 242,
+        251, 254, 257, 260, 269) with explicit Latinised-form justification at line 251
+        ("the Latinised form is preserved in this Nonnus reception context"); Kadmos used
+        in the Greek-tradition context (lines 272, 381, 396, 408). This matches the approved
+        claims and the glossary.yaml Kadmos/Cadmus entry exactly.
+        Drakōn: appears in asterisk-italics (*drakōn*) at line 145 for the Ogden classification
+        reference, consistent with the claims. Book title _Drakōn_ correctly italicised at
+        line 10. "The dragon" used as the morphological descriptor for Typhon (line 28, line
+        31, etc.) as authorised by the glossary. "Chaos-figure" and "chaos-monster" absent.
+    footnote_integrity:
+      result: PASS
+      notes: >
+        127 footnotes in the narrative; 127 footnotes in the claims. Programmatic count
+        confirms exact match on both sides. All footnote texts match their corresponding
+        claims footnotes verbatim. No footnote is missing; no extra footnote is present.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with one NOTE-level finding requiring no
+  action. Check 1 (Completeness): all 127 claims are mapped to narrative locations in exact
+  sequence, with 127 footnotes on each side. Check 2 (No additions): the three-stage variant
+  timeline attribution discipline is rigorous (sinew-theft labelled Apollodoran throughout,
+  never retrojected to Hesiod); the Aigipan-as-Pan-epithet correction is preserved verbatim;
+  the Prometheus Bound contested-authorship caveat is present in both its brief form and its
+  full form; the Kumarbi parallels (Hedammu, Ullikummi, Elkunirsa) are concrete, named, and
+  attributed; cross-references are within authorised scope. Forbidden words are either absent
+  or present only in the two approved functional uses ("primordial" twice; "clearly" once).
+  No unauthorised sources or content introduced. Check 3 (Fidelity): all 5 markers (2
+  INFERENCE, 3 VARIANT) are verbatim identical to the approved claims. Glossary discipline
+  is clean: Greek terms italicised, Typhoeus/Typhon naming distinction maintained, Kadmos/
+  Cadmus distinction explained and applied correctly, drakōn in asterisk-italics. The only
+  finding is one transitional chapter-navigation sentence at line 49 that introduces no
+  factual claim and requires no revision (NOTE severity). Verdict: PASS.
