@@ -1,0 +1,20 @@
+stage: claims-factcheck
+chapter: 9
+slug: revelation-red-dragon
+completed: 2026-04-26
+agent_model: claude-sonnet-4-6
+verdict: REVISE
+output_file: books/chaoskampf/chapters/09-revelation-red-dragon.claims.factcheck.yaml
+claims_audited: 113
+tallies:
+  supported: 107
+  high: 1
+  medium: 2
+  low: 3
+  silent_bridges: 0
+  contamination: 0
+top_findings:
+  - HIGH-01: NRSV attributed to Yarbro Collins 1976 — anachronistic (NRSV published 1989)
+  - MEDIUM-01: Apollodorus Bibliotheca 1.4.1 cited for Leto-pursued-by-Python; that source has Hera (not Python) pursuing Leto
+  - MEDIUM-02: "inverted royal-legitimation" terminology not triangulated to exact language in cited works
+ready_for_chapter_draft: conditional_on_HIGH-01_and_MEDIUM-01_fixes
