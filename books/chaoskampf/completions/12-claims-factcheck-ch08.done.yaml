@@ -1,0 +1,30 @@
+stage: claims-factcheck
+chapter: "08-yahweh-leviathan-rahab"
+completed: "2026-04-26"
+auditor_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+verdict: REVISE
+claims_audited: 187
+output_file: "books/chaoskampf/chapters/08-yahweh-leviathan-rahab.claims.factcheck.yaml"
+high_findings: 0
+medium_findings: 3
+silent_bridges: 0
+contamination: 0
+ready_for_draft: false
+blocking_fixes:
+  - id: F01
+    line: 387
+    fix: "Change 'the deep gives forth its voice' to '*tehôm* gives forth its voice' (tehôm policy violation)"
+  - id: F02
+    lines: "50, 91, 100, 109, 141, 144, 179, 185, 217, 258, 261, 267, 302, 305, 343, 384, 390, 532"
+    fix: >
+      Replace 'NRSV translation...as quoted in Day 1985' throughout.
+      Day 1985 used RSV (NRSV not published until 1989). Attribute to RSV/Day 1985,
+      or cite NRSV independently as the modern scholarly standard.
+  - id: F03
+    line: 364
+    fix: >
+      Remove 'first of the great acts of God' from Leviathan/Job 41 claim.
+      That phrase (Job 40:19 NRSV) belongs to Behemoth, not Leviathan.
+      Replace with Job 41:33: 'on earth it has no equal, a creature without fear.'
+next_stage: "13-post-human-normalize-claims-ch08 (after human review of fixes)"
