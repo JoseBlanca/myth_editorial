@@ -1,0 +1,52 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-25T17:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/07-baal-yamm-lotan.claims.approved.adoc"
+    lines: 450
+  - file: "chapters/08-yahweh-leviathan-rahab.claims.approved.adoc"
+    lines: 609
+summary: "Promoted Ch07 (PASS, +1 optional MEDIUM footnote flag) and Ch08 (REVISE, 3 MEDIUM fixes applied) to .claims.approved.adoc; both render cleanly and pass footnote/evidence parity, source_id whitelist, glossary discipline, and marker validity."
+notes: |
+  Ch07 (PASS verdict — optional flag added):
+  - M01 footnote flag added at the messenger-restraint claim (line
+    153) noting that the identity of the restraining figures is one
+    of KTU 1.2 i's interpretive cruxes; an alternative reading in
+    the secondary literature attributes the restraint to El or
+    Athirat rather than to ʿAnat and Athtart.
+  - All 137 footnotes / 137 evidence tokens preserved.
+  - Marker counts: 2 LACUNA + 1 INFERENCE + 1 VARIANT, unchanged.
+
+  Ch08 (REVISE verdict — three MEDIUM fixes applied):
+  - F01 (line 387 tehôm policy): "the deep gives forth its voice" in
+    the Hab 3:9–10 body-prose paraphrase corrected to "the *tehôm*
+    gives forth its voice", restoring the v1-locked italicised-
+    *tehôm*-throughout-body-prose policy.
+  - F02 (anachronistic translation attribution, 18 footnotes):
+    rewrote the source-overview claim at line 50 and applied a
+    global NRSV → RSV substitution across 18 body-prose and footnote
+    references. Day 1985 predates the 1989 NRSV and actually quotes
+    the RSV; the chapter now reflects that. One NRSV mention
+    survives at line 50 in the explicit historical-context
+    explanation ("the translation Day's monograph (which predates
+    the 1989 NRSV) actually used"). All other NRSV references
+    converted to RSV.
+  - F03 (line 364 Behemoth/Leviathan misquote): "first of the great
+    acts of God" (which is Job 40:19, applied to Behemoth, not
+    Leviathan) replaced with the correct Job 41:33 RSV "on earth
+    there is not his like" — keeping the structural point about
+    Leviathan as created creature in Job 41 while quoting the
+    correct verse.
+  - All 187 footnotes / 187 evidence tokens preserved.
+  - Marker counts: 1 LACUNA + 2 INFERENCE + 1 VARIANT + 1
+    RECONSTRUCTION, unchanged. The factcheck auditor confirmed
+    these are appropriate (the LACUNA is on the absent narrative
+    continuity rather than textual damage; the RECONSTRUCTION is an
+    in-tradition fill).
+
+  Counts after revision: Ch7 = 137 footnotes / 137 evidence tokens,
+  4 comparative hooks, 2 LACUNA + 1 INFERENCE + 1 VARIANT. Ch8 = 187
+  footnotes / 187 evidence tokens, 5 comparative hooks, 1 LACUNA + 2
+  INFERENCE + 1 VARIANT + 1 RECONSTRUCTION. Both files render cleanly
+  via asciidoctor.
