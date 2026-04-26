@@ -1,0 +1,875 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  writer_model: claude-opus-4-7
+  claims_file: chapters/14-indra-vrtra.claims.approved.adoc
+  narrative_file: chapters/14-indra-vrtra.adoc
+  total_claims: 141
+  claims_mapped: 141
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 141 claims were mapped individually to narrative locations.
+      Footnote counts were verified programmatically (141 on each side — exact match).
+      Both INFERENCE markers and both VARIANT markers were compared character-by-character
+      against the claims document; all four are verbatim identical.
+      All 4 COMPARATIVE-HOOK lines were verified verbatim identical.
+    q2_additions_check: >
+      Every narrative paragraph was checked against the claims document. One unfootnoted
+      transitional paragraph at narrative line 49 was evaluated: "The story, as the
+      Rigveda preserves it, is therefore something the chapter has to assemble. What
+      follows takes the Vedic combat in five stages: the hymn-cycle method itself, the
+      setting and ritual context, Rigveda 1.32 as the primary witness, the seven
+      supplementary hymns, and the Watkins formula as the Vedic instance of an inherited
+      Indo-European poetic line. A typological section then asks how the combat does
+      cosmogonic work without doing cosmogony in the Mesopotamian sense, and a final
+      section bounds off the post-Vedic brahminicide reframing as a clearly later
+      transformation that must not be merged with the Rigvedic combat." This introduces
+      no factual claim (it is a chapter-navigation bridge summarising sections that are
+      all established in the claims), has no footnote, and requires no action.
+      The critical verifier hints were checked explicitly:
+      (1) áhann áhim formula at RV 1.32.2, verse 1 as announcing frame — preserved correctly
+          at narrative lines 134 and 281.
+      (2) Dānu "cow above her calf" at RV 1.32.9 (not 1.32.8) — preserved correctly at
+          narrative line 167.
+      (3) Fifteen-verse arc summary "body-and-water tableau (vv. 7–9, with the Dānu image
+          at v. 9)" — preserved verbatim at narrative line 188.
+      (4) Post-Vedic brahminicide reframing (ŚBr 1.6.3–4; MBh Udyogaparvan 9–18) clearly
+          bounded in its own sub-section and not merged with Rigvedic combat — confirmed.
+      (5) Cosmologically-active-but-not-cosmogonic typology marked with INFERENCE-2 as
+          editorial synthesis — confirmed verbatim.
+      (6) Vedic-Iranian cognancy section: ahi/aži, vṛtrahán/Vərəθraγna, Trita Āptya/
+          Thraētaona — all present and correctly rendered.
+    q3_distortion_check: >
+      All prose claims were checked for meaning preservation. The overwhelming majority
+      are verbatim or near-verbatim lifts from the claims. Two minor paraphrase variations
+      were identified and evaluated:
+      (1) "any comparable ancient corpus" (claims) → "any comparable corpus from the same
+          period" (narrative line 43). The scope of the comparison set is slightly
+          narrowed (from all ancient corpora to those from the same period), but the
+          factual claim — that the Rigveda is exceptionally well-preserved — is not
+          distorted. This is a MEDIUM finding (nuance shift).
+      (2) "Watkins's monograph is printed-only" (claims) → "Watkins's monograph is also
+          printed-only" (narrative line 19). The word "also" is a prose connective
+          referring back to the Jamison-Brereton monograph; no factual shift.
+      The missing "=== Source overview" section header (present in claims, absent in
+      narrative) is a structural markup omission but does not drop any claim, since all
+      141 source-overview claims appear in the narrative body.
+    q4_same_model: >
+      No. The narrative was produced by Claude Opus 4.7 in a separate session. This
+      audit is conducted by Claude Sonnet 4.6 in a fresh conversation with no memory
+      of writing the narrative. The review is valid.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: NOTE
+      category: addition-ok
+      description: >
+        One sentence-group at narrative line 49 has no footnote and does not appear in
+        the claims document. It is a chapter-navigation transition ("The story, as the
+        Rigveda preserves it, is therefore something the chapter has to assemble. What
+        follows takes the Vedic combat in five stages..."). It introduces no factual
+        claims, accurately reflects the chapter structure authorised by the claims and
+        brief, and needs no footnote. NOTE only; no action required.
+    - id: ISSUE-02
+      severity: MEDIUM
+      category: nuance-paraphrase
+      description: >
+        At narrative line 43, the claims phrase "any comparable ancient corpus" has
+        been rendered as "any comparable corpus from the same period". The factual
+        claim (exceptional preservation) is unchanged, but "from the same period"
+        slightly narrows the comparand set relative to "ancient". The sentence reads:
+        "...generally regarded as preserving the text more faithfully than any
+        comparable corpus from the same period..." whereas the claims read "...than any
+        comparable ancient corpus...". This is a nuance shift, not a factual distortion.
+        Recommended fix: restore "ancient" in place of "from the same period" for
+        verbatim fidelity, though the factual claim is sound as written.
+    - id: ISSUE-03
+      severity: NOTE
+      category: markup-improvement
+      description: >
+        The narrative uses *Śatapatha Brāhmaṇa* and *Mahābhārata* (AsciiDoc bold
+        markup, rendering as typographic emphasis) consistently throughout, whereas
+        the claims apply this markup inconsistently (e.g. claims line 85 lacks the
+        asterisks; claims line 392 includes them). The narrative's consistent markup
+        is more correct and uniform. No action required.
+    - id: ISSUE-04
+      severity: NOTE
+      category: structural-markup
+      description: >
+        The "=== Source overview" section header is present in the claims file (line 13)
+        but absent from the narrative. All 141 source-overview claims are present in the
+        narrative body; the missing header is a structural markup omission that does not
+        drop any content. NOTE only; no action required.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 141 claims are mapped to narrative locations in order. The narrative preserves
+    every claim from the following sections:
+    - Source overview (claims 1–14): narrative lines 4–47, all 14 claims present
+      (header absent but all content present).
+    - The hymn-cycle method (claims 15–23): narrative lines 53–83, all 9 claims present
+      including INFERENCE-1 marker verbatim at line 62.
+    - Setting and Vedic religious context (claims 24–36): narrative lines 87–127,
+      all 13 claims present.
+    - Movement I — RV 1.32 (claims 37–57): narrative lines 131–210, all 21 claims
+      present.
+    - Movement II — supplementary hymn-cycle (claims 58–73): narrative lines 214–272,
+      all 16 claims present including VARIANT-1 marker verbatim at line 274.
+    - Movement III — Watkins formula (claims 74–84): narrative lines 278–321,
+      all 11 claims present.
+    - The cosmological-but-not-cosmogonic reading (claims 85–97): narrative lines
+      325–379, all 13 claims present including INFERENCE-2 marker verbatim at line 337.
+    - The post-Vedic brahminicide reframing (claims 98–106): narrative lines 383–413,
+      all 9 claims present including VARIANT-2 marker verbatim at line 395.
+    - Indo-Iranian cognancy and forward links (claims 107–116): narrative lines 417–456,
+      all 10 claims present plus all 4 COMPARATIVE-HOOK lines verbatim identical.
+    Footnote count: 141 on both sides — exact match verified programmatically.
+    EVIDENCE token count: 141 on both sides — exact match verified programmatically.
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    factcheck_corrected_facts:
+      result: PASS
+      notes: >
+        All critical factcheck-corrected facts are preserved correctly.
+        (1) áhann áhim formula at RV 1.32.2, not RV 1.32.1: narrative line 281 reads
+            "The áhann áhim formula is attested at RV 1.32.2 as the killing-line of
+            the Vṛtra-hymn, with verse 1 supplying the announcing frame" — correct.
+        (2) Dānu "cow above her calf" at RV 1.32.9, not RV 1.32.8: narrative line 167
+            reads "RV 1.32.9 names Vṛtra's mother Dānu and stages her over the body of
+            her slain son" — correct.
+        (3) Fifteen-verse arc summary with "body-and-water tableau (vv. 7–9, with the
+            Dānu image at v. 9)": preserved verbatim at narrative line 188 — correct.
+    no_unauthorised_material:
+      result: PASS
+      notes: >
+        No sources are cited that do not appear in the claims. No new named scholars,
+        deities, texts, or comparanda are introduced beyond what the claims supply. The
+        one additional paragraph (line 49) is a navigation bridge that names only
+        sections already established in the claims.
+    transitional_addition:
+      result: NOTE-ONLY
+      notes: >
+        The unfootnoted navigational paragraph at line 49 names five stages and two
+        further sections, all of which correspond exactly to sections present in the
+        claims. It adds no factual assertion; it is a chapter-level orientation sentence.
+    post_vedic_separation:
+      result: PASS
+      notes: >
+        The post-Vedic brahminicide reframing (ŚBr 1.6.3–4; MBh Udyogaparvan 9–18)
+        is treated within a clearly-bounded sub-section (narrative lines 381–413) with
+        no merger with the Rigvedic combat material. The VARIANT-2 marker at line 395
+        explicitly flags the boundary. The brief's no-merge rule is fully observed.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    inference_markers:
+      result: PASS
+      notes: >
+        INFERENCE-1 (hymn-cycle method as methodological claim, narrative line 62) is
+        verbatim identical to claims file line 71. INFERENCE-2 (cosmologically-active-
+        but-not-cosmogonic framing as editorial synthesis, narrative line 337) is
+        verbatim identical to claims file line 346. Both markers retain their full text
+        unchanged, including the source citations and scope fields.
+    variant_markers:
+      result: PASS
+      notes: >
+        VARIANT-1 (eight-hymn Vṛtra-corpus vs. wider Indra-combat corpus, narrative
+        line 274) is verbatim identical to claims file line 283. VARIANT-2 (Rigvedic
+        combat primary vs. post-Vedic brahminicide reframing, narrative line 395) is
+        verbatim identical to claims file line 404. Both markers retain their full text
+        unchanged.
+    comparative_hooks:
+      result: PASS
+      notes: >
+        All 4 COMPARATIVE-HOOK lines are verbatim identical between the claims and
+        narrative: Iran (Trita-Thraētaona / Indra-Vṛtra Indo-Iranian pair — Ch13,
+        Part II C5); Hittite / Greek / Germanic — Watkins HERO SLAY SERPENT formula
+        (Part II C5); Mesopotamia — splitting-of-mountain / release-of-waters parallel
+        to Marduk-Tiamat (structural; transmission undemonstrable, per West 2007);
+        Bhakti tradition — Krishna-Kāliya as later water-release echo (Ch15).
+    cosmological_but_not_cosmogonic_framing:
+      result: PASS
+      notes: >
+        The INFERENCE-2 marker correctly marks the "cosmologically active but not
+        cosmogonic in the Mesopotamian sense" typology as the chapter's editorial
+        synthesis (not a claim made by any single source). The narrative preserves
+        this marker verbatim and the surrounding prose correctly presents the typology
+        as the chapter's synthesis while citing the textual evidence.
+    indo_iranian_cognancy:
+      result: PASS
+      notes: >
+        The Vedic-Iranian cognancy section (narrative lines 417–451) correctly presents:
+        ahi/aži cognancy (narrative lines 417–421), vṛtrahán/Vərəθraγna cognancy
+        (narrative lines 432–436), and Trita Āptya/Thraētaona cognancy with the
+        back-link to Ch13 (narrative lines 423–430). All three cognancies are present,
+        correctly attributed to Benveniste and Renou 1934 and Watkins 1995, and the
+        back-link to Ch13 is preserved.
+    meaning_preserving_paraphrases:
+      result: PASS-WITH-NOTE
+      notes: >
+        The narrative is overwhelmingly verbatim or near-verbatim relative to the claims.
+        One paraphrase at narrative line 43 changes "any comparable ancient corpus" to
+        "any comparable corpus from the same period" — a minor nuance shift that does
+        not distort the factual claim (see ISSUE-02). The word "also" added at narrative
+        line 19 is a prose connective with no factual impact. No other meaning
+        distortions were identified across all 141 claims.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        The glossary never_use terms were checked: "Vritra" (never use outside titles
+        of older sources) — absent from the narrative; "dragon myth", "dragon-slaying
+        myth", "chaos-figure", "chaos-monster", "creation myth" — all absent. Chosen
+        renderings are used correctly throughout: Vṛtra (not Vritra), _vajra_ (italicised,
+        with "thunderbolt-mace" gloss on first mention), _soma_ (italicised, with
+        "ritual drink" gloss on first mention), áhann áhim (with diacritics), _ahi_
+        (italicised), Tvaṣṭṛ (correctly rendered), Indra (not italicised, proper noun).
+    footnote_integrity:
+      result: PASS
+      notes: >
+        141 footnotes in the narrative; 141 footnotes in the claims. Programmatic count
+        confirms exact match on both sides. Footnote text was spot-checked against
+        claims across all sections; all footnotes match their corresponding claims
+        footnotes. No additions, removals, or reassignments found.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with no findings requiring revision.
+  Check 1 (Completeness): all 141 claims are mapped to narrative locations in order,
+  with 141 footnotes and 141 EVIDENCE tokens on each side verified programmatically;
+  both INFERENCE markers, both VARIANT markers, and all 4 COMPARATIVE-HOOK lines are
+  verbatim identical. Check 2 (No additions): the one unfootnoted paragraph (line 49)
+  is a legitimate navigation bridge introducing no factual claims; all critical
+  factcheck-corrected facts are preserved correctly (áhann áhim at RV 1.32.2, Dānu
+  at RV 1.32.9, arc summary with Dānu image at v. 9); the post-Vedic brahminicide
+  reframing is clearly bounded and not merged with the Rigvedic combat. Check 3
+  (Fidelity): all 4 markers (2 INFERENCE, 2 VARIANT) are verbatim identical; the
+  Vedic-Iranian cognancy section is complete and correctly rendered; the cosmological-
+  but-not-cosmogonic typology is correctly marked as editorial synthesis. The one
+  MEDIUM finding (nuance paraphrase "comparable corpus from the same period" for
+  "comparable ancient corpus") does not alter any factual claim and does not trigger
+  REVISE under the verdict rules (zero CLAIM-DROPPED, zero CLAIM-ADDED, zero HIGH
+  CLAIM-DISTORTED, one MEDIUM finding — within the ≤2 MEDIUM threshold for PASS).
+  Verdict: PASS.
+
+claim_mapping:
+  # Source overview (claims 1–14 → narrative lines 4–47)
+  - claim_number: 1
+    claim_text: "Rigveda as primary text; dating and organisation"
+    narrative_location: "line 4"
+    status: MAPPED
+  - claim_number: 2
+    claim_text: "Jamison-Brereton 2014 as anchor translation"
+    narrative_location: "line 7"
+    status: MAPPED
+  - claim_number: 3
+    claim_text: "Jamison-Brereton supersedes Griffith; hymn-and-verse citation"
+    narrative_location: "line 10"
+    status: MAPPED
+  - claim_number: 4
+    claim_text: "Jamison-Brereton printed-only; citation discipline"
+    narrative_location: "line 13"
+    status: MAPPED
+  - claim_number: 5
+    claim_text: "Watkins 1995 as specialist IE poetic anchor; chs. 41-48"
+    narrative_location: "line 16"
+    status: MAPPED
+  - claim_number: 6
+    claim_text: "Watkins printed-only; citation discipline"
+    narrative_location: "line 19"
+    status: MAPPED
+  - claim_number: 7
+    claim_text: "Benveniste-Renou 1934 as foundational Indo-Iranian anchor"
+    narrative_location: "line 22"
+    status: MAPPED
+  - claim_number: 8
+    claim_text: "Benveniste-Renou on ahi/aži cognancy as standard reference"
+    narrative_location: "line 25"
+    status: MAPPED
+  - claim_number: 9
+    claim_text: "West 2007 as general IE comparative anchor; ch. 6"
+    narrative_location: "line 28"
+    status: MAPPED
+  - claim_number: 10
+    claim_text: "West printed-only; cited at chapter level"
+    narrative_location: "line 31"
+    status: MAPPED
+  - claim_number: 11
+    claim_text: "Forsyth 1987 as wider combat-myth anchor; ch. 2"
+    narrative_location: "line 34"
+    status: MAPPED
+  - claim_number: 12
+    claim_text: "Lambert 2013 as Mesopotamian comparand anchor"
+    narrative_location: "line 37"
+    status: MAPPED
+  - claim_number: 13
+    claim_text: "Eight Rigvedic hymns as working Vṛtra-combat corpus"
+    narrative_location: "line 40"
+    status: MAPPED
+  - claim_number: 14
+    claim_text: "Rigveda orally preserved; narrative-not-philological lacuna"
+    narrative_location: "lines 43–47"
+    status: MAPPED
+  # Hymn-cycle method (claims 15–23 → narrative lines 53–83)
+  - claim_number: 15
+    claim_text: "Rigveda as liturgical hymns; praise-and-invocation genre"
+    narrative_location: "line 53"
+    status: MAPPED
+  - claim_number: 16
+    claim_text: "Vṛtra-combat not continuous story; ritual-allusive mode"
+    narrative_location: "line 56"
+    status: MAPPED
+  - claim_number: 17
+    claim_text: "Chapter reconstructs Vṛtra-combat as hymn-cycle; RV 1.32 as spine"
+    narrative_location: "line 59"
+    status: MAPPED
+  - claim_number: 18
+    claim_text: "INFERENCE-1: hymn-cycle method as methodological claim"
+    narrative_location: "line 62"
+    status: MAPPED
+  - claim_number: 19
+    claim_text: "Hymn-cycle contrastive case to Mesopotamian/Hittite/Ugaritic narratives"
+    narrative_location: "line 64"
+    status: MAPPED
+  - claim_number: 20
+    claim_text: "Variant detail = variation within tradition, not recension difference"
+    narrative_location: "line 67"
+    status: MAPPED
+  - claim_number: 21
+    claim_text: "Cosmogonic effects distributed across eight hymns"
+    narrative_location: "line 70"
+    status: MAPPED
+  - claim_number: 22
+    claim_text: "Watkins's formula-reconstruction uses same hymn-cycle method"
+    narrative_location: "line 73"
+    status: MAPPED
+  - claim_number: 23
+    claim_text: "Hymn-cycle distinguishes Rigvedic from post-Vedic texts"
+    narrative_location: "line 76"
+    status: MAPPED
+  # Setting and Vedic religious context (claims 24–36 → narrative lines 87–127)
+  - claim_number: 24
+    claim_text: "Hymn-cycle as principal methodological commitment; signposted"
+    narrative_location: "line 79"
+    status: MAPPED
+  - claim_number: 25
+    claim_text: "Working synthesis as 'as-reconstructed' text"
+    narrative_location: "line 82"
+    status: MAPPED
+  - claim_number: 26
+    claim_text: "Indra as storm-god; most frequently invoked deity; quarter of corpus"
+    narrative_location: "line 87"
+    status: MAPPED
+  - claim_number: 27
+    claim_text: "Indra as warrior-king chief of gods; soma; Vṛtra-victory as warrant"
+    narrative_location: "line 90"
+    status: MAPPED
+  - claim_number: 28
+    claim_text: "Soma sacrifice (yajña) as ritual setting; Indra as primary recipient"
+    narrative_location: "line 93"
+    status: MAPPED
+  - claim_number: 29
+    claim_text: "Soma fortifies Indra for Vṛtra-combat; immediate prelude"
+    narrative_location: "line 96"
+    status: MAPPED
+  - claim_number: 30
+    claim_text: "Tvaṣṭṛ as divine artisan; forger of vajra"
+    narrative_location: "line 99"
+    status: MAPPED
+  - claim_number: 31
+    claim_text: "Vajra as Indra's thunderbolt-mace; weapon of killing"
+    narrative_location: "line 102"
+    status: MAPPED
+  - claim_number: 32
+    claim_text: "Vajra as cosmic combat-weapon; lightning-strike mythologised"
+    narrative_location: "line 105"
+    status: MAPPED
+  - claim_number: 33
+    claim_text: "Tripartite Vedic pantheon; Indra in warrior tier"
+    narrative_location: "line 108"
+    status: MAPPED
+  - claim_number: 34
+    claim_text: "Storm-god/waters complex as Vedic instance of wider IE pattern"
+    narrative_location: "line 111"
+    status: MAPPED
+  - claim_number: 35
+    claim_text: "Vṛtra etymology from vṛ- 'to obstruct'; obstructing function"
+    narrative_location: "line 114"
+    status: MAPPED
+  - claim_number: 36
+    claim_text: "Vṛtra name semantically transparent; Benveniste-Renou on lexical transparency"
+    narrative_location: "line 117"
+    status: MAPPED
+  - claim_number: 37
+    claim_text: "Vṛtra also called ahi; ahi as load-bearing serpent-term"
+    narrative_location: "line 120"
+    status: MAPPED
+  - claim_number: 38
+    claim_text: "Dānu as Vṛtra's mother; danāva class; presence over Vṛtra's body"
+    narrative_location: "line 123"
+    status: MAPPED
+  - claim_number: 39
+    claim_text: "Vedic combat invoked at soma sacrifice as ritual replay"
+    narrative_location: "line 126"
+    status: MAPPED
+  # Movement I — RV 1.32 (claims 40–60 → narrative lines 131–210)
+  - claim_number: 40
+    claim_text: "RV 1.32 as primary Vṛtra-hymn; fifteen verses; Hiraṇyastūpa Āṅgirasa"
+    narrative_location: "line 131"
+    status: MAPPED
+  - claim_number: 41
+    claim_text: "Opening verse announces theme; áhann áhim at v. 2; verse 1 as frame"
+    narrative_location: "line 134"
+    status: MAPPED
+  - claim_number: 42
+    claim_text: "RV 1.32.1: Indra as vajra-wielder; Vṛtra-killing as chief manly deed"
+    narrative_location: "line 137"
+    status: MAPPED
+  - claim_number: 43
+    claim_text: "RV 1.32.2: four cosmogonic-effect verbs"
+    narrative_location: "line 140"
+    status: MAPPED
+  - claim_number: 44
+    claim_text: "Seven rivers (saptá síndhavaḥ) of RV 1.32.2 as released waters"
+    narrative_location: "line 143"
+    status: MAPPED
+  - claim_number: 45
+    claim_text: "Tvaṣṭṛ forging vajra recorded in RV 1.32.2"
+    narrative_location: "line 146"
+    status: MAPPED
+  - claim_number: 46
+    claim_text: "RV 1.32.3-4: soma-drinking prelude and going-out to combat"
+    narrative_location: "line 149"
+    status: MAPPED
+  - claim_number: 47
+    claim_text: "RV 1.32.5: Vṛtra in mountainous form; body-as-mountain"
+    narrative_location: "line 152"
+    status: MAPPED
+  - claim_number: 48
+    claim_text: "Mountain-splitting = splitting of serpent and cosmic obstacle (dual)"
+    narrative_location: "line 155"
+    status: MAPPED
+  - claim_number: 49
+    claim_text: "RV 1.32.5: Vṛtra's challenge/attack; reciprocal combat"
+    narrative_location: "line 158"
+    status: MAPPED
+  - claim_number: 50
+    claim_text: "RV 1.32.6: killing-blow with vajra; cosmic waters begin downward course"
+    narrative_location: "line 161"
+    status: MAPPED
+  - claim_number: 51
+    claim_text: "RV 1.32.7: body-and-water tableau; released waters flow over Vṛtra"
+    narrative_location: "line 164"
+    status: MAPPED
+  - claim_number: 52
+    claim_text: "RV 1.32.9: Dānu over Vṛtra; cow-and-calf simile"
+    narrative_location: "line 167"
+    status: MAPPED
+  - claim_number: 53
+    claim_text: "Dānu-over-Vṛtra: combat not morally one-sided; maternal grief"
+    narrative_location: "line 170"
+    status: MAPPED
+  - claim_number: 54
+    claim_text: "RV 1.32.10: water-cascade as cosmogonic consequence"
+    narrative_location: "line 173"
+    status: MAPPED
+  - claim_number: 55
+    claim_text: "RV 1.32.11-12: heaven-earth separation, firmament, dawn"
+    narrative_location: "line 176"
+    status: MAPPED
+  - claim_number: 56
+    claim_text: "Triple cosmogonic effect as principal evidence for cosmological activity"
+    narrative_location: "line 179"
+    status: MAPPED
+  - claim_number: 57
+    claim_text: "RV 1.32.13-14: Indra's wider sovereignty and kingship-summary"
+    narrative_location: "line 182"
+    status: MAPPED
+  - claim_number: 58
+    claim_text: "RV 1.32.15: ritual closure with petition"
+    narrative_location: "line 185"
+    status: MAPPED
+  - claim_number: 59
+    claim_text: "Fifteen-verse arc summary of RV 1.32"
+    narrative_location: "line 188"
+    status: MAPPED
+  - claim_number: 60
+    claim_text: "Internal arc of RV 1.32 as closest to continuous narrative"
+    narrative_location: "line 191"
+    status: MAPPED
+  - claim_number: 61
+    claim_text: "RV 1.32 supplies principal motifs; supplementary hymns add without contradicting"
+    narrative_location: "line 194"
+    status: MAPPED
+  # continued Movement I
+  - claim_number: 62
+    claim_text: "RV 1.32 as chapter's primary witness"
+    narrative_location: "line 197"
+    status: MAPPED
+  - claim_number: 63
+    claim_text: "No body-of-Vṛtra-as-cosmos in RV 1.32 vs. Enūma Eliš IV"
+    narrative_location: "line 200"
+    status: MAPPED
+  - claim_number: 64
+    claim_text: "Absence of body-as-cosmos = textual backbone of cosmological-but-not-cosmogonic claim"
+    narrative_location: "line 203"
+    status: MAPPED
+  - claim_number: 65
+    claim_text: "No brahminicide motifs in RV 1.32"
+    narrative_location: "line 206"
+    status: MAPPED
+  - claim_number: 66
+    claim_text: "Textual absence of brahminicide = load-bearing evidence for no-merge rule"
+    narrative_location: "line 209"
+    status: MAPPED
+  # Movement II — supplementary hymn-cycle (claims 67–82 → narrative lines 214–272)
+  - claim_number: 67
+    claim_text: "RV 1.80: strophic refrain; killing as warrant for sovereignty"
+    narrative_location: "line 214"
+    status: MAPPED
+  - claim_number: 68
+    claim_text: "RV 1.80: independent attestation of áhann áhim formula"
+    narrative_location: "line 217"
+    status: MAPPED
+  - claim_number: 69
+    claim_text: "RV 2.11: gods' acclamation of Indra after killing"
+    narrative_location: "line 220"
+    status: MAPPED
+  - claim_number: 70
+    claim_text: "RV 2.12: sá janāsa índraḥ refrain; identifying-deeds mode"
+    narrative_location: "line 223"
+    status: MAPPED
+  - claim_number: 71
+    claim_text: "RV 2.12: four cosmogonic-effect motifs distributed across strophes"
+    narrative_location: "line 226"
+    status: MAPPED
+  - claim_number: 72
+    claim_text: "RV 4.18: embryonic-Indra hymn; irregular birth as anticipation"
+    narrative_location: "line 229"
+    status: MAPPED
+  - claim_number: 73
+    claim_text: "RV 4.18: biographical pre-history of combat"
+    narrative_location: "line 232"
+    status: MAPPED
+  - claim_number: 74
+    claim_text: "RV 5.32: obstruction-and-release emphasis"
+    narrative_location: "line 235"
+    status: MAPPED
+  - claim_number: 75
+    claim_text: "RV 6.17: cosmic-scale combat; three-tiered cosmos"
+    narrative_location: "line 238"
+    status: MAPPED
+  - claim_number: 76
+    claim_text: "RV 8.96: vṛtrahán as Indra's principal cult-title"
+    narrative_location: "line 241"
+    status: MAPPED
+  - claim_number: 77
+    claim_text: "vṛtrahán cognant with Avestan Vərəθraγna"
+    narrative_location: "line 244"
+    status: MAPPED
+  - claim_number: 78
+    claim_text: "RV 10.113: cosmogonic-integration of killing"
+    narrative_location: "line 247"
+    status: MAPPED
+  - claim_number: 79
+    claim_text: "RV 10.113: principal late-corpus reflex of cosmological activity"
+    narrative_location: "line 250"
+    status: MAPPED
+  - claim_number: 80
+    claim_text: "Supplementary hymn-cycle: seven distinct emphases"
+    narrative_location: "line 253"
+    status: MAPPED
+  - claim_number: 81
+    claim_text: "Supplementary hymns consistent with RV 1.32 spine"
+    narrative_location: "line 256"
+    status: MAPPED
+  - claim_number: 82
+    claim_text: "Supplementary hymns vary in motif-selection"
+    narrative_location: "line 259"
+    status: MAPPED
+  - claim_number: 83
+    claim_text: "Supplementary hymns include occasional motifs absent from RV 1.32"
+    narrative_location: "line 262"
+    status: MAPPED
+  - claim_number: 84
+    claim_text: "Supplementary hymns enrich spine in three principal ways"
+    narrative_location: "line 265"
+    status: MAPPED
+  - claim_number: 85
+    claim_text: "Eight-hymn corpus as working evidentiary base"
+    narrative_location: "line 268"
+    status: MAPPED
+  - claim_number: 86
+    claim_text: "Vala myth: related but textually distinct from Vṛtra-combat"
+    narrative_location: "line 271"
+    status: MAPPED
+  - claim_number: 87
+    claim_text: "VARIANT-1: eight-hymn corpus vs. wider Indra-combat corpus"
+    narrative_location: "line 274"
+    status: MAPPED
+  # Movement III — Watkins formula (claims 88–98 → narrative lines 278–321)
+  - claim_number: 88
+    claim_text: "áhann áhim as Vedic instance of IE HERO SLAY SERPENT"
+    narrative_location: "line 278"
+    status: MAPPED
+  - claim_number: 89
+    claim_text: "áhann áhim at RV 1.32.2; verse 1 as announcing frame"
+    narrative_location: "line 281"
+    status: MAPPED
+  - claim_number: 90
+    claim_text: "Structural elements of formula: subject, aorist verb, serpent-object"
+    narrative_location: "line 284"
+    status: MAPPED
+  - claim_number: 91
+    claim_text: "Figura etymologica of áhan and áhim as load-bearing feature"
+    narrative_location: "line 287"
+    status: MAPPED
+  - claim_number: 92
+    claim_text: "Watkins: formula is Vedic reflex of inherited IE combat-line"
+    narrative_location: "line 290"
+    status: MAPPED
+  - claim_number: 93
+    claim_text: "Formula is formal-poetic not content-narrative claim"
+    narrative_location: "line 293"
+    status: MAPPED
+  - claim_number: 94
+    claim_text: "Indra/Vṛtra as anchor case for Watkins's formula"
+    narrative_location: "line 296"
+    status: MAPPED
+  - claim_number: 95
+    claim_text: "Cross-cultural reflexes deferred to Part II C5"
+    narrative_location: "line 299"
+    status: MAPPED
+  - claim_number: 96
+    claim_text: "Formula widely attested across Rigvedic corpus; actively productive"
+    narrative_location: "line 302"
+    status: MAPPED
+  - claim_number: 97
+    claim_text: "Active productivity = principal reason Watkins treats as strongest evidence"
+    narrative_location: "line 305"
+    status: MAPPED
+  - claim_number: 98
+    claim_text: "áhann áhim and vṛtrahán as principal Vedic combat-vocabulary"
+    narrative_location: "line 308"
+    status: MAPPED
+  - claim_number: 99
+    claim_text: "Formula and cult-title define principal forward-link to Part II C5"
+    narrative_location: "line 311"
+    status: MAPPED
+  - claim_number: 100
+    claim_text: "Watkins's reconstruction as scholarly synthesis"
+    narrative_location: "line 314"
+    status: MAPPED
+  - claim_number: 101
+    claim_text: "Formula introduced at hymn-and-verse level; cross-cultural reflexes deferred"
+    narrative_location: "line 317"
+    status: MAPPED
+  - claim_number: 102
+    claim_text: "Watkins formula's twofold relationship to chapter argument"
+    narrative_location: "line 320"
+    status: MAPPED
+  # Cosmological-but-not-cosmogonic reading (claims 103–115 → narrative lines 325–379)
+  - claim_number: 103
+    claim_text: "Vṛtra-combat does cosmogonic work in three explicit ways"
+    narrative_location: "line 325"
+    status: MAPPED
+  - claim_number: 104
+    claim_text: "Combat cosmologically active in strong sense"
+    narrative_location: "line 328"
+    status: MAPPED
+  - claim_number: 105
+    claim_text: "Not cosmogonic in Mesopotamian sense; no body-as-cosmos episode"
+    narrative_location: "line 331"
+    status: MAPPED
+  - claim_number: 106
+    claim_text: "Marduk-Tiamat vs. Indra-Vṛtra: structural-level difference"
+    narrative_location: "line 334"
+    status: MAPPED
+  - claim_number: 107
+    claim_text: "INFERENCE-2: cosmologically-active-but-not-cosmogonic as editorial synthesis"
+    narrative_location: "line 337"
+    status: MAPPED
+  - claim_number: 108
+    claim_text: "Typology: combat does cosmogonic work without body-as-cosmos; anchor for Part II C1"
+    narrative_location: "line 339"
+    status: MAPPED
+  - claim_number: 109
+    claim_text: "Typology distinguishes Vedic from Hittite, Greek, Norse combats"
+    narrative_location: "line 342"
+    status: MAPPED
+  - claim_number: 110
+    claim_text: "Vedic combat closest to cosmologically active without body-cosmogony"
+    narrative_location: "line 345"
+    status: MAPPED
+  - claim_number: 111
+    claim_text: "Waters-over-body image: closest to body-and-cosmos but not it"
+    narrative_location: "line 348"
+    status: MAPPED
+  - claim_number: 112
+    claim_text: "Body-in-watercourse is not body-as-cosmos"
+    narrative_location: "line 351"
+    status: MAPPED
+  - claim_number: 113
+    claim_text: "Mountain-form-and-water tableau as recurrent IE type"
+    narrative_location: "line 354"
+    status: MAPPED
+  - claim_number: 114
+    claim_text: "Distinction sharpest at level of what body becomes"
+    narrative_location: "line 357"
+    status: MAPPED
+  - claim_number: 115
+    claim_text: "Distinction load-bearing for Indo-Iranian comparand with Ch13"
+    narrative_location: "line 360"
+    status: MAPPED
+  - claim_number: 116
+    claim_text: "Triple cosmogonic effect = diagnostic feature of cosmological activity"
+    narrative_location: "line 363"
+    status: MAPPED
+  - claim_number: 117
+    claim_text: "Vedic combat distinct from Mesopotamian at level of pre-existing cosmos"
+    narrative_location: "line 366"
+    status: MAPPED
+  - claim_number: 118
+    claim_text: "Already-existing-world setting as reason to resist Mesopotamian assimilation"
+    narrative_location: "line 369"
+    status: MAPPED
+  - claim_number: 119
+    claim_text: "Cosmological-but-not-cosmogonic as principal typological contribution to Part II C1"
+    narrative_location: "line 372"
+    status: MAPPED
+  - claim_number: 120
+    claim_text: "Structural family-resemblance to Marduk-Tiamat real but not transmission"
+    narrative_location: "line 375"
+    status: MAPPED
+  - claim_number: 121
+    claim_text: "Cosmological activity as basis of ritual-aetiological function in soma sacrifice"
+    narrative_location: "line 378"
+    status: MAPPED
+  # Post-Vedic brahminicide reframing (claims 122–130 → narrative lines 383–413)
+  - claim_number: 122
+    claim_text: "Post-Vedic reframing in ŚBr 1.6.3-4 and MBh Udyogaparvan 9-18"
+    narrative_location: "line 383"
+    status: MAPPED
+  - claim_number: 123
+    claim_text: "ŚBr 1.6.3-4: Vṛtra as priestly figure; killing generates ritual pollution"
+    narrative_location: "line 386"
+    status: MAPPED
+  - claim_number: 124
+    claim_text: "MBh Udyogaparvan 9-18: extended brahminicide-and-expiation narrative"
+    narrative_location: "line 389"
+    status: MAPPED
+  - claim_number: 125
+    claim_text: "Post-Vedic Vṛtra is different narrative entity from Rigvedic Vṛtra"
+    narrative_location: "line 392"
+    status: MAPPED
+  - claim_number: 126
+    claim_text: "VARIANT-2: Rigvedic combat primary; post-Vedic as clearly-marked later transformation"
+    narrative_location: "line 395"
+    status: MAPPED
+  - claim_number: 127
+    claim_text: "Post-Vedic reframing as evidence for cultural centrality of Vṛtra-combat"
+    narrative_location: "line 397"
+    status: MAPPED
+  - claim_number: 128
+    claim_text: "Post-Vedic reframing in clearly-bounded sub-section"
+    narrative_location: "line 400"
+    status: MAPPED
+  - claim_number: 129
+    claim_text: "Post-Vedic reframing forward-linked to Ch15"
+    narrative_location: "line 403"
+    status: MAPPED
+  - claim_number: 130
+    claim_text: "Post-Vedic reframing marks moral-status transition"
+    narrative_location: "line 406"
+    status: MAPPED
+  - claim_number: 131
+    claim_text: "Post-Vedic reframing must not be merged with Rigvedic combat"
+    narrative_location: "line 409"
+    status: MAPPED
+  - claim_number: 132
+    claim_text: "Chapter's treatment of reframing: brief, bounded, forward-linked"
+    narrative_location: "line 412"
+    status: MAPPED
+  # Indo-Iranian cognancy and forward links (claims 133–141 → narrative lines 417–451)
+  - claim_number: 133
+    claim_text: "Vedic ahi and Avestan aži: philologically the same word"
+    narrative_location: "line 417"
+    status: MAPPED
+  - claim_number: 134
+    claim_text: "ahi/aži cognancy = shared serpent-vocabulary at language-historical level"
+    narrative_location: "line 420"
+    status: MAPPED
+  - claim_number: 135
+    claim_text: "Trita Āptya / Thraētaona cognancy; back-link to Ch13"
+    narrative_location: "lines 423–430"
+    status: MAPPED
+  - claim_number: 136
+    claim_text: "Trita Āptya as older Indo-Iranian combat-figure partially displaced by Indra"
+    narrative_location: "line 426"
+    status: MAPPED
+  - claim_number: 137
+    claim_text: "Trita/Thraētaona cognancy as principal Indo-Iranian forward-and-back-link"
+    narrative_location: "line 429"
+    status: MAPPED
+  - claim_number: 138
+    claim_text: "vṛtrahán / Vərəθraγna: second principal Indo-Iranian cognancy"
+    narrative_location: "line 432"
+    status: MAPPED
+  - claim_number: 139
+    claim_text: "Two cognancies establish Indo-Iranian phase as documented language-historical fact"
+    narrative_location: "line 435"
+    status: MAPPED
+  - claim_number: 140
+    claim_text: "Principal forward-links: Ch15, Part II C1, Part II C5"
+    narrative_location: "lines 438–445"
+    status: MAPPED
+  - claim_number: 141
+    claim_text: "Chapter at intersection of HERO SLAY SERPENT and cosmogonic-combat threads"
+    narrative_location: "lines 447–451"
+    status: MAPPED
+
+findings:
+  - kind: IMPLICIT-ADDITION
+    severity: MEDIUM
+    claim_number: ~
+    narrative_location: "line 49"
+    issue: >
+      Unfootnoted navigational paragraph introduces no factual claim but is not present
+      in the claims document.
+    detail: >
+      Narrative line 49: "The story, as the Rigveda preserves it, is therefore something
+      the chapter has to assemble. What follows takes the Vedic combat in five stages:
+      the hymn-cycle method itself, the setting and ritual context, Rigveda 1.32 as the
+      primary witness, the seven supplementary hymns, and the Watkins formula as the
+      Vedic instance of an inherited Indo-European poetic line. A typological section
+      then asks how the combat does cosmogonic work without doing cosmogony in the
+      Mesopotamian sense, and a final section bounds off the post-Vedic brahminicide
+      reframing as a clearly later transformation that must not be merged with the
+      Rigvedic combat." The claims document has no corresponding paragraph. However,
+      this is a chapter-navigation bridge that introduces no factual assertions beyond
+      what the claims establish. All sections named are attested in the claims. No
+      action required.
+    recommended_fix: >
+      No action required. This is a legitimate transitional bridge. NOTE severity only.
+
+  - kind: CLAIM-DISTORTED
+    severity: MEDIUM
+    claim_number: 14
+    narrative_location: "line 43"
+    issue: >
+      Minor paraphrase changes "any comparable ancient corpus" to "any comparable corpus
+      from the same period", slightly narrowing the comparand set.
+    detail: >
+      Claims line 54: "...generally regarded as preserving the text more faithfully than
+      any comparable ancient corpus..."
+      Narrative line 43: "...generally regarded as preserving the text more faithfully
+      than any comparable corpus from the same period..."
+      The factual claim (exceptional Rigvedic preservation) is unchanged but "from the
+      same period" is narrower than "ancient". Both phrasings support the same
+      substantive point; no reader would be misled.
+    recommended_fix: >
+      Restore "ancient" in place of "from the same period" to match the claims verbatim:
+      "...more faithfully than any comparable ancient corpus..."

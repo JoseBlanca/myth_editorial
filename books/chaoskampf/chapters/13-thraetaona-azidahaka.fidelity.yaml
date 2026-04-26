@@ -1,0 +1,225 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  writer_model: claude-opus-4-7
+  claims_file: chapters/13-thraetaona-azidahaka.claims.approved.adoc
+  narrative_file: chapters/13-thraetaona-azidahaka.adoc
+  total_claims: 118
+  claims_mapped: 118
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 118 claims were mapped in order across the five sections:
+      Source overview (claims 1–15), Setting and Zoroastrian cosmology (16–28),
+      Movement I — Avestan tradition (29–51), Movement II — Pahlavi narrative (52–78),
+      Movement III — Frashokereti (79–98), Indo-Iranian cognancy (99–113),
+      Reception briefly (114–118). All 6 markers (1 LACUNA, 4 INFERENCE, 1 VARIANT) were
+      compared character-by-character. Footnote counts were verified programmatically
+      (118 on each side — exact match). EVIDENCE token counts verified (118 each side).
+    q2_additions_check: >
+      Every narrative paragraph was checked against the claims document. Two unfootnoted
+      passages were evaluated:
+      (1) The parenthetical "— a hero-slayer whose name surfaces in Middle Persian as
+      Frēdōn and in New Persian as Fereydun in the Shāhnāmeh —" inserted into the
+      opening sentence at narrative line 4. The information is accurate and is derived
+      from a separate verified claim (the onomastic chain claim, mapped to narrative
+      lines 76–77); it is not new information but an early editorial placement of already-
+      claimed content, and it does not acquire its own footnote because the sentence's
+      existing footnote (unchanged) covers the source overview. Assessed as NOTE severity
+      only — the content is claimed elsewhere; no fact is introduced.
+      (2) The unfootnoted navigation paragraph at narrative line 54: "What follows takes
+      the chapter in five movements..." This is a transitional chapter-navigation sentence
+      that introduces no factual claim and accurately reflects the chapter structure
+      authorised by the claims document. NOTE only; no action required.
+      All other narrative paragraphs map cleanly to claims in sequence.
+    q3_distortion_check: >
+      Precise meaning was compared for all 118 claims, not just topic-matching.
+      The narrative consistently breaks single long claims-sentences into two shorter
+      prose sentences without altering meaning or scope. Certainty markers are preserved:
+      claims that say "only in the Pahlavi" say the same in the narrative; claims that
+      say "the Avestan attestations do not attest" retain that negation. No softening,
+      hardening, or scope-shifts were identified. All four INFERENCE markers and one
+      VARIANT marker and one LACUNA marker retain verbatim text. One area of closer
+      scrutiny: the onomastic parenthetical insertion into narrative line 4 (see q2
+      above) — assessed as an accurate placement of claimed material, not a distortion.
+    q4_same_model: >
+      No. The narrative was produced by Claude Opus 4.7 (1M context) in a separate
+      session. This audit is conducted by Claude Sonnet 4.6 in a fresh conversation.
+      The review is valid.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: NOTE
+      category: addition-ok
+      description: >
+        The opening sentence at narrative line 4 inserts a parenthetical "— a hero-slayer
+        whose name surfaces in Middle Persian as Frēdōn and in New Persian as Fereydun in
+        the Shāhnāmeh —" that does not appear in the corresponding source-overview claim
+        (claims line 1). The onomastic chain Thraētaona → Frēdōn → Fereydun is a
+        separately verified claim (claims section "Setting and Zoroastrian cosmology,"
+        paragraph on onomastic afterlife, mapped to narrative lines 76–77), so the content
+        is claimed and verified. The writer pre-positioned it in the opening sentence for
+        reader orientation. The sentence's footnote is unchanged. No unverified information
+        is introduced. NOTE only; no action required.
+    - id: ISSUE-02
+      severity: NOTE
+      category: addition-ok
+      description: >
+        The unfootnoted navigation paragraph at narrative line 54 — "What follows takes
+        the chapter in five movements, after a short orientation in Zoroastrian cosmology:
+        Movement I treats..." — has no corresponding claim and carries no footnote. It is
+        a legitimate transitional chapter-structure sentence that introduces no factual
+        claims and accurately describes the chapter architecture authorised by the brief
+        and claims document. NOTE only; no action required.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 118 claims are mapped to narrative locations in order. The narrative preserves
+    every claim from the following sections:
+    - Source overview (claims 1–15, including source citations for Watkins, Benveniste-Renou,
+      Forsyth, West, Gunkel): narrative lines 4–52, all 15 claims present, the LACUNA
+      marker verbatim at line 43.
+    - Setting and Zoroastrian cosmology (claims 16–28, including dualism, Ahura Mazdā,
+      Angra Mainyu, Aži Dahāka, Thraētaona onomastics, Damāvand intro): narrative lines
+      58–93, all 13 claims present.
+    - Movement I — Avestan tradition (claims 29–51, including VARIANT-1): narrative lines
+      97–161, all 23 claims present including the VARIANT marker verbatim at line 123.
+    - Movement II — Pahlavi narrative (claims 52–78, including INFERENCE-1): narrative lines
+      165–234, all 27 claims present including the INFERENCE marker verbatim at line 202.
+    - Movement III — Frashokereti (claims 79–98, including INFERENCE-2): narrative lines
+      238–311, all 20 claims present including the INFERENCE marker verbatim at line 290.
+    - Indo-Iranian cognancy (claims 99–113, including INFERENCE-3 and INFERENCE-4):
+      narrative lines 315–375, all 15 claims present including INFERENCE markers verbatim
+      at lines 330 and 359.
+    - Reception (claims 114–118): narrative lines 379–388, all 5 claims present.
+    Footnote count: 118 on both sides — exact match (verified programmatically).
+    EVIDENCE token count: 118 on both sides — exact match (verified programmatically).
+    COMPARATIVE-HOOK lines: 5 on both sides — exact match.
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    verifier_hint_items:
+      result: PASS
+      notes: >
+        All five verifier-hint items confirmed clean:
+        (1) RV 10.99.6 (not 10.8.8-9): narrative lines 321 and 324 both cite
+        "RV 10.99.6" — correct.
+        (2) Lincoln 2012 citation: narrative line 216 cites "Lincoln 2012, on Iranian
+        combat-myth as political-ideological discourse" directly, with no "via Forsyth
+        and Watkins" parenthetical — correct.
+        (3) Yašt 14 framing: narrative lines 105 and 108 correctly describe Yt. 14 as
+        supplying the Vərəθraγna theological framework, and lines 108–109 explicitly state
+        the hymn does not feature "Thraētaona's combat as one of its principal exemplary
+        cases" — correct.
+        (4) Bundahišn weapon: narrative line 184 cites "Thraētaona's mace as the
+        instrument of the killing, with the mace-attack as the central narrative beat"
+        — mace only, no bow — correct.
+        (5) Avestan-Pahlavi temporal layering: the post-Achaemenid date is flagged
+        throughout Movement II and III (narrative lines 165, 167, 170, 172, 192, 245, 293)
+        — correct and consistent.
+    no_unauthorised_sources:
+      result: PASS
+      notes: >
+        No sources are cited in the narrative that do not appear in the claims. No new
+        named scholars, rulers, events, or comparative examples are introduced beyond what
+        the claims supply.
+    cross_references:
+      result: PASS
+      notes: >
+        Authorised cross-references only: Chapter 14 (Indra-Vṛtra), Part II C4
+        (eschatological displacement), Part II C5 (IE HERO SLAY SERPENT), Chapter 6
+        (Illuyanka), Vahagn-and-Vishaps family chapter. All appear in the claims document.
+    navigation_paragraph:
+      result: NOTE
+      notes: >
+        Unfootnoted transitional sentence at narrative line 54 (noted as ISSUE-02 above).
+        No factual content; no action required.
+    onomastic_insertion:
+      result: NOTE
+      notes: >
+        Parenthetical onomastic placement at narrative line 4 (noted as ISSUE-01 above).
+        Content is verified in a separate claim; no action required.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    lacuna_markers:
+      result: PASS
+      notes: >
+        LACUNA marker (narrative line 43) is verbatim identical to claims line 54.
+        Verified by programmatic diff — zero character differences.
+    inference_markers:
+      result: PASS
+      notes: >
+        All four INFERENCE markers are verbatim identical to their claims counterparts.
+        INFERENCE-1 (binding-not-killing opens Frashokereti, narrative line 202) matches
+        claims line 211 verbatim. INFERENCE-2 (doubled-combat cognate of Revelation 20,
+        narrative line 290) matches claims line 299 verbatim. INFERENCE-3 (Indo-Iranian
+        three-headed-serpent-slaying reconstruction, narrative line 330) matches claims
+        line 339 verbatim. INFERENCE-4 (Iranian-Vedic structural divergence as
+        theologically motivated, narrative line 359) matches claims line 368 verbatim.
+        Verified by programmatic diff — zero character differences across all four.
+    variant_markers:
+      result: PASS
+      notes: >
+        VARIANT marker (Avestan hymn-allusions vs. Pahlavi narrative compilation as
+        two layers, narrative line 123) is verbatim identical to claims line 132. Verified
+        by programmatic diff — zero character differences.
+    meaning_preserving_paraphrases:
+      result: PASS
+      notes: >
+        The narrative is overwhelmingly a verbatim or near-verbatim transformation of the
+        claims. The consistent prose technique is to split a single long claims-sentence
+        into two or three shorter sentences at a conjunctional break, without altering
+        factual content or scope. Scope qualifications ("only in the Pahlavi," "not
+        equivalent to late and unreliable," "does not attest") are all preserved. No
+        softening of inference-level claims into fact-level claims or vice versa was found.
+        The parenthetical onomastic insertion at line 4 (ISSUE-01) and the navigation
+        sentence at line 54 (ISSUE-02) are the only departures from strict claims-parallel
+        prose, and both are NOTE-severity with no factual impact.
+    footnote_integrity:
+      result: PASS
+      notes: >
+        118 footnotes in the narrative; 118 footnotes in the claims. Programmatic diff of
+        all footnote texts ([footnote:[...]] content) confirms that every footnote is
+        verbatim identical between the two documents. No footnote was added, removed,
+        reassigned, or altered.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        Diacritical forms locked: Aži Dahāka, Thraētaona, Frēdōn / Fereydun, Kərəsāspa
+        (diacritical at first scholarly mention, "Keresaspa" in subsequent body prose per
+        glossary.yaml), Bundahišn, Shāhnāmeh, Vendīdād, Yašt, xᵛarənah, Vərəθraγna,
+        Vṛtrahán, Frashokereti (italicised at first body mention), frašegird (italicised).
+        Context-conditional Avestan/Pahlavi name pairs: Ahura Mazdā / Ohrmazd and Angra
+        Mainyu / Ahriman used correctly throughout — Avestan form in Avestan-material
+        contexts, Pahlavi form where post-Achaemenid sources are under discussion.
+        "Rig Veda" (two-word form) does not appear; "Rigveda" (one word) used consistently.
+        "Aryan" (never_use) does not appear.
+    forbidden_words:
+      result: PASS
+      notes: >
+        Asimov-register check: "tapestry," "delve," "weave," "testament," "shimmer,"
+        "profound," "nuanced," "intricate," "complex," "facet," "embark," "captivating,"
+        "remarkable," "meticulous," "fascinating" — none found in the narrative. The
+        register throughout is plain expository prose consistent with the Asimov-style
+        requirement.
+
+findings: []
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with no findings requiring revision.
+  Check 1 (Completeness): all 118 claims are mapped to narrative locations in exact
+  sequence, with 118 footnotes and 118 EVIDENCE tokens on each side verified
+  programmatically. All 5 COMPARATIVE-HOOK lines are present on both sides. Check 2
+  (No additions): all five verifier-hint items are confirmed clean — RV 10.99.6 (not
+  10.8.8-9), Lincoln 2012 cited directly, Yašt 14 correctly framed as theological
+  framework not principal exemplary case, mace only (no bow), Avestan-Pahlavi temporal
+  layering flagged consistently. The two NOTE-severity items (parenthetical onomastic
+  placement at line 4; navigation sentence at line 54) introduce no unverified content.
+  Check 3 (Fidelity): all 6 markers (1 LACUNA, 4 INFERENCE, 1 VARIANT) are verbatim
+  identical to the approved claims (confirmed by programmatic diff). All 118 footnotes
+  are verbatim identical. Glossary discipline is clean; no forbidden words found.
+  Verdict: PASS.
