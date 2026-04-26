@@ -1,0 +1,48 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-25T22:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/09-revelation-red-dragon.claims.approved.adoc"
+    lines: 372
+  - file: "chapters/10-christian-reception.claims.approved.adoc"
+    lines: 233
+summary: "Promoted Ch09 (REVISE: 1 HIGH NRSV-anachronism + Apollodorus conflation + terminology flag) and Ch10 (PASS: 1 cosmetic date) to .claims.approved.adoc; both render cleanly and pass footnote/evidence parity."
+notes: |
+  Ch09 (REVISE — three fixes applied):
+  - HIGH-01 (NRSV anachronism, repeat of Ch8 pattern): the
+    source-overview claim at line 51 rewrote the attribution chain.
+    NRSV is now described as the modern scholarly reading-anchor;
+    Yarbro Collins 1976 is described as predating the 1989 NRSV
+    and quoting RSV in its own readings. Throughout the body
+    prose, the "as quoted in Yarbro Collins 1976" attribution on
+    NRSV verses was changed to "as quoted in Yarbro Collins 1976
+    (citing RSV)" — preserving the Yarbro Collins interpretive
+    anchor while accurately noting the translation Yarbro Collins
+    actually used. 15 of 16 NRSV references converted via sed;
+    the final one (line 51) reformulated by hand.
+  - MEDIUM-01 (Apollodorus 1.4.1 conflation, line 184): the
+    claim about Yarbro Collins's Greek-mythography sources is
+    rewritten to distinguish what each source contributes.
+    Hyginus *Fabulae* 140 supplies Python's pursuit-with-oracle-
+    motive (Python pursues pregnant Leto); Apollodorus 1.4.1
+    supplies Apollo's killing of Python at Delphi. The earlier
+    Apollodorus passage where Hera (not Python) drives Leto is
+    explicitly noted in the revised footnote.
+  - MEDIUM-02 (terminology flag, line 298): "inverted royal-
+    legitimation" is reformulated as "what this book describes as
+    an inverted structure". The footnote now explicitly labels
+    the formulation as the book's analytical synthesis while
+    crediting Yarbro Collins ch. 4 and Forsyth ch. 6 for the
+    underlying structural observation that Christ's enthronement
+    precedes the combat in Rev 12.
+
+  Ch10 (PASS — single cosmetic fix applied):
+  - FC-01 (Legenda Aurea date): all four occurrences of "later
+    thirteenth century" replaced with "c. 1260" (the scholarly
+    consensus date for Voragine's *Legenda Aurea*).
+
+  Counts after revision: Ch9 = 113 footnotes / 113 evidence
+  tokens, 5 comparative hooks, 0 LACUNA + 1 INFERENCE + 1 VARIANT.
+  Ch10 = 67 footnotes / 67 evidence tokens, 3 comparative hooks,
+  0 LACUNA + 2 INFERENCE + 1 VARIANT. Both files render cleanly.
