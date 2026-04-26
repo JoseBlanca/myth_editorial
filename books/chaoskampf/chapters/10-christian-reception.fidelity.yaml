@@ -1,0 +1,156 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  claims_file: chapters/10-christian-reception.claims.approved.adoc
+  narrative_file: chapters/10-christian-reception.adoc
+  total_claims: 67
+  claims_mapped: 67
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 67 claims were mapped individually to narrative locations.
+      Both INFERENCE markers and the one VARIANT marker were compared character-by-character.
+      Footnote counts were verified programmatically (67 on each side — exact match).
+    q2_additions_check: >
+      Every narrative paragraph was checked against the claims document. One unfootnoted
+      transitional sentence at narrative line 40 was evaluated: "What follows takes the
+      three reception nodes in turn — Michael, George, and the harrowing — and then steps
+      back to ask what, taken together, the late-antique and medieval Christian inheritance
+      of the dragon-combat pattern actually preserves." This introduces no factual claim
+      and requires no footnote; it is a legitimate chapter-navigation bridge. All special-
+      attention checks (period boundary, dragon-fight framing, Legenda Aurea date, cross-
+      references, Renaissance/heraldry material, glossary items) were conducted systematically,
+      not by spot-check.
+    q3_distortion_check: >
+      Both INFERENCE markers were compared verbatim against the claims; both are verbatim
+      identical. The VARIANT marker was similarly compared and confirmed verbatim. All prose
+      claims are meaning-preserving near-verbatim copies. No paraphrase was found to shift or
+      weaken any factual claim.
+    q4_same_model: >
+      No. The narrative was produced by Opus 4.7 (1M context). This audit is conducted by
+      Sonnet 4.6. The review is valid.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: NOTE
+      category: addition-ok
+      description: >
+        One sentence at narrative line 40 has no footnote and does not appear in the claims
+        document: "What follows takes the three reception nodes in turn — Michael, George,
+        and the harrowing — and then steps back to ask what, taken together, the late-antique
+        and medieval Christian inheritance of the dragon-combat pattern actually preserves."
+        This is a transitional chapter-navigation sentence added by the drafter. It introduces
+        no factual claims, accurately reflects the chapter structure authorised by the brief,
+        and needs no footnote. NOTE only; no action required.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 67 claims are mapped to narrative locations in order. The narrative preserves every
+    claim from the following sections:
+    - Source overview (claims 1–12): narrative lines 4–38, all 12 claims present.
+    - St. Michael and Rev 12 (claims 13–26, including INFERENCE-1): narrative lines 44–88,
+      all 14 claims present including the INFERENCE marker verbatim.
+    - St. George and the dragon (claims 27–42, including VARIANT): narrative lines 92–139,
+      all 16 claims present including the VARIANT marker verbatim.
+    - Christ's harrowing of hell (claims 43–52): narrative lines 143–171, all 10 claims
+      present.
+    - The reception pattern (claims 53–64, including INFERENCE-2): narrative lines 175–204,
+      all 12 claims present including the second INFERENCE marker verbatim.
+    - Forward links (claims 65–67): narrative lines 208–218, all 3 forward-link claims
+      present with all 3 comparative-hook comments carried through.
+    Footnote count: 67 on both sides — exact match (verified programmatically).
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    period_boundary:
+      result: PASS
+      notes: >
+        The narrative body (lines 4–204) contains zero Renaissance, heraldry, or modern
+        national iconography material. The names Raphael, Carpaccio, and Uccello appear only
+        at narrative line 214, inside the forward-link paragraph that explicitly defers
+        post-medieval reception to Chapter 42. This is exactly the placement authorised by
+        the claims forward-link section and the brief's special_instructions.
+    dragon_fight_framing:
+      result: PASS
+      notes: >
+        The dragon-fight episode is framed throughout as an 11th–12th-century accretion onto
+        the original martyr-narrative. Narrative lines 104–107 state: "the dragon-fight episode
+        [...] is documented as a later accretion onto the original martyr-narrative, attached
+        to the saint's *vita* by the eleventh and twelfth centuries." Lines 107–108 confirm:
+        "The dragon-fight episode is therefore not part of the historical or earliest-attested
+        layer of the George tradition." The Diocletianic martyrdom (early fourth century) and
+        the dragon-fight episode are consistently kept separate throughout. No sentence
+        conflates them.
+    legenda_aurea_date:
+      result: PASS
+      notes: >
+        The *Legenda Aurea* date is given as "c. 1260" at all three occurrences: narrative
+        line 34 (intro corpus list), line 125 (VARIANT paragraph), and line 129 (George
+        vita paragraph). The phrase "later thirteenth century" does not appear anywhere.
+    cross_references:
+      result: PASS
+      notes: >
+        Authorised cross-references only. Ch12 appears at line 116–117 (one permitted
+        forward-pointer inside the George body, matching comparative-hook #1) and at line
+        208–209 (forward-link section). Ch9 appears at line 211–212 (forward-link section
+        only, matching comparative-hook #2). Ch42 appears at line 31–32 (introductory deferral
+        statement) and at line 214–215 (forward-link section, matching comparative-hook #3).
+        No cross-references to any other chapter are present.
+    no_unauthorised_material:
+      result: PASS
+      notes: >
+        No material from outside the late-antique-to-high-medieval window appears in the body
+        prose. No sources are cited that do not appear in the claims. No new named scholars,
+        rulers, events, or iconographic examples are introduced beyond what the claims supply.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    inference_markers:
+      result: PASS
+      notes: >
+        INFERENCE-1 (Michael / Rev 12 causal derivation, narrative lines 86–88) is verbatim
+        identical to claims file lines 92–94. INFERENCE-2 (three reception nodes as unified
+        vs. independent complex, narrative lines 184–186) is verbatim identical to claims file
+        lines 190–192. Both markers retain their full text and their footnotes unchanged.
+    variant_marker:
+      result: PASS
+      notes: >
+        VARIANT (George *vita* recensional variation, narrative lines 125–127) is verbatim
+        identical to claims file lines 131–133. The marker retains its full text and footnote
+        unchanged.
+    meaning_preserving_paraphrases:
+      result: PASS
+      notes: >
+        The narrative is overwhelmingly a verbatim or near-verbatim lift from the claims.
+        The one added transitional sentence (line 40) does not distort any claim. No meaning
+        distortions identified across any of the 67 claims.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        Latin titles italicised at first mention: *Drakōn* (line 7, also footnote line 4),
+        *passio* (line 28), *Legenda Aurea* (line 34), *Gospel of Nicodemus* (line 143),
+        *Acta Pilati* (line 143), *Descensus Christi ad Inferos* (line 143), *descensus ad
+        inferos* (line 155), *vita* (consistently italicised throughout), *Passio S. Georgii*
+        (line 34 and throughout), *Acta Sanctorum* (line 34 and throughout), *drakōn* (lines
+        10 and 110). "The dragon" used consistently for the morphologically draconic adversary.
+        "Yahweh" (not YHWH) at line 188. "Chaos-figure" does not appear.
+    footnote_integrity:
+      result: PASS
+      notes: >
+        67 footnotes in the narrative; 67 footnotes in the claims. Programmatic count confirms
+        exact match on both sides. All footnote texts match their corresponding claims
+        footnotes verbatim.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with no issues requiring revision. Check 1
+  (Completeness): all 67 claims are mapped to narrative locations in exact sequence, with 67
+  footnotes on each side. Check 2 (No additions): the period boundary is clean — Renaissance/
+  heraldry/modern material appears only in the authorised forward-link paragraph; the dragon-
+  fight is correctly framed as an 11th–12th-c. accretion throughout; the *Legenda Aurea* date
+  c. 1260 is preserved at all three occurrences; cross-references are within authorised scope
+  only. Check 3 (Fidelity): all 3 markers (2 INFERENCE, 1 VARIANT) are verbatim identical to
+  the approved claims. Glossary discipline is clean throughout. The only item worth noting is
+  a single unfootnoted transitional sentence (NOTE severity, no action required). Verdict: PASS.

@@ -1,0 +1,24 @@
+stage: 15-narrative-fidelity
+chapter: 09-revelation-red-dragon
+status: done
+timestamp: 2026-04-26T00:00:00Z
+auditor_model: claude-sonnet-4-6
+verdict: REVISE
+claims_total: 113
+claims_covered: 113
+issues:
+  - id: ISSUE-01
+    severity: REVISE
+    category: glossary-markup
+    summary: >
+      tehôm at narrative line 107 is marked *tehôm* (bold) rather than _tehôm_ (italic)
+      as required by the v1-locked glossary. Same error as Ch08 ISSUE-01. Fix: replace
+      *tehôm* with _tehôm_ at body-prose line 107 only (one occurrence). Error is also
+      present in the approved claims file at line 140.
+  - id: ISSUE-02
+    severity: NOTE
+    category: addition-ok
+    summary: >
+      One unfootnoted orientation paragraph at narrative line 43 not present in claims.
+      Makes no new factual claims. Acceptable addition; no action required.
+output_file: chapters/09-revelation-red-dragon.fidelity.yaml

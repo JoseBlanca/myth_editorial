@@ -1,0 +1,235 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  claims_file: chapters/09-revelation-red-dragon.claims.approved.adoc
+  narrative_file: chapters/09-revelation-red-dragon.adoc
+  total_claims: 113
+  claims_mapped: 113
+  verdict: REVISE
+
+  honesty_self_check:
+    q1_skipped_claims: "No claims skipped. The narrative is a near-verbatim lift of the
+      claims document with identical footnotes across all 113 claims, the 1 VARIANT marker,
+      and the 1 INFERENCE marker. The one unfootnoted orientation paragraph at narrative
+      line 43 was explicitly evaluated. All 113 footnotes were counted and confirmed on
+      both sides."
+    q2_additions_check: "Every narrative paragraph was checked against the claims document.
+      The unfootnoted paragraph at line 43 was identified and assessed. No spot-only
+      checking was done. Key addition checks (Yarbro Collins / Aune adjudication,
+      inverted-royal-legitimation attribution, Hyginus / Apollodorus distinction,
+      unauthorised cross-references, rogue etymological claims, banned terms) were all
+      negative except the single glossary-markup issue (ISSUE-01)."
+    q3_distortion_check: "The VARIANT marker was compared character-by-character with the
+      claims: verbatim identical (narrative lines 204-205; claims lines 261-262). The
+      INFERENCE marker was compared character-by-character: verbatim identical (narrative
+      lines 208-210; claims lines 265-267). All prose claims were meaning-compared against
+      the narrative; all are meaning-preserving verbatim copies or negligible paraphrases
+      with no distortion."
+    q4_same_model: "No. The narrative was produced by Opus 4.7 (1M context). This audit is
+      conducted by Sonnet 4.6. The review is valid."
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: REVISE
+      category: glossary-markup
+      description: >
+        The glossary (v1-locked) specifies that tehôm must be italicised (_tehôm_)
+        throughout body prose. The narrative uses *tehôm* (AsciiDoc bold) at line 107
+        in the one body-prose occurrence of the term. The same markup error is present
+        in the approved claims file at claims line 140, meaning the narrative faithfully
+        reproduced the source, but the output violates the glossary policy. The fix is
+        mechanical: replace *tehôm* with _tehôm_ at narrative line 107.
+      fix: >
+        Replace *tehôm* with _tehôm_ at narrative line 107. Do not alter the term in
+        footnote brackets or AsciiDoc comment lines. Only one body-prose occurrence.
+
+    - id: ISSUE-02
+      severity: NOTE
+      category: addition-ok
+      description: >
+        One paragraph at narrative line 43 has no footnote and does not appear in the
+        claims document: "Two features of this dossier set it apart from most of the
+        combat-myths gathered in this book. The first is the chapter's status as canonical
+        scripture in continuous transmission — a textual situation closer to Genesis or the
+        Psalter than to the fragmentary cuneiform witnesses behind earlier chapters. The
+        second is the doubled-up scholarly framing: a single twentieth-century monograph
+        and a near-contemporary three-volume commentary represent two organising principles
+        for the same set of textual data, and both are taken seriously here." This is a
+        chapter-level orientation sentence added by the drafter. It introduces no new
+        factual claims, accurately summarises the chapter's framing per the brief, and
+        requires no footnote because it makes no attributed claims. NOTE only; no action
+        required.
+
+tallies:
+  claims_total: 113
+  claims_covered: 113
+  claims_missing: 0
+  variant_markers_present: 1
+  variant_markers_expected: 1
+  inference_markers_present: 1
+  inference_markers_expected: 1
+  footnotes_narrative: 113
+  footnotes_claims: 113
+  footnote_match: true
+  unauthorised_additions: 0
+  glossary_violations: 1
+
+claim_coverage:
+  source_overview:
+    claims: 15
+    covered: 15
+    notes: "All 15 source-overview claims mapped verbatim at narrative lines 6-43."
+  text_of_revelation_12:
+    claims: 37
+    covered: 37
+    notes: "All 37 verse-walk claims (vv. 1-2, 3-4, 5, 6, 7, 8, 9, 10-12, 13-14, 15,
+      16, 17, seven-episode summary) mapped verbatim at narrative lines 47-122."
+  yarbro_collins_reading:
+    claims: 22
+    covered: 22
+    notes: "All 22 Yarbro Collins claims (central thesis, four correspondences, Hyginus /
+      Apollodorus distinction, Hellenistic-Roman setting, political inversion, primary-
+      substrate-vs-sole-source, Jewish-overlay catalogue, methodological force, Fontenrose
+      role, transmission chain, male child identification, explanatory power) mapped verbatim
+      at narrative lines 126-171."
+  aune_eclectic_reading:
+    claims: 19
+    covered: 19
+    notes: "All 19 Aune claims (eclectic position, three streams, Jewish stream, Greek stream,
+      Egyptian stream, Isis-Horus-Set, Khemmis parallel, co-equal-streams method, Jewish
+      weight, multi-source details, Forsyth compatible, VARIANT, INFERENCE, format comparison
+      x2, complementary-not-competing) mapped verbatim at narrative lines 175-217."
+  combat_myth_function:
+    claims: 14
+    covered: 14
+    notes: "All 14 function claims (eschatological, eschatological ordering, cosmogonic
+      distinction, eschatological category, didactic, didactic most-cited, royal-legitimation
+      inverted, inverted-vs-cosmogonic-kingship, structural-inversion load-bearing, didactic
+      depends-on-inverted, Ballentine rival-sovereignty, Forsyth climactic, tripartite,
+      structural centre, three scales) mapped verbatim at narrative lines 221-253."
+  reception_and_forward_links:
+    claims: 6
+    covered: 6
+    notes: "All 6 reception claims (Rev 12:9 consolidation, patristic consequence, Leviathan
+      trajectory closes, Frashokereti parallel, Frashokereti structural-not-genetic, C6 feed,
+      Apollo-Python family chapter, Egyptian deferral, Michael / George iconographic, Ch10
+      treatment, closing structural observation) mapped verbatim at narrative lines 258-285."
+
+findings:
+  check_1_completeness:
+    result: PASS
+    notes: >
+      All 113 claims mapped to narrative locations. The narrative reproduces the claims in
+      section order without omission: source overview (15 claims, lines 6-43), text walk
+      (37 claims, lines 47-122), Yarbro Collins reading (22 claims, lines 126-171), Aune
+      eclectic reading (19 claims including VARIANT and INFERENCE, lines 175-217), combat-
+      myth function (14 claims, lines 221-253), reception and forward links (6 claims,
+      lines 258-285), with comparative hooks preserved as AsciiDoc comments (lines 287-291).
+      Footnote count: 113 on both sides — exact match.
+
+  check_2_no_additions:
+    result: PASS
+    sub_checks:
+      yarbro_collins_aune_balance:
+        result: PASS
+        notes: >
+          Both readings presented in dedicated sections ("The Yarbro Collins reading —
+          Leto-Apollo-Python primary substrate" and "The Aune eclectic reading — Jewish,
+          Greek, Egyptian streams") of approximately equal depth. The VARIANT marker at
+          narrative lines 204-205 explicitly states "The chapter does not adjudicate; per
+          brief special_instructions, both are presented as serious scholarly framings of
+          the same material." No adjudication introduced.
+      inverted_royal_legitimation_attribution:
+        result: PASS
+        notes: >
+          The "inverted royal-legitimation" formulation is correctly attributed at narrative
+          line 235: "with what this book describes as an inverted structure," with the
+          footnote explicitly stating "The 'inverted royal-legitimation' formulation is this
+          book's analytical synthesis." The formulation is never attributed to Yarbro Collins
+          or any other scholar.
+      apollodorus_hyginus_distinction:
+        result: PASS
+        notes: >
+          The Hyginus / Apollodorus distinction is precisely preserved at narrative line 142:
+          Hyginus Fabulae 140 = "Python (acting on an oracle that he would be killed by
+          Leto's offspring) pursues the pregnant Leto"; Apollodorus Bibliotheca 1.4.1 =
+          "preserves the Apollo-slays-Python-at-Delphi denouement (in Apollodorus's earlier
+          passage Hera, not Python, drives Leto from place to place)." No conflation. Matches
+          claims line 184 verbatim.
+      cross_references:
+        result: PASS
+        notes: >
+          Cross-references present: Part II C4 (narrative line 265), Part II C6 (line 270),
+          Part I cluster 4 / Greek family chapter (line 272), Part I cluster 7 / Egyptian
+          (line 274), Ch10 (line 281), Ch08 comment-hook (line 287). All five authorised by
+          comparative hooks in the claims file (lines 363-367). No Ch11, no C2, no
+          unauthorised references.
+      etymological_glosses:
+        result: PASS
+        notes: >
+          Greek terms glossed in the narrative: ὁ δράκων (line 6), ἡ γυνή (line 47),
+          *stephanos* / διάδημα (line 49), *megas* / *purros* / *drakōn* (line 56),
+          τέκνον ἄρρεν (line 63), ὁ ὄφις ὁ ἀρχαῖος (line 82), διάβολος / σατανᾶς
+          (line 90), Μιχαήλ (lines 6, 77), *diadēma* (line 212). All are claims-supplied;
+          none are invented by the drafter. Hebrew *śāṭān* (lines 92, 97) is claims-supplied.
+      banned_terms:
+        result: PASS
+        notes: >
+          'chaos-figure' does not appear. 'YHWH' does not appear. 'Yahweh' appears once
+          at line 244 in a cross-reference to the Hebrew Bible corpus ("Yahweh's defeat of
+          Leviathan / Rahab"), which is exactly the permitted use (glossary: "Yahweh in body
+          prose only when cross-referencing Hebrew Bible"). NRSV appears twice: once in the
+          translation-policy claim at line 35 (correct historical-context use) and once in
+          the footnote at line 35. No verse quotations are labeled NRSV; all are labeled RSV.
+
+  check_3_fidelity:
+    result: PASS
+    sub_checks:
+      variant_marker:
+        result: PASS
+        notes: >
+          VARIANT marker (narrative lines 204-205) is verbatim identical to claims lines
+          261-262, including the footnote at narrative line 205 / claims line 262.
+      inference_marker:
+        result: PASS
+        notes: >
+          INFERENCE marker (narrative lines 208-210) is verbatim identical to claims lines
+          265-267, including the footnote at narrative line 209 / claims line 266.
+      meaning_preserving_paraphrases:
+        result: PASS
+        notes: >
+          The narrative is overwhelmingly a verbatim lift from the claims. The one added
+          orientation paragraph (line 43) does not distort any claim. No meaning distortions
+          identified across any of the 113 claims.
+      rsv_citation_discipline:
+        result: PASS
+        notes: >
+          All twelve direct biblical verse quotations are attributed to RSV and follow the
+          claims exactly: Rev 12:1, 12:2, 12:3, 12:4, 12:5, 12:6, 12:7, 12:8, 12:9, 12:10,
+          12:12, 12:13-14, 12:15, 12:16, 12:17. No NRSV substitution at any quotation site.
+          The source-overview RSV/NRSV distinction claim (line 35) is present and correctly
+          framed.
+      glossary_diacritics:
+        result: PASS_WITH_ISSUE
+        notes: >
+          Lôtan (lines 58, 156, 196), Tannīn (line 107), Aži Dahāka (lines 227, 265, 267),
+          Kərəsāspa (lines 265, 267), all use correct diacritics. tehôm is correctly spelled
+          with circumflex at line 107 but is marked *bold* (*tehôm*) instead of _italic_
+          (_tehôm_) as the v1-locked glossary requires. See ISSUE-01.
+      footnote_integrity:
+        result: PASS
+        notes: >
+          113 footnotes in the narrative; 113 footnotes in the claims. Every narrative
+          footnote matches its corresponding claims footnote verbatim.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with one exception: tehôm is marked as
+  bold (*tehôm*) in the single body-prose occurrence at line 107 rather than italic (_tehôm_)
+  as required by the v1-locked glossary. This is the same mechanical AsciiDoc markup error
+  identified in Ch08 (ISSUE-01 of that audit), inherited from the approved claims file itself.
+  Because the glossary policy is v1-locked and the error is book-wide, the verdict is REVISE
+  (not MAJOR-REVISE): the fix is a single find-and-replace in body prose only (one occurrence),
+  with no content changes needed. All substantive checks pass cleanly: 113/113 claims covered,
+  both markers verbatim, Yarbro Collins / Aune balance preserved without adjudication, inverted-
+  royal-legitimation correctly attributed as book synthesis, Hyginus / Apollodorus distinction
+  intact, cross-references within authorised scope, no banned terms, RSV citation discipline
+  maintained, footnote count exact.
