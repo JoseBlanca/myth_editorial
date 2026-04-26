@@ -1,0 +1,22 @@
+stage: 15-narrative-fidelity
+chapter: 08-yahweh-leviathan-rahab
+completed_at: "2026-04-26T00:00:00Z"
+auditor_model: claude-sonnet-4-6
+verdict: REVISE
+claims_total: 187
+claims_mapped: 187
+inference_markers: 2
+inference_markers_preserved: 2
+footnotes_narrative: 187
+footnotes_claims: 187
+issues_found: 1
+issues:
+  - id: ISSUE-01
+    severity: REVISE
+    category: glossary-markup
+    summary: "tehôm marked *bold* in 8 body-prose lines; glossary requires _italic_"
+    lines_affected: [306, 422, 427, 429, 437, 439, 441, 444, 470]
+    fix: "Replace *tehôm* with _tehôm_ in body prose only (not inside footnote brackets or comment lines)"
+output_files:
+  - chapters/08-yahweh-leviathan-rahab.fidelity.yaml
+next_stage: 16-post-human-normalize-fidelity

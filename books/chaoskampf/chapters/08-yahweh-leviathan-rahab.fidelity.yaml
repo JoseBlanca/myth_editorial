@@ -1,0 +1,156 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  claims_file: chapters/08-yahweh-leviathan-rahab.claims.approved.adoc
+  narrative_file: chapters/08-yahweh-leviathan-rahab.adoc
+  total_claims: 187
+  claims_mapped: 187
+  verdict: REVISE
+
+  honesty_self_check:
+    q1_skipped_claims: "No claims skipped. The narrative is a near-verbatim lift of the claims
+      document with identical footnotes across all 187 claims and both INFERENCE markers.
+      One unfootnoted synthesis paragraph (narrative line 41) was explicitly evaluated.
+      All 187 footnotes were counted and confirmed on both sides."
+    q2_additions_check: "Every narrative paragraph was checked against the claims document.
+      The unfootnoted paragraph at line 41 was identified and assessed. No spot-only
+      checking was done. Key addition checks (manufactured combat narrative, Day/Ballentine
+      adjudication, unauthorised cross-references, rogue etymological claims) were all
+      negative. One glossary-markup inconsistency was found: tehôm is marked *tehôm*
+      (AsciiDoc bold) in most body-prose occurrences rather than _tehôm_ (italic) as the
+      glossary requires. This inconsistency is inherited from the claims file itself and is
+      present throughout both documents identically."
+    q3_distortion_check: "Both INFERENCE markers were compared character-by-character with
+      the claims; they are verbatim identical. All prose claims were meaning-compared against
+      the narrative; all are meaning-preserving paraphrases or verbatim copies."
+    q4_same_model: "No. The narrative was produced by Opus 4.7 (1M context). This audit is
+      conducted by Sonnet 4.6. The review is valid."
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: REVISE
+      category: glossary-markup
+      description: >
+        The glossary (v1-locked) specifies that tehôm must be italicised (_tehôm_) throughout
+        body prose. The narrative uses *tehôm* (AsciiDoc bold) in 8 out of 11 occurrences:
+        lines 306, 422, 427, 429, 437, 439, 441, 444, 470. The italic form _tehôm_ appears
+        only at line 424 in body prose (and in footnote and comment contexts). The same
+        inconsistency is present in the approved claims file, meaning the narrative faithfully
+        reproduced the source, but the output violates the glossary policy. The fix is
+        mechanical: replace *tehôm* with _tehôm_ throughout body prose.
+      fix: Replace all *tehôm* occurrences in body prose with _tehôm_. Lines affected: 306,
+        422, 427, 429, 437, 439, 441, 444, 470. Do not alter occurrences inside footnote
+        brackets or AsciiDoc comment lines.
+
+    - id: ISSUE-02
+      severity: NOTE
+      category: addition-ok
+      description: >
+        One paragraph at narrative line 41 has no footnote and does not appear verbatim in
+        the claims document: "Two features of this dossier set the terms for everything that
+        follows. The first is the corpus shape itself: a network of allusions across genres,
+        not a single narrated combat. The second is the long-running interpretive disagreement
+        between the Day continuity reading and the Ballentine rival-sovereignty critique. The
+        chapter is built around those two features." This is a chapter-level orientation
+        sentence added by the drafter. It introduces no new factual claims, accurately
+        summarises the chapter's framing per the brief, and requires no footnote because it
+        makes no attributed claims. NOTE only; no action required.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 187 claims are mapped to narrative locations. The narrative preserves every claim
+    from the following sections in order: Source overview (C1-C13), Combat by allusion
+    (C14-C20 including INFERENCE-1), Psalm 74 (C21-C35), Psalm 89 (C36-C49), Psalm 104
+    (C50-C62), Isaiah 27 (C63-C76), Isaiah 51 (C77-C89), Job 26 (C90-C101), Job 41
+    (C102-C115), Habakkuk 3 (C116-C130), Ugaritic continuity (C131-C145), Ballentine
+    critique (C146-C163 including INFERENCE-2), Tehôm / Genesis 1 (C164-C172), Reception
+    and forward links (C173-C187). Footnote count: 187 on both sides — exact match.
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    no_combat_narrative:
+      result: PASS
+      notes: >
+        The narrative does not manufacture a Yahweh-Leviathan combat sequence. It
+        explicitly and repeatedly states that the Hebrew Bible does not contain a connected
+        combat narrative (lines 45-46, 58-59, 278, 404). The chapter presents only
+        allusive summaries of what the biblical passages claim Yahweh did, consistently
+        framed as past-tense presuppositions or scholarly characterisations.
+    day_ballentine_balance:
+      result: PASS
+      notes: >
+        Both readings are presented per-passage for every biblical passage (Ps 74, 89, 104,
+        Isa 27, 51, Job 26, 41, Hab 3) and in dedicated sections ('The Ugaritic continuity
+        — Day 1985' and 'The Ballentine critique — rival sovereignty, not chaos'). The
+        chapter explicitly states it does not resolve the debate (narrative line 404).
+        INFERENCE-2 (line 407) correctly frames both framings as analytic constructs.
+    cross_references:
+      result: PASS
+      notes: >
+        Cross-references present: Ch9 (Revelation 12), Part II C2, C4, C6. All five
+        authorised by comparative hooks in the claims file (lines 477-481 of narrative,
+        matching claims lines 600-604). No unauthorised cross-references found.
+    etymological_glosses:
+      result: PASS
+      notes: >
+        Hebrew roots glossed in the narrative: *yām* (line 74), *tannīnīm* / *tannīn*
+        (line 76), *g'r* (line 159), *bṯn brḥ* / *bṯn ʿqltn* (line 175), *tannīn*
+        (line 208), *ḥōlēlâ* (line 257). All are claims-supplied; none are invented by
+        the drafter.
+    banned_terms:
+      result: PASS
+      notes: >
+        'chaos-figure' does not appear. 'YHWH' does not appear; Yahweh is used
+        consistently throughout. 'NRSV' appears once (line 36), correctly inside the
+        historical-context note about the 1989 NRSV — exactly the one permitted location.
+        No further NRSV appearances.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    inference_markers:
+      result: PASS
+      notes: >
+        INFERENCE-1 (lost-narrative inference, narrative line 61) is verbatim identical to
+        claims file line 79. INFERENCE-2 (chaos-ordering vs rival-sovereignty framing as
+        analytic construct, narrative line 407) is verbatim identical to claims file
+        line 514. Both markers retain their full text and footnotes.
+    meaning_preserving_paraphrases:
+      result: PASS
+      notes: >
+        The narrative is overwhelmingly a verbatim lift from the claims rather than a
+        paraphrase. The one added paragraph (line 41) does not distort any claim. No
+        meaning distortions identified across any of the 187 claims.
+    rsv_citations:
+      result: PASS
+      notes: >
+        All direct biblical quotations are attributed to the RSV and follow the claims
+        exactly: Ps 74:13, 74:14, 89:9, 89:10, 104:9, 104:26, Isa 27:1, Isa 51:9-10,
+        Job 26:12, 26:13, Job 41:1, Job 41:33, Hab 3:8, Hab 3:15, Gen 1:2. The NRSV
+        does not substitute for RSV at any quotation site.
+    glossary_diacritics:
+      result: PASS_WITH_ISSUE
+      notes: >
+        Lôtan, Tannīn, and Tiamat use correct diacritics throughout. tehôm is correctly
+        spelled with circumflex throughout. However, the AsciiDoc markup for tehôm is
+        *bold* (*tehôm*) in 8 body-prose instances rather than _italic_ (_tehôm_) as the
+        glossary requires. See ISSUE-01. The section heading of the claims file used the
+        title 'The honest framing — combat by allusion, not narration'; the narrative
+        uses 'Combat by allusion, not narration' (line 43). This is a minor heading
+        simplification that does not affect claim content.
+    footnote_integrity:
+      result: PASS
+      notes: >
+        187 footnotes in the narrative; 187 footnotes in the claims. Every footnote in
+        the narrative matches its corresponding claims footnote verbatim.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with one exception: tehôm is consistently
+  marked as bold (*tehôm*) in body prose rather than italic (_tehôm_) as required by the
+  v1-locked glossary. This is a mechanical AsciiDoc markup error affecting 8 lines. Because
+  the glossary policy is v1-locked and the error is book-wide, the verdict is REVISE (not
+  MAJOR-REVISE): the fix is a simple find-and-replace in body prose only, with no content
+  changes needed. All substantive checks (completeness, no manufactured combat narrative,
+  Day/Ballentine balance, inference marker fidelity, RSV citation discipline, cross-reference
+  scope, banned-term compliance) pass cleanly.
