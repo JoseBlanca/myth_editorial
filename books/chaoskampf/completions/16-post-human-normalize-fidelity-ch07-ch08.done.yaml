@@ -1,0 +1,37 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-25T20:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/08-yahweh-leviathan-rahab.adoc"
+    lines: 481
+  - file: "chapters/08-yahweh-leviathan-rahab.claims.approved.adoc"
+    lines: 609
+summary: "Applied the one Ch8 italics fix surfaced by narrative-fidelity (mechanical *tehôm* → _tehôm_ across 9 occurrences in narrative and claims-approved); Ch7 PASSed without revision."
+notes: |
+  Ch7 PASSed cleanly (0 HIGH, 0 MEDIUM, 2 LOW), no fixes applied.
+
+  Ch8 fix:
+  - *tehôm* (AsciiDoc bold) → _tehôm_ (AsciiDoc italic) globally
+    across both the narrative chapter and the upstream claims
+    approved doc. The agent had used the wrong AsciiDoc syntax —
+    `*term*` for bold instead of `_term_` for italic. The
+    glossary-locked policy requires italics, not bold.
+  - Pre-fix count: 9 *tehôm* (bold) occurrences in each file.
+  - Post-fix count: 0 *tehôm* (bold), 12 _tehôm_ (italic) — the
+    file already had 3 correct italic occurrences and the 9 bold
+    occurrences were converted, totalling 12.
+  - The narrative re-renders cleanly via asciidoctor.
+
+  All other Ch8 checks passed cleanly: 187/187 claims mapped, 187
+  footnotes match, 2/2 INFERENCE markers preserved, no
+  manufactured combat narrative, Day / Ballentine balance
+  preserved per brief, zero YHWH leakage, zero unauthorised
+  "chaos-figure".
+
+  Counts after revision: Ch7 = 137 footnotes / 137 evidence
+  tokens, 4 comparative hooks, 2 LACUNA + 1 INFERENCE + 1
+  VARIANT, unchanged. Ch8 = 187 footnotes / 187 evidence tokens,
+  5 comparative hooks, 2 INFERENCE markers (the actual count;
+  earlier reports of LACUNA/VARIANT/RECONSTRUCTION were grep
+  artefacts), unchanged. Both files render cleanly.
