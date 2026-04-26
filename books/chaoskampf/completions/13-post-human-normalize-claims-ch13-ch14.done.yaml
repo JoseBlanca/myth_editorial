@@ -1,0 +1,84 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-26T17:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/13-thraetaona-azidahaka.claims.approved.adoc"
+    lines: 402
+  - file: "chapters/14-indra-vrtra.claims.approved.adoc"
+    lines: 470
+summary: "Promoted Ch13 (1 HIGH + 3 MEDIUM fixes applied) and Ch14 (2 MEDIUM citation-corrections applied; 4 LOW findings flagged-only) to .claims.approved.adoc with post-human-normalize provenance blocks."
+notes: |
+  Ch13 fixes (1 HIGH + 3 MEDIUM applied):
+  - FC-01 HIGH (citation_wrong, line 225): removed the chronologically
+    impossible "(cited via Forsyth 1987 and Watkins 1995)" parenthetical
+    from the Lincoln 2012 footnote — Lincoln 2012 is now cited directly
+    on its own authority. EVIDENCE token retained as forsyth-1987 (the
+    1:1 footnote/evidence convention is preserved; the dual citation
+    is carried by the footnote text, which is the load-bearing
+    attribution).
+  - FC-02 MEDIUM (lines 114, 117): Yašt 14 reframed from a "second
+    principal Avestan locus for the combat" with Thraētaona as "one of
+    the principal exemplary cases" to a hymn that supplies the
+    Vərəθraγna theological framework within which the combat is to be
+    understood, with the specific Thraētaona-Aži Dahāka narrative
+    explicitly relocated to Yt. 5 and Yt. 19. Hymn-content description
+    revised to note that Yt. 14 catalogues Vərəθraγna's incarnation-
+    forms and praises victorious-warrior force more broadly.
+  - FC-03 MEDIUM (line 193): "mace and bow" → "mace as the instrument
+    of the killing" — the standard Bundahišn account names only the
+    mace as Thraētaona's weapon; the bow attribution overstated the
+    textual evidence.
+  - FC-04 MEDIUM (lines 330, 333, 336, 339, 393): RV 10.8.8–9 →
+    RV 10.99.6 throughout — the latter is the standard Vedic locus
+    for Trita Āptya as three-headed-serpent slayer; RV 10.8 is an
+    Agni hymn where Trita appears in connection with cosmogonic
+    purification rather than dragon-slaying. Viśvarūpa-naming
+    removed (Viśvarūpa is associated with Indra's killing in
+    related Vedic passages, not Trita's). Updates applied to the
+    EVIDENCE tokens, the INFERENCE marker, and the COMPARATIVE-HOOK
+    comment.
+
+  Ch14 fixes (2 MEDIUM applied; 4 LOW flagged-only):
+  - MEDIUM (claim 36, citation_wrong, lines 176, 177, 179, 180):
+    RV 1.32.8 → RV 1.32.9 throughout — the Dānu-over-Vṛtra "cow above
+    her calf" passage falls in v. 9 in Jamison-Brereton (and in all
+    standard editions), not v. 8. Three claim-paragraph instances
+    plus the two EVIDENCE tokens were corrected.
+  - MEDIUM (arc summary, line 197): "body-and-water tableau (vv. 7–8
+    with the Dānu image)" → "body-and-water tableau (vv. 7–9, with
+    the Dānu image at v. 9)" — propagates the v. 9 correction into
+    the structural arc.
+  - MEDIUM (claim 52, citation_wrong, line 290): "RV 1.32.1 (and in
+    the second verse, depending on the editorial division of the
+    line)" → "RV 1.32.2 ... with verse 1 supplying the announcing
+    frame" — collapsed the false ambiguity. The áhann áhim killing
+    formula is unambiguously in v. 2 in J-B and Watkins; the earlier
+    correct claim at line 143 (which already places the formula in
+    v. 2) is now consistent with this passage.
+
+  Ch14 LOW findings flagged-only (not applied — require source
+  verification not available in this session):
+  - LOW (claim 12): Lambert 2013 series volume number "Mesopotamian
+    Civilizations 16" — book and series confirmed, volume number not
+    independently verifiable from trained knowledge. Left as written.
+  - LOW (claim 53): Watkins 1995 chapter range 41–48 for Vedic Vṛtra
+    material — coverage confirmed in principle, exact chapter numbers
+    not independently verified. Left as written.
+  - LOW (claim 70): Indo-Iranian proto-form *ajhi- — possibly an older
+    notation; modern usage favours *H1ĵhi- or *Haĵi-. Notation
+    follows Benveniste-Renou 1934 convention (the cited anchor) and
+    is left as written.
+  - LOW (claim 84): Mahābhārata Udyogaparvan 9–18 chapter range —
+    follows Forsyth 1987's reference; not independently verified
+    against the Critical Edition. Left as written.
+
+  Counts after revision:
+  - Ch13 = 118 footnotes / 118 evidence tokens, 5 comparative hooks,
+    1 LACUNA + 4 INFERENCE + 1 VARIANT.
+  - Ch14 = 141 footnotes / 141 evidence tokens, 4 comparative hooks,
+    0 LACUNA + 2 INFERENCE + 2 VARIANT.
+
+  Both files render cleanly. All EVIDENCE source_ids resolve to
+  entries in sources.yaml. Banned glossary term "chaos-figure" not
+  present. Both files ready for chapter-draft.
