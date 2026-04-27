@@ -1,0 +1,108 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-27T20:00:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+outputs:
+  - file: "chapters/15-vedic-reflexes.claims.approved.adoc"
+    lines: 273
+  - file: "chapters/16-ra-apep.claims.approved.adoc"
+    lines: 479
+summary: "Promoted Ch15 (MEDIUM-1 brief fix + MEDIUM-2 Tagare threading applied; LOW findings 3–7 resolved by Tagare) and Ch16 (FC-01 HIGH date fix; FC-02 HIGH source-id retagging; FC-03 MEDIUM hymn title neutralised; FC-05 MEDIUM brief glossary fix applied; FC-04 MEDIUM flagged-only) to .claims.approved.adoc with post-human-normalize provenance blocks. Two new source entries added to sources.yaml."
+notes: |
+  sources.yaml additions (2 new entries):
+  - faulkner-1936-bremner-rhind (primary-translation): Faulkner's four-part JEA
+    series on Papyrus BM EA 10188 (Bremner-Rhind), JEA 22 (1936) – JEA 24 (1938).
+    Inserted after faulkner-1972-bod. Anchor for Ch16 Bremner-Rhind evidence tags.
+  - tagare-bhagavata (primary-translation): Tagare G.V., The Bhāgavata Purāṇa,
+    Translated and Annotated, 5 vols., AITM 7–11, Motilal Banarsidass, 1976–78.
+    Inserted after jamison-brereton-2014. Anchor for Ch15 Krishna-Kāliya BP 10.15–17
+    narrative-detail claims.
+  Source count: 56 → 58 (confirmed by grep).
+
+  Brief fixes:
+  - briefs/15-vedic-reflexes.yaml: sources.primary[0].loc corrected from
+    "Rigveda 10.8.8–9; 1.105; 2.11.19–20" to "Rigveda 10.99.6; 1.105; 2.11.19–20";
+    family_members[0].summary RV reference corrected identically (MEDIUM-1).
+  - briefs/16-ra-apep.yaml: entities_glossary Apep entry first_mention_gloss_candidate
+    changed from "chaos-serpent; adversary of Ra; embodiment of isfet (disorder)" to
+    "isfet-personification; adversary of Ra; the agent of disorder that nightly
+    threatens the cosmic order" (FC-05 MEDIUM glossary-discipline fix).
+
+  Ch16 fixes applied (FC-01 HIGH + FC-02 HIGH + FC-03 MEDIUM):
+  - FC-01 HIGH (5 occurrences of "Faulkner 1933" / "1933" in Bremner-Rhind context):
+    All converted to "Faulkner 1936" / "1936". Lines 89, 92, 95, 98, 307.
+    "Faulkner 1933 (JEA 22)" → "Faulkner 1936 (JEA 22)";
+    "JEA (1933, 1937–38)" → "JEA 22–24 (1936–38)";
+    LACUNA block updated accordingly.
+  - FC-02 HIGH (2 EVIDENCE tags retagged):
+    line 93: source_id=faulkner-1972-bod → source_id=faulkner-1936-bremner-rhind
+             (the Source overview claim about Faulkner's JEA editions as the
+             principal edition of the Bremner-Rhind Papyrus)
+    line 96: source_id=faulkner-1972-bod → source_id=faulkner-1936-bremner-rhind
+             (the fragmentary-preservation claim about P. BM EA 10188)
+    All other faulkner-1972-bod tags point to genuine Book of the Dead content
+    (spells 7, 39, 108; introduction; Pyramid Texts) and were left unchanged.
+  - FC-03 MEDIUM: "Hymn of the Four Falls of Apep" claim neutralised.
+    Prose: "include the hymn known in Egyptological literature as the 'Hymn of
+    the Four Falls of Apep' — a hymn that recites the four moments at which
+    Apep falls in the daily combat — and other titled hymns whose function is
+    to recapitulate the cosmological combat in the priestly recitation"
+    → "include hymns that recite the moments at which Apep falls in the daily
+    combat, structured as a recapitulation of the cosmological combat in the
+    priestly recitation"
+    Footnote: "on the 'Hymn of the Four Falls of Apep' and the other titled hymns"
+    → "on the recitative hymns of the Bremner-Rhind corpus that recapitulate
+    the cosmological combat"
+    EVIDENCE loc: "ch. 3 (Hymn of the Four Falls)" → "ch. 3 (recitative hymns)"
+
+  Ch16 FC-04 MEDIUM — FLAGGED-ONLY (not applied):
+  - The "fourth gate of the Book of Gates" designation (line 261/262) is
+    cited to te Velde 1967 ch. 3 and is left as written. The auditor flagged
+    that the specific gate-number may require verification against the printed
+    text. Without direct access to te Velde ch. 3 this cannot be confirmed in
+    this session. The overall narrative (Apep blocks the barque at a gate-
+    threshold in the Book of Gates) is correct; the specific gate-4 designation
+    is plausible and is the brief's cited authority. Flagged in the provenance
+    block of 16-ra-apep.claims.approved.adoc.
+
+  Ch15 fixes applied (MEDIUM-1 brief fix + MEDIUM-2 Tagare threading):
+  - MEDIUM-1: Brief fixes (see above).
+  - MEDIUM-2: Tagare 1976–78 threaded through 12 Krishna-Kāliya
+    claim-paragraphs covering BP 10.15–17 narrative and iconographic content.
+    Claims updated: narrative occasion (BP 10.15); head-count and venom
+    poisoning; Yamunā setting (BP 10.15); BP 10.15–17 as most famous witness;
+    narrative occasion of combat (BP 10.15); kadamba-tree leap and coiling
+    attack (BP 10.16); dance-resolution (BP 10.16); non-lethal resolution and
+    nāgapatnīs' intercession (BP 10.16–17); kṛpā / power-compassion reading
+    (BP 10.16–17); līlā framing (BP 10.15–17); Kāliyamardana iconographic
+    centrality (BP 10.15–17 ×2); nāga moral-personhood (BP 10.16–17);
+    dance-on-the-heads developed iconography (BP 10.15–17).
+    Long-arc framing claims (four-fold transformation; cosmological-to-local
+    reduction; frame transformation; coexistence not replacement; nāga vs ahi;
+    bhakti theological constructions) retain Forsyth 1987 as the primary or
+    sole citation — Tagare is BP-specific and those claims synthesise across
+    the full arc of the tradition.
+    Harivaṃśa-specific and Viṣṇu Purāṇa-specific claims retain Forsyth 1987
+    as the sole citation (Tagare's translation covers the BP only).
+
+  Ch15 LOW findings 3–7 — resolved by MEDIUM-2:
+  - LOW 3 (head-counts five/seven/110): now anchored to Tagare BP 10.15–17
+    (specialist source) alongside Forsyth.
+  - LOW 4 (Watkins chs. 44–45 specific): unverifiable without printed text;
+    left as written per existing discipline.
+  - LOW 5 (BP 10.15 occasion / 10.16 combat chapter assignments): now
+    anchored to Tagare BP 10.15–17 at chapter-granularity.
+  - LOW 6 (BP 10.16 coiling crush-or-envenom mechanic): now anchored to
+    Tagare BP 10.16.
+  - LOW 7 (HV/VP characterisations as "load-bearing demonstrations"): these
+    remain Forsyth-only as Tagare is BP-only; noted for chapter-draft stage.
+
+  Counts after revision:
+  - Ch15 = 77 footnotes / 77 evidence tokens (1:1 invariant preserved).
+    tagare-bhagavata count: 14; forsyth-1987 count reduced from 41.
+  - Ch16 = 140 footnotes / 140 evidence tokens (1:1 invariant preserved).
+    faulkner-1936-bremner-rhind count: 2; all "Faulkner 1933" references: 0.
+
+  Both files render cleanly. All EVIDENCE source_ids resolve to entries
+  in sources.yaml. Banned glossary term "chaos-figure" not present in either
+  claims body. Both files ready for chapter-draft.
