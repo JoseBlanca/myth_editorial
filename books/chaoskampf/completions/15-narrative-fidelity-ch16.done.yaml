@@ -1,0 +1,69 @@
+stage: 15-narrative-fidelity
+chapter: 16
+chapter_title: "Ra vs. Apep: The Nightly Combat"
+status: done
+verdict: PASS
+timestamp: 2026-04-27T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 140
+  claims_mapped: 140
+  footnotes_claims: 140
+  footnotes_narrative: 140
+  evidence_tokens_claims: 140
+  evidence_tokens_narrative: 140
+  inference_markers: 4
+  lacuna_markers: 1
+  variant_markers: 1
+  comparative_hooks: 7
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  note_findings: 2
+
+output_files:
+  fidelity_yaml: chapters/16-ra-apep.fidelity.yaml
+  narrative: chapters/16-ra-apep.adoc
+  claims: chapters/16-ra-apep.claims.approved.adoc
+
+key_checks_passed:
+  - faulkner_source_id_discipline: >
+      FC-02 preserved. Bremner-Rhind tags carry faulkner-1936-bremner-rhind;
+      BOD tags carry faulkner-1972-bod. No cross-contamination. All EVIDENCE
+      tags character-by-character identical to claims (diff=zero).
+  - cyclical_maintenance_framing: >
+      No "final defeat" or "combat ends" language in body prose. Amduat
+      seventh-hour section explicitly states the combat resumes the next night.
+      Recurrent-not-terminal framing preserved throughout.
+  - rahab_parallel_discipline: >
+      Rahab-as-Egypt (Isa 30:7) in Reception section as typological-not-borrowing
+      body claim, matching claims exactly. Not presented as direct borrowing. PASS.
+  - hymn_title_suppression: >
+      FC-03 fix preserved. "Hymn of the Four Falls of Apep" named title absent
+      from narrative. Neutral description used instead.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-serpent", "chaos-monster" absent from narrative body.
+      Apep consistently called "isfet-personification" and "agent of disorder".
+  - seth_two_dossiers: >
+      Apep-slayer role and Osiris-murderer dossier coexist without harmonisation.
+      Forward-link to Ch. 17 correctly established.
+  - all_markers_verbatim: >
+      All 6 markers (4 INFERENCE, 1 LACUNA, 1 VARIANT) verbatim identical to claims.
+  - all_comparative_hooks_verbatim: >
+      All 7 COMPARATIVE-HOOK lines verbatim identical to claims.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      "=== Source overview" section header present in claims but absent from
+      narrative. All 23 source-overview claims present in narrative body; no content dropped.
+  - id: ISSUE-02
+    severity: NOTE
+    description: >
+      One unfootnoted navigational paragraph at narrative line 98 not in claims.
+      No factual assertions added; legitimate chapter-navigation bridge.
