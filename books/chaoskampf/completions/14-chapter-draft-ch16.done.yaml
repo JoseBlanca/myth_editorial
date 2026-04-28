@@ -1,0 +1,41 @@
+stage: "chapter-draft"
+timestamp: "2026-04-28T07:11:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7"
+outputs:
+  - file: "chapters/16-ra-apep.adoc"
+    lines: 454
+summary: "Drafted Ch16 (Ra vs. Apep: The Nightly Combat) from the approved claims document. 12,879 words; target 10,000. 140 claim-paragraphs → 140 narrative paragraphs → 140 footnotes → 140 EVIDENCE tokens (1:1 invariant preserved). Markers: 1 LACUNA + 4 INFERENCE + 1 VARIANT carried over verbatim. 7 COMPARATIVE-HOOK lines carried over."
+notes: |
+  Completion record reconstructed in a follow-up session: the
+  drafting agent succeeded in writing the narrative file to disk
+  (timestamp 2026-04-28 07:11) but the API connection dropped before
+  the agent could write this completion record. The narrative file
+  itself was structurally verified in the follow-up session before
+  this record was issued.
+
+  Structural verification:
+  - footnote:[…] tokens: 140 (matches claims.approved.adoc count)
+  - // EVIDENCE: tokens: 140 (matches claims.approved.adoc count)
+  - [LACUNA:] markers: 1 (matches claims-side; Bremner-Rhind
+    fragmentary preservation)
+  - [INFERENCE:] markers: 4 (matches claims-side)
+  - [VARIANT:] markers: 1 (matches claims-side; composite-editorial
+    multi-corpus variant)
+  - // COMPARATIVE-HOOK: comments: 7 (matches claims-side)
+  - chaos-* banned terms: 0 (Apep treated as isfet-personification
+    throughout, per Ballentine 2015 critique compliance)
+  - Word count 12,879 over the 10,000 target: brief allows over-
+    shoot on the two-thousand-year textual stratification (Pyramid
+    Texts → Coffin Texts → Book of the Dead → Amduat → Book of
+    Gates → Bremner-Rhind), the four-section structural arc, and
+    the Seth-at-the-prow sub-section that sets up Ch17. Not
+    pad-flagged; not in the chapter-draft self-check pad-band but
+    proportionate to the corpus depth.
+
+  Faulkner source-id correctness: the narrative carries the post-
+  factcheck-fix source-id discipline forward — Bremner-Rhind
+  evidence tags use faulkner-1936-bremner-rhind (the JEA edition);
+  Book of the Dead spell tags use faulkner-1972-bod (the volume
+  edition). The two source-ids are kept distinct throughout per
+  the FC-02 fix.
