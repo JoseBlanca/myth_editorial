@@ -1,6 +1,6 @@
 # Stage 9 of 19: claims-factcheck
 # Book: chaoskampf
-# Generated: 2026-04-24T13:06:28Z
+# Generated: 2026-04-28T12:11:00Z
 
 ---
 
@@ -477,6 +477,18 @@ registry:
     identifier_value: "9780199370184"
     notes: "Current scholarly-standard English Rigveda. Anchor for Indra/Vṛtra and Trita Āptya."
 
+  - id: tagare-bhagavata
+    source_tier: primary-translation
+    in_scope: true
+    author: "Tagare, Ganesh Vasudeo"
+    title: "The Bhāgavata Purāṇa, Translated and Annotated"
+    year: 1976-1979
+    full_citation: "Tagare, G.V., *The Bhāgavata Purāṇa, Translated and Annotated*, 5 vols., Ancient Indian Tradition and Mythology series 7–11 (Delhi: Motilal Banarsidass, 1976–1978)."
+    short_citation: "Tagare 1976–78"
+    identifier_type: series
+    identifier_value: "Ancient Indian Tradition and Mythology 7–11"
+    notes: "Standard scholarly English translation of the Bhāgavata Purāṇa. Anchor for the Krishna-Kāliya episode (book 10 chs. 15–17) in Ch15."
+
   - id: benveniste-renou-1934
     source_tier: secondary
     in_scope: true
@@ -500,6 +512,18 @@ registry:
     identifier_type: ISBN
     identifier_value: "9780292704251"
     notes: "Standard English Book of the Dead including Apep-slaying spells."
+
+  - id: faulkner-1936-bremner-rhind
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkner, Raymond O."
+    title: "The Bremner-Rhind Papyrus I–IV"
+    year: 1936
+    full_citation: "Faulkner, R.O., 'The Bremner-Rhind Papyrus I–IV', *Journal of Egyptian Archaeology* 22 (1936): 121–140; 23 (1937): 10–16, 166–185; 24 (1938): 41–53."
+    short_citation: "Faulkner 1936–38 (JEA 22–24)"
+    identifier_type: jstor-collection
+    identifier_value: "JEA 22, 23, 24"
+    notes: "Faulkner's four-part philological edition of Papyrus BM EA 10188 (Bremner-Rhind) — the *Book of Overthrowing Apep* — published as articles in JEA across 1936–38. Distinct from Faulkner's 1972 Book of the Dead translation. Anchor for Ch16 ritual-embedding section."
 
   - id: te-velde-1967
     source_tier: secondary
@@ -2686,472 +2710,632 @@ After human review and normalization: `chapters/NN-<slug>.claims.approved.adoc` 
 
 ---
 
-# Input file: chapters/02-ninurta-anzu.claims.adoc
+# Input file: chapters/18-thor-jormungandr.claims.adoc
 
 ```
-[[ch-02-ninurta-anzu-claims]]
-== Ninurta vs. Anzû: The Theft of the Tablet of Destinies — Claims
+[[ch-18-thor-jormungandr-claims]]
+== Thor vs. Jörmungandr: Three Encounters and Ragnarök — Claims
 
-// This is a claims document, not final prose. Each paragraph is one verifiable claim.
-// After fact-check and human review, chapter-draft will transform this into narrative.
+// One fact per paragraph; chapter-draft will transform this into narrative.
+// Per brief 18-thor-jormungandr.yaml: structure around three encounters
+// — (1) Útgarðaloki's lifting-contest in Gylfaginning 46–48; (2) the
+// Hymir fishing expedition in Hymiskviða (Eddic) and Húsdrápa (skaldic
+// fragments preserved by Snorri), with the variant outcomes (line cut
+// vs. apparent beheading); (3) the mutual killing at Ragnarök in
+// Völuspá 56 and Gylfaginning 51. The three encounters are a layered
+// record from different sources and registers, NOT alternative versions
+// of one combat. Iconographic evidence is unusually rich for a
+// combat-myth chapter (Altuna, Hørdum, Gosforth, Ardre VIII stones)
+// and is treated in its own section. Watkins's full Indo-European
+// HERO SLAY SERPENT philological argument is reserved for Part II C5;
+// this chapter summarises and forward-links it.
 
 === Source overview
 
-The Standard Babylonian Anzû Epic survives as a three-tablet composition preserved primarily on Neo-Assyrian library copies.footnote:[Annus 2001, introduction, on the three-tablet Standard Babylonian recension as the main attested form.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction (SAACT 3)
+The chapter's two principal primary-source anchors are the *Poetic Edda* — a corpus of Old Norse mythological and heroic poems preserved chiefly in the late-thirteenth-century Icelandic *Codex Regius* (GKS 2365 4to) — and the *Prose Edda* (or *Snorra Edda*) of Snorri Sturluson, an Icelandic chieftain and historian who composed his prose handbook of mythology and skaldic poetics in the early thirteenth century, around 1220–1230 CE.footnote:[Larrington 2014, *The Poetic Edda*, revised Oxford World's Classics edition, introduction, on the Codex Regius and on the Eddic poetic corpus; Faulkes 1987, *Edda* by Snorri Sturluson, introduction, on Snorri's authorship and on the early-thirteenth-century date of the Prose Edda.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=introduction
 
-The critical edition used throughout this chapter is Amar Annus's *The Standard Babylonian Epic of Anzu* (SAACT 3, 2001), which provides the cuneiform text, transliteration, score, glossary, and sign list.footnote:[Annus 2001, whole volume (SAACT 3, Helsinki: Neo-Assyrian Text Corpus Project).]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=whole volume
+The working English text for the *Poetic Edda* is Carolyne Larrington's revised translation, published as *The Poetic Edda* in the Oxford World's Classics series in 2014 (ISBN 9780199675340), which supplies the chapter's hymn-and-stanza-level English citations of the Eddic Thor-and-Jörmungandr material.footnote:[Larrington 2014, *The Poetic Edda*, revised edition, Oxford University Press, ISBN 9780199675340, used as the working English Eddic text; cited throughout at hymn-and-stanza level.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=publisher and edition
 
-The working English translation cited in this chapter is Benjamin Foster's in *Before the Muses*, 3rd edition (2005), pp. 555–578.footnote:[Foster 2005, pp. 555–578, "Anzu."]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-578
+The working English text for the *Prose Edda* is Anthony Faulkes's translation, published as *Edda* (by Snorri Sturluson) in the Everyman's Library / Dent series in 1987 and reissued by the Viking Society for Northern Research in 2005 (ISBN 9780460876162), which supplies the chapter's chapter-level English citations of *Gylfaginning* and *Skáldskaparmál*.footnote:[Faulkes 1987, *Edda* by Snorri Sturluson, Everyman / Viking Society edition, ISBN 9780460876162, used as the working English Snorra Edda text; cited at chapter and page level.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=publisher and edition
 
-Foster's translation is keyed to the Annus critical text and presents a composite English version that integrates the Old Babylonian, Middle Babylonian, and Standard Babylonian witnesses.footnote:[Foster 2005, pp. 555–556, headnote on the composite translation.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+Larrington 2014 and Faulkes 1987 are both printed-only in the present project's working corpus, and the chapter cites them at hymn-and-stanza level (Larrington) and at chapter level (Faulkes) in line with the citation discipline applied throughout the Indo-European cluster of the present book.footnote:[Larrington 2014 and Faulkes 1987, both printed-only; cited at hymn-and-stanza and chapter level respectively per the established discipline of chapters 13, 14, and 15 of the present volume.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=printed-only edition
 
-Witnesses to the composition span the Old Babylonian, Middle Babylonian, and Neo-Assyrian periods, with the bulk of the Standard Babylonian text reconstructed from the Neo-Assyrian royal libraries.footnote:[Annus 2001, introduction on the witness distribution across periods.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The chapter's Eddic primary text for Thor's fishing expedition is *Hymiskviða* ("The Lay of Hymir"), a thirty-nine-stanza Eddic poem in *fornyrðislag* metre that narrates Thor's journey to the giant Hymir's hall to fetch a brewing-cauldron and his rowing-out with Hymir to fish for the world-encircling serpent.footnote:[Larrington 2014, headnote and translation of *Hymiskviða*, on the poem's thirty-nine-stanza length, its *fornyrðislag* metre, and its narrative arc from cauldron-quest to fishing expedition.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða headnote
 
-An Old Babylonian fragmentary version of the same story survives with divergent details; it is treated here as an earlier recension rather than a textually equivalent variant.footnote:[Foster 2005, pp. 555–556, on the Old Babylonian antecedent; Annus 2001, introduction.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The chapter's Eddic primary text for the eschatological combat is *Völuspá* ("The Seeress's Prophecy"), the opening poem of the *Codex Regius* and the principal Eddic source for the Norse cosmogony and eschatology, in which the Thor-and-Jörmungandr Ragnarök combat is named and compressed in stanzas 55 and 56 of the Larrington 2014 edition.footnote:[Larrington 2014, headnote and translation of *Völuspá* with attention to the Ragnarök sequence at stanzas 50–58, and specifically to stanza 56 on the Thor-and-Jörmungandr combat.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá headnote and st. 50–58
 
-The Standard Babylonian copies cluster heavily in the Nineveh libraries of the seventh century BCE, including the library of Ashurbanipal.footnote:[Annus 2001, introduction on the Nineveh library provenance.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The chapter's Snorra Edda primary text is *Gylfaginning* ("The Tricking of Gylfi"), the second part of Snorri's handbook, which presents the Norse mythological corpus as a dialogue between the disguised gods Hárr, Jafnhárr, and Þriði and the visiting king Gylfi, with chapter 34 supplying the serpent's origin, chapters 46 to 48 supplying the Útgarðaloki lifting-contest, and chapter 51 supplying the Ragnarök combat.footnote:[Faulkes 1987, *Gylfaginning*, on the dialogue-frame with Hárr / Jafnhárr / Þriði and Gylfi, and on the chapter-divisions used in the Faulkes edition; chapter 34 (the serpent's origin), chs. 46–48 (Útgarðaloki), ch. 51 (Ragnarök).]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 34, 46–48, 51
 
-Tablet II of the Standard Babylonian recension has significant gaps in the middle passages covering the transition from Ninurta's first failed engagement to Ea's counsel.footnote:[Annus 2001, Tablet II apparatus; Foster 2005, pp. 568–571 (noting lacunae).]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=Tablet II
+The chapter's third primary-source stratum is the skaldic corpus — short occasional poems composed by named court-poets in the ninth, tenth, and eleventh centuries CE — and specifically the surviving skaldic verses on the fishing expedition, which include fragments by Bragi Boddason (early ninth century), Eysteinn Valdason (tenth century), and Úlfr Uggason (late tenth century, in his ekphrastic poem *Húsdrápa*), preserved chiefly through Snorri's quotations of them in *Skáldskaparmál*.footnote:[Faulkes 1987, *Skáldskaparmál*, on the skaldic verses on the Thor-and-Jörmungandr fishing expedition cited by Snorri, including fragments by Bragi Boddason, Eysteinn Valdason, and Úlfr Uggason; Faulkes 1987 introduction on the dating of the named skalds (Bragi 9th c.; Eysteinn and Úlfr 10th c.).]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (skaldic citations)
 
-The closing doxology of Tablet III is partially broken, and Annus reconstructs the final hymn of praise from parallel Mesopotamian praise-formulae.footnote:[Annus 2001, Tablet III apparatus, on the partially broken closing hymn.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=Tablet III
+*Húsdrápa* is an ekphrastic skaldic poem composed by Úlfr Uggason in approximately 985 CE for the wedding-feast of Óláfr Höskuldsson at the hall of Hjarðarholt in western Iceland, in which the poet describes the carved or painted scenes on the panels of the hall — including a scene of Thor's fishing for Jörmungandr — and the poem survives only as fragmentary quotations preserved in Snorri's *Skáldskaparmál*.footnote:[Faulkes 1987, *Skáldskaparmál*, headnote and citations for *Húsdrápa* by Úlfr Uggason, c. 985 CE, on the ekphrastic occasion (Hjarðarholt wedding-feast), on the surviving fragmentary quotations, and on the fishing scene depicted in the surviving stanzas.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (Húsdrápa fragments)
 
-The Anzû Epic has Sumerian-language prehistory in the literature of the third-to-early-second millennium, including allusions to Anzû in the Sumerian compositions *Lugal-e* and *Angim dimma*.footnote:[ETCSL 1.6.2 (Lugal-e) line 122 listing the Anzud bird among Ninurta's earlier trophies; ETCSL 1.6.1 (Angim dimma) lines 30–40 and 55–63 on the Anzud bird brought forth and hung on the chariot.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 and 1.6.2
+The chapter's principal scholarly anchor for the Indo-European poetic dimension of the Thor-and-Jörmungandr combat is Calvert Watkins's *How to Kill a Dragon: Aspects of Indo-European Poetics*, published by Oxford University Press in 1995, whose Part V treats the Old Norse skaldic and Eddic dragon-slaying diction as one of the principal Indo-European reflexes of the reconstructed HERO SLAY SERPENT poetic formula.footnote:[Watkins 1995, *How to Kill a Dragon: Aspects of Indo-European Poetics*, Part V, on the Old Norse skaldic and Eddic dragon-slaying diction as a reflex of the reconstructed Indo-European HERO SLAY SERPENT formula.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V
 
-*Angim dimma* ("Ninurta's return to Nibru") is a Sumerian *šir-gida* to Ninurta in which the Anzud bird appears in the warrior-god's trophy inventory but not as the subject of a narrated combat.footnote:[ETCSL 1.6.1 title and opening formula; lines 30–40 trophy list; line 208 closing formula "šir-gida of Ninurta."]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 (Angim dimma)
+Watkins 1995 is printed-only and is cited in the present chapter at section and chapter level (Part V), with the full philological argument on the skaldic and Eddic diction reserved for the comparative chapter on the Indo-European HERO SLAY SERPENT formula (Part II C5 of the present book) and only summarised here.footnote:[Watkins 1995, Part V (printed only; cited at section and chapter level); per brief 18-thor-jormungandr.yaml on the reservation of the full philological argument for Part II C5.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V
 
-*Lugal-e* ("Ninurta's exploits") likewise lists the Anzud bird among Ninurta's earlier defeated enemies without narrating the combat at length.footnote:[ETCSL 1.6.2 line 122, Anzud bird in Šarur's catalogue of Ninurta's prior victories.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 line 122
+The chapter's principal scholarly anchor for the wider Indo-European storm-god / water-dragon complex is M. L. West's *Indo-European Poetry and Myth*, published by Oxford University Press in 2007, whose chapter 6 ("Storm and Stream") situates Thor as the Norse instance of the Indo-European storm-god type and treats the Thor-and-Jörmungandr combat alongside the Vedic Indra-Vṛtra, the Hittite Tarḫunna-Illuyanka, and the Avestan Thraētaona-Aži Dahāka comparanda.footnote:[West 2007, *Indo-European Poetry and Myth*, ch. 6 ("Storm and Stream"), on Thor as the Norse instance of the Indo-European storm-god / water-dragon complex and on the Thor-and-Jörmungandr combat in comparative Indo-European context.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6
 
-The Sumerian allusions are therefore treated as pre-history of the Standard Babylonian narrative rather than as independent tellings of the same story.footnote:[Annus 2001, introduction, on the Sumerian background; Foster 2005, pp. 555–556.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+West 2007 is printed-only and is cited in the present chapter at chapter level (chapter 6, "Storm and Stream"), with the comparative arguments of chapter 6 supplying the wider Indo-European context for the Norse combat-narrative.footnote:[West 2007, ch. 6 (printed only; cited at chapter level per the established discipline of chapters 13, 14, and 15 of the present volume).]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6
 
-Anzû is extensively represented in Mesopotamian iconography from the third millennium onward, appearing on cylinder seals, amulets, and temple sculpture as a lion-headed eagle.footnote:[Annus 2001, introduction on the iconographic corpus; Foster 2005, pp. 555–556, headnote.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The chapter's wider combat-myth comparative anchor is Neil Forsyth's *The Old Enemy: Satan and the Combat Myth*, published by Princeton University Press in 1987, which supplies a long-trajectory comparative survey of the combat-myth and includes treatment of the Norse Thor-and-Jörmungandr material in its chapter on the Indo-European combat-myth corpus.footnote:[Forsyth 1987, *The Old Enemy: Satan and the Combat Myth*, on the long-trajectory comparative survey including the Norse Thor-and-Jörmungandr material.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=on Norse combat-myth
 
-Scholarship treats the Anzû Epic as the direct Mesopotamian antecedent of the combat in *Enūma Eliš*, in which Marduk will defeat Qingu and reclaim the Tablet of Destinies.footnote:[Lambert 2013, introduction, on the Anzû–Marduk genealogy; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The four chief witnesses for the Thor-and-Jörmungandr corpus that the present chapter treats together are therefore the Eddic *Hymiskviða* (Larrington 2014), the Eddic *Völuspá* stanza 56 (Larrington 2014), the Snorra Edda *Gylfaginning* chapters 34, 46–48, and 51 (Faulkes 1987), and the skaldic *Húsdrápa* fragments preserved in *Skáldskaparmál* (Faulkes 1987), with Bragi Boddason and Eysteinn Valdason supplying further skaldic co-witnesses.footnote:[Larrington 2014 on *Hymiskviða* and *Völuspá*; Faulkes 1987 on *Gylfaginning* and on the *Skáldskaparmál* skaldic citations including *Húsdrápa*; per brief 18-thor-jormungandr.yaml on the four-witness corpus.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning and Skáldskaparmál
 
-Forsyth's *The Old Enemy* treats the Anzû narrative as a structural bridge between the Sumerian Ninurta cycle and the later Judeo-Christian combat tradition.footnote:[Forsyth 1987, ch. 2, on Anzu as a bridge to Enūma Eliš and later combat myth.]
-// EVIDENCE: source_id=forsyth-1987 ; loc=ch. 2
+The Codex Regius is a late-thirteenth-century Icelandic manuscript (GKS 2365 4to) discovered in 1643 by Bishop Brynjólfur Sveinsson and now housed in the Árni Magnússon Institute for Icelandic Studies in Reykjavík, and it is the principal manuscript witness to the Eddic poems including *Völuspá* (the opening poem) and *Hymiskviða* (the seventh poem of the mythological section).footnote:[Larrington 2014, introduction, on the Codex Regius (GKS 2365 4to), its discovery in 1643, its late-thirteenth-century date, and its position as the principal manuscript witness to the Eddic mythological corpus.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=introduction (Codex Regius)
 
-Scurlock and Beal's volume on the Chaoskampf hypothesis includes chapters that engage the Anzû Epic as part of the Mesopotamian combat-myth corpus.footnote:[Scurlock & Beal 2013, chapters on Mesopotamian combat-myth.]
-// EVIDENCE: source_id=scurlock-beal-2013 ; loc=chapters on Mesopotamian combat-myth
+The Eddic poems preserved in the Codex Regius are widely held to be older in their compositional cores than the manuscript itself, with the principal mythological poems generally dated by their formulaic and lexical features to a Viking-Age compositional horizon between the ninth and the eleventh centuries CE, even where the precise dating of any individual poem remains contested.footnote:[Larrington 2014, introduction, on the dating of the Eddic mythological poems to a Viking-Age compositional horizon prior to the late-thirteenth-century manuscript and on the contested precision of poem-by-poem dating.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=introduction (Eddic dating)
 
-=== Setting and context
+The Snorra Edda is preserved in four principal medieval manuscripts — the Codex Upsaliensis (DG 11 4to, c. 1300), the Codex Regius of the Snorra Edda (GKS 2367 4to, c. 1325; not to be confused with the Eddic Codex Regius), the Codex Wormianus (AM 242 fol., c. 1340–1370), and the Codex Trajectinus (1593 paper transcript) — with Faulkes 1987 reading from the conflated text reconstructed across the four witnesses.footnote:[Faulkes 1987, introduction, on the four principal manuscripts of the Snorra Edda (Upsaliensis, Regius, Wormianus, Trajectinus) and on the conflated-text editorial procedure of the working English translation.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=introduction (Snorra Edda manuscripts)
 
-Ninurta is the warrior-god of Nippur, son of Enlil, and the champion sent out to defeat enemies of the divine order in both the Sumerian and Akkadian literary traditions.footnote:[ETCSL 1.6.1 opening "Created like An, O son of Enlil, Ninurta"; Annus 2001, introduction on Ninurta's Nippur-warrior identity.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 opening lines 1-6
+The chapter is organised around the brief's three-encounter structure: the Útgarðaloki lifting-contest of *Gylfaginning* 46–48, the Hymir fishing expedition (jointly attested by *Hymiskviða*, *Gylfaginning* 47–48 in narrative continuity with the lifting-contest, and the *Húsdrápa* fragments), and the Ragnarök combat of *Völuspá* 56 and *Gylfaginning* 51, with the three encounters treated as a layered record from different sources and registers rather than as alternative versions of a single underlying combat.footnote:[Per brief 18-thor-jormungandr.yaml on the three-encounter structure as a layered record across the Eddic, skaldic, and Snorra Edda strata; per brief on the explicit "not alternative versions of one combat" framing.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 46–48, 51 (three-encounter structure)
 
-Ninurta's earlier Sumerian exploits — including the combat with Asag in *Lugal-e* and the return to Nippur in *Angim dimma* — establish him as the prototype warrior-champion that the Standard Babylonian Anzû Epic will draw on.footnote:[ETCSL 1.6.2 (Lugal-e); ETCSL 1.6.1 (Angim dimma); Annus 2001, introduction on the Ninurta-warrior tradition.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 and 1.6.2
+The variant-handling classification for the present chapter is therefore *co-equal*: no single source has all three encounters fully narrated, and the chapter presents claims from each of the three textual strata in sequence with explicit source attribution rather than presenting one prevalent version with footnoted alternatives.footnote:[Per brief 18-thor-jormungandr.yaml variants.classification: co-equal, with the three-encounter structure requiring Eddic, skaldic, and Snorra Edda witnesses together; Larrington 2014 and Faulkes 1987 on the three-encounter distribution across sources.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning (three-encounter co-equal classification)
 
-Enlil, chief god of the Mesopotamian pantheon and lord of the air, is the custodian of the Tablet of Destinies in the Standard Babylonian text.footnote:[Foster 2005, pp. 556–558, Tablet I on Enlil's custody of the Tablet; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-558
+The Thor-and-Jörmungandr corpus is unusually well-documented in pre-Christian Norse iconography, with at least four surviving runestones or picture-stones depicting the fishing expedition: the Altuna stone (Uppland, Sweden, c. 1050 CE), the Hørdum stone (Thy, Jutland, Denmark, c. 800 CE), the Gosforth fishing stone (Cumbria, England, c. 950 CE), and the Ardre VIII stone (Gotland, Sweden, c. 700–800 CE).footnote:[Per brief 18-thor-jormungandr.yaml centrality_evidence on the four runestones and picture-stones depicting the fishing expedition; West 2007, ch. 6 ("Storm and Stream"), on the iconographic dossier; Faulkes 1987, introduction, on the iconographic supplement to the textual record.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (iconographic dossier)
 
-Ea is the god of wisdom and the deep fresh waters of the Apsû, and in this Akkadian composition he functions as counselor both to the divine assembly and to Ninurta.footnote:[Foster 2005, pp. 560–562, on Ea's role as counselor; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-562
+The four-stone iconographic dossier is the most substantial surviving pre-Christian visual record of any single Norse mythological narrative and supplies an independent witness-stratum that pre-dates the Eddic and Snorra Edda manuscripts by between two and five centuries, with the earliest stone (Ardre VIII) dating to roughly the eighth century CE and the latest (Altuna) to the eleventh century CE.footnote:[Per brief 18-thor-jormungandr.yaml iconography centrality on the pre-Christian iconographic dossier as an independent witness-stratum predating the manuscript record; West 2007, ch. 6, on the dating range and significance of the four-stone series.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (iconographic chronology)
 
-The Tablet of Destinies is the divinely held object that confers universal decree-power; possession of it is, functionally, kingship over the cosmos.footnote:[Foster 2005, pp. 556–558, on the Tablet of Destinies as the decree-holding object; Lambert 2013, introduction, on the Tablet as sovereignty-token.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-558
+The chapter's principal *lacunae* are two: first, *Völuspá* 56 compresses the Ragnarök combat into a few lines of mythic-cosmic verse, leaving the bulk of narrative detail to be supplied by Snorri's *Gylfaginning* 51; second, *Húsdrápa* survives only as fragmentary skaldic quotations preserved in Snorri's *Skáldskaparmál*, with the original ekphrastic poem otherwise lost.footnote:[Per brief 18-thor-jormungandr.yaml lacunae section on the Völuspá 56 compression and the *Húsdrápa* fragmentary preservation; Larrington 2014 on the Völuspá 56 compression; Faulkes 1987 on the *Húsdrápa* fragmentary preservation.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá 56; Faulkes 1987 Skáldskaparmál
 
-The Tablet is depicted as an object that can be physically seized and physically returned, so that the narrative treats sovereignty as a transferable token.footnote:[Foster 2005, pp. 557–559, Tablet I on the seizure; Lambert 2013, introduction.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-559
+Both lacunae are *in-tradition fillable* under the chapter's reconstruction policy: the *Völuspá* 56 compression is filled from *Gylfaginning* 51 (a Norse in-tradition source), and the *Húsdrápa* fragmentary preservation is filled from Snorri's own preservation of the surviving stanzas in *Skáldskaparmál* (also a Norse in-tradition source), with no cross-tradition reconstruction permitted under the present book's policy.footnote:[Per brief 18-thor-jormungandr.yaml lacunae in-tradition-fills-available; per chaoskampf scope.md §"Reconstruction policy" on the no-cross-tradition reconstruction rule and on the donor-source naming requirement; Faulkes 1987 *Gylfaginning* 51 (Ragnarök expansion) and *Skáldskaparmál* (Húsdrápa preservation).]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning 51 and Skáldskaparmál (in-tradition fills)
 
-Šarur is Ninurta's animate mace, a weapon with the capacity to speak and to travel as a messenger, already known from the Sumerian *Lugal-e*.footnote:[ETCSL 1.6.2 lines 24–47, 96–118, 228–243 on Šarur addressing Ninurta; Foster 2005 p. 562 for Šarur in the Anzû Epic.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 lines 24-47
+The Snorri-as-witness problem is itself a recurring methodological theme in modern Norse scholarship: Snorri composed the Snorra Edda in the early thirteenth century, more than two hundred years after the official conversion of Iceland to Christianity in 999/1000 CE, and his handbook is at once the fullest synthesis of Norse mythology and a Christian-period work whose framing-narrative (Gylfi's interrogation of the disguised "Æsir") presents the Norse gods as deceivers and his treatment as antiquarian rather than confessional.footnote:[Faulkes 1987, introduction, on the early-thirteenth-century date of the Snorra Edda, on the conversion of Iceland to Christianity in 999/1000 CE, and on Snorri's antiquarian-rather-than-confessional framing of the Norse mythological material.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=introduction (Snorri-as-witness)
 
-Anzû is introduced as a minor divine servitor originally attached to Enlil, not as a primordial adversary.footnote:[Foster 2005, pp. 555–557, Tablet I on Anzû's status as servitor.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-557
+[INFERENCE: the chapter's reliance on Snorri as the principal narrative-continuous source, while supplementing him with the older Eddic poems and the still-older skaldic fragments, is itself a methodological commitment about how to read the Norse mythological corpus, distinct from any specific philological or comparative claim within the corpus; the method is well-supported by Faulkes 1987's editorial practice and by the brief's three-encounter framing, but the chapter flags it explicitly because the resulting "Thor-and-Jörmungandr corpus" is a synthesis of textual strata of different ages and registers, with Snorri's thirteenth-century Christian-period prose reading the older Viking-Age and pagan-period verse. | basis: Faulkes 1987 editorial practice; brief 18-thor-jormungandr.yaml three-encounter framing; Larrington 2014 on the Eddic-poem dating; Watkins 1995 on the skaldic dating | risk: Snorri is read as a witness to older traditions whose reception he himself shaped, and the chapter's three-encounter synthesis is therefore an editorial reading of layered evidence rather than a straightforward report of any single source.]
 
-Anzû takes the form of a lion-headed eagle; this iconographic identification is confirmed by the Mesopotamian visual corpus as well as by the descriptive epithets in the epic.footnote:[Annus 2001, introduction, on the lion-headed eagle iconography; Foster 2005, pp. 555–556, on Anzû's physical form.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The chapter does not attempt to harmonise the three encounters into a single coherent biographical narrative for either Thor or Jörmungandr: each encounter is treated in its own narrative-and-source context, and apparent discontinuities (the cat-disguise of *Gylfaginning* 47, the line-cut of *Hymiskviða* 23–24, the apparent beheading of the *Húsdrápa* fragments, the mutual killing of *Völuspá* 56 and *Gylfaginning* 51) are presented as features of the layered record rather than as contradictions to be resolved.footnote:[Per brief 18-thor-jormungandr.yaml special_instructions on the layered-record framing and on the explicit non-harmonisation; Faulkes 1987 *Gylfaginning* chs. 46–48 and 51; Larrington 2014 *Hymiskviða* and *Völuspá*.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning (non-harmonisation framing)
 
-The opening of Tablet I situates the narrative in a divine palace-and-assembly world rather than in a primordial, pre-cosmic setting.footnote:[Foster 2005, pp. 555–557, Tablet I opening; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-557
+=== Setting and Norse mythological context
 
-The combat in the Anzû Epic is therefore a sovereignty-reclamation narrative, not a cosmogony: the cosmos already exists, and the story is about the return of a displaced kingship-token to its rightful holder.footnote:[Foster 2005, pp. 555–578 on the narrative scope; Lambert 2013, introduction, on sovereignty-as-function in the Mesopotamian combat corpus.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+Thor (Old Norse Þórr) is the storm-god of the Norse pantheon, son of Óðinn (the chief of the Æsir) and of the giantess Jörð ("Earth"), and the principal warrior-figure of the Æsir, whose function in the Norse mythological corpus is the defence of Miðgarðr — the world of humans — against the giants and against the great adversaries of the cosmos.footnote:[Faulkes 1987, *Gylfaginning* chs. 9 and 21, on Thor (Þórr) as son of Óðinn and Jörð, on his position as principal warrior of the Æsir, and on his role as defender of Miðgarðr against the giants and against the great adversaries.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 9 and 21
 
-=== Narrative sequence
+Thor is one of the most frequently named gods in the surviving Norse mythological corpus and the recipient of the largest body of skaldic praise-poetry on combat themes, with named Viking-Age skalds — Bragi Boddason in the early ninth century, Eysteinn Valdason in the tenth century, Úlfr Uggason in the late tenth century, and others — composing verse on Thor's combats with the giants and with Jörmungandr.footnote:[Faulkes 1987, *Skáldskaparmál*, on the named Viking-Age skalds composing on Thor's combats and on the volume of skaldic Thor-praise relative to other gods; Watkins 1995 Part V on the skaldic Thor-corpus as a body of named-poet attestations.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (skaldic Thor-corpus)
 
-==== Tablet I — theft and assembly
+Thor's combat-weapon is Mjöllnir (normalised Old Norse Mjǫllnir), a hammer forged by the dwarves Brokkr and Eitri (or Sindri) in the contest-and-bargain narrative of *Skáldskaparmál* 35 (the "smiths' contest" episode), with the hammer described as so potent that it never fails of its target and returns to the wielder's hand after striking.footnote:[Faulkes 1987, *Skáldskaparmál* ch. 35 (the smiths' contest), on the forging of Mjöllnir by the dwarves Brokkr and Eitri/Sindri and on the hammer's properties of unfailing strike and return-to-hand.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál ch. 35
 
-Tablet I opens with a hymn of praise to Ninurta, invoking his warrior-qualities before the narrative proper begins.footnote:[Foster 2005, pp. 555–556, Tablet I proem; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+Mjöllnir is the cosmic combat-weapon of the Norse storm-god in the same structural position as Indra's *vajra* in the Vedic combat-corpus and Baal's maces Ayyamur and Yagrush in the Ugaritic Baal Cycle: a divinely forged implement whose use by the storm-god is the materialised image of the lightning-strike and the principal mythological signifier of the storm-god's combat-function.footnote:[West 2007, ch. 6 ("Storm and Stream"), on Mjöllnir's structural position alongside the Vedic *vajra* and the Ugaritic Ayyamur/Yagrush as the materialised combat-implement of the Indo-European storm-god; Faulkes 1987 *Gylfaginning* 21 on Mjöllnir's combat-function.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6
 
-Anzû is born or brought into being at the Apsû, the cosmic fresh-water region associated with Ea, and is introduced into Enlil's service.footnote:[Foster 2005, pp. 556–557, Tablet I on Anzû's origin at the Apsû; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-557
+Thor wears two further combat-implements alongside Mjöllnir: a belt of strength (Old Norse *Megingjǫrð*) that doubles his already great power when girded, and a pair of iron gauntlets without which he cannot grip the hammer's short haft, and the three implements together constitute the Norse storm-god's combat-equipment set.footnote:[Faulkes 1987, *Gylfaginning* ch. 21, on Thor's combat-equipment set (Mjöllnir, *Megingjǫrð*, iron gauntlets) and on the doubling of his strength when girded.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 21
 
-Anzû is assigned the role of attendant in Enlil's household, including attendance at the chamber where Enlil bathes and sets aside the Tablet of Destinies.footnote:[Foster 2005, pp. 557–558, Tablet I on Anzû's role as chamber-attendant; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-558
+Thor's chariot is drawn by two goats — Tanngnjóstr ("Tooth-gnasher") and Tanngrisnir ("Tooth-grinder") — whose hooves sound the thunder, in a chariot-and-thunder image that aligns Thor with the chariot-borne storm-gods of the wider Indo-European tradition.footnote:[Faulkes 1987, *Gylfaginning* ch. 21, on Thor's chariot, the two named goats, and the thunder-image; West 2007, ch. 6, on the chariot-and-thunder image as a wider Indo-European storm-god feature.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 21
 
-Day after day, Anzû observes the Tablet of Destinies lying within reach while Enlil bathes, and the text describes Anzû's envy and ambition directly.footnote:[Foster 2005, pp. 557–558, Tablet I on Anzû's envy of Enlil's regalia; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-558
+Óðinn (Old Norse Óðinn, sometimes anglicised "Odin" but kept here in the Old Norse spelling per the chapter's glossary discipline) is the chief of the Æsir, the father of Thor, the ruler of Valhǫll, and the patron-god of poetry and war, whose role in the Thor-and-Jörmungandr corpus is largely structural — as the cosmic-rulership figure under whom Thor's defensive function is exercised — rather than directly narrative.footnote:[Faulkes 1987, *Gylfaginning* chs. 9, 20, on Óðinn as chief of the Æsir, father of Thor, and ruler of Valhǫll; per brief 18-thor-jormungandr.yaml glossary discipline on the Óðinn (locked spelling) form.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 9 and 20
 
-Anzû forms a plot to seize the Tablet of Destinies and, with it, the rulership of the gods.footnote:[Foster 2005, pp. 558–559, Tablet I; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 558-559
+Loki is the Norse trickster-god, sometimes counted among the Æsir and sometimes treated as a giant ("of the giant kindred"), and his role in the Thor-and-Jörmungandr corpus is generative: Jörmungandr is Loki's son by the giantess Angrboða, born alongside the wolf Fenrir and the goddess Hel, in the lineage-narrative recorded in *Gylfaginning* 34.footnote:[Faulkes 1987, *Gylfaginning* ch. 34, on Loki as the trickster-god, on Loki's union with Angrboða, and on Jörmungandr as Loki's son alongside Fenrir and Hel.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 34
 
-While Enlil is bathing, Anzû seizes the Tablet and flies away with it to the mountains.footnote:[Foster 2005, pp. 558–559, Tablet I on the theft; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 558-559
+Jörmungandr (Old Norse Jǫrmungandr, also called Miðgarðsormr, "the Midgard Serpent") is the world-encircling serpent of Norse cosmology, lying in the ocean that surrounds Miðgarðr with its tail in its mouth, and is the principal serpentine adversary of Thor in the Norse combat-corpus.footnote:[Faulkes 1987, *Gylfaginning* ch. 34, on Jörmungandr (Miðgarðsormr) as the world-encircling serpent lying in the surrounding ocean with its tail in its mouth; Larrington 2014 on the Miðgarðsormr designation in the Eddic corpus.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 34
 
-With the Tablet in Anzû's talons, the decree-power of the gods is immediately dislocated: rites fall silent, the divine assembly loses its governing authority, and the cosmos registers the theft as a disruption.footnote:[Foster 2005, pp. 559–560, Tablet I on the consequences of the theft; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 559-560
+The Miðgarðsormr designation ("Midgard-serpent") encodes the serpent's cosmic-spatial function directly in its name: Miðgarðr is the "middle enclosure" — the world of humans — and the serpent's role is the encirclement of this world, with the serpent's body forming the outer boundary of the human cosmos and the inner edge of the surrounding ocean.footnote:[Faulkes 1987, *Gylfaginning* chs. 8 and 34, on the cosmographic structure of Miðgarðr as the "middle enclosure" surrounded by the ocean and on the Miðgarðsormr as the serpent encircling that ocean.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 8 and 34
 
-Anu, the sky-father, convenes the assembly of the great gods to address the crisis.footnote:[Foster 2005, pp. 560–561, Tablet I on Anu summoning the assembly; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-561
+The Norse cosmography is structured by a tripartite vertical-and-horizontal scheme: the world-tree Yggdrasil at the centre, with Ásgarðr (the realm of the gods) above, Miðgarðr (the world of humans) at the middle level surrounded by the ocean and the encircling serpent, and Útgarðr (the "outer enclosure", realm of the giants) and Niflheimr / Hel beyond.footnote:[Faulkes 1987, *Gylfaginning* chs. 8, 14, 34, on the tripartite Norse cosmography (Ásgarðr, Miðgarðr, Útgarðr / Niflheimr) organised around Yggdrasil and on the encircling-serpent's position at the boundary between Miðgarðr and the outer realms.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 8, 14, 34
 
-Anu calls for a champion to hunt down Anzû, recover the Tablet, and slay the rebel.footnote:[Foster 2005, pp. 560–561, Tablet I on the call for a champion; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-561
+The encircling serpent's cosmic-boundary position has the consequence that any combat between Thor and Jörmungandr is structurally a combat at and for the boundary of the human world: the serpent's defeat unmakes the boundary, and the boundary's unmaking is the structural feature that makes the Ragnarök combat the eschatological close of the Norse cosmic age.footnote:[Faulkes 1987, *Gylfaginning* chs. 34 and 51, on the cosmic-boundary position of Jörmungandr and on the eschatological consequence of his defeat at Ragnarök; West 2007 ch. 6 on the cosmic-boundary structure as a feature of the Norse instance of the storm-god / water-dragon complex.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 34 and 51
 
-Anu first addresses the storm-god Adad, offering him supremacy among the gods if he will undertake the combat.footnote:[Foster 2005, pp. 561, Tablet I on the summons of Adad; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The lineage-and-binding narrative of *Gylfaginning* 34 also records that Óðinn, learning of the threat that Loki's three monstrous offspring posed to the gods, dispatched them to three different cosmic stations: Hel was sent to rule the realm of the dead (Hel / Niflheimr), Fenrir was bound by an unbreakable chain (Gleipnir) on a remote island, and Jörmungandr was thrown into the ocean encircling Miðgarðr where the serpent grew so large that it could encircle the world and bite its own tail.footnote:[Faulkes 1987, *Gylfaginning* ch. 34, on Óðinn's dispatch of Loki's three offspring to their three cosmic stations and on Jörmungandr's growth in the ocean to encircle the world and bite its own tail.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 34
 
-Adad refuses the combat, citing the impossibility of fighting an adversary who holds the Tablet of Destinies.footnote:[Foster 2005, p. 561, Tablet I on Adad's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The dispatching-and-encircling narrative of *Gylfaginning* 34 is also the explicit aetiology of the serpent's *position*: Jörmungandr is in the ocean because Óðinn put it there, and the encircling-of-the-world is the consequence of the serpent's growth from the giant-progeny that Óðinn could not destroy outright.footnote:[Faulkes 1987, *Gylfaginning* ch. 34, on the aetiology of Jörmungandr's encircling position as consequent on Óðinn's dispatching of the giant-progeny he could not destroy.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 34
 
-Anu next addresses Gerra, the fire-god, with the same offer of supremacy.footnote:[Foster 2005, p. 561, Tablet I on the summons of Gerra; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The dispatching-and-encircling narrative places Thor's eventual mortal combat with Jörmungandr at Ragnarök inside a longer-term structural logic: the gods could not destroy the serpent at its origin, so the serpent's destruction is deferred to the end of the cosmic age, when the deferred combat releases the serpent's accumulated threat and ends the Æsir's regime.footnote:[Faulkes 1987, *Gylfaginning* chs. 34 and 51, on the structural-logic relation between the original dispatching-and-encircling and the eventual mutual killing at Ragnarök; West 2007 ch. 6 on the deferred-combat structural feature.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 34 and 51
 
-Gerra likewise refuses, giving the same reason — that possession of the Tablet makes Anzû unassailable.footnote:[Foster 2005, p. 561, Tablet I on Gerra's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The Æsir / Vanir / giant tripartite division of Norse mythological agency places Thor's combats firmly in the Æsir-versus-giants axis: Thor is the Æsir's principal combatant against the giants, and the Jötnar (giants) — including Hymir, Útgarðaloki, and Loki's giant-side kin — are the chronic adversaries against whom Thor's hammer is repeatedly raised.footnote:[Faulkes 1987, *Gylfaginning* chs. 1, 9, 21, on the tripartite Æsir / Vanir / giant division and on Thor's principal combat-axis as Æsir-versus-giants.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 1, 9, 21
 
-Anu then addresses Šara, the warrior-son of Inanna, with the same commission.footnote:[Foster 2005, p. 561, Tablet I on the summons of Šara; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+Hymir is a giant of the Norse mythological corpus whose principal narrative role is as the host (or unwilling host) of Thor in *Hymiskviða* and as Thor's companion (or rival) in the fishing expedition for Jörmungandr; in *Gylfaginning* Hymir is named as the boat-owner and rower, and in *Hymiskviða* he appears as the resident giant whose cauldron the Æsir need for their feast-brewing.footnote:[Larrington 2014, *Hymiskviða* headnote and translation, on Hymir as the resident giant and host-rival of the cauldron-quest; Faulkes 1987 *Gylfaginning* ch. 47, on Hymir as the boat-owner and rower in the fishing expedition.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða headnote
 
-Šara also refuses on the same grounds, and the assembly is left without a champion.footnote:[Foster 2005, pp. 561–562, Tablet I on Šara's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 561-562
+Útgarðaloki is the giant-king of Útgarðr ("the outer enclosure", the realm of the giants), and his principal narrative role in the Norse corpus is as the trickster-host of Thor and his companions in the elaborate visit-to-Útgarðr episode of *Gylfaginning* 45 to 47, in which the giant-king's illusions are progressively unmasked across a sequence of contests.footnote:[Faulkes 1987, *Gylfaginning* chs. 45–47, on Útgarðaloki as the giant-king of Útgarðr, on his trickster-host function, and on the visit-to-Útgarðr episode's sequence of contests.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 45–47
 
-The threefold refusal establishes that the adversary cannot be defeated by the most obvious divine champions, heightening the need for a different kind of warrior.footnote:[Foster 2005, pp. 561–562, Tablet I; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 561-562
+Ragnarök (Old Norse Ragnarǫk) is the Norse eschatological end, the "doom of the gods", at which the present cosmic age closes in a sequence of cosmic disasters and final combats: Surtr the fire-giant burns the world, the wolf Fenrir slays Óðinn, the wolf Skǫll (or Hati) swallows the sun, and Thor and Jörmungandr meet for the last and mutual combat that the present chapter's third encounter narrates.footnote:[Larrington 2014, *Völuspá* sts. 50–58, on the Ragnarök sequence; Faulkes 1987 *Gylfaginning* ch. 51 on the Ragnarök narrative including the Thor-and-Jörmungandr mutual combat.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá sts. 50–58
 
-Ea, god of wisdom and the deep waters, proposes a new candidate to the assembly.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's counsel; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+The Ragnarök eschatological structure is followed in the Eddic and Snorra Edda corpus by a renewal-narrative — a "new earth" rising green from the sea, a small surviving group of gods (including Thor's sons Móði and Magni, who inherit Mjöllnir), and the return of certain figures — but the Thor-and-Jörmungandr mutual killing is itself the close of the present cosmic age and not a feature of the renewal.footnote:[Larrington 2014, *Völuspá* sts. 59–66, on the post-Ragnarök renewal; Faulkes 1987 *Gylfaginning* chs. 52–53 on the renewal-narrative including the surviving gods and the inheritance of Mjöllnir; Faulkes 1987 ch. 51 on the mutual killing as close-of-age.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá sts. 59–66
 
-Ea nominates Ninurta, son of Enlil, as the champion who can face Anzû.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's nomination of Ninurta; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+The Norse combat-myth is therefore distinct in its eschatological structure from the cyclical-maintenance combat of the Egyptian Apep tradition (chapter 16 of the present volume) and from the once-only cosmogonic combat of the Mesopotamian Marduk-Tiamat tradition (chapter 3 of the present volume): the Thor-and-Jörmungandr combat is once-only and end-of-age rather than recurrent or origin-of-age, and the Norse eschatological position is the principal subtype-feature of the Thor-and-Jörmungandr corpus.footnote:[Per chaoskampf scope.md §"Subject definition" on the four combat-myth subtypes (cosmogonic / sovereignty / cyclical-maintenance / eschatological) and on the Thor-and-Jörmungandr position in the eschatological category; Faulkes 1987 *Gylfaginning* ch. 51 and Larrington 2014 *Völuspá* st. 56 on the once-only end-of-age structure.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-Ea addresses the goddess Bēlet-ilī (Mami), who is also called the mother of Ninurta in this passage, and instructs her to dispatch her son.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's address to the mother-goddess; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+=== Encounter 1 — Útgarðaloki and the lifting of the cat (Gylfaginning 46–48)
 
-The mother-goddess summons Ninurta, arms him with explicit instruction, and sends him out against Anzû.footnote:[Foster 2005, pp. 563–564, Tablet I on the commissioning of Ninurta; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 563-564
+The first of the three encounters is the lifting-of-the-cat trickery in the visit-to-Útgarðr narrative of *Gylfaginning* 45 to 47 (with consequence in chapter 48), in which Thor — accompanied by Loki and the human servants Þjálfi and Rǫskva — visits the giant-king Útgarðaloki's hall and is set a series of contests of strength, agility, and consumption.footnote:[Faulkes 1987, *Gylfaginning* chs. 45–47, on the visit-to-Útgarðr narrative, on Thor's companions (Loki, Þjálfi, Rǫskva), on the giant-king Útgarðaloki, and on the contest-sequence in his hall.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 45–47
 
-==== Tablet II — first assault and its failure
+The visit-to-Útgarðr is preceded in *Gylfaginning* 45 by the night-in-the-glove episode, in which Thor and his companions sleep inside what they take to be a great hall and discover at dawn that they have spent the night inside the discarded glove of the giant Skrýmir, whose snoring Thor had attempted (and failed) to silence with three hammer-blows that left only small dents in the giant's brow.footnote:[Faulkes 1987, *Gylfaginning* ch. 45, on the night-in-the-glove episode, on Skrýmir as the giant whose glove they sleep in, and on Thor's three hammer-blows that fail to wake or kill the giant.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 45
 
-Tablet II opens with Ninurta mustering his weapons, including the Seven Evil Winds, the flood-storm, and the sling-stone, and setting out into the mountains.footnote:[Foster 2005, pp. 565–566, Tablet II on the mustering of weapons; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 565-566
+Skrýmir is later revealed (in the post-departure exposition of *Gylfaginning* 47) to have been Útgarðaloki himself in disguise, and the giant-king's confession that he had interposed a mountain between Thor's hammer and his own brow — leaving only the dented mountain as evidence — establishes the trickster-illusion register of the entire visit-to-Útgarðr sequence.footnote:[Faulkes 1987, *Gylfaginning* ch. 47, on the post-departure revelation that Skrýmir was Útgarðaloki in disguise and on the mountain-interposition trick that produced the dented mountain in place of the wounded giant.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 47
 
-Ninurta carries Šarur, his animate mace, who will serve as scout and messenger between the warrior and his divine counselor.footnote:[Foster 2005, pp. 565–566, Tablet II on Šarur accompanying Ninurta; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 565-566
+The Útgarðr contests proper occupy *Gylfaginning* 46, with each member of Thor's party set a contest against an apparent opponent: Loki competes in eating against Logi ("Wildfire"), Þjálfi races against Hugi ("Thought"), Thor attempts to drain a horn of mead, Thor attempts to lift Útgarðaloki's grey cat, and Thor wrestles with the old woman Elli ("Old Age").footnote:[Faulkes 1987, *Gylfaginning* ch. 46, on the contest-sequence in Útgarðaloki's hall: Loki vs. Logi (eating); Þjálfi vs. Hugi (running); Thor and the horn (drinking); Thor and the cat (lifting); Thor and Elli (wrestling).]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 46
 
-Ninurta advances to confront Anzû in the mountain where the rebel has taken refuge with the Tablet.footnote:[Foster 2005, pp. 566–567, Tablet II on the advance to the mountain; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 566-567
+The horn-drinking contest is presented as a test of capacity: Útgarðaloki sets Thor a drinking-horn that he claims his retainers can empty in one or at most three draughts, and Thor — in three great pulls — succeeds only in lowering the level of the horn by what appears to the eye to be a small amount, despite his efforts.footnote:[Faulkes 1987, *Gylfaginning* ch. 46, on the horn-drinking contest, on Útgarðaloki's claim about retainer-capacity, and on Thor's three pulls that lower the level only slightly.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 46
 
-Anzû sees Ninurta approaching and challenges him, threatening the warrior with the decree-power he now holds.footnote:[Foster 2005, pp. 566–567, Tablet II on Anzû's challenge; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 566-567
+The lifting-of-the-cat contest immediately follows the horn-drinking and is presented as a test of strength: Útgarðaloki produces a large grey cat and challenges Thor to lift it from the hall floor, and Thor — putting his arms under the cat's belly and heaving with all his strength — succeeds only in raising the cat so far that one of its paws leaves the ground.footnote:[Faulkes 1987, *Gylfaginning* ch. 46, on the lifting-of-the-cat contest, on Útgarðaloki's grey cat as the object to be lifted, and on Thor's heave that raises only one of the cat's paws from the floor.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 46
 
-Ninurta opens the engagement by shooting an arrow at Anzû.footnote:[Foster 2005, p. 567, Tablet II on Ninurta's first arrow; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+Thor's apparent failure at the cat-lift is recorded by *Gylfaginning* 46 as causing visible mockery from the giant-king's retainers, and the failure is the second of three apparent humiliations (after the horn) that Thor undergoes within the giant-king's hall: the wrestling-match with Elli completes the trio.footnote:[Faulkes 1987, *Gylfaginning* ch. 46, on the mockery of Thor's failure at the cat-lift and on the three-humiliations sequence (horn, cat, Elli) within the giant-king's hall.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 46
 
-Anzû, holding the Tablet of Destinies, uses its decree-power to command the arrow to disassemble into its component parts.footnote:[Foster 2005, p. 567, Tablet II on Anzû's counter-decree; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+The wrestling-match with the old woman Elli is the third Thor-contest of the sequence and the most apparently degrading: Útgarðaloki summons his old foster-mother and challenges Thor to wrestle her, and Thor — after a long bout — is brought to one knee, with the giant-king then calling the contest to a halt.footnote:[Faulkes 1987, *Gylfaginning* ch. 46, on the Elli wrestling-match and on Thor's being brought to one knee in the contest with the old woman.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 46
 
-The shaft returns to its cane, the arrowhead to its flint, the feathers to the bird from which they came, and the bowstring to the sinew — the arrow is annulled mid-flight by the decree of the Tablet.footnote:[Foster 2005, p. 567, Tablet II on the arrow-feather-back-to-feather motif; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+The morning after the contests, Útgarðaloki escorts Thor and his companions out of the hall and beyond the giant-king's territory, and only at the parting does the giant-king reveal the true identity of the contests' opponents and the illusions that had structured the night.footnote:[Faulkes 1987, *Gylfaginning* ch. 47, on Útgarðaloki's escort of Thor's party out of the territory and on the parting-revelation of the contests' true natures.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 47
 
-The annulment motif depends on a specific theology of the Tablet: what the Tablet decrees, the cosmos obeys, even against the physics of weapons.footnote:[Foster 2005, p. 567, Tablet II; Lambert 2013, introduction, on the Tablet as decree-object.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+The parting-revelation explicitly identifies the cat as Jörmungandr in disguise: Útgarðaloki tells Thor that the grey cat had been the world-encircling serpent enchanted into feline form, and that Thor's heave — which raised only one of the cat's paws — had in fact lifted the serpent so far that its body had pulled out of the ocean's circuit and the gods themselves had been alarmed at how high the cat had been raised.footnote:[Faulkes 1987, *Gylfaginning* ch. 47, on the parting-revelation that the cat had been Jörmungandr in disguise, on Thor's heave as having pulled the serpent's body out of the ocean's circuit, and on the gods' alarm at the height to which the disguised serpent had been raised.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 47
 
-Ninurta's first assault therefore fails — not because his weapons are weak but because the weapons themselves cannot exist in a cosmos whose decree is now spoken by Anzû.footnote:[Foster 2005, pp. 567–568, Tablet II on the failure of the first assault; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 567-568
+The parting-revelation also retroactively re-reads the other two Thor-contests as cosmic tests in disguise: the horn from which Thor had drunk had been the ocean itself (Thor's three pulls had perceptibly lowered sea-level around the world's coasts and produced what is now called the tide), and the old woman Elli had been Old Age herself, against whom no being can finally prevail.footnote:[Faulkes 1987, *Gylfaginning* ch. 47, on the retroactive re-reading of the horn-contest as drinking-from-the-ocean (with the ebbing tide as observable consequence) and of the Elli wrestling-match as a contest against Old Age herself.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 47
 
-[LACUNA: the middle passages of Tablet II between the first failed engagement and Ea's counsel are broken | source: Annus 2001, Tablet II apparatus | scholarly_reconstruction: Annus's score integrates Old Babylonian and Neo-Assyrian witnesses; Foster's English fills the gap from parallel passages.]
+On hearing the parting-revelation, Thor reaches for Mjöllnir to strike the giant-king — and finds that Útgarðaloki and his hall have vanished, leaving only an empty plain, in a final illusion-collapse that frames the entire visit as a single sustained giant-trick that Thor cannot retroactively avenge.footnote:[Faulkes 1987, *Gylfaginning* ch. 47 (closing) and ch. 48 (consequence), on Thor's reaching for Mjöllnir and on the disappearance of Útgarðaloki and his hall, leaving only the empty plain.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 47–48
 
-Ninurta dispatches Šarur, his animate mace, back to Ea to report the failure and to seek counsel.footnote:[Foster 2005, pp. 568–569, Tablet II on Šarur returning to Ea; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 568-569
+The Útgarðaloki episode is therefore the *trickster-framed* encounter of the three: the meeting of Thor and Jörmungandr in *Gylfaginning* 46–47 is mediated through illusion, the serpent appears in non-serpentine form, and the encounter ends without combat in the conventional sense, with Thor having lifted-but-not-killed the disguised serpent.footnote:[Faulkes 1987, *Gylfaginning* chs. 46–48, on the trickster-framing of the first Thor-and-Jörmungandr encounter and on the lift-but-not-kill structure of the cat-lifting contest.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 46–48
 
-Šarur speaks on Ninurta's behalf, delivering the warrior's report to Ea in direct speech.footnote:[Foster 2005, pp. 568–569, Tablet II on Šarur's speech to Ea; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 568-569
+The Útgarðaloki encounter is also the *cosmic-cost* encounter: the heave that raised the cat-by-one-paw has retroactively measurable cosmic consequences (the alarm of the gods, the destabilising of the ocean's encircling boundary, the apparent tide-effect of the related horn-contest), and the encounter therefore stages cosmic-magnitude force without cosmic-magnitude resolution.footnote:[Faulkes 1987, *Gylfaginning* ch. 47, on the cosmic-cost dimension of the Útgarðaloki contests as retroactively reported in the parting-revelation; per brief 18-thor-jormungandr.yaml on the trickster-framed and cosmic-cost reading of the first encounter.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 47
 
-The animate-mace-as-messenger motif is the distinctive contribution of this chapter to the book's Ninurta-cycle continuity: Šarur already speaks and travels as messenger in the Sumerian *Lugal-e*, and the Anzû Epic preserves the function.footnote:[ETCSL 1.6.2 lines 24–47, 96–118 on Šarur as messenger in Lugal-e; Foster 2005, pp. 568–569 for the Anzû Epic parallel.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 lines 24-47
+The Útgarðaloki encounter is found only in Snorri's *Gylfaginning* in the surviving Norse corpus and has no Eddic poetic parallel: there is no *Útgarðaloks-kviða* in the *Codex Regius*, and the encounter survives only as Snorri's prose narrative, with no skaldic verse cited by Snorri to support the cat-disguise specifically.footnote:[Faulkes 1987, *Gylfaginning* chs. 45–48, on the absence of an Eddic poetic parallel for the Útgarðaloki episode and on the encounter's survival only as Snorri's prose; Larrington 2014, on the absence of an Útgarðaloki poem in the Codex Regius.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 45–48
 
-Ea receives Šarur's report and deliberates on a counter-strategy that will not depend on the straightforward shooting of arrows.footnote:[Foster 2005, pp. 569–570, Tablet II on Ea's deliberation; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 569-570
+[INFERENCE: the Útgarðaloki encounter's survival only in Snorri's prose, without an extant Eddic poetic parallel, raises the question of whether the cat-disguise is a Snorra Edda elaboration of an older underlying tradition or whether it represents an older oral-traditional motif that simply happened not to survive into the *Codex Regius*; the chapter does not adjudicate the question and treats the encounter as a Snorra Edda witness to be taken on its own terms, with the absence of poetic parallel noted but not resolved. | basis: Faulkes 1987 on the Snorra-Edda-only attestation; Larrington 2014 on the Eddic-poem corpus and the absence of an Útgarðaloki poem | risk: the underlying age of the cat-disguise motif is not securely datable from the Snorra Edda alone, and reading the encounter as continuous with the Eddic and skaldic strata is itself an editorial choice rather than an evidentiary fact.]
 
-Ea instructs Šarur to carry back a new plan to Ninurta.footnote:[Foster 2005, pp. 569–570, Tablet II on Ea's counter-plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 569-570
+The Útgarðaloki encounter's narrative-thematic function is the establishment of Thor's cosmic-grade power *and* its cosmic-grade insufficiency: Thor's heave is sufficient to disturb the world-encircling serpent but not to dislodge it, and the encounter functions as a measure of the storm-god's strength against the cosmic-boundary figure rather than as a successful combat.footnote:[Faulkes 1987, *Gylfaginning* chs. 46–47, on the narrative-thematic function of the Útgarðaloki encounter as a power-measure rather than a combat; per brief 18-thor-jormungandr.yaml on the encounter's role in the layered three-encounter record.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 46–47
 
-Ea's counsel has two components: first strike off Anzû's pinion-feathers with a gust or sling, and then shoot while Anzû is preoccupied with the damaged wing.footnote:[Foster 2005, pp. 570–571, Tablet II on Ea's two-step plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 570-571
+=== Encounter 2 — The fishing expedition with Hymir (Hymiskviða, Gylfaginning 48, Húsdrápa)
 
-The logic of the counsel is that the Tablet's decree can neutralise a weapon in flight only if the combat proceeds along the line the decree anticipates; surprise and disruption at the wing break the chain between decree and response.footnote:[Foster 2005, pp. 570–571, Tablet II; Annus 2001, Tablet II; Lambert 2013, introduction, on the theological logic.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The second of the three encounters is the fishing expedition in which Thor rows out with the giant Hymir to deep ocean and hooks Jörmungandr on a baited line, with two principal textual witnesses giving variant outcomes: *Hymiskviða* (Eddic) records that Hymir cuts the line before Thor can deliver the killing blow, while the *Húsdrápa* fragments preserved in *Skáldskaparmál* appear to record the serpent's beheading.footnote:[Larrington 2014, *Hymiskviða* sts. 17–25, on the fishing expedition and on Hymir's cutting of the line before the killing-blow; Faulkes 1987 *Skáldskaparmál* (citing *Húsdrápa*), on the apparent beheading of the serpent in Úlfr Uggason's ekphrastic account.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 17–25
 
-[INFERENCE: the feather-shooting detail is interpreted as a theological, not merely a tactical, device | basis: Foster 2005, pp. 570–571 and Lambert 2013, introduction, both treat the Tablet's decree as the load-bearing element | risk: the surviving text does not explicitly state the theology; this reading is scholarly.]
+The Eddic *Hymiskviða* opens (sts. 1–6) with a frame-narrative situating the fishing expedition within a larger cauldron-quest: the gods are without a brewing-cauldron large enough for Ægir's feast, and Thor is dispatched to the giant Hymir's hall on the eastern shore to fetch the great cauldron that Hymir possesses.footnote:[Larrington 2014, *Hymiskviða* sts. 1–6, on the frame-narrative of the cauldron-quest and on Thor's dispatch to Hymir's hall.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 1–6
 
-Šarur returns from Ea and delivers the new plan to Ninurta in direct speech.footnote:[Foster 2005, pp. 571–572, Tablet II on Šarur returning with the plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 571-572
+In *Hymiskviða* sts. 7–14, Thor arrives at Hymir's hall accompanied by Týr (the one-handed god), is received with grudging hospitality, and consumes — in a giant-feast register — two of Hymir's three oxen at the evening meal, prompting Hymir to remark that they will need to fish if the next day's meal is to be provided.footnote:[Larrington 2014, *Hymiskviða* sts. 7–14, on Thor's arrival at Hymir's hall with Týr, on the grudging hospitality, and on Thor's consumption of two oxen prompting Hymir's fishing-remark.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 7–14
 
-==== Tablet III — second assault and victory
+In *Hymiskviða* sts. 15–17, Thor — required to provide his own bait for the next morning's fishing — kills Hymir's largest ox and severs its head, taking the ox-head as bait for the line, in a baiting-action that the poem records as itself an aggressive imposition on the giant's livestock.footnote:[Larrington 2014, *Hymiskviða* sts. 15–17, on Thor's killing of Hymir's largest ox and severing of its head as bait for the next morning's fishing line.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 15–17
 
-Tablet III opens with Ninurta returning to the mountain to engage Anzû a second time, now equipped with Ea's strategy.footnote:[Foster 2005, pp. 572–573, Tablet III opening; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 572-573
+In *Hymiskviða* sts. 17–19, Thor and Hymir launch the boat and row out, with Thor at the oars rowing far past the inshore fishing-grounds where Hymir habitually catches his whales, and far enough out that Hymir grows fearful of the depth and of the encircling serpent in whose ocean-zone they now find themselves.footnote:[Larrington 2014, *Hymiskviða* sts. 17–19, on Thor's rowing past Hymir's habitual whale-grounds, on the row's reach into the deep ocean, and on Hymir's fear of the serpent's ocean-zone.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 17–19
 
-Ninurta summons the south wind and commands it to pluck the pinions — the great flight-feathers — from Anzû's wings in the moment of engagement.footnote:[Foster 2005, pp. 573–574, Tablet III on the wind-and-pinion stratagem; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
+In *Hymiskviða* sts. 20–22, Thor baits his line with the ox-head, casts, and hooks Jörmungandr, with the serpent striking the bait and being drawn upward against Thor's rowing-bench, in a hook-and-haul image that the poem develops at the level of physical force: Thor's feet press through the boat's bottom and onto the sea-floor as he hauls the serpent up.footnote:[Larrington 2014, *Hymiskviða* sts. 20–22, on Thor's baiting with the ox-head, on the hooking of Jörmungandr, on the haul against the rowing-bench, and on Thor's feet driving through the boat's bottom to the sea-floor.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 20–22
 
-Anzû, seeing the pinions fall, cries out to them to return — attempting to use the Tablet's decree-power to reverse the damage, as he had done with the arrow.footnote:[Foster 2005, pp. 573–574, Tablet III on Anzû's attempt to recall his pinions; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
+The feet-through-the-bottom image is one of the most distinctive of the *Hymiskviða* narrative and is also one of the iconographic features that the surviving runestones (notably the Altuna stone) preserve as a visual anchor of the encounter, with the foot-and-boat-bottom motif visible in the stone-carving as well as in the poem.footnote:[Larrington 2014, *Hymiskviða* st. 22 and notes, on the feet-through-the-boat-bottom image; per brief 18-thor-jormungandr.yaml iconography on the Altuna stone's preservation of the same motif; West 2007 ch. 6 on the iconographic-and-poetic correspondence.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða st. 22
 
-Ninurta speaks over Anzû's decree, invoking Ea's counsel as a counter-decree, and the pinions remain severed.footnote:[Foster 2005, pp. 573–574, Tablet III on Ninurta's counter-decree; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
+In *Hymiskviða* st. 22, the haul brings the serpent's head above the surface of the sea, and Thor — gripping the line with one hand and reaching for Mjöllnir with the other — is poised to strike the killing blow with the hammer in a face-to-face confrontation with Jörmungandr.footnote:[Larrington 2014, *Hymiskviða* st. 22, on the haul that brings the serpent's head above the sea's surface and on Thor reaching for Mjöllnir with hammer raised for the killing blow.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða st. 22
 
-With Anzû's wings broken, Ninurta shoots an arrow into Anzû's chest.footnote:[Foster 2005, p. 574, Tablet III on the fatal arrow; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 574
+In *Hymiskviða* sts. 23–24, Hymir — fearful of the consequences of Thor's actually striking the serpent — cuts the fishing line with his knife, and the serpent slips back into the depths before Thor can complete the killing blow, with the encounter ending in Thor's striking the boat's stern (or, by other readings, Hymir himself) with the hammer in his frustration.footnote:[Larrington 2014, *Hymiskviða* sts. 23–24, on Hymir's cutting of the line, on the serpent's escape into the depths, and on Thor's striking-out in frustration.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 23–24
 
-Ninurta severs Anzû's throat with a further blow, completing the kill.footnote:[Foster 2005, pp. 574–575, Tablet III on the finishing stroke; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 574-575
+The *Hymiskviða* outcome is therefore *the serpent escapes*: Hymir's intervention prevents the killing-blow, the line is severed, Jörmungandr returns to the deep, and the cosmic boundary that the encircling-serpent represents is not breached in this encounter.footnote:[Larrington 2014, *Hymiskviða* sts. 23–24, on the serpent-escapes outcome of the *Hymiskviða* fishing encounter; per brief 18-thor-jormungandr.yaml variants section on the *Hymiskviða* outcome.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 23–24
 
-With Anzû slain, Ninurta recovers the Tablet of Destinies from the dead body.footnote:[Foster 2005, p. 575, Tablet III on the recovery of the Tablet; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 575
+The remainder of *Hymiskviða* (sts. 25–39) returns to the cauldron-quest frame-narrative: Thor and Týr take the great cauldron from Hymir's hall (after a contest of strength involving the breaking of Hymir's drinking-cup against the giant's head), are pursued by Hymir and his giant-kin, and Thor slays the pursuing giants with Mjöllnir on the shore before returning with the cauldron to the gods.footnote:[Larrington 2014, *Hymiskviða* sts. 25–39, on the resolution of the cauldron-quest frame, on the breaking of Hymir's drinking-cup, on the pursuit by Hymir's giant-kin, and on Thor's killing of the giants on the shore.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 25–39
 
-Ninurta carries the Tablet back toward the assembly, restoring the decree-power to its proper custodians.footnote:[Foster 2005, pp. 575–576, Tablet III on the return journey; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 575-576
+Snorri's *Gylfaginning* version of the fishing expedition (chapter 48) is in narrative continuity with the Útgarðaloki encounter and is presented as Thor's *return-bout* attempt to make good against the serpent after the lifting-contest revelation: in Snorri's account, Thor disguises himself as a young man, lodges with the giant Hymir, fashions an ox-head bait, and rows out with Hymir to fish for Jörmungandr.footnote:[Faulkes 1987, *Gylfaginning* ch. 48, on the fishing-expedition's narrative continuity with the Útgarðaloki episode, on Thor's young-man disguise, on the lodging with Hymir, and on the ox-head bait and the row-out.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 48
 
-Dagan, the messenger of the assembly, is dispatched to bring news of the victory to the gods.footnote:[Foster 2005, pp. 575–576, Tablet III on Dagan's messenger role; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 575-576
+In Snorri's account, Thor hooks Jörmungandr on the baited line, hauls the serpent up to the surface, raises Mjöllnir, and is on the point of striking the killing blow when Hymir — terror-struck at the cosmic combat unfolding in his fishing-boat — cuts the line with his bait-knife, releasing the serpent back into the deep before the hammer can fall.footnote:[Faulkes 1987, *Gylfaginning* ch. 48, on Thor's hooking and hauling of Jörmungandr, on the raised hammer, and on Hymir's cutting of the line with his bait-knife at the moment of the would-be killing-blow.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 48
 
-The assembly responds with praise and formal acknowledgement of Ninurta's victory.footnote:[Foster 2005, pp. 576–577, Tablet III on the assembly's response; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 576-577
+Snorri's *Gylfaginning* 48 outcome is therefore the same as the *Hymiskviða* outcome at the level of result: the serpent escapes, Thor is denied the killing-blow by the giant's intervention, and the encounter ends without the fishing-bout becoming the final combat — the final combat is reserved for Ragnarök.footnote:[Faulkes 1987, *Gylfaginning* ch. 48, on the same serpent-escapes outcome and on the explicit reservation of the final combat for Ragnarök; Larrington 2014 *Hymiskviða* sts. 23–24 on the same outcome in the Eddic poem.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 48
 
-Ninurta is granted a catalogue of honorific names, each marking a facet of his victory and his warrior-function.footnote:[Foster 2005, pp. 576–577, Tablet III on the honorific name-list; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 576-577
+[VARIANT: primary=Hymiskviða sts. 23–24 / Gylfaginning 48 (Larrington 2014; Faulkes 1987), serpent escapes when Hymir cuts the line before the killing blow | alt=Húsdrápa fragments (Faulkes 1987 Skáldskaparmál citations), serpent appears to be beheaded by Thor before the line is cut | chosen: both variants are presented co-equally per the brief, with the Hymiskviða / Gylfaginning outcome treated as the dominant one in the surviving narrative tradition and the Húsdrápa beheading as the older skaldic alternate that Snorri preserves as a witness to a divergent reading | reason: per brief 18-thor-jormungandr.yaml variants.classification: co-equal (no single source has all three encounters fully narrated); per brief alternates listing the Húsdrápa-beheading as a variant outcome of the fishing encounter; Larrington 2014 and Faulkes 1987 both record the line-cut outcome but Faulkes 1987 also preserves the *Húsdrápa* fragments that imply the beheading.]
 
-The name-list is structurally comparable to — and treated in the scholarship as the direct antecedent of — the fifty names of Marduk that close *Enūma Eliš*.footnote:[Lambert 2013, introduction, on the Anzû name-list and Enūma Eliš; Annus 2001, introduction and Tablet III commentary.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The *Húsdrápa* of Úlfr Uggason is preserved in the surviving corpus only as fragmentary skaldic stanzas quoted by Snorri in *Skáldskaparmál*, and the surviving stanzas on the fishing expedition include lines describing Thor's striking off the serpent's head and the subsequent reaction of the gods at this killing-blow.footnote:[Faulkes 1987, *Skáldskaparmál*, on the *Húsdrápa* fragmentary preservation and on the surviving stanzas describing the fishing expedition with the serpent's head-striking; per brief 18-thor-jormungandr.yaml on the *Húsdrápa* outcome.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (Húsdrápa fragments)
 
-Ninurta's honours include confirmation of his warrior-champion role and a formal place in the royal-ideological order that the Tablet underwrites.footnote:[Foster 2005, pp. 576–577, Tablet III; Annus 2001, Tablet III; Lambert 2013, introduction, on the royal-legitimation function.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+[LACUNA: the *Húsdrápa* of Úlfr Uggason c. 985 CE survives only as fragmentary stanzas preserved in Snorri's *Skáldskaparmál* citations rather than as a continuous original poem, and the precise scope and sequence of Úlfr's narrative of the fishing expedition cannot be fully recovered from the surviving fragments. | source: Faulkes 1987 *Skáldskaparmál* citations of *Húsdrápa* | scholarly_reconstruction: Faulkes 1987 reads the surviving stanzas as recording an apparent killing-blow against the serpent (a beheading or comparable head-striking) that diverges from the *Hymiskviða* line-cutting outcome; the reconstruction is based on the surviving fragments alone, with no other manuscript witness to *Húsdrápa* outside Snorri's quotations.]
 
-[LACUNA: the closing doxology of Tablet III is partially broken | source: Annus 2001, Tablet III apparatus | scholarly_reconstruction: Annus reconstructs the final hymn of praise from parallel Mesopotamian praise-formulae.]
+The *Húsdrápa* fishing-expedition fragments contain skaldic kennings (the compressed metaphorical phrases characteristic of the genre) for both Thor and Jörmungandr that preserve a Viking-Age vocabulary of storm-god-and-encircling-serpent combat-poetics and that Watkins reads as evidence for the Indo-European inheritance of the dragon-slaying poetic register.footnote:[Faulkes 1987, *Skáldskaparmál* citations of *Húsdrápa*, on the kennings for Thor and Jörmungandr in the surviving stanzas; Watkins 1995 Part V on the skaldic kennings as evidence for the Indo-European poetic register of dragon-slaying.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V
 
-[RECONSTRUCTION: the final doxology is presented in Annus's reconstructed form, completing the hymn of praise to Ninurta | gap_source: Annus 2001, Tablet III closing lines | fill_source: Annus's score of parallel Mesopotamian praise-formulae, drawn from within the Anzû textual tradition | confidence: medium]
+The *Húsdrápa* outcome — as far as the surviving fragments allow it to be reconstructed — is therefore that *Thor strikes the serpent*: the divergence from the *Hymiskviða* / *Gylfaginning* line-cut outcome is unambiguous in the fragments that survive, and the skaldic poem appears to record an alternative tradition in which the fishing-encounter ends with a killing-blow rather than with the line-cut and the serpent's escape.footnote:[Faulkes 1987, *Skáldskaparmál* citations of *Húsdrápa* on the Thor-strikes-the-serpent outcome of the surviving fragments; per brief 18-thor-jormungandr.yaml on the *Húsdrápa* divergent outcome.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (Húsdrápa outcome)
 
-The epic closes with a hymn-formula addressed to Ninurta as victorious warrior and restorer of cosmic order.footnote:[Foster 2005, pp. 577–578, Tablet III closing hymn; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 577-578
+[INFERENCE: the apparent *Húsdrápa* beheading of Jörmungandr at the fishing-expedition is in tension with the wider Norse tradition's reservation of the actual killing for Ragnarök (per *Völuspá* 56 and *Gylfaginning* 51), and modern scholarship has read the *Húsdrápa* fragments either as recording an early-skaldic alternate tradition that diverged on the outcome or as recording a hyperbolic ekphrastic figure (Úlfr describing a panel-image whose pictorial moment was the raised-hammer instant just before the line-cut, with the skaldic verse describing the apparent rather than the actual outcome). | basis: Faulkes 1987 *Skáldskaparmál* citations; Watkins 1995 Part V; brief 18-thor-jormungandr.yaml variants.alternates | risk: the fragmentary survival of *Húsdrápa* makes it impossible to settle the question on textual evidence alone, and the chapter presents both readings as live without adjudication.]
 
-=== Function and interpretation
+The skaldic Thor-and-Jörmungandr corpus is older than the Eddic *Hymiskviða* in compositional date: Bragi Boddason's verses on the fishing-encounter are conventionally dated to the early ninth century CE, Eysteinn Valdason's to the tenth century, and *Húsdrápa* to circa 985 CE, while the *Hymiskviða* is generally dated by its formulaic features to the late tenth or eleventh century.footnote:[Faulkes 1987, *Skáldskaparmál*, on the dating of Bragi Boddason (early 9th c.), Eysteinn Valdason (10th c.), and Úlfr Uggason / *Húsdrápa* (c. 985 CE); Larrington 2014 introduction on the late-tenth-or-eleventh-century dating of *Hymiskviða*; Watkins 1995 Part V on the skaldic-corpus chronology.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (skaldic dating)
 
-The Anzû Epic is read in the scholarship as a sovereignty-combat rather than a cosmogonic combat: no world is made in it, and the decisive action is the return of an already-existing kingship-token to its legitimate custodian.footnote:[Lambert 2013, introduction, on sovereignty-as-function; Foster 2005, pp. 555–556, headnote; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The skaldic Thor-and-Jörmungandr corpus is therefore the *earliest* surviving witness-stratum for the fishing-encounter and is contemporary with — or in some cases earlier than — the iconographic dossier (the Hørdum and Ardre VIII stones in particular pre-date *Húsdrápa*), with the consequence that the encounter's outline is securely attested in pre-Christian Norse poetry and visual art before the manuscript record begins.footnote:[Faulkes 1987 *Skáldskaparmál* on the skaldic chronology; per brief 18-thor-jormungandr.yaml iconography on the Hørdum (c. 800 CE) and Ardre VIII (c. 700–800 CE) chronologies; Watkins 1995 Part V on the pre-Christian status of the skaldic corpus; West 2007 ch. 6 on the iconographic-and-skaldic mutual support.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V (pre-Christian skaldic corpus)
 
-The narrative establishes Ninurta as model king: the warrior who defends the order of the assembly, follows the counsel of the wise god, and restores the instruments of rule to their rightful place.footnote:[Annus 2001, introduction, on Ninurta-as-model-king; Lambert 2013, introduction.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Bragi Boddason's verses on the fishing-encounter (early ninth century CE) are the oldest surviving Norse poetic witness to the fishing-encounter and are among the oldest surviving Norse skaldic verses in any genre, with Bragi conventionally regarded as the earliest skald whose work is preserved by name; his fishing-encounter verses are quoted by Snorri in *Skáldskaparmál*.footnote:[Faulkes 1987, *Skáldskaparmál*, on Bragi Boddason as the earliest named skald whose work survives, on the early-ninth-century date of his fishing-encounter verses, and on the preservation of those verses through Snorri's quotation.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (Bragi Boddason)
 
-The narrative is cited in the scholarship as invoked within Neo-Assyrian royal ritual and within the *akītu* framework, linking the myth to the performative legitimation of the king.footnote:[Annus 2001, introduction, on the ritual and *akītu* contexts.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Eysteinn Valdason's tenth-century verses on the fishing-encounter (also preserved through Snorri's *Skáldskaparmál* quotations) supply additional skaldic kennings for Thor and the serpent and reinforce the evidence that the fishing-encounter was a stock skaldic subject across the ninth and tenth centuries.footnote:[Faulkes 1987, *Skáldskaparmál*, on Eysteinn Valdason's tenth-century fishing-encounter verses and on the encounter as a stock skaldic subject across the ninth-and-tenth-century skaldic corpus.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (Eysteinn Valdason)
 
-The theology of the Tablet of Destinies — that kingship is a transferable token, enforceable by decree — is the conceptual pivot that the scholarship follows into *Enūma Eliš*.footnote:[Lambert 2013, introduction, on the Tablet of Destinies across compositions; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The fishing-encounter's status as a *stock skaldic subject* is itself an evidentiary point: at least three named skalds across two centuries composed verse on the encounter, and the encounter therefore has the documentary profile of a well-known and frequently-rehearsed traditional narrative in pre-Christian Norse poetic culture, independent of any single textual or visual source.footnote:[Faulkes 1987, *Skáldskaparmál*, on the multiple-skald attestation of the fishing-encounter as evidence of its status as a stock skaldic subject; Watkins 1995 Part V on the same status; per brief 18-thor-jormungandr.yaml centrality_evidence on the skaldic attestation-volume.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (multi-skald attestation)
 
-Foster's headnote specifies that the Anzû Epic is preserved on multiple Neo-Assyrian copies and is one of the better-represented narrative poems of the Standard Babylonian corpus.footnote:[Foster 2005, pp. 555–556, headnote on the Standard Babylonian preservation.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The fishing-encounter's narrative-thematic function in the layered three-encounter record is the *failed combat*: Thor and Jörmungandr meet face-to-face for the first time as combatants in their own forms (no cat-disguise, no boundary-mediation), and the killing-blow is either prevented (Hymiskviða / Gylfaginning) or apparently delivered without lasting effect (Húsdrápa, given the Ragnarök reservation), with the encounter functioning as a deferred preliminary to the eschatological combat.footnote:[Larrington 2014 *Hymiskviða* sts. 22–24 and Faulkes 1987 *Gylfaginning* ch. 48 on the prevented-killing outcome; Faulkes 1987 *Skáldskaparmál* on the *Húsdrápa* apparent-killing outcome; Faulkes 1987 *Gylfaginning* ch. 51 on the Ragnarök reservation; per brief 18-thor-jormungandr.yaml on the failed-combat function of the fishing-encounter.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 48 and Skáldskaparmál
 
-Annus's introduction lays out the case that the Anzû Epic is a deliberate literary antecedent of *Enūma Eliš*, reused, reshaped, and structurally outbid in the later composition.footnote:[Annus 2001, introduction on the Anzû → Enūma Eliš genealogy.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+=== Encounter 3 — The mutual killing at Ragnarök (Völuspá 56, Gylfaginning 51)
 
-Lambert concurs that Marduk's assumption of the Tablet of Destinies in *Enūma Eliš* is modelled directly on Ninurta's recovery of the Tablet in the Anzû Epic.footnote:[Lambert 2013, introduction, on Marduk and the Tablet.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The third of the three encounters is the mutual killing at Ragnarök, attested co-equally in *Völuspá* stanza 56 (Eddic) and in *Gylfaginning* chapter 51 (Snorra Edda), in which Thor and Jörmungandr meet for the final combat and each slays the other in the same engagement.footnote:[Larrington 2014, *Völuspá* st. 56, on the Ragnarök combat between Thor and Jörmungandr and on the mutual-killing outcome; Faulkes 1987 *Gylfaginning* ch. 51 on the same combat in Snorri's expansion of the Eddic narrative.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá st. 56
 
-Forsyth treats the Anzû Epic as a key node in the long genealogy that the combat-myth scholarship traces from Mesopotamia to the Hebrew Bible and Christian apocalyptic.footnote:[Forsyth 1987, ch. 2, on the Anzu-bridge argument.]
-// EVIDENCE: source_id=forsyth-1987 ; loc=ch. 2
+*Völuspá* stanza 56 compresses the Ragnarök Thor-and-Jörmungandr combat into a few lines: the verse names Thor as Hlóðyn's son ("Hlóðyn's son" being a kenning for Thor by his mother's name, Earth), records his victorious strike against the serpent, and then records that Thor — having killed the serpent — staggers nine paces from the kill-site before falling dead from the serpent's venom.footnote:[Larrington 2014, *Völuspá* st. 56, on the compressed combat-narrative naming Thor as Hlóðyn's son, on the victorious strike against the serpent, on the staggering nine paces, and on Thor's death from the serpent's venom.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá st. 56
 
-=== Variants and transmission
+[LACUNA: *Völuspá* stanza 56 compresses the Ragnarök combat into a few lines of mythic-cosmic verse, with narrative detail of the encounter (the approach, the exchange of blows, the precise sequence of strike and venom) absent from the surviving Eddic poem. | source: Larrington 2014 *Völuspá* st. 56 | scholarly_reconstruction: Faulkes 1987 *Gylfaginning* ch. 51 supplies the in-tradition Norse expansion of the *Völuspá* compression, with additional narrative detail (the approach of the serpent across the land, the exchange of blows, the venom-spew) drawn from Snorri's prose retelling that is consistent with — and elaborative of — the *Völuspá* st. 56 outline.]
 
-[VARIANT: primary=Annus 2001 ("Standard Babylonian three-tablet recension"); alt=Foster 2005 pp. 555–556 ("Old Babylonian fragmentary version survives with some divergent details") | chosen: A | reason: the Standard Babylonian text is the main attested recension, and the brief designates Annus 2001 as the prevalent version.]
+The *Völuspá* st. 56 designation of Thor as "Hlóðyn's son" (Old Norse Hlǫðynjar burr or similar formulations across the manuscript readings) is a kenning that names the storm-god by his maternal lineage rather than by his patronymic Óðinsson, and the kenning's use in the Ragnarök verse aligns Thor with the earth (Jörð / Hlóðyn / Fjǫrgyn) at the moment of the cosmic combat.footnote:[Larrington 2014, *Völuspá* st. 56 and notes, on the Hlóðyn's-son kenning for Thor, on the maternal-lineage naming convention, and on the kenning's significance at the Ragnarök combat-moment.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá st. 56 and notes
 
-An Old Babylonian fragmentary version of the story survives; Foster's translation indicates it differs from the Standard Babylonian recension in narrative details but not in the overall arc.footnote:[Foster 2005, pp. 555–556, headnote on the Old Babylonian antecedent.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+*Gylfaginning* chapter 51 is the principal narrative-continuous Norse account of Ragnarök and is structured as Snorri's expansion of the Eddic poetic compressions — drawing on *Völuspá*, *Vafþrúðnismál*, and other Eddic mythological poems — into a single continuous prose narrative of the eschatological end.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on the chapter as a continuous prose narrative of Ragnarök drawing on *Völuspá*, *Vafþrúðnismál*, and other Eddic sources; Larrington 2014 on the same Eddic-poem-cluster as Snorri's evident sources.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-The Old Babylonian version is treated here as an earlier, shorter witness rather than a textually equivalent variant, following the brief's classification.footnote:[Annus 2001, introduction; Foster 2005, pp. 555–556.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+In *Gylfaginning* 51, Ragnarök opens with the fimbulvetr — the "great winter" — three winters of unrelieved cold that pass in succession without intervening summer, accompanied by social collapse (kin-killings, oath-breakings, and the unmaking of human moral bonds) and by cosmic portents (Skǫll and Hati swallow the sun and moon, the earth trembles, the world-tree shakes).footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on the fimbulvetr, on the three-winters-without-summer, on the social-collapse and oath-breaking sequence, and on the cosmic portents (Skǫll, Hati, earth-trembling, Yggdrasil shaking).]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-The Sumerian *Lugal-e* does not narrate the Anzû combat but lists "the Anzud bird" in Šarur's catalogue of Ninurta's prior trophies.footnote:[ETCSL 1.6.2 line 122, the Anzud bird in the trophy-list.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 line 122
+In *Gylfaginning* 51, the bound monsters — Loki and Fenrir — break their bindings, Naglfar (the ship of the dead) is launched with its giant-crew, and the sons of Múspell (the fire-giants) ride out of the south under Surtr's leadership, with the world-bridge Bifrǫst breaking under Múspell's host as they cross to attack the gods.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on Loki and Fenrir breaking their bindings, on Naglfar's launching with the giant-crew, on the Múspellssynir riding out under Surtr, and on the breaking of Bifrǫst.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-The Sumerian *Angim dimma* likewise places the Anzud bird in Ninurta's catalogue of slain foes and among the trophies hung on the warrior's chariot, but does not narrate a combat.footnote:[ETCSL 1.6.1 lines 30–40 (trophy list) and 55–63 (chariot-hanging).]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 lines 30-63
+In *Gylfaginning* 51, Jörmungandr — at the unmaking of the boundary by which the serpent had encircled the world — emerges from the ocean onto the land and approaches the field of Vígríðr (the appointed Ragnarök battle-plain) spewing venom across sky and water as it advances, in a body-and-venom image that establishes the serpent's combat-mode for the encounter.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on Jörmungandr's emergence from the ocean, on the approach to Vígríðr, and on the venom-spewing across sky and water as the serpent advances.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-The Sumerian allusions indicate that an Anzû-slaying tradition was already in circulation before the Standard Babylonian epic gave it narrative expansion.footnote:[ETCSL 1.6.1 lines 30–40; ETCSL 1.6.2 line 122; Annus 2001, introduction on the Sumerian prehistory.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+In *Gylfaginning* 51, the Æsir arm and ride out from Ásgarðr in their final array: Óðinn at the head with his spear Gungnir, Thor with Mjöllnir, Týr (the one-handed god), Freyr, Heimdallr, and the rest of the Æsir in their war-gear, riding out of Ásgarðr to meet the giant-and-monster host on Vígríðr.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on the Æsir's arming and riding-out from Ásgarðr, on Óðinn with Gungnir at the head, on Thor with Mjöllnir, and on the assembly on Vígríðr.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-The continuity from Sumerian Ninurta material into the Standard Babylonian Anzû Epic is strongest in the figure of Šarur, the animate messenger-mace, who functions in both traditions as scout and speaker between warrior and counselor.footnote:[ETCSL 1.6.2 lines 24–47, 96–118, 228–243 on Šarur in Lugal-e; Foster 2005, pp. 568–569 on Šarur in the Anzû Epic.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 Šarur passages
+In *Gylfaginning* 51, the field of Vígríðr becomes the site of multiple paired single-combats among the named principals: Óðinn confronts Fenrir, Freyr confronts Surtr, Týr confronts Garmr (the hound of Hel), Heimdallr confronts Loki, and Thor confronts Jörmungandr in the principal Thor-and-serpent combat that the present chapter centres.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on the paired single-combats at Vígríðr: Óðinn and Fenrir, Freyr and Surtr, Týr and Garmr, Heimdallr and Loki, and Thor and Jörmungandr.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-The Standard Babylonian composition therefore draws on an older Sumerian Ninurta cycle in which the warrior-god's weapons and adversaries are already identified, and narratively expands one of those adversaries (Anzû) into a full combat-and-recovery story.footnote:[Annus 2001, introduction, on the Sumerian-to-Akkadian literary transmission.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+In *Gylfaginning* 51, Thor and Jörmungandr engage on the field, Thor wielding Mjöllnir and the serpent attacking with body and venom, and the combat is staged as a face-to-face confrontation with neither the boundary-mediation of the Útgarðr disguise nor the boat-and-line interposition of the fishing-encounter.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on the face-to-face Thor-and-Jörmungandr combat at Vígríðr without the boundary-mediation or the boat-and-line interposition of the earlier encounters.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-=== Reception within the Mesopotamian tradition
+In *Gylfaginning* 51, Thor strikes the killing-blow against Jörmungandr with Mjöllnir, slaying the world-encircling serpent in a single stroke that is at once the unmaking of the cosmic boundary the serpent had encircled and the close of the Æsir's combat-history with their long-deferred adversary.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on Thor's killing-blow with Mjöllnir against Jörmungandr and on the slaying as both boundary-unmaking and combat-closure.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-Scholarship traces a deliberate literary line from *Lugal-e* (Ninurta vs. Asag) to the Anzû Epic (Ninurta vs. Anzû) to *Enūma Eliš* (Marduk vs. Tiamat and Qingu), with each composition reusing and outbidding its predecessor.footnote:[Annus 2001, introduction, on the *Lugal-e* → Anzû → *Enūma Eliš* line; Lambert 2013, introduction.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+In *Gylfaginning* 51, Thor — having killed the serpent — staggers nine paces from the kill-site before falling dead from the serpent's venom, with the venom that Jörmungandr had been spewing across sky and water during the approach having reached Thor at close range during the combat and having proved fatal in the aftermath of the killing-blow.footnote:[Faulkes 1987, *Gylfaginning* ch. 51, on Thor's nine-pace stagger from the kill-site, on the serpent's venom as the proximate cause of Thor's death, and on the close-range venom-exposure during the combat.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51
 
-The Tablet of Destinies appears as a narrative object in the Anzû Epic and again in *Enūma Eliš*, where Tiamat bestows it on Qingu and Marduk reclaims it after the combat.footnote:[Lambert 2013, introduction and commentary on the Tablet in Enūma Eliš; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The nine-pace stagger and the venom-death of Thor are the load-bearing distinctive features of the Norse eschatological combat: the storm-god kills the serpent and dies of the killing, with the Norse outcome distinct from the survivor-victor outcomes of the cosmogonic and sovereignty subtypes (Marduk surviving Tiamat, Zeus surviving Typhon, Indra surviving Vṛtra) and characteristic of the eschatological subtype's mutual-cost feature.footnote:[Faulkes 1987 *Gylfaginning* ch. 51 on the nine-pace stagger and the venom-death; Larrington 2014 *Völuspá* st. 56 on the same; per chaoskampf scope.md on the eschatological subtype's distinctive features; Lambert 2013 on Marduk's survival as cosmogonic-subtype contrast; Jamison and Brereton 2014 on Indra's survival as sovereignty-subtype contrast.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51 (mutual-cost outcome)
 
-The structural reuse extends to the name-list: Ninurta's honorific names at the close of the Anzû Epic are the direct antecedent of Marduk's fifty names at the close of *Enūma Eliš*.footnote:[Lambert 2013, introduction; Annus 2001, introduction and Tablet III commentary.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+In *Gylfaginning* 51 and *Völuspá* sts. 57–58, the Ragnarök combat-sequence continues after the Thor-and-Jörmungandr mutual killing: Surtr's fire engulfs the world, the earth sinks into the sea, Yggdrasil burns, and the cosmos is unmade in a final conflagration.footnote:[Larrington 2014, *Völuspá* sts. 57–58, on the post-Thor-and-Jörmungandr Surtr's-fire conclusion of Ragnarök; Faulkes 1987 *Gylfaginning* ch. 51 on the same fire-conclusion and on the earth-into-sea unmaking of the cosmos.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá sts. 57–58
 
-Anzû himself is repurposed in *Enūma Eliš* — no longer the rebel-servant of the Anzû Epic, but a monster in Tiamat's brood, slain once already and now recruited into a new cosmogonic conflict.footnote:[Lambert 2013, introduction and commentary on Anzû's reuse in Enūma Eliš; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+The Norse eschatological combat is therefore *terminal but not final*: the present cosmic age ends in the Thor-and-Jörmungandr mutual killing and the Surtr's-fire conflagration, but the Eddic and Snorra Edda corpus also records a renewal-narrative in which a new earth rises green from the sea, a small surviving group of gods (Móði and Magni inheriting Mjöllnir, Víðar and Váli, the returning Baldr) re-establish the cosmic order, and the human pair Líf and Lífþrasir survive to repopulate the new earth.footnote:[Larrington 2014, *Völuspá* sts. 59–66, on the post-Ragnarök renewal with the new earth, the surviving gods, the inheritance of Mjöllnir by Móði and Magni, and the human pair Líf and Lífþrasir; Faulkes 1987 *Gylfaginning* chs. 52–53 on the same renewal-narrative.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá sts. 59–66
 
-// COMPARATIVE-HOOK: Lambert 2013 and Annus 2001 both argue the Lugal-e → Anzû → Enūma Eliš literary genealogy is deliberate authorial reuse rather than general pattern-matching; this is the Part II C2 (combat as sovereignty) argument for Mesopotamian continuity.
-// COMPARATIVE-HOOK: the Tablet of Destinies as sovereignty-token — transferable, decree-enforcing, recoverable — is the Mesopotamian conceptual analogue to Marduk's assumption of the Tablet in Enūma Eliš and to the "kingship as object" motif that feeds the Kumarbi Cycle and, via transmission, the Hesiodic succession in Theogony 820–880 (see hoffner-1998; west-1997).
-// COMPARATIVE-HOOK: the lion-headed eagle-monster iconography across third-millennium Mesopotamia is evidence for the Anzû-figure's circulation independent of the narrative epic — a reception-across-media story that parallels the wider Near Eastern diffusion of combat imagery (Annus 2001 introduction; Foster 2005 pp. 555–556 headnote).
-// COMPARATIVE-HOOK: the threefold refusal structure (Adad, Gerra, Šara decline before Ea proposes Ninurta) is structurally comparable to the threefold refusal in the Baal Cycle before Baal takes up the combat against Yamm (see Part II C2; smith-1994-baal-i).
-// COMPARATIVE-HOOK: the Vedic "Indra and the theft of soma" material offers a parallel theft-of-kingship-token motif in positive valence — the champion takes back what belongs to the gods — which the C2 sovereignty chapter should address (jamison-brereton-2014).
-// COMPARATIVE-HOOK: the animate-weapon motif (Šarur as messenger-mace) links this chapter to Ch1 Ninurta/Asag; the two chapters together establish Šarur as a cross-composition character and prepare the contrast with Marduk's impersonal weapons in Enūma Eliš.
-// COMPARATIVE-HOOK: the "arrow annulled by decree" motif (arrow back to shaft, feather back to bird) has no close Indo-European parallel in the Watkins HERO SLAY SERPENT corpus; it is a distinctly Mesopotamian theological innovation tied to the Tablet-of-Destinies theology (watkins-1995; Lambert 2013).
+The Norse renewal-narrative places the Thor-and-Jörmungandr mutual killing at the close of the *present* cosmic age and at the threshold of a *renewed* age in which Thor's role is inherited by his sons Móði and Magni rather than continued by Thor himself, with the consequence that the mutual killing is permanent for Thor as an individual but not the absolute cosmic terminus.footnote:[Larrington 2014, *Völuspá* sts. 59–66, on the renewal-narrative's structural placement of the Thor-and-Jörmungandr mutual killing as close-of-age but not absolute-terminus; Faulkes 1987 *Gylfaginning* chs. 52–53 on the inheritance of Mjöllnir by Móði and Magni.]
+// EVIDENCE: source_id=larrington-poetic-edda ; loc=Völuspá sts. 59–66
+
+[INFERENCE: the structural similarity between the Norse Thor-and-Jörmungandr mutual killing and the Iranian Aži Dahāka rebound-and-final-killing at Frashokereti — both involving the deferral of the dragon's destruction, the eventual eschatological combat, and the binding-and-release-and-killing structural sequence — is one of the principal Indo-European-comparative observations of the wider book and is developed in Part II C4 (Eschatological Displacement); the present chapter notes the parallel for the comparative chapter without resolving the question of whether the parallel reflects shared inheritance or independent typological development. | basis: Faulkes 1987 *Gylfaginning* ch. 51; Larrington 2014 *Völuspá* st. 56; Benveniste and Renou 1934 on Aži Dahāka; Watkins 1995 Part V on the Indo-European poetic family; per brief 18-thor-jormungandr.yaml comparative_hooks on the Frashokereti pairing | risk: structural-typological similarity is not by itself evidence of historical inheritance, and the Aži Dahāka / Jörmungandr structural pair may reflect independent IE eschatologisations of an earlier non-eschatological combat rather than a shared Indo-European eschatological inheritance.]
+
+The third encounter is the only one of the three in which the killing actually takes place: in the Útgarðaloki encounter the serpent is lifted-but-not-killed; in the fishing encounter the serpent is hooked-but-(in the dominant Hymiskviða / Gylfaginning reading)-released; in the Ragnarök encounter the serpent is killed-and-Thor-also-dies, completing the layered sequence with the deferred mutual killing.footnote:[Faulkes 1987 *Gylfaginning* chs. 47, 48, 51; Larrington 2014 *Hymiskviða* sts. 22–24 and *Völuspá* st. 56; per brief 18-thor-jormungandr.yaml on the layered three-encounter completion-structure.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning chs. 47, 48, 51 (three-encounter completion)
+
+The three encounters together form a layered record across three textual strata (Snorra Edda prose, Eddic poetry, skaldic verse) and three narrative-thematic registers (trickster-mediated, hooked-but-released, eschatological-mutual): no single source has all three encounters, no single encounter is the canonical one, and the chapter's three-encounter framing is the brief's explicit reading of the layered evidence.footnote:[Per brief 18-thor-jormungandr.yaml special_instructions on the three-encounter layered-record framing and on the explicit no-canonical-encounter and no-single-source reading; Faulkes 1987 and Larrington 2014 on the source-distribution.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning (three-encounter framing)
+
+=== Iconographic dossier — the four runestones
+
+The Thor-and-Jörmungandr fishing-encounter is depicted on at least four surviving pre-Christian or transitional runestones and picture-stones from across the Norse cultural area, and the four-stone iconographic dossier supplies an independent visual witness-stratum that pre-dates the manuscript record by between two and five centuries.footnote:[Per brief 18-thor-jormungandr.yaml centrality_evidence iconography on the four-stone dossier; West 2007 ch. 6 on the iconographic-witness function; Faulkes 1987 introduction on the iconographic supplement to the textual record.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (iconographic dossier overview)
+
+The Altuna stone is a Viking-Age picture-stone from Altuna parish in Uppland, Sweden, dated to approximately 1050 CE, depicting Thor in a fishing-boat with hooked line descending into the water and a serpent at the line's end, with one of Thor's feet visible thrust through the bottom of the boat in a direct visual realisation of the *Hymiskviða* st. 22 feet-through-the-boat-bottom motif.footnote:[Per brief 18-thor-jormungandr.yaml iconography centrality_evidence on the Altuna stone (Uppland, c. 1050 CE) and on the foot-through-boat-bottom motif; West 2007 ch. 6 on the Altuna depiction; Larrington 2014 *Hymiskviða* st. 22 on the feet-through-boat-bottom poetic motif.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Altuna stone)
+
+The Altuna stone is the latest of the four-stone series in date and the most explicit in its iconographic alignment with the *Hymiskviða* narrative, and the stone is conventionally read as the iconographic anchor for the foot-through-boat-bottom motif specifically.footnote:[Per brief 18-thor-jormungandr.yaml on the Altuna stone's iconographic-textual alignment; West 2007 ch. 6 on the Altuna stone as iconographic anchor for the foot-through-boat-bottom motif.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Altuna iconography)
+
+The Hørdum stone is a Viking-Age picture-stone from Hørdum in Thy on the northern Jutland peninsula in Denmark, dated to approximately 800 CE, depicting two figures in a boat with a hooked line and a serpent at the line's end in a composition similar in essentials to the Altuna scene but at substantially earlier date.footnote:[Per brief 18-thor-jormungandr.yaml iconography centrality_evidence on the Hørdum stone (Thy, Jutland, c. 800 CE); West 2007 ch. 6 on the Hørdum depiction.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Hørdum stone)
+
+The Hørdum stone's c. 800 CE date places its production approximately 175 years before *Húsdrápa* and approximately 250 years before *Hymiskviða*'s probable compositional horizon, with the consequence that the iconographic record of the fishing-encounter is securely attested in pre-Christian Norse visual art before either of the principal poetic witnesses was composed.footnote:[Per brief 18-thor-jormungandr.yaml iconography on the Hørdum dating; West 2007 ch. 6 on the Hørdum stone as the earliest dateable Norse pictorial witness to the fishing-encounter; Faulkes 1987 *Skáldskaparmál* on the *Húsdrápa* dating; Larrington 2014 on the *Hymiskviða* dating.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Hørdum chronology)
+
+The Gosforth fishing stone is a fragmentary Viking-Age stone from Gosforth in Cumbria, north-west England, dated to approximately 950 CE, depicting Thor and Hymir in a boat with a hooked serpent — and is one of three surviving Norse-pagan stone-monuments at Gosforth, alongside the famous Gosforth Cross (a tenth-century stone cross combining Christian crucifixion iconography with scenes of Norse Ragnarök figures) and a second hogback monument.footnote:[Per brief 18-thor-jormungandr.yaml iconography centrality_evidence on the Gosforth fishing stone (Cumbria, c. 950 CE); West 2007 ch. 6 on the Gosforth depiction and on the Gosforth-monument cluster.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Gosforth fishing stone)
+
+The Gosforth fishing stone's location in Cumbria — within the Anglo-Scandinavian cultural area of tenth-century north-west England — supplies geographic evidence for the wide distribution of the fishing-encounter iconography across the Norse cultural area, with depictions surviving in present-day Sweden (Altuna, Ardre VIII), Denmark (Hørdum), and England (Gosforth).footnote:[Per brief 18-thor-jormungandr.yaml iconography on the geographic distribution of the four-stone dossier; West 2007 ch. 6 on the Anglo-Scandinavian distribution including Gosforth.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (geographic distribution)
+
+The Ardre VIII stone is one of a group of more than two hundred picture-stones from the Swedish island of Gotland, with the specific stone numbered VIII at Ardre church dated by its style and context to approximately 700–800 CE, depicting (among other Norse mythological scenes) a fishing-encounter composition with Thor and a hooked serpent.footnote:[Per brief 18-thor-jormungandr.yaml iconography centrality_evidence on the Ardre VIII stone (Gotland, c. 700–800 CE); West 2007 ch. 6 on the Ardre VIII depiction and on the wider Gotlandic picture-stone corpus.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Ardre VIII stone)
+
+The Ardre VIII stone is therefore the earliest of the four-stone iconographic dossier in compositional date, with its eighth-century horizon predating the earliest skaldic witness (Bragi Boddason, early ninth century) and supplying the oldest surviving Norse depiction of the fishing-encounter in any medium.footnote:[Per brief 18-thor-jormungandr.yaml iconography on the Ardre VIII chronology; West 2007 ch. 6 on the Ardre VIII stone as the earliest surviving Norse depiction of the fishing-encounter; Faulkes 1987 *Skáldskaparmál* on Bragi Boddason as the earliest named skald.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Ardre VIII chronology)
+
+The four-stone iconographic dossier together spans approximately 350 years of Norse pre-Christian and transitional visual culture (c. 700 CE Ardre VIII through c. 1050 CE Altuna), with the encounter depicted across three present-day countries (Sweden, Denmark, England) and across three different Norse cultural-political areas (Gotland, Jutland-Thy, Cumbria-Anglo-Scandinavian, Uppland), supplying both chronological depth and geographic breadth as evidence of the encounter's wide currency.footnote:[Per brief 18-thor-jormungandr.yaml iconography on the chronological and geographic spread of the four-stone dossier; West 2007 ch. 6 on the same; Watkins 1995 Part V on the iconographic dossier as evidence of the encounter's wide currency.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (chronological-geographic spread)
+
+The four-stone dossier focuses iconographically on the fishing-encounter and not on the Útgarðaloki encounter or on the Ragnarök combat: there are no surviving pre-Christian Norse depictions of Thor lifting Útgarðaloki's cat, and the surviving depictions of Ragnarök figures (notably the Gosforth Cross's depiction of Loki bound and Sigyn holding the basin, and various depictions of Fenrir at Ragnarök) do not include an explicit Thor-and-Jörmungandr final-combat scene.footnote:[Per brief 18-thor-jormungandr.yaml iconography on the four-stone dossier's focus on the fishing-encounter rather than the other two encounters; West 2007 ch. 6 on the iconographic distribution; Faulkes 1987 introduction on the surviving Ragnarök iconography (Gosforth Cross etc.) and on its non-inclusion of a Thor-and-Jörmungandr final-combat scene.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (iconographic focus)
+
+[INFERENCE: the iconographic concentration on the fishing-encounter rather than on the eschatological combat, and the absence of pre-Christian visual depictions of the Útgarðaloki cat-lift, may reflect either the relative narrative compactness and visual legibility of the boat-and-line composition (which lends itself to single-panel depiction) or the relative cultic prominence of the fishing-encounter as a stock subject — or both — but the chapter does not adjudicate between these competing readings and treats the iconographic-encounter focus as a feature of the surviving evidence rather than as an interpretive claim. | basis: per brief 18-thor-jormungandr.yaml on the iconographic distribution; West 2007 ch. 6; Faulkes 1987 introduction; Watkins 1995 Part V on the visual-poetic correspondence | risk: the iconographic distribution may reflect survival-bias as much as production-bias, with smaller-scale, wood-carved, or perishable depictions of the other encounters lost to the medieval record; the chapter avoids interpretive overclaim from the surviving sample.]
+
+The fishing-encounter iconographic dossier is the most substantial pre-Christian visual evidence for any single combat-myth in the present book's corpus, and stands in contrast to the Marduk-Tiamat tradition (whose Mesopotamian iconography is sparse despite the textual prominence of the *Enūma Eliš*), the Ra-Apep tradition (whose iconography is concentrated in funerary papyri rather than monumental stone), and the Hittite Illuyanka tradition (whose iconography is limited to a handful of relief-fragments).footnote:[Per brief 18-thor-jormungandr.yaml on the four-stone dossier as the most substantial pre-Christian visual evidence; West 2007 ch. 6 on the comparative-iconographic position; Lambert 2013 on the sparse Marduk-Tiamat iconography (cross-ref Ch. 3); Faulkner 1972 on the funerary-papyri concentration of Ra-Apep iconography (cross-ref Ch. 16); Hoffner 1998 on the limited Illuyanka iconographic record (cross-ref Ch. 6).]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (comparative-iconographic position)
+
+The four-stone iconographic dossier supports — independently of the textual sources — three substantive claims about the Norse combat-tradition: that the fishing-encounter was widely known across the Norse cultural area, that it pre-dates the Christian conversion of the Norse-speaking peoples, and that the basic compositional features of the encounter (boat, hooked line, raised hammer, serpent at the line's end) were sufficiently stable across centuries and regions to constitute a recognisable shared visual schema.footnote:[Per brief 18-thor-jormungandr.yaml iconography on the three substantive claims supported by the four-stone dossier; West 2007 ch. 6 on the visual-schema stability; Watkins 1995 Part V on the iconographic-textual mutual reinforcement of the encounter.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (substantive claims from iconography)
+
+The iconographic dossier's pre-Christian status is significant for the wider question of the Norse combat-myth's transmission: the surviving textual witnesses are all from the Christian period (the manuscript record being entirely post-conversion, with the earliest skaldic verses themselves preserved only in later manuscript citations), and the iconographic evidence supplies the only directly pre-Christian witness-stratum, anchoring the encounter's pre-Christian existence independently of Snorri's antiquarian framing.footnote:[Per brief 18-thor-jormungandr.yaml on the iconographic dossier as pre-Christian witness; Faulkes 1987 introduction on the post-conversion status of the textual record; West 2007 ch. 6 on the iconographic anchor for the pre-Christian existence of the encounter.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=introduction (pre-Christian iconographic anchor)
+
+=== Skaldic diction and the Indo-European context (summary; full argument in Part II C5)
+
+The skaldic Thor-and-Jörmungandr corpus contains a stable vocabulary of kennings — compressed metaphorical phrases characteristic of the genre — for both Thor and the serpent, and this vocabulary is the principal Norse exhibit for Calvert Watkins's reconstruction of the Indo-European HERO SLAY SERPENT poetic formula in *How to Kill a Dragon* Part V.footnote:[Watkins 1995, Part V, on the skaldic Thor-and-Jörmungandr kennings as the principal Norse exhibit for the Indo-European HERO SLAY SERPENT formula reconstruction; per brief 18-thor-jormungandr.yaml comparative_hooks on the Watkins exhibit-status of the Norse material.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V
+
+The skaldic kennings for Jörmungandr in the surviving corpus include phrases that name the serpent by its world-encircling position ("the band of all lands", "the encircler of all lands", and similar formulations), by its parental lineage ("Loki's son", "Angrboða's son"), and by its eschatological role ("the doom-fated one", "the one who slays the storm-god"), with each kenning preserving a distinct facet of the serpent's mythological-semantic profile.footnote:[Faulkes 1987, *Skáldskaparmál*, on the skaldic kennings for Jörmungandr including the world-encircling, parental-lineage, and eschatological-role formulations; Watkins 1995 Part V on the kennings as preserving distinct facets of the serpent's profile.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (Jörmungandr kennings)
+
+The skaldic kennings for Thor in the surviving fishing-encounter corpus include phrases that name the storm-god by his combat-implement ("hammer-bearer", "wielder of the smasher"), by his parental lineage ("Óðinn's son", "Earth's son", "Hlóðyn's son"), and by his combat-function ("foe of giants", "slayer of the world-serpent"), with the serpent-foe kennings overlapping with the parallel storm-god kennings in other Indo-European traditions.footnote:[Faulkes 1987, *Skáldskaparmál*, on the skaldic kennings for Thor in the fishing-encounter corpus; Larrington 2014 *Völuspá* st. 56 on the Hlóðyn's-son kenning specifically; Watkins 1995 Part V on the parallel storm-god kennings across the Indo-European traditions.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Skáldskaparmál (Thor kennings)
+
+Watkins's reconstructed Indo-European HERO SLAY SERPENT formula — the verbal-syntactic combat-formula that Watkins reconstructs from the Vedic áhann áhim ("he slew the serpent", RV 1.32.1) and its Avestan, Hittite, Greek, and Norse comparanda — is attested in the Norse corpus chiefly through the skaldic kennings rather than through a direct verbal cognate of áhann áhim.footnote:[Watkins 1995, Part V, on the Indo-European HERO SLAY SERPENT formula and on its Norse attestation through the skaldic kennings rather than through a direct verbal cognate of áhann áhim.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V
+
+The Norse skaldic instance of the HERO SLAY SERPENT formula is one of Watkins's *most iconographically supported* cases: the formula is attested verbally in the surviving skaldic corpus, in narrative form in the Eddic and Snorra Edda corpus, and visually on the four-stone iconographic dossier, with the consequence that the Norse reflex of the formula is the only one of Watkins's cases that has independent verbal, narrative, and visual witness across pre-Christian and transitional sources.footnote:[Watkins 1995, Part V, on the Norse instance of the HERO SLAY SERPENT formula as exceptionally well-supported across verbal, narrative, and visual sources; per brief 18-thor-jormungandr.yaml comparative_hooks on the Norse case as Watkins's most iconographically supported exhibit; West 2007 ch. 6 on the same.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V (Norse case as best-supported)
+
+The full philological argument for the skaldic kennings as direct Indo-European reflexes of HERO SLAY SERPENT is reserved for Part II C5 of the present book (the comparative chapter on the Indo-European formula), which treats the Norse kennings together with the Vedic áhann áhim, the Avestan áhi-, the Hittite kuenta... illuyanka, and the Greek and Italic comparanda in a single consolidated argument; the present chapter summarises the argument and forward-links to Part II C5.footnote:[Per brief 18-thor-jormungandr.yaml special_instructions on the reservation of the full Watkins argument for Part II C5; per chaoskampf scope.md §"Part II — thematic comparative chapters" on Part II C5 (the Indo-European HERO SLAY SERPENT formula); Watkins 1995 Part V on the consolidated argument.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V
+
+The Norse storm-god / water-dragon complex is also one of West's principal exhibits in chapter 6 of *Indo-European Poetry and Myth* ("Storm and Stream"), in which the Thor-and-Jörmungandr combat is placed alongside the Vedic Indra-Vṛtra, the Hittite Tarḫunna-Illuyanka, and the Avestan Thraētaona-Aži Dahāka comparanda as the principal Indo-European instances of the type.footnote:[West 2007, ch. 6 ("Storm and Stream"), on the Norse storm-god / water-dragon complex as a principal exhibit alongside the Vedic, Hittite, and Avestan comparanda.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6
+
+West's chapter 6 reading places the distinctive Norse feature (the eschatological mutual killing) within the wider Indo-European storm-god / water-dragon type as a developed eschatological inflection of an inheritance whose un-eschatologised forms are attested in the Vedic and Hittite reflexes (Indra survives Vṛtra; Tarḫunna survives Illuyanka in version 2 only after recovering his organs), with the Norse mutual-killing outcome as the principal eschatologisation of the IE type.footnote:[West 2007, ch. 6 ("Storm and Stream"), on the Norse mutual-killing outcome as the principal eschatologisation of the wider Indo-European storm-god / water-dragon type; Jamison and Brereton 2014 RV 1.32 on Indra surviving Vṛtra; Hoffner 1998 on Tarḫunna's recovery in Illuyanka version 2.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (eschatologisation argument)
+
+The Avestan Aži Dahāka rebound-and-final-killing structure is the closest Indo-European parallel in eschatological structure to the Thor-and-Jörmungandr combat: both involve a serpent-adversary whose initial constraint (binding, encircling, or imprisonment) is followed by an eventual eschatological release and a final mortal combat, and the two together are the principal Indo-European witnesses for the eschatological-combat subtype.footnote:[Per brief 18-thor-jormungandr.yaml on the Aži Dahāka eschatological-structural parallel; Benveniste and Renou 1934 on Aži Dahāka; Watkins 1995 Part V on the Indo-European eschatological-combat pattern; West 2007 ch. 6 on the same.]
+// EVIDENCE: source_id=benveniste-renou-1934 ; loc=Aži Dahāka discussion
+
+The Hittite Illuyanka version 2 ("the body-recovery version") is also adduced as a structural-thematic parallel by Watkins: in version 2, the storm-god is initially defeated and his heart and eyes are taken by Illuyanka; he recovers his organs through his son's marriage-trick and finally slays the serpent, with the body-damage motif paralleled by Thor's venom-poisoning at Ragnarök in the layered combat-aftermath structure.footnote:[Per brief 18-thor-jormungandr.yaml comparative_hooks on the Hittite Illuyanka version 2 body-damage parallel; Watkins 1995 Part V on the structural parallel; Hoffner 1998 on Illuyanka version 2.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V (Illuyanka v2 parallel)
+
+The Norse eschatological combat is therefore positioned within a tight Indo-European comparative cluster (Vedic Indra-Vṛtra, Hittite Tarḫunna-Illuyanka, Avestan Thraētaona-Aži Dahāka, Norse Thor-Jörmungandr) in which the storm-god / water-dragon type is widely attested but in which the specifically-eschatological inflection of the type is best preserved in the Norse and the Avestan reflexes, with Part II C4 of the present book developing the eschatological-displacement argument in full.footnote:[Per chaoskampf scope.md §"Part II" on Part II C4 (Eschatological Displacement); per brief 18-thor-jormungandr.yaml comparative_hooks on the eschatological cluster; Watkins 1995 Part V; West 2007 ch. 6.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (eschatological cluster)
+
+=== Reception and forward links
+
+The Thor-and-Jörmungandr corpus's pre-Christian iconographic dossier and its post-Christian textual record together demonstrate the survival of a substantial body of pagan Norse mythological narrative across the conversion-horizon (Iceland 999/1000 CE; Sweden and Norway across the eleventh century), with the corpus surviving both as Snorri's antiquarian synthesis and as the older skaldic and Eddic substrate that Snorri's synthesis preserves.footnote:[Faulkes 1987, introduction, on the conversion-horizon and on the survival of the pagan Norse mythological narrative across it; Larrington 2014 introduction on the same survival in the Eddic poetic record; per chaoskampf scope.md §"Period" on the post-medieval reception treatment.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=introduction (conversion-horizon survival)
+
+The Gosforth Cross (Cumbria, c. 950 CE; the same site as the Gosforth fishing stone) is the principal pre-Conquest Anglo-Scandinavian monument that combines Christian crucifixion iconography with Norse Ragnarök figures and represents the iconographic phase of Norse-Christian syncretism in tenth-century England, in which the Norse mythological figures are visible alongside Christian imagery in monumental stone.footnote:[Faulkes 1987, introduction, on the Gosforth Cross and on the Norse-Christian syncretism phase in tenth-century Anglo-Scandinavian England; West 2007 ch. 6 on the Gosforth-monument cluster including the Cross.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=introduction (Gosforth Cross)
+
+The Norse mythological corpus's reception in modern Western literature and popular culture — Wagner's *Der Ring des Nibelungen* (1869–1876) drawing principally on the heroic *Nibelungenlied* / *Vǫlsunga saga* / *Sigurðarkviða* tradition rather than on the Thor-and-Jörmungandr corpus, J. R. R. Tolkien's adaptation of Norse motifs into the Middle-earth legendarium (with the Beowulf dragon as more direct influence than Jörmungandr), and the various twentieth-century-and-later popular adaptations — is treated in the present book's reception coda rather than in the present chapter, per scope.md's reception-policy.footnote:[Per chaoskampf scope.md §"Period" on the post-medieval reworkings as out-of-scope as primary material and §"Front matter, back matter, and appendices" on the reception coda; Forsyth 1987 on the long-trajectory reception of the combat-myth.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=on long-trajectory reception (reception coda)
+
+The chapter's principal forward-link is to chapter 19 of the present volume (the Indo-European reflexes family chapter), which treats the Sigurd-Fáfnir, Beowulf-dragon, Lugh-Balor, Welsh Red-vs-White Dragon, Batraz, and Vahagn-Vishaps material as further Indo-European reflexes of the dragon-combat type in a family-chapter format, with Sigurd-Fáfnir as the principal Norse heroic-rather-than-divine combat and Beowulf-dragon as the principal Old English instance.footnote:[Per chaoskampf scope.md §"Part I — story chapters, geographic clusters", chapter 19 (Indo-European reflexes family chapter); per brief 18-thor-jormungandr.yaml comparative_hooks on the Beowulf forward-link; West 2007 ch. 6 on the wider Indo-European reflex-cluster.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (forward-link to Ch. 19)
+
+The Beowulf dragon-combat (the third and final monster-combat of the Old English poem *Beowulf*, in which the aged Beowulf and his retainer Wiglaf together kill the hoard-dragon at the cost of Beowulf's own death from the dragon's venom) is the principal Old English thematic rhyme for the Thor-and-Jörmungandr Ragnarök combat: an aged-champion dies-killing-the-serpent structure that West and J. R. R. Tolkien (in his 1936 essay "Beowulf: The Monsters and the Critics") both identify as a structural parallel.footnote:[Per brief 18-thor-jormungandr.yaml comparative_hooks on the Beowulf parallel; West 2007 ch. 6 on the structural parallel; Watkins 1995 Part V on the same; Forsyth 1987 on the long-trajectory dragon-combat tradition.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Beowulf parallel)
+
+The chapter's principal forward-link to Part II Chapter C4 (Eschatological Displacement) is the load-bearing one for the present chapter: Thor-and-Jörmungandr at Ragnarök, Revelation 12 in the Christian apocalyptic tradition, and Aži Dahāka at Frashokereti in the Zoroastrian tradition together constitute the three principal eschatological-combat cases that Part II C4 develops as the canonical exhibits for the eschatological subtype of the combat-myth.footnote:[Per chaoskampf scope.md §"Part II" on Part II C4 (Eschatological Displacement); per brief 18-thor-jormungandr.yaml comparative_hooks on the Part II C4 forward-link; Yarbro Collins 1976 on Revelation 12 (cross-ref Ch. 9); Benveniste and Renou 1934 on Aži Dahāka / Frashokereti (cross-ref Ch. 13); West 2007 ch. 6.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (Part II C4 forward-link)
+
+The chapter's principal forward-link to Part II Chapter C5 (the Indo-European HERO SLAY SERPENT formula) is the Watkins-exhibit forward-link: the Norse Thor-and-Jörmungandr corpus is Watkins's most iconographically supported case for the formula, and Part II C5 develops Watkins's full philological argument across the Vedic, Avestan, Hittite, Greek, and Norse reflexes.footnote:[Per chaoskampf scope.md §"Part II" on Part II C5 (the Indo-European HERO SLAY SERPENT formula); per brief 18-thor-jormungandr.yaml comparative_hooks on the Part II C5 forward-link; Watkins 1995 Part V.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V (Part II C5 forward-link)
+
+The chapter's principal back-link is to chapter 14 of the present volume (Indra vs. Vṛtra), in which the Vedic instance of the storm-god / water-dragon type is treated in detail and in which the áhann áhim formula is introduced as the anchor case for Watkins's HERO SLAY SERPENT reconstruction; the Norse instance of the type and the Norse skaldic-kenning attestation of the formula are read by the present chapter as the western Indo-European parallel to the Vedic flagship.footnote:[Per chaoskampf scope.md on the Indo-European cluster sequencing; chapter 14 of the present volume on the Vedic Indra-Vṛtra flagship; Jamison and Brereton 2014 on the áhann áhim formula; Watkins 1995 Part V on the Norse parallel.]
+// EVIDENCE: source_id=jamison-brereton-2014 ; loc=RV 1.32 (back-link to Ch. 14)
+
+The chapter's secondary back-link is to chapter 13 of the present volume (Thraētaona vs. Aži Dahāka and the Frashokereti pendant), in which the Avestan eschatological-combat reflex is treated and in which the binding-release-and-final-killing structure of Aži Dahāka is set out; the Norse Thor-and-Jörmungandr Ragnarök combat is read by the present chapter as the western Indo-European parallel to the Iranian eschatological reflex.footnote:[Per chaoskampf scope.md on the Indo-European cluster sequencing; chapter 13 of the present volume on the Avestan Thraētaona-Aži Dahāka and Frashokereti pendant; Benveniste and Renou 1934 on the Avestan reflex; per brief 18-thor-jormungandr.yaml on the Aži Dahāka structural-parallel.]
+// EVIDENCE: source_id=benveniste-renou-1934 ; loc=Aži Dahāka discussion (back-link to Ch. 13)
+
+The chapter's tertiary back-link is to chapter 6 of the present volume (Tarḫunna vs. Illuyanka), in which the Hittite combat is treated in its purulli-festival ritual frame and in which version 2's body-damage / body-recovery structure is set out; the Norse Thor-and-Jörmungandr venom-poisoning at Ragnarök is read as a structural parallel to the Hittite body-damage tradition rather than as a borrowing from it.footnote:[Per chaoskampf scope.md on the Anatolian cluster; chapter 6 of the present volume on the Hittite Tarḫunna-Illuyanka and on version 2's body-damage structure; Hoffner 1998 on Illuyanka; Watkins 1995 Part V on the structural parallel; per brief 18-thor-jormungandr.yaml on the Illuyanka v2 comparative-hook.]
+// EVIDENCE: source_id=watkins-1995 ; loc=Part V (back-link to Ch. 6)
+
+The chapter's principal contribution to the present book is therefore three-fold: it supplies the Norse instance of the storm-god / water-dragon Indo-European type as a central element of the IE comparative cluster (chapter 14, chapter 13, chapter 6, the present chapter, and Part II C5 together); it supplies the principal eschatological-combat case for Part II C4 alongside Revelation 12 and Frashokereti; and it supplies the most substantial pre-Christian iconographic dossier in the book, demonstrating the survival of a pagan combat-myth tradition into the visual-monumental record across the Norse cultural area.footnote:[Per brief 18-thor-jormungandr.yaml on the chapter's three-fold contribution; per chaoskampf scope.md on the Indo-European cluster, the eschatological cases, and the iconographic-record discipline; Watkins 1995 Part V; West 2007 ch. 6.]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (three-fold contribution)
+
+The chapter's joint position within the present book is at the intersection of three of the book's principal threads: the Indo-European HERO SLAY SERPENT poetic-formula thread (Part II C5; back-link to chapter 14), the eschatological-combat subtype thread (Part II C4; alongside Revelation 12 in chapter 9 and Aži Dahāka / Frashokereti in chapter 13), and the iconographically-supported pre-Christian witness thread (the four-stone dossier as the most substantial visual record in the book's corpus).footnote:[Per chaoskampf scope.md §"Part II — thematic comparative chapters" on the three thematic threads; per brief 18-thor-jormungandr.yaml comparative_hooks on the chapter's intersection-of-threads position; Watkins 1995 Part V (formula thread); West 2007 ch. 6 (eschatological-and-iconographic threads).]
+// EVIDENCE: source_id=west-2007 ; loc=ch. 6 (intersection of threads)
+
+The chapter's closing observation — and the principal forward-statement of the book's eschatological argument — is that the Thor-and-Jörmungandr Ragnarök combat is the paradigmatic Indo-European eschatological combat: a once-only end-of-age combat between storm-god and world-encircling serpent, ending in mutual killing, followed by cosmic conflagration and renewal, with the storm-god's death from the serpent's venom as the most distinctive feature and the most explicit thematisation of the eschatological-combat subtype's mutual-cost structure.footnote:[Faulkes 1987 *Gylfaginning* ch. 51 on the Ragnarök combat; Larrington 2014 *Völuspá* st. 56 on the same; per brief 18-thor-jormungandr.yaml on the paradigmatic-eschatological-combat reading; West 2007 ch. 6 on the Indo-European eschatological-combat profile.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Gylfaginning ch. 51 (eschatological paradigm)
+
+// COMPARATIVE-HOOK: India (Indra-Vṛtra; Ch. 14) — the Norse Thor-and-Jörmungandr combat is the western Indo-European parallel to the Vedic Indra-Vṛtra flagship: both are storm-god-versus-serpent combats with the storm-god's combat-implement (Mjöllnir / vajra) as the materialised lightning-strike, with Watkins reading the Norse skaldic kennings as the IE-poetic-formula reflex of the Vedic áhann áhim. The Norse reflex is distinguished from the Vedic by its eschatological inflection (mutual killing at Ragnarök; Indra survives Vṛtra) and by its cosmological-boundary framing (Jörmungandr encircles the world; Vṛtra obstructs the waters). Treated comparatively in Part II C5 (Indo-European HERO SLAY SERPENT) and Part II C4 (Eschatological Displacement). (watkins-1995 Part V; west-2007 ch. 6; jamison-brereton-2014 RV 1.32; cross-ref Ch. 14.)
+// COMPARATIVE-HOOK: Iran (Aži Dahāka and Frashokereti; Ch. 13) — the Norse Thor-and-Jörmungandr Ragnarök combat is the closest Indo-European parallel in eschatological structure to the Iranian Aži Dahāka rebound-and-final-killing at Frashokereti: both involve a serpent-adversary whose initial constraint (encircling / binding) is followed by an eventual eschatological release and a final mortal combat. The Iranian and Norse cases are the two principal Indo-European eschatological-combat reflexes and are developed jointly in Part II C4. The Iranian structural-distinctive feature (Kərəsāspa as the revived hero-killer of the rebound dragon, with Thraētaona's earlier binding as the deferring action) and the Norse structural-distinctive feature (mutual killing rather than hero-survival) supply the within-IE variation on the eschatological-combat type. (benveniste-renou-1934 on Aži Dahāka; watkins-1995 Part V; west-2007 ch. 6; cross-ref Ch. 13 and Part II C4.)
+// COMPARATIVE-HOOK: Anatolia (Tarḫunna-Illuyanka v2; Ch. 6) — the Norse Thor-and-Jörmungandr combat parallels the Hittite Illuyanka version 2 in its body-damage / body-aftermath feature: in Illuyanka v2 the storm-god is initially defeated and his heart and eyes are taken, recovered through his son's marriage-trick, and the serpent is finally slain; in the Norse Ragnarök combat Thor kills the serpent but dies of the venom in the killing's aftermath. The structural commonality is the body-damage-in-the-killing motif — the storm-god's combat is not a clean dispatch but is bodily costly even where ultimately victorious — and Watkins reads this as a candidate IE inheritance distinct from the formula-level cognancy of the kennings. The Anatolian-Norse pair is treated in Part II C5 alongside the Vedic and Avestan reflexes. (watkins-1995 Part V; hoffner-1998 on Illuyanka v2; cross-ref Ch. 6 and Part II C5.)
+// COMPARATIVE-HOOK: Christian apocalyptic (Revelation 12; Ch. 9) — Thor-and-Jörmungandr at Ragnarök and Michael-and-the-dragon at Revelation 12 are two of the three principal eschatological-combat cases of the present book (with Aži Dahāka at Frashokereti as the third), and Part II C4 develops the three-case typology together. The Norse and the Christian-apocalyptic cases differ structurally in their outcome (mutual killing in the Norse case; the dragon's eventual elimination and the establishment of the new heavens-and-earth in the Christian-apocalyptic case) but agree in their position-within-eschatology (a final combat that closes the present cosmic age) and in their compressed-mythic-cosmic register (Völuspá 56 and Revelation 12 are both compressed eschatological visions rather than narrative epics). (yarbro-collins-1976 on Revelation 12; west-2007 ch. 6; cross-ref Ch. 9 and Part II C4.)
+// COMPARATIVE-HOOK: Mesopotamia (Marduk-Tiamat; Ch. 3) — the Norse Thor-and-Jörmungandr combat contrasts structurally with the Mesopotamian Marduk-Tiamat combat at the level of cosmic-time placement: Marduk's combat is once-only and cosmogonic (the cosmos is established for the first time from Tiamat's body), while Thor's Ragnarök combat is once-only and eschatological (the present cosmic age ends in the mutual killing). The contrast is load-bearing for the cosmic-time-spectrum analysis of Part II C1 (Cosmogony) and Part II C4 (Eschatological Displacement), with the Mesopotamian cosmogonic and the Norse eschatological cases as the two endpoints of the once-only-combat spectrum and the Egyptian Apep tradition (Ch. 16) as the cyclical-recurrent third position. (lambert-2013 on Marduk-Tiamat; assmann-2001-search on Apep; per scope.md on the four-subtype typology; cross-ref Chs. 3, 16, and Part II C1, C3, C4.)
+// COMPARATIVE-HOOK: Old English (Beowulf-dragon; Ch. 19) — the Beowulf dragon-combat at the close of the Old English poem (Beowulf and Wiglaf together kill the hoard-dragon at the cost of Beowulf's death from the dragon's venom) is the principal Old English thematic rhyme for the Norse Thor-and-Jörmungandr Ragnarök combat: the aged-champion-dies-killing-the-serpent structure is shared between the two, and J. R. R. Tolkien's 1936 essay "Beowulf: The Monsters and the Critics" identified the parallel as load-bearing for the Old English poem's eschatological resonance. Treated in detail in chapter 19 (the Indo-European reflexes family chapter) alongside the Sigurd-Fáfnir, Lugh-Balor, and other reflex-cases. (west-2007 ch. 6; watkins-1995 Part V; cross-ref Ch. 19.)
+// COMPARATIVE-HOOK: Indo-European HERO SLAY SERPENT formula (Part II C5) — the Norse Thor-and-Jörmungandr corpus is Watkins's most iconographically supported case for the IE HERO SLAY SERPENT formula, with verbal attestation in the skaldic kennings, narrative attestation in the Eddic and Snorra Edda corpus, and visual attestation on the four-stone iconographic dossier (Altuna, Hørdum, Gosforth, Ardre VIII). The Norse case is therefore the principal exhibit for the multi-medium robustness of the IE formula and is treated in Part II C5 as a load-bearing case alongside the Vedic áhann áhim, the Avestan áhi-, the Hittite kuenta... illuyanka, and the Greek and Italic comparanda. (watkins-1995 Part V; cross-ref Part II C5.)
+// COMPARATIVE-HOOK: Eschatological displacement (Part II C4) — Thor-and-Jörmungandr at Ragnarök, Revelation 12's Michael-and-the-dragon combat, and Aži Dahāka at Frashokereti together constitute the three canonical eschatological-combat cases of the present book, and Part II C4 develops the three-case typology as the principal exhibit for the eschatological subtype of the combat-myth. The three cases are independent in their textual-traditional descent (Norse Eddic-and-skaldic; Christian-apocalyptic; Avestan-and-Pahlavi) and present structurally distinct outcomes (mutual killing; dragon's elimination and renewal; rebound-and-final-killing by the revived hero), but agree in their eschatological structural position. (faulkes-snorri *Gylfaginning* 51; yarbro-collins-1976 on Revelation 12; benveniste-renou-1934 on Aži Dahāka; per scope.md on Part II C4; cross-ref Chs. 9, 13, 18 and Part II C4.)
 ```
 
 ---
 
-# Input file: briefs/02-ninurta-anzu.yaml
+# Input file: briefs/18-thor-jormungandr.yaml
 
 ```
-chapter_number: 2
-slug: "ninurta-anzu"
-title: "Ninurta vs. Anzû: The Theft of the Tablet of Destinies"
-chapter_anchor: "ch-02-ninurta-anzu"
+chapter_number: 18
+slug: "thor-jormungandr"
+title: "Thor vs. Jörmungandr: Three Encounters and Ragnarök"
+chapter_anchor: "ch-18-thor-jormungandr"
 
 sources:
   primary:
-    - id: annus-2001-anzu
-      loc: "Standard Babylonian Anzû Epic, Tablets I–III (cuneiform text, transliteration, score, glossary)"
-      translator_edition: "Annus 2001 (SAACT 3, critical edition)"
-      identifier: "ISBN 9789514590511"
+    - id: larrington-poetic-edda
+      loc: "Hymiskviða (Thor's fishing expedition); Völuspá 56 (Ragnarök combat)"
+      translator_edition: "Larrington 2014"
+      identifier: "ISBN 9780199675340"
       url_or_file: ~
-    - id: foster-2005
-      loc: "Before the Muses 3rd ed., 'Anzu' pp. 555–578 (English translation)"
-      translator_edition: "Foster 2005"
-      identifier: "ISBN 9781883053765"
+    - id: faulkes-snorri
+      loc: "Gylfaginning 34 (the serpent's origin), 46–48 (Útgarðaloki's hall and the fishing), 51 (Ragnarök combat)"
+      translator_edition: "Faulkes 1987"
+      identifier: "ISBN 9780460876162"
       url_or_file: ~
-    - id: etcsl
-      loc: "Sumerian background: Angim dimma (ETCSL 1.6.1), allusions in Lugal-e (ETCSL 1.6.2)"
-      translator_edition: "ETCSL"
-      identifier: "etcsl-1.6.1"
-      url_or_file: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.1"
   secondary:
-    - { id: forsyth-1987, loc: "ch. 2 on Anzu as bridge to Enūma Eliš" }
-    - { id: scurlock-beal-2013, loc: "chapters on Mesopotamian combat-myth" }
-    - { id: lambert-2013, loc: "introduction on the Anzu-Marduk genealogy" }
+    - { id: watkins-1995, loc: "Part V, on skaldic dragon-slaying diction" }
+    - { id: west-2007, loc: "ch. 6 ('Storm and Stream'), on Thor in IE context" }
+    - { id: forsyth-1987, loc: "on Norse combat-myth" }
 
 lacunae:
-  - source: annus-2001-anzu
-    location: "Tablet II, middle passages on the first failed assault"
-    what_is_missing: "Breaks between Ninurta's first engagement and Ea's counsel; gaps in the narrative economy"
-    in_tradition_fills_available: "yes, Annus's score integrates Old Babylonian and Neo-Assyrian witnesses"
-  - source: annus-2001-anzu
-    location: "Tablet III, closing doxology"
-    what_is_missing: "Final hymn of praise partially broken"
-    in_tradition_fills_available: "partial, Annus reconstructs from parallel praise-formulae"
+  - source: larrington-poetic-edda
+    location: "Völuspá 56"
+    what_is_missing: "The Ragnarök combat is compressed into a few lines of mythic-cosmic verse; narrative detail is sparse"
+    in_tradition_fills_available: "yes, Snorri's Gylfaginning 51 expands the Ragnarök combat significantly"
+  - source: faulkes-snorri
+    location: "Húsdrápa (skaldic poem by Úlfr Uggason, c. 985 CE)"
+    what_is_missing: "Only fragmentary verses survive in Snorri's citations — but those fragments explicitly depict the fishing and apparent decapitation of the serpent"
+    in_tradition_fills_available: "partial — Snorri preserves what survives"
 
 variants:
-  classification: single-prevalent-reconstructed
+  classification: co-equal
   prevalent_version:
-    source: annus-2001-anzu
-    why_prevalent: "The Standard Babylonian three-tablet version is the main attested recension. Annus 2001 is the critical edition; Foster 2005 provides the working English."
+    source: faulkes-snorri
+    why_prevalent: "Snorri's Gylfaginning provides the fullest narrative and is the standard synthesis. But the three-encounter structure requires Eddic (Hymiskviða), skaldic (Húsdrápa and others), and Snorri together. No single version has all three encounters fully narrated."
   alternates:
-    - source: etcsl
-      difference: "Sumerian precursor material (Angim dimma, Lugal-e allusions to an-zu) is shorter and less narratively developed; treat in footnote as pre-history of the Standard Babylonian text."
-    - source: foster-2005
-      difference: "An Old Babylonian fragmentary version survives with some divergent details; Foster presents a composite English keyed to Annus. Present only where the OB differs substantively."
+    - source: larrington-poetic-edda
+      difference: "Hymiskviða (Eddic): Thor and Hymir fishing; Hymir cuts the line before Thor can kill the serpent"
+    - source: faulkes-snorri
+      difference: "Gylfaginning 46–48 (Útgarðaloki's hall): Thor attempts to lift the cat — which turns out to be the Midgard Serpent in disguise. A trickster-framed encounter"
+    - source: faulkes-snorri
+      difference: "Gylfaginning 51 (Ragnarök): Thor kills Jörmungandr but staggers nine paces and dies of the serpent's venom"
+    - source: faulkes-snorri
+      difference: "Húsdrápa (skaldic, c. 985 CE, preserved in Snorri's citations): Thor appears to successfully behead the serpent in the fishing encounter — a variant outcome from Hymiskviða"
 
 entities_glossary:
-  - name: "Ninurta (𒀭𒊩𒌆𒅅)"
+  - name: "Thor (Þórr)"
     role: deity
-    first_mention_gloss_candidate: "warrior-god of Nippur, son of Enlil, the champion sent against Anzû"
-  - name: "Anzû (𒀭𒅎𒄷)"
+    first_mention_gloss_candidate: "storm-god of the Norse pantheon, son of Óðinn, wielder of Mjöllnir"
+  - name: "Jörmungandr / the Midgard Serpent (Miðgarðsormr)"
     role: deity
-    first_mention_gloss_candidate: "lion-headed eagle-monster, originally a minor divine servitor who rebels by stealing the Tablet of Destinies"
-  - name: "Tablet of Destinies (𒁾 𒉏𒂊𒌍)"
+    first_mention_gloss_candidate: "world-encircling serpent, Loki's son; lies in the ocean surrounding the world"
+  - name: "Mjöllnir (Mjǫllnir)"
     role: artifact
-    first_mention_gloss_candidate: "the divinely-held document that confers universal decree-power; possessing it is kingship itself"
-  - name: "Enlil (𒀭𒂗𒆤)"
+    first_mention_gloss_candidate: "Thor's hammer; the storm-god's combat-weapon"
+  - name: "Hymir"
     role: deity
-    first_mention_gloss_candidate: "chief Sumerian god, lord of the air, from whom Anzû steals the Tablet"
-  - name: "Ea (𒀭𒂗𒆠)"
+    first_mention_gloss_candidate: "giant whose boat Thor uses on the fishing expedition"
+  - name: "Útgarðaloki"
     role: deity
-    first_mention_gloss_candidate: "god of wisdom and the deep waters, counselor of Ninurta (Sumerian Enki)"
-  - name: "Šarur (𒃻𒄯)"
-    role: artifact
-    first_mention_gloss_candidate: "Ninurta's mace, animate, carrying messages between warrior and counselor"
+    first_mention_gloss_candidate: "giant-king whose trickery disguises the serpent as a cat in the lifting-contest"
+  - name: "Ragnarök"
+    role: ritual-term
+    first_mention_gloss_candidate: "'doom of the gods'; the Norse eschatological end, at which Thor and Jörmungandr slay each other"
+  - name: "Miðgarðr"
+    role: place
+    first_mention_gloss_candidate: "'middle enclosure'; the world of humans, encircled by the serpent"
+  - name: "Loki"
+    role: deity
+    first_mention_gloss_candidate: "trickster god, father of Jörmungandr (and of Fenrir and Hel)"
 
 cultural_relevance:
   centrality: central
   centrality_evidence:
-    - kind: attestation-volume
-      detail: "Preserved in multiple tablets across Old Babylonian, Middle Babylonian, and Neo-Assyrian periods, including extensive Neo-Assyrian library copies"
-      source: "annus-2001-anzu introduction"
     - kind: iconography
-      detail: "The Anzu-bird is extensively represented in seals, amulets, and temple sculpture from the third millennium onward"
-      source: "annus-2001-anzu introduction; foster-2005 pp. 555–556"
+      detail: "The Thor-fishing scene is the most iconographically dense Norse myth, depicted on the Altuna (Uppland, c. 1050 CE), Hørdum (Jutland, c. 800 CE), Gosforth (Cumbria, c. 950 CE), and Ardre VIII (Gotland, c. 700–800 CE) stones"
+      source: "west-2007 ch. 6; faulkes-snorri introduction"
+    - kind: attestation-volume
+      detail: "Skaldic verses by Bragi Boddason (9th c.), Úlfr Uggason (10th c.), and Eysteinn Valdason (10th c.) pre-date the Eddic and prose sources; the tradition is pre-Christian"
+      source: "watkins-1995 Part V; faulkes-snorri introduction"
     - kind: scholarly-attention
-      detail: "Treated as the direct Mesopotamian ancestor of Enūma Eliš's combat (Lambert, Annus, Forsyth)"
-      source: "lambert-2013 introduction; annus-2001-anzu"
+      detail: "Watkins reads the skaldic diction as a direct Indo-European reflex; West traces the storm-god/water-dragon complex across IE traditions"
+      source: "watkins-1995; west-2007"
   function:
+    - role: eschatological
+      basis: "The Ragnarök combat is the paradigmatic case of combat-as-cosmic-closure: the combatants kill each other, and this ends the current world-age"
+      source: "faulkes-snorri Gylfaginning 51"
     - role: royal-legitimation
-      basis: "Ninurta's victory restores the Tablet to the assembly and confirms him as warrior-champion; the narrative structurally prefigures the Marduk-Tiamat legitimation"
-      source: "annus-2001-anzu; foster-2005"
-    - role: ritual-aetiological
-      basis: "The Tablet of Destinies theft-and-recovery narrative is invoked in Neo-Assyrian royal ritual and in the akītu framework"
-      source: "annus-2001-anzu introduction"
+      basis: "Thor's role as Miðgarðr's defender against the encircling serpent supports his cult as protector of humanity; skaldic kennings for Thor stress this role"
+      source: "watkins-1995; faulkes-snorri"
+    - role: cosmological
+      basis: "Jörmungandr's encircling position structures the world's boundary; his defeat at Ragnarök unmakes that boundary"
+      source: "faulkes-snorri Gylfaginning 34"
   cross_cultural_parallels:
-    - other_culture: "Babylonian (Enūma Eliš)"
-      parallel: "Marduk's defeat of Qingu (who holds the Tablet of Destinies on Tiamat's behalf) is a direct structural reprise of Ninurta's defeat of Anzû"
-      source: "lambert-2013"
-    - other_culture: "Hittite (Kumarbi Cycle)"
-      parallel: "Kumarbi's disruption of the succession of heaven through monstrous offspring shows the same 'rival steals kingship / champion restores order' structure"
-      source: "hoffner-1998"
-    - other_culture: "Greek (Hesiod)"
-      parallel: "Zeus's defeat of Typhon in Theogony 820–880 is the Hesiodic reflex of the same sovereignty-reclamation pattern, transmitted via the Hittite route"
-      source: "west-1997"
+    - other_culture: "Vedic"
+      parallel: "Thor-Jörmungandr parallels Indra-Vṛtra as storm-god-versus-serpent. Watkins argues the skaldic diction preserves the IE HERO SLAY SERPENT formula most clearly"
+      source: "watkins-1995; west-2007"
+    - other_culture: "Hittite"
+      parallel: "The body-damage / body-recovery pattern of Illuyanka version 2 has been compared to Thor's dying from Jörmungandr's venom after the killing-blow — a structural parallel in the combat's aftermath"
+      source: "watkins-1995"
+    - other_culture: "Hebrew Bible / Christian"
+      parallel: "The eschatological-combat pattern parallels Revelation 12 and Isaiah 27:1. Part II C4 develops this"
+      source: "yarbro-collins-1976; west-2007"
+    - other_culture: "Iran"
+      parallel: "Aži Dahāka's rebinding-and-final-killing at Frashokereti is the closest IE parallel in structure: monster constrained, released at the end, killed definitively"
+      source: "benveniste-renou-1934; watkins-1995"
 
 comparative_hooks:
-  - other_culture: "Babylonian (Enūma Eliš)"
-    parallel: "Enūma Eliš's opening is deliberately shaped as a continuation and outbidding of the Anzu narrative: Anzû is slain once, then repurposed as a monster in Tiamat's brood"
-    source: "lambert-2013; annus-2001-anzu"
-  - other_culture: "Hittite"
-    parallel: "The motif of the rebel who seizes the kingship-token is mediated into the Kumarbi Cycle (kingship in heaven) and then into Greece"
-    source: "hoffner-1998; west-1997"
-  - other_culture: "Vedic"
-    parallel: "Indra's theft of soma parallels the theft-of-kingship-token motif, though directed at a positive rather than negative valence"
-    source: "jamison-brereton-2014"
+  - other_culture: "IE"
+    parallel: "Part II C5 uses Thor as Watkins's most iconographically-supported case of the IE HERO SLAY SERPENT formula; the skaldic kennings are the closest thing to a direct cross-cultural philological match"
+    source: "watkins-1995"
+  - other_culture: "Revelation / Frashokereti"
+    parallel: "Part II C4 pairs Thor-Jörmungandr with Rev 12 and Frashokereti as three independent eschatological completions of the combat myth"
+    source: "west-2007; benveniste-renou-1934"
+  - other_culture: "Germanic"
+    parallel: "The Beowulf dragon-combat (Chapter 19 family) rhymes thematically with Thor's final battle: the aged champion dies killing the serpent. West and Tolkien (1936) both note the parallel"
+    source: "watkins-1995"
 
 triangulation_databases:
-  - ETCSL
-  - CDLI
-  - ORACC
+  - TITUS
 
-target_length_words: 8000
+target_length_words: 10500
 
 special_instructions: |
-  Present Anzû as a sovereignty-combat (not cosmogonic): the combat does not remake the world,
-  it returns the Tablet to its rightful holder. This distinction is load-bearing for the book's
-  typology (Part II C2 uses Anzû as a paradigm case of sovereignty-as-function). The chapter
-  should explicitly note the Ninurta-as-model-king theme that will feed the Marduk chapter.
-  Where Annus and Foster diverge on a line, prefer Annus (the critical edition); use Foster
-  when the Annus transliteration is more cryptic than the translated sense requires.
+  Structure around three encounters: (1) the Útgarðaloki lift-the-cat trickery; (2) the
+  fishing expedition with Hymir — note the Hymiskviða version (serpent escapes) and the
+  Húsdrápa version (serpent possibly beheaded); (3) Ragnarök — the mutual killing per
+  Gylfaginning 51 and Völuspá 56. The three encounters are a layered record, not alternative
+  versions of one combat. The iconographic evidence is unusually rich — discuss the Altuna,
+  Hørdum, Gosforth, and Ardre VIII stones; these are the only pre-Christian depictions in
+  the chapter-series that survive in such number. Watkins's skaldic diction argument is
+  important but belongs in Part II C5 in full form — summarize here. The chapter closes
+  with Ragnarök's eschatological implications, setting up Part II C4.
 ```

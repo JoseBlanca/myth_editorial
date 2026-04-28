@@ -1,0 +1,948 @@
+meta:
+  stage: claims-factcheck
+  chapter: "18-thor-jormungandr"
+  chapter_title: "Thor vs. Jörmungandr: Three Encounters and Ragnarök"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-28"
+  input_file: "chapters/18-thor-jormungandr.claims.adoc"
+  claims_identified: 142
+  triangulations_performed: 38
+  verdict: REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. All printed-only anchors (Larrington 2014 Poetic Edda; Faulkes 1987
+      Prose Edda; Watkins 1995 How to Kill a Dragon; West 2007 Indo-European Poetry
+      and Myth; Forsyth 1987 The Old Enemy) could not be fetched directly. WebFetch
+      was not attempted; the task instructions anticipated this and directed
+      triangulation against trained knowledge of the Norse mythological corpus.
+      Verification relied on: (a) trained knowledge of the standard Eddic text,
+      including Völuspá stanza numbering in Larrington 2014 / standard Neckel-Kuhn;
+      (b) the Faulkes 1987 Gylfaginning chapter-division conventions (chs. 34, 45–48,
+      51 as standard); (c) trained knowledge of Hymiskviða's stanza count; (d) the
+      standard iconographic dossier for the four stones (Altuna, Hørdum, Gosforth,
+      Ardre VIII) as known from the comparative literature; (e) the skaldic dossier
+      (Bragi Boddason, Eysteinn Valdason, Úlfr Uggason / Húsdrápa) as known from
+      trained knowledge of Faulkes 1987 Skáldskaparmál; (f) Watkins 1995 content
+      as known from trained knowledge. The governing files (brief 18-thor-jormungandr.yaml,
+      scope.md, sources.yaml, glossary.yaml) were read directly.
+    sources_skimmed:
+      - "Larrington 2014 (printed; not fetched; cited at hymn-and-stanza level per
+        brief discipline; trained knowledge of Völuspá, Hymiskviða stanza text used
+        for stanza-level verification)"
+      - "Faulkes 1987 (printed; not fetched; cited at chapter level; Gylfaginning
+        chapter-division conventions verified via trained knowledge)"
+      - "Watkins 1995 (printed; not fetched; cited at Part V level; content verified
+        via trained knowledge of the HERO SLAY SERPENT argument)"
+      - "West 2007 (printed; not fetched; ch. 6 'Storm and Stream' title and
+        content verified via trained knowledge)"
+      - "Forsyth 1987 (printed; not fetched; cited at monograph level; Norse
+        treatment verified via trained knowledge)"
+      - "Benveniste-Renou 1934 (digitally available via Gallica; not fetched; cited
+        at monograph level for the Aži Dahāka material)"
+    triangulations_assumed: >
+      (1) Hymiskviða stanza count: standard editions (Neckel-Kuhn) give 38 numbered
+      stanzas plus one incomplete stanza; some editions count 39 by including the
+      partial stanza. Larrington 2014's exact count cannot be confirmed without the
+      printed edition but is most likely 38 or 39 — the claim "thirty-nine stanzas"
+      is at the edge of verifiability. (2) Völuspá stanza 56 as the principal
+      Thor-stanza: confirmed in trained knowledge of both Larrington 2014 and the
+      standard numbering. St. 56 in Larrington does include the nine-steps detail
+      (Fjörgyn's son / nine steps). The nine-paces detail therefore appears in
+      BOTH Völuspá 56 AND Gylfaginning 51; the writer's attribution to Völuspá 56
+      is not wrong, but the task instruction note ("nine paces detail is from
+      Gylfaginning 51") reflects that Gylfaginning 51 is the fuller-narrative
+      attribution. Both are correct. (3) Bragi Boddason's Ragnarsdrápa: confirmed
+      in trained knowledge to include shield-description verses on the
+      Thor-fishing scene. (4) The Húsdrápa occasion (Hjarðarholt wedding-feast for
+      Óláfr Höskuldsson): confirmed in Faulkes 1987 Skáldskaparmál headnote
+      per trained knowledge. (5) The four-stone iconographic dossier dates:
+      Altuna c. 1050 CE, Hørdum c. 800 CE, Gosforth c. 950 CE, Ardre VIII
+      c. 700–800 CE — all consistent with standard archaeological dating.
+    verbatim_quote_policy: >
+      No verbatim quotes from Larrington 2014 or Faulkes 1987 appear in the claims
+      document. All renderings of stanza content are paraphrases within the
+      description of what the stanza says, not translations presented as quotations.
+      The kenning translations ("band of all lands", "slayer of the world-serpent",
+      etc.) are conventional scholarly paraphrases; none are attributed as direct
+      Larrington or Faulkes quotes. Kenning glosses in body prose are standard and
+      do not constitute verbatim quotation. No invented quotations detected.
+    internal_variance_vs_contamination: >
+      No cross-tradition contamination detected. All comparative material is
+      correctly confined to COMPARATIVE-HOOK comment lines (eight total) or to
+      forward/back-links in the Reception section with explicit cross-reference
+      labels. No Near Eastern, Egyptian, or non-Norse material is imported into
+      the body claims. The Watkins IE argument is summarised and forward-linked
+      per the brief's instruction; no pre-emption of Part II C5 detected. The
+      three-encounter framing is preserved throughout: Útgarðaloki / fishing /
+      Ragnarök are treated as distinct encounters from different source strata
+      and not collapsed into variant versions of one combat. One internal
+      contradiction flagged in the VARIANT marker (co-equal claimed but then
+      immediately qualified as "dominant one") — see FC-02.
+    model_identity_confirmation: >
+      I am Claude Sonnet 4.6. The writer was Claude Opus 4.7. This is an
+      adversarial audit in a fresh conversation. I have no memory of producing
+      the claims document and have approached it with independent scrutiny.
+
+tallies:
+  total_claims: 142
+  supported: 137
+  internal_variance: 0
+  unverified: 1
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridge: 0
+  marker_issues: 1
+  glossary_violations: 1
+  total_findings: 5
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: MEDIUM
+    category: marker_issue
+    location: >
+      §"Encounter 2 — The fishing expedition with Hymir" — the VARIANT marker
+      at the paragraph following line 258 (after the Gylfaginning 48 outcome
+      paragraph).
+    claim_text: >
+      [VARIANT: primary=Hymiskviða sts. 23–24 / Gylfaginning 48 (Larrington 2014;
+      Faulkes 1987), serpent escapes when Hymir cuts the line before the killing
+      blow | alt=Húsdrápa fragments (Faulkes 1987 Skáldskaparmál citations), serpent
+      appears to be beheaded by Thor before the line is cut | chosen: both variants
+      are presented co-equally per the brief, with the Hymiskviða / Gylfaginning
+      outcome treated as the dominant one in the surviving narrative tradition and
+      the Húsdrápa beheading as the older skaldic alternate that Snorri preserves
+      as a witness to a divergent reading | reason: per brief
+      18-thor-jormungandr.yaml variants.classification: co-equal ...]
+    problem: >
+      The VARIANT marker's 'chosen' sub-field contains an internal contradiction
+      that violates the brief's co-equal mandate. The field opens with "both
+      variants are presented co-equally per the brief" — correctly invoking the
+      brief's variants.classification: co-equal — but then immediately qualifies
+      this with "the Hymiskviða / Gylfaginning outcome treated as the dominant one
+      in the surviving narrative tradition." Calling one variant "dominant" is
+      incompatible with co-equal treatment. The brief is unambiguous: because no
+      single source has all three encounters fully narrated, the co-equal
+      classification means neither the line-cut nor the Húsdrápa outcome is
+      privileged over the other. By labelling the Hymiskviða / Gylfaginning
+      outcome "dominant," the writer drifts toward the implicit hierarchy that
+      the brief explicitly excludes. The body prose around this marker is
+      acceptable (it presents both outcomes without privileging either), but the
+      VARIANT 'chosen' field will need to be corrected before the chapter-draft
+      stage to avoid propagating the implicit hierarchy into the chapter-draft
+      instructions.
+    evidence: >
+      Brief 18-thor-jormungandr.yaml, variants.classification: co-equal; variants.
+      why_prevalent: "No single version has all three encounters fully narrated."
+      The brief lists both the Hymiskviða line-cut and the Húsdrápa beheading as
+      alternates under variants.alternates, with neither marked as the
+      prevalent_version outcome — the prevalent_version.source is Faulkes-snorri
+      only in the structural sense (Snorri provides the fullest narrative), not
+      in the sense that the line-cut is the "true" outcome.
+    recommended_fix: >
+      In the VARIANT 'chosen' sub-field, replace "both variants are presented
+      co-equally per the brief, with the Hymiskviða / Gylfaginning outcome treated
+      as the dominant one in the surviving narrative tradition" with "both variants
+      are presented co-equally per the brief; neither the Hymiskviða / Gylfaginning
+      line-cut outcome nor the Húsdrápa apparent-killing outcome is privileged as
+      the canonical version, and the chapter presents both as live witnesses from
+      different textual strata." Remove the "dominant one" qualification entirely.
+
+  - id: FC-02
+    severity: MEDIUM
+    category: unverified
+    location: >
+      §"Source overview" — the claim beginning "The chapter's Eddic primary text
+      for the eschatological combat is Völuspá... in which the Thor-and-Jörmungandr
+      Ragnarök combat is named and compressed in stanzas 55 and 56 of the Larrington
+      2014 edition."
+    claim_text: >
+      The chapter's Eddic primary text for the eschatological combat is Völuspá
+      ("The Seeress's Prophecy"), the opening poem of the Codex Regius and the
+      principal Eddic source for the Norse cosmogony and eschatology, in which the
+      Thor-and-Jörmungandr Ragnarök combat is named and compressed in stanzas 55
+      and 56 of the Larrington 2014 edition.
+    problem: >
+      The claim states the Thor-and-Jörmungandr combat occupies "stanzas 55 and
+      56" of the Larrington 2014 edition, but the footnote attached to this very
+      claim contradicts it by saying "specifically to stanza 56 on the Thor-and-
+      Jörmungandr combat." Every other citation in the claims document uses
+      Völuspá st. 56 alone as the Thor-stanza. In standard Eddic stanza numbering
+      (Neckel-Kuhn basis), Völuspá st. 55 describes the Fenrir-Óðinn aspect and
+      the world-tree's trembling; st. 56 is the Thor-and-serpent stanza. The
+      Larrington 2014 numbering may differ by one or two stanzas from the Neckel-
+      Kuhn in the Ragnarök sequence, but the internal inconsistency within the
+      claims document itself — "stanzas 55 and 56" in the body vs. "stanza 56" in
+      the footnote — is a precision error that needs correction before the
+      chapter-draft stage. The brief cites only "Völuspá 56" as the anchor.
+      Without direct access to Larrington 2014, the exact stanza split cannot be
+      confirmed, but the internal contradiction is unambiguous.
+    evidence: >
+      Brief 18-thor-jormungandr.yaml primary_source loc: "Völuspá 56 (Ragnarök
+      combat)". The claims document's own footnote at this claim: "specifically to
+      stanza 56 on the Thor-and-Jörmungandr combat." All subsequent citations in
+      the document use "Völuspá st. 56" consistently. The body claim's "stanzas
+      55 and 56" is therefore either an inaccuracy (if the Thor-stanza is only 56)
+      or an imprecision (if both stanzas contribute to the Thor-and-serpent
+      combat-passage in the Larrington edition). Either way, it conflicts with the
+      brief and with the document's own footnote.
+    recommended_fix: >
+      Before the chapter-draft stage, verify in Larrington 2014 whether the
+      Thor-and-Jörmungandr combat passage occupies one stanza (56 only) or spans
+      two stanzas (55–56). If only st. 56 (as the brief and the document's own
+      footnote suggest), correct the body claim to "stanza 56 of the Larrington
+      2014 edition." If two stanzas, update the footnote and all subsequent
+      citations from "st. 56" to "sts. 55–56" for consistency. Do not let the
+      body-claim and the citation apparatus disagree on the stanza count.
+
+  - id: FC-03
+    severity: MEDIUM
+    category: citation_imprecision
+    location: >
+      §"Source overview" — the claim beginning "The chapter's Eddic primary text
+      for Thor's fishing expedition is Hymiskviða... a thirty-nine-stanza Eddic
+      poem in fornyrðislag metre..."
+    claim_text: >
+      The chapter's Eddic primary text for Thor's fishing expedition is Hymiskviða
+      ("The Lay of Hymir"), a thirty-nine-stanza Eddic poem in fornyrðislag metre
+      that narrates Thor's journey to the giant Hymir's hall to fetch a brewing-
+      cauldron and his rowing-out with Hymir to fish for the world-encircling serpent.
+    problem: >
+      The standard scholarly stanza count for Hymiskviða is 38 complete stanzas
+      in the Neckel-Kuhn critical edition (used as the standard philological basis
+      for most modern translations including Larrington 2014), with the final
+      stanza sometimes counted as incomplete, giving either 38 or 38+ stanzas.
+      Some counts include one partial or fragmentary stanza to reach 39.
+      Without direct access to Larrington 2014's headnote, the exact count in
+      that edition cannot be confirmed. The claim "thirty-nine stanzas" is either
+      correct (if Larrington counts 39 by including the partial stanza) or one
+      off (if Larrington gives 38). The citation apparatus (footnote) correctly
+      defers to Larrington 2014's headnote, but the body-claim presents the
+      stanza count as a fact rather than as a headnote-reported fact, which risks
+      the error propagating into the chapter draft as a stated figure.
+    evidence: >
+      Standard Neckel-Kuhn Edda: Hymiskviða = 38 complete stanzas (plus one
+      half-stanza sometimes counted separately). This is the standard reference
+      count. Larrington 2014 may differ slightly in presentation. The brief does
+      not cite a stanza count. The claim cannot be verified without the printed
+      edition.
+    recommended_fix: >
+      Before the chapter-draft stage, verify Larrington 2014's headnote stanza
+      count for Hymiskviða. If the headnote says 38 or a different number, correct
+      the body claim. If uncertain, rephrase to "a poem of approximately forty
+      stanzas" or "a poem of thirty-eight to thirty-nine stanzas, depending on
+      the edition" rather than the unqualified "thirty-nine stanzas." Alternatively,
+      omit the precise stanza count from the claims skeleton and let the chapter-draft
+      verify it against the printed text.
+
+  - id: FC-04
+    severity: LOW
+    category: glossary_precision
+    location: >
+      Throughout the body prose — all occurrences of "Miðgarðr" in body-prose
+      claims (rather than in philological footnotes or Old Norse parentheticals).
+      Instances at: the Thor-introduction paragraph, the Miðgarðsormr-name
+      paragraph, the Norse-cosmography paragraph, the Óðinn-dispatch paragraph,
+      and other body paragraphs throughout.
+    claim_text: >
+      [Body prose throughout uses "Miðgarðr" as the primary form; e.g., "the
+      defence of Miðgarðr — the world of humans — against the giants..."]
+    problem: >
+      The locked glossary.yaml entry for Miðgarðr specifies: "chosen: Midgard
+      (body prose); Miðgarðr at first mention and in philological notes." The
+      claims document consistently uses "Miðgarðr" in body prose throughout,
+      including in paragraphs that are not philological footnotes and not
+      first-mention contexts. The glossary requires "Midgard" (without the
+      Old Norse diacritics) in running body prose, with "Miðgarðr" reserved
+      for first mention and philological contexts. This is a LOW finding because
+      the claims stage is not final body prose — the chapter-draft stage will
+      render the final form — but the claims skeleton's pervasive use of the
+      scholarly diacritical form may propagate into the chapter draft if the
+      claims prose is used as a template.
+    evidence: >
+      glossary.yaml entry for Miðgarðr: "chosen: Midgard (body prose); Miðgarðr
+      at first mention and in philological notes." The claims document uses
+      "Miðgarðr" in running body-prose paragraphs throughout (e.g., "the defence
+      of Miðgarðr"; "Jörmungandr was thrown into the ocean encircling Miðgarðr";
+      "Miðgarðr (the world of humans) at the middle level"). The first-mention
+      gloss is correctly supplied at the Jörmungandr paragraph ("the Midgard
+      Serpent"), but the body-prose form is consistently Miðgarðr rather than
+      Midgard.
+    recommended_fix: >
+      At the chapter-draft stage, apply the glossary's Midgard/Miðgarðr
+      distinction: use "Midgard" in running body prose and "Miðgarðr" only at
+      first mention (with gloss) and in philological footnotes or parentheticals.
+      The claims skeleton's use of "Miðgarðr" throughout is acceptable for
+      claims purposes but should not carry over as-is into the chapter draft.
+      This does not require a revision to the claims file itself — it is a
+      reminder for the chapter-draft stage.
+
+  - id: FC-05
+    severity: NOTE
+    category: stage_orchestration
+    location: >
+      §"Source overview" — the nine-paces attribution split between Völuspá st. 56
+      and Gylfaginning 51. Both the Völuspá claim (paragraph beginning "Völuspá
+      stanza 56 compresses the Ragnarök...") and the Gylfaginning 51 claim
+      (paragraph beginning "In Gylfaginning 51, Thor — having killed the
+      serpent — staggers nine paces...") attribute the nine-paces detail.
+    claim_text: >
+      [Völuspá st. 56 paragraph] ...then records that Thor — having killed the
+      serpent — staggers nine paces from the kill-site before falling dead from
+      the serpent's venom.
+      [Gylfaginning 51 paragraph] In Gylfaginning 51, Thor — having killed the
+      serpent — staggers nine paces from the kill-site before falling dead from
+      the serpent's venom...
+    problem: >
+      The claims document correctly attributes the nine-paces detail to both
+      Völuspá st. 56 (Larrington 2014) and Gylfaginning ch. 51 (Faulkes 1987).
+      In trained knowledge of the standard texts, Völuspá st. 56 does include
+      the nine-steps detail ("nine steps goes Fjörgyn's son" or equivalent in
+      Larrington's translation), and Gylfaginning 51 expands this into a prose
+      narrative. The writer's double-attribution is therefore accurate and not
+      an error. This is a NOTE to confirm that the task instruction's statement
+      "The 'nine paces' detail is from Gylfaginning 51" was not intended to
+      exclude Völuspá 56 as a co-source, but rather to ensure that the detail
+      was specifically anchored to Gylfaginning 51 as the more narratively
+      explicit source. The double-attribution in the claims document is the
+      correct and fuller treatment.
+    evidence: >
+      Standard Völuspá st. 56 (Larrington 2014 / Neckel-Kuhn numbering): the
+      stanza includes the detail that Thor goes nine steps before falling.
+      Gylfaginning ch. 51 (Faulkes 1987): the prose expansion of this detail
+      names the nine paces explicitly. Brief 18-thor-jormungandr.yaml variants
+      section: "Gylfaginning 51 (Ragnarök): Thor kills Jörmungandr but staggers
+      nine paces and dies of the serpent's venom." The brief cites Gylfaginning
+      51 for this detail (not Völuspá 56 separately), but this reflects the brief's
+      focus on the prose-narrative source, not an exclusion of Völuspá 56 as
+      a co-source. Both attributions in the claims document are valid.
+    recommended_fix: >
+      No fix required. The double-attribution is correct. If anything, the
+      chapter-draft might clarify: "the nine-pace stagger is named in Völuspá st.
+      56 and expanded in Snorri's Gylfaginning 51" to make the source-layering
+      explicit. But this is a drafting refinement, not a factual correction.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS (representative sample; 137 verified claims noted by
+# sub-section and category)
+# ─────────────────────────────────────────────────────────────────────────────
+
+supported_claims:
+
+  - claim_ref: "Source overview / Larrington 2014 publication data"
+    claim_text: >
+      The working English text for the Poetic Edda is Carolyne Larrington's revised
+      translation, published as The Poetic Edda in the Oxford World's Classics
+      series in 2014 (ISBN 9780199675340).
+    verdict: SUPPORTED
+    source: "sources.yaml (larrington-poetic-edda); brief 18-thor-jormungandr.yaml"
+    note: >
+      Oxford World's Classics 2014, revised edition, ISBN 9780199675340: confirmed
+      in sources.yaml entry larrington-poetic-edda.
+
+  - claim_ref: "Source overview / Faulkes 1987 publication data"
+    claim_text: >
+      The working English text for the Prose Edda is Anthony Faulkes's translation,
+      published as Edda (by Snorri Sturluson) in the Everyman's Library / Dent series
+      in 1987 and reissued by the Viking Society for Northern Research in 2005
+      (ISBN 9780460876162).
+    verdict: SUPPORTED
+    source: "sources.yaml (faulkes-snorri); brief 18-thor-jormungandr.yaml"
+    note: >
+      Everyman/Dent 1987, Viking Society 2005, ISBN 9780460876162: confirmed in
+      sources.yaml entry faulkes-snorri.
+
+  - claim_ref: "Source overview / Codex Regius discovery and location"
+    claim_text: >
+      The Codex Regius is a late-thirteenth-century Icelandic manuscript (GKS 2365
+      4to) discovered in 1643 by Bishop Brynjólfur Sveinsson and now housed in the
+      Árni Magnússon Institute for Icelandic Studies in Reykjavík.
+    verdict: SUPPORTED
+    source: "Trained knowledge of standard Norse scholarship"
+    note: >
+      GKS 2365 4to, discovered 1643 by Brynjólfur Sveinsson, housed at the Árni
+      Magnússon Institute: all confirmed in standard Norse-philological references
+      and consistent with trained knowledge of the manuscript's provenance.
+
+  - claim_ref: "Source overview / Codex Regius as opening poem"
+    claim_text: >
+      Völuspá is the opening poem of the Codex Regius and Hymiskviða is the seventh
+      poem of the mythological section.
+    verdict: SUPPORTED
+    source: "Larrington 2014 (trained knowledge of Codex Regius ordering)"
+    note: >
+      Völuspá as opening poem of the Codex Regius (first of the mythological
+      section) is the standard scholarly position. Hymiskviða's position as
+      the seventh poem of the mythological section is confirmed in trained
+      knowledge of the Codex Regius ordering.
+
+  - claim_ref: "Source overview / Húsdrápa occasion and dating"
+    claim_text: >
+      Húsdrápa is an ekphrastic skaldic poem composed by Úlfr Uggason in
+      approximately 985 CE for the wedding-feast of Óláfr Höskuldsson at the
+      hall of Hjarðarholt in western Iceland.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Skáldskaparmál (trained knowledge)"
+    note: >
+      Húsdrápa c. 985 CE, by Úlfr Uggason, for the Hjarðarholt wedding-feast
+      (Óláfr Höskuldsson): confirmed in trained knowledge of Faulkes 1987
+      Skáldskaparmál headnote. The occasion and the hall are standard reference
+      points in skaldic scholarship.
+
+  - claim_ref: "Source overview / Watkins 1995 and West 2007 publication data"
+    claim_text: >
+      Watkins 1995 How to Kill a Dragon (OUP) Part V on skaldic dragon-slaying
+      diction; West 2007 Indo-European Poetry and Myth (OUP) ch. 6 ("Storm and
+      Stream").
+    verdict: SUPPORTED
+    source: "sources.yaml (watkins-1995; west-2007)"
+    note: >
+      Both publication-data claims confirmed in sources.yaml entries. Chapter-title
+      "Storm and Stream" for West ch. 6 confirmed in sources.yaml notes field.
+
+  - claim_ref: "Source overview / Snorra Edda four-manuscript tradition"
+    claim_text: >
+      The Snorra Edda is preserved in four principal medieval manuscripts —
+      the Codex Upsaliensis (DG 11 4to, c. 1300), the Codex Regius of the Snorra
+      Edda (GKS 2367 4to, c. 1325; not to be confused with the Eddic Codex Regius),
+      the Codex Wormianus (AM 242 fol., c. 1340–1370), and the Codex Trajectinus
+      (1593 paper transcript).
+    verdict: SUPPORTED
+    source: "Faulkes 1987 introduction (trained knowledge)"
+    note: >
+      The four principal Snorra Edda manuscripts with their shelfmarks and dates
+      are confirmed in trained knowledge of Faulkes 1987's introduction: Upsaliensis
+      (DG 11 4to, c. 1300–1310); Regius (GKS 2367 4to, c. 1300–1325); Wormianus
+      (AM 242 fol., c. 1340–1370); Trajectinus (1593). All dates within acceptable
+      scholarly range. The note "not to be confused with the Eddic Codex Regius"
+      is correct and editorially appropriate.
+
+  - claim_ref: "Source overview / three-encounter structure as layered record"
+    claim_text: >
+      The chapter is organised around the brief's three-encounter structure, with
+      the three encounters treated as a layered record from different sources and
+      registers rather than as alternative versions of a single underlying combat.
+    verdict: SUPPORTED
+    source: "Brief 18-thor-jormungandr.yaml special_instructions"
+    note: >
+      The brief's special_instructions explicitly state: "The three encounters are
+      a layered record, not alternative versions of one combat." The claims document
+      preserves this framing throughout the body prose, the markers, and the
+      Comparative-Hook comments. No collapsing of the three encounters detected.
+
+  - claim_ref: "Setting / Thor's parentage and combat role"
+    claim_text: >
+      Thor (Old Norse Þórr) is the storm-god of the Norse pantheon, son of Óðinn
+      and the giantess Jörð ("Earth"), and the principal warrior-figure of the
+      Æsir whose function is the defence of Miðgarðr against the giants.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning chs. 9 and 21 (trained knowledge)"
+    note: >
+      Thor as son of Óðinn and Jörð (Earth) as a giantess, principal warrior of
+      the Æsir, defender against giants: confirmed in trained knowledge of
+      Gylfaginning chs. 9 and 21. All details are standard Norse-mythological
+      reference material.
+
+  - claim_ref: "Setting / Mjöllnir forged by Brokkr and Eitri/Sindri"
+    claim_text: >
+      Thor's combat-weapon is Mjöllnir (normalised Old Norse Mjǫllnir), a hammer
+      forged by the dwarves Brokkr and Eitri (or Sindri) in the contest-and-bargain
+      narrative of Skáldskaparmál 35.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Skáldskaparmál ch. 35 (trained knowledge)"
+    note: >
+      Brokkr and Eitri (or Sindri) as the forging-dwarves in Skáldskaparmál's
+      smiths-contest episode: confirmed. The "(or Sindri)" qualification is
+      correct — the two names for the same dwarf (or two dwarves) are both used
+      in the Norse corpus and the uncertainty is correctly flagged. The
+      Skáldskaparmál ch. 35 reference for this episode is correct.
+
+  - claim_ref: "Setting / Jörmungandr as Loki's son by Angrboða"
+    claim_text: >
+      Jörmungandr is Loki's son by the giantess Angrboða, born alongside the wolf
+      Fenrir and the goddess Hel, in the lineage-narrative recorded in Gylfaginning 34.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 34 (trained knowledge)"
+    note: >
+      Jörmungandr as Loki's son by Angrboða, alongside Fenrir and Hel: confirmed
+      in trained knowledge of Gylfaginning ch. 34. Gylfaginning 34 is the standard
+      source for this lineage. All three offspring named correctly.
+
+  - claim_ref: "Setting / Óðinn dispatches Jörmungandr to encircle the world"
+    claim_text: >
+      Óðinn dispatched Jörmungandr into the ocean encircling Miðgarðr where the
+      serpent grew so large that it could encircle the world and bite its own tail.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 34 (trained knowledge)"
+    note: >
+      Óðinn's dispatch of Jörmungandr into the encircling ocean, the serpent's
+      growth to world-encircling size, the ouroboric tail-biting: confirmed in
+      Gylfaginning ch. 34 per trained knowledge.
+
+  - claim_ref: "Encounter 1 / Útgarðaloki as Skrýmir in disguise"
+    claim_text: >
+      Skrýmir is later revealed (in the post-departure exposition of Gylfaginning 47)
+      to have been Útgarðaloki himself in disguise, and the giant-king's confession
+      that he had interposed a mountain between Thor's hammer and his own brow.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 47 (trained knowledge)"
+    note: >
+      The post-departure revelation that Skrýmir = Útgarðaloki in disguise, with
+      the mountain-interposition trick: confirmed in trained knowledge of
+      Gylfaginning ch. 47. This is one of the most widely-cited episodes in
+      standard treatments of the Útgarðaloki narrative.
+
+  - claim_ref: "Encounter 1 / five contests in Útgarðaloki's hall"
+    claim_text: >
+      The Útgarðr contests: Loki vs. Logi (eating); Þjálfi vs. Hugi (running);
+      Thor and the horn (drinking); Thor and the cat (lifting); Thor and Elli (wrestling).
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 46 (trained knowledge)"
+    note: >
+      All five contests with their named opponents (Logi = Wildfire, Hugi = Thought,
+      Elli = Old Age) are confirmed in trained knowledge of Gylfaginning ch. 46.
+      The allegorical identities of Logi, Hugi, and Elli are correctly glossed.
+
+  - claim_ref: "Encounter 1 / parting revelation of cat as Jörmungandr"
+    claim_text: >
+      Útgarðaloki tells Thor that the grey cat had been the world-encircling serpent
+      enchanted into feline form, and that Thor's heave had raised the serpent so
+      far that its body had pulled out of the ocean's circuit.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 47 (trained knowledge)"
+    note: >
+      The parting-revelation that the cat was Jörmungandr in disguise, and that
+      Thor's lift pulled the serpent's body out of the ocean circuit (alarming the
+      gods): confirmed in trained knowledge of Gylfaginning ch. 47. The horn =
+      ocean and Elli = Old Age retroactive revelations are also correctly reported.
+
+  - claim_ref: "Encounter 1 / Útgarðaloki's hall vanishes on Thor reaching for Mjöllnir"
+    claim_text: >
+      On hearing the parting-revelation, Thor reaches for Mjöllnir to strike the
+      giant-king — and finds that Útgarðaloki and his hall have vanished, leaving
+      only an empty plain.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning chs. 47–48 (trained knowledge)"
+    note: >
+      The disappearance of Útgarðaloki and his hall as Thor reaches for Mjöllnir:
+      confirmed in trained knowledge of Gylfaginning chs. 47–48. Standard and
+      widely cited.
+
+  - claim_ref: "Encounter 2 / Hymiskviða cauldron-quest frame (sts. 1–6)"
+    claim_text: >
+      The Eddic Hymiskviða opens (sts. 1–6) with a frame-narrative situating the
+      fishing expedition within a cauldron-quest: the gods are without a brewing-
+      cauldron large enough for Ægir's feast, and Thor is dispatched to the giant
+      Hymir's hall on the eastern shore.
+    verdict: SUPPORTED
+    source: "Larrington 2014 Hymiskviða sts. 1–6 (trained knowledge)"
+    note: >
+      The cauldron-quest frame in Hymiskviða sts. 1–6 (gods lacking a cauldron for
+      Ægir's feast; Thor dispatched to Hymir's hall): confirmed in trained knowledge
+      of the poem. The "eastern shore" location for Hymir's hall matches the
+      standard reading.
+
+  - claim_ref: "Encounter 2 / Thor kills Hymir's ox for bait (sts. 15–17)"
+    claim_text: >
+      Thor — required to provide his own bait — kills Hymir's largest ox and
+      severs its head, taking the ox-head as bait for the line.
+    verdict: SUPPORTED
+    source: "Larrington 2014 Hymiskviða sts. 15–17 (trained knowledge)"
+    note: >
+      Thor's killing of Hymir's largest ox for bait: confirmed in trained knowledge
+      of Hymiskviða. Standard narrative element of the fishing-encounter, reflected
+      in the iconographic dossier as well.
+
+  - claim_ref: "Encounter 2 / Thor's feet through boat bottom (st. 22)"
+    claim_text: >
+      In Hymiskviða st. 22, Thor's feet press through the boat's bottom and onto
+      the sea-floor as he hauls the serpent up.
+    verdict: SUPPORTED
+    source: "Larrington 2014 Hymiskviða st. 22 (trained knowledge)"
+    note: >
+      The foot-through-boat-bottom motif in Hymiskviða st. 22 is one of the
+      most distinctive details of the poem and is confirmed in all standard
+      treatments of Hymiskviða. The Altuna stone's iconographic reflection of
+      this motif is also confirmed.
+
+  - claim_ref: "Encounter 2 / Hymir cuts the line (sts. 23–24)"
+    claim_text: >
+      In Hymiskviða sts. 23–24, Hymir — fearful of the consequences — cuts the
+      fishing line with his knife, and the serpent slips back into the depths before
+      Thor can complete the killing blow.
+    verdict: SUPPORTED
+    source: "Larrington 2014 Hymiskviða sts. 23–24 (trained knowledge)"
+    note: >
+      Hymir cutting the line as the pivotal moment in Hymiskviða: confirmed in
+      trained knowledge of the poem. Standard and load-bearing for the variant-handling.
+
+  - claim_ref: "Encounter 2 / Gylfaginning 48 fishing expedition matches Hymiskviða outcome"
+    claim_text: >
+      In Snorri's account (Gylfaginning ch. 48), Hymir terror-struck cuts the line
+      with his bait-knife, releasing the serpent back into the deep before the
+      hammer can fall.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 48 (trained knowledge)"
+    note: >
+      Gylfaginning ch. 48 as Snorri's prose fishing-expedition narrative with the
+      same line-cut outcome as Hymiskviða: confirmed in trained knowledge.
+      The detail that Hymir cuts the line with a "bait-knife" is consistent with
+      the Gylfaginning account.
+
+  - claim_ref: "Encounter 2 / Húsdrápa fishing-encounter fragments as apparent killing-blow"
+    claim_text: >
+      The Húsdrápa fragments preserved in Skáldskaparmál appear to record the
+      serpent's beheading; the surviving stanzas include lines describing Thor's
+      striking off the serpent's head.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Skáldskaparmál (trained knowledge of Húsdrápa fragments)"
+    note: >
+      The Húsdrápa fragments' apparent depiction of a killing-blow (beheading or
+      head-striking) is confirmed in trained knowledge of the scholarly literature
+      on the skaldic fishing-encounter corpus. The "apparent" qualification is
+      appropriately maintained throughout (consistent with the LACUNA marker and
+      the INFERENCE marker that follow).
+
+  - claim_ref: "Encounter 2 / skaldic chronology (Bragi early 9th c.; Eysteinn 10th c.)"
+    claim_text: >
+      The skaldic corpus is older than the Eddic Hymiskviða: Bragi Boddason's
+      verses (early ninth century), Eysteinn Valdason's (tenth century), and
+      Húsdrápa (c. 985 CE), while Hymiskviða is dated to the late tenth or
+      eleventh century.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Skáldskaparmál; Larrington 2014 introduction (trained knowledge)"
+    note: >
+      The skaldic-to-Eddic chronological argument is confirmed: Bragi Boddason
+      early 9th c., Eysteinn Valdason 10th c., Húsdrápa c. 985 CE, Hymiskviða
+      late 10th–11th c. These are the standard scholarly datings and are
+      correctly invoked for the pre-Christian attestation argument.
+
+  - claim_ref: "Encounter 3 / Völuspá st. 56 mutual-killing structure"
+    claim_text: >
+      Völuspá stanza 56 compresses the Ragnarök Thor-and-Jörmungandr combat into
+      a few lines: the verse names Thor as Hlóðyn's son, records his victorious
+      strike against the serpent, and then records that Thor staggers nine paces
+      from the kill-site before falling dead from the serpent's venom.
+    verdict: SUPPORTED
+    source: "Larrington 2014 Völuspá st. 56 (trained knowledge)"
+    note: >
+      The Hlóðyn's-son kenning, the victorious strike, and the nine-step stagger
+      before death from venom: confirmed in trained knowledge of Völuspá st. 56
+      as rendered in the Larrington 2014 tradition. See FC-05 (NOTE) for
+      the double-attribution of nine-paces to both Völuspá 56 and Gylfaginning 51.
+
+  - claim_ref: "Encounter 3 / Hlóðyn's-son kenning"
+    claim_text: >
+      The Völuspá st. 56 designation of Thor as "Hlóðyn's son" (Old Norse Hlǫðynjar
+      burr or similar formulations) is a kenning that names the storm-god by his
+      maternal lineage (Jörð / Hlóðyn / Fjǫrgyn).
+    verdict: SUPPORTED
+    source: "Larrington 2014 Völuspá st. 56 and notes (trained knowledge)"
+    note: >
+      The Hlóðyn / Fjǫrgyn / Jörð triad as names for Thor's mother Earth is
+      confirmed in the standard Eddic scholarship. The maternal-lineage kenning
+      in the Ragnarök stanza is a standard reference point.
+
+  - claim_ref: "Encounter 3 / Gylfaginning 51 Ragnarök combat sequence"
+    claim_text: >
+      Gylfaginning 51 is the principal narrative-continuous Norse account of
+      Ragnarök, structured as Snorri's expansion of the Eddic poetic compressions.
+      The chapter includes the fimbulvetr, the releasing of Loki and Fenrir,
+      Naglfar's launching, the Múspellssynir's ride, the paired combats at Vígríðr.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 51 (trained knowledge)"
+    note: >
+      All Ragnarök details attributed to Gylfaginning 51 (fimbulvetr,
+      Loki-and-Fenrir breaking bonds, Naglfar, Surtr, Vígríðr, the named
+      single-combat pairs) are confirmed in trained knowledge of the chapter.
+      The claim that Snorri draws on Völuspá, Vafþrúðnismál, and other Eddic
+      sources for Gylfaginning 51 is standard Norse-philological knowledge.
+
+  - claim_ref: "Encounter 3 / nine-pace stagger attributed to Gylfaginning 51"
+    claim_text: >
+      In Gylfaginning 51, Thor — having killed the serpent — staggers nine paces
+      from the kill-site before falling dead from the serpent's venom.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 51 (trained knowledge)"
+    note: >
+      The nine-pace stagger and venom-death in Gylfaginning 51: confirmed.
+
+  - claim_ref: "Encounter 3 / post-Ragnarök renewal and Mjöllnir inheritance"
+    claim_text: >
+      The renewal-narrative records a new earth rising green from the sea, with
+      Thor's sons Móði and Magni inheriting Mjöllnir.
+    verdict: SUPPORTED
+    source: "Larrington 2014 Völuspá sts. 59–66; Faulkes 1987 Gylfaginning chs. 52–53"
+    note: >
+      The post-Ragnarök renewal with the new earth, the inheriting of Mjöllnir
+      by Móði and Magni: confirmed in trained knowledge of Völuspá sts. 59–66
+      and Gylfaginning chs. 52–53. This is load-bearing for the distinction
+      between "terminal but not final" — correctly framed.
+
+  - claim_ref: "Iconographic dossier / all four stones correctly identified"
+    claim_text: >
+      Altuna (Uppland, Sweden, c. 1050 CE): fishing-boat, hooked line, foot through
+      boat bottom. Hørdum (Thy, Jutland, c. 800 CE): two figures in boat with
+      hooked line and serpent. Gosforth (Cumbria, c. 950 CE): Thor and Hymir in
+      a boat with hooked serpent. Ardre VIII (Gotland, c. 700–800 CE): fishing-
+      encounter composition with Thor and hooked serpent.
+    verdict: SUPPORTED
+    source: "Brief 18-thor-jormungandr.yaml iconography; West 2007 ch. 6 (trained knowledge)"
+    note: >
+      All four stones correctly identified with locations, dates, and depicted
+      content consistent with the brief and with trained knowledge of the standard
+      iconographic literature. The Altuna foot-through-boat-bottom motif, the
+      Hørdum two-figure composition, the Gosforth fishing-stone distinction from
+      the Gosforth Cross, and the Ardre VIII picture-stone context are all
+      standard reference points.
+
+  - claim_ref: "Iconographic dossier / Ardre VIII as earliest of four stones"
+    claim_text: >
+      The Ardre VIII stone (c. 700–800 CE) is the earliest of the four-stone
+      iconographic dossier, predating the earliest skaldic witness (Bragi Boddason,
+      early 9th c.).
+    verdict: SUPPORTED
+    source: "Brief 18-thor-jormungandr.yaml; West 2007 ch. 6"
+    note: >
+      Ardre VIII as the earliest of the four stones (c. 700–800 CE), predating
+      Bragi Boddason (early 9th c.): confirmed in brief and consistent with
+      trained knowledge of the Gotlandic picture-stone corpus.
+
+  - claim_ref: "Skaldic diction / Watkins HERO SLAY SERPENT in Norse skaldic corpus"
+    claim_text: >
+      Watkins's reconstructed Indo-European HERO SLAY SERPENT formula is attested
+      in the Norse corpus chiefly through the skaldic kennings rather than through
+      a direct verbal cognate of áhann áhim.
+    verdict: SUPPORTED
+    source: "Watkins 1995 Part V (trained knowledge)"
+    note: >
+      The Norse HERO SLAY SERPENT attestation via kennings rather than via a direct
+      áhann-áhim cognate: confirmed in trained knowledge of Watkins 1995 Part V.
+      The distinction between formula-level (kenning-based) and verbal-cognate
+      attestation is correctly drawn.
+
+  - claim_ref: "Skaldic diction / forward-link to Part II C5 correctly disciplined"
+    claim_text: >
+      The full philological argument for the skaldic kennings as direct IE reflexes
+      of HERO SLAY SERPENT is reserved for Part II C5; the present chapter summarises
+      and forward-links.
+    verdict: SUPPORTED
+    source: "Brief 18-thor-jormungandr.yaml special_instructions; scope.md"
+    note: >
+      The Watkins argument is summarised but not pre-empted. No full IE-cognate
+      list, no full philological derivation. The forward-link discipline is
+      correctly maintained throughout the Skaldic Diction section.
+
+  - claim_ref: "Reception / Gosforth Cross combination of Norse and Christian iconography"
+    claim_text: >
+      The Gosforth Cross (Cumbria, c. 950 CE; the same site as the Gosforth fishing
+      stone) is the principal pre-Conquest Anglo-Scandinavian monument combining
+      Christian crucifixion iconography with Norse Ragnarök figures.
+    verdict: SUPPORTED
+    source: "West 2007 ch. 6; Faulkes 1987 introduction (trained knowledge)"
+    note: >
+      The Gosforth Cross's combination of Christian and Norse iconography is one
+      of the most frequently cited instances of Anglo-Scandinavian syncretism.
+      The c. 950 CE date and Cumbrian location are confirmed.
+
+  - claim_ref: "Marker integrity / 1:1 footnote and EVIDENCE invariant"
+    claim_text: >
+      Every substantive claim paragraph carries one footnote and one EVIDENCE token.
+    verdict: SUPPORTED
+    note: >
+      Verified by count: 142 footnote markers and 142 EVIDENCE tokens, matching
+      the stated 142 claim paragraphs. The 1:1 invariant holds throughout the
+      document.
+
+  - claim_ref: "Marker integrity / INFERENCE markers all include basis and risk"
+    claim_text: >
+      [Five INFERENCE markers: (1) Snorri-as-witness methodological commitment;
+      (2) Útgarðaloki cat-disguise age uncertainty; (3) Húsdrápa beheading vs.
+      Ragnarök reservation; (4) Aži Dahāka structural similarity (eschatological);
+      (5) iconographic concentration on fishing-encounter]
+    verdict: SUPPORTED
+    note: >
+      All five INFERENCE markers include 'basis' and 'risk' sub-fields as required
+      by the marker discipline. None omit either sub-field. Marker structure is
+      correct throughout.
+
+  - claim_ref: "Marker integrity / LACUNA markers include source and scholarly_reconstruction"
+    claim_text: >
+      [Two LACUNA markers: (1) Húsdrápa fragmentary survival; (2) Völuspá st. 56
+      compression of Ragnarök combat]
+    verdict: SUPPORTED
+    note: >
+      Both LACUNA markers include 'source' and 'scholarly_reconstruction' sub-fields
+      as required by the marker discipline. The in-tradition fill is correctly
+      identified (Gylfaginning 51 for the Völuspá lacuna; Skáldskaparmál fragments
+      for the Húsdrápa lacuna). Correct.
+
+  - claim_ref: "Marker integrity / VARIANT includes primary, alt, chosen, reason sub-fields"
+    claim_text: >
+      [One VARIANT marker: fishing-encounter outcome (line-cut vs. apparent beheading)]
+    verdict: SUPPORTED (with qualification — see FC-01 for internal contradiction)
+    note: >
+      The VARIANT marker has all four required sub-fields (primary, alt, chosen,
+      reason). The structural completeness is confirmed. The content issue (internal
+      contradiction in 'chosen' sub-field between co-equal and dominant-one language)
+      is flagged separately as FC-01.
+
+  - claim_ref: "Glossary compliance / banned terms not used in body prose"
+    claim_text: >
+      The claims document body avoids "chaos-figure," "chaos-serpent," and
+      "chaos-monster" throughout.
+    verdict: SUPPORTED
+    note: >
+      No instances of "chaos-figure," "chaos-serpent," or "chaos-monster" found
+      in the body prose or footnotes of the claims document. The only instances
+      of the "chaos" root in the document are in cross-references to chapter 3
+      (Marduk/Tiamat) and in the Comparative-Hook comments where the terms are
+      used in chapter cross-reference contexts, not as descriptors for Jörmungandr.
+      Glossary discipline on the banned terms is fully compliant.
+
+  - claim_ref: "Glossary compliance / Jörmungandr descriptors"
+    claim_text: >
+      Jörmungandr is consistently described as "world-encircling serpent," "Loki's
+      son," and "Miðgarðsormr" — never as "chaos-serpent" or "chaos-monster."
+    verdict: SUPPORTED
+    note: >
+      All referential descriptors for Jörmungandr in the body prose comply with
+      the glossary's mandated forms. No banned-term usage detected.
+
+  - claim_ref: "Glossary compliance / Óðinn spelling locked"
+    claim_text: >
+      Óðinn is used throughout in the Old Norse locked spelling, with "Odin"
+      noted only as the anglicisation at first mention.
+    verdict: SUPPORTED
+    note: >
+      "Óðinn" used consistently throughout. The first-mention paragraph
+      explicitly notes the anglicised form "Odin" and states it is kept in
+      the Old Norse spelling per glossary discipline. Correct.
+
+  - claim_ref: "Glossary compliance / Mjöllnir spelling"
+    claim_text: >
+      Mjöllnir (with umlaut) used in body prose; Mjǫllnir noted as the
+      normalised Old Norse form at first mention.
+    verdict: SUPPORTED
+    note: >
+      The glossary.yaml entry for Mjöllnir specifies: "chosen: Mjöllnir."
+      The claims document uses "Mjöllnir" consistently in body prose and notes
+      "Mjǫllnir" as the normalized form at first mention. Correct.
+
+  - claim_ref: "Glossary compliance / Ragnarök spelling"
+    claim_text: >
+      Ragnarök (with umlaut) used in body prose; Ragnarǫk noted as normalised
+      Old Norse at first mention.
+    verdict: SUPPORTED
+    note: >
+      The glossary.yaml entry for Ragnarök specifies: "chosen: Ragnarök." The
+      claims document uses "Ragnarök" consistently and notes "Ragnarǫk" at first
+      mention. Correct.
+
+  - claim_ref: "Comparative hooks / all eight hooks in comment lines"
+    claim_text: >
+      Eight COMPARATIVE-HOOK comment lines at the end of the document: India
+      (Indra-Vṛtra; Ch. 14); Iran (Aži Dahāka; Ch. 13); Anatolia (Tarḫunna-
+      Illuyanka; Ch. 6); Christian apocalyptic (Revelation 12; Ch. 9); Mesopotamia
+      (Marduk-Tiamat; Ch. 3); Old English (Beowulf-dragon; Ch. 19); IE formula
+      (Part II C5); Eschatological displacement (Part II C4).
+    verdict: SUPPORTED
+    note: >
+      All eight hooks are correctly placed as // COMPARATIVE-HOOK comment lines
+      at the close of the document, not in body prose. None overclaim direct
+      transmission. The three required hooks per brief (Part II C5; Part II C4
+      Rev 12 / Frashokereti; Beowulf Ch. 19) are all present. Additional hooks
+      for Indra-Vṛtra, Tarḫunna-Illuyanka, Marduk-Tiamat, and Mesopotamia are
+      properly supplementary. Hook discipline fully compliant.
+
+  - claim_ref: "Comparative hooks / Watkins IE argument forward-linked not pre-empted"
+    claim_text: >
+      The full Watkins philological argument is reserved for Part II C5; the
+      present chapter summarises and forward-links.
+    verdict: SUPPORTED
+    note: >
+      The Skaldic Diction section summarises the IE argument at a level appropriate
+      for a story chapter: kennings noted, formula named, Viking-Age status of
+      skaldic corpus noted, and the Part II C5 forward-link explicitly stated.
+      No full philological derivation, no full IE-cognate list. Scope discipline
+      maintained.
+
+  - claim_ref: "Source overview / citation discipline at hymn-and-stanza level"
+    claim_text: >
+      Larrington 2014 is cited at hymn-and-stanza level throughout; Faulkes 1987
+      at chapter level; Watkins 1995 and West 2007 at section/chapter level.
+    verdict: SUPPORTED
+    note: >
+      Citation discipline confirmed: Larrington citations consistently specify
+      hymn (e.g., "Hymiskviða sts. 17–25", "Völuspá st. 56"); Faulkes citations
+      consistently specify chapter (e.g., "Gylfaginning ch. 48", "Skáldskaparmál");
+      Watkins and West citations at "Part V" and "ch. 6" level respectively.
+      No over-precise citations (page-number with verbatim quote) detected.
+      No under-precise citations (author-year only without location) detected.
+
+  - claim_ref: "Source overview / no verbatim quotations from printed-only sources"
+    claim_text: >
+      No verbatim translations or direct quotations from Larrington 2014 or
+      Faulkes 1987 appear in the body prose of the claims document.
+    verdict: SUPPORTED
+    note: >
+      Confirmed: all rendered stanza content is paraphrase ("the verse names Thor
+      as Hlóðyn's son... records his victorious strike... staggers nine paces")
+      rather than presented as direct quotation. The kenning glosses are
+      conventional scholarly paraphrases. No invented quotations detected.
+
+  - claim_ref: "Conversion of Iceland to Christianity in 999/1000 CE"
+    claim_text: >
+      Snorri composed the Snorra Edda more than two hundred years after the official
+      conversion of Iceland to Christianity in 999/1000 CE.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 introduction (trained knowledge)"
+    note: >
+      Iceland's official conversion to Christianity at the Althing in 999 or 1000 CE
+      is one of the most securely dated events in Norse history. The 200+ years
+      between 999/1000 CE and Snorri's 1220s is correctly stated.
+
+  - claim_ref: "Encounter 3 / Ragnarök paired combats correctly listed"
+    claim_text: >
+      At Vígríðr: Óðinn confronts Fenrir, Freyr confronts Surtr, Týr confronts
+      Garmr (the hound of Hel), Heimdallr confronts Loki, and Thor confronts
+      Jörmungandr.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning ch. 51 (trained knowledge)"
+    note: >
+      The paired combats at Ragnarök as listed in Gylfaginning ch. 51: confirmed
+      in trained knowledge. Óðinn-Fenrir, Freyr-Surtr, Týr-Garmr, Heimdallr-Loki,
+      Thor-Jörmungandr: all correct per standard Norse-mythological scholarship.
+
+  - claim_ref: "Setting / Norse cosmography correctly described"
+    claim_text: >
+      The world-tree Yggdrasil at the centre; Ásgarðr above; Miðgarðr at the
+      middle level surrounded by the ocean and the encircling serpent; Útgarðr
+      and Niflheimr / Hel beyond.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Gylfaginning chs. 8, 14, 34 (trained knowledge)"
+    note: >
+      The tripartite Norse cosmography is correctly described. Yggdrasil at centre,
+      Ásgarðr above, Miðgarðr at the middle level with its ocean boundary,
+      Útgarðr beyond: confirmed in trained knowledge of Gylfaginning chs. 8 and 14.
+
+  - claim_ref: "Encounter 2 / stock-skaldic-subject characterisation"
+    claim_text: >
+      At least three named skalds across two centuries composed verse on the
+      fishing-encounter, giving it the documentary profile of a well-known and
+      frequently-rehearsed traditional narrative in pre-Christian Norse poetic
+      culture.
+    verdict: SUPPORTED
+    source: "Faulkes 1987 Skáldskaparmál; Watkins 1995 Part V"
+    note: >
+      Multi-skald attestation (Bragi, Eysteinn, Úlfr) across two centuries as
+      evidence of the fishing-encounter's status as a stock skaldic subject:
+      confirmed. This is one of the standard arguments for the antiquity of the
+      tradition and is correctly developed.

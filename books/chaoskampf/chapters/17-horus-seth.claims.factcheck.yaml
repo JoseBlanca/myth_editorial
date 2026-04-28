@@ -1,0 +1,962 @@
+meta:
+  stage: claims-factcheck
+  chapter: "17-horus-seth"
+  chapter_title: "Horus vs. Seth (An Edge Case)"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-28"
+  input_file: "chapters/17-horus-seth.claims.adoc"
+  claims_identified: 49
+  triangulations_performed: 24
+  verdict: REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. All printed-only anchors (te Velde 1967 Seth God of Confusion;
+      Assmann 2001 The Search for God in Ancient Egypt; Forsyth 1987 The Old
+      Enemy; Ballentine 2015 The Conflict Myth and the Biblical Tradition;
+      Hoffner 1998 Hittite Myths) could not be fetched directly. WebFetch was
+      not attempted; the task instructions anticipated this and directed
+      triangulation against trained knowledge of the Egyptological corpus and
+      the secondary scholarship. All verifications rely on trained knowledge of
+      the Egyptian funerary corpus (Pyramid Texts, Coffin Texts, Chester Beatty
+      I), on the standard Egyptological bibliography for te Velde 1967 and
+      Assmann 2001, and on trained knowledge of the Contendings of Horus and
+      Seth as documented in Egyptological scholarship.
+    sources_skimmed:
+      - "te Velde 1967 Seth God of Confusion (printed; not fetched; cited at chs. 1-2 per brief discipline)"
+      - "Assmann 2001 The Search for God in Ancient Egypt (printed; not fetched; cited at chapter-section level)"
+      - "Forsyth 1987 The Old Enemy (printed; not fetched; cited at chapter level)"
+      - "Ballentine 2015 The Conflict Myth and the Biblical Tradition (printed; not fetched; cited at passim level)"
+      - "Hoffner 1998 Hittite Myths (printed; not fetched; cited at §§14-18)"
+    triangulations_assumed: >
+      Chester Beatty I date (c. 1160 BCE, Twentieth Dynasty) is the standard
+      Egyptological date confirmed in all reference works. The wedjat eye as
+      the healed/restored eye of Horus and the distinction between the torn-out
+      (left, lunar) eye and the wedjat designation were triangulated against
+      trained knowledge of Egyptological scholarship (te Velde 1967 is the
+      anchor but the wedjat-eye distinction is standard in the field). The
+      mutual-mutilation motif (Seth tears out Horus's left eye; Horus injures
+      Seth's testicles) is confirmed in the Pyramid Texts and the Contendings as
+      documented in the standard Egyptological literature. The "eighty years
+      without resolution" figure from the Contendings is a specific narrative
+      detail; it appears in Chester Beatty I and is widely cited in
+      Egyptological literature, though the exact duration varies between
+      manuscript traditions. The Coffin Texts date range (c. 2050-1650 BCE) is
+      the standard Middle Kingdom periodisation. The Hoffner 1998 §§14-18 loc
+      citation is flagged as unverifiable without direct text access to the
+      printed edition, but is plausible given Hoffner's organisation of the
+      Kumarbi Cycle materials. Gardiner 1931 as the first Chester Beatty
+      publication date is confirmed in the standard bibliography.
+    verbatim_quote_policy: >
+      No verbatim quotes from the primary or secondary sources were attempted
+      or asserted in the claims document. All citations are at chapter-section
+      level (te Velde chs. 1-2; Assmann chs. on maʿat/isfet) or at paraphrase
+      level. The one exception is the characterisation of te Velde 1967's
+      "introduction" as a specific citable locus — this is flagged as MEDIUM
+      (citation more precise than the brief's chapter-level discipline allows
+      for printed-only sources). No verbatim quote fabrication detected.
+    internal_variance_vs_contamination: >
+      No contamination detected. All substantive material is within the Egyptian
+      tradition (Pyramid Texts, Coffin Texts, Chester Beatty I Contendings,
+      Osiris cycle) or correctly labeled in COMPARATIVE-HOOK comment lines. The
+      Kumarbi Cycle parallel (Hoffner 1998 Ch. 5 cross-reference) is correctly
+      confined to a COMPARATIVE-HOOK comment. The Ballentine critique is engaged
+      in the body at a forward-pointing level (cross-ref Part II C8) consistent
+      with the brief's instruction to feed the C8 debate without pre-empting it.
+      No Near Eastern or other-tradition material imported into body claims.
+      The banned term "chaos-figure" appears in scare quotes only, in a correct
+      counter-model argument (compliant with the Ch16 line 143 Ballentine
+      COMPLIANCE pattern). Seth's two-dossier ambivalence is preserved
+      throughout; no claim collapses the parallelism into a single valuation.
+    model_identity_confirmation: >
+      I am Claude Sonnet 4.6. The writer was Claude Opus 4.7. This is an
+      adversarial audit in a fresh conversation. I have no memory of producing
+      the claims document and have approached it with independent scrutiny.
+
+tallies:
+  total_claims: 49
+  footnotes_counted: 49
+  evidence_tokens_counted: 49
+  invariant_1to1: HOLDS
+  supported: 43
+  internal_variance: 0
+  unverified: 3
+  citation_wrong: 0
+  glossary_violations: 1
+  scope_creep: 0
+  fabrication: 0
+  silent_bridge: 0
+  marker_issues: 0
+  total_findings: 4
+  claims_with_issues: 4
+  claims_without_issues: 45
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: MEDIUM
+    category: glossary_violation
+    location: >
+      §"Setting and context" line 67 — the claim beginning "Seth — Egyptian
+      Setekh, alternative form Sutekh in Ramesside diplomatic contexts..."
+    claim_text: >
+      Seth — Egyptian Setekh, alternative form Sutekh in Ramesside diplomatic
+      contexts — is the Egyptian god of storms, deserts, and disorder...
+    problem: >
+      The form "Setekh" is introduced as the Egyptian-language name for Seth at
+      first mention, but "Setekh" is not in the locked glossary.yaml for this
+      book. The glossary entry "Seth / Sutekh" lists the renderings_considered
+      as Seth (Faulkner 1972; te Velde 1967), Sutekh (Hittite treaty usage;
+      Ramesside period), and Sēt (with length-mark, less common). The chosen
+      form is "Seth as body-prose default; 'Sutekh' only where the Hittite-
+      Egyptian interface is under discussion." The form "Setekh" is not among
+      the locked renderings. While "Setekh" is a legitimate Egyptological
+      transliteration of the Egyptian orthography and appears in some scholarly
+      literature, the book's locked glossary discipline does not sanction it.
+      The first-mention gloss in the claims document should use the glossary-
+      approved form (Seth / Sutekh) rather than introducing an unlocked variant.
+      This is a glossary-discipline violation, not a factual error about the
+      deity.
+    evidence: >
+      glossary.yaml entry "Seth / Sutekh": renderings_considered includes Seth,
+      Sutekh, and Sēt; chosen is "Seth as body-prose default; 'Sutekh' only
+      where Hittite-Egyptian interface is under discussion." "Setekh" does not
+      appear in the entry. The brief 17-horus-seth.yaml also uses "Seth" and
+      "Sutekh" as the sanctioned forms.
+    recommended_fix: >
+      At line 67, replace "Seth — Egyptian Setekh, alternative form Sutekh in
+      Ramesside diplomatic contexts" with "Seth — alternative form Sutekh in
+      Ramesside diplomatic contexts." The Egyptian-language transliteration
+      Setekh is not a locked glossary form; if the chapter-draft stage wants to
+      note the Egyptian orthography, it should do so in a footnote using the
+      locked scholarly sources (te Velde 1967) rather than in the body claim.
+      Update the EVIDENCE-tag note accordingly.
+
+  - id: FC-02
+    severity: MEDIUM
+    category: unverified
+    location: >
+      §"Setting and context" line 98 — the claim about the wedjat eye:
+      "the *wedjat* eye, conventionally the lunar left eye"
+    claim_text: >
+      Seth tears out one of Horus's eyes (the *wedjat* eye, conventionally the
+      lunar left eye), and Horus in turn injures Seth's testicles, with the
+      eye-injury and the testicle-injury preserved in the textual record as the
+      canonical mutilations of the contention.
+    problem: >
+      The claim conflates two distinct Egyptological concepts. In standard
+      Egyptological usage, the "wedjat" (wḏꜣt) eye is the healed or whole/
+      restored eye of Horus — the eye AFTER its restoration by Thoth, not the
+      eye as Seth tears it out. The eye that Seth tears from Horus is the left
+      (lunar) eye, which becomes the wedjat only after restoration. Calling
+      the torn-out eye "the wedjat eye" at the moment of its extraction
+      reverses the logic: the wedjat is precisely the healthy/healed eye, and
+      its restoration is the resolution of the injury, not the injury itself.
+      The Pyramid Texts and Coffin Texts attestations of the wedjat eye are
+      typically in contexts of protection and restoration, not of wounding.
+      The identification "conventionally the lunar left eye" for the torn eye
+      is itself contested in Egyptology: the right eye of Horus is solar and
+      associated with Ra; the left eye is lunar — this much the claim gets
+      right. But the attachment of the "wedjat" label to the torn eye at the
+      moment of tearing is an imprecision that the chapter-draft stage should
+      not perpetuate. This is flagged as MEDIUM (imprecision, not fabrication)
+      because the Egyptian sources do associate wedjat with the left/lunar eye
+      broadly, but the precise sequence (tear → heal → wedjat) matters for
+      theological accuracy in a chapter that stakes much on Egyptological
+      precision.
+    evidence: >
+      Standard Egyptological usage: "wedjat" (wḏꜣt) means "the sound/healthy
+      one" and refers to the restored eye of Horus, not the damaged eye.
+      The sequence in the mythology is: Seth tears out the eye; Thoth
+      (or Hathor in some variants) restores it; the restored eye is the wedjat.
+      The claim as written presents the wedjat as simply another name for the
+      torn-out eye, which is inaccurate. te Velde 1967 ch. 1 treats the
+      eye-injury in the Pyramid Texts context; the wedjat-as-restored-eye is
+      standard in the funerary literature and in te Velde's treatment.
+    recommended_fix: >
+      Revise to: "Seth tears out one of Horus's eyes (the left, conventionally
+      the lunar eye; subsequently restored as the *wedjat*, the 'sound eye'),
+      and Horus in turn injures Seth's testicles..." This preserves the
+      correct Egyptological sequence: the eye is torn out as the lunar/left
+      eye; it becomes the wedjat after restoration by Thoth. The wedjat label
+      should be attached to the restored, not the torn, eye.
+
+  - id: FC-03
+    severity: MEDIUM
+    category: unverified
+    location: >
+      §"Source overview" line 82-83 — the EVIDENCE token citing "introduction"
+      as the locus for te Velde 1967.
+    claim_text: >
+      te Velde 1967's title _Seth, God of Confusion_ reflects the scholarly
+      judgment that the Egyptian tradition's handling of Seth is itself
+      characterised by deliberate ambivalence...
+      [EVIDENCE: source_id=te-velde-1967 ; loc=introduction (deliberate ambivalence)]
+    problem: >
+      The EVIDENCE token at line 83 cites "loc=introduction (deliberate
+      ambivalence)" as the locus within te Velde 1967. The brief and the
+      citation discipline established for this book (and documented in the
+      chapter's own lines 35-36 on the printed-source citation policy) specify
+      that te Velde 1967 is to be cited at "chapter-section level (chs. 1-2)"
+      for this chapter. "Introduction" is a more precise location than
+      chapter-level and cannot be verified without direct access to the printed
+      edition. The body footnote at line 82 correctly links the observation to
+      the monograph's title and chs. 1-2, but the EVIDENCE tag narrows the
+      citation to "introduction" specifically. This over-precision violates the
+      printed-source citation discipline established by the brief.
+    evidence: >
+      Brief 17-horus-seth.yaml, sources.primary: "loc: Seth, God of Confusion,
+      chs. 1-2 (on Horus-Seth contention and Seth's ambivalence)." The chapter
+      itself (lines 35-36) states: "te Velde 1967 is printed-only; in the
+      present chapter it is cited at chapter-section level (chs. 1-2) per the
+      established discipline." The "introduction" loc is more precise than the
+      chapter-level discipline allows for an unverified printed source.
+    recommended_fix: >
+      Change the EVIDENCE token at line 83 from
+      "source_id=te-velde-1967 ; loc=introduction (deliberate ambivalence)"
+      to "source_id=te-velde-1967 ; loc=chs. 1-2 (deliberate ambivalence)."
+      The body footnote correctly notes both the title and chs. 1-2 as
+      co-references; the EVIDENCE tag should match the chapter-level citation
+      discipline, not narrow to the introduction.
+
+  - id: FC-04
+    severity: LOW
+    category: unverified
+    location: >
+      §"The Contendings of Horus and Seth" line 186-187 — the Hoffner 1998
+      §§14-18 citation in the Kumarbi-Teshub evidence tag.
+    claim_text: >
+      ...Hoffner 1998 on the Kumarbi-Teshub succession-strife (cross-ref Ch. 5).
+      [EVIDENCE: source_id=hoffner-1998 ; loc=§§14-18 (Kumarbi-Teshub succession)]
+    problem: >
+      The EVIDENCE token for the Kumarbi Cycle cross-reference cites Hoffner
+      1998 at "§§14-18 (Kumarbi-Teshub succession)." This is a specific section
+      range within a printed-only edition. Hoffner 1998 (Hittite Myths, 2nd ed.,
+      SBL Writings from the Ancient World 2) organises its texts by number, and
+      the Kumarbi Cycle materials are among the longer numbered sections — but
+      the specific section numbers §§14-18 cannot be verified without direct
+      access to the printed edition. The citation is therefore over-precise for
+      an unverifiable printed source. This is LOW rather than MEDIUM because
+      the citation is in a forward-link / COMPARATIVE-HOOK context (the Kumarbi
+      comparison is being forwarded to Ch. 5 and Part II C2, not being developed
+      here), and the section numbering is plausible given Hoffner's standard
+      organisation of the myths. The substantive claim (that the Kumarbi-Teshub
+      succession-strife is the structural comparand) is not fabricated.
+    evidence: >
+      Hoffner 1998 (sources.yaml entry: "Anchor for Illuyanka and the Kumarbi
+      Cycle [Song of Ullikummi, Song of Hedammu, Kingship in Heaven]") is a
+      printed-only source. The section-number range §§14-18 for the Kumarbi-
+      Teshub materials is plausible but unverifiable without the printed text.
+      The corresponding body footnote (line 186) does not repeat the section
+      numbers, citing only "Hoffner 1998 on the Kumarbi-Teshub succession-
+      strife" — the section numbers are introduced only in the EVIDENCE tag,
+      which is the more machine-readable/precise citation level.
+    recommended_fix: >
+      Change the EVIDENCE token at line 187 from
+      "source_id=hoffner-1998 ; loc=§§14-18 (Kumarbi-Teshub succession)"
+      to "source_id=hoffner-1998 ; loc=Kumarbi Cycle sections (Kumarbi-Teshub
+      succession)." The body footnote already correctly cites at work level
+      without section numbers; the EVIDENCE tag should match rather than add
+      unverified precision.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS (representative sample; 43 verified claims noted here)
+# ─────────────────────────────────────────────────────────────────────────────
+
+supported_claims:
+
+  - claim_ref: "INCLUSION-MARGINAL marker — all required sub-fields present"
+    claim_text: >
+      [INCLUSION-MARGINAL marker at line 26: basis | justification | scope —
+      all three required sub-fields present and correctly populated]
+    verdict: SUPPORTED
+    source: "brief 17-horus-seth.yaml special_instructions; scope.md §Inclusion criteria"
+    note: >
+      The INCLUSION-MARGINAL marker opens the document (before the first
+      section header), contains the required basis field (Seth is not
+      serpentine; combat is god-against-god), the required justification field
+      (te Velde 1967 two-dossier reading), and the required scope field
+      (structural-comparative rather than morphological). All three sub-fields
+      present. The marker correctly identifies the audit-review-log date
+      (2026-04-23) as the source of the RELATED/INCLUSION-MARGINAL decision.
+      Fully compliant with the brief's special_instructions.
+
+  - claim_ref: "te Velde 1967 publication data — title, publisher, series, date, second edition"
+    claim_text: >
+      Herman te Velde's Seth, God of Confusion: A Study of His Role in Egyptian
+      Mythology and Religion, originally published in 1967 by Brill in Leiden
+      as Probleme der Ägyptologie 6, with a second edition in 1977.
+    verdict: SUPPORTED
+    source: "sources.yaml (te-velde-1967); brief 17-horus-seth.yaml"
+    note: >
+      Publisher Brill Leiden 1967, series Probleme der Ägyptologie 6, second
+      edition 1977: all confirmed in sources.yaml (ISBN 9789004054028) and in
+      trained knowledge of the monograph. The chapter correctly identifies
+      chapters 1-2 as covering the Horus-Seth contention and Seth's ambivalence,
+      matching the brief's specification.
+
+  - claim_ref: "te Velde citation discipline — printed-only, chapter-section level"
+    claim_text: >
+      te Velde 1967 is printed-only; in the present chapter it is cited at
+      chapter-section level (chs. 1-2 for the Horus-Seth and Seth-ambivalence
+      material) per the established discipline.
+    verdict: SUPPORTED
+    source: "brief 17-horus-seth.yaml; scope.md source discipline"
+    note: >
+      The chapter explicitly documents its own citation discipline at lines
+      35-36. With the exception of the "introduction" over-precision flagged
+      in FC-03, all te Velde citations are at chs. 1-2 or chs. 1-4 (the latter
+      only in the Reception back-link where the whole monograph's two-dossier
+      structure is being described). Citation discipline is maintained.
+
+  - claim_ref: "Assmann 2001 publication data"
+    claim_text: >
+      Jan Assmann's The Search for God in Ancient Egypt, translated from the
+      German by David Lorton and published by Cornell University Press in 2001.
+    verdict: SUPPORTED
+    source: "sources.yaml (assmann-2001-search)"
+    note: >
+      Translator David Lorton, Cornell University Press 2001: confirmed in
+      sources.yaml entry assmann-2001-search.
+
+  - claim_ref: "Forsyth 1987 publication data and Horus-Seth marginal treatment"
+    claim_text: >
+      Neil Forsyth's The Old Enemy: Satan and the Combat Myth, published by
+      Princeton University Press in 1987, whose engagement with the Horus-Seth
+      material is brief.
+    verdict: SUPPORTED
+    source: "sources.yaml (forsyth-1987); trained knowledge"
+    note: >
+      Princeton University Press 1987: confirmed in sources.yaml (ISBN
+      9780691014746). The characterisation of Forsyth's treatment of Horus-Seth
+      as brief/marginal is consistent with trained knowledge of the monograph's
+      focus on the cosmogonic and eschatological combat traditions (Babylonian,
+      Ugaritic, Hebrew, Apocalyptic) rather than the Egyptian sovereignty strife.
+
+  - claim_ref: "Chester Beatty I — date, dynasty, Dublin location"
+    claim_text: >
+      Chester Beatty I papyrus (Twentieth Dynasty, c. 1160 BCE), preserved in
+      the Chester Beatty Library in Dublin.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; glossary.yaml (Contendings entry); standard Egyptological bibliography"
+    note: >
+      Twentieth Dynasty (c. 1160 BCE) dating is confirmed in the glossary.yaml
+      entry for the Contendings and in the standard Egyptological bibliography.
+      Chester Beatty Library in Dublin is confirmed as the correct holding
+      institution. The "early twentieth century" characterisation of the first
+      publication (line 112) is accurate and not over-precise (Gardiner 1931,
+      Chester Beatty Gift, Vol. I — within the early twentieth century).
+
+  - claim_ref: "Chester Beatty I — recto as Contendings text-carrier"
+    claim_text: >
+      The recto of Chester Beatty I contains The Contendings of Horus and Seth.
+    verdict: SUPPORTED
+    source: "Standard Egyptological bibliography"
+    note: >
+      The Contendings text is on the recto of the papyrus; the verso contains
+      other material including the Love Songs. Confirmed in the standard
+      Egyptological literature.
+
+  - claim_ref: "VARIANT marker — co-equal classification, all sub-fields present"
+    claim_text: >
+      [VARIANT at line 57: primary | alt | chosen | reason — all four required
+      sub-fields present]
+    verdict: SUPPORTED
+    source: "skill rules (VARIANT marker); brief variants.classification=co-equal"
+    note: >
+      The VARIANT marker at line 57 has all four required sub-fields: primary
+      (Chester Beatty I), alt (Pyramid Texts and Coffin Texts), chosen
+      (co-equal presentation), reason (brief co-equal mandate + structural
+      register difference). Marker discipline is correct.
+
+  - claim_ref: "Pyramid Texts dating and first attestation at Unas pyramid"
+    claim_text: >
+      The Pyramid Texts — the earliest attested layer of Egyptian funerary
+      literature, inscribed on the interior walls of late Old Kingdom royal
+      pyramids at Saqqara from the pyramid of Unas (c. 2350 BCE) onward.
+    verdict: SUPPORTED
+    source: "Standard Egyptological reference; te Velde 1967 ch. 1"
+    note: >
+      The Pyramid Texts beginning with Unas (Fifth Dynasty, c. 2350 BCE) at
+      Saqqara is the standard Egyptological account. The c. 2400 BCE for the
+      corpus overall (line 48) and c. 2350 BCE for Unas (line 92) are both
+      within the accepted scholarly range.
+
+  - claim_ref: "Coffin Texts dating range c. 2050–1650 BCE, Middle Kingdom, non-royal extension"
+    claim_text: >
+      The Coffin Texts — inscribed on the interior surfaces of wooden coffins
+      from c. 2050–1650 BCE — develop the Horus-Seth material further,
+      extending the funerary-liturgical register beyond the royal context.
+    verdict: SUPPORTED
+    source: "Standard Egyptological reference"
+    note: >
+      The Coffin Texts are dated to the Middle Kingdom (c. 2055/2050–1650 BCE);
+      the extension of funerary texts from royal pyramids to non-royal wooden
+      coffins is the standard characterisation of the Coffin Texts corpus.
+      Confirmed.
+
+  - claim_ref: "Contendings as later literary reworking, not base text — brief instruction honoured"
+    claim_text: >
+      Chester Beatty I "Contendings" (c. 1160 BCE) is by contrast a bawdy
+      literary reworking that supplies the longest single connected narrative
+      of the contention and is presented in the chapter as a specific later
+      literary reworking, not as the base text.
+    verdict: SUPPORTED
+    source: "brief 17-horus-seth.yaml special_instructions; te Velde 1967 chs. 1-2"
+    note: >
+      The brief's special_instructions explicitly require presenting the
+      Contendings as a specific later literary reworking rather than the base
+      text. The chapter honours this at lines 51, 141, and in the VARIANT
+      marker's alt/chosen structure. The Pyramid Texts and Coffin Texts
+      attestations are correctly presented as the foundational stratum.
+      Compliant.
+
+  - claim_ref: "Osiris cycle narrative sequence — killing, dismemberment, resurrection, conception"
+    claim_text: >
+      The Osiris cycle narrates the killing of Osiris by his brother Seth, the
+      dismemberment of Osiris's body, the magical reassembly and resurrection
+      of Osiris by his sister-and-wife Isis, and the conception and posthumous
+      birth of Horus as Osiris's son and avenger.
+    verdict: SUPPORTED
+    source: "te Velde 1967 ch. 1; standard Egyptological reference"
+    note: >
+      The killing-dismemberment-resurrection-conception sequence is the standard
+      account of the Osiris cycle, confirmed in te Velde 1967 and in all
+      Egyptological reference works treating the cycle.
+
+  - claim_ref: "Osiris as murdered king becoming lord of the dead"
+    claim_text: >
+      Osiris is, in the Egyptian theological imagination, the murdered king who
+      becomes lord of the dead — his death is the death-of-the-king that founds
+      the kingship of the netherworld.
+    verdict: SUPPORTED
+    source: "te Velde 1967 ch. 1; standard Egyptological reference"
+    note: >
+      Osiris as the murdered king becoming lord of the Duat / netherworld is
+      the standard Egyptological characterisation. Confirmed.
+
+  - claim_ref: "Seth as god of storms, deserts, and disorder"
+    claim_text: >
+      Seth is the Egyptian god of storms, deserts, and disorder.
+    verdict: SUPPORTED
+    source: "glossary.yaml (Seth/Sutekh entry); te Velde 1967 ch. 1"
+    note: >
+      The glossary.yaml first_mention_gloss confirms "Egyptian god of storms
+      and desert." The addition of "disorder" reflects te Velde's analysis of
+      Seth's ambivalent character and is not a fabrication.
+
+  - claim_ref: "Sutekh reserved for Ramesside-diplomatic contexts — glossary discipline honoured"
+    claim_text: >
+      Seth — ...alternative form Sutekh in Ramesside diplomatic contexts.
+    verdict: SUPPORTED
+    source: "glossary.yaml (Seth/Sutekh entry)"
+    note: >
+      The glossary.yaml chosen form confirms "Seth as body-prose default;
+      'Sutekh' only where the Hittite-Egyptian interface is under discussion
+      (Ramesses II treaties)." The writer correctly identifies the diplomatic
+      restriction on Sutekh. The "Setekh" issue is handled separately in FC-01.
+
+  - claim_ref: "Isis as wife-and-sister of Osiris, mother of Horus, resurrection-magician"
+    claim_text: >
+      Isis — Egyptian Aset, the magic-working goddess of the pantheon — is in
+      the Osiris cycle the wife and sister of Osiris and the mother of Horus;
+      her magical power resurrects Osiris after his dismemberment by Seth and
+      protects Horus during his concealed upbringing in the Delta marshes.
+    verdict: SUPPORTED
+    source: "te Velde 1967 ch. 1; glossary.yaml (Isis entry)"
+    note: >
+      Isis as wife-sister-of-Osiris, mother-of-Horus, resurrection-magician,
+      protector of infant Horus in the Delta marshes: all confirmed in the
+      Egyptological literature. The Delta-marshes detail (Khemmis) is well-
+      attested in the Egyptian tradition. Glossary.yaml confirms the Aset
+      form as a legitimate Egyptian alternate.
+
+  - claim_ref: "Horus as falcon-headed son of Osiris and Isis, raised in concealment"
+    claim_text: >
+      Horus — falcon-headed son of Osiris and Isis — is born after Osiris's
+      death, raised in concealment by Isis, and emerges to claim the kingship
+      of Egypt as his father's rightful heir.
+    verdict: SUPPORTED
+    source: "te Velde 1967 ch. 1; glossary.yaml (Horus entry)"
+    note: >
+      Confirmed. Glossary.yaml first_mention_gloss: "falcon-headed god; son of
+      Isis and Osiris; opposes and eventually succeeds Seth in the Contendings."
+
+  - claim_ref: "Horus-Seth as contested-succession rather than cosmogonic combat"
+    claim_text: >
+      The contention's narrative dynamic is that of contested-succession rather
+      than that of cosmogonic combat.
+    verdict: SUPPORTED
+    source: "te Velde 1967 ch. 1; brief 17-horus-seth.yaml cultural_relevance"
+    note: >
+      The brief explicitly classifies the function as "theogonic (succession
+      after Osiris's murder)" and "royal-legitimation" rather than cosmogonic.
+      The structural distinction is the load-bearing rationale for the
+      INCLUSION-MARGINAL status. Confirmed.
+
+  - claim_ref: "Seth's two-dossier ambivalence preserved throughout — no harmonisation detected"
+    claim_text: >
+      Seth's two dossiers — the positive Apep-slayer dossier (Ch. 16) and the
+      negative Osiris-murderer dossier (the present chapter) — are documented
+      in parallel without the kind of theological harmonisation that would
+      resolve the apparent contradiction.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; brief 17-horus-seth.yaml"
+    note: >
+      The two-dossier ambivalence is maintained throughout the document without
+      collapse. No claim in the document harmonises Seth's two roles into a
+      single valuation. The compensatory-placement reading (Seth reassigned to
+      Ra's side after the kingship-contest defeat) is correctly presented as
+      demonstrating the coexistence of both roles in the Contendings, not as
+      resolving the tension.
+
+  - claim_ref: "Pyramid Texts allusive register — oblique reference presupposing familiarity"
+    claim_text: >
+      In the Pyramid Texts the Horus-Seth contention is not narrated as a
+      continuous story but is alluded to in scattered utterances that presuppose
+      the reader's familiarity with the cycle's narrative outline.
+    verdict: SUPPORTED
+    source: "te Velde 1967 ch. 1; standard Egyptological reference"
+    note: >
+      The oblique-allusive register of the Pyramid Texts (as opposed to the
+      narrative register of the Contendings) is the standard Egyptological
+      account of how the Horus-Seth contention is embedded in the funerary
+      corpus. Confirmed.
+
+  - claim_ref: "Mutual mutilation — Seth tears eye, Horus injures testicles"
+    claim_text: >
+      Seth tears out one of Horus's eyes... and Horus in turn injures Seth's
+      testicles, with the eye-injury and the testicle-injury preserved in the
+      textual record as the canonical mutilations of the contention.
+    verdict: SUPPORTED (with wedjat imprecision flagged separately in FC-02)
+    source: "te Velde 1967 ch. 1; standard Egyptological reference"
+    note: >
+      The mutual mutilation (Seth destroys Horus's left eye; Horus injures
+      Seth's testicles) is confirmed as the canonical mutilation-motif across
+      the Pyramid Texts and later corpus. The wedjat identification is flagged
+      as a precision issue in FC-02 but the core mutilation claim is supported.
+      The identification of the torn eye as the left/lunar eye is correct.
+
+  - claim_ref: "Contendings as continuous narrative with comic-bawdy register and tribunal structure"
+    claim_text: >
+      The Contendings is a continuous narrative composition with extended
+      dialogue, vivid scene-setting, comic-and-bawdy episodes, and a tribunal-
+      procedural structure.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; standard Egyptological reference"
+    note: >
+      The characterisation of the Contendings as a continuous literary narrative
+      with comic-bawdy episodes and a divine-tribunal procedural frame is the
+      standard Egyptological account. Confirmed.
+
+  - claim_ref: "Contendings tribunal — sun-god as Ra-Atum or Pre, eighty-years conceit"
+    claim_text: >
+      The gods of the Egyptian pantheon, presided over by the sun-god (variously
+      identified as Ra-Atum or as Pre in different sections of the text), are
+      deliberating... a deliberation that, in the text's narrative, has already
+      been ongoing for eighty years without resolution.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; standard Egyptological reference"
+    note: >
+      The sun-god's varying identification as Ra-Atum or Pre within the
+      Contendings is a well-attested text-critical feature of the papyrus.
+      The "eighty years" figure is a specific narrative detail within the
+      Contendings; while manuscript traditions may vary slightly, eighty years
+      is the figure consistently cited in scholarly literature on the papyrus,
+      including Lichtheim's Ancient Egyptian Literature and te Velde's synthesis.
+      The claim is treated as SUPPORTED rather than UNVERIFIED because the
+      figure is widely confirmed in the secondary literature.
+
+  - claim_ref: "Isis's advocacy as principal narrative engine of the Contendings"
+    claim_text: >
+      Isis intervenes repeatedly on behalf of her son Horus... her advocacy is
+      one of the principal narrative engines of the text's plot.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; standard Egyptological reference"
+    note: >
+      Isis's repeated intervention and magical-rhetorical advocacy in the
+      Contendings is confirmed in the standard Egyptological literature and
+      is a central feature of te Velde's analysis.
+
+  - claim_ref: "Contests-and-trials sequence — hippopotami contest, boat-race contest"
+    claim_text: >
+      The Contendings narrates a sequence of contests-and-trials, including
+      swimming-as-hippopotami contests, boat-race contests, and other physical
+      contests.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; standard Egyptological reference"
+    note: >
+      The contest sequence in the Contendings, including the hippopotami contest
+      and the boat-race contest, is confirmed in the Egyptological literature.
+      These are among the most-discussed episodes of the text.
+
+  - claim_ref: "Seed-and-lettuce episode — magical reversal, Seth's seminal dominance thwarted"
+    claim_text: >
+      Seth attempts to assert dominance over Horus through a homosexual act,
+      but Horus — counselled by Isis — turns the encounter to his advantage by
+      manoeuvring Seth's seed onto a lettuce that Seth then eats, the resulting
+      magical reversal disqualifying Seth's claim of seminal-dominance before
+      the divine tribunal.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; standard Egyptological reference"
+    note: >
+      The seed-and-lettuce episode is one of the most famous and widely-cited
+      passages of the Contendings. The narrative mechanics (Seth's seed
+      manoeuvred by Isis onto a lettuce; Seth eats it; the divine tribunal
+      calls Seth's sperm from within his body) are confirmed in the standard
+      literature. te Velde 1967 treats this as a magical-reversal contest.
+      Confirmed.
+
+  - claim_ref: "Contendings resolution — Horus awarded kingship, Seth compensated at Ra's side"
+    claim_text: >
+      The gods of the assembly... formally recognise Horus as the legitimate
+      king and assign Seth a compensatory role — the storm-god is given a place
+      at Ra's side in the heavens, where (per the Apep dossier of Ch. 16) he
+      serves as Apep-slayer at the prow of the solar barque.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; standard Egyptological reference"
+    note: >
+      The Contendings' resolution with Horus awarded the kingship and Seth
+      compensated with a role at Ra's side is confirmed in the standard
+      Egyptological literature. The link to the Apep-slayer role (Ch. 16,
+      te Velde chs. 3-4) is te Velde's own reading and is correctly
+      cross-referenced here.
+
+  - claim_ref: "Two-dossier structure acknowledged in the Contendings' conclusion"
+    claim_text: >
+      The compensatory placement of Seth at Ra's side at the conclusion of the
+      Contendings is one of the principal Egyptian textual loci at which the
+      two-dossier structure of Seth's mythological identity is itself
+      acknowledged within a single narrative.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2"
+    note: >
+      This is te Velde's reading as synthesised across the chapter. The reading
+      is correctly attributed and correctly framed as te Velde's interpretive
+      contribution rather than as a stated doctrine of the Egyptian tradition.
+      The INFERENCE marker that follows (line 139) correctly flags the
+      interpretive status. Supported.
+
+  - claim_ref: "INFERENCE markers — three present, all with basis and risk fields"
+    claim_text: >
+      [Three INFERENCE markers: (1) Seth's unharmonised two-dossier ambivalence
+      as settled theological tolerance; (2) Contendings' compensatory placement
+      as encoding two-dossier structure in a single narrative; (3) tribunal-
+      frame as Egyptian tradition's juridical-rather-than-martial cosmic order]
+    verdict: SUPPORTED
+    source: "skill rules (INFERENCE marker discipline)"
+    note: >
+      All three INFERENCE markers are correctly structured with basis and risk
+      fields. The inferences are appropriately hedged (all three note that
+      alternative readings remain available). The basis fields cite te Velde
+      1967 and Assmann 2001 as the scholarly grounding. Marker discipline is
+      correct throughout.
+
+  - claim_ref: "Theological-political function — royal legitimation, Osiris-king / Horus-successor pattern"
+    claim_text: >
+      The divine tribunal's award of the kingship to Horus is the divine
+      pattern that legitimates pharaonic kingship in the historical political
+      register, with each pharaoh figured as Horus-on-the-throne and his
+      deceased predecessor figured as Osiris-in-the-netherworld.
+    verdict: SUPPORTED
+    source: "te Velde 1967 chs. 1-2; Assmann 2001; standard Egyptological reference"
+    note: >
+      The Osiris-deceased-king and Horus-successor-king pattern as the divine
+      template for pharaonic succession is one of the most fundamental elements
+      of Egyptian royal theology and is confirmed in te Velde 1967, Assmann
+      2001, and all relevant Egyptological reference works. Confirmed.
+
+  - claim_ref: "Seth's isfet-aligned action against Osiris — limited sense, theologically necessary"
+    claim_text: >
+      Seth's role as agent of disorder in the Osiris-Horus material is, on
+      Assmann 2001's framework, isfet-aligned in the limited sense that his
+      action against Osiris is isfet... but the Egyptian theological imagination
+      recognises that isfet-aligned violence may itself be theologically
+      necessary in cosmological roles where its energy is required.
+    verdict: SUPPORTED
+    source: "Assmann 2001; te Velde 1967 chs. 1-2"
+    note: >
+      The careful "limited sense" framing correctly prevents collapsing Seth's
+      Osiris-murder into a simple isfet-equals-evil equation and matches
+      Assmann's nuanced treatment of the maʿat/isfet framework. The claim does
+      not over-extend the isfet identification. Supported.
+
+  - claim_ref: "Judicial-procedural vs. martial resolution — INCLUSION-MARGINAL basis"
+    claim_text: >
+      The Horus-Seth contention is finally settled by the divine assembly's
+      deliberative-judicial verdict — and this judicial-procedural resolution
+      is part of why the chapter is INCLUSION-MARGINAL.
+    verdict: SUPPORTED
+    source: "brief 17-horus-seth.yaml; te Velde 1967 chs. 1-2"
+    note: >
+      The judicial-procedural resolution (versus champion-combat resolution)
+      as a structural feature of the Horus-Seth material and as a basis for
+      INCLUSION-MARGINAL classification is confirmed in the brief and is
+      supported by the standard Egyptological account of the Contendings'
+      tribunal structure.
+
+  - claim_ref: "Forsyth 1987 — Horus-Seth as marginal data point in longue-durée trajectory"
+    claim_text: >
+      Forsyth 1987's brief engagement with the Horus-Seth material treats the
+      contention as a relatively-marginal data point within the long-trajectory
+      combat-myth corpus.
+    verdict: SUPPORTED
+    source: "forsyth-1987; trained knowledge of The Old Enemy's scope"
+    note: >
+      Forsyth's The Old Enemy is primarily focused on the transmission of the
+      combat myth from Babylon through Ugarit-Canaan into the Hebrew Bible,
+      Jewish apocalyptic, and early Christianity. The Egyptian material is a
+      comparatively minor component of his argument. This characterisation is
+      consistent with trained knowledge of the monograph's scope.
+
+  - claim_ref: "Horus-Seth structural affinity with Kumarbi Cycle — correctly deferred to C2 hook"
+    claim_text: >
+      The chapter's structural-comparative forward-link is to Chapter 5
+      (Kumarbi Cycle)... per brief 17-horus-seth.yaml the structural affinity
+      with the Kumarbi material is the principal cross-cultural comparison
+      that the chapter notes within its body and develops as a
+      // COMPARATIVE-HOOK for Part II C2.
+    verdict: SUPPORTED
+    source: "brief 17-horus-seth.yaml cultural_relevance; scope.md Part II C2"
+    note: >
+      The brief explicitly states: "The Horus-Seth contention parallels
+      succession-combat patterns in the Kumarbi Cycle (Chapter 5) more than it
+      parallels the chaoskampf serpent-adversary pattern." The structural
+      affinity is noted in a body claim (line 186) but developed in a
+      COMPARATIVE-HOOK comment (line 195), not expanded into a body argument.
+      This is correct scope discipline.
+
+  - claim_ref: "COMPARATIVE-HOOK comment lines — all three required hooks present"
+    claim_text: >
+      [Five COMPARATIVE-HOOK comment lines: Kumarbi Cycle Ch5 / Part II C2;
+      Sovereignty cluster Part II C2; Gunkel-Ballentine debate Part II C8;
+      Ra-Apep Ch16 back-link; Royal-legitimation cluster judicial-vs-martial]
+    verdict: SUPPORTED
+    source: "brief 17-horus-seth.yaml; scope.md Part II"
+    note: >
+      The brief requires hooks for: Kumarbi cycle (Ch5) succession-affinity;
+      Part II C2 sovereignty; Part II C8 Gunkel-Ballentine. All three required
+      hooks are present as // COMPARATIVE-HOOK comment lines. Two additional
+      hooks (Ra-Apep Ch16 back-link; judicial-vs-martial royal legitimation)
+      are also present. All hooks are correctly placed in // comment lines,
+      not in body claims. No overclaiming of direct transmission. Compliant.
+
+  - claim_ref: "Gunkel-Ballentine debate — body claim forwards to C8, does not develop debate"
+    claim_text: >
+      The Egyptian tradition's refusal to annihilate Seth at the conclusion of
+      the contention is a load-bearing piece of evidence for the wider book's
+      engagement with the Gunkel-Ballentine debate (Part II C8)...
+      [body claim at line 155, with cross-ref Part II C8]
+    verdict: SUPPORTED
+    source: "scope.md Part II C8; brief special_instructions"
+    note: >
+      The body claim at line 155 introduces the Gunkel-Ballentine interface but
+      explicitly defers to Part II C8 for development. The claim does not
+      pre-empt C8 by developing the debate in the body; it establishes the
+      evidentiary grounding and hands off. This is the correct scope discipline
+      for a story chapter that feeds into a comparative chapter. The
+      // COMPARATIVE-HOOK at line 197 correctly develops the hook in comment
+      form. No scope creep detected.
+
+  - claim_ref: "Banned terms — chaos-figure/chaos-monster/chaos-serpent not used referentially"
+    claim_text: >
+      [The banned umbrella terms 'chaos-figure', 'chaos-monster', 'chaos-
+      serpent' are used only in scare-quoted critical discussion of the
+      category itself at lines 155 and 197 (Ballentine COMPLIANCE pattern)]
+    verdict: SUPPORTED
+    source: "glossary.yaml (the adversary category term — never_use list)"
+    note: >
+      The banned terms appear only in "chaos-figure" with scare-quotes, in the
+      context of explicitly rejecting the category ("if Seth were a
+      'chaos-figure'..."), matching the Ch16 line 143 Ballentine COMPLIANCE
+      pattern. The body text uses "agent of disorder," "isfet-personification,"
+      and "negatively-valued figure" throughout. Fully compliant.
+
+  - claim_ref: "maʿat with ʿayin throughout; Maʿat capitalised when personified not used"
+    claim_text: >
+      [maʿat consistently written with ʿayin; isfet italicised; no confusing
+      capitalisation detected]
+    verdict: SUPPORTED
+    source: "glossary.yaml (maʿat entry; isfet entry)"
+    note: >
+      "maʿat" is rendered consistently with the ʿayin throughout the document.
+      "isfet" is used in italics throughout. Maʿat-capitalised (personified
+      goddess form) is not needed in this chapter (the maʿat/isfet framework is
+      invoked at the conceptual level, not through the personified goddess), so
+      no capitalisation test arises. Compliant.
+
+  - claim_ref: "Seth rendered 'Seth' in body prose; Sutekh used in Ramesside context at line 67"
+    claim_text: >
+      Seth is used as body-prose default throughout; Sutekh mentioned at line
+      67 in the context of Ramesside diplomatic use.
+    verdict: SUPPORTED (Setekh issue flagged separately in FC-01)
+    source: "glossary.yaml (Seth/Sutekh entry)"
+    note: >
+      "Seth" is used throughout body prose. The single "Sutekh" introduction
+      at line 67 is correctly contexted as "alternative form Sutekh in
+      Ramesside diplomatic contexts." The Setekh issue is a separate glossary
+      violation (FC-01) but does not undermine the broader Seth-discipline
+      compliance.
+
+  - claim_ref: "Horus identified as falcon-headed at first mention per glossary"
+    claim_text: >
+      Horus — falcon-headed son of Osiris and Isis...
+    verdict: SUPPORTED
+    source: "glossary.yaml (Horus entry)"
+    note: >
+      The glossary first_mention_gloss for Horus is "falcon-headed god; son of
+      Isis and Osiris; opposes and eventually succeeds Seth in the Contendings."
+      The first-mention gloss at line 73 matches this specification. Compliant.
+
+  - claim_ref: "Isis identified with first-mention gloss per glossary"
+    claim_text: >
+      Isis — Egyptian Aset, the magic-working goddess of the pantheon — is in
+      the Osiris cycle the wife and sister of Osiris and the mother of Horus.
+    verdict: SUPPORTED
+    source: "glossary.yaml (Isis entry)"
+    note: >
+      The glossary first_mention_gloss for Isis is "magic-working goddess;
+      binds Apep with spells in the combat-corpus; in the Osiris cycle, wife
+      of Osiris and mother of Horus." The first-mention identification at
+      line 70 covers the magic-working, wife-of-Osiris, and mother-of-Horus
+      elements. Aset is in the glossary's renderings_considered. Compliant.
+
+  - claim_ref: "Kumarbi-Teshub structural comparand — correctly in hook, not body development"
+    claim_text: >
+      The Horus-Seth contention's contested-succession dynamic is structurally
+      closer to the Hurro-Hittite Kumarbi-Teshub succession-strife.
+      [// COMPARATIVE-HOOK: Hurro-Hittite at line 195]
+    verdict: SUPPORTED
+    source: "brief 17-horus-seth.yaml cultural_relevance; Hoffner 1998"
+    note: >
+      The structural comparand is noted briefly in a body sentence (line 186)
+      and developed in the COMPARATIVE-HOOK comment line (line 195). The brief
+      explicitly specifies this structural affinity. The Kumarbi comparison
+      does not bleed into a body-level comparative analysis, correctly
+      respecting scope.md's rule against inline cross-tradition comparisons.
+
+  - claim_ref: "1:1 invariant — 49 footnotes and 49 EVIDENCE tokens"
+    claim_text: >
+      Every claim paragraph ends with exactly one footnote and is followed by
+      exactly one // EVIDENCE token.
+    verdict: SUPPORTED
+    source: "direct count of claims document"
+    note: >
+      Machine count: 49 inline footnote citations (footnote:[...]) and 49
+      EVIDENCE token lines (// EVIDENCE: source_id=...). The 1:1 invariant
+      holds across the entire document. Confirmed.
+
+  - claim_ref: "Scope-creep into C8 — not detected"
+    claim_text: >
+      [The Gunkel-Ballentine debate (Part II C8) is introduced but not
+      developed in the body; full development is correctly deferred to C8]
+    verdict: SUPPORTED
+    source: "scope.md §'Part II — thematic comparative chapters'; brief special_instructions"
+    note: >
+      The body claims flag the Gunkel-Ballentine interface at lines 154-156
+      and 182-183 as a forward-pointing evidentiary reference ("load-bearing
+      piece of evidence for... Part II C8") rather than as a body development
+      of the debate. The // COMPARATIVE-HOOK at line 197 develops the hook in
+      comment form without adding body-level comparative argument. No pre-
+      emption of C8 detected.
+
+  - claim_ref: "Seth-animal iconography cited from glossary, not invented"
+    claim_text: >
+      Egyptian iconography of the falcon-headed Horus and the *Seth-animal*-
+      headed Seth was widely diffused in the Hellenistic and Roman periods.
+    verdict: SUPPORTED
+    source: "glossary.yaml (Seth/Sutekh entry, ch. 16 cross-reference)"
+    note: >
+      The Seth-animal iconography as an unresolved zooarchaeological question
+      was confirmed in the Ch16 factcheck (FC claim: Seth-animal head as
+      iconographic identifier, with the ongoing debate about the biological
+      identification). The reference to "Seth-animal*-headed" correctly
+      italicises the term and defers to the standard Egyptological uncertainty
+      about the animal's identification.
+
+  - claim_ref: "Reception elusiveness of Horus-Seth in Hellenistic-Christian context"
+    claim_text: >
+      The specific narrative material of the Contendings does not have a
+      clearly-traceable reception trajectory in Hellenistic-Christian combat-
+      myth reception comparable to the Marduk-Tiamat or the Baal-Yamm reception
+      trajectories.
+    verdict: SUPPORTED
+    source: "Forsyth 1987; trained knowledge"
+    note: >
+      The comparative elusiveness of the Contendings' Hellenistic-Christian
+      reception is consistent with the standard scholarly account. The narrative
+      material of the Contendings is not attested in Greek or Latin adaptations
+      in the way that Marduk-Tiamat or the Baal Cycle has traceable reception
+      pathways. Confirmed.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUMMARY
+# ─────────────────────────────────────────────────────────────────────────────
+
+summary:
+  verdict: REVISE
+  findings_by_severity:
+    HIGH: 0
+    MEDIUM: 3
+    LOW: 1
+    NOTE: 0
+  total_findings: 4
+  claims_with_issues: 4
+  claims_without_issues: 45
+
+  most_consequential_finding: >
+    FC-02 (MEDIUM): The wedjat eye identification. The claim at line 98 calls
+    the torn-out eye "the *wedjat* eye, conventionally the lunar left eye" at
+    the moment of its extraction by Seth. In standard Egyptological usage the
+    wedjat (wḏꜣt, "the sound/healthy one") is the RESTORED eye of Horus —
+    the eye after Thoth's healing — not the damaged eye itself. Calling the
+    torn-out eye "the wedjat" reverses the Egyptological sequence and will
+    mislead readers in a chapter that stakes its claim to scholarly precision
+    on Egyptological accuracy. This is the most consequential single factual
+    imprecision in the document.
+
+  invariant_1to1: >
+    HOLDS. Machine count confirms 49 footnote citations and 49 EVIDENCE tokens
+    across 49 claim paragraphs. The 1:1 invariant is intact throughout the
+    document.
+
+  overall_assessment: >
+    The Ch17 claims document is well-constructed and substantially compliant
+    with the brief's requirements. The INCLUSION-MARGINAL framing marker is
+    present at the document's opening with all required sub-fields. Seth's
+    two-dossier ambivalence is preserved throughout without collapse or
+    harmonisation. The Contendings is correctly presented as a later literary
+    reworking rather than the base text. The banned chaos terms appear only in
+    scare-quoted critical discussion (Ballentine COMPLIANCE pattern). The
+    Gunkel-Ballentine debate is forwarded to C8 without pre-emption. All three
+    required COMPARATIVE-HOOK targets (Kumarbi/Ch5; Part II C2; Part II C8)
+    are present in comment lines. The marker discipline (INFERENCE with basis
+    and risk; VARIANT with all four sub-fields) is correct throughout.
+    The four findings are all MEDIUM or LOW: no fabrication, no invented
+    quotations, no missing required markers, no HIGH issues. The most
+    consequential is the wedjat-eye imprecision (FC-02), which is a real
+    Egyptological error requiring a one-sentence fix. The Setekh glossary
+    violation (FC-01) is a discipline issue rather than a factual error.
+    The "introduction" over-precision (FC-03) and the Hoffner section-number
+    over-precision (FC-04) both violate the printed-source citation discipline
+    but are minor. REVISE status is recommended; the fixes required are small
+    and targeted.
+
+  recommended_actions:
+    - "FC-02 (MEDIUM): Fix wedjat identification — the eye is torn out as the
+      left/lunar eye and BECOMES the wedjat after restoration by Thoth; revise
+      line 98 to preserve this sequence."
+    - "FC-01 (MEDIUM): Remove 'Setekh' from line 67 — it is not a locked
+      glossary form; retain 'Seth' (body default) and 'Sutekh' (Ramesside-
+      diplomatic context) per glossary.yaml."
+    - "FC-03 (MEDIUM): Change EVIDENCE tag at line 83 from loc=introduction
+      to loc=chs. 1-2 to comply with the printed-source chapter-level citation
+      discipline."
+    - "FC-04 (LOW): Change EVIDENCE tag at line 187 from loc=§§14-18 to
+      loc=Kumarbi Cycle sections (unverifiable section numbers) to comply with
+      printed-source citation discipline."
