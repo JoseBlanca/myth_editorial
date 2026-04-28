@@ -1,0 +1,353 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-28T20:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/19-ie-reflexes.claims.approved.adoc"
+    lines: 346
+  - file: "chapters/20-slavic-baltic.claims.approved.adoc"
+    lines: 249
+summary: "Promoted Ch19 (FC-01 MEDIUM Tolkien EVIDENCE retag with new sources.yaml entry; FC-02 MEDIUM Beowulf line-range correction; FC-03 LOW rune-stone count softened with re-attribution to Watkins ch. 42; FC-04 LOW Bedzenag dropped; FC-05 LOW resolved by FC-01 fix) and Ch20 (FC-01 HIGH 16-claim source-tagging surgery from forsyth-1987 to bailey-ivanova-1998; FC-02 HIGH Moszyński first-name correction Kazimierz→Leszek; FC-03 MEDIUM Watkins false-specificity removed; FC-05/FC-06 MEDIUM bylina-detail softening; FC-07 LOW no-fix; FC-03 Lajoye and FC-04 Jakobson flag-only) to .claims.approved.adoc with post-human-normalize provenance footers. Two new source entries added to sources.yaml (tolkien-1936-monsters; bailey-ivanova-1998)."
+notes: |
+  ──────────────────────────────────────────────────────────────────────────────
+  Sources.yaml additions (2 new entries; 58 → 60):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - tolkien-1936-monsters (secondary): Tolkien, J.R.R., 'Beowulf: The Monsters
+    and the Critics', *Proceedings of the British Academy* 22 (1936): 245–295;
+    reprinted in *The Monsters and the Critics and Other Essays*, ed. Christopher
+    Tolkien (London: George Allen & Unwin, 1983): 5–48. Inserted after
+    watkins-1995 (topical adjacency: IE / Beowulf material). identifier_type:
+    stable-url; identifier_value: https://www.britac.ac.uk/pubs/proc/files/22p245.pdf
+    Anchor for Ch19 Beowulf sub-section's three Tolkien-specific claims at lines
+    151, 154, 157. Per FC-01 (Ch19) and FC-05 (Ch19, resolved by way of FC-01).
+
+  - bailey-ivanova-1998 (secondary): Bailey, James; Ivanova, Tatyana (eds.),
+    *An Anthology of Russian Folk Epics* (Armonk, NY: M.E. Sharpe, 1998).
+    Inserted after russell-zoroastrianism-armenia (topical adjacency: IE-cluster
+    / Indo-European-comparative regional anchors). ISBN 9781563244889.
+    Anchor for Ch20 Dobrynya-cycle narrative and collection-history claims (16
+    EVIDENCE tags retagged from forsyth-1987). Per FC-01 (Ch20).
+
+  Source count delta: 58 → 60 (+2). Confirmed via grep "  - id:" → 60.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Briefs / governing-document changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  No upstream brief changes required for this stage.
+  - briefs/19-ie-reflexes.yaml: NO CHANGES. The brief's special_instructions
+    correctly identify Tolkien 1936 as load-bearing for the Beowulf sub-section
+    and as deferred to Ch42 for literary-critical afterlife; the writer's
+    correct EVIDENCE-tag attribution (to a not-yet-existent source_id) was a
+    sources.yaml gap that should have been flagged at inventory stage. The
+    sources.yaml addition resolves the issue without requiring a brief change.
+  - briefs/20-slavic-baltic.yaml: NO CHANGES. The brief's family_members entry
+    correctly defers Oinas / Propp edition-pinning to glossary-lock and the
+    bailey-ivanova-1998 specialist source addition is consistent with the brief's
+    direction. The brief's named-critics list (Jakobson, Lajoye, Moszyński,
+    Kapović) is preserved as written; the surname-only convention used by the
+    brief is followed at lines 9, 90, 116, 239 of the claims document, with
+    only the line-34 first-name disambiguation corrected per FC-02.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch19 fixes applied (FC-01 MEDIUM + FC-02 MEDIUM + FC-03 LOW + FC-04 LOW;
+  FC-05 LOW resolved by FC-01):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 MEDIUM (citation_wrong, Tolkien EVIDENCE retag at lines 152, 155, 158):
+    All three Tolkien-specific EVIDENCE tags retagged from
+    "source_id=watkins-1995 ; loc=Part V" to
+    "source_id=tolkien-1936-monsters ; loc=Proceedings of the British Academy 22 (1936)".
+    Footnote citations at lines 151, 154, 157 upgraded from "British Academy
+    lecture 1936" to the full bibliographic form "*Proceedings of the British
+    Academy* 22 (1936): 245–295". Line 157 footnote retains both Watkins 1995
+    Part V and Tolkien 1936 as the synthesis-source pair (Watkins for the
+    philological argument; Tolkien for the structural-critical argument).
+    Before / after for line 152 (representative):
+      Before: "// EVIDENCE: source_id=watkins-1995 ; loc=Part V"
+      After:  "// EVIDENCE: source_id=tolkien-1936-monsters ; loc=Proceedings of the British Academy 22 (1936)"
+    Sources.yaml addition (tolkien-1936-monsters) made per FC-01's recommended_fix.
+
+  - FC-02 MEDIUM (imprecision, Beowulf line range at line 124):
+    Footnote line range "lines 86–193" for Beowulf's Geatish identity corrected
+    via the safer chapter-level fallback per the human-review instruction.
+    Before: "*Beowulf*, lines 86–193 in the standard Klaeber-edition line-numbering,
+            on the Geatish identity of Beowulf, the Danish setting, Hrothgar's
+            court at Heorot, Grendel's twelve-year depredations, and Grendel's
+            descent from Cain."
+    After:  "*Beowulf*, the Geatish-arrival passage (Beowulf's introduction and
+            Geatish identity from approximately line 194 onwards in the standard
+            Klaeber-edition line-numbering), with Grendel's introduction, his
+            descent from Cain, and his twelve-year depredations at Heorot
+            narrated at lines 86–193 in the same line-numbering."
+    Rationale: lines 86–193 cover Grendel's introduction, Cain genealogy, and
+    twelve-year depredations; Beowulf's introduction and Geatish identity begin
+    from approximately line 194 onwards in standard Klaeber 4th ed. The fix
+    distributes the two clauses to their correct loci (Beowulf-arrival ~194
+    onwards; Grendel 86–193) and uses the chapter-level fallback "the
+    Geatish-arrival passage" for the Beowulf-arrival half, per the human-review
+    safer-phrasing instruction.
+
+  - FC-03 LOW (unverified, rune-stone count at line 114):
+    "at least eleven Scandinavian rune-stones" softened to "several extant
+    Scandinavian rune-stones and rock carvings"; EVIDENCE source_id retagged
+    from larrington-poetic-edda to watkins-1995 ch. 42 (since Larrington 2014
+    is a verse translation, not a rune-stone catalogue, and Watkins 1995 ch. 42
+    treats the Sigurd-Fáfnir iconographic dossier alongside the philological
+    diction). The Ramsund carving identification (Södermanland c. 1030 CE)
+    preserved; "stone" ↦ "carving" terminology adjusted for the Ramsund
+    monument (which is technically a rock carving, not a free-standing
+    rune-stone, though the broader "rune-stones" category remains in body
+    prose). Specific stone-count flagged for verification at glossary-lock.
+    Before / after EVIDENCE:
+      Before: "// EVIDENCE: source_id=larrington-poetic-edda ; loc=Sigurd-Fáfnir iconographic dossier"
+      After:  "// EVIDENCE: source_id=watkins-1995 ; loc=ch. 42 (Sigurd-Fáfnir iconographic dossier)"
+
+  - FC-04 LOW (unverified, Batraz adversary alternate-name at line 245):
+    Unverified alternate name "Bedzenag" dropped from the parenthetical
+    "(or Bedzenag)" and from the footnote.
+    Before: "Batraz fights monstrous giants and dragons across multiple episodes
+            of the Nart corpus: against the giant Mukara (or Bedzenag), against
+            various dragons-and-monstrous-figures..."
+            footnote "...combats against Mukara / Bedzenag and against various
+            dragons-and-monstrous-figures..."
+    After:  "Batraz fights monstrous giants and dragons across multiple episodes
+            of the Nart corpus: against the giant Mukara, against various
+            dragons-and-monstrous-figures..."
+            footnote "...combats against the giant Mukara and against various
+            other giant and dragon adversaries within the corpus..."
+
+  - FC-05 LOW (imprecision, Tolkien venue completeness): RESOLVED by FC-01.
+    Once tolkien-1936-monsters source entry exists in sources.yaml, the three
+    Tolkien-specific footnotes use the standard "Tolkien 1936 (*Proc. British
+    Academy* 22: 245–295)" form. No separate fix required; the footnote
+    upgrades made under FC-01 also resolve FC-05.
+
+  Ch19 counts after revision:
+  - 95 footnotes / 95 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 339 → 346 (+7 = 6-line trailing provenance footer + blank
+    separator).
+  - "Bedzenag" occurrences: 1 → 0 (both body-prose and footnote).
+  - "at least eleven" rune-stone-count occurrences: 1 → 0.
+  - source_id=tolkien-1936-monsters EVIDENCE tags: 0 → 3.
+  - source_id=watkins-1995 EVIDENCE tags: 16 → 14 (3 retagged to
+    tolkien-1936-monsters; 1 added — the rune-stone retag from
+    larrington-poetic-edda).
+  - source_id=larrington-poetic-edda EVIDENCE tags: 11 → 10 (1 retagged to
+    watkins-1995 for the iconographic-dossier claim).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch20 fixes applied (FC-01 HIGH + FC-02 HIGH + FC-03 MEDIUM applied for
+  Watkins-specificity / FC-03 flag-only for Lajoye-publication / FC-04 MEDIUM
+  flag-only / FC-05 MEDIUM + FC-06 MEDIUM applied / FC-07 LOW no-fix):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 HIGH (citation_wrong, source-tagging surgery, 16 EVIDENCE tags):
+    Sixteen East Slavic byliny-specific EVIDENCE tags retagged from
+    "source_id=forsyth-1987 ; loc=ch. 2" to
+    "source_id=bailey-ivanova-1998 ; loc=[introduction / Dobrynya-cycle headnotes]".
+    Affected lines (15 in the Dobrynya sub-section + 2 in Source overview):
+      - line 41 (Source overview: Dobrynya-tradition introduction;
+        loc=introduction (bylina tradition overview))
+      - line 44 (Source overview: 19th-c. collection history;
+        loc=introduction (collection history))
+      - line 148 (Dobrynya: bylina tradition as orally-transmitted heroic-epic
+        corpus; loc=introduction (bylina tradition))
+      - line 151 (Dobrynya: principal 19th-c. collectors Rybnikov / Hilferding;
+        loc=introduction (collection history))
+      - line 154 (Dobrynya: Dobrynya as one of three central bogatyri;
+        loc=introduction and Dobrynya-cycle headnotes)
+      - line 157 (Dobrynya: Vladimir-cycle's narrative setting at Kiev;
+        loc=introduction (Vladimir-cycle setting))
+      - line 160 (Dobrynya: Zmey Gorynych three-headed dragon, Gorynych
+        etymology; loc=Dobrynya-cycle headnotes (Zmey Gorynych))
+      - line 163 (Dobrynya: three-stage plot-skeleton;
+        loc=Dobrynya-cycle headnotes (plot-skeleton))
+      - line 166 (Dobrynya: kolpak weapon, Puchai-river first combat;
+        loc=Dobrynya-cycle headnotes (first combat))
+      - line 169 (Dobrynya: second combat, head-severing;
+        loc=Dobrynya-cycle headnotes (second combat))
+      - line 172 (Dobrynya: inter-variant differences;
+        loc=Dobrynya-cycle headnotes (variants))
+      - line 177 (Dobrynya: textual-record robustness;
+        loc=introduction (textual-record robustness))
+      - line 180 (Dobrynya: Vladimir-cycle late-Kievan reference;
+        loc=introduction (Vladimir-cycle dating))
+      - line 183 (Dobrynya: 988 CE Christian-conversion caesura;
+        loc=introduction (Christian-period frame))
+      - line 194 (Dobrynya: bylina genre vs reconstructed myth;
+        loc=introduction (bylina genre vs. reconstructed myth))
+      - line 203 (Dobrynya: Vladimir-cycle's cultural-historical centrality;
+        loc=introduction (cultural-historical centrality))
+    Two forsyth-1987 EVIDENCE tags retained where the citation matches Forsyth's
+    actual scope of *The Old Enemy*:
+      - line 59 (Source overview: introduces Forsyth as the chapter's secondary
+        anchor for the long-arc combat-myth tradition)
+      - line 197 (Dobrynya: international Christian-period dragon-slaying type
+        / St. George cycle as competing/supplementary explanation — within the
+        Sumer-through-Judeo-Christian-apocalyptic scope of Forsyth 1987)
+    All sixteen retagged footnote lead-citations updated from "Forsyth 1987,
+    ch. 2, on..." to "Bailey and Ivanova 1998 (eds.), *An Anthology of Russian
+    Folk Epics*, [introduction / Dobrynya-cycle headnotes] on...".
+
+  - FC-02 HIGH (unverified, Moszyński first-name at line 34):
+    "Kazimierz Moszyński in the Polish ethnographic tradition" → "Leszek
+    Moszyński in the Polish Slavic-studies tradition".
+    Rationale: Kazimierz Moszyński (1887–1959) died six years before Ivanov-
+    Toporov's first 1965 publication and cannot be a critic of the I-T
+    reconstruction; Leszek Moszyński (1928–2006) is the Polish Slavicist who
+    is known for sceptical assessments of the I-T methodology in the period
+    contemporary with and after I-T. The "ethnographic" → "Slavic-studies"
+    descriptor adjustment matches Leszek's disciplinary affiliation
+    (linguistics / Slavic studies, not ethnography). The four other
+    occurrences of "Moszyński" in the document (line 9 in the chapter-introductory
+    comment block; line 90 in the RECONSTRUCTION marker; line 116 in body
+    prose; line 239 in COMPARATIVE-HOOK) all use the surname-only form and
+    require no change since the line-34 first-name disambiguation anchors the
+    named critic for the chapter.
+
+  - FC-03 MEDIUM (citation_wrong, Watkins 1995 Part-V chapter-range at line 52):
+    Applied for the Watkins-specificity component:
+    Before: "Calvert Watkins's [...] whose Part V (chapters 41 to 48) treats
+            the reconstructed Indo-European HERO SLAY SERPENT poetic formula"
+    After:  "Calvert Watkins's [...] which treats the reconstructed Indo-European
+            HERO SLAY SERPENT poetic formula"
+    Footnote softened: "Part V (chs. 41–48), on the HERO SLAY SERPENT formula" →
+            "on the HERO SLAY SERPENT formula (cited at Part level per the
+            established discipline; the specific Part covering Slavic material
+            to be confirmed at glossary-lock against the printed text)".
+    EVIDENCE loc=Part V retained as the chapter-level discipline placeholder
+    pending glossary-lock verification of which Part of the printed Watkins
+    text actually treats Slavic material.
+    Lajoye-publication component (FLAGGED-ONLY): the document already cites
+    Lajoye at chapter level ("Patrice Lajoye in the French Slavic-studies
+    tradition") with no specific year/title to soften; flagged in the
+    provenance footer as requiring verification at glossary-lock.
+
+  - FC-04 MEDIUM (unverified, Jakobson as I-T critic): FLAGGED-ONLY.
+    Rationale per human-review verdict: Jakobson's specific role vis-à-vis the
+    I-T basic myth reconstruction is more nuanced than the other three named
+    critics' (he was a colleague-and-co-worker of Toporov's in the
+    structural-semiotic tradition as well as critically-engaged), and verifying
+    West 2007 ch. 6's own characterisation of Jakobson's position requires
+    direct access to the printed text. Flagged in the provenance footer for
+    verification at glossary-lock; document text left as written within the
+    four-name list at lines 34, 90, 116, 239.
+
+  - FC-05 MEDIUM (unverified, kolpak three-pud weight at line 165):
+    Precise pud-count specification softened.
+    Before: "Dobrynya — armed in some variants with his cap (*kolpak*) of three
+            pud weight as an improvised weapon, having no other arms to hand"
+    After:  "Dobrynya — armed in some variants with his cap (*kolpak*) of
+            folkloric-hyperbolic weight as an improvised weapon, having no
+            other arms to hand"
+    Footnote updated to flag the specification for verification:
+            "the cap-as-weapon detail (the precise pud-count specification
+            flagged for verification at glossary-lock against Oinas / Propp
+            or equivalent specialist edition)".
+    Combined with the FC-01 retag (forsyth-1987 → bailey-ivanova-1998).
+
+  - FC-06 MEDIUM (unverified, three-day combat / head-severing at line 168):
+    Precise day-count and head-severing-sequence softened.
+    Before: "fights the dragon for three days and three nights at the dragon's
+            mountain-lair, and finally kills the dragon — typically by severing
+            all three heads"
+    After:  "fights the dragon at the dragon's mountain-lair over a multi-day
+            combat, and finally kills the dragon — typically by severing the
+            dragon's heads"
+    Footnote updated to flag the specifications for verification:
+            "the second combat's multi-day duration, the killing of the dragon
+            by head-severing, and the rescue of the princess and other captives
+            (the precise day-count and head-severing-sequence variants flagged
+            for verification at glossary-lock)".
+    Combined with the FC-01 retag (forsyth-1987 → bailey-ivanova-1998).
+
+  - FC-07 LOW (unverified, chronicle-detail content at lines 78, 81): NO FIX.
+    Per factcheck recommended_fix: content is accurate (Perun's idol with
+    silver head and gold moustache from Primary Chronicle 980 CE; 945 CE
+    Russo-Byzantine treaty's oath-formula naming Perun and Volos; Slovo's
+    "grandson of Veles" / "Velesov vnuku" epithet for Boyan); West 2007 ch. 6
+    citation is appropriate at the chapter-level discipline. Adding a primary-
+    chronicle edition (e.g., Likhachev edition of the Povest' vremennykh let)
+    to sources.yaml may be considered at glossary-lock for greater citation
+    precision.
+
+  Ch20 counts after revision:
+  - 66 footnotes / 66 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 241 → 249 (+8 = 7-line trailing provenance footer + blank
+    separator).
+  - source_id=forsyth-1987 EVIDENCE tags: 18 → 2 (16 retagged to
+    bailey-ivanova-1998; lines 59 and 197 retained).
+  - source_id=bailey-ivanova-1998 EVIDENCE tags: 0 → 16.
+  - "Kazimierz Moszyński" occurrences: 1 → 0; "Leszek Moszyński" occurrences:
+    0 → 1.
+  - "(chapters 41 to 48)" Watkins false-specificity occurrences: 1 → 0.
+  - "three pud weight" body-prose occurrences: 1 → 0.
+  - "three days and three nights" body-prose occurrences: 1 → 0; "severing all
+    three heads" body-prose occurrences: 1 → 0.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch19: 95 footnotes / 95 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 95; grep -c "^// EVIDENCE:" → 95.
+  - Ch20: 66 footnotes / 66 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 66; grep -c "^// EVIDENCE:" → 66.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Banned-umbrella-term grep result for body prose:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch19: "chaos-figure", "chaos-monster", "chaos-serpent" not present in
+    body prose, footnotes, or COMPARATIVE-HOOK comments. Only occurrence is
+    in the trailing provenance footer's self-reference (line 346) listing the
+    never-use terms as a meta-statement of the rule. No body-prose violations.
+  - Ch20: "chaos-figure", "chaos-monster", "chaos-serpent" not present in
+    body prose, footnotes, or COMPARATIVE-HOOK comments. Only occurrence is
+    in the trailing provenance footer's self-reference (line 249). No
+    body-prose violations. Veles is consistently called "earth-serpent" and
+    "Perun's adversary"; Zmey Gorynych is "three-headed dragon".
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Glossary-discipline check:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch19: All entity names (Fáfnismál, Gnitaheiðr, Tuatha Dé Danann, Fomorians,
+    Cath Maige Tuired, Mag Tuired, Historia Brittonum, Lludd, Llefelys,
+    Mabinogion, Dinas Emrys, Patmut'iwn Hayots', Vishapakagh, vishapakar,
+    Khamits, Mukara) use conventional scholarly forms consistent with sources
+    and glossary discipline.
+  - Ch20: All entity names (Perun, Veles/Volos, Zmey Gorynych, Dobrynya
+    Nikitich, Ilya Muromets, Alyosha Popovich, Vladimir, Perkūnas, Pērkons,
+    Velnias/Velinas, Primary Chronicle / Povest' vremennykh let, Slovo o polku
+    Igoreve, *bylina* / *byliny*, *bogatyr* / *bogatyri*, *kolpak*, Puchai-river,
+    Zabava Putyatichna, Peryn) use conventional scholarly forms. Reconstruction-
+    framing language preserved throughout the Perun-Veles sub-section per
+    scope.md §"Reconstruction policy".
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Source-count delta (sources.yaml):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Before: 58 entries.
+  - After:  60 entries (+2).
+  - Additions: tolkien-1936-monsters (Ch19 FC-01 anchor); bailey-ivanova-1998
+    (Ch20 FC-01 anchor).
+  - Both insertions placed in topical-adjacency positions:
+    - tolkien-1936-monsters after watkins-1995 (IE / Beowulf material).
+    - bailey-ivanova-1998 after russell-zoroastrianism-armenia (IE-cluster
+      regional anchors).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Files produced:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - chapters/19-ie-reflexes.claims.approved.adoc (346 lines; 95/95 invariant)
+  - chapters/20-slavic-baltic.claims.approved.adoc (249 lines; 66/66 invariant)
+  - sources.yaml (updated; +2 entries; 58 → 60)
+
+  Both .claims.approved.adoc files render cleanly. All EVIDENCE source_ids
+  resolve to entries in sources.yaml. Glossary discipline holds. Both files
+  ready for chapter-draft.
