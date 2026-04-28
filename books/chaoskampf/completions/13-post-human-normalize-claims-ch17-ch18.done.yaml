@@ -1,0 +1,247 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-28T14:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/17-horus-seth.claims.approved.adoc"
+    lines: 205
+  - file: "chapters/18-thor-jormungandr.claims.approved.adoc"
+    lines: 490
+summary: "Promoted Ch17 (FC-01 MEDIUM glossary fix; FC-02 MEDIUM wedjat re-attribution; FC-03 MEDIUM EVIDENCE loc fix; FC-04 LOW Hoffner section-range chapter-level fallback) and Ch18 (FC-01 MEDIUM VARIANT marker co-equal restoration; FC-02 MEDIUM Völuspá stanza correction; FC-03 MEDIUM Hymiskviða stanza-count softening; FC-04 LOW Miðgarðr→Midgard body-prose normalisation; FC-05 NOTE flagged-only on nine-paces double-attribution) to .claims.approved.adoc with post-human-normalize provenance footers. No upstream brief or sources.yaml changes required."
+notes: |
+  Both chapters' factcheck findings were internal (glossary discipline, citation
+  precision, marker consistency) and required no upstream brief or sources.yaml
+  changes. All accepted fixes were applied line-by-line; one finding (Ch18 FC-05
+  NOTE) was flagged-only per the human-review verdict.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch17 fixes applied (FC-01 + FC-02 + FC-03 + FC-04):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 MEDIUM (glossary violation, line 67): "Setekh" non-glossary form removed.
+    Before: "Seth — Egyptian Setekh, alternative form Sutekh in Ramesside diplomatic
+            contexts — is the Egyptian god of storms, deserts, and disorder;"
+    After:  "Seth — alternative form Sutekh in Ramesside diplomatic contexts — is
+            the Egyptian god of storms, deserts, and disorder;"
+    Rationale: the line is a body-prose first-mention paragraph, not the
+    Hittite-Egyptian diplomatic interface; per glossary 854 the body-prose
+    default is "Seth", with "Sutekh" reserved for the Ramesside-diplomatic
+    context. The glossary's renderings_considered list does not include
+    "Setekh"; the form is therefore disallowed in the locked-glossary
+    discipline. The parenthetical "Sutekh in Ramesside diplomatic contexts"
+    note is preserved as a glossary-permitted variant indicator.
+    Footnote unchanged (already cites the glossary correctly).
+
+  - FC-02 MEDIUM (unverified, line 98): wedjat eye re-attribution.
+    Before: "Seth tears out one of Horus's eyes (the *wedjat* eye, conventionally
+            the lunar left eye), and Horus in turn injures Seth's testicles..."
+    After:  "Seth tears out one of Horus's eyes (the left, conventionally the
+            lunar eye; subsequently restored by Thoth as the *wedjat*, the
+            'sound eye'), and Horus in turn injures Seth's testicles..."
+    Footnote updated: "on the *wedjat* eye and the testicle-injury as the
+    principal mutilation-references" → "on the lunar left eye and the
+    testicle-injury as the principal mutilation-references, with the
+    torn-out eye becoming the *wedjat* (the 'sound/healthy one') only after
+    Thoth's restoration."
+    Rationale: standard Egyptological usage, wedjat (wḏꜣt) = "the
+    sound/healthy one" = the eye AFTER Thoth's healing. Calling the
+    torn-out eye "the wedjat eye" at the moment of extraction reverses
+    the canonical Egyptological sequence. Fix preserves correct order:
+    eye is torn out (left/lunar) → restored by Thoth → becomes wedjat.
+
+  - FC-03 MEDIUM (citation precision, line 83): EVIDENCE tag chapter-level fix.
+    Before: "// EVIDENCE: source_id=te-velde-1967 ; loc=introduction (deliberate ambivalence)"
+    After:  "// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (deliberate ambivalence)"
+    Body footnote at line 82 also softened for consistency:
+    Before: "te Velde 1967, _Seth, God of Confusion_, title and introduction
+            on the deliberate ambivalence...; chs. 1–2 on the parallel
+            two-dossier structure."
+    After:  "te Velde 1967, _Seth, God of Confusion_, title and chs. 1–2 on
+            the deliberate ambivalence of the Egyptian tradition's handling
+            of Seth and on the parallel two-dossier structure."
+    Rationale: project-wide printed-source citation discipline cites te
+    Velde 1967 at chapter-section level (chs. 1-2 for this chapter, per
+    brief 17-horus-seth.yaml and per the chapter's own discipline note at
+    lines 35-36). The "introduction" loc is more precise than the
+    chapter-level discipline allows for an unverified printed source.
+
+  - FC-04 LOW (citation precision, line 187): Hoffner 1998 section-range
+    chapter-level fallback (the safer option chosen per human-review
+    instruction).
+    Before: "// EVIDENCE: source_id=hoffner-1998 ; loc=§§14-18 (Kumarbi-Teshub succession)"
+    After:  "// EVIDENCE: source_id=hoffner-1998 ; loc=Kumarbi cycle (Kumarbi-Teshub succession)"
+    Line 195 COMPARATIVE-HOOK softened for consistency:
+    Before: "Hoffner 1998 §§14–18 treats the Kumarbi-Teshub material as the
+            central documentary case for Anatolian succession-combat;"
+    After:  "Hoffner 1998 (Kumarbi cycle) treats the Kumarbi-Teshub material
+            as the central documentary case for Anatolian succession-combat;"
+    Rationale: §§14-18 cannot be confirmed without printed text; the brief
+    did not specify section numbers; chapter-level fallback (Kumarbi cycle)
+    is the safer option per the printed-source citation discipline. The
+    body footnote at line 186 already cites at work level without section
+    numbers — the EVIDENCE tag now matches.
+
+  Ch17 counts after revision:
+  - 49 footnotes / 49 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 199 → 205 (+6 = 5-line trailing provenance footer + blank
+    separator).
+  - "Setekh" occurrences: 1 → 0.
+  - "introduction" as EVIDENCE loc value: 1 → 0.
+  - "§§14-18" / "§§14–18" occurrences: 2 → 0.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch18 fixes applied (FC-01 + FC-02 + FC-03 + FC-04) and FC-05 flagged-only:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 MEDIUM (marker_issue, VARIANT at line 261): co-equal framing restored.
+    Before (chosen sub-field): "both variants are presented co-equally per the
+            brief, with the Hymiskviða / Gylfaginning outcome treated as the
+            dominant one in the surviving narrative tradition and the Húsdrápa
+            beheading as the older skaldic alternate that Snorri preserves as
+            a witness to a divergent reading"
+    After:  "both variants are presented co-equally per the brief; neither the
+            Hymiskviða / Gylfaginning line-cut outcome nor the Húsdrápa
+            apparent-killing outcome is privileged as the canonical version,
+            and the chapter presents both as live witnesses from different
+            textual strata"
+    Additional fix to eliminate priority drift downstream (line 348):
+    Before: "in the fishing encounter the serpent is hooked-but-(in the
+            dominant Hymiskviða / Gylfaginning reading)-released;"
+    After:  "in the fishing encounter the serpent is hooked-but-(in the
+            Hymiskviða / Gylfaginning reading)-released — or, in the
+            *Húsdrápa* fragments, apparently struck before the line is cut;"
+    Rationale: the brief's variants.classification is co-equal; calling one
+    variant "dominant" is incompatible with co-equal treatment. The original
+    VARIANT-marker chosen field internally contradicted itself by claiming
+    co-equal status and then qualifying with "dominant one." Fix removes the
+    priority claim and adds explicit Húsdrápa co-witness at the second
+    occurrence so the layered-record framing carries through the document.
+
+  - FC-02 MEDIUM (unverified, line 35 source-overview): Völuspá stanza correction.
+    Before: "the Thor-and-Jörmungandr Ragnarök combat is named and compressed
+            in stanzas 55 and 56 of the Larrington 2014 edition."
+    After:  "the Thor-and-Jörmungandr Ragnarök combat is named and compressed
+            in stanza 56 of the Larrington 2014 edition."
+    Rationale: brief 18-thor-jormungandr.yaml anchors the Ragnarök combat to
+    Völuspá 56 alone; the body claim's "stanzas 55 and 56" contradicted both
+    the brief and the document's own footnote ("specifically to stanza 56 on
+    the Thor-and-Jörmungandr combat") and all subsequent citations of "st. 56".
+    Internal-consistency fix; footnote already correctly cites st. 56 and is
+    left unchanged (the "Ragnarök sequence at stanzas 50–58" range remains as
+    contextual headnote framing).
+
+  - FC-03 MEDIUM (citation precision, line 32): Hymiskviða stanza count softened.
+    Before: "the chapter's Eddic primary text for Thor's fishing expedition is
+            *Hymiskviða* ('The Lay of Hymir'), a thirty-nine-stanza Eddic
+            poem in *fornyrðislag* metre..."
+    After:  "the chapter's Eddic primary text for Thor's fishing expedition is
+            *Hymiskviða* ('The Lay of Hymir'), an Eddic poem of approximately
+            forty stanzas in *fornyrðislag* metre..."
+    Footnote updated: "on the poem's thirty-nine-stanza length" → "on the
+    poem's approximate length (around forty stanzas; the standard Neckel-Kuhn
+    edition counts 38 complete stanzas plus one partial)".
+    Additional consistency fix at line 249 (and EVIDENCE loc):
+    Before: "The remainder of *Hymiskviða* (sts. 25–39) returns to the
+            cauldron-quest frame-narrative..."
+            "// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 25–39"
+    After:  "The remainder of *Hymiskviða* (sts. 25 to the close of the poem)
+            returns to the cauldron-quest frame-narrative..."
+            "// EVIDENCE: source_id=larrington-poetic-edda ; loc=Hymiskviða sts. 25 to end"
+    Rationale: standard Neckel-Kuhn count is 38 complete stanzas plus one
+    partial; Larrington 2014's exact count cannot be confirmed without the
+    printed text. Softer phrasing protects against the precise stanza-count
+    error propagating into the chapter draft. The "sts. 25–39" range is
+    likewise softened to "sts. 25 to end" / "sts. 25 to the close of the
+    poem" for consistency.
+
+  - FC-04 LOW (glossary precision, body prose throughout): Miðgarðr → Midgard
+    in body prose per glossary 957–961 ("Midgard (body prose); Miðgarðr at
+    first mention and in philological notes").
+    Body-prose conversions:
+    - line 102: "the defence of Miðgarðr — the world of humans"
+                → "the defence of Midgard (Old Norse Miðgarðr) — the world
+                  of humans" (first-mention pattern: introduces both forms)
+    - line 126: "lying in the ocean that surrounds Miðgarðr with its tail in
+                its mouth" → "lying in the ocean that surrounds Midgard with
+                its tail in its mouth"
+    - line 132: "Ásgarðr (the realm of the gods) above, Miðgarðr (the world
+                of humans) at the middle level" → "Ásgarðr (the realm of the
+                gods) above, Midgard (the world of humans) at the middle
+                level"
+    - line 138: "Jörmungandr was thrown into the ocean encircling Miðgarðr"
+                → "Jörmungandr was thrown into the ocean encircling Midgard"
+    Preserved as Miðgarðr (philological notes / etymological gloss):
+    - line 129: "Miðgarðr is the 'middle enclosure' — the world of humans"
+                (etymological gloss explaining the Old Norse name)
+    - all footnotes containing "Miðgarðr" (philological reference apparatus)
+    - the lexeme Miðgarðsormr preserved everywhere (different word; glossary
+      rule applies to Miðgarðr alone)
+    Body-prose Miðgarðr count: 5 → 0; first-mention pair "Midgard (Old Norse
+    Miðgarðr)" present at line 102; etymological-gloss Miðgarðr retained at
+    line 129; footnote Miðgarðr preserved.
+
+  - FC-05 NOTE (stage_orchestration, nine-paces double-attribution): FLAGGED-ONLY.
+    The nine-paces detail is correctly attributed to both Völuspá st. 56
+    (Larrington 2014) and Gylfaginning ch. 51 (Faulkes 1987); Völuspá st. 56
+    contains "nine steps goes Fjörgyn's son" (or equivalent in Larrington's
+    translation) and Gylfaginning 51 expands this into a prose narrative.
+    Both attributions are textually accurate per the standard Eddic
+    scholarship. No fix required; double-attribution preserved as written.
+    Flagged in the Ch18 provenance block.
+
+  Ch18 counts after revision:
+  - 142 footnotes / 142 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 483 → 490 (+7 = 6-line trailing provenance footer + blank
+    separator).
+  - "thirty-nine-stanza" occurrences: 1 → 0.
+  - "stanzas 55 and 56" occurrences: 1 → 0.
+  - "dominant" priority-claim occurrences in fishing-encounter context: 2 → 0.
+  - body-prose "Miðgarðr" occurrences: 5 → 0 (1 retained at line 102 as
+    parenthetical Old Norse gloss for the first-mention pair "Midgard
+    (Old Norse Miðgarðr)"); etymological-gloss "Miðgarðr" at line 129
+    retained as philological note; footnote "Miðgarðr" occurrences
+    preserved.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Upstream changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/17-horus-seth.yaml: NO CHANGES. All Ch17 findings are internal
+    (glossary discipline, citation precision, factual accuracy). The brief's
+    sources.primary loc and discipline statements are correct as written.
+  - briefs/18-thor-jormungandr.yaml: NO CHANGES. All Ch18 findings are
+    internal. The brief's variants.classification: co-equal is correctly
+    stated; the writer's drift toward "dominant one" was a marker-content
+    error, not a brief inconsistency. The brief's primary_source loc
+    "Völuspá 56 (Ragnarök combat)" is correct; the writer's "stanzas 55 and
+    56" was a body-claim drift, not a brief inconsistency.
+  - sources.yaml: NO CHANGES. Both chapters use already-existing source IDs
+    (te-velde-1967, assmann-2001-search, forsyth-1987, hoffner-1998,
+    ballentine-2015 for Ch17; larrington-poetic-edda, faulkes-snorri,
+    watkins-1995, west-2007, forsyth-1987, jamison-brereton-2014,
+    benveniste-renou-1934, lambert-2013, yarbro-collins-1976,
+    faulkner-1972 in cross-ref, hoffner-1998 in cross-ref for Ch18). All
+    EVIDENCE source_ids resolve to existing entries.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch17: 49 footnotes / 49 EVIDENCE tokens (1:1 HOLDS).
+  - Ch18: 142 footnotes / 142 EVIDENCE tokens (1:1 HOLDS).
+
+  Banned-umbrella-term grep result for body prose:
+  - Ch17: "chaos-figure" appears in scare-quoted Ballentine-COMPLIANCE
+    counter-model passages at lines 155 (body) and 197 (COMPARATIVE-HOOK
+    comment), per the Ch16 line 143 pattern. Line 21 (chapter-introductory
+    comment block) lists the never-use terms as a meta-statement of the
+    rule, not as referential body prose. No body-prose violations.
+  - Ch18: "chaos-figure", "chaos-monster", "chaos-serpent" not present in
+    body prose, footnotes, COMPARATIVE-HOOK comments, or the trailing
+    provenance footer. Fully compliant.
+
+  Both files render cleanly. All EVIDENCE source_ids resolve to entries in
+  sources.yaml. Glossary discipline holds (Ch17: Seth body-prose default,
+  Sutekh reserved for Ramesside-diplomatic note, Setekh removed; Ch18:
+  Midgard body-prose default, Miðgarðr preserved at first mention and in
+  philological notes). Both files ready for chapter-draft.
