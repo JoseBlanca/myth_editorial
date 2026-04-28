@@ -1,6 +1,6 @@
 # Stage 8 of 19: chapter-claims
 # Book: chaoskampf
-# Generated: 2026-04-24T12:56:26Z
+# Generated: 2026-04-28T10:54:20Z
 
 ---
 
@@ -477,6 +477,18 @@ registry:
     identifier_value: "9780199370184"
     notes: "Current scholarly-standard English Rigveda. Anchor for Indra/Vṛtra and Trita Āptya."
 
+  - id: tagare-bhagavata
+    source_tier: primary-translation
+    in_scope: true
+    author: "Tagare, Ganesh Vasudeo"
+    title: "The Bhāgavata Purāṇa, Translated and Annotated"
+    year: 1976-1979
+    full_citation: "Tagare, G.V., *The Bhāgavata Purāṇa, Translated and Annotated*, 5 vols., Ancient Indian Tradition and Mythology series 7–11 (Delhi: Motilal Banarsidass, 1976–1978)."
+    short_citation: "Tagare 1976–78"
+    identifier_type: series
+    identifier_value: "Ancient Indian Tradition and Mythology 7–11"
+    notes: "Standard scholarly English translation of the Bhāgavata Purāṇa. Anchor for the Krishna-Kāliya episode (book 10 chs. 15–17) in Ch15."
+
   - id: benveniste-renou-1934
     source_tier: secondary
     in_scope: true
@@ -500,6 +512,18 @@ registry:
     identifier_type: ISBN
     identifier_value: "9780292704251"
     notes: "Standard English Book of the Dead including Apep-slaying spells."
+
+  - id: faulkner-1936-bremner-rhind
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkner, Raymond O."
+    title: "The Bremner-Rhind Papyrus I–IV"
+    year: 1936
+    full_citation: "Faulkner, R.O., 'The Bremner-Rhind Papyrus I–IV', *Journal of Egyptian Archaeology* 22 (1936): 121–140; 23 (1937): 10–16, 166–185; 24 (1938): 41–53."
+    short_citation: "Faulkner 1936–38 (JEA 22–24)"
+    identifier_type: jstor-collection
+    identifier_value: "JEA 22, 23, 24"
+    notes: "Faulkner's four-part philological edition of Papyrus BM EA 10188 (Bremner-Rhind) — the *Book of Overthrowing Apep* — published as articles in JEA across 1936–38. Distinct from Faulkner's 1972 Book of the Dead translation. Anchor for Ch16 ritual-embedding section."
 
   - id: te-velde-1967
     source_tier: secondary
@@ -2719,130 +2743,62 @@ To `claims-factcheck`, in a fresh conversation (a different AI model is preferre
 
 ---
 
-# Input file: briefs/02-ninurta-anzu.yaml
+# Input file: briefs/17-horus-seth.yaml
 
 ```
-chapter_number: 2
-slug: "ninurta-anzu"
-title: "Ninurta vs. Anzû: The Theft of the Tablet of Destinies"
-chapter_anchor: "ch-02-ninurta-anzu"
+chapter_number: 17
+slug: "horus-seth"
+title: "Horus vs. Seth (An Edge Case)"
+chapter_anchor: "ch-17-horus-seth"
+
+chapter_type: "related (edge case — INCLUSION-MARGINAL)"
 
 sources:
   primary:
-    - id: annus-2001-anzu
-      loc: "Standard Babylonian Anzû Epic, Tablets I–III (cuneiform text, transliteration, score, glossary)"
-      translator_edition: "Annus 2001 (SAACT 3, critical edition)"
-      identifier: "ISBN 9789514590511"
-      url_or_file: ~
-    - id: foster-2005
-      loc: "Before the Muses 3rd ed., 'Anzu' pp. 555–578 (English translation)"
-      translator_edition: "Foster 2005"
-      identifier: "ISBN 9781883053765"
-      url_or_file: ~
-    - id: etcsl
-      loc: "Sumerian background: Angim dimma (ETCSL 1.6.1), allusions in Lugal-e (ETCSL 1.6.2)"
-      translator_edition: "ETCSL"
-      identifier: "etcsl-1.6.1"
-      url_or_file: "https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.1"
+    - id: te-velde-1967
+      loc: "Seth, God of Confusion, chs. 1–2 (on Horus-Seth contention and Seth's ambivalence)"
+      identifier: "ISBN 9789004054028"
   secondary:
-    - { id: forsyth-1987, loc: "ch. 2 on Anzu as bridge to Enūma Eliš" }
-    - { id: scurlock-beal-2013, loc: "chapters on Mesopotamian combat-myth" }
-    - { id: lambert-2013, loc: "introduction on the Anzu-Marduk genealogy" }
-
-lacunae:
-  - source: annus-2001-anzu
-    location: "Tablet II, middle passages on the first failed assault"
-    what_is_missing: "Breaks between Ninurta's first engagement and Ea's counsel; gaps in the narrative economy"
-    in_tradition_fills_available: "yes, Annus's score integrates Old Babylonian and Neo-Assyrian witnesses"
-  - source: annus-2001-anzu
-    location: "Tablet III, closing doxology"
-    what_is_missing: "Final hymn of praise partially broken"
-    in_tradition_fills_available: "partial, Annus reconstructs from parallel praise-formulae"
+    - { id: assmann-2001-search, loc: "on maʿat/isfet and Egyptian ambivalence" }
+    - { id: forsyth-1987, loc: "brief engagement with Horus-Seth" }
 
 variants:
-  classification: single-prevalent-reconstructed
-  prevalent_version:
-    source: annus-2001-anzu
-    why_prevalent: "The Standard Babylonian three-tablet version is the main attested recension. Annus 2001 is the critical edition; Foster 2005 provides the working English."
-  alternates:
-    - source: etcsl
-      difference: "Sumerian precursor material (Angim dimma, Lugal-e allusions to an-zu) is shorter and less narratively developed; treat in footnote as pre-history of the Standard Babylonian text."
-    - source: foster-2005
-      difference: "An Old Babylonian fragmentary version survives with some divergent details; Foster presents a composite English keyed to Annus. Present only where the OB differs substantively."
+  classification: co-equal
+  summary: |
+    The Horus-Seth combat is distributed across Pyramid Texts, Coffin Texts, and the
+    Chester Beatty I "Contendings" (c. 1160 BCE). The Contendings is bawdy and literary;
+    the Pyramid Texts material is older and more sober. No single account dominates, and
+    the tradition evolved substantially over two millennia. te Velde 1967 is the scholarly
+    anchor.
 
-entities_glossary:
-  - name: "Ninurta (𒀭𒊩𒌆𒅅)"
-    role: deity
-    first_mention_gloss_candidate: "warrior-god of Nippur, son of Enlil, the champion sent against Anzû"
-  - name: "Anzû (𒀭𒅎𒄷)"
-    role: deity
-    first_mention_gloss_candidate: "lion-headed eagle-monster, originally a minor divine servitor who rebels by stealing the Tablet of Destinies"
-  - name: "Tablet of Destinies (𒁾 𒉏𒂊𒌍)"
-    role: artifact
-    first_mention_gloss_candidate: "the divinely-held document that confers universal decree-power; possessing it is kingship itself"
-  - name: "Enlil (𒀭𒂗𒆤)"
-    role: deity
-    first_mention_gloss_candidate: "chief Sumerian god, lord of the air, from whom Anzû steals the Tablet"
-  - name: "Ea (𒀭𒂗𒆠)"
-    role: deity
-    first_mention_gloss_candidate: "god of wisdom and the deep waters, counselor of Ninurta (Sumerian Enki)"
-  - name: "Šarur (𒃻𒄯)"
-    role: artifact
-    first_mention_gloss_candidate: "Ninurta's mace, animate, carrying messages between warrior and counselor"
+  family_members: |
+    This is a single story chapter (not a family), but it is INCLUSION-MARGINAL per
+    scope.md §"Inclusion / exclusion criteria" and per audit-review-log.md 2026-04-23:
+    the adversary (Seth) is not serpentine; the combat is god-against-god sovereignty
+    strife rather than hero-against-monster. The chapter's framing-marker is explicit.
 
 cultural_relevance:
-  centrality: central
-  centrality_evidence:
-    - kind: attestation-volume
-      detail: "Preserved in multiple tablets across Old Babylonian, Middle Babylonian, and Neo-Assyrian periods, including extensive Neo-Assyrian library copies"
-      source: "annus-2001-anzu introduction"
-    - kind: iconography
-      detail: "The Anzu-bird is extensively represented in seals, amulets, and temple sculpture from the third millennium onward"
-      source: "annus-2001-anzu introduction; foster-2005 pp. 555–556"
-    - kind: scholarly-attention
-      detail: "Treated as the direct Mesopotamian ancestor of Enūma Eliš's combat (Lambert, Annus, Forsyth)"
-      source: "lambert-2013 introduction; annus-2001-anzu"
-  function:
-    - role: royal-legitimation
-      basis: "Ninurta's victory restores the Tablet to the assembly and confirms him as warrior-champion; the narrative structurally prefigures the Marduk-Tiamat legitimation"
-      source: "annus-2001-anzu; foster-2005"
-    - role: ritual-aetiological
-      basis: "The Tablet of Destinies theft-and-recovery narrative is invoked in Neo-Assyrian royal ritual and in the akītu framework"
-      source: "annus-2001-anzu introduction"
-  cross_cultural_parallels:
-    - other_culture: "Babylonian (Enūma Eliš)"
-      parallel: "Marduk's defeat of Qingu (who holds the Tablet of Destinies on Tiamat's behalf) is a direct structural reprise of Ninurta's defeat of Anzû"
-      source: "lambert-2013"
-    - other_culture: "Hittite (Kumarbi Cycle)"
-      parallel: "Kumarbi's disruption of the succession of heaven through monstrous offspring shows the same 'rival steals kingship / champion restores order' structure"
-      source: "hoffner-1998"
-    - other_culture: "Greek (Hesiod)"
-      parallel: "Zeus's defeat of Typhon in Theogony 820–880 is the Hesiodic reflex of the same sovereignty-reclamation pattern, transmitted via the Hittite route"
-      source: "west-1997"
+  centrality: central (within Egyptian religious history)
+  function: |
+    - theogonic (succession after Osiris's murder)
+    - royal-legitimation (the victorious Horus is the pharaonic ideal)
+    - Seth is BOTH adversary (of Osiris) AND ally (of Ra against Apep, at the prow of the
+      solar barque — see Chapter 16). This ambivalence is load-bearing for te Velde's
+      reading.
+  cross_cultural_parallel: |
+    The Horus-Seth contention parallels succession-combat patterns in the Kumarbi Cycle
+    (Chapter 5) more than it parallels the chaoskampf serpent-adversary pattern. In
+    structural terms Horus-Seth is closer to Teshub-Kumarbi than to Ra-Apep.
 
-comparative_hooks:
-  - other_culture: "Babylonian (Enūma Eliš)"
-    parallel: "Enūma Eliš's opening is deliberately shaped as a continuation and outbidding of the Anzu narrative: Anzû is slain once, then repurposed as a monster in Tiamat's brood"
-    source: "lambert-2013; annus-2001-anzu"
-  - other_culture: "Hittite"
-    parallel: "The motif of the rebel who seizes the kingship-token is mediated into the Kumarbi Cycle (kingship in heaven) and then into Greece"
-    source: "hoffner-1998; west-1997"
-  - other_culture: "Vedic"
-    parallel: "Indra's theft of soma parallels the theft-of-kingship-token motif, though directed at a positive rather than negative valence"
-    source: "jamison-brereton-2014"
-
-triangulation_databases:
-  - ETCSL
-  - CDLI
-  - ORACC
-
-target_length_words: 8000
+target_length_words: 3500
 
 special_instructions: |
-  Present Anzû as a sovereignty-combat (not cosmogonic): the combat does not remake the world,
-  it returns the Tablet to its rightful holder. This distinction is load-bearing for the book's
-  typology (Part II C2 uses Anzû as a paradigm case of sovereignty-as-function). The chapter
-  should explicitly note the Ninurta-as-model-king theme that will feed the Marduk chapter.
-  Where Annus and Foster diverge on a line, prefer Annus (the critical edition); use Foster
-  when the Annus transliteration is more cryptic than the translated sense requires.
+  Short full chapter. Chapter MUST open with an explicit INCLUSION-MARGINAL framing marker
+  explaining why this edge-case is included: te Velde's scholarship is the anchor; Seth's
+  ambivalence (adversary of Osiris, defender of Ra) is exactly what makes the Egyptian
+  combat-myth complex more interesting than a simple chaos-vs-order mapping would allow.
+  Present Chester Beatty I Contendings as a specific later literary reworking, not as the
+  base text. The chapter sets up material for Part II C2 (sovereignty) and also feeds the
+  Gunkel-Ballentine debate: the fact that Seth is both slayer-of-Apep and murderer-of-Osiris
+  undermines any simple moral dualism.
 ```
