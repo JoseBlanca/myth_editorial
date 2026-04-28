@@ -1,0 +1,110 @@
+stage: "chapter-draft"
+timestamp: "2026-04-28T15:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/17-horus-seth.adoc"
+    lines: 175
+summary: "Drafted Ch17 (Horus vs. Seth — An Edge Case) from the approved claims document. 6,489 total words (4,624 narrative-prose words excluding markers and comparative hooks); brief target ~3,500. 49 claim-paragraphs → 49 narrative paragraphs → 49 footnotes → 49 EVIDENCE tokens (1:1 invariant preserved). Markers: 1 INCLUSION-MARGINAL (chapter opening) + 3 INFERENCE + 1 VARIANT carried over verbatim. 5 COMPARATIVE-HOOK lines carried over verbatim."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 49 (matches claims.approved.adoc count)
+  - // EVIDENCE: tokens: 49 (matches claims.approved.adoc count)
+  - [INCLUSION-MARGINAL:] markers: 1 (matches claims-side; placed
+    at chapter opening immediately after title per brief
+    special_instructions)
+  - [INFERENCE:] markers: 3 (matches claims-side; deliberate-
+    ambivalence inference, two-dossier-articulation inference,
+    juridical-vs-martial cosmic-order inference)
+  - [VARIANT:] markers: 1 (matches claims-side; co-equal
+    Pyramid Texts / Coffin Texts / Contendings)
+  - [LACUNA:] markers: 0 (matches claims-side; none in claims)
+  - [RECONSTRUCTION:] markers: 0 (matches claims-side; none in claims)
+  - // COMPARATIVE-HOOK: lines: 5 (matches claims-side; all
+    five hooks — Kumarbi Ch. 5, sovereignty cluster Part II C2,
+    Gunkel-Ballentine Part II C8, Ra-Apep Ch. 16 joint two-
+    dossier, judicial-vs-martial royal-legitimation contrast —
+    carried over verbatim at chapter end)
+
+  Verbatim-fidelity check (diff against claims):
+  - Footnote contents: 49/49 byte-identical (diff -q exit 0
+    on sorted footnote:[…] extractions)
+  - EVIDENCE tokens: 49/49 byte-identical (diff -q exit 0)
+  - COMPARATIVE-HOOK lines: 5/5 byte-identical (diff -q exit 0)
+  - INCLUSION-MARGINAL marker: byte-identical (diff -q exit 0)
+  - INFERENCE markers: 3/3 byte-identical (diff -q exit 0)
+  - VARIANT marker: byte-identical (diff -q exit 0)
+
+  Banned-term grep result:
+  - chaos-figure: 2 occurrences (both scare-quoted in
+    Ballentine-COMPLIANCE counter-model passages — once at
+    line 105 in the Part II C8 paragraph, once at line 174
+    in the Gunkel-Ballentine COMPARATIVE-HOOK; matches the
+    Ch16 line-143 pattern explicitly authorised by the claims
+    file's post-human-normalize warning at line 205)
+  - chaos-monster: 0 occurrences in body prose
+  - chaos-serpent: 0 occurrences in body prose
+  - All occurrences are in scare-quoted critique-of-the-category
+    contexts per the audit-permitted exception.
+
+  Glossary discipline confirmation:
+  - Seth used in body prose; Sutekh flagged at first mention
+    as Ramesside-diplomatic alternative form (per glossary
+    locked rendering)
+  - Horus, Isis, Osiris, Ra used in their locked renderings
+  - the Contendings used in body prose; Chester Beatty I
+    given at first mention (per glossary "the Contendings
+    (body prose); 'Chester Beatty I' at first mention")
+  - maʿat / isfet rendered with the ʿayin and italicised per
+    glossary locked rendering
+  - wedjat italicised; first-mention gloss "sound eye" /
+    "sound/healthy one" carried in the eye-injury footnote
+  - Seth-animal italicised at the iconographic mention in
+    the reception paragraph
+  - "agent of disorder" and "isfet-personification" used in
+    place of any banned umbrella term per Ballentine 2015
+    counter-model compliance
+
+  Structural notes:
+  - Chapter opens with [INCLUSION-MARGINAL: …] framing marker
+    immediately after the title, per brief special_instructions
+    (the marker must remain at the OPENING, with all sub-fields
+    intact — basis / justification / scope all preserved verbatim)
+  - Six === sections in claims preserved as five === sections
+    in narrative: Source overview consolidated into the chapter
+    opening (paragraphs preceding the first === heading), then
+    "Setting and context — Osiris's murder and the contested
+    kingship", "The Pyramid Texts and Coffin Texts attestations",
+    "The Contendings of Horus and Seth (Chester Beatty I)",
+    "Theological-political reading — sovereignty and ambivalence",
+    "Reception and forward links" — preserving claims-side
+    section structure exactly with the consolidation that the
+    skill explicitly permits
+  - Two-dossier ambivalence (Seth as Apep-slayer at the prow vs.
+    Osiris-murderer) load-bearing throughout: Ch. 16 back-link
+    explicit at chapter opening, mid-chapter (deliberate-
+    ambivalence paragraphs), in the Contendings' compensatory-
+    placement resolution paragraph, and in the Reception-and-
+    forward-links section's primary-back-link paragraph; Part II
+    C8 forward-link to Gunkel-Ballentine debate established in
+    the theological-political-reading section and recapitulated
+    in COMPARATIVE-HOOK
+  - Co-equal variant treatment (Pyramid Texts / Coffin Texts /
+    Contendings) preserved with no-priority framing; Contendings
+    explicitly presented as a "later literary reworking" rather
+    than the base text in two paragraphs (source-overview and
+    Contendings-section closing)
+  - Five COMPARATIVE-HOOKs at chapter end (Kumarbi Ch. 5,
+    sovereignty cluster Part II C2, Gunkel-Ballentine Part II
+    C8, Ra-Apep Ch. 16 joint two-dossier, judicial-vs-martial
+    royal-legitimation contrast) all transferred verbatim
+  - Word count 6,489 total / 4,624 narrative-prose: above the
+    ~3,500 brief target; the overrun reflects fidelity to the
+    49-claim corpus (one sentence-or-more per claim plus
+    connective tissue) and to the verbatim-marker requirement
+    (the INCLUSION-MARGINAL marker alone runs ~330 words,
+    INFERENCE markers ~700 words combined, VARIANT marker ~120
+    words, comparative hooks ~870 words combined). Narrative-
+    prose-only count of ~4,624 is closer to but still over the
+    target; treating this as proportionate to the claims-file
+    depth (claims file is ~6,700 words) and not pad-flagged
