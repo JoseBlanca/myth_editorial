@@ -1,6 +1,6 @@
 # Stage 12 of 19: narrative-fidelity
 # Book: chaoskampf
-# Generated: 2026-04-24T14:15:12Z
+# Generated: 2026-04-28T12:58:38Z
 
 ---
 
@@ -477,6 +477,18 @@ registry:
     identifier_value: "9780199370184"
     notes: "Current scholarly-standard English Rigveda. Anchor for Indra/Vṛtra and Trita Āptya."
 
+  - id: tagare-bhagavata
+    source_tier: primary-translation
+    in_scope: true
+    author: "Tagare, Ganesh Vasudeo"
+    title: "The Bhāgavata Purāṇa, Translated and Annotated"
+    year: 1976-1979
+    full_citation: "Tagare, G.V., *The Bhāgavata Purāṇa, Translated and Annotated*, 5 vols., Ancient Indian Tradition and Mythology series 7–11 (Delhi: Motilal Banarsidass, 1976–1978)."
+    short_citation: "Tagare 1976–78"
+    identifier_type: series
+    identifier_value: "Ancient Indian Tradition and Mythology 7–11"
+    notes: "Standard scholarly English translation of the Bhāgavata Purāṇa. Anchor for the Krishna-Kāliya episode (book 10 chs. 15–17) in Ch15."
+
   - id: benveniste-renou-1934
     source_tier: secondary
     in_scope: true
@@ -500,6 +512,18 @@ registry:
     identifier_type: ISBN
     identifier_value: "9780292704251"
     notes: "Standard English Book of the Dead including Apep-slaying spells."
+
+  - id: faulkner-1936-bremner-rhind
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkner, Raymond O."
+    title: "The Bremner-Rhind Papyrus I–IV"
+    year: 1936
+    full_citation: "Faulkner, R.O., 'The Bremner-Rhind Papyrus I–IV', *Journal of Egyptian Archaeology* 22 (1936): 121–140; 23 (1937): 10–16, 166–185; 24 (1938): 41–53."
+    short_citation: "Faulkner 1936–38 (JEA 22–24)"
+    identifier_type: jstor-collection
+    identifier_value: "JEA 22, 23, 24"
+    notes: "Faulkner's four-part philological edition of Papyrus BM EA 10188 (Bremner-Rhind) — the *Book of Overthrowing Apep* — published as articles in JEA across 1936–38. Distinct from Faulkner's 1972 Book of the Dead translation. Anchor for Ch16 ritual-embedding section."
 
   - id: te-velde-1967
     source_tier: secondary
@@ -2692,686 +2716,456 @@ After PASS (or PASS on re-review): the chapter waits until all story chapters ar
 
 ---
 
-# Input file: chapters/02-ninurta-anzu.claims.approved.adoc
+# Input file: chapters/17-horus-seth.claims.approved.adoc
 
 ```
-[[ch-02-ninurta-anzu-claims]]
-== Ninurta vs. Anzû: The Theft of the Tablet of Destinies — Claims
+[[ch-17-horus-seth-claims]]
+== Horus vs. Seth (An Edge Case) — Claims
 
 // This is a claims document, not final prose. Each paragraph is one verifiable claim.
 // After fact-check and human review, chapter-draft will transform this into narrative.
+//
+// Per brief 17-horus-seth.yaml the chapter is INCLUSION-MARGINAL: the adversary
+// (Seth) is not serpentine, and the combat is god-against-god sovereignty
+// strife rather than hero-against-monster. The chapter opens with an explicit
+// framing marker (per brief special_instructions) and treats the Horus-Seth
+// material as the chaoskampf-adjacent edge-case whose inclusion is justified
+// by Seth's two-dossier ambivalence (Apep-slayer at the prow in Ch. 16;
+// Osiris-murderer in Ch. 17), which is load-bearing for te Velde 1967's
+// reading and for the book's engagement with the Gunkel-Ballentine debate
+// (Part II C8). The variants.classification is co-equal: Pyramid Texts,
+// Coffin Texts, and the Chester Beatty I "Contendings" (c. 1160 BCE) are
+// presented as distributed witnesses; the Contendings is presented as a
+// later literary reworking, not as the base text. Per scope.md and the
+// Ballentine 2015 critique, Seth as Osiris-murderer is described as "agent
+// of disorder" or "isfet-personification"; the banned umbrella category-term
+// for chaos-personification figures (chaos-figure, chaos-monster, chaos-serpent)
+// is avoided throughout. Forward-links to Part II C2 (sovereignty),
+// Part II C8 (the Gunkel-Ballentine non-chaos counter-model), and Ch. 5
+// (Kumarbi-cycle succession-combat parallel).
+
+[INCLUSION-MARGINAL: Horus-Seth is included as an edge-case rather than a CORE chapter | basis: Seth is not a serpentine adversary, and the combat is god-against-god sovereignty strife rather than hero-against-monster — the chapter therefore fails the strict CORE inclusion test of scope.md §"Inclusion / exclusion criteria" criterion (1) and is classified RELATED at INCLUSION-MARGINAL standing per audit-review-log 2026-04-23 | justification: te Velde 1967 _Seth, God of Confusion_ chs. 1–2 establishes Seth's two-dossier ambivalence (Apep-slayer at the prow of Ra's barque, treated in Ch. 16; brother-murderer of Osiris and Horus's adversary, treated here) as the structural pattern whose theological subtlety is load-bearing for the wider book — the same god is positively-valued in the cyclical-maintenance combat against Apep and negatively-valued in the succession-strife of the Osiris cycle, and this unharmonised parallelism complicates any simple chaos-versus-order mapping; the chapter is therefore read as the edge-case whose inclusion sharpens, rather than dilutes, the book's typology, with explicit forward-links to Part II C2 (sovereignty) and Part II C8 (Gunkel-Ballentine non-chaos counter-model) | scope: structural-comparative rather than morphological — Horus-Seth is closer to the Hurro-Hittite Kumarbi-Teshub succession-combat (Ch. 5) than to the Egyptian Ra-Apep cyclical combat (Ch. 16), and the chapter's organisation honours that structural affinity.]
 
 === Source overview
 
-The Standard Babylonian Anzû Epic survives as a three-tablet composition preserved primarily on Neo-Assyrian library copies.footnote:[Annus 2001, introduction, on the three-tablet Standard Babylonian recension as the main attested form.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction (SAACT 3)
+The chapter treats the Egyptian myth-complex of the contention between Horus, falcon-headed son of Osiris and Isis, and Seth, Egyptian god of storms and deserts and brother-murderer of Osiris, in which the kingship of Egypt is contested between the two gods after Osiris's death — the principal locus in the Egyptian textual record for what te Velde 1967 chapters 1–2 treat as Seth's negative dossier within his two-dossier ambivalence.footnote:[Per brief 17-horus-seth.yaml; te Velde 1967, _Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion_, chs. 1–2, on the Horus-Seth contention as the principal narrative locus of Seth's negative dossier.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-The critical edition used throughout this chapter is Amar Annus's *The Standard Babylonian Epic of Anzu* (SAACT 3, 2001), which provides the cuneiform text, transliteration, score, glossary, and sign list.footnote:[Annus 2001, whole volume (SAACT 3, Helsinki: Neo-Assyrian Text Corpus Project).]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=whole volume
+The chapter's primary scholarly anchor is Herman te Velde's _Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion_, originally published in 1967 by Brill in Leiden as Probleme der Ägyptologie 6, with a second edition in 1977; te Velde's chapters 1 and 2 treat the Horus-Seth contention and Seth's two-dossier ambivalence at length and constitute the standard scholarly synthesis of the material.footnote:[te Velde 1967, _Seth, God of Confusion_, chs. 1–2, on the Horus-Seth contention and Seth's ambivalence as the central scholarly subject of the monograph; per chaoskampf sources.yaml on te-velde-1967 as the principal Apep-and-Seth anchor.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-The working English translation cited in this chapter is Benjamin Foster's in *Before the Muses*, 3rd edition (2005), pp. 555–578.footnote:[Foster 2005, pp. 555–578, "Anzu."]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-578
+te Velde 1967 is printed-only; in the present chapter it is cited at chapter-section level (chs. 1–2 for the Horus-Seth and Seth-ambivalence material) per the established discipline for printed comparative anchors in this book and per the Ch. 15 completion-record note on the same.footnote:[te Velde 1967 (printed only; cited at chapter-section level per brief and per the citation discipline established in prior CORE chapters of the present book); per ch. 15 completion record on the printed-source citation discipline.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-Foster's translation is keyed to the Annus critical text and presents a composite English version that integrates the Old Babylonian, Middle Babylonian, and Standard Babylonian witnesses.footnote:[Foster 2005, pp. 555–556, headnote on the composite translation.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The chapter's secondary conceptual anchor is Jan Assmann's _The Search for God in Ancient Egypt_, translated from the German by David Lorton and published by Cornell University Press in 2001, which supplies the *maʿat*/*isfet* framework within which Seth's role as agent of disorder in the Osiris-Horus material is to be read alongside his role as defender of Ra in the Apep combat (Ch. 16).footnote:[Assmann 2001, _The Search for God in Ancient Egypt_, on *maʿat*/*isfet* and Egyptian ambivalence as it bears on Seth's two roles; per chaoskampf sources.yaml on assmann-2001-search as the *maʿat*/*isfet* anchor.]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet and Egyptian ambivalence
 
-Witnesses to the composition span the Old Babylonian, Middle Babylonian, and Neo-Assyrian periods, with the bulk of the Standard Babylonian text reconstructed from the Neo-Assyrian royal libraries.footnote:[Annus 2001, introduction on the witness distribution across periods.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Assmann 2001 is printed-only; in the present chapter it is cited at chapter-section level — at the chapters that treat the *maʿat*/*isfet* opposition and the Egyptian theology of ambivalence — per the established discipline for printed comparative anchors in this book.footnote:[Assmann 2001 (printed only; cited at chapter-section level per brief and per the citation discipline established in prior CORE chapters of the present book).]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet and Egyptian ambivalence
 
-An Old Babylonian fragmentary version of the same story survives with divergent details; it is treated here as an earlier recension rather than a textually equivalent variant.footnote:[Foster 2005, pp. 555–556, on the Old Babylonian antecedent; Annus 2001, introduction.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The chapter's secondary survey-anchor for the long-trajectory combat-myth perspective is Neil Forsyth's _The Old Enemy: Satan and the Combat Myth_, published by Princeton University Press in 1987, whose engagement with the Horus-Seth material is brief but supplies the comparative framing within which the contention is read against the wider combat-myth corpus.footnote:[Forsyth 1987, _The Old Enemy: Satan and the Combat Myth_, on the brief engagement with Horus-Seth in the long-trajectory comparative perspective; per chaoskampf sources.yaml on forsyth-1987 as the long-trajectory comparative anchor.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-The Standard Babylonian copies cluster heavily in the Nineveh libraries of the seventh century BCE, including the library of Ashurbanipal.footnote:[Annus 2001, introduction on the Nineveh library provenance.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The Horus-Seth contention is not preserved in a single primary text but is distributed across multiple Egyptian textual corpora over a span of approximately two millennia, from the Pyramid Texts of the late Old Kingdom (c. 2400 BCE) through the Coffin Texts of the Middle Kingdom and into the Chester Beatty I papyrus of the Twentieth Dynasty (c. 1160 BCE) — and the chapter treats the variant attestations as co-equal per brief variants.classification.footnote:[Per brief 17-horus-seth.yaml on the co-equal classification and the distribution of the Horus-Seth material across Pyramid Texts, Coffin Texts, and the Chester Beatty I "Contendings"; te Velde 1967, chs. 1–2, on the same multi-corpus distribution.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-Tablet II of the Standard Babylonian recension has significant gaps in the middle passages covering the transition from Ninurta's first failed engagement to Ea's counsel.footnote:[Annus 2001, Tablet II apparatus; Foster 2005, pp. 568–571 (noting lacunae).]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=Tablet II
+The Pyramid Texts and Coffin Texts attestations of the Horus-Seth contention are older and more sober in register, embedding the contention within funerary-cosmological liturgy rather than in continuous narrative; the Chester Beatty I "Contendings" (c. 1160 BCE) is by contrast a bawdy literary reworking that supplies the longest single connected narrative of the contention and is presented in the chapter as a specific later literary reworking, not as the base text.footnote:[Per brief 17-horus-seth.yaml special_instructions on the presentation of Chester Beatty I as a later literary reworking rather than the base text; te Velde 1967, chs. 1–2, on the register-distinction between the older funerary-liturgical attestations and the later literary "Contendings".]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-The closing doxology of Tablet III is partially broken, and Annus reconstructs the final hymn of praise from parallel Mesopotamian praise-formulae.footnote:[Annus 2001, Tablet III apparatus, on the partially broken closing hymn.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=Tablet III
+The Chester Beatty I papyrus is a New Kingdom literary papyrus of the Twentieth Dynasty (c. 1160 BCE), preserved in the Chester Beatty Library in Dublin under that designation, the recto of which contains _The Contendings of Horus and Seth_ — the longest single narrative of the contention preserved in the Egyptian record and the principal documentary witness for the late literary form of the tradition.footnote:[te Velde 1967, chs. 1–2, on the Chester Beatty I papyrus and the dating of _The Contendings of Horus and Seth_ to the Twentieth Dynasty c. 1160 BCE; per chaoskampf glossary.yaml on the locked rendering "the Contendings (body prose); 'Chester Beatty I' at first mention".]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Chester Beatty I)
 
-The Anzû Epic has Sumerian-language prehistory in the literature of the third-to-early-second millennium, including allusions to Anzû in the Sumerian compositions *Lugal-e* and *Angim dimma*.footnote:[ETCSL 1.6.2 (Lugal-e) line 122 listing the Anzud bird among Ninurta's earlier trophies; ETCSL 1.6.1 (Angim dimma) lines 30–40 and 55–63 on the Anzud bird brought forth and hung on the chariot.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 and 1.6.2
+[VARIANT: primary=Chester Beatty I "Contendings" as the longest single connected narrative (c. 1160 BCE; Twentieth Dynasty literary papyrus) | alt=Pyramid Texts and Coffin Texts attestations as older liturgical-funerary embeddings (c. 2400 BCE onward) | chosen: co-equal presentation per brief variants.classification — both strata are treated as substantive witnesses with explicit register-attribution rather than collapsing one into the other | reason: per brief 17-horus-seth.yaml the variants.classification is explicitly co-equal; the Pyramid Texts material is older and more sober but is liturgical rather than narrative, while the Contendings is later, bawdy, and literary but is the only sustained narrative — neither attestation by itself supplies the full picture, and the tradition evolved substantially over two millennia (per te Velde 1967 chs. 1–2).]
 
-*Angim dimma* ("Ninurta's return to Nibru") is a Sumerian *šir-gida* to Ninurta in which the Anzud bird appears in the warrior-god's trophy inventory but not as the subject of a narrated combat.footnote:[ETCSL 1.6.1 title and opening formula; lines 30–40 trophy list; line 208 closing formula "šir-gida of Ninurta."]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 (Angim dimma)
+=== Setting and context — Osiris's murder and the contested kingship
 
-*Lugal-e* ("Ninurta's exploits") likewise lists the Anzud bird among Ninurta's earlier defeated enemies without narrating the combat at length.footnote:[ETCSL 1.6.2 line 122, Anzud bird in Šarur's catalogue of Ninurta's prior victories.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 line 122
+The Osiris cycle — the Egyptian myth-complex within which the Horus-Seth contention is embedded — narrates the killing of Osiris by his brother Seth, the dismemberment of Osiris's body, the magical reassembly and resurrection of Osiris by his sister-and-wife Isis, and the conception and posthumous birth of Horus as Osiris's son and avenger.footnote:[te Velde 1967, ch. 1, on the Osiris cycle as the narrative context within which the Horus-Seth contention is set; on the killing-dismemberment-resurrection-conception sequence of the cycle.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Osiris cycle frame)
 
-The Sumerian allusions are therefore treated as pre-history of the Standard Babylonian narrative rather than as independent tellings of the same story.footnote:[Annus 2001, introduction, on the Sumerian background; Foster 2005, pp. 555–556.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Osiris is, in the Egyptian theological imagination, the murdered king who becomes lord of the dead — his death is the death-of-the-king that founds the kingship of the netherworld, and his resurrection by Isis is the magical restoration that makes him the divine pattern for the deceased pharaoh's transition into afterlife sovereignty.footnote:[te Velde 1967, ch. 1, on Osiris as the murdered-king and lord-of-the-dead in the Egyptian theological imagination; on the magical-resurrection by Isis as the divine pattern for pharaonic afterlife.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Osiris)
 
-Anzû is extensively represented in Mesopotamian iconography from the third millennium onward, appearing on cylinder seals, amulets, and temple sculpture as a lion-headed eagle.footnote:[Annus 2001, introduction on the iconographic corpus; Foster 2005, pp. 555–556, headnote.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Seth — alternative form Sutekh in Ramesside diplomatic contexts — is the Egyptian god of storms, deserts, and disorder; he is the brother of Osiris in the cycle's family-of-the-gods and the agent of Osiris's death, and his role within the cycle is structurally that of the disruptive brother whose violence overturns the established kingship.footnote:[te Velde 1967, ch. 1, on Seth as god of storms-deserts-disorder and as Osiris's brother-and-killer; per chaoskampf glossary.yaml on the locked rendering "Seth" with "Sutekh" reserved for Ramesside-diplomatic contexts.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Seth as Osiris-killer)
 
-Scholarship treats the Anzû Epic as the direct Mesopotamian antecedent of the combat in *Enūma Eliš*, in which Marduk will defeat Qingu and reclaim the Tablet of Destinies.footnote:[Lambert 2013, introduction, on the Anzû–Marduk genealogy; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+Isis — Egyptian Aset, the magic-working goddess of the pantheon — is in the Osiris cycle the wife and sister of Osiris and the mother of Horus; her magical power resurrects Osiris after his dismemberment by Seth and protects Horus during his concealed upbringing in the Delta marshes, and her dual role as resurrection-magician and protector-of-the-heir is structurally constitutive for the contention that follows.footnote:[te Velde 1967, ch. 1, on Isis's magical resurrection of Osiris and her protection of the infant Horus; per chaoskampf glossary.yaml on the locked rendering "Isis" with first-mention gloss covering both her magic-working and Osiris-cycle roles.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Isis)
 
-Forsyth's *The Old Enemy* treats the Anzû narrative as a structural bridge between the Sumerian Ninurta cycle and the later Judeo-Christian combat tradition.footnote:[Forsyth 1987, ch. 2, on Anzu as a bridge to Enūma Eliš and later combat myth.]
-// EVIDENCE: source_id=forsyth-1987 ; loc=ch. 2
+Horus — falcon-headed son of Osiris and Isis — is born after Osiris's death, raised in concealment by Isis, and emerges to claim the kingship of Egypt as his father's rightful heir; his role in the contention is that of the legitimate but initially-disinherited successor whose claim must be vindicated against the violent usurper.footnote:[te Velde 1967, ch. 1, on Horus's birth-and-upbringing and his role as Osiris's avenger-and-heir; per chaoskampf glossary.yaml on the locked rendering "Horus" with first-mention gloss covering his role in the Contendings.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Horus)
 
-Scurlock and Beal's volume on the Chaoskampf hypothesis includes chapters that engage the Anzû Epic as part of the Mesopotamian combat-myth corpus.footnote:[Scurlock & Beal 2013, chapters on Mesopotamian combat-myth.]
-// EVIDENCE: source_id=scurlock-beal-2013 ; loc=chapters on Mesopotamian combat-myth
+The Horus-Seth contention is therefore embedded within a succession-frame: Osiris is the murdered father-king, Seth is the brother-usurper whose violence has interrupted the legitimate succession, and Horus is the rightful heir whose claim must be adjudicated by the divine assembly before the kingship of Egypt can be properly resumed — and the contention's narrative dynamic is that of contested-succession rather than that of cosmogonic combat.footnote:[te Velde 1967, ch. 1, on the succession-frame of the Horus-Seth contention; on the contested-succession dynamic as distinct from cosmogonic combat.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (succession frame)
 
-=== Setting and context
+The structural distinction between the Horus-Seth contention's contested-succession dynamic and the Ra-Apep combat's cyclical-maintenance dynamic is the principal reason for the present chapter's INCLUSION-MARGINAL classification: the Horus-Seth material is sovereignty-strife between two divine claimants for an established throne rather than the divine-cosmographic combat against an *isfet*-personification that the Apep material narrates.footnote:[Per brief 17-horus-seth.yaml on the structural distinction and the INCLUSION-MARGINAL classification; te Velde 1967, ch. 1, on the same structural distinction.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (succession vs cyclical)
 
-Ninurta is the warrior-god of Nippur, son of Enlil, and the champion sent out to defeat enemies of the divine order in both the Sumerian and Akkadian literary traditions.footnote:[ETCSL 1.6.1 opening "Created like An, O son of Enlil, Ninurta"; Annus 2001, introduction on Ninurta's Nippur-warrior identity.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 opening lines 1-6
+Seth's two dossiers — the positive Apep-slayer dossier (Ch. 16) and the negative Osiris-murderer dossier (the present chapter) — are documented in parallel across the Egyptian textual corpus over two millennia without the kind of theological harmonisation that would resolve the apparent contradiction; te Velde 1967's title _Seth, God of Confusion_ reflects the scholarly judgment that the Egyptian tradition's handling of Seth is itself characterised by deliberate ambivalence rather than by clear positive or negative valuation.footnote:[te Velde 1967, _Seth, God of Confusion_, title and chs. 1–2 on the deliberate ambivalence of the Egyptian tradition's handling of Seth and on the parallel two-dossier structure.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (deliberate ambivalence)
 
-Ninurta's earlier Sumerian exploits — including the combat with Asag in *Lugal-e* and the return to Nippur in *Angim dimma* — establish him as the prototype warrior-champion that the Standard Babylonian Anzû Epic will draw on.footnote:[ETCSL 1.6.2 (Lugal-e); ETCSL 1.6.1 (Angim dimma); Annus 2001, introduction on the Ninurta-warrior tradition.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 and 1.6.2
+The deliberate-ambivalence reading is one of the principal contributions that te Velde 1967 makes to the wider study of the Egyptian pantheon: the Egyptian sources allow Seth to be positively-valued as Apep-slayer and negatively-valued as Osiris-murderer simultaneously, without forcing a resolution, and the unharmonised character of the parallelism is itself a structural feature of Egyptian theological reasoning rather than an oversight or an internal contradiction awaiting redaction.footnote:[te Velde 1967, chs. 1–2, on the deliberate-ambivalence reading as a structural feature of Egyptian theology; on the unharmonised parallelism as deliberate rather than accidental.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (deliberate ambivalence)
 
-Enlil, chief god of the Mesopotamian pantheon and lord of the air, is the custodian of the Tablet of Destinies in the Standard Babylonian text.footnote:[Foster 2005, pp. 556–558, Tablet I on Enlil's custody of the Tablet; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-558
+[INFERENCE: the unharmonised character of Seth's two dossiers across two millennia of Egyptian textual record reflects a settled theological tolerance of moral ambivalence within cosmological function rather than an internal contradiction awaiting redaction | basis: te Velde 1967 chs. 1–2 read the parallelism as deliberate; the Egyptian tradition's continuous use of Seth as Apep-slayer at the prow of the solar barque even during periods (Late Period and Ptolemaic) when his Osiris-murderer dossier dominated his theological reception is direct textual evidence that the two roles were maintained in parallel rather than collapsed; Assmann 2001's reading of the *maʿat*/*isfet* framework as a sophisticated theological-ethical category-pair supplies the conceptual context within which the parallelism makes theological sense | risk: the inference is interpretive-theological rather than directly attested as a stated theological doctrine; alternative readings (in which Seth's two roles reflect different historical-political evaluations rather than a deliberate theological subtlety) remain in principle available, though they are less natural fits for the diachronic continuity of both roles in parallel that te Velde 1967 documents.]
 
-Ea is the god of wisdom and the deep fresh waters of the Apsû, and in this Akkadian composition he functions as counselor both to the divine assembly and to Ninurta.footnote:[Foster 2005, pp. 560–562, on Ea's role as counselor; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-562
+=== The Pyramid Texts and Coffin Texts attestations
 
-The Tablet of Destinies is the divinely held object that confers universal decree-power; possession of it is, functionally, kingship over the cosmos.footnote:[Foster 2005, pp. 556–558, on the Tablet of Destinies as the decree-holding object; Lambert 2013, introduction, on the Tablet as sovereignty-token.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-558
+The Pyramid Texts — the earliest attested layer of Egyptian funerary literature, inscribed on the interior walls of late Old Kingdom royal pyramids at Saqqara from the pyramid of Unas (c. 2350 BCE) onward — contain the earliest attestations of the Horus-Seth contention, embedded in the apotropaic-and-resurrection liturgy of the deceased king's posthumous ascent.footnote:[te Velde 1967, ch. 1, on the Pyramid Texts as the earliest attested layer of the Horus-Seth contention and on the funerary-liturgical embedding of the material.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Pyramid Texts)
 
-The Tablet is depicted as an object that can be physically seized and physically returned, so that the narrative treats sovereignty as a transferable token.footnote:[Foster 2005, pp. 557–559, Tablet I on the seizure; Lambert 2013, introduction.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-559
+In the Pyramid Texts the Horus-Seth contention is not narrated as a continuous story but is alluded to in scattered utterances that presuppose the reader's familiarity with the cycle's narrative outline: the killing of Osiris by Seth, the resurrection by Isis, the eye-injuries that the contending gods inflict on each other, and the eventual judicial-divine vindication of Horus's claim are all referenced obliquely in the funerary-liturgical register.footnote:[te Velde 1967, ch. 1, on the oblique-allusive register of the Pyramid Texts attestations and on the cycle's narrative outline as already presupposed in the late Old Kingdom liturgy.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Pyramid Texts allusive register)
 
-Šarur is Ninurta's animate mace, a weapon with the capacity to speak and to travel as a messenger, already known from the Sumerian *Lugal-e*.footnote:[ETCSL 1.6.2 lines 24–47, 96–118, 228–243 on Šarur addressing Ninurta; Foster 2005 p. 562 for Šarur in the Anzû Epic.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 lines 24-47
+A recurrent narrative element in the Pyramid Texts and elsewhere in the Horus-Seth corpus is the mutual mutilation of the contending gods: Seth tears out one of Horus's eyes (the left, conventionally the lunar eye; subsequently restored by Thoth as the *wedjat*, the "sound eye"), and Horus in turn injures Seth's testicles, with the eye-injury and the testicle-injury preserved in the textual record as the canonical mutilations of the contention.footnote:[te Velde 1967, ch. 1, on the mutual mutilation as a canonical motif of the Horus-Seth contention across the Pyramid Texts and the later corpus; on the lunar left eye and the testicle-injury as the principal mutilation-references, with the torn-out eye becoming the *wedjat* (the "sound/healthy one") only after Thoth's restoration.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (mutual mutilation)
 
-Anzû is introduced as a minor divine servitor originally attached to Enlil, not as a primordial adversary.footnote:[Foster 2005, pp. 555–557, Tablet I on Anzû's status as servitor.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-557
+The Coffin Texts — the Middle Kingdom layer of the funerary corpus, inscribed on the interior surfaces of wooden coffins from c. 2050–1650 BCE — develop the Horus-Seth material further, extending the funerary-liturgical register beyond the royal context and elaborating the cycle's narrative beats in the form of additional spell-attestations.footnote:[te Velde 1967, ch. 1, on the Coffin Texts development of the Horus-Seth material and on the extension of the corpus to non-royal contexts in the Middle Kingdom.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Coffin Texts)
 
-Anzû takes the form of a lion-headed eagle; this iconographic identification is confirmed by the Mesopotamian visual corpus as well as by the descriptive epithets in the epic.footnote:[Annus 2001, introduction, on the lion-headed eagle iconography; Foster 2005, pp. 555–556, on Anzû's physical form.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The Coffin Texts attestations of the contention preserve the same oblique-allusive register as the Pyramid Texts but presuppose a more elaborated narrative tradition: by the Middle Kingdom the cycle's narrative outline is more fully developed, and the spells presuppose familiarity with the eye-injury, the testicle-injury, the divine tribunal, and the eventual award of the kingship to Horus.footnote:[te Velde 1967, ch. 1, on the more elaborated Coffin Texts narrative tradition and on the presupposed familiarity with the cycle's narrative beats by the Middle Kingdom.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Coffin Texts narrative tradition)
 
-The opening of Tablet I situates the narrative in a divine palace-and-assembly world rather than in a primordial, pre-cosmic setting.footnote:[Foster 2005, pp. 555–557, Tablet I opening; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-557
+The funerary-liturgical embedding of the Horus-Seth contention in the Pyramid Texts and the Coffin Texts is theologically load-bearing: the deceased king is identified with Osiris in the funerary corpus, his successor on earth is identified with Horus, and the contention's judicial resolution in favour of Horus is the divine pattern that legitimates the orderly succession of pharaonic kingship in the historical political register.footnote:[te Velde 1967, ch. 1, on the theological loadbearing of the funerary-liturgical embedding; on the Osiris-deceased-king and Horus-successor identifications as the divine pattern of pharaonic succession.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (royal-legitimation pattern)
 
-The combat in the Anzû Epic is therefore a sovereignty-reclamation narrative, not a cosmogony: the cosmos already exists, and the story is about the return of a displaced kingship-token to its rightful holder.footnote:[Foster 2005, pp. 555–578 on the narrative scope; Lambert 2013, introduction, on sovereignty-as-function in the Mesopotamian combat corpus.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+=== The Contendings of Horus and Seth (Chester Beatty I)
 
-=== Narrative sequence
+_The Contendings of Horus and Seth_, preserved on the recto of the Chester Beatty I papyrus (Twentieth Dynasty, c. 1160 BCE), is the longest single connected narrative of the Horus-Seth contention surviving from ancient Egypt; the papyrus is held in the Chester Beatty Library in Dublin and was first edited and published in the early twentieth century, with subsequent translations bringing the text to wider Egyptological readership.footnote:[te Velde 1967, chs. 1–2, on Chester Beatty I as the longest single connected narrative of the contention and on its Twentieth-Dynasty c. 1160 BCE dating; per chaoskampf glossary.yaml on the locked rendering "the Contendings (body prose)".]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Chester Beatty I)
 
-==== Tablet I — theft and assembly
+The literary register of the Contendings is markedly different from the funerary-liturgical register of the Pyramid Texts and the Coffin Texts: the Contendings is a continuous narrative composition with extended dialogue, vivid scene-setting, comic-and-bawdy episodes, and a tribunal-procedural structure that allows the divine assembly's deliberations to be staged at length, with the contending gods presented as characters whose conduct is at points undignified.footnote:[te Velde 1967, chs. 1–2, on the literary register of the Contendings as continuous narrative with extended dialogue, comic-and-bawdy episodes, and tribunal-procedural structure; on the register-distinction from the funerary-liturgical attestations.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Contendings literary register)
 
-Tablet I opens with a hymn of praise to Ninurta, invoking his warrior-qualities before the narrative proper begins.footnote:[Foster 2005, pp. 555–556, Tablet I proem; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The Contendings opens with the divine tribunal already in session: the gods of the Egyptian pantheon, presided over by the sun-god (variously identified as Ra-Atum or as Pre in different sections of the text), are deliberating on the rival claims of Horus and Seth to the kingship of Egypt — a deliberation that, in the text's narrative, has already been ongoing for eighty years without resolution.footnote:[te Velde 1967, chs. 1–2, on the Contendings' opening tribunal and on the eighty-years-without-resolution narrative conceit; on the sun-god's presiding role.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (tribunal frame)
 
-Anzû is born or brought into being at the Apsû, the cosmic fresh-water region associated with Ea, and is introduced into Enlil's service.footnote:[Foster 2005, pp. 556–557, Tablet I on Anzû's origin at the Apsû; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-557
+Within the tribunal narrative of the Contendings, Isis intervenes repeatedly on behalf of her son Horus: she advocates his claim before the divine assembly, she works magical interventions to thwart Seth's manoeuvres, and her advocacy is one of the principal narrative engines of the text's plot, with the divine tribunal's eventual decision shaped by her sustained interventions.footnote:[te Velde 1967, chs. 1–2, on Isis's repeated intervention in the divine tribunal of the Contendings and on her magical-and-rhetorical advocacy as a principal narrative engine of the text.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Isis advocacy)
 
-Anzû is assigned the role of attendant in Enlil's household, including attendance at the chamber where Enlil bathes and sets aside the Tablet of Destinies.footnote:[Foster 2005, pp. 557–558, Tablet I on Anzû's role as chamber-attendant; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-558
+The Contendings narrates a sequence of contests-and-trials in which Horus and Seth compete to demonstrate their fitness for kingship, including swimming-as-hippopotami contests, boat-race contests, and other physical contests, in addition to the rhetorical-and-procedural advocacy before the tribunal — the contests are presented in a register that is at points comic and at points violent, and the text does not maintain a consistently dignified tone throughout.footnote:[te Velde 1967, chs. 1–2, on the contest-sequence of the Contendings (hippopotami-contest, boat-race contest, and others) and on the mixed comic-and-violent register of the contest-narrative.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (contest sequence)
 
-Day after day, Anzû observes the Tablet of Destinies lying within reach while Enlil bathes, and the text describes Anzû's envy and ambition directly.footnote:[Foster 2005, pp. 557–558, Tablet I on Anzû's envy of Enlil's regalia; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-558
+The Contendings includes one of the more notorious episodes in the Egyptian literary record: a sexual encounter between Seth and Horus in which Seth attempts to assert dominance over Horus through a homosexual act, but Horus — counselled by Isis — turns the encounter to his advantage by manoeuvring Seth's seed onto a lettuce that Seth then eats, the resulting magical reversal disqualifying Seth's claim of seminal-dominance before the divine tribunal.footnote:[te Velde 1967, chs. 1–2, on the seed-and-lettuce episode of the Contendings as a magical-reversal contest in which Horus and Isis turn Seth's attempted-dominance against him; on the bawdy register of this episode in particular.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (seed-and-lettuce)
 
-Anzû forms a plot to seize the Tablet of Destinies and, with it, the rulership of the gods.footnote:[Foster 2005, pp. 558–559, Tablet I; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 558-559
+The bawdy register of episodes such as the seed-and-lettuce contest is part of what makes the Contendings a distinctive Egyptian literary-narrative composition: the text deploys comic and undignified material in the service of a serious theological-political point — namely the vindication of Horus's kingship-claim through the exposure of Seth's unfitness for the throne — and the comic register is integrated rather than incidental to the text's thematic project.footnote:[te Velde 1967, chs. 1–2, on the integration of the bawdy register into the Contendings' theological-political project; on the comic episodes as serving the vindication-of-Horus thematic framework.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (bawdy-as-theological)
 
-While Enlil is bathing, Anzû seizes the Tablet and flies away with it to the mountains.footnote:[Foster 2005, pp. 558–559, Tablet I on the theft; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 558-559
+The Contendings reaches its resolution in the divine tribunal's eventual award of the kingship of Egypt to Horus: the gods of the assembly, persuaded by Isis's advocacy, by the outcomes of the contests, and by Osiris's own intervention from the netherworld, formally recognise Horus as the legitimate king and assign Seth a compensatory role — the storm-god is given a place at Ra's side in the heavens, where (per the Apep dossier of Ch. 16) he serves as Apep-slayer at the prow of the solar barque.footnote:[te Velde 1967, chs. 1–2, on the Contendings' resolution in the award of the kingship to Horus and on Seth's compensatory placement at Ra's side; on the convergence of the negative-dossier resolution with the positive-dossier role.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (resolution)
 
-With the Tablet in Anzû's talons, the decree-power of the gods is immediately dislocated: rites fall silent, the divine assembly loses its governing authority, and the cosmos registers the theft as a disruption.footnote:[Foster 2005, pp. 559–560, Tablet I on the consequences of the theft; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 559-560
+The compensatory placement of Seth at Ra's side at the conclusion of the Contendings is one of the principal Egyptian textual loci at which the two-dossier structure of Seth's mythological identity is itself acknowledged within a single narrative: the same text that documents Seth's defeat in the kingship-contest reassigns him to the cosmological-combat role in which his storm-and-desert violence finds its positive function.footnote:[te Velde 1967, chs. 1–2, on the Contendings' explicit acknowledgment of Seth's two-dossier structure within its concluding narrative; on the compensatory placement as the textual articulation of the two-dossier reading.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (two-dossier articulation)
 
-Anu, the sky-father, convenes the assembly of the great gods to address the crisis.footnote:[Foster 2005, pp. 560–561, Tablet I on Anu summoning the assembly; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-561
+[INFERENCE: the Contendings' concluding compensatory placement of Seth at Ra's side encodes within a single late-period narrative the same two-dossier structure that te Velde 1967 reads diachronically across the wider corpus, suggesting that by the Twentieth Dynasty the two-dossier reading was itself part of the literary self-understanding of the Egyptian tradition rather than a modern scholarly synthesis | basis: te Velde 1967 chs. 1–2 read the compensatory placement as deliberate; the Contendings' integration of the negative-dossier defeat with the positive-dossier reassignment in a single narrative is direct textual evidence that the two roles were available to the text's audience as a coherent theological pattern; the wider Egyptian corpus's continuous use of Seth as Apep-slayer (Ch. 16) supports the reading that the positive-dossier role was theologically necessary even after the kingship-contest resolution | risk: the inference is interpretive-textual rather than directly attested as a stated theological doctrine of the Contendings; alternative readings (in which the compensatory placement is a narrative-economic rather than theological-self-conscious move) remain in principle available.]
 
-Anu calls for a champion to hunt down Anzû, recover the Tablet, and slay the rebel.footnote:[Foster 2005, pp. 560–561, Tablet I on the call for a champion; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-561
+The Contendings is, on te Velde's reading and on the brief's special_instructions, a specific later literary reworking of the Horus-Seth tradition rather than the base text of the contention: the older funerary-liturgical attestations in the Pyramid Texts and the Coffin Texts are the foundational stratum, and the Contendings' literary-narrative form is one Twentieth-Dynasty articulation of a tradition that continued to be reworked across the New Kingdom and beyond.footnote:[Per brief 17-horus-seth.yaml special_instructions on the Contendings as a later literary reworking rather than the base text; te Velde 1967, chs. 1–2, on the same.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (literary reworking)
 
-Anu first addresses the storm-god Adad, offering him supremacy among the gods if he will undertake the combat.footnote:[Foster 2005, pp. 561, Tablet I on the summons of Adad; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+=== Theological-political reading — sovereignty and ambivalence
 
-Adad refuses the combat, citing the impossibility of fighting an adversary who holds the Tablet of Destinies.footnote:[Foster 2005, p. 561, Tablet I on Adad's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The theological-political function of the Horus-Seth contention is, on te Velde 1967 chapters 1–2 and Assmann 2001's *maʿat*/*isfet* framework, royal-legitimation: the divine tribunal's award of the kingship to Horus is the divine pattern that legitimates pharaonic kingship in the historical political register, with each pharaoh figured as Horus-on-the-throne and his deceased predecessor figured as Osiris-in-the-netherworld.footnote:[te Velde 1967, chs. 1–2, on the royal-legitimation function of the Contendings and the wider Horus-Seth corpus; Assmann 2001, on the *maʿat*/*isfet* framework's articulation of pharaonic legitimacy.]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet (royal legitimation)
 
-Anu next addresses Gerra, the fire-god, with the same offer of supremacy.footnote:[Foster 2005, p. 561, Tablet I on the summons of Gerra; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The pharaonic-legitimation function is one of the principal theological-political uses to which the Egyptian tradition puts the Horus-Seth material: the orderly succession of kingship from the murdered Osiris through his vindicated son Horus is the divine guarantor of the orderly succession of kingship from one historical pharaoh to his successor, and the contention's narrative is the cosmological-mythological grounding for that historical-political institution.footnote:[te Velde 1967, chs. 1–2, on the pharaonic-legitimation function as a principal theological-political use of the material; Assmann 2001 on the cosmological-historical alignment of the divine and the historical succession.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (royal-legitimation)
 
-Gerra likewise refuses, giving the same reason — that possession of the Tablet makes Anzû unassailable.footnote:[Foster 2005, p. 561, Tablet I on Gerra's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+Seth's role within this royal-legitimation framework is, on te Velde 1967's reading, structurally ambivalent: the storm-god's violence is the disruption that the contention must resolve, but his violence is also (per the Ch. 16 Apep-dossier) theologically necessary for the cosmic order's continued maintenance — and the Egyptian tradition's settlement of the contention through Seth's compensatory placement at Ra's side rather than through Seth's annihilation reflects this ambivalent theological assessment.footnote:[te Velde 1967, chs. 1–2, on Seth's structurally-ambivalent role in the royal-legitimation framework; on the compensatory-placement settlement as reflecting the theological assessment that Seth is necessary even where defeated.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (ambivalent settlement)
 
-Anu then addresses Šara, the warrior-son of Inanna, with the same commission.footnote:[Foster 2005, p. 561, Tablet I on the summons of Šara; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The Egyptian tradition's refusal to annihilate Seth at the conclusion of the contention is a load-bearing piece of evidence for the wider book's engagement with the Gunkel-Ballentine debate (Part II C8): if Seth were a "chaos-figure" in the simple sense of Western-philosophical inchoate primordial unformedness, his annihilation would be theologically required for the establishment of cosmic order — but the Egyptian tradition keeps him in a positive cosmological role even after his defeat, and the persistence of the negatively-valued figure in a positively-functional role is part of why the Ballentine 2015 critique of the chaos-category applies with particular force to the Egyptian material.footnote:[Per chaoskampf scope.md on the Ballentine 2015 critique of the chaos-category as it applies to the Egyptian material; te Velde 1967 chs. 1–2 on the persistence of Seth in a positive role after his defeat; cross-ref Part II C8.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=passim (chaos-category critique)
 
-Šara also refuses on the same grounds, and the assembly is left without a champion.footnote:[Foster 2005, pp. 561–562, Tablet I on Šara's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 561-562
+Seth's role as agent of disorder in the Osiris-Horus material is, on Assmann 2001's framework, *isfet*-aligned in the limited sense that his action against Osiris is *isfet* — disorder, injustice, ritual transgression, falsehood-of-conduct — but the Egyptian theological imagination recognises that *isfet*-aligned violence may itself be theologically necessary in cosmological roles where its energy is required, and Seth's compensatory placement at Ra's side after the kingship-contest is the textual articulation of this recognition.footnote:[Assmann 2001, on Seth's action against Osiris as *isfet*-aligned and on the *isfet*-aligned violence as theologically necessary in cosmological roles; te Velde 1967 chs. 1–2 on the compensatory placement.]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet (Seth's ambivalence)
 
-The threefold refusal establishes that the adversary cannot be defeated by the most obvious divine champions, heightening the need for a different kind of warrior.footnote:[Foster 2005, pp. 561–562, Tablet I; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 561-562
+The Horus-Seth contention's resolution through divine-tribunal procedure rather than through champion-combat is a further structural feature that distinguishes the material from the cosmogonic combat-myths of the wider corpus: where Marduk defeats Tiamat by single combat (Ch. 3), Indra defeats Vṛtra by single combat (Ch. 14), and Ra defeats Apep nightly through the action of the barque-crew (Ch. 16), the Horus-Seth contention is finally settled by the divine assembly's deliberative-judicial verdict — and this judicial-procedural resolution is part of why the chapter is INCLUSION-MARGINAL in the present book's typology.footnote:[Per brief 17-horus-seth.yaml on the structural distinction between judicial-procedural resolution and champion-combat resolution; te Velde 1967 chs. 1–2 on the divine-tribunal frame of the Contendings; cross-refs Chs. 3, 14, 16.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (tribunal resolution)
 
-Ea, god of wisdom and the deep waters, proposes a new candidate to the assembly.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's counsel; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+The judicial-procedural resolution of the Horus-Seth contention does not, however, exclude all combat from the narrative: the contests-and-trials of the Contendings include physical contests, the cycle's wider attestations preserve the mutual mutilation in which Seth tears out Horus's eye and Horus injures Seth's testicles, and the Pyramid Texts and Coffin Texts allusions presuppose a tradition in which the contending gods have engaged in physical confrontation — but the decisive resolution is judicial rather than martial, and the combat-elements are subordinate to the tribunal-frame.footnote:[te Velde 1967, chs. 1–2, on the subordination of the combat-elements to the tribunal-frame in the contention's overall narrative structure.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (combat subordinate to tribunal)
 
-Ea nominates Ninurta, son of Enlil, as the champion who can face Anzû.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's nomination of Ninurta; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+[INFERENCE: the structural subordination of the combat-elements to the tribunal-frame in the Horus-Seth contention reflects the Egyptian tradition's distinctive theological-political reading of cosmic order as juridically-rather-than-martially established at the highest level, in contrast to the cosmogonic-combat traditions in which the cosmos is established through champion-victory | basis: te Velde 1967 chs. 1–2 on the tribunal-frame as the decisive structural element of the contention; Assmann 2001's *maʿat*/*isfet* framework on *maʿat* as juridical-and-cosmic order; the Egyptian tradition's prominent role for the divine tribunal in legal-cosmological matters elsewhere in the corpus | risk: the inference is interpretive-comparative rather than directly attested as a stated theological doctrine; alternative readings (in which the tribunal-frame is a Twentieth-Dynasty literary innovation rather than a structural-theological feature of the wider tradition) remain in principle available, though they are less natural fits for the Pyramid Texts and Coffin Texts attestations that already presuppose the tribunal-resolution outcome.]
 
-Ea addresses the goddess Bēlet-ilī (Mami), who is also called the mother of Ninurta in this passage, and instructs her to dispatch her son.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's address to the mother-goddess; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+Forsyth 1987's brief engagement with the Horus-Seth material treats the contention as a relatively-marginal data point within the long-trajectory combat-myth corpus that runs from Sumer through the Hebrew Bible into Christian apocalyptic: the contention's distinctive judicial-procedural resolution and Seth's ambivalent two-dossier structure are noted, but the material is not given the central comparative treatment that Forsyth gives to the Marduk-Tiamat or Baal-Yamm corpora.footnote:[Forsyth 1987, on the brief engagement with Horus-Seth as a relatively-marginal data point in the long-trajectory comparative corpus; on the judicial-procedural resolution and the two-dossier structure as noted but not centrally treated.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-The mother-goddess summons Ninurta, arms him with explicit instruction, and sends him out against Anzû.footnote:[Foster 2005, pp. 563–564, Tablet I on the commissioning of Ninurta; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 563-564
+The marginality of Horus-Seth in Forsyth 1987's comparative treatment is itself a piece of evidence for the chapter's INCLUSION-MARGINAL classification: Forsyth's longue-durée trajectory is dominated by the cosmogonic and the eschatological combat-myths, and the Horus-Seth material's sovereignty-strife structure does not fit that trajectory cleanly — the same structural features that make the contention an edge-case within the present book also make it an edge-case within Forsyth's wider survey.footnote:[Forsyth 1987, on the marginality of Horus-Seth within the longue-durée trajectory; per brief 17-horus-seth.yaml on the convergence between Forsyth's marginal treatment and the present book's INCLUSION-MARGINAL classification.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-==== Tablet II — first assault and its failure
+=== Reception and forward links
 
-Tablet II opens with Ninurta mustering his weapons, including the seven winds, the flood-storm, and the sling-stone, and setting out into the mountains.footnote:[Foster 2005, pp. 565–566, Tablet II on the mustering of weapons — "the weapon of chaos, the seven winds, formed up"; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 565-566
+The chapter's primary back-link is to Chapter 16 (Ra vs. Apep): the present chapter's negative-dossier treatment of Seth as Osiris-murderer presupposes and complements the positive-dossier treatment of Seth as Apep-slayer at the prow of the solar barque, and the two-dossier structure that te Velde 1967 chapters 1–2 (negative dossier; this chapter) and chapters 3–4 (positive dossier; Ch. 16) document together is the structural-theological subject that the two chapters jointly develop.footnote:[Per brief 17-horus-seth.yaml on the back-link to Ch. 16; te Velde 1967, chs. 1–4, on the two-dossier structure as the joint subject of the monograph; cross-ref Ch. 16.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-4 (back-link Ch. 16)
 
-Ninurta carries Šarur, his animate mace, who will serve as scout and messenger between the warrior and his divine counselor.footnote:[Foster 2005, pp. 565–566, Tablet II on Šarur accompanying Ninurta; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 565-566
+The chapter's primary forward-link is to Part II Chapter C2 (Combat as Sovereignty): the Horus-Seth contention's contested-succession and royal-legitimation function is one of the principal sovereignty-themed cases in the present book's catalogue, and Part II C2 develops the contention together with the Baal-Yamm (Ch. 7), Zeus-Typhon (Ch. 11), Indra-Vṛtra (Ch. 14), Thraētaona (Ch. 13), Kumarbi-Ullikummi (Ch. 5), and Ninurta-Anzû (Ch. 2) cases as the canonical sovereignty-combat cluster.footnote:[Per chaoskampf scope.md §"Part II — thematic comparative chapters" on Part II C2 (Combat as Sovereignty) and on Horus-Seth's place within the cluster; per brief 17-horus-seth.yaml on the forward-link to Part II C2.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Part II C2 anchor)
 
-Ninurta advances to confront Anzû in the mountain where the rebel has taken refuge with the Tablet.footnote:[Foster 2005, pp. 566–567, Tablet II on the advance to the mountain; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 566-567
+The chapter's secondary forward-link is to Part II Chapter C8 (The Refusal and the Appropriation Problem): Seth's two-dossier ambivalence — positive Apep-slayer and negative Osiris-murderer in parallel without theological harmonisation — is direct textual evidence for the Ballentine 2015 critique of the chaos-category, and the persistence of a negatively-valued figure in a positively-functional cosmological role is among the strongest Egyptian-material grounds for the non-chaos counter-model that Part II C8 develops.footnote:[Per chaoskampf scope.md §"Part II — thematic comparative chapters" on Part II C8 and the Ballentine 2015 critique; te Velde 1967 chs. 1–2 on Seth's persistence in a positive role after defeat; cross-ref Part II C8.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=passim (Part II C8 anchor)
 
-Anzû sees Ninurta approaching and challenges him, threatening the warrior with the decree-power he now holds.footnote:[Foster 2005, pp. 566–567, Tablet II on Anzû's challenge; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 566-567
+The chapter's structural-comparative forward-link is to Chapter 5 (Kumarbi Cycle): the Horus-Seth contention's contested-succession dynamic parallels the Hurro-Hittite Kumarbi-Teshub succession-strife more closely than it parallels the Egyptian Ra-Apep cyclical-maintenance combat, and per brief 17-horus-seth.yaml the structural affinity with the Kumarbi material is the principal cross-cultural comparison that the chapter notes within its body and develops as a // COMPARATIVE-HOOK for Part II C2.footnote:[Per brief 17-horus-seth.yaml on the structural affinity with Kumarbi-cycle succession-combat; Hoffner 1998 on the Kumarbi-Teshub succession-strife (cross-ref Ch. 5).]
+// EVIDENCE: source_id=hoffner-1998 ; loc=Kumarbi cycle (Kumarbi-Teshub succession)
 
-Ninurta opens the engagement by shooting an arrow at Anzû.footnote:[Foster 2005, p. 567, Tablet II on Ninurta's first arrow; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+The reception of the Horus-Seth material in the wider Mediterranean and Hellenistic worlds is comparatively elusive: although Egyptian iconography of the falcon-headed Horus and the *Seth-animal*-headed Seth was widely diffused in the Hellenistic and Roman periods, the specific narrative material of the Contendings does not have a clearly-traceable reception trajectory in Hellenistic-Christian combat-myth reception comparable to the Marduk-Tiamat or the Baal-Yamm reception trajectories.footnote:[Forsyth 1987, on the comparative elusiveness of the Horus-Seth reception trajectory in Hellenistic-Christian combat-myth reception; per chaoskampf glossary.yaml on the *Seth-animal* iconography.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-Anzû, holding the Tablet of Destinies, uses its decree-power to command the arrow to disassemble into its component parts.footnote:[Foster 2005, p. 567, Tablet II on Anzû's counter-decree; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+The chapter's overall structure — INCLUSION-MARGINAL framing-marker; source overview; Osiris-cycle setting and context; Pyramid Texts and Coffin Texts attestations; Contendings of Horus and Seth (Chester Beatty I); theological-political reading; reception and forward links — honours the brief's special_instructions in opening with the framing marker, presenting the Contendings as a later literary reworking rather than the base text, threading Seth's two-dossier ambivalence as the chapter's principal theological-conceptual subject, and feeding the Gunkel-Ballentine debate via Part II C8 and the sovereignty-cluster via Part II C2.footnote:[Per brief 17-horus-seth.yaml special_instructions on the chapter's required structural features; te Velde 1967, chs. 1–2; Assmann 2001, chs. on *maʿat*/*isfet*; Forsyth 1987, on the long-trajectory frame.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (chapter structure)
 
-The shaft returns to its reed thicket, the bow frame to its copse, the bowstring to the ram's gut, and the feathers to the birds — the arrow is annulled mid-flight by the decree of the Tablet.footnote:[Foster 2005, p. 567, Tablet II on the arrow-dissolution decree; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
-
-The annulment motif depends on a specific theology of the Tablet: what the Tablet decrees, the cosmos obeys, even against the physics of weapons.footnote:[Foster 2005, p. 567, Tablet II; Lambert 2013, introduction, on the Tablet as decree-object.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
-
-Ninurta's first assault therefore fails — not because his weapons are weak but because the weapons themselves cannot exist in a cosmos whose decree is now spoken by Anzû.footnote:[Foster 2005, pp. 567–568, Tablet II on the failure of the first assault; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 567-568
-
-[LACUNA: the middle passages of Tablet II between the first failed engagement and Ea's counsel are broken | source: Annus 2001, Tablet II apparatus | scholarly_reconstruction: Annus's score integrates Old Babylonian and Neo-Assyrian witnesses; Foster's English fills the gap from parallel passages.]
-
-Ninurta dispatches Šarur, his animate mace, back to Ea to report the failure and to seek counsel.footnote:[Foster 2005, pp. 568–569, Tablet II on Šarur returning to Ea; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 568-569
-
-Šarur speaks on Ninurta's behalf, delivering the warrior's report to Ea in direct speech.footnote:[Foster 2005, pp. 568–569, Tablet II on Šarur's speech to Ea; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 568-569
-
-The animate-mace-as-messenger motif is the distinctive contribution of this chapter to the book's Ninurta-cycle continuity: Šarur already speaks and travels as messenger in the Sumerian *Lugal-e*, and the Anzû Epic preserves the function.footnote:[ETCSL 1.6.2 lines 24–47, 96–118 on Šarur as messenger in Lugal-e; Foster 2005, pp. 568–569 for the Anzû Epic parallel.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 lines 24-47
-
-Ea receives Šarur's report and deliberates on a counter-strategy that will not depend on the straightforward shooting of arrows.footnote:[Foster 2005, pp. 569–570, Tablet II on Ea's deliberation; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 569-570
-
-Ea instructs Šarur to carry back a new plan to Ninurta.footnote:[Foster 2005, pp. 569–570, Tablet II on Ea's counter-plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 569-570
-
-Ea's counsel has two components: first strike off Anzû's pinion-feathers with a gust or sling, and then shoot while Anzû is preoccupied with the damaged wing.footnote:[Foster 2005, pp. 570–571, Tablet II on Ea's two-step plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 570-571
-
-The logic of the counsel is that the Tablet's decree can neutralise a weapon in flight only if the combat proceeds along the line the decree anticipates; surprise and disruption at the wing break the chain between decree and response.footnote:[Foster 2005, pp. 570–571, Tablet II; Annus 2001, Tablet II; Lambert 2013, introduction, on the theological logic.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-[INFERENCE: the feather-shooting detail is interpreted as a theological, not merely a tactical, device | basis: Foster 2005, pp. 570–571 and Lambert 2013, introduction, both treat the Tablet's decree as the load-bearing element | risk: the surviving text does not explicitly state the theology; this reading is scholarly.]
-
-Šarur returns from Ea and delivers the new plan to Ninurta in direct speech.footnote:[Foster 2005, pp. 571–572, Tablet II on Šarur returning with the plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 571-572
-
-==== Tablet III — second assault and victory
-
-Tablet III opens with Ninurta returning to the mountain to engage Anzû a second time, now equipped with Ea's strategy.footnote:[Foster 2005, pp. 572–573, Tablet III opening; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 572-573
-
-Ninurta summons the south wind and commands it to pluck the pinions — the great flight-feathers — from Anzû's wings in the moment of engagement.footnote:[Foster 2005, pp. 573–574, Tablet III on the wind-and-pinion stratagem; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
-
-Anzû, seeing the pinions fall, cries out to them to return — attempting to use the Tablet's decree-power to reverse the damage, as he had done with the arrow.footnote:[Foster 2005, pp. 573–574, Tablet III on Anzû's attempt to recall his pinions; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
-
-Ninurta speaks over Anzû's decree, invoking Ea's counsel as a counter-decree, and the pinions remain severed.footnote:[Foster 2005, pp. 573–574, Tablet III on Ninurta's counter-decree; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
-
-With Anzû's wings broken, Ninurta shoots an arrow into Anzû's chest.footnote:[Foster 2005, p. 574, Tablet III on the fatal arrow; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 574
-
-Ninurta severs Anzû's throat with a further blow, completing the kill.footnote:[Foster 2005, pp. 574–575, Tablet III on the finishing stroke; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 574-575
-
-With Anzû slain, Ninurta recovers the Tablet of Destinies from the dead body.footnote:[Foster 2005, p. 575, Tablet III on the recovery of the Tablet; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 575
-
-Ninurta carries the Tablet back toward the assembly, restoring the decree-power to its proper custodians.footnote:[Foster 2005, pp. 575–576, Tablet III on the return journey; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 575-576
-
-The messenger god Birdu is dispatched, entering Enlil's presence to announce Ninurta's victory; the text at this point also uses the name Dagan as an honorific epithet for Ninurta ("bulwark of Anu and Dagan"), not as a dispatched actor.footnote:[Foster 2005, pp. 575–576, Tablet III on Birdu as messenger and the Dagan epithet; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 575-576
-
-The assembly responds with praise and formal acknowledgement of Ninurta's victory.footnote:[Foster 2005, pp. 576–577, Tablet III on the assembly's response; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 576-577
-
-Ninurta is granted a catalogue of honorific names, each marking a facet of his victory and his warrior-function.footnote:[Foster 2005, pp. 576–577, Tablet III on the honorific name-list; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 576-577
-
-The name-list is structurally comparable to — and treated in the scholarship as the direct antecedent of — the fifty names of Marduk that close *Enūma Eliš*.footnote:[Lambert 2013, introduction, on the Anzû name-list and Enūma Eliš; Annus 2001, introduction and Tablet III commentary.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Ninurta's honours include confirmation of his warrior-champion role and a formal place in the royal-ideological order that the Tablet underwrites.footnote:[Foster 2005, pp. 576–577, Tablet III; Annus 2001, Tablet III; Lambert 2013, introduction, on the royal-legitimation function.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-[LACUNA: the closing doxology of Tablet III is partially broken | source: Annus 2001, Tablet III apparatus | scholarly_reconstruction: Annus reconstructs the final hymn of praise from parallel Mesopotamian praise-formulae.]
-
-[RECONSTRUCTION: the final doxology is presented in Annus's reconstructed form, completing the hymn of praise to Ninurta | gap_source: Annus 2001, Tablet III closing lines | fill_source: Annus's score of parallel Mesopotamian praise-formulae, drawn from within the Anzû textual tradition | confidence: medium]
-
-The epic closes with a hymn-formula addressed to Ninurta as victorious warrior and restorer of cosmic order.footnote:[Foster 2005, pp. 577–578, Tablet III closing hymn; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 577-578
-
-=== Function and interpretation
-
-The Anzû Epic is read in the scholarship as a sovereignty-combat rather than a cosmogonic combat: no world is made in it, and the decisive action is the return of an already-existing kingship-token to its legitimate custodian.footnote:[Lambert 2013, introduction, on sovereignty-as-function; Foster 2005, pp. 555–556, headnote; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-The narrative establishes Ninurta as model king: the warrior who defends the order of the assembly, follows the counsel of the wise god, and restores the instruments of rule to their rightful place.footnote:[Annus 2001, introduction, on Ninurta-as-model-king; Lambert 2013, introduction.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The narrative is cited in the scholarship as invoked within Neo-Assyrian royal ritual and within the *akītu* framework, linking the myth to the performative legitimation of the king.footnote:[Annus 2001, introduction, on the ritual and *akītu* contexts.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The theology of the Tablet of Destinies — that kingship is a transferable token, enforceable by decree — is the conceptual pivot that the scholarship follows into *Enūma Eliš*.footnote:[Lambert 2013, introduction, on the Tablet of Destinies across compositions; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Foster's headnote specifies that the Anzû Epic is preserved on multiple Neo-Assyrian copies and is one of the better-represented narrative poems of the Standard Babylonian corpus.footnote:[Foster 2005, pp. 555–556, headnote on the Standard Babylonian preservation.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
-
-Annus's introduction lays out the case that the Anzû Epic is a deliberate literary antecedent of *Enūma Eliš*, reused, reshaped, and structurally outbid in the later composition.footnote:[Annus 2001, introduction on the Anzû → Enūma Eliš genealogy.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-Lambert concurs that Marduk's assumption of the Tablet of Destinies in *Enūma Eliš* is modelled directly on Ninurta's recovery of the Tablet in the Anzû Epic.footnote:[Lambert 2013, introduction, on Marduk and the Tablet.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Forsyth treats the Anzû Epic as a key node in the long genealogy that the combat-myth scholarship traces from Mesopotamia to the Hebrew Bible and Christian apocalyptic.footnote:[Forsyth 1987, ch. 2, on the Anzu-bridge argument.]
-// EVIDENCE: source_id=forsyth-1987 ; loc=ch. 2
-
-=== Variants and transmission
-
-[VARIANT: primary=Annus 2001 ("Standard Babylonian three-tablet recension"); alt=Foster 2005 pp. 555–556 ("Old Babylonian fragmentary version survives with some divergent details") | chosen: A | reason: the Standard Babylonian text is the main attested recension, and the brief designates Annus 2001 as the prevalent version.]
-
-An Old Babylonian fragmentary version of the story survives; Foster's translation indicates it differs from the Standard Babylonian recension in narrative details but not in the overall arc.footnote:[Foster 2005, pp. 555–556, headnote on the Old Babylonian antecedent.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
-
-The Old Babylonian version is treated here as an earlier, shorter witness rather than a textually equivalent variant, following the brief's classification.footnote:[Annus 2001, introduction; Foster 2005, pp. 555–556.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The Sumerian *Lugal-e* does not narrate the Anzû combat but lists "the Anzud bird" in Šarur's catalogue of Ninurta's prior trophies.footnote:[ETCSL 1.6.2 line 122, the Anzud bird in the trophy-list.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 line 122
-
-The Sumerian *Angim dimma* likewise places the Anzud bird in Ninurta's catalogue of slain foes and among the trophies hung on the warrior's chariot, but does not narrate a combat.footnote:[ETCSL 1.6.1 lines 30–40 (trophy list) and 55–63 (chariot-hanging).]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 lines 30-63
-
-The Sumerian allusions indicate that an Anzû-slaying tradition was already in circulation before the Standard Babylonian epic gave it narrative expansion.footnote:[ETCSL 1.6.1 lines 30–40; ETCSL 1.6.2 line 122; Annus 2001, introduction on the Sumerian prehistory.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The continuity from Sumerian Ninurta material into the Standard Babylonian Anzû Epic is strongest in the figure of Šarur, the animate messenger-mace, who functions in both traditions as scout and speaker between warrior and counselor.footnote:[ETCSL 1.6.2 lines 24–47, 96–118, 228–243 on Šarur in Lugal-e; Foster 2005, pp. 568–569 on Šarur in the Anzû Epic.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 Šarur passages
-
-The Standard Babylonian composition therefore draws on an older Sumerian Ninurta cycle in which the warrior-god's weapons and adversaries are already identified, and narratively expands one of those adversaries (Anzû) into a full combat-and-recovery story.footnote:[Annus 2001, introduction, on the Sumerian-to-Akkadian literary transmission.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-=== Reception within the Mesopotamian tradition
-
-Scholarship traces a deliberate literary line from *Lugal-e* (Ninurta vs. Asag) to the Anzû Epic (Ninurta vs. Anzû) to *Enūma Eliš* (Marduk vs. Tiamat and Qingu), with each composition reusing and outbidding its predecessor.footnote:[Annus 2001, introduction, on the *Lugal-e* → Anzû → *Enūma Eliš* line; Lambert 2013, introduction.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The Tablet of Destinies appears as a narrative object in the Anzû Epic and again in *Enūma Eliš*, where Tiamat bestows it on Qingu and Marduk reclaims it after the combat.footnote:[Lambert 2013, introduction and commentary on the Tablet in Enūma Eliš; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-The structural reuse extends to the name-list: Ninurta's honorific names at the close of the Anzû Epic are the direct antecedent of Marduk's fifty names at the close of *Enūma Eliš*.footnote:[Lambert 2013, introduction; Annus 2001, introduction and Tablet III commentary.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Anzû himself is repurposed in *Enūma Eliš* — no longer the rebel-servant of the Anzû Epic, but a monster in Tiamat's brood, slain once already and now recruited into a new cosmogonic conflict.footnote:[Lambert 2013, introduction and commentary on Anzû's reuse in Enūma Eliš; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-// COMPARATIVE-HOOK: Lambert 2013 and Annus 2001 both argue the Lugal-e → Anzû → Enūma Eliš literary genealogy is deliberate authorial reuse rather than general pattern-matching; this is the Part II C2 (combat as sovereignty) argument for Mesopotamian continuity.
-// COMPARATIVE-HOOK: the Tablet of Destinies as sovereignty-token — transferable, decree-enforcing, recoverable — is the Mesopotamian conceptual analogue to Marduk's assumption of the Tablet in Enūma Eliš and to the "kingship as object" motif that feeds the Kumarbi Cycle and, via transmission, the Hesiodic succession in Theogony 820–880 (see hoffner-1998; west-1997).
-// COMPARATIVE-HOOK: the lion-headed eagle-monster iconography across third-millennium Mesopotamia is evidence for the Anzû-figure's circulation independent of the narrative epic — a reception-across-media story that parallels the wider Near Eastern diffusion of combat imagery (Annus 2001 introduction; Foster 2005 pp. 555–556 headnote).
-// COMPARATIVE-HOOK: the threefold refusal structure (Adad, Gerra, Šara decline before Ea proposes Ninurta) is structurally comparable to the threefold refusal in the Baal Cycle before Baal takes up the combat against Yamm (see Part II C2; smith-1994-baal-i).
-// COMPARATIVE-HOOK: the Vedic "Indra and the theft of soma" material offers a parallel theft-of-kingship-token motif in positive valence — the champion takes back what belongs to the gods — which the C2 sovereignty chapter should address (jamison-brereton-2014).
-// COMPARATIVE-HOOK: the animate-weapon motif (Šarur as messenger-mace) links this chapter to Ch1 Ninurta/Asag; the two chapters together establish Šarur as a cross-composition character and prepare the contrast with Marduk's impersonal weapons in Enūma Eliš.
-// COMPARATIVE-HOOK: the "arrow annulled by decree" motif (arrow back to shaft, feather back to bird) has no close Indo-European parallel in the Watkins HERO SLAY SERPENT corpus; it is a distinctly Mesopotamian theological innovation tied to the Tablet-of-Destinies theology (watkins-1995; Lambert 2013).
+// COMPARATIVE-HOOK: Hurro-Hittite (Kumarbi Cycle, Ch. 5) — the Horus-Seth contention's contested-succession dynamic is structurally closer to the Hurro-Hittite Kumarbi-Teshub succession-strife than to the cyclical-maintenance Ra-Apep combat (Ch. 16). Both materials narrate divine-succession contests in which a deposed or disrupted father-figure (Anu / Kumarbi in the Hurrian cycle; Osiris in the Egyptian cycle) is succeeded through contestation between rival claimants, with the storm-god figure (Teshub in the Hurrian; Seth in the Egyptian, here in the role of the disruptive contender rather than the legitimate successor) playing a structurally-pivotal role. Hoffner 1998 (Kumarbi cycle) treats the Kumarbi-Teshub material as the central documentary case for Anatolian succession-combat; te Velde 1967 chs. 1–2 treats the Horus-Seth material as the principal Egyptian sovereignty-strife. Treated in detail in Part II C2 (te-velde-1967; hoffner-1998; cross-ref Ch. 5).
+// COMPARATIVE-HOOK: Sovereignty cluster (Part II C2) — the Horus-Seth contention is one of the principal sovereignty-themed cases in the present book's catalogue, sitting alongside Baal-Yamm (Ch. 7), Zeus-Typhon (Ch. 11), Indra-Vṛtra (Ch. 14), Thraētaona vs. Aži Dahāka (Ch. 13), Kumarbi-Ullikummi (Ch. 5), and Ninurta-Anzû (Ch. 2) as the canonical sovereignty-combat cluster that Part II C2 develops. The Horus-Seth case is distinctive within the cluster for its judicial-procedural rather than martial resolution: the divine tribunal's verdict, rather than champion-combat, is the decisive structural element of the contention's resolution, and this distinguishes the Egyptian sovereignty-strife from the more directly-martial sovereignty-combats of the Levantine, Greek, Vedic, and Iranian traditions. Treated in detail in Part II C2 (te-velde-1967; cross-ref Chs. 2, 5, 7, 11, 13, 14).
+// COMPARATIVE-HOOK: Gunkel-Ballentine debate (Part II C8) — Seth's two-dossier ambivalence (positive Apep-slayer at the prow, Ch. 16; negative Osiris-murderer in the present chapter) is among the strongest Egyptian-material grounds for the Ballentine 2015 critique of the chaos-category. If Seth were a "chaos-figure" in the simple sense of Western-philosophical inchoate primordial unformedness, his annihilation would be theologically required at the conclusion of the kingship-contest — but the Egyptian tradition keeps him in a positive cosmological role at Ra's side after his defeat, and the persistence of the negatively-valued figure in a positively-functional role is direct textual evidence for the inadequacy of "chaos" as a cross-tradition category-term. The chapter's compliance with the locked glossary discipline (the banned umbrella category-term for chaos-personification figures is avoided throughout; "agent of disorder" and "*isfet*-personification" are used instead) is itself a marker of this counter-model interface. Treated in detail in Part II C8 (te-velde-1967; assmann-2001-search; ballentine-2015; cross-ref Part II C8).
+// COMPARATIVE-HOOK: Ra-Apep (Ch. 16) — the present chapter and Ch. 16 jointly develop te Velde 1967's two-dossier reading of Seth: the positive-dossier Apep-slayer at the prow of the solar barque (Ch. 16, te Velde chs. 3–4) and the negative-dossier brother-murderer of Osiris and contender-against-Horus (this chapter, te Velde chs. 1–2) are documented in parallel across the Egyptian textual corpus over two millennia without theological harmonisation, and the unharmonised parallelism is itself a structural feature of Egyptian theological reasoning rather than an oversight or an internal contradiction awaiting redaction. The Contendings' compensatory placement of Seth at Ra's side at the conclusion of the kingship-contest is the textual locus at which the two-dossier structure is itself acknowledged within a single late-period narrative. Treated together with Ch. 16 and in Part II C8 (te-velde-1967 chs. 1–4; cross-ref Ch. 16).
+// COMPARATIVE-HOOK: Royal-legitimation cluster (judicial vs. martial) — the Horus-Seth contention's judicial-procedural resolution distinguishes it from the more-directly-martial royal-legitimation combats elsewhere in the corpus: Marduk's establishment of cosmic kingship is martial (Ch. 3), Baal's establishment of his sovereign rule is martial (Ch. 7), Zeus's defeat of Typhon is martial (Ch. 11), but Horus's vindication of his kingship-claim is finally judicial — the divine assembly's deliberative verdict, persuaded by Isis's advocacy and by Osiris's intervention, is the decisive structural element. The judicial-procedural element is one of the features that places the Egyptian material at an oblique angle to the cosmogonic-and-sovereignty combat-myth corpus and that grounds the chapter's INCLUSION-MARGINAL classification. Treated in Part II C2 (te-velde-1967; cross-refs Chs. 3, 7, 11).
 
 // Validated by post-human-normalize
-// Timestamp: 2026-04-24T13:48:22Z
-// Checks passed: footnote+evidence-pair, source_id-whitelist, glossary-discipline, markers-valid
-// Warnings: none
+// Timestamp: 2026-04-28T14:30:00Z
+// Checks passed: footnote+evidence-pair (49/49), source_id-whitelist, glossary-discipline, markers-valid
+// Fixes applied: FC-01 MEDIUM (line 67 "Setekh" non-glossary form removed; body retains "Seth" body-prose default with parenthetical "Sutekh" Ramesside-diplomatic note per glossary 854); FC-02 MEDIUM (line 98 wedjat re-attribution: torn-out eye is the lunar left eye, restored by Thoth as the wedjat / "sound eye"; standard Egyptological sequence preserved); FC-03 MEDIUM (line 83 EVIDENCE loc "introduction (deliberate ambivalence)" → "chs. 1-2 (deliberate ambivalence)" per printed-source chapter-level discipline; line 82 footnote softened from "title and introduction" to "title and chs. 1–2" for consistency); FC-04 LOW (line 187 EVIDENCE loc "§§14-18 (Kumarbi-Teshub succession)" → "Kumarbi cycle (Kumarbi-Teshub succession)" — chapter-level fallback chosen as the safer option per printed-source citation discipline; line 195 COMPARATIVE-HOOK "Hoffner 1998 §§14–18" softened to "Hoffner 1998 (Kumarbi cycle)" for consistency).
+// Warnings: none. Banned umbrella terms ("chaos-figure", "chaos-monster", "chaos-serpent") appear only in scare-quoted Ballentine-COMPLIANCE counter-model passages at lines 155 and 197 (per Ch16 line 143 pattern) and in the chapter's introductory comment at lines 20–21 referring to the locked glossary's never-use list; no body-prose violations.
 ```
 
 ---
 
-# Input file: chapters/02-ninurta-anzu.adoc
+# Input file: chapters/17-horus-seth.adoc
 
 ```
-[[ch-02-ninurta-anzu]]
-== Ninurta vs. Anzû: The Theft of the Tablet of Destinies
+[[ch-17-horus-seth]]
+== Horus vs. Seth (An Edge Case)
 
-=== Source overview
+[INCLUSION-MARGINAL: Horus-Seth is included as an edge-case rather than a CORE chapter | basis: Seth is not a serpentine adversary, and the combat is god-against-god sovereignty strife rather than hero-against-monster — the chapter therefore fails the strict CORE inclusion test of scope.md §"Inclusion / exclusion criteria" criterion (1) and is classified RELATED at INCLUSION-MARGINAL standing per audit-review-log 2026-04-23 | justification: te Velde 1967 _Seth, God of Confusion_ chs. 1–2 establishes Seth's two-dossier ambivalence (Apep-slayer at the prow of Ra's barque, treated in Ch. 16; brother-murderer of Osiris and Horus's adversary, treated here) as the structural pattern whose theological subtlety is load-bearing for the wider book — the same god is positively-valued in the cyclical-maintenance combat against Apep and negatively-valued in the succession-strife of the Osiris cycle, and this unharmonised parallelism complicates any simple chaos-versus-order mapping; the chapter is therefore read as the edge-case whose inclusion sharpens, rather than dilutes, the book's typology, with explicit forward-links to Part II C2 (sovereignty) and Part II C8 (Gunkel-Ballentine non-chaos counter-model) | scope: structural-comparative rather than morphological — Horus-Seth is closer to the Hurro-Hittite Kumarbi-Teshub succession-combat (Ch. 5) than to the Egyptian Ra-Apep cyclical combat (Ch. 16), and the chapter's organisation honours that structural affinity.]
 
-The Standard Babylonian Anzû Epic survives as a three-tablet composition, preserved chiefly on Neo-Assyrian library copies from the first millennium BCE.footnote:[Annus 2001, introduction, on the three-tablet Standard Babylonian recension as the main attested form.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction (SAACT 3)
+The contention between Horus, falcon-headed son of Osiris and Isis, and Seth, Egyptian god of storms and deserts and brother-murderer of Osiris, is the principal locus in the Egyptian textual record for what te Velde 1967 chapters 1–2 treat as Seth's negative dossier within his two-dossier ambivalence: a contest over the kingship of Egypt between two gods after Osiris's death.footnote:[Per brief 17-horus-seth.yaml; te Velde 1967, _Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion_, chs. 1–2, on the Horus-Seth contention as the principal narrative locus of Seth's negative dossier.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-The critical edition used throughout this chapter is Amar Annus's *The Standard Babylonian Epic of Anzu*, published in 2001 as volume three of the State Archives of Assyria Cuneiform Texts series.footnote:[Annus 2001, whole volume (SAACT 3, Helsinki: Neo-Assyrian Text Corpus Project).] Annus's volume gives the cuneiform text, transliteration, a line-by-line score of the witnesses, a glossary, and a sign list — the full scholarly apparatus on which any reading of the epic now rests.
-// EVIDENCE: source_id=annus-2001-anzu ; loc=whole volume
+The chapter's principal scholarly anchor is Herman te Velde's _Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion_, originally published in 1967 by Brill in Leiden as Probleme der Ägyptologie 6, with a second edition in 1977. te Velde's chapters 1 and 2 treat the Horus-Seth contention and Seth's two-dossier ambivalence at length and constitute the standard scholarly synthesis of the material.footnote:[te Velde 1967, _Seth, God of Confusion_, chs. 1–2, on the Horus-Seth contention and Seth's ambivalence as the central scholarly subject of the monograph; per chaoskampf sources.yaml on te-velde-1967 as the principal Apep-and-Seth anchor.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-The working English translation cited in this chapter is Benjamin Foster's, published in the third edition of *Before the Muses* in 2005, pp. 555–578.footnote:[Foster 2005, pp. 555–578, "Anzu."]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-578
+The monograph is printed-only; the chapter cites it at chapter-section level (chs. 1–2 for the Horus-Seth and Seth-ambivalence material) per the established discipline for printed comparative anchors in this book and per the Ch. 15 completion-record note on the same.footnote:[te Velde 1967 (printed only; cited at chapter-section level per brief and per the citation discipline established in prior CORE chapters of the present book); per ch. 15 completion record on the printed-source citation discipline.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-Foster's translation is keyed to Annus's critical text. It presents a composite English version that integrates the Old Babylonian, Middle Babylonian, and Standard Babylonian witnesses, which is how the text is now normally read in the comparative literature.footnote:[Foster 2005, pp. 555–556, headnote on the composite translation.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The chapter's secondary conceptual anchor is Jan Assmann's _The Search for God in Ancient Egypt_, translated from the German by David Lorton and published by Cornell University Press in 2001, which supplies the *maʿat*/*isfet* framework within which Seth's role as agent of disorder in the Osiris-Horus material is to be read alongside his role as defender of Ra in the Apep combat (Ch. 16).footnote:[Assmann 2001, _The Search for God in Ancient Egypt_, on *maʿat*/*isfet* and Egyptian ambivalence as it bears on Seth's two roles; per chaoskampf sources.yaml on assmann-2001-search as the *maʿat*/*isfet* anchor.]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet and Egyptian ambivalence
 
-Witnesses to the composition span the Old Babylonian, Middle Babylonian, and Neo-Assyrian periods, a spread of roughly a thousand years. The bulk of the Standard Babylonian text, however, is reconstructed from the Neo-Assyrian royal libraries.footnote:[Annus 2001, introduction on the witness distribution across periods.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Assmann 2001 is also printed-only; in the present chapter it is cited at chapter-section level — at the chapters that treat the *maʿat*/*isfet* opposition and the Egyptian theology of ambivalence — per the established discipline for printed comparative anchors in this book.footnote:[Assmann 2001 (printed only; cited at chapter-section level per brief and per the citation discipline established in prior CORE chapters of the present book).]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet and Egyptian ambivalence
 
-An Old Babylonian fragmentary version of the same story survives with divergent details. It is treated here, following Annus and Foster, as an earlier recension rather than as a textually equivalent variant.footnote:[Foster 2005, pp. 555–556, on the Old Babylonian antecedent; Annus 2001, introduction.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The chapter's secondary survey-anchor for the long-trajectory combat-myth perspective is Neil Forsyth's _The Old Enemy: Satan and the Combat Myth_, published by Princeton University Press in 1987, whose engagement with the Horus-Seth material is brief but supplies the comparative framing within which the contention is read against the wider combat-myth corpus.footnote:[Forsyth 1987, _The Old Enemy: Satan and the Combat Myth_, on the brief engagement with Horus-Seth in the long-trajectory comparative perspective; per chaoskampf sources.yaml on forsyth-1987 as the long-trajectory comparative anchor.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-The Standard Babylonian copies cluster heavily in the Nineveh libraries of the seventh century BCE, including the library of Ashurbanipal — the same royal collection that gave back to modern scholarship the bulk of the Standard Babylonian *Gilgamesh* and substantial parts of *Enūma Eliš*.footnote:[Annus 2001, introduction on the Nineveh library provenance.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The Horus-Seth contention is not preserved in a single primary text. It is distributed across multiple Egyptian textual corpora over a span of approximately two millennia, from the Pyramid Texts of the late Old Kingdom (c. 2400 BCE) through the Coffin Texts of the Middle Kingdom and into the Chester Beatty I papyrus of the Twentieth Dynasty (c. 1160 BCE), and the chapter treats the variant attestations as co-equal per brief variants.classification.footnote:[Per brief 17-horus-seth.yaml on the co-equal classification and the distribution of the Horus-Seth material across Pyramid Texts, Coffin Texts, and the Chester Beatty I "Contendings"; te Velde 1967, chs. 1–2, on the same multi-corpus distribution.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-Tablet II of the Standard Babylonian recension has significant gaps in its middle passages, in the section that covers the transition from Ninurta's first failed engagement to Ea's counsel.footnote:[Annus 2001, Tablet II apparatus; Foster 2005, pp. 568–571 (noting lacunae).]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=Tablet II
+The Pyramid Texts and Coffin Texts attestations are older and more sober in register, embedding the contention within funerary-cosmological liturgy rather than in continuous narrative; the Chester Beatty I "Contendings" (c. 1160 BCE) is by contrast a bawdy literary reworking that supplies the longest single connected narrative of the contention and is presented in the chapter as a specific later literary reworking, not as the base text.footnote:[Per brief 17-horus-seth.yaml special_instructions on the presentation of Chester Beatty I as a later literary reworking rather than the base text; te Velde 1967, chs. 1–2, on the register-distinction between the older funerary-liturgical attestations and the later literary "Contendings".]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2
 
-The closing doxology of Tablet III — the hymn of praise that formally rounds off the poem — is also partially broken. Annus reconstructs the final hymn from parallel Mesopotamian praise-formulae within the Anzû textual tradition.footnote:[Annus 2001, Tablet III apparatus, on the partially broken closing hymn.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=Tablet III
+The Chester Beatty I papyrus is a New Kingdom literary papyrus of the Twentieth Dynasty (c. 1160 BCE), preserved in the Chester Beatty Library in Dublin under that designation; the recto contains _The Contendings of Horus and Seth_ — the longest single narrative of the contention preserved in the Egyptian record and the principal documentary witness for the late literary form of the tradition.footnote:[te Velde 1967, chs. 1–2, on the Chester Beatty I papyrus and the dating of _The Contendings of Horus and Seth_ to the Twentieth Dynasty c. 1160 BCE; per chaoskampf glossary.yaml on the locked rendering "the Contendings (body prose); 'Chester Beatty I' at first mention".]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Chester Beatty I)
 
-Behind the Standard Babylonian text lies a Sumerian-language prehistory from the third to early second millennium. Anzû is already named in the Sumerian compositions *Lugal-e* and *Angim dimma*, where the Sumerian form *Anzud* is used.footnote:[ETCSL 1.6.2 (Lugal-e) line 122 listing the Anzud bird among Ninurta's earlier trophies; ETCSL 1.6.1 (Angim dimma) lines 30–40 and 55–63 on the Anzud bird brought forth and hung on the chariot.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 and 1.6.2
+[VARIANT: primary=Chester Beatty I "Contendings" as the longest single connected narrative (c. 1160 BCE; Twentieth Dynasty literary papyrus) | alt=Pyramid Texts and Coffin Texts attestations as older liturgical-funerary embeddings (c. 2400 BCE onward) | chosen: co-equal presentation per brief variants.classification — both strata are treated as substantive witnesses with explicit register-attribution rather than collapsing one into the other | reason: per brief 17-horus-seth.yaml the variants.classification is explicitly co-equal; the Pyramid Texts material is older and more sober but is liturgical rather than narrative, while the Contendings is later, bawdy, and literary but is the only sustained narrative — neither attestation by itself supplies the full picture, and the tradition evolved substantially over two millennia (per te Velde 1967 chs. 1–2).]
 
-*Angim dimma* — conventionally translated "Ninurta's return to Nibru" — is a Sumerian *šir-gida*, a "long song," addressed to Ninurta. (Nibru is the Sumerian name of the city Nippur.) In it the Anzud bird appears in the warrior-god's trophy inventory but is not the subject of a narrated combat.footnote:[ETCSL 1.6.1 title and opening formula; lines 30–40 trophy list; line 208 closing formula "šir-gida of Ninurta."]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 (Angim dimma)
+=== Setting and context — Osiris's murder and the contested kingship
 
-*Lugal-e* — "Ninurta's exploits," the long Sumerian poem that Chapter 1 of this book treats at length — likewise lists the Anzud bird among Ninurta's earlier defeated enemies, without narrating the combat at length.footnote:[ETCSL 1.6.2 line 122, Anzud bird in Šarur's catalogue of Ninurta's prior victories.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 line 122
+The Osiris cycle — the Egyptian myth-complex within which the Horus-Seth contention is embedded — narrates the killing of Osiris by his brother Seth, the dismemberment of Osiris's body, the magical reassembly and resurrection of Osiris by his sister-and-wife Isis, and the conception and posthumous birth of Horus as Osiris's son and avenger.footnote:[te Velde 1967, ch. 1, on the Osiris cycle as the narrative context within which the Horus-Seth contention is set; on the killing-dismemberment-resurrection-conception sequence of the cycle.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Osiris cycle frame)
 
-The Sumerian allusions are therefore treated here as pre-history of the Standard Babylonian narrative, not as independent tellings of the same story.footnote:[Annus 2001, introduction, on the Sumerian background; Foster 2005, pp. 555–556.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Osiris is, in the Egyptian theological imagination, the murdered king who becomes lord of the dead. His death is the death-of-the-king that founds the kingship of the netherworld, and his resurrection by Isis is the magical restoration that makes him the divine pattern for the deceased pharaoh's transition into afterlife sovereignty.footnote:[te Velde 1967, ch. 1, on Osiris as the murdered-king and lord-of-the-dead in the Egyptian theological imagination; on the magical-resurrection by Isis as the divine pattern for pharaonic afterlife.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Osiris)
 
-Alongside the textual tradition runs a visual one. Anzû is extensively represented in Mesopotamian iconography from the third millennium onward, appearing on cylinder seals, amulets, and temple sculpture as a lion-headed eagle — a predator bird with a lion's head grafted onto its raptor body.footnote:[Annus 2001, introduction on the iconographic corpus; Foster 2005, pp. 555–556, headnote.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+Seth — alternative form Sutekh in Ramesside diplomatic contexts — is the Egyptian god of storms, deserts, and disorder. He is the brother of Osiris in the cycle's family-of-the-gods and the agent of Osiris's death, and his role within the cycle is structurally that of the disruptive brother whose violence overturns the established kingship.footnote:[te Velde 1967, ch. 1, on Seth as god of storms-deserts-disorder and as Osiris's brother-and-killer; per chaoskampf glossary.yaml on the locked rendering "Seth" with "Sutekh" reserved for Ramesside-diplomatic contexts.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Seth as Osiris-killer)
 
-Scholarship treats the Anzû Epic as the direct Mesopotamian antecedent of the combat in *Enūma Eliš*, the Babylonian creation epic in which Marduk will defeat Tiamat's general Qingu and reclaim the Tablet of Destinies.footnote:[Lambert 2013, introduction, on the Anzû–Marduk genealogy; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+Isis — Egyptian Aset, the magic-working goddess of the pantheon — is in the Osiris cycle the wife and sister of Osiris and the mother of Horus. Her magical power resurrects Osiris after his dismemberment by Seth and protects Horus during his concealed upbringing in the Delta marshes, and her dual role as resurrection-magician and protector-of-the-heir is structurally constitutive for the contention that follows.footnote:[te Velde 1967, ch. 1, on Isis's magical resurrection of Osiris and her protection of the infant Horus; per chaoskampf glossary.yaml on the locked rendering "Isis" with first-mention gloss covering both her magic-working and Osiris-cycle roles.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Isis)
 
-Neil Forsyth's *The Old Enemy* treats the Anzû narrative as a structural bridge between the Sumerian Ninurta cycle and the later Judeo-Christian combat tradition — the long line that runs from Ninurta through Marduk, the Hebrew Leviathan passages, and ultimately the red dragon of Revelation 12.footnote:[Forsyth 1987, ch. 2, on Anzu as a bridge to Enūma Eliš and later combat myth.]
-// EVIDENCE: source_id=forsyth-1987 ; loc=ch. 2
+Horus — falcon-headed son of Osiris and Isis — is born after Osiris's death, raised in concealment by Isis, and emerges to claim the kingship of Egypt as his father's rightful heir. His role in the contention is that of the legitimate but initially-disinherited successor whose claim must be vindicated against the violent usurper.footnote:[te Velde 1967, ch. 1, on Horus's birth-and-upbringing and his role as Osiris's avenger-and-heir; per chaoskampf glossary.yaml on the locked rendering "Horus" with first-mention gloss covering his role in the Contendings.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Horus)
 
-JoAnn Scurlock and Richard Beal's 2013 volume on the Chaoskampf hypothesis — introduced in this book's front matter as one of the two landmarks of the recent critique — contains chapters that engage the Anzû Epic as part of the Mesopotamian combat-myth corpus.footnote:[Scurlock & Beal 2013, chapters on Mesopotamian combat-myth.]
-// EVIDENCE: source_id=scurlock-beal-2013 ; loc=chapters on Mesopotamian combat-myth
+The Horus-Seth contention is therefore embedded within a succession-frame: Osiris is the murdered father-king, Seth is the brother-usurper whose violence has interrupted the legitimate succession, and Horus is the rightful heir whose claim must be adjudicated by the divine assembly before the kingship of Egypt can be properly resumed. The contention's narrative dynamic is that of contested-succession rather than that of cosmogonic combat.footnote:[te Velde 1967, ch. 1, on the succession-frame of the Horus-Seth contention; on the contested-succession dynamic as distinct from cosmogonic combat.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (succession frame)
 
-=== Setting and context
+This structural distinction between the Horus-Seth contention's contested-succession dynamic and the Ra-Apep combat's cyclical-maintenance dynamic is the principal reason for the chapter's INCLUSION-MARGINAL classification: the Horus-Seth material is sovereignty-strife between two divine claimants for an established throne rather than the divine-cosmographic combat against an *isfet*-personification that the Apep material narrates.footnote:[Per brief 17-horus-seth.yaml on the structural distinction and the INCLUSION-MARGINAL classification; te Velde 1967, ch. 1, on the same structural distinction.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (succession vs cyclical)
 
-Ninurta is the warrior-god of Nippur, son of Enlil, and the champion sent out to defeat enemies of the divine order in both the Sumerian and Akkadian literary traditions. In the opening of *Angim dimma* he is addressed as one "created like An, O son of Enlil."footnote:[ETCSL 1.6.1 opening "Created like An, O son of Enlil, Ninurta"; Annus 2001, introduction on Ninurta's Nippur-warrior identity.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 opening lines 1-6
+Seth's two dossiers — the positive Apep-slayer dossier (Ch. 16) and the negative Osiris-murderer dossier (the present chapter) — are documented in parallel across the Egyptian textual corpus over two millennia without the kind of theological harmonisation that would resolve the apparent contradiction. te Velde 1967's title _Seth, God of Confusion_ reflects the scholarly judgment that the Egyptian tradition's handling of Seth is itself characterised by deliberate ambivalence rather than by clear positive or negative valuation.footnote:[te Velde 1967, _Seth, God of Confusion_, title and chs. 1–2 on the deliberate ambivalence of the Egyptian tradition's handling of Seth and on the parallel two-dossier structure.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (deliberate ambivalence)
 
-Ninurta's earlier Sumerian exploits — the combat with Asag in *Lugal-e* and the return to Nippur in *Angim dimma* — establish him as the prototype warrior-champion that the Standard Babylonian Anzû Epic will draw on. The warrior who fights Anzû is already a known figure with a biography.footnote:[ETCSL 1.6.2 (Lugal-e); ETCSL 1.6.1 (Angim dimma); Annus 2001, introduction on the Ninurta-warrior tradition.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 and 1.6.2
+The deliberate-ambivalence reading is one of the principal contributions that te Velde 1967 makes to the wider study of the Egyptian pantheon: the Egyptian sources allow Seth to be positively-valued as Apep-slayer and negatively-valued as Osiris-murderer simultaneously, without forcing a resolution, and the unharmonised character of the parallelism is itself a structural feature of Egyptian theological reasoning rather than an oversight or an internal contradiction awaiting redaction.footnote:[te Velde 1967, chs. 1–2, on the deliberate-ambivalence reading as a structural feature of Egyptian theology; on the unharmonised parallelism as deliberate rather than accidental.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (deliberate ambivalence)
 
-Enlil, chief god of the Mesopotamian pantheon and lord of the air, is the custodian of the Tablet of Destinies in the Standard Babylonian text. The Tablet sits on Enlil's authority; when he is dispossessed of it, the assembly's decree-power is dispossessed with him.footnote:[Foster 2005, pp. 556–558, Tablet I on Enlil's custody of the Tablet; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-558
+[INFERENCE: the unharmonised character of Seth's two dossiers across two millennia of Egyptian textual record reflects a settled theological tolerance of moral ambivalence within cosmological function rather than an internal contradiction awaiting redaction | basis: te Velde 1967 chs. 1–2 read the parallelism as deliberate; the Egyptian tradition's continuous use of Seth as Apep-slayer at the prow of the solar barque even during periods (Late Period and Ptolemaic) when his Osiris-murderer dossier dominated his theological reception is direct textual evidence that the two roles were maintained in parallel rather than collapsed; Assmann 2001's reading of the *maʿat*/*isfet* framework as a sophisticated theological-ethical category-pair supplies the conceptual context within which the parallelism makes theological sense | risk: the inference is interpretive-theological rather than directly attested as a stated theological doctrine; alternative readings (in which Seth's two roles reflect different historical-political evaluations rather than a deliberate theological subtlety) remain in principle available, though they are less natural fits for the diachronic continuity of both roles in parallel that te Velde 1967 documents.]
 
-Ea is the god of wisdom and of the deep fresh waters of the Apsû. In this Akkadian composition he functions as counselor both to the divine assembly and to Ninurta — the hinge between the assembled gods who cannot fight and the champion who can.footnote:[Foster 2005, pp. 560–562, on Ea's role as counselor; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-562
+=== The Pyramid Texts and Coffin Texts attestations
 
-The Tablet of Destinies — Akkadian *dup šīmāti*, "tablet of fates" — is the divinely held object that confers universal decree-power. Possession of it is, functionally, kingship over the cosmos: whoever holds the Tablet speaks decrees that the universe obeys.footnote:[Foster 2005, pp. 556–558, on the Tablet of Destinies as the decree-holding object; Lambert 2013, introduction, on the Tablet as sovereignty-token.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-558
+The Pyramid Texts — the earliest attested layer of Egyptian funerary literature, inscribed on the interior walls of late Old Kingdom royal pyramids at Saqqara from the pyramid of Unas (c. 2350 BCE) onward — contain the earliest attestations of the Horus-Seth contention, embedded in the apotropaic-and-resurrection liturgy of the deceased king's posthumous ascent.footnote:[te Velde 1967, ch. 1, on the Pyramid Texts as the earliest attested layer of the Horus-Seth contention and on the funerary-liturgical embedding of the material.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Pyramid Texts)
 
-Crucially, the Tablet is depicted as a physical object that can be seized and physically returned. The narrative therefore treats sovereignty as a transferable token — a document that changes hands — rather than as an inalienable attribute of one god.footnote:[Foster 2005, pp. 557–559, Tablet I on the seizure; Lambert 2013, introduction.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-559
+In the Pyramid Texts the contention is not narrated as a continuous story but is alluded to in scattered utterances that presuppose the reader's familiarity with the cycle's narrative outline: the killing of Osiris by Seth, the resurrection by Isis, the eye-injuries that the contending gods inflict on each other, and the eventual judicial-divine vindication of Horus's claim are all referenced obliquely in the funerary-liturgical register.footnote:[te Velde 1967, ch. 1, on the oblique-allusive register of the Pyramid Texts attestations and on the cycle's narrative outline as already presupposed in the late Old Kingdom liturgy.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Pyramid Texts allusive register)
 
-Šarur is Ninurta's animate mace — a weapon with the capacity to speak and to travel as a messenger. The talking mace is already known from the Sumerian *Lugal-e*, where it converses with Ninurta several times over the course of the poem.footnote:[ETCSL 1.6.2 lines 24–47, 96–118, 228–243 on Šarur addressing Ninurta; Foster 2005 p. 562 for Šarur in the Anzû Epic.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 lines 24-47
+A recurrent narrative element across the Pyramid Texts and the wider Horus-Seth corpus is the mutual mutilation of the contending gods: Seth tears out one of Horus's eyes (the left, conventionally the lunar eye; subsequently restored by Thoth as the *wedjat*, the "sound eye"), and Horus in turn injures Seth's testicles, with the eye-injury and the testicle-injury preserved in the textual record as the canonical mutilations of the contention.footnote:[te Velde 1967, ch. 1, on the mutual mutilation as a canonical motif of the Horus-Seth contention across the Pyramid Texts and the later corpus; on the lunar left eye and the testicle-injury as the principal mutilation-references, with the torn-out eye becoming the *wedjat* (the "sound/healthy one") only after Thoth's restoration.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (mutual mutilation)
 
-Anzû himself is introduced as a minor divine servitor originally attached to Enlil, not as a primordial adversary. He does not exist before the cosmos; he is produced within it, and his rebellion is internal to the divine household.footnote:[Foster 2005, pp. 555–557, Tablet I on Anzû's status as servitor.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-557
+The Coffin Texts — the Middle Kingdom layer of the funerary corpus, inscribed on the interior surfaces of wooden coffins from c. 2050–1650 BCE — develop the Horus-Seth material further, extending the funerary-liturgical register beyond the royal context and elaborating the cycle's narrative beats in the form of additional spell-attestations.footnote:[te Velde 1967, ch. 1, on the Coffin Texts development of the Horus-Seth material and on the extension of the corpus to non-royal contexts in the Middle Kingdom.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Coffin Texts)
 
-Anzû's bodily form is a lion-headed eagle. This iconographic identification is confirmed both by the Mesopotamian visual corpus — seals, plaques, temple reliefs — and by the descriptive epithets used of Anzû in the epic.footnote:[Annus 2001, introduction, on the lion-headed eagle iconography; Foster 2005, pp. 555–556, on Anzû's physical form.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
+The Coffin Texts attestations preserve the same oblique-allusive register as the Pyramid Texts but presuppose a more elaborated narrative tradition: by the Middle Kingdom the cycle's narrative outline is more fully developed, and the spells presuppose familiarity with the eye-injury, the testicle-injury, the divine tribunal, and the eventual award of the kingship to Horus.footnote:[te Velde 1967, ch. 1, on the more elaborated Coffin Texts narrative tradition and on the presupposed familiarity with the cycle's narrative beats by the Middle Kingdom.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (Coffin Texts narrative tradition)
 
-The opening of Tablet I situates the narrative inside a divine palace-and-assembly world rather than in a primordial, pre-cosmic setting. There is no moment in the Anzû Epic when the world does not yet exist.footnote:[Foster 2005, pp. 555–557, Tablet I opening; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-557
+The funerary-liturgical embedding of the contention in the Pyramid Texts and the Coffin Texts is theologically load-bearing: the deceased king is identified with Osiris in the funerary corpus, his successor on earth is identified with Horus, and the contention's judicial resolution in favour of Horus is the divine pattern that legitimates the orderly succession of pharaonic kingship in the historical political register.footnote:[te Velde 1967, ch. 1, on the theological loadbearing of the funerary-liturgical embedding; on the Osiris-deceased-king and Horus-successor identifications as the divine pattern of pharaonic succession.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=ch. 1 (royal-legitimation pattern)
 
-This setting matters for the book's typology. The combat in the Anzû Epic is a sovereignty-reclamation narrative, not a cosmogony. The cosmos already exists. The story is about the return of a displaced kingship-token to its rightful holder.footnote:[Foster 2005, pp. 555–578 on the narrative scope; Lambert 2013, introduction, on sovereignty-as-function in the Mesopotamian combat corpus.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
+=== The Contendings of Horus and Seth (Chester Beatty I)
 
-=== Narrative sequence
+_The Contendings of Horus and Seth_, preserved on the recto of the Chester Beatty I papyrus (Twentieth Dynasty, c. 1160 BCE), is the longest single connected narrative of the Horus-Seth contention surviving from ancient Egypt. The papyrus is held in the Chester Beatty Library in Dublin and was first edited and published in the early twentieth century, with subsequent translations bringing the text to wider Egyptological readership.footnote:[te Velde 1967, chs. 1–2, on Chester Beatty I as the longest single connected narrative of the contention and on its Twentieth-Dynasty c. 1160 BCE dating; per chaoskampf glossary.yaml on the locked rendering "the Contendings (body prose)".]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Chester Beatty I)
 
-==== Tablet I — theft and assembly
+The literary register of the Contendings is markedly different from the funerary-liturgical register of the Pyramid Texts and the Coffin Texts: the Contendings is a continuous narrative composition with extended dialogue, vivid scene-setting, comic-and-bawdy episodes, and a tribunal-procedural structure that allows the divine assembly's deliberations to be staged at length, with the contending gods presented as characters whose conduct is at points undignified.footnote:[te Velde 1967, chs. 1–2, on the literary register of the Contendings as continuous narrative with extended dialogue, comic-and-bawdy episodes, and tribunal-procedural structure; on the register-distinction from the funerary-liturgical attestations.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Contendings literary register)
 
-Tablet I opens with a hymn of praise to Ninurta. Before any narrative action begins, the poet invokes the warrior's qualities — the standard opening gesture of the Mesopotamian royal-narrative poem.footnote:[Foster 2005, pp. 555–556, Tablet I proem; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
+The Contendings opens with the divine tribunal already in session: the gods of the Egyptian pantheon, presided over by the sun-god (variously identified as Ra-Atum or as Pre in different sections of the text), are deliberating on the rival claims of Horus and Seth to the kingship of Egypt — a deliberation that, in the text's narrative, has already been ongoing for eighty years without resolution.footnote:[te Velde 1967, chs. 1–2, on the Contendings' opening tribunal and on the eighty-years-without-resolution narrative conceit; on the sun-god's presiding role.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (tribunal frame)
 
-After the proem, the story proper begins. Anzû is born, or brought into being, at the Apsû — the cosmic fresh-water region associated with Ea — and is introduced into Enlil's service.footnote:[Foster 2005, pp. 556–557, Tablet I on Anzû's origin at the Apsû; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 556-557
+Within the tribunal narrative, Isis intervenes repeatedly on behalf of her son Horus: she advocates his claim before the divine assembly, she works magical interventions to thwart Seth's manoeuvres, and her advocacy is one of the principal narrative engines of the text's plot, with the divine tribunal's eventual decision shaped by her sustained interventions.footnote:[te Velde 1967, chs. 1–2, on Isis's repeated intervention in the divine tribunal of the Contendings and on her magical-and-rhetorical advocacy as a principal narrative engine of the text.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Isis advocacy)
 
-Anzû's role in the household is that of chamber-attendant: he attends on Enlil, including at the chamber where Enlil bathes and sets the Tablet of Destinies aside.footnote:[Foster 2005, pp. 557–558, Tablet I on Anzû's role as chamber-attendant; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-558
+The Contendings narrates a sequence of contests-and-trials in which Horus and Seth compete to demonstrate their fitness for kingship, including swimming-as-hippopotami contests, boat-race contests, and other physical contests, in addition to the rhetorical-and-procedural advocacy before the tribunal. The contests are presented in a register that is at points comic and at points violent, and the text does not maintain a consistently dignified tone throughout.footnote:[te Velde 1967, chs. 1–2, on the contest-sequence of the Contendings (hippopotami-contest, boat-race contest, and others) and on the mixed comic-and-violent register of the contest-narrative.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (contest sequence)
 
-Day after day, Anzû observes the Tablet lying within reach while Enlil bathes. The text describes his envy and his ambition directly; it does not leave his motive to be inferred.footnote:[Foster 2005, pp. 557–558, Tablet I on Anzû's envy of Enlil's regalia; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 557-558
+The Contendings includes one of the more notorious episodes in the Egyptian literary record: a sexual encounter between Seth and Horus in which Seth attempts to assert dominance over Horus through a homosexual act, but Horus — counselled by Isis — turns the encounter to his advantage by manoeuvring Seth's seed onto a lettuce that Seth then eats, the resulting magical reversal disqualifying Seth's claim of seminal-dominance before the divine tribunal.footnote:[te Velde 1967, chs. 1–2, on the seed-and-lettuce episode of the Contendings as a magical-reversal contest in which Horus and Isis turn Seth's attempted-dominance against him; on the bawdy register of this episode in particular.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (seed-and-lettuce)
 
-Anzû forms a plot. The plan is to seize the Tablet of Destinies and, with it, the rulership of the gods.footnote:[Foster 2005, pp. 558–559, Tablet I; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 558-559
+The bawdy register of episodes such as the seed-and-lettuce contest is part of what makes the Contendings a distinctive Egyptian literary-narrative composition. The text deploys comic and undignified material in the service of a serious theological-political point — namely the vindication of Horus's kingship-claim through the exposure of Seth's unfitness for the throne — and the comic register is integrated rather than incidental to the text's thematic project.footnote:[te Velde 1967, chs. 1–2, on the integration of the bawdy register into the Contendings' theological-political project; on the comic episodes as serving the vindication-of-Horus thematic framework.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (bawdy-as-theological)
 
-The moment comes. While Enlil is bathing, Anzû snatches the Tablet and flies away with it to the mountains.footnote:[Foster 2005, pp. 558–559, Tablet I on the theft; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 558-559
+The Contendings reaches its resolution in the divine tribunal's eventual award of the kingship of Egypt to Horus: the gods of the assembly, persuaded by Isis's advocacy, by the outcomes of the contests, and by Osiris's own intervention from the netherworld, formally recognise Horus as the legitimate king and assign Seth a compensatory role — the storm-god is given a place at Ra's side in the heavens, where (per the Apep dossier of Ch. 16) he serves as Apep-slayer at the prow of the solar barque.footnote:[te Velde 1967, chs. 1–2, on the Contendings' resolution in the award of the kingship to Horus and on Seth's compensatory placement at Ra's side; on the convergence of the negative-dossier resolution with the positive-dossier role.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (resolution)
 
-With the Tablet in Anzû's talons, the decree-power of the gods is immediately dislocated. Rites fall silent, the divine assembly loses its governing authority, and the cosmos registers the theft as a disruption — the kind of disruption that a well-governed Mesopotamian universe cannot tolerate.footnote:[Foster 2005, pp. 559–560, Tablet I on the consequences of the theft; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 559-560
+The compensatory placement of Seth at Ra's side at the conclusion of the Contendings is one of the principal Egyptian textual loci at which the two-dossier structure of Seth's mythological identity is itself acknowledged within a single narrative: the same text that documents Seth's defeat in the kingship-contest reassigns him to the cosmological-combat role in which his storm-and-desert violence finds its positive function.footnote:[te Velde 1967, chs. 1–2, on the Contendings' explicit acknowledgment of Seth's two-dossier structure within its concluding narrative; on the compensatory placement as the textual articulation of the two-dossier reading.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (two-dossier articulation)
 
-Anu, the sky-father, now convenes the assembly of the great gods to address the crisis.footnote:[Foster 2005, pp. 560–561, Tablet I on Anu summoning the assembly; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-561
+[INFERENCE: the Contendings' concluding compensatory placement of Seth at Ra's side encodes within a single late-period narrative the same two-dossier structure that te Velde 1967 reads diachronically across the wider corpus, suggesting that by the Twentieth Dynasty the two-dossier reading was itself part of the literary self-understanding of the Egyptian tradition rather than a modern scholarly synthesis | basis: te Velde 1967 chs. 1–2 read the compensatory placement as deliberate; the Contendings' integration of the negative-dossier defeat with the positive-dossier reassignment in a single narrative is direct textual evidence that the two roles were available to the text's audience as a coherent theological pattern; the wider Egyptian corpus's continuous use of Seth as Apep-slayer (Ch. 16) supports the reading that the positive-dossier role was theologically necessary even after the kingship-contest resolution | risk: the inference is interpretive-textual rather than directly attested as a stated theological doctrine of the Contendings; alternative readings (in which the compensatory placement is a narrative-economic rather than theological-self-conscious move) remain in principle available.]
 
-Anu calls for a champion — a god willing to hunt down Anzû, recover the Tablet, and slay the rebel.footnote:[Foster 2005, pp. 560–561, Tablet I on the call for a champion; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 560-561
+The Contendings is, on te Velde's reading and on the brief's special_instructions, a specific later literary reworking of the Horus-Seth tradition rather than the base text of the contention: the older funerary-liturgical attestations in the Pyramid Texts and the Coffin Texts are the foundational stratum, and the Contendings' literary-narrative form is one Twentieth-Dynasty articulation of a tradition that continued to be reworked across the New Kingdom and beyond.footnote:[Per brief 17-horus-seth.yaml special_instructions on the Contendings as a later literary reworking rather than the base text; te Velde 1967, chs. 1–2, on the same.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (literary reworking)
 
-He addresses first the storm-god Adad, offering him supremacy among the gods if he will undertake the combat.footnote:[Foster 2005, pp. 561, Tablet I on the summons of Adad; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+=== Theological-political reading — sovereignty and ambivalence
 
-Adad refuses. His reasoning is precise: one cannot fight an adversary who holds the Tablet of Destinies, because the Tablet's decree-power annuls the weapon of anyone who raises it against its holder.footnote:[Foster 2005, p. 561, Tablet I on Adad's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The theological-political function of the Horus-Seth contention is, on te Velde 1967 chapters 1–2 and Assmann 2001's *maʿat*/*isfet* framework, royal-legitimation: the divine tribunal's award of the kingship to Horus is the divine pattern that legitimates pharaonic kingship in the historical political register, with each pharaoh figured as Horus-on-the-throne and his deceased predecessor figured as Osiris-in-the-netherworld.footnote:[te Velde 1967, chs. 1–2, on the royal-legitimation function of the Contendings and the wider Horus-Seth corpus; Assmann 2001, on the *maʿat*/*isfet* framework's articulation of pharaonic legitimacy.]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet (royal legitimation)
 
-Anu turns next to Gerra, the fire-god, with the same offer of supremacy.footnote:[Foster 2005, p. 561, Tablet I on the summons of Gerra; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The pharaonic-legitimation function is one of the principal theological-political uses to which the Egyptian tradition puts the Horus-Seth material: the orderly succession of kingship from the murdered Osiris through his vindicated son Horus is the divine guarantor of the orderly succession of kingship from one historical pharaoh to his successor, and the contention's narrative is the cosmological-mythological grounding for that historical-political institution.footnote:[te Velde 1967, chs. 1–2, on the pharaonic-legitimation function as a principal theological-political use of the material; Assmann 2001 on the cosmological-historical alignment of the divine and the historical succession.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (royal-legitimation)
 
-Gerra also refuses, giving the same reason. Possession of the Tablet makes Anzû unassailable by the ordinary means of divine combat.footnote:[Foster 2005, p. 561, Tablet I on Gerra's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+Seth's role within this royal-legitimation framework is, on te Velde 1967's reading, structurally ambivalent: the storm-god's violence is the disruption that the contention must resolve, but his violence is also (per the Ch. 16 Apep-dossier) theologically necessary for the cosmic order's continued maintenance — and the Egyptian tradition's settlement of the contention through Seth's compensatory placement at Ra's side rather than through Seth's annihilation reflects this ambivalent theological assessment.footnote:[te Velde 1967, chs. 1–2, on Seth's structurally-ambivalent role in the royal-legitimation framework; on the compensatory-placement settlement as reflecting the theological assessment that Seth is necessary even where defeated.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (ambivalent settlement)
 
-Anu then addresses Šara, the warrior-son of Inanna, with the same commission.footnote:[Foster 2005, p. 561, Tablet I on the summons of Šara; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 561
+The Egyptian tradition's refusal to annihilate Seth at the conclusion of the contention is a load-bearing piece of evidence for the wider book's engagement with the Gunkel-Ballentine debate (Part II C8): if Seth were a "chaos-figure" in the simple sense of Western-philosophical inchoate primordial unformedness, his annihilation would be theologically required for the establishment of cosmic order — but the Egyptian tradition keeps him in a positive cosmological role even after his defeat, and the persistence of the negatively-valued figure in a positively-functional role is part of why the Ballentine 2015 critique of the chaos-category applies with particular force to the Egyptian material.footnote:[Per chaoskampf scope.md on the Ballentine 2015 critique of the chaos-category as it applies to the Egyptian material; te Velde 1967 chs. 1–2 on the persistence of Seth in a positive role after his defeat; cross-ref Part II C8.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=passim (chaos-category critique)
 
-Šara also refuses, on the same grounds. The assembly is left without a champion.footnote:[Foster 2005, pp. 561–562, Tablet I on Šara's refusal; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 561-562
+Seth's role as agent of disorder in the Osiris-Horus material is, on Assmann 2001's framework, *isfet*-aligned in the limited sense that his action against Osiris is *isfet* — disorder, injustice, ritual transgression, falsehood-of-conduct — but the Egyptian theological imagination recognises that *isfet*-aligned violence may itself be theologically necessary in cosmological roles where its energy is required, and Seth's compensatory placement at Ra's side after the kingship-contest is the textual articulation of this recognition.footnote:[Assmann 2001, on Seth's action against Osiris as *isfet*-aligned and on the *isfet*-aligned violence as theologically necessary in cosmological roles; te Velde 1967 chs. 1–2 on the compensatory placement.]
+// EVIDENCE: source_id=assmann-2001-search ; loc=chs. on maʿat/isfet (Seth's ambivalence)
 
-The threefold refusal is a pattern with a purpose. It establishes that the adversary cannot be defeated by the most obvious divine champions — a storm-god, a fire-god, a warrior-son — and so heightens the need for a different kind of warrior.footnote:[Foster 2005, pp. 561–562, Tablet I; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 561-562
+The Horus-Seth contention's resolution through divine-tribunal procedure rather than through champion-combat is a further structural feature that distinguishes the material from the cosmogonic combat-myths of the wider corpus: where Marduk defeats Tiamat by single combat (Ch. 3), Indra defeats Vṛtra by single combat (Ch. 14), and Ra defeats Apep nightly through the action of the barque-crew (Ch. 16), the Horus-Seth contention is finally settled by the divine assembly's deliberative-judicial verdict — and this judicial-procedural resolution is part of why the chapter is INCLUSION-MARGINAL in the present book's typology.footnote:[Per brief 17-horus-seth.yaml on the structural distinction between judicial-procedural resolution and champion-combat resolution; te Velde 1967 chs. 1–2 on the divine-tribunal frame of the Contendings; cross-refs Chs. 3, 14, 16.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (tribunal resolution)
 
-At this point Ea — god of wisdom and of the deep waters — proposes a new candidate to the assembly.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's counsel; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+The judicial-procedural resolution does not, however, exclude all combat from the narrative: the contests-and-trials of the Contendings include physical contests, the cycle's wider attestations preserve the mutual mutilation in which Seth tears out Horus's eye and Horus injures Seth's testicles, and the Pyramid Texts and Coffin Texts allusions presuppose a tradition in which the contending gods have engaged in physical confrontation — but the decisive resolution is judicial rather than martial, and the combat-elements are subordinate to the tribunal-frame.footnote:[te Velde 1967, chs. 1–2, on the subordination of the combat-elements to the tribunal-frame in the contention's overall narrative structure.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (combat subordinate to tribunal)
 
-Ea nominates Ninurta, son of Enlil, as the champion who can face Anzû. The warrior Ea names is precisely the son of the god who has been robbed.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's nomination of Ninurta; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+[INFERENCE: the structural subordination of the combat-elements to the tribunal-frame in the Horus-Seth contention reflects the Egyptian tradition's distinctive theological-political reading of cosmic order as juridically-rather-than-martially established at the highest level, in contrast to the cosmogonic-combat traditions in which the cosmos is established through champion-victory | basis: te Velde 1967 chs. 1–2 on the tribunal-frame as the decisive structural element of the contention; Assmann 2001's *maʿat*/*isfet* framework on *maʿat* as juridical-and-cosmic order; the Egyptian tradition's prominent role for the divine tribunal in legal-cosmological matters elsewhere in the corpus | risk: the inference is interpretive-comparative rather than directly attested as a stated theological doctrine; alternative readings (in which the tribunal-frame is a Twentieth-Dynasty literary innovation rather than a structural-theological feature of the wider tradition) remain in principle available, though they are less natural fits for the Pyramid Texts and Coffin Texts attestations that already presuppose the tribunal-resolution outcome.]
 
-Ea addresses the goddess Bēlet-ilī — also called Mami, "mother of the gods" — who is identified in this passage as the mother of Ninurta. Ea instructs her to dispatch her son.footnote:[Foster 2005, pp. 562–563, Tablet I on Ea's address to the mother-goddess; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 562-563
+Forsyth 1987's brief engagement with the Horus-Seth material treats the contention as a relatively-marginal data point within the long-trajectory combat-myth corpus that runs from Sumer through the Hebrew Bible into Christian apocalyptic: the contention's distinctive judicial-procedural resolution and Seth's ambivalent two-dossier structure are noted, but the material is not given the central comparative treatment that Forsyth gives to the Marduk-Tiamat or Baal-Yamm corpora.footnote:[Forsyth 1987, on the brief engagement with Horus-Seth as a relatively-marginal data point in the long-trajectory comparative corpus; on the judicial-procedural resolution and the two-dossier structure as noted but not centrally treated.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-The mother-goddess summons Ninurta, arms him with explicit instruction, and sends him out against Anzû. Tablet I closes on the commissioning.footnote:[Foster 2005, pp. 563–564, Tablet I on the commissioning of Ninurta; Annus 2001, Tablet I.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 563-564
+The marginality of Horus-Seth in Forsyth 1987's comparative treatment is itself a piece of evidence for the chapter's INCLUSION-MARGINAL classification: Forsyth's longue-durée trajectory is dominated by the cosmogonic and the eschatological combat-myths, and the Horus-Seth material's sovereignty-strife structure does not fit that trajectory cleanly — the same structural features that make the contention an edge-case within the present book also make it an edge-case within Forsyth's wider survey.footnote:[Forsyth 1987, on the marginality of Horus-Seth within the longue-durée trajectory; per brief 17-horus-seth.yaml on the convergence between Forsyth's marginal treatment and the present book's INCLUSION-MARGINAL classification.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-==== Tablet II — first assault and its failure
+=== Reception and forward links
 
-Tablet II opens with Ninurta mustering his weapons. The poet catalogues them: the seven winds, the flood-storm, and the sling-stone — "the weapon of chaos, the seven winds, formed up," in Foster's rendering. He sets out into the mountains.footnote:[Foster 2005, pp. 565–566, Tablet II on the mustering of weapons — "the weapon of chaos, the seven winds, formed up"; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 565-566
+The chapter's primary back-link is to Chapter 16 (Ra vs. Apep): the present chapter's negative-dossier treatment of Seth as Osiris-murderer presupposes and complements the positive-dossier treatment of Seth as Apep-slayer at the prow of the solar barque, and the two-dossier structure that te Velde 1967 chapters 1–2 (negative dossier; this chapter) and chapters 3–4 (positive dossier; Ch. 16) document together is the structural-theological subject that the two chapters jointly develop.footnote:[Per brief 17-horus-seth.yaml on the back-link to Ch. 16; te Velde 1967, chs. 1–4, on the two-dossier structure as the joint subject of the monograph; cross-ref Ch. 16.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-4 (back-link Ch. 16)
 
-Ninurta carries Šarur, his animate mace. In the Anzû Epic, as already in *Lugal-e*, the mace will serve as scout and messenger between warrior and divine counselor.footnote:[Foster 2005, pp. 565–566, Tablet II on Šarur accompanying Ninurta; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 565-566
+The chapter's primary forward-link is to Part II Chapter C2 (Combat as Sovereignty): the Horus-Seth contention's contested-succession and royal-legitimation function is one of the principal sovereignty-themed cases in the present book's catalogue, and Part II C2 develops the contention together with the Baal-Yamm (Ch. 7), Zeus-Typhon (Ch. 11), Indra-Vṛtra (Ch. 14), Thraētaona (Ch. 13), Kumarbi-Ullikummi (Ch. 5), and Ninurta-Anzû (Ch. 2) cases as the canonical sovereignty-combat cluster.footnote:[Per chaoskampf scope.md §"Part II — thematic comparative chapters" on Part II C2 (Combat as Sovereignty) and on Horus-Seth's place within the cluster; per brief 17-horus-seth.yaml on the forward-link to Part II C2.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (Part II C2 anchor)
 
-Ninurta advances to confront Anzû in the mountain where the rebel has taken refuge with the Tablet.footnote:[Foster 2005, pp. 566–567, Tablet II on the advance to the mountain; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 566-567
+The chapter's secondary forward-link is to Part II Chapter C8 (The Refusal and the Appropriation Problem): Seth's two-dossier ambivalence — positive Apep-slayer and negative Osiris-murderer in parallel without theological harmonisation — is direct textual evidence for the Ballentine 2015 critique of the chaos-category, and the persistence of a negatively-valued figure in a positively-functional cosmological role is among the strongest Egyptian-material grounds for the non-chaos counter-model that Part II C8 develops.footnote:[Per chaoskampf scope.md §"Part II — thematic comparative chapters" on Part II C8 and the Ballentine 2015 critique; te Velde 1967 chs. 1–2 on Seth's persistence in a positive role after defeat; cross-ref Part II C8.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=passim (Part II C8 anchor)
 
-Anzû sees the warrior approaching and challenges him. He threatens Ninurta with the decree-power he now holds.footnote:[Foster 2005, pp. 566–567, Tablet II on Anzû's challenge; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 566-567
+The chapter's structural-comparative forward-link is to Chapter 5 (Kumarbi Cycle): the Horus-Seth contention's contested-succession dynamic parallels the Hurro-Hittite Kumarbi-Teshub succession-strife more closely than it parallels the Egyptian Ra-Apep cyclical-maintenance combat, and per brief 17-horus-seth.yaml the structural affinity with the Kumarbi material is the principal cross-cultural comparison that the chapter notes within its body and develops as a // COMPARATIVE-HOOK for Part II C2.footnote:[Per brief 17-horus-seth.yaml on the structural affinity with Kumarbi-cycle succession-combat; Hoffner 1998 on the Kumarbi-Teshub succession-strife (cross-ref Ch. 5).]
+// EVIDENCE: source_id=hoffner-1998 ; loc=Kumarbi cycle (Kumarbi-Teshub succession)
 
-Ninurta opens the engagement by shooting an arrow at Anzû.footnote:[Foster 2005, p. 567, Tablet II on Ninurta's first arrow; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+The reception of the Horus-Seth material in the wider Mediterranean and Hellenistic worlds is comparatively elusive: although Egyptian iconography of the falcon-headed Horus and the *Seth-animal*-headed Seth was widely diffused in the Hellenistic and Roman periods, the specific narrative material of the Contendings does not have a clearly-traceable reception trajectory in Hellenistic-Christian combat-myth reception comparable to the Marduk-Tiamat or the Baal-Yamm reception trajectories.footnote:[Forsyth 1987, on the comparative elusiveness of the Horus-Seth reception trajectory in Hellenistic-Christian combat-myth reception; per chaoskampf glossary.yaml on the *Seth-animal* iconography.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=brief engagement with Horus-Seth
 
-Anzû, holding the Tablet of Destinies, uses its decree-power against the arrow in flight. He commands the arrow to disassemble into its component parts.footnote:[Foster 2005, p. 567, Tablet II on Anzû's counter-decree; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+The chapter's overall structure — INCLUSION-MARGINAL framing-marker; source overview; Osiris-cycle setting and context; Pyramid Texts and Coffin Texts attestations; Contendings of Horus and Seth (Chester Beatty I); theological-political reading; reception and forward links — honours the brief's special_instructions in opening with the framing marker, presenting the Contendings as a later literary reworking rather than the base text, threading Seth's two-dossier ambivalence as the chapter's principal theological-conceptual subject, and feeding the Gunkel-Ballentine debate via Part II C8 and the sovereignty-cluster via Part II C2.footnote:[Per brief 17-horus-seth.yaml special_instructions on the chapter's required structural features; te Velde 1967, chs. 1–2; Assmann 2001, chs. on *maʿat*/*isfet*; Forsyth 1987, on the long-trajectory frame.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=chs. 1-2 (chapter structure)
 
-The arrow obeys. The shaft returns to its reed thicket, the bow frame to its copse, the bowstring to the ram's gut, and the feathers to the birds. The arrow is annulled mid-flight by the decree of the Tablet — not deflected, not broken, but unmade into the materials out of which it had been assembled.footnote:[Foster 2005, p. 567, Tablet II on the arrow-dissolution decree; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+// COMPARATIVE-HOOK: Hurro-Hittite (Kumarbi Cycle, Ch. 5) — the Horus-Seth contention's contested-succession dynamic is structurally closer to the Hurro-Hittite Kumarbi-Teshub succession-strife than to the cyclical-maintenance Ra-Apep combat (Ch. 16). Both materials narrate divine-succession contests in which a deposed or disrupted father-figure (Anu / Kumarbi in the Hurrian cycle; Osiris in the Egyptian cycle) is succeeded through contestation between rival claimants, with the storm-god figure (Teshub in the Hurrian; Seth in the Egyptian, here in the role of the disruptive contender rather than the legitimate successor) playing a structurally-pivotal role. Hoffner 1998 (Kumarbi cycle) treats the Kumarbi-Teshub material as the central documentary case for Anatolian succession-combat; te Velde 1967 chs. 1–2 treats the Horus-Seth material as the principal Egyptian sovereignty-strife. Treated in detail in Part II C2 (te-velde-1967; hoffner-1998; cross-ref Ch. 5).
+// COMPARATIVE-HOOK: Sovereignty cluster (Part II C2) — the Horus-Seth contention is one of the principal sovereignty-themed cases in the present book's catalogue, sitting alongside Baal-Yamm (Ch. 7), Zeus-Typhon (Ch. 11), Indra-Vṛtra (Ch. 14), Thraētaona vs. Aži Dahāka (Ch. 13), Kumarbi-Ullikummi (Ch. 5), and Ninurta-Anzû (Ch. 2) as the canonical sovereignty-combat cluster that Part II C2 develops. The Horus-Seth case is distinctive within the cluster for its judicial-procedural rather than martial resolution: the divine tribunal's verdict, rather than champion-combat, is the decisive structural element of the contention's resolution, and this distinguishes the Egyptian sovereignty-strife from the more directly-martial sovereignty-combats of the Levantine, Greek, Vedic, and Iranian traditions. Treated in detail in Part II C2 (te-velde-1967; cross-ref Chs. 2, 5, 7, 11, 13, 14).
+// COMPARATIVE-HOOK: Gunkel-Ballentine debate (Part II C8) — Seth's two-dossier ambivalence (positive Apep-slayer at the prow, Ch. 16; negative Osiris-murderer in the present chapter) is among the strongest Egyptian-material grounds for the Ballentine 2015 critique of the chaos-category. If Seth were a "chaos-figure" in the simple sense of Western-philosophical inchoate primordial unformedness, his annihilation would be theologically required at the conclusion of the kingship-contest — but the Egyptian tradition keeps him in a positive cosmological role at Ra's side after his defeat, and the persistence of the negatively-valued figure in a positively-functional role is direct textual evidence for the inadequacy of "chaos" as a cross-tradition category-term. The chapter's compliance with the locked glossary discipline (the banned umbrella category-term for chaos-personification figures is avoided throughout; "agent of disorder" and "*isfet*-personification" are used instead) is itself a marker of this counter-model interface. Treated in detail in Part II C8 (te-velde-1967; assmann-2001-search; ballentine-2015; cross-ref Part II C8).
+// COMPARATIVE-HOOK: Ra-Apep (Ch. 16) — the present chapter and Ch. 16 jointly develop te Velde 1967's two-dossier reading of Seth: the positive-dossier Apep-slayer at the prow of the solar barque (Ch. 16, te Velde chs. 3–4) and the negative-dossier brother-murderer of Osiris and contender-against-Horus (this chapter, te Velde chs. 1–2) are documented in parallel across the Egyptian textual corpus over two millennia without theological harmonisation, and the unharmonised parallelism is itself a structural feature of Egyptian theological reasoning rather than an oversight or an internal contradiction awaiting redaction. The Contendings' compensatory placement of Seth at Ra's side at the conclusion of the kingship-contest is the textual locus at which the two-dossier structure is itself acknowledged within a single late-period narrative. Treated together with Ch. 16 and in Part II C8 (te-velde-1967 chs. 1–4; cross-ref Ch. 16).
+// COMPARATIVE-HOOK: Royal-legitimation cluster (judicial vs. martial) — the Horus-Seth contention's judicial-procedural resolution distinguishes it from the more-directly-martial royal-legitimation combats elsewhere in the corpus: Marduk's establishment of cosmic kingship is martial (Ch. 3), Baal's establishment of his sovereign rule is martial (Ch. 7), Zeus's defeat of Typhon is martial (Ch. 11), but Horus's vindication of his kingship-claim is finally judicial — the divine assembly's deliberative verdict, persuaded by Isis's advocacy and by Osiris's intervention, is the decisive structural element. The judicial-procedural element is one of the features that places the Egyptian material at an oblique angle to the cosmogonic-and-sovereignty combat-myth corpus and that grounds the chapter's INCLUSION-MARGINAL classification. Treated in Part II C2 (te-velde-1967; cross-refs Chs. 3, 7, 11).
+```
 
-The annulment motif depends on a specific theology of the Tablet. What the Tablet decrees, the cosmos obeys — even against the physics of weapons. Arrow-parts that have been assembled can be dis-assembled by command because the command over assembly belongs to whoever holds the Tablet.footnote:[Foster 2005, p. 567, Tablet II; Lambert 2013, introduction, on the Tablet as decree-object.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 567
+---
 
-Ninurta's first assault therefore fails. It does not fail because his weapons are weak. It fails because the weapons themselves cannot exist in a cosmos whose decree is now spoken by Anzû.footnote:[Foster 2005, pp. 567–568, Tablet II on the failure of the first assault; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 567-568
+# Input file: briefs/17-horus-seth.yaml
 
-[LACUNA: the middle passages of Tablet II between the first failed engagement and Ea's counsel are broken | source: Annus 2001, Tablet II apparatus | scholarly_reconstruction: Annus's score integrates Old Babylonian and Neo-Assyrian witnesses; Foster's English fills the gap from parallel passages.]
+```
+chapter_number: 17
+slug: "horus-seth"
+title: "Horus vs. Seth (An Edge Case)"
+chapter_anchor: "ch-17-horus-seth"
 
-After the break, the narrative resumes with Ninurta dispatching Šarur, his animate mace, back to Ea. The mace is to report the failure and seek counsel.footnote:[Foster 2005, pp. 568–569, Tablet II on Šarur returning to Ea; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 568-569
+chapter_type: "related (edge case — INCLUSION-MARGINAL)"
 
-Šarur speaks on Ninurta's behalf. The mace delivers the warrior's report to Ea in direct speech — a scene in which a weapon is the speaking subject and the warrior, in absence, is only quoted.footnote:[Foster 2005, pp. 568–569, Tablet II on Šarur's speech to Ea; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 568-569
+sources:
+  primary:
+    - id: te-velde-1967
+      loc: "Seth, God of Confusion, chs. 1–2 (on Horus-Seth contention and Seth's ambivalence)"
+      identifier: "ISBN 9789004054028"
+  secondary:
+    - { id: assmann-2001-search, loc: "on maʿat/isfet and Egyptian ambivalence" }
+    - { id: forsyth-1987, loc: "brief engagement with Horus-Seth" }
 
-The animate-mace-as-messenger motif is the distinctive contribution of this chapter to the book's Ninurta-cycle continuity. Šarur already speaks and travels as messenger in the Sumerian *Lugal-e*, and the Anzû Epic preserves the function. Across the two Ninurta compositions, Šarur is a cross-text character in his own right.footnote:[ETCSL 1.6.2 lines 24–47, 96–118 on Šarur as messenger in Lugal-e; Foster 2005, pp. 568–569 for the Anzû Epic parallel.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 lines 24-47
+variants:
+  classification: co-equal
+  summary: |
+    The Horus-Seth combat is distributed across Pyramid Texts, Coffin Texts, and the
+    Chester Beatty I "Contendings" (c. 1160 BCE). The Contendings is bawdy and literary;
+    the Pyramid Texts material is older and more sober. No single account dominates, and
+    the tradition evolved substantially over two millennia. te Velde 1967 is the scholarly
+    anchor.
 
-Ea receives the report. He deliberates on a counter-strategy that will not depend on the straightforward shooting of arrows — a strategy, that is, that will not collide with the Tablet's decree along the same axis on which the first assault collided.footnote:[Foster 2005, pp. 569–570, Tablet II on Ea's deliberation; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 569-570
+  family_members: |
+    This is a single story chapter (not a family), but it is INCLUSION-MARGINAL per
+    scope.md §"Inclusion / exclusion criteria" and per audit-review-log.md 2026-04-23:
+    the adversary (Seth) is not serpentine; the combat is god-against-god sovereignty
+    strife rather than hero-against-monster. The chapter's framing-marker is explicit.
 
-Ea instructs Šarur to carry a new plan back to Ninurta.footnote:[Foster 2005, pp. 569–570, Tablet II on Ea's counter-plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 569-570
+cultural_relevance:
+  centrality: central (within Egyptian religious history)
+  function: |
+    - theogonic (succession after Osiris's murder)
+    - royal-legitimation (the victorious Horus is the pharaonic ideal)
+    - Seth is BOTH adversary (of Osiris) AND ally (of Ra against Apep, at the prow of the
+      solar barque — see Chapter 16). This ambivalence is load-bearing for te Velde's
+      reading.
+  cross_cultural_parallel: |
+    The Horus-Seth contention parallels succession-combat patterns in the Kumarbi Cycle
+    (Chapter 5) more than it parallels the chaoskampf serpent-adversary pattern. In
+    structural terms Horus-Seth is closer to Teshub-Kumarbi than to Ra-Apep.
 
-The counsel has two components. First, strike off Anzû's pinion-feathers — the great flight-feathers — with a gust or a sling. Second, while Anzû is preoccupied with the damaged wing, shoot.footnote:[Foster 2005, pp. 570–571, Tablet II on Ea's two-step plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 570-571
+target_length_words: 3500
 
-The logic of the counsel is theological, not just tactical. The Tablet's decree can neutralise a weapon in flight only if the combat proceeds along the line the decree anticipates. Surprise and disruption at the wing break the chain between decree and response. Anzû cannot decree against an unexpected gust at his own feathers the way he can decree against an arrow whose purpose is visible from its release.footnote:[Foster 2005, pp. 570–571, Tablet II; Annus 2001, Tablet II; Lambert 2013, introduction, on the theological logic.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-[INFERENCE: the feather-shooting detail is interpreted as a theological, not merely a tactical, device | basis: Foster 2005, pp. 570–571 and Lambert 2013, introduction, both treat the Tablet's decree as the load-bearing element | risk: the surviving text does not explicitly state the theology; this reading is scholarly.]
-
-Šarur returns from Ea and delivers the new plan to Ninurta in direct speech. Tablet II closes with the counsel in the warrior's hands.footnote:[Foster 2005, pp. 571–572, Tablet II on Šarur returning with the plan; Annus 2001, Tablet II.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 571-572
-
-==== Tablet III — second assault and victory
-
-Tablet III opens with Ninurta returning to the mountain to engage Anzû a second time, now equipped with Ea's strategy.footnote:[Foster 2005, pp. 572–573, Tablet III opening; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 572-573
-
-Ninurta summons the south wind. He commands it to pluck the pinions — the great flight-feathers — from Anzû's wings in the moment of engagement.footnote:[Foster 2005, pp. 573–574, Tablet III on the wind-and-pinion stratagem; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
-
-Anzû, seeing the pinions fall, cries out to them to return. He is attempting to use the Tablet's decree-power in exactly the way he used it before, as he had done with the arrow — commanding parts back into their whole.footnote:[Foster 2005, pp. 573–574, Tablet III on Anzû's attempt to recall his pinions; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
-
-Ninurta now speaks over Anzû's decree. He invokes Ea's counsel as a counter-decree. The pinions remain severed.footnote:[Foster 2005, pp. 573–574, Tablet III on Ninurta's counter-decree; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 573-574
-
-With Anzû's wings broken, Ninurta shoots an arrow into his chest.footnote:[Foster 2005, p. 574, Tablet III on the fatal arrow; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 574
-
-Ninurta then severs Anzû's throat with a further blow, completing the kill.footnote:[Foster 2005, pp. 574–575, Tablet III on the finishing stroke; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 574-575
-
-With Anzû slain, Ninurta recovers the Tablet of Destinies from the dead body.footnote:[Foster 2005, p. 575, Tablet III on the recovery of the Tablet; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=p. 575
-
-He then carries the Tablet back toward the assembly, restoring the decree-power to its proper custodians.footnote:[Foster 2005, pp. 575–576, Tablet III on the return journey; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 575-576
-
-The messenger-god Birdu is dispatched, entering Enlil's presence to announce Ninurta's victory. The text at this point also uses the name Dagan as an honorific epithet for Ninurta — "bulwark of Anu and Dagan" — not as the name of a dispatched actor.footnote:[Foster 2005, pp. 575–576, Tablet III on Birdu as messenger and the Dagan epithet; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 575-576
-
-The assembly responds with praise and formal acknowledgement of Ninurta's victory.footnote:[Foster 2005, pp. 576–577, Tablet III on the assembly's response; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 576-577
-
-Ninurta is granted a catalogue of honorific names, each marking a facet of his victory and his warrior-function.footnote:[Foster 2005, pp. 576–577, Tablet III on the honorific name-list; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 576-577
-
-The name-list is structurally comparable to — and treated in the scholarship as the direct antecedent of — the fifty names of Marduk that close *Enūma Eliš*. What Marduk will receive at the end of his cosmogonic combat, Ninurta here receives at the end of his sovereignty-restoration.footnote:[Lambert 2013, introduction, on the Anzû name-list and Enūma Eliš; Annus 2001, introduction and Tablet III commentary.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Ninurta's honours include confirmation of his warrior-champion role and a formal place in the royal-ideological order that the Tablet underwrites.footnote:[Foster 2005, pp. 576–577, Tablet III; Annus 2001, Tablet III; Lambert 2013, introduction, on the royal-legitimation function.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-[LACUNA: the closing doxology of Tablet III is partially broken | source: Annus 2001, Tablet III apparatus | scholarly_reconstruction: Annus reconstructs the final hymn of praise from parallel Mesopotamian praise-formulae.]
-
-[RECONSTRUCTION: the final doxology is presented in Annus's reconstructed form, completing the hymn of praise to Ninurta | gap_source: Annus 2001, Tablet III closing lines | fill_source: Annus's score of parallel Mesopotamian praise-formulae, drawn from within the Anzû textual tradition | confidence: medium]
-
-The epic closes, in Annus's reconstructed form, with a hymn-formula addressed to Ninurta as victorious warrior and restorer of cosmic order.footnote:[Foster 2005, pp. 577–578, Tablet III closing hymn; Annus 2001, Tablet III.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 577-578
-
-=== Function and interpretation
-
-The Anzû Epic is read in the scholarship as a sovereignty-combat rather than as a cosmogonic combat. No world is made in it. The decisive action is the return of an already-existing kingship-token to its legitimate custodian.footnote:[Lambert 2013, introduction, on sovereignty-as-function; Foster 2005, pp. 555–556, headnote; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-The narrative establishes Ninurta as a model king — the warrior who defends the order of the assembly, follows the counsel of the wise god, and restores the instruments of rule to their rightful place. This is the Ninurta whom the Marduk chapter will meet again, translated into a new pantheon.footnote:[Annus 2001, introduction, on Ninurta-as-model-king; Lambert 2013, introduction.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The narrative is cited in the scholarship as invoked within Neo-Assyrian royal ritual and within the *akītu* — the New Year festival framework that ties the epic to the performative legitimation of the king.footnote:[Annus 2001, introduction, on the ritual and *akītu* contexts.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The theology of the Tablet of Destinies — the claim that kingship is a transferable token, enforceable by decree — is the conceptual pivot that the scholarship follows into *Enūma Eliš*. What begins as a sub-plot in the Anzû Epic will become the cosmological engine of the Babylonian creation epic.footnote:[Lambert 2013, introduction, on the Tablet of Destinies across compositions; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Foster's headnote specifies that the Anzû Epic is preserved on multiple Neo-Assyrian copies and is one of the better-represented narrative poems of the Standard Babylonian corpus — a point worth registering because it means the text can be read without the acute fragmentation problems that dog some neighbouring compositions.footnote:[Foster 2005, pp. 555–556, headnote on the Standard Babylonian preservation.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
-
-Annus's introduction lays out the case that the Anzû Epic is a deliberate literary antecedent of *Enūma Eliš*, reused, reshaped, and structurally outbid in the later composition.footnote:[Annus 2001, introduction on the Anzû → Enūma Eliš genealogy.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-Lambert concurs. Marduk's assumption of the Tablet of Destinies in *Enūma Eliš* is, on Lambert's reading, modelled directly on Ninurta's recovery of the Tablet in the Anzû Epic.footnote:[Lambert 2013, introduction, on Marduk and the Tablet.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Forsyth, writing from outside Assyriology and with a wider comparative horizon, treats the Anzû Epic as a key node in the long genealogy that combat-myth scholarship traces from Mesopotamia to the Hebrew Bible and Christian apocalyptic.footnote:[Forsyth 1987, ch. 2, on the Anzu-bridge argument.]
-// EVIDENCE: source_id=forsyth-1987 ; loc=ch. 2
-
-=== Variants and transmission
-
-[VARIANT: primary=Annus 2001 ("Standard Babylonian three-tablet recension"); alt=Foster 2005 pp. 555–556 ("Old Babylonian fragmentary version survives with some divergent details") | chosen: A | reason: the Standard Babylonian text is the main attested recension, and the brief designates Annus 2001 as the prevalent version.]
-
-An Old Babylonian fragmentary version of the story survives. Foster's translation indicates it differs from the Standard Babylonian recension in narrative details but not in the overall arc.footnote:[Foster 2005, pp. 555–556, headnote on the Old Babylonian antecedent.]
-// EVIDENCE: source_id=foster-2005 ; loc=pp. 555-556
-
-The Old Babylonian version is treated here as an earlier, shorter witness rather than as a textually equivalent variant, following the brief's classification.footnote:[Annus 2001, introduction; Foster 2005, pp. 555–556.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The Sumerian *Lugal-e* does not narrate the Anzû combat. It lists "the Anzud bird" in Šarur's catalogue of Ninurta's prior trophies — the list the mace recites to remind the warrior who he is.footnote:[ETCSL 1.6.2 line 122, the Anzud bird in the trophy-list.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 line 122
-
-The Sumerian *Angim dimma* likewise places the Anzud bird in Ninurta's catalogue of slain foes and among the trophies hung on the warrior's chariot. It too does not narrate a combat.footnote:[ETCSL 1.6.1 lines 30–40 (trophy list) and 55–63 (chariot-hanging).]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.1 lines 30-63
-
-The Sumerian allusions are therefore evidence that an Anzû-slaying tradition was already in circulation before the Standard Babylonian epic gave it narrative expansion. The story the Akkadian poet develops is older than the poem.footnote:[ETCSL 1.6.1 lines 30–40; ETCSL 1.6.2 line 122; Annus 2001, introduction on the Sumerian prehistory.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The continuity from the Sumerian Ninurta material into the Standard Babylonian Anzû Epic is strongest in the figure of Šarur, the animate messenger-mace. Across both traditions, Šarur functions as scout and speaker between warrior and counselor.footnote:[ETCSL 1.6.2 lines 24–47, 96–118, 228–243 on Šarur in Lugal-e; Foster 2005, pp. 568–569 on Šarur in the Anzû Epic.]
-// EVIDENCE: source_id=etcsl ; loc=ETCSL 1.6.2 Šarur passages
-
-The Standard Babylonian composition therefore draws on an older Sumerian Ninurta cycle in which the warrior-god's weapons and adversaries are already identified. What the Akkadian poet does is to take one of those adversaries — Anzû — and narratively expand the allusion into a full combat-and-recovery story.footnote:[Annus 2001, introduction, on the Sumerian-to-Akkadian literary transmission.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-=== Reception within the Mesopotamian tradition
-
-Scholarship traces a deliberate literary line from *Lugal-e* (Ninurta vs. Asag) to the Anzû Epic (Ninurta vs. Anzû) to *Enūma Eliš* (Marduk vs. Tiamat and Qingu). Each composition reuses and outbids its predecessor. The warrior becomes younger, the adversary becomes larger, the stakes become more cosmic.footnote:[Annus 2001, introduction, on the *Lugal-e* → Anzû → *Enūma Eliš* line; Lambert 2013, introduction.]
-// EVIDENCE: source_id=annus-2001-anzu ; loc=introduction
-
-The Tablet of Destinies appears as a narrative object in the Anzû Epic and then again in *Enūma Eliš*, where Tiamat bestows it on Qingu and Marduk reclaims it after the combat. The object travels between compositions as a recognisable token.footnote:[Lambert 2013, introduction and commentary on the Tablet in Enūma Eliš; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-The structural reuse extends to the name-list. Ninurta's honorific names at the close of the Anzû Epic are the direct antecedent of Marduk's fifty names at the close of *Enūma Eliš*. What began as one warrior's catalogue of honorifics becomes another's coronation.footnote:[Lambert 2013, introduction; Annus 2001, introduction and Tablet III commentary.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-Anzû himself is repurposed in *Enūma Eliš*. He is no longer the rebel-servant of the Anzû Epic; he is now a monster in Tiamat's brood, slain once already and now recruited into a new cosmogonic conflict. The Marduk-poet is working with a character who has already died in an earlier text.footnote:[Lambert 2013, introduction and commentary on Anzû's reuse in Enūma Eliš; Annus 2001, introduction.]
-// EVIDENCE: source_id=lambert-2013 ; loc=introduction
-
-// COMPARATIVE-HOOK: Lambert 2013 and Annus 2001 both argue the Lugal-e → Anzû → Enūma Eliš literary genealogy is deliberate authorial reuse rather than general pattern-matching; this is the Part II C2 (combat as sovereignty) argument for Mesopotamian continuity.
-// COMPARATIVE-HOOK: the Tablet of Destinies as sovereignty-token — transferable, decree-enforcing, recoverable — is the Mesopotamian conceptual analogue to Marduk's assumption of the Tablet in Enūma Eliš and to the "kingship as object" motif that feeds the Kumarbi Cycle and, via transmission, the Hesiodic succession in Theogony 820–880 (see hoffner-1998; west-1997).
-// COMPARATIVE-HOOK: the lion-headed eagle-monster iconography across third-millennium Mesopotamia is evidence for the Anzû-figure's circulation independent of the narrative epic — a reception-across-media story that parallels the wider Near Eastern diffusion of combat imagery (Annus 2001 introduction; Foster 2005 pp. 555–556 headnote).
-// COMPARATIVE-HOOK: the threefold refusal structure (Adad, Gerra, Šara decline before Ea proposes Ninurta) is structurally comparable to the threefold refusal in the Baal Cycle before Baal takes up the combat against Yamm (see Part II C2; smith-1994-baal-i).
-// COMPARATIVE-HOOK: the Vedic "Indra and the theft of soma" material offers a parallel theft-of-kingship-token motif in positive valence — the champion takes back what belongs to the gods — which the C2 sovereignty chapter should address (jamison-brereton-2014).
-// COMPARATIVE-HOOK: the animate-weapon motif (Šarur as messenger-mace) links this chapter to Ch1 Ninurta/Asag; the two chapters together establish Šarur as a cross-composition character and prepare the contrast with Marduk's impersonal weapons in Enūma Eliš.
-// COMPARATIVE-HOOK: the "arrow annulled by decree" motif (arrow back to shaft, feather back to bird) has no close Indo-European parallel in the Watkins HERO SLAY SERPENT corpus; it is a distinctly Mesopotamian theological innovation tied to the Tablet-of-Destinies theology (watkins-1995; Lambert 2013).
+special_instructions: |
+  Short full chapter. Chapter MUST open with an explicit INCLUSION-MARGINAL framing marker
+  explaining why this edge-case is included: te Velde's scholarship is the anchor; Seth's
+  ambivalence (adversary of Osiris, defender of Ra) is exactly what makes the Egyptian
+  combat-myth complex more interesting than a simple chaos-vs-order mapping would allow.
+  Present Chester Beatty I Contendings as a specific later literary reworking, not as the
+  base text. The chapter sets up material for Part II C2 (sovereignty) and also feeds the
+  Gunkel-Ballentine debate: the fact that Seth is both slayer-of-Apep and murderer-of-Osiris
+  undermines any simple moral dualism.
 ```

@@ -1,0 +1,113 @@
+stage: 15-narrative-fidelity
+chapter: 17
+chapter_title: "Horus vs. Seth (An Edge Case)"
+status: done
+verdict: PASS
+timestamp: 2026-04-28T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 49
+  claims_mapped: 49
+  footnotes_claims: 49
+  footnotes_narrative: 49
+  evidence_tokens_claims: 49
+  evidence_tokens_narrative: 49
+  inclusion_marginal_markers: 1
+  variant_markers: 1
+  inference_markers: 3
+  lacuna_markers: 0
+  reconstruction_markers: 0
+  comparative_hooks: 5
+  high_severity_findings: 0
+  medium_severity_findings: 0
+  low_severity_findings: 3
+  note_findings: 1
+  new_fact_findings: 0
+  dropped_claim_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  footnote_verbatim: PASS
+  evidence_verbatim: PASS
+
+output_files:
+  fidelity_yaml: chapters/17-horus-seth.fidelity.yaml
+  narrative: chapters/17-horus-seth.adoc
+  claims: chapters/17-horus-seth.claims.approved.adoc
+
+key_checks_passed:
+  - inclusion_marginal_at_opening: >
+      INCLUSION-MARGINAL marker at narrative line 4 (immediately after chapter
+      title), verbatim identical to claims — all four sub-fields (basis,
+      justification, scope) preserved character-by-character.
+  - all_markers_verbatim: >
+      All 5 markers (1 INCLUSION-MARGINAL, 1 VARIANT, 3 INFERENCE) verbatim
+      identical to claims. INFERENCE-1 (settled theological tolerance of moral
+      ambivalence), INFERENCE-2 (compensatory placement encodes two-dossier
+      structure), INFERENCE-3 (tribunal-frame as juridically-rather-than-martially
+      established order) — all verbatim identical including basis and risk fields.
+  - all_comparative_hooks_verbatim: >
+      All 5 COMPARATIVE-HOOK lines verbatim identical to claims: Kumarbi Cycle
+      (Ch. 5); Sovereignty cluster (Part II C2); Gunkel-Ballentine debate
+      (Part II C8); Ra-Apep (Ch. 16); Royal-legitimation cluster (judicial vs.
+      martial). Diff returned zero discrepancies.
+  - seth_two_dossiers_preserved: >
+      Two-dossier ambivalence preserved without moralising collapse throughout.
+      Narrative line 58 explicitly: "without the kind of theological harmonisation
+      that would resolve the apparent contradiction." INFERENCE-1 marker frames
+      parallelism as "settled theological tolerance of moral ambivalence."
+      Contendings resolution (line 109) preserves compensatory placement without
+      resolving ambivalence. No sentence collapses the two dossiers.
+  - variants_co_equal: >
+      Contendings presented as "later literary reworking, not as the base text"
+      (line 27). VARIANT marker (line 33) makes co-equal presentation explicit.
+      Pyramid Texts/Coffin Texts presented as "foundational stratum" (line 117).
+      Contendings never elevated to base-text status.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-serpent", "chaos-monster" absent as bare umbrella
+      terms. "chaos-figure" appears twice in scare-quoted critique-of-category
+      constructions (lines 131 and 173) matching the claims exactly — approved
+      Ballentine-compliance pattern.
+  - footnote_evidence_verbatim: >
+      49 footnotes / 49 EVIDENCE tokens on each side. Footnote texts verbatim
+      identical (sorted diff = zero). EVIDENCE tags verbatim identical (diff =
+      zero). Source-id discipline preserved: te-velde-1967 at chapter-section
+      level; assmann-2001-search at chapter-section level; forsyth-1987 at
+      "brief engagement with Horus-Seth"; ballentine-2015 at "passim"; hoffner-1998
+      at "Kumarbi cycle (Kumarbi-Teshub succession)" per FC-04 fix.
+  - word_count_proportionate: >
+      6,489 words narrative vs. ~6,370 expected (49 claims × ~130 words). The
+      over-target figure (~85% above the 3,500-word brief target) reflects
+      efficient verbatim transfer of a dense 49-claim set with three multi-
+      paragraph INFERENCE markers. No unclaimed elaboration found.
+
+note_findings:
+  - id: FINDING-01
+    severity: NOTE
+    description: >
+      "=== Source overview" section header present in claims (line 2749) but
+      absent from narrative. All 13 source-overview claims present in narrative
+      body; no content dropped. Same NOTE-severity pattern as Ch. 16.
+
+low_findings:
+  - id: FINDING-02
+    severity: LOW
+    description: >
+      "primary scholarly anchor" (claims) → "principal scholarly anchor"
+      (narrative, line 9). Synonymous substitution; footnote verbatim identical.
+  - id: FINDING-03
+    severity: LOW
+    description: >
+      "Assmann 2001 is printed-only" → "Assmann 2001 is also printed-only"
+      (narrative, line 18). The word "also" adds a cohesion marker; no factual
+      content altered; footnote verbatim identical.
+  - id: FINDING-04
+    severity: LOW
+    description: >
+      Multiple minor body-sentence condensations (narrative lines 55, 71, 80,
+      83, 94, 97, 140): back-reference phrases dropped in mid-section uses
+      ("the Horus-Seth contention" → "the contention"; "of the Contendings" →
+      dropped; etc.); several semicolons split to periods. None alter factual
+      content; all footnotes verbatim identical.

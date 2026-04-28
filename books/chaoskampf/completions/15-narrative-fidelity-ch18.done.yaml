@@ -1,0 +1,107 @@
+stage: 15-narrative-fidelity
+chapter: 18
+chapter_title: "Thor vs. Jörmungandr: Three Encounters and Ragnarök"
+status: done
+verdict: PASS
+timestamp: 2026-04-28T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 142
+  claims_mapped: 142
+  footnotes_claims: 142
+  footnotes_narrative: 142
+  evidence_tokens_claims: 142
+  evidence_tokens_narrative: 142
+  inference_markers: 5
+  lacuna_markers: 2
+  variant_markers: 1
+  comparative_hooks: 8
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  note_findings: 1
+
+output_files:
+  fidelity_yaml: chapters/18-thor-jormungandr.fidelity.yaml
+  narrative: chapters/18-thor-jormungandr.adoc
+  claims: chapters/18-thor-jormungandr.claims.approved.adoc
+
+key_checks_passed:
+  - three_encounter_framing: >
+      Útgarðaloki (trickster-framed), Hymir fishing (failed combat), and
+      Ragnarök (eschatological mutual killing) each maintain their own
+      narrative-thematic register. No collapse of the three encounters found.
+      The narrative explicitly states "the three encounters are not three
+      retellings of one combat but a layered record" at the opening paragraph
+      and reinforces the point at line 339.
+  - co_equal_variant_discipline: >
+      FC-01 correction preserved. Hymiskviða line-cut and Húsdrápa apparent-
+      beheading presented co-equally; no priority drift. The VARIANT marker
+      text is verbatim identical to the approved claims. The body prose at
+      line 207 presents both outcomes simultaneously without ordering one as
+      dominant.
+  - watkins_summary_discipline: >
+      Full philological argument reserved for Part II C5. Section header
+      explicitly flags "(summary; full argument in Part II C5)". Narrative
+      line 405 states the full argument is reserved and only summarised here.
+      No pre-emption of the consolidated Vedic/Avestan/Hittite/Greek/Norse
+      comparative argument.
+  - iconographic_dossier_prominence: >
+      Own section ("=== Iconographic dossier — the four runestones") with
+      each of the four stones given its own dedicated claim-paragraph:
+      Altuna (Uppland, c. 1050 CE), Hørdum (Thy, Jutland, c. 800 CE),
+      Gosforth (Cumbria, c. 950 CE), Ardre VIII (Gotland, c. 700–800 CE).
+      Each paragraph includes date, location, and depiction details.
+      Not collapsed.
+  - skaldic_chronology: >
+      Bragi Boddason (early ninth century CE), Eysteinn Valdason (tenth
+      century), Úlfr Uggason / Húsdrápa (c. 985 CE) all correctly dated.
+      Skaldic corpus presented as pre-dating the Eddic manuscript record.
+      Chronological load-bearing argument preserved throughout.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-serpent", "chaos-monster" absent from narrative
+      body prose. Grep returned empty output. Jörmungandr consistently
+      characterised as "world-encircling serpent", "cosmic-boundary figure",
+      "serpentine adversary".
+  - glossary_discipline: >
+      Þórr/Thor: first body-prose mention introduces both forms; Thor
+      thereafter. Óðinn locked spelling throughout; parenthetical flags
+      policy at line 108. Midgard/Miðgarðr: first mention introduces both;
+      Midgard in body prose; Miðgarðr preserved in philological notes and
+      Miðgarðsormr. Mjöllnir/Mjǫllnir: first mention introduces both. All
+      source-title italicisation disciplines preserved.
+  - all_markers_verbatim: >
+      All 8 markers (5 INFERENCE, 2 LACUNA, 1 VARIANT) verbatim identical
+      to claims. Verified by diff returning empty output.
+  - all_comparative_hooks_verbatim: >
+      All 8 COMPARATIVE-HOOK lines verbatim identical to claims. Verified by
+      diff returning empty output. Hooks cover: India/Indra-Vṛtra (Ch. 14),
+      Iran/Aži Dahāka-Frashokereti (Ch. 13), Anatolia/Illuyanka v2 (Ch. 6),
+      Christian apocalyptic/Rev. 12 (Ch. 9), Mesopotamia/Marduk-Tiamat (Ch. 3),
+      Old English/Beowulf-dragon (Ch. 19), IE HERO SLAY SERPENT formula
+      (Part II C5), Eschatological displacement (Part II C4).
+  - footnote_integrity: >
+      142 footnotes in narrative and claims. Verbatim identical by diff
+      (empty output). No additions, removals, or text alterations.
+  - evidence_token_integrity: >
+      142 EVIDENCE tokens in narrative and claims. Verbatim identical by diff
+      (empty output). Sequence matches claims sequence exactly.
+  - word_count_sanity: >
+      15,790 words narrative vs. ~15,620-word claim-density baseline
+      (142 claims × ~110 words). Overage of ~170 words entirely attributable
+      to the 103-word unfootnoted intro paragraph plus normal sentence-
+      splitting connectives. No over-elaboration or unclaimed content.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      One unfootnoted introductory paragraph at narrative lines 3–4 (103 words)
+      absent from the claims document. The paragraph previews the three-encounter
+      structure and layered-record framing mandated by the brief and claims. No
+      factual assertions added. Legitimate chapter-opening navigation bridge.
+      Accounts for essentially all of the word-count overage above claim-baseline.
