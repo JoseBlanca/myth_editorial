@@ -12,8 +12,20 @@ Examples:
     python assemble_prompt.py claims-factcheck sumer chapters/01-descent-of-inanna.claims.adoc
 
 Output:
-    Writes the assembled prompt to books/<book>/prompts/<stage>.prompt.md
+    Writes the assembled prompt to books/<book>/prompts/<NN>-<stage>[<modifier>][<chapter>].prompt.md
     If xclip/xsel/wl-copy is available, also copies to clipboard.
+
+    The output filename is derived from the inputs:
+      - Chapter suffix: input filenames matching `^NN-` (e.g. `briefs/21-gonggong.yaml`)
+        contribute `-chNN`. Up to 2 unique chapter numbers are kept, sorted, e.g.
+        `04-post-human-normalize-claims-ch21-ch22.prompt.md`. More than 2 (e.g.
+        comparative-chapter taking every story chapter as input) → no suffix.
+      - Modifier suffix: post-human-normalize is reused for four artifacts
+        (inventory / intro / claims / fidelity) — the modifier is inferred from
+        the input filenames so parallel cycles don't collide.
+
+    Without these, parallel runs of the same stage on different chapters
+    overwrite each other's prompt files mid-pipeline.
 
 The assembled prompt contains:
     1. The governing files (scope.md, sources.yaml, glossary.yaml) if they exist
@@ -21,6 +33,8 @@ The assembled prompt contains:
     3. Any extra input files passed as arguments
 """
 
+import os
+import re
 import sys
 import shutil
 import subprocess
@@ -65,8 +79,61 @@ def list_books() -> list[str]:
     return [d.name for d in sorted(BOOKS_DIR.iterdir()) if d.is_dir()]
 
 
+CHAPTER_NUM_RE = re.compile(r"(?:^|/)(\d+)-")
+
+
+def detect_chapter_suffix(extra_files: list[str]) -> str:
+    """Build a ``-chNN[-chNN]`` suffix from chapter numbers found in input
+    filenames matching ``NN-...``. Returns ``""`` if no chapters are found
+    or if more than two unique chapter numbers are present (avoids
+    multi-chapter stages like comparative-chapter producing absurdly long
+    filenames)."""
+    nums: list[int] = []
+    for f in extra_files:
+        m = CHAPTER_NUM_RE.search(f)
+        if m:
+            n = int(m.group(1))
+            if n not in nums:
+                nums.append(n)
+    if not nums or len(nums) > 2:
+        return ""
+    nums.sort()
+    return "".join(f"-ch{n:02d}" for n in nums)
+
+
+def detect_normalize_modifier(stage: str, extra_files: list[str]) -> str:
+    """For ``post-human-normalize``, infer which artifact is being normalized
+    from the input filenames and return ``-claims`` / ``-fidelity`` /
+    ``-intro`` / ``-inventory`` (or ``""`` if unrecognized). The same skill
+    is reused for four distinct artifacts; without a modifier their prompt
+    files collide. ``intro`` and ``inventory`` are checked before the
+    chapter-based modifiers because they live at fixed paths that the
+    chapter-suffix logic would otherwise also match."""
+    if stage != "post-human-normalize":
+        return ""
+    files_str = " ".join(extra_files)
+    if "00-introduction" in files_str:
+        return "-intro"
+    if "inventory" in files_str:
+        return "-inventory"
+    if ".fidelity.yaml" in files_str:
+        return "-fidelity"
+    if ".claims.factcheck.yaml" in files_str or ".claims.adoc" in files_str:
+        return "-claims"
+    return ""
+
+
 def copy_to_clipboard(text: str) -> str | None:
-    """Try to copy text to clipboard. Returns the tool name used, or None."""
+    """Try to copy text to clipboard. Returns the tool name used, or None.
+
+    Skipped entirely when no display server is detected. Without an X11
+    DISPLAY or Wayland session, xsel falls back to dumping its stdin to
+    stdout while still exiting 0 — that pollutes the script's stdout
+    (with up to several hundred KB of prompt text) and produces a
+    misleading "Copied to clipboard" message. Stdout/stderr from the
+    clipboard tool are also redirected to DEVNULL as belt-and-suspenders."""
+    if not (os.environ.get("DISPLAY") or os.environ.get("WAYLAND_DISPLAY")):
+        return None
     for tool, args in [
         ("xclip", ["xclip", "-selection", "clipboard"]),
         ("xsel", ["xsel", "--clipboard"]),
@@ -74,7 +141,13 @@ def copy_to_clipboard(text: str) -> str | None:
     ]:
         if shutil.which(tool):
             try:
-                subprocess.run(args, input=text.encode(), check=True)
+                subprocess.run(
+                    args,
+                    input=text.encode(),
+                    check=True,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                )
                 return tool
             except subprocess.CalledProcessError:
                 continue
@@ -151,7 +224,9 @@ def assemble(stage: str, book: str, extra_files: list[str]) -> None:
     prompts_dir = book_dir / "prompts"
     prompts_dir.mkdir(exist_ok=True)
     padded = f"{stage_number:02d}"
-    output_path = prompts_dir / f"{padded}-{stage}.prompt.md"
+    modifier = detect_normalize_modifier(stage, extra_files)
+    chapter_suffix = "" if modifier in ("-intro", "-inventory") else detect_chapter_suffix(extra_files)
+    output_path = prompts_dir / f"{padded}-{stage}{modifier}{chapter_suffix}.prompt.md"
     output_path.write_text(prompt_text)
 
     line_count = prompt_text.count("\n")
