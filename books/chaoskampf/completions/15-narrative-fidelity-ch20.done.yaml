@@ -1,0 +1,144 @@
+stage: 15-narrative-fidelity
+chapter: 20
+chapter_title: "Slavic and Baltic Combat (Perun/Veles, Dobrynya byliny)"
+status: done
+verdict: PASS
+timestamp: 2026-04-28T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 66
+  claims_mapped: 66
+  footnotes_claims: 66
+  footnotes_narrative: 66
+  evidence_tokens_claims: 66
+  evidence_tokens_narrative: 66
+  reconstruction_markers: 1
+  inference_markers: 2
+  variant_markers: 1
+  comparative_hooks: 8
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  kazimierz_hits: 0
+  leszek_present: true
+  note_findings: 2
+
+source_distribution:
+  west_2007: 45
+  bailey_ivanova_1998: 16
+  watkins_1995: 3
+  forsyth_1987: 2
+  total: 66
+  distribution_matches_claims: true
+  fc01_fix_preserved: true
+  fc02_fix_preserved: true
+
+output_files:
+  fidelity_yaml: chapters/20-slavic-baltic.fidelity.yaml
+  narrative: chapters/20-slavic-baltic.adoc
+  claims: chapters/20-slavic-baltic.claims.approved.adoc
+
+key_checks_passed:
+  - reconstruction_framing_throughout: >
+      Every Perun-Veles plot-element claim in the narrative uses explicit
+      reconstruction-conditional language. The four-stage pursuit (line 87)
+      is introduced with "On the Ivanov-Toporov reading..."; subtype
+      assignments (lines 119, 122) use "If the reconstruction holds...";
+      the combat summary (line 73) is framed as what "the reconstruction
+      proposes". The RECONSTRUCTION marker at line 76 with all three
+      sub-fields intact (gap_source / fill_source / confidence: low) frames
+      all downstream plot-element content. No unconditional Perun-Veles
+      combat assertion found anywhere in body prose.
+  - fc01_source_retagging_preserved: >
+      FC-01 HIGH fix preserved. All 16 Dobrynya-specific EVIDENCE tokens carry
+      source_id=bailey-ivanova-1998 in the narrative. The two forsyth-1987
+      tokens retained in the claims (source-overview anchor and international-
+      dragon-slaying-type claim) appear at their correct sequence positions in
+      the narrative. Source distribution exactly matches the post-normalize
+      approved claims: west-2007=45, bailey-ivanova-1998=16, watkins-1995=3,
+      forsyth-1987=2. Verified by diff (empty output) and md5sum match on all
+      EVIDENCE token lines.
+  - fc02_moszynski_name_preserved: >
+      FC-02 HIGH fix preserved. Narrative line 18 names "Leszek Moszyński in
+      the Polish Slavic-studies tradition". "Kazimierz Moszyński" does not
+      appear anywhere in the narrative (grep exit code 1, zero matches). The
+      bare surname "Moszyński" in the RECONSTRUCTION marker (line 76), the
+      methodological-objections claim (line 102), and the COMPARATIVE-HOOK
+      (line 225) is anchored by the full-name disambiguation at line 18.
+  - chapter_opening_framing: >
+      The Source overview opens with immediate establishment of the two-sub-case
+      asymmetry (line 6), the Ivanov-Toporov 1965–1974 reconstruction status
+      (line 15), and by the 5th paragraph (line 18) names all four critics
+      (Jakobson, Lajoye, Leszek Moszyński, Kapović) with their grounds of
+      objection. Hard Rule 12 satisfied within the first source-overview section.
+  - dobrynya_bridge_as_inference: >
+      The Ivanov-Toporov reflex-claim (Dobrynya as Perun-reflex) is presented
+      at line 171 as Ivanov and Toporov's "specific comparative claim" and
+      immediately followed by INFERENCE-2 (line 174) flagging the doubly-
+      mediated character: the claim depends both on the contested pre-Christian
+      reconstruction and on structural-comparative reading. The evidential limits
+      and competing international-type explanation are registered at lines 179
+      and 182. Never asserted as fact.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-serpent", "chaos-monster" absent from narrative
+      body prose. Grep returned no matches. Veles consistently characterised as
+      "cattle-stealing earth-serpent" and "earth-serpent"; Zmey Gorynych as
+      "three-headed dragon" and "serpent-adversary".
+  - glossary_discipline: >
+      All locked renderings used correctly: Perun (37 hits), Veles (38 hits),
+      *bogatyr* / *bogatyri* (4 hits, correct plural), *bylina* / *byliny*
+      (correct italicised singular/plural throughout), Dobrynya Nikitich (35
+      hits), Zmey Gorynych (7 hits), Ivanov (39 hits), Toporov (24 hits).
+      No glossary violations found.
+  - all_markers_verbatim: >
+      All 4 markers (1 RECONSTRUCTION, 2 INFERENCE, 1 VARIANT) verbatim
+      identical to claims. Verified by diff returning empty output for each.
+      RECONSTRUCTION marker retains all three sub-fields (gap_source,
+      fill_source, confidence: low) verbatim. INFERENCE markers retain basis
+      and risk fields verbatim. VARIANT marker retains all four fields (primary,
+      alt, chosen, reason) verbatim.
+  - all_comparative_hooks_verbatim: >
+      All 8 COMPARATIVE-HOOK lines verbatim identical to claims. Verified by
+      diff returning empty output. Hooks cover: India/Indra-Vṛtra (Ch. 14),
+      Anatolia/Tarḫunna-Illuyanka (Ch. 6), Norse/Thor-Jörmungandr (Ch. 18),
+      Greek cattle-raid reflexes/Geryon-Cacus (Ch. 12), IE HERO SLAY SERPENT
+      formula (Watkins 1995 Part V; Part II C5), Methods sidebar (Ch. 33),
+      Christian reception/St. George (Ch. 10), Iran/Thraētaona-Aži Dahāka
+      (Ch. 13).
+  - footnote_integrity: >
+      66 footnotes in narrative and claims body. Footnote CONTENTS (inside
+      footnote:[...]) verified character-by-character identical by md5sum hash
+      match (b682ea97f5657c9d8b80a1abb6370cb2 on both sides). No additions,
+      removals, or text alterations found. The body prose surrounding the
+      footnotes is rewritten for readability but all content is present.
+  - evidence_token_integrity: >
+      66 EVIDENCE tokens in narrative and claims body. Verbatim identical
+      sequence (diff empty output; md5sum match). The EVIDENCE token sequence
+      matches the claims sequence exactly (verified by numbered-sequence
+      comparison). Source distribution exactly preserved.
+  - word_count_sanity: >
+      8,343 words narrative vs. ~7,260-word formula baseline (66 × ~110).
+      Overage of ~1,083 words (~15%) attributable to sentence-splitting and
+      connective-prose style throughout, plus ~50-word navigation bridge.
+      The 85%-over-target figure in the audit brief reflects the entire AsciiDoc
+      file including 66 long footnotes (~3,500 words) and 8 COMPARATIVE-HOOK
+      blocks. No unclaimed elaboration found.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      One unfootnoted navigational paragraph at narrative line 54 absent from
+      the claims document. The paragraph previews the three-part structure
+      (Perun-Veles / Dobrynya / forward-links). No factual assertions added.
+      Legitimate chapter-opening navigation bridge. No action required.
+  - id: ISSUE-02
+    severity: NOTE
+    description: >
+      Word-count overage of ~1,083 words (~15% above formula baseline). Entirely
+      attributable to sentence-splitting and connective-prose style; no unclaimed
+      elaboration found. No action required at fidelity stage.

@@ -1,0 +1,834 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  writer_model: claude-opus-4-7
+  claims_file: chapters/19-ie-reflexes.claims.approved.adoc
+  narrative_file: chapters/19-ie-reflexes.adoc
+  total_claims: 95
+  claims_mapped: 95
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 95 claims were mapped individually to narrative
+      locations in section order. Footnote counts were verified programmatically
+      (95 on each side — exact match). EVIDENCE token counts were verified
+      programmatically (95 on each side — exact match, and all EVIDENCE tags
+      are character-by-character identical between the two files, confirmed by
+      diff returning empty output). All 7 INFERENCE markers, 1 LACUNA marker,
+      and 2 VARIANT markers were compared to the claims document; all 10 are
+      verbatim identical, confirmed by diff returning empty output. All 7
+      COMPARATIVE-HOOK lines were verified verbatim identical by diff.
+    q2_additions_check: >
+      Every narrative paragraph was checked against the claims document. One
+      unfootnoted introductory paragraph at narrative lines 3–4 (before the
+      "=== Source overview" header) was evaluated: "Six post-Vedic, post-Iranian,
+      post-Anatolian Indo-European traditions preserve the dragon-combat at varying
+      philological depths. The Eddic poem *Fáfnismál* gives the diction of
+      Sigurd's killing-stroke in a verbal form that Calvert Watkins reads as a
+      direct reflex of the reconstructed Indo-European poetic formula HERO SLAY
+      SERPENT. The Old English *Beowulf* gives the dragon-episode that closes the
+      poem with the aged king's death-stroke. The Middle Irish *Cath Maige Tuired*
+      gives Lugh's sling-stone killing of Balor. The Welsh tradition gives the
+      Red-and-White Dragon combat in two recensions of distinct framing. The
+      Ossetic Nart corpus gives Batraz's combats. And the Armenian material — the
+      most fragmentary of the six — gives Vahagn the *Vishapakagh*, 'dragon-reaper',
+      through Khorenatsi's late paraphrase of a hymn whose own text is lost. The
+      chapter takes these six sub-cases in order from the strongest philological
+      evidence to the most fragmentary, treating each in its own clearly-bounded
+      sub-section and preserving the morphological and evidential distinctiveness
+      of each rather than smoothing them into a single comparative schema."
+      This paragraph previews the six sub-cases established in the claims;
+      every factual assertion in it (Fáfnismál/Sigurd/Watkins direct-reflex;
+      Beowulf aged-king death-stroke; Cath Maige Tuired/Lugh/Balor sling-stone;
+      Welsh two-recension framing; Ossetic Nart/Batraz; Vahagn/Vishapakagh/
+      Khorenatsi lost-hymn paraphrase) maps exactly to claims in the approved
+      file. No footnote required; no new factual content. NOTE only.
+      Critical verifier checks were confirmed explicitly:
+      (1) Tolkien-1936 deferral discipline (FC-01 fix): three claims in the
+          Beowulf sub-section carry source_id=tolkien-1936-monsters at the
+          correct loc=Proceedings of the British Academy 22 (1936) in both
+          claims and narrative; diff is empty. The narrative contains no
+          analysis of Tolkien's essay beyond its load-bearing critical move
+          (recovery of the mythic register of the Beowulf monsters). The
+          literary-critical afterlife (influence on medievalism, Tolkien's
+          dragon-fiction, modern academic reading) is explicitly deferred to
+          Ch42 in two separate narrative passages. No pre-emption of Ch42.
+      (2) Watkins full-derivation deferral: the narrative contains no full
+          philological derivation of the HERO SLAY SERPENT formula. The formula
+          is summarised at the level of its syntactic-semantic structure
+          (Old Norse *vega* + hero + *Fáfnir* = Vedic *áhann áhim* = Hittite
+          *kuenta . . . illuyanka*) in the Sigurd sub-section, which is exactly
+          the claim-level summary at narrative line 3201. The full argument is
+          consistently referred forward to Part II C5. No pre-emption.
+      (3) Vahagn fragmentary framing: the sub-section opens with an explicit
+          lost-hymn statement, the LACUNA marker is verbatim present with all
+          sub-fields (source, scholarly_reconstruction), the narrative never
+          presents Khorenatsi's paraphrase content as the hymn itself, and the
+          birth-narrative (triple-birth motif: heavens / sea / reed) is
+          explicitly attributed to Khorenatsi's paraphrase. The combat-content
+          reconstruction is explicitly presented as drawn from the Vishapakagh
+          epithet, vishapakar stelae, and comparative-philological readings
+          rather than from a primary narrative text. No LACUNA collapse.
+      (4) Six sub-sections: all six (Sigurd / Beowulf / Lugh-Balor / Welsh /
+          Batraz / Vahagn) plus "Source overview" and "Family pattern, reception,
+          and forward links" are present in narrative and claims with identical
+          section headers. The ordering is identical (Sigurd to Vahagn, strongest
+          to most fragmentary). Each sub-section has its own thematic register.
+      (5) tolkien-1936-monsters source_id discipline (FC-01): three EVIDENCE
+          tags in the narrative use source_id=tolkien-1936-monsters at
+          loc=Proceedings of the British Academy 22 (1936). The counts match
+          the claims exactly (3 in each); diff is empty.
+      (6) Banned umbrella terms: "chaos-figure", "chaos-monster", and
+          "chaos-serpent" are absent from narrative body prose. Grep confirmed
+          zero hits.
+      (7) No new source IDs: both narrative and claims use the same seven
+          source_ids (forsyth-1987, larrington-poetic-edda, ogden-2013,
+          russell-zoroastrianism-armenia, tolkien-1936-monsters, watkins-1995,
+          west-2007). No unclaimed scholars, deities, texts, or comparanda
+          introduced in narrative.
+    q3_distortion_check: >
+      All prose claims were checked for meaning preservation. The narrative is
+      overwhelmingly verbatim relative to the claims — the diff between
+      corresponding paragraphs is effectively zero. No paraphrases that alter
+      meaning were found. The single addition (the introductory paragraph)
+      introduces no new factual content. The marker sub-fields are preserved
+      verbatim throughout. The Vahagn sub-section correctly maintains the
+      fragmentary framing without collapsing the LACUNA. The Tolkien deferral
+      is maintained at every load-bearing point. The Watkins forward-link
+      discipline is preserved throughout.
+    q4_same_model: >
+      No. The narrative was produced by Claude Opus 4.7 in a separate session.
+      This audit is conducted by Claude Sonnet 4.6 in a fresh conversation with
+      no memory of writing the narrative. The review is valid.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: NOTE
+      category: addition-ok
+      description: >
+        One unfootnoted navigational-introductory paragraph before the
+        "=== Source overview" header previews all six sub-cases without
+        introducing any factual content beyond what the claims establish.
+        All six sub-case previews (Fáfnismál/Sigurd, Beowulf aged-king,
+        Cath Maige Tuired/Lugh-Balor sling-stone, Welsh two-recension,
+        Ossetic Nart/Batraz, Vahagn/Vishapakagh/Khorenatsi-paraphrase)
+        map exactly to claims in the approved file. No action required.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 95 claims are mapped to narrative locations in section order. The
+    narrative preserves every claim from all eight sections:
+    - Source overview (claims 1–19): narrative lines 5–18 (in the prompt
+      section 3107–3162), all 19 claims present including the chapter's
+      overall-argument claim (claim 19) on the six-narrative IE-reflex case.
+    - Sigurd vs. Fáfnir (claims 20–36): narrative lines 19–42, all 17 claims
+      present including 2 INFERENCE markers verbatim identical.
+    - Beowulf vs. Grendel and the dragon (claims 37–52): narrative lines 43–65,
+      all 16 claims present including 1 INFERENCE marker verbatim identical and
+      3 tolkien-1936-monsters EVIDENCE tags correctly placed.
+    - Lugh vs. Balor (claims 53–62): narrative lines 66–79, all 10 claims
+      present including 1 VARIANT marker and 1 INFERENCE marker verbatim identical.
+    - Welsh Red Dragon and White Dragon (claims 63–72): narrative lines 80–91,
+      all 10 claims present including 1 VARIANT marker and 1 INFERENCE marker
+      verbatim identical.
+    - Batraz and the Nart combats (claims 73–81): narrative lines 92–104, all
+      9 claims present including 1 INFERENCE marker verbatim identical.
+    - Vahagn and the vishaps (claims 82–91): narrative lines 105–117, all 10
+      claims present including 1 LACUNA marker and 1 INFERENCE marker verbatim
+      identical; fragmentary framing explicit throughout.
+    - Family pattern, reception, and forward links (claims 92–95): narrative
+      lines 118–132, all 4 forward-link-and-pattern-summary claims present plus
+      all 7 COMPARATIVE-HOOK lines verbatim identical.
+    Footnote count: 95 on both sides — exact match verified programmatically.
+    EVIDENCE token count: 95 on both sides — exact match, with all EVIDENCE
+    tags verified character-by-character identical by diff (zero discrepancies).
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    tolkien_1936_source_id_discipline:
+      result: PASS
+      notes: >
+        FC-01 source-id discipline preserved. All three Tolkien-specific claims
+        carry source_id=tolkien-1936-monsters at loc=Proceedings of the British
+        Academy 22 (1936) in both claims and narrative. Diff is empty for these
+        three EVIDENCE tags. The narrative does not use source_id=watkins-1995
+        for any of the three Tolkien claims. PASS.
+    tolkien_afterlife_deferral:
+      result: PASS
+      notes: >
+        The narrative contains no analysis of Tolkien's literary-critical afterlife
+        — no treatment of the essay's influence on twentieth-century medievalism,
+        on Tolkien's own dragon-fiction, or on the modern academic reading of the
+        poem. These topics are explicitly deferred to Ch42 at two narrative points:
+        (1) the Tolkien-deferral claim in the Beowulf sub-section (narrative line
+        corresponding to claims line 155); (2) the secondary forward-link claim
+        in the Family pattern section (claims line 185). Both deferral statements
+        are verbatim identical to the claims. No pre-emption of Ch42. PASS.
+    watkins_forward_link_discipline:
+      result: PASS
+      notes: >
+        The narrative contains no full philological derivation of the HERO SLAY
+        SERPENT formula. The formula's syntactic-semantic structure is summarised
+        once in the Sigurd sub-section (the narrative claim on the verb *vega*,
+        Vedic *áhann áhim*, and Hittite *kuenta . . . illuyanka* as instances of
+        the same structure), which is exactly the claim-level summary in the
+        approved file. The full philological argument is consistently referred
+        forward to Part II C5 throughout (10 occurrences in the narrative). No
+        pre-emption of Part II C5. PASS.
+    vahagn_lacuna_discipline:
+      result: PASS
+      notes: >
+        The LACUNA marker is present verbatim in the Vahagn sub-section with all
+        required sub-fields: source (Khorenatsi *Patmut'iwn Hayots'* I.31 with
+        the hymn-text not extant in any manuscript witness and the brief's
+        lost-hymn status), and scholarly_reconstruction (Russell 1987 reading
+        Khorenatsi's paraphrase as preserving substantive content at the level
+        of the dragon-slayer-epithet and storm-god combat-frame, with verbal-
+        poetic diction unrecoverable; Petrosyan corroboration with verbal-
+        philological limits flagged). The narrative never presents Khorenatsi's
+        content as the hymn itself — the triple-birth passage is explicitly
+        attributed to "Khorenatsi's paraphrase at *Patmut'iwn Hayots'* I.31"
+        throughout. Combat-content is explicitly reconstructed from the
+        Vishapakagh epithet, the vishapakar stelae, and comparative-philological
+        readings rather than from a primary narrative text. PASS.
+    banned_glossary_terms:
+      result: PASS
+      notes: >
+        The banned umbrella terms "chaos-figure", "chaos-monster", and
+        "chaos-serpent" are absent from the narrative body prose. Grep confirmed
+        zero hits across the entire narrative section. Ballentine 2015 compliance
+        confirmed. Adversaries are referred to within their tradition-specific
+        categories (Fáfnir as a *draca* / dragon; Balor as a "one-eyed giant";
+        the Welsh dragons as "dragons" with morphological specificity; vishaps
+        as "dragons of the Armenian tradition"). PASS.
+    six_sub_section_order_and_register:
+      result: PASS
+      notes: >
+        All six sub-sections are present in the narrative with identical headers
+        to the claims, in the correct order from strongest philological evidence
+        to most fragmentary: (1) Sigurd vs. Fáfnir — strongest philological
+        evidence; (2) Beowulf vs. Grendel and the dragon; (3) Lugh vs. Balor —
+        the Second Battle of Mag Tuired; (4) The Red Dragon and the White Dragon —
+        Welsh combat; (5) Batraz and the Nart combats — Ossetic; (6) Vahagn and
+        the vishaps — Armenian (fragmentary). Each sub-section maintains its
+        own thematic register: Sigurd with the philological-formula and
+        curse-driven-tragedy register; Beowulf with the aged-king / mythic-
+        register-recovery register; Lugh-Balor with the sovereignty-combat and
+        morphological-distinctiveness register; Welsh with the two-recension
+        and edge-of-IE-pattern register; Batraz with the oral-epic-and-Dumézilian
+        register; Vahagn with the explicit fragmentary-and-epithet register.
+        PASS.
+    no_unauthorised_material:
+      result: PASS
+      notes: >
+        No sources are cited that do not appear in the claims. The seven
+        source_ids in the narrative (forsyth-1987, larrington-poetic-edda,
+        ogden-2013, russell-zoroastrianism-armenia, tolkien-1936-monsters,
+        watkins-1995, west-2007) are identical to the seven source_ids in
+        the claims. No new named scholars, deities, texts, or comparanda
+        introduced beyond what the claims supply. The introductory paragraph
+        previews only sub-case content established in the claims. PASS.
+    transitional_addition:
+      result: NOTE-ONLY
+      notes: >
+        The unfootnoted introductory paragraph (narrative lines 3–4 in the
+        prompt section) previews the six sub-cases without adding factual
+        content beyond what the claims establish. The preview claims (six
+        sub-cases, Fáfnismál/Sigurd direct-reflex, Beowulf aged-king, Lugh/
+        Balor sling-stone, Welsh two recensions, Batraz combats, Vahagn
+        Vishapakagh Khorenatsi-paraphrase lost-hymn, order strongest-to-most-
+        fragmentary) all map to approved claims. No footnote required. NOTE only.
+    word_count_sanity_check:
+      result: PASS
+      notes: >
+        The narrative section (prompt lines 3099–3433) contains approximately
+        11,645 words. The claims section (prompt lines 2748–3093) contains
+        approximately 11,921 words. The narrative is slightly shorter than the
+        claims (the claims include the FC-01–FC-05 normalisation log and warning
+        comments which inflate the claims word count). The 11,643-word brief
+        target narrative word count (per task specification: "11,643 narrative
+        words against ~8,500-word brief target — 37% over") is consistent with
+        the 95-claim density at approximately 110–120 words per claim
+        (95 × ~120 = ~11,400 words ≈ 11,643 actual), placing the overage firmly
+        within the claim-density-justified range rather than indicating authorial
+        expansion. No action required.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    inference_markers:
+      result: PASS
+      notes: >
+        All 7 INFERENCE markers are verbatim identical to the claims file,
+        confirmed by diff returning empty output. The markers and their
+        locations are:
+        INFERENCE-1 (Sigurd-cycle ambiguous-outcome reading as editorial
+        comparative-typological reading): verbatim in Sigurd sub-section.
+        INFERENCE-2 (Sigurd-Fáfnir triple-witness parallel to Thor-Jörmungandr
+        as typological-comparative not direct-connection): verbatim in Sigurd
+        sub-section.
+        INFERENCE-3 (Lugh-Balor as Celtic IE-reflex reading as Dumézilian
+        comparative not *Cath Maige Tuired* self-framing): verbatim in
+        Lugh-Balor sub-section.
+        INFERENCE-4 (Welsh *Lludd and Llefelys* as older non-politicised
+        substrate vs. *Historia Brittonum* politicisation as philological-
+        historical reading not manuscript-dated chronology): verbatim in
+        Welsh sub-section.
+        INFERENCE-5 (Batraz as Scytho-Alanic IE reflex as comparative-
+        philological not Nart-narrators' self-framing, with Caucasian-area-
+        specialist methodological reservations flagged): verbatim in Batraz
+        sub-section.
+        INFERENCE-6 (Vahagn as Armenian IE HERO SLAY SERPENT reflex as
+        heavily-comparative reading with thin evidential base): verbatim in
+        Vahagn sub-section.
+        INFERENCE-7 (Beowulf dragon-episode as IE reflex as comparative-
+        philological not unmediated, with Beowulf-poet's authorial-cultural
+        position not adjudicated): verbatim in Beowulf sub-section.
+        All 7 markers retain their full text including basis and risk fields
+        unchanged.
+    lacuna_marker:
+      result: PASS
+      notes: >
+        The single LACUNA marker (Vahagn principal hymn-text lost; only
+        Khorenatsi's late paraphrase survives at *Patmut'iwn Hayots'* I.31)
+        is verbatim identical to the claims file, confirmed by diff returning
+        empty output. The marker retains all required fields: source (Khorenatsi
+        I.31 with the hymn-text not extant in any manuscript witness and the
+        brief's lost-hymn status cited) and scholarly_reconstruction (Russell
+        1987 on the paraphrase preserving substantive content at the dragon-
+        slayer-epithet and storm-god combat-frame level, with verbal-poetic
+        diction unrecoverable; Petrosyan corroboration with verbal-philological
+        limits). PASS.
+    variant_markers:
+      result: PASS
+      notes: >
+        Both VARIANT markers are verbatim identical to the claims file,
+        confirmed by diff returning empty output. VARIANT-1 (Lugh-Balor:
+        primary=*Cath Maige Tuired* sling-stone version; alt=later folkloric
+        spear-or-gae-bolga variants; chosen=primary; reason=sling-stone is the
+        principal medieval prose narrative and spear-variants are later folkloric
+        reworkings) is verbatim in the Lugh-Balor sub-section. VARIANT-2
+        (Welsh: primary=*Historia Brittonum* political-allegorical reading;
+        alt=*Lludd and Llefelys* annual-disturbance cosmological reading;
+        chosen=present-both; reason=two recensions present two distinct
+        framings of the same underlying combat-tradition) is verbatim in the
+        Welsh sub-section. Both markers retain all four fields (primary, alt,
+        chosen, reason) unchanged.
+    comparative_hooks:
+      result: PASS
+      notes: >
+        All 7 COMPARATIVE-HOOK lines are verbatim identical between the claims
+        and narrative, confirmed by diff returning empty output:
+        Hook 1: Indo-European HERO SLAY SERPENT formula (Watkins 1995 ch. 42
+        for Sigurd; Part V for Beowulf, Lugh, Welsh, Batraz, Vahagn — Part II
+        C5 main feeder).
+        Hook 2: Norse (Thor-Jörmungandr triple-witness pattern paralleled by
+        Sigurd-Fáfnir Eddic-iconographic dossier; aged-champion-dies-killing-
+        the-serpent pattern parallel between Beowulf and Thor — Ch18 back-link).
+        Hook 3: Inversion problem (Sigurd's ambiguous outcome — the killing
+        brings the curse that destroys the hero — paired with Bida as IE-
+        internal inversion exhibit, Part II C7).
+        Hook 4: Reception coda (Tolkien 1936 *Beowulf* essay as load-bearing
+        critical move for the chapter's Beowulf section; the essay's literary-
+        critical afterlife deferred to Ch42).
+        Hook 5: Slavic-Baltic IE-reflex (Perun-Veles "basic myth" reconstruction
+        and Dobrynya byliny — Ch20; shared IE-formula context as next IE-reflex
+        chapter in Part I).
+        Hook 6: Indo-Iranian comparanda (Vahagn / Vərəθraγna / Indra-Vṛtra
+        storm-god dragon-slayer category-position — Russell 1987 Vahagn chapter;
+        back-link to Ch13 Aži Dahāka and Ch14 Indra-Vṛtra).
+        Hook 7: Cyclical-cosmological annual disturbance (*Lludd and Llefelys*
+        annual May-Eve dragon-combat as preserved older substrate — comparative
+        parallel to Hittite Illuyanka *purulli* festival, Ch6, and to Apollo-
+        Python Septerion festival, Ch12).
+    evidence_token_integrity:
+      result: PASS
+      notes: >
+        95 EVIDENCE tokens in the narrative; 95 in the claims. All EVIDENCE
+        tokens verified character-by-character identical by diff — zero
+        discrepancies. Source-id discipline is preserved across all tokens:
+        tolkien-1936-monsters at loc=Proceedings of the British Academy 22
+        (1936) for the three Tolkien-specific claims (FC-01 fix preserved);
+        watkins-1995 for all Watkins-specific claims (including the rune-stone
+        iconographic claim now anchored at watkins-1995 ch. 42 per FC-03 fix);
+        larrington-poetic-edda for all Sigurd-narrative claims; west-2007
+        for all Lugh-Balor, Welsh, Batraz, and Vahagn (via West 2007 ch. 6)
+        claims; ogden-2013 for all Welsh-recension claims; russell-zoroastrianism-
+        armenia for all Vahagn-specific claims; forsyth-1987 for the secondary
+        survey-anchor claim.
+    footnote_integrity:
+      result: PASS
+      notes: >
+        95 footnotes in the narrative; 95 in the claims. Footnote text was
+        verified by diff: all footnote texts are character-by-character identical
+        to the corresponding claims footnotes. No additions, removals, or text
+        alterations found. The three Tolkien footnotes correctly use the full
+        bibliographic form "Tolkien, J. R. R., 'Beowulf: The Monsters and the
+        Critics', *Proceedings of the British Academy* 22 (1936): 245–295"
+        and "Tolkien 1936 (*Proc. British Academy* 22: 245–295)" per the FC-01
+        and FC-05 normalisation fixes preserved in the claims.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        Locked glossary renderings used correctly throughout. *Fáfnismál* is
+        italicised consistently. *Völsunga saga*, *Nibelungenlied*, *Cath Maige
+        Tuired*, *Historia Brittonum*, *Lludd and Llefelys*, *Mabinogion*, and
+        *Patmut'iwn Hayots'* are italicised consistently. *Vishapakagh* is
+        italicised as a term of art. *vishapakar* is italicised as the Armenian
+        archaeological term. *vishap* is italicised as the Armenian common noun.
+        *draca* and *wyrm* are italicised as Old English terms. Gnitaheiðr,
+        Gráni, Sigrdrífumál, Reginsmál, Vafþrúðnismál, Grímnismál are in
+        correct Eddic form. Tuatha Dé Danann, Fomorians, Mag Tuired, Dinas
+        Emrys, Khamits are in conventional scholarly forms throughout.
+        The HERO SLAY SERPENT formula appears in small-capital convention
+        when naming the formula (body prose uses "hero-slay-serpent formula"
+        or "the formula" in running text, consistent with glossary discipline).
+        Banned umbrella terms absent (confirmed by grep). PASS.
+    meaning_preserving_paraphrases:
+      result: PASS
+      notes: >
+        The narrative is overwhelmingly verbatim relative to the claims.
+        No paraphrases that alter meaning were found. The condensation
+        practised in the introductory paragraph (the navigational preview
+        preceding the Source overview) preserves all load-bearing content
+        from the six sub-cases without distorting any claim. The claim
+        density of 95 claims at approximately 110–120 words per claim
+        accounts for the chapter's 11,643-word narrative length.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with no findings requiring
+  revision. Check 1 (Completeness): all 95 claims are mapped to narrative
+  locations in section order, with 95 footnotes and 95 EVIDENCE tokens on
+  each side verified programmatically and character-by-character identical
+  by diff; the 1 LACUNA marker, 2 VARIANT markers, 7 INFERENCE markers, and
+  all 7 COMPARATIVE-HOOK lines are verbatim identical, confirmed by diff
+  returning empty output. Check 2 (No additions): the one unfootnoted
+  paragraph (the navigational-introductory paragraph preceding "=== Source
+  overview") is a legitimate preview bridge introducing no factual assertions
+  beyond what the claims establish; the tolkien-1936-monsters source-id
+  discipline (FC-01 fix) is preserved with all three Tolkien EVIDENCE tags
+  correctly at loc=Proceedings of the British Academy 22 (1936); the Tolkien
+  afterlife is explicitly deferred to Ch42 at two narrative points; the Watkins
+  full-derivation is consistently deferred to Part II C5 throughout; the
+  Vahagn LACUNA marker sub-fields are complete and the fragmentary framing is
+  maintained; the Ballentine-2015 compliance (no banned umbrella terms) is
+  confirmed; no new source_ids introduced; all seven source_ids match. Check 3
+  (Fidelity): all 10 markers are verbatim identical; all 7 COMPARATIVE-HOOKs
+  are verbatim identical; the six sub-sections are present in correct order
+  with distinct thematic registers; glossary discipline is fully preserved;
+  all locked renderings are correct. The single NOTE finding (unfootnoted
+  introductory navigational paragraph) is within the zero-action threshold.
+  Verdict: PASS.
+
+claim_mapping:
+  # Source overview (claims 1–19 → narrative lines corresponding to prompt lines 3107–3162)
+  - claim_number: 1
+    claim_text: "Six IE sub-cases ordered from strongest philological evidence (Sigurd) to most fragmentary (Vahagn); Watkins HERO SLAY SERPENT formula"
+    narrative_location: "Source overview, paragraph 1"
+    status: MAPPED
+  - claim_number: 2
+    claim_text: "Watkins 1995 principal IE-poetic anchor; ch. 42 for Sigurd; Celtic and Germanic clusters for Lugh, Welsh, Beowulf"
+    narrative_location: "Source overview, paragraph 2"
+    status: MAPPED
+  - claim_number: 3
+    claim_text: "Watkins printed-only; cited at chapter and Part level; consistent with chs. 13, 14, 15, 18 discipline"
+    narrative_location: "Source overview, paragraph 3"
+    status: MAPPED
+  - claim_number: 4
+    claim_text: "West 2007 general IE comparative anchor; ch. 6 Storm and Stream; Germanic, Celtic, Ossetic, Armenian instances"
+    narrative_location: "Source overview, paragraph 4"
+    status: MAPPED
+  - claim_number: 5
+    claim_text: "West 2007 printed-only; cited at chapter level; consistent with chs. 15, 18 discipline"
+    narrative_location: "Source overview, paragraph 5"
+    status: MAPPED
+  - claim_number: 6
+    claim_text: "Fáfnismál primary text; Codex Regius GKS 2365 4to c. 1270 CE; Larrington 2014 translation"
+    narrative_location: "Source overview, paragraph 6"
+    status: MAPPED
+  - claim_number: 7
+    claim_text: "Larrington printed-only; cited at hymn-and-stanza level; 44 stanzas Neckel-Kuhn; discipline from ch. 18"
+    narrative_location: "Source overview, paragraph 7"
+    status: MAPPED
+  - claim_number: 8
+    claim_text: "Beowulf primary text; Nowell Codex BL Cotton Vitellius A.xv c. 1000 CE; Klaeber 4th ed. 2008"
+    narrative_location: "Source overview, paragraph 8"
+    status: MAPPED
+  - claim_number: 9
+    claim_text: "Beowulf cited at corpus/episode level (Grendel 86–1250; Grendel's mother 1251–1887; dragon 2200–3182); edition-pinning deferred"
+    narrative_location: "Source overview, paragraph 9"
+    status: MAPPED
+  - claim_number: 10
+    claim_text: "Cath Maige Tuired primary text; manuscripts 12th–16th c. CE; Harleian MS 5280; Gray 1982 ITS edition; glossary-lock pin"
+    narrative_location: "Source overview, paragraph 10"
+    status: MAPPED
+  - claim_number: 11
+    claim_text: "Cath Maige Tuired cited at chapter/episode level; edition-pinning deferred"
+    narrative_location: "Source overview, paragraph 11"
+    status: MAPPED
+  - claim_number: 12
+    claim_text: "Welsh primary texts: Historia Brittonum c. 828 CE and Lludd and Llefelys in Mabinogion (White Book c. 1350; Red Book c. 1382–1410); Ogden 2013 Celtic chapter anchor"
+    narrative_location: "Source overview, paragraph 12"
+    status: MAPPED
+  - claim_number: 13
+    claim_text: "Ogden 2013 printed-only; cited at Celtic-material chapter level; discipline from ch. 12"
+    narrative_location: "Source overview, paragraph 13"
+    status: MAPPED
+  - claim_number: 14
+    claim_text: "Batraz primary text: Ossetic Nart saga corpus, oral-epic 19th–20th c. CE; Dumézil twentieth-century reconstructions; cited at corpus level"
+    narrative_location: "Source overview, paragraph 14"
+    status: MAPPED
+  - claim_number: 15
+    claim_text: "Vahagn primary text: Khorenatsi Patmut'iwn Hayots' book I.31; 5th–9th c. CE dating contested; hymn lost; Russell 1987 anchor"
+    narrative_location: "Source overview, paragraph 15"
+    status: MAPPED
+  - claim_number: 16
+    claim_text: "Russell 1987 printed-only; cited at Vahagn-chapter level; explicit fragmentary framing throughout"
+    narrative_location: "Source overview, paragraph 16"
+    status: MAPPED
+  - claim_number: 17
+    claim_text: "Forsyth 1987 secondary survey-anchor for long-arc IE combat-pattern framing"
+    narrative_location: "Source overview, paragraph 17"
+    status: MAPPED
+  - claim_number: 18
+    claim_text: "Family-chapter related-tier; six sub-cases on philological-evidence spectrum; not merged at narrative or comparative level"
+    narrative_location: "Source overview, paragraph 18"
+    status: MAPPED
+  - claim_number: 19
+    claim_text: "Chapter's overall argument: six narratives are IE HERO SLAY SERPENT reflexes; chapter is main feeder to Part II C5"
+    narrative_location: "Source overview, paragraph 19"
+    status: MAPPED
+  # Sigurd vs. Fáfnir (claims 20–36 → Sigurd sub-section)
+  - claim_number: 20
+    claim_text: "Fáfnismál in Codex Regius with Reginsmál preceding and Sigrdrífumál following; Völsunga saga c. 1270; Nibelungenlied c. 1200 as related Germanic witness"
+    narrative_location: "Sigurd sub-section, paragraph 1"
+    status: MAPPED
+  - claim_number: 21
+    claim_text: "Sigurd son of Sigmund / Völsung lineage; raised by smith Regin; Fáfnismál presents him on threshold of first heroic deed at Gnitaheiðr"
+    narrative_location: "Sigurd sub-section, paragraph 2"
+    status: MAPPED
+  - claim_number: 22
+    claim_text: "Fáfnir dwarf transformed into dragon by guardianship of cursed gold of Andvari; Loki extorted the gold from Andvari for wergild to Hreidmar for killing of Otr; curse drives Sigurd-cycle to Sigurd's death"
+    narrative_location: "Sigurd sub-section, paragraph 3"
+    status: MAPPED
+  - claim_number: 23
+    claim_text: "Regin forges sword Gram from Sigmund's sword-fragments; incites Sigurd to ambush Fáfnir; Fáfnismál opens at the killing-stroke with pit dug on dragon's path"
+    narrative_location: "Sigurd sub-section, paragraph 4"
+    status: MAPPED
+  - claim_number: 24
+    claim_text: "Killing-stroke with Gram from pit: Sigurd thrusts upward into Fáfnir's underbelly; Fáfnismál structures poem as dialogue around the central killing"
+    narrative_location: "Sigurd sub-section, paragraph 5"
+    status: MAPPED
+  - claim_number: 25
+    claim_text: "Post-killing wisdom-dialogue occupies bulk of Fáfnismál: Fáfnir asks Sigurd's name, warns of curse, supplies cosmological-and-genealogical lore; Eddic wisdom-dialogue register (Vafþrúðnismál, Grímnismál)"
+    narrative_location: "Sigurd sub-section, paragraph 6"
+    status: MAPPED
+  - claim_number: 26
+    claim_text: "Regin requests heart-roasting; Sigurd burns finger on heart, licks blood, gains bird-speech; nuthatches warn Regin plans to kill him"
+    narrative_location: "Sigurd sub-section, paragraph 7"
+    status: MAPPED
+  - claim_number: 27
+    claim_text: "Sigurd kills Regin with Gram; takes Fáfnir's hoard onto Grani; Fáfnismál ends bridging to Sigrdrífumál / Brynhild encounter"
+    narrative_location: "Sigurd sub-section, paragraph 8"
+    status: MAPPED
+  - claim_number: 28
+    claim_text: "Sigurd-cycle outcome ambiguous: killing gains hoard but curse drives long-arc tragedy (Brynhild, Burgundian disasters, Sigurd's death at Gutthorm's hands)"
+    narrative_location: "Sigurd sub-section, paragraph 9"
+    status: MAPPED
+  - claim_number: 29
+    claim_text: "INFERENCE: ambiguous-outcome reading is editorial comparative-typological from Larrington 2014 and Watkins 1995 ch. 42; forward-link to Part II C7 (inversion problem)"
+    narrative_location: "Sigurd sub-section, INFERENCE-1"
+    status: MAPPED
+  - claim_number: 30
+    claim_text: "Völsunga saga c. 1270 CE as continuous-narrative parallel witness; cited as parallel not primary text"
+    narrative_location: "Sigurd sub-section, paragraph 10"
+    status: MAPPED
+  - claim_number: 31
+    claim_text: "Nibelungenlied c. 1200 CE as related Germanic witness; Siegfried; dragon-killing in retrospective; cited at corpus level"
+    narrative_location: "Sigurd sub-section, paragraph 11"
+    status: MAPPED
+  - claim_number: 32
+    claim_text: "Watkins ch. 42: Fáfnismál diction is direct IE HERO SLAY SERPENT reflex; Old Norse *vega* + hero + Fáfnir = Vedic áhann áhim = Hittite kuenta...illuyanka"
+    narrative_location: "Sigurd sub-section, paragraph 12"
+    status: MAPPED
+  - claim_number: 33
+    claim_text: "Watkins ch. 42: Fáfnismál preserves IE formula at verbal-diction level not just structural-typological; Norse sub-case strongest philological evidence"
+    narrative_location: "Sigurd sub-section, paragraph 13"
+    status: MAPPED
+  - claim_number: 34
+    claim_text: "Sigurd-Fáfnir iconographically dense: several extant Scandinavian rune-stones and rock carvings 11th–12th c. CE; Ramsund carving Södermanland c. 1030 CE as principal witness; iconographic dossier as third register of attestation"
+    narrative_location: "Sigurd sub-section, paragraph 14"
+    status: MAPPED
+  - claim_number: 35
+    claim_text: "INFERENCE: Sigurd-Fáfnir triple-witness parallel to Thor-Jörmungandr triple-witness is comparative reading not feature of either cycle in isolation"
+    narrative_location: "Sigurd sub-section, INFERENCE-2"
+    status: MAPPED
+  - claim_number: 36
+    claim_text: "Völsunga saga treated by Old Norse scholarship as preserving older oral-tradition material; cited as parallel not primary for Fáfnismál episode"
+    narrative_location: "Sigurd sub-section, parallel-witness paragraph"
+    status: MAPPED
+  # Beowulf (claims 37–52 → Beowulf sub-section)
+  - claim_number: 37
+    claim_text: "Beowulf: single-manuscript Nowell Codex BL Cotton Vitellius A.xv c. 1000 CE; composition 7th–10th c. CE; three-movement structure (Grendel / Grendel's mother / dragon)"
+    narrative_location: "Beowulf sub-section, paragraph 1"
+    status: MAPPED
+  - claim_number: 38
+    claim_text: "Beowulf is Geatish hero of the Gēatas; travels to Hrothgar's court to defend Heorot from Grendel descendant-of-Cain who has killed warriors for twelve years (lines 86–193 and line 194 onwards)"
+    narrative_location: "Beowulf sub-section, paragraph 2"
+    status: MAPPED
+  - claim_number: 39
+    claim_text: "Beowulf kills Grendel by arm-tearing in wrestling-match at lines 710–836; weaponless contest; Grendel flees to die in fen-mere"
+    narrative_location: "Beowulf sub-section, paragraph 3"
+    status: MAPPED
+  - claim_number: 40
+    claim_text: "Grendel's mother attacks next night; Beowulf descends into underwater hall, kills her with giant-forged sword; lines 1251–1887"
+    narrative_location: "Beowulf sub-section, paragraph 4"
+    status: MAPPED
+  - claim_number: 41
+    claim_text: "Third movement: fifty years later, aged king; treasure-hoarding draca sleeping under burial-mound roused by thief stealing a cup; nocturnal raids; lines 2200–3182"
+    narrative_location: "Beowulf sub-section, paragraph 5"
+    status: MAPPED
+  - claim_number: 42
+    claim_text: "Dragon combat: Beowulf's shield fails; retainers flee except Wiglaf; Beowulf kills dragon and is mortally wounded by bite; dies in Wiglaf's arms; lines 2510–2820"
+    narrative_location: "Beowulf sub-section, paragraph 6"
+    status: MAPPED
+  - claim_number: 43
+    claim_text: "Aged-king dragon-combat distinguishes Beowulf from Sigurd-Fáfnir heroic-initiation type: end-of-life not heroic-initiatory"
+    narrative_location: "Beowulf sub-section, paragraph 7"
+    status: MAPPED
+  - claim_number: 44
+    claim_text: "Aged-king-dies-killing-the-dragon parallel to Thor-Jörmungandr (Ch18): both die after killing-stroke; comparative-typological observation not direct-textual-connection"
+    narrative_location: "Beowulf sub-section, paragraph 8"
+    status: MAPPED
+  - claim_number: 45
+    claim_text: "Beowulf dragon distinct from Grendel morphologically: Grendel and mother are biblical-genealogical anthropoid-monstrous; dragon is draca category, serpentine fire-breathing hoard-guardian with no biblical-genealogical commitment"
+    narrative_location: "Beowulf sub-section, paragraph 9"
+    status: MAPPED
+  - claim_number: 46
+    claim_text: "Watkins Part V: Beowulf dragon-episode preserves IE HERO SLAY SERPENT poetic diction in killing-vocabulary; draca and wyrm as IE-formula reflex"
+    narrative_location: "Beowulf sub-section, paragraph 10"
+    status: MAPPED
+  - claim_number: 47
+    claim_text: "Tolkien 1936 British Academy lecture argued dragon and monsters are proper mythic adversaries integral to poem's structure; load-bearing critical move re-establishing mythic register"
+    narrative_location: "Beowulf sub-section, paragraph 11"
+    status: MAPPED
+  - claim_number: 48
+    claim_text: "Tolkien 1936 mentioned only at load-bearing-critical-move level; wider literary-critical afterlife (medievalism, dragon-fiction, modern academic reading) explicitly deferred to Ch42"
+    narrative_location: "Beowulf sub-section, paragraph 12"
+    status: MAPPED
+  - claim_number: 49
+    claim_text: "Beowulf IE-reflex reading depends on two converging arguments: Watkins (philological) and Tolkien (structural-critical); chapter takes both as load-bearing without authorial-cultural commitment"
+    narrative_location: "Beowulf sub-section, paragraph 13"
+    status: MAPPED
+  - claim_number: 50
+    claim_text: "INFERENCE: Beowulf dragon as IE HERO SLAY SERPENT reflex is comparative-philological reading; Beowulf-poet's authorial-cultural position on Christian-vs-pagan inheritance not adjudicated"
+    narrative_location: "Beowulf sub-section, INFERENCE (Beowulf)"
+    status: MAPPED
+  - claim_number: 51
+    claim_text: "Principal forward-link: Part II C5 (consolidated IE-formula argument); principal back-link: Ch18 (aged-champion-dies-killing-the-serpent parallel)"
+    narrative_location: "Beowulf sub-section, final paragraph"
+    status: MAPPED
+  - claim_number: 52
+    claim_text: "Beowulf dragon episode narrative-detail: burial-mound, fifty-year interval, thief-and-cup motif, Wiglaf loyalty"
+    narrative_location: "Beowulf sub-section, paragraphs 5–6"
+    status: MAPPED
+  # Lugh vs. Balor (claims 53–62 → Lugh-Balor sub-section)
+  - claim_number: 53
+    claim_text: "Cath Maige Tuired: Second Battle of Mag Tuired as decisive combat between Tuatha Dé Danann and Fomorians (monstrous-and-oppressive, associated with sea and tyranny)"
+    narrative_location: "Lugh-Balor sub-section, paragraph 1"
+    status: MAPPED
+  - claim_number: 54
+    claim_text: "Lugh: young warrior-hero; son of Cian (Tuatha Dé) and Ethniu (daughter of Fomorian Balor); hybrid lineage positions him as only figure who can kill Balor"
+    narrative_location: "Lugh-Balor sub-section, paragraph 2"
+    status: MAPPED
+  - claim_number: 55
+    claim_text: "Balor: king/principal warrior of Fomorians; Balor of the Evil Eye / Balor Birug-derc; destructive eye can incinerate host; tactical problem is bringing down the eye"
+    narrative_location: "Lugh-Balor sub-section, paragraph 3"
+    status: MAPPED
+  - claim_number: 56
+    claim_text: "Killing-stroke: Lugh with sling-stone strikes Balor's eye at moment of opening; eye driven through back of Balor's head; redirected gaze breaks Fomorian host; Tuatha Dé rule inaugurated"
+    narrative_location: "Lugh-Balor sub-section, paragraph 4"
+    status: MAPPED
+  - claim_number: 57
+    claim_text: "VARIANT: primary=Cath Maige Tuired sling-stone; alt=later folkloric spear-or-gae-bolga variants; chosen=primary; reason=principal medieval prose narrative"
+    narrative_location: "Lugh-Balor sub-section, VARIANT-1"
+    status: MAPPED
+  - claim_number: 58
+    claim_text: "Cath Maige Tuired structured around wider Second Battle context on plain of Mag Tuired (County Sligo); Lugh as battle-leader; Lugh-Balor encounter as decisive single-combat at centre"
+    narrative_location: "Lugh-Balor sub-section, paragraph 5"
+    status: MAPPED
+  - claim_number: 59
+    claim_text: "First Battle of Mag Tuired (Cath Maige Tuired Cunga) is separate combat of Tuatha Dé vs. Fir Bolg; present chapter treats only Second Battle with Fomorian opponents"
+    narrative_location: "Lugh-Balor sub-section, paragraph 6"
+    status: MAPPED
+  - claim_number: 60
+    claim_text: "Lugh-Balor read by IE comparativists (Dumézil; West 2007) as Celtic reflex of IE warrior/dragon-slayer pattern; morphologically distinctive: Balor is one-eyed giant not serpentine; killing-weapon is sling-stone not sword or thunderbolt"
+    narrative_location: "Lugh-Balor sub-section, paragraph 7"
+    status: MAPPED
+  - claim_number: 61
+    claim_text: "INFERENCE: Lugh-Balor as Celtic IE reflex is comparative-philological from Dumézil and West 2007 ch. 6; Cath Maige Tuired itself does not frame encounter as IE-comparative"
+    narrative_location: "Lugh-Balor sub-section, INFERENCE (Lugh-Balor)"
+    status: MAPPED
+  - claim_number: 62
+    claim_text: "Lugh's dynastic-political role: killing inaugurates Tuatha Dé rule over Ireland; Lugh becomes principal Tuatha Dé warrior-king in post-battle narrative"
+    narrative_location: "Lugh-Balor sub-section, paragraph 8"
+    status: MAPPED
+  # Welsh Red Dragon and White Dragon (claims 63–72 → Welsh sub-section)
+  - claim_number: 63
+    claim_text: "Welsh Red-and-White Dragon: two principal primary witnesses — Historia Brittonum (Nennius-recension c. 828 CE; political-allegorical) and Lludd and Llefelys in Mabinogion (c. 1350 CE onward; annual cosmological disturbance)"
+    narrative_location: "Welsh sub-section, paragraph 1"
+    status: MAPPED
+  - claim_number: 64
+    claim_text: "Historia Brittonum: Vortigern-and-Ambrosius episode at Dinas Emrys; foundations sink each night; underground pool with red and white dragons fighting; political allegory: red=Britons, white=Saxons"
+    narrative_location: "Welsh sub-section, paragraph 2"
+    status: MAPPED
+  - claim_number: 65
+    claim_text: "Historia Brittonum political-allegorical frame: red Welsh dragon will eventually defeat white Saxon dragon; red-dragon symbol enters long-arc Welsh political iconography"
+    narrative_location: "Welsh sub-section, paragraph 3"
+    status: MAPPED
+  - claim_number: 66
+    claim_text: "Lludd and Llefelys: three plagues (Coraniaid; annual dragon-combat scream; magical thief); Lludd addresses each plague on Llefelys's advice"
+    narrative_location: "Welsh sub-section, paragraph 4"
+    status: MAPPED
+  - claim_number: 67
+    claim_text: "Lludd and Llefelys: dragon-combat annual disturbance every May Eve; dragons rise from beneath centre of Britain; resolution: find centre, dig mead-pit, lure dragons, capture when drunk, bury at Dinas Emrys"
+    narrative_location: "Welsh sub-section, paragraph 5"
+    status: MAPPED
+  - claim_number: 68
+    claim_text: "VARIANT: primary=Historia Brittonum political allegory; alt=Lludd and Llefelys annual-disturbance cosmological; chosen=present-both; reason=two distinct framings of same combat-tradition"
+    narrative_location: "Welsh sub-section, VARIANT-2"
+    status: MAPPED
+  - claim_number: 69
+    claim_text: "Lludd and Llefelys preserves older non-political layer: cyclical-cosmological disturbance to be ended; Welsh-philological scholarship treats it as older substrate that Historia Brittonum politicised"
+    narrative_location: "Welsh sub-section, paragraph 6"
+    status: MAPPED
+  - claim_number: 70
+    claim_text: "Dinas Emrys (Snowdonia, north Wales): principal geographical anchor of both witnesses; pre-Roman and post-Roman archaeological occupation; some Welsh archaeologists read as cultic locus; cited at corpus level not specific-finding level"
+    narrative_location: "Welsh sub-section, paragraph 7"
+    status: MAPPED
+  - claim_number: 71
+    claim_text: "INFERENCE: Lludd and Llefelys as older non-politicised substrate than Historia Brittonum is philological-historical reading not manuscript-dated chronology; Mabinogion manuscripts are later in transmission-date"
+    narrative_location: "Welsh sub-section, INFERENCE (Welsh)"
+    status: MAPPED
+  - claim_number: 72
+    claim_text: "Welsh Red-and-White Dragon structurally distinctive: dragon-on-dragon combat with human-political resolution as external; stands at edge of IE HERO SLAY SERPENT pattern"
+    narrative_location: "Welsh sub-section, paragraph 8"
+    status: MAPPED
+  # Batraz (claims 73–81 → Batraz sub-section)
+  - claim_number: 73
+    claim_text: "Batraz: Ossetic Nart saga corpus, oral-epic 19th–20th c. CE from Ossetian, Circassian, and Chechen narrators; Dumézil twentieth-century treatments; West 2007 ch. 6"
+    narrative_location: "Batraz sub-section, paragraph 1"
+    status: MAPPED
+  - claim_number: 74
+    claim_text: "Narts: heroic figures of North Caucasian epic tradition; category-class of warrior-figures; Batraz one of principal Ossetic Nart warrior-figures"
+    narrative_location: "Batraz sub-section, paragraph 2"
+    status: MAPPED
+  - claim_number: 75
+    claim_text: "Batraz distinguished by steel body: born from tumour/boil on Khamits's back; plunges into furnace; emerges with steel body; steel-body motif is principal physical-and-narrative attribute"
+    narrative_location: "Batraz sub-section, paragraph 3"
+    status: MAPPED
+  - claim_number: 76
+    claim_text: "Batraz fights giant Mukara, various dragons-and-monstrous-figures, opposing Nart-clans; Nart corpus is episodic-cluster not single continuous narrative; each episode preserves warrior-pole in distinctive Ossetic morphology"
+    narrative_location: "Batraz sub-section, paragraph 4"
+    status: MAPPED
+  - claim_number: 77
+    claim_text: "Dumézil's reading: Batraz is Scytho-Alanic IE reflex of IE warrior/dragon-slayer pattern; indigenous-and-uninterrupted Scytho-Alanic continuation; steel-body as distinctively-developed Scytho-Alanic feature"
+    narrative_location: "Batraz sub-section, paragraph 5"
+    status: MAPPED
+  - claim_number: 78
+    claim_text: "Multiple recorded variants across Ossetic, Circassian, and Chechen narrators; Ossetic variants = principal corpus for Dumézilian reading; Circassian-and-Chechen provide comparative-and-control material"
+    narrative_location: "Batraz sub-section, paragraph 6"
+    status: MAPPED
+  - claim_number: 79
+    claim_text: "Batraz's death: cast from heavens into body of water; steel body cooled-and-shattered; death-by-water read as cognate with other IE warrior-death narratives by some twentieth-century Ossetic-folkloric scholarship"
+    narrative_location: "Batraz sub-section, paragraph 7"
+    status: MAPPED
+  - claim_number: 80
+    claim_text: "INFERENCE: Batraz as Scytho-Alanic IE reflex is comparative-philological from Dumézil and West 2007; Nart-narrators do not frame Batraz as IE-comparative; Caucasian-area-specialist methodological reservations on directness of Dumézilian reading"
+    narrative_location: "Batraz sub-section, INFERENCE (Batraz)"
+    status: MAPPED
+  - claim_number: 81
+    claim_text: "Batraz centrally located in Ossetic tradition; marginally located outside; known outside North Caucasian context principally through Dumézil's IE-comparative monographs"
+    narrative_location: "Batraz sub-section, paragraph 8"
+    status: MAPPED
+  # Vahagn (claims 82–91 → Vahagn sub-section)
+  - claim_number: 82
+    claim_text: "Vahagn: most fragmentary of six; principal hymn-text lost; only Khorenatsi's late paraphrase at Patmut'iwn Hayots' book I.31 survives"
+    narrative_location: "Vahagn sub-section, paragraph 1"
+    status: MAPPED
+  - claim_number: 83
+    claim_text: "LACUNA: principal hymn-text to Vahagn is lost; only Khorenatsi's late paraphrase at Patmut'iwn Hayots' I.31; scholarly_reconstruction: Russell 1987 reads paraphrase as preserving substantive content at dragon-slayer-epithet and storm-god combat-frame level; verbal-poetic diction unrecoverable; Petrosyan corroborates at substantive level"
+    narrative_location: "Vahagn sub-section, LACUNA"
+    status: MAPPED
+  - claim_number: 84
+    claim_text: "Vahagn: Armenian storm-god; epithet Vishapakagh ('dragon-reaper') preserves dragon-slayer combat-pattern; same category-position as Indra (Vedic), Thraētaona (Iranian), Thor (Norse)"
+    narrative_location: "Vahagn sub-section, paragraph 2"
+    status: MAPPED
+  - claim_number: 85
+    claim_text: "Khorenatsi Patmut'iwn Hayots': 5th–9th c. CE dating contested; relatively-late historiographical witness to pre-Christian Armenian culture; paraphrase presented as document of Armenian pagan-religious tradition for Khorenatsi's Christian-historiographical narrative"
+    narrative_location: "Vahagn sub-section, paragraph 3"
+    status: MAPPED
+  - claim_number: 86
+    claim_text: "Khorenatsi paraphrase at I.31: Vahagn's birth from heavens, sea, and reed — triple-birth motif (heavens labour, sea labours, purple reed labours; Vahagn emerges from smoke with sun-like hair/beard and fire-like eyes); paraphrase preserves birth-narrative not continuous combat-narrative"
+    narrative_location: "Vahagn sub-section, paragraph 4"
+    status: MAPPED
+  - claim_number: 87
+    claim_text: "Vahagn combat-with-vishaps not preserved as continuous narrative; combat-content reconstructed from Vishapakagh epithet, storm-god category-position, vishapakar stelae (2nd millennium BCE), and comparative-philological readings"
+    narrative_location: "Vahagn sub-section, paragraph 5"
+    status: MAPPED
+  - claim_number: 88
+    claim_text: "Vishaps: Armenian common noun for dragon; term attested as narrative-mythological category and as name of 2nd-millennium-BCE stone stelae (vishapakar 'dragon-stones') in Armenian highlands; vishapakar are principal pre-Christian-period material attestation"
+    narrative_location: "Vahagn sub-section, paragraph 6"
+    status: MAPPED
+  - claim_number: 89
+    claim_text: "Vishapakar: dated 2nd millennium BCE; concentrated on slopes of Mount Aragats and in Geghama mountains; fish-like or serpentine-like carvings on tall stone shafts; read by Armenian-archaeological literature as cultic objects associated with water, fertility, and dragon-figures"
+    narrative_location: "Vahagn sub-section, paragraph 7"
+    status: MAPPED
+  - claim_number: 90
+    claim_text: "INFERENCE: Vahagn as Armenian IE HERO SLAY SERPENT reflex is heavily-comparative reading with fragmentary evidential base (lost hymn; reconstruction from epithet / category-position / stelae / comparative-philology); more circumspect than other five sub-cases"
+    narrative_location: "Vahagn sub-section, INFERENCE (Vahagn)"
+    status: MAPPED
+  - claim_number: 91
+    claim_text: "Russell's reading: Vahagn integrated into wider Indo-Iranian and IE combat-tradition as Armenian preservation of storm-god dragon-slayer; Vərəθraγna (Iranian) and Indra-Vṛtra (Vedic) as principal comparanda; Vishapakagh as load-bearing philological exhibit"
+    narrative_location: "Vahagn sub-section, paragraph 8"
+    status: MAPPED
+  # Family pattern, reception, and forward links (claims 92–95)
+  - claim_number: 92
+    claim_text: "Six sub-cases arranged on philological-evidence spectrum from Sigurd (Watkins direct-IE-formula reflex) to Vahagn (lost hymn; Vishapakagh epithet; Khorenatsi paraphrase; vishapakar); three-dimension framing (text existence; philological-formulaic directness; tradition-centrality)"
+    narrative_location: "Family pattern section, paragraphs 1–2"
+    status: MAPPED
+  - claim_number: 93
+    claim_text: "Chapter's overall argument: IE HERO SLAY SERPENT pattern preserved across six traditions in different evidential modalities (Eddic poetic-formulaic; Old English epic-formulaic; Middle Irish prose; Welsh prose-recension-pair; Ossetic oral-epic-IE-comparative; Armenian fragmentary-paraphrase-archaeological); family-chapter format justified by shared inheritance"
+    narrative_location: "Family pattern section, paragraph 3"
+    status: MAPPED
+  - claim_number: 94
+    claim_text: "Principal forward-link: Part II C5 (six sub-cases join Ch14/Ch13/Ch6/Ch18/Ch12 IE material); principal back-link: Ch18 (Sigurd-Norse triple-witness parallel; Beowulf aged-champion parallel); secondary forward-link: Ch42 (Tolkien 1936 essay afterlife deferred); tertiary: Part II C7 (Sigurd ambiguous outcome as inversion exhibit); quaternary: Ch20 (Slavic-Baltic shared IE-formula context)"
+    narrative_location: "Family pattern section, paragraphs 4–8"
+    status: MAPPED
+  - claim_number: 95
+    claim_text: "Chapter's joint contribution: (1) principal post-Vedic/post-Iranian/post-Anatolian IE-reflex apparatus for Part II C5; (2) inversion-foreshadowing reading of Sigurd-cycle for Part II C7; (3) Tolkien 1936 load-bearing-critical-move with Ch42 deferral; chapter is principal IE-reflex consolidation in Part I"
+    narrative_location: "Family pattern section, paragraphs 9–10"
+    status: MAPPED
+
+findings:
+  - kind: IMPLICIT-ADDITION
+    severity: NOTE
+    claim_number: ~
+    narrative_location: "Introductory paragraph before === Source overview"
+    issue: >
+      One unfootnoted navigational-introductory paragraph not present in the
+      claims document precedes the "=== Source overview" header.
+    detail: >
+      The narrative opens with a paragraph previewing all six sub-cases:
+      Fáfnismál/Sigurd/Watkins direct-reflex; Beowulf aged-king death-stroke;
+      Cath Maige Tuired/Lugh/Balor sling-stone; Welsh two-recension framing;
+      Ossetic Nart/Batraz combats; Vahagn/Vishapakagh/Khorenatsi-paraphrase
+      lost-hymn. All factual assertions in this paragraph map to approved claims
+      in the Source overview and the six sub-sections. The paragraph introduces
+      no factual content beyond what the claims establish and accurately previews
+      the chapter structure authorised by the claims and brief.
+    recommended_fix: >
+      No action required. This is a legitimate navigational-introductory bridge.
+      NOTE severity only. All sub-case previews are attested in the claims.

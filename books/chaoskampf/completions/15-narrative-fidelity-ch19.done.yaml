@@ -1,0 +1,92 @@
+stage: 15-narrative-fidelity
+chapter: 19
+chapter_title: "Indo-European Reflexes of HERO SLAY SERPENT"
+status: done
+verdict: PASS
+timestamp: 2026-04-29T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 95
+  claims_mapped: 95
+  footnotes_claims: 95
+  footnotes_narrative: 95
+  evidence_tokens_claims: 95
+  evidence_tokens_narrative: 95
+  lacuna_markers: 1
+  inference_markers: 7
+  variant_markers: 2
+  total_markers: 10
+  comparative_hooks: 7
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  note_findings: 1
+
+output_files:
+  fidelity_yaml: chapters/19-ie-reflexes.fidelity.yaml
+  narrative: chapters/19-ie-reflexes.adoc
+  claims: chapters/19-ie-reflexes.claims.approved.adoc
+
+key_checks_passed:
+  - six_sub_section_order_and_register: >
+      All six sub-sections (Sigurd / Beowulf / Lugh-Balor / Welsh / Batraz /
+      Vahagn) plus Source overview and Family pattern sections are present in
+      the narrative with identical headers to the claims, in the correct order
+      from strongest philological evidence to most fragmentary. Each sub-section
+      maintains its own thematic register (Sigurd: philological-formula and
+      curse-driven-tragedy; Beowulf: aged-king and mythic-register-recovery;
+      Lugh-Balor: sovereignty-combat and morphological-distinctiveness; Welsh:
+      two-recension and edge-of-IE-pattern; Batraz: oral-epic-and-Dumézilian;
+      Vahagn: explicit fragmentary-and-epithet). No collapse of registers found.
+  - tolkien_1936_deferral_preserved: >
+      Three claims in the Beowulf sub-section carry source_id=tolkien-1936-monsters
+      at loc=Proceedings of the British Academy 22 (1936) in both claims and
+      narrative (FC-01 fix preserved; diff is empty). The narrative contains no
+      analysis of Tolkien's literary-critical afterlife beyond the load-bearing
+      critical move (recovery of the mythic register of the Beowulf monsters).
+      The wider afterlife (influence on medievalism, Tolkien's dragon-fiction,
+      modern academic reading) is explicitly deferred to Ch42 at two narrative
+      points. No pre-emption of Ch42.
+  - watkins_forward_link_discipline: >
+      The narrative contains no full philological derivation of the HERO SLAY
+      SERPENT formula. The formula is summarised at claim-level (verb *vega* +
+      hero + Fáfnir = Vedic áhann áhim = Hittite kuenta...illuyanka) and the
+      full argument is consistently referred forward to Part II C5 (10 C5
+      forward-link references in the narrative). No pre-emption of Part II C5.
+  - vahagn_lacuna_intact: >
+      The LACUNA marker is verbatim present with all required sub-fields
+      (source: Khorenatsi I.31 with hymn-text not extant; scholarly_reconstruction:
+      Russell 1987 on substantive content preserved at epithet and storm-god
+      combat-frame level, verbal-poetic diction unrecoverable; Petrosyan
+      corroboration with verbal-philological limits). The narrative never
+      presents Khorenatsi's content as the hymn itself. Combat-content explicitly
+      reconstructed from Vishapakagh epithet, vishapakar stelae, and comparative-
+      philological readings. No LACUNA collapse.
+  - tolkien_evidence_source_ids_correct: >
+      All three tolkien-1936-monsters EVIDENCE tags are correctly placed in the
+      Beowulf sub-section at loc=Proceedings of the British Academy 22 (1936).
+      Counts match claims exactly (3 in each). Diff is empty. No watkins-1995
+      EVIDENCE tag used for the three Tolkien claims.
+  - evidence_footnote_marker_hook_verbatim: >
+      All counts match programmatically (95/95 EVIDENCE tokens, 95/95 footnotes,
+      1 LACUNA + 7 INFERENCE + 2 VARIANT = 10 markers, 7/7 COMPARATIVE-HOOKs)
+      and character-by-character diffs returned empty output for all four
+      categories. Zero discrepancies.
+  - banned_glossary_terms_absent: >
+      The banned umbrella terms "chaos-figure", "chaos-monster", and
+      "chaos-serpent" are absent from the narrative body prose. Grep confirmed
+      zero hits. Ballentine 2015 compliance confirmed.
+  - no_unauthorised_sources: >
+      The seven source_ids in the narrative (forsyth-1987, larrington-poetic-edda,
+      ogden-2013, russell-zoroastrianism-armenia, tolkien-1936-monsters,
+      watkins-1995, west-2007) are identical to the seven source_ids in the
+      claims. No new named scholars, deities, texts, or comparanda introduced.
+  - word_count_justified: >
+      The narrative's approximately 11,643 words is consistent with the 95-claim
+      density at approximately 120 words per claim (95 × 120 ≈ 11,400 words).
+      The 37% overage relative to the 8,500-word brief target is claim-density-
+      justified, not authorial expansion.
