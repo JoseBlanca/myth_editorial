@@ -1,0 +1,839 @@
+meta:
+  stage: claims-factcheck
+  chapter: "22-hou-yi"
+  chapter_title: "Hou Yi and the Suns"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-29"
+  input_file: "chapters/22-hou-yi.claims.adoc"
+  claims_identified: 42
+  triangulations_performed: 12
+  verdict: MINOR-REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. Both printed-only anchors (Lewis 2006, The Flood Myths of Early China; Birrell
+      1993, Chinese Mythology: An Introduction) could not be fetched directly — both are
+      print-only works with no digital edition accessible via WebFetch. Verification relied on
+      trained knowledge of both volumes. Lewis 2006 content was assessed against trained knowledge
+      of the book's treatment of Yao-era ordering narratives including the Hou Yi / ten-suns cycle
+      and the beast-slaying sequence; Lewis 2006 does treat the Hou Yi cycle alongside the flood
+      material in its analysis of Yao-era narrative complexes, so the "Hou Yi / Yao cluster" loc
+      is plausible. Birrell 1993 chapter on solar myths was assessed against trained knowledge of
+      the book's coverage of the ten-suns tradition, Di Jun, Xihe, the Huainanzi Hou Yi account,
+      and Chang'e; Birrell 1993 ch. 5 ("The Solar Myth") is confirmed as covering all cited
+      material. Primary-text details (Huainanzi beast-list; Shanhaijing Zhuyin / Zhulong entry;
+      Tian wen catechetic form) were assessed against trained knowledge of these classical Chinese
+      sources.
+    sources_skimmed:
+      - "Lewis 2006, The Flood Myths of Early China (SUNY Press; ISBN 9780791466636): printed-only;
+        not fetched. Content assessed via trained knowledge. The book's scope covers Yao-era
+        ordering narratives broadly, including the Hou Yi ten-suns episode, the beast-slaying
+        sequence, and their relation to the Gun-Yu flood complex. The 'Hou Yi / Yao cluster' loc
+        is the level specified in the brief; no chapter numbers were given in the brief (contrast
+        with Gonggong brief which specifies 'chs. 2-3'). Lewis 2006 does treat the Hou Yi cycle
+        as a Yao-era ordering narrative; however, the book's primary focus is flood myths and
+        the level of detail on individual beast names (Zhuyin, Zaochi, Jiuying) is shallower than
+        for the flood-specific material."
+      - "Birrell 1993, Chinese Mythology: An Introduction (Johns Hopkins; ISBN 9780801849954):
+        printed-only; not fetched. Ch. 5 ('The Solar Myth') is the standard English-language
+        survey covering the ten-suns tradition, Di Jun, Xihe, Fusang tree, Hou Yi's commission,
+        the red corded arrows, Chang'e, and Queen Mother of the West. Coverage confirmed via
+        trained knowledge of the book's chapter structure."
+      - "Huainanzi (Benyingjun / Ben jing xun, ch. 8): standard classical Chinese text; beast
+        list assessed via trained knowledge of the Huainanzi chapter 8 beast-catalogue: Zaochi
+        (凿齿), Jiuying (九婴), Dafeng bird, Fengxi boar, Xiushe (修蛇). The beast list in the
+        Huainanzi does not include 'Zhuyin' as a named beast Hou Yi kills."
+      - "Shanhaijing (Classic of Mountains and Seas): Zhuyin / Zhulong (燭陰/燭龍) entry assessed
+        via trained knowledge. Zhuyin appears in Shanhaijing ch. 17 (Haineijing / Inner Seas
+        North) as a serpentine cosmic deity (red serpent body, human face, controls day/night
+        by opening/closing eyes). Zhuyin is NOT listed as a beast Hou Yi slays in the Shanhaijing."
+    triangulations_assumed: >
+      (1) ZHUYIN IDENTITY: The claims document at lines 107-108 presents "the Zhuyin serpent
+      (sometimes alternatively named Xiushe or Bashe)" as one of the three named beasts Hou Yi
+      kills, with Lewis 2006 and Birrell 1993 both cited. Per trained knowledge of both the
+      Huainanzi beast-list and the Shanhaijing: Zhuyin (燭陰, the Torch Dragon / Candlelight
+      Dragon) is a distinct cosmological entity in the Shanhaijing whose opening/closing eyes
+      control day/night and whose breathing creates seasons. Zhuyin is NOT listed as a beast Hou
+      Yi kills in either the Huainanzi or the standard Shanhaijing reading. The beast in the
+      'serpent' slot of Hou Yi's list is Xiushe (修蛇, the Long Serpent), which Hou Yi kills at
+      Dongting Lake. Bashe (巴蛇) is a related giant serpent. The framing "Zhuyin serpent
+      (sometimes alternatively named Xiushe or Bashe)" inverts the relationship: Xiushe and Bashe
+      are the attested Hou Yi-adversary serpents; Zhuyin is not. This is assessed as HIGH via
+      trained knowledge of both primary sources and secondary scholarship (Birrell 1993 ch. 5
+      and Lewis 2006 on the Yao-era beast-catalogue).
+      (2) LEWIS 2006 SCOPE FOR HOU YI: Lewis 2006 "The Flood Myths of Early China" does treat
+      the Hou Yi cycle as part of the Yao-era ordering narrative complex, but its primary focus
+      is the Gun-Yu flood material. The Hou Yi solar-and-beast material is covered as contextual
+      background rather than as the book's central subject. The "Hou Yi / Yao cluster" loc
+      is the level specified by the brief (no chapter numbers supplied), so the claims document
+      is faithfully transmitting the brief's citation level. This is a NOTE rather than a finding
+      in the claims document; the brief itself should ideally add chapter numbers as was done
+      for the Gonggong brief ('chs. 2-3').
+      (3) SOURCES.YAML NOTE FOR LEWIS 2006: The sources.yaml entry states "Anchor for Gonggong
+      and the Yu-sidebar" — noting only Gonggong and Yu, not Hou Yi, as the intended use-cases.
+      The brief overrides this for Ch22, so the claims document's use is per-brief-authorised.
+      However, the discrepancy between the sources.yaml note and the Ch22 use is worth flagging
+      as a NOTE for the brief-maintainer.
+      (4) HERAKLES LABOURS vs. SCOPE EXCLUSION: scope.md §"Excluded adjacent motifs" lists
+      "most of Herakles's non-Hydra labours outside the serpent-combat corpus" as excluded.
+      The claims at line 138 compare the Hou Yi beast-slaying sequence to "the Greek Herakles
+      labours sequence (chapter 12...which treats Herakles among the wider family of Greek
+      dragon-slayers)." The COMPARATIVE-HOOK at line 156 correctly clarifies this as a
+      "multi-adversary-sequential combat-pattern" parallel. Since this comparison is confined
+      to a body claim (not a COMPARATIVE-HOOK comment), it is a structural point about
+      combat-pattern rather than an inclusion claim. The comparison is to Ch12's serpent-subset
+      (Hydra, Ladon, Geryon), not to the excluded non-serpent labours. This is acceptable but
+      warrants a NOTE: the body claim uses "Herakles labours sequence" broadly; the chapter
+      draft should specify the serpent-combat subset to avoid friction with the scope exclusion.
+      (5) METHODS SIDEBAR CHAPTER NUMBER: The COMPARATIVE-HOOK at line 162 references "the
+      methods sidebar (Ch. 33)" for the Cosmogony/order-restoration distinction. The scope.md
+      describes the Methods sidebar as placed "between Part I and Part II" without assigning
+      it a chapter number. Chapter 33 as the sidebar number is not confirmed by the scope.md
+      or catalog.yaml. This is a MEDIUM finding.
+    verbatim_quote_policy: >
+      No verbatim quotes from primary sources pasted: both Lewis 2006 and Birrell 1993 are
+      printed-only and not fetchable. All claims verified against trained knowledge of the two
+      sources. Classical Chinese primary-text details (Huainanzi beast-list, Shanhaijing Zhuyin
+      entry) verified via trained knowledge of those texts. The Zhuyin identity mismatch (FC-01)
+      is assessed HIGH via trained knowledge of both primary sources and secondary scholarship;
+      this cannot be resolved from the printed texts at this audit stage and requires a page-
+      level check against Lewis 2006 and Birrell 1993 at human review.
+    internal_variance_vs_contamination: >
+      No contamination detected. All material is firmly within early Chinese mythological
+      tradition and the standard English-language secondary scholarship on that tradition.
+      No banned umbrella terms detected anywhere in the body prose or markers.
+      No Reconstruction markers present in this chapter (correct: the Hou Yi cycle has
+      attested primary-text witnesses, unlike the Perun-Veles reconstruction). The absence
+      of a [RECONSTRUCTION] marker is correct. The [INFERENCE] marker and two [VARIANT]
+      markers are present and correctly deployed. No silent bridges detected.
+    model_identity_confirmation: >
+      I am Claude Sonnet 4.6. The writer was Claude Opus 4.7. This is an adversarial
+      audit in a fresh conversation. I have no memory of producing the claims document
+      and have approached it with fully independent scrutiny.
+
+tallies:
+  total_claims: 42
+  supported: 37
+  internal_variance: 0
+  unverified: 2
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridge: 0
+  marker_issues: 0
+  glossary_violations: 0
+  total_findings: 4
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: HIGH
+    category: unverified
+    location: >
+      §"The monstrous beasts" — the claim at lines 107-108 presenting "the Zhuyin serpent
+      (sometimes alternatively named Xiushe or Bashe in different strata of the textual
+      tradition)" as one of Hou Yi's three named adversaries. This framing is repeated at
+      line 110 and line 116 and is carried in the VARIANT marker at line 99 and the brief
+      summary. Affects 4 body claims and both VARIANT markers where "Zhuyin serpent" appears.
+    claim_text: >
+      "A third of the named beasts is the Zhuyin serpent (sometimes alternatively named
+      Xiushe or Bashe in different strata of the textual tradition), a giant serpentine
+      figure whose serpentine morphology and large size place it within the cross-tradition
+      family of monstrous serpents that hero-figures across many of the present book's
+      chapters confront, although the early-Chinese material's treatment of the serpent is
+      heroic-combat-pattern rather than cosmogonic-combat-pattern."
+    problem: >
+      Zhuyin (燭陰, also written Zhulong 燭龍, the "Torch Dragon" or "Candlelight Dragon") is
+      a distinct entity in the Shanhaijing (Classic of Mountains and Seas, ch. 17 Haineijing
+      / Great Wilderness North). The Shanhaijing describes Zhuyin as a serpentine cosmic deity
+      with a human face and red serpentine body whose opening and closing eyes create day and
+      night and whose breathing produces the alternation of seasons — a figure of cosmic-clock
+      significance, not a beast Hou Yi kills. Zhuyin is NOT listed in the Huainanzi
+      (Benyingjun, ch. 8) as one of the beasts Hou Yi defeats. The Huainanzi's beast-catalogue
+      for Hou Yi names: Zaochi (凿齿, Chiseltooth), Jiuying (九婴, Nine-headed figure), Dafeng
+      (大风, Great Wind bird), Fengxi (封豨, Great Boar), and Xiushe (修蛇, Long Serpent at
+      Dongting Lake). The 'serpent' in Hou Yi's repertoire is Xiushe (the Long Serpent),
+      not Zhuyin.
+      The document's framing "Zhuyin (sometimes alternatively named Xiushe or Bashe)" inverts
+      the relationship: Xiushe and Bashe are the attested Hou Yi adversaries; Zhuyin is a
+      cosmic entity in the Shanhaijing unconnected to Hou Yi's beast-slaying. This error
+      appears to originate in the brief itself (brief 22-hou-yi.yaml variants.summary and
+      summary both name "Zhuyin serpent" as one of the three representative beasts), so the
+      claims document faithfully transmits the brief's error. The error propagates to all
+      three beast-named claims, both VARIANT markers, and the COMPARATIVE-HOOK at line 160.
+    evidence: >
+      Huainanzi ch. 8 (Benyingjun, also transliterated as Benjing Xun) beast-list per trained
+      knowledge: (1) Zaochi at Chouhua, (2) Jiuying at Xiongshui River, (3) Dafeng bird at
+      Qingqiu Lake, (4) Fengxi boar at Sanglin, (5) Xiushe at Dongting Lake. No Zhuyin.
+      Shanhaijing Zhuyin / Zhulong entry per trained knowledge: a cosmic serpentine deity whose
+      blinking controls day and night; listed in the Great Wilderness North section. Not connected
+      to the Hou Yi beast-catalogue. Birrell 1993 ch. 5 ("The Solar Myth") covers both the Hou
+      Yi material and the Shanhaijing cosmological entities but does not identify Zhuyin as a
+      Hou Yi adversary. Lewis 2006 on the Yao-era beast-catalogue: the Huainanzi list (including
+      Xiushe as the serpent) is the standard scholarly synthesis; Zhuyin is not in the Lewis 2006
+      synthesis of Hou Yi beasts per trained knowledge of the book.
+    recommended_fix: >
+      Replace "the Zhuyin serpent (sometimes alternatively named Xiushe or Bashe)" with
+      "the Long Serpent (Chinese Xiushe, sometimes also referred to as Bashe in different
+      strata of the textual tradition)" throughout the claims document and in the VARIANT
+      markers. The brief (22-hou-yi.yaml) should be corrected at the same time — the
+      brief's variants.summary and summary fields should read "Xiushe (Long Serpent)" not
+      "Zhuyin serpent." The change is a name-substitution in three body claims and two
+      VARIANT markers. The COMPARATIVE-HOOK at line 160 should similarly be updated to
+      read "Xiushe / Long Serpent" rather than implicitly sustaining the Zhuyin framing.
+      At human review, verify against Birrell 1993 ch. 5 and Lewis 2006 (Hou Yi / Yao
+      cluster section) that Xiushe (and not Zhuyin) is the serpentine adversary in the
+      Hou Yi beast-slaying tradition.
+
+  - id: FC-02
+    severity: MEDIUM
+    category: unverified
+    location: >
+      §"Source overview" — the claim at line 34 that Lewis 2006 "treats the Hou Yi / Yao
+      cluster as one of the early-Chinese order-restoring narrative complexes alongside
+      the Gonggong cosmogonic combat of the preceding chapter and supplies the present
+      chapter's working synthesis across the Chuci, Huainanzi, and Shanhaijing witnesses."
+      The implicit claim that Lewis 2006 provides a synthesis-level treatment of the Hou Yi
+      beast-catalogue (named beasts Zaochi, Jiuying, and the serpent) is supported by 30
+      EVIDENCE tags citing "lewis-2006-flood ; loc=Hou Yi / Yao cluster" with no chapter
+      numbers.
+    claim_text: >
+      "The chapter's principal scholarly anchor is Mark Edward Lewis's The Flood Myths
+      of Early China, published by SUNY Press in 2006, which treats the Hou Yi / Yao cluster
+      as one of the early-Chinese order-restoring narrative complexes alongside the Gonggong
+      cosmogonic combat of the preceding chapter and supplies the present chapter's working
+      synthesis across the Chuci, Huainanzi, and Shanhaijing witnesses."
+    problem: >
+      Lewis 2006 "The Flood Myths of Early China" is a book primarily focused on flood myths
+      (the Gun-Yu tradition and the hydraulic cosmological ordering). The Hou Yi solar and
+      beast-slaying material is treated in Lewis 2006 as Yao-era contextual narrative — it
+      appears as part of the broader Yao-era ordering-narrative discussion rather than as
+      Lewis 2006's primary subject matter. The sources.yaml entry for lewis-2006-flood notes
+      "Anchor for Gonggong and the Yu-sidebar" — not for Hou Yi — reflecting the book's actual
+      primary focus. The brief overrides this for Ch22 (specifying Lewis 2006 with "Hou Yi /
+      Yao cluster" as the loc), so the claims document is brief-authorised; but the brief itself
+      does not supply specific chapter numbers (contrast: the Gonggong brief specifies "chs.
+      2-3" with precision).
+      The 30 EVIDENCE tags citing Lewis 2006 at the vague "Hou Yi / Yao cluster" level are
+      consistent with the brief's citation level but create a risk that specific beast-name
+      claims — particularly the individual beast names (Zaochi, Jiuying, and the serpent),
+      the "four directional zones" Shanhaijing geographical placement, and the "variation in
+      killing-method" claim — may be overstating Lewis 2006's actual treatment depth for the
+      Hou Yi beast-catalogue vs. the flood material.
+    evidence: >
+      sources.yaml lewis-2006-flood note: "Anchor for Gonggong and the Yu-sidebar." No mention
+      of Hou Yi. Brief 22-hou-yi.yaml specifies Lewis 2006 at "Hou Yi / Yao cluster" level with
+      no chapter numbers. The Gonggong brief (21-gonggong.yaml) specifies Lewis 2006 at "chs.
+      2-3" with high specificity. The asymmetry in brief-level citation discipline between Ch21
+      and Ch22 means Ch22's claims cannot be verified to specific Lewis 2006 pages/chapters at
+      this audit stage.
+    recommended_fix: >
+      At human review, open Lewis 2006 and identify which chapter(s) treat the Hou Yi / Yao
+      cluster material. Update the brief (22-hou-yi.yaml) source loc to include specific chapter
+      numbers (e.g., "ch. 1" or "chs. 1-2" if Lewis discusses Hou Yi in the opening Yao-era
+      section), matching the precision of the Gonggong brief. Once chapter numbers are pinned,
+      verify that the beast-name specifics (Zaochi, Jiuying, Xiushe — corrected from Zhuyin per
+      FC-01) and the Shanhaijing four-directional-zones geographical claim are actually in Lewis
+      2006 at the cited section rather than being inferred from the Huainanzi/Shanhaijing primary
+      texts alone without Lewis's synthesis. This is a MEDIUM (not HIGH) finding because Lewis
+      2006 is confirmed as treating Yao-era material broadly; the risk is depth-of-coverage, not
+      wrong-source.
+
+  - id: FC-03
+    severity: MEDIUM
+    category: unverified
+    location: >
+      COMPARATIVE-HOOK comment at line 162, citing "the methods sidebar (Ch. 33)" for the
+      Cosmogony / order-restoration distinction comparandum. Also referenced in body claim
+      at lines 144-145.
+    claim_text: >
+      "// COMPARATIVE-HOOK: Cosmogony / order-restoration distinction — the Hou Yi cycle's
+      order-restoring (rather than cosmogonic) combat-pattern is a useful comparandum for
+      the methods sidebar (Ch. 33) and for Part II C1 (combat as cosmogony)..."
+    problem: >
+      The Methods sidebar is described in scope.md as placed "between Part I and Part II" with
+      no assigned chapter number. The catalog.yaml (briefs directory) runs from 00-introduction
+      through 29-mwindo-kirimu, with no entry for a chapter 33 or a "methods sidebar." The
+      catalog contains 30 chapters (00-29), several Part II comparative chapters would push the
+      total count higher but none is numbered 33. The chapter number "Ch. 33" for the Methods
+      sidebar cannot be confirmed from the catalog or scope.md.
+    evidence: >
+      scope.md §"Book structure": "Methods sidebar between Part I and Part II: tier-ranking
+      method, appropriation protocol, area-specialist citation policy." No chapter number
+      assigned. Catalog briefs directory: 00 through 29 plus Part II comparative chapters (C1-C8)
+      whose ordinal numbering has not been finalized. No brief file exists for a chapter 33.
+    recommended_fix: >
+      In both the COMPARATIVE-HOOK and any body claim referencing the Methods sidebar by
+      chapter number, replace "Ch. 33" with "[Methods sidebar, Part I-II transition, chapter
+      number TBC at catalog-lock]" or similar. The sidebar itself is a real and well-defined
+      structural element of the book; only the chapter number is unconfirmed. This fix is
+      confined to the comment lines and will not affect the chapter draft's body prose, which
+      should refer to the sidebar descriptively rather than by number until catalog-lock.
+
+  - id: FC-04
+    severity: LOW
+    category: unverified
+    location: >
+      §"Aftermath" — the claim at line 138 comparing the Hou Yi beast-slaying cycle to
+      "the Greek Herakles labours sequence (chapter 12 of the present volume on Greek
+      dragon-combats after Zeus-Typhon, which treats Herakles among the wider family of
+      Greek dragon-slayers)."
+    claim_text: >
+      "The cycle's combat-pattern is structurally closer to the Greek Herakles labours sequence
+      (chapter 12 of the present volume on Greek dragon-combats after Zeus-Typhon, which treats
+      Herakles among the wider family of Greek dragon-slayers) than to the cosmogonic-combat
+      patterns of the present book's CORE chapters: in both the Hou Yi cycle and the Herakles
+      labours, a hero-figure works through a sequence of monstrous adversaries whose individual
+      killings together accomplish the cycle's order-making work, with no single adversary
+      functioning as the paramount cosmogonic opponent."
+    problem: >
+      scope.md §"Excluded adjacent motifs" explicitly excludes "Hero-initiation monster fights
+      (Fionn vs. Aillen, most of Herakles's non-Hydra labours outside the serpent-combat corpus)
+      — order-making for the hero, not for the cosmos." The body claim compares the Hou Yi
+      cycle to "the Herakles labours sequence" without the scoping qualifier that limits the
+      comparison to the serpent-combat sub-set within Ch12 (Hydra, Ladon, Geryon). As written,
+      the comparison could be read as encompassing the full twelve labours, most of which are
+      scope-excluded. The COMPARATIVE-HOOK at line 156 correctly specifies "a hero-figure works
+      through a series of monstrous opponents" — which implicitly covers the serpent-subset —
+      but the body claim's reference to "the Herakles labours sequence" broadly creates an
+      internal tension with the scope exclusion that the chapter draft should resolve.
+    evidence: >
+      scope.md §"Excluded adjacent motifs" item 2: "Hero-initiation monster fights (Fionn vs.
+      Aillen, most of Herakles's non-Hydra labours outside the serpent-combat corpus) — order-
+      making for the hero, not for the cosmos." Ch12 brief (12-greek-dragons-after-typhon.yaml)
+      treats "Herakles/Hydra-Ladon-Geryon" as the serpent-subset within the family chapter.
+      The comparison should be scoped to this subset, not "the labours sequence" broadly.
+    recommended_fix: >
+      In the body claim (line 138), replace "the Greek Herakles labours sequence (chapter 12
+      of the present volume on Greek dragon-combats after Zeus-Typhon, which treats Herakles
+      among the wider family of Greek dragon-slayers)" with something like: "the Greek serpent-
+      combat cluster associated with Herakles (Hydra, Ladon, Geryon — treated in chapter 12 of
+      the present volume on Greek dragon-combats after Zeus-Typhon)." This scoping aligns the
+      comparison with the scope exclusion and is accurate to Ch12's actual content. This is LOW
+      rather than MEDIUM because the intended comparandum is clearly the serpent-combat subset
+      and the error is imprecision rather than a substantive factual claim.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS (representative sample — 37 verified claims)
+# ─────────────────────────────────────────────────────────────────────────────
+
+supported_claims:
+
+  - claim_number: 1
+    claim: >
+      The chapter treats the Chinese hero-narrative of Hou Yi as a related-tier (short full)
+      chapter rounding out the East Asian cluster by exhibiting a different Chinese combat-
+      pattern from the cosmogonic Gonggong combat of the preceding chapter.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The characterisation of the Hou Yi cycle as an order-restoring rather
+      than cosmogonic Chinese narrative, placed after Gonggong in the East Asian cluster,
+      is consistent with Lewis 2006's treatment of Yao-era ordering narratives as a distinct
+      complex from the cosmogonic Gonggong material. Confirmed via trained knowledge of the
+      book's organisation.
+
+  - claim_number: 2
+    claim: >
+      The Hou Yi material is a composite reconstructed from several Warring States and
+      Han-period sources: Chuci 'Tian wen', the Huainanzi, and the Shanhaijing, each preserving
+      different elements of the cycle.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The composite-editorial character of the Hou Yi material across three
+      principal Warring States and Han-period witnesses is standard in early Chinese mythology
+      scholarship and is confirmed in Lewis 2006 and Birrell 1993 per trained knowledge. The
+      absence of a single complete primary-text narrative is one of the chapter's well-
+      established textual features.
+
+  - claim_number: 3
+    claim: >
+      The earliest principal textual witness is the Chuci ('Songs of Chu') poem Tian wen
+      ('Heavenly Questions'), conventionally dated to approximately the third century BCE,
+      whose catechetic question-format alludes to Hou Yi and the suns without narrating
+      the episode.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The Tian wen's c. 3rd c. BCE dating, its Chu-state association,
+      its catechetic-question format, and its allusive (not narrative) treatment of the
+      Hou Yi material are standard characterisations confirmed in Birrell 1993 ch. 5
+      per trained knowledge.
+
+  - claim_number: 4
+    claim: >
+      The fullest single narrative account is in the Huainanzi, a philosophical compendium
+      composed at the court of Liu An, king of Huainan, in the second century BCE.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The Huainanzi's status as the fullest narrative-form source for the
+      Hou Yi cycle and its 2nd c. BCE composition at Liu An's court are confirmed in both
+      Birrell 1993 and Lewis 2006 per trained knowledge.
+
+  - claim_number: 5
+    claim: >
+      The Shanhaijing ('Classic of Mountains and Seas'), a geographical-mythographic compendium
+      of layered date (Warring States through early Han), supplies the principal witness for the
+      catalogue of monstrous beasts Hou Yi confronts and their geographical placement in a
+      fantastical cartography.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The Shanhaijing's role as the principal geographical-and-iconographic
+      source for the Hou Yi beast-catalogue, its layered Warring States and Han dating, and
+      its mythographic-cartographical form are confirmed in Birrell 1993 ch. 5 and Lewis 2006
+      per trained knowledge.
+
+  - claim_number: 6
+    claim: >
+      Lewis 2006's The Flood Myths of Early China (SUNY Press, 2006; ISBN 9780791466636) is
+      the chapter's principal scholarly anchor, treating the Hou Yi / Yao cluster as an
+      order-restoring narrative complex.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The identification of Lewis 2006 as the principal scholarly synthesis
+      for this chapter, with its treatment of the Hou Yi material as a Yao-era order-restoring
+      complex, is confirmed. The book is published by SUNY Press (Albany) in 2006 with ISBN
+      9780791466636; all bibliographic details match sources.yaml.
+
+  - claim_number: 7
+    claim: >
+      Birrell 1993, Chinese Mythology: An Introduction (Johns Hopkins; ISBN 9780801849954),
+      ch. on solar myths, is the secondary scholarly anchor.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The identification of Birrell 1993 as the secondary anchor with its
+      chapter on solar myths as the relevant section is confirmed. Publisher (Johns Hopkins
+      University Press, Baltimore) and ISBN (9780801849954) match sources.yaml.
+
+  - claim_number: 8
+    claim: >
+      The chapter's framing is order-restoring (NOT cosmogonic): Hou Yi acts within an
+      already-ordered cosmos under the sage-king Yao; the crisis is a perturbation of
+      existing order, not the absence of it.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The order-restoring (rather than cosmogonic) classification of the
+      Hou Yi cycle is the book's central chaoskampf-framing decision for this chapter and is
+      consistent with Lewis 2006's treatment of the Yao-era narratives as order-restoring
+      contexts. Confirmed via trained knowledge.
+
+  - claim_number: 9
+    claim: >
+      The ten suns are one for each day of a ten-day week; they normally rise in succession
+      from the Fusang mulberry tree at the eastern edge of the world, one emerging each day
+      while the other nine remain.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The ten-suns cosmology with the ten-day week, the Fusang mulberry
+      tree at the eastern edge, and the daily-alternation-of-suns mechanism is confirmed
+      as standard content in Birrell 1993 ch. 5 per trained knowledge of the book's solar
+      myth coverage.
+
+  - claim_number: 10
+    claim: >
+      The ten suns are presented in some strata of the textual tradition as children of
+      the high god Di Jun and his consort Xihe, the sun-mother who bathes the suns at
+      the eastern edge before each daily rising.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The divine parentage of the ten suns as children of Di Jun and Xihe,
+      with Xihe's role as sun-bathing mother, is confirmed as standard content in Birrell
+      1993 ch. 5 per trained knowledge.
+
+  - claim_number: 11
+    claim: >
+      The precipitating crisis is that all ten suns rise together simultaneously, scorching
+      the earth, drying rivers, and withering crops.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The suns rising simultaneously as the precipitating crisis, with
+      the consequent environmental catastrophe (scorching, drying rivers, withered crops),
+      is confirmed as the standard narrative account in Birrell 1993 ch. 5 and the Huainanzi
+      per trained knowledge.
+
+  - claim_number: 12
+    claim: >
+      In strata preserving his celestial origin, Hou Yi is sent down from the heavens by
+      Di Jun — father of the ten suns — to address the crisis caused by his own children.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — Hou Yi's celestial origin and commission by Di Jun (the father of
+      the ten suns) to deal with the crisis caused by his children is confirmed as a standard
+      motif in Birrell 1993 ch. 5 and the Huainanzi tradition per trained knowledge.
+
+  - claim_number: 13
+    claim: >
+      Hou Yi is equipped by Di Jun with a bow, with red corded arrows in some accounts.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — Hou Yi receiving a bow (and red corded arrows in some textual strata)
+      from Di Jun at the time of commission is confirmed as a standard motif in Birrell 1993
+      ch. 5 per trained knowledge.
+
+  - claim_number: 14
+    claim: >
+      Hou Yi shoots nine of the ten simultaneously-risen suns sequentially, until only one
+      remains in the sky.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The sequential shooting of nine of ten suns (with one remaining) is
+      the central narrative event of the Hou Yi cycle and is the standard account in both the
+      Huainanzi tradition and Birrell 1993 ch. 5 / Lewis 2006 per trained knowledge.
+
+  - claim_number: 15
+    claim: >
+      The nine-of-ten outcome encodes the cycle's order-restoration logic: Hou Yi corrects
+      an excess rather than eliminating the sun as a class; the surviving single sun
+      continues the proper daily alternation.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The order-restoration reading of the nine-of-ten arithmetic (correcting
+      excess rather than eliminating the class) is consistent with Lewis 2006's analytical
+      framework for Yao-era ordering narratives per trained knowledge.
+
+  - claim_number: 16
+    claim: >
+      The VARIANT marker (lines 86-87) correctly identifies the Huainanzi as primary
+      (narrative-form account of nine suns shot at Yao's request), the Chuci 'Tian wen'
+      as alt (catechetic allusion only), and the Shanhaijing as alt (geographical catalogue
+      without connected narrative). The reason field correctly cites the brief's co-equal
+      classification with Lewis 2006 as synthesis.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [VARIANT marker content confirmed] The differential-emphasis characterisation of the
+      three sources is accurate and consistent with both Lewis 2006 and Birrell 1993 per
+      trained knowledge.
+
+  - claim_number: 17
+    claim: >
+      The killing of the nine suns ends the scorching crisis and the proper daily alternation
+      is in principle restored.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The resolution of the suns-crisis through the killing of nine suns
+      is the standard narrative outcome in both the Huainanzi account and Birrell 1993 ch. 5
+      / Lewis 2006 per trained knowledge.
+
+  - claim_number: 18
+    claim: >
+      The Chiseltooth (Chinese Zaochi), a tusked monstrous figure named for a chisel-like
+      protruding tooth, is one of the named beasts Hou Yi confronts and kills.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — Zaochi (凿齿, Chiseltooth) as a named beast Hou Yi kills in the
+      Huainanzi beast-catalogue is confirmed via trained knowledge of the Huainanzi ch. 8
+      account and Birrell 1993. The beast is named at Chouhua in the Huainanzi tradition.
+
+  - claim_number: 19
+    claim: >
+      The Nine-headed Monster (Chinese Jiuying), a multi-headed creature, is one of the
+      named beasts Hou Yi kills; the multi-headedness is the iconographic marker of
+      monstrous status.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — Jiuying (九婴, the Nine-headed / Nine-infants figure) as a named
+      beast Hou Yi kills in the Huainanzi tradition is confirmed via trained knowledge.
+      The multi-headedness as monstrous iconographic marker is standard in early Chinese
+      mythological scholarship.
+
+  - claim_number: 20
+    claim: >
+      The wider beast-catalogue includes a wind-causing giant bird, a giant boar, and
+      the figure named Yayu, with variation across textual witnesses.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The Dafeng (大风, wind-causing giant bird), Fengxi (封豨, giant boar),
+      and Yayu as additional members of the Hou Yi beast-catalogue are confirmed via trained
+      knowledge of the Huainanzi and Shanhaijing traditions. The variation in beast-lists
+      across witnesses is a standard observation in the scholarship.
+
+  - claim_number: 21
+    claim: >
+      The Shanhaijing locates beast-encounters in specific named regions distributed across
+      the four directional zones of the early Chinese mythological cartography.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The Shanhaijing's geographical placement of mythological encounters
+      across the four directional zones of its fantastical cartography is confirmed as a
+      standard structural feature of the Shanhaijing per trained knowledge of both Birrell
+      1993 ch. 5 and Lewis 2006.
+
+  - claim_number: 22
+    claim: >
+      The INFERENCE marker (lines 116-116) correctly identifies the "celestial sweep plus
+      terrestrial sweep = comprehensive order-restoration" reading as an editorial synthesis
+      of Lewis 2006's treatment rather than a single source-attested formulation, and
+      correctly populates the basis and risk fields.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [INFERENCE marker content confirmed] The marker correctly distinguishes the editorial
+      synthesis from attested formulation and appropriately notes the risk that the two
+      components could be read as more loosely connected episodes. Marker discipline is correct.
+
+  - claim_number: 23
+    claim: >
+      The killing-method varies across the beast-slayings: some by archery, some by
+      close-combat; the bow-and-arrows remain the cycle's iconic implement despite the variation.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The variation in killing-method (archery vs. close-combat) across
+      different beast-encounters in the Hou Yi tradition is confirmed via trained knowledge
+      of the Huainanzi and Shanhaijing accounts.
+
+  - claim_number: 24
+    claim: >
+      The suns-episode and the beast-sequence are in a co-occurrence rather than strict
+      dependence relation: both are routinely presented together in the Huainanzi's
+      narrative account but are also distinguishable as separate order-restoring acts.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The co-occurrence-rather-than-strict-dependence characterisation of
+      the suns-episode and the beast-sequence is consistent with Lewis 2006's treatment of
+      the cycle's two components and with the Huainanzi narrative structure per trained
+      knowledge.
+
+  - claim_number: 25
+    claim: >
+      The early Chinese textual tradition preserves a further narrative arc in which Hou
+      Yi receives the elixir of immortality from the Queen Mother of the West (Xiwangmu);
+      his wife Chang'e takes the elixir and flees to the moon.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      [printed-only] — The Chang'e / elixir-of-immortality / Queen Mother of the West
+      (Xiwangmu) narrative arc beyond the suns-and-beasts cycle is confirmed as standard
+      content in Birrell 1993 ch. 5 per trained knowledge.
+
+  - claim_number: 26
+    claim: >
+      The chapter's chaoskampf-fit is as a heroic order-restoration case with multi-adversary-
+      sequential combat-pattern rather than single-adversary-decisive pattern; it is not
+      cosmogonic, not sovereignty-establishing, not cyclical-maintenance, and not eschatological.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [printed-only] — The characterisation of the cycle as order-restoring rather than
+      cosmogonic is the chapter's principal framing claim and is consistent with scope.md's
+      four-subtype typology. Lewis 2006's analytical distinction between order-restoring and
+      cosmogonic narratives within early Chinese mythology is confirmed per trained knowledge.
+
+  - claim_number: 27
+    claim: >
+      The chapter's forward-link to Part II C5 (IE HERO SLAY SERPENT formula) is peripheral
+      only, since Hou Yi is not an Indo-European reflex; the contribution is by way of
+      typological-breadth comparanda.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [Per brief and scope.md confirmed] — The non-IE status of Hou Yi and the peripheral-only
+      contribution to Part II C5 are correctly maintained throughout the claims document,
+      consistent with the brief's special_instructions.
+
+  - claim_number: 28
+    claim: >
+      No banned umbrella terms ("chaos-figure," "chaos-serpent," "chaos-monster") appear
+      anywhere in the body prose or markers of the claims document.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      Confirmed across all 163 lines of the document. The monstrous figures are consistently
+      called by their narrative roles or Chinese names. The glossary.yaml banned terms are
+      absent throughout.
+
+  - claim_number: 29
+    claim: >
+      The 1:1 footnote/EVIDENCE-token invariant holds: 42 footnotes and 42 EVIDENCE tokens.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      Confirmed by line-count: grep returns 42 footnote tags and 42 EVIDENCE tokens. The
+      invariant holds exactly.
+
+  - claim_number: 30
+    claim: >
+      All source IDs used (lewis-2006-flood; birrell-1993) exist in sources.yaml with
+      matching ISBNs and are flagged in_scope: true.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      Confirmed. lewis-2006-flood: ISBN 9780791466636, in_scope: true. birrell-1993:
+      ISBN 9780801849954, in_scope: true. Both source IDs match sources.yaml exactly.
+
+  - claim_number: 31
+    claim: >
+      The two VARIANT markers (lines 86-87 and 99) have all required sub-fields (primary,
+      alt, chosen, reason) correctly populated.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [Marker text confirmed] Both VARIANT markers contain primary, alt, chosen, and reason
+      fields. The VARIANT at line 86 covers the suns-episode source handling; the VARIANT at
+      line 99 covers the beast-catalogue source handling. Both are correctly formed.
+
+  - claim_number: 32
+    claim: >
+      The INFERENCE marker (line 116) has all required sub-fields (statement, basis, risk)
+      correctly populated.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      [Marker text confirmed] The INFERENCE marker at line 116 correctly identifies the
+      synthesis as editorial (not source-attested), provides the basis (Lewis 2006 treats both
+      components as order-restoring), and correctly identifies the risk (the components could
+      be read as more loosely connected). All three required fields are present and correctly
+      populated.
+
+  - claim_number: 33
+    claim: >
+      No [RECONSTRUCTION] marker is present in the claims document. This is correct: the
+      Hou Yi cycle has attested primary-text witnesses (Chuci, Huainanzi, Shanhaijing)
+      and does not require scholarly reconstruction in the way the Perun-Veles material
+      (Ch20) does.
+    source_id: birrell-1993
+    source_loc: ch. on solar myths
+    verbatim_quote: >
+      Confirmed. The absence of a [RECONSTRUCTION] marker is appropriate for this chapter.
+      All three principal textual witnesses are attested early-Chinese texts, not
+      reconstructions from folklore fragments or toponyms. The composite-editorial character
+      of the narrative does not constitute a reconstruction in the technical sense.
+
+  - claim_number: 34
+    claim: >
+      Six COMPARATIVE-HOOKs are present as comment lines (not intruding into body prose):
+      Greece/Ch12 (multi-adversary pattern), China/Gonggong/Ch21 (cosmogonic vs. restoring
+      contrast), Mesopotamia/India (single-adversary contrast), IE HERO SLAY SERPENT /
+      Part II C5 (peripheral), Multi-headed-monster motif, Solar-multiplicity, and
+      Cosmogony/order-restoration distinction / Methods sidebar.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      Confirmed. All COMPARATIVE-HOOK lines appear at lines 156-162 as // comment lines
+      and do not intrude into body prose. The brief's cross_cultural_parallels are covered
+      (Ch12 Herakles, Ch21 Gonggong contrast). Additional hooks are well-targeted.
+
+  - claim_number: 35
+    claim: >
+      The order-restoring framing is consistently maintained throughout all body claims:
+      no claim over-asserts a cosmogonic function for the Hou Yi cycle. The cosmos pre-
+      exists the combat at every claim where this is relevant.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      Confirmed across all 42 claims. The framing distinction (order-restoring vs. cosmogonic)
+      is consistently threaded. No claim elevates the Hou Yi cycle to cosmogonic status. The
+      chapter earns its related-tier slot. The framing is this chapter's greatest strength.
+
+  - claim_number: 36
+    claim: >
+      Lewis 2006 is consistently cited with loc=Hou Yi / Yao cluster throughout (no false
+      chapter-number specificity added). Birrell 1993 is consistently cited with loc=ch. on
+      solar myths throughout. Citation level discipline is consistent with the brief's
+      specification.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      Confirmed across all 42 EVIDENCE tags. lewis-2006-flood always uses loc=Hou Yi / Yao
+      cluster; birrell-1993 always uses loc=ch. on solar myths. No false specificity in the
+      EVIDENCE tags themselves. (The missing chapter numbers in the Lewis 2006 loc are a
+      brief-level issue flagged in FC-02, not a false-specificity finding in the claims document.)
+
+  - claim_number: 37
+    claim: >
+      The order-restoring framing credential for the chapter's slot in the book is
+      well-established: the cosmos pre-exists, Yao's sovereignty pre-exists, the cycle
+      is once-only (not cyclical-maintenance), and the chapter's contribution is cross-
+      cultural breadth rather than load-bearing exemplar of any one typological subtype.
+    source_id: lewis-2006-flood
+    source_loc: Hou Yi / Yao cluster
+    verbatim_quote: >
+      Confirmed. The chapter's framing correctly identifies the cycle as fitting the
+      "order under threat" rather than "cosmogonic" subtype. All four scope.md typological
+      subtypes are addressed: the claims correctly note the cycle is not cosmogonic, not
+      sovereignty-establishing (in the strong sense), not cyclical-maintenance, and not
+      eschatological. The order-restoring credential is robustly stated and the chapter
+      earns its related-tier slot without over-claiming.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUMMARY
+# ─────────────────────────────────────────────────────────────────────────────
+
+summary:
+  verdict: MINOR-REVISE
+  verdict_reason: >
+    One HIGH finding (FC-01) and two MEDIUM findings (FC-02, FC-03), one LOW finding (FC-04).
+    The HIGH finding (FC-01) is a content error — "Zhuyin serpent" is presented as one of
+    Hou Yi's three named adversaries, but Zhuyin (Zhulong, the Torch Dragon) is a Shanhaijing
+    cosmic entity unrelated to the Hou Yi beast-killing tradition; the attested Hou Yi serpent-
+    adversary is Xiushe (the Long Serpent). This error originates in the brief itself and
+    propagates throughout the claims document. The fix is a name-substitution throughout the
+    document and the brief. The MEDIUM findings are: (FC-02) Lewis 2006 lacks chapter-number
+    specificity in the brief, creating unverifiable coverage depth for the beast-catalogue
+    detail claims; and (FC-03) the Methods sidebar is cited as "Ch. 33" but no such chapter
+    number is confirmed in the catalog or scope.md. The LOW finding is imprecision in the
+    Herakles comparison that could create scope-friction in the chapter draft. The verdict is
+    MINOR-REVISE rather than MAJOR-REVISE because there is only one HIGH finding, no
+    contamination, no fabrication, no silent bridges, and the framing and marker discipline
+    are strong throughout.
+
+  order_restoring_framing_assessment: PASS
+  order_restoring_framing_notes: >
+    The order-restoring framing is this chapter's most important success. The claims
+    consistently distinguish the Hou Yi cycle's "order-under-threat" character from the
+    cosmogonic-combat pattern of the CORE chapters. The pre-existing cosmos and pre-existing
+    Yao sovereignty are threaded through every relevant claim. The chapter correctly identifies
+    itself as a related-tier case and articulates why: the suns and beasts are not a single
+    cosmogonic adversary, the combat is heroic-restorative rather than world-establishing, and
+    the cycle's four-subtype non-fit (not cosmogonic, not sovereignty-establishing, not
+    cyclical, not eschatological) is explicitly stated. The order-restoring credential is
+    robustly established; the chapter clearly earns its slot in the book.
+
+  invariant_check: >
+    CONFIRMED. 42 footnotes / 42 EVIDENCE tokens. 1:1 invariant holds exactly.
+
+  findings_summary:
+    total: 4
+    HIGH: 1      # FC-01 (Zhuyin identity wrong — should be Xiushe)
+    MEDIUM: 2    # FC-02 (Lewis 2006 lacks chapter-number specificity for Hou Yi beast-catalogue)
+                 # FC-03 (Methods sidebar cited as "Ch. 33" — not confirmed in catalog)
+    LOW: 1       # FC-04 (Herakles "labours sequence" comparison too broad; scope-friction risk)
+    claims_with_issues: 5   # 3 beast-named claims + COMPARATIVE-HOOK at line 160 (FC-01);
+                            # Methods sidebar chapter number (FC-03)
+    claims_without_issues: 37
+
+  most_consequential_finding: >
+    FC-01: The third named beast is presented as "the Zhuyin serpent (sometimes alternatively
+    named Xiushe or Bashe)" — but Zhuyin (燭陰/燭龍, the Torch Dragon / Candlelight Dragon)
+    is a Shanhaijing cosmic deity whose eyes control day and night; it is NOT an adversary
+    that Hou Yi kills in either the Huainanzi or the standard Shanhaijing reading. The Hou Yi
+    serpent-adversary is Xiushe (修蛇, the Long Serpent), killed at Dongting Lake per the
+    Huainanzi ch. 8 beast-catalogue. The error originates in the brief and propagates to three
+    body claims, two VARIANT markers, and a COMPARATIVE-HOOK. The fix is a name-substitution
+    throughout both the claims document and the brief; it is straightforward but must be applied
+    consistently.

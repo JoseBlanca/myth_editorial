@@ -1,0 +1,800 @@
+meta:
+  stage: claims-factcheck
+  chapter: "21-gonggong"
+  chapter_title: "Gonggong and the Broken Pillar"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-29"
+  input_file: "chapters/21-gonggong.claims.adoc"
+  claims_identified: 56
+  triangulations_performed: 12
+  verdict: MINOR-REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. All four cited sources (Lewis 2006 The Flood Myths of Early China; Birrell 1993
+      Chinese Mythology: An Introduction; Forsyth 1987 The Old Enemy: Satan and the Combat
+      Myth; Scurlock & Beal 2013 Creation and Chaos) are printed-only and could not be fetched
+      directly. Lewis 2006 content and chapter structure assessed via trained knowledge of the
+      SUNY Press 2006 volume (ISBN 9780791466636) and its reception in early-China scholarship.
+      Birrell 1993 content and chapter structure assessed via trained knowledge of the Johns
+      Hopkins 1993 volume (ISBN 9780801849954). Forsyth 1987 scope and chapter structure
+      assessed via trained knowledge and the sources.yaml description ("Traces the combat
+      myth from Sumer through Judeo-Christian apocalyptic"). Scurlock & Beal 2013 scope
+      assessed via trained knowledge of the volume's Mesopotamia-centred reassessment of
+      Gunkel. Claims whose verification depends on exact content of chapters were assessed
+      conservatively against trained knowledge of those works' documented scope and coverage.
+    sources_skimmed:
+      - "Lewis 2006 The Flood Myths of Early China (SUNY Press; printed-only; chapter
+        structure and content of chs. 2-3 on Gonggong/Nüwa cosmogony and chapters on Yu
+        assessed via trained knowledge of the book's organisation; the chapter-level citation
+        chs. 2-3 for Gonggong material and Yu chapters for the sidebar is consistent with
+        the book's known structure)"
+      - "Birrell 1993 Chinese Mythology: An Introduction (Johns Hopkins; printed-only;
+        chapters on cosmogony assessed for coverage of Shanhaijing variants, wuxing / Five
+        Phases connection, and Nüwa human-creation material)"
+      - "Forsyth 1987 The Old Enemy: Satan and the Combat Myth (Princeton; printed-only;
+        scope assessed via sources.yaml note 'Traces the combat myth from Sumer through
+        Judeo-Christian apocalyptic' and trained knowledge of the book's Near-Eastern /
+        Judeo-Christian focus — see FC-01)"
+      - "Scurlock & Beal 2013 Creation and Chaos (Eisenbrauns; printed-only; scope
+        confirmed as Mesopotamia-centred; limited Chinese material claim is plausible)"
+    triangulations_assumed: >
+      (1) Lewis 2006 chapter structure: trained knowledge confirms the book covers Gonggong
+      and the flood-and-cosmogony tradition in its early chapters (around ch. 2) with Yu
+      covered in subsequent chapters on the flood; the "chs. 2-3 / Yu chapters" two-level
+      citation is structurally plausible. (2) Forsyth 1987 scope: the book's title (The Old
+      Enemy: Satan and the Combat Myth) and sources.yaml description ("from Sumer through
+      Judeo-Christian apocalyptic") confirm Near Eastern and Jewish/Christian scope; Chinese
+      Gonggong material is outside this scope — see FC-01. (3) The five-coloured-stones /
+      wuxing Five Phases connection: this cosmological link is well-attested in the secondary
+      literature on Han cosmology; Birrell 1993's cosmogony chapters plausibly address this,
+      though the wuxing linkage is more of a cosmological-framework observation than a
+      primary-text claim — flagged MEDIUM. (4) Nüwa human-creation from yellow earth: this
+      is attested in Han sources (notably the Fengsu tongyi); Lewis 2006 (a flood-myths book)
+      citing chapters 2-3 for this detail is questioned since it is outside the flood-myth
+      scope — flagged LOW. (5) Lewis 2006 as the source for the four-way C1 placement
+      (Gonggong / Marduk / Ninurta / Huitzilopochtli): Lewis 2006 works within Chinese
+      mythology and flood-myth scholarship; the four-way comparative grouping is the present
+      book's Part II C1 editorial framework, not Lewis's own comparative claim — see FC-02.
+    verbatim_quote_policy: >
+      No verbatim quotes from primary sources pasted — all cited sources are printed-only
+      and not fetchable. Claims requiring exact source content have been conservatively
+      assessed via trained knowledge of those sources' documented scope and organisation.
+    internal_variance_vs_contamination: >
+      No contamination detected. All body claims concern the Chinese Gonggong tradition,
+      its Han-period textual witnesses, and the post-combat cosmogonic geography. The
+      COMPARATIVE-HOOK comment lines correctly confine cross-cultural comparisons to //
+      comment lines and do not intrude into body claims. No use of banned umbrella terms
+      ("chaos-figure," "chaos-serpent," "chaos-monster") detected anywhere in the body
+      prose or markers. Glossary terms (Gonggong, Zhuanxu, Nüwa, Mount Buzhou, Zhurong,
+      five-coloured stones) used verbatim in the glossary's chosen form throughout.
+    model_identity_confirmation: >
+      I am Claude Sonnet 4.6. The writer was Claude Opus 4.7. This is an adversarial
+      audit in a fresh context. I have not consulted the writer's completion record
+      (11-chapter-claims-ch21.done.yaml) and have approached the claims document with
+      fully independent scrutiny.
+
+tallies:
+  total_claims: 56
+  supported: 49
+  internal_variance: 0
+  unverified: 2
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridge: 0
+  marker_issues: 0
+  glossary_violations: 0
+  total_findings: 5
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: HIGH
+    category: citation_wrong
+    location: >
+      §"Source overview" lines 55-56 and §"Cultural and ritual context" lines 181-182.
+      Both EVIDENCE tags read "source_id=forsyth-1987 ; loc=on non-Near-Eastern combat-myth."
+      The two affected claims are: (1) "The chapter's general comparative anchor for the
+      long-arc combat-myth tradition is Neil Forsyth's The Old Enemy: Satan and the Combat
+      Myth (Princeton University Press, 1987), whose treatment of non-Near-Eastern combat-myth
+      supplies a wider scholarly anchor for the Gonggong narrative's place in the comparative
+      dragon-combat corpus" (lines 55–56); and (2) the parallel restatement at lines 181–182
+      ("Forsyth 1987's treatment of non-Near-Eastern combat-myth, which supplies a wider
+      scholarly anchor for the Gonggong narrative's place in the comparative dragon-combat
+      corpus").
+    claim_text: >
+      [Representative] "The chapter's general comparative anchor for the long-arc combat-myth
+      tradition is Neil Forsyth's The Old Enemy: Satan and the Combat Myth (Princeton
+      University Press, 1987), whose treatment of non-Near-Eastern combat-myth supplies a
+      wider scholarly anchor for the Gonggong narrative's place in the comparative dragon-
+      combat corpus and for the chapter's forward-link to Part II C1 of the present book."
+    problem: >
+      Forsyth 1987 "The Old Enemy: Satan and the Combat Myth" does not treat non-Near-Eastern
+      combat myth in any substantive sense. The sources.yaml entry is explicit: the book
+      "Traces the combat myth from Sumer through Judeo-Christian apocalyptic." Its scope is
+      Near Eastern (Sumerian, Akkadian, Ugaritic) → Jewish → early Christian. The loc
+      "on non-Near-Eastern combat-myth" is therefore a mislabel: Forsyth 1987 does not
+      cover Chinese Gonggong material, does not treat the East Asian combat-myth tradition,
+      and does not extend to the non-Near-Eastern corpus in the sense the claims document
+      asserts. The book cannot serve as a comparative anchor for the Gonggong narrative's
+      place in a wider "comparative dragon-combat corpus" that includes Chinese material —
+      its coverage stops at Judeo-Christian apocalyptic. The characterisation of Forsyth
+      1987 as a "general comparative anchor" for the Gonggong narrative specifically is
+      misleading and the EVIDENCE loc tag is inaccurate.
+    evidence: >
+      sources.yaml entry for forsyth-1987: "Traces the combat myth from Sumer through
+      Judeo-Christian apocalyptic. Full catalog-level treatment." Brief 21-gonggong.yaml
+      lists forsyth-1987 as secondary source with loc "on non-Near-Eastern combat-myth" —
+      this characterisation in the brief is inconsistent with Forsyth's documented scope,
+      which is explicitly Near Eastern → Judeo-Christian, not East Asian. Trained knowledge
+      confirms Forsyth 1987 does not include a chapter on Chinese cosmogonic combat.
+    recommended_fix: >
+      Remove or substantially qualify the Forsyth 1987 citations at lines 55-56 and 181-182.
+      Forsyth 1987 is a legitimate secondary source for the combat-myth tradition in its
+      Sumer-through-Judeo-Christian arc (and may be cited for claims about that arc's
+      general typological context). It is not a valid anchor for "the Gonggong narrative's
+      place in the comparative dragon-combat corpus" since the book does not treat Chinese
+      material. The two sentences should either be rewritten to restrict Forsyth's role
+      to the Near-Eastern / Judeo-Christian combat-myth background (the scope the book
+      actually covers) or an alternative comparative source should be identified that
+      genuinely treats cross-cultural combat-myth including East Asian cases. The EVIDENCE
+      loc tag "on non-Near-Eastern combat-myth" must be corrected regardless.
+
+  - id: FC-02
+    severity: HIGH
+    category: citation_wrong
+    location: >
+      §"Cultural and ritual context" line 178–179. The claim attributes to "Lewis 2006,
+      The Flood Myths of Early China, chs. 2–3" the specific comparative placement of
+      Gonggong alongside Marduk-Tiamat, Ninurta-Asag, and Huitzilopochtli-at-Coatepec
+      as "the four clearest cosmogonic-combat cases across non-cognate traditions."
+    claim_text: >
+      "The chapter's principal cross-cultural comparative companions, on Lewis 2006's
+      framing and on the present book's Part II C1 organisation, are the Mesopotamian
+      Marduk-Tiamat combat (chapter 3 of the present volume), the Sumerian Ninurta-Asag
+      combat (chapter 1), and the Mesoamerican Huitzilopochtli-at-Coatepec combat
+      (chapter 24 of the present volume): each is a combat-cosmogony in the strong sense
+      in which the present features of the cosmos emerge from the combat's aftermath.
+      [footnote: Lewis 2006 chs. 2–3 on the comparative-mythology placement of the
+      Gonggong narrative alongside Marduk-Tiamat, Ninurta-Asag, and Huitzilopochtli-
+      at-Coatepec]"
+    problem: >
+      Lewis 2006 "The Flood Myths of Early China" (SUNY Press) is a book about early
+      Chinese flood and cosmogony myths. Its scope is Chinese — it does not make a
+      comparative argument that places Gonggong alongside Huitzilopochtli-at-Coatepec
+      (a Mesoamerican tradition) as one of four cosmogonic-combat cases. Lewis 2006
+      chs. 2-3 may plausibly discuss comparative connections to Near Eastern flood and
+      cosmogony traditions (a direction common in Chinese cosmogony scholarship), but
+      the specific four-way grouping (Gonggong / Marduk / Ninurta / Huitzilopochtli)
+      as "the four clearest cosmogonic-combat cases" is the present book's own Part II
+      C1 editorial framework — it is not something Lewis 2006 asserts. Attributing
+      this four-way comparative placement to Lewis 2006 chs. 2-3 with the phrase "on
+      Lewis 2006's framing" is a false attribution: it presents the chapter's own
+      classification as though it were Lewis's comparative claim. This is a scope-
+      plausibility problem: Lewis 2006 (a Chinese-tradition specialist monograph)
+      cannot plausibly supply the comparative warrant for a grouping that includes
+      a Mesoamerican combat-myth.
+    evidence: >
+      sources.yaml entry for lewis-2006-flood: "Anchor for Gonggong and the Yu-sidebar."
+      No comparative scope extending to Mesoamerica noted. Brief 21-gonggong.yaml
+      comparative_hooks entry attributes the C1 pairing to "lewis-2006-flood; lambert-2013;
+      matos-moctezuma-templo-mayor" — i.e., the Mesoamerican parallel is anchored in
+      Matos Moctezuma 1988, not Lewis 2006. The claims document conflates the brief's
+      composite comparative framework into a single Lewis 2006 attribution. Trained
+      knowledge confirms Lewis 2006 does not treat Mesoamerican combat mythology.
+    recommended_fix: >
+      Revise the claim and its footnote to distinguish: (a) Lewis 2006 chs. 2-3 for the
+      Gonggong narrative's characterisation as a strongly-cosmogonic event; and (b) the
+      present book's Part II C1 editorial framework as the source of the four-way grouping.
+      The sentence should read something like: "The present book's Part II C1 organisation
+      pairs the Gonggong narrative with [the three others] as the four clearest cosmogonic-
+      combat cases across non-cognate traditions; Lewis 2006 chs. 2-3 supplies the
+      cosmogonic characterisation of the Gonggong narrative, while Matos Moctezuma 1988
+      and Lambert 2013 anchor the Mesoamerican and Mesopotamian comparanda respectively."
+      The EVIDENCE tag should not cite Lewis 2006 alone for the comparative placement.
+
+  - id: FC-03
+    severity: MEDIUM
+    category: unverified
+    location: >
+      §"Nüwa and the repair of the sky" lines 111-112. The claim about the five-coloured
+      stones being "read in subsequent Han and post-Han Chinese cosmological writing as
+      corresponding to the Five Phases or Five Elements (wuxing 五行)" is cited to
+      "Birrell 1993, Chinese Mythology: An Introduction, chapters on cosmogony."
+    claim_text: >
+      "The five-coloured stones are presented in the Han sources as a technical-cosmological
+      material rather than as a generic patch: their five colours are read in subsequent Han
+      and post-Han Chinese cosmological writing as corresponding to the Five Phases or Five
+      Elements (wuxing 五行) — wood, fire, earth, metal, water — that organise the
+      cosmographic system within which the repair makes sense."
+    problem: >
+      The five-coloured-stones / wuxing Five Phases connection is a cosmological-system
+      linkage made in secondary scholarship rather than an explicit reading found in the
+      Han primary texts' own treatment of the Gonggong / Nüwa narrative. Birrell 1993's
+      "chapters on cosmogony" covers the Gonggong-Nüwa narrative but may not specifically
+      treat the five-coloured-stones-as-wuxing correspondence — the wuxing cosmological
+      system is a Han cosmological framework that permeates many areas of Han culture,
+      and the specific assertion that the five-coloured-stones in the Nüwa narrative are
+      "read" as wuxing-coded is a specific secondary-scholarly claim whose presence in
+      Birrell 1993's cosmogony chapters cannot be confirmed via trained knowledge at
+      MEDIUM confidence. The wuxing connection is plausible but requires verification
+      against Birrell's actual text, as Birrell 1993 may treat the five stones as a
+      ritual-material detail without making the explicit wuxing correspondence claim.
+    evidence: >
+      Birrell 1993 covers the Gonggong-Nüwa narrative in its cosmogony chapters. The
+      wuxing connection is plausible for a general Chinese mythology survey, but Birrell
+      1993's cosmogony focus is on narrative content and cross-cultural comparison rather
+      than on cosmological-system exegesis. The claim that this specific interpretive
+      connection is present in Birrell's cosmogony chapters (rather than in a more
+      specialised Han cosmological source) cannot be confirmed without access to the
+      text. The content claim itself is substantively plausible (the wuxing connection
+      is made in the secondary literature) but the specific attribution to Birrell 1993
+      chapters on cosmogony is unverified.
+    recommended_fix: >
+      At human review, verify in Birrell 1993's cosmogony chapters whether the five-
+      coloured-stones / wuxing correspondence is explicitly made or merely implied.
+      If Birrell does not make the connection explicitly, the claim should either be
+      softened ("their five colours may be connected with...") or a more specific
+      Han cosmological source should be cited. If Lewis 2006 chs. 2-3 treats the
+      wuxing connection in passing, the EVIDENCE tag should be updated to include
+      the Lewis citation as the primary anchor.
+
+  - id: FC-04
+    severity: MEDIUM
+    category: unverified
+    location: >
+      §"Setting and combatants" line 80. The claim attributes to "Lewis 2006, The Flood
+      Myths of Early China, chs. 2-3" Nüwa's association "with the creation of humans
+      (in some Han sources, by moulding humans from yellow earth)."
+    claim_text: >
+      "Nüwa (女媧), the serpent-tailed creator-goddess who repairs the broken sky after
+      the combat, is one of the principal cosmogonic figures of the early-imperial Chinese
+      pantheon and is associated more broadly with the creation of humans (in some Han
+      sources, by moulding humans from yellow earth) and with the mending and ordering
+      of the cosmos."
+      [footnote cites Lewis 2006 chs. 2-3 AND Birrell 1993 chapters on cosmogony]
+    problem: >
+      Lewis 2006 "The Flood Myths of Early China" is specifically about flood myths.
+      Its chapters 2-3 treat the Gonggong / Nüwa broken-pillar cosmogony and the
+      flood-and-repair sequence. Nüwa's role in the human-creation-from-yellow-earth
+      tradition is a separate cosmogonic sub-tradition (attested in the Fengsu tongyi
+      and other sources) that is not principally a flood-myth topic. Lewis 2006 chs. 2-3
+      may note Nüwa's wider cosmogonic associations in passing, but using Lewis 2006 as
+      an anchor for the human-creation detail specifically (rather than Birrell 1993,
+      which covers Nüwa's full cosmogonic portfolio in its mythology-survey chapters)
+      is a scope-plausibility concern. The Birrell 1993 co-citation in the same footnote
+      is the more appropriate anchor for the human-creation detail. This is LOW-to-MEDIUM
+      severity because Birrell 1993 is already cited and the content is correct; the
+      concern is that Lewis 2006 chs. 2-3 is listed first in the footnote as though it
+      were the primary source for the human-creation detail.
+    evidence: >
+      Lewis 2006 documented scope in sources.yaml: "Anchor for Gonggong and the Yu-sidebar."
+      No human-creation material mentioned. Birrell 1993 documented scope: "General Chinese
+      reference." Nüwa's human-creation tradition is the broader cosmogonic material that
+      a mythology survey (Birrell) would cover; a flood-myths specialist monograph (Lewis)
+      focuses on the flood-and-cosmogony cluster. The human-creation-from-yellow-earth
+      detail is plausible and attested; the citation ordering in the footnote may imply
+      Lewis 2006 is the primary support for this detail when Birrell 1993 is the
+      more appropriate anchor.
+    recommended_fix: >
+      Reorder the footnote to cite Birrell 1993 chapters on cosmogony as the primary
+      anchor for Nüwa's wider creation-and-mending role (including the yellow-earth
+      human-creation), with Lewis 2006 chs. 2-3 as the anchor specifically for the
+      post-combat repair role in the flood-and-cosmogony sequence. At human review,
+      confirm whether Lewis 2006 chs. 2-3 explicitly mentions the yellow-earth
+      human-creation detail; if not, remove Lewis from this footnote's human-creation
+      claim or add a qualifier ("Lewis 2006 on Nüwa's repair role; Birrell 1993 on
+      Nüwa's wider cosmogonic associations including human creation").
+
+  - id: FC-05
+    severity: LOW
+    category: unverified
+    location: >
+      §"Source overview" lines 36-38. The claim about the Liezi's date and framing
+      cites Lewis 2006 chs. 2-3 for the characterisation of the Liezi as "3rd–4th
+      century CE but drawing on earlier material."
+    claim_text: >
+      "The Liezi (列子, 'Master Lie'), a heterogeneous Daoist compilation in its received
+      form conventionally dated to the 3rd–4th century CE but drawing on earlier material,
+      supplies a further later witness to the Gonggong / Nüwa cosmogony with characteristic
+      Daoist-philosophical framing of the combat-and-repair sequence as a cosmological
+      aetiology."
+      [footnote cites Lewis 2006 chs. 2-3 and Birrell 1993 chapters on cosmogony]
+    problem: >
+      The Liezi's conventional date (3rd–4th century CE in its received form) and the
+      "drawing on earlier material" characterisation are well-established in the secondary
+      literature. The more specific claim — that the Liezi's treatment of the Gonggong /
+      Nüwa cosmogony has a "characteristic Daoist-philosophical framing" — is cited to
+      Birrell 1993 chapters on cosmogony as the specific source for this framing
+      characterisation. Birrell 1993 is a plausible anchor for this claim. However,
+      the specific framing assessment (Daoist-philosophical as opposed to cosmological-
+      aetiology in a non-Daoist sense) is an interpretive characterisation that is
+      attributed to Birrell without a specific chapter or page, making it unverifiable
+      at the chapter-level citation discipline. This is LOW severity because the content
+      is substantively plausible (the Liezi has a distinctively Daoist framing in its
+      received form) and the citation anchor (Birrell 1993 chapters on cosmogony) is
+      appropriate; the concern is that the specific "Daoist-philosophical framing"
+      characterisation is an interpretive claim that needs to be confirmed as present in
+      Birrell's cosmogony chapters rather than being an inference from other reading.
+    evidence: >
+      The Liezi's date and Daoist character are confirmed via trained knowledge of Chinese
+      textual history — the 3rd–4th century CE date for the received Liezi is standard.
+      The Daoist-philosophical framing of cosmogonic material in the Liezi is consistent
+      with trained knowledge of the text. Birrell 1993 as a general Chinese mythology
+      survey plausibly discusses the Liezi's cosmogonic passages. The content is not
+      doubted; the citability at chapter-only level is the concern.
+    recommended_fix: >
+      At human review, verify in Birrell 1993's cosmogony chapters whether the Liezi's
+      Daoist-philosophical framing is explicitly characterised as such. If present,
+      the citation is appropriate. If Birrell treats the Liezi material without the
+      "Daoist-philosophical" qualifier, soften the claim to "characteristic cosmological-
+      aetiological framing" or add a note that the Daoist framing characterisation is
+      based on the Liezi's known Daoist context rather than on a specific Birrell passage.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS (representative sample — 49 verified claims)
+# ─────────────────────────────────────────────────────────────────────────────
+
+supported_claims:
+
+  - claim_number: 1
+    claim: >
+      The Gonggong narrative has no continuous primary-text witness from the Warring States
+      period (5th–3rd c. BCE); the surviving narrative is preserved in Han-dynasty compilations.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The Han-dynasty composite character of the surviving Gonggong narrative
+      (absence of a continuous Warring States primary text) is confirmed via trained knowledge
+      of early Chinese textual history and is consistent with Lewis 2006's documented scope as
+      an anchor for the Gonggong material.
+
+  - claim_number: 2
+    claim: >
+      The principal Han-dynasty witness to the Gonggong / Nüwa cosmogony is the Huainanzi
+      (c. 139 BCE), associated with Liu An, Prince of Huainan, whose chapter 天文訓 preserves
+      the fullest single account.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The Huainanzi 天文訓 as the fullest single account of the Gonggong
+      cosmogony, its c. 139 BCE date, and its association with Liu An of Huainan are confirmed
+      via trained knowledge of Han-dynasty textual history and are standard claims in the
+      field. Lewis 2006 is the appropriate anchor for these textual-witness claims.
+
+  - claim_number: 3
+    claim: >
+      The Lienü zhuan is conventionally attributed to Liu Xiang (c. 79–8 BCE) and dated to
+      the late Western Han.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — Liu Xiang (79–8 BCE) as the conventional compiler of the Lienü zhuan
+      and its late Western Han date are confirmed via trained knowledge of Han-dynasty textual
+      history. This is a standard attribution in Chinese literary history.
+
+  - claim_number: 4
+    claim: >
+      The Shanhaijing's commentaries, notably the 3rd-century-CE Jin-dynasty commentary of
+      Guo Pu, supply additional Gonggong references naming different opponents.
+    source_id: birrell-1993
+    source_loc: chapters on cosmogony
+    verbatim_quote: >
+      [printed-only] — Guo Pu's Jin-dynasty commentary on the Shanhaijing (3rd century CE)
+      is confirmed via trained knowledge as a major commentary on the Shanhaijing. The
+      multiple-opponents pattern (Zhuanxu, Zhurong, others) across the Shanhaijing and its
+      commentaries is confirmed via trained knowledge of the Gonggong corpus.
+
+  - claim_number: 5
+    claim: >
+      The Liezi is conventionally dated to the 3rd–4th century CE in its received form but
+      draws on earlier material.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The 3rd–4th century CE date for the received Liezi and the
+      "drawing on earlier material" characterisation are standard in Chinese textual history
+      and are confirmed via trained knowledge.
+
+  - claim_number: 6
+    claim: >
+      Gonggong is a primordial water-god, conventionally described as red-haired and
+      serpent-bodied (or human-faced with serpent body).
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — Gonggong as water-god with red-haired and serpent-bodied descriptions
+      in the Han and post-Han sources is confirmed via trained knowledge of the Gonggong
+      corpus. The glossary.yaml entry confirms this description. This is the standard
+      scholarly characterisation.
+
+  - claim_number: 7
+    claim: >
+      Zhuanxu is the sky-emperor who defeats Gonggong in the most widely attested Huainanzi
+      version, and is one of the so-called Five Emperors of the early-imperial Chinese tradition.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — Zhuanxu as the sky-emperor of the most widely attested Huainanzi
+      version and as one of the Five Emperors is confirmed via trained knowledge of early
+      Chinese mythology and the Five Emperors sequence. Lewis 2006 chs. 2-3 is the
+      appropriate anchor.
+
+  - claim_number: 8
+    claim: >
+      Zhurong is a fire-god who appears in some Shanhaijing and commentary variants as the
+      alternative combatant who defeats Gonggong.
+    source_id: birrell-1993
+    source_loc: chapters on cosmogony
+    verbatim_quote: >
+      [printed-only] — Zhurong as a fire-god and alternative combatant in Shanhaijing and
+      commentary variants is confirmed via trained knowledge of the Gonggong corpus and the
+      Shanhaijing tradition. The glossary entry confirms Zhurong's role.
+
+  - claim_number: 9
+    claim: >
+      Mount Buzhou has a name conventionally rendered "mountain-that-is-not-whole" or
+      "incomplete mountain" and is positioned in the Han-period cosmography as a sky-pillar
+      in the northwest quadrant of the cosmos.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The rendering "mountain-that-is-not-whole" and the northwest-quadrant
+      sky-pillar position are confirmed via trained knowledge of Han cosmography and the
+      Gonggong narrative. The bu-zhou (不周) character-compound meaning "not complete/whole"
+      is confirmed by Chinese etymology.
+
+  - claim_number: 10
+    claim: >
+      The Huainanzi 天文訓 version precipitates the combat as a contest for sovereignty:
+      Gonggong, defeated, strikes Mount Buzhou in rage rather than attacking his victorious
+      opponent.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The sovereignty-contest framing of the Gonggong-Zhuanxu combat and
+      the displacement of Gonggong's rage to the cosmic pillar are confirmed via trained
+      knowledge of the Huainanzi 天文訓 passage. This is the standard reading in the
+      secondary literature on the Gonggong narrative.
+
+  - claim_number: 11
+    claim: >
+      The Huainanzi records that with the northwestern sky-pillar broken, the heavens tilt
+      toward the northwest and the earth tilts toward the southeast.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The northwest heaven-tilt and southeast earth-tilt from the
+      Huainanzi are confirmed via trained knowledge of the Gonggong passage in the
+      Huainanzi 天文訓. This is among the most-cited cosmographic outcomes of the
+      Gonggong narrative in the secondary literature.
+
+  - claim_number: 12
+    claim: >
+      The cosmic tilt is presented in the Huainanzi as the explanation for why the heavenly
+      bodies appear to move toward the northwest and why the rivers of the Chinese landscape
+      flow eastward to the sea.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The northwest motion of heavenly bodies and the east-flowing rivers
+      as the aetiological reading of the cosmic tilt in the Huainanzi are confirmed via
+      trained knowledge of the Gonggong narrative's cosmographic-aetiological function.
+      This is the standard reading.
+
+  - claim_number: 13
+    claim: >
+      Nüwa melts five-coloured stones (五色石) and uses the molten material to patch the
+      gap in the heavens; the smelting-and-patching is the central technical operation
+      of the repair-cosmogony.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — Nüwa's smelting of five-coloured stones (五色石) to patch the sky
+      is confirmed via trained knowledge of the Huainanzi 天文訓 and parallel Han sources.
+      This is one of the most recognisable details of the Gonggong-Nüwa narrative.
+
+  - claim_number: 14
+    claim: >
+      Nüwa also cuts the legs from a giant turtle to prop up the corners of heaven,
+      restoring structural support for the tilted cosmos.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The giant turtle legs (tortoise-pillar) as Nüwa's structural
+      intervention in the Huainanzi is confirmed via trained knowledge of the passage.
+      This detail is well-attested in the Gonggong-Nüwa narrative.
+
+  - claim_number: 15
+    claim: >
+      Nüwa's repair is partial rather than complete: the cosmic tilt is stabilised in
+      its post-combat state rather than undone.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The partial-repair reading (the tilt is stabilised, not reversed)
+      is confirmed via trained knowledge of the Huainanzi's treatment of the Gonggong-Nüwa
+      cosmogony. This is the standard scholarly characterisation: the present asymmetric
+      cosmos is the product of the repair, not a return to a pre-combat condition.
+
+  - claim_number: 16
+    claim: >
+      The Lienü zhuan version connects the Gonggong combat to a subsequent flood that Yu
+      the Great tames by opening channels — a sequential drama rather than two separate
+      stories.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The Lienü zhuan's sequential drama (Gonggong combat → flood → Yu
+      hydraulic restoration) is confirmed via trained knowledge of the Lienü zhuan's
+      treatment of the Gonggong narrative. Lewis 2006 is the appropriate anchor for
+      this connection.
+
+  - claim_number: 17
+    claim: >
+      Yu's defining technical operation is channel-opening: he does not combat a personalised
+      flood-adversary but opens channels and re-routes the waters.
+    source_id: lewis-2006-flood
+    source_loc: Yu chapters
+    verbatim_quote: >
+      [printed-only] — Yu's channel-opening as the defining flood-control operation
+      (as opposed to dragon-combat) is confirmed via trained knowledge of the Yu
+      flood-myth tradition in early Chinese sources. Lewis 2006 (a flood-myths book)
+      is precisely the appropriate anchor for this characterisation.
+
+  - claim_number: 18
+    claim: >
+      The Yu narrative is associated with the founding of the Xia dynasty, and Yu's
+      flood-control work is presented as the direct basis for his receipt of the imperial
+      mandate from Shun.
+    source_id: lewis-2006-flood
+    source_loc: Yu chapters
+    verbatim_quote: >
+      [printed-only] — The founding of the Xia dynasty by Yu and his receipt of the
+      mandate from Shun are confirmed via trained knowledge of the early Chinese
+      historiographical tradition. This is a standard claim in Chinese dynastic history
+      and mythology.
+
+  - claim_number: 19
+    claim: >
+      The LACUNA marker correctly identifies that a complete connected Warring States
+      primary text for the Gonggong combat-and-repair narrative is not preserved, and
+      supplies all required sub-fields: source, scholarly_reconstruction.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [Marker content] The [LACUNA] marker at lines 187–188 has all required sub-fields
+      (source; scholarly_reconstruction). The composite-witness character of the surviving
+      Gonggong narrative is correctly and accurately identified. The [LACUNA] marker is
+      used correctly (gap bridged by composite text-witnesses across Han compilations,
+      not by in-tradition gap-filling of a single text — which would require [RECONSTRUCTION]).
+      Marker discipline is appropriate.
+
+  - claim_number: 20
+    claim: >
+      The two INFERENCE markers are correctly deployed with all required sub-fields
+      (basis; risk) for the two synthesis-readings: (1) the combat-and-repair as a
+      single connected cosmogony in two stages; (2) the Gonggong / Yu two-templates-
+      coexisting reading.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [Marker content] Both [INFERENCE] markers (lines 123–124 and 159–160) have fully
+      populated basis and risk fields. The risk field correctly identifies alternative
+      scholarly readings for each inference. The inferences are appropriate: the
+      "two stages of one cosmogony" and "two templates coexisting" framings are editorial
+      syntheses drawn from Lewis 2006's connected presentation, not direct citations from
+      the Han sources themselves. Marker discipline is correct.
+
+  - claim_number: 21
+    claim: >
+      The VARIANT marker correctly identifies the primary variant (Huainanzi version:
+      Gonggong fights Zhuanxu) vs the alt (Shanhaijing-and-commentaries: multiple opponents),
+      with chosen: present-side-by-side and reason citing the brief's co-equal classification.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [Marker content] The [VARIANT] marker at lines 78–79 is fully formed with primary,
+      alt, chosen, and reason fields. The reason correctly cites the brief's co-equal
+      classification (variants.classification = co-equal). Marker discipline is correct.
+
+  - claim_number: 22
+    claim: >
+      No banned umbrella terms ("chaos-figure," "chaos-monster," "chaos-serpent") appear
+      anywhere in the body prose or markers of the claims document.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      Confirmed across all 220 lines of the document body (excluding comment lines).
+      Gonggong is consistently called "water-god" and "primordial water-god." No banned
+      terms detected.
+
+  - claim_number: 23
+    claim: >
+      All eight COMPARATIVE-HOOK comment lines are correctly placed as // comment lines
+      and do not intrude into body prose. Required hooks (Part II C1, East Asian cluster,
+      IE HERO SLAY SERPENT, Methods sidebar Ch. 33) are present.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      Confirmed. Eight COMPARATIVE-HOOK lines appear at lines 212–219: Mesopotamia/Ch.3;
+      Sumer/Ch.1; Mesoamerica/Ch.24; IE HERO SLAY SERPENT/Part II C5; China/Hou Yi Ch.22;
+      China/Yu sidebar; Japan/Ch.23; Methods sidebar Ch.33. All required hooks are present
+      and correctly formatted.
+
+  - claim_number: 24
+    claim: >
+      The 1:1 footnote / EVIDENCE-token invariant holds: 56 footnotes and 56 EVIDENCE
+      tokens in the claims document.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      Confirmed by grep count: "grep -c 'footnote:['" returns 56; "grep -c '^// EVIDENCE:'"
+      returns 56. The invariant holds exactly.
+
+  - claim_number: 25
+    claim: >
+      Glossary terms are used verbatim throughout: Gonggong, Zhuanxu, Nüwa, Mount Buzhou,
+      Zhurong, five-coloured stones (五色石) all appear in their glossary-locked forms.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      Confirmed. "Gonggong" (not "Kung-kung" or other Wade-Giles forms); "Zhuanxu" (Pinyin;
+      Lewis 2006 form); "Nüwa" (with umlaut, per glossary); "Mount Buzhou" (not "Buzhoushan"
+      alone); "Zhurong" (Pinyin); "five-coloured stones" (British spelling, matching glossary).
+      All locked forms are observed consistently.
+
+  - claim_number: 26
+    claim: >
+      All four source_ids (lewis-2006-flood, birrell-1993, forsyth-1987, scurlock-beal-2013)
+      exist in sources.yaml.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      Confirmed. All four source_ids present in sources.yaml with appropriate full_citation
+      entries, ISBNs, and notes.
+
+  - claim_number: 27
+    claim: >
+      The Han-period cosmography the Huainanzi presupposes positions the cosmos as a roughly
+      square earth covered by a roughly circular heaven, with sky-supporting pillars at the
+      cardinal-and-intercardinal points.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The gaitian (or related) cosmography of roughly square earth and
+      circular heaven with pillars is confirmed via trained knowledge of Han-dynasty
+      cosmological models. This is the standard characterisation in Han cosmography
+      scholarship and is appropriate content for Lewis 2006 chs. 2-3.
+
+  - claim_number: 28
+    claim: >
+      The Gonggong cosmogony is treated in the comparative-mythology literature as the
+      standard Chinese cosmogonic-combat comparandum; Lewis 2006 presents it as the
+      principal Chinese case in the comparative flood-and-cosmogony literature.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — Lewis 2006 as the standard English-language synthesis of the
+      Gonggong cycle and its treatment as the principal Chinese cosmogonic-combat
+      comparandum are confirmed via trained knowledge of the field and consistent with
+      the sources.yaml note ("Anchor for Gonggong and the Yu-sidebar").
+
+  - claim_number: 29
+    claim: >
+      The Gonggong narrative's position within the subtype-typology is firmly cosmogonic
+      in the strong sense: the present features of the cosmos (northwest tilt, eastward-
+      flowing rivers) are the direct outcome of the combat, making it a once-only-
+      cosmogonic event rather than cyclically-maintained or eschatological.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      [printed-only] — The once-only-cosmogonic, non-cyclical character of the Gonggong
+      combat is confirmed via trained knowledge of the narrative and is consistent with
+      scope.md's subtype-typology. The strongly-cosmogonic classification is well-supported.
+
+  - claim_number: 30
+    claim: >
+      The Scurlock and Beal 2013 volume's reassessment of Gunkel focuses on Mesopotamian
+      and Near-Eastern material, with limited references to Chinese cosmogonic-combat
+      material rather than as load-bearing case studies.
+    source_id: scurlock-beal-2013
+    source_loc: limited references to Chinese material
+    verbatim_quote: >
+      [printed-only] — Scurlock & Beal 2013 "Creation and Chaos" is confirmed as a
+      Mesopotamia-centred volume per sources.yaml ("Direct reassessment of Gunkel.
+      Essential for the book's terminological framing"). The claim that Chinese material
+      appears only marginally is consistent with the volume's documented Near-Eastern focus.
+
+  - claim_number: 31
+    claim: >
+      The chapter correctly classifies the Gonggong narrative as CORE-tier with a 7000-word
+      target and an embedded 800–1200-word Yu sidebar per the brief.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      Confirmed against brief 21-gonggong.yaml: target_length_words = 7000; special_instructions
+      confirms the embedded Yu sidebar at 800–1200 words; scope.md cluster 9 confirms
+      the CORE-tier classification and the sidebar placement.
+
+  - claim_number: 32
+    claim: >
+      The forward-links to Part II C1 and to the East Asian cluster (chapter 22, Hou Yi;
+      chapter 23, Susanoo/Orochi) are correctly specified per scope.md cluster 9 and the brief.
+    source_id: lewis-2006-flood
+    source_loc: chs. 2-3
+    verbatim_quote: >
+      Confirmed against scope.md §"Book structure" cluster 9: "Gonggong (full); family
+      chapter on other Chinese combats (Hou Yi); Susanoo vs. Orochi (full chapter)."
+      The chapter sequencing (21-Gonggong; 22-Hou Yi family; 23-Susanoo/Orochi) matches
+      the scope.md cluster 9 ordering.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUMMARY
+# ─────────────────────────────────────────────────────────────────────────────
+
+summary:
+  verdict: MINOR-REVISE
+  verdict_reason: >
+    Two HIGH findings (FC-01 and FC-02) are present. FC-01 is a citation-scope error:
+    Forsyth 1987 "The Old Enemy: Satan and the Combat Myth" is described as covering
+    "non-Near-Eastern combat-myth" and used as a comparative anchor for the Gonggong
+    narrative, but the book traces the combat myth from Sumer through Judeo-Christian
+    apocalyptic and does not treat Chinese material; the loc tag "on non-Near-Eastern
+    combat-myth" is inaccurate. FC-02 is a false-attribution error: the four-way
+    Part II C1 comparative grouping (Gonggong / Marduk / Ninurta / Huitzilopochtli)
+    is attributed to "Lewis 2006's framing" but Lewis 2006 is a Chinese-tradition
+    specialist monograph that does not make comparative arguments extending to
+    Mesoamerican combat-myth; the four-way grouping is the present book's own
+    editorial framework. Both HIGH findings are point errors (2 claims each) rather
+    than systemic errors across the whole document; the 49 other claims are well-
+    supported. The document is strong overall and the HIGH findings are correctable
+    without requiring a restructure. MINOR-REVISE is appropriate: the HIGH findings
+    must be addressed before chapter draft, but the document's main body is sound.
+
+  reconstruction_framing_assessment: PASS
+  reconstruction_framing_notes: >
+    The Gonggong narrative uses LACUNA (not RECONSTRUCTION) for the composite-text-witness
+    gap, which is correct per the task instructions: the gap is bridged by scholarly synthesis
+    across Han compilation-witnesses, not by in-tradition gap-filling of a continuous but
+    partial text, making LACUNA the appropriate marker. The two INFERENCE markers are correctly
+    deployed for the two synthesis-readings (combat-and-repair as two stages of one cosmogony;
+    Gonggong/Yu as two coexisting templates) with fully populated basis and risk fields.
+    No RECONSTRUCTION marker is present — correctly so, since the Gonggong narrative is
+    genuinely attested in Han sources rather than reconstructed. The body claims about the
+    Huainanzi and Lienü zhuan versions use appropriate source-attribution language rather
+    than presenting the Han compilations as directly transcribing a hypothetical original.
+    This is the chapter's greatest strength.
+
+  invariant_check: >
+    CONFIRMED. 56 footnotes / 56 EVIDENCE tokens. 1:1 invariant holds exactly.
+
+  findings_summary:
+    total: 5
+    HIGH: 2      # FC-01 (Forsyth 1987 scope mislabelled as "non-Near-Eastern"),
+                 # FC-02 (Lewis 2006 falsely credited with four-way C1 comparative grouping)
+    MEDIUM: 2    # FC-03 (five-coloured stones / wuxing connection in Birrell 1993
+                 #         unverified at chapter level),
+                 # FC-04 (Lewis 2006 chs. 2-3 cited for Nüwa human-creation detail
+                 #         outside flood-myths scope)
+    LOW: 1       # FC-05 (Liezi's "Daoist-philosophical framing" characterisation
+                 #         unverified in Birrell 1993 cosmogony chapters)
+    claims_with_issues: 7
+    claims_without_issues: 49
+
+  most_consequential_finding: >
+    FC-01: Forsyth 1987 "The Old Enemy: Satan and the Combat Myth" is cited twice as
+    a "general comparative anchor" for the Gonggong narrative's place in the "comparative
+    dragon-combat corpus" under the loc "on non-Near-Eastern combat-myth." The book's
+    scope (per sources.yaml) is "Sumer through Judeo-Christian apocalyptic" — it does not
+    treat Chinese Gonggong material and is not a valid anchor for East Asian combat-myth
+    claims. The claims document should either restrict Forsyth to the Near-Eastern /
+    Judeo-Christian comparative background (his actual coverage) or find an alternative
+    source that genuinely surveys combat-myth across non-cognate traditions including
+    East Asian cases.
