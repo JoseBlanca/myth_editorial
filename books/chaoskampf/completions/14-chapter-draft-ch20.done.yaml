@@ -1,0 +1,209 @@
+stage: "chapter-draft"
+timestamp: "2026-04-29T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/20-slavic-baltic.adoc"
+    lines: 227
+summary: "Drafted Ch20 (Slavic and Baltic Combat: Perun/Veles, Dobrynya byliny) from the approved claims document. 8,343 words (target 4,500); over-target driven by the in-line preservation of one long [RECONSTRUCTION] marker, two long [INFERENCE] markers, one [VARIANT] marker, 66 verbatim footnotes, and 8 verbatim COMPARATIVE-HOOK lines, with the 1:1 claim-to-narrative-paragraph invariant held. 50 claim-paragraphs (16 source-overview + 26 Perun-Veles body + 8 Dobrynya body, summed across the four === sections) preserved as 50 narrative paragraphs each carrying its footnote and EVIDENCE token verbatim. 1 RECONSTRUCTION + 2 INFERENCE + 1 VARIANT marker carried over verbatim with all required sub-fields. 8 COMPARATIVE-HOOK lines carried over verbatim. Reconstruction-conditional framing preserved on every Perun-Veles plot-element claim."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 66 (matches claims.approved.adoc count exactly)
+  - // EVIDENCE: tokens: 66 (matches claims.approved.adoc count exactly)
+  - Source-id distribution: west-2007=45, bailey-ivanova-1998=16,
+    watkins-1995=3, forsyth-1987=2 (matches the post-normalize FC-01
+    distribution in the approved claims file exactly)
+  - [RECONSTRUCTION:] markers: 1 (matches claims-side; the load-bearing
+    Perun-pursues-Veles-through-tree-rock-water-livestock marker, with
+    gap_source / fill_source / confidence: low all preserved verbatim
+    at the head of the Perun-Veles narrative content per brief)
+  - [INFERENCE:] markers: 2 (matches claims-side; (a) the chapter's
+    evidential-floor / evidential-ceiling editorial synthesis on the
+    Ivanov-Toporov reconstruction's standing; (b) the doubly-mediated
+    Dobrynya-bylina-as-reflex-of-reconstructed-Perun-Veles-combat
+    marker — both with basis / risk sub-fields preserved verbatim)
+  - [VARIANT:] markers: 1 (matches claims-side; the recorded *bylina*
+    corpus common-skeleton vs. variant-specific differences marker
+    per brief shared_variant_handling — present-the-common-skeleton
+    chosen with reason preserved verbatim)
+  - [LACUNA:] markers: 0 (matches claims-side)
+  - // COMPARATIVE-HOOK: comments: 8 (matches claims-side: India/Ch14;
+    Anatolia/Ch6; Norse/Ch18; Greek cattle-raid reflexes/Ch12; IE
+    HERO SLAY SERPENT formula/Watkins Part V & Part II C5; Methods
+    sidebar/Ch33; Christian reception and St. George/Ch10; Iran/Ch13)
+    — all carried over verbatim at the end of the file
+
+  Banned-term grep: chaos-figure / chaos-serpent / chaos-monster /
+  chaoskampf- — zero hits in body prose, footnotes, markers, or
+  COMPARATIVE-HOOK comments. Asimov forbidden-words register-list
+  (shimmering, mystical, unfathomable, ineffable, fearsome,
+  primordial, veiled, shrouded, boundless, dread, "Long ago...",
+  "In the time before time...") — zero hits.
+
+  Critic-name accuracy (post-normalize FC-02 fix):
+  - "Leszek Moszyński" present (1 occurrence at the source-overview
+    list of named critics — line 13's claim, which carries the
+    surname disambiguation)
+  - "Kazimierz Moszyński" absent (zero hits) — the corrected attribution
+    is preserved (Leszek Moszyński 1928–2006, Polish Slavicist
+    contemporary with Ivanov-Toporov, not Kazimierz Moszyński 1887–1959
+    who died six years before the first I-T 1965 publication)
+  - The bare-surname "Moszyński" references in the [RECONSTRUCTION]
+    marker, in the methodological-objections paragraph, and in the
+    Methods-sidebar COMPARATIVE-HOOK preserved verbatim from claims
+  - The four named critics — Roman Jakobson, Patrice Lajoye, Leszek
+    Moszyński, Mate Kapović — accurately present at the source-
+    overview list, the [RECONSTRUCTION] marker, the methodological-
+    objections paragraph, and the Methods-sidebar COMPARATIVE-HOOK
+
+  Glossary discipline confirmed:
+  - Perun: body-prose default = "Perun"; first mention introduces
+    functional gloss "the storm-god Perun" / "Slavic storm-god" via
+    surrounding text per glossary 1055–1060
+  - Veles: body-prose default = "Veles"; first mention introduces
+    functional gloss "the earth-serpent Veles" / "Perun's adversary"
+    via surrounding text per glossary 1063–1069; East Slavic variant
+    *Volos* italicised per glossary
+  - bogatyr / bogatyri: italicised as foreign loanword per glossary
+    1481–1488 first_mention_gloss "Russian-epic (bylina) warrior-hero"
+    embedded in text
+  - bylina (sing.) / byliny (pl.): italicised throughout per glossary
+    1490–1494
+  - Dobrynya Nikitich: full form on first mention per glossary
+    1072–1078; "Dobrynya" used as short-form thereafter
+  - Zmey Gorynych: full form throughout per glossary 1081–1087;
+    first_mention_gloss "three-headed dragon of East Slavic epic"
+    embedded in text
+  - Ivanov / Toporov: bare surnames with full forms ("Vyacheslav
+    Ivanov and Vladimir Toporov") on first mention
+  - "basic myth" (Ivanov-Toporov): in single quotation marks on first
+    mention per glossary 150–157; Russian *основной миф*
+    parenthetical preserved
+  - Italicised primary-source titles preserved: *Primary Chronicle*,
+    *Povest' vremennykh let*, *Slovo o polku Igoreve*, *The Tale of
+    Igor's Campaign*, *Indo-European Poetry and Myth*, *How to Kill
+    a Dragon: Aspects of Indo-European Poetics*, *The Old Enemy:
+    Satan and the Combat Myth*, *An Anthology of Russian Folk Epics*
+  - Italicised lexemes preserved: *zmey*, *Gorynych*, *gora*,
+    *kolpak*, *peryn*, *Velnias* / *Velinas*, *Perun-*, *Perunkovac*,
+    *Volos-*, *Vol-* / *Vel-*, *Peryn*, *Veles* (toponym)
+  - Baltic comparanda preserved with diacritics: Perkūnas (Lithuanian
+    storm-god), Pērkons (Latvian)
+  - Critic names preserved with diacritics: Moszyński, Kapović
+
+  Reconstruction-framing preservation (load-bearing per brief):
+  - The chapter opens with explicit reconstruction framing at the
+    source-overview level: the four-name critic list (Jakobson,
+    Lajoye, Moszyński, Kapović) appears in the source-overview
+    before any plot-element claim is made; the explicit-reconstruction-
+    framing requirement is named in the source-overview claim that
+    follows
+  - The [RECONSTRUCTION] marker stands at the head of the Perun-Veles
+    narrative content with all three sub-fields (gap_source /
+    fill_source / confidence: low) preserved verbatim
+  - Every Perun-Veles plot-element claim is presented with
+    reconstruction-conditional language. Sample phrasings preserved
+    from claims: "On the Ivanov-Toporov reading...", "if the
+    reconstruction holds...", "The Ivanov-Toporov reconstruction
+    proposes nonetheless that...", "The reconstruction draws on
+    three classes of indirect evidence...", "On the Ivanov-Toporov
+    reading, the reconstructed combat's narrative core...", "On
+    West 2007 ch. 6's survey, the reconstructed combat's principal
+    Indo-European-comparative companions are...". 11 distinct
+    reconstruction-conditional phrases counted in the body
+  - The chapter does not assert the reconstructed plot as attested
+    fact at any point in the body, the footnotes, or the markers
+  - The four critics (Jakobson, Lajoye, Moszyński, Kapović) are
+    named together in the body prose at the source-overview, in the
+    [RECONSTRUCTION] marker confidence sub-field, in the
+    methodological-objections paragraph, and in the Methods-sidebar
+    COMPARATIVE-HOOK — four occurrences of the joint critic-list
+
+  Doubly-mediated Dobrynya-reflex inference preserved:
+  - The Ivanov-Toporov reflex-claim that the Dobrynya *bylina* is
+    the later epic reflex of the reconstructed pre-Christian
+    Perun-Veles combat is presented in its own claim-paragraph and
+    immediately followed by the [INFERENCE] marker that flags it
+    as a doubly-mediated comparative argument depending on (a) the
+    Perun-Veles reconstruction holding and (b) structural-comparative
+    reading being sufficient warrant for inheritance-claims
+  - The reflex-claim's structural-parallel basis (storm-figure /
+    serpent-figure pairing; multi-headed adversary; water-and-mountain
+    setting; rescue-and-restoration outcome) and its evidential limits
+    (heroic-epic genre vs. cosmogonic-and-agricultural myth;
+    Christian-period frame; international-hagiographic-and-romance
+    type as competing-or-supplementary explanation) both preserved
+    in their own claim-paragraphs
+
+  Structural notes:
+  - 4 === sections in narrative match 4 === sections in claims file
+    exactly (Source overview / Perun and Veles — the contested
+    'basic myth' / Dobrynya Nikitich and Zmey Gorynych — the East
+    Slavic bylina / Family pattern and forward links). Section
+    titles preserved verbatim from claims.
+  - Each claim paragraph in claims → one corresponding narrative
+    paragraph with the footnote and EVIDENCE token attached verbatim.
+    No claims merged, no claims dropped, no claims reordered within
+    sections.
+  - Brief two-sentence transition added at the end of the source
+    overview ("What follows treats the two sub-cases in turn...")
+    as structural orientation per chapter-draft skill's "transitional
+    sentences" / "orienting context" allowance; no factual content
+    beyond what is already established in the claims (names the two
+    sub-cases, the structural ordering, the closing-section topic
+    — all redundant with claims content).
+  - Variant handling per brief shared_variant_handling preserved:
+    VARIANT marker inline in body at the Dobrynya plot-skeleton
+    juncture, presenting the common narrative skeleton across the
+    corpus rather than privileging one specific variant; primary-text
+    edition-pinning (Oinas, Propp) deferred to glossary-lock per
+    brief special_instructions.
+
+  Word-count discipline:
+  - 8,343 words against 4,500 target (≈85% over). Driven by (a) the
+    in-line preservation of the four markers (one long RECONSTRUCTION
+    marker with three sub-fields running to roughly 250 words; two
+    long INFERENCE markers running to roughly 400 words combined;
+    one VARIANT marker running to roughly 100 words — total marker
+    text ≈ 750 words); (b) the verbatim transfer of 66 footnotes,
+    which carry roughly 3,500 words of citation text by themselves;
+    (c) the verbatim transfer of 8 COMPARATIVE-HOOK lines totalling
+    roughly 350 words; and (d) the 1:1 claim-to-narrative-paragraph
+    invariant that requires every claim's factual content to be
+    preserved without compression. Subtracting markers, footnotes,
+    and hooks, the narrative-prose body is closer to the brief's
+    target. Per Ch16 (12,879 vs. 10,000) and Ch18 (15,790 vs. 10,500)
+    precedents, proportionate over-target driven by claim-set depth
+    and marker-and-citation-verbatim discipline is accepted by the
+    chapter-draft skill.
+
+  No new facts introduced: every footnoted assertion in the
+  narrative traces back to a claim in the approved claims file.
+  Connective tissue (transitional sentences, orienting context) is
+  non-factual and adds no information about the myth itself beyond
+  what the surrounding claims establish. The bridging "What
+  follows..." paragraph at the end of the source overview names
+  only the two sub-cases and the closing-section topic — all
+  already in the source-overview claims.
+
+  Self-checks passed: source overview present (lines 5–32; 16
+  source-overview claim-paragraphs as 16 narrative paragraphs plus
+  one short orienting paragraph); every claim represented (66/66
+  with footnote and EVIDENCE attached, plus 4 markers as their own
+  inline blocks); no factual additions; forbidden-words register-
+  list zero hits; banned umbrella terms zero hits; glossary
+  discipline holds (Perun, Veles/Volos, Zmey Gorynych, Dobrynya
+  Nikitich, Ilya Muromets, Alyosha Popovich, Vladimir, Perkūnas,
+  Pērkons, Velnias/Velinas, *Primary Chronicle* / *Povest' vremennykh
+  let*, *Slovo o polku Igoreve*, *bylina* / *byliny*, *bogatyr* /
+  *bogatyri*, *kolpak*, Puchai-river, Zabava Putyatichna, *Peryn*);
+  variant handling matches brief's shared_variant_handling
+  (present-the-common-skeleton); all markers survived verbatim with
+  required sub-fields; all footnotes carried over unchanged; all 8
+  COMPARATIVE-HOOK comments carried over verbatim at end of file;
+  reconstruction-framing-preserved confirmed at source-overview,
+  RECONSTRUCTION marker, every Perun-Veles plot-element claim, and
+  Methods-sidebar COMPARATIVE-HOOK; Leszek Moszyński present (1
+  occurrence) and Kazimierz Moszyński absent (0 occurrences) per
+  post-normalize FC-02 fix; doubly-mediated Dobrynya-reflex
+  INFERENCE marker preserved verbatim with basis / risk sub-fields.
