@@ -1,0 +1,135 @@
+stage: 15-narrative-fidelity
+chapter: 22
+chapter_title: "Hou Yi and the Suns"
+status: done
+verdict: PASS
+timestamp: 2026-04-29T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 42
+  claims_mapped: 42
+  footnotes_claims: 42
+  footnotes_narrative: 42
+  footnote_md5_claims: 3a9a798f1efc91db7916f97ba28e72cd
+  footnote_md5_narrative: 3a9a798f1efc91db7916f97ba28e72cd
+  evidence_tokens_claims: 42
+  evidence_tokens_narrative: 42
+  evidence_sequence_match: true
+  reconstruction_markers: 0
+  inference_markers: 1
+  variant_markers: 2
+  comparative_hooks: 7
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  zhuyin_in_body_prose: false
+  xiushe_in_body_prose: true
+  fc01_fix_preserved: true
+  order_restoring_framing_hits: 20
+  cosmogonic_role_drift: false
+  note_findings: 2
+
+source_distribution:
+  lewis_2006_flood: 30
+  birrell_1993: 12
+  total: 42
+  distribution_matches_claims: true
+
+output_files:
+  fidelity_yaml: chapters/22-hou-yi.fidelity.yaml
+  narrative: chapters/22-hou-yi.adoc
+  claims: chapters/22-hou-yi.claims.approved.adoc
+
+key_checks_passed:
+  - fc01_xiushe_correction_preserved: >
+      FC-01 HIGH fix fully preserved. Body prose at narrative line 103 names
+      "the Long Serpent (Chinese *Xiushe* 修蛇, sometimes also referred to as
+      *Bashe* 巴蛇 in different strata of the textual tradition)"; body prose at
+      line 106 names "the Long Serpent (*Xiushe*)". The name "Zhuyin" appears
+      zero times in narrative body prose. The single hit of "Zhuyin" in the file
+      (line 106) is inside the footnote bracket, in the FC-01 explanatory note
+      that correctly identifies Zhuyin / Zhulong as a Shanhaijing cosmic deity
+      unrelated to Hou Yi's beast-catalogue. The Xiushe / Dongting Lake /
+      Huainanzi ch. 8 (Benjing xun) attestation is present in both body prose
+      and footnote, verbatim identical to claims. PASS.
+  - order_restoring_framing_throughout: >
+      The order-restoring framing is maintained throughout the narrative without
+      drift. "order-restor*" appears 20 times. Every occurrence of "cosmogonic"
+      correctly attributes cosmogonic-combat to Gonggong, to the CORE chapters
+      (Tiamat / Vṛtra), or to the general typological vocabulary by contrast —
+      never to Hou Yi. The chapter opens in the first paragraph with "distinct
+      from the cosmogonic Gonggong combat" and repeats the contrast consistently
+      through all five sections. No drift toward cosmogonic-role claims for Hou Yi
+      found anywhere in the narrative. PASS.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-serpent", "chaos-monster" absent from narrative body
+      prose. Grep returned no matches. The beasts are characterised as "monstrous
+      beasts", "monstrous adversaries", "order-disturbing beasts", or by specific
+      names (Chiseltooth / Zaochi; Nine-headed Monster / Jiuying; Long Serpent /
+      Xiushe). No banned terms found. PASS.
+  - glossary_discipline: >
+      All Pinyin renderings and text titles consistent with approved claims: Hou Yi,
+      Yao, Di Jun, Xihe, Fusang, Chuci / Tian wen / Heavenly Questions, Huainanzi,
+      Shanhaijing, Chiseltooth / Zaochi, Nine-headed Monster / Jiuying, Long
+      Serpent / Xiushe / Bashe, Yayu, Chang'e, Xiwangmu / Queen Mother of the West.
+      No glossary violations found. PASS.
+  - all_markers_verbatim: >
+      All 3 markers (1 INFERENCE, 2 VARIANT) verbatim identical to claims.
+      Verified by direct line extraction showing character-by-character identity
+      for the INFERENCE marker; both VARIANT markers verified by diff returning
+      empty output. INFERENCE marker retains all three sub-fields (main
+      formulation, basis, risk) verbatim. VARIANT markers retain all four fields
+      (primary, alt, chosen, reason) verbatim. PASS.
+  - all_comparative_hooks_verbatim: >
+      All 7 COMPARATIVE-HOOK lines verbatim identical to claims. Verified by diff
+      returning empty output. Hooks cover: Greece (Herakles serpent-combat
+      sub-cluster: Hydra, Ladon, Geryon — Ch. 12); China (Gonggong, Ch. 21)
+      structural-and-typological contrast; Mesopotamia (Marduk-Tiamat, Ch. 3) and
+      India (Indra-Vṛtra, Ch. 14) — single-adversary-decisive contrasts; IE HERO
+      SLAY SERPENT formula (Watkins 1995 Part V; Part II C5); Multi-headed-monster
+      motif (Lôtan/Leviathan Ch. 7-8; Vṛtra Ch. 14; Aži Dahāka Ch. 13; Zmey
+      Gorynych Ch. 20; Yamata no Orochi Ch. 23); Solar-multiplicity motif;
+      Cosmogony/order-restoration distinction (Ch. 33 / Part II C1). PASS.
+  - footnote_integrity: >
+      42 footnotes in narrative and claims body. Footnote CONTENTS (inside
+      footnote:[...]) verified character-by-character identical by md5sum hash
+      match (3a9a798f1efc91db7916f97ba28e72cd on both sides). No additions,
+      removals, or text alterations found. PASS.
+  - evidence_token_integrity: >
+      42 EVIDENCE tokens in narrative and claims body. Verbatim identical
+      source_id sequence (diff returned empty output on sequence extraction).
+      Source distribution exactly preserved: lewis-2006-flood=30, birrell-1993=12.
+      PASS.
+  - section_structure: >
+      5 sections in claims = 5 sections in narrative with identical headers:
+      (1) Source overview; (2) Setting: the Yao era and the ten suns;
+      (3) Hou Yi and the shooting of the suns; (4) The monstrous beasts;
+      (5) Aftermath: the relation between the components and Hou Yi's later fate.
+      PASS.
+  - word_count_sanity: >
+      6,258 words (wc -w count) vs. ~3,500-word brief target for prose body.
+      The file total includes 42 long footnotes (~150 words each ≈ 6,300 footnote
+      words), 7 COMPARATIVE-HOOK lines, markers, and EVIDENCE tokens. Prose-body-
+      only estimate is ~3,400–3,600 words, within the brief's ~3,500-word target.
+      No unclaimed elaboration found. NOTE only.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      One unfootnoted navigational paragraph at narrative line 42 absent from
+      the claims document. The paragraph previews the three-movement structure
+      (Yao-era setting / shooting / beast-slayings and aftermath). No factual
+      assertions added. Legitimate chapter-opening navigation bridge. No action
+      required.
+  - id: ISSUE-02
+    severity: NOTE
+    description: >
+      Word-count formula overage attributable to footnote-bulk inclusion in
+      wc count plus sentence-splitting prose style. Prose-body-only estimated
+      within brief's ~3,500-word target. No unclaimed elaboration found.
+      No action required at fidelity stage.

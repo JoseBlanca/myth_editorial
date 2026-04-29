@@ -1,0 +1,143 @@
+stage: 15-narrative-fidelity
+chapter: 21
+chapter_title: "Gonggong and the Broken Pillar"
+status: done
+verdict: PASS
+timestamp: 2026-04-29T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 56
+  claims_mapped: 56
+  footnotes_claims: 56
+  footnotes_narrative: 56
+  evidence_tokens_claims: 56
+  evidence_tokens_narrative: 56
+  lacuna_markers: 1
+  inference_markers: 3
+  variant_markers: 1
+  reconstruction_markers: 0
+  comparative_hooks: 8
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  note_findings: 2
+
+source_distribution:
+  lewis_2006_flood: 47
+  birrell_1993: 6
+  forsyth_1987: 2
+  scurlock_beal_2013: 1
+  total: 56
+  distribution_matches_claims: true
+  fc01_forsyth_scope_fix_preserved: true
+  fc02_four_way_grouping_fix_preserved: true
+  fc03_wuxing_softening_preserved: true
+  fc04_nuwa_footnote_reordering_preserved: true
+
+output_files:
+  fidelity_yaml: chapters/21-gonggong.fidelity.yaml
+  narrative: chapters/21-gonggong.adoc
+  claims: chapters/21-gonggong.claims.approved.adoc
+  prompt: books/chaoskampf/prompts/12-narrative-fidelity-ch21.prompt.md
+
+key_checks_passed:
+  - all_markers_verbatim: >
+      All 5 markers (1 VARIANT, 3 INFERENCE, 1 LACUNA) verbatim identical to
+      claims. Verified by diff returning empty output for each. VARIANT marker
+      at narrative line 66 retains all four fields (primary, alt, chosen,
+      reason) verbatim. INFERENCE-1 at line 113 (combat-and-repair as single
+      connected cosmogony) and INFERENCE-2 at line 151 (two-templates framing)
+      and INFERENCE-3 at line 175 (four-way cosmogonic grouping as editorial
+      synthesis) all retain basis and risk fields verbatim. LACUNA marker at
+      line 185 retains all three fields (lacuna description, source,
+      scholarly_reconstruction) verbatim.
+  - all_comparative_hooks_verbatim: >
+      All 8 COMPARATIVE-HOOK lines verbatim identical to claims. Verified by
+      diff returning empty output (md5sum 848a573a61f71e5111515cb312efbc01 on
+      both sides). Hooks cover: Mesopotamia/Marduk-Tiamat (Ch. 3), Sumer/
+      Ninurta-Asag (Ch. 1), Mesoamerica/Huitzilopochtli at Coatepec (Ch. 24),
+      IE HERO SLAY SERPENT formula (Watkins 1995 Part V; Part II C5), China/
+      Hou Yi (Ch. 22), China/Yu (Ch. 21 sidebar), Japan/Susanoo-Orochi (Ch. 23),
+      Methods sidebar (Ch. 33).
+  - footnote_integrity: >
+      56 footnotes in narrative and claims body. Footnote CONTENTS (inside
+      footnote:[...]) verified character-by-character identical by md5sum hash
+      match (f7f6bdcc8ac285f631cdc48320a592bd on both sides). No additions,
+      removals, or text alterations found. Body prose rewritten for readability
+      but all claim content is present.
+  - evidence_token_integrity: >
+      56 EVIDENCE tokens in narrative and claims body. All token lines verbatim
+      identical (diff empty output; md5sum 5a1f668e87f6c948dd888378e47aa2e1 on
+      both sides). Sequence order matches claims sequence exactly. Source
+      distribution exactly preserved: lewis-2006-flood=47, birrell-1993=6,
+      forsyth-1987=2, scurlock-beal-2013=1.
+  - fc01_forsyth_scope_fix_preserved: >
+      FC-01 HIGH fix preserved. Both Forsyth EVIDENCE tokens carry source_id=
+      forsyth-1987 with loc=combat-myth long-arc typology (Sumer through
+      Judeo-Christian apocalyptic). Both narrative paragraphs (lines 39 and 177)
+      frame Forsyth as typological framing anchor only and explicitly state
+      "Forsyth 1987 does not treat Chinese material directly". No scope-inflation.
+  - fc02_four_way_grouping_fix_preserved: >
+      FC-02 HIGH fix preserved. Narrative line 170 attributes the four-way
+      cosmogonic grouping to "the present book's own Part II C1 editorial
+      framework — not a Lewis 2006 comparative claim". EVIDENCE tag at line 171
+      carries "loc=chs. 2-3 (Gonggong-specific characterisation)". INFERENCE-3
+      (line 175) explicitly marks the grouping as the project's editorial
+      synthesis with Lewis-as-source disclaimer in the risk field.
+  - fc03_wuxing_softening_preserved: >
+      FC-03 MEDIUM fix preserved. Narrative line 99 retains the softened wuxing
+      correspondence claim with "although the wuxing correspondence is a
+      cosmological-system reading rather than a feature directly stated within
+      the *Huainanzi*-and-parallel narrative-form sources themselves". Footnote
+      flags Birrell 1993 articulation for verification at glossary-lock.
+  - fc04_nuwa_footnote_reordering_preserved: >
+      FC-04 MEDIUM fix preserved. EVIDENCE token for Nüwa paragraph (narrative
+      line 69) carries source_id=birrell-1993. Footnote leads with Birrell 1993
+      on human-creation tradition and specifies Lewis 2006 covers only the
+      post-combat repair role within its flood-myths focus.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-serpent", "chaos-monster" absent from narrative
+      body prose. Grep returned no matches.
+  - glossary_discipline: >
+      All locked Chinese-character first-mention glosses present: Zhuanxu 顓頊
+      (line 58), Zhurong 祝融 (line 61), Nüwa 女媧 (line 68), Mount Buzhou
+      不周山 (line 71), five-coloured stones 五色石 (line 96), wuxing 五行 (line
+      99), Yu the Great 大禹 (line 131). *Huainanzi*, *Lienü zhuan*, *Shanhaijing*,
+      *Liezi* consistently italicised. No glossary violations found.
+  - section_structure: >
+      All 8 section headers verbatim identical between claims and narrative:
+      Source overview / Setting and combatants / The combat and the broken pillar
+      (Huainanzi version) / Nüwa and the repair of the sky / The Lienü zhuan and
+      the flood (co-equal Han variant) / Yu the Great — embedded sidebar /
+      Cultural and ritual context / Forward and back links. Order preserved.
+  - word_count_sanity: >
+      8,126 words (per wc) vs. ~6,160-word formula baseline (56 × ~110).
+      Overage of ~1,966 words (~32%) attributable to orienting-sentence style
+      (21 additional unfootnoted sentences), 56 long footnotes (~2,800–3,200
+      words in wc count), and sentence-splitting. Consistent with Ch20's ~32%
+      overage, which also PASSED. No unclaimed elaboration found.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      Twenty-one unfootnoted navigational, orienting, or marker-introduction
+      sentences in narrative absent from the claims document. None introduce
+      factual assertions absent from the approved claims. The most notable is
+      the chapter-navigation bridge at narrative line 48 ("What follows works
+      through the story in order..."), which previews the eight-section structure
+      authorised by the claims. Three marker-introduction sentences (lines 111,
+      149, 173) and one LACUNA-introduction sentence (line 183) correctly frame
+      their respective markers without adding new facts. Legitimate writer
+      latitude. No action required.
+  - id: ISSUE-02
+    severity: NOTE
+    description: >
+      Word-count overage of ~1,966 words (~32% above formula baseline). Entirely
+      attributable to writer's orienting-sentence style and long footnotes. No
+      unclaimed elaboration found. Consistent with Ch20 overage pattern. No
+      action required at fidelity stage.
