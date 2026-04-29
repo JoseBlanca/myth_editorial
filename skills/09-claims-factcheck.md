@@ -24,6 +24,7 @@ Must be run in a fresh conversation with no memory of producing the claims. If y
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
+- `toc.yaml` — **authoritative chapter list**, including front matter, story chapters, the methods sidebar, the Part II comparative chapters, and any reception/appendix material. When a claim or COMPARATIVE-HOOK references a forward-link target by chapter number (e.g. "Ch. 33", "see Chapter 4"), resolve it against `toc.yaml` before flagging anything as missing. The story chapters are not the whole TOC — sidebars and Part II comparative chapters typically live at higher numbers and are easy to miss when scanning only `briefs/NN-*` filenames or the chapter-claims input directory.
 - `chapters/NN-<slug>.claims.adoc` (claims document)
 - `briefs/NN-<slug>.yaml`
 - Primary source translations referenced in the brief (pasted or accessible via fetch)
@@ -43,6 +44,8 @@ Walk the document paragraph by paragraph. Each paragraph is one claim. Assign a 
 
 ### Pass 2 — Triangulation of references
 Verify each citation's tablet number, line range, or page reference resolves in a `triangulation_databases` entry. Non-resolving: CITATION-WRONG, HIGH severity, with verification URL.
+
+For cross-chapter references inside the book (claims that say "see Ch. N", COMPARATIVE-HOOK targets like "Part II C5", forward-links to the methods sidebar): resolve against `toc.yaml`, not against the directory of `briefs/NN-*` files. The TOC is authoritative; the briefs directory is not exhaustive (Part II comparative chapters and the methods sidebar live at numbers above the last story chapter). Only flag a forward-link as missing when `toc.yaml` does not list a chapter at that number or with that anchor.
 
 ### Pass 3 — Document-provenance contamination scan
 For each factual detail: is this detail attested in a document within the scope's date range and culture? Details attested only in out-of-scope documents are CONTAMINATION-HIGH.

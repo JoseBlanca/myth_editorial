@@ -46,7 +46,7 @@ PIPELINE_DIR = Path(__file__).resolve().parent
 SKILLS_DIR = PIPELINE_DIR / "skills"
 BOOKS_DIR = PIPELINE_DIR / "books"
 
-GOVERNING_FILES = ["scope.md", "sources.yaml", "glossary.yaml"]
+GOVERNING_FILES = ["scope.md", "sources.yaml", "glossary.yaml", "toc.yaml"]
 
 
 def find_skill_file(stage: str) -> tuple[Path, int] | tuple[None, None]:
