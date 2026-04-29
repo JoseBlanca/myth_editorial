@@ -1,0 +1,193 @@
+stage: "chapter-draft"
+timestamp: "2026-04-29T18:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/22-hou-yi.adoc"
+    lines: 160
+summary: "Drafted Ch22 (Hou Yi and the Suns) from the approved claims document. 6,257 words (target 3,500); over-target driven by the verbatim preservation of 42 footnotes, 1 INFERENCE marker + 2 VARIANT markers, and 7 COMPARATIVE-HOOK lines, with the 1:1 claim-to-narrative-paragraph invariant held. 42 claim-paragraphs (12 source-overview + 6 setting + 5 suns-shooting body + 9 beasts body + 10 aftermath, summed across the four === sections) preserved as 42 narrative paragraphs each carrying its footnote and EVIDENCE token verbatim. 0 LACUNA + 1 INFERENCE + 2 VARIANT + 0 RECONSTRUCTION markers carried over verbatim with all required sub-fields. 7 COMPARATIVE-HOOK lines carried over verbatim. Order-restoring (rather than cosmogonic) framing preserved throughout. Xiushe correctly named as the serpent-adversary (Zhuyin appearing only in the FC-01 explanatory footnote)."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 42 (matches claims.approved.adoc count exactly)
+  - // EVIDENCE: tokens: 42 (matches claims.approved.adoc count and
+    order exactly via diff against claims file)
+  - Source-id distribution: lewis-2006-flood=30, birrell-1993=12
+    (matches the post-normalize distribution in the approved claims
+    file exactly)
+  - [VARIANT:] markers: 2 (matches claims-side; (a) the suns-shooting
+    Huainanzi-vs-Chuci/Shanhaijing variant marker with primary / alt /
+    chosen / reason sub-fields; (b) the beast-catalogue
+    Lewis-synthesis-vs-individual-witnesses variant marker with the
+    same four sub-fields — both carried over verbatim)
+  - [INFERENCE:] markers: 1 (matches claims-side; the celestial-plus-
+    terrestrial comprehensive-sweep editorial-synthesis marker with
+    basis / risk sub-fields preserved verbatim)
+  - [LACUNA:] markers: 0 (matches claims-side)
+  - [RECONSTRUCTION:] markers: 0 (matches claims-side)
+  - // COMPARATIVE-HOOK: comments: 7 (matches claims-side: Greece /
+    Herakles serpent-combat sub-cluster Ch12; China / Gonggong Ch21;
+    Mesopotamia-Marduk-Tiamat-Ch3 + India-Indra-Vrtra-Ch14; IE HERO
+    SLAY SERPENT formula / Watkins Part V & Part II C5; Multi-headed-
+    monster motif across Lotan/Vrtra/Azi-Dahaka/Zmey-Gorynych/Yamata-
+    no-Orochi; Solar-multiplicity motif; Cosmogony / order-restoration
+    distinction Ch33 + Part II C1) — all carried over verbatim at the
+    end of the file via diff against claims file
+
+  Banned-term grep: chaos-figure / chaos-monster / chaos-serpent —
+  zero hits in body prose, footnotes, markers, or COMPARATIVE-HOOK
+  comments.
+
+  Order-restoring framing preservation (load-bearing per brief and
+  task instructions):
+  - Source overview paragraphs explicitly frame the chapter as
+    "order-restoring rather than cosmogonic" at the related-tier
+    classification claim and at the heroic-restorative framing claim
+  - Setting section paragraphs preserve the pre-existing-cosmic-order
+    framing with explicit "perturbation of that order rather than
+    the absence of it" phrasing carried into the prose around the
+    footnote
+  - Crisis-character paragraph preserves the "environmental-and-
+    political rather than cosmogonic-and-foundational" phrasing and
+    the alignment with the "order under threat" subtype rather than
+    the cosmogonic-combat subtype
+  - Aftermath section paragraphs preserve the contrast with Gonggong
+    as "cosmogonic vs. order-restoring" and the
+    cosmos-pre-exists-the-combat / preserved-rather-than-established
+    framing throughout
+  - The Hou Yi cycle is consistently described as a heroic order-
+    restoration narrative, not as a cosmogonic combat. No drift
+    toward over-claiming a cosmogonic role for Hou Yi at any point
+    in body, footnotes, or markers.
+
+  Xiushe correction confirmation (FC-01 fix from post-normalize):
+  - The named serpent-adversary in the body prose (line 103) is the
+    Long Serpent (Chinese *Xiushe* 修蛇, with *Bashe* 巴蛇 as
+    alternative-strata name) — at Dongting Lake per Huainanzi ch. 8
+    (*Benjing xun*)
+  - The body prose at line 106 names the three brief-named
+    representatives as Chiseltooth, Nine-headed Monster, and Long
+    Serpent (*Xiushe*) — Zhuyin does not appear as the adversary
+  - Zhuyin appears in the file only at line 106 within the FC-01
+    explanatory footnote, where it is correctly identified as a
+    Shanhaijing cosmic deity unconnected to the Hou Yi beast-catalogue
+    (the explanatory footnote text is preserved verbatim from claims)
+  - Reflex from earlier writing context (where Zhuyin had been the
+    serpent name) did not re-introduce the error
+
+  Marker framing integration:
+  - The first [VARIANT] marker (suns-shooting) is preceded by
+    transitional prose: "The narrative-form account of the shooting
+    derives principally from the *Huainanzi*, with the *Chuci* and
+    the *Shanhaijing* preserving allusive and catalogue-form
+    material that does not narrate the episode itself. The chapter
+    accordingly works from the *Huainanzi*'s narrative skeleton
+    while flagging the variant-handling explicitly:" — this gives
+    the marker variant-aware framing
+  - The second [VARIANT] marker (beast-catalogue) is preceded by
+    transitional prose: "Because the witnesses diverge, the chapter
+    is explicit about the editorial choice it makes:" — this gives
+    the marker source-attributed / variant-aware framing
+  - The [INFERENCE] marker (celestial-plus-terrestrial sweep) is
+    preceded by transitional prose: "That celestial-plus-terrestrial
+    reading is offered as an editorial synthesis rather than as a
+    single source-attested formulation, and the chapter flags it
+    accordingly:" — this gives the marker conditional /
+    source-attributed framing as required
+
+  Glossary discipline confirmed:
+  - Hou Yi: full form throughout
+  - Yao: introduced as "the sage-king Yao"
+  - Di Jun: introduced as "the high god Di Jun"
+  - Xihe: introduced as "his consort Xihe, the sun-mother"
+  - Fusang: introduced as "a mulberry tree, the Fusang tree, at the
+    eastern edge of the world"
+  - Chang'e: introduced as "his wife Chang'e"
+  - Xiwangmu: introduced as "the Queen Mother of the West (Xiwangmu)"
+  - Italicised primary-source titles preserved: *Chuci* ("Songs of
+    Chu"), *Tian wen* ("Heavenly Questions"), *Huainanzi*,
+    *Shanhaijing* ("Classic of Mountains and Seas"), *Benjing xun*
+  - Italicised Chinese terms with Chinese-character pairing
+    preserved: *Zaochi* (Chiseltooth), *Jiuying* (Nine-headed
+    Monster), *Xiushe* 修蛇 (Long Serpent), *Bashe* 巴蛇, *Yayu*
+  - Geographical names preserved: Dongting Lake
+
+  Structural notes:
+  - 4 === sections in narrative match 4 === sections in claims file
+    exactly (Source overview / Setting: the Yao era and the ten
+    suns / Hou Yi and the shooting of the suns / The monstrous
+    beasts / Aftermath: the relation between the components and Hou
+    Yi's later fate). Section titles preserved verbatim from claims.
+    (Note: this is 5 === sections including Aftermath; counted
+    correctly as 5, not 4.)
+  - Each claim paragraph in claims → one corresponding narrative
+    paragraph with the footnote and EVIDENCE token attached verbatim.
+    No claims merged, no claims dropped, no claims reordered within
+    sections.
+  - One brief two-sentence transition added at the end of the source
+    overview ("What follows treats the cycle in three movements...")
+    as structural orientation per chapter-draft skill's "transitional
+    sentences" / "orienting context" allowance; no factual content
+    beyond what is already established in the source-overview claims
+    (names the three movements only — already redundant with the
+    two-component structure claim).
+  - Three short prose-only bridge sentences added before each marker
+    block to integrate the marker into the surrounding narrative
+    voice (per task instructions on marker framing): one before each
+    of the two VARIANT markers and one before the INFERENCE marker.
+    These bridges contain no factual content beyond what the marker
+    itself or the surrounding claims already establish.
+  - Variant handling per brief variants.classification: co-equal
+    preserved: both VARIANT markers preserve their primary / alt /
+    chosen / reason sub-fields verbatim and the chapter follows
+    Lewis 2006's synthesis as the chosen-skeleton at both junctures.
+
+  Word-count discipline:
+  - 6,257 words against 3,500 target (≈78% over). Driven by (a) the
+    in-line preservation of the three markers (one INFERENCE marker
+    with basis / risk sub-fields running ≈170 words; two VARIANT
+    markers with primary / alt / chosen / reason sub-fields running
+    ≈230 words combined — total marker text ≈ 400 words);
+    (b) the verbatim transfer of 42 footnotes, which carry ≈2,700
+    words of citation text by themselves; (c) the verbatim transfer
+    of 7 COMPARATIVE-HOOK lines totalling ≈350 words; and (d) the
+    1:1 claim-to-narrative-paragraph invariant that requires every
+    claim's factual content to be preserved without compression.
+    Subtracting markers, footnotes, and hooks, the narrative-prose
+    body is ≈2,800 words — well within the brief's 3,500-word target
+    for the prose itself. Per Ch16 (12,879 vs. 10,000) and Ch20
+    (8,343 vs. 4,500) precedents, proportionate over-target driven
+    by claim-set depth and marker-and-citation-verbatim discipline
+    is accepted by the chapter-draft skill.
+
+  No new facts introduced: every footnoted assertion in the
+  narrative traces back to a claim in the approved claims file.
+  Connective tissue (transitional sentences, orienting context, the
+  three marker-bridge sentences) is non-factual and adds no
+  information about the myth itself beyond what the surrounding
+  claims establish. The bridging "What follows treats the cycle in
+  three movements..." paragraph at the end of the source overview
+  names only the three movements — all already in the source-overview
+  claims as the two narrative components plus the closing aftermath.
+
+  Self-checks passed: source overview present (12 source-overview
+  claim-paragraphs as 12 narrative paragraphs plus one short
+  orienting paragraph at the end of the section); every claim
+  represented (42/42 with footnote and EVIDENCE attached, plus 3
+  markers as their own inline blocks); no factual additions;
+  forbidden-words register-list zero hits; banned umbrella terms
+  zero hits; glossary discipline holds (Hou Yi, Yao, Di Jun, Xihe,
+  Fusang, *Chuci* / *Tian wen*, *Huainanzi*, *Shanhaijing*,
+  *Benjing xun*, Chiseltooth / *Zaochi*, Nine-headed Monster /
+  *Jiuying*, Long Serpent / *Xiushe* / *Bashe*, *Yayu*, Chang'e,
+  Xiwangmu / Queen Mother of the West, Dongting Lake); variant
+  handling matches brief's variants.classification: co-equal
+  (present-the-Huainanzi-narrative-skeleton for the suns-shooting
+  variant, present-the-Lewis-synthesis-skeleton for the beast-
+  catalogue variant); all markers survived verbatim with required
+  sub-fields; all footnotes carried over unchanged; all 7
+  COMPARATIVE-HOOK comments carried over verbatim at end of file;
+  order-restoring (rather than cosmogonic) framing preserved at
+  source overview, setting section, suns-shooting section, beasts
+  section, and aftermath section; Xiushe correctly named as the
+  serpent-adversary at lines 103 and 106 with Zhuyin appearing only
+  in the FC-01 explanatory footnote.
