@@ -1,0 +1,467 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-29T18:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/21-gonggong.claims.approved.adoc"
+    lines: 229
+  - file: "chapters/22-hou-yi.claims.approved.adoc"
+    lines: 170
+  - file: "briefs/22-hou-yi.yaml"
+    lines: 55
+summary: "Promoted Ch21 (FC-01 HIGH Forsyth scope reframe with loc-tag MODIFY rather than retag, following Ch19/Ch20 long-arc-framing-anchor practice; FC-02 HIGH four-way C1 grouping reframed as the present book's editorial framework with a new [INFERENCE] marker added and Lewis 2006 retagged for Gonggong-only specifics; FC-03 MEDIUM wuxing/Birrell softened with glossary-lock flag; FC-04 MEDIUM Nüwa human-creation footnote citation order reordered Birrell-first with EVIDENCE retag; FC-05 LOW Liezi Daoist-philosophical-framing softened with glossary-lock flag) and Ch22 (FC-01 HIGH Zhuyin → Xiushe substitution applied to two body claims and to the brief; FC-02 MEDIUM Lewis 2006 chapter-number specificity FLAGGED-ONLY for glossary-lock; FC-03 MEDIUM Methods sidebar Ch. 33 REJECTED — toc.yaml confirms chapter-33 methods-sidebar entry and briefs/33-methods.yaml exists; FC-04 LOW Herakles labours scoped to serpent-combat subset with COMPARATIVE-HOOK update) to .claims.approved.adoc with post-human-normalize provenance footers. No new source-entries required (FC-01 Ch21 used MODIFY-loc rather than retag, retaining Forsyth as long-arc-framing-anchor per Ch19/Ch20 practice). One brief edit applied (briefs/22-hou-yi.yaml Zhuyin → Xiushe with FC-01 correction note)."
+notes: |
+  ──────────────────────────────────────────────────────────────────────────────
+  Sources.yaml additions (0 new entries; 60 → 60):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  No new source entries needed for this stage.
+  - Ch21 FC-01 (Forsyth scope): MODIFY rather than retag. Per task instructions
+    and per the established Ch19/Ch20 practice, Forsyth 1987 is retained as the
+    chapter's long-arc framing-anchor with the loc tag corrected to reflect
+    Forsyth's actual scope (Sumer through Judeo-Christian apocalyptic) rather
+    than the misleading "non-Near-Eastern combat-myth" wording. The prose is
+    rewritten to make explicit that Forsyth's typology is the framing within
+    which the present chapter situates the Gonggong narrative as a non-cognate
+    parallel — not as a member of Forsyth's coverage. This MODIFY-loc approach
+    is consistent with Ch19's use of Forsyth at "loc=on IE combat-myth" for
+    Indo-European material and Ch20's use at "loc=ch. 2" for Slavic material:
+    in both prior chapters Forsyth is anchoring the long-arc typological frame
+    rather than supplying direct coverage of the local material. The Ch21 fix
+    extends the same practice to Chinese material with appropriately precise
+    loc-tag wording.
+  - Ch22: no new source entries (Lewis 2006, Birrell 1993, Huainanzi ch. 8
+    Benjing xun reference all use existing source-anchor structure).
+
+  Source count delta: 60 → 60 (no change). Confirmed via grep "  - id:" → 60.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Briefs / governing-document changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/21-gonggong.yaml: NO CHANGES. The brief's secondary source-loc
+    "on non-Near-Eastern combat-myth" is itself an instance of the same
+    mischaracterisation that the claims-document FC-01 fix corrects, but a
+    brief edit would be a contained-fix duplicate of the claims-document fix.
+    Future stages (glossary-lock, format-finalize) may opt to align the brief
+    loc with the claims-document's revised wording; left as written for now
+    to keep the brief edit to the single load-bearing case (Ch22 FC-01).
+
+  - briefs/22-hou-yi.yaml: UPDATED per Ch22 FC-01 (Zhuyin → Xiushe).
+    Specifically:
+    * variants.summary: "Chiseltooth, Nine-headed Monster, Zhuyin serpent" →
+      "Chiseltooth / Zaochi, Nine-headed Monster / Jiuying, Long Serpent /
+      Xiushe — also referred to as Bashe in some strata"; explanatory note
+      added recording the FC-01 correction (Zhuyin / Zhulong is a Shanhaijing
+      cosmic deity unconnected to Hou Yi's beast-catalogue; the attested
+      Hou Yi serpent-adversary is Xiushe at Dongting Lake per Huainanzi ch. 8).
+    * summary: "the Chiseltooth, the Nine-headed Monster, the Zhuyin serpent"
+      → "the Chiseltooth / Zaochi, the Nine-headed Monster / Jiuying, the
+      Long Serpent / Xiushe".
+    The brief edit is a contained-fix correction of an upstream error and does
+    not require cascading changes to inventory.approved.yaml or scope.md (the
+    Zhuyin/Xiushe issue did not propagate beyond the brief and the claims
+    document).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch21 dispositions (5 findings: 2 HIGH + 2 MEDIUM + 1 LOW):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 HIGH (citation_wrong, Forsyth scope at lines 55-56 and 181-182):
+    ACCEPT and MODIFY. The auditor is right that Forsyth 1987's scope (Sumer
+    through Judeo-Christian apocalyptic) does not include Chinese material
+    and that the loc tag "on non-Near-Eastern combat-myth" misrepresents
+    Forsyth's coverage. Per task instructions, the established Ch19/Ch20
+    practice of using Forsyth as a long-arc framing-anchor (rather than
+    retagging to a different source) is followed here.
+    Fix applied:
+      Before (line 55): "whose treatment of non-Near-Eastern combat-myth
+        supplies a wider scholarly anchor for the Gonggong narrative's place
+        in the comparative dragon-combat corpus"
+      After:  "whose Sumer-through-Judeo-Christian-apocalyptic survey supplies
+        the combat-myth typology within which the present chapter situates
+        the Gonggong narrative as a non-cognate parallel to (rather than a
+        member of) Forsyth's Near-Eastern-and-Judeo-Christian arc; the
+        typological framing — not Chinese-material coverage — is what
+        Forsyth supplies for the chapter's forward-link to Part II C1"
+      Footnote rewritten to make explicit that Forsyth 1987 does not treat
+        Chinese material directly and that the chapter's use is for the
+        long-arc typological framing.
+      EVIDENCE loc tag updated from
+        "loc=on non-Near-Eastern combat-myth" to
+        "loc=combat-myth long-arc typology (Sumer through Judeo-Christian apocalyptic)"
+      Same fix applied to the parallel claim at lines 181-182.
+
+  - FC-02 HIGH (citation_wrong, Lewis 2006 four-way grouping at line 178):
+    ACCEPT and MODIFY. The auditor is correct that Lewis 2006 (a Chinese-
+    tradition specialist monograph) cannot anchor a Mesopotamia-Mesoamerica
+    comparative grouping; the four-way placement is the present book's own
+    Part II C1 editorial framework.
+    Fix applied:
+      Before: "The chapter's principal cross-cultural comparative companions,
+        on Lewis 2006's framing and on the present book's Part II C1
+        organisation, are the Mesopotamian Marduk-Tiamat combat... [etc.]
+        [footnote: Lewis 2006 chs. 2-3 on the comparative-mythology placement
+        of the Gonggong narrative alongside Marduk-Tiamat, Ninurta-Asag,
+        and Huitzilopochtli-at-Coatepec]"
+      After:  "The chapter's principal cross-cultural comparative companions,
+        on the present book's own Part II C1 editorial framework, are the
+        Mesopotamian Marduk-Tiamat combat... and Lewis 2006 chs. 2-3 supplies
+        the strongly-cosmogonic characterisation of the Gonggong narrative
+        on which the present chapter's contribution to the four-way
+        comparative grouping rests. [footnote: Lewis 2006 chs. 2-3 on the
+        strongly-cosmogonic characterisation of the Gonggong narrative; the
+        four-way comparative grouping is the present book's own Part II C1
+        editorial framework — not a Lewis 2006 comparative claim — with
+        Lambert 2013 anchoring the Mesopotamian comparanda and Matos
+        Moctezuma 1988 anchoring the Mesoamerican comparandum]"
+      EVIDENCE loc tag retagged from
+        "loc=chs. 2-3" to
+        "loc=chs. 2-3 (Gonggong-specific characterisation)"
+      A new [INFERENCE] marker added immediately after the claim to make the
+      editorial-framework attribution explicit:
+        "[INFERENCE: the four-way grouping... is the present book's Part II
+        C1 editorial framework — articulated by the project rather than by
+        any single source. | basis: Lewis 2006 (Gonggong); Lambert 2013
+        (Marduk-Tiamat); van Dijk 1983 (Ninurta-Asag); Matos Moctezuma 1988
+        (Huitzilopochtli); brief 21-gonggong.yaml comparative_hooks. | risk:
+        Lewis 2006 does not itself assert this comparative grouping;
+        treating Lewis as the source for the four-way placement would be
+        a false attribution. The grouping is the present book's editorial
+        synthesis across non-cognate traditions...]"
+      The new [INFERENCE] marker does not affect the 56-claim invariant —
+      structural markers (INFERENCE, LACUNA, RECONSTRUCTION, VARIANT) are not
+      counted as body claims and do not require footnote+EVIDENCE pairs.
+
+  - FC-03 MEDIUM (unverified, wuxing connection at line 111):
+    ACCEPT and MODIFY. The auditor's concern about the specific Birrell 1993
+    cosmogony-chapters wuxing-articulation is reasonable; the wuxing connection
+    is well-attested in the secondary literature but the specific Birrell
+    attribution requires verification.
+    Fix applied:
+      Before: "their five colours are read in subsequent Han and post-Han
+        Chinese cosmological writing as corresponding to the Five Phases or
+        Five Elements (wuxing 五行)... that organise the cosmographic system
+        within which the repair makes sense"
+      After:  "their five colours have been connected by subsequent Han and
+        post-Han Chinese cosmological writing — and by modern scholarly
+        readings of that writing — with the Five Phases or Five Elements
+        (wuxing 五行) framework... that organises Han cosmography, although
+        the wuxing correspondence is a cosmological-system reading rather
+        than a feature directly stated within the *Huainanzi*-and-parallel
+        narrative-form sources themselves"
+      Footnote updated to flag the specific Birrell 1993 cosmogony-chapters
+      wuxing-articulation for verification at glossary-lock against the
+      printed text.
+
+  - FC-04 MEDIUM (unverified, Nüwa human-creation citation order at line 80):
+    ACCEPT and MODIFY. The auditor is right that Birrell 1993 (general-survey
+    coverage of Nüwa's full cosmogonic portfolio) is a more appropriate primary
+    anchor for the human-creation-from-yellow-earth detail than Lewis 2006
+    (flood-myths specialist focus).
+    Fix applied:
+      Footnote citation order reordered: Lewis 2006 first → Birrell 1993 first.
+      Before: "Lewis 2006... on Nüwa as serpent-tailed creator-goddess and
+        post-combat repairer of the sky in the Gonggong cycle; Birrell 1993...
+        on Nüwa's wider creation-and-mending role across the Han sources"
+      After:  "Birrell 1993... on Nüwa's wider creation-and-mending role
+        across the Han sources including the human-creation-from-yellow-earth
+        tradition; Lewis 2006... specifically as serpent-tailed creator-
+        goddess and post-combat repairer of the sky in the Gonggong cycle
+        (Lewis 2006's flood-myths focus covers the post-combat repair role;
+        the wider human-creation tradition is Birrell's general-survey
+        territory)"
+      EVIDENCE tag retagged:
+        Before: "// EVIDENCE: source_id=lewis-2006-flood ; loc=chs. 2-3"
+        After:  "// EVIDENCE: source_id=birrell-1993 ; loc=chapters on cosmogony"
+
+  - FC-05 LOW (unverified, Liezi Daoist-philosophical framing at line 37):
+    ACCEPT and MODIFY. The auditor's concern about the specific Birrell-attribution
+    of the "Daoist-philosophical framing" characterisation is reasonable; the
+    framing is consistent with the Liezi's known Daoist context but the specific
+    Birrell phrasing is not verifiable without access to the printed text.
+    Fix applied:
+      Before: "supplies a further later witness to the Gonggong / Nüwa
+        cosmogony with characteristic Daoist-philosophical framing of the
+        combat-and-repair sequence as a cosmological aetiology"
+      After:  "supplies a further later witness to the Gonggong / Nüwa
+        cosmogony, presenting the combat-and-repair sequence as a cosmological
+        aetiology within the compilation's broader cosmological-aetiological-
+        and-Daoist register"
+      Footnote updated to flag the specific Daoist-philosophical-framing
+      characterisation for verification at glossary-lock.
+
+  Ch21 counts after revision:
+  - 56 footnotes / 56 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 219 → 229 (+10 = new [INFERENCE] marker after FC-02 claim
+    + 8-line trailing provenance footer + blank separator).
+  - "non-Near-Eastern combat-myth" body-prose occurrences: 2 → 0 (both Forsyth
+    occurrences reframed).
+  - "loc=on non-Near-Eastern combat-myth" EVIDENCE tag occurrences: 2 → 0.
+  - "loc=combat-myth long-arc typology (Sumer through Judeo-Christian
+    apocalyptic)" EVIDENCE tag occurrences: 0 → 2.
+  - source_id=lewis-2006-flood EVIDENCE tags: 49 → 48 (1 retagged to
+    birrell-1993 for FC-04 Nüwa human-creation citation).
+  - source_id=birrell-1993 EVIDENCE tags: 4 → 5 (1 added from FC-04 retag).
+  - source_id=forsyth-1987 EVIDENCE tags: 2 → 2 (loc tag updated, count
+    unchanged).
+  - source_id=scurlock-beal-2013 EVIDENCE tags: 1 → 1 (no change).
+  - [INFERENCE] markers: 2 → 3 (new marker added after FC-02 claim).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch22 dispositions (4 findings: 1 HIGH + 2 MEDIUM + 1 LOW):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 HIGH (unverified, Zhuyin → Xiushe at lines 107-108, 110, plus brief):
+    ACCEPT and MODIFY. The auditor is correct: Zhuyin (燭陰 / Zhulong 燭龍, the
+    Torch Dragon / Candlelight Dragon) is a distinct entity in the Shanhaijing
+    (a serpentine cosmic deity whose blinking eyes control day and night and
+    whose breathing creates seasons), not an adversary that Hou Yi kills. The
+    Huainanzi ch. 8 (Benjing xun) beast-catalogue lists: Zaochi (Chiseltooth),
+    Jiuying (Nine-headed), Dafeng (wind-bird), Fengxi (boar), and Xiushe
+    (Long Serpent at Dongting Lake) — Zhuyin is not in this list. The
+    attested Hou Yi serpent-adversary is Xiushe; Bashe (巴蛇) is a related
+    giant serpent attested in some strata. The error originated in the brief
+    and propagated to the claims document.
+    Fix applied (claims document):
+      Line 107 prose:
+        Before: "the Zhuyin serpent (sometimes alternatively named *Xiushe*
+          or *Bashe* in different strata of the textual tradition)"
+        After:  "the Long Serpent (Chinese *Xiushe* 修蛇, sometimes also
+          referred to as *Bashe* 巴蛇 in different strata of the textual
+          tradition)... in the *Huainanzi* ch. 8 (*Benjing xun*) beast-
+          catalogue Hou Yi kills the Long Serpent at Dongting Lake"
+      Line 107 footnote: "Zhuyin serpent" → "Xiushe (the Long Serpent)" with
+        Dongting-Lake locus and Huainanzi ch. 8 (Benjing xun) attestation.
+      Line 110 prose: "the Zhuyin serpent" → "the Long Serpent (*Xiushe*)";
+        footnote updated with brief-substitution note explaining the FC-01
+        correction.
+    Fix applied (brief 22-hou-yi.yaml):
+      variants.summary updated to name Long Serpent / Xiushe with explanatory
+        note; summary field updated to name Long Serpent / Xiushe.
+    VARIANT marker check: the two VARIANT markers at lines 86 and 99 do not
+      in fact contain the name "Zhuyin" — they reference "associated beasts"
+      and "beasts" generically — so no VARIANT-marker edits were required
+      despite the auditor's claim that they did.
+    COMPARATIVE-HOOK check: the COMPARATIVE-HOOK at line 160 references "the
+      Nine-headed Monster (*Jiuying*)" rather than the serpent, so no edit
+      was required there.
+    Note: the trailing provenance footer documents the correction and so
+      contains "Zhuyin / Zhulong" within the explanation — this is meta-text
+      rather than body-prose use of the wrong name.
+
+  - FC-02 MEDIUM (unverified, Lewis 2006 chapter-number specificity for Hou
+    Yi material): ACCEPT but FLAGGED-ONLY rather than fixed at this stage.
+    The auditor is right that the brief's "Hou Yi / Yao cluster" loc lacks
+    chapter-number specificity (asymmetric with the Gonggong brief's "chs.
+    2-3"); pinning specific chapter numbers requires direct access to the
+    printed Lewis 2006 text. The 30 EVIDENCE tags retain the brief-specified
+    loc level. The chapter-number specificity is flagged here for resolution
+    at glossary-lock when the printed text is consulted alongside the brief.
+    No prose or EVIDENCE-tag changes applied at post-human-normalize.
+
+  - FC-03 MEDIUM (unverified, Methods sidebar Ch. 33): REJECT.
+    Ground-truth check: books/chaoskampf/toc.yaml lists chapter 33 as the
+    methods sidebar with the following entry:
+        - number: 33
+          slug: methods
+          title: "Methods: how the tiering works, appropriation protocol,
+                  area-specialist policy"
+          part: "methods-sidebar"
+          chapter_anchor: "ch-33-methods"
+          brief: briefs/33-methods.yaml
+    And books/chaoskampf/briefs/33-methods.yaml exists in the briefs
+    directory.
+    The auditor's claim that "no entry for a chapter 33 or a 'methods sidebar'"
+    exists in the catalog is incorrect. The auditor's apparent confusion
+    stemmed from looking only at the briefs/00-29 numbered range and missing
+    the methods-sidebar entry at the toc.yaml's higher chapter-number. The
+    COMPARATIVE-HOOK at line 162 referencing "Ch. 33" is therefore correct
+    as written; no edit applied.
+
+  - FC-04 LOW (unverified, Herakles labours scope at line 138 and COMPARATIVE-
+    HOOK at line 156): ACCEPT and MODIFY. The auditor is right that "the
+    Greek Herakles labours sequence" is too broad — scope.md §"Excluded
+    adjacent motifs" item 2 explicitly excludes "most of Herakles's non-Hydra
+    labours outside the serpent-combat corpus." The body claim should scope
+    the comparison to Ch12's serpent-combat subset (Hydra, Ladon, Geryon).
+    Fix applied (body claim, line 138):
+      Before: "the Greek Herakles labours sequence (chapter 12 of the present
+        volume on Greek dragon-combats after Zeus-Typhon, which treats
+        Herakles among the wider family of Greek dragon-slayers)"
+      After:  "the Greek serpent-combat cluster associated with Herakles (the
+        Hydra, Ladon, and Geryon — treated within chapter 12 of the present
+        volume on Greek dragon-combats after Zeus-Typhon as the serpent-
+        combat subset within the wider family of Greek dragon-slayers)"
+      "Hou Yi cycle and the Herakles labours" → "Hou Yi cycle and the
+        Herakles serpent-combat sub-cluster"
+      Footnote updated to scope the comparison to Ch12's serpent-combat
+        subset per scope.md §"Excluded adjacent motifs" item 2.
+    Fix applied (COMPARATIVE-HOOK, line 156):
+      Before: "// COMPARATIVE-HOOK: Greece (Herakles labours, Ch. 12) —
+        multi-adversary-sequential combat-pattern in which a hero-figure
+        works through a series of monstrous opponents to accomplish
+        cumulative order-making work..."
+      After:  "// COMPARATIVE-HOOK: Greece (Herakles serpent-combat sub-
+        cluster: Hydra, Ladon, Geryon — within Ch. 12 on Greek dragon-
+        combats after Zeus-Typhon) — multi-adversary-sequential combat-
+        pattern in which a hero-figure works through a series of monstrous
+        serpent-opponents to accomplish cumulative order-making work...
+        the comparison is scoped to Ch12's serpent-combat subset per
+        scope.md §"Excluded adjacent motifs"; per brief 22-hou-yi.yaml
+        cross_cultural_parallels."
+
+  Ch22 counts after revision:
+  - 42 footnotes / 42 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 162 → 170 (+8 = 7-line trailing provenance footer + blank
+    separator).
+  - "Zhuyin serpent" body-prose occurrences: 2 → 0 (both substituted to
+    "Long Serpent (Xiushe)" / "Long Serpent (*Xiushe*)").
+  - "Zhuyin / Zhulong" footnote occurrences: 0 → 1 (one in line 110 footnote
+    documenting the FC-01 correction; this is meta-text rather than a body
+    claim).
+  - "Herakles labours" body-prose occurrences: 1 → 0 (substituted to
+    "Herakles serpent-combat sub-cluster"); "Herakles labours" footnote
+    occurrences: 1 → 1 (retained in brief-reference within line 150 footnote
+    that quotes the brief's own cross_cultural_parallels phrasing).
+  - source_id distribution unchanged across all 42 EVIDENCE tags (no retags
+    applied at Ch22).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch21: 56 footnotes / 56 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 56; grep -c "^// EVIDENCE:" → 56.
+  - Ch22: 42 footnotes / 42 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 42; grep -c "^// EVIDENCE:" → 42.
+  - Source-id whitelist: all source_ids resolve to entries in sources.yaml
+    (Ch21: birrell-1993, forsyth-1987, lewis-2006-flood, scurlock-beal-2013;
+    Ch22: birrell-1993, lewis-2006-flood). Confirmed.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Banned-umbrella-term grep result for body prose:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch21: "chaos-figure", "chaos-monster", "chaos-serpent" not present in
+    body prose, footnotes, or COMPARATIVE-HOOK comments. Only occurrence is
+    in the trailing provenance footer's self-reference (line 229) listing
+    the never-use terms as a meta-statement of the rule. No body-prose
+    violations.
+  - Ch22: "chaos-figure", "chaos-monster", "chaos-serpent" not present in
+    body prose, footnotes, or COMPARATIVE-HOOK comments. Only occurrence is
+    in the trailing provenance footer's self-reference (line 170). No
+    body-prose violations.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Glossary-discipline check:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch21: All entity names (Gonggong, Zhuanxu, Zhurong, Nüwa, Mount Buzhou,
+    Yu the Great, five-coloured stones, *Huainanzi*, *Lienü zhuan*,
+    *Shanhaijing*, *Liezi*, *wuxing*, Liu An, Liu Xiang, Guo Pu) use
+    conventional scholarly forms consistent with sources and glossary
+    discipline.
+  - Ch22: All entity names (Hou Yi, Yao, Di Jun, Xihe, Fusang, *Chuci* /
+    'Tian wen' / 'Heavenly Questions', *Huainanzi*, *Shanhaijing*,
+    Chiseltooth / *Zaochi*, Nine-headed Monster / *Jiuying*, Long Serpent /
+    *Xiushe*, *Bashe*, *Yayu*, Chang'e, Xiwangmu / Queen Mother of the West,
+    Dongting Lake, *Benjing xun*) use conventional scholarly forms. The
+    Zhuyin → Xiushe substitution (FC-01) is now consistently applied in
+    body prose; "Zhuyin / Zhulong" appears only in the FC-01 explanatory
+    footnote and provenance footer (meta-text rather than active glossary
+    use).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Source-count delta (sources.yaml):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Before: 60 entries.
+  - After:  60 entries (no change).
+  - Additions: none. The Ch21 FC-01 fix used the MODIFY-loc approach (per
+    Ch19/Ch20 established practice and per task instructions), retaining
+    Forsyth 1987 as the long-arc framing-anchor with corrected loc tag;
+    no new comparative-source addition was required to legitimise the
+    citation.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Brief-modifications log:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/22-hou-yi.yaml (UPDATED, Ch22 FC-01):
+    * variants.summary: "Chiseltooth, Nine-headed Monster, Zhuyin serpent"
+      → "Chiseltooth / Zaochi, Nine-headed Monster / Jiuying, Long Serpent /
+      Xiushe — also referred to as Bashe in some strata"; explanatory note
+      added at end of variants.summary recording the FC-01 correction with
+      Huainanzi ch. 8 / Dongting Lake attestation reference and the Zhuyin /
+      Zhulong-as-Shanhaijing-cosmic-deity disclaimer.
+    * summary: "the Chiseltooth, the Nine-headed Monster, the Zhuyin serpent"
+      → "the Chiseltooth / Zaochi, the Nine-headed Monster / Jiuying, the
+      Long Serpent / Xiushe".
+    Brief line count: 51 → 56 (+5 = explanatory note expansion).
+
+  - briefs/21-gonggong.yaml: NO CHANGES (per the disposition rationale on
+    FC-01 above; the brief's loc descriptor mirrors the same misstatement
+    that the claims document fix corrects, but a brief edit at this stage
+    would be a contained-fix duplicate of the claims document fix; left as
+    written for the present stage, with the option to align at glossary-lock).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Files produced:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - chapters/21-gonggong.claims.approved.adoc (229 lines; 56/56 invariant)
+  - chapters/22-hou-yi.claims.approved.adoc (170 lines; 42/42 invariant)
+  - briefs/22-hou-yi.yaml (56 lines; updated for Ch22 FC-01 Zhuyin → Xiushe)
+
+  Both .claims.approved.adoc files render cleanly. All EVIDENCE source_ids
+  resolve to entries in sources.yaml. Glossary discipline holds. Both files
+  ready for chapter-draft.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Judgment calls flagged for user review:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  1. Ch21 FC-01 (Forsyth scope) handled via MODIFY rather than retag, on
+     the principle that Forsyth's typological frame is what the chapter
+     uses (not Forsyth's Chinese-material coverage, which is nil) — this
+     follows the Ch19/Ch20 established practice. An alternative reading would
+     drop Forsyth from this chapter's source list and replace with a comparative
+     anchor that genuinely treats Chinese material in cross-cultural context.
+     The MODIFY approach was taken because (a) the project's established practice
+     uses Forsyth for long-arc typological framing across multiple non-NE
+     chapters, and (b) no obvious replacement comparative source presents itself
+     for Chinese-material-in-cross-cultural-context that is also already in
+     sources.yaml; replacing with an external source would require a sources.yaml
+     addition and an inventory consequences check that exceeds the scope of
+     post-human-normalize. The user may elect to revisit this at glossary-lock
+     if the Ch21 Forsyth citations come to seem strained.
+
+  2. Ch21 FC-02 (Lewis four-way grouping) added a new [INFERENCE] marker.
+     [INFERENCE] markers are structural (not body claims) and do not affect
+     the 56-claim invariant. The new marker reads as the present book's editorial
+     synthesis with explicit Lewis-as-source disclaimer in the risk field. The
+     marker is the structurally cleanest way to register the four-way grouping
+     as a project framework rather than a Lewis 2006 claim. The user may want
+     to verify at later stages that this [INFERENCE] marker's framing aligns
+     with the project's wider editorial position on Part II C1's typological
+     synthesis.
+
+  3. Ch21 FC-01 brief edit deferred. The brief's "on non-Near-Eastern combat-myth"
+     loc descriptor mirrors the misstatement that the claims document FC-01
+     fix corrects, but a brief edit at post-human-normalize would duplicate
+     the claims-document fix without adding value. The user may want to
+     align the brief at glossary-lock to keep the brief and claims document
+     consistent on this point.
+
+  4. Ch22 FC-02 (Lewis chapter-number specificity) FLAGGED-ONLY. Resolving
+     this requires direct access to the printed Lewis 2006 text. The brief's
+     "Hou Yi / Yao cluster" loc is asymmetric with the Gonggong brief's
+     "chs. 2-3" precision; the user may want to consult Lewis 2006 at
+     glossary-lock and update the brief and the 30 EVIDENCE tags accordingly.
+
+  5. Ch22 FC-03 (Methods sidebar Ch. 33) was REJECTED as the auditor's
+     ground-truth claim was incorrect. The user may want to file a note
+     for the auditor's prompt to ensure that toc.yaml is consulted alongside
+     the briefs/00-29 directory range when checking chapter-number references
+     in COMPARATIVE-HOOK comments.
