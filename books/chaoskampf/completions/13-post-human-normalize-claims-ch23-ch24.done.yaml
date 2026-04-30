@@ -1,0 +1,533 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-30T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/23-susanoo-orochi.claims.approved.adoc"
+    lines: 244
+  - file: "chapters/24-huitzilopochtli-coatepec.claims.approved.adoc"
+    lines: 238
+  - file: "briefs/23-susanoo-orochi.yaml"
+    lines: 62
+  - file: "briefs/24-huitzilopochtli-coatepec.yaml"
+    lines: 128
+  - file: "sources.yaml"
+    lines_delta: "+12 (anderson-dibble-florentine entry added)"
+summary: "Promoted Ch23 (FC-01 HIGH Forsyth East-Asian misuse — MODIFY-loc following Ch19/Ch20/Ch21 long-arc-framing-anchor precedent applied to all three Forsyth EVIDENCE tags at lines 53/190/193 with body-prose rewrites at lines 52/189/192 and brief edit; FC-02 MEDIUM Isomae/Como/Ooms attribution — MODIFY narrowing the four-scholar attribution at line 170 to Naumann-load-bearing with the three subsequent specialists named-but-flagged-not-in-sources.yaml as compatible-framing scholars per the brief's authorisation, with the existing INFERENCE marker's risk field already documenting the gap; FC-03 LOW Philippi bibliographic — ACCEPT bibliographic-inconsistency standardisation across both in-text footnotes (lines 31/46) and the sources.yaml philippi-kojiki entry to use the joint U Tokyo Press / Princeton publisher attribution and to disambiguate the Princeton-paperback-reprint ISBN 9780691611358; FC-04 NOTE APPROPRIATION-FLAG marker — ACCEPT adding a new [APPROPRIATION-FLAG:] structural marker after the line 198 VARIANT marker per scope.md §\"Appropriation protocol\" point 2's mandatory requirement for a specifically-named marker when area specialists object to the chaoskampf framing) and Ch24 (FC-01 MEDIUM Forsyth Mesoamerican misuse — MODIFY-loc following the same Ch19/Ch20/Ch21/Ch23 precedent applied to both Forsyth EVIDENCE tags at lines 61/204 with body-prose rewrites at lines 60/203 and brief edit; FC-02 MEDIUM Durán-source swap at line 184-185 — ACCEPT EVIDENCE-token retag from lopez-austin-myths to carrasco-1999-city aligning the Durán Panquetzaliztli ritual-apparatus claim with the correctly-routed line 92-93 Carrasco anchor for the same content, with corresponding brief variants.alternates fix; FC-03 LOW Anderson-Dibble missing — ACCEPT addition of anderson-dibble-florentine primary-translation entry to sources.yaml so that Florentine Codex Book 3 narrative-detail citations can be anchored directly at chapter-draft stage rather than routing through Matos Moctezuma 1988 / Carrasco 1999 as secondary interpreters; the optional retag of existing claims to anderson-dibble-florentine is DEFERRED to chapter-draft per the auditor's own LOW-at-claims-stage assessment; FC-04 NOTE Matos Moctezuma loc vagueness — FLAGGED-ONLY since this is the brief-level citation discipline and the auditor explicitly classified it as not-a-finding) to .claims.approved.adoc with post-human-normalize provenance footers. Source-count delta: +1 (60 → 61, anderson-dibble-florentine added). Three brief edits applied: briefs/23-susanoo-orochi.yaml secondary-source loc reframed for Forsyth; briefs/24-huitzilopochtli-coatepec.yaml secondary-source loc reframed for Forsyth and variants.alternates Durán routing corrected from lopez-austin-myths to carrasco-1999-city."
+notes: |
+  ──────────────────────────────────────────────────────────────────────────────
+  Sources.yaml additions (1 new entry; 60 → 61):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - anderson-dibble-florentine (NEW for Ch24 FC-03):
+      id: anderson-dibble-florentine
+      source_tier: primary-translation
+      in_scope: true
+      author: "Anderson, Arthur J.O.; Dibble, Charles E. (trans. and eds.)"
+      title: "Florentine Codex: General History of the Things of New Spain"
+      year: "1950-1982"
+      full_citation: "Sahagún, B. de, *Florentine Codex: General History of
+        the Things of New Spain*, trans. and ed. A.J.O. Anderson and
+        C.E. Dibble, 13 vols. (Santa Fe: School of American Research / Salt
+        Lake City: University of Utah Press, 1950-1982)."
+      short_citation: "Anderson-Dibble 1950-82"
+      identifier_type: ISBN
+      identifier_value: "9780874800821"
+      notes: "Standard scholarly English translation of the Nahuatl Florentine
+        Codex (Sahagún, c. 1545-1590). Book 3 (\"The Origin of the Gods\") is
+        the principal narrative anchor for the Coatepec / Huitzilopochtli /
+        Coyolxauhqui / Centzon Huitznahua episode."
+    Placed after lopez-austin-myths in the Mesoamerican secondary block.
+
+  - philippi-kojiki (UPDATED IN PLACE for Ch23 FC-03; not a new entry):
+      full_citation reformatted to "(Tokyo: University of Tokyo Press /
+        Princeton: Princeton University Press, 1968)" to match the joint-edition
+        publisher attribution implied by the Princeton-paperback-reprint ISBN
+        9780691611358.
+      notes field expanded to disambiguate: "ISBN 9780691611358 corresponds
+        to the Princeton paperback reprint of the 1968 joint U Tokyo Press /
+        Princeton University Press edition; content is identical across editions."
+
+  Source count delta: 60 → 61 (+1). Confirmed via
+    grep -c "^  - id:" books/chaoskampf/sources.yaml → 61.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Briefs / governing-document changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/23-susanoo-orochi.yaml (UPDATED, Ch23 FC-01):
+    * sources.secondary forsyth-1987 entry: loc changed from
+      "on East Asian combat-myth"
+      to "long-arc combat-myth typology (Sumer through Judeo-Christian
+         apocalyptic); used as comparative-tradition framing anchor for the
+         chaoskampf reading of the Susanoo / Orochi episode — Forsyth does
+         not himself treat Japanese material"
+      to align with the claims-document FC-01 fix at the brief level and to
+      stop the same misstatement from propagating to chapter-draft.
+
+  - briefs/24-huitzilopochtli-coatepec.yaml (UPDATED, Ch24 FC-01 + FC-02):
+    * sources.secondary forsyth-1987 entry: loc changed from
+      "on non-Eurasian combat-myth parallels"
+      to "long-arc combat-myth typology (Sumer through Judeo-Christian
+         apocalyptic); used as comparative-tradition framing anchor for the
+         Coatepec narrative's placement within the wider chaoskampf typology
+         — Forsyth does not himself treat Aztec or other Mesoamerican material"
+      to align with the claims-document FC-01 fix at the brief level.
+    * variants.alternates Durán entry: source attribution changed from
+      "lopez-austin-myths" to "carrasco-1999-city" with rationale appended
+      ("Carrasco 1999 ch. on Coatepec is the standard scholarly treatment of
+       Durán's Coatepec / Panquetzaliztli ritual-apparatus content;
+       previously routed to lopez-austin-myths but corrected at
+       post-human-normalize per FC-02"), aligning the brief with the
+      claims-document FC-02 EVIDENCE-token retag.
+
+  No edits to scope.md, glossary.yaml, toc.yaml, catalog.yaml, or
+    inventory.approved.yaml were required — neither chapter's findings touched
+    governing-document material outside the briefs and sources.yaml.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch23 dispositions (4 findings: 1 HIGH + 1 MEDIUM + 1 LOW + 1 NOTE):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 HIGH (citation_wrong, Forsyth East-Asian misuse at lines 52-53,
+    189-190, 192-193): ACCEPT and MODIFY. The auditor is right that Forsyth
+    1987 (Sumer through Judeo-Christian apocalyptic) does not treat Japanese
+    material and that the loc tag "on East Asian combat-myth" misrepresents
+    Forsyth's coverage. This is the third recurrence of the same Forsyth
+    misuse pattern across the East Asian cluster (Ch20 Slavic-Baltic,
+    Ch21 Gonggong, Ch23 Susanoo); the established Ch19/Ch20/Ch21 practice of
+    using Forsyth as a long-arc framing-anchor with MODIFY-loc rather than
+    retagging to a different source is followed here.
+    Fix applied to claims document:
+      Body prose at line 52: "whose treatment of East Asian combat-myth
+        supplies the wider scholarly context within which the comparative
+        chaoskampf reading of the Susanoo / Orochi narrative has been advanced"
+        → "whose Sumer-through-Judeo-Christian-apocalyptic survey supplies
+        the long-arc combat-myth typology within which the present chapter
+        situates the Susanoo / Orochi narrative as a non-cognate parallel
+        to (rather than a member of) Forsyth's Near-Eastern-and-Judeo-
+        Christian arc; the typological framing — not Japanese-material
+        coverage, which Forsyth does not undertake — is what Forsyth
+        supplies for the chapter's comparative engagement with the
+        chaoskampf reading of the episode"
+      Footnote at line 52: rewritten to make explicit that Forsyth 1987
+        "does not itself treat Japanese material directly, and the chapter's
+        use is for the long-arc typological framing rather than for
+        Japanese-content scholarly coverage"
+      Body prose at line 189: rewritten to attribute the Susanoo/Orochi
+        chaoskampf reading to "the long-arc Sumer-through-Judeo-Christian-
+        apocalyptic treatments of Forsyth 1987 and others, into whose
+        typological frame the Susanoo / Orochi episode has been brought
+        from outside the early-Japanese tradition"
+      Footnote at line 189: rewritten to disclaim "any Forsyth treatment of
+        the Japanese material itself"
+      Body prose at line 192: minor schema-attribution rephrase; footnote
+        rewritten to make explicit that Forsyth's three structural-similarity
+        points are general to the Sumer-through-Judeo-Christian-apocalyptic
+        comparative frame
+      EVIDENCE loc tags at lines 53, 190, 193 all updated from
+        "loc=on East Asian combat-myth" to
+        "loc=combat-myth long-arc typology (Sumer through Judeo-Christian
+         apocalyptic)"
+    Fix applied to brief: briefs/23-susanoo-orochi.yaml sources.secondary
+      forsyth-1987 loc updated as documented above.
+
+  - FC-02 MEDIUM (unverified, Isomae/Como/Ooms attribution at line 170):
+    ACCEPT and MODIFY. Per task instructions, judgment call: are the three
+    additional names load-bearing? Examination of the EVIDENCE-token routing
+    confirms they are not — every Naumann-related EVIDENCE token routes
+    through naumann-mythen alone, and the three subsequent scholars appear
+    only in body-prose attribution and in the INFERENCE/VARIANT marker
+    fields. Naumann alone fully sustains the metallurgical-allegory content
+    via her Orochi-chapter argument. The four-scholar body-prose attribution
+    is an authorising-supplemental-naming that the brief encourages but no
+    individual claim depends on. MODIFY rather than FLAGGED-ONLY: keep the
+    three names in body prose to maintain compliance with scope.md
+    §"Appropriation protocol" point 1 (two area specialists by name in the
+    first factual pass; Naumann alone might satisfy the literal "two" only
+    if generous), with explicit body-prose flagging that the three works
+    are not yet in sources.yaml and are not load-bearing for any individual
+    EVIDENCE-anchored claim.
+    Fix applied to claims document, line 170:
+      Before: "developed in detail by Nelly Naumann and taken up by
+        subsequent specialists including Jun'ichi Isomae, Michael Como,
+        and Herman Ooms"
+      After:  "developed in detail by Nelly Naumann, with the wider
+        Japanese-studies attention to early-Japanese imperial-charter and
+        ritual-religion readings represented by subsequent area-specialists
+        (Jun'ichi Isomae, Michael Como, and Herman Ooms are flagged as
+        scholars of early Japanese religion whose work develops compatible
+        specialist framings, though their works are not yet in the present
+        book's sources.yaml registry and are not load-bearing for any
+        individual EVIDENCE-anchored claim in this chapter)"
+      Footnote at line 170: updated to credit Naumann 1996 as the load-
+        bearing anchor and to flag the body-prose acknowledgement of
+        Isomae, Como, and Ooms as "subsequent Japanese-studies area-
+        specialists ... flagged for inventory-audit pending their addition
+        to sources.yaml."
+    The existing INFERENCE marker at line 176 remains in place and its risk
+      field continues to document the gap. No EVIDENCE token retag required;
+      no source ID invented (per task instructions).
+
+  - FC-03 LOW (unverified, Philippi bibliographic inconsistency at lines
+    31, 46): ACCEPT and MODIFY. The auditor is correct that the ISBN
+    9780691611358 (Princeton-prefix 0-691) paired with "University of Tokyo
+    Press" creates a bibliographic inconsistency; the original 1968 edition
+    was a joint U Tokyo Press / Princeton publication and the
+    Princeton-prefixed ISBN corresponds to the Princeton paperback reprint.
+    Fix applied (claims document):
+      Line 31 footnote: "Philippi 1968, *Kojiki* (Princeton/Tokyo: University
+        of Tokyo Press; ISBN 9780691611358)" → "Philippi 1968, *Kojiki*,
+        trans. Donald L. Philippi (Tokyo: University of Tokyo Press /
+        Princeton: Princeton University Press, 1968; ISBN 9780691611358 —
+        Princeton paperback reprint of the 1968 joint U Tokyo Press /
+        Princeton edition)"
+      Line 46 body prose: "published by the University of Tokyo Press in
+        1968" → "originally published in 1968 in a joint University of Tokyo
+        Press / Princeton University Press edition"
+      Line 46 footnote: "(Tokyo: University of Tokyo Press, 1968; ISBN
+        9780691611358)" → "(Tokyo: University of Tokyo Press / Princeton:
+        Princeton University Press, 1968; ISBN 9780691611358 = Princeton
+        paperback reprint)"
+    Fix applied (sources.yaml philippi-kojiki entry):
+      full_citation: "(Tokyo: University of Tokyo Press, 1968)" →
+        "(Tokyo: University of Tokyo Press / Princeton: Princeton University
+        Press, 1968)"
+      notes: appended disambiguation: "ISBN 9780691611358 corresponds to
+        the Princeton paperback reprint of the 1968 joint U Tokyo Press /
+        Princeton University Press edition; content is identical across
+        editions."
+
+  - FC-04 NOTE (unverified, APPROPRIATION-FLAG marker absent): ACCEPT and
+    add the marker. scope.md §"Appropriation protocol" point 2 reads
+    "Record any specialist objection to the chaoskampf framing in an
+    [APPROPRIATION-FLAG:] marker, which the comparative chapter must
+    address rather than paper over" — this is mandatory ("must"), and Ch23
+    has explicit area-specialist objection (Naumann's metallurgical-
+    allegory reading is the substantive specialist objection the chapter
+    is built around). The auditor's NOTE-rather-than-MEDIUM rationale
+    (that INFERENCE+VARIANT functionally cover it) is reasonable but the
+    scope.md text specifies a named marker type. The new marker is
+    additive and does not affect the 57-claim invariant since structural
+    markers are not body claims.
+    Fix applied: new [APPROPRIATION-FLAG:] marker inserted immediately
+      after the VARIANT marker at line 198, identifying the objecting
+      specialists (Naumann; Isomae, Como, Ooms named-but-flagged), stating
+      the substance of the objection (sword-etiology and metallurgical-
+      allegorical-political charter as the load-bearing internal function;
+      not cosmogonic-or-sovereignty combat in the chaoskampf-typological
+      sense), and noting that Part II C8 (ch. 41) is the locus where the
+      comparative analysis must address the objection per scope.md
+      §"Appropriation protocol" point 2.
+
+  Ch23 counts after revision:
+  - 57 footnotes / 57 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 234 → 244 (+10 = new [APPROPRIATION-FLAG:] marker block
+    + 7-line trailing provenance footer + a few blank-line separators).
+  - "loc=on East Asian combat-myth" EVIDENCE-tag occurrences: 3 → 0.
+  - "loc=combat-myth long-arc typology (Sumer through Judeo-Christian
+    apocalyptic)" EVIDENCE-tag occurrences: 0 → 3.
+  - "treatment of East Asian combat-myth" body-prose occurrences: 1 → 0.
+  - source_id=forsyth-1987 EVIDENCE tags: 3 → 3 (loc updated; count unchanged).
+  - source_id=naumann-mythen EVIDENCE tags: 25 → 25 (no change).
+  - source_id=philippi-kojiki EVIDENCE tags: 29 → 29 (no change; FC-03
+    fix is footnote-prose-and-publisher-attribution only).
+  - [APPROPRIATION-FLAG:] markers: 0 → 1 (new structural marker after
+    line 198 VARIANT).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 1 → 1 (no change).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch24 dispositions (4 findings: 0 HIGH + 2 MEDIUM + 1 LOW + 1 NOTE):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 MEDIUM (unverified, Forsyth Mesoamerican misuse at lines 60-61,
+    203-204): ACCEPT and MODIFY. The auditor is right that Forsyth 1987's
+    scope (Sumer through Judeo-Christian apocalyptic) does not include
+    Aztec or other Mesoamerican material and that the loc tag "on
+    non-Eurasian combat-myth parallels" overstates Forsyth's actual scope.
+    Same MODIFY-loc precedent as Ch19/Ch20/Ch21/Ch23 applied here.
+    Fix applied to claims document:
+      Body prose at line 60: "whose treatment of non-Eurasian combat-myth
+        parallels supplies a comparative anchor for the Coatepec narrative's
+        place alongside Mesopotamian and other combat-myths" → "whose
+        Sumer-through-Judeo-Christian-apocalyptic survey supplies the
+        long-arc combat-myth typology within which the present chapter
+        situates the Coatepec narrative as a non-cognate parallel to
+        (rather than a member of) Forsyth's Near-Eastern-and-Judeo-
+        Christian arc; the typological framing — not Aztec-material
+        coverage, which Forsyth does not undertake — is what Forsyth
+        supplies for the chapter's comparative engagement with the
+        chaoskampf tradition"
+      Footnote at line 60: rewritten to disclaim Aztec-material coverage
+      Footnote at line 203: rewritten to make explicit that the placement
+        of Coatepec as "one of the strongest single cases outside the
+        Eurasian heartland" is the present chapter's comparative judgement
+        against Forsyth's typological frame rather than a Forsyth claim
+        about the Coatepec narrative
+      EVIDENCE loc tags at lines 61 and 204 updated from
+        "loc=on non-Eurasian combat-myth parallels" to
+        "loc=combat-myth long-arc typology (Sumer through Judeo-Christian
+         apocalyptic)"
+    Fix applied to brief: briefs/24-huitzilopochtli-coatepec.yaml
+      sources.secondary forsyth-1987 loc updated as documented above.
+
+  - FC-02 MEDIUM (citation_wrong, Durán-source swap at line 184-185):
+    ACCEPT and SWAP. The auditor is correct that the Durán Panquetzaliztli
+    ritual-apparatus content (dough-image, mock combats, victim-casting)
+    is Carrasco 1999's primary contribution and is correctly anchored to
+    carrasco-1999-city at lines 92-93 of the same chapter; the line
+    184-185 EVIDENCE token misrouting through lopez-austin-myths creates
+    an internal-inconsistency that the swap eliminates.
+    Fix applied to claims document, line 184-185:
+      Footnote: "López Austin 1993, *The Myths of the Opossum*, chapter on
+        cosmic combat, on Durán's *Historia*..." → "Carrasco 1999, *City
+        of Sacrifice*, ch. on Coatepec, on Durán's *Historia*... López
+        Austin 1993 supplies the Mesoamerican-comparative framing for the
+        contrast"
+      EVIDENCE token: "source_id=lopez-austin-myths ; loc=The Myths of the
+        Opossum, ch. on cosmic combat" → "source_id=carrasco-1999-city ;
+        loc=City of Sacrifice, ch. on Coatepec"
+    Fix applied to brief: briefs/24-huitzilopochtli-coatepec.yaml
+      variants.alternates Durán-entry source changed from lopez-austin-myths
+      to carrasco-1999-city with rationale appended.
+
+  - FC-03 LOW (unverified, Anderson-Dibble missing): ACCEPT and add to
+    sources.yaml. Per task instructions, the auditor's flag that this
+    becomes HIGH at chapter-draft stage justifies adding the entry now
+    rather than deferring. Entry added per neighbouring Mesoamerican
+    secondary-source entry format with primary-translation source_tier
+    (matching the pattern of philippi-kojiki and salomon-urioste-huarochiri
+    primary-translation entries) and ISBN 9780874800821 (a stable
+    early-volume identifier from the multi-volume 1950-1982 set).
+    Per task instructions ("you may optionally retag a few of the
+    Florentine-Codex narrative-content claims directly to anderson-dibble-
+    florentine"): the optional retag is DEFERRED to chapter-draft stage.
+    The auditor's own LOW-at-claims-stage assessment confirms the existing
+    routing through matos-moctezuma-templo-mayor and carrasco-1999-city
+    as secondary interpreters remains pipeline-valid at the claims level;
+    direct page-cited Anderson-Dibble anchoring is more naturally added at
+    chapter-draft when narrative-paraphrase prose requires page citations.
+
+  - FC-04 NOTE (note, Matos Moctezuma "interpretive chapters" loc
+    vagueness): FLAGGED-ONLY. The auditor's own characterisation: "This is
+    a NOTE rather than a finding: no claim is wrong, no claim lacks a
+    sources.yaml anchor, and no claim is unsupported by the source. The
+    issue is citation-specificity depth, which the brief itself does not
+    supply." The brief-level loc-vagueness is a brief-maintenance task for
+    chapter-draft stage when the printed Matos Moctezuma 1988 monograph
+    is consulted. No prose, EVIDENCE-tag, or brief edits applied at
+    post-human-normalize.
+
+  Ch24 counts after revision:
+  - 57 footnotes / 57 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 230 → 238 (+8 = 7-line trailing provenance footer + blank
+    separator).
+  - "loc=on non-Eurasian combat-myth parallels" EVIDENCE-tag occurrences:
+    2 → 0.
+  - "loc=combat-myth long-arc typology (Sumer through Judeo-Christian
+    apocalyptic)" EVIDENCE-tag occurrences: 0 → 2.
+  - "treatment of non-Eurasian combat-myth parallels" body-prose
+    occurrences: 1 → 0.
+  - source_id=matos-moctezuma-templo-mayor EVIDENCE tags: 28 → 28 (no
+    change).
+  - source_id=carrasco-1999-city EVIDENCE tags: 21 → 22 (+1 from FC-02
+    Durán-source swap at line 184-185).
+  - source_id=lopez-austin-myths EVIDENCE tags: 6 → 5 (-1 from FC-02
+    Durán-source swap; the Mesoamerican-comparative-framing claims at
+    lines 170, 173, 176, 213 retain their lopez-austin-myths anchor).
+  - source_id=forsyth-1987 EVIDENCE tags: 2 → 2 (loc updated; count
+    unchanged).
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 3 → 3 (no change).
+  - [VARIANT] markers: 1 → 1 (no change).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch23: 57 footnotes / 57 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 57; grep -c "^// EVIDENCE:" → 57.
+  - Ch24: 57 footnotes / 57 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 57; grep -c "^// EVIDENCE:" → 57.
+  - Source-id whitelist: all source_ids in both .claims.approved.adoc files
+    resolve to entries in sources.yaml.
+    Ch23: forsyth-1987, naumann-mythen, philippi-kojiki — all in scope.
+    Ch24: carrasco-1999-city, forsyth-1987, lopez-austin-myths,
+          matos-moctezuma-templo-mayor — all in scope.
+    anderson-dibble-florentine added to sources.yaml but not yet referenced
+      in any EVIDENCE token (deferred to chapter-draft per the FC-03
+      disposition).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Banned-umbrella-term grep result for body prose:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch23: "chaos-figure", "chaos-monster", "chaos-serpent" not present in
+    body prose, footnotes, markers, or COMPARATIVE-HOOK comments. Provenance
+    footer self-references "chaos-figure / chaos-monster / chaos-serpent"
+    only in the meta-list of banned terms, which is acceptable per the
+    Ch21/Ch22 normalize precedent.
+  - Ch24: "chaos-figure", "chaos-monster", "chaos-serpent" not present in
+    body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    Provenance footer self-references the banned-term meta-list only.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Glossary-discipline check:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch23: All entity and term names (Susanoo, Amaterasu, Tsukuyomi, Izanagi,
+    Takamagahara, Kusanagi, Yamata no Orochi, Ashinazuchi, Tenazuchi,
+    Kushinada-hime, Totsuka-no-Tsurugi, Izumo, Hi-river, Naumann, Isomae,
+    Como, Ooms, *Kojiki*, *Nihon shoki*, *kami*, *kunitsukami*, *kushi*,
+    *waka*, Atsuta Shrine, Ninigi-no-Mikoto, Ōkuninushi, Yashima-jinumi,
+    Yamato Takeru) use conventional scholarly forms throughout. Forsyth
+    citation policy reframed per FC-01 with explicit non-treatment
+    disclaimer; Naumann citation policy retained at Orochi-chapter loc
+    (the brief's specified level); Isomae/Como/Ooms named-but-flagged
+    in body prose only (not in EVIDENCE tokens).
+  - Ch24: All entity and term names (Huitzilopochtli, Coatlicue,
+    Coyolxauhqui, Centzon Huitznahua, Coatepec, Templo Mayor, Panquetzaliztli,
+    Tenochtitlan, Tlaloc, Cuahuitlicac, Huitzlampa, Cipactli, Quetzalcoatl,
+    Tezcatlipoca, *xiuhcōātl*, *xōchiyāōyōtl*, *tzoalli*, *centzontli*,
+    Sahagún, Durán, *Florentine Codex*, *Historia de los Mexicanos por sus
+    pinturas*, *Crónica Mexicáyotl*, *Anales de Cuauhtitlán*, Aztlán,
+    Five Suns / Nahui Ollin / Tonatiuh) use conventional scholarly forms
+    throughout. Anderson-Dibble named in the VARIANT marker only (not in
+    body-prose claims or EVIDENCE tokens at this stage).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Source-count delta (sources.yaml):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Before: 60 entries.
+  - After:  61 entries (+1 = anderson-dibble-florentine for Ch24 FC-03).
+  - In-place updates: philippi-kojiki entry's full_citation and notes
+    fields updated for Ch23 FC-03 publisher-attribution standardisation
+    (not a new entry; same id).
+  - Confirmed via grep -c "^  - id:" books/chaoskampf/sources.yaml → 61.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Brief-modifications log:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/23-susanoo-orochi.yaml (UPDATED, Ch23 FC-01):
+    * sources.secondary forsyth-1987 loc reframed as documented above.
+    Brief line count: 62 → 62 (single-line entry replacement; multi-line
+    YAML formatting preserves total line count at 62).
+
+  - briefs/24-huitzilopochtli-coatepec.yaml (UPDATED, Ch24 FC-01 + FC-02):
+    * sources.secondary forsyth-1987 loc reframed as documented above.
+    * variants.alternates Durán entry: source attribution corrected from
+      lopez-austin-myths to carrasco-1999-city with rationale appended.
+    Brief line count: 128 → 128 (in-place edits to two entries; total
+    line count unchanged).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Files produced:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - chapters/23-susanoo-orochi.claims.approved.adoc (244 lines; 57/57
+    invariant; new [APPROPRIATION-FLAG:] structural marker; provenance
+    footer)
+  - chapters/24-huitzilopochtli-coatepec.claims.approved.adoc (238 lines;
+    57/57 invariant; provenance footer)
+  - briefs/23-susanoo-orochi.yaml (UPDATED, Forsyth loc reframe)
+  - briefs/24-huitzilopochtli-coatepec.yaml (UPDATED, Forsyth loc reframe
+    + Durán-source swap)
+  - sources.yaml (UPDATED, +1 entry anderson-dibble-florentine; in-place
+    update to philippi-kojiki for FC-03)
+
+  Both .claims.approved.adoc files render cleanly. All EVIDENCE source_ids
+  resolve to entries in sources.yaml. Glossary discipline holds. Both files
+  ready for chapter-draft.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Judgment calls flagged for user review:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  1. Ch23 FC-01 (Forsyth scope) handled via MODIFY-loc rather than retag,
+     consistent with the Ch19/Ch20/Ch21 established practice. The same
+     judgment applies as for those prior chapters: Forsyth's typological
+     frame is what the chapter uses (not Forsyth's Japanese-material
+     coverage, which is nil). The user may revisit at glossary-lock if
+     the Ch23 Forsyth citations come to seem strained.
+
+  2. Ch23 FC-02 (Isomae/Como/Ooms attribution) handled via MODIFY (narrowing
+     the claim to Naumann-load-bearing with the three subsequent specialists
+     named-but-flagged in body prose) rather than FLAGGED-ONLY. The
+     four-scholar attribution is preserved at the brief level and in the
+     INFERENCE marker, but the body-prose attribution at line 170 is
+     softened to acknowledge that Isomae, Como, and Ooms are not yet in
+     sources.yaml and are not load-bearing for any individual EVIDENCE-
+     anchored claim. An alternative reading would FLAGGED-ONLY (preserve
+     the writer's wording verbatim) and add the three works to sources.yaml
+     at inventory-audit. The MODIFY approach was taken because (a) the
+     three works are not actually load-bearing for any EVIDENCE-anchored
+     claim, so deferring sources.yaml additions until the chapter-draft
+     stage actually needs to cite them is appropriate, and (b) the body-
+     prose softening is more honest about the current state of the source
+     registry. The user may want to consult Isomae 2010, Como 2009, and
+     Ooms 2009 at inventory-audit and either confirm the metallurgical-
+     allegory attribution and add to sources.yaml, or further-narrow the
+     body claim to Naumann-only with all three names dropped.
+
+  3. Ch23 FC-03 (Philippi bibliographic) fixed in-line in sources.yaml as
+     the auditor recommended (one-entry low-risk fix). The publisher
+     attribution standardisation across both in-text footnotes and
+     sources.yaml uses the joint-edition format ("U Tokyo Press / Princeton
+     UP, 1968") rather than the alternative of finding the original-1968
+     U Tokyo Press ISBN; this is option (a) of the auditor's recommended_fix
+     and is the simpler route. The user may revisit if the
+     joint-publication framing seems imprecise at glossary-lock.
+
+  4. Ch23 FC-04 (APPROPRIATION-FLAG marker) added per scope.md
+     §"Appropriation protocol" point 2's mandatory wording. The marker is
+     structural (not a body claim) and does not affect the 57-claim
+     invariant. The user may want to verify at later stages that the
+     marker's wording (specifically the substantive-objection summary and
+     the Part II C8 forward-link) aligns with the project's wider editorial
+     position on the appropriation-protocol's marker format. This is the
+     first APPROPRIATION-FLAG marker added to a chapter in the present
+     book; subsequent related-tier non-Eurasian chapters (Ch26 Pariacaca,
+     Ch27 Mapuche, Ch28 Bida, Ch29 Mwindo, Ch30 Bakunawa, Ch32 Nanabozho)
+     may need similar markers per the same scope.md mandate, depending on
+     whether their area-specialist literature contains explicit objections
+     to the chaoskampf framing. The Ch23 marker can serve as the format
+     template for those chapters.
+
+  5. Ch24 FC-01 (Forsyth scope) handled via MODIFY-loc rather than retag,
+     same precedent as Ch19/Ch20/Ch21/Ch23. Same judgment-call note as
+     for Ch23 FC-01.
+
+  6. Ch24 FC-02 (Durán-source swap) is straightforward and the EVIDENCE-
+     token retag from lopez-austin-myths to carrasco-1999-city is well-
+     justified by the auditor's evidence (the same content is correctly
+     anchored to Carrasco at line 92-93 of the same chapter). The brief
+     edit aligns the variant-source attribution at the brief level. No
+     downstream consequences expected.
+
+  7. Ch24 FC-03 (Anderson-Dibble addition) added now per task instructions
+     to forestall the auditor's HIGH-at-chapter-draft escalation. The
+     optional retag of existing claims to anderson-dibble-florentine is
+     DEFERRED to chapter-draft. The user may want to do the retag at
+     chapter-draft when page-citation discipline kicks in: at that point,
+     Florentine Codex Book 3 narrative-detail claims (the feather-ball
+     conception, Cuahuitlicac's role, the dismemberment sequence, the
+     *xiuhcōātl* description) can be anchored directly to Anderson-Dibble
+     volume IV (Book 3) at specific page numbers, with Matos Moctezuma
+     1988 / Carrasco 1999 as secondary-interpreter co-anchors.
+     The ISBN 9780874800821 is a stable early-volume identifier from the
+     multi-volume 1950-1982 set; if the user wants to use a different
+     identifier (e.g., a DOI for one of the volumes, or a per-volume ISBN
+     for volume IV which contains Book 3), the sources.yaml entry can be
+     updated at inventory-audit.
+
+  8. Ch24 FC-04 (Matos Moctezuma loc vagueness) FLAGGED-ONLY per the
+     auditor's own NOTE classification. The brief-level loc "interpretive
+     chapters" lacks chapter-number specificity (asymmetric with the
+     Gonggong brief's "chs. 2-3"); resolving this requires direct access
+     to the printed Matos Moctezuma 1988 monograph and is naturally a
+     chapter-draft-stage task. The user may want to consult Matos
+     Moctezuma 1988 at glossary-lock or chapter-draft and update the
+     brief and the 28 EVIDENCE-tag locs accordingly.
