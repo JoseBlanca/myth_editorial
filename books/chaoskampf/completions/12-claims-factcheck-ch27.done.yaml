@@ -1,0 +1,23 @@
+stage: "claims-factcheck"
+timestamp: "2026-04-30T19:15:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+outputs:
+  - file: "chapters/27-mapuche-kai-tren.claims.factcheck.yaml"
+    lines: 1171
+summary: >
+  Claims factcheck audit for Ch27 Kai-Kai vs. Tren-Tren (Mapuche).
+  23/23/23 invariant PASS. Verdict: MINOR-REVISE. 4 findings, all identifier-mismatch
+  category, all actionable at post-human-normalize per Ch20 FC-03 / Ch24 FC-03 precedent:
+  FC-01 (MEDIUM) Foerster ISBN 9789561109315 in sources.yaml should be 9789561109124;
+  FC-02 (LOW) Course ISBN 9780252078163 should be 9780252078231 or 9780252036477;
+  FC-03 (LOW) Faron OCLC 247070 unverified, dominant WorldCat record is 320079821;
+  FC-04 (LOW) Koessler-Ilg 1962 Mar Océano edition/OCLC unverified — the confirmed 1962
+  Koessler-Ilg publication is Tradiciones araucanas (UNLP, La Plata), not Cuentan los
+  araucanos. Bacigalupo ISBN 9780292716599 VERIFIED correct. Forsyth disclaimer correctly
+  applied. APPROPRIATION-FLAG complete with all four required components (Foerster,
+  Bacigalupo, Course, Faron; Latcham named-but-flagged); comparable-to-Ch26 / milder-
+  than-Ch32 characterisation confirmed. All 12 forward-links pass against toc.yaml.
+  No contamination, no banned umbrella terms, no silent bridges, no marker-count errors
+  detected. Named-but-flagged sources (Rosales SJ, Núñez de Pineda, Latcham, Lenz,
+  Augusta-Moesbach) correctly handled per Ch23 FC-02 / Ch26 FC-02 precedent.

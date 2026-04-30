@@ -1,0 +1,65 @@
+stage: claims-factcheck
+chapter: "28-bida-wagadu"
+chapter_title: "Bida and the Founding of Wagadu (the Inversion)"
+completed: true
+date: "2026-04-30"
+auditor_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+verdict: MINOR-REVISE
+output_file: "chapters/28-bida-wagadu.claims.factcheck.yaml"
+input_file: "chapters/28-bida-wagadu.claims.adoc"
+claims_audited: 45
+findings_count: 3
+finding_severities:
+  - id: FC-01
+    severity: LOW
+    category: unverified
+    summary: >
+      Frobenius institutional name ("Deutsches Institut für Kulturmorphologie") may
+      be inaccurate — official name was "Institut für Kulturmorphologie" without
+      the "Deutsches" prefix. "Volumes IV-VI" for Atlantis Wagadu material is
+      approximately correct but cannot be verified to specific-volume level. Both
+      items are in named-but-flagged body-prose content cited indirectly through
+      Belcher 1999 and Conrad 2005. LOW severity.
+  - id: FC-02
+    severity: NOTE
+    category: note
+    summary: >
+      Six named-but-flagged secondary sources (Hale 1998, Bird, Levtzion 1973,
+      Dieterlen, Frobenius 1921, Monteil 1953) are not in sources.yaml. Pipeline-
+      management NOTE; named-but-flagged pattern correctly applied at claims stage.
+      Bird's specific publication not identified (need title/year before chapter-draft).
+  - id: FC-03
+    severity: NOTE
+    category: note
+    summary: >
+      Frobenius expedition timing ("1910s") and Monteil dating ("1924 / 1953") are
+      LOW-PRECISION for named-but-flagged secondary sources cited indirectly.
+      Monteil "1924" component uncertain; canonical citation is 1953 (IFAN Dakar).
+      Verify against Belcher 1999 before chapter-draft.
+key_passes:
+  - "1:1:1 invariant: 45/45/45 — PASS"
+  - "Source resolution: all three IDs (conrad-west-africa, belcher-epic, forsyth-1987) in sources.yaml — PASS"
+  - "Forsyth exception-case wording: inversion-depends-on-typology-to-invert-against correctly justified and disclaimed — PASS"
+  - "Inversion framing: Soninke framing opens chapter (sections 1-5) before inversion invoked in section 6 — PASS"
+  - "INFERENCE marker: basis and risk fields correct; inversion-as-comparativist-overlay correctly registered — PASS"
+  - "LACUNA marker: source and scholarly_reconstruction fields correct; cross-tradition reconstruction excluded — PASS"
+  - "VARIANT marker: co-equal-recorded-versions treatment correctly brief-authorised — PASS"
+  - "APPROPRIATION-FLAG marker (1 structural marker, 4th in book): all required components present — PASS"
+  - "RECONSTRUCTION markers: 0 (correct) — PASS"
+  - "Banned umbrella terms: 0 instances — PASS"
+  - "Glossary discipline: Bida, Wagadu, Mamadi Sefe Dekote all match locked forms — PASS"
+  - "Forward-links: all 15 cross-chapter references verified against toc.yaml — PASS"
+  - "Ch40 (Part II C7) as PRIMARY FORWARD TARGET: explicitly designated throughout — PASS"
+  - "Named-but-flagged pattern: Frobenius, Monteil, Dieterlen, Hale, Bird, Levtzion all correctly handled — PASS"
+  - "Historical facts (Ghana/Wagadu periodisation, Almoravid decline, Arabic chronicles): PASS"
+  - "Soninke ethnonyms, Mamadi name gloss, Bida seven-headedness: PASS"
+notes: >
+  The chapter is the methodologically strongest non-Eurasian-cluster claims skeleton
+  in the pipeline to date. The Forsyth exception case (load-bearing for the inversion
+  rather than framing-only) is correctly justified and disclaimed — the best Forsyth
+  citation in the pipeline. The APPROPRIATION-FLAG is the most complete in the book.
+  The inversion framing is correctly structured at every required level. The three
+  findings are all LOW or NOTE severity and concern named-but-flagged bibliographic
+  precision (FC-01, FC-03) and sources.yaml inventory (FC-02) — no substantive
+  factual errors in load-bearing claims.
