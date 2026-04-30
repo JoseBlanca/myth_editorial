@@ -1,0 +1,352 @@
+stage: "chapter-draft"
+timestamp: "2026-04-30T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/23-susanoo-orochi.adoc"
+    lines: 219
+summary: "Drafted Ch23 (Susanoo vs. Yamata no Orochi — Chaoskampf as Applied Label) from the approved claims document. 9,523 words (target 5,500); over-target driven by the verbatim preservation of 57 footnotes, 1 INFERENCE marker + 1 VARIANT marker + 1 APPROPRIATION-FLAG marker (the first APPROPRIATION-FLAG marker in the book), and 9 COMPARATIVE-HOOK lines, with the 1:1 claim-to-narrative-paragraph invariant held. 57 claim-paragraphs preserved as 57 narrative paragraphs each carrying its footnote and EVIDENCE token verbatim. 0 LACUNA + 1 INFERENCE + 1 VARIANT + 1 APPROPRIATION-FLAG + 0 RECONSTRUCTION markers carried over verbatim with all required sub-fields. 9 COMPARATIVE-HOOK lines carried over verbatim. Outside-framing of the chaoskampf label (sword-etiology / Three-Sacred-Treasures / metallurgical-allegory framing first; comparativist chaoskampf reading engaged but not endorsed) preserved throughout."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 57 (matches claims.approved.adoc count exactly
+    via diff against claims file — diff returns empty)
+  - // EVIDENCE: tokens: 57 (matches claims.approved.adoc count and
+    order exactly via diff against claims file — diff returns empty)
+  - Source-id distribution: philippi-kojiki=29, naumann-mythen=25,
+    forsyth-1987=3 (matches the post-normalize distribution in the
+    approved claims file exactly)
+  - [VARIANT:] markers: 1 (matches claims-side; the area-specialist-
+    vs-comparativist reading variant marker with primary / alt /
+    chosen / reason sub-fields preserved verbatim)
+  - [INFERENCE:] markers: 1 (matches claims-side; the metallurgical-
+    allegory-as-standard-area-specialist-reading editorial-synthesis
+    marker with basis / risk sub-fields preserved verbatim)
+  - [APPROPRIATION-FLAG:] markers: 1 (matches claims-side; FIRST
+    APPROPRIATION-FLAG MARKER IN THE BOOK — full text preserved
+    verbatim including the named specialists Naumann / Isomae / Como
+    / Ooms, the substance of the objection, the demotion-from-CORE
+    explanation, and the C8 forwarding clause). Marker preservation
+    confirmed via diff against claims file (empty diff).
+  - [LACUNA:] markers: 0 (matches claims-side)
+  - [RECONSTRUCTION:] markers: 0 (matches claims-side)
+  - // COMPARATIVE-HOOK: comments: 9 (matches claims-side: Mesopotamia-
+    Marduk-Tiamat-Ch3 + India-Indra-Vrtra-Ch14; Norse-Thor-
+    Jormungandr-Ch18; Multi-headed-monster motif across
+    Lotan/Vrtra/Azi-Dahaka/Ladon-Hydra/Zmey-Gorynych/Jiuying;
+    Iran-Thraetaona-vs-Azi-Dahaka-Ch13; Inversion/transformation
+    Part II C7 Ch40; Refusal/appropriation Part II C8 Ch41;
+    Methods sidebar Ch33; East Asian geographic cluster
+    Ch21+Ch22+Ch23; Imperial-charter regalia function Three Sacred
+    Treasures) — all carried over verbatim at the end of the file
+    via diff against claims file (empty diff)
+
+  Banned-term grep: chaos-figure / chaos-monster / chaos-serpent —
+  zero hits in body prose, footnotes, markers, or COMPARATIVE-HOOK
+  comments.
+
+  Outside-framing preservation (load-bearing per brief
+  special_instructions and task instructions):
+  - Source overview opens with the imperial-regalium / Three Sacred
+    Treasures / sword-etiology framing per the Japanese tradition
+    BEFORE invoking the chaoskampf label. The first paragraph of
+    the source overview explicitly names "sword-etiology and
+    imperial-charter" as the load-bearing function "within its own
+    tradition" and frames the regalium / charter footing as the
+    grounds on which the chronicles tell the story
+  - Source-overview claims preserve the chapter's framing premise
+    that the chaoskampf label is a 20th-century-Western
+    comparativist move rather than an internal feature of the
+    early-Japanese material, with explicit reference to scope.md
+    §"Book structure" cluster 9 demoting the chapter from CORE
+    precisely because of the area-specialists' objection
+  - The Forsyth source-overview claim explicitly disclaims
+    Japanese-content coverage per the FC-01 fix: "Forsyth supplies
+    the long-arc combat-myth typology within which the present
+    chapter situates the Susanoo / Orochi narrative as a
+    non-cognate parallel to (rather than a member of) Forsyth's
+    Near-Eastern-and-Judeo-Christian arc; the typological framing
+    — not Japanese-material coverage, which Forsyth does not
+    undertake — is what Forsyth supplies for the chapter's
+    comparative engagement". The footnote text preserves the same
+    disclaimer verbatim from claims
+  - Background section opens with the kamiyo / age-of-the-gods
+    Japanese mytho-chronological framing and presents Susanoo
+    within the imperial-chronicle pantheon as sun/moon/storm
+    sibling-triad. The Takamagahara expulsion is presented as the
+    immediate narrative-structural antecedent of the Yamata no
+    Orochi episode within the chronicle's own narrative-architecture,
+    not as a chaoskampf prelude
+  - Yamata no Orochi description section foregrounds the
+    eight-foldedness as "a distinctively Japanese narrative-rhetorical
+    pattern rather than as a comparativist trans-traditional motif"
+    and the annual-arrival/devouring as "a recurring-threat
+    narrative-structure rather than as a once-and-for-all
+    cosmogonic conflict"
+  - Combat-mode section preserves the trap-and-dismember structure
+    as "a feature of the narrative that the comparative chaoskampf
+    reading tends to flatten when fitting the episode into the
+    storm-god-vs-serpent frame"
+  - Discovery section presents Kusanagi-discovery as the chapter's
+    "principal etiological outcome" and foregrounds the Three
+    Sacred Treasures (三種の神器, *sanshu no jingi*) imperial-regalia
+    framing throughout
+  - Aftermath section follows the Kusanagi forward-arc through
+    Ninigi-no-Mikoto's descent and the Atsuta Shrine institutional
+    continuation as the "dominant narrative-structural function of
+    the Yamata no Orochi episode within the chronicle's overall
+    purpose"
+  - Metallurgical-allegory section is presented as "the principal
+    area-specialist reading of the Yamata no Orochi episode in
+    current scholarship" with Naumann named first and Isomae /
+    Como / Ooms named in the body prose per the brief's
+    area-specialist citation policy
+  - Chaoskampf-as-applied-from-outside section opens by framing the
+    chaoskampf reading explicitly as "a 20th-century-Western
+    comparativist move developed within the wider scholarly
+    tradition of cross-cultural combat-myth comparison" and
+    "brought from outside the early-Japanese tradition" — the
+    chapter's load-bearing rhetorical move
+  - Resolution paragraph preserves the chapter's "two readings
+    together but not as equally weighted" gesture, with the
+    area-specialist reading as load-bearing and the comparativist
+    reading "engaged but not endorsed"
+  - The chapter does NOT endorse the chaoskampf reading at any
+    point in body prose, footnotes, markers, or COMPARATIVE-HOOK
+    comments
+
+  APPROPRIATION-FLAG marker preservation (FIRST in the book):
+  - The [APPROPRIATION-FLAG:] marker is the first instance of this
+    marker type in the chaoskampf book; preserved verbatim from
+    claims line 200 to narrative with all sub-fields intact
+  - Named specialists preserved exactly: "Nelly Naumann; with
+    subsequent Japanese-religion specialists Jun'ichi Isomae,
+    Michael Como, and Herman Ooms named in the chapter brief"
+  - Substance of the objection preserved: sword-etiology and
+    metallurgical-allegorical-political charter (the eight-headed
+    serpent figuring the Izumo-Hi-river iron-smelting industry;
+    the sword discovered in the tail figuring the metallurgical
+    product of smelting-and-forging; Susanoo's victory figuring
+    the heavenly line's bringing of the Izumo iron-smelting
+    industry under Yamato-court control), not cosmogonic-or-
+    sovereignty combat in the chaoskampf-typological sense
+  - Demotion-from-CORE clause preserved: "the substantive reason
+    scope.md §'Book structure' cluster 9 demoted this chapter from
+    CORE to related-tier"
+  - C8-forwarding clause preserved: "Part II C8 (refusal and
+    appropriation; ch. 41 of the present volume) is the locus
+    where the comparative analysis must address this objection
+    rather than paper over it; the present chapter functions as a
+    worked instance of the appropriation-protocol's outside-framing
+    requirement at scope.md §'Appropriation protocol' point 3, and
+    forwards the objection to C8 for the comparative-engagement
+    work that scope.md §'Appropriation protocol' point 2 requires
+    of the comparative chapter"
+
+  Marker framing integration:
+  - The [INFERENCE] marker (metallurgical-as-standard-area-specialist-
+    reading) is preceded by transitional prose: "That the
+    metallurgical reading is the standard area-specialist treatment
+    is itself an editorial synthesis drawn from the brief's named
+    scholars and from Naumann 1996's Orochi chapter, and the
+    chapter flags the synthesis accordingly:" — this gives the
+    marker editorial-synthesis / source-attributed framing
+  - The [VARIANT] marker (area-specialist-vs-comparativist) is
+    preceded by transitional prose: "The area-specialist and
+    comparativist readings are presented side by side as a
+    substantive variant choice that the chapter resolves in favour
+    of the area-specialist reading:" — this gives the marker
+    variant-aware framing
+  - The [APPROPRIATION-FLAG] marker is preceded by transitional
+    prose: "That choice is the specific outcome of an area-
+    specialist objection to the comparativist framing, and the
+    chapter flags the objection explicitly under the appropriation-
+    protocol marker the project reserves for cases of this kind:"
+    — this gives the marker the appropriation-protocol /
+    objection-substance framing
+
+  Glossary discipline confirmed:
+  - Susanoo: full Hepburn form throughout
+  - Amaterasu: full Hepburn form
+  - Tsukuyomi: full Hepburn form
+  - Izanagi: full Hepburn form
+  - Takamagahara: full Hepburn form (with kamiyo / *Ame-no-Iwato*
+    glossed where introduced)
+  - Yamata no Orochi: full form throughout (八岐大蛇 in source
+    overview); "the eight-headed serpent" used as descriptor on
+    repeated reference
+  - Kushinada-hime: full Hepburn form (with 奇稲田姫 / 櫛名田比売
+    glossed at introduction)
+  - Ashinazuchi / Tenazuchi: full Hepburn forms (with 足名椎 /
+    手名椎 and "foot-stroking-elder" / "hand-stroking-elder" glosses)
+  - Kusanagi: full Hepburn form (with 草薙剣 and "grass-cutting
+    sword" gloss; later imperial-chronicle Yamato-Takeru-and-grass-
+    fire etiology preserved)
+  - Totsuka-no-Tsurugi: full Hepburn form (with "ten-hands-long
+    sword" gloss)
+  - Izumo / Hi-no-kawa (river Hi, 肥河): preserved with character
+    pairings and conventional gloss
+  - Suga: place-name preserved
+  - Ninigi-no-Mikoto: full Hepburn form
+  - Yamato Takeru: full Hepburn form
+  - Three Sacred Treasures (三種の神器, *sanshu no jingi*): full
+    English + Japanese + Hepburn form preserved
+  - Yata-no-Kagami / Yasakani-no-Magatama: full Hepburn forms
+  - Atsuta Shrine in Owari (modern Aichi Prefecture): full form
+  - Italicised primary-source titles preserved: *Kojiki*,
+    *Nihon shoki*
+  - Italicised area-specialist source preserved: *Die Mythen des
+    alten Japan*
+  - Italicised Japanese terms preserved with Chinese-character
+    pairing where appropriate: *kami* (神代 *kamiyo*), *kunitsukami*
+    (国つ神), *kushi* (櫛), *waka*, *tatara*, "eight-fold refined
+    sake" (八塩折之酒)
+  - Area-specialist scholar names: Naumann (Nelly), Isomae
+    (Jun'ichi), Como (Michael), Ooms (Herman) — all named in body
+    prose per appropriation-protocol point 1; sources.yaml
+    registry status flagged in body prose ("their works are not
+    yet in the present book's sources.yaml registry and are not
+    load-bearing for any individual EVIDENCE-anchored claim in
+    this chapter")
+
+  Forsyth-Japanese-coverage disclaimer (FC-01 fix from
+  post-normalize) preservation:
+  - Source-overview body prose at paragraph "The chapter's general
+    comparative anchor for the long-arc combat-myth tradition is
+    Neil Forsyth's *The Old Enemy*..." preserves explicit
+    disclaimer that "Japanese-material coverage, which Forsyth
+    does not undertake" is NOT what Forsyth supplies; the
+    chapter's use is for "long-arc typological framing rather than
+    for Japanese-content scholarly coverage"
+  - Chaoskampf-as-applied-from-outside body prose at paragraph
+    "The chaoskampf reading of the Yamata no Orochi episode..."
+    preserves "Forsyth 1987 does not itself treat the Japanese
+    material" disclaimer in footnote
+  - Three-structural-similarity-points body prose at paragraph
+    "The comparativist chaoskampf reading rests on three principal
+    structural-similarity points..." preserves "the schema is
+    general to Forsyth's Sumer-through-Judeo-Christian-apocalyptic
+    comparative frame and does not derive from any Forsyth
+    treatment of the Japanese material itself" disclaimer in
+    footnote
+  - All three Forsyth EVIDENCE tokens carry the corrected
+    "loc=combat-myth long-arc typology (Sumer through
+    Judeo-Christian apocalyptic)" form per FC-01 — verbatim from
+    claims
+
+  Structural notes:
+  - 11 === sections in narrative match 11 === sections in claims
+    file exactly (Source overview / Background: Susanoo's
+    expulsion from Takamagahara / Setting in Izumo: the elderly
+    couple and the seven daughters / Yamata no Orochi: the
+    eight-headed serpent / Susanoo's plan: vats of sake and the
+    fence / The combat: intoxication and dismemberment / The
+    discovery of Kusanagi in the tail / Aftermath: marriage and
+    the Izumo-cycle / The metallurgical-allegory reading / The
+    chaoskampf label as applied from outside / Typology and
+    forward-links). Section titles preserved verbatim from claims.
+  - Each claim paragraph in claims → one corresponding narrative
+    paragraph with the footnote and EVIDENCE token attached
+    verbatim. No claims merged, no claims dropped, no claims
+    reordered within sections.
+  - One brief one-paragraph orienting transition added at the end
+    of the source overview ("What follows works through the story
+    in order. The next section sketches Susanoo's expulsion from
+    Takamagahara as the immediate narrative-structural antecedent
+    of the Izumo episode...") as structural orientation per
+    chapter-draft skill's "transitional sentences" / "orienting
+    context" allowance; no factual content beyond what is already
+    established in the source-overview claims (names the sections
+    only — already redundant with the chapter structure).
+  - Three short prose-only bridge sentences added before the
+    three marker blocks to integrate each marker into the
+    surrounding narrative voice (per task instructions on marker
+    framing): one before the INFERENCE marker, one before the
+    VARIANT marker, and one before the APPROPRIATION-FLAG marker.
+    These bridges contain no factual content beyond what the
+    marker itself or the surrounding claims already establish.
+  - Variant handling per brief variants.classification: co-equal
+    preserved: the *Kojiki* (single-account) and *Nihon shoki*
+    ("one writing says" co-equal-variants format) are presented
+    as joint primary textual base in the source overview;
+    Naumann 1996 named for the metallurgical-allegory anchor;
+    Philippi 1968 named as the principal English-language Kojiki
+    anchor.
+
+  Word-count discipline:
+  - 9,523 words against 5,500 target (≈73% over). Driven by (a)
+    the in-line preservation of the three markers (one INFERENCE
+    marker with basis / risk sub-fields running ≈230 words; one
+    VARIANT marker with primary / alt / chosen / reason sub-fields
+    running ≈170 words; one APPROPRIATION-FLAG marker running
+    ≈260 words — total marker text ≈ 660 words);
+    (b) the verbatim transfer of 57 footnotes, which carry ≈3,400
+    words of citation text by themselves (approximately 60 words
+    per footnote × 57 footnotes); (c) the verbatim transfer of 9
+    COMPARATIVE-HOOK lines totalling ≈800 words; and (d) the 1:1
+    claim-to-narrative-paragraph invariant that requires every
+    claim's factual content to be preserved without compression.
+    Subtracting markers, footnotes, and hooks, the narrative-prose
+    body is ≈4,650 words — within the brief's 5,500-word target
+    for the prose itself. Per Ch16 (12,879 vs. 10,000), Ch20
+    (8,343 vs. 4,500), and Ch22 (6,257 vs. 3,500) precedents,
+    proportionate over-target driven by claim-set depth and
+    marker-and-citation-verbatim discipline is accepted by the
+    chapter-draft skill.
+
+  No new facts introduced: every footnoted assertion in the
+  narrative traces back to a claim in the approved claims file.
+  Connective tissue (transitional sentences, orienting context,
+  the three marker-bridge sentences) is non-factual and adds no
+  information about the myth itself beyond what the surrounding
+  claims establish. The bridging "What follows works through the
+  story in order..." paragraph at the end of the source overview
+  names only the sections in their order — all already in the
+  chapter's section structure.
+
+  Prose-only paragraphs added (NOTE-level):
+  - One orienting paragraph at the end of source overview
+    (≈55 words) listing the chapter's narrative arc; redundant
+    with section structure. No new factual content.
+  - One bridge sentence before INFERENCE marker (≈40 words);
+    redundant with marker contents.
+  - One bridge sentence before VARIANT marker (≈30 words);
+    redundant with surrounding claims.
+  - One bridge sentence before APPROPRIATION-FLAG marker
+    (≈40 words); redundant with marker contents.
+  Total prose-only addition: ≈165 words across 4 short
+  prose-only stretches; non-factual; consistent with Ch22
+  precedent.
+
+  Self-checks passed: source overview present (13 source-overview
+  claim-paragraphs as 13 narrative paragraphs plus one short
+  orienting paragraph at the end of the section); every claim
+  represented (57/57 with footnote and EVIDENCE attached, plus 3
+  markers as their own inline blocks); no factual additions;
+  banned umbrella terms zero hits; glossary discipline holds
+  (Susanoo, Amaterasu, Tsukuyomi, Izanagi, Takamagahara, Kusanagi,
+  Yamata no Orochi, Ashinazuchi, Tenazuchi, Kushinada-hime,
+  Totsuka-no-Tsurugi, Izumo, Hi-river / Hi-no-kawa, Suga,
+  Ninigi-no-Mikoto, Yamato Takeru, Atsuta Shrine, Owari /
+  Aichi Prefecture, Yata-no-Kagami, Yasakani-no-Magatama,
+  *sanshu no jingi*, *kami*, *kunitsukami*, *kushi*, *waka*,
+  *tatara*, *Kojiki*, *Nihon shoki*, *Die Mythen des alten Japan*,
+  Naumann, Isomae, Como, Ooms, Philippi, Forsyth in conventional
+  scholarly forms throughout); variant handling matches brief's
+  variants.classification: co-equal (Kojiki single coherent
+  account presented as connected narrative skeleton; Nihon shoki
+  "one writing says" co-equal-variants format registered as
+  legitimate co-equal versions); all markers survived verbatim
+  with required sub-fields (1 INFERENCE basis/risk; 1 VARIANT
+  primary/alt/chosen/reason; 1 APPROPRIATION-FLAG with named
+  specialists / objection substance / C8-forwarding); all
+  footnotes carried over unchanged (diff returns empty); all 9
+  COMPARATIVE-HOOK comments carried over verbatim at end of file
+  (diff returns empty); outside-framing of the chaoskampf label
+  preserved at source overview, background section, Yamata no
+  Orochi description section, combat section, discovery section,
+  aftermath section, metallurgical-allegory section, chaoskampf-
+  as-applied-from-outside section, and typology section; FIRST
+  APPROPRIATION-FLAG marker in the book preserved verbatim with
+  all sub-fields; Forsyth-Japanese-coverage disclaimer preserved
+  in body prose at all three Forsyth-EVIDENCE-anchored paragraphs
+  per FC-01 fix.
