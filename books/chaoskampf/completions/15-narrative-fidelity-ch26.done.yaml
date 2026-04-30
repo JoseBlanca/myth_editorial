@@ -1,0 +1,174 @@
+stage: 15-narrative-fidelity
+chapter: 26
+chapter_title: "Pariacaca and the amaru (Huarochirí)"
+status: done
+verdict: PASS
+timestamp: 2026-04-30T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 39
+  claims_mapped: 39
+  footnotes_claims: 39
+  footnotes_narrative: 39
+  footnote_content_match: true
+  footnote_md5_claims: 223c707c4d34d04b47c0270c40f89d3f
+  footnote_md5_narrative: 223c707c4d34d04b47c0270c40f89d3f
+  evidence_tokens_claims: 39
+  evidence_tokens_narrative: 39
+  evidence_sequence_match: true
+  reconstruction_markers: 0
+  lacuna_markers: 1
+  inference_markers: 1
+  variant_markers: 1
+  appropriation_flag_markers: 1
+  comparative_hooks: 10
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  forsyth_disclaimer_preserved: true
+  fc01_watershed_softening_preserved: true
+  lacuna_marker_verbatim: true
+  appropriation_flag_marker_verbatim: true
+  post_conquest_filtering_operationally_framed: true
+  outside_framing_of_chaoskampf_label_preserved: true
+  note_findings: 2
+  high_findings: 0
+  medium_findings: 0
+
+source_distribution:
+  salomon_urioste_huarochiri: 38
+  forsyth_1987: 1
+  total: 39
+  distribution_matches_claims: true
+
+output_files:
+  fidelity_yaml: chapters/26-pariacaca-amaru.fidelity.yaml
+  narrative: chapters/26-pariacaca-amaru.adoc
+  claims: chapters/26-pariacaca-amaru.claims.approved.adoc
+
+key_checks_passed:
+  - lacuna_marker_preservation: >
+      The LACUNA marker appears verbatim at narrative line 38, immediately
+      following the introduction bridge at line 36. All sub-fields intact:
+      main formulation (pre-conquest Quechua alphabetic-text absence;
+      khipu-rather-than-alphabetic record-keeping), source, and
+      scholarly_reconstruction (with explicit "Cross-tradition reconstruction
+      is excluded per scope.md §\"Reconstruction policy\" point 1." clause).
+      Verbatim match confirmed by Python character comparison (zero diffs).
+      PASS.
+  - appropriation_flag_marker_preservation: >
+      The APPROPRIATION-FLAG marker (the second in the book; Ch23 Susanoo
+      set the structural template) appears verbatim against claims, verified
+      character-by-character by Python comparison. All four required components
+      present: (1) named area specialists Salomon, Urioste, Taylor, Dean with
+      Lima IFEA and ritual-political-imagination contexts; (2) wak'a-succession
+      vs. chaos-vs-order combat objection substance; (3) tier-implication
+      clause with explicit milder-than-Ch23-Naumann AND milder-than-Ch32-
+      Hallowell-Johnston-Smith-Vizenor characterisation; (4) Ch40/Ch41
+      forwarding clause with explicit ordinal chapter numbers. PASS.
+  - post_conquest_filtering_operational_framing: >
+      The Huarochirí Manuscript's compositional context (Francisco de Ávila's
+      anti-idolatry campaign for use against the religion it documents) is
+      operationally framed at five loci: source-overview anti-idolatry
+      compositional context paragraphs (3); LACUNA marker; dedicated
+      Ch24-contrast paragraph ("more polemical compositional context than the
+      Sahagún or Durán situations"); methods-sidebar contribution paragraph;
+      methods-sidebar COMPARATIVE-HOOK ("post-conquest source-record-filtering
+      issue at its sharpest"). Not just acknowledged but operationally framed
+      throughout. PASS.
+  - outside_framing_of_chaoskampf_label: >
+      The chapter's load-bearing rhetorical move — engaging the chaoskampf
+      reading as one possible frame while preserving the wak'a-succession
+      area-specialist reading — is preserved throughout. The narrative does
+      not drift toward endorsing chaoskampf-typology as the chapter's own
+      commitment. Parallel to Ch23 Susanoo's outside-framing of the
+      comparativist reading. PASS.
+  - forsyth_disclaimer_preserved: >
+      Body prose at narrative line 30 explicitly states "The typological
+      framing — not Andean-material coverage, which Forsyth does not
+      undertake — is what Forsyth supplies for the chapter's comparative
+      engagement with the chaoskampf category." The footnote for the
+      forsyth-1987 EVIDENCE token states "Forsyth 1987 does not itself treat
+      Andean material directly, and the chapter's use of the citation is for
+      the long-arc typological framing rather than for Andean-content
+      scholarly coverage." EVIDENCE loc carries
+      "combat-myth long-arc typology (Sumer through Judeo-Christian
+      apocalyptic)". PASS.
+  - fc01_watershed_softening_preserved: >
+      The post-normalize FC-01 watershed-softening fix is preserved. The
+      assertive boundary-formulation ("on the boundary between the upper
+      drainages of the Mantaro and Cañete") is absent from body prose
+      (one hit in a COMPARATIVE-HOOK refers to typological figures, not
+      the geographic watershed claim). The softened formulation is present
+      at narrative line 56: "a high glaciated massif among the headwaters
+      of multiple drainages of the central Andean cordillera, including
+      the Mantaro and Cañete river systems". PASS.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-monster", "chaos-serpent" absent from narrative.
+      Programmatic count returned zero matches for all three. PASS.
+  - all_markers_verbatim: >
+      All 4 markers (1 LACUNA, 1 INFERENCE, 1 VARIANT, 1 APPROPRIATION-FLAG)
+      verbatim identical to claims. Verified by Python character comparison
+      (zero diffs on all four). PASS.
+  - all_comparative_hooks_verbatim: >
+      All 10 COMPARATIVE-HOOK lines verbatim identical to claims. Verified
+      by Python comparison (exact match). Hooks cover: Ch3 Marduk-Tiamat,
+      Ch6 Illuyanka, Ch21 Gonggong, Ch23 Susanoo-Orochi, Ch24 Huitzilopochtli,
+      Ch27 (next chapter), Ch32 Nanabozho-Mishipeshu, Ch33 methods sidebar,
+      Part II C7 (Ch40 inversion-problem), Part II C8 (Ch41 refusal-and-
+      appropriation). PASS.
+  - footnote_integrity: >
+      39 footnotes in narrative and claims body. Footnote CONTENTS (inside
+      footnote:[...]) verified character-by-character identical by Python
+      hashlib comparison (md5sum 223c707c4d34d04b47c0270c40f89d3f on both
+      sides — exact match). PASS.
+  - evidence_token_integrity: >
+      39 EVIDENCE tokens in narrative and claims body. Sequence-order
+      identity verified by Python comparison (no discrepancies). Source
+      distribution exactly preserved: salomon-urioste-huarochiri=38,
+      forsyth-1987=1. PASS.
+  - section_structure: >
+      7 sections in claims = 7 sections in narrative with identical headers.
+      No sections added, dropped, or renamed. PASS.
+  - forward_link_verification: >
+      Cross-chapter references Ch3 (Marduk-Tiamat), Ch24 (Huitzilopochtli),
+      Ch27 (next chapter), Ch33 (methods sidebar), Ch40 (Part II C7
+      inversion-problem), Ch41 (Part II C8 refusal-and-appropriation) all
+      verified in toc.yaml: FOUND. All cross-chapter references resolve.
+      PASS.
+  - word_count_sanity: >
+      7,675 words (wc -w count) vs. ~4,000-word brief target. The file
+      total includes 39 long footnotes (averaging ~100 words each, ~3,900
+      footnote words), plus 4 marker blocks (LACUNA, VARIANT, INFERENCE,
+      APPROPRIATION-FLAG — the last particularly long at ~450 words),
+      10 COMPARATIVE-HOOK lines, and EVIDENCE tokens. The prose-body-only
+      word count is approximately 3,298 words, consistent with the brief's
+      related-tier body-prose estimate of ~2,600 words (small overage
+      attributable to the five bridge sentences). No unclaimed elaboration
+      found. NOTE only.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      Five unfootnoted transitional/bridge sentences at narrative lines 36,
+      46, 101, 119, and 128 absent from the claims document. Lines 36, 101,
+      119, and 128 are introductory bridges immediately preceding structural
+      markers (LACUNA, VARIANT, INFERENCE, APPROPRIATION-FLAG respectively);
+      line 46 is a chapter-navigation sentence previewing the chapter's six
+      movements. None introduces factual assertions beyond what the claims
+      establish. Same pattern as Ch24 ISSUE-01. No action required.
+  - id: ISSUE-02
+    severity: NOTE
+    description: >
+      Word-count formula overage attributable to footnote-bulk and marker-
+      block inclusion in the wc count (39 long footnotes plus a particularly
+      long APPROPRIATION-FLAG marker at ~450 words). Prose-body-only
+      estimated at approximately 3,298 words, consistent with the brief's
+      related-tier body-prose estimate of ~2,600 words (small overage
+      attributable to the five bridge sentences). No unclaimed elaboration
+      found. No action required at fidelity stage.

@@ -1,0 +1,200 @@
+stage: 15-narrative-fidelity
+chapter: 25
+chapter_title: "Other Mesoamerican Combats (Cipactli, Quetzalcoatl vs. Tezcatlipoca)"
+status: done
+verdict: PASS
+timestamp: 2026-04-30T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 30
+  claims_mapped: 30
+  footnotes_claims: 30
+  footnotes_narrative: 30
+  footnote_content_match: true
+  footnote_python_diffs: 0
+  evidence_tokens_claims: 30
+  evidence_tokens_narrative: 30
+  evidence_sequence_match: true
+  evidence_md5_claims: b95864b548bf963d48c57d4edc216a33
+  evidence_md5_narrative: b95864b548bf963d48c57d4edc216a33
+  reconstruction_markers: 0
+  lacuna_markers: 1
+  inference_markers: 2
+  variant_markers: 1
+  comparative_hooks: 9
+  comparative_hooks_md5_claims: f17e18326d18db1520b01e8cb4c01429
+  comparative_hooks_md5_narrative: f17e18326d18db1520b01e8cb4c01429
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  forsyth_disclaimer_preserved: true
+  fc01_source_swap_preserved: true
+  lacuna_marker_verbatim: true
+  lacuna_marker_at_source_overview_opening: true
+  methodological_framing_preserved: true
+  cipactli_boundary_case_framing_preserved: true
+  note_findings: 2
+  high_findings: 0
+  medium_findings: 0
+
+source_distribution:
+  lopez_austin_myths: 15
+  carrasco_1999_city: 13
+  forsyth_1987: 2
+  total: 30
+  distribution_matches_claims: true
+
+output_files:
+  fidelity_yaml: chapters/25-mesoamerican-cluster.fidelity.yaml
+  narrative: chapters/25-mesoamerican-cluster.adoc
+  claims: chapters/25-mesoamerican-cluster.claims.approved.adoc
+
+key_checks_passed:
+  - cipactli_boundary_case_framing: >
+      The chapter's load-bearing rhetorical move — treating Cipactli-dismemberment
+      as a present-but-bounded boundary case per scope.md §"Excluded adjacent
+      motifs" #1 — is fully preserved. "dismemberment-cosmogony" appears 24 times
+      in the narrative; "dismemberment-without-combat" appears 3 times. The
+      narrative never treats Cipactli as an in-scope chaoskampf case. At narrative
+      line 56 the narrative states "Cipactli does not contest the division, and the
+      gods do not fight her in the sense the Coatepec, Marduk-Tiamat, or
+      Indra-Vṛtra narratives understand fighting." At narrative line 66 the
+      narrative states "The Cipactli cosmogony's role in the present book is
+      therefore that of a within-tradition contrast rather than that of an in-scope
+      chaoskampf." Boundary-case framing fully preserved throughout. PASS.
+  - forsyth_disclaimer_preserved: >
+      Forsyth disclaimer fully preserved at both EVIDENCE-token occurrences. Body
+      prose at narrative line 34 states "The typological framing — not Aztec-
+      material coverage, which Forsyth does not undertake — is what Forsyth supplies
+      for the chapter's comparative engagement." The footnote at narrative line 34
+      states "not for Aztec-specific coverage — Forsyth does not himself treat Aztec
+      or other Mesoamerican material." The footnote at narrative line 117 states
+      "not for Aztec-specific coverage — Forsyth does not himself treat Aztec or
+      other Mesoamerican material, and the placement is the present chapter's
+      comparative judgement against Forsyth's typological frame rather than a
+      Forsyth claim about the Mesoamerican narratives." Both EVIDENCE tokens carry
+      loc=combat-myth long-arc typology (Sumer through Judeo-Christian apocalyptic).
+      PASS.
+  - fc01_source_swap_preserved: >
+      FC-01 source-swap fully preserved. The sovereignty-transfer / cosmogonic-
+      political cycle framing claim at narrative line 93 carries EVIDENCE
+      source_id=carrasco-1999-city ; loc=City of Sacrifice, ch. on the five Suns.
+      The footnote credits Carrasco 1999 as the principal anchor ("the political-
+      sovereignty vocabulary in this claim is Carrasco's") and retains López Austin
+      1993 as the comparative-mythological framing anchor. Zero occurrences of
+      source_id=lopez-austin-myths anchor the sovereignty-transfer framing. Exact
+      match to post-human-normalize FC-01 swap in claims document. PASS.
+  - lacuna_marker_preservation: >
+      The LACUNA marker appears verbatim at narrative line 14, in the correct
+      load-bearing position within the source overview. Introduced by the
+      transitional bridge "The shape of that absence is methodologically load-
+      bearing for the whole chapter, and the claims document marks it explicitly:"
+      at narrative line 12. All three sub-fields intact: main formulation (pre-
+      conquest written-prose attestations not available; all witnesses post-
+      conquest 1521 CE onward), source (Histoyre du Mechique c. 1543; Leyenda de
+      los Soles 1558; Historia de los Mexicanos por sus pinturas c. 1530s–1540s;
+      Florentine Codex 1545–1590; López Austin 1993; Codex Borgia and Borgia-group
+      pictorial codices; Aztec Sun Stone as parallel non-textual witnesses), and
+      scholarly_reconstruction (yes — corroborative material from Borgia-group
+      pictorial codices and Aztec Sun Stone treated by López Austin 1993 as
+      confirming the broad outlines of the post-conquest narratives). Verbatim
+      match confirmed by Python character comparison (zero diffs). PASS.
+  - methodological_framing_preserved: >
+      Post-conquest-source-witness situation registered consistently throughout.
+      LACUNA marker at source-overview opening (narrative line 14). Post-conquest
+      filtering restated at narrative line 25 (Spanish-friar conceptual frames
+      paragraph), narrative line 114 (methodological centrality in typology section),
+      and INFERENCE-2 at narrative line 104 (Sun Stone reduces but does not eliminate
+      filtering risk). The chapter does not claim equal evidential confidence with
+      chapters anchored in continuous primary-text traditions. No methodological
+      drift found. PASS.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-monster", "chaos-serpent" absent from narrative.
+      Programmatic count returned zero matches for all three. Adversaries
+      characterised by specific names (Cipactli, Quetzalcoatl, Tezcatlipoca) and
+      the structural framing of their respective cosmogonic patterns. PASS.
+  - glossary_discipline: >
+      All Nahuatl, Spanish-titled colonial, and scholarly-form renderings consistent
+      between claims and narrative throughout: Cipactli, Quetzalcoatl, Tezcatlipoca,
+      Tlaltecuhtli, Tonatiuh, Chalchiuhtlicue, Topiltzin, Tula / Tollan, Histoyre
+      du Mechique, Leyenda de los Soles, Códice Chimalpopoca, Historia de los
+      Mexicanos por sus pinturas, Florentine Codex, Anales de Cuauhtitlán, Piedra
+      del Sol, Nahui Ocelotl / Nahui Ehecatl / Nahui Quiahuitl / Nahui Atl /
+      Nahui Ollin, Zipacná / Cabrakán, Puruṣa, Pangu, Ymir — all in conventional
+      scholarly forms throughout. No glossary violations. PASS.
+  - all_markers_verbatim: >
+      All 4 markers (1 LACUNA, 2 INFERENCE, 1 VARIANT) verbatim identical to claims.
+      LACUNA marker verified by Python character comparison (zero diffs). INFERENCE-1
+      (pan-Mesoamerican dismemberment-cosmogony pattern, narrative line 64) and
+      INFERENCE-2 (Aztec Sun Stone parallel witness, narrative line 104) both verified
+      by Python character comparison (zero diffs). VARIANT marker (five Suns variant-
+      handling, narrative line 82) verified by Python character comparison (zero diffs).
+      All markers retain all required sub-fields verbatim. PASS.
+  - all_comparative_hooks_verbatim: >
+      All 9 COMPARATIVE-HOOK lines verbatim identical to claims. Verified by md5sum
+      (f17e18326d18db1520b01e8cb4c01429 on both sides). Hooks cover: Mesoamerica
+      within-tradition contrast (Coatepec Ch24); Mesopotamia Marduk-Tiamat Ch3
+      dismemberment-parallel and boundary-marker; East Asia Gonggong Ch21 four-cases
+      set; Egypt Horus-vs-Seth Ch17 agonistic sovereignty rotation parallel;
+      scope.md §1 Ymir/Puruṣa/Pangu parallel dismemberment-cosmogonies; Part II C1
+      combat as cosmogony Ch34 boundary-case function; Part II C2 combat as
+      sovereignty rotation-of-sovereignty alternative; Methods sidebar Ch33 second
+      load-bearing test case; Mexica solar-warrior cult and Fifth-Sun framing of
+      Ch24. PASS.
+  - footnote_integrity: >
+      30 footnotes in narrative and claims body. Footnote CONTENTS (inside
+      footnote:[...]) verified character-by-character identical by Python (zero diffs
+      on 30/30 pairs). No additions, removals, or text alterations found inside
+      footnote brackets. The body prose surrounding the footnotes is rewritten for
+      narrative readability but all load-bearing content is present. The md5sum
+      difference on raw grep output (14fa38ccf50d5adad7af9fc1439131cc vs
+      02eab6c7b4daa1f1df16f0082d740e46) reflects surrounding whitespace differences
+      in grep extraction, not content differences — confirmed by Python zero-diff. PASS.
+  - evidence_token_integrity: >
+      30 EVIDENCE tokens in narrative and claims body. All 30 content lines
+      character-by-character identical (Python zero diffs; md5sum
+      b95864b548bf963d48c57d4edc216a33 on both full EVIDENCE-line extractions).
+      Source distribution exactly preserved: lopez-austin-myths=15, carrasco-1999-
+      city=13, forsyth-1987=2. FC-01 swap preserved at narrative line 93:
+      source_id=carrasco-1999-city. PASS.
+  - section_structure: >
+      4 sections in claims = 4 sections in narrative with identical headers:
+      (1) Source overview; (2) Cipactli — the dismemberment-cosmogony;
+      (3) Quetzalcoatl vs. Tezcatlipoca — the alternation across the five Suns;
+      (4) The chapter's place in the typology and the comparative reading.
+      No sections added, dropped, or renamed. PASS.
+  - forward_link_verification: >
+      Ch3 (Marduk-Tiamat), Ch17 (Horus-vs-Seth), Ch21 (Gonggong), Ch24 (previous
+      chapter, Coatepec), Ch33 (methods sidebar), Ch34 (Part II C1 combat as
+      cosmogony) — all verified in toc.yaml: FOUND. All cross-chapter references
+      resolve. PASS.
+  - word_count_sanity: >
+      7,263 words (wc -w count) vs. ~4,500-word brief target. The file total
+      includes 30 long footnotes (~150 words each ≈ ~4,500 footnote words), plus 2
+      INFERENCE markers, 1 LACUNA marker, 1 VARIANT marker, 9 COMPARATIVE-HOOK
+      comment lines, 30 EVIDENCE tokens, and metadata. Body-prose-only estimate is
+      approximately 2,873 words, within the brief's related-tier family-chapter
+      body-prose target. No unclaimed elaboration found. NOTE only.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      Five unfootnoted transitional/bridge sentences at narrative lines 12, 40,
+      62, 80, and 102 absent from the claims document. Lines 12, 62, 80, and 102
+      are introductory bridges immediately preceding structural markers (LACUNA,
+      INFERENCE-1, VARIANT, INFERENCE-2 respectively); line 40 is a chapter-
+      navigation sentence previewing the two-sub-section structure. None introduces
+      factual assertions beyond what the claims establish. Legitimate transitional
+      bridges. No action required.
+  - id: ISSUE-02
+    severity: NOTE
+    description: >
+      Word-count formula overage attributable to footnote-bulk inclusion in wc
+      count. Prose-body-only estimated at approximately 2,873 words, within the
+      brief's related-tier family-chapter body-prose target. No unclaimed
+      elaboration found. No action required at fidelity stage.
