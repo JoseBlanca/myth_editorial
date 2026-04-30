@@ -1,0 +1,173 @@
+stage: 15-narrative-fidelity
+chapter: 24
+chapter_title: "Huitzilopochtli, Coyolxauhqui, and the Mountain of Serpents (Coatepec)"
+status: done
+verdict: PASS
+timestamp: 2026-04-30T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 57
+  claims_mapped: 57
+  footnotes_claims: 57
+  footnotes_narrative: 57
+  footnote_md5_claims: 6374f803fe0bf9edb0feaef696ead4a9
+  footnote_md5_narrative: 6374f803fe0bf9edb0feaef696ead4a9
+  evidence_tokens_claims: 57
+  evidence_tokens_narrative: 57
+  evidence_sequence_match: true
+  reconstruction_markers: 0
+  lacuna_markers: 1
+  inference_markers: 3
+  variant_markers: 1
+  comparative_hooks: 10
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  fc01_forsyth_disclaimer_preserved: true
+  fc02_duran_retag_preserved: true
+  lacuna_marker_verbatim: true
+  lacuna_marker_at_source_overview_opening: true
+  methodological_framing_preserved: true
+  tenochtitlan_body_prose_diacritic: true
+  tenochtitlan_footnote_nondiacritic: true
+  tenochtitlan_diacritic_split_intentional: true
+  note_findings: 2
+  high_findings: 0
+  medium_findings: 0
+
+source_distribution:
+  matos_moctezuma_templo_mayor: 28
+  carrasco_1999_city: 22
+  lopez_austin_myths: 5
+  forsyth_1987: 2
+  total: 57
+  distribution_matches_claims: true
+
+output_files:
+  fidelity_yaml: chapters/24-huitzilopochtli-coatepec.fidelity.yaml
+  narrative: chapters/24-huitzilopochtli-coatepec.adoc
+  claims: chapters/24-huitzilopochtli-coatepec.claims.approved.adoc
+
+key_checks_passed:
+  - fc01_forsyth_disclaimer_preserved: >
+      FC-01 MEDIUM fix fully preserved. Body prose at narrative line 40
+      explicitly states "The typological framing — not Aztec-material coverage,
+      which Forsyth does not undertake — is what Forsyth supplies for the
+      chapter's comparative engagement with the chaoskampf tradition." Body
+      prose at narrative line 193 (footnote) states "Forsyth 1987 does not
+      itself treat the Aztec material." Both forsyth-1987 EVIDENCE tokens carry
+      corrected loc=combat-myth long-arc typology (Sumer through Judeo-Christian
+      apocalyptic). No Forsyth Mesoamerican-coverage claims in body prose. PASS.
+  - fc02_duran_retag_preserved: >
+      FC-02 MEDIUM fix fully preserved. Durán-ritual-apparatus claim at narrative
+      line 172 is anchored to source_id=carrasco-1999-city (EVIDENCE at line 173).
+      Panquetzaliztli ritual-sequence claim at narrative line 73 is also anchored
+      to source_id=carrasco-1999-city. Zero occurrences of source_id=lopez-austin-
+      myths anchor any Durán-ritual-apparatus content. The footnote at line 172
+      explicitly credits Carrasco 1999 as the principal anchor with López Austin
+      1993 supplying only the Mesoamerican-comparative framing. PASS.
+  - lacuna_marker_preservation: >
+      The LACUNA marker appears verbatim at narrative lines 13–14, in the correct
+      load-bearing position within the source overview (third paragraph of the
+      overview). It is introduced by the transitional sentence "The shape of that
+      absence is methodologically load-bearing for the whole chapter, and the
+      claims document marks it explicitly:" at narrative line 12. All three sub-
+      fields (main formulation, source, scholarly_reconstruction) are intact and
+      verbatim identical to claims (cmp returned empty output). The LACUNA framing
+      is sustained throughout the body in two additional registrations (lines 186
+      and 191). PASS.
+  - methodological_framing_preserved: >
+      The chapter's post-conquest-source-witness situation is registered
+      consistently. The LACUNA marker is at source-overview opening. The post-
+      conquest filtering risk is re-registered at narrative line 186 (risk of
+      category-import from Spanish-friar "war in heaven" notions). INFERENCE-3
+      at narrative line 191 explicitly holds the combat-cosmogony reading "as a
+      defensible scholarly synthesis under continuous methodological monitoring
+      rather than as an entirely text-independent fact." The chapter does not
+      claim equal evidential confidence with chapters anchored in continuous
+      primary-text traditions. No methodological drift found. PASS.
+  - banned_glossary_terms: >
+      "chaos-figure", "chaos-serpent", "chaos-monster" absent from narrative.
+      Grep returned zero matches. Adversaries characterised by specific names
+      (Coyolxauhqui, Centzon Huitznahua) and the cosmogonic-and-sovereignty
+      framing. No banned terms found. PASS.
+  - glossary_discipline: >
+      All Nahuatl and colonial-work renderings consistent with approved claims:
+      Huitzilopochtli, Coyolxauhqui, Centzon Huitznahua, Coatlicue, Coatepec,
+      Mexica, Tenochtitlán (body prose; diacritic per brief glossary), Templo
+      Mayor, Panquetzaliztli, xiuhcōātl, xōchiyāōyōtl, tzoalli, centzontli,
+      Cuahuitlicac, Huitzlampa, Cipactli, Quetzalcoatl, Tezcatlipoca, Tlaloc,
+      Sahagún, Durán, Florentine Codex, Historia de los Mexicanos por sus
+      pinturas, Crónica Mexicáyotl, Anales de Cuauhtitlán, Aztlán, Five Suns /
+      Nahui Ollin / Tonatiuh. Footnotes use Tenochtitlan (non-diacritic, per
+      claims-document forms) — intentional design decision. No glossary violations.
+      PASS.
+  - all_markers_verbatim: >
+      All 5 markers (1 LACUNA, 3 INFERENCE, 1 VARIANT) verbatim identical to
+      claims. LACUNA marker verified by cmp returning empty output. All 3
+      INFERENCE markers verified by cmp returning empty output. VARIANT marker
+      verified by cmp returning empty output. All markers retain all required
+      sub-fields verbatim. PASS.
+  - all_comparative_hooks_verbatim: >
+      All 10 COMPARATIVE-HOOK lines verbatim identical to claims. Verified by
+      cmp returning empty output. Hooks cover: Mesopotamia (Marduk-Tiamat, Ch. 3);
+      Mesopotamia (Ninurta-Asag, Ch. 1); China (Gonggong, Ch. 21) cosmic-mountain;
+      Hebrew Bible / Christian (Revelation 12, Ch. 9) structural parallel;
+      Mesoamerica (Cipactli dismemberment-cosmogony, Ch. 25 family); Comparative
+      ritual — architectural-embedded combat unparalleled in explicitness; Part II
+      C1 (combat as cosmogony) four-cases-set; Part II C2 (combat as sovereignty)
+      secondary case; Methods sidebar (Ch. 33) load-bearing test case; Mexica
+      solar-warrior cult and the Five Suns cycle. PASS.
+  - footnote_integrity: >
+      57 footnotes in narrative and claims body. Footnote CONTENTS (inside
+      footnote:[...]) verified character-by-character identical by cmp (md5sum
+      6374f803fe0bf9edb0feaef696ead4a9 on both sides). No additions, removals,
+      or text alterations found inside footnote brackets. The body prose outside
+      footnote brackets differs in Tenochtitlán/Tenochtitlan diacritic usage —
+      this is an intentional design decision (body prose uses diacritic per brief
+      glossary; footnotes preserve claims-document form without diacritic). PASS.
+  - evidence_token_integrity: >
+      57 EVIDENCE tokens in narrative and claims body. Verbatim identical full-
+      line sequence (cmp returned empty output on full EVIDENCE line extraction).
+      Source distribution exactly preserved: matos-moctezuma-templo-mayor=28,
+      carrasco-1999-city=22, lopez-austin-myths=5, forsyth-1987=2. PASS.
+  - section_structure: >
+      7 sections in claims = 7 sections in narrative with identical headers:
+      (1) Source overview; (2) The Mexica state, the festival, and the
+      architecture; (3) The Coatepec narrative: Coatlicue and the conception of
+      Huitzilopochtli; (4) The combat at Coatepec; (5) The cosmogonic and
+      sovereignty work of the combat; (6) Variants in the kinship and ritual
+      contexts; (7) The chapter's place in the typology and the comparative
+      reading. PASS.
+  - forward_link_verification: >
+      Ch33 (methods sidebar) verified in toc.yaml (number: 33, slug: methods).
+      Ch25 (next chapter, family on other Mesoamerican combats) verified in
+      toc.yaml (number: 25). Ch21 (Gonggong back-link) verified in toc.yaml.
+      All cross-chapter references resolve. PASS.
+  - word_count_sanity: >
+      10,824 words (wc -w count) vs. ~9,000-word brief target. The file total
+      includes 57 long footnotes (~150 words each ≈ ~8,550 footnote words), 10
+      COMPARATIVE-HOOK lines, markers, and EVIDENCE tokens. Prose-body-only
+      estimate is approximately 4,900 words, within the brief's stated body-prose
+      target. No unclaimed elaboration found. NOTE only.
+
+note_findings:
+  - id: ISSUE-01
+    severity: NOTE
+    description: >
+      One unfootnoted navigational paragraph at narrative line 49 absent from
+      the claims document. The paragraph previews the five-movement structure
+      (Mexica state/festival/architecture / conception / combat / cosmogonic-
+      and-sovereignty work / variants-and-typology). No factual assertions added.
+      Legitimate chapter-opening navigation bridge. No action required.
+  - id: ISSUE-02
+    severity: NOTE
+    description: >
+      Word-count formula overage attributable to footnote-bulk inclusion in
+      wc count. Prose-body-only estimated at approximately 4,900 words, within
+      the brief's ~9,000-word target once footnote bulk is accounted for. No
+      unclaimed elaboration found. No action required at fidelity stage.
