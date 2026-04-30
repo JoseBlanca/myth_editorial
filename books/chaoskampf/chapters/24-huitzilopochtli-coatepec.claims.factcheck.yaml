@@ -1,0 +1,854 @@
+meta:
+  stage: claims-factcheck
+  chapter: "24-huitzilopochtli-coatepec"
+  chapter_title: "Huitzilopochtli, Coyolxauhqui, and Coatepec"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-04-30"
+  input_file: "chapters/24-huitzilopochtli-coatepec.claims.adoc"
+  claims_identified: 57
+  triangulations_performed: 14
+  verdict: MINOR-REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. The four print-only anchors (Matos Moctezuma 1988, Carrasco 1999, López Austin
+      1993, Forsyth 1987) could not be fetched directly — all are print-only monographs.
+      Verification relied on trained knowledge of each volume. Matos Moctezuma 1988 (The Great
+      Temple of the Aztecs: Treasures of Tenochtitlan, Thames and Hudson) was assessed against
+      trained knowledge of its scope: an archaeological-and-interpretive monograph on the Templo
+      Mayor excavations directed by Matos Moctezuma from 1978, covering the architecture, the
+      Coyolxauhqui stone, the Coatepec-as-Templo-Mayor reading, and the iconographic programme
+      of the pyramid. Carrasco 1999 (City of Sacrifice: The Aztec Empire and the Role of Violence
+      in Civilization, Beacon Press) was assessed against trained knowledge: a political-ritual
+      reading of Mexica imperial violence with a substantial chapter on Coatepec, the
+      Panquetzaliztli festival, and the sacrificial logic of the Templo Mayor, including the
+      Spanish-friar redaction problem. López Austin 1993 (The Myths of the Opossum: Pathways of
+      Mesoamerican Mythology, University of New Mexico Press, trans. B.R. and T. Ortiz de
+      Montellano) was assessed against trained knowledge: a wide-ranging Mesoamerican comparative
+      mythology framework covering cosmogonic combat, the Cipactli dismemberment contrast, and
+      the placement of the Coatepec narrative within the broader Mesoamerican mythological
+      landscape. Forsyth 1987 (The Old Enemy: Satan and the Combat Myth, Princeton University
+      Press) was assessed against trained knowledge: its scope runs from Sumerian through
+      Judeo-Christian apocalyptic, focusing on the Near Eastern → Hebrew Bible → early Christian
+      transmission chain, with no substantive chapter on Mesoamerican or Aztec material.
+    sources_skimmed:
+      - "Matos Moctezuma 1988, The Great Temple of the Aztecs (Thames and Hudson; ISBN
+        9780500390245): printed-only; not fetched. Content assessed via trained knowledge.
+        The book covers: (1) the 1978 Coyolxauhqui stone discovery, (2) the Templo Mayor
+        archaeological stratigraphy (seven principal construction phases), (3) the
+        Coatepec-as-Templo-Mayor interpretive argument, (4) the iconographic programme
+        (serpent-headed balustrades, Coyolxauhqui stone placement, cosmic-mountain design),
+        (5) the post-conquest textual situation including Florentine Codex Book 3 as the
+        fullest narrative, (6) the Panquetzaliztli festival in its architectural context.
+        The 'interpretive chapters' loc specification used throughout the chapter is accurate
+        but vague — no page ranges or chapter titles given. This is a NOTE: the brief
+        supplies no chapter-number specificity for Matos Moctezuma 1988 (contrast with, e.g.,
+        the Gonggong brief specifying Lewis 2006 at 'chs. 2-3')."
+      - "Carrasco 1999, City of Sacrifice (Beacon Press; ISBN 9780807046425): printed-only;
+        not fetched. Content assessed via trained knowledge. The book covers: (1) a chapter
+        explicitly on Coatepec as the mythico-ritual foundation of Mexica state violence,
+        (2) the Panquetzaliztli festival ritual sequence (tzoalli dough-image, mock combats,
+        victim-casting), (3) the post-conquest textual filtering problem (Sahagún and Durán
+        as Spanish-friar mediators), (4) the sacrificial reading of Mexica warfare
+        (xochiyaoyotl / flowery wars), (5) the sacrificial-body-down-staircase ritual logic.
+        The 'ch. on Coatepec' loc is consistent with the book's structure."
+      - "López Austin 1993, The Myths of the Opossum (University of New Mexico Press; ISBN
+        9780826313942): printed-only; not fetched. Content assessed via trained knowledge.
+        The book's chapter on cosmic combat covers the Mesoamerican landscape of cosmogonic
+        narratives, distinguishes the Huitzilopochtli combat-cosmogony from the Cipactli
+        dismemberment-without-combat cosmogony, and places the Coatepec narrative in the wider
+        Mesoamerican comparative frame. However, the claim at line 184-185 cites López Austin
+        1993 as the anchor for specific content about Durán's Historia de las Indias de Nueva
+        España (the dough-image, mock combats, victim-casting ritual apparatus) — this is a
+        plausibility concern assessed as MEDIUM. The 'ch. on cosmic combat' is a
+        Mesoamerican-comparative discussion; the specific Durán ritual-context content would
+        be better anchored to Carrasco 1999 (which does substantively treat Durán's ritual
+        material in its Coatepec chapter) rather than to López Austin's comparative framework."
+      - "Forsyth 1987, The Old Enemy: Satan and the Combat Myth (Princeton University Press;
+        ISBN 9780691014746): printed-only; not fetched. Content assessed via trained knowledge.
+        The book traces the combat myth from Sumerian material through Hebrew Bible,
+        intertestamental Jewish, and early Christian apocalyptic, with primary focus on
+        the Near Eastern to Judeo-Christian transmission. Mesoamerican material does not
+        appear in the book's main argument or chapters. The brief's secondary entry for
+        Forsyth specifies loc 'on non-Eurasian combat-myth parallels' — but Forsyth 1987's
+        actual coverage is Sumer-through-Christian, not non-Eurasian. The two EVIDENCE
+        tokens citing Forsyth (lines 61 and 204) frame him as supplying 'a comparative
+        anchor for the Coatepec narrative's place alongside Mesopotamian and other
+        combat-myths in the long-arc combat-myth tradition' — which is a long-arc framing
+        use rather than Aztec-content coverage. This is an acceptable but imprecisely
+        characterized use: the loc 'on non-Eurasian combat-myth parallels' overstates
+        Forsyth's actual scope. Assessed MEDIUM — same pattern flagged HIGH in Ch20/21."
+      - "Anderson-Dibble (Arthur J.O. Anderson and Charles E. Dibble, trans., Florentine Codex:
+        General History of the Things of New Spain, University of Utah Press, 1950-1982):
+        The VARIANT marker at line 120 names the Anderson-Dibble English translation as the
+        primary version of the Florentine Codex Book 3 narrative. Anderson-Dibble is NOT
+        in sources.yaml. The EVIDENCE tokens route through Matos Moctezuma 1988 and
+        Carrasco 1999, not directly through Anderson-Dibble, so no claim formally lacks
+        a sources.yaml anchor. However, the VARIANT marker's explicit naming of Anderson-Dibble
+        as the primary version means that the Chapter 3 narrative details (ball of feathers,
+        Cuahuitlicac informer, fully-armed birth) are effectively anchored to a translation
+        that is not in the source registry. Assessed LOW — requires inventory-audit flag
+        to add Anderson-Dibble to sources.yaml."
+      - "Florentine Codex Book 3 page-range specificity: no page numbers or specific chapter
+        references within Book 3 appear in the EVIDENCE tokens. The loc 'The Great Temple
+        of the Aztecs, interpretive chapters' for Matos Moctezuma 1988 and 'City of Sacrifice,
+        ch. on Coatepec' for Carrasco 1999 are the citation level supplied by the brief.
+        Specific Florentine Codex Book 3 passage citations (e.g., fols. or chapter numbers
+        from the Anderson-Dibble edition) are absent throughout. This is consistent with
+        the brief's spec level but means triangulation-incomplete for the narrative-detail
+        claims. Assessed NOTE — not a finding at this stage, but Anderson-Dibble should be
+        added to sources.yaml before the chapter draft so that page-level Florentine Codex
+        citations can be anchored directly."
+    triangulations_assumed: >
+      (1) FORSYTH 1987 SCOPE: The two EVIDENCE tokens citing forsyth-1987 (lines 61, 204)
+      characterize Forsyth as supplying 'treatment of non-Eurasian combat-myth parallels.'
+      Per trained knowledge, Forsyth 1987 (The Old Enemy: Satan and the Combat Myth) is a
+      Sumer-through-Judeo-Christian-apocalyptic study with no substantive coverage of
+      Mesoamerican material. Its coverage of 'non-Eurasian' traditions is negligible. The
+      loc 'on non-Eurasian combat-myth parallels' therefore describes a use that the source
+      does not directly support. This is MEDIUM: the use is for long-arc framing (Coatepec
+      in the context of the wider combat-myth tradition the book surveys) rather than for
+      Aztec-content specifics, which partially mitigates — but 'non-Eurasian parallels'
+      is a positive characterization of Forsyth's scope that Forsyth does not have.
+      Recommended fix: replace 'treatment of non-Eurasian combat-myth parallels' with
+      'as the book's long-arc combat-myth framing anchor (Sumer through Christian apocalyptic),
+      for the purpose of situating the Coatepec narrative within the broader combat-myth
+      tradition the present book surveys — not for Aztec-content coverage.'
+      (2) LÓPEZ AUSTIN 1993 AS ANCHOR FOR DURÁN CONTENT: The claim at line 184-185 uses
+      López Austin 1993 (The Myths of the Opossum, ch. on cosmic combat) to anchor specific
+      claims about what Durán's Historia de las Indias de Nueva España supplies — specifically,
+      that Durán's Historia gives 'an unusually full ritual-context apparatus that ties the
+      narrative closely to the Panquetzaliztli winter-solstice festival, supplying ritual-
+      aetiological elements (the dough-image of the god, the mock combats of the festival,
+      the casting of victims down the staircase) that the Florentine Codex Book 3 omits
+      or treats more cursorily.' López Austin 1993 may reference Durán in its comparative
+      framework, but it is not the primary anchor for Durán's specific ritual-apparatus
+      content. Carrasco 1999 (ch. on Coatepec) explicitly treats the Panquetzaliztli
+      festival sequence including the dough-image, mock combats, and victim-casting per
+      Durán's account. The EVIDENCE token at line 185 should cite carrasco-1999-city,
+      not lopez-austin-myths. Assessed MEDIUM.
+      (3) MATOS MOCTEZUMA 1988 FOR FLORENTINE CODEX NARRATIVE DETAILS: Multiple EVIDENCE
+      tokens anchor Florentine Codex Book 3 narrative details (the feather-ball conception,
+      Cuahuitlicac's role, the birth-arms sequence, the dismemberment details) to Matos
+      Moctezuma 1988. Matos Moctezuma 1988 is an archaeological-and-interpretive monograph
+      on the Templo Mayor excavations — it discusses the Florentine Codex Book 3 narrative
+      in its interpretive chapters, but as a secondary source on the Codex rather than as
+      the primary text-edition. The Florentine Codex narrative details would ideally be
+      anchored to Anderson-Dibble directly, with Matos Moctezuma 1988 as the interpretive
+      secondary. As noted above (triangulation 2), Anderson-Dibble is absent from sources.yaml.
+      The current arrangement is the best available given the source registry, and the brief
+      authorizes this routing. This is a NOTE rather than a finding: the pipeline should add
+      Anderson-Dibble before the chapter-draft stage so that Florentine Codex narrative-detail
+      claims can be directly anchored to the translation.
+      (4) FORWARD-LINK CHAPTER NUMBERS: The chapter references Ch. 3 (Marduk), Ch. 1
+      (Ninurta/Asag), Ch. 21 (Gonggong), Ch. 9 (Revelation 12), Ch. 25 (Mesoamerican cluster),
+      Ch. 33 (methods sidebar), and Part II C1 as chapter-structure references.
+      Per toc.yaml: Ch. 3 = Marduk/Tiamat (PASS); Ch. 1 = Ninurta/Asag (PASS);
+      Ch. 21 = Gonggong (PASS); Ch. 9 = Revelation 12 Red Dragon (PASS);
+      Ch. 25 = Other Mesoamerican combats (PASS); Ch. 33 = Methods sidebar (PASS — unlike
+      Ch22 audit where Ch. 33 could not be confirmed, toc.yaml v1 now has Ch. 33 as the
+      methods sidebar at number 33); Part II C1 = Ch. 34 in toc.yaml. The chapter
+      consistently refers to Part II C1 by its label (not by ordinal chapter number), which
+      is correct and consistent. NOTE: the chapter's forward-link body claim at line 206
+      says 'Part II C1 (combat as cosmogony)' without specifying the ordinal number 34 —
+      this is acceptable at the claims stage; the chapter draft should include the number
+      once catalog-lock assigns it definitively.
+      (5) PANQUETZALIZTLI DATE CHARACTERIZATION: The chapter (line 89) characterizes
+      Panquetzaliztli as 'the Mexica winter-solstice festival' with 'European-calendar dates
+      fall around the winter solstice in late November to mid-December in the Julian system
+      used in the early colonial sources.' The Panquetzaliztli veintena in the Mexica
+      365-day calendar corresponds roughly to late November to mid-December in the Julian
+      calendar used by 16th-century Spanish sources — consistent with Carrasco 1999. However,
+      the Mexica calendar was not keyed to the solar year in the way the chapter implies:
+      there was no leap-year correction, so the veintena drifted over centuries. The
+      chapter's own qualifier ('with the precise correspondence varying with the Mexica
+      calendrical drift') registers this correctly. PASS.
+      (6) COYOLXAUHQUI STONE DATE: Line 83 states the stone was 'discovered on 21 February
+      1978 by electrical-utility workers digging a trench at the corner of Calle Guatemala
+      and Calle de la Argentina in central Mexico City.' Per trained knowledge: the date
+      (21 February 1978), location, and circumstances of the discovery match the standard
+      archaeological record. PASS.
+      (7) STAGE IV PLACEMENT: Line 201's INFERENCE body note dates the Coyolxauhqui stone
+      to 'the Stage IV phase of the Templo Mayor construction (mid-fifteenth century CE under
+      the rulers Moctezuma I and Axayácatl).' Per Matos Moctezuma 1988 and trained
+      knowledge of the Templo Mayor stratigraphy, Stage IV (Etapa IV) of the Templo Mayor
+      is indeed associated with construction under Moctezuma I (r. 1440-1469) and Axayácatl
+      (r. 1469-1481). PASS.
+      (8) FLORENTINE CODEX HOLDING LIBRARY: Line 36 states the Florentine Codex is 'held
+      at the Biblioteca Medicea Laurenziana in Florence, MS Mediceo Palatino 218-220.'
+      Per trained knowledge: the Florentine Codex is indeed held at the Biblioteca Medicea
+      Laurenziana, Florence, with the standard shelf-mark being MS Medicea Palatina 218-220
+      (occasionally referenced as Mediceo Palatino 218-220). PASS.
+      (9) BANNED UMBRELLA TERMS: Searched throughout the claims document for 'chaos-figure',
+      'chaos-monster', 'chaos-serpent'. None found. PASS.
+      (10) COATLICUE STATUE DIMENSIONS: Line 105 states the Coatlicue statue is
+      'approximately 2.6 metres tall.' Per trained knowledge of the Museo Nacional de
+      Antropología collection: the Coatlicue monolith is approximately 2.5-2.7 metres
+      tall depending on base inclusion; 2.6 metres is within the standard range. PASS.
+      (11) XOCHIYAOYOTL ORTHOGRAPHY: Line 95 uses the spelling 'xōchiyāōyōtl' with
+      macrons indicating long vowels. The macrons follow the orthographic conventions of
+      the Classical Nahuatl scholarly standard (consistent with Carrasco 1999). PASS.
+      (12) FORSYTH SCOPE CHARACTERIZATION: Lines 60-61 state Forsyth 1987 supplies
+      'treatment of non-Eurasian combat-myth parallels' — this is an inaccurate scope
+      description assessed MEDIUM above. Neither the sources.yaml entry nor trained
+      knowledge of the book supports this characterization. MEDIUM finding.
+      (13) HISTORIA DE LOS MEXICANOS POR SUS PINTURAS ATTRIBUTION: Line 181 identifies
+      it as 'often attributed to Andrés de Olmos.' Per trained knowledge: this is the
+      conventional attribution, though it is disputed; the anonymous character of the
+      manuscript is also acknowledged in the claim's phrasing. PASS.
+      (14) DURÁN'S ORDER: Line 42 identifies Durán as 'the Dominican friar Diego Durán.'
+      Per trained knowledge: Durán was indeed a Dominican friar (Order of Preachers);
+      Sahagún was the Franciscan. The order attributions are correct. PASS.
+    verbatim_quote_policy: >
+      No verbatim quotes from primary or secondary sources pasted; all four printed-only
+      anchors are inaccessible directly. All claims verified against trained knowledge
+      of each source. The two principal findings (FC-01, FC-02) are assessed via trained
+      knowledge of Forsyth 1987's actual scope and of López Austin 1993's actual coverage
+      relative to Durán's ritual-context material. The Anderson-Dibble issue (FC-03) is
+      assessed via trained knowledge of the translation's existence and its absence from
+      sources.yaml. Forward-link chapter numbers verified against toc.yaml directly (read
+      in full). All marker structures verified by direct inspection of the claims file.
+    internal_variance_vs_contamination: >
+      No contamination detected. All material is firmly within Mexica/Aztec mythology and
+      the standard English-language secondary scholarship on Mexica state religion (Matos
+      Moctezuma, Carrasco, López Austin). No banned umbrella terms found anywhere in body
+      prose, markers, or COMPARATIVE-HOOK comments. No RECONSTRUCTION markers present
+      (correct: the chapter correctly handles the post-conquest source situation via the
+      LACUNA marker rather than via a RECONSTRUCTION marker, since the gap is textual
+      rather than a cross-tradition fill). The [LACUNA], three [INFERENCE], and one [VARIANT]
+      markers are correctly deployed with required sub-fields. No silent bridges detected —
+      the chapter consistently flags its inferential moves. The post-conquest filtering
+      is methodologically prominent throughout, consistently registered via the LACUNA
+      marker and via continuous methodological hedging in the body claims and INFERENCE
+      markers. The appropriation protocol is followed: Matos Moctezuma, Carrasco, and
+      López Austin are cited by name in the first factual pass. The chapter opens with
+      Mexica framing before comparative invocation, per the brief's special_instructions.
+    model_identity_confirmation: >
+      I am Claude Sonnet 4.6. The writer was Claude Opus 4.7. This is an adversarial
+      audit in a fresh conversation. I have no memory of producing the claims document
+      and have approached it with fully independent scrutiny.
+
+tallies:
+  total_claims: 57
+  supported: 53
+  internal_variance: 0
+  unverified: 2
+  citation_wrong: 1
+  contamination: 0
+  fabrication: 0
+  silent_bridge: 0
+  marker_issues: 0
+  glossary_violations: 0
+  total_findings: 4
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: MEDIUM
+    category: unverified
+    location: >
+      §"Source overview" lines 60-61 (body claim anchored source_id=forsyth-1987) and
+      §"The chapter's place in the typology and the comparative reading" lines 203-204
+      (body claim anchored source_id=forsyth-1987 ; loc=on non-Eurasian combat-myth
+      parallels). Both EVIDENCE tokens at lines 61 and 204 share the same mismatch.
+    claim_text: >
+      (Line 60-61) "The chapter's secondary scholarly anchor for the wider non-Eurasian
+      combat-myth comparison is Neil Forsyth's The Old Enemy: Satan and the Combat Myth
+      (Princeton University Press, 1987), whose treatment of non-Eurasian combat-myth
+      parallels supplies a comparative anchor for the Coatepec narrative's place alongside
+      Mesopotamian and other combat-myths in the long-arc combat-myth tradition that the
+      present book surveys."
+      (Line 203-204) "...Forsyth 1987, The Old Enemy: Satan and the Combat Myth, treatment
+      of non-Eurasian combat-myth parallels on the Coatepec narrative as one of the strongest
+      single cases outside the Eurasian heartland of the chaoskampf tradition..."
+    problem: >
+      Forsyth 1987 (The Old Enemy: Satan and the Combat Myth) is, per the sources.yaml
+      entry and per trained knowledge of the volume, a study that traces the combat myth
+      from Sumer through Judeo-Christian apocalyptic: its coverage runs Sumerian →
+      Babylonian → Hebrew Bible → intertestamental Jewish → early Christian, with primary
+      focus on the Near Eastern to Judeo-Christian transmission chain. The book does not
+      contain substantive chapters on Mesoamerican material. Its coverage of
+      'non-Eurasian combat-myth parallels' is therefore not accurately characterized
+      by the loc supplied. The chapter's claim that Forsyth supplies 'treatment of
+      non-Eurasian combat-myth parallels' is an overstatement of the book's scope.
+      This is the same pattern flagged in previous Ch20/21 audits (Forsyth cited for
+      Aztec material it does not substantively cover), though the present use is less
+      severe: both EVIDENCE tokens here are for long-arc framing claims (situating
+      Coatepec within the wider combat-myth tradition the book surveys) rather than for
+      Aztec-specific narrative content. The 'non-Eurasian parallels' loc characterization
+      is inaccurate regardless.
+      Note: the brief (24-huitzilopochtli-coatepec.yaml secondary entry) already records
+      the loc as 'on non-Eurasian combat-myth parallels' — so the claims document
+      faithfully transmits the brief's loc characterization. The brief's loc is itself
+      the source of the inaccuracy.
+    evidence: >
+      sources.yaml entry for forsyth-1987: "Traces the combat myth from Sumer through
+      Judeo-Christian apocalyptic. Full catalog-level treatment." No mention of Mesoamerican
+      or non-Eurasian coverage. Trained knowledge of Forsyth 1987: the book's chapter
+      structure runs through Mesopotamian, Ugaritic, Hebrew Bible, early Jewish, and
+      early Christian combat-myth material; it does not include chapters on Aztec, Andean,
+      Chinese, or other non-Eurasian combat traditions. The characterization 'treatment
+      of non-Eurasian combat-myth parallels' is therefore not supported by the source's
+      actual scope.
+    recommended_fix: >
+      In both EVIDENCE-bearing body claims (lines 60-61 and 203-204), replace the loc
+      'on non-Eurasian combat-myth parallels' with language that accurately characterizes
+      Forsyth's actual scope: e.g., 'as the book's long-arc Sumer-through-Christian
+      combat-myth framing anchor, used here for contextual placement of the Coatepec
+      narrative within the wider combat-myth tradition the present book surveys — not
+      for Aztec-specific content coverage.' The brief's secondary entry for forsyth-1987
+      should likewise be corrected: the loc 'on non-Eurasian combat-myth parallels'
+      should be replaced with 'as long-arc framing anchor (Sumer through Christian
+      apocalyptic); cited for contextual positioning of the Coatepec narrative within
+      the book's wider survey, not for Aztec-specific coverage.' The body claims'
+      substance (that Coatepec is one of the strongest non-Eurasian cases in the wider
+      combat-myth tradition) is sound as an editorial judgement; only the characterization
+      of Forsyth as the source for that judgement requires adjustment.
+
+  - id: FC-02
+    severity: MEDIUM
+    category: citation_wrong
+    location: >
+      §"Variants in the kinship and ritual contexts" — the body claim at line 184-185
+      on Durán's Historia de las Indias de Nueva España (EVIDENCE token: source_id=
+      lopez-austin-myths ; loc=The Myths of the Opossum, ch. on cosmic combat). The
+      same claim at line 185 in the footnote credits López Austin 1993 as the anchor
+      for Durán's specific ritual-apparatus content.
+    claim_text: >
+      "Diego Durán's Historia de las Indias de Nueva España (compiled c. 1581 from Nahua
+      informants and earlier Mexica pictorial sources, preserved in the manuscript at the
+      Biblioteca Nacional de España in Madrid) supplies the Coatepec narrative within an
+      unusually full ritual-context apparatus that ties the narrative closely to the
+      Panquetzaliztli winter-solstice festival, supplying ritual-aetiological elements
+      (the dough-image of the god, the mock combats of the festival, the casting of victims
+      down the staircase) that the Florentine Codex Book 3 omits or treats more cursorily."
+    problem: >
+      The EVIDENCE token for this claim cites source_id=lopez-austin-myths (The Myths of
+      the Opossum, ch. on cosmic combat) as the anchor. However, the specific claim being
+      made is about what Durán's Historia de las Indias de Nueva España contains — namely,
+      the dough-image (tzoalli), mock combats of the Panquetzaliztli festival, and the
+      victim-casting ritual sequence. López Austin 1993 (The Myths of the Opossum) is a
+      Mesoamerican comparative mythology framework that may reference Durán in passing, but
+      it is not the primary authority on what Durán's Historia specifically supplies vis-à-vis
+      the Panquetzaliztli ritual apparatus.
+      Carrasco 1999 (City of Sacrifice, ch. on Coatepec) is the established scholarly
+      anchor for precisely this content: Carrasco 1999 explicitly treats the Panquetzaliztli
+      festival sequence including the tzoalli dough-image, the mock combats between warriors
+      representing Huitzilopochtli's forces and the Centzon Huitznahua, and the casting of
+      victims onto the Coyolxauhqui stone. The claim at line 92-93 of the same chapter
+      correctly anchors the Panquetzaliztli festival sequence description to carrasco-1999-city.
+      The Durán-specific claim at line 184-185 should share the same anchor (or add
+      carrasco-1999-city alongside lopez-austin-myths), not route through López Austin alone.
+    evidence: >
+      The claims document at lines 92-93 correctly cites carrasco-1999-city for the
+      Panquetzaliztli festival sequence including 'the dough-image (tzoalli) of Huitzilopochtli
+      processed through the city, the mock combats between pairs of warriors representing
+      Huitzilopochtli's forces and the Centzon Huitznahua, the casting of sacrificial victims
+      onto the Coyolxauhqui stone.' The identical content is claimed at line 184-185 to come
+      from Durán's Historia, but is anchored to López Austin 1993 rather than to Carrasco 1999
+      — creating an inconsistency in which the same ritual-apparatus content is correctly
+      attributed to Carrasco at one point and incorrectly attributed to López Austin at another.
+      López Austin 1993's ch. on cosmic combat focuses on the Mesoamerican cosmogonic-combat
+      typology; it does not function as the standard authority for Durán's Panquetzaliztli
+      ritual-apparatus content.
+    recommended_fix: >
+      At line 184-185, change the EVIDENCE token from source_id=lopez-austin-myths to
+      source_id=carrasco-1999-city ; loc=City of Sacrifice, ch. on Coatepec, with the
+      footnote citing Carrasco 1999 as the anchor for Durán's ritual-context material
+      and López Austin 1993 as the Mesoamerican-comparative framing source. The brief's
+      variants.alternates entry for Durán's Historia credits it to lopez-austin-myths,
+      which may have propagated the misrouting; the brief should be updated to attribute
+      the Durán ritual-context variant description to Carrasco 1999 rather than to López
+      Austin 1993.
+
+  - id: FC-03
+    severity: LOW
+    category: unverified
+    location: >
+      §"Source overview" — the VARIANT marker at line 120 names "(Sahagún 1545-1590;
+      Anderson-Dibble English translation)" as the primary version of the Florentine Codex
+      Book 3 narrative on which the chapter's prevalent version is based.
+    claim_text: >
+      "primary=Florentine Codex Book 3 (Sahagún 1545-1590; Anderson-Dibble English
+      translation): Coatlicue is impregnated by a ball of feathers..."
+    problem: >
+      The Anderson-Dibble English translation (Arthur J.O. Anderson and Charles E. Dibble,
+      trans., Florentine Codex: General History of the Things of New Spain, 13 vols.,
+      University of Utah Press / School of American Research, 1950-1982) is the standard
+      scholarly English translation of the Florentine Codex and the de facto translation
+      the chapter's narrative-detail claims are filtered through. However, Anderson-Dibble
+      does not appear in sources.yaml. The EVIDENCE tokens for all Florentine Codex narrative
+      claims route through matos-moctezuma-templo-mayor and carrasco-1999-city (which discuss
+      the Florentine Codex content as secondary interpreters), rather than through Anderson-
+      Dibble as the primary translation. This means no body claim formally lacks a sources.yaml
+      anchor — but the VARIANT marker's naming of Anderson-Dibble as the primary version
+      implies the chapter draft will quote or paraphrase Anderson-Dibble, creating a citation
+      that the source registry cannot handle at draft stage.
+      This is a pipeline-management issue rather than a factual error: the body claims are
+      correctly routed through sources.yaml entries. But the absence of Anderson-Dibble from
+      sources.yaml will need to be remedied before the chapter-draft stage, when narrative
+      prose paraphrasing the Florentine Codex Book 3 will require a page-cited anchor in the
+      primary translation.
+    evidence: >
+      sources.yaml: no entry with id=anderson-dibble or similar. The VARIANT marker at line
+      120 names the translation explicitly. The narratological detail claims (ball of feathers,
+      Cuahuitlicac's role, dismemberment sequence, *xiuhcōātl* description) in §"The Coatepec
+      narrative" and §"The combat at Coatepec" are claims about the Florentine Codex Book 3
+      text that will need page-level citations in the chapter draft. Without Anderson-Dibble
+      in sources.yaml, the chapter draft cannot supply those citations in a form the pipeline
+      can validate.
+    recommended_fix: >
+      Add an Anderson-Dibble entry to sources.yaml before the chapter-draft stage:
+        id: anderson-dibble-florentine
+        source_tier: primary-translation
+        author: "Anderson, Arthur J.O.; Dibble, Charles E."
+        title: "Florentine Codex: General History of the Things of New Spain"
+        year: 1950-1982
+        full_citation: "Sahagún, Bernardino de. Florentine Codex: General History of the Things
+          of New Spain, trans. A.J.O. Anderson and C.E. Dibble, 13 vols. (Santa Fe: School
+          of American Research / Salt Lake City: University of Utah, 1950-1982)."
+        short_citation: "Anderson-Dibble 1950-82"
+        notes: "Standard scholarly English translation of the Nahuatl Florentine Codex. Book 3
+          ('The Origin of the Gods') contains the fullest narrative account of Huitzilopochtli's
+          birth at Coatepec and the killing of Coyolxauhqui and the Centzon Huitznahua."
+      Once added, the Florentine Codex narrative-detail EVIDENCE tokens in §"The Coatepec
+      narrative" and §"The combat at Coatepec" should include anderson-dibble-florentine
+      as the co-anchor (alongside matos-moctezuma-templo-mayor as interpretive secondary).
+      This is a LOW finding at the claims stage because the current routing is pipeline-
+      valid; the issue will become HIGH at the draft stage if not remedied.
+
+  - id: FC-04
+    severity: NOTE
+    category: note
+    location: >
+      Multiple EVIDENCE tokens across §"Source overview" and §"The Mexica state, the
+      festival, and the architecture" anchored source_id=matos-moctezuma-templo-mayor
+      ; loc=The Great Temple of the Aztecs, interpretive chapters.
+    claim_text: >
+      (Representative) "The chapter's principal scholarly anchor for the archaeological-
+      iconographic dimension is Eduardo Matos Moctezuma's The Great Temple of the Aztecs:
+      Treasures of Tenochtitlan (Thames and Hudson, 1988), the standard English-language
+      interpretive monograph by the archaeologist who directed the Templo Mayor excavations
+      from 1978 onward..."
+    problem: >
+      The loc 'interpretive chapters' is used throughout for Matos Moctezuma 1988 — 28
+      of the 57 EVIDENCE tokens specify this loc. No chapter titles, chapter numbers, or
+      page ranges are supplied. This creates a consistent but vague citation structure
+      in which virtually all architectural, iconographic, and narrative-detail claims in
+      the chapter are anchored at the same vague loc level. This is consistent with the
+      brief's specification for Matos Moctezuma 1988 (the brief says 'The Great Temple of
+      the Aztecs, interpretive chapters — Coatepec as Templo Mayor, archaeological and
+      iconographic evidence') — so the claims document faithfully transmits the brief's
+      citation level. But the vagueness will require resolution before the chapter draft.
+      This is a NOTE rather than a finding: no claim is wrong, no claim lacks a
+      sources.yaml anchor, and no claim is unsupported by the source. The issue is
+      citation-specificity depth, which the brief itself does not supply.
+    evidence: >
+      Brief 24-huitzilopochtli-coatepec.yaml, sources.primary entry for
+      matos-moctezuma-templo-mayor: loc = 'The Great Temple of the Aztecs, interpretive
+      chapters — Coatepec as Templo Mayor, archaeological and iconographic evidence.'
+      No chapter numbers given. Contrast: brief 21-gonggong.yaml specifies Lewis 2006
+      at 'chs. 2-3.' The asymmetry in brief-level citation discipline between the
+      Chinese chapters (chapter-number precision) and the Mesoamerican chapter (vague
+      'interpretive chapters') is a NOTE for the brief-maintainer.
+    recommended_fix: >
+      Before the chapter-draft stage, open Matos Moctezuma 1988 and identify the specific
+      chapters that cover: (1) the Templo Mayor architectural identification as Coatepec,
+      (2) the Coyolxauhqui stone discovery and iconography, (3) the Florentine Codex Book 3
+      narrative in the context of the Templo Mayor programme, (4) the Panquetzaliztli
+      festival in its architectural context, (5) the seven building stages. Update the brief
+      with specific chapter titles and page ranges so that the chapter draft can supply
+      pinned citations. This would allow the 28 matos-moctezuma EVIDENCE tokens to be
+      validated at the page level rather than the 'interpretive chapters' vague level.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS (representative sample — 53 verified claims)
+# ─────────────────────────────────────────────────────────────────────────────
+
+supported_claims:
+
+  - claim_number: 1
+    claim: >
+      The chapter treats the Mexica cosmogonic-and-sovereignty combat in which
+      Huitzilopochtli is born fully armed from his mother Coatlicue at the Mountain
+      of Serpents (Coatepec), and at the moment of his birth kills his elder sister
+      Coyolxauhqui and the Centzon Huitznahua, his four hundred stellar brothers.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The Coatepec narrative's structure (Huitzilopochtli born fully
+      armed, killing Coyolxauhqui and Centzon Huitznahua at the moment of birth) is
+      confirmed in Matos Moctezuma 1988 per trained knowledge as the chapter's core
+      narrative as presented in Florentine Codex Book 3.
+
+  - claim_number: 2
+    claim: >
+      The Coatepec narrative has no pre-conquest written-text witness in the strict sense;
+      surviving textual witnesses are post-conquest, written by Nahua informants and Spanish
+      friars in the generation after the fall of Tenochtitlan in 1521 CE.
+    source_id: carrasco-1999-city
+    source_loc: City of Sacrifice, ch. on Coatepec
+    verbatim_quote: >
+      [printed-only] — The post-conquest character of all alphabetic-prose witnesses to
+      the Coatepec narrative is standard in Mexica studies and confirmed in Carrasco 1999
+      per trained knowledge.
+
+  - claim_number: 3
+    claim: >
+      The LACUNA marker correctly identifies the absence of pre-conquest written-prose
+      attestations; the scholarly_reconstruction field correctly identifies corroborative
+      material from Historia de los Mexicanos por sus pinturas, Durán, and the Templo
+      Mayor archaeological record.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [marker structure] — The LACUNA marker at line 34 contains all required fields
+      (source, scholarly_reconstruction). The gap identified (no pre-conquest written
+      prose) is the methodologically correct framing of the Mexica source situation.
+      The parallel-witness characterization of the Templo Mayor archaeological evidence
+      is the standard scholarly position per Matos Moctezuma 1988.
+
+  - claim_number: 4
+    claim: >
+      The fullest single textual witness is the Florentine Codex (Biblioteca Medicea
+      Laurenziana, Florence, MS Mediceo Palatino 218-220), compiled by Sahagún with
+      Nahua informants between approximately 1545 and 1590 CE; Book 3 ("The Origin
+      of the Gods") contains the fullest extant narrative account.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The Florentine Codex's shelf-mark (MS Mediceo Palatino 218-220),
+      its bilingual character, Sahagún's compilation dates (c. 1545-1590), and Book 3
+      as the fullest narrative witness are confirmed per trained knowledge of the manuscript
+      and its scholarship. PASS.
+
+  - claim_number: 5
+    claim: >
+      The Coyolxauhqui stone (approximately 3.25 metres in diameter) was discovered on
+      21 February 1978 at the corner of Calle Guatemala and Calle de la Argentina in
+      central Mexico City, and lies at the foot of the southern (Huitzilopochtli) staircase
+      of the Stage IV Templo Mayor.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The date (21 February 1978), location (corner of Calle Guatemala
+      and Calle de la Argentina), stone dimensions (~3.25 m diameter), and Stage IV
+      placement are confirmed per trained knowledge of the Templo Mayor excavation history
+      as described in Matos Moctezuma 1988.
+
+  - claim_number: 6
+    claim: >
+      The Templo Mayor's architectural identification as Coatepec is supported by the
+      serpent-headed balustrades flanking the southern staircase, the Coyolxauhqui stone
+      at the foot of that staircase, and the four-tiered cosmic-mountain structural design.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The convergent iconographic evidence for the Templo Mayor as
+      Coatepec (serpent-headed balustrades, Coyolxauhqui stone placement, cosmic-mountain
+      design) is Matos Moctezuma 1988's load-bearing interpretive argument, confirmed
+      per trained knowledge.
+
+  - claim_number: 7
+    claim: >
+      The Panquetzaliztli ("Raising of Banners") festival included mock combats between
+      warriors representing Huitzilopochtli's forces and the Centzon Huitznahua, the
+      casting of sacrificial victims down the southern staircase onto the Coyolxauhqui
+      stone, and ritual feasting on the dough-image (tzoalli) of Huitzilopochtli.
+    source_id: carrasco-1999-city
+    source_loc: City of Sacrifice, ch. on Coatepec
+    verbatim_quote: >
+      [printed-only] — The Panquetzaliztli festival's ritual sequence (tzoalli dough-image,
+      mock combats, victim-casting onto Coyolxauhqui stone, ritual feasting) is Carrasco
+      1999's primary contribution as the political-ritual anchor; confirmed per trained
+      knowledge of the chapter.
+
+  - claim_number: 8
+    claim: >
+      Coatlicue's miraculous conception of Huitzilopochtli through a ball of feathers that
+      descends from the sky, which she places in her bosom and then cannot find, constitutes
+      a virgin-conception event in the Florentine Codex Book 3 narrative.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The feather-ball conception narrative (feathers descend, Coatlicue
+      places them in her bosom, becomes pregnant without finding the feathers) is the
+      standard account of the Florentine Codex Book 3 narrative confirmed per trained
+      knowledge of the source.
+
+  - claim_number: 9
+    claim: >
+      Cuahuitlicac, one of Huitzilopochtli's brothers, betrays the conspiracy to the
+      unborn god inside Coatlicue's womb, providing continuous intelligence on the
+      Centzon Huitznahua's gathering, armour, weapons, and plan of attack.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The Cuahuitlicac informer element is a standard feature of the
+      Florentine Codex Book 3 Coatepec narrative confirmed per trained knowledge.
+
+  - claim_number: 10
+    claim: >
+      Huitzilopochtli is born fully armed with the xiuhcōātl (turquoise-serpent / fire-serpent
+      weapon, a fire-serpent of solar character appearing as a serpent-shaped firebrand with
+      a recurved snout in Mexica iconography) and with body-paint and feathered war-regalia.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The xiuhcōātl as the fire-serpent weapon, its iconographic
+      appearance as a serpent-shaped firebrand with recurved snout, and the body-paint
+      and feathered war-regalia are confirmed as standard iconographic identifiers of
+      Huitzilopochtli per Matos Moctezuma 1988 and per trained knowledge.
+
+  - claim_number: 11
+    claim: >
+      Huitzilopochtli kills Coyolxauhqui by striking off her head with the xiuhcōātl,
+      then dismembers her body (severing arms and legs), and flings the dismembered
+      body down the side of Coatepec. The Coyolxauhqui stone's iconography (head severed,
+      limbs disarticulated radially around the torso) corresponds to this exact moment.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The dismemberment narrative (head struck off with xiuhcōātl; arms
+      and legs severed; body flung down the mountain) and its iconographic correspondence
+      in the Coyolxauhqui stone (head severed, limbs arranged radially) are confirmed per
+      trained knowledge of Matos Moctezuma 1988's core interpretive argument.
+
+  - claim_number: 12
+    claim: >
+      The number centzontli (four hundred) attached to the Centzon Huitznahua is a stock
+      Classical Nahuatl collective number for "many" or "innumerable," paralleled by the
+      centzon mimixcoa of the northern stars.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: The Great Temple of the Aztecs, interpretive chapters
+    verbatim_quote: >
+      [printed-only] — The four-hundred (centzontli) as a Classical Nahuatl collective
+      numeral for "innumerable," and the parallel centzon mimixcoa figure, are standard
+      features of the Nahuatl mythological tradition confirmed per trained knowledge.
+
+  - claim_number: 13
+    claim: >
+      The VARIANT marker correctly identifies the single-prevalent classification (Florentine
+      Codex Book 3 as prevalent version), contains all required sub-fields (primary, alt,
+      chosen, reason), and the reason sub-field correctly cites the brief's variant
+      classification.
+    source_id: matos-moctezuma-templo-mayor
+    source_loc: variant marker structure
+    verbatim_quote: >
+      [marker structure] — The VARIANT marker at line 120 is correctly structured with
+      primary/alt/chosen/reason sub-fields. The reason cites brief 24-huitzilopochtli-
+      coatepec.yaml variants.classification = single-prevalent. PASS.
+
+  - claim_number: 14
+    claim: >
+      The three INFERENCE markers carry required basis and risk sub-fields; none constitute
+      silent bridges or unregistered inferential leaps.
+    source_id: carrasco-1999-city
+    source_loc: marker structure review
+    verbatim_quote: >
+      [marker structure] — All three INFERENCE markers (lines 98, 168, 201) contain
+      basis and risk sub-fields. The inferences are: (1) four converging witnesses as
+      integrated complex; (2) most-unambiguous-state-founded-combat-cosmogony claim;
+      (3) combat-cosmogony reading robust against post-conquest-filtering risk via
+      parallel non-textual witness. All three are appropriately registered rather
+      than silently asserted. PASS.
+
+  - claim_number: 15
+    claim: >
+      No banned umbrella terms ("chaos-figure," "chaos-monster," "chaos-serpent") appear
+      anywhere in the body prose, markers, or COMPARATIVE-HOOK comments.
+    source_id: glossary-check
+    source_loc: full document search
+    verbatim_quote: >
+      [direct search] — Zero instances of "chaos-figure," "chaos-monster," or
+      "chaos-serpent" found in the claims document. PASS.
+
+  - claim_number: 16
+    claim: >
+      Forward-link chapter numbers are correct per toc.yaml: Ch. 3 = Marduk/Tiamat (PASS);
+      Ch. 1 = Ninurta/Asag (PASS); Ch. 21 = Gonggong (PASS); Ch. 9 = Revelation 12
+      Red Dragon (PASS); Ch. 25 = Other Mesoamerican combats (PASS); Ch. 33 = Methods
+      sidebar (PASS). "Part II C1" is used as a label rather than an ordinal chapter
+      number — toc.yaml places C1 at Ch. 34.
+    source_id: toc-verification
+    source_loc: toc.yaml read in full
+    verbatim_quote: >
+      [toc.yaml direct read] — All chapter-number forward-links verified correct.
+      Ch. 33 as methods sidebar is confirmed (toc.yaml number 33, slug: methods,
+      title: "Methods: how the tiering works, appropriation protocol, area-specialist
+      policy"). Unlike Ch22 audit where Ch. 33 was flagged as unverified, toc.yaml v1
+      definitively places the methods sidebar at number 33. PASS.
+
+  - claim_number: 17
+    claim: >
+      The chapter opens with Mexica framing (the Mexica polity, Tenochtitlan, Huitzilopochtli
+      as patron god, the Templo Mayor, the Panquetzaliztli festival) before any comparative
+      invocation, per the brief's special_instructions and scope.md §"Appropriation protocol."
+    source_id: scope-compliance
+    source_loc: brief special_instructions
+    verbatim_quote: >
+      [structural check] — The source overview section and §"The Mexica state, the festival,
+      and the architecture" establish the Mexica framing before any comparative hooks appear.
+      Comparative hooks are confined to the COMPARATIVE-HOOK comments at the end of the
+      document. PASS.
+
+  - claim_number: 18
+    claim: >
+      Area-specialist citation policy is satisfied: Matos Moctezuma 1988, Carrasco 1999,
+      and López Austin 1993 are cited by name in the first factual pass (source overview),
+      per scope.md §"Appropriation protocol."
+    source_id: scope-compliance
+    source_loc: scope.md appropriation protocol
+    verbatim_quote: >
+      [structural check] — All three area specialists named at lines 51 (Matos Moctezuma),
+      54 (Carrasco), 57 (López Austin), within the source overview section. PASS.
+
+  - claim_number: 19
+    claim: >
+      The Mexica polity's tributary empire extended from the Pacific to Gulf coasts at its
+      greatest extent under Moctezuma I, Axayácatl, Ahuítzotl, and Moctezuma II.
+    source_id: carrasco-1999-city
+    source_loc: City of Sacrifice, ch. on Coatepec
+    verbatim_quote: >
+      [printed-only] — The four rulers named (Moctezuma I, Axayácatl, Ahuítzotl,
+      Moctezuma II) as the major expansionist rulers of the Triple Alliance state and
+      the broad Pacific-to-Gulf geographic scope of the empire at its height are
+      confirmed per trained knowledge.
+
+  - claim_number: 20
+    claim: >
+      The Coatepec narrative is typologized as a cosmogonic-and-sovereignty combat —
+      simultaneously performing cosmogonic work (establishing the proper celestial order)
+      and sovereignty work (establishing Huitzilopochtli's sovereignty over the Mexica
+      pantheon and (by extension) the Mexica state's political-ritual order).
+    source_id: carrasco-1999-city
+    source_loc: City of Sacrifice, ch. on Coatepec
+    verbatim_quote: >
+      [printed-only] — The dual cosmogonic-and-sovereignty reading of the Coatepec combat
+      is Carrasco 1999's interpretive framework and the standard scholarly characterization
+      confirmed per trained knowledge.
+
+  - claim_number: 21
+    claim: >
+      The post-conquest-filtering risk (Spanish-friar conceptual frames; the 'war in heaven'
+      biblical-and-medieval analogue) is explicitly flagged in the chapter's methodological
+      body claims and INFERENCE markers, not papered over.
+    source_id: carrasco-1999-city
+    source_loc: City of Sacrifice, ch. on Coatepec
+    verbatim_quote: >
+      [structural check] — The filtering risk is registered at lines 45-46, 198-199,
+      and in the third INFERENCE marker (line 201). The chapter does not over-claim on
+      filtered sources; it consistently hedges the combat-cosmogony reading by foregrounding
+      the parallel non-textual archaeological witness. PASS.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1:1 INVARIANT CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+invariant_check:
+  total_claims_with_footnotes: 57
+  total_footnotes: 57
+  total_evidence_tokens: 57
+  invariant_result: PASS
+  notes: >
+    All three counts match at 57/57/57. Source distribution among EVIDENCE tokens:
+    matos-moctezuma-templo-mayor = 28 tokens; carrasco-1999-city = 21 tokens;
+    lopez-austin-myths = 6 tokens; forsyth-1987 = 2 tokens. Total = 57. The four-source
+    split is consistent with the brief's source specification (three primary + one
+    secondary). The high Matos Moctezuma count (28/57) reflects the archaeological-
+    iconographic emphasis called for in the brief's special_instructions.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SOURCE-RESOLUTION CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+source_resolution:
+  - source_id: matos-moctezuma-templo-mayor
+    in_sources_yaml: true
+    plausibility: PASS
+    notes: >
+      Matos Moctezuma 1988 is the architectural-archaeological anchor for the Templo Mayor;
+      its scope (Coatepec as Templo Mayor, Coyolxauhqui stone, iconographic programme)
+      covers the chapter's archaeological-iconographic claims. Appropriate anchor for
+      Florentine Codex Book 3 narrative discussion (as secondary interpreter discussing
+      the narrative in its architectural context). The 'interpretive chapters' loc is
+      vague but brief-authorised.
+
+  - source_id: carrasco-1999-city
+    in_sources_yaml: true
+    plausibility: PASS
+    notes: >
+      Carrasco 1999 is the political-ritual anchor; its chapter on Coatepec covers
+      the Panquetzaliztli festival, the sacrificial logic, the post-conquest textual
+      filtering problem, and the Mexica state ideology reading. Appropriate for all
+      political-ritual claims cited. One misrouting found (FC-02): Durán ritual-apparatus
+      content at line 184-185 should be carrasco-1999-city rather than lopez-austin-myths.
+
+  - source_id: lopez-austin-myths
+    in_sources_yaml: true
+    plausibility: PASS_WITH_NOTE
+    notes: >
+      López Austin 1993 is the Mesoamerican comparative framework anchor; its chapter on
+      cosmic combat covers the Cipactli-vs-Coatepec distinction, the placement of the
+      Coatepec narrative in the Mesoamerican typology, and the cosmogonic-combat reading.
+      Appropriate for all comparative-framework claims. One misrouting found (FC-02):
+      the Durán ritual-apparatus claim at line 184-185 is anchored here but should be
+      carrasco-1999-city.
+
+  - source_id: forsyth-1987
+    in_sources_yaml: true
+    plausibility: MEDIUM_CONCERN
+    notes: >
+      Forsyth 1987 is in sources.yaml. Its scope (Sumer through Judeo-Christian apocalyptic)
+      does not cover Mesoamerican material. The two EVIDENCE tokens citing Forsyth are for
+      long-arc framing claims rather than Aztec-specific content, which partially mitigates;
+      but the loc 'on non-Eurasian combat-myth parallels' is an inaccurate description of
+      the book's scope. See FC-01 for recommended fix.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FORWARD-LINK VERIFICATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+forward_link_verification:
+  toc_version: "v1, 2026-04-23"
+  links_checked:
+    - reference: "Ch. 1 (Ninurta/Asag)"
+      toc_entry: "number: 1, slug: ninurta-asag"
+      result: PASS
+
+    - reference: "Ch. 3 (Marduk/Tiamat)"
+      toc_entry: "number: 3, slug: marduk-tiamat"
+      result: PASS
+
+    - reference: "Ch. 9 (Revelation 12)"
+      toc_entry: "number: 9, slug: revelation-red-dragon"
+      result: PASS
+
+    - reference: "Ch. 21 (Gonggong)"
+      toc_entry: "number: 21, slug: gonggong"
+      result: PASS
+
+    - reference: "Ch. 25 (Mesoamerican cluster / Cipactli)"
+      toc_entry: "number: 25, slug: mesoamerican-cluster"
+      result: PASS
+
+    - reference: "Ch. 33 (methods sidebar)"
+      toc_entry: "number: 33, slug: methods, title: Methods: how the tiering works..."
+      result: PASS
+      note: >
+        Unlike Ch22 audit (where Ch. 33 could not be confirmed from catalog), toc.yaml v1
+        definitively places the methods sidebar at number 33. All Ch24 references to
+        'chapter 33' and 'Methods sidebar (Ch. 33)' are correct.
+
+    - reference: "Part II C1 (combat as cosmogony)"
+      toc_entry: "number: 34, slug: C1-combat-as-cosmogony"
+      result: PASS_WITH_NOTE
+      note: >
+        The chapter uses 'Part II C1' as the label throughout (not the ordinal number 34).
+        toc.yaml places C1 at Ch. 34. The label use is correct and consistent; the
+        chapter draft should include the ordinal number for reader navigation.

@@ -1,0 +1,67 @@
+stage: "claims-factcheck"
+timestamp: "2026-04-30T05:45:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+outputs:
+  - file: "chapters/24-huitzilopochtli-coatepec.claims.factcheck.yaml"
+    lines: 448
+summary: >
+  Factcheck audit of Ch24 Huitzilopochtli/Coatepec claims (57 claims / 57 footnotes / 57
+  EVIDENCE tokens; 1:1 invariant confirmed): MINOR-REVISE verdict with 0 HIGH, 2 MEDIUM,
+  1 LOW, and 1 NOTE finding.
+
+  Source distribution: matos-moctezuma-templo-mayor = 28 tokens; carrasco-1999-city = 21;
+  lopez-austin-myths = 6; forsyth-1987 = 2. All four sources resolve in sources.yaml.
+
+  Marker discipline: PASS. 1 LACUNA (correct: post-conquest written-prose witness gap, with
+  scholarly_reconstruction field properly populated), 3 INFERENCE (correct: four-converging-
+  witnesses, most-unambiguous-state-founded-combat-cosmogony, parallel-non-textual-witness —
+  all carry basis/risk sub-fields), 1 VARIANT (correct: single-prevalent classification,
+  Florentine Codex Book 3 as prevalent version, with primary/alt/chosen/reason). No RECONSTRUCTION
+  markers (correctly absent — gap handled via LACUNA, not cross-tradition fill). No banned
+  terms. Appropriation protocol complied with: three area specialists cited by name in first
+  factual pass. Post-conquest filtering methodologically prominent throughout.
+
+  Forward-links: all PASS against toc.yaml. Notable: Ch. 33 (methods sidebar) is correctly
+  identified — toc.yaml v1 definitively places the methods sidebar at number 33, validating
+  the chapter's references (unlike Ch22 where Ch. 33 was unverifiable from the catalog).
+  Part II C1 used as a label; resolves to Ch. 34 in toc.yaml.
+
+  FC-01 (MEDIUM): Forsyth 1987 cited with loc "on non-Eurasian combat-myth parallels" — but
+  Forsyth's actual scope is Sumer-through-Christian-apocalyptic, not non-Eurasian traditions.
+  Both EVIDENCE tokens (lines 61, 204) are for long-arc framing claims rather than Aztec-
+  specific content, which partially mitigates; however, the loc characterization is inaccurate
+  and should be corrected to reflect a long-arc-framing-anchor use only (consistent with
+  MODIFY-loc treatment applied in Ch19/Ch20). The brief's secondary entry for forsyth-1987
+  should likewise be corrected. This is a recurring pattern: Forsyth cited for non-Eurasian
+  material it does not cover.
+
+  FC-02 (MEDIUM): At line 184-185 (Durán's Historia ritual-apparatus claim), EVIDENCE token
+  cites source_id=lopez-austin-myths but the anchor should be carrasco-1999-city. The
+  Panquetzaliztli dough-image / mock-combats / victim-casting content is Carrasco 1999's
+  material (correctly anchored at lines 92-93 of the same document); the same content is
+  misrouted through López Austin at line 185. The brief's variants.alternates entry for
+  Durán's Historia likely propagated this misrouting. Fix: change EVIDENCE token at line
+  185 to carrasco-1999-city; update brief accordingly.
+
+  FC-03 (LOW): Anderson-Dibble English translation of the Florentine Codex (the scholarly-
+  standard 13-volume translation, University of Utah Press 1950-82) is named explicitly in
+  the VARIANT marker as the primary version, but is absent from sources.yaml. No body claim
+  formally lacks a sources.yaml anchor (all narrative-detail claims route through Matos
+  Moctezuma and Carrasco as secondary interpreters). However, the chapter draft will require
+  Anderson-Dibble for page-level Florentine Codex citations. Recommended: add entry
+  id=anderson-dibble-florentine to sources.yaml before chapter-draft stage. LOW at claims
+  stage; becomes HIGH at draft stage if not remedied.
+
+  FC-04 (NOTE): Matos Moctezuma 1988's loc "interpretive chapters" is used throughout (28/57
+  tokens) with no chapter titles or page ranges. Brief-authorised at this level, but less
+  specific than the precision achieved for comparable sources (e.g., Lewis 2006 at "chs. 2-3"
+  in the Gonggong brief). Recommend adding chapter-level specificity to Matos Moctezuma 1988
+  in the brief before chapter-draft stage.
+
+  Overall: the chapter is in substantially better shape than Ch22 (no HIGH findings, no
+  factual errors comparable to the Zhuyin-vs-Xiushe mismatch). The two MEDIUM findings are
+  source-attribution/loc issues, both correctable without touching the chapter's narrative
+  substance. The LACUNA, INFERENCE, and VARIANT marker discipline is clean. The appropriation
+  protocol and post-conquest filtering handling are model-quality for a non-Eurasian CORE
+  chapter.
