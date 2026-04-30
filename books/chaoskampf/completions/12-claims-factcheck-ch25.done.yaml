@@ -1,0 +1,61 @@
+stage: "claims-factcheck"
+timestamp: "2026-04-30T13:45:00Z"
+status: "completed"
+agent_model: "claude-sonnet-4-6"
+outputs:
+  - file: "chapters/25-mesoamerican-cluster.claims.factcheck.yaml"
+    lines: 956
+summary: >
+  Factcheck audit of Ch25 Other Mesoamerican Combats (Cipactli, Quetzalcoatl vs. Tezcatlipoca)
+  claims (30 claims / 30 footnotes / 30 EVIDENCE tokens; 1:1 invariant confirmed): MINOR-REVISE
+  verdict with 0 HIGH, 1 MEDIUM, 0 LOW, and 1 NOTE finding.
+
+  Source distribution: lopez-austin-myths = 16 tokens; carrasco-1999-city = 12 tokens;
+  forsyth-1987 = 2 tokens. All three sources resolve in sources.yaml.
+
+  Forsyth disclaimer: PASS. Both EVIDENCE tokens citing forsyth-1987 (lines 51, 126) carry
+  the corrected disclaimer wording per the Ch23-onwards brief-level fix: loc accurately states
+  'combat-myth long-arc typology (Sumer through Judeo-Christian apocalyptic)'; footnotes
+  explicitly disclaim Aztec-material coverage. NOT a finding.
+
+  Marker discipline: PASS. 1 LACUNA (line 30: post-conquest written-prose witness gap, with
+  source and scholarly_reconstruction sub-fields correctly populated — names Histoyre du
+  Mechique, Leyenda de los Soles, Historia de los Mexicanos por sus pinturas, Florentine Codex
+  as principal witnesses; Borgia group and Aztec Sun Stone as pre-conquest pictorial witnesses).
+  2 INFERENCE (lines 76 and 112, both carry basis and risk sub-fields — pan-Mesoamerican
+  dismemberment-cosmogony pattern; Sun Stone as pre-conquest parallel witness). 1 VARIANT
+  (line 92: Leyenda de los Soles as prevalent connected-narrative version, with primary/alt/
+  chosen/reason sub-fields). Required marker counts (1 + 2 + 1) confirmed. No RECONSTRUCTION
+  markers (correctly absent — post-conquest gap handled via LACUNA). No banned terms. No
+  silent bridges. Appropriation protocol: López Austin 1993 and Carrasco 1999 cited by name
+  in first factual pass. Both sub-cases (Cipactli and Suns cycle) present and balanced per
+  brief. Scope.md boundary-marking honoured.
+
+  Forward-links: all PASS against toc.yaml. Ch. 24 (Huitzilopochtli), Ch. 3 (Marduk),
+  Ch. 21 (Gonggong), Ch. 17 (Horus/Seth), Ch. 34 (Part II C1 — ordinal used once in
+  COMPARATIVE-HOOK), Part II C2 (label only, resolves to Ch. 35), Ch. 33 (methods sidebar)
+  — all verified.
+
+  Aztec Sun Stone central-face identification: PASS. The body claim presents Tonatiuh as
+  the standard reading with Tlaltecuhtli as the alternative; the second INFERENCE marker's
+  risk sub-field explicitly registers the alternative identification and the interpretive
+  dependence on post-conquest texts. Handled appropriately.
+
+  FC-01 (MEDIUM): At line 103, the sovereignty-transfer / cosmogonic-political-cycle
+  structural framing claim for the Suns alternation is anchored solely to lopez-austin-myths.
+  The political-sovereignty vocabulary ('sovereignty-transfer between paired antagonist deities,'
+  'cosmogonic-political cycle') is the characteristic framing of Carrasco 1999 (City of Sacrifice),
+  which directly analyses the Suns cycle as Mexica state-ritual ideology. Recommended fix:
+  add carrasco-1999-city as co-anchor in the EVIDENCE token and footnote at line 103. This
+  parallels the FC-02 misrouting pattern from Ch24. The claim's substance is factually correct;
+  only the source attribution needs adjustment.
+
+  FC-02 (NOTE): All 16 lopez-austin-myths and 12 carrasco-1999-city EVIDENCE tokens carry
+  chapter-level locs only ('ch. on Cipactli and the Suns cycle'; 'ch. on the five Suns') with
+  no page ranges or sub-chapter titles. Brief-authorised at this stage; will require page-level
+  anchoring before chapter draft. Same recommendation as Ch24 FC-04 for Matos Moctezuma 1988.
+
+  Overall: the chapter is in strong shape. The Forsyth-disclaimer fix (implemented at brief
+  level for Ch23-onwards) is correctly applied. The boundary-marking treatment of Cipactli
+  per scope.md is model-quality. The single MEDIUM finding is a source-attribution misrouting
+  for one load-bearing claim, correctable without touching the narrative substance.
