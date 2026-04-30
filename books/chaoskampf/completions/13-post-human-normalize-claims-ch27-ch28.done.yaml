@@ -1,0 +1,533 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-30T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/27-mapuche-kai-tren.claims.approved.adoc"
+    lines: 137
+  - file: "chapters/28-bida-wagadu.claims.approved.adoc"
+    lines: 203
+  - file: "briefs/27-mapuche-kai-tren.yaml"
+    lines: 92
+  - file: "briefs/28-bida-wagadu.yaml"
+    lines: 56
+  - file: "sources.yaml"
+    lines_delta: "0 (no new entries; 66 → 66; 4 in-place identifier corrections on Ch27 anchors)"
+summary: "Promoted Ch27 (FC-01 MEDIUM Foerster ISBN — ACCEPT digit-transposition fix 9789561109315 → 9789561109124; FC-02 LOW Course ISBN — ACCEPT paperback 9780252078163 → 9780252078231; FC-03 LOW Faron OCLC — ACCEPT 247070 → 320079821 per the auditor's verified WorldCat record; FC-04 LOW-MEDIUM Koessler-Ilg edition — MODIFY swap from unconfirmed 1962 Editorial Mar Océano edition to confirmed 1954 Espasa-Calpe Austral edition (Colección Austral no. 1208, 153 pp.) per the Argentine mincyt repository entry, with identifier_type changed from OCLC to stable-url and the body-prose 1962 references updated to 1954 throughout) and Ch28 (FC-01 LOW Frobenius institutional name and Atlantis volume range — ACCEPT, drop \"Deutsches\" prefix from Institut für Kulturmorphologie and soften \"volumes IV–VI\" with \"the Sahel and West African material conventionally cited as volumes IV–VI\"; FC-02 NOTE six named-but-flagged secondary sources missing from sources.yaml — FLAGGED-ONLY per Ch23 FC-02 / Ch26 FC-02 named-but-flagged precedent, deferred to inventory-audit; FC-03 NOTE Frobenius 1910s + Monteil 1924/1953 precision — MODIFY, tighten Frobenius to \"1907–1909 expedition window\" and Monteil to \"1953 IFAN-Dakar publication\" with the matching footnote and LACUNA-and-VARIANT-marker updates) to .claims.approved.adoc with post-human-normalize provenance footers. Source-count delta: 0 (66 → 66, no new entries; 4 in-place identifier corrections on Ch27 anchors koessler-ilg-cuentan, foerster-religiosidad-mapuche, course-becoming-mapuche, faron-hawks-of-sun). One brief edit applied: briefs/27-mapuche-kai-tren.yaml updated to mirror the 4 sources.yaml identifier corrections; briefs/28-bida-wagadu.yaml unchanged (the brief's high-level \"Monteil 1924 and later\" formulation is general enough to cover the canonical 1953 IFAN edition; the institutional-name and volume-range body-prose tightenings have no brief-level counterparts). Both .claims.approved.adoc files preserve the 1:1 invariant (Ch27 23/23; Ch28 45/45); no claims added, no claims removed; original .claims.adoc files for both chapters confirmed UNMODIFIED via git status."
+notes: |
+  ──────────────────────────────────────────────────────────────────────────────
+  Sources.yaml in-place updates (Ch27 identifier corrections; 0 entries added):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  Four in-place identifier corrections on the five Mapuche-cluster anchors
+  pinned in commit 18f3bff (Bacigalupo's ISBN 9780292716599 was the only
+  identifier that the auditor PASSED; the other four required corrections):
+
+  - foerster-religiosidad-mapuche (Ch27 FC-01):
+    identifier_value: "9789561109315" → "9789561109124"
+    notes: appended post-human-normalize correction note citing
+    AbeBooks, Amazon, University of Chile repository, buscalibre.cl,
+    serindigena.org, and the University of Chicago catalog record as
+    the consensus sources. Digit-transposition data-entry error.
+
+  - course-becoming-mapuche (Ch27 FC-02):
+    identifier_value: "9780252078163" → "9780252078231" (paperback)
+    notes: appended post-human-normalize correction note citing the
+    University of Illinois Press catalogue and Amazon as confirmation
+    sources for the paperback ISBN; the hardcover ISBN 9780252036477
+    is the alternative; paperback selected as the more accessible
+    standard per project precedent for non-rare 21st-c. scholarly
+    anchors.
+
+  - faron-hawks-of-sun (Ch27 FC-03):
+    identifier_value: "247070" → "320079821"
+    notes: appended post-human-normalize correction note citing the
+    auditor's verified WorldCat record at
+    https://search.worldcat.org/es/title/Hawks-of-the-sun-:-Mapuche-morality-and-its-ritual-attributes/oclc/320079821
+    as the dominant WorldCat record for the 1964 Faron monograph.
+
+  - koessler-ilg-cuentan (Ch27 FC-04):
+    year: 1962 → 1954
+    full_citation: "(Buenos Aires: Editorial Mar Océano, 1962)" →
+      "(Buenos Aires: Espasa-Calpe, Colección Austral no. 1208, 1954)"
+    short_citation: "Koessler-Ilg 1962" → "Koessler-Ilg 1954"
+    identifier_type: OCLC → stable-url
+    identifier_value: "4124869" → "https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/BDUNCU_f331a4b9b4ecdd61224cf08ff45c49bd"
+    notes: extensively rewritten to record the post-human-normalize
+    edition swap; the 1954 Espasa-Calpe Austral edition (Colección
+    Austral no. 1208, Buenos Aires, 153 pp.) is the canonical
+    Spanish-language scholarly citation per the Argentine mincyt
+    repository entry; the previously-recorded 1962 Editorial Mar Océano
+    edition could not be independently confirmed in WorldCat or in any
+    Argentine catalogue; the alternative 1962 UNLP *Tradiciones
+    araucanas* edition was rejected as the swap target since the
+    canonical short-citation form across Mapuche-studies references
+    privileges *Cuentan los araucanos*. OCLC pending verification at
+    chapter-draft.
+
+  Source count delta: 66 → 66 (0). Confirmed via
+    grep -c "^  - id:" books/chaoskampf/sources.yaml → 66.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Briefs / governing-document changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/27-mapuche-kai-tren.yaml (UPDATED, Ch27 FC-01..FC-04):
+    * sources.primary koessler-ilg-cuentan identifier:
+      "OCLC 4124869" → "stable-url: https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/BDUNCU_f331a4b9b4ecdd61224cf08ff45c49bd (1954 Espasa-Calpe Austral edition)"
+    * sources.secondary foerster-religiosidad-mapuche identifier:
+      "ISBN 9789561109315" → "ISBN 9789561109124"
+    * sources.secondary course-becoming-mapuche identifier:
+      "ISBN 9780252078163" → "ISBN 9780252078231"
+    * sources.secondary faron-hawks-of-sun identifier:
+      "OCLC 247070" → "OCLC 320079821"
+    Brief line count: 92 → 92 (no net line change; identifier values
+    swapped in place, with only the Koessler-Ilg identifier line being
+    longer due to the stable-url format).
+
+  - briefs/28-bida-wagadu.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement at this stage.
+    FC-01 (Frobenius institutional name and volume range) and FC-03
+    (Frobenius 1910s + Monteil 1924/1953) are body-prose-and-footnote
+    tightenings only; the brief's high-level "Monteil 1924 and later"
+    formulation is general enough to cover the canonical 1953 IFAN
+    edition without requiring a brief-level edit. FC-02 (six named-but-
+    flagged secondaries) was deferred to inventory-audit.
+    Brief line count: 56 → 56 (no change).
+
+  No edits to scope.md, glossary.yaml, toc.yaml, catalog.yaml, or
+    inventory.approved.yaml were required — neither chapter's findings
+    touched governing-document material outside the brief-level fix to
+    briefs/27-mapuche-kai-tren.yaml.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch27 dispositions (4 findings: 0 HIGH + 1 MEDIUM + 2 LOW + 1 LOW-MEDIUM):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 MEDIUM (identifier-mismatch, Foerster ISBN at sources.yaml
+    line 561 and at the 8 EVIDENCE-anchored footnotes citing
+    foerster-religiosidad-mapuche): ACCEPT per Ch20 FC-03 / Ch24 FC-03
+    precedent. The auditor's research consensus across AbeBooks, Amazon,
+    University of Chile repository, buscalibre.cl, serindigena.org, and
+    the University of Chicago catalog record converges on ISBN
+    9789561109124 as the correct identifier; the previously-recorded
+    ISBN 9789561109315 was a digit-transposition data-entry error
+    (09315 vs. 09124). Content plausibility is unaffected — Foerster
+    1993 remains the correct anchor for all 8 cited claims.
+    Fix applied to sources.yaml entry foerster-religiosidad-mapuche
+    (identifier_value updated; notes appended).
+    Fix applied to brief 27 sources.secondary entry foerster-
+    religiosidad-mapuche (identifier value updated).
+    Fix applied to .claims.approved.adoc lines 36 and 39 (the two
+    footnotes containing the verbatim ISBN string); replace_all of
+    "9789561109315" → "9789561109124" was used to ensure complete
+    coverage.
+
+  - FC-02 LOW (identifier-mismatch, Course ISBN at sources.yaml
+    line 585 and at the 2 EVIDENCE-anchored footnotes citing
+    course-becoming-mapuche): ACCEPT (paperback) per Ch20 FC-03
+    precedent. The auditor's research found that the previously-recorded
+    ISBN 9780252078163 does not match any catalogue record; the
+    University of Illinois Press catalogue gives ISBN 9780252036477
+    (hardcover), and Amazon and Dussmann give ISBN 9780252078231
+    (paperback). The paperback ISBN was selected per project precedent
+    for non-rare 21st-c. scholarly anchors (the more accessible standard
+    rather than the publisher's hardcover-of-record).
+    Fix applied to sources.yaml entry course-becoming-mapuche
+    (identifier_value updated; notes appended).
+    Fix applied to brief 27 sources.secondary entry course-becoming-
+    mapuche (identifier value updated).
+    Fix applied to .claims.approved.adoc line 39 (the footnote
+    containing the verbatim ISBN string); replace_all of
+    "9780252078163" → "9780252078231" was used.
+
+  - FC-03 LOW (identifier-mismatch, Faron OCLC at sources.yaml line 597
+    and at the 1 EVIDENCE-anchored footnote citing faron-hawks-of-sun):
+    ACCEPT per Ch20 FC-03 precedent. The auditor's WorldCat search
+    returned OCLC 320079821 as the dominant record for "Hawks of the
+    Sun: Mapuche Morality and Its Ritual Attributes" (Faron, 1964,
+    University of Pittsburgh Press); the previously-recorded OCLC
+    247070 could not be confirmed as either a WorldCat or institutional
+    record. The auditor's WorldCat URL
+    (https://search.worldcat.org/es/title/Hawks-of-the-sun-:-Mapuche-morality-and-its-ritual-attributes/oclc/320079821)
+    was firewall-blocked from direct WebFetch verification but the
+    auditor's research consensus stands. The MODIFY-to-LCCN fallback
+    was rejected since OCLC is the project standard for English-
+    language monographs without ISBNs.
+    Fix applied to sources.yaml entry faron-hawks-of-sun
+    (identifier_value updated; notes appended).
+    Fix applied to brief 27 sources.secondary entry faron-hawks-of-sun
+    (identifier value updated).
+    Fix applied to .claims.approved.adoc line 39 (the footnote
+    containing the verbatim OCLC string); replace_all of "OCLC 247070"
+    → "OCLC 320079821" was used.
+
+  - FC-04 LOW-MEDIUM (identifier-mismatch, Koessler-Ilg edition at
+    sources.yaml lines 540-550 and at the 10 EVIDENCE-anchored footnotes
+    citing koessler-ilg-cuentan): MODIFY per Ch20 FC-03 precedent. The
+    auditor's research found that the previously-recorded "Buenos
+    Aires: Editorial Mar Océano, 1962" edition could not be
+    independently confirmed in WorldCat or in any Argentine catalogue;
+    the well-attested editions of Koessler-Ilg's *Cuentan los
+    araucanos* are the 1952 first edition and the 1954 Espasa-Calpe
+    Austral edition (Colección Austral no. 1208, Buenos Aires, 153 pp.).
+    The Argentine mincyt repository entry confirms the 1954
+    Espasa-Calpe Austral edition as the canonical scholarly citation
+    (https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/BDUNCU_f331a4b9b4ecdd61224cf08ff45c49bd).
+    The alternative swap target (1962 UNLP *Tradiciones araucanas*)
+    was rejected since the canonical short-citation form across
+    Mapuche-studies references privileges *Cuentan los araucanos*; the
+    work expansion narrative ("expanding her earlier German-language
+    *Märchenerzähler ohne Buch* of 1928") remains correct since the
+    1954 edition does expand the 1928 German original.
+    Fix applied to sources.yaml entry koessler-ilg-cuentan (year,
+    full_citation, short_citation, identifier_type, identifier_value,
+    notes all updated).
+    Fix applied to brief 27 sources.primary entry koessler-ilg-cuentan
+    (identifier value swapped to stable-url and 1954 edition note).
+    Fix applied to .claims.approved.adoc:
+      - line 33 footnote: "(Buenos Aires: Editorial Mar Océano, 1962;
+        OCLC 4124869)" → "(Buenos Aires: Espasa-Calpe, Colección Austral
+        no. 1208, 1954)" — applied via replace_all
+      - line 39 body prose: "(Buenos Aires: Editorial Mar Océano, 1962),
+        a Spanish-language compilation expanding..." → "(Buenos Aires:
+        Espasa-Calpe, Colección Austral no. 1208, 1954), a Spanish-
+        language compilation expanding..."
+      - line 39 footnote: same publisher-and-year correction
+      - all 10 "Koessler-Ilg 1962" body-prose references (header
+        comment, body prose, LACUNA marker, the 7 short-cite footnote
+        references) → "Koessler-Ilg 1954"
+    Three judgment calls flagged for user review (see below).
+
+  Ch27 counts after revision:
+  - 23 footnotes / 23 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 129 → 137 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=koessler-ilg-cuentan EVIDENCE tags: 10 → 10 (no change;
+    identifier-and-edition correction only).
+  - source_id=foerster-religiosidad-mapuche EVIDENCE tags: 8 → 8.
+  - source_id=bacigalupo-shamans-foye EVIDENCE tags: 1 → 1.
+  - source_id=course-becoming-mapuche EVIDENCE tags: 2 → 2.
+  - source_id=faron-hawks-of-sun EVIDENCE tags: 1 → 1.
+  - source_id=forsyth-1987 EVIDENCE tags: 1 → 1.
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 0 → 0 (no marker — variant material handled in
+    the regional-groupings section body prose).
+  - [APPROPRIATION-FLAG:] markers: 1 → 1 (no change; the existing
+    marker at line 109 is verified as complete per the auditor's
+    appropriation_flag_check section — four required components plus
+    the comparable-to-Ch26 / milder-than-Ch32 spectrum positioning).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch28 dispositions (3 findings: 0 HIGH + 0 MEDIUM + 1 LOW + 2 NOTE):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 LOW (unverified, Frobenius institutional name and Atlantis
+    volume range at line 35, with related references at lines 56, 59,
+    118): ACCEPT per Ch20 FC-03 / Ch24 FC-03 precedent. The body-prose
+    claim that Frobenius's expedition published through "the Deutsches
+    Institut für Kulturmorphologie" was reformulated to "the Institut
+    für Kulturmorphologie" (without the "Deutsches" prefix) per the
+    auditor's research finding that the official institutional name in
+    the 1910s-1921 period (and the standard scholarly citation today
+    as Frobenius-Institut at Goethe University Frankfurt) does not
+    include the "Deutsches" prefix. The volume-range citation
+    "volumes IV–VI" was softened to "the Sahel and West African
+    material conventionally cited as volumes IV–VI" per the auditor's
+    note that the IV–VI range is conventional but not verified to
+    specific-volume level. Both fixes are body-prose and footnote
+    tightenings on a named-but-flagged secondary-anchor body claim
+    (Frobenius cited indirectly through Belcher 1999 and Conrad 2005);
+    no EVIDENCE token routes through Frobenius directly.
+    Fix applied to .claims.approved.adoc line 35 (body prose and
+    footnote): "Deutsches Institut für Kulturmorphologie" →
+    "Institut für Kulturmorphologie"; "volumes IV–VI" → "the Sahel
+    and West African material conventionally cited as volumes IV–VI"
+    (with the matching footnote updates and an added hedge that "the
+    precise volume range and expedition dates are flagged for chapter-
+    draft confirmation against Belcher 1999's bibliographic apparatus").
+
+  - FC-02 NOTE (note, six named-but-flagged secondary sources missing
+    from sources.yaml — Hale 1998, Bird, Levtzion 1973, Dieterlen,
+    Frobenius 1921, Monteil 1953): FLAGGED-ONLY per Ch23 FC-02 / Ch26
+    FC-02 named-but-flagged precedent. The named-but-flagged pattern
+    is the established pipeline solution for this situation, and the
+    chapter's APPROPRIATION-FLAG marker at line 153 already explicitly
+    registers the sources.yaml absence and defers to inventory-audit:
+    "(Hale's *Griots and Griottes*, Indiana University Press 1998;
+    Bird's Mande oral-epic publications; Levtzion's *Ancient Ghana
+    and Mali*, Methuen 1973 — none currently in sources.yaml; deferred
+    to inventory-audit per Ch23 FC-02 and Ch26 FC-02 named-but-flagged
+    precedent)." No EVIDENCE token in the chapter routes through any
+    of the six named-but-flagged secondaries (all EVIDENCE tokens
+    route through conrad-west-africa, belcher-epic, or forsyth-1987).
+    Conrad and Belcher already satisfy scope.md §"Appropriation
+    protocol" point 1 (cite at least two area specialists by name in
+    the first factual pass).
+    The ACCEPT alternative (add Hale 1998, Levtzion 1973, etc. to
+    sources.yaml now per the auditor's recommended_fix entry stubs)
+    was rejected because no body claim is load-bearing on any of the
+    six named-but-flagged secondaries. Pipeline-management addition is
+    DEFERRED to inventory-audit. Note documented for chapter-draft:
+    Bird's specific publication needs identification (title/year)
+    before chapter-draft — likely "Heroic Songs of the Mande Hunters"
+    (1974) per the auditor's trained-knowledge note.
+
+  - FC-03 NOTE (note, Frobenius "1910s" + Monteil "1924 / 1953"
+    precision at lines 35 and 38, with related references at lines 56,
+    59, 118): MODIFY per task-instructions guidance. Line 35 body
+    prose tightened to "Frobenius's West African expedition
+    (conventionally dated to the 1907–1909 expedition window)" with
+    the matching footnote update; line 38 body prose tightened from
+    "1924 / 1953" to "1953 by IFAN (Institut français d'Afrique noire)
+    at Dakar" with the footnote rewritten to characterise the canonical
+    scholarly citation as the 1953 IFAN edition, and to note that
+    "Earlier partial / limited-circulation reports of Monteil's
+    Wagadu material from the 1924 period are sometimes cited; the
+    canonical scholarly citation is the 1953 IFAN edition, and the
+    present chapter cites that edition." Related references at line 59
+    (LACUNA marker) and line 118 (VARIANT marker) updated to match
+    the new Monteil dating "IFAN-Dakar 1953" rather than "1924 / 1953".
+    The Frobenius and Monteil tightening is consistent with the named-
+    but-flagged disposition since both sources are cited indirectly
+    through Belcher 1999.
+    Fix applied to .claims.approved.adoc:
+      - line 35 body prose: "Frobenius's expedition recorded in the
+        1910s" → "Frobenius's West African expedition (conventionally
+        dated to the 1907–1909 expedition window) recorded"
+      - line 35 footnote: "in the 1910s" → "Frobenius's 1907–1909 West
+        African expedition window per current scholarly consensus"
+      - line 38 body prose: "published in 1924 / 1953" → "published in
+        1953 by IFAN (Institut français d'Afrique noire) at Dakar"
+      - line 38 footnote: "originally 1924; later expanded edition
+        1953" → "the canonical 1953 IFAN-Dakar publication"
+      - line 59 LACUNA: "Monteil's 'La légende du Ouagadou,' 1924 /
+        1953" → "Monteil's 'La légende du Ouagadou,' IFAN-Dakar 1953"
+      - line 118 VARIANT: "Monteil's 'La légende du Ouagadou' 1924 /
+        1953" → "Monteil's 'La légende du Ouagadou' IFAN-Dakar 1953"
+
+  Ch28 counts after revision:
+  - 45 footnotes / 45 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 195 → 203 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=conrad-west-africa EVIDENCE tags: 17 → 17 (no change).
+  - source_id=belcher-epic EVIDENCE tags: 27 → 27 (no change).
+  - source_id=forsyth-1987 EVIDENCE tags: 1 → 1 (no change).
+  - [LACUNA] markers: 1 → 1 (no change; line 59 marker text updated to
+    reflect the new Monteil dating but the marker itself is preserved).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 1 → 1 (no change; line 118 marker text updated
+    to reflect the new Monteil dating but the marker itself is
+    preserved).
+  - [APPROPRIATION-FLAG:] markers: 1 → 1 (no change; the existing
+    marker at line 153 is verified as complete per the auditor's
+    appropriation_flag_check section — six named area specialists
+    Conrad/Belcher/Hale/Bird/Dieterlen/Levtzion; substance of typological-
+    assimilation objection; tier implication; C7/C8 forwarding clause;
+    spectrum positioning between Ch23 Naumann and Ch26 Salomon-Urioste-
+    Taylor-Dean, with Ch28 closer to the Pariacaca end of the
+    spectrum).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch27: 23 footnotes / 23 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 23; grep -c "^// EVIDENCE:" → 23.
+  - Ch28: 45 footnotes / 45 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 45; grep -c "^// EVIDENCE:" → 45.
+  - Source-id whitelist: all source_ids in both .claims.approved.adoc
+    files resolve to entries in sources.yaml.
+    Ch27: koessler-ilg-cuentan (sources.yaml line 540),
+          foerster-religiosidad-mapuche (line 552),
+          bacigalupo-shamans-foye (line 564),
+          course-becoming-mapuche (line 576),
+          faron-hawks-of-sun (line 588),
+          forsyth-1987 (line 78) — all resolve.
+    Ch28: conrad-west-africa, belcher-epic, forsyth-1987 — all resolve.
+  - Original .claims.adoc files for Ch27 and Ch28 confirmed UNMODIFIED
+    via git status (neither file appears in the modified list).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Banned-umbrella-term grep result for body prose:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch27: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    Provenance footer self-references "chaos-figure / chaos-monster /
+    chaos-serpent" only in the meta-list of banned terms, which is
+    acceptable per the Ch21/Ch22 normalize precedent.
+  - Ch28: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    Provenance footer self-references the banned-term meta-list only.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Glossary-discipline check:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch27: All entity and term names (Kai-Kai / Tren-Tren, Kaikai-filu,
+    Trentren-filu, Wenu Mapu, Naq Mapu, Minche Mapu, ngen, wekufü,
+    machi, ngillatun, nguillatuwe, filu, Mapudungun, Nguluche,
+    Huilliche, Pehuenche, pehuén / Araucaria araucana, Rosales SJ,
+    Núñez de Pineda y Bascuñán, Lenz, Latcham, Augusta-Moesbach,
+    Koessler-Ilg, Foerster, Bacigalupo, Course, Faron) use conventional
+    scholarly forms throughout. Forsyth disclaimer wording at line 47
+    verified as correct per Ch23/Ch24-onwards precedent.
+  - Ch28: All entity and term names (Bida, Wagadu, Mamadi Sefe Dekote,
+    Soninke / Soninké / Sarakolé / Marka, Mande, Tarikh as-Sudan,
+    Tarikh al-Fettash, Mahmud Kati, Abd al-Rahman al-Sa'di, griot,
+    Frobenius, Monteil, Dieterlen, Hale, Bird, Levtzion, Conrad,
+    Belcher, IFAN, Institut français d'Afrique noire, Institut für
+    Kulturmorphologie, *Atlantis*, "La légende du Ouagadou et l'origine
+    des Soninké") use conventional scholarly forms throughout.
+    Forsyth disclaimer wording at line 53 verified as correct per
+    Ch23/Ch24-onwards precedent.
+    APPROPRIATION-FLAG marker at line 153 verified as complete per
+    the four-component checklist plus the Ch23-vs-Ch26 spectrum
+    positioning per the auditor's appropriation_flag_check section.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Source-count delta (sources.yaml):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Before: 66 entries.
+  - After:  66 entries (no change).
+  - In-place updates: 4 identifier corrections on Ch27 anchors
+    (foerster-religiosidad-mapuche identifier_value; course-becoming-
+    mapuche identifier_value; faron-hawks-of-sun identifier_value;
+    koessler-ilg-cuentan year + full_citation + short_citation +
+    identifier_type + identifier_value; all four entries have
+    appended notes documenting the post-human-normalize correction).
+  - Confirmed via grep -c "^  - id:" books/chaoskampf/sources.yaml → 66.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Brief-modifications log:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/27-mapuche-kai-tren.yaml (UPDATED, Ch27 FC-01..FC-04):
+    Four sources block identifier corrections to mirror sources.yaml:
+    * koessler-ilg-cuentan: "OCLC 4124869" →
+      "stable-url: https://repositoriosdigitales.mincyt.gob.ar/... (1954 Espasa-Calpe Austral edition)"
+    * foerster-religiosidad-mapuche: "ISBN 9789561109315" →
+      "ISBN 9789561109124"
+    * course-becoming-mapuche: "ISBN 9780252078163" →
+      "ISBN 9780252078231"
+    * faron-hawks-of-sun: "OCLC 247070" → "OCLC 320079821"
+    Brief line count: 92 → 92 (no net line change).
+
+  - briefs/28-bida-wagadu.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement at this stage.
+    Brief line count: 56 → 56 (no change).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Original .claims.adoc files unchanged (cycle constraint verification):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  Per the explicit cycle constraint added this run (do NOT modify the
+  original .claims.adoc files; fixes go ONLY into the new .claims.
+  approved.adoc copies), both originals were verified UNMODIFIED via
+  git status:
+    - chapters/27-mapuche-kai-tren.claims.adoc: NOT in git status
+      modified list (clean).
+    - chapters/28-bida-wagadu.claims.adoc: NOT in git status modified
+      list (clean).
+  Confirmed: 23 EVIDENCE tokens in the original Ch27 .claims.adoc;
+  45 EVIDENCE tokens in the original Ch28 .claims.adoc — invariants
+  preserved on the originals as well as on the .approved copies.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Files produced:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - chapters/27-mapuche-kai-tren.claims.approved.adoc (137 lines;
+    23/23 invariant; FC-01..FC-04 fixes applied; provenance footer)
+  - chapters/28-bida-wagadu.claims.approved.adoc (203 lines; 45/45
+    invariant; FC-01 + FC-03 fixes applied; FC-02 deferred; provenance
+    footer)
+  - briefs/27-mapuche-kai-tren.yaml (UPDATED, 4 identifier corrections)
+  - briefs/28-bida-wagadu.yaml (UNCHANGED)
+  - sources.yaml (4 in-place identifier corrections on Ch27 anchors;
+    66 entries unchanged in count)
+
+  Both .claims.approved.adoc files render cleanly. All EVIDENCE
+  source_ids resolve to entries in sources.yaml. Glossary discipline
+  holds. Both files ready for chapter-draft.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Judgment calls flagged for user review:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  1. Ch27 FC-04 (Koessler-Ilg edition swap) handled via 1954
+     Espasa-Calpe Austral edition rather than 1962 UNLP *Tradiciones
+     araucanas* edition. The auditor presented both alternatives; the
+     1954 Espasa-Calpe edition was selected because (a) the Argentine
+     mincyt repository entry confirms the 1954 edition as an extant
+     scholarly publication; (b) the canonical short-citation form
+     across Mapuche-studies references privileges *Cuentan los
+     araucanos* over *Tradiciones araucanas*; (c) the body-prose
+     "expanding her earlier German-language *Märchenerzähler ohne Buch*
+     of 1928" claim remains correct since the 1954 edition does
+     expand the 1928 German original; and (d) the chapter's existing
+     "Koessler-Ilg's compilation" body-prose references work for
+     either edition. The user may want to verify against WorldCat or
+     against a printed copy of the 1954 Espasa-Calpe Austral edition
+     at chapter-draft, and either retain the 1954 swap or revisit
+     whether the 1962 UNLP *Tradiciones araucanas* is the more
+     scholarly-canonical anchor.
+
+  2. Ch27 FC-04 identifier_type changed from OCLC to stable-url. The
+     OCLC for the 1954 Espasa-Calpe Austral edition could not be
+     confirmed in this audit; the Argentine mincyt repository URL was
+     used as a stable-url identifier. The user may want to add the
+     OCLC for the 1954 edition at chapter-draft if a printed copy or
+     WorldCat record is consulted, and convert the identifier_type
+     back to OCLC.
+
+  3. Ch27 FC-03 (Faron OCLC swap) handled via the auditor's research-
+     consensus OCLC 320079821 rather than via the LCCN-fallback
+     option. The auditor's WorldCat URL was firewall-blocked from
+     direct WebFetch verification; the auditor's research consensus
+     stands and the OCLC swap was applied. The user may want to verify
+     OCLC 320079821 directly at WorldCat.org at chapter-draft.
+
+  4. Ch28 FC-01 (Frobenius institutional name and volume range)
+     handled via body-prose tightening rather than via removal of the
+     named-but-flagged Frobenius citation entirely. The named-but-
+     flagged disposition is the established pipeline solution for
+     secondary sources cited indirectly through a third-party anchor;
+     dropping the Frobenius mention entirely would over-correct since
+     the Frobenius *Atlantis* IV–VI is the standard early-twentieth-
+     century recording of the Bida material per all area-specialist
+     scholarly references. The body-prose tightening (drop "Deutsches"
+     prefix; soften "volumes IV–VI" with "the Sahel and West African
+     material conventionally cited as volumes IV–VI") is the minimum-
+     correction fix that preserves the named-but-flagged disposition
+     while addressing the auditor's institutional-name and volume-
+     range concerns.
+
+  5. Ch28 FC-02 (six named-but-flagged secondary sources missing from
+     sources.yaml) FLAGGED-ONLY per Ch23 FC-02 / Ch26 FC-02 named-but-
+     flagged precedent. The user may want to add Hale 1998 (Indiana
+     University Press), Levtzion 1973 (Methuen), Bird's specific
+     Mande oral-epic publication (likely "Heroic Songs of the Mande
+     Hunters" 1974), Frobenius 1921 (Diederichs), Monteil 1953
+     (IFAN-Dakar), and Dieterlen's specific Mande-area-ethnography
+     publication to sources.yaml at inventory-audit, alongside any
+     further specialists for the upcoming related-tier non-Eurasian
+     chapters (Ch29 Mwindo, Ch30 Bakunawa, Ch32 Nanabozho/Mishipeshu).
+
+  6. Ch28 FC-03 (Frobenius 1910s + Monteil 1924/1953 precision) handled
+     via body-prose tightening with the chapter-draft-confirmation
+     hedge in the line 35 footnote. The user may want to verify
+     Frobenius's 1907–1909 West African expedition window and
+     Monteil's 1953 IFAN-Dakar canonical citation against Belcher
+     1999's bibliographic apparatus at chapter-draft, and either
+     retain the tightening or restore an earlier "1910s" / "1924 and
+     later" hedge if Belcher 1999's framing differs.
+
+  7. All FC-NOTE dispositions (Ch28 FC-02; the auditor classifies
+     FC-03 as NOTE but the task-instructions guidance was MODIFY) are
+     deferred or applied per the task-instructions guidance. The
+     established Ch23 FC-02 / Ch26 FC-02 named-but-flagged precedent
+     stands as the inventory-audit deferral pattern.
