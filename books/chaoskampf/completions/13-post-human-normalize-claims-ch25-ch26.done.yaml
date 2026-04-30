@@ -1,0 +1,424 @@
+stage: "post-human-normalize"
+timestamp: "2026-04-30T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/25-mesoamerican-cluster.claims.approved.adoc"
+    lines: 144
+  - file: "chapters/26-pariacaca-amaru.claims.approved.adoc"
+    lines: 183
+  - file: "briefs/25-mesoamerican-cluster.yaml"
+    lines: 60
+  - file: "briefs/26-pariacaca-amaru.yaml"
+    lines: 57
+  - file: "sources.yaml"
+    lines_delta: "0 (no new entries; 61 → 61)"
+summary: "Promoted Ch25 (FC-01 MEDIUM source-misrouting at line 103 — ACCEPT and SWAP per Ch24 FC-02 Durán precedent: EVIDENCE token retagged from lopez-austin-myths to carrasco-1999-city for the political-sovereignty / cosmogonic-political-cycle structural-framing claim, since the political-sovereignty vocabulary is Carrasco's reading of the Suns cycle as Mexica state-ritual ideology rather than López Austin's comparative-mythological framing; the dual-anchor alternative recommended_fix was rejected in favour of the single-token swap matching the project's claim-format precedent, with López Austin retained as comparative-mythological framing in body footnote prose; brief-level update to briefs/25-mesoamerican-cluster.yaml sources.primary entries to characterise the López Austin / Carrasco division of labour at the brief level; FC-02 NOTE vague chapter-level locs — FLAGGED-ONLY per Ch24 FC-04 precedent, deferred to chapter-draft when printed monographs are consulted) and Ch26 (FC-01 LOW Pariacaca peak watershed-detail unverified — MODIFY softening per task-instructions option (a): line 75 body prose reframed from 'on the boundary between the upper drainages of the Mantaro and Cañete rivers' to 'in the Yauyos region of the western Cordillera, a high glaciated massif among the headwaters of multiple drainages of the central Andean cordillera, including the Mantaro and Cañete river systems'; line 75 footnote rewritten to flag the precise watershed-boundary formulation for chapter-draft confirmation against Salomon & Urioste 1991 translators' introduction and modern Andean hydrographic reference; FC-02 NOTE Taylor/Dean missing from sources.yaml plus Bray/MacCormack named in brief but absent from body — FLAGGED-ONLY per Ch23 FC-02 named-but-flagged precedent: the body's APPROPRIATION-FLAG already names Taylor and Dean with the 'named in the brief's special_instructions' hedge, no EVIDENCE token routes through Taylor or Dean, and Salomon and Urioste already satisfy scope.md §'Appropriation protocol' point 1; pipeline-management addition of Taylor and Dean to sources.yaml deferred to inventory-audit) to .claims.approved.adoc with post-human-normalize provenance footers. Source-count delta: 0 (61 → 61, no new entries; Taylor and Dean deferred per FC-02 disposition). One brief edit applied: briefs/25-mesoamerican-cluster.yaml sources.primary entries annotated with notes characterising the López Austin / Carrasco division of labour per the Ch25 FC-01 swap; briefs/26-pariacaca-amaru.yaml unchanged. Both .claims.approved.adoc files preserve the 1:1 invariant (Ch25 30/30; Ch26 39/39); no claims added, no claims removed."
+notes: |
+  ──────────────────────────────────────────────────────────────────────────────
+  Sources.yaml additions: 0 new entries (61 → 61):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  No new sources.yaml entries for Ch25 or Ch26. The Ch26 FC-02 NOTE
+  (Taylor and Dean named-but-flagged in APPROPRIATION-FLAG body text but
+  absent from sources.yaml) was assessed against the Ch23 FC-02 precedent
+  and dispositioned FLAGGED-ONLY. The named-but-flagged pattern is the
+  established pipeline solution for this situation: no EVIDENCE token in
+  the chapter routes through Taylor or Dean, and the body's "named in the
+  brief's special_instructions" hedge at the APPROPRIATION-FLAG marker
+  registers the gap. Salomon and Urioste already satisfy scope.md
+  §"Appropriation protocol" point 1 (cite at least two area specialists
+  by name in the first factual pass); Taylor and Dean are supplementary.
+  Bray (Tamara Bray, on Inca objects) and MacCormack (Sabine MacCormack,
+  on pre-Columbian Andean religion) are named in the brief's
+  special_instructions with the "as relevant" qualifier — neither is
+  invoked in the body, consistent with that qualifier.
+
+  Pipeline-management addition of Taylor (Ritos y tradiciones de
+  Huarochirí, Lima IFEA 1987/2008), Dean (A Culture of Stone, Duke 2010
+  ISBN 9780822348023), and conditionally Bray and MacCormack to
+  sources.yaml is DEFERRED to inventory-audit, where the Andean-studies
+  sub-registry can be expanded systematically (alongside any further
+  specialists for Ch27 Mapuche Kai-Kai/Tren-Tren, Ch28 Bida, Ch29 Mwindo,
+  Ch30 Bakunawa, Ch32 Nanabozho/Mishipeshu) rather than entry-by-entry
+  at claims-stage post-human-normalize. The source count remains 61.
+
+  Source count delta: 61 → 61 (0). Confirmed via
+    grep -c "^  - id:" books/chaoskampf/sources.yaml → 61.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Briefs / governing-document changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/25-mesoamerican-cluster.yaml (UPDATED, Ch25 FC-01):
+    * sources.primary lopez-austin-myths entry: notes field added
+      characterising López Austin 1993 as the comparative-mythological
+      framing anchor for the Cipactli dismemberment-cosmogony and for
+      the Mesoamerican cosmogonic typology within which the Suns cycle
+      is situated, but explicitly NOT the political-sovereignty-framing
+      anchor for the Suns cycle.
+    * sources.primary carrasco-1999-city entry: notes field added
+      characterising Carrasco 1999 as the political-sovereignty-framing
+      anchor for the Quetzalcoatl-vs-Tezcatlipoca alternation across the
+      five Suns ("cosmogonic-political cycle" / "sovereignty-transfer
+      between paired antagonist deities" vocabulary as Carrasco's reading
+      of the cycle as Mexica state-ritual ideology), per the
+      post-human-normalize FC-01 swap of the line-103 EVIDENCE token from
+      lopez-austin-myths to carrasco-1999-city.
+    Brief line count: 58 → 60 (+2 from added notes fields, one-line
+    each, per neighbouring brief style).
+
+  - briefs/26-pariacaca-amaru.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement. FC-01 (Pariacaca
+    peak watershed detail) was handled as a body-prose-and-footnote
+    softening only since the brief does not currently include a
+    watershed-formulation claim at the chapter-level cross-reference
+    detail; the modified body-prose hedge ("a high glaciated massif among
+    the headwaters of multiple drainages of the central Andean
+    cordillera, including the Mantaro and Cañete river systems") with
+    the chapter-draft-confirmation flag in the footnote is sufficient.
+    FC-02 (Taylor and Dean named-but-flagged) was deferred to
+    inventory-audit for the sources.yaml addition, leaving the brief's
+    special_instructions citation policy intact at the post-human-
+    normalize stage.
+    Brief line count: 57 → 57 (no change).
+
+  No edits to scope.md, glossary.yaml, toc.yaml, catalog.yaml, or
+    inventory.approved.yaml were required — neither chapter's findings
+    touched governing-document material outside the brief-level fix to
+    briefs/25-mesoamerican-cluster.yaml.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch25 dispositions (2 findings: 0 HIGH + 1 MEDIUM + 0 LOW + 1 NOTE):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 MEDIUM (citation_wrong, sovereignty-political-cycle framing at
+    line 103 misrouted to lopez-austin-myths): ACCEPT and SWAP. The
+    auditor is right that the political-sovereignty vocabulary
+    ("cosmogonic-political cycle", "sovereignty-transfer between paired
+    antagonist deities", the Suns cycle as a Mexica political-ideological
+    framework) is the characteristic framing of Carrasco 1999 (City of
+    Sacrifice) and not the comparative-mythological framing of López
+    Austin 1993 (The Myths of the Opossum). The misrouting is the same
+    pattern as Ch24 FC-02 (Durán ritual-context content anchored to
+    López Austin rather than to Carrasco), and the same SWAP precedent
+    applies here.
+    Fix applied to claims document, line 103:
+      Footnote: "López Austin 1993, *The Myths of the Opossum*, chapter
+        on the five Suns, on the structural pattern of the Quetzalcoatl-
+        vs-Tezcatlipoca alternation as a cosmogonic-political cycle of
+        combats rather than a single chaoskampf, on each age-bounding
+        combat as a sovereignty-transfer between paired antagonist
+        deities..." → "Carrasco 1999, *City of Sacrifice*, chapter on
+        the five Suns, on the structural pattern of the Quetzalcoatl-
+        vs-Tezcatlipoca alternation as a cosmogonic-political cycle of
+        combats rather than a single chaoskampf and on the sovereignty-
+        transfer political framing of each age-bounding combat as a
+        transfer between paired antagonist deities — the political-
+        sovereignty vocabulary in this claim is Carrasco's; López Austin
+        1993, *The Myths of the Opossum*, chapter on the Cipactli
+        cosmogony and the Suns cycle, supplies the comparative-
+        mythological framing within which Carrasco's political-
+        sovereignty reading is situated, and the contrast with the
+        single decisive combat of the Coatepec, Marduk-Tiamat, and
+        Indra-Vṛtra narratives..."
+      EVIDENCE token: "source_id=lopez-austin-myths ; loc=The Myths of
+        the Opossum, ch. on Cipactli and the Suns cycle" →
+        "source_id=carrasco-1999-city ; loc=City of Sacrifice, ch. on
+        the five Suns"
+    Fix applied to brief: briefs/25-mesoamerican-cluster.yaml
+      sources.primary entries annotated with notes fields characterising
+      the López Austin / Carrasco division of labour as documented above.
+
+    The auditor's alternative recommended_fix (dual-anchor pattern with
+    both lopez-austin-myths and carrasco-1999-city in a single EVIDENCE
+    token) was not adopted: the project's claim-format precedent (one
+    EVIDENCE token per paragraph; co-anchoring handled in body footnote
+    prose rather than in the EVIDENCE token itself) follows the Ch24
+    FC-02 swap precedent rather than introducing a dual-anchor token
+    format. This judgment-call is documented for user review.
+
+  - FC-02 NOTE (note, vague chapter-level locs for lopez-austin-myths
+    and carrasco-1999-city across the chapter): FLAGGED-ONLY per Ch24
+    FC-04 precedent. The auditor's own characterisation classifies this
+    as a NOTE rather than a finding: no claim is factually wrong, no
+    claim lacks a sources.yaml anchor, and the brief itself supplies
+    only chapter-level loc specificity. Brief-level loc-vagueness is a
+    brief-maintenance task for chapter-draft stage when the printed
+    López Austin 1993 (The Myths of the Opossum, 316 pp.) and Carrasco
+    1999 (City of Sacrifice, 228 pp.) monographs are consulted alongside
+    the brief and specific chapter titles and page ranges are added.
+    No prose, EVIDENCE-tag, or brief edits applied at post-human-
+    normalize for this NOTE; deferred per Ch24 FC-04 precedent.
+
+  Ch25 counts after revision:
+  - 30 footnotes / 30 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 136 → 144 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=lopez-austin-myths EVIDENCE tags: 16 → 15 (-1 from FC-01
+    swap at line 103).
+  - source_id=carrasco-1999-city EVIDENCE tags: 12 → 13 (+1 from FC-01
+    swap at line 103).
+  - source_id=forsyth-1987 EVIDENCE tags: 2 → 2 (no change).
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 2 → 2 (no change).
+  - [VARIANT] markers: 1 → 1 (no change).
+  - [APPROPRIATION-FLAG:] markers: 0 → 0 (no marker required for Ch25 —
+    the chapter is a within-tradition family-cluster on the Mesoamerican
+    material and the area-specialist consensus does NOT object to the
+    chaoskampf framing of the Coatepec narrative in Ch24 or to the
+    boundary-and-rhythm framing of the Cipactli + Suns sub-cases in
+    Ch25; scope.md §"Appropriation protocol" point 2 mandates the
+    marker only when there IS a specialist objection to the chaoskampf
+    framing).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch26 dispositions (2 findings: 0 HIGH + 0 MEDIUM + 1 LOW + 1 NOTE):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 LOW (unverified, Pariacaca peak watershed detail at line 75):
+    MODIFY softening per task-instructions option (a). The auditor's
+    plausibility-PASS-with-NOTE assessment is sufficient at the claims
+    stage but the original prose's assertive boundary-formulation lacked
+    hedging that the chapter-draft fact-check will need; the modest
+    softening preserves the claim while flagging the precise pairing
+    for chapter-draft verification.
+    Fix applied to claims document, line 75:
+      Body prose: "the eponymous Pariacaca peak in the western
+        Cordillera, a high glaciated massif on the boundary between the
+        upper drainages of the Mantaro and Cañete rivers" → "the
+        eponymous Pariacaca peak in the Yauyos region of the western
+        Cordillera, a high glaciated massif among the headwaters of
+        multiple drainages of the central Andean cordillera, including
+        the Mantaro and Cañete river systems"
+      Footnote: "on the eponymous Pariacaca peak as a high glaciated
+        massif on the boundary between the upper Mantaro and Cañete
+        drainages" → "on the eponymous Pariacaca peak as a high glaciated
+        massif among the headwaters of the central Andean cordillera
+        with the Mantaro and Cañete river systems among the principal
+        drainages of the wider Yauyos / Huarochirí area (the precise
+        watershed-boundary formulation against Salomon & Urioste 1991's
+        translators' introduction and against a modern Andean
+        hydrographic reference is to be confirmed at chapter-draft)"
+    EVIDENCE token unchanged: source_id=salomon-urioste-huarochiri ;
+      loc=Huarochirí Manuscript chs. 6, 8 (correct anchor; the LOW-
+      severity issue is at the level of in-claim hydrographic
+      specificity, not source-routing).
+
+    The ACCEPT-as-PASS option (treating the auditor's plausibility-PASS
+    as sufficient at the claims stage without prose softening) was
+    rejected because the original prose's assertive boundary-formulation
+    lacked hedging that the chapter-draft fact-check will need; the
+    REJECT-as-NOTE option (no edit, deferred to chapter-draft) was
+    rejected because the modest softening is more honest about the
+    current state of the geographic source-record and pre-empts a
+    chapter-draft-stage HIGH-finding if the precise pairing turns out
+    to be ambiguous. This judgment-call is documented for user review.
+
+  - FC-02 NOTE (note, Taylor/Dean named-but-flagged in APPROPRIATION-
+    FLAG body text but absent from sources.yaml; plus Bray/MacCormack
+    named in brief special_instructions but absent from both
+    sources.yaml and the body): FLAGGED-ONLY per Ch23 FC-02 precedent.
+    The named-but-flagged pattern is the established pipeline solution
+    for this situation. The body prose at the APPROPRIATION-FLAG marker
+    (line 143) names Taylor (with his Lima IFEA critical edition
+    context) and Dean (on Andean ritual-political imagination) as area
+    specialists supporting the wak'a-succession reading, with the
+    explicit "named in the brief's special_instructions" hedge that
+    registers the gap; no EVIDENCE token routes through Taylor or Dean.
+    Salomon and Urioste already satisfy scope.md §"Appropriation
+    protocol" point 1 (cite at least two area specialists by name in
+    the first factual pass). Bray and MacCormack are not invoked in the
+    body, consistent with the brief's "as relevant" qualifier.
+
+    The ACCEPT alternative (add Taylor 1987/2008 and Dean 2010 to
+    sources.yaml now per the auditor's recommended_fix entry stubs) was
+    rejected because no body claim is load-bearing on the Taylor or
+    Dean entries — the wak'a-succession reading at the APPROPRIATION-
+    FLAG is anchored by Salomon & Urioste 1991 (with Taylor and Dean
+    named as supplementary area-specialist citation policy compliance),
+    and the named-but-flagged pattern is the established Ch23 FC-02
+    precedent. Pipeline-management addition is DEFERRED to inventory-
+    audit. This judgment-call is documented for user review.
+
+  Ch26 counts after revision:
+  - 39 footnotes / 39 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 175 → 183 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=salomon-urioste-huarochiri EVIDENCE tags: 38 → 38 (no
+    change; FC-01 is body-prose-and-footnote-softening only).
+  - source_id=forsyth-1987 EVIDENCE tags: 1 → 1 (no change).
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 1 → 1 (no change).
+  - [APPROPRIATION-FLAG:] markers: 1 → 1 (no change; the existing
+    marker at line 143 is verified as complete per the auditor's
+    appropriation_flag_check section).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch25: 30 footnotes / 30 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 30; grep -c "^// EVIDENCE:" → 30.
+  - Ch26: 39 footnotes / 39 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "footnote:\[" → 39; grep -c "^// EVIDENCE:" → 39.
+  - Source-id whitelist: all source_ids in both .claims.approved.adoc
+    files resolve to entries in sources.yaml.
+    Ch25: lopez-austin-myths (sources.yaml line 502),
+          carrasco-1999-city (line 490), forsyth-1987 (line 78) — all
+          resolve.
+    Ch26: salomon-urioste-huarochiri (sources.yaml line 528),
+          forsyth-1987 (line 78) — all resolve.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Banned-umbrella-term grep result for body prose:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch25: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    Provenance footer self-references "chaos-figure / chaos-monster /
+    chaos-serpent" only in the meta-list of banned terms, which is
+    acceptable per the Ch21/Ch22 normalize precedent.
+  - Ch26: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    Provenance footer self-references the banned-term meta-list only.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Glossary-discipline check:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch25: All entity and term names (Cipactli, Quetzalcoatl, Tezcatlipoca,
+    Tlaltecuhtli, Tonatiuh, Chalchiuhtlicue, Topiltzin, Tula / Tollan,
+    Histoyre du Mechique, Leyenda de los Soles, Códice Chimalpopoca,
+    Historia de los Mexicanos por sus pinturas, Florentine Codex,
+    Anales de Cuauhtitlán, Piedra del Sol, Nahui Ocelotl / Nahui Ehecatl
+    / Nahui Quiahuitl / Nahui Atl / Nahui Ollin, Zipacná / Cabrakán,
+    Puruṣa, Pangu, Ymir) use conventional scholarly forms throughout.
+    Forsyth disclaimer wording at lines 51 and 126 verified as correct
+    per Ch23/Ch24-onwards precedent — no further fix required.
+  - Ch26: All entity and term names (Pariacaca, amaru, wak'a, ayllu,
+    khipu, capacocha, Antisuyu, Yauyos, Condorcoto, Chaupiñamca,
+    Huallallo Carhuincho, Huarochirí Manuscript, Ávila, Salomon,
+    Urioste, Taylor, Dean) use conventional scholarly forms throughout.
+    Forsyth disclaimer wording at line 53-54 verified as correct per
+    Ch23/Ch24-onwards precedent.
+    APPROPRIATION-FLAG marker at line 143 verified as complete per the
+    four-component checklist (named area specialists; substance of
+    objection; tier implication; C7/C8 forwarding clause; milder-than-
+    Ch23 characterisation) per the auditor's appropriation_flag_check
+    section.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Source-count delta (sources.yaml):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Before: 61 entries.
+  - After:  61 entries (no change; no new sources for Ch25 or Ch26).
+  - In-place updates: none.
+  - Confirmed via grep -c "^  - id:" books/chaoskampf/sources.yaml → 61.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Brief-modifications log:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/25-mesoamerican-cluster.yaml (UPDATED, Ch25 FC-01):
+    * sources.primary lopez-austin-myths entry: notes field added —
+      "Comparative-mythological framing anchor for the Cipactli
+      dismemberment-cosmogony and for the Mesoamerican cosmogonic
+      typology within which the Suns cycle is situated; not the
+      political-sovereignty-framing anchor (see carrasco-1999-city
+      note)."
+    * sources.primary carrasco-1999-city entry: notes field added —
+      "Political-sovereignty-framing anchor for the Quetzalcoatl-vs-
+      Tezcatlipoca alternation across the five Suns: the 'cosmogonic-
+      political cycle' / 'sovereignty-transfer between paired antagonist
+      deities' vocabulary that the chapter uses for the structural
+      pattern of the Suns is Carrasco's reading of the cycle as Mexica
+      state-ritual ideology, per the post-human-normalize FC-01 swap
+      (the structural-framing claim at line 103 of the claims document
+      is anchored to carrasco-1999-city not lopez-austin-myths)."
+    Brief line count: 58 → 60 (+2 net from added notes fields).
+
+  - briefs/26-pariacaca-amaru.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement at this stage.
+    Brief line count: 57 → 57 (no change).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Files produced:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - chapters/25-mesoamerican-cluster.claims.approved.adoc (144 lines;
+    30/30 invariant; FC-01 swap applied at line 103 EVIDENCE token;
+    provenance footer)
+  - chapters/26-pariacaca-amaru.claims.approved.adoc (183 lines; 39/39
+    invariant; FC-01 watershed-detail softening applied at line 75;
+    provenance footer)
+  - briefs/25-mesoamerican-cluster.yaml (UPDATED, López Austin / Carrasco
+    division-of-labour notes annotation)
+  - briefs/26-pariacaca-amaru.yaml (UNCHANGED)
+  - sources.yaml (UNCHANGED; 61 entries)
+
+  Both .claims.approved.adoc files render cleanly. All EVIDENCE
+  source_ids resolve to entries in sources.yaml. Glossary discipline
+  holds. Both files ready for chapter-draft.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Judgment calls flagged for user review:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  1. Ch25 FC-01 (Carrasco swap) handled via single-token SWAP rather
+     than the auditor's alternative dual-anchor recommended_fix. The
+     project's claim-format precedent (one EVIDENCE token per paragraph;
+     co-anchoring in body footnote prose) was followed per the Ch24
+     FC-02 SWAP precedent. The user may want to revisit at chapter-draft
+     if the dual-anchor format becomes desirable elsewhere; introducing
+     it for one Ch25 claim only would create an inconsistency. The
+     López Austin co-anchor is preserved in the body footnote prose so
+     no scholarly attribution is lost.
+
+  2. Ch25 FC-02 (vague locs) FLAGGED-ONLY per Ch24 FC-04 precedent. The
+     brief-level loc-vagueness is a brief-maintenance task for chapter-
+     draft stage when the printed monographs are consulted alongside
+     the brief. The user may want to consult López Austin 1993 and
+     Carrasco 1999 at glossary-lock or chapter-draft and update the
+     brief and the 16+13 EVIDENCE-tag locs accordingly.
+
+  3. Ch26 FC-01 (watershed detail) handled via MODIFY softening rather
+     than ACCEPT-as-PASS or REJECT-as-NOTE. The auditor's plausibility-
+     PASS-with-NOTE assessment supported any of the three options; the
+     MODIFY softening was chosen because it is more honest about the
+     current state of the geographic source-record and pre-empts a
+     chapter-draft-stage HIGH-finding if the precise Mantaro/Cañete
+     pairing turns out to be ambiguous. The user may want to verify
+     the watershed claim against Salomon & Urioste 1991's translators'
+     introduction and against a modern Andean hydrographic reference
+     at chapter-draft, and either restore the original assertive
+     boundary-formulation if the precise pairing is in Salomon &
+     Urioste 1991 as stated, or further-soften if the actual watershed
+     boundary involves a different river on either side (e.g., the
+     Rímac rather than the Cañete for the Pacific-slope drainage).
+
+  4. Ch26 FC-02 (Taylor and Dean named-but-flagged) FLAGGED-ONLY per
+     Ch23 FC-02 named-but-flagged precedent. The user may want to add
+     Taylor (Ritos y tradiciones de Huarochirí, Lima IFEA 1987/2008)
+     and Dean (A Culture of Stone, Duke 2010 ISBN 9780822348023) to
+     sources.yaml at inventory-audit, alongside any further specialists
+     for the upcoming related-tier non-Eurasian chapters (Ch27 Mapuche
+     Kai-Kai/Tren-Tren, Ch28 Bida, Ch29 Mwindo, Ch30 Bakunawa, Ch32
+     Nanabozho/Mishipeshu). The auditor's recommended_fix entry stubs
+     for Taylor (source_tier: primary-translation; Lima IFEA / IEP) and
+     Dean (source_tier: secondary; Duke UP) are reproduced verbatim in
+     the auditor's report and can be used as starting points for the
+     inventory-audit additions.
+
+  5. Both chapters' FC-NOTE dispositions (Ch25 FC-02 and Ch26 FC-02) are
+     deferred to later pipeline stages (chapter-draft for Ch25 FC-02;
+     inventory-audit for Ch26 FC-02). Both deferrals match the
+     established Ch23 FC-02 / Ch24 FC-04 precedents. The user may want
+     to track these as pipeline-management TODO items: the brief-level
+     loc-specificity work for López Austin 1993 and Carrasco 1999 is a
+     larger ongoing task across Ch24, Ch25, and any further Mesoamerican
+     chapters that draw on the same monographs (Ch24 FC-04 already
+     deferred; Ch25 FC-02 now deferred), and is naturally bundled at
+     chapter-draft when the printed books are consulted.
