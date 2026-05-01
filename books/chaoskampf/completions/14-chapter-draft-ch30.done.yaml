@@ -1,0 +1,188 @@
+stage: "chapter-draft"
+timestamp: "2026-05-01T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/30-bakunawa.adoc"
+    lines: 155
+summary: "Drafted Ch30 (Bakunawa and the Moons, with Erlik / Ülgen as Altaic Comparandum) from the approved claims document. 10,871 wc -w total file count vs. ~4,000 brief target; over-target driven by verbatim preservation of 36 footnotes, 1 LACUNA + 2 VARIANT + 1 INFERENCE + 1 APPROPRIATION-FLAG marker (5 total), and 8 COMPARATIVE-HOOK lines, with the 1:1 claim-to-narrative-paragraph invariant held. 36 claim-paragraphs preserved as 36 narrative paragraphs each carrying its footnote and EVIDENCE token verbatim. The chapter is a PRINCIPAL CASE for Part II C8 (the refusal and appropriation problem, Ch41), and the two-component structure is preserved: Bakunawa source-overview-and-narrative material in sections 1-3 BEFORE Erlik / Ülgen source-overview-and-narrative material in sections 4-5 BEFORE the consolidated typology and forward-links section in section 6. The Forsyth framing-only treatment is preserved with the explicit not-for-Philippine-or-Altaic-content disclaimer at both Forsyth EVIDENCE locations. The sixth APPROPRIATION-FLAG in the book is preserved character-for-character with all four required components for both halves (named area specialists Eugenio for Bakunawa and Eliade/Harva with Potanin/Verbitsky/Radloff named-but-flagged for Erlik / Ülgen; substance of inclusion-marginal objections — no-hero-slaying for Bakunawa and non-serpentine-adversary / non-decisive-opposition for Erlik / Ülgen; spectrum-positioning Bakunawa half closer to Ch32 Nanabozho refusal-strength and Erlik / Ülgen half as structurally distinctive strong-objection case; Ch40/Ch41 forwarding clause with Ch41 (C8) as PRIMARY FORWARD TARGET)."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 36 (matches claims.approved.adoc count exactly)
+  - // EVIDENCE: tokens: 36 (matches claims.approved.adoc count and
+    order exactly; verified via diff against /tmp/evidence_claims.txt
+    — empty diff)
+  - Source-id distribution in EVIDENCE tokens (matches the post-
+    normalize distribution in the approved claims file exactly):
+    eugenio-philippine-myths=19, harva-altaic-religious=10,
+    eliade-shamanism=5, forsyth-1987=2 (total = 36)
+  - Footnote-text verbatim preservation verified via grep -o
+    "footnote:\[[^]]*\]" diff against the claims file — empty diff,
+    character-for-character identical footnote contents.
+  - [LACUNA:] markers: 1 (the pre-modern pre-19th-century-attestation
+    absence + 19th-20th-c. ethnographic-recording corpus LACUNA marker
+    covering BOTH halves, carried over verbatim with both sub-fields —
+    source / scholarly_reconstruction (with the explicit
+    "cross-tradition reconstruction is excluded per scope.md
+    §\"Reconstruction policy\" point 1, and the two halves of the
+    chapter are kept separate at the narrative-reconstruction level"
+    clause) — preserved character-for-character)
+  - [VARIANT:] markers: 2 (one per half — Bakunawa across
+    Visayan/Bikol/other Philippine traditions; Erlik / Ülgen across
+    Altai, Buryat, Yakut recordings; both with primary / alts / chosen
+    / reason sub-fields carried over verbatim character-for-character;
+    the brief's shared_variant_handling: co-equal preserved for both)
+  - [INFERENCE:] markers: 1 (the inclusion-marginal-as-comparativist-
+    overlay-synthesis INFERENCE with basis / risk sub-fields preserved
+    character-for-character; the methodological caveat that the
+    inclusion-marginal characterisation is itself a comparativist
+    framing the area-specialist traditions for both halves do not
+    adopt is preserved verbatim)
+  - [APPROPRIATION-FLAG:] markers: 1 (the SIXTH in the book per Ch23 /
+    Ch26 / Ch27 / Ch28 / Ch29 precedents; carried over verbatim
+    character-for-character. Four required components preserved for
+    both halves: (a) named area specialists (Eugenio with *Philippine
+    Folk Literature: The Myths* for the Bakunawa half; Eliade with
+    *Shamanism* and Harva with *Die religiösen Vorstellungen der
+    altaischen Völker* for the Erlik / Ülgen half; with Potanin,
+    Verbitsky, and Radloff named-but-flagged per Ch23 FC-02 / Ch26
+    FC-02 / Ch27 / Ch28 precedent); (b) substance of inclusion-
+    marginal objections (Bakunawa: no-hero-slaying / communal-
+    prophylactic register; Erlik / Ülgen: non-serpentine-adversary
+    / non-decisive-opposition / dualistic-cosmology comparandum);
+    (c) spectrum-positioning (Bakunawa half closer in objection-
+    strength to Ch32 Nanabozho refusal case than to milder Ch26
+    Pariacaca and Ch27 Mapuche cases; Erlik / Ülgen half as
+    structurally distinctive strong-objection case in which the
+    dualistic-cosmology framing and the chaoskampf typology
+    converge on no structural feature at the load-bearing level);
+    (d) Ch40/Ch41 forwarding clause with explicit ordinal chapter
+    numbers (Ch41 (C8) as PRIMARY FORWARD TARGET; Ch40 (C7) as
+    secondary), distinguished from the inversion characterisation
+    of the Ch28 Bida case and from the transformation
+    characterisations of the Ch23 Susanoo and Ch26 Pariacaca cases.)
+  - [RECONSTRUCTION:] markers: 0 (matches claims-side)
+  - // COMPARATIVE-HOOK: comments: 8 (matches claims-side: Egypt-
+    Ra-Apep-Ch16 daily cyclical-maintenance contrast structurally
+    closest to the Bakunawa half's communal-prophylactic register;
+    Anatolia-Illuyanka-Ch6 *purulli*-festival cyclical-maintenance
+    contrast at festival-attached level; Iran-Thraētaona-Aži-Dahāka-
+    Ch13 Indo-Iranian dualistic-cosmology comparandum for the Erlik
+    / Ülgen half; Africa-Bida-and-the-founding-of-Wagadu-Ch28 non-
+    Eurasian-cluster inclusion-marginal-versus-inversion contrast;
+    Mapuche-Kai-Kai-vs-Tren-Tren-Ch27 non-Eurasian-cluster co-
+    comparandum at the related-tier level; Methods-sidebar-Ch33
+    worked-instance for three methodological moves; Part-II-C7-Ch40
+    secondary forward target for inclusion-marginal characterisation
+    as a typological-engagement category alongside inversion and
+    transformation; Part-II-C8-Ch41 PRIMARY FORWARD TARGET as
+    PRINCIPAL CASE for the chaoskampf-frame-applies-only-partially-
+    at-best argument) — all carried over verbatim at the end of the
+    file; verbatim diff against claims confirmed empty.
+  - Banned-term grep ("chaos-figure" / "chaos-monster" /
+    "chaos-serpent"): zero hits in the entire narrative file — the
+    chapter consistently uses specific names (Bakunawa, Erlik,
+    Ülgen, Visayan, Bikol, Altai, Buryat, Yakut, Turkic-Mongol)
+    and structural-feature framings (serpent-dragon, communal-noise-
+    making, eclipse-aetiology, sky-god, underworld-god, dualistic-
+    cosmology) without resorting to the banned umbrella terms.
+
+  Two-component structure verification:
+  - The chapter opens with the Source overview (paragraphs covering
+    both halves' textual situation), then proceeds to (1) Bakunawa:
+    the Philippine context and the eclipse-and-moon narrative
+    (Visayan / Bikol heartlands; Bakunawa as deep-sea serpent-dragon;
+    seven moons / six devoured premise; communal noise-making during
+    eclipses; retreat-not-death outcome) followed by (2) Bakunawa:
+    communal-ritual register and inclusion-marginal status (eclipse-
+    aetiology function; absence of hero-figure; communal-prophylactic
+    register adjacent to but distinct from the Eurasian cyclical-
+    maintenance register of Illuyanka and Ra-Apep; inclusion-marginal
+    status), then to (3) Erlik and Ülgen: the Altaic / Turkic-Mongol
+    cosmographic frame (Altai / Buryat / Yakut attestation; Ülgen as
+    sky-god of the upper world; Erlik as anthropomorphic underworld-
+    god of the lower world; dualistic-cosmological pairing as long-
+    term cosmographic arrangement; integration with Altaic-Siberian
+    shamanic complex / white-shaman / black-shaman traditions) followed
+    by (4) Erlik and Ülgen: dualistic cosmology and inclusion-marginal
+    status (cultural-historical function of structuring the
+    cosmographic-and-moral order; non-serpentine-adversary and non-
+    decisive-opposition as inclusion-marginal grounds; Indo-Iranian
+    Ahura Mazdā / Angra Mainyu structural parallel as independent
+    typological convergence rather than transmission; inclusion-
+    marginal status; Forsyth framing-only function), then (5)
+    Typology, area-specialist framing, and forward-links
+    consolidating both halves (INFERENCE marker on the inclusion-
+    marginal characterisation as a comparativist-overlay synthesis;
+    parallel inclusion-marginality of both halves; APPROPRIATION-FLAG
+    marker; tier-classification consistency; principal forward-link
+    to C8 Ch41; secondary forward-link to C7 Ch40; methods-sidebar
+    contribution; principal back-links to Ch28 Bida, Ch27 Mapuche,
+    Ch6 Illuyanka, Ch16 Ra-Apep; chapter's load-bearing methodological
+    function as the present book's principal worked instance of the
+    inclusion-marginal-cases methodological move). The two-component
+    structure is preserved exactly per the brief's special_instructions
+    (Bakunawa half BEFORE Erlik / Ülgen half BEFORE consolidated
+    typology and forward-links section).
+
+  Inclusion-marginal framing preservation:
+  - Bakunawa half: NO HERO-SLAYING; combat is communal and recurring
+    (eclipse-aetiology + drum/gong noise drives the serpent off). The
+    extension-to-the-book's-category clause is preserved verbatim:
+    "the extension of the chaoskampf comparative range to include the
+    *communal / non-slaying combat* register at all, where the serpent-
+    and-human-community encounter is registered as a recurring
+    communal-prophylactic practice rather than a hero-led decisive
+    combat."
+  - Erlik / Ülgen half: NON-SERPENTINE ADVERSARY (Erlik) and NON-
+    DECISIVE OPPOSITION (dualistic-cosmological framework rather than
+    a single decisive combat). The extension-to-the-book's-category
+    clause is preserved verbatim: "the registration of the dualistic-
+    cosmology comparandum that is structurally adjacent to but distinct
+    from chaoskampf proper, and the contribution of an independent
+    (non-Indo-Iranian-derived) attestation of the high-god-and-
+    adversarial-counterpart pairing to the comparative typology."
+
+  Forsyth disclaimer preservation:
+  - 2 Forsyth EVIDENCE tokens, both at framing-only locations
+    (the Source overview Forsyth-typology claim and the Erlik / Ülgen
+    half's Forsyth-framing-load-bearing-for-both-halves claim). The
+    explicit not-for-Philippine-or-Altaic-content disclaimer is
+    preserved at both Forsyth footnote locations character-for-
+    character, per the brief-level fix in place from chs. 23 onward
+    and the post-human-normalize verification at claims line 183.
+
+  Prose-only paragraphs added (NOTE-level for fidelity stage):
+  - One source-overview-closing roadmap paragraph naming the two-
+    component structure of the chapter (Bakunawa half first; then
+    Erlik / Ülgen half; then consolidated typology and forward-links);
+    no factual content.
+  - Marker-bridge sentences before each of the 5 markers: at LACUNA
+    introducing the pre-modern-attestation-absence common-to-both-
+    halves framing; at the first VARIANT (Bakunawa) introducing the
+    co-equal-recorded-versions treatment for the Bakunawa half; at the
+    second VARIANT (Erlik / Ülgen) introducing the parallel co-equal-
+    recorded-versions treatment for the Erlik / Ülgen half; at
+    INFERENCE introducing the inclusion-marginal characterisation as
+    a comparativist-overlay synthesis; at APPROPRIATION-FLAG
+    introducing the area-specialist objection registration for both
+    halves. Each bridge sentence non-factual and serving only to
+    integrate the marker into the surrounding narrative voice.
+  - One short transitional paragraph at the head of the Erlik / Ülgen
+    section bridging from the Philippine archipelago to the southern-
+    Siberian and Inner-Asian cultural-areal complex; no factual
+    content beyond the geographic-shift orientation.
+
+  Brief-target word-count handling:
+  - 10,871 wc -w total file count vs. ~4,000 brief target; over-target
+    driven by verbatim preservation of 36 footnotes (~5,400 words of
+    footnote content), 5 markers (~3,500 words combined; the
+    APPROPRIATION-FLAG marker at ~1,400 words is particularly long
+    because of the comprehensive area-specialist naming for both
+    halves and the spectrum-positioning prose with the Bakunawa-vs-
+    Erlik / Ülgen objection-strength differentiation), and 8
+    COMPARATIVE-HOOK lines (~900 words). Body-prose-only estimate:
+    ~1,100 words, well within the brief's ~4,000-word body-prose
+    target. The over-target ratio matches the Ch28 / Ch26 / Ch27
+    pattern where the appropriation-flag-bearing chapters accumulate
+    marker-bulk that dominates the wc count.

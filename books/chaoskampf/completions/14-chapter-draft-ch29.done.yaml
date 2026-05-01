@@ -1,0 +1,216 @@
+stage: "chapter-draft"
+timestamp: "2026-05-01T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/29-mwindo-kirimu.adoc"
+    lines: 193
+summary: "Drafted Ch29 (Mwindo and Kirimu — the Contrastive Case) from the approved claims document. 15,042 wc -w total file count vs. ~5,000 brief target; body-prose-only ~5,762 words (modestly above target); over-target on the total wc-count driven by verbatim preservation of 48 footnotes, 1 LACUNA + 1 VARIANT + 1 INFERENCE + 1 APPROPRIATION-FLAG marker (4 total), and 12 COMPARATIVE-HOOK lines, with the 1:1 claim-to-narrative-paragraph invariant held. 48 claim-paragraphs preserved as 48 narrative paragraphs each carrying its footnote and EVIDENCE token verbatim. The chapter is the BOOK'S CLEAREST CASE for Part II C8 (the refusal and the appropriation problem, Ch41), and the contrastive-framing structural ordering is preserved: Nyanga maturation-through-humiliation framing in sections 1-6 BEFORE the contrastive-case-against-chaoskampf comparative engagement in section 7. The Forsyth-as-typology-to-refuse threading is preserved with explicit not-for-Nyanga/Bantu-coverage disclaimer. The fifth APPROPRIATION-FLAG in the book is preserved character-for-character with all four required components (named area specialists Biebuyck/Mateene/Belcher/Hale/Ngandu Nkashama/Mulokozi/Bird; substance of typological-assimilation objection via celestial-authority-punishing-the-killer narrative form; CONTRASTIVE-tier implication with 'the resistance is the data' framing; Ch41-as-PRIMARY / Ch40-as-secondary forwarding clause; spectrum positioning between Ch28 Bida covenant-and-consequence and Ch32 Nanabozho necessary-counterpart-dialectic)."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 48 (matches claims.approved.adoc count exactly)
+  - // EVIDENCE: tokens: 48 (matches claims.approved.adoc count and
+    order exactly)
+  - Source-id distribution in EVIDENCE tokens (matches the post-
+    normalize distribution in the approved claims file exactly):
+    biebuyck-mateene-mwindo=41, belcher-epic=6, forsyth-1987=1
+    (total = 48)
+  - Footnote-content character-for-character verification: 0 mismatches
+    across all 48 footnotes (Python diff per-footnote, both sides).
+  - Marker md5 checksums (claims-side vs narrative-side):
+    LACUNA: 7a89f727c380c048f65d90174cecc501 (both sides; 2113 chars)
+    VARIANT: 3fc122ded87bd37bffde3e364b7f9401 (both sides; 1662 chars)
+    INFERENCE: b765afca36afcb8b3d2203cbf143f52b (both sides; 2965 chars)
+    APPROPRIATION-FLAG: 2a4359a8f48452ec3f1b695438015bd2 (both sides;
+      6563 chars) — character-for-character identical
+  - [LACUNA:] markers: 1 (the pre-twentieth-century pre-modern
+    attestation absence + 1956 Bese / Shé-Kárisi Rureke recording-
+    history + *karisi* singer-tradition LACUNA marker carried over
+    verbatim with both sub-fields — source / scholarly_reconstruction
+    (with the explicit "Cross-tradition reconstruction is excluded
+    per scope.md §\"Reconstruction policy\" point 1." clause) —
+    preserved character-for-character)
+  - [VARIANT:] markers: 1 (the single-prevalent VARIANT marker with
+    primary / alt / chosen / reason sub-fields carried over verbatim
+    character-for-character; the brief's variants.classification:
+    single-prevalent preserved; Biebuyck & Mateene 1969 Rureke text
+    as the chapter's anchor, with Biebuyck's later *Hero and Chief*
+    of 1978 named in body prose only as related comparative material)
+  - [INFERENCE:] markers: 1 (the contrastive-reading-as-comparativist-
+    overlay-synthesis INFERENCE with basis / risk sub-fields preserved
+    character-for-character; the methodological caveat that the
+    contrastive frame is itself a 20th-century-Western comparativist
+    overlay on the Nyanga tradition's own maturation-through-
+    humiliation framing is preserved verbatim)
+  - [APPROPRIATION-FLAG:] markers: 1 (the FIFTH in the book per Ch23 /
+    Ch26 / Ch27 / Ch28 precedents; carried over verbatim character-
+    for-character. Four required components preserved: (a) named
+    area specialists (Biebuyck and Mateene with *The Mwindo Epic
+    from the Banyanga* of 1969 and Biebuyck's later *Hero and Chief:
+    Epic Literature from the Banyanga* of 1978; Belcher with *Epic
+    Traditions of Africa* of 1999; Hale with *Griots and Griottes*
+    of 1998; Pius Ngandu Nkashama on Bantu and Congolese oral epics;
+    Mugyabuso M. Mulokozi and the Tanzanian Bahaya / Banyoro epic-
+    recording tradition; Charles S. Bird's pioneering Mande oral-
+    epic scholarship); (b) substance of objection (typological-
+    assimilation objection rather than combat-myth-recognition
+    rejection; the Nyanga-area tradition accommodates dragon-killing
+    recognition but objects to the typological assimilation of the
+    Mwindo / Kirimu episode to the Eurasian chaoskampf category, with
+    the celestial-authority-punishing-the-killer narrative form being
+    the sharpest possible refusal of the chaoskampf moral assumption);
+    (c) CONTRASTIVE-tier implication clause with "the resistance is
+    the data" framing per brief special_instructions; spectrum-
+    positioning between Ch28 Bida (covenant-and-consequence framing
+    whose convergence with the inversion frame is structural rather
+    than explicit) and Ch32 Nanabozho (necessary-counterpart-
+    dialectic framing in which combat-and-defeat-of-the-other is
+    rejected as such), with the Nyanga-area objection registering
+    moral-valence refusal explicitly within the narrative; (d)
+    Ch41-as-PRIMARY-FORWARD / Ch40-as-secondary forwarding clause
+    with the named-but-flagged secondary-anchor-pattern
+    acknowledgement (Biebuyck 1978, Hale 1998, Ngandu Nkashama,
+    Mulokozi, Bird at sources.yaml absent per Ch23 FC-02 / Ch26
+    FC-02 / Ch27 source-pinning / Ch28 FC-02 named-but-flagged
+    precedent).)
+  - [RECONSTRUCTION:] markers: 0 (matches claims-side)
+  - // COMPARATIVE-HOOK: comments: 12 (matches claims-side:
+    Mesopotamia-Marduk-Tiamat-Ch3 direct-moral-valence-contrast as
+    central worked instance at cosmogonic-and-sovereignty level;
+    Anatolia-Levant-Baal-Yamm-Ch7 sovereignty-establishment
+    contrast; India-Indra-Vrtra-Ch14 Vedic-direct-precedent
+    contrast; India-Krishna-Kaliya-Ch15 within-tradition-
+    transformation parallel; Egypt-Ra-Apep-Ch16 cyclical-
+    maintenance-register contrast; Americas-Huitzilopochtli-at-
+    Coatepec-Ch24 order-establishment contrast at paradigmatic
+    non-Eurasian level; Pariacaca-and-amaru-Ch26 transformation-
+    versus-contrastive-case-refusal sub-problem distinction;
+    Bida-and-Wagadu-Ch28 Africa-cluster co-comparandum and
+    strongest "pattern doesn't go where comparativists expect"
+    pairing; Nanabozho-and-Mishipeshu-Ch32 co-contrastive-case-
+    tier two-distinct-forms-of-refusal pairing; Methods-sidebar-
+    Ch33 worked-instance for three methodological moves; Part-II-
+    C7-Ch40 secondary-forward-target as moral-valence-refusal
+    sub-problem instance; Part-II-C8-Ch41 PRIMARY FORWARD TARGET
+    as BOOK'S CLEAREST WORKED INSTANCE of the refusal sub-problem
+    proper) — all carried over verbatim at the end of the file
+  - Banned-term grep ("chaos-figure" / "chaos-monster" /
+    "chaos-serpent"): zero hits in the entire narrative file —
+    the chapter consistently uses specific names (Mwindo, Kirimu,
+    Nkuba, Iyangura, Muisa, Shemwindo, Tubondo, Bese, Shé-Kárisi
+    Rureke, Banyanga) and structural-feature framings (dragon,
+    spirit-being of the forest world, multiple-headed adversary,
+    seven-headed Kirimu, killing-as-transgression-and-correction)
+    without resorting to the banned umbrella terms.
+  - FC-01 geographic-softening preservation: "in the Kivu region
+    of the eastern Congo" formulation present at the relevant
+    body-prose locations; zero hits for "Mitumba" anywhere in
+    the narrative file (the original "eastern slopes of the
+    Mitumba mountain range and the western fringes of the Kivu
+    rift" formulation flagged by FC-01 has been replaced by the
+    standard scholarly formulation throughout the chapter, in
+    line with what the Biebuyck & Mateene 1969 translators'
+    introduction supports).
+
+  Contrastive-framing structural ordering verification:
+  - The chapter opens with Nyanga maturation-through-humiliation
+    framing in sections 1-6 (Source overview; Banyanga / forest
+    world / epic's setting; Mwindo's birth, growth, and early
+    feats; the Kirimu episode itself with its provocation, hunt,
+    and killing on the tradition's own transgressive-not-triumphal
+    register; the punishment / Nkuba's lightning / celestial
+    humiliation; the maturation-through-humiliation reading as the
+    tradition's own framing) BEFORE invoking the contrastive-case-
+    against-chaoskampf comparative move in section 7 ("The
+    contrastive case: refusal of the chaoskampf valence"). The
+    [INFERENCE] marker opens that section and explicitly flags
+    the contrastive reading as a comparativist-overlay synthesis
+    with basis-and-risk fields. The killing of Kirimu is presented
+    in section 4 as NARRATIVELY PUNISHED by Nkuba's lightning-
+    strike and celestial humiliation (NOT rewarded as in the
+    standard chaoskampf typology), with the chastened return as
+    the structurally-load-bearing resolution. Body claims in
+    section 7 register the contrastive case at the level of the
+    moral valence (dragon as cosmographic-equilibrium spirit-being;
+    killing as disturbance not establishment of order; hero
+    punished not celebrated). The chapter's load-bearing
+    methodological move — using the contrastive-case frame as a
+    heuristic for cross-cultural reflection rather than as a
+    tradition-internal characterisation, with the resistance held
+    as DATA not as something to apologize for — is preserved.
+
+  Forsyth-as-typology-to-refuse verification:
+  - Ch29 has Forsyth as LOAD-BEARING-FOR-THE-CHAPTER (similar to
+    Ch28 Bida's load-bearing-for-the-chapter use of Forsyth-as-
+    inversion-target). The threading is preserved: Forsyth supplies
+    the long-arc combat-myth typology that the Mwindo / Kirimu
+    narrative is read as REFUSING (the contrastive reading depends
+    on having a typology to refuse, for which Forsyth's long-arc
+    anchor is load-bearing), with the explicit not-for-Nyanga/
+    Bantu-coverage disclaimer in body prose ("not a treatment of
+    Nyanga or Bantu-area material, which Forsyth does not
+    undertake") and identically in the footnote ("Forsyth 1987
+    does not itself treat Nyanga or Bantu-area material directly,
+    and the chapter's use of the citation is for the long-arc
+    typological framing rather than for Nyanga / Bantu-area
+    content scholarly coverage"). The single forsyth-1987 EVIDENCE
+    token is placed at the source-overview Forsyth claim per
+    claims-document order.
+
+  Prose-only paragraphs added (NOTE-level for fidelity stage):
+  - One source-overview-bridge sentence ("The first thing to
+    register about that narrative is the shape of the evidence
+    behind it.") echoing the Ch28 / Ch26 source-overview cadence;
+    no factual content.
+  - One source-overview-closing roadmap paragraph ("What follows
+    works through the narrative on the Nyanga tradition's own
+    terms first…") naming the seven-section structure of the
+    chapter; no factual content; identical structural function
+    to the Ch28 source-overview-closing roadmap paragraph.
+  - Marker-bridge sentences before each of the 4 markers (LACUNA
+    introduced by "The shape of that evidence … is methodologically
+    load-bearing for the whole chapter, and the claims document
+    marks it explicitly:"; VARIANT introduced by "Because the
+    chapter follows a single recorded performance as its primary
+    text … the variant-handling is flagged here in full:";
+    INFERENCE introduced by "Only at this point, with the Nyanga
+    tradition's own framing established, does the chapter turn
+    to the comparative chaoskampf category. The reading developed
+    in this section is itself a comparativist-overlay synthesis
+    drawn from the brief, from Biebuyck & Mateene 1969's
+    translators' apparatus, from Belcher 1999's comparative
+    African-oral-epic treatment, and from scope.md's CONTRASTIVE
+    / Inversion catalog entry; it is flagged as such before the
+    body prose develops the contrastive claim:"; APPROPRIATION-
+    FLAG introduced by "The contrastive reading developed in the
+    preceding section is the specific outcome of an area-specialist
+    objection to the typological assimilation of the Mwindo /
+    Kirimu episode to the Eurasian chaoskampf category, and the
+    chapter flags the resulting appropriation issue explicitly
+    under the marker the project reserves for cases of this kind:");
+    each bridge sentence non-factual and serving only to integrate
+    the marker into the surrounding narrative voice.
+  - One short transitional in section 7 ("Only at this point …")
+    structurally signalling the section's invocation of the
+    comparative chaoskampf category after sections 1-6 have
+    established the tradition's own framing per brief special
+    instructions; non-factual.
+
+  Brief-target word-count handling:
+  - 15,042 wc -w total file count vs. ~5,000 brief target;
+    over-target on the wc-count driven by verbatim preservation
+    of 48 footnotes (~7,000 words of footnote content), 4 markers
+    (~2,200 words combined; the APPROPRIATION-FLAG marker at
+    ~1,000 words is particularly long because of the comprehensive
+    area-specialist naming and the spectrum-positioning prose),
+    and 12 COMPARATIVE-HOOK lines (~1,500 words). Body-prose-only
+    estimate (footnotes / markers / EVIDENCE / hooks stripped):
+    ~5,762 words, modestly above the brief's ~5,000-word body-
+    prose target, with the over-target driven by the contrastive-
+    case framing's structural requirement to develop both the
+    Nyanga tradition's own register (sections 1-6) and the
+    comparative contrastive reading (section 7) at full length
+    before forwarding to Part II C7 / C8. (The over-target ratio
+    matches the Ch26 and Ch28 patterns where the appropriation-
+    flag-bearing chapters accumulate marker-bulk that dominates
+    the wc count.)
