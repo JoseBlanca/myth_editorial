@@ -1,0 +1,487 @@
+stage: "chapter-draft"
+timestamp: "2026-04-30T20:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/27-mapuche-kai-tren.adoc"
+    lines: 110
+summary: "Drafted Ch27 (Kai-Kai vs. Tren-Tren (Mapuche)) from the approved claims document. 6,001 total words (target 2,500 narrative words; narrative-only word count after stripping footnotes and markers is 2,336 — within target). 23 claim-paragraphs preserved as 23 narrative paragraphs each carrying its footnote and EVIDENCE token verbatim and in claims order. The methodologically load-bearing LACUNA marker on the pre-conquest oral-tradition / post-conquest Spanish-language transcription situation (Rosales SJ c. 1670, Núñez de Pineda c. 1673, Lenz, Latcham 1924, Augusta-Moesbach 1934-36, Koessler-Ilg 1954) is preserved verbatim in the source-overview opening; the cosmogonic-cataclysm-rather-than-chaoskampf framing is held throughout; the post-conquest filtering caveat is operationally framed (registered at source overview, in the LACUNA marker, in the post-conquest-witnesses paragraph, in the APPROPRIATION-FLAG marker, in the back-link to Ch26, and in the Mesoamerica-Ch24 colonial-filtering COMPARATIVE-HOOK); the two-serpent-with-human-beneficiary-centre structure is preserved as load-bearing for the related-tier classification (no hero figure; no kill-and-eradicate outcome; the Mapuche on the rising peaks as the beneficiary-centre); the Forsyth long-arc-typology-only disclaimer with explicit no-Mapuche-coverage statement is preserved at body and footnote (line 22 of the chapter)."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 23 (matches claims.approved.adoc count
+    exactly via diff against claims file: zero differences;
+    md5sum match)
+  - // EVIDENCE: tokens: 23 (matches claims.approved.adoc count and
+    order exactly via diff against claims file: zero differences;
+    md5sum match)
+  - Source-id distribution in EVIDENCE tokens (matches the post-
+    normalize distribution in the approved claims file exactly):
+    koessler-ilg-cuentan=10, foerster-religiosidad-mapuche=8,
+    bacigalupo-shamans-foye=1, course-becoming-mapuche=2,
+    faron-hawks-of-sun=1, forsyth-1987=1 (total = 23)
+  - [LACUNA:] markers: 1 (matches claims-side; the pre-conquest
+    oral-tradition / post-conquest Spanish-language-transcription
+    LACUNA marker carried over verbatim with all sub-fields —
+    source / scholarly_reconstruction (with the explicit
+    "Cross-tradition reconstruction is excluded per scope.md
+    §\"Reconstruction policy\" point 1." clause and the
+    still-active-ngillatun-ritual continuing-tradition-witness
+    clause) — preserved character-for-character; verified via
+    diff against claims file: zero differences; md5sum match)
+  - [INFERENCE:] markers: 1 (matches claims-side; the
+    cosmogonic-cataclysm-within-existing-cosmos editorial-synthesis
+    INFERENCE with basis / risk sub-fields preserved character-
+    for-character; md5 portion verified via diff)
+  - [APPROPRIATION-FLAG:] markers: 1 (matches claims-side; the
+    THIRD APPROPRIATION-FLAG in the book per Ch23 / Ch26 precedent;
+    carried over verbatim character-for-character via diff against
+    claims file: zero differences; md5sum match. Four required
+    components preserved:
+    (a) named area specialists: Rolf Foerster González (Introducción
+        a la religiosidad mapuche, 1993); Ana Mariella Bacigalupo
+        (Shamans of the Foye Tree, 2007); Magnus Course (Becoming
+        Mapuche, 2011); Louis C. Faron (Hawks of the Sun, 1964);
+        with Ricardo E. Latcham 1924 (La organización social y las
+        creencias religiosas de los antiguos araucanos) as the
+        foundational early-twentieth-century precursor named-but-
+        flagged per Ch23 FC-02 / Ch26 FC-02 pattern;
+    (b) substance of objection: cosmogonic-cataclysm-within-existing-
+        cosmos and ngillatun-ritual-foundation reading vs. chaos-
+        versus-order combat reading; the cycle's two-serpent
+        structure (no hero-figure, no kill-and-eradicate outcome,
+        non-divine human population as beneficiary-centre) and the
+        cataclysm-within-already-existing-cosmos framing (Mapuche
+        world already populated and ordered before Kai-Kai's
+        flood) do not match the Gunkel-tradition chaoskampf-
+        typology cosmos-versus-chaos opposition;
+    (c) tier-implication clause: the area-specialist objection
+        accommodates some combat-myth framing — comparable to
+        the Ch26 Pariacaca case (Salomon, Urioste, Taylor, Dean
+        wak'a-succession reading) and milder than the Ch32
+        Nanabozho case (Hallowell, Johnston, T. Smith, Vizenor
+        reject combat-and-defeat-of-the-other framing entirely
+        in favour of necessary-counterpart-dialectic framing);
+    (d) Ch40/Ch41 forwarding clause with explicit ordinal chapter
+        numbers: "Part II C7 (inversion / transformation;
+        ch. 40 of the present volume) and Part II C8 (refusal
+        and appropriation; ch. 41) are the loci where the
+        comparative analysis must address this objection rather
+        than paper over it"; plus the appropriation-protocol
+        point-3 outside-framing-requirement clause and the
+        point-2 comparative-engagement-work clause.)
+  - [VARIANT:] markers: 0 (matches claims-side; the regional
+    variation across Nguluche / Huilliche / Pehuenche is presented
+    in dedicated section "Regional variants: Nguluche, Huilliche,
+    Pehuenche" per the brief's variants.classification: co-equal
+    rather than via a [VARIANT:] marker)
+  - [RECONSTRUCTION:] markers: 0 (matches claims-side)
+  - // COMPARATIVE-HOOK: comments: 10 (matches claims-side:
+    Andean-Pariacaca-Ch26 framing-stance parallel; Mesoamerica-
+    Huitzilopochtli-at-Coatepec-Ch24 colonial-filtering parallel;
+    Mesopotamia-Marduk-Tiamat-Ch3 combat-as-cosmogony pattern;
+    Northeast Asia-China-Gonggong-Ch21 water-and-mountain
+    cosmographic-reorganisation; Susanoo / Yamata no Orochi Ch23
+    paired non-Eurasian outside-framing; Nanabozho / Mishipeshu
+    Ch32 milder-case contrast; Methods-sidebar-Ch33 worked-
+    instance; Part-II-C1 cosmogonic-cataclysm-within-existing-
+    cosmos comparandum; Part-II-C7 transformation sub-problem;
+    Part-II-C8 milder-appropriation sub-problem) — all carried
+    over verbatim at the end of the file via diff against claims
+    file: zero differences; md5sum match.
+
+  Banned-term grep: chaos-figure / chaos-monster / chaos-serpent —
+  zero hits in body prose, footnotes, markers, or COMPARATIVE-HOOK
+  comments.
+
+  LACUNA-marker preservation (load-bearing per task instructions):
+  - The single [LACUNA:] marker on the pre-conquest oral-tradition
+    / post-conquest Spanish-language-transcription situation is
+    preserved verbatim in the source-overview section after the
+    post-conquest-witnesses paragraph (Rosales SJ c. 1670, Núñez
+    de Pineda c. 1673, Lenz, Latcham 1924, Augusta-Moesbach
+    1934-36) and before the Forsyth long-arc-typology-anchor
+    paragraph
+  - All sub-fields preserved verbatim (source: brief / Koessler-Ilg
+    / Foerster on the colonial-period and ethnographic-compilation
+    history including Rosales SJ, Núñez de Pineda, Lenz, Latcham,
+    Augusta-Moesbach; scholarly_reconstruction: yes — within the
+    body of Mapuche oral-and-ethnographic record itself, taking
+    Koessler-Ilg 1954 as principal anchor and Foerster 1993,
+    Bacigalupo 2007, Course 2011, Faron 1964 as area-specialist
+    secondaries, with explicit cross-tradition-reconstruction-
+    excluded clause per scope.md §"Reconstruction policy" point 1
+    and explicit still-active-ngillatun-ritual / ongoing-machi-
+    practice / oral-narrative-still-in-performance continuing-
+    tradition-witness clause distinguishing the Mapuche situation
+    from the more strictly archival Eurasian situations)
+  - The pre-contact ritual-context partial-recoverability framing
+    (ngillatun communal ritual; machi shamanic practice; oral
+    epew and nütram narrative-and-history performance; twentieth-
+    and twenty-first-century ethnographic fieldwork in still-
+    active Mapuche communities; archaeological evidence at
+    ritual sites in south-central Chile and southern-cone
+    Argentina) is preserved verbatim within the marker
+  - The methodological framing surrounding the marker is integrated
+    via a transitional sentence ("The shape of that evidence —
+    oral-tradition transmission with no pre-contact alphabetic
+    record, post-conquest Spanish-language witnesses, a modern
+    ethnographic compilation history, and a tradition that
+    remains in continuing performance — is methodologically load-
+    bearing for the whole chapter, and the claims document marks
+    it explicitly:") that gives the marker its methodologically-
+    load-bearing framing without adding new factual content
+
+  APPROPRIATION-FLAG character-level preservation:
+  - The single [APPROPRIATION-FLAG:] marker is the THIRD in the
+    book (Ch23 set the template; Ch26 was the second) and is the
+    most failure-prone marker due to its length and the four
+    required components
+  - Verified via diff against claims file: zero character-level
+    differences; md5sum match (c6dde8ff2b9375957e02866c96d6f96b)
+  - All four required components present and verbatim:
+    (1) named area specialists: Rolf Foerster González in
+        Introducción a la religiosidad mapuche, 1993; Ana
+        Mariella Bacigalupo in Shamans of the Foye Tree, 2007;
+        Magnus Course in Becoming Mapuche, 2011; Louis C. Faron
+        in Hawks of the Sun, 1964; with Ricardo E. Latcham 1924's
+        La organización social y las creencias religiosas de
+        los antiguos araucanos as the foundational early-
+        twentieth-century precursor explicitly flagged as named-
+        in-body-prose-without-sources.yaml-entry per the Ch23
+        FC-02 / Ch26 FC-02 named-but-flagged pattern;
+    (2) substance of objection: the cycle's two-serpent
+        structure (no hero-figure; no kill-and-eradicate
+        outcome; non-divine human population as beneficiary-
+        centre) and the cataclysm-within-already-existing-
+        cosmos framing (Mapuche world already populated and
+        ordered before Kai-Kai's flood) do not match the
+        cosmos-versus-chaos opposition the Gunkel-tradition
+        chaoskampf-typology presupposes; the cycle's narrative
+        work is foundational-charter establishment of the
+        ngillatun ritual life and legitimisation of Mapuche
+        territorial occupation of the elevated southern-cone
+        landscape rather than cosmogonic establishment of
+        cosmic order from primordial chaos;
+    (3) tier-implication clause via the comparable-to-Ch26-
+        Pariacaca / milder-than-Ch32-Nanabozho spectrum
+        positioning: comparable to Ch26 Pariacaca (Salomon,
+        Urioste, Taylor, Dean wak'a-succession reading) — both
+        mid-spectrum objections accommodating some combat-myth
+        framing while objecting to chaos-order framing — and
+        milder than Ch32 Nanabozho (Hallowell, Johnston, T.
+        Smith, Vizenor rejecting combat-and-defeat-of-the-other
+        framing entirely in favour of necessary-counterpart-
+        dialectic framing);
+    (4) Ch40/Ch41 forwarding clause with explicit ordinal
+        chapter numbers: "Part II C7 (inversion / transformation;
+        ch. 40 of the present volume) and Part II C8 (refusal
+        and appropriation; ch. 41) are the loci where the
+        comparative analysis must address this objection
+        rather than paper over it; the present chapter
+        functions as a worked instance of the appropriation-
+        protocol's outside-framing requirement at scope.md
+        §\"Appropriation protocol\" point 3, and forwards the
+        objection to C7 and C8 for the comparative-engagement
+        work that scope.md §\"Appropriation protocol\" point 2
+        requires of the comparative chapters."
+
+  Marker framing integration (NOTE-level prose-only paragraphs added):
+  - Three short prose-only bridge sentences before each marker
+    block to integrate the markers into the surrounding narrative
+    voice (per task instructions on marker framing): one before
+    the LACUNA marker, one before the INFERENCE marker, one
+    before the APPROPRIATION-FLAG marker. These bridges contain
+    no factual content beyond what the marker itself or the
+    surrounding claims already establish.
+  - LACUNA bridge: "The shape of that evidence — oral-tradition
+    transmission with no pre-contact alphabetic record, post-
+    conquest Spanish-language witnesses, a modern ethnographic
+    compilation history, and a tradition that remains in
+    continuing performance — is methodologically load-bearing
+    for the whole chapter, and the claims document marks it
+    explicitly:" — methodologically-load-bearing-shape-of-evidence
+    framing parallel to the Ch26 LACUNA bridge
+  - INFERENCE bridge: "That cataclysm-within-existing-cosmos
+    reading is the chapter's load-bearing editorial synthesis,
+    drawn from the brief, from Foerster's cosmographic framework,
+    from the contemporary anthropological readings of Course and
+    Bacigalupo, and from Faron's mid-twentieth-century structural-
+    ritual reading; it is flagged as such:" — editorial-synthesis-
+    of-brief-and-Foerster-and-Course-Bacigalupo-and-Faron framing
+  - APPROPRIATION-FLAG bridge: "That place is the specific
+    outcome of an area-specialist reading that resists the chaos-
+    versus-order framing of the Gunkel-tradition chaoskampf
+    category, and the chapter flags the resulting appropriation
+    issue explicitly under the marker the project reserves for
+    cases of this kind:" — outside-framing-of-Gunkel-tradition-
+    chaos-order-framing parallel to the Ch23 / Ch26 APPROPRIATION-
+    FLAG marker bridge
+  - One additional prose-only sentence at the end of the source-
+    overview section provides a brief what-follows roadmap
+    ("What follows works through the cycle in order...") parallel
+    to the Ch26 source-overview-closing roadmap; lists only the
+    section-headings of the body which are already established
+    by the claims-document structure
+  - One short transitional sentence between the cosmographic-
+    framework paragraph and the Kai-Kai paragraph ("Within that
+    vertical-cosmographic system the two named serpent-beings of
+    the cycle take their distinct positions.") to bridge claims
+    that move from the Wenu/Naq/Minche frame to the named
+    serpents
+  - One short transitional sentence between the third and fourth
+    source-overview paragraphs ("Behind Koessler-Ilg and the
+    area-specialist secondary anchors stands a longer compilation
+    history.") to bridge to the colonial-period-witnesses paragraph
+  - One short transitional clause introducing Forsyth at the
+    second-anchor paragraph ("A second scholarly anchor sits
+    behind the wider comparative-tradition framing rather than
+    the source-content.") parallel to the Ch26 Forsyth-anchor
+    bridge
+  - One transitional opening on the "shape of the textual
+    evidence" sentence at the second source-overview paragraph
+    ("The shape of the textual evidence behind that narrative is
+    the first thing to register.") to introduce the oral-
+    tradition / no-pre-conquest-writing-system claim
+  - All bridges are non-factual: they introduce no information
+    about the cycle beyond what the surrounding claims already
+    establish.
+
+  Two-serpent-structure framing confirmation:
+  - Two-serpent structure (Kai-Kai and Tren-Tren are both
+    serpent-beings with no hero figure) is held throughout
+    body prose, in the Tren-Tren paragraph ("the protective
+    counterpart to Kai-Kai rather than as a hero who slays
+    Kai-Kai"), in the mountain-rising paragraph ("neither
+    serpent kills or is killed"; "the Mapuche on the rising
+    peaks being the narrative's centre of attention as the
+    cycle's beneficiary-survivors of a combat between two non-
+    human powers"), in the typology paragraph ("two named
+    serpent-beings opposing one another with sustained vertical
+    action"), in the APPROPRIATION-FLAG marker (the cycle's
+    "two-serpent structure (with no hero-figure and no kill-
+    and-eradicate outcome, and with a non-divine human
+    population as the narrative's beneficiary-centre)"), and
+    in the distinctive-contribution paragraph (the "two-serpent-
+    with-human-beneficiary-centre pattern"). The atypicality
+    relative to the book's hero-versus-monster default is
+    load-bearing for the chapter's RELATED tier classification
+    and is preserved as such throughout.
+
+  Forsyth disclaimer preservation:
+  - The single Forsyth EVIDENCE token (line 28, footnote at end
+    of line 27) carries the long-arc-typology-only disclaimer
+    with explicit no-Mapuche-coverage statement
+  - Body prose at line 22: "Forsyth supplies the typological
+    framing only — not Mapuche-content coverage, which Forsyth
+    does not undertake — and the area-specialist objection to
+    the chaoskampf framing of the Mapuche material is registered
+    separately in this chapter's [APPROPRIATION-FLAG:] marker"
+  - Footnote at line 22: "Forsyth 1987 does not itself treat
+    Mapuche material, and the chapter's use of the citation is
+    for the long-arc typological framing rather than for
+    Mapuche-content scholarly coverage; per brief 27-mapuche-
+    kai-tren.yaml sources.secondary entry on the not-for-
+    Mapuche-coverage disclaimer"
+  - EVIDENCE token loc: "combat-myth long-arc typology (Sumer
+    through Judeo-Christian apocalyptic)" — verbatim from claims
+
+  Glossary discipline confirmed:
+  - Kai-Kai / Tren-Tren: full forms throughout per glossary
+    'Kai-Kai / Tren-Tren' first_mention_gloss; Kaikai-filu and
+    Trentren-filu twentieth-century-compilation forms preserved
+    parenthetically in the named-serpent paragraphs per claims
+  - Wenu Mapu / Naq Mapu / Minche Mapu: italicised on first
+    mention per glossary; English glosses (upper land / middle
+    land, the surface of the earth where humans live / under-
+    land) respected from the claims-document forms
+  - ngen / wekufü: italicised on first mention per glossary,
+    with parenthetical English glosses (place-spirits / owners;
+    adversarial powers) per claims
+  - machi: italicised on first mention per glossary; "the
+    Mapuche shaman, traditionally though not exclusively a
+    woman" first-mention gloss preserved at the ngillatun
+    paragraph
+  - ngillatun: italicised throughout per glossary; "communal
+    ritual" first-mention gloss respected at the ngillatun
+    paragraph and consistently throughout
+  - nguillatuwe: italicised in the ngillatun paragraph per
+    claims; "named ritual sites" gloss respected
+  - filu: italicised in the Kai-Kai paragraph per claims; "the
+    Mapudungun word for serpent" gloss respected
+  - Mapudungun: capitalised throughout per claims
+  - Nguluche / Huilliche / Pehuenche: capitalised regional-
+    grouping forms preserved per claims; gloss-pairs (Nguluche
+    of the central Mapuche heartland / Huilliche of the
+    southern territories and Chiloé / Pehuenche of the Andean
+    cordillera and eastern slopes) preserved per claims
+  - pehuén / Araucaria araucana / monkey-puzzle tree: italicised
+    on first mention with the trinomial "pehuén (Araucaria
+    araucana / monkey-puzzle tree)" gloss preserved at the
+    Pehuenche-variants paragraph per claims
+  - epew / nütram: italicised in the LACUNA marker per claims;
+    "narrative-and-history performance" gloss respected
+  - Bío-Bío / Toltén / Chiloé / Neuquén / Río Negro / Chubut:
+    place-names with diacritics preserved verbatim
+  - Rosales SJ / Núñez de Pineda y Bascuñán / Lenz / Latcham /
+    Augusta / Moesbach: ethnographer / colonial-witness names
+    preserved with diacritics throughout
+  - Foerster González / Bacigalupo / Course / Faron / Latcham:
+    area-specialist names preserved with the Mapudungun-specialist
+    pattern; Ricardo E. Latcham 1924 (La organización social y
+    las creencias religiosas de los antiguos araucanos)
+    preserved verbatim with the named-but-flagged framing
+  - Salomon / Urioste / Taylor / Dean: Ch26 Pariacaca-cycle
+    area-specialists named in the APPROPRIATION-FLAG marker per
+    claims
+  - Hallowell / Johnston / T. Smith / Vizenor: Ch32 Nanabozho-
+    cycle area-specialists named in the APPROPRIATION-FLAG
+    marker per claims
+  - Märchenerzähler ohne Buch (1928): preserved with diacritic
+    and italicised at the Koessler-Ilg-anchor paragraph
+  - Espasa-Calpe, Colección Austral no. 1208 (1954): preserved
+    verbatim per FC-04 publisher / year fix
+  - Marduk / Tiamat / Gonggong / Susanoo / Yamata no Orochi /
+    Nanabozho / Mishipeshu / Mwindo / Kirimu / Anishinaabe /
+    Bida: comparator-tradition names with full diacritics
+    preserved verbatim in COMPARATIVE-HOOK comments
+
+  Structural notes:
+  - 7 === sections in narrative match 7 === sections in claims
+    file exactly (Source overview / The Mapuche cosmographic
+    frame: Wenu Mapu, Naq Mapu, Minche Mapu / The flood: Kai-Kai
+    raises the sea / The mountain rising: Tren-Tren raises the
+    land / Regional variants: Nguluche, Huilliche, Pehuenche /
+    Ngillatun and the cycle's ritual context / Typology, area-
+    specialist framing, and forward-links). Section titles
+    preserved verbatim from claims.
+  - Each claim paragraph in claims → one corresponding narrative
+    paragraph with the footnote and EVIDENCE token attached
+    verbatim. No claims merged, no claims dropped, no claims
+    reordered within sections.
+
+  Prose-only paragraphs added (transitional / orienting only,
+  zero new factual content) — NOTE-level summary:
+  - Source-overview opening "shape of the textual evidence"
+    transitional sentence (1 sentence)
+  - Source-overview "Behind Koessler-Ilg" transitional sentence
+    bridging into colonial-period-witnesses paragraph (1 sentence)
+  - LACUNA-marker bridge: methodologically-load-bearing-shape-of-
+    evidence framing (1 sentence)
+  - Source-overview Forsyth-anchor "second scholarly anchor"
+    transitional clause (1 sentence)
+  - Source-overview-closing "what follows" roadmap sentence
+    (1 sentence)
+  - Cosmographic-section "Within that vertical-cosmographic
+    system the two named serpent-beings" transitional sentence
+    bridging into Kai-Kai paragraph (1 sentence)
+  - INFERENCE-marker bridge: editorial-synthesis-of-brief-and-
+    area-specialists framing (1 sentence)
+  - APPROPRIATION-FLAG-marker bridge: outside-framing-of-Gunkel-
+    tradition-chaos-order-framing parallel to Ch23 / Ch26
+    bridges (1 sentence)
+  - Total: 8 short prose-only sentences across 7 sections; no
+    full prose-only paragraphs beyond these brief connective-
+    tissue sentences. All non-factual; introduce no information
+    about the cycle beyond what the surrounding claims already
+    establish.
+
+  Variant handling per brief variants.classification: co-equal —
+  preserved: regional Mapuche variations across Nguluche,
+  Huilliche, and Pehuenche presented in dedicated section
+  "Regional variants: Nguluche, Huilliche, Pehuenche" with the
+  common narrative core (Kai-Kai's marine flood; Tren-Tren's
+  mountain rising; the Mapuche refuge on the rising peaks; the
+  landscape-aetiological resolution) shared across the regional
+  variants and regional-specific narrative elements (specific
+  named mountain refuges; particular animal companions of the
+  human survivors; details of Kai-Kai's defeat or pacification;
+  Huilliche-specific identification of refuge-mountains with
+  southern-cordillera peaks; Pehuenche-specific integration with
+  the pehuén / Araucaria araucana subsistence base) presented
+  inline rather than via a [VARIANT:] marker per the brief's
+  co-equal classification (dedicated section presentation
+  rather than primary / alt / chosen / reason marker).
+
+  Word-count discipline:
+  - 6,001 total words against 2,500 narrative-word target;
+    narrative-only word count after stripping footnotes and
+    markers is 2,336 — within the brief's 2,500-word target
+    for the prose itself.
+  - Total over-target driven by (a) the in-line preservation
+    of the three markers (the LACUNA marker with source /
+    scholarly_reconstruction sub-fields running ≈250 words;
+    one INFERENCE marker with basis / risk sub-fields running
+    ≈190 words; and one APPROPRIATION-FLAG marker running
+    ≈430 words — total marker text ≈ 870 words);
+    (b) the verbatim transfer of 23 footnotes, which carry
+    ≈1,800 words of citation text;
+    (c) the verbatim transfer of 10 COMPARATIVE-HOOK lines
+    totalling ≈900 words;
+    (d) the 1:1 claim-to-narrative-paragraph invariant that
+    requires every claim's factual content to be preserved
+    without compression.
+  - Proportionate over-target driven by claim-set depth and
+    marker-and-citation-verbatim discipline is accepted per
+    the chapter-draft skill, and the narrative-only count
+    (2,336) is within target.
+
+  No new facts introduced: every footnoted assertion in the
+  narrative traces back to a claim in the approved claims file.
+  Connective tissue (eight transitional sentences listed above)
+  is non-factual and adds no information about the Kai-Kai /
+  Tren-Tren cycle beyond what the surrounding claims establish.
+
+  Self-checks passed: source overview present (7 source-overview
+  claim-paragraphs as 7 narrative paragraphs plus the LACUNA
+  marker plus four short transitional sentences); every claim
+  represented (23/23 with footnote and EVIDENCE attached, plus
+  3 markers as their own inline blocks); no factual additions;
+  forbidden-words register-list zero hits for ornament-register
+  words (shimmering, mystical, ineffable, etc.) in connective-
+  tissue prose (the three "primordial" hits in the chapter are
+  all inside verbatim-preserved claims/markers, not in added
+  connective tissue); banned umbrella terms (chaos-figure /
+  chaos-monster / chaos-serpent) zero hits; glossary discipline
+  holds; variant handling matches brief's variants.classification:
+  co-equal via dedicated regional-variants section; all markers
+  survived verbatim with required sub-fields (LACUNA with
+  source / scholarly_reconstruction including cross-tradition-
+  reconstruction-excluded clause and continuing-tradition-witness
+  clause; INFERENCE with basis / risk; APPROPRIATION-FLAG
+  character-by-character verbatim with all four required
+  components plus Ch26-Pariacaca-comparable and Ch32-Nanabozho-
+  milder-than spectrum positioning); all 23 footnotes carried
+  over unchanged; all 10 COMPARATIVE-HOOK comments carried over
+  verbatim at end of file; cosmogonic-cataclysm-within-existing-
+  cosmos / ngillatun-ritual-foundation framing preserved at
+  source overview, Mapuche-cosmographic-frame section, flood
+  section, mountain-rising section, regional-variants section,
+  ngillatun-and-ritual-context section, and typology-area-
+  specialist-framing-and-forward-links section; Forsyth disclaim-
+  Mapuche-coverage preserved at body and at footnote; two-
+  serpent structure (no hero figure; mutual-rising stalemate;
+  human-beneficiary-centre) preserved as load-bearing for the
+  related-tier classification throughout body prose, marker
+  text, and COMPARATIVE-HOOK comments.
+
+  Judgment calls:
+  - Section-internal claim ordering preserved exactly as in
+    claims file; no rearrangement to improve narrative flow.
+  - The three marker-bridge sentences and the source-overview-
+    closing what-follows roadmap sentence and the four other
+    short transitional sentences are the only prose additions
+    beyond immediate transitional connective tissue between
+    adjacent claim-paragraphs; no other connective tissue
+    introduces new information.
+  - The chapter's outside-framing of the chaoskampf label is
+    the load-bearing rhetorical move (parallel to Ch23 Susanoo's
+    outside-framing of the comparativist reading and Ch26
+    Pariacaca's wak'a-succession outside-framing): the chapter
+    opens with the Mapuche tradition's own framing (Mapudungun
+    oral-tradition material in still-living transmission,
+    embedded in the Wenu Mapu / Naq Mapu / Minche Mapu vertical
+    cosmography and the ngillatun communal-ritual context per
+    Foerster, Bacigalupo, Course, Faron with Latcham as
+    precursor) before invoking the comparative chaoskampf
+    category at the typology-area-specialist-framing section,
+    in line with scope.md §"Appropriation protocol" point 3.
