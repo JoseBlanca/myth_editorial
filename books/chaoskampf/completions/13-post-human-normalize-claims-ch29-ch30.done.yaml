@@ -1,0 +1,463 @@
+stage: "post-human-normalize"
+timestamp: "2026-05-01T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/29-mwindo-kirimu.claims.approved.adoc"
+    lines: 217
+  - file: "chapters/30-bakunawa.claims.approved.adoc"
+    lines: 183
+  - file: "briefs/29-mwindo-kirimu.yaml"
+    lines_delta: "0 (UNCHANGED — no FC-finding required brief-level acknowledgement)"
+  - file: "briefs/30-bakunawa.yaml"
+    lines_delta: "0 (UPDATED in place — 2 identifier corrections to mirror sources.yaml)"
+  - file: "sources.yaml"
+    lines_delta: "0 (no new entries; 69 → 69; 2 in-place identifier corrections on Ch30 anchors eugenio-philippine-myths and harva-altaic-religious)"
+summary: "Promoted Ch29 (FC-01 LOW Mitumba geographic-label imprecision — MODIFY softening 'eastern slopes of the Mitumba mountain range and the western fringes of the Kivu rift' to 'in the Kivu region of the eastern Congo' per the auditor's note that Biebuyck & Mateene 1969's translators' introduction frames the Nyanga territory as 'Kivu region / upper Oso valley' broadly rather than via the more specific Mitumba label, with the matching footnote tightened identically; FC-02 NOTE five named-but-flagged secondary sources missing from sources.yaml — Biebuyck 1978 *Hero and Chief*, Hale 1998 *Griots and Griottes*, Pius Ngandu Nkashama, Mugyabuso M. Mulokozi, Charles S. Bird — FLAGGED-ONLY per Ch23 FC-02 / Ch26 FC-02 / Ch28 FC-02 named-but-flagged precedent, deferred to inventory-audit; FC-03 NOTE *karisi* gloss expansion at lines 56, 74, 142 — FLAGGED-ONLY for chapter-draft per task-instructions guidance; the first-mention parenthetical gloss at line 74 is adequate at claims-stage but brief, chapter-draft can expand) and Ch30 (FC-01 LOW Eugenio ISBN — ACCEPT correction 9789715421140 → 9789715422918 per UP Press product page, Amazon, AbeBooks, and Philippine-Books retailer catalog; FC-02 LOW Harva stable-url — ACCEPT correction https://archive.org/details/diereligiosenvor0000unkn → https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker per direct WebFetch verification on 2026-05-01, with the OCLC-pending-at-chapter-draft hedge retained since web-search did not surface a verifiable WorldCat OCLC for the FFC 125 1938 edition) to .claims.approved.adoc with post-human-normalize provenance footers. Source-count delta: 0 (69 → 69, no new entries; 2 in-place identifier corrections on Ch30 anchors eugenio-philippine-myths and harva-altaic-religious). One brief edit applied: briefs/30-bakunawa.yaml updated to mirror the 2 sources.yaml identifier corrections; briefs/29-mwindo-kirimu.yaml unchanged (Ch29 FC-01 geographic tightening is body-prose-and-footnote only and is not encoded at the brief level; Ch29 FC-02/FC-03 are FLAGGED-ONLY). Both .claims.approved.adoc files preserve the 1:1 invariant (Ch29 48/48; Ch30 36/36); no claims added, no claims removed; original .claims.adoc files for both chapters confirmed UNMODIFIED via git status."
+notes: |
+  ──────────────────────────────────────────────────────────────────────────────
+  Sources.yaml in-place updates (Ch30 identifier corrections; 0 entries added):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  Two in-place identifier corrections on the two Ch30-anchor entries pinned
+  in commit 9ea3bd1 (eliade-shamanism's ISBN 9780691119427 was the only Ch30
+  identifier that the auditor PASSED; the other two required corrections):
+
+  - eugenio-philippine-myths (Ch30 FC-01):
+    identifier_value: "9789715421140" → "9789715422918"
+    notes: rewritten to record the post-human-normalize correction citing
+    the UP Press product page (https://press.up.edu.ph/product/philippine-folk-literature-the-myths/),
+    Amazon listing for *The Myths (Philippine Folk Literature, Vol. 2)*
+    (ASIN 9715422918 → ISBN-13 9789715422918), the AbeBooks listing for
+    Vol. 2 of the Philippine Folk Literature series, and the Philippine-
+    Books retailer catalog as the consensus sources. The provisional flag
+    on the original entry is removed since the factcheck has supplied the
+    correction. Volume-II identification (eight-volume Philippine Folk
+    Literature series; 546 pp.) added per the search-result detail.
+
+  - harva-altaic-religious (Ch30 FC-02):
+    identifier_value: "https://archive.org/details/diereligiosenvor0000unkn"
+      → "https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker"
+    notes: rewritten to record the post-human-normalize correction citing
+    the direct WebFetch verification on 2026-05-01 (archive.org confirms
+    title "Die religiösen Vorstellungen der altaischen Völker" attributed
+    to "Uno Holmberg" — Harva's birth name, which he changed to Harva in
+    1935 before FFC 125 was published in 1938; the post-1935 scholarly
+    citation name is Harva, so sources.yaml's "Harva, Uno" attribution
+    is correct and no author-name correction is needed). The OCLC-pending
+    hedge is retained: the auditor recommended also adding a verifiable
+    WorldCat OCLC as a backup identifier for institutional stability;
+    web-search via the available tools (CiNii NCID BA26529489, OpenLibrary
+    OL732575M, Heidelberg HEIDI, AbeBooks Centralantikvariatet listing)
+    returned bibliographic confirmations of the work (FFC 125, Helsinki:
+    Suomalainen Tiedeakatemia, 1938) but did not surface a verifiable
+    WorldCat OCLC; defensible OCLC value not added to the notes field
+    per task-instruction guidance to leave the URL alone with an OCLC-
+    pending-at-chapter-draft hedge rather than guess.
+
+  Source count delta: 69 → 69 (0). Confirmed via
+    grep -c "^  - id:" books/chaoskampf/sources.yaml → 69.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Briefs / governing-document changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/30-bakunawa.yaml (UPDATED, Ch30 FC-01 + FC-02):
+    Two sources block identifier corrections to mirror sources.yaml:
+    * sources.primary eugenio-philippine-myths identifier:
+      "ISBN 9789715421140" → "ISBN 9789715422918"
+    * sources.secondary harva-altaic-religious identifier:
+      "stable-url: https://archive.org/details/diereligiosenvor0000unkn"
+      → "stable-url: https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker"
+    Brief line count unchanged (identifier values swapped in place).
+
+  - briefs/29-mwindo-kirimu.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement at this stage.
+    FC-01 (Mitumba geographic-label imprecision) is a body-prose-and-
+    footnote tightening that has no brief-level counterpart since the
+    brief does not currently encode a Mitumba-or-Kivu-rift specificity
+    claim. FC-02 (named-but-flagged secondaries) is deferred to
+    inventory-audit. FC-03 (*karisi* gloss expansion) is a forward
+    chapter-draft glossing action with no claims-stage or brief-stage
+    counterpart. Brief line count unchanged.
+
+  No edits to scope.md, glossary.yaml, toc.yaml, catalog.yaml, or
+    inventory.approved.yaml were required — neither chapter's findings
+    touched governing-document material outside the brief-level fix to
+    briefs/30-bakunawa.yaml.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch29 dispositions (3 findings: 0 HIGH + 0 MEDIUM + 1 LOW + 2 NOTE):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 LOW (geographic-precision, "eastern slopes of the Mitumba
+    mountain range and the western fringes of the Kivu rift" at body
+    prose line 68 and the matching footnote): MODIFY per task-
+    instructions guidance. The auditor flagged the Mitumba-range and
+    Kivu-rift labels as more specific than what the Biebuyck & Mateene
+    1969 translators' introduction supports (where the framing is
+    broadly "Kivu region / upper Oso valley"). Body prose at line 68
+    revised from "the upper Oso river valley and adjacent forested
+    terrain on the eastern slopes of the Mitumba mountain range and
+    the western fringes of the Kivu rift" to "the upper Oso river
+    valley and adjacent forested terrain in the Kivu region of the
+    eastern Congo," with the matching footnote tightened identically
+    — the standard scholarly formulation. No EVIDENCE-token disposition
+    change since the source_id biebuyck-mateene-mwindo was already
+    correctly the anchor; the geographic claim is brought into
+    alignment with what the anchor actually supports.
+    Fix applied to .claims.approved.adoc line 68 (body prose and
+    footnote): "the upper Oso river valley and adjacent forested
+    terrain on the eastern slopes of the Mitumba mountain range and
+    the western fringes of the Kivu rift" → "the upper Oso river
+    valley and adjacent forested terrain in the Kivu region of the
+    eastern Congo" (replace_all not required; the Mitumba-and-Kivu-
+    rift wording occurs only in the body prose and the matching
+    footnote at line 68). No other body-prose or footnote
+    occurrences.
+
+  - FC-02 NOTE (note, five named-but-flagged secondary sources missing
+    from sources.yaml — Biebuyck 1978 *Hero and Chief*, Hale 1998
+    *Griots and Griottes*, Pius Ngandu Nkashama, Mugyabuso M. Mulokozi,
+    Charles S. Bird): FLAGGED-ONLY per Ch23 FC-02 / Ch26 FC-02 /
+    Ch28 FC-02 named-but-flagged precedent. The named-but-flagged
+    pattern is the established pipeline solution for this situation,
+    and the chapter's APPROPRIATION-FLAG marker at line 172 and the
+    LACUNA / VARIANT markers explicitly register the sources.yaml
+    absence and defer to inventory-audit. No EVIDENCE token in the
+    chapter routes through any of the five named-but-flagged
+    secondaries (all EVIDENCE tokens route through biebuyck-mateene-
+    mwindo, belcher-epic, or forsyth-1987). Biebuyck and Mateene
+    already satisfy scope.md §"Appropriation protocol" point 1 (cite
+    at least two area specialists by name in the first factual pass),
+    and Belcher 1999 supplies the comparative-scholarly secondary
+    anchor — so the named-but-flagged secondaries are not load-bearing
+    for any individual EVIDENCE-anchored claim. Pipeline-management
+    addition of Biebuyck 1978, Hale 1998, and the three further
+    specialists to sources.yaml is DEFERRED to inventory-audit, where
+    the Bantu-and-African-oral-epic sub-registry can be expanded
+    systematically alongside the Ch28 / Ch30 / Ch32 named-but-flagged
+    pending entries. Note documented for chapter-draft: Bird's,
+    Ngandu Nkashama's, and Mulokozi's specific publication titles and
+    years remain unidentified; identification before chapter-draft is
+    required to enable proper bibliographic handling. Bird's likely
+    candidate is "Heroic Songs of the Mande Hunters" (1974) per the
+    Ch28 FC-02 auditor's trained-knowledge note.
+
+  - FC-03 NOTE (note, *karisi* gloss expansion at lines 56, 74, 142):
+    FLAGGED-ONLY for chapter-draft per task-instructions guidance.
+    The first-mention parenthetical gloss at line 74 ("the praise-
+    and-narrative singer-tradition's title") is adequate for a
+    claims-stage document but brief; chapter-draft can expand the
+    gloss per scope.md §"Book register" (plain-English register;
+    every ancient-language term glossed at first occurrence) to a
+    fuller glossary-style gloss identifying *karisi* as the Nyanga
+    designation for the trained specialist reciter of the epic
+    tradition. No claims-stage action; no revision to the
+    .claims.approved.adoc file at this stage.
+
+  Ch29 counts after revision:
+  - 48 footnotes / 48 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 209 → 217 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=biebuyck-mateene-mwindo EVIDENCE tags: 41 → 41 (no
+    change).
+  - source_id=belcher-epic EVIDENCE tags: 6 → 6 (no change).
+  - source_id=forsyth-1987 EVIDENCE tags: 1 → 1 (no change).
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 1 → 1 (no change).
+  - [APPROPRIATION-FLAG:] markers: 1 → 1 (no change; the existing
+    marker at line 172 is verified as complete per the auditor's
+    appropriation_flag_check section — five named area specialists
+    Biebuyck/Mateene/Belcher/Hale/Ngandu Nkashama/Mulokozi/Bird;
+    substance of typological-assimilation objection via celestial-
+    authority-punishing-the-killer narrative form; CONTRASTIVE-tier
+    implication with "the resistance is the data" framing; Ch41-as-
+    PRIMARY / Ch40-as-secondary forwarding clause; spectrum
+    positioning between Ch28 Bida covenant-and-consequence and Ch32
+    Nanabozho necessary-counterpart-dialectic).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch30 dispositions (2 findings: 0 HIGH + 0 MEDIUM + 2 LOW + 0 NOTE):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 LOW (identifier-mismatch, Eugenio ISBN at sources.yaml
+    line 621 and at the body-prose footnote at line 40 of the .claims.
+    approved.adoc file containing the verbatim ISBN string): ACCEPT
+    per Ch20 FC-03 / Ch24 FC-03 / Ch27 source-pinning precedent.
+    The originally-pinned ISBN 9789715421140 was wrong; the correct
+    ISBN-13 is 9789715422918, confirmed via the UP Press product
+    page (https://press.up.edu.ph/product/philippine-folk-literature-the-myths/),
+    Amazon listing for *The Myths (Philippine Folk Literature, Vol. 2)*
+    (ASIN 9715422918 → ISBN-13 9789715422918), the AbeBooks listing
+    for Vol. 2 of the Philippine Folk Literature series, and the
+    Philippine-Books retailer catalog as the consensus sources. The
+    provisional flag on the original sources.yaml entry was correctly
+    set; the factcheck supplied the correction.
+    Fix applied to sources.yaml entry eugenio-philippine-myths
+    (identifier_value updated; notes rewritten to record the post-
+    human-normalize correction and remove the provisional flag;
+    Volume-II identification added per the search-result detail).
+    Fix applied to brief 30 sources.primary entry eugenio-philippine-
+    myths (identifier value swapped to ISBN 9789715422918).
+    Fix applied to .claims.approved.adoc line 40 (the body-prose
+    footnote containing the verbatim ISBN string): "9789715421140"
+    → "9789715422918" via direct edit. No EVIDENCE-token disposition
+    change since the source_id eugenio-philippine-myths was already
+    correctly the anchor for all 19 Ch30 EVIDENCE tokens that route
+    through it.
+
+  - FC-02 LOW (identifier-mismatch, Harva stable-url at sources.yaml
+    line 645): ACCEPT per Ch27 source-pinning precedent. The
+    originally-pinned URL https://archive.org/details/diereligiosenvor0000unkn
+    did not resolve; the correct archive.org identifier is
+    "DieReligioenVorstellungenDerAltaischenVolker", verified by
+    direct WebFetch on 2026-05-01 (archive.org confirms title "Die
+    religiösen Vorstellungen der altaischen Völker" attributed to
+    "Uno Holmberg" — Harva's birth name, which he changed to Harva
+    in 1935 before FFC 125 was published in 1938; the post-1935
+    scholarly citation name is Harva, so sources.yaml's "Harva, Uno"
+    attribution is correct and no author-name correction is needed).
+    Fix applied to sources.yaml entry harva-altaic-religious
+    (identifier_value updated to the correct stable-url; notes
+    rewritten to record the post-human-normalize correction, the
+    WebFetch verification, and the OCLC-pending-at-chapter-draft
+    hedge).
+    Fix applied to brief 30 sources.secondary entry harva-altaic-
+    religious (identifier value swapped to the correct stable-url).
+    No body-prose or footnote correction required: the .claims.adoc
+    body footnotes citing Harva 1938 do not pin the verbatim
+    archive.org URL at any EVIDENCE-anchored location; only the
+    sources.yaml entry and the brief carry the pinned URL.
+    No EVIDENCE-token disposition change since the source_id harva-
+    altaic-religious was already correctly the anchor for all 10
+    Ch30 EVIDENCE tokens that route through it.
+    The auditor recommended also adding a verifiable WorldCat OCLC
+    as a backup identifier for institutional stability; web-search
+    via the available tools (CiNii NCID BA26529489, OpenLibrary
+    OL732575M, Heidelberg HEIDI, AbeBooks Centralantikvariatet
+    listing) returned bibliographic confirmations of the work (FFC
+    125, Helsinki: Suomalainen Tiedeakatemia, 1938) but did not
+    surface a verifiable WorldCat OCLC; defensible OCLC value not
+    added to the notes field per task-instruction guidance to leave
+    the URL alone with an OCLC-pending-at-chapter-draft hedge rather
+    than guess.
+
+  Ch30 counts after revision:
+  - 36 footnotes / 36 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 175 → 183 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=eugenio-philippine-myths EVIDENCE tags: 19 → 19 (no
+    change).
+  - source_id=harva-altaic-religious EVIDENCE tags: 10 → 10 (no
+    change).
+  - source_id=eliade-shamanism EVIDENCE tags: 5 → 5 (no change).
+  - source_id=forsyth-1987 EVIDENCE tags: 2 → 2 (no change).
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 2 → 2 (no change; one per half).
+  - [APPROPRIATION-FLAG:] markers: 1 → 1 (no change; sixth in book).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch29: 48 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "^// EVIDENCE: source_id=" → 48 on both .claims.adoc and
+    .claims.approved.adoc.
+  - Ch30: 36 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "^// EVIDENCE: source_id=" → 36 on both .claims.adoc and
+    .claims.approved.adoc.
+  - Source-id whitelist: all source_ids in both .claims.approved.adoc
+    files resolve to entries in sources.yaml.
+    Ch29: biebuyck-mateene-mwindo, belcher-epic, forsyth-1987 — all
+    resolve.
+    Ch30: eugenio-philippine-myths, eliade-shamanism, harva-altaic-
+    religious, forsyth-1987 — all resolve.
+  - Original .claims.adoc files for Ch29 and Ch30 confirmed UNMODIFIED
+    via git status (neither file appears in the modified list).
+    Cycle constraint (do NOT modify the original .claims.adoc files;
+    fixes go ONLY into the new .claims.approved.adoc copies) HELD.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Banned-umbrella-term grep result for body prose:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch29: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    Provenance footer self-references the banned-term meta-list only,
+    which is acceptable per the Ch21/Ch22 normalize precedent.
+  - Ch30: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    Provenance footer self-references the banned-term meta-list only.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Glossary-discipline check:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch29: All entity and term names (Mwindo, Kirimu, Nkuba, Shé-Kárisi
+    Rureke / Shé-Kárisi Candi Rureke, Bese, Bantu, Nyanga / Banyanga,
+    Iyangura, Muisa, Shemwindo, Tubondo, *conga*-scepter, *karisi*,
+    Biebuyck, Mateene, Belcher, Forsyth, Hale, Ngandu Nkashama,
+    Mulokozi, Bird) use conventional scholarly forms throughout.
+    Forsyth disclaimer wording at line 51 verified as correct per the
+    Ch28 exception-case-load-bearing precedent.
+  - Ch30: All entity and term names (Bakunawa, Visayan, Bikol,
+    Tagalog, Cebu, Panay, Negros, Bohol, Samar, Leyte, Mindanao,
+    Erlik, Ülgen, Altai, Buryat, Yakut, Turkic-Mongol, Potanin,
+    Verbitsky, Radloff, Eugenio, Eliade, Harva, Forsyth, Ahura
+    Mazdā, Angra Mainyu, Frashokereti, Suomalainen Tiedeakatemia,
+    Folklore Fellows Communications) use conventional scholarly
+    forms throughout. Forsyth disclaimer wording at lines 62 and 139
+    verified as correct per the framing-only (non-exception)
+    precedent.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Source-count delta (sources.yaml):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Before: 69 entries.
+  - After:  69 entries (no change).
+  - In-place updates: 2 identifier corrections on Ch30 anchors
+    (eugenio-philippine-myths identifier_value; harva-altaic-religious
+    identifier_value; both entries have rewritten notes documenting
+    the post-human-normalize correction).
+  - Confirmed via grep -c "^  - id:" books/chaoskampf/sources.yaml → 69.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Brief-modifications log:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/30-bakunawa.yaml (UPDATED, Ch30 FC-01 + FC-02):
+    Two sources block identifier corrections to mirror sources.yaml:
+    * eugenio-philippine-myths: "ISBN 9789715421140" → "ISBN 9789715422918"
+    * harva-altaic-religious:
+      "stable-url: https://archive.org/details/diereligiosenvor0000unkn"
+      → "stable-url: https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker"
+    Brief line count unchanged (identifier values swapped in place).
+
+  - briefs/29-mwindo-kirimu.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement at this stage.
+    Brief line count unchanged.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Original .claims.adoc files unchanged (cycle constraint verification):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  Per the explicit cycle constraint repeated this run (do NOT modify
+  the original .claims.adoc files; fixes go ONLY into the new
+  .claims.approved.adoc copies; the Ch25/Ch26 cycle had a leakage bug
+  that the Ch27/Ch28 cycle closed and that this Ch29/Ch30 cycle
+  must keep closed), both originals were verified UNMODIFIED via
+  git status:
+    - chapters/29-mwindo-kirimu.claims.adoc: NOT in git status
+      modified list (clean).
+    - chapters/30-bakunawa.claims.adoc: NOT in git status modified
+      list (clean).
+  Confirmed: 48 EVIDENCE tokens in the original Ch29 .claims.adoc;
+  36 EVIDENCE tokens in the original Ch30 .claims.adoc — invariants
+  preserved on the originals as well as on the .approved copies.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Files produced:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - chapters/29-mwindo-kirimu.claims.approved.adoc (217 lines;
+    48/48 invariant; FC-01 fix applied; FC-02 + FC-03 deferred;
+    provenance footer)
+  - chapters/30-bakunawa.claims.approved.adoc (183 lines; 36/36
+    invariant; FC-01 + FC-02 sources.yaml corrections applied,
+    plus body-prose footnote ISBN string corrected at line 40;
+    provenance footer)
+  - briefs/30-bakunawa.yaml (UPDATED, 2 identifier corrections)
+  - briefs/29-mwindo-kirimu.yaml (UNCHANGED)
+  - sources.yaml (2 in-place identifier corrections on Ch30
+    anchors; 69 entries unchanged in count)
+
+  Both .claims.approved.adoc files render cleanly. All EVIDENCE
+  source_ids resolve to entries in sources.yaml. Glossary discipline
+  holds. Both files ready for chapter-draft.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Judgment calls flagged for user review:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  1. Ch29 FC-01 (Mitumba geographic-label imprecision) handled via
+     softening to "in the Kivu region of the eastern Congo" rather
+     than via a more elaborate reformulation (e.g., "in the Kivu
+     region of the eastern Congo, principally in the upper Oso
+     valley and adjacent forested terrain — a high-rainfall
+     equatorial-forest zone"). The softer formulation was selected
+     because the surrounding sentence already enumerates the
+     specific "upper Oso river valley and adjacent forested terrain"
+     and "high-rainfall equatorial-forest zone" qualifiers; the
+     replacement is a minimal-correction fix that brings the
+     specific Mitumba-and-Kivu-rift label into alignment with the
+     Biebuyck & Mateene 1969 anchor's broader "Kivu region / upper
+     Oso valley" framing. The user may want to verify against a
+     printed copy of the 1969 translators' introduction at chapter-
+     draft and either retain the softer formulation or restore the
+     Mitumba-range label if Biebuyck & Mateene 1969 actually use it
+     directly (the auditor reports they do not).
+
+  2. Ch30 FC-02 (Harva stable-url) handled via the auditor's
+     research-consensus archive.org identifier
+     "DieReligioenVorstellungenDerAltaischenVolker" (verified by
+     direct WebFetch on 2026-05-01) with the OCLC-pending hedge
+     retained rather than via the auditor's recommended-also-check-
+     OCLC backup. Web-search via the available tools (CiNii NCID
+     BA26529489, OpenLibrary OL732575M, Heidelberg HEIDI, AbeBooks
+     Centralantikvariatet listing) returned bibliographic
+     confirmations of the work but did not surface a verifiable
+     WorldCat OCLC for the FFC 125 1938 edition. Per task-
+     instruction guidance ("if you can find a defensible OCLC value
+     via web-search, ALSO add it to the notes field as a backup
+     identifier; if not, leave the URL alone with a hedge note"),
+     the OCLC is left pending at chapter-draft. The user may want
+     to add the OCLC for FFC 125 at chapter-draft if a printed copy
+     or WorldCat record is consulted.
+
+  3. Ch30 FC-01 (Eugenio ISBN) and FC-02 (Harva stable-url) handled
+     via in-place identifier corrections on the existing sources.yaml
+     and brief 30 entries (per the Ch20 FC-03 / Ch24 FC-03 / Ch27
+     source-pinning precedent) rather than via expansion of the
+     entries (e.g., addition of a backup ISBN, additional volume-
+     identification fields, or further bibliographic apparatus).
+     The minimal-correction-in-place approach is the established
+     pipeline pattern; the user may want to expand the entries at
+     inventory-audit if cross-references require finer-grained
+     bibliographic apparatus.
+
+  4. Ch29 FC-02 (five named-but-flagged secondary sources) FLAGGED-
+     ONLY per the named-but-flagged precedent. The user may want
+     to add Biebuyck 1978 (*Hero and Chief: Epic Literature from
+     the Banyanga*, University of California Press, 1978) and Hale
+     1998 (*Griots and Griottes: Masters of Words and Music*,
+     Indiana University Press, 1998) as named secondary entries in
+     sources.yaml at inventory-audit, alongside identification of
+     the specific Bird, Ngandu Nkashama, and Mulokozi publication
+     titles and years (which remain unidentified per the auditor's
+     trained-knowledge note that they are unspecified in the
+     marker text). Bird's likely candidate is "Heroic Songs of the
+     Mande Hunters" (1974) per the Ch28 FC-02 auditor's note.
+
+  5. Ch29 FC-03 (*karisi* gloss expansion) FLAGGED-ONLY for chapter-
+     draft per task-instructions guidance. The user may want to
+     verify at chapter-draft that the expanded gloss aligns with
+     glossary.yaml's *karisi* first-mention-gloss entry (if one
+     exists; the chapter currently relies on the parenthetical
+     in-line gloss at line 74).
+
+  6. The OCLC-pending-at-chapter-draft hedge for Ch30 FC-02 carries
+     forward the same normalize-stage caveat as the Ch27 FC-04
+     identifier_type-changed-from-OCLC-to-stable-url decision (the
+     Koessler-Ilg 1954 Espasa-Calpe Austral edition); both cases
+     defer the OCLC determination to chapter-draft when a printed-
+     copy or WorldCat record can be consulted. The pipeline now
+     has two pending OCLC determinations open at chapter-draft for
+     two different reasons (Ch27 FC-04: the 1954 edition's OCLC was
+     not findable via the auditor's research; Ch30 FC-02: the FFC
+     125 1938 edition's OCLC was not findable via the agent's
+     web-search). Both are tracked in the respective sources.yaml
+     entries' notes field.
