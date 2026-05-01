@@ -1,0 +1,179 @@
+stage: 15-narrative-fidelity
+chapter: 29
+chapter_title: "Mwindo and Kirimu (the Contrastive Case)"
+status: done
+verdict: PASS
+timestamp: 2026-05-01T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 48
+  claims_mapped: 48
+  footnotes_claims: 48
+  footnotes_narrative: 48
+  footnote_content_match: true
+  footnote_md5_claims: fba81fc2ce1dabc0e24fb7d26a2dd57e
+  footnote_md5_narrative: fba81fc2ce1dabc0e24fb7d26a2dd57e
+  evidence_tokens_claims: 48
+  evidence_tokens_narrative: 48
+  evidence_sequence_match: true
+  reconstruction_markers: 0
+  lacuna_markers: 1
+  inference_markers: 1
+  variant_markers: 1
+  appropriation_flag_markers: 1
+  comparative_hooks: 12
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  forsyth_disclaimer_preserved: true
+  forsyth_typology_to_refuse_threading_preserved: true
+  fc01_geographic_softening_preserved: true
+  fc01_mitumba_hits: 0
+  fc01_kivu_region_hits: 2
+  lacuna_marker_verbatim: true
+  inference_marker_verbatim: true
+  variant_marker_verbatim: true
+  appropriation_flag_marker_verbatim: true
+  contrastive_framing_structural_ordering_preserved: true
+  banned_umbrella_terms_hits: 0
+  note_findings: 3
+  high_findings: 0
+  medium_findings: 0
+
+source_distribution:
+  biebuyck_mateene_mwindo: 41
+  belcher_epic: 6
+  forsyth_1987: 1
+  total: 48
+  distribution_matches_claims: true
+
+contrastive_framing_structural_ordering:
+  sections_1_to_6_before_contrastive_section_7: true
+  dedicated_contrastive_case_section_7: true
+  killing_explicitly_narratively_punished: true
+  punishment_section_dedicated: true
+  resistance_held_as_data: true
+  resistance_is_the_data_in_inference_marker: true
+
+appropriation_flag_components:
+  appropriation_flag_number_in_book: 5
+  named_area_specialists: >
+    Biebuyck, Mateene, Belcher, Hale, Ngandu Nkashama, Mulokozi, Bird —
+    all seven named with institutional and publication contexts. PASS.
+  substance_typological_assimilation_objection: >
+    Objection is to typological ASSIMILATION of Mwindo / Kirimu episode to
+    Eurasian chaoskampf category; celestial-authority-punishing-the-killer
+    narrative form registered as sharpest possible refusal of chaoskampf
+    moral assumption that dragon-killer is order-establisher. NOT a rejection
+    of combat-myth recognition as such. Correct substance per task
+    instructions. PASS.
+  tier_implication: >
+    CONTRASTIVE-tier framing confirmed throughout. "Resistance is the data"
+    phrase present in INFERENCE marker (4 hits in narrative; consistent with
+    claims placement — INFERENCE not APPROPRIATION-FLAG carries this phrase
+    on both sides). PASS.
+  ch41_ch40_forwarding_clause: >
+    Ch41 (C8 refusal and appropriation problem) as PRIMARY FORWARD TARGET:
+    "Forwarded to Part II C8 (refusal and appropriation problem; ch. 41) as
+    the BOOK'S CLEAREST CASE of the refusal sub-problem proper." Ch40 (C7
+    inversion / transformation problem) as secondary: "Forwarded to Part II
+    C7 (inversion / transformation problem; ch. 40 of the present volume)."
+    Both explicitly named. PASS.
+  spectrum_positioning: >
+    Nyanga-area objection positioned between Ch28 Bida Mande-area
+    covenant-and-consequence objection (milder end — structural-rather-than-
+    explicit) and Ch32 Anishinaabe Hallowell-Johnston-T. Smith-Vizenor
+    necessary-counterpart-dialectic objection (stronger end). Nyanga
+    operates more strongly than Ch28 in that the tradition explicitly punishes
+    rather than ambiguously pays the cost of the killing, with the celestial-
+    authority-as-punisher form being the most explicit possible tradition-
+    internal repudiation of the chaoskampf moral valence. PASS.
+
+forsyth_as_typology_to_refuse:
+  typology_to_refuse_threading_present: true
+  phrase_contrastive_reading_depends_on_typology_to_refuse: 2
+  phrase_nyanga_bantu_area_coverage_disclaimer: 1
+  threading_location: source_overview_section_1
+  threading_correct_placement: true
+
+fc01_geographic_softening:
+  softer_formulation_present: true
+  softer_formulation_hits: 2
+  banned_formulation_mitumba_hits: 0
+
+lacuna_marker_required_fields:
+  pre_modern_attestation_absence: true
+  single_1956_recorded_performance: true
+  named_narrator_she_karisi_rureke: true
+  bese_locality: true
+  late_belgian_colonial_recording_context: true
+  no_pre_20th_century_manuscript_witness: true
+
+output_files:
+  fidelity_yaml: chapters/29-mwindo-kirimu.fidelity.yaml
+  narrative: chapters/29-mwindo-kirimu.adoc
+  claims: chapters/29-mwindo-kirimu.claims.approved.adoc
+
+key_checks_passed:
+  - footnote_integrity: >
+      md5sum fba81fc2ce1dabc0e24fb7d26a2dd57e on both sides. Claim-by-claim
+      footnote comparison: 0 footnote diffs across all 48. PASS.
+  - evidence_token_integrity: >
+      48/48 tokens on both sides. Python sequence comparison: exact match.
+      Source distribution biebuyck-mateene-mwindo=41, belcher-epic=6,
+      forsyth-1987=1 on both sides. PASS.
+  - marker_integrity: >
+      All four markers verbatim identical (bracket-depth-matched extraction
+      with line-start anchoring; Python character comparison: zero diffs on
+      all four): LACUNA 2113 chars, VARIANT 1662 chars, INFERENCE 2965 chars,
+      APPROPRIATION-FLAG 6563 chars. PASS.
+  - comparative_hook_integrity: >
+      All 12 COMPARATIVE-HOOK lines verbatim identical (Python comparison:
+      exact match). Covers Ch3, Ch7, Ch14, Ch15, Ch16, Ch24, Ch26, Ch27,
+      Ch28, Ch33, Ch40, Ch41. PASS.
+  - appropriation_flag_marker_preservation: >
+      APPROPRIATION-FLAG (the FIFTH in the book) verbatim identical to claims
+      (6563 chars on both sides, zero diffs). All four required components
+      verified character-by-character: (1) seven area specialists named
+      (Biebuyck, Mateene, Belcher, Hale, Ngandu Nkashama, Mulokozi, Bird);
+      (2) typological-assimilation objection substance with celestial-
+      authority-punishing-the-killer as sharpest possible refusal; (3)
+      CONTRASTIVE-tier implication with "resistance is the data" in INFERENCE
+      marker per claims placement; (4) Ch41 as PRIMARY FORWARD TARGET and
+      Ch40 as secondary with explicit chapter numbers. PASS.
+  - contrastive_framing_structural_ordering: >
+      (a) Sections 1-6 (source overview through maturation-through-humiliation)
+      develop Nyanga tradition's own framing before section 7 invokes
+      comparative chaoskampf category: confirmed. (b) Dedicated contrastive
+      section 7 "The contrastive case: refusal of the chaoskampf valence" at
+      line 131: confirmed. (c) Killing of Kirimu explicitly narratively
+      punished: full dedicated section 5 "The punishment: Nkuba's lightning
+      and the celestial humiliation" with punish (6 hits), humiliat (13 hits),
+      celestial (29 hits), Nkuba (13 hits) — NOT rewarded. (d) Resistance
+      held as data: "resistance is the data" present 4 times in narrative.
+      PASS.
+  - forsyth_as_typology_to_refuse: >
+      "The contrastive reading depends on having a typology to refuse, which
+      Forsyth's long-arc anchor provides" — 2 hits. Not-for-Nyanga/Bantu-
+      coverage disclaimer at body and footnote. Threading in source overview
+      section 1 before contrastive-case section deploys it. PASS.
+  - fc01_geographic_softening_preservation: >
+      "Kivu region of the eastern Congo" 2 hits; "Mitumba" 0 hits. FC-01
+      fix preserved. PASS.
+  - banned_umbrella_terms: >
+      Zero hits for "chaos-figure", "chaos-monster", "chaos-serpent".
+      Python grep: zero on all three. PASS.
+  - forward_link_verification: >
+      All 13 required chapter links (Ch3, Ch7, Ch14, Ch15, Ch16, Ch24, Ch26,
+      Ch27, Ch28, Ch32, Ch33, Ch40, Ch41) verified present in both toc.yaml
+      and narrative. All resolve. PASS.
+  - section_structure: >
+      1 title section + 7 narrative sections on both sides with identical
+      headers. No sections added, dropped, or renamed. PASS.
+  - glossary_discipline: >
+      Mwindo, Kirimu, Nkuba, Iyangura, Banyanga, Shé-Kárisi Rureke, Bese,
+      karisi all in consistent scholarly forms. No violations. PASS.

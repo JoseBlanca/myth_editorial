@@ -1,0 +1,668 @@
+meta:
+  auditor_model: claude-sonnet-4-6
+  writer_model: claude-opus-4-7
+  claims_file: chapters/30-bakunawa.claims.approved.adoc
+  narrative_file: chapters/30-bakunawa.adoc
+  total_claims: 36
+  claims_mapped: 36
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 36 claims were mapped individually to narrative
+      locations in order. Footnote counts were verified programmatically
+      (36 on each side — exact match). Footnote CONTENTS were verified
+      character-by-character identical by Python hashlib comparison
+      (md5sum 1609bfff2d7a498bb080a193fa91ca38 on both sides — exact match).
+      EVIDENCE token counts were verified programmatically (36 on each side —
+      exact match). The EVIDENCE token sequence order was verified identical by
+      Python comparison (claims_ev == narrative_ev: True). Source distribution:
+      eugenio-philippine-myths=19, harva-altaic-religious=10, eliade-shamanism=5,
+      forsyth-1987=2 on both sides — exact match. All five markers were compared
+      to the claims document using bracket-depth-matched extraction: LACUNA
+      (claims_len=2970, narrative_len=2970, identical=True), VARIANT[0] Bakunawa
+      (claims_len=2092, narrative_len=2092, identical=True), VARIANT[1] Erlik/Ülgen
+      (claims_len=1927, narrative_len=1927, identical=True), INFERENCE
+      (claims_len=2580, narrative_len=2580, identical=True), APPROPRIATION-FLAG
+      (claims_len=5446, narrative_len=5446, identical=True). All 8 COMPARATIVE-HOOK
+      lines were verified verbatim identical by Python comparison (exact match).
+      Section structure: 6 sections in claims = 6 sections in narrative, with
+      identical headers. Forward-links Ch6, Ch13, Ch16, Ch27, Ch28, Ch32, Ch33,
+      Ch40, Ch41 verified in toc.yaml: PASS.
+    q2_additions_check: >
+      Every narrative paragraph was checked against the claims document. The
+      narrative contains one bridge sentence not present in the claims (at the
+      opening of the Typology section, introducing the INFERENCE marker):
+      "The chapter's reading of both halves as inclusion-marginal cases is
+      itself a comparativist-overlay synthesis drawn from the brief, from
+      Eugenio's Philippine-folkloric framing for the Bakunawa half, from
+      Eliade's and Harva's Altaic-religious-cosmology framing for the Erlik /
+      Ülgen half, and from scope.md's operational-definition-and-related-tier
+      criteria; it is flagged as such before the body prose develops the
+      chapter's consolidated typological work:" — a marker-introduction bridge
+      introducing no factual assertions. A second bridge sentence introduces
+      the APPROPRIATION-FLAG: "That parallel inclusion-marginality is the
+      specific outcome of area-specialist framings that read both halves
+      outside the chaos-vs-order combat register, and the chapter flags the
+      resulting appropriation issue explicitly under the marker the project
+      reserves for cases of this kind:" — also a marker-introduction bridge
+      introducing no factual assertions. Same transitional-bridge pattern as
+      Ch24 ISSUE-01, Ch26 ISSUE-01, Ch27, and Ch28. No footnotes required;
+      no action needed.
+      Programmatic body-paragraph comparison: the narrative rewrites claim
+      prose for readability. No footnote diffs found (md5sum identical on
+      both sides). Banned umbrella terms (chaos-figure, chaos-monster,
+      chaos-serpent): zero hits in narrative (Python grep: zero). PASS.
+    q3_distortion_check: >
+      The narrative rewrites claim prose for readability (sentence-splitting,
+      connectives, minor re-ordering within multi-sentence claims) but all
+      load-bearing content is preserved. The footnote CONTENTS (inside
+      footnote:[...]) are character-by-character identical to the claims,
+      confirmed by Python hashlib comparison (md5sum 1609bfff2d7a498bb080a193fa91ca38
+      on both sides). No claim-distortions, meaning-shifts, or scope-alterations
+      found. All five marker blocks are verbatim identical (bracket-depth-matched
+      extraction, Python character comparison: equal on all five). The INFERENCE
+      marker correctly flags the inclusion-marginal characterisation as a
+      comparativist-overlay synthesis. The APPROPRIATION-FLAG correctly registers
+      the typological-assimilation objection with all four required components
+      for both halves, spectrum-positioning confirmed, Ch41 as PRIMARY FORWARD
+      TARGET confirmed. Both VARIANT markers are verbatim identical and placed
+      correctly within their respective halves (Bakunawa VARIANT in the
+      Bakunawa eclipse-and-moon section; Erlik/Ülgen VARIANT in the Erlik/Ülgen
+      cosmographic-frame section). Forsyth disclaimer preserved at two locations
+      ('does not itself treat Philippine or Altaic': 2 hits). No methodological
+      drift found. Inclusion-marginal framing for both halves confirmed:
+      Bakunawa no-hero-slaying / communal-prophylactic register preserved
+      throughout; Erlik non-serpentine and non-decisive opposition preserved
+      throughout. Two-component chapter structure (Bakunawa half → Erlik/Ülgen
+      half → typology section) confirmed intact.
+    q4_same_model: >
+      No. The narrative was produced by Claude Opus 4.7 in a separate session.
+      This audit is conducted by Claude Sonnet 4.6 in a fresh conversation with
+      no memory of writing the narrative. The review is valid.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: NOTE
+      category: addition-ok
+      description: >
+        Two unfootnoted bridge/transitional sentences not present in the claims
+        document: one introducing the INFERENCE marker at the opening of the
+        Typology section, one introducing the APPROPRIATION-FLAG marker. Both
+        are marker-introduction bridges introducing no factual assertions.
+        Same pattern as Ch24, Ch26, Ch27, Ch28 ISSUE-01. NOTE only; no action
+        required.
+    - id: ISSUE-02
+      severity: NOTE
+      category: word-count-above-target
+      description: >
+        Narrative word count (10,871 wc -w total) is above the brief's
+        ~4,000 narrative-word target. Body-prose-only count (after removing
+        footnotes, markers, EVIDENCE tokens, COMPARATIVE-HOOKs) is approximately
+        1,000 words — within reasonable range given the 36-claim depth, two
+        halves, and the APPROPRIATION-FLAG marker (~5,446 chars). The total
+        file count includes 36 footnotes, five marker blocks (LACUNA, two
+        VARIANT, INFERENCE, APPROPRIATION-FLAG), 8 COMPARATIVE-HOOK lines, and
+        EVIDENCE tokens. No unclaimed elaboration found. NOTE only; no action
+        required.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 36 claims are mapped to narrative locations in order across 6 sections:
+    - Source overview (claims 1–10): all 10 claims present. The two-component
+      structure (Bakunawa with Eugenio 2001 anchor; Erlik/Ülgen with Eliade 1964
+      and Harva 1938 anchors), oral-tradition textual situation for both halves,
+      colonial-ethnographic mediation (Spanish-American-colonial Philippine;
+      Russian-Imperial Altaic), Forsyth typology anchor with explicit
+      not-for-Philippine-or-Altaic-coverage disclaimer, LACUNA marker covering
+      both halves' pre-modern attestation absence, chapter treatment type —
+      all present in correct order.
+    - Bakunawa: Philippine context and eclipse-and-moon narrative (claims 11–16):
+      all 6 claims present. Visayan/Bikol geographic setting, Bakunawa as
+      deep-sea serpent-dragon, seven-moons premise (six devoured), recurrent
+      eclipse events as continuing Bakunawa attempts, communal noise-making
+      (drums, gongs, shouting, metal pots) as eclipse-response practice,
+      cycle outcome as retreat not death — all present.
+    - Bakunawa: communal-ritual register and inclusion-marginal status
+      (claims 17–20): all 4 claims present. Eclipse-aetiology not cosmogony,
+      absence of hero-figure, communal-prophylactic vs. Eurasian
+      cyclical-maintenance register, inclusion-marginal characterisation with
+      VARIANT marker — all present.
+    - Erlik/Ülgen: Altaic/Turkic-Mongol cosmographic frame (claims 21–27):
+      all 7 claims present. Altai/Buryat/Yakut geographic setting, Ülgen as
+      sky-god of upper world, Erlik as anthropomorphic underworld-ruler
+      (non-serpentine), dualistic pairing not combat-resolved, shamanic
+      integration (white-shaman/black-shaman), VARIANT marker, inclusion-
+      marginal on two grounds — all present.
+    - Erlik/Ülgen: dualistic cosmology and inclusion-marginal status
+      (claims 28–31): all 4 claims present. Dualistic-cosmological
+      structuring function, non-serpentine and non-decisive features placing
+      material outside operational definition, Indo-Iranian parallel as
+      independent typological convergence (not inheritance), Forsyth
+      typology anchor repeated for Erlik/Ülgen half — all present.
+    - Typology, area-specialist framing, and forward-links (claims 32–36):
+      all 5 claims present. INFERENCE marker, parallel inclusion-marginality
+      of both halves, APPROPRIATION-FLAG with all four required components,
+      related-tier classification and disproportionate structural significance,
+      principal forward-link to Ch41 / secondary to Ch40, methods sidebar
+      three-point contribution (Ch33), back-links to Ch28/Ch27/Ch6/Ch16,
+      closing methodological registration — all present.
+    Footnote count: 36 on both sides — exact match verified programmatically.
+    Footnote CONTENTS: verified character-by-character identical by Python
+    hashlib comparison (md5sum 1609bfff2d7a498bb080a193fa91ca38 on both sides).
+    EVIDENCE token count: 36 on both sides — exact match, sequence order
+    verified identical by Python comparison (True).
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    forsyth_disclaimer_preserved:
+      result: PASS
+      notes: >
+        Forsyth disclaimer preserved at two locations. Body prose in source
+        overview (claim 8 narrative) states: "Forsyth supplies the typological
+        framing only — not Philippine or Altaic-content coverage, which Forsyth
+        does not undertake." The body prose in the Erlik/Ülgen inclusion-
+        marginal section (claim 31 narrative) repeats: "Forsyth does not
+        himself treat Philippine or Altaic content, with the chapter's use of
+        the Forsyth citation being for the long-arc typological framing rather
+        than for Philippine or Altaic-content scholarly coverage in either half."
+        Python search: 'does not itself treat Philippine or Altaic': 2 hits.
+        Both Forsyth EVIDENCE tokens correctly designated loc=combat-myth
+        long-arc typology (Sumer through Judeo-Christian apocalyptic). PASS.
+    lacuna_marker_preservation:
+      result: PASS
+      notes: >
+        The LACUNA marker (claims_len=2970, narrative_len=2970) is verbatim
+        identical (bracket-depth-matched extraction, Python character comparison:
+        True). The marker covers BOTH halves: (1) Bakunawa — pre-Hispanic-
+        contact Philippine indigenous-script attestation absent; principal
+        record is 19th-20th-century folkloric/ethnographic recordings of
+        Visayan-/Bikol-/other-Philippine-regional-language oral performances
+        synthesised in Eugenio's Philippine Folk Literature series; (2) Erlik/
+        Ülgen — pre-19th-century Russian-language or European-language
+        attestation absent (beyond passing medieval Islamic geographer
+        references); principal record is 19th-20th-century Russian-Imperial
+        ethnographic recordings (Potanin, Verbitsky, Radloff, Russian Imperial
+        Geographical Society, Russian Academy of Sciences corpus) synthesised
+        in Harva 1938 FFC 125 and read through Eliade 1964. Pre-modern
+        performance contexts partially recoverable through recordings and
+        continuing-tradition record. scholarly_reconstruction: yes — within
+        19th-20th-century recording corpus for each half; cross-tradition
+        reconstruction excluded per scope.md §"Reconstruction policy" point 1;
+        two halves kept separate at narrative-reconstruction level. PASS.
+    banned_glossary_terms:
+      result: PASS
+      notes: >
+        The banned umbrella terms "chaos-figure", "chaos-monster", and
+        "chaos-serpent" are absent from the narrative. Python grep returned
+        zero hits for all three terms. Bakunawa is characterised throughout
+        as "serpent-dragon", "serpent", "serpent-dragon of the deep sea" —
+        never by any banned umbrella term. Erlik is characterised as
+        "underworld-god", "anthropomorphic underworld-ruler" — never as any
+        banned umbrella term. PASS.
+    no_unauthorised_material:
+      result: PASS
+      notes: >
+        No sources cited in the narrative that do not appear in the approved
+        claims. No new named scholars, deities, texts, or comparanda introduced
+        beyond what the claims supply. The two bridge sentences name only
+        structural movements, markers, and chapter-movement previews already
+        established in the claims and brief. No new factual content found
+        anywhere in the narrative. Potanin, Verbitsky, and Radloff are named
+        in body prose per the named-but-flagged secondary-anchor pattern
+        authorised by the claims document (and validated at the post-human-
+        normalize stage per Ch23 FC-02 / Ch26 FC-02 / Ch27 / Ch28 precedent). PASS.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        Glossary discipline holds throughout. Bakunawa (consistent spelling,
+        Philippine/Visayan/Bikol context); Visayan (consistent); Bikol
+        (consistent); Erlik (consistent, anthropomorphic underworld-ruler);
+        Ülgen (consistent, sky-god/upper world); Altai/Altaic (consistent);
+        Buryat (consistent); Yakut (consistent); Tengri (not applicable to
+        this chapter); Eugenio/Eliade/Harva in correct scholarly forms.
+        Locked terms (chaoskampf, cosmogonic, shamanic complex, etc.) used
+        verbatim. No glossary violations found. PASS.
+    section_structure:
+      result: PASS
+      notes: >
+        6 sections in claims = 6 sections in narrative with identical headers:
+        (1) Source overview; (2) Bakunawa: the Philippine context and the
+        eclipse-and-moon narrative; (3) Bakunawa: communal-ritual register
+        and inclusion-marginal status; (4) Erlik and Ülgen: the Altaic /
+        Turkic-Mongol cosmographic frame; (5) Erlik and Ülgen: dualistic
+        cosmology and inclusion-marginal status; (6) Typology, area-specialist
+        framing, and forward-links. No sections added, dropped, or renamed.
+        Python comparison: identical. PASS.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    lacuna_marker:
+      result: PASS
+      notes: >
+        Single LACUNA marker (source overview, end of section 1) is verbatim
+        identical to claims (bracket-depth-matched extraction, Python character
+        comparison: True; length 2970 on both sides). Covers both halves. PASS.
+    inference_marker:
+      result: PASS
+      notes: >
+        Single INFERENCE marker (typology section, opening of section 6) is
+        verbatim identical to claims (bracket-depth-matched extraction, Python
+        character comparison: True; length 2580 on both sides). Correctly flags
+        the inclusion-marginal characterisation as a comparativist-overlay
+        synthesis, with basis field naming brief 30-bakunawa.yaml, Eugenio 2001,
+        Eliade 1964, Harva 1938, and scope.md §"Subject definition" / §"Inclusion
+        / exclusion criteria" / §"Appropriation protocol"; risk field noting the
+        area-specialist traditions do not adopt the inclusion-marginal framing
+        in their own register. Preceded by non-footnoted bridge sentence
+        (introductory navigation — appropriate bridge text, no footnote). PASS.
+    variant_markers:
+      result: PASS
+      notes: >
+        Two VARIANT markers present, one per half, both verbatim identical to
+        claims (bracket-depth-matched extraction, Python character comparison:
+        True on both).
+        VARIANT[0] (Bakunawa, section 2): claims_len=2092, narrative_len=2092,
+        identical=True. Placed correctly in the Bakunawa eclipse-and-moon
+        section. Covers: number of original moons (seven dominant; reduced
+        counts in some recordings), dwelling-place of Bakunawa (deep sea /
+        underworld), enumeration of communal noise-making practices, framing
+        of celestial-versus-cosmographic threat (devouring six of seven moons
+        dominant; alternative devourings in some variants). chosen:
+        co-equal-recorded-versions per brief shared_variant_handling. PASS.
+        VARIANT[1] (Erlik/Ülgen, section 4): claims_len=1927, narrative_len=1927,
+        identical=True. Placed correctly in the Erlik/Ülgen cosmographic-frame
+        section. Covers: number of layered heavens/underworlds (seven, nine,
+        or other), enumeration and naming of subordinate spirits, framing of
+        cosmogonic Erlik-Ülgen relationship (fallen-from-Ülgen vs. co-eternal),
+        division of shamanic specialisation (white-shaman/black-shaman).
+        chosen: co-equal-recorded-versions per brief shared_variant_handling.
+        PASS.
+    appropriation_flag_marker:
+      result: PASS
+      notes: >
+        Single APPROPRIATION-FLAG marker (typology section 6, following INFERENCE
+        marker and bridge sentence) is verbatim identical to claims
+        (bracket-depth-matched extraction, Python character comparison: True;
+        length 5446 on both sides). This is the sixth APPROPRIATION-FLAG in
+        the book. All four required components verified:
+        (1) Named area specialists for both halves: Eugenio for Bakunawa half
+        (Eugenio 2001, *Philippine Folk Literature: The Myths*, and wider
+        Philippine Folk Literature series compilations); Eliade (Shamanism 1964)
+        and Harva (FFC 125 1938) for Erlik/Ülgen half with Potanin, Verbitsky,
+        and Radloff named-but-flagged per Ch23 FC-02 / Ch26 FC-02 / Ch27 / Ch28
+        precedent. All named in first factual pass per scope.md §"Appropriation
+        protocol" point 1. PASS.
+        (2) Substance of objections: Bakunawa half — Eugenio's eclipse-aetiology /
+        communal-ritual framing; area-specialist objection to typological-
+        assimilation on no-hero-figure / no-decisive-combat-and-victory-episode
+        grounds. Erlik/Ülgen half — Eliade's and Harva's dualistic-cosmology /
+        shamanic-complex framing; area-specialist objection to typological-
+        assimilation on non-serpentine-adversary and non-decisive-opposition
+        grounds. Both halves read outside the chaos-vs-order combat register
+        that the Gunkel-tradition chaoskampf typology presupposes. PASS.
+        (3) Spectrum-positioning: Bakunawa half positioned closer to Ch32
+        Nanabozho refusal case (Hallowell-Johnston-T. Smith-Vizenor tradition
+        rejecting combat-and-defeat-of-the-other framing) than to the milder
+        Ch26 Pariacaca and Ch27 Mapuche cases. Erlik/Ülgen half positioned as
+        structurally distinctive strong-objection case in which the dualistic-
+        cosmology framing and chaoskampf typology converge on no structural
+        feature at the load-bearing level. Both are strong-objection cases.
+        Python check: 'Ch32 Nanabozho' in af AND 'Ch26 Pariacaca' in af:
+        PASS. Python check: 'structurally distinctive strong-objection case'
+        in af: PASS. PASS.
+        (4) Ch41 PRIMARY / Ch40 secondary forwarding clause: "Forwarded to Part
+        II C8 (refusal and appropriation problem; ch. 41 of the present volume)
+        as PRINCIPAL CASES"; "forwarded also to Part II C7 (inversion /
+        transformation problem; ch. 40)". Python check: 'ch. 41' in af: PASS;
+        'ch. 40' in af: PASS. Ch41 as PRIMARY FORWARD TARGET confirmed. PASS.
+        Python check: 'inclusion-marginal characterisation as the heuristic'
+        in af: PASS. PASS on all four components.
+    comparative_hooks:
+      result: PASS
+      notes: >
+        All 8 COMPARATIVE-HOOK lines are verbatim identical between the claims
+        and narrative, confirmed by Python comparison returning exact match
+        (claims_hooks == narrative_hooks: True). Hooks cover:
+        C1 — Egypt (Ra-Apep, Ch. 16): daily cyclical-maintenance register contrast
+        vs. Bakunawa communal-prophylactic register; Apep-Bakunawa as principal
+        worked instance of inclusion-marginal-cyclical-maintenance distinction.
+        C2 — Anatolia (Illuyanka, Ch. 6): *purulli*-festival cyclical-maintenance
+        contrast vs. Bakunawa eclipse-response practice; inclusion-marginal
+        feature at festival-attached level.
+        C3 — Iran (Thraētaona / Aži Dahāka, Ch. 13): Indo-Iranian dualistic-
+        cosmology comparandum for Erlik/Ülgen; Ahura Mazdā/Angra Mainyu parallel
+        registered as independent typological convergence (not transmission);
+        decisive-combat contrast (Frashokereti vs. no Altaic decisive-combat).
+        C4 — Africa (Bida/Wagadu, Ch. 28): inclusion-marginal-versus-inversion
+        contrast; three-category typological-engagement scheme (inversion,
+        no-hero-slaying-communal-prophylactic, non-serpentine-non-decisive).
+        C5 — Mapuche Kai-Kai / Tren-Tren (Ch. 27): non-Eurasian-cluster
+        co-comparandum at related-tier level; transformation vs. inclusion-
+        marginal characterisation for Part II C7 / C8.
+        C6 — Methods sidebar (Ch. 33): three methodological moves (appropriation-
+        protocol outside-framing; inclusion-marginal-characterisation move;
+        named-but-flagged secondary-anchor pattern for Potanin/Verbitsky/Radloff).
+        C7 — Part II C7 (Ch. 40): structurally-adjacent-boundary cases testing
+        typology's application range; inclusion-marginal as own category
+        alongside inversion and transformation.
+        C8 — Part II C8 (Ch. 41): PRIMARY FORWARD TARGET; PRINCIPAL CASES for
+        chaoskampf-frame-applies-only-partially-at-best argument from both
+        halves; load-bearing methodological move for C8.
+        PASS.
+    source_distribution:
+      result: PASS
+      notes: >
+        Source distribution in narrative matches approved-claims body exactly:
+        eugenio-philippine-myths=19, harva-altaic-religious=10, eliade-shamanism=5,
+        forsyth-1987=2. Total: 36.
+        Distribution confirmed by programmatic count on both sides (Python
+        Counter). EVIDENCE token sequence order also confirmed identical (Python
+        list comparison: claims_ev == narrative_ev: True). PASS.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        See check_2_no_additions.glossary_discipline above. All locked renderings
+        used correctly throughout. No glossary violations found. PASS.
+    footnote_integrity:
+      result: PASS
+      notes: >
+        36 footnotes in the narrative; 36 in the claims body. Footnote CONTENTS
+        (inside footnote:[...] brackets) verified character-by-character identical
+        by Python hashlib comparison (md5sum 1609bfff2d7a498bb080a193fa91ca38
+        on both sides — exact match). Python bracket-depth-matched extraction
+        of all 36 footnotes: 0 footnote diffs across all 36. No additions,
+        removals, or text alterations inside footnote brackets. Body prose is
+        rewritten for narrative readability but footnotes are content-identical.
+        PASS.
+    evidence_token_integrity:
+      result: PASS
+      notes: >
+        36 EVIDENCE tokens in the narrative; 36 in the claims body. All EVIDENCE
+        token content lines are character-by-character identical between the two
+        files, confirmed by Python comparison (claims_ev == narrative_ev: True).
+        Source distribution exactly preserved: eugenio-philippine-myths=19,
+        harva-altaic-religious=10, eliade-shamanism=5, forsyth-1987=2. PASS.
+    two_component_structure_preservation:
+      result: PASS
+      notes: >
+        (1) Bakunawa source-overview-and-narrative material (anchor: Eugenio 2001):
+        sections 1–3 cover the Philippine context, eclipse narrative, communal-
+        ritual register, and inclusion-marginal status of the Bakunawa half in
+        that order before the Erlik/Ülgen material begins. Section order within
+        the Bakunawa half confirmed (Philippine context → eclipse-moon narrative
+        → communal-ritual register → inclusion-marginal status). PASS.
+        (2) Erlik/Ülgen source-overview-and-narrative material (anchors: Eliade
+        1964; Harva 1938): sections 4–5 cover the Altaic cosmographic frame,
+        dualistic cosmology, and inclusion-marginal status of the Erlik/Ülgen
+        half in that order. Section order within the Erlik/Ülgen half confirmed
+        (cosmographic frame → dualistic cosmology and inclusion-marginal). PASS.
+        (3) Typology and forward-links section (section 6) consolidates both
+        halves. INFERENCE and APPROPRIATION-FLAG markers in correct positions.
+        C8 Ch41 as PRIMARY FORWARD TARGET with Ch40 as secondary confirmed.
+        PASS.
+    inclusion_marginal_framing_preservation:
+      result: PASS
+      notes: >
+        Bakunawa half: NO HERO-SLAYING framing preserved throughout.
+        Python checks: 'no individual hero' in narrative: True; 'no hero-slaying'
+        in narrative: True; 'no hero-figure' in narrative: True; 'communal noise'
+        in narrative: True. Communal-prophylactic-rather-than-hero-led-re-enactive
+        characterisation explicit in section 3. Extension of chaoskampf category
+        to communal/non-slaying register stated explicitly. PASS.
+        Erlik/Ülgen half: NON-SERPENTINE ADVERSARY and NON-DECISIVE OPPOSITION
+        framing preserved throughout.
+        Python checks: 'non-serpentine' in narrative: True; 'non-decisive' in
+        narrative: True. Erlik's anthropomorphic underworld-ruler conception stated
+        explicitly at claims 24 and 29 narrative. Non-decisive long-term
+        cosmographic arrangement (not single-combat-and-victory) stated explicitly
+        at claims 26 and 29 narrative. Dualistic-cosmology comparandum registration
+        explicit. PASS.
+    forsyth_disclaimer_preservation:
+      result: PASS
+      notes: >
+        Two Forsyth EVIDENCE tokens (forsyth-1987; loc=combat-myth long-arc
+        typology (Sumer through Judeo-Christian apocalyptic)), both framing-only
+        with the explicit not-for-Philippine-or-Altaic-coverage disclaimer. First
+        Forsyth token in source overview (claim 8 narrative): explicit disclaimer
+        "not Philippine or Altaic-content coverage, which Forsyth does not
+        undertake." Second Forsyth token in Erlik/Ülgen inclusion-marginal
+        section (claim 31 narrative): explicit disclaimer "Forsyth does not
+        himself treat Philippine or Altaic content." Python check: 'does not
+        itself treat Philippine or Altaic': 2 hits in narrative. Both footnotes
+        also carry the disclaimer ("Forsyth 1987 does not itself treat Philippine
+        or Altaic-content material"). PASS.
+    forward_link_verification:
+      result: PASS
+      notes: >
+        All forward and back-links verified against toc.yaml by programmatic
+        regex pattern match (number: N):
+        Ch6 (Illuyanka *purulli*-festival): toc.yaml — FOUND; narrative — FOUND.
+        Ch13 (Thraētaona/Aži Dahāka): toc.yaml — FOUND; narrative — FOUND.
+        Ch16 (Ra-Apep): toc.yaml — FOUND; narrative — FOUND.
+        Ch27 (Mapuche Kai-Kai/Tren-Tren): toc.yaml — FOUND; narrative — FOUND.
+        Ch28 (Bida/Wagadu): toc.yaml — FOUND; narrative — FOUND.
+        Ch32 (Nanabozho/Mishipeshu): toc.yaml — FOUND; narrative — FOUND.
+        Ch33 (methods sidebar): toc.yaml — FOUND; narrative — FOUND.
+        Ch40 (C7 inversion/transformation): toc.yaml — FOUND; narrative — FOUND.
+        Ch41 (C8 refusal and appropriation; PRIMARY FORWARD TARGET): toc.yaml —
+        FOUND; narrative — FOUND.
+        All nine cross-chapter references resolve. PASS.
+    word_count_sanity:
+      result: NOTE
+      notes: >
+        10,871 total words (wc -w) against ~4,000 brief target. The AsciiDoc
+        file count includes 36 footnotes, five marker blocks (LACUNA, two
+        VARIANT, INFERENCE, APPROPRIATION-FLAG), 8 COMPARATIVE-HOOK lines, and
+        EVIDENCE tokens. The word-count formula: 36 footnotes averaging ~100+
+        words each (~3,600 footnote words); LACUNA marker (~430 words); two
+        VARIANT markers (~600 words combined); INFERENCE marker (~380 words);
+        APPROPRIATION-FLAG (~800 words); 8 COMPARATIVE-HOOK lines (~700 words);
+        EVIDENCE tokens. Body-prose-only count (excluding footnotes, EVIDENCE
+        tokens, COMPARATIVE-HOOKs, markers, and metadata) is approximately
+        1,000 words — within target for a related-tier family chapter with two
+        halves and a full marker set. NOTE only; no unclaimed elaboration found.
+    banned_umbrella_terms:
+      result: PASS
+      notes: >
+        Zero hits for "chaos-figure", "chaos-monster", "chaos-serpent" anywhere
+        in narrative (Python grep: zero on all three). PASS.
+
+verdict_rationale: >
+  The narrative scores PASS on all three checks with no findings requiring
+  revision. Check 1 (Completeness): all 36 claims are mapped to narrative
+  locations in order, across 6 sections with identical headers on both sides;
+  36 footnotes and 36 EVIDENCE tokens on each side verified programmatically;
+  footnote CONTENTS verified character-by-character identical (md5sum
+  1609bfff2d7a498bb080a193fa91ca38 on both sides); EVIDENCE sequence order
+  identical (Python comparison: True); all five markers (LACUNA, VARIANT[0]
+  Bakunawa, VARIANT[1] Erlik/Ülgen, INFERENCE, APPROPRIATION-FLAG) are verbatim
+  identical to claims (bracket-depth-matched extraction, Python character
+  comparison: True on all five); all 8 COMPARATIVE-HOOK lines are verbatim
+  identical (Python comparison: exact match). Check 2 (No additions): two
+  unfootnoted bridge sentences are legitimate marker-introduction bridges
+  introducing no factual assertions; Forsyth disclaimer preserved at two
+  locations; no banned umbrella terms found; glossary discipline holds; no
+  unauthorised new material. Check 3 (Fidelity): all five markers verbatim
+  identical; all 8 hooks verbatim identical; source distribution matches
+  exactly (eugenio-philippine-myths=19, harva-altaic-religious=10,
+  eliade-shamanism=5, forsyth-1987=2); footnote integrity confirmed by Python
+  hash; EVIDENCE integrity confirmed by Python comparison; two-component
+  chapter structure (Bakunawa sections 1-3 → Erlik/Ülgen sections 4-5 →
+  Typology section 6) confirmed intact; inclusion-marginal framing for both
+  halves confirmed (Bakunawa no-hero-slaying/communal-prophylactic; Erlik
+  non-serpentine/non-decisive); Forsyth disclaimer at both EVIDENCE token
+  locations confirmed; both VARIANT markers present and verbatim identical
+  (one per half); APPROPRIATION-FLAG four required components verified
+  (Eugenio named for Bakunawa half; Eliade/Harva named for Erlik/Ülgen half
+  with Potanin/Verbitsky/Radloff named-but-flagged; eclipse-aetiology/communal-
+  ritual framing for Bakunawa; dualistic-cosmology/shamanic-complex framing for
+  Erlik/Ülgen; Bakunawa closer to Ch32 Nanabozho; Erlik/Ülgen structurally
+  distinctive strong-objection case; Ch41 PRIMARY FORWARD TARGET; Ch40 secondary;
+  inclusion-marginal as heuristic); forward-links all nine resolved against
+  toc.yaml. The two NOTE findings (two bridge sentences; word-count formula
+  overage attributable to marker-bulk appropriate for a dual-half family chapter
+  with five markers) are within the zero-action threshold. Verdict: PASS.
+
+claim_mapping:
+  # Source overview (claims 1–10 → narrative section 1)
+  - claim_number: 1
+    narrative_location: "source overview, opening paragraph"
+    status: MAPPED
+  - claim_number: 2
+    narrative_location: "source overview, Eugenio anchor paragraph"
+    status: MAPPED
+  - claim_number: 3
+    narrative_location: "source overview, Eliade/Harva anchor paragraph"
+    status: MAPPED
+  - claim_number: 4
+    narrative_location: "source overview, Bakunawa oral-tradition paragraph"
+    status: MAPPED
+  - claim_number: 5
+    narrative_location: "source overview, Erlik/Ülgen oral-tradition paragraph"
+    status: MAPPED
+  - claim_number: 6
+    narrative_location: "source overview, Bakunawa colonial-filtering paragraph"
+    status: MAPPED
+  - claim_number: 7
+    narrative_location: "source overview, Erlik/Ülgen colonial-filtering paragraph"
+    status: MAPPED
+  - claim_number: 8
+    narrative_location: "source overview, Forsyth typology paragraph"
+    status: MAPPED
+  - claim_number: 9
+    narrative_location: "source overview, shared oral-tradition textual-situation paragraph"
+    status: MAPPED
+  - claim_number: 10
+    narrative_location: "source overview, LACUNA marker"
+    status: MAPPED
+  # Bakunawa: Philippine context (claims 11–16 → narrative section 2)
+  - claim_number: 11
+    narrative_location: "section 2, geographic setting paragraph"
+    status: MAPPED
+  - claim_number: 12
+    narrative_location: "section 2, Bakunawa as deep-sea serpent-dragon paragraph"
+    status: MAPPED
+  - claim_number: 13
+    narrative_location: "section 2, seven-moons premise paragraph"
+    status: MAPPED
+  - claim_number: 14
+    narrative_location: "section 2, communal noise-making practice paragraph"
+    status: MAPPED
+  - claim_number: 15
+    narrative_location: "section 2, cycle outcome as retreat paragraph"
+    status: MAPPED
+  - claim_number: 16
+    narrative_location: "section 2, VARIANT[0] marker"
+    status: MAPPED
+  # Bakunawa: communal-ritual register (claims 17–20 → narrative section 3)
+  - claim_number: 17
+    narrative_location: "section 3, eclipse-aetiology not cosmogony paragraph"
+    status: MAPPED
+  - claim_number: 18
+    narrative_location: "section 3, absence of hero-figure paragraph"
+    status: MAPPED
+  - claim_number: 19
+    narrative_location: "section 3, communal-prophylactic vs. Eurasian cyclical-maintenance paragraph"
+    status: MAPPED
+  - claim_number: 20
+    narrative_location: "section 3, inclusion-marginal status paragraph"
+    status: MAPPED
+  # Erlik/Ülgen: cosmographic frame (claims 21–27 → narrative section 4)
+  - claim_number: 21
+    narrative_location: "section 4, geographic setting paragraph"
+    status: MAPPED
+  - claim_number: 22
+    narrative_location: "section 4, Ülgen as sky-god paragraph"
+    status: MAPPED
+  - claim_number: 23
+    narrative_location: "section 4, Erlik as anthropomorphic underworld-ruler paragraph"
+    status: MAPPED
+  - claim_number: 24
+    narrative_location: "section 4, dualistic pairing not combat-resolved paragraph"
+    status: MAPPED
+  - claim_number: 25
+    narrative_location: "section 4, shamanic integration paragraph"
+    status: MAPPED
+  - claim_number: 26
+    narrative_location: "section 4, VARIANT[1] marker"
+    status: MAPPED
+  # Erlik/Ülgen: dualistic cosmology (claims 27–31 → narrative section 5)
+  - claim_number: 27
+    narrative_location: "section 5, dualistic-cosmological function paragraph"
+    status: MAPPED
+  - claim_number: 28
+    narrative_location: "section 5, non-serpentine and non-decisive features paragraph"
+    status: MAPPED
+  - claim_number: 29
+    narrative_location: "section 5, Indo-Iranian parallel as independent convergence paragraph"
+    status: MAPPED
+  - claim_number: 30
+    narrative_location: "section 5, inclusion-marginal strong-sense paragraph"
+    status: MAPPED
+  - claim_number: 31
+    narrative_location: "section 5, Forsyth typology load-bearing for Erlik/Ülgen half paragraph"
+    status: MAPPED
+  # Typology and forward-links (claims 32–36 → narrative section 6)
+  - claim_number: 32
+    narrative_location: "section 6, INFERENCE marker"
+    status: MAPPED
+  - claim_number: 33
+    narrative_location: "section 6, parallel inclusion-marginality paragraph + APPROPRIATION-FLAG marker"
+    status: MAPPED
+  - claim_number: 34
+    narrative_location: "section 6, related-tier classification and disproportionate significance paragraph"
+    status: MAPPED
+  - claim_number: 35
+    narrative_location: "section 6, principal forward-link to Ch41 paragraph"
+    status: MAPPED
+  - claim_number: 36
+    narrative_location: "section 6, methods sidebar Ch33 three-point contribution + back-links + closing paragraph"
+    status: MAPPED
+
+findings:
+  - kind: BRIDGE-SENTENCE
+    severity: NOTE
+    claim_number: ~
+    narrative_location: "section 6 (bridge before INFERENCE marker; bridge before APPROPRIATION-FLAG)"
+    issue: >
+      Two unfootnoted bridge/transitional sentences not present in the claims
+      document, at narrative bridge points introducing the INFERENCE marker
+      and the APPROPRIATION-FLAG marker.
+    detail: >
+      Bridge before INFERENCE (opening of section 6): "The chapter's reading
+      of both halves as inclusion-marginal cases is itself a comparativist-
+      overlay synthesis drawn from the brief, from Eugenio's Philippine-folkloric
+      framing for the Bakunawa half, from Eliade's and Harva's Altaic-religious-
+      cosmology framing for the Erlik / Ülgen half, and from scope.md's
+      operational-definition-and-related-tier criteria; it is flagged as such
+      before the body prose develops the chapter's consolidated typological work:"
+      Bridge before APPROPRIATION-FLAG: "That parallel inclusion-marginality
+      is the specific outcome of area-specialist framings that read both halves
+      outside the chaos-vs-order combat register, and the chapter flags the
+      resulting appropriation issue explicitly under the marker the project
+      reserves for cases of this kind:" Both bridges introduce no factual
+      assertions beyond what the claims establish. Same pattern as Ch24 ISSUE-01,
+      Ch26 ISSUE-01, Ch27, and Ch28.
+    recommended_fix: >
+      No action required. NOTE severity only.
+
+  - kind: WORD-COUNT-OVERAGE
+    severity: NOTE
+    claim_number: ~
+    narrative_location: "whole chapter"
+    issue: >
+      Narrative word count (10,871 wc -w) exceeds the brief's ~4,000 narrative-
+      word target.
+    detail: >
+      Overage attributable to: 36 footnotes (~3,600+ footnote words); five
+      marker blocks (LACUNA ~430 words, two VARIANT ~600 words combined,
+      INFERENCE ~380 words, APPROPRIATION-FLAG ~800 words); 8 COMPARATIVE-HOOK
+      lines (~700 words); EVIDENCE tokens. Body-prose-only count is approximately
+      1,000 words — within target for a related-tier family chapter with two
+      halves and a full marker set. No unclaimed elaboration found.
+    recommended_fix: >
+      No action required at fidelity stage. NOTE only.

@@ -1,0 +1,193 @@
+stage: 15-narrative-fidelity
+chapter: 30
+chapter_title: "Bakunawa and the Moons (with Erlik/Ülgen as Altaic Comparandum)"
+status: done
+verdict: PASS
+timestamp: 2026-05-01T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 36
+  claims_mapped: 36
+  footnotes_claims: 36
+  footnotes_narrative: 36
+  footnote_content_match: true
+  footnote_md5_claims: 1609bfff2d7a498bb080a193fa91ca38
+  footnote_md5_narrative: 1609bfff2d7a498bb080a193fa91ca38
+  evidence_tokens_claims: 36
+  evidence_tokens_narrative: 36
+  evidence_sequence_match: true
+  reconstruction_markers: 0
+  lacuna_markers: 1
+  inference_markers: 1
+  variant_markers: 2
+  appropriation_flag_markers: 1
+  comparative_hooks: 8
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  forsyth_disclaimer_preserved: true
+  lacuna_marker_verbatim: true
+  inference_marker_verbatim: true
+  variant_marker_bakunawa_verbatim: true
+  variant_marker_erlik_ulgen_verbatim: true
+  appropriation_flag_marker_verbatim: true
+  two_component_structure_preserved: true
+  inclusion_marginal_framing_bakunawa_preserved: true
+  inclusion_marginal_framing_erlik_ulgen_preserved: true
+  banned_umbrella_terms_hits: 0
+  note_findings: 2
+  high_findings: 0
+  medium_findings: 0
+
+source_distribution:
+  eugenio_philippine_myths: 19
+  harva_altaic_religious: 10
+  eliade_shamanism: 5
+  forsyth_1987: 2
+  total: 36
+  distribution_matches_claims: true
+
+two_component_structure:
+  bakunawa_half_sections_before_erlik_sections: true
+  bakunawa_sections_in_order: true
+  erlik_ulgen_sections_in_order: true
+  typology_forward_links_section_consolidates_both: true
+
+inclusion_marginal_framing:
+  bakunawa_no_hero_slaying: true
+  bakunawa_communal_prophylactic_register: true
+  bakunawa_extends_chaoskampf_to_communal_non_slaying: true
+  erlik_non_serpentine_adversary: true
+  erlik_non_decisive_opposition: true
+  erlik_ulgen_dualistic_cosmology_comparandum: true
+
+appropriation_flag_components:
+  named_area_specialists: >
+    Bakunawa half: Eugenio named in first factual pass (Eugenio 2001,
+    Philippine Folk Literature: The Myths, and wider series).
+    Erlik/Ülgen half: Eliade (Shamanism 1964) and Harva (FFC 125 1938)
+    named in first factual pass; Potanin, Verbitsky, Radloff named-but-
+    flagged per Ch23 FC-02 / Ch26 FC-02 / Ch27 / Ch28 precedent.
+    All named in first factual pass per scope.md Appropriation protocol
+    point 1. PASS.
+  substance_of_objections: >
+    Bakunawa: Eugenio's eclipse-aetiology / communal-ritual framing;
+    objection to typological-assimilation on no-hero-figure / no-decisive-
+    combat-and-victory-episode grounds. Erlik/Ülgen: Eliade and Harva's
+    dualistic-cosmology / shamanic-complex framing; objection on non-
+    serpentine-adversary and non-decisive-opposition grounds. Both halves
+    read outside chaos-vs-order combat register. PASS.
+  spectrum_positioning: >
+    Bakunawa half: closer to Ch32 Nanabozho refusal case (Hallowell-Johnston-
+    T. Smith-Vizenor tradition) than to milder Ch26 Pariacaca and Ch27 Mapuche
+    cases. Erlik/Ülgen half: structurally distinctive strong-objection case
+    in which dualistic-cosmology framing and chaoskampf typology converge on
+    no structural feature at the load-bearing level. Both strong-objection cases.
+    Python check: 'Ch32 Nanabozho' and 'Ch26 Pariacaca' in APPROPRIATION-FLAG:
+    PASS. Python check: 'structurally distinctive strong-objection case': PASS.
+  ch41_primary_ch40_secondary_forwarding: >
+    Ch41 (C8 refusal and appropriation problem) named as PRIMARY FORWARD TARGET
+    with both halves as PRINCIPAL CASES. Ch40 (C7 inversion/transformation
+    problem) named as secondary forward. Python check: 'ch. 41' in
+    APPROPRIATION-FLAG: PASS; 'ch. 40' in APPROPRIATION-FLAG: PASS. PASS.
+  appropriation_flag_number_in_book: sixth
+
+lacuna_marker_required_fields:
+  bakunawa_pre_hispanic_attestation_absent: true
+  bakunawa_19th_20th_c_folkloric_recording_corpus: true
+  bakunawa_eugenio_philippine_folk_literature: true
+  erlik_ulgen_pre_19th_c_attestation_absent: true
+  erlik_ulgen_russian_imperial_ethnographic_corpus: true
+  erlik_ulgen_potanin_verbitsky_radloff_named: true
+  erlik_ulgen_harva_1938_ffc_125: true
+  erlik_ulgen_eliade_1964: true
+  pre_modern_performance_contexts_partially_recoverable: true
+  scholarly_reconstruction_within_recording_corpus_only: true
+  cross_tradition_reconstruction_excluded: true
+  two_halves_kept_separate_at_narrative_reconstruction_level: true
+
+variant_marker_bakunawa_required_fields:
+  moon_count_variants: true
+  dwelling_place_variants: true
+  noise_making_practice_variants: true
+  celestial_vs_cosmographic_threat_variants: true
+  chosen_co_equal_recorded_versions: true
+
+variant_marker_erlik_ulgen_required_fields:
+  layered_heavens_underworlds_count_variants: true
+  subordinate_spirits_enumeration_variants: true
+  cosmogonic_relationship_framing_variants: true
+  shamanic_specialisation_variants: true
+  chosen_co_equal_recorded_versions: true
+
+forsyth_disclaimer:
+  token_1_location: "source overview, claim 8 narrative"
+  token_1_disclaimer: "not Philippine or Altaic-content coverage, which Forsyth does not undertake"
+  token_2_location: "Erlik/Ülgen inclusion-marginal section, claim 31 narrative"
+  token_2_disclaimer: "does not himself treat Philippine or Altaic content"
+  python_hits_does_not_itself_treat: 2
+
+output_files:
+  fidelity_yaml: chapters/30-bakunawa.fidelity.yaml
+  narrative: chapters/30-bakunawa.adoc
+  claims: chapters/30-bakunawa.claims.approved.adoc
+
+key_checks_passed:
+  - lacuna_marker_preservation: >
+      Single LACUNA marker (source overview, section 1) verbatim identical to
+      claims (length 2970 on both sides, Python bracket-depth-matched character
+      comparison: True). Covers BOTH halves: Bakunawa pre-colonial attestation
+      absence + 19th-20th-century folkloric recording corpus (Eugenio); Erlik/Ülgen
+      pre-19th-c. attestation absence + Russian-Imperial ethnographic corpus
+      (Potanin, Verbitsky, Radloff, Russian Imperial Geographical Society, Russian
+      Academy of Sciences) synthesised in Harva FFC 125 and Eliade 1964. PASS.
+  - both_variant_markers_preservation: >
+      Two VARIANT markers present and verbatim identical to claims: VARIANT[0]
+      (Bakunawa, section 2, length 2092 on both sides, Python: True) covers moon
+      count, dwelling-place, noise-making enumeration, and celestial-vs-cosmographic
+      threat variants. VARIANT[1] (Erlik/Ülgen, section 4, length 1927 on both
+      sides, Python: True) covers layered-heavens count, subordinate spirits,
+      cosmogonic-relationship framing, and shamanic-specialisation division.
+      One VARIANT per half, correctly placed. PASS.
+  - appropriation_flag_marker_preservation: >
+      Single APPROPRIATION-FLAG marker (typology section 6; the sixth in the book)
+      verbatim identical to claims (length 5446 on both sides, Python: True). All
+      four required components for both halves verified (see appropriation_flag_
+      components above). Ch41 as PRIMARY FORWARD TARGET confirmed. PASS.
+  - comparative_hooks: >
+      All 8 COMPARATIVE-HOOK lines verbatim identical (Python list comparison:
+      exact match). Eight hooks: Ra-Apep Ch16 (daily cyclical-maintenance vs.
+      Bakunawa communal-prophylactic), Illuyanka Ch6 (purulli-festival vs. Bakunawa
+      eclipse-response), Thraētaona/Aži Dahāka Ch13 (Indo-Iranian dualistic-
+      cosmology comparandum for Erlik/Ülgen), Bida/Wagadu Ch28 (inversion vs.
+      inclusion-marginal contrast), Mapuche Ch27 (transformation vs. inclusion-
+      marginal at related-tier), Methods sidebar Ch33 (three methodological moves),
+      Part II C7 Ch40 (structurally-adjacent-boundary cases), Part II C8 Ch41
+      (PRIMARY FORWARD TARGET; PRINCIPAL CASES for both halves). PASS.
+  - footnote_integrity: >
+      md5sum 1609bfff2d7a498bb080a193fa91ca38 on both sides. Python bracket-depth-
+      matched extraction: 0 footnote diffs across all 36. PASS.
+  - source_distribution: >
+      eugenio-philippine-myths=19, harva-altaic-religious=10, eliade-shamanism=5,
+      forsyth-1987=2 on both sides. Python Counter and list comparison: exact match.
+      PASS.
+  - banned_umbrella_terms: >
+      Zero hits for "chaos-figure", "chaos-monster", "chaos-serpent" anywhere in
+      narrative (Python grep: zero). PASS.
+  - forward_link_verification: >
+      All nine cross-chapter references (Ch6, Ch13, Ch16, Ch27, Ch28, Ch32, Ch33,
+      Ch40, Ch41) verified present in toc.yaml by programmatic regex pattern match
+      AND in narrative text. All resolve. PASS.
+  - two_component_structure: >
+      Bakunawa sections (1-3) precede Erlik/Ülgen sections (4-5); both precede
+      Typology section (6). Section headers identical on both sides (Python: True).
+      Three-component structure (Bakunawa → Erlik/Ülgen → Typology) preserved. PASS.
+  - inclusion_marginal_framing: >
+      Bakunawa: no-hero-slaying, communal-prophylactic register, extension of
+      chaoskampf comparative range — Python checks all True. Erlik/Ülgen:
+      non-serpentine-adversary, non-decisive-opposition, dualistic-cosmology
+      comparandum — Python checks all True. PASS.
