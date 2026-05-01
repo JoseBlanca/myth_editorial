@@ -1,0 +1,153 @@
+stage: 15-narrative-fidelity
+chapter: 28
+chapter_title: "Bida and the Founding of Wagadu (the Inversion)"
+status: done
+verdict: PASS
+timestamp: 2026-04-30T00:00:00Z
+auditor_model: claude-sonnet-4-6
+writer_model: claude-opus-4-7
+
+summary:
+  total_claims: 45
+  claims_mapped: 45
+  footnotes_claims: 45
+  footnotes_narrative: 45
+  footnote_content_match: true
+  footnote_md5_claims: 550f1e8d7e2d3ca6e427f6cbef1fec63
+  footnote_md5_narrative: 550f1e8d7e2d3ca6e427f6cbef1fec63
+  evidence_tokens_claims: 45
+  evidence_tokens_narrative: 45
+  evidence_sequence_match: true
+  reconstruction_markers: 0
+  lacuna_markers: 1
+  inference_markers: 1
+  variant_markers: 1
+  appropriation_flag_markers: 1
+  comparative_hooks: 12
+  drift_findings: 0
+  new_fact_findings: 0
+  marker_fidelity: PASS
+  glossary_violations: 0
+  forbidden_word_hits: 0
+  forsyth_disclaimer_preserved: true
+  forsyth_inversion_target_threading_preserved: true
+  lacuna_marker_verbatim: true
+  inference_marker_verbatim: true
+  variant_marker_verbatim: true
+  appropriation_flag_marker_verbatim: true
+  inversion_framing_structural_ordering_preserved: true
+  banned_umbrella_terms_hits: 0
+  note_findings: 3
+  high_findings: 0
+  medium_findings: 0
+
+source_distribution:
+  belcher_epic: 24
+  conrad_west_africa: 20
+  forsyth_1987: 1
+  total: 45
+  distribution_matches_claims: true
+
+inversion_framing_structural_ordering:
+  sections_1_to_5_before_section_6: true
+  dedicated_inversion_section_6: true
+  inference_precedes_inversion_body_prose: true
+  protector_vs_adversary_registered: true
+  destroying_vs_establishing_registered: true
+  broken_vs_reenacted_maintenance_ritual_registered: true
+  forsyth_inversion_depends_on_typology_explicit: true
+
+appropriation_flag_components:
+  named_area_specialists: >
+    Conrad, Belcher, Hale, Bird, Dieterlen, Levtzion — all six named with
+    institutional contexts. PASS.
+  substance_typological_assimilation_objection: >
+    Objection is to typological ASSIMILATION of Bida narrative to Eurasian
+    chaoskampf register — NOT to combat-myth recognition as such. Correct
+    per task instructions. PASS.
+  spectrum_positioning: >
+    Positioned as milder than Ch23 Naumann / Isomae / Como (combat-myth
+    framing rejection) and Ch32 Hallowell / Johnston / T. Smith / Vizenor
+    (combat-and-defeat-of-the-other rejection) in APPROP-FLAG body.
+    Spectrum between Ch23 Naumann (stronger) and Ch26 Salomon-Urioste-
+    Taylor-Dean (milder) confirmed across APPROP-FLAG body and C8
+    COMPARATIVE-HOOK together. PASS.
+  ch40_ch41_forwarding_clause: >
+    Part II C7 ch. 40 and Part II C8 ch. 41 explicitly named in
+    APPROPRIATION-FLAG body. PASS.
+
+lacuna_marker_required_fields:
+  pre_modern_attestation_absence: true
+  ethnographic_recording_corpus_19th_20th_c: true
+  frobenius_atlantis_iv_vi_1921: true
+  monteil_ifan_dakar_1953: true
+  ecole_francaise_dieterlen: true
+  tarikh_as_sudan: true
+  tarikh_al_fettash: true
+
+output_files:
+  fidelity_yaml: chapters/28-bida-wagadu.fidelity.yaml
+  narrative: chapters/28-bida-wagadu.adoc
+  claims: chapters/28-bida-wagadu.claims.approved.adoc
+
+key_checks_passed:
+  - lacuna_marker_preservation: >
+      The LACUNA marker appears verbatim at the end of source overview section
+      (section 1), introduced by a bridge sentence. All required sub-fields
+      intact: main formulation names Frobenius's Atlantis IV-VI 1921 onward,
+      Monteil's IFAN-Dakar 1953, École française de l'Afrique de l'Ouest
+      recordings associated with Dieterlen, subsequent 20th-century Mande-area
+      recordings; Tarikh as-Sudan (17th c.) and Tarikh al-Fettash as external
+      historiographical record not attesting the Bida narrative itself; pre-
+      19th-century performance contexts partially recoverable; scholarly_
+      reconstruction: yes — within the 19th-20th-century recording corpus;
+      cross-tradition reconstruction excluded per scope.md §"Reconstruction
+      policy" point 1. Verbatim match confirmed by Python bracket-depth-matched
+      character comparison (zero diffs). PASS.
+  - appropriation_flag_marker_preservation: >
+      The APPROPRIATION-FLAG marker (the FOURTH in the book; Ch23 Susanoo set
+      the template; Ch26 Pariacaca was the second; Ch27 Mapuche was the third)
+      is verbatim identical to claims, verified character-by-character by Python
+      bracket-depth-matched comparison (zero diffs; length 6,263 chars on both
+      sides). All four required components present: (1) named area specialists
+      Conrad, Belcher, Hale, Bird, Dieterlen, Levtzion with institutional
+      contexts; (2) substance of typological-assimilation objection — NOT
+      combat-myth-recognition rejection; (3) spectrum positioning milder than
+      Ch23 Naumann / Isomae / Como and Ch32 Hallowell / Johnston / T. Smith /
+      Vizenor, with Ch26 Salomon-Urioste-Taylor-Dean spectrum placement
+      confirmed across APPROP-FLAG and C8 COMPARATIVE-HOOK; (4) Ch40/Ch41
+      forwarding clause with explicit chapter numbers. PASS.
+  - inversion_framing_structural_ordering: >
+      (a) Sections 1-5 in tradition's own framing before section 6 invokes
+      inversion: confirmed. (b) Dedicated inversion section 6 "The inversion
+      of the chaoskampf typology": confirmed. (c) INFERENCE marker precedes
+      inversion body prose: INFERENCE at char 433 in section 6, preceded by
+      385-char non-footnoted bridge sentence — confirmed. (d) All three
+      load-bearing structural features registered in section 6:
+      protector-vs-adversary FOUND, destroying-vs-establishing FOUND,
+      broken-vs-re-enacted maintenance ritual FOUND. (e) Forsyth-as-inversion-
+      target explicit: "the inversion reading depends on having a typology to
+      invert against, which Forsyth's long-arc anchor provides" at claim 9
+      narrative in section 1. PASS.
+  - forsyth_as_inversion_target: >
+      Forsyth supplies the typology being inverted: stated in claim 9 narrative
+      ("supplies the long-arc combat-myth typology against which the Bida /
+      Wagadu narrative will be read as the present book's principal inversion
+      case") and in Forsyth footnote ("The inversion reading depends on having
+      a typology to invert against, for which Forsyth's long-arc anchor is
+      load-bearing in this chapter even more than in the preceding non-Eurasian
+      related-tier chapters"). Forsyth no-Mande/Soninke-coverage disclaimer
+      preserved at body and footnote. PASS.
+  - forward_link_verification: >
+      All 12 forward and back-links (Ch3, Ch6, Ch7, Ch8, Ch16, Ch24, Ch26,
+      Ch27, Ch29, Ch33, Ch40, Ch41) verified present in toc.yaml by programmatic
+      pattern match. All resolve. PASS.
+  - banned_terms: >
+      Zero hits for "chaos-figure", "chaos-monster", "chaos-serpent" anywhere in
+      narrative (Python grep: zero). PASS.
+  - source_distribution: >
+      belcher-epic=24, conrad-west-africa=20, forsyth-1987=1 on both sides.
+      Python Counter comparison: exact match. PASS.
+  - footnote_integrity: >
+      md5sum 550f1e8d7e2d3ca6e427f6cbef1fec63 on both sides. Claim-by-claim
+      footnote comparison: 0 footnote diffs across all 45. PASS.
