@@ -17,9 +17,20 @@ The output of this stage is not text the reader will ever see. It is a verified 
 
 ## Hard rules
 1. Cite only sources whose text has been provided to you in this conversation or fetched by you via tool use. No citing from memory, even confidently.
-2. Use exactly the English renderings locked in `glossary.yaml`. If a needed term is missing, stop and ask.
-3. Omit material from excluded cultures. Note the temptation in a `// COMPARATIVE-HOOK:` comment for the comparative chapter.
-4. One claim per paragraph. No bundling. No narrative connective tissue.
+2. **Never invent a source ID.** Every `source_id` in an EVIDENCE token must resolve to an existing entry in `sources.yaml`. If the brief's `sources.primary` list is empty or names sources that aren't in `sources.yaml`, run the pre-flight check below and STOP. Do not work around the block by routing EVIDENCE tokens through the brief filename, an inventory entry, or a placeholder ID. (For scholars who need to be credited but have no `sources.yaml` entry yet, use the named-but-flagged pattern below — that is the supported workaround.)
+3. Use exactly the English renderings locked in `glossary.yaml`. If a needed term is missing, stop and ask.
+4. Omit material from excluded cultures. Note the temptation in a `// COMPARATIVE-HOOK:` comment for the comparative chapter.
+5. One claim per paragraph. No bundling. No narrative connective tissue.
+
+## Pre-flight check
+
+Before producing any claims, verify the brief is complete:
+
+1. `briefs/NN-<slug>.yaml` exists and is structurally valid.
+2. `sources.primary` is non-empty AND every entry has an `id` that resolves to `sources.yaml`.
+3. There is no `primary_sources_to_pin_at_glossary_lock` block, no `# identifier_missing: true` comment in the sources block, and no other deferral language saying the brief is in a partially-pinned state.
+
+If any of these fails, STOP. Do NOT proceed. Surface the block to the human with a one-paragraph diagnostic naming which check failed and what would unblock it (typically: chapter-briefs needs to do its source-pinning step). The chapter-claims stage is downstream of source-pinning and cannot do its own; attempting to work around the block by inventing source IDs is the canonical failure mode and produces output that must be discarded.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
@@ -87,6 +98,19 @@ Same markers as the rest of the pipeline, but used at the claim level:
   — Content filled from another in-tradition source per the reconstruction policy.
 - `[VARIANT: primary=<source A, short quote> | alt=<source B, short quote> | chosen: A|B | reason: <why>]`
   — For single-prevalent cases. Co-equal variants are listed as separate attributed claims without a marker.
+- `[APPROPRIATION-FLAG: <substance of the area-specialist objection> | named_specialists: <scholars who frame the material outside the comparative typology being applied> | tier_implication: <how the objection bears on the chapter's tier classification — e.g., "milder than Ch23 Naumann objection; comparable to Ch26 wak'a-succession reading"> | forwards_to: <comparative chapter(s) where the objection is engaged at length, with explicit ordinal numbers>]`
+  — For non-Eurasian or area-specialist-contested cases where the comparative framing being imposed by the book is itself questioned by the area's scholarly tradition. Used when the chapter must hold its comparative engagement with the typology ALONGSIDE the area-specialist objection, rather than imposing the typology unilaterally. Required only when `scope.md`'s appropriation protocol applies to the chapter (typically signaled by the brief's `chapter_type` being non-Eurasian related-tier or contrastive-tier, or by the brief explicitly naming an area-specialist tradition that resists the framing). Use the named-but-flagged pattern (below) for specialists named in the marker who are not in `sources.yaml`.
+
+## Named-but-flagged pattern (for non-anchored scholars)
+
+Sometimes the chapter needs to NAME a scholar in body prose or inside a marker — for credit, for area-specialist disclosure, or to register that a particular reading has multiple proponents — without anchoring an EVIDENCE token through their work because their specific publication is not (yet) in `sources.yaml`.
+
+The supported pattern:
+1. Name the scholar in body prose or inside the marker. Do not route any EVIDENCE token through them.
+2. Anchor the substantive claim through an existing source whose work covers it.
+3. In the completion record's `notes`, list every named-but-flagged scholar with the publication that should be added at inventory-audit (title + year + publisher if known).
+
+This is the explicit alternative to inventing a source ID. Inventing source IDs is forbidden (see Hard rules); naming-without-anchoring is the supported workaround. It is appropriate for: (a) area-specialists named at an APPROPRIATION-FLAG marker; (b) precursor or supplementary scholars named alongside the principal anchor in a footnote; (c) scholars whose work covers the material but whose specific edition cannot be confirmed at this stage.
 
 ## Comparative hooks
 
@@ -134,20 +158,27 @@ End the claims document with a section of `// COMPARATIVE-HOOK:` comments collec
 
 <Alternate claim from different source>
 
+=== Typology and area-specialist framing  // only when scope.md's appropriation protocol applies
+
+[APPROPRIATION-FLAG: <...>]
+
 // COMPARATIVE-HOOK: <detail for comparative chapter>
 // COMPARATIVE-HOOK: <detail for comparative chapter>
 ```
 
 ## Self-check before returning
-1. The `=== Source overview` section is present and contains at least 3 claims about the physical artifacts, preservation state, and scholarly edition.
-2. Every claim is a single factual assertion — no bundled claims, no narrative connective tissue.
-3. Every claim has footnote coverage citing a source provided in this conversation. Nothing from memory.
-4. Claims follow the narrative order of the myth.
-4. The claims skeleton is complete — everything the narrative will need is here.
-5. Every marker has all required sub-fields.
-6. No out-of-scope material.
-7. Variant handling matches the brief's classification.
-8. `glossary.yaml` renderings used throughout.
+1. The pre-flight check passed (brief complete; no source-pinning deferral).
+2. Every `source_id` in every EVIDENCE token resolves to an existing entry in `sources.yaml`. Zero invented IDs.
+3. The `=== Source overview` section is present and contains at least 3 claims about the physical artifacts, preservation state, and scholarly edition.
+4. Every claim is a single factual assertion — no bundled claims, no narrative connective tissue.
+5. Every claim has footnote coverage citing a source provided in this conversation. Nothing from memory.
+6. Claims follow the narrative order of the myth.
+7. The claims skeleton is complete — everything the narrative will need is here.
+8. Every marker has all required sub-fields. If an `[APPROPRIATION-FLAG:]` is present, all four required components are filled.
+9. Any scholar named in body prose or inside a marker without a corresponding `sources.yaml` entry is handled via the named-but-flagged pattern (no EVIDENCE token routes through them) and listed in the completion record's `notes` for inventory-audit follow-up.
+10. No out-of-scope material.
+11. Variant handling matches the brief's classification.
+12. `glossary.yaml` renderings used throughout.
 
 ## Completion protocol
 

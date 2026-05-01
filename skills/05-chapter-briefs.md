@@ -25,6 +25,16 @@ Three things the brief must get right:
 
 For each story in the approved inventory, produce `briefs/NN-<slug>.yaml` (where NN is chapter number).
 
+### Source-pinning is a prerequisite — do not defer
+
+If `inventory.approved.yaml` flags a story with `identifier_missing: true` (or with `sources: []` and a notes entry like "to be pinned at chapter-briefs"), RESOLVE the pinning at this stage. Pin specific editions to `sources.yaml` and populate the brief's `sources.primary` and `sources.secondary` lists with real source IDs that resolve to `sources.yaml` entries.
+
+Do NOT produce a brief with empty `sources.primary` and a deferral note like "to be pinned at glossary-lock". This breaks `chapter-claims` downstream — the writer agent has no source to cite, and absent explicit pre-flight refusal will invent fake source IDs (e.g. `brief-NN-<slug>`) to work around the block. Inventing source IDs violates the pipeline's hard rules and produces output that must be discarded and re-run after the pinning is finally done.
+
+If you genuinely cannot resolve the pinning here (no library access, no web confirmation of an edition, source doesn't exist or can't be located), STOP and surface the gap to the human for resolution. The brief should not proceed in a partially-pinned state.
+
+When pinning, prefer ISBN-13 for in-print scholarly editions; OCLC or stable-url (archive.org / library catalogue) for older works without ISBNs. Identifier values may be provisional pending factcheck verification — `claims-factcheck` will catch ISBN digit-transpositions and stale OCLCs, and `post-human-normalize` will correct them in place.
+
 ### Chapter ordering
 Default order: cosmogony → theogony → major heroic cycles → minor heroic → eschatology → miscellaneous. Adapt to the culture. Some cultures have no cosmogony (e.g., Irish); don't force the scheme. Record final order in `toc.yaml`.
 

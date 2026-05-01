@@ -23,6 +23,14 @@ After every `[HUMAN]` checkpoint in the stage order:
 - After comparative-chapter factcheck human review → validates `comparative.adoc`
 - After character-appendix factcheck human review → validates `character-appendix.adoc`
 
+## Hard rules
+
+1. **Do NOT modify the original input file.** Post-normalize takes a `.claims.adoc` (or other writer output) and produces a NEW file (typically `.claims.approved.adoc`) carrying the human-reviewed-and-fixed version. The original is the immutable record of what the writer produced. Before declaring the stage complete, verify with `git status` and `git diff <original>` that the original is unchanged — empty diff is the success signal. Edits that leak into the original break the round-trip integrity that downstream stages (especially `narrative-fidelity`) depend on.
+
+2. **Identifier-correction-in-place is an authorized fix type.** When `claims-factcheck` flags an ISBN/OCLC/URL mismatch on a recently-pinned source (typically introduced at `chapter-briefs` source-pinning), web-verify the correct value via AbeBooks / WorldCat / publisher catalogue / archive.org and update `sources.yaml` AND any mirrored identifier in the brief's `sources.primary` / `sources.secondary` block. The `source_id` stays the same; only `identifier_value` (and `year` / `full_citation` / `notes` where the published edition genuinely differs from what was pinned) changes. Document the correction in the completion record and add a one-line provenance note in the source's `notes` field. This is the established pattern; do not defer identifier corrections to inventory-audit.
+
+3. **Triage every factcheck finding before applying.** Each FC-NN gets one of: ACCEPT (apply the fix as proposed), MODIFY (auditor right about the problem, proposed fix needs adjustment), REJECT (auditor wrong on its own terms — document why), or FLAGGED-ONLY (defer to a later stage with explicit note). Document every disposition in the completion record. Auditors are not infallible; ground-truth checks on `toc.yaml`, `sources.yaml`, and the actual brief sometimes show a finding is incorrect on its face.
+
 ## Checks performed
 
 ### For YAML files (`inventory.approved.yaml`, factcheck outputs)

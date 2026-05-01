@@ -47,6 +47,16 @@ Verify each citation's tablet number, line range, or page reference resolves in 
 
 For cross-chapter references inside the book (claims that say "see Ch. N", COMPARATIVE-HOOK targets like "Part II C5", forward-links to the methods sidebar): resolve against `toc.yaml`, not against the directory of `briefs/NN-*` files. The TOC is authoritative; the briefs directory is not exhaustive (Part II comparative chapters and the methods sidebar live at numbers above the last story chapter). Only flag a forward-link as missing when `toc.yaml` does not list a chapter at that number or with that anchor.
 
+**Identifier verification on recently-pinned sources.** When `sources.yaml` shows a source added or last edited recently (typically a chapter-briefs source-pinning round), web-verify the published identifier against AbeBooks / WorldCat / publisher catalogue / archive.org. Common failure modes:
+- ISBN digit-transposition (e.g. `9789561109315` for what should be `9789561109124`).
+- ISBN belongs to a different edition of the same work (hardcover vs. paperback; reprint vs. first printing).
+- ISBN/publisher mismatch — ISBN comes from publisher A but the entry attributes the work to publisher B.
+- OCLC number guessed rather than verified; correct value is a different WorldCat record.
+- archive.org URL slug malformed; correct slug is different.
+- For older works without ISBNs (pre-1970, especially): year, publisher, and series number all need print-copy or library-catalogue verification.
+
+Flag mismatches as CITATION-WRONG, severity LOW (digit-transposition) to MEDIUM (wrong edition / wrong publisher / wrong year). Include the verified-correct value in the `recommended_fix`. These are actionable at `post-human-normalize` via identifier-correction-in-place — do NOT defer to inventory-audit.
+
 ### Pass 3 — Document-provenance contamination scan
 For each factual detail: is this detail attested in a document within the scope's date range and culture? Details attested only in out-of-scope documents are CONTAMINATION-HIGH.
 
@@ -55,7 +65,10 @@ For each factual detail: is this detail attested in a document within the scope'
 - `[LACUNA:]` — source actually has the claimed gap?
 - `[RECONSTRUCTION:]` — fill source is in-tradition per `scope.md`?
 - `[VARIANT:]` — both quoted phrases present in cited sources?
+- `[APPROPRIATION-FLAG:]` — when present, verify all four required components: substance of the area-specialist objection; named specialists framing the material outside the comparative typology; tier-implication clause; forwards-to clause naming the comparative chapter(s) where the objection is engaged at length. Verify named specialists are either in `sources.yaml` OR handled via the named-but-flagged pattern (no EVIDENCE token routes through them, and they are flagged in the writer's completion record for inventory-audit). The marker is required only when `scope.md`'s appropriation protocol applies; if present in a chapter that doesn't trigger the protocol, flag MARKER-MISUSED.
 - **Silent bridges** — uncited claims not under a marker. Flag SILENT-BRIDGE, HIGH.
+
+**Named-but-flagged pattern verification.** When body prose or marker text names a scholar (e.g. "Hale, Bird, and Levtzion read the cycle within the registers of Mande oral-epic performance") whose specific publication is not in `sources.yaml`, the pattern is acceptable IF AND ONLY IF no EVIDENCE token routes through that scholar's work. Verify: walk every EVIDENCE token's `source_id` against the named scholars; any match is a finding (the scholar IS load-bearing on a specific claim and must be added to `sources.yaml` rather than named-but-flagged). Acceptable named-but-flagged usage is captured as NOTE in the factcheck output and forwarded to the writer's completion record for inventory-audit follow-up — not flagged as a finding.
 
 ### Pass 5 — Reverse-order second pass
 Walk from last claim to first. Add any new findings.
