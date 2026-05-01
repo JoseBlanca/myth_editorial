@@ -1,0 +1,900 @@
+meta:
+  stage: claims-factcheck
+  chapter: "30-bakunawa"
+  chapter_title: "Bakunawa and the Moons (with Erlik/Ülgen as Altaic Comparandum)"
+  auditor_model: "claude-sonnet-4-6"
+  writer_model: "claude-opus-4-7"
+  audit_date: "2026-05-01"
+  input_file: "chapters/30-bakunawa.claims.adoc"
+  claims_identified: 36
+  triangulations_performed: 18
+  verdict: MINOR-REVISE
+
+  honesty_self_check:
+    primary_source_opened: >
+      PARTIAL. All four cited sources (Eugenio 2001, Eliade 1964, Harva 1938, Forsyth 1987)
+      are print-only monographs and could not be fetched directly. Verification relied on
+      trained knowledge of each volume plus targeted web searches for the three newly-pinned
+      identifiers. Damiana L. Eugenio (ed.), *Philippine Folk Literature: The Myths*
+      (Quezon City: University of the Philippines Press, 2001) is the standard scholarly
+      compilation of Philippine oral-tradition narratives; the UP Press product page
+      confirms the volume's content and series position. Mircea Eliade, *Shamanism:
+      Archaic Techniques of Ecstasy*, trans. Willard R. Trask (Princeton: Princeton
+      University Press, Bollingen Series LXXVI, 1964; 2004 reprint ISBN 9780691119427),
+      confirmed by Amazon and AbeBooks listing for the 2004 edition. Uno Harva,
+      *Die religiösen Vorstellungen der altaischen Völker*, FFC 125 (Helsinki: Suomalainen
+      Tiedeakatemia, 1938), confirmed at https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker
+      (noting that the archive.org record lists the author under his birth name "Uno
+      Holmberg" — Harva changed his name from Holmberg to Harva in 1935, three years
+      before FFC 125 was published, so the correct attribution in sources.yaml is Harva).
+      Neil Forsyth, *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton
+      University Press, 1987; ISBN 9780691014746), assessed via trained knowledge — the
+      book traces the combat myth from Sumer through Judeo-Christian apocalyptic; it does
+      not treat Philippine or Altaic material. All content claims assessed against trained
+      knowledge of the scholarly literature on Philippine oral tradition, Altaic/Turkic-
+      Mongol religious cosmology, and the shamanic-complex comparative literature.
+    sources_skimmed:
+      - >
+        Eugenio 2001, *Philippine Folk Literature: The Myths* (Quezon City: University
+        of the Philippines Press): print-only; not fetched. Content assessed via trained
+        knowledge and web search. UP Press confirms: (1) the volume is part of Eugenio's
+        Philippine Folk Literature series; (2) it covers Philippine myths from across the
+        archipelago including Visayan, Bikol, Tagalog, and other regional traditions;
+        (3) its coverage includes creation stories, origin myths, and cosmogonic narratives;
+        (4) the Bakunawa eclipse-aetiology cycle is within scope of a myths compilation
+        treating Visayan and Bikol oral tradition. Per trained knowledge: Eugenio's PFL
+        series is the standard scholarly compilation for Philippine oral-tradition
+        narratives in English and is widely cited in Philippine folklore and anthropology.
+        The chapter's description of the volume as "the standard scholarly compilation
+        of Philippine oral-tradition narratives across the Visayan, Bikol, Tagalog, and
+        other regional traditions" is correct. PASS on all Eugenio-anchored substantive
+        claims.
+        NOTE — ISBN MISMATCH (FC-01): sources.yaml pins identifier_value 9789715421140,
+        but the UP Press product page, AbeBooks listing, and all available bibliographic
+        sources confirm the correct ISBN-13 is 9789715422918. This is a LOW finding
+        actionable at post-human-normalize per the Ch20 FC-03 / Ch24 FC-03 precedent.
+      - >
+        Eliade 1964, *Shamanism: Archaic Techniques of Ecstasy* (Princeton: Princeton
+        University Press, Bollingen Series LXXVI; 2004 reprint): print-only; not fetched.
+        Content assessed via trained knowledge. The 2004 Princeton reprint ISBN
+        9780691119427 is confirmed by Amazon listing (ASIN 0691119422 matches ISBN-10
+        of 0691119422, i.e. ISBN-13 9780691119427) and AbeBooks listing for the same
+        edition. Per trained knowledge: (1) Eliade's *Shamanism* devotes substantial
+        treatment to the Altaic-Siberian shamanic complex including the Erlik/Ülgen
+        dualistic cosmology; (2) the white-shaman (ascent to Ülgen) and black-shaman
+        (descent to Erlik) division of shamanic specialisation is correctly attributed
+        to Eliade; (3) Eliade's comparative-religion framework for the Altaic material
+        draws on the Potanin/Verbitsky/Radloff ethnographic corpus, as the chapter states.
+        PASS on all Eliade-anchored substantive claims. ISBN 9780691119427 VERIFIED.
+      - >
+        Harva 1938, *Die religiösen Vorstellungen der altaischen Völker*, FFC 125
+        (Helsinki: Suomalainen Tiedeakatemia / Academia Scientiarum Fennica): print-only;
+        not fetched. Content assessed via trained knowledge and web search. Archive.org
+        confirms the text at https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker
+        (FFC 125, 1938). Per trained knowledge: (1) Harva 1938 is the canonical early-
+        20th-century reference for the religious cosmology of the Altaic / Turkic-Mongol
+        peoples; (2) the Erlik/Ülgen pairing is the central organising dualism of the
+        book's treatment of Altaic cosmology; (3) the layered-heavens and layered-
+        underworlds framework and the attribution of Ülgen to the highest heaven and
+        Erlik to the lowest underworld are correctly attributed to Harva; (4) the coverage
+        of Buryat, Yakut, and Altai regional variants is within the book's scope; (5)
+        the non-serpentine, anthropomorphic-underworld-ruler characterisation of Erlik
+        is correct per Harva's synthesis.
+        NOTE — STABLE-URL MISMATCH (FC-02): sources.yaml pins
+        identifier_value "https://archive.org/details/diereligiosenvor0000unkn" but the
+        confirmed archive.org identifier is "DieReligioenVorstellungenDerAltaischenVolker"
+        (URL: https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker).
+        The pinned identifier is wrong and does not resolve to the correct record. This
+        is a LOW finding actionable at post-human-normalize per the Ch27 source-pinning
+        precedent. The OCLC catalogue should also be checked at normalize.
+        AUTHOR-NAME NOTE: The archive.org record lists "Uno Holmberg" as the author.
+        Harva changed his family name from Holmberg to Harva in 1935, before FFC 125
+        was published in 1938, so "Harva" is the correct scholarly citation name.
+        Sources.yaml correctly cites "Harva, Uno" — no correction needed there.
+        PASS on all Harva-anchored substantive claims (content). LOW on stable-url.
+      - >
+        Forsyth 1987, *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton
+        University Press; ISBN 9780691014746): print-only; not fetched. Content assessed
+        via trained knowledge. The book traces the combat myth from Sumerian material
+        through Hebrew Bible, intertestamental Jewish, and early Christian apocalyptic.
+        It does not treat Philippine or Altaic-content material. The two EVIDENCE tokens
+        citing Forsyth (lines 62 and 139) both correctly characterise his role as the
+        "long-arc combat-myth typology anchor" and both carry the not-for-Philippine-or-
+        Altaic-coverage disclaimer explicitly ("Forsyth does not himself treat Philippine
+        or Altaic content"; "not for Philippine or Altaic-content scholarly coverage in
+        either half"). This is the established framing-only use (not the exception load-
+        bearing use of Ch28), correctly disclaimed. PASS.
+    triangulations_assumed: >
+      (1) BAKUNAWA SEVEN-MOONS NARRATIVE: The narrative premise that seven original moons
+      existed of which six were devoured by Bakunawa is correctly identified as the
+      "most widely attested form" per Eugenio 2001. Per trained knowledge: the seven-moons
+      version is the dominant recorded form in the Visayan/Bikol corpus. PASS.
+      (2) ECLIPSE-AS-DEVOURING: The eclipse interpreted within the tradition as Bakunawa's
+      devouring action upon the last moon is correctly characterised per Eugenio. PASS.
+      (3) COMMUNAL NOISE-MAKING PRACTICES: Drums, gongs, shouting, banging metal pots —
+      these are correctly described as the eclipse-response practices in the recorded
+      Bakunawa cycle. PASS.
+      (4) BAKUNAWA DWELLING: Deep sea in dominant Visayan recording; underworld in some
+      recordings — both are correctly registered as variant attestations. PASS.
+      (5) VISAYAN AND BIKOL AS HEARTLANDS: Correct per trained knowledge of Philippine
+      ethnographic geography; the Visayan island group and the Bikol region of southeastern
+      Luzon are the principal attestation zones for the Bakunawa cycle. PASS.
+      (6) PHILIPPINE COLONIAL PERIODS: Spanish colonial (1565–1898) and American colonial
+      (1898–1946) periodisation is correctly stated. PASS.
+      (7) ÜLGEN AS SKY-GOD IN HIGHEST HEAVEN: Correctly characterised per Harva 1938.
+      The layered-heavens structure of Altaic cosmology with Ülgen at the highest level
+      is canonical in the scholarly literature. PASS.
+      (8) ERLIK AS ANTHROPOMORPHIC UNDERWORLD-RULER: Non-serpentine characterisation is
+      correct per Harva 1938; Erlik is consistently described in the recorded versions
+      as anthropomorphic (human-like) rather than serpentine, in contrast to the Eurasian
+      chaoskampf adversaries. PASS.
+      (9) WHITE-SHAMAN / BLACK-SHAMAN DIVISION: Correctly attributed to Eliade 1964;
+      the division of Altaic shamanic specialisation into sky-directed (Ülgen) and
+      underworld-directed (Erlik) strands is a standard feature of the Altaic-Siberian
+      shamanic complex literature. PASS.
+      (10) ERLIK AS FALLEN-FROM-ÜLGEN IN SOME VARIANTS: Some recordings present Erlik
+      as a fallen or expelled figure from Ülgen's realm; others present the two as
+      co-eternal independent powers. Both are correctly registered as legitimate variant
+      attestations. PASS.
+      (11) POTANIN, VERBITSKY, RADLOFF AS FOUNDATIONAL ETHNOGRAPHERS: Named correctly;
+      all three are canonical figures in the 19th-century Russian/European ethnographic
+      recording corpus for Altaic/Turkic-Mongol peoples. None is in sources.yaml.
+      Named-but-flagged pattern is correctly applied — none carries an EVIDENCE token.
+      NOT LOAD-BEARING for any individual claim. PASS.
+      (12) AHURA MAZDĀ / ANGRA MAINYU AS PARALLEL: The claim that the Erlik/Ülgen pairing
+      parallels the Avestan Ahura Mazdā/Angra Mainyu dualistic cosmology as an independent
+      typological convergence rather than a transmission relationship is the correct
+      framing in current Altaic-studies and history-of-religions scholarship. Per trained
+      knowledge of the field: (a) there is no established genetic/transmission link between
+      Altaic and Avestan dualisms in current scholarship; (b) the parallel is noted as a
+      structural-typological convergence in comparative-religion literature (including
+      Eliade); (c) the claim that this is NOT held to be a transmission relationship in
+      current Altaic-studies scholarship is accurate — the two dualisms are independently
+      attested in geographically adjacent but culturally distinct traditions. The chapter's
+      framing ("independent typological convergence rather than transmission relationship")
+      is the standard and defensible scholarly position. PASS — Ahura Mazdā/Angra Mainyu
+      independent-convergence framing judgment: CONFIRMED as current consensus.
+      (13) POTANIN, VERBITSKY, RADLOFF NOT LOAD-BEARING: Correct. All three are named
+      in body prose in the Source overview §Erlik/Ülgen recording-corpus claim with
+      explicit flagging that "none is currently a sources.yaml entry." None appears in
+      any EVIDENCE token. Named-but-flagged pattern correctly applied per Ch23 FC-02 /
+      Ch26 FC-02 / Ch27 / Ch28 FC-02 precedent. PASS.
+      (14) BAKUNAWA CYCLE: NO PRE-MODERN WRITTEN ATTESTATION: Correctly characterised;
+      per trained knowledge of Philippine indigenous-script traditions (Baybayin): there
+      is no known pre-Hispanic-contact written attestation of the Bakunawa cycle in
+      Baybayin or any other Philippine indigenous script. The claim that no pre-modern
+      attestation is available is factually accurate. PASS.
+      (15) ERLIK/ÜLGEN: NO PRE-MODERN WRITTEN RECORD: Correctly characterised; per
+      trained knowledge: the principal written attestations of Erlik/Ülgen cosmology are
+      all 19th-20th-century. The qualified note that "passing references in the writings
+      of medieval Islamic geographers and travellers" exist is appropriately cautious.
+      PASS.
+      (16) BAKUNAWA CYCLE'S FUNCTION: ECLIPSE-AETIOLOGY NOT COSMOGONY: Correctly
+      characterised as the cycle's primary cultural-historical function. The cycle explains
+      eclipses (recurring observable phenomenon) rather than original cosmogonic creation.
+      This distinction is correct and important for the inclusion-marginal characterisation.
+      PASS.
+      (17) STRUCTURAL ABSENCE OF HERO-FIGURE: The characterisation that the Bakunawa
+      cycle has no individual hero (deity, champion, or human protagonist) who confronts
+      and defeats the serpent is correct per trained knowledge of the cycle's recorded
+      versions; communal noise-making is the response in all principal recordings. PASS.
+      (18) FORSYTH DISCLAIMER: Both Forsyth EVIDENCE tokens carry the not-for-Philippine-
+      or-Altaic-coverage disclaimer explicitly ("Forsyth does not himself treat Philippine
+      or Altaic content"). The framing-only (non-exception) use is correct for this chapter
+      — unlike Ch28 where Forsyth was load-bearing for the inversion (exception case), here
+      Forsyth is correctly cited only for the long-arc typological frame against which
+      inclusion-marginality is characterised. PASS.
+    verbatim_quote_policy: >
+      No verbatim quotes from any of the four print-only anchors. All claims verified
+      against trained knowledge of each source and against the brief's explicit framing.
+      Both Forsyth EVIDENCE tokens verified for correct disclaimer wording. Forward-link
+      chapter numbers verified against toc.yaml directly (read in full). All marker
+      structures verified by direct inspection of the claims file. Named-but-flagged
+      sources (Potanin, Verbitsky, Radloff) verified against the pipeline precedent from
+      Ch23 FC-02 / Ch26 FC-02 / Ch27 / Ch28 FC-02.
+    internal_variance_vs_contamination: >
+      No contamination detected. All material is firmly within Philippine oral-tradition
+      and Altaic/Turkic-Mongol religious-cosmology domains. No banned umbrella terms
+      found anywhere in the document (body prose, markers, or COMPARATIVE-HOOK comments):
+      zero instances of "chaos-figure," "chaos-monster," or "chaos-serpent." The document
+      uses "the adversary" as the neutral category term per glossary discipline. COMPARATIVE-
+      HOOK comments contain cross-chapter comparanda (Apep, Illuyanka, Thraētaona, Bida,
+      Mapuche, Nanabozho) correctly confined to comments rather than body prose. No
+      RECONSTRUCTION markers — correct, since reconstruction situation is handled via
+      the LACUNA marker with scholarly_reconstruction field. Inclusion-marginal
+      characterisation is correctly flagged via the INFERENCE marker and not silently
+      presupposed in body claims. Colonial-ethnographic filtering caveat is methodologically
+      prominent in both halves. Appropriation protocol correctly followed: Eugenio named
+      as principal anchor for Bakunawa half and Eliade+Harva named as principal anchors
+      for Erlik/Ülgen half in the first factual pass per scope.md §"Appropriation protocol"
+      point 1.
+    model_identity_confirmation: >
+      I am Claude Sonnet 4.6. The writer was Claude Opus 4.7. This is an adversarial
+      audit in a fresh conversation. I have not consulted the 11-chapter-claims-ch30.done.yaml
+      completion record as instructed. I have no memory of producing the claims document
+      and have approached it with fully independent scrutiny.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1:1 INVARIANT CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+invariant_check:
+  total_claims_with_footnotes: 36
+  total_footnotes: 36
+  total_evidence_tokens: 36
+  invariant_result: PASS
+  notes: >
+    All three counts match at 36/36/36. Source distribution among EVIDENCE tokens:
+    eugenio-philippine-myths = 19 tokens; harva-altaic-religious = 10 tokens;
+    eliade-shamanism = 5 tokens; forsyth-1987 = 2 tokens. Total = 36. This matches
+    the task brief's stated distribution (19/10/5/2). The Eugenio-heavy loading
+    reflects the Bakunawa half's single-source structure; the Harva/Eliade split
+    reflects the dual-anchor structure of the Erlik/Ülgen half (Harva as content anchor,
+    Eliade as shamanic-complex framing anchor). Forsyth's two tokens (one per half,
+    both framing-only) are the correct non-exception pattern. The 1:1:1 invariant
+    holds perfectly.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SOURCE-RESOLUTION CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+source_resolution:
+  - source_id: eugenio-philippine-myths
+    in_sources_yaml: true
+    plausibility: PASS_WITH_FINDING
+    notes: >
+      eugenio-philippine-myths is in sources.yaml (source_tier: primary-translation;
+      year: 2001; publisher: University of the Philippines Press). The volume is the
+      standard scholarly compilation of Philippine oral-tradition narratives and is
+      correctly used as the primary-translation anchor for the Bakunawa half. Per trained
+      knowledge and UP Press product page: the series and volume description match the
+      chapter's characterisation. Eugenio's volume does cover Visayan and Bikol
+      traditions including eclipse-aetiology narratives, making it a genuine and
+      appropriate anchor for the Bakunawa material.
+      FINDING FC-01 (LOW): sources.yaml identifier_value is 9789715421140 but the
+      confirmed correct ISBN-13 from the UP Press product page, AbeBooks, and all
+      available bibliographic sources is 9789715422918. The pinned ISBN is wrong.
+      Actionable at post-human-normalize per Ch20 FC-03 / Ch24 FC-03 precedent.
+      NOTE: Sources.yaml already annotates this as "Identifier provisional pending
+      factcheck verification per the Ch27 source-pinning precedent" — the provisional
+      flag is correctly set and the factcheck now supplies the correction.
+
+  - source_id: eliade-shamanism
+    in_sources_yaml: true
+    plausibility: PASS
+    notes: >
+      eliade-shamanism is in sources.yaml (source_tier: secondary; year: 1964;
+      publisher: Princeton University Press, Bollingen Series LXXVI; 2004 reprint
+      ISBN 9780691119427). ISBN 9780691119427 VERIFIED by web search: Amazon listing
+      and AbeBooks listing for the 2004 Princeton/Bollingen reprint confirm this ISBN.
+      Per trained knowledge: *Shamanism: Archaic Techniques of Ecstasy* is the major
+      topic of the book — the Altaic-Siberian material (Erlik/Ülgen, white-shaman /
+      black-shaman division, cosmographic levels) is a central subject of the volume.
+      The chapter's use of Eliade for shamanic-complex framing of the Altaic material
+      is entirely appropriate to the source's scope and standing. PASS — including
+      identifier verification.
+
+  - source_id: harva-altaic-religious
+    in_sources_yaml: true
+    plausibility: PASS_WITH_FINDING
+    notes: >
+      harva-altaic-religious is in sources.yaml (source_tier: secondary; year: 1938;
+      FFC 125; identifier_type: stable-url). Per trained knowledge and web search:
+      Harva 1938 is the canonical scholarly reference for Altaic/Turkic-Mongol religious
+      cosmology; the Erlik/Ülgen pairing is a central subject of the volume; the book is
+      publicly available at archive.org. The chapter's use of Harva as the principal
+      content anchor for the Erlik/Ülgen half is entirely appropriate.
+      FINDING FC-02 (LOW): sources.yaml identifier_value is
+      "https://archive.org/details/diereligiosenvor0000unkn" — this identifier is wrong.
+      The confirmed archive.org URL is https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker
+      (confirmed by web search). The pinned stable-url does not resolve to the correct
+      record. Actionable at post-human-normalize per the Ch27 source-pinning precedent.
+      Sources.yaml already annotates this as "identifier is a stable archive.org URL
+      provisional pending factcheck verification" — the flag is correctly set; the
+      factcheck now supplies the correction.
+      AUTHOR-NAME NOTE (informational, no action needed): The archive.org record lists
+      the author as "Uno Holmberg" (Harva's birth name, which he changed to Harva in
+      1935). Sources.yaml correctly cites "Harva, Uno" — the post-1935 scholarly name
+      and the name on the FFC 125 title page are both "Harva." No correction needed.
+      PASS on all substantive content claims anchored to Harva.
+
+  - source_id: forsyth-1987
+    in_sources_yaml: true
+    plausibility: PASS
+    notes: >
+      forsyth-1987 is in sources.yaml. Its scope (Sumer through Judeo-Christian
+      apocalyptic) does not cover Philippine or Altaic-content material. The two EVIDENCE
+      tokens (lines 62 and 139 of the claims file) both correctly characterise Forsyth's
+      role as the "long-arc combat-myth typology anchor" and both carry explicit
+      disclaimers: "Forsyth 1987 does not itself treat Philippine or Altaic-content
+      material" / "Forsyth supplies the typological framing only — not Philippine or
+      Altaic-content coverage, which Forsyth does not undertake." This is the
+      framing-only (non-exception) use established across the pipeline and correctly
+      applied here. Unlike Ch28 where Forsyth was explicitly load-bearing for the
+      inversion reading (exception case), here the framing-only use is correct: the
+      inclusion-marginal characterisation depends on having a typology against which the
+      marginality can be characterised, but Forsyth is not load-bearing for any individual
+      content claim about Bakunawa or Erlik/Ülgen. PASS — both tokens thread the needle
+      correctly and consistently with prior normalize precedent.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# NEWLY-PINNED IDENTIFIER VERIFICATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+newly_pinned_identifier_verification:
+  eugenio_philippine_myths_isbn:
+    pinned_value: "9789715421140"
+    verified_correct_value: "9789715422918"
+    source_of_correction: >
+      UP Press product page (https://press.up.edu.ph/product/philippine-folk-literature-the-myths/
+      returned ISBN 978971542291-8); AbeBooks listing for Vol. 2 explicitly at
+      9789715422918; confirmed across multiple bibliographic databases.
+    result: MISMATCH — LOW FINDING (FC-01)
+    actionable: PASS at post-human-normalize per Ch20 FC-03 / Ch24 FC-03 pattern
+
+  eliade_shamanism_isbn:
+    pinned_value: "9780691119427"
+    verified_correct_value: "9780691119427"
+    source_of_verification: >
+      Amazon listing (ASIN 0691119422 = ISBN-10, confirming ISBN-13 9780691119427);
+      AbeBooks listing for the 2004 Princeton/Bollingen reprint explicitly cites
+      9780691119427. Multiple sources confirm.
+    result: VERIFIED — PASS
+
+  harva_altaic_stable_url:
+    pinned_value: "https://archive.org/details/diereligiosenvor0000unkn"
+    verified_correct_value: "https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker"
+    source_of_correction: >
+      Web search directly confirms the archive.org identifier is
+      "DieReligioenVorstellungenDerAltaischenVolker" at the URL
+      https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker.
+      The pinned identifier "diereligiosenvor0000unkn" does not correspond to the
+      confirmed record for this work.
+    result: MISMATCH — LOW FINDING (FC-02)
+    actionable: PASS at post-human-normalize per Ch27 source-pinning precedent
+    additional_note: >
+      The OCLC catalogue should also be checked at post-human-normalize as
+      sources.yaml's own annotation recommends. The OCLC WorldCat entry for FFC 125
+      is the most stable non-web-dependent identifier for this 1938 monograph.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TWO-COMPONENT CHAPTER STRUCTURE VERIFICATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+two_component_structure_check:
+  bakunawa_half_present: true
+  bakunawa_half_sections:
+    - "§Source overview (lines 37-67) — shared source-overview section covering both halves"
+    - "§Bakunawa: the Philippine context and the eclipse-and-moon narrative (lines 71-87)"
+    - "§Bakunawa: communal-ritual register and inclusion-marginal status (lines 90-103)"
+  erlik_ulgen_half_present: true
+  erlik_ulgen_half_sections:
+    - "§Erlik and Ülgen: the Altaic / Turkic-Mongol cosmographic frame (lines 105-122)"
+    - "§Erlik and Ülgen: dualistic cosmology and inclusion-marginal status (lines 124-139)"
+  consolidated_typology_section_present: true
+  consolidated_section: "§Typology, area-specialist framing, and forward-links (lines 141-175)"
+  result: PASS
+  notes: >
+    The chapter's two-component structure (Bakunawa half + Erlik/Ülgen half + consolidated
+    typology-and-forward-links section) is correctly implemented per brief 30-bakunawa.yaml
+    special_instructions. Each half has its own geographical/cultural-context section and
+    its own inclusion-marginal-status section. The consolidated section addresses the
+    typological comparison and forward-links across both halves.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# INCLUSION-MARGINAL FRAMING PRESERVATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+inclusion_marginal_framing:
+  bakunawa_no_hero_slaying:
+    stated_explicitly: true
+    location: >
+      §Bakunawa: communal-ritual register and inclusion-marginal status, and throughout
+      body prose from §Bakunawa: the Philippine context onward
+    characterisation: >
+      The cycle's principal structural feature — communal-noise-making-drives-the-serpent-off
+      rather than hero-slays-the-serpent — is correctly stated as the inclusion-marginal
+      grounds for the Bakunawa half. The communal-prophylactic-rather-than-hero-led-
+      re-enactive characterisation is explicit and consistently maintained. PASS.
+  erlik_ulgen_non_serpentine_adversary:
+    stated_explicitly: true
+    location: >
+      §Erlik and Ülgen: dualistic cosmology and inclusion-marginal status
+    characterisation: >
+      Erlik's non-serpentine, anthropomorphic-underworld-ruler conception is correctly
+      stated as the first structural-marginality ground. PASS.
+  erlik_ulgen_non_decisive_opposition:
+    stated_explicitly: true
+    location: >
+      §Erlik and Ülgen: the Altaic / Turkic-Mongol cosmographic frame, and
+      §Erlik and Ülgen: dualistic cosmology and inclusion-marginal status
+    characterisation: >
+      The dualistic-cosmological arrangement as a long-term cosmographic structure rather
+      than a single decisive-combat-and-victory episode is correctly stated as the second
+      structural-marginality ground. PASS.
+  tradition_own_framing_opens_chapter: true
+  note_own_framing: >
+    The chapter opens with the source-overview-and-narrative material for each half
+    in its own register before invoking the comparative chaoskampf category: Eugenio's
+    Philippine eclipse-aetiology / communal-ritual framing for the Bakunawa half;
+    Eliade's and Harva's dualistic-cosmology / shamanic-complex framing for the
+    Erlik/Ülgen half. This correctly implements scope.md §"Appropriation protocol"
+    point 3. PASS.
+  result: PASS
+
+# ─────────────────────────────────────────────────────────────────────────────
+# BRIEF COMPLIANCE CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+brief_compliance:
+  word_target_compliance: >
+    The claims skeleton does not itself carry a word count; the 4,000-narrative-word
+    target is for the chapter draft. The claims skeleton's content is appropriate in
+    scope and density for a 4,000-word chapter: 36 claims across source overview, two
+    narrative halves, two inclusion-marginal-status sections, and a consolidated
+    typology-and-forward-links section. PASS — the skeleton is appropriately scoped.
+  chapter_type_compliance: >
+    The chapter is correctly classified throughout as "related-tier (family, 'communal /
+    non-slaying combat')" per brief 30-bakunawa.yaml chapter_type. The brief's
+    classification is consistently stated in the preamble, source overview, and INFERENCE
+    marker. PASS.
+  result: PASS
+
+# ─────────────────────────────────────────────────────────────────────────────
+# GLOSSARY DISCIPLINE CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+glossary_discipline:
+  banned_umbrella_terms:
+    chaos_figure: 0
+    chaos_monster: 0
+    chaos_serpent: 0
+    result: PASS
+    notes: >
+      Zero instances of any banned umbrella term anywhere in the document (body prose,
+      markers, COMPARATIVE-HOOK comments, or preamble). The document uses "the adversary"
+      as the neutral category term per glossary discipline. PASS.
+  non_glossary_terms_consistency:
+    bakunawa: >
+      Used consistently throughout as the Philippine (Visayan/Bikol) serpent-dragon
+      eclipse-devourer. The first-mention gloss in footnote at line 73 correctly
+      identifies the figure's eclipse-and-noise-making narrative role. PASS.
+    visayan_bikol: >
+      Used consistently as the principal regional designations for the Bakunawa cycle's
+      heartland traditions. PASS.
+    erlik_ulgen: >
+      Used consistently as the paired Altaic/Turkic-Mongol underworld-god and sky-god.
+      The first-mention gloss in footnote at line 107 correctly identifies the paired
+      figures. PASS.
+    altai_buryat_yakut: >
+      Used consistently as the principal regional designations for the Erlik/Ülgen
+      material's attestation zones. PASS.
+  result: PASS
+
+# ─────────────────────────────────────────────────────────────────────────────
+# MARKER DISCIPLINE CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+marker_discipline:
+  lacuna:
+    count: 1
+    location: "§Source overview, line 67 (after the textual-distinctiveness claim)"
+    covers_both_halves: true
+    source_field: PASS
+    scholarly_reconstruction_field: PASS
+    cross_tradition_fill_excluded: PASS
+    notes: >
+      The LACUNA marker correctly covers BOTH halves' oral-tradition / 19th-20th-century-
+      ethnographic-recording filtering caveat as required by the task brief. The source
+      field cites brief 30-bakunawa.yaml, Eugenio 2001, Harva 1938, and Eliade 1964.
+      The scholarly_reconstruction field limits reconstruction to within the 19th-20th-
+      century recording corpus for each half and explicitly excludes cross-tradition
+      reconstruction per scope.md §"Reconstruction policy" point 1. The LACUNA also
+      correctly notes that pre-modern attestations are absent for both halves — no
+      Philippine indigenous-script attestation and no pre-19th-century Altaic-script
+      or Russian-language attestation. The medieval Islamic geographers' passing
+      references for the Altaic material are correctly flagged as partial-availability.
+      PASS on all counts.
+
+  inference:
+    count: 1
+    location: "§Typology, area-specialist framing, and forward-links, line 143"
+    basis_field: PASS
+    risk_field: PASS
+    notes: >
+      The INFERENCE marker correctly registers the inclusion-marginal characterisation
+      of both halves as a comparativist-overlay synthesis of: the brief's special_instructions
+      framing; Eugenio 2001's Philippine-folkloric framing for the Bakunawa half; Eliade
+      1964's and Harva 1938's Altaic-religious-cosmology framing for the Erlik/Ülgen half;
+      and scope.md §"Subject definition" / §"Inclusion / exclusion criteria" /
+      §"Appropriation protocol." The basis field is multi-sourced and explicit. The risk
+      field correctly identifies the area-specialist framing for each half as the
+      alternative register that the chapter must hold at appropriate distance from the
+      comparativist overlay. The inference is genuinely inferential: no single source
+      directly states "these are inclusion-marginal cases" in those terms; the synthesis
+      is the chapter's editorial work. PASS.
+
+  variant:
+    count: 2
+    locations:
+      - "Bakunawa VARIANT marker: §Bakunawa: the Philippine context and the eclipse-and-moon narrative, line 89"
+      - "Erlik/Ülgen VARIANT marker: §Erlik and Ülgen: the Altaic / Turkic-Mongol cosmographic frame, line 122"
+    one_per_half: true
+    primary_field_both: PASS
+    alts_field_both: PASS
+    chosen_field_both: PASS
+    reason_field_both: PASS
+    notes: >
+      Both VARIANT markers are present — one per half as required. The Bakunawa VARIANT
+      correctly registers the co-equal-variants treatment for the Visayan/Bikol/Philippine
+      regional recordings, enumerating the principal points of variation (number of moons;
+      Bakunawa's dwelling place; enumeration of noise-making practices; framing of celestial
+      vs. cosmographic threat). The Erlik/Ülgen VARIANT correctly registers the co-equal-
+      variants treatment for the Altai/Buryat/Yakut recordings, enumerating the principal
+      points of variation (number of layered heavens and underworlds; subordinate spirits;
+      fallen-from-Ülgen vs. co-eternal framing; white/black-shaman division). Both markers
+      provide the required alts treatments (privileging one recording strand; reconstructing
+      from convergences) and explain why the co-equal treatment is chosen per brief
+      30-bakunawa.yaml shared_variant_handling. PASS on both markers.
+
+  appropriation_flag:
+    count: 1
+    location: "§Typology, area-specialist framing, and forward-links, line 148"
+    marker_number_in_book: 6
+    note_on_marker_count: >
+      The task brief specifies this is the SIXTH APPROPRIATION-FLAG in the book.
+      The marker text does not explicitly state the ordinal number (unlike some earlier
+      markers); the ch-30 marker is the sixth in the pipeline (ch-23, ch-26, ch-27,
+      ch-28, ch-29, ch-30). This is a pipeline-counting matter, not a correctness
+      issue.
+    required_components:
+      named_area_specialists:
+        present: true
+        bakunawa_half:
+          - "Damiana L. Eugenio (*Philippine Folk Literature: The Myths*, Eugenio 2001)"
+        erlik_ulgen_half:
+          - "Mircea Eliade (*Shamanism*, Eliade 1964)"
+          - "Uno Harva (*Die religiösen Vorstellungen der altaischen Völker*, Harva 1938)"
+          - "Grigory Potanin (named in body prose, named-but-flagged)"
+          - "Vasily Verbitsky (named in body prose, named-but-flagged)"
+          - "Wilhelm Radloff (named in body prose, named-but-flagged)"
+        note: >
+          Eugenio is correctly named as the principal anchor for the Bakunawa half and
+          named in the first factual pass per scope.md §"Appropriation protocol" point 1.
+          Eliade and Harva are correctly named as the principal anchors for the
+          Erlik/Ülgen half. Potanin, Verbitsky, and Radloff are named in APPROPRIATION-FLAG
+          body text per the named-but-flagged secondary-anchor pattern (none in sources.yaml;
+          none carries an EVIDENCE token). PASS.
+      substance_of_objection:
+        present: true
+        bakunawa_characterisation: >
+          Eugenio's framing within Philippine eclipse-aetiology and communal-ritual practice
+          does not invoke the chaos-vs-order combat register; the area-specialist objection
+          is to typological-assimilation on the ground that the cycle has no hero-figure
+          and no decisive combat-and-victory episode. Correctly stated. PASS.
+        erlik_ulgen_characterisation: >
+          Eliade's and Harva's framing within the Altaic-Siberian shamanic complex and
+          dualistic religious cosmology treats the pairing as a dualistic-cosmological
+          structure rather than a combat-and-victory episode; the area-specialist objection
+          is to typological-assimilation on the non-serpentine-adversary and non-decisive-
+          opposition grounds. Correctly stated. PASS.
+      eugenio_bakunawa_eclipse_aetiology_framing: true
+      eliade_harva_dualistic_cosmology_shamanic_framing: true
+      both_as_inclusion_marginal_not_combat_register: true
+      positioning_on_spectrum:
+        bakunawa_closer_to_nanabozho_than_mild_cases: true
+        erlik_ulgen_structurally_distinctive_strong_objection: true
+        note: >
+          The Bakunawa half is correctly positioned "closer in objection-strength to the
+          Ch32 Nanabozho refusal case than to the milder Ch26 Pariacaca and Ch27 Mapuche
+          cases." The Erlik/Ülgen half is correctly characterised as "a structurally
+          distinctive strong-objection case in which the dualistic-cosmology framing and
+          the chaoskampf typology converge on no structural feature at the load-bearing
+          level." Both positioning claims are accurate and internally consistent. PASS.
+      forwarded_to_c8_ch41: true
+      forwarded_to_c7_ch40: true
+    overall_result: PASS
+    notes: >
+      The APPROPRIATION-FLAG satisfies all required components for both halves. It is
+      structurally the most complex APPROPRIATION-FLAG in the pipeline (two halves,
+      six named specialists, two distinct objection grounds) and handles the complexity
+      correctly. The four required components specified in the task brief (Eugenio for
+      Bakunawa; Eliade and Harva for Erlik/Ülgen; both as inclusion-marginal outside
+      combat register; Bakunawa closer to Ch32, Erlik/Ülgen as structurally distinctive
+      strong-objection) are all present and correctly characterised. PASS.
+
+  reconstruction:
+    count: 0
+    expected: 0
+    result: PASS
+    notes: >
+      No RECONSTRUCTION markers present. Correct: the chapter handles the reconstruction
+      situation via the LACUNA marker with scholarly_reconstruction field, which limits
+      reconstruction to within the 19th-20th-century recording corpus per each half's
+      sources.
+
+  total_markers: 5
+  expected_markers: 5
+  expected_breakdown: "1 LACUNA + 1 INFERENCE + 2 VARIANT + 1 APPROPRIATION-FLAG"
+  marker_count_result: PASS
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FORSYTH DISCLAIMER VERIFICATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+forsyth_disclaimer_check:
+  token_count: 2
+  token_locations:
+    - "§Source overview, line 62 (Forsyth body claim on long-arc typology)"
+    - "§Erlik and Ülgen: dualistic cosmology and inclusion-marginal status, line 139"
+  framing_only_vs_exception: framing-only
+  disclaimer_present_token_1: true
+  disclaimer_wording_token_1: >
+    "Forsyth 1987 does not itself treat Philippine or Altaic-content material, and the
+    chapter's use of the citation is for the long-arc typological framing rather than
+    for Philippine or Altaic-content scholarly coverage."
+  disclaimer_present_token_2: true
+  disclaimer_wording_token_2: >
+    "Forsyth 1987 does not itself treat Philippine or Altaic-content material and the
+    chapter's use of the citation is for the long-arc typological framing rather than
+    for Philippine or Altaic-content scholarly coverage in either half."
+  result: PASS
+  notes: >
+    Both Forsyth EVIDENCE tokens carry the required not-for-Philippine-or-Altaic-coverage
+    disclaimer explicitly. Unlike Ch28 (exception case where Forsyth was load-bearing for
+    the inversion), the Ch30 use is correctly framing-only: the inclusion-marginal
+    characterisation depends on having a characterised typology, but Forsyth is not cited
+    for any Philippine or Altaic content claim. The framing-only use is appropriate and
+    correctly disclaimed on both tokens. This is a consistent and clean application of the
+    normalize precedent from Ch19-Ch28.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AHURA MAZDA / ANGRA MAINYU INDEPENDENT-CONVERGENCE FRAMING
+# ─────────────────────────────────────────────────────────────────────────────
+
+ahura_mazda_angra_mainyu_framing:
+  claim_location: "§Erlik and Ülgen: dualistic cosmology and inclusion-marginal status, line 133"
+  claim_text: >
+    The Erlik/Ülgen pairing parallels the Indo-Iranian Ahura Mazdā/Angra Mainyu
+    dualistic cosmology at the structural level of the high-god-and-adversarial-counterpart
+    pairing, but does not inherit from the Indo-Iranian material. The structural parallel
+    is registered as an independent typological convergence.
+  judgment: CONFIRMED_CORRECT
+  reasoning: >
+    Per trained knowledge of current Altaic-studies and history-of-religions scholarship:
+    (1) There is no established genetic or transmission link between the Altaic/Turkic-Mongol
+    dualism (Erlik/Ülgen) and the Avestan dualism (Ahura Mazdā/Angra Mainyu) in current
+    scholarship. Proposals of Iranian religious influence on Altaic religions exist in
+    the older comparative-religion literature but are not the current consensus.
+    (2) The structural parallel at the level of the high-god / adversarial-counterpart
+    pairing is real and noted in comparative-religion literature including Eliade.
+    (3) The formulation "independent typological convergence rather than transmission
+    relationship" is the standard and defensible scholarly position for a cross-cultural
+    structural parallel without demonstrated transmission.
+    (4) The chapter correctly cross-references Ch13 (Thraētaona / Aži Dahāka) where the
+    Ahura Mazdā / Angra Mainyu dualism is treated within the Indo-Iranian context.
+    (5) The contrast at the level of the decisive-combat feature (Frashokereti eschatological
+    combat in the Avestan tradition vs. non-decisive arrangement in the Altaic tradition)
+    is correctly registered as the load-bearing inclusion-marginal feature.
+    The Ahura Mazdā / Angra Mainyu independent-convergence framing is CONFIRMED as
+    consistent with current Altaic-studies and history-of-religions consensus. PASS.
+  sources_used: "Harva 1938, Eliade 1964 (via trained knowledge of each volume)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# MISSING-SOURCE FLAGS CHECK
+# ─────────────────────────────────────────────────────────────────────────────
+
+missing_source_flags:
+  potanin:
+    load_bearing_evidence_token: false
+    named_in_body_prose: true
+    named_but_flagged_pattern: CORRECTLY_APPLIED
+    note: >
+      Grigory Potanin named in §Source overview (Erlik/Ülgen recording-corpus body claim)
+      and in APPROPRIATION-FLAG body text. Not cited in any EVIDENCE token. Not in
+      sources.yaml. The named-but-flagged pattern is correctly applied per Ch23 FC-02 /
+      Ch26 FC-02 / Ch27 / Ch28 FC-02 precedent. Cited indirectly through Harva 1938
+      and Eliade 1964. NOT LOAD-BEARING for any individual EVIDENCE-anchored claim. PASS.
+  verbitsky:
+    load_bearing_evidence_token: false
+    named_in_body_prose: true
+    named_but_flagged_pattern: CORRECTLY_APPLIED
+    note: >
+      Vasily Verbitsky named in §Source overview and APPROPRIATION-FLAG body text. Not
+      cited in any EVIDENCE token. Not in sources.yaml. Same handling as Potanin. PASS.
+  radloff:
+    load_bearing_evidence_token: false
+    named_in_body_prose: true
+    named_but_flagged_pattern: CORRECTLY_APPLIED
+    note: >
+      Wilhelm Radloff named in §Source overview and APPROPRIATION-FLAG body text. Not
+      cited in any EVIDENCE token. Not in sources.yaml. Same handling as Potanin. PASS.
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FORWARD-LINK VERIFICATION
+# ─────────────────────────────────────────────────────────────────────────────
+
+forward_link_verification:
+  toc_version: "v1, 2026-04-23"
+  links_checked:
+    - reference: "Part II C8 (the refusal and the appropriation problem; ch. 41)"
+      toc_entry: "number: 41, slug: C8-refusal-and-appropriation, chapter_anchor: ch-41-C8-refusal-and-appropriation"
+      result: PASS
+      note: >
+        PRIMARY FORWARD TARGET. Both label "Part II C8" and chapter number "ch. 41 of
+        the present volume" are used consistently throughout body prose, markers, and
+        COMPARATIVE-HOOK comments. toc.yaml confirms C8 at ch. 41. PASS.
+
+    - reference: "Ch. 16 (Ra-Apep — daily cyclical-maintenance context)"
+      toc_entry: "number: 16, slug: ra-apep, chapter_anchor: ch-16-ra-apep"
+      result: PASS
+      note: >
+        Referenced in body prose (§Bakunawa: communal-ritual register) and COMPARATIVE-HOOK
+        comments as the principal Eurasian cyclical-maintenance comparandum for the Bakunawa
+        half. toc.yaml confirms ch. 16 = ra-apep. PASS.
+
+    - reference: "Ch. 6 (Illuyanka / purulli festival)"
+      toc_entry: "number: 6, slug: illuyanka, chapter_anchor: ch-06-illuyanka"
+      result: PASS
+      note: >
+        Referenced in body prose (§Bakunawa: communal-ritual register, back-link) and
+        COMPARATIVE-HOOK comments. toc.yaml confirms ch. 6 = illuyanka. PASS.
+
+    - reference: "Ch. 13 (Thraētaona / Aži Dahāka — Indo-Iranian dualistic-cosmology comparandum)"
+      toc_entry: "number: 13, slug: thraetaona-azidahaka, chapter_anchor: ch-13-thraetaona-azidahaka"
+      result: PASS
+      note: >
+        Referenced in the Erlik/Ülgen-half body claim on Ahura Mazdā/Angra Mainyu parallel
+        and in COMPARATIVE-HOOK comments. toc.yaml confirms ch. 13 = thraetaona-azidahaka.
+        PASS.
+
+    - reference: "Ch. 28 (Bida and Wagadu — non-Eurasian-cluster back-link)"
+      toc_entry: "number: 28, slug: bida-wagadu, chapter_anchor: ch-28-bida-wagadu"
+      result: PASS
+      note: >
+        Referenced in §Typology, area-specialist framing, and forward-links (back-link)
+        and COMPARATIVE-HOOK comments as the inversion case contrasted with Ch30's
+        inclusion-marginal cases. toc.yaml confirms ch. 28 = bida-wagadu. PASS.
+
+    - reference: "Ch. 33 (methods sidebar)"
+      toc_entry: "number: 33, slug: methods, chapter_anchor: ch-33-methods"
+      result: PASS
+      note: >
+        Referenced in §Typology, area-specialist framing, and forward-links (three
+        methodological contributions to the methods sidebar) and in COMPARATIVE-HOOK
+        comments. toc.yaml confirms ch. 33 = methods. PASS.
+
+    - reference: "Part II C7 (inversion / transformation problem; ch. 40)"
+      toc_entry: "number: 40, slug: C7-inversion-problem, chapter_anchor: ch-40-C7-inversion-problem"
+      result: PASS
+      note: >
+        Both label "Part II C7" and chapter number "ch. 40 of the present volume" used
+        consistently in body prose, APPROPRIATION-FLAG, and COMPARATIVE-HOOK comments.
+        toc.yaml confirms C7 at ch. 40. PASS.
+
+    - reference: "Ch. 27 (Mapuche Kai-Kai / Tren-Tren — co-comparandum back-link)"
+      toc_entry: "number: 27, slug: mapuche-kai-tren, chapter_anchor: ch-27-mapuche-kai-tren"
+      result: PASS
+      note: >
+        Referenced in §Typology, area-specialist framing, and forward-links (back-link)
+        and COMPARATIVE-HOOK comments. toc.yaml confirms ch. 27 = mapuche-kai-tren. PASS.
+
+    - reference: "Ch. 32 (Nanabozho / Mishipeshu — APPROPRIATION-FLAG spectrum positioning)"
+      toc_entry: "number: 32, slug: nanabozho-mishipeshu, chapter_anchor: ch-32-nanabozho-mishipeshu"
+      result: PASS
+      note: >
+        Referenced in APPROPRIATION-FLAG body text as the strongest-objection case against
+        which the Bakunawa half's objection-strength is positioned. toc.yaml confirms
+        ch. 32 = nanabozho-mishipeshu. PASS.
+
+    - reference: "Ch. 40 (Part II C7 — secondary forward-link)"
+      toc_entry: "number: 40, slug: C7-inversion-problem"
+      result: PASS
+      note: Already verified above. PASS.
+
+    - reference: "Ch. 41 (Part II C8 — PRIMARY FORWARD TARGET)"
+      toc_entry: "number: 41, slug: C8-refusal-and-appropriation"
+      result: PASS
+      note: Already verified above. PASS.
+
+  ch41_primary_forward_target_verification: >
+    Part II C8 (ch. 41) is correctly designated as the PRIMARY FORWARD TARGET throughout
+    the document: in the preamble (lines 17-23), in §Typology, area-specialist framing,
+    and forward-links (body prose at lines 153, 165), in the APPROPRIATION-FLAG body text,
+    in multiple COMPARATIVE-HOOK comments, and explicitly in COMPARATIVE-HOOK at line 175
+    ("Part II C8 (the refusal and the appropriation problem, Ch. 41) — PRIMARY FORWARD
+    TARGET"). The Ch. 41 forward-link is the most prominent and consistently maintained
+    cross-chapter link in the document. PASS.
+
+  all_forward_links_verified: PASS
+  total_links_checked: 11
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TALLIES
+# ─────────────────────────────────────────────────────────────────────────────
+
+tallies:
+  total_claims: 36
+  supported: 34
+  internal_variance: 0
+  unverified: 0
+  citation_wrong: 0
+  identifier_mismatch: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridge: 0
+  marker_issues: 0
+  glossary_violations: 0
+  total_findings: 2
+
+# ─────────────────────────────────────────────────────────────────────────────
+# FINDINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+findings:
+
+  - id: FC-01
+    severity: LOW
+    category: identifier_mismatch
+    location: >
+      sources.yaml — eugenio-philippine-myths entry, identifier_value field.
+    claim_text: >
+      sources.yaml pins identifier_value: "9789715421140" for Eugenio 2001,
+      *Philippine Folk Literature: The Myths* (UP Press).
+    problem: >
+      The pinned ISBN-13 (9789715421140) is incorrect. The confirmed correct ISBN-13,
+      per the UP Press product page (https://press.up.edu.ph/product/philippine-folk-literature-the-myths/),
+      AbeBooks listing (9789715422918), and multiple bibliographic sources, is 9789715422918.
+      The two ISBNs differ at the final digits (−1140 vs. −2918). The content of the volume
+      and its series placement are correctly described in sources.yaml; only the identifier
+      is wrong. Sources.yaml's own notes field flags this as "provisional pending factcheck
+      verification" — the flag is correctly set and the factcheck now supplies the
+      correction.
+    evidence: >
+      UP Press product page for *Philippine Folk Literature: The Myths* returns
+      ISBN 978971542291-8; AbeBooks listing explicitly cites 9789715422918 for Vol. 2
+      of the Philippine Folk Literature series. Both independent sources agree.
+    recommended_fix: >
+      At post-human-normalize: correct identifier_value in sources.yaml from "9789715421140"
+      to "9789715422918" per the Ch20 FC-03 / Ch24 FC-03 ISBN-correction-in-place pattern.
+      Update the notes field to remove the provisional flag and record the correction date.
+      No change to any claims file: the identifier mismatch is in sources.yaml only; no
+      EVIDENCE token in the claims file cites the ISBN directly. LOW-priority — all
+      content claims anchored to eugenio-philippine-myths are substantively correct.
+
+  - id: FC-02
+    severity: LOW
+    category: identifier_mismatch
+    location: >
+      sources.yaml — harva-altaic-religious entry, identifier_value field.
+    claim_text: >
+      sources.yaml pins identifier_value:
+      "https://archive.org/details/diereligiosenvor0000unkn" for Harva 1938,
+      *Die religiösen Vorstellungen der altaischen Völker*, FFC 125.
+    problem: >
+      The pinned stable-url identifier does not correspond to the correct archive.org
+      record for this work. The confirmed archive.org URL, per direct web search, is
+      https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker
+      (identifier: "DieReligioenVorstellungenDerAltaischenVolker"). The pinned identifier
+      "diereligiosenvor0000unkn" appears to be a placeholder or an incorrect OCLC-pattern
+      identifier rather than the actual archive.org stable-url. Sources.yaml's own notes
+      field flags this as "provisional pending factcheck verification" and recommends
+      checking the OCLC catalogue at normalize — the flag is correctly set and the
+      factcheck now supplies the archive.org correction.
+      NOTE: The archive.org record lists the author as "Uno Holmberg" (Harva's birth name,
+      before his 1935 name change). Sources.yaml correctly cites "Harva, Uno" — no
+      correction needed there.
+    evidence: >
+      Web search confirms archive.org identifier is "DieReligioenVorstellungenDerAltaischenVolker"
+      at https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker. The
+      search did not return any record matching the pinned identifier "diereligiosenvor0000unkn."
+    recommended_fix: >
+      At post-human-normalize: correct identifier_value in sources.yaml from
+      "https://archive.org/details/diereligiosenvor0000unkn" to
+      "https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker". Also
+      check OCLC WorldCat for the FFC 125 OCLC number as a more institutionally stable
+      identifier (OCLC is more stable than archive.org over multi-year horizons). Update
+      the notes field to remove the provisional flag and record the correction date.
+      No change to any claims file: the identifier mismatch is in sources.yaml only.
+      LOW-priority — all content claims anchored to harva-altaic-religious are
+      substantively correct; the stable-url fix is a bibliographic housekeeping item.

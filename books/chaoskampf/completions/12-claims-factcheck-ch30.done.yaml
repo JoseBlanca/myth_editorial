@@ -1,0 +1,70 @@
+stage: claims-factcheck
+chapter: "30-bakunawa"
+chapter_title: "Bakunawa and the Moons (with Erlik/Ülgen as Altaic Comparandum)"
+completed: true
+date: "2026-05-01"
+auditor_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+verdict: MINOR-REVISE
+output_file: "chapters/30-bakunawa.claims.factcheck.yaml"
+input_file: "chapters/30-bakunawa.claims.adoc"
+claims_audited: 36
+findings_count: 2
+finding_severities:
+  - id: FC-01
+    severity: LOW
+    category: identifier_mismatch
+    summary: >
+      Eugenio 2001 ISBN mismatch in sources.yaml: pinned as 9789715421140 but confirmed
+      correct ISBN-13 is 9789715422918 per UP Press product page and AbeBooks listing.
+      Actionable at post-human-normalize per Ch20 FC-03 / Ch24 FC-03 pattern. Sources.yaml
+      provisional flag was correctly set; factcheck supplies the correction.
+  - id: FC-02
+    severity: LOW
+    category: identifier_mismatch
+    summary: >
+      Harva 1938 stable-url mismatch in sources.yaml: pinned as
+      https://archive.org/details/diereligiosenvor0000unkn but confirmed archive.org
+      identifier is DieReligioenVorstellungenDerAltaischenVolker. Pinned URL does not
+      resolve to the correct record. OCLC catalogue check recommended at normalize.
+      Sources.yaml provisional flag was correctly set; factcheck supplies the correction.
+key_passes:
+  - "1:1:1 invariant: 36/36/36 — PASS"
+  - "Source resolution: all 4 IDs (eugenio-philippine-myths, harva-altaic-religious, eliade-shamanism, forsyth-1987) in sources.yaml — PASS"
+  - "Eliade ISBN 9780691119427: VERIFIED by Amazon/AbeBooks — PASS"
+  - "Eugenio ISBN: LOW finding FC-01 — correct ISBN is 9789715422918"
+  - "Harva stable-url: LOW finding FC-02 — correct archive.org ID is DieReligioenVorstellungenDerAltaischenVolker"
+  - "Eugenio content plausibility: Philippine Folk Literature: The Myths covers Visayan/Bikol oral tradition including eclipse-aetiology narratives — PASS"
+  - "Harva content plausibility: Erlik/Ülgen pairing is a central subject of FFC 125 — PASS"
+  - "Eliade content plausibility: Altaic-Siberian material (Erlik/Ülgen, white/black-shaman division) is major topic of Shamanism — PASS"
+  - "Forsyth disclaimer (2 tokens): both carry not-for-Philippine-or-Altaic-coverage disclaimer; framing-only use (non-exception) correctly applied — PASS"
+  - "Two-component chapter structure: Bakunawa half + Erlik/Ülgen half + consolidated typology section all present — PASS"
+  - "Inclusion-marginal framing: no-hero-slaying (Bakunawa) and non-serpentine/non-decisive (Erlik/Ülgen) stated explicitly throughout — PASS"
+  - "Tradition's own framing opens chapter before comparativist category invoked — PASS"
+  - "LACUNA marker: covers both halves; source and scholarly_reconstruction fields correct; cross-tradition reconstruction excluded — PASS"
+  - "INFERENCE marker: basis and risk fields correct; inclusion-marginal characterisation as comparativist overlay correctly registered — PASS"
+  - "VARIANT markers (2): one per half (Bakunawa and Erlik/Ülgen); all required fields present and correctly brief-authorised — PASS"
+  - "APPROPRIATION-FLAG marker (6th in book): all four required components present for both halves — PASS"
+  - "APPROPRIATION-FLAG spectrum positioning: Bakunawa closer to Ch32 Nanabozho, Erlik/Ülgen as structurally distinctive strong-objection case — PASS"
+  - "RECONSTRUCTION markers: 0 (correct) — PASS"
+  - "Banned umbrella terms: 0 instances — PASS"
+  - "Glossary discipline: Bakunawa, Visayan, Bikol, Erlik, Ülgen, Altai, Buryat, Yakut all consistent with cited anchors — PASS"
+  - "Forward-links (11 checked): Ch41 (PRIMARY), Ch16, Ch6, Ch13, Ch28, Ch33, Ch40, Ch27, Ch32 all verified in toc.yaml — PASS"
+  - "Named-but-flagged pattern: Potanin, Verbitsky, Radloff correctly handled (no EVIDENCE tokens) — PASS"
+  - "Ahura Mazdā/Angra Mainyu independent-convergence framing: CONFIRMED as current scholarly consensus — PASS"
+  - "Bakunawa seven-moons narrative, eclipse-as-devouring, communal noise-making practices: all substantively correct — PASS"
+  - "Erlik as anthropomorphic (non-serpentine) underworld-ruler: correct per Harva 1938 — PASS"
+  - "Philippine colonial periodisation (Spanish 1565-1898, American 1898-1946): correct — PASS"
+notes: >
+  The chapter is the methodologically most complex non-Eurasian-cluster claims skeleton
+  in the pipeline: two parallel inclusion-marginal cases from two distinct cultural-areal
+  contexts, each with its own source anchors, variant handling, and appropriation-flag
+  component. The writer has handled the two-half structure correctly throughout — keeping
+  the halves analytically separate at the narrative-reconstruction level while consolidating
+  them at the typological level in the closing section. The APPROPRIATION-FLAG is the
+  most structurally complex in the book and satisfies all required components for both
+  halves. The Ahura Mazdā/Angra Mainyu independent-convergence framing is confirmed as
+  the correct current scholarly position. The only findings are both LOW identifier
+  mismatches in sources.yaml for the two newly-pinned source anchors whose ISBNs/stable-urls
+  were explicitly flagged as provisional at pinning time — the factcheck supplies the
+  verified corrections. No substantive factual errors in any load-bearing claims.

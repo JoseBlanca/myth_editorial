@@ -1,0 +1,75 @@
+stage: claims-factcheck
+chapter: "29-mwindo-kirimu"
+chapter_title: "Mwindo and Kirimu (the Contrastive Case)"
+completed: true
+date: "2026-05-01"
+auditor_model: "claude-sonnet-4-6"
+writer_model: "claude-opus-4-7"
+verdict: MINOR-REVISE
+output_file: "chapters/29-mwindo-kirimu.claims.factcheck.yaml"
+input_file: "chapters/29-mwindo-kirimu.claims.adoc"
+claims_audited: 48
+findings_count: 3
+finding_severities:
+  - id: FC-01
+    severity: LOW
+    category: geographic-precision
+    summary: >
+      "Eastern slopes of the Mitumba mountain range" is a more specific geographic
+      label than Biebuyck & Mateene 1969's translators' introduction uses (which
+      frames the territory as "Kivu region / upper Oso valley and adjacent forested
+      terrain" broadly). Geographically consistent but LOW-PRECISION for a body-prose
+      descriptor drawn from the anchor source. Verify at chapter-draft; revise to the
+      standard scholarly formulation if the Mitumba label is not in the translators'
+      introduction.
+  - id: FC-02
+    severity: NOTE
+    category: sources-inventory
+    summary: >
+      Five named-but-flagged secondary sources (Biebuyck 1978 *Hero and Chief*,
+      Hale 1998 *Griots and Griottes*, Ngandu Nkashama, Mulokozi, Bird) are not in
+      sources.yaml. Named-but-flagged pattern correctly applied at claims stage.
+      Bird, Ngandu Nkashama, and Mulokozi's publication titles and years entirely
+      unspecified; require identification before chapter-draft. Same inventory issue
+      as Ch28 FC-02.
+  - id: FC-03
+    severity: NOTE
+    category: gloss-precision
+    summary: >
+      *karisi* first-mention gloss at line 74 ("the praise-and-narrative singer-
+      tradition's title") is present but brief. Expand to a full glossary-compliant
+      gloss at chapter-draft identifying *karisi* as the Nyanga designation for
+      the trained specialist reciter of the epic tradition. No claims-file revision
+      required; forward drafting action.
+key_passes:
+  - "1:1:1 invariant: 48/48/48 — PASS"
+  - "Source resolution: all three IDs (biebuyck-mateene-mwindo, belcher-epic, forsyth-1987) in sources.yaml — PASS"
+  - "Kirimu episode genuinely covered by biebuyck-mateene-mwindo — PASS"
+  - "Forsyth exception-case wording: contrastive-reading-depends-on-typology-to-refuse correctly justified and disclaimed — PASS"
+  - "Contrastive framing: Nyanga maturation-through-humiliation framing opens chapter before chaoskampf category invoked — PASS"
+  - "INFERENCE marker: basis and risk fields correct; contrastive-reading-as-comparativist-overlay correctly registered — PASS"
+  - "LACUNA marker: source and scholarly_reconstruction fields correct; cross-tradition reconstruction excluded — PASS"
+  - "VARIANT marker: single-prevalent treatment correctly brief-authorised — PASS"
+  - "APPROPRIATION-FLAG marker (1 structural marker, 5th in book): all four required components present — PASS"
+  - "RECONSTRUCTION markers: 0 (correct) — PASS"
+  - "Banned umbrella terms: 0 instances — PASS"
+  - "Glossary discipline: Mwindo, Kirimu, Nkuba, Shé-Kárisi Rureke, Bese, Nyanga / Banyanga all consistent — PASS"
+  - "Forward-links: all cross-chapter references verified against toc.yaml — PASS"
+  - "Ch41 (Part II C8) as PRIMARY FORWARD TARGET: explicitly designated in body prose, APPROPRIATION-FLAG, INFERENCE, and COMPARATIVE-HOOK throughout — PASS"
+  - "Ch40 (Part II C7) correctly designated secondary forward link — PASS"
+  - "Named-but-flagged pattern: Biebuyck 1978, Hale 1998, Ngandu Nkashama, Mulokozi, Bird all correctly handled — PASS"
+  - "Missing-source flags: Hale, Ngandu Nkashama, Mulokozi, Bird not load-bearing for any EVIDENCE-anchored claim — PASS"
+  - "Narrative facts (miraculous birth, drum episode, Kirimu seven-headed, Nkuba as sky-god, celestial humiliation): PASS"
+  - "Contrastive-framing preservation: resistance held as data; no apologetic framing detected — PASS"
+notes: >
+  The chapter is the methodologically strongest CONTRASTIVE-tier claims skeleton in the
+  pipeline and the most complete exercise of the appropriation protocol in the book.
+  The Forsyth exception case (load-bearing for the contrastive-typology-refusal rather
+  than framing-only) is correctly justified and disclaimed — matching the Ch28 standard.
+  The APPROPRIATION-FLAG is the most complete in the pipeline (5th in book): all four
+  required components fully present; Ch41 (C8) as PRIMARY FORWARD TARGET correctly
+  designated throughout; Ch40 (C7) as secondary link correctly designated; spectrum
+  positioning between Ch28 and Ch32 internally coherent. The three findings are all LOW
+  or NOTE severity and concern geographic-label precision (FC-01), named-but-flagged
+  bibliographic inventory (FC-02), and first-mention gloss expansion (FC-03) — no
+  substantive factual errors in load-bearing claims.
