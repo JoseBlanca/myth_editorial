@@ -1,0 +1,233 @@
+stage: "14-chapter-draft-ch31"
+timestamp: "2026-05-02T12:57:06Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/31-vainamoinen-iku-turso.adoc"
+    lines: 159
+summary: "Drafted Ch31 (Väinämöinen and Iku-Turso, Transformed Variant) from the approved claims document. 11,952 wc -w total file count; body-prose-only count ~4,818 words against the brief's 4,500-word target. Over-target driven by verbatim preservation of 38 footnotes, 1 LACUNA + 1 VARIANT + 1 INFERENCE + 1 APPROPRIATION-FLAG marker (4 total), and 10 COMPARATIVE-HOOK lines, with the 1:1 claim-to-narrative-paragraph invariant held. The 38 claim-paragraphs are preserved as 38 narrative paragraphs each carrying its footnote and EVIDENCE token verbatim. The chapter is the PRINCIPAL CASE for Part II C7 (the inversion / transformation problem, Ch40) for the *transformation* sub-problem and a secondary contributor to Part II C8 (the refusal and appropriation problem, Ch41) for the methodological point about 19th-century editorial synthesis. The two-layer presentation discipline is preserved: older rune-tradition material (sections on Finnic context, Väinämöinen as shaman-sage hero, and Iku-Turso in the older rune material) precedes Lönnrot's 1835 / 1849 *Kalevala* editorial synthesis (the *Kalevala* section), with the methodological-discipline section explicitly holding the two layers apart and the consolidated typology-and-forward-links section closing the chapter. The Forsyth framing-only treatment is preserved with the explicit not-for-Finnic-content disclaimer at the single Forsyth EVIDENCE location. The chapter explicitly does NOT claim Iku-Turso fits chaoskampf cleanly (per brief special_instructions). Siikala 2002 cited by name throughout as the principal anchor; Honko, DuBois, and the wider rune-collector cohort (Europaeus, Ahlqvist, Genetz, Krohn, Perttunen, Malinen, Agricola, Gallen-Kallela, Sibelius, Macpherson, Ivanov, Toporov) named in body prose per the named-but-flagged pattern of Ch23 FC-02 / Ch26 FC-02 / Ch27 / Ch28 / Ch30."
+notes: |
+  Structural verification:
+  - footnote:[…] tokens: 38 (matches claims.approved.adoc count exactly;
+    verified via grep -o "footnote:\[[^]]*\]" diff against claims file —
+    empty diff, character-for-character identical footnote contents)
+  - // EVIDENCE: tokens: 38 (matches claims.approved.adoc count and order
+    exactly; verified via diff — empty diff)
+  - Source-id distribution in EVIDENCE tokens (matches the post-normalize
+    distribution in the approved claims file exactly):
+    siikala-finnish=37, forsyth-1987=1 (total = 38)
+  - [LACUNA:] markers: 1 (the pre-modern pre-19th-century-attestation
+    absence + 19th-20th-c. rune-collection-corpus LACUNA marker, carried
+    over verbatim with both sub-fields — source / scholarly_reconstruction
+    — preserved character-for-character)
+  - [VARIANT:] markers: 1 (the co-equal two-layer treatment — older rune-
+    tradition material as primary alongside Lönnrot 1835 / 1849 *Kalevala*
+    synthesis as alt — with all four sub-fields (primary / alt / chosen /
+    reason) carried over verbatim character-for-character; the brief's
+    variants.classification: co-equal preserved)
+  - [INFERENCE:] markers: 1 (the transformed-shamanic-binding INFERENCE
+    with basis / risk sub-fields preserved character-for-character; the
+    methodological caveat that the *transformed variant* characterisation
+    is itself a comparativist framing the area-specialist Finnic-folklore-
+    studies tradition does not necessarily adopt is preserved verbatim)
+  - [APPROPRIATION-FLAG:] markers: 1 (the SEVENTH in the book per Ch23 /
+    Ch26 / Ch27 / Ch28 / Ch29 / Ch30 precedents; carried over verbatim
+    character-for-character. Five required components preserved: (a) named
+    area specialists (Siikala as principal; Honko and DuBois named-but-
+    flagged per Ch23 FC-02 / Ch26 FC-02 / Ch27 / Ch28 / Ch30 precedent);
+    (b) substance of typological-assimilation objection (encounter's
+    structural features — song-and-knowledge mode, binding-rather-than-
+    slaying, continuity with incantation-against-sickness register, situated-
+    ness in northern-Eurasian shamanic complex — are not the weapon-combat-
+    and-slaying features the chaoskampf typology takes as its load-bearing
+    centre; plus the methodological objection about Lönnrot's editorial
+    synthesis); (c) tier-implication clause (related-tier transformed-
+    variant classification consistent with PRINCIPAL CASE for Part II C7
+    *transformation* sub-problem, structurally distinct from inversion
+    Ch28 Bida and Ch29 Mwindo, and from inclusion-marginal Ch30 Bakunawa-
+    Erlik-Ülgen); (d) spectrum-positioning (mid-spectrum alongside Ch23
+    Susanoo and Ch26 Pariacaca, milder than Ch29 Mwindo and Ch32 Nanabozho
+    refusals); (e) C7/C8 forwarding clause (Ch40 (C7) as PRIMARY FORWARD
+    TARGET; Ch41 (C8) as secondary for the Lönnrot-editorial-synthesis
+    methodological point); marker placement at consolidated typology-and-
+    forward-links section per the Ch27 / Ch28 / Ch30 marker-placement
+    template precedent.)
+  - [RECONSTRUCTION:] markers: 0 (matches claims-side)
+  - // COMPARATIVE-HOOK: comments: 10 (matches claims-side: Krishna-Kāliya-
+    Ch15 most-precise-structural-comparandum at binding-or-taming level;
+    Susanoo-Ch23 co-related-tier *transformation* case at load-bearing-
+    frame level; Pariacaca-Ch26 co-related-tier *transformation* case at
+    related-tier classification with mid-spectrum objections; Slavic-
+    Baltic-Ch20 methodological-parallel back-link on 19th-and-20th-century
+    scholarly-or-editorial reconstruction; Mwindo-Ch29 preceding non-
+    Eurasian related-tier-and-contrastive chapter contrasting transforma-
+    tion with inversion; Bakunawa-Erlik-Ülgen-Ch30 preceding inclusion-
+    marginal chapter contrasting transformation with structural-feature-
+    absence; Nanabozho-Ch32 succeeding contrastive chapter contrasting
+    mid-spectrum transformation with strong refusal; Methods-sidebar-Ch33
+    three-methodological-moves contribution; Part-II-C7-Ch40 PRIMARY
+    FORWARD TARGET as PRINCIPAL CASE for *transformation* sub-problem;
+    Part-II-C8-Ch41 secondary forward-link for Lönnrot-editorial-synthesis
+    methodological point) — all carried over verbatim at the end of the
+    file; verbatim diff against claims confirmed empty.
+  - Banned-term grep ("chaos-figure" / "chaos-monster" / "chaos-serpent"):
+    zero hits in the entire file — the chapter consistently uses specific
+    names (Iku-Turso, sea-monster, Väinämöinen, the *Kalevala*, Lönnrot,
+    Karelia, Pohjola, Louhi) and structural-feature framings (song-and-
+    knowledge, binding-rather-than-slaying, origin-incantation, weapon-
+    combat-and-slaying register) without resorting to the banned umbrella
+    terms.
+
+  Two-layer presentation discipline verification:
+  - The chapter opens with the Source overview (paragraphs covering the
+    textual situation, the Siikala anchor, the Forsyth typology framing,
+    the LACUNA on pre-modern non-attestation, the VARIANT on the two co-
+    equal layers, and a roadmap paragraph), then proceeds in the
+    prescribed order:
+    (1) The Finnic context: Karelia, the rune-singing tradition, and the
+        Kalevala-meter (geographic area; *Kalevala*-meter; *runonlaulajat*
+        performance tradition; principal protagonists including
+        Väinämöinen, Ilmarinen, Lemminkäinen, Louhi, Pohjola, Iku-Turso).
+    (2) Väinämöinen as shaman-sage hero (the Finnic shaman-sage type;
+        song as central mode of agency; the northern-Eurasian shamanic
+        complex; *origin-incantation* as load-bearing technique).
+    (3) Iku-Turso in the older rune material (the etymology and dual
+        narrative-encounter / incantation-against-sickness register; the
+        laconic-and-fragmentary character; morphological variability;
+        the typical narrative shape; absence of weapon-combat as load-
+        bearing structural feature; INFERENCE marker on the transformed
+        shamanic binding reading).
+    (4) Lönnrot's *Kalevala*: the 1835 *Vanha* and the 1849 *Uusi*
+        editions (Lönnrot's biography; the two editions with their canto
+        and line counts; Lönnrot's compositional method as active
+        editorial intervention with Honko and DuBois named-but-flagged;
+        the *Kalevala*'s Iku-Turso material in Cantos II and XLII per
+        the FC-01 fix; the principal narrative-substantive shifts; the
+        *Kalevala*'s reception with Gallen-Kallela, Sibelius, and the
+        Kalevalan päivä commemoration date 28 February 1835 per the
+        FC-02 fix).
+    (5) The two layers held apart: methodological discipline (the
+        chapter's two-layer presentation as principal methodological
+        discipline; the Macpherson-Ossian and Ivanov-Toporov Perun-Veles
+        methodological parallels; citation-discipline as load-bearing
+        contribution).
+    (6) Typology, area-specialist framing, and forward-links (the
+        related-tier *transformed variant* placement with explicit non-
+        claim that Iku-Turso fits chaoskampf cleanly; APPROPRIATION-FLAG
+        marker; *transformed variant* characterisation distinct from
+        inversion and inclusion-marginal; principal forward-link to C7
+        Ch40, secondary to C8 Ch41 and methods sidebar Ch33; principal
+        back-links to Ch20, Ch23, Ch26, Ch15).
+    The two-layer structure is preserved exactly per the brief's
+    special_instructions: older rune-tradition material first (laconic,
+    fragmentary), then Lönnrot's 1835 / 1849 *Kalevala* editorial
+    synthesis as the 19th-century compositional layer that reshapes
+    the older material for the modern national epic.
+
+  Transformed-variant framing preservation:
+  - Structural features of the chaoskampf typology PRESENT: named hero
+    (Väinämöinen), named adversary (Iku-Turso), encounter at the boundary
+    of human and non-human worlds (sea-monster emerging from the sea),
+    decisive subjugation (the binding).
+  - Load-bearing mode REPLACED: song-and-knowledge for weapon-combat;
+    binding-rather-than-slaying for once-and-done killing; continuity
+    with the rune-tradition's incantation-against-sickness register
+    rather than confinement to a single combat-encounter context.
+  - Brief's NOT-claim discipline preserved verbatim: "the chapter
+    explicitly NOT claiming that Iku-Turso fits chaoskampf cleanly per
+    brief special_instructions." The *transformed variant* framing is
+    the chapter's contribution to Part II C7.
+
+  Forsyth disclaimer preservation:
+  - 1 Forsyth EVIDENCE token at the Source overview Forsyth-typology
+    claim. The explicit not-for-Finnic-content disclaimer is preserved
+    at the Forsyth footnote location character-for-character: "Forsyth
+    1987 does not itself treat Finnic material directly, and the
+    chapter's use of the citation is for the long-arc typological
+    framing rather than for Finnic-area content scholarly coverage."
+
+  Named-but-flagged scholar discipline:
+  - Siikala (Anna-Leena Siikala, *Mythic Images and Shamanism: A
+    Perspective on Kalevala Poetry*, 2002, FFC 280): principal anchor,
+    named in first factual pass per scope.md §"Appropriation protocol"
+    point 1, cited by name throughout (37 of 38 EVIDENCE tokens).
+  - Honko (Lauri Honko, *Religion, Myth, and Folklore in the World's
+    Epics: The Kalevala and Its Predecessors*, 1990): named in body
+    prose at the Lönnrot-compositional-method passage of the
+    *Kalevala* section and at the APPROPRIATION-FLAG marker; not in
+    sources.yaml; cited indirectly through Siikala 2002.
+  - DuBois (Thomas A. DuBois, *Lyric, Meaning, and Audience in the
+    Oral Tradition of Northern Europe*, 2006): same disposition as
+    Honko.
+  - Other named-but-flagged scholars in body prose per the existing
+    pattern of the approved claims file: Daniel Europaeus, August
+    Ahlqvist, Arvid Genetz, Julius and Kaarle Krohn (rune-collectors,
+    named at the source-overview and Lönnrot-context passages); Arhippa
+    Perttunen of Latvajärvi in Viena Karelia, Ontrei Malinen of
+    Vuonninen (rune-singers, named at the source-overview passage);
+    Mikael Agricola (named at the LACUNA marker for the 16th-century
+    New Testament translation as the earliest Finnish-language Latin-
+    script attestation); Akseli Gallen-Kallela, Jean Sibelius (named
+    at the *Kalevala*-reception passage); James Macpherson (named at
+    the methodological-parallels passage and at the COMPARATIVE-HOOK
+    on Slavic-Baltic / Perun-Veles); Vyacheslav Ivanov, Vladimir
+    Toporov (named at the methodological-parallels passage and at
+    the COMPARATIVE-HOOK on the basic-myth reconstruction).
+
+  Prose-only paragraphs added (NOTE-level for fidelity stage):
+  - Source-overview transitional sentences before each marker block
+    and at section boundaries (no factual content; orienting language
+    only).
+  - One source-overview-closing roadmap paragraph naming the
+    six-section structure of the chapter (Finnic context first; then
+    Väinämöinen as shaman-sage; then Iku-Turso in the older rune
+    material; then Lönnrot's *Kalevala*; then the methodological
+    discipline; then the consolidated typology-and-forward-links
+    section); no factual content beyond the structural orientation.
+  - Marker-bridge sentences before each of the 4 markers: at LACUNA
+    introducing the pre-modern-attestation-absence + 19th-century-
+    rune-collection-corpus situation; at VARIANT introducing the
+    co-equal two-layer treatment; at INFERENCE introducing the
+    transformed-shamanic-binding reading as a comparativist synthesis;
+    at APPROPRIATION-FLAG introducing the area-specialist objection
+    registration. Each bridge sentence non-factual and serving only to
+    integrate the marker into the surrounding narrative voice.
+
+  Brief-target word-count handling:
+  - 11,952 wc -w total file count vs. ~4,500 brief target; over-target
+    driven by verbatim preservation of 38 footnotes (large per-footnote
+    text in the Siikala-anchored citation pattern), 4 markers (the
+    LACUNA, VARIANT, INFERENCE, and APPROPRIATION-FLAG markers each
+    being multi-paragraph in length per the established Ch26 / Ch27 /
+    Ch28 / Ch29 / Ch30 marker-bulk pattern), and 10 COMPARATIVE-HOOK
+    lines. Body-prose-only estimate: ~4,818 words, slightly above the
+    brief's 4,500-word body-prose target — within reasonable tolerance,
+    matching the over-target ratio of the Ch28 / Ch29 / Ch30 cycle
+    where the appropriation-flag-bearing chapters accumulate marker-
+    bulk that dominates the wc count.
+
+  FC-fix preservation from the approved claims file:
+  - FC-01 HIGH (CITATION-WRONG canto location): the body prose
+    correctly states "Iku-Turso appears principally in the *Kalevala*'s
+    42nd canto (Rune XLII, in the 1849 *Uusi Kalevala* numbering — the
+    Sampo-cycle and Pohjola material in which Louhi summons Iku-Turso
+    to stop the Kalevala heroes' return with the Sampo and Väinämöinen
+    subdues him by song), with an earlier brief appearance in the 2nd
+    canto" — preserved character-for-character from the post-normalize
+    fix in the claims.approved.adoc.
+  - FC-02 HIGH (CITATION-WRONG Kalevalan päivä commemoration date and
+    edition): the body prose correctly states "since the 1835 *Vanha
+    Kalevala* and especially since the 1849 *Uusi Kalevala* became the
+    standard text (with the date 28 February 1835, on which Lönnrot
+    signed the preface to the first edition, celebrated annually in
+    Finland as *Kalevalan päivä*, 'Kalevala Day', and as the Day of
+    Finnish Culture)" — preserved character-for-character from the
+    post-normalize fix in the claims.approved.adoc.
+
+  Deviations from claims file: zero. The chapter preserves every
+  factual claim, every footnote, every EVIDENCE token, every marker,
+  and every COMPARATIVE-HOOK comment from the approved claims file
+  character-for-character. The only additions are non-factual prose
+  scaffolding (transitional sentences, roadmap paragraph, marker-bridge
+  sentences) per the chapter-draft skill's "Narrative transitions"
+  guidance.
