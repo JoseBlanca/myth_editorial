@@ -1,0 +1,432 @@
+stage: "13-post-human-normalize-claims-ch31-ch32"
+timestamp: "2026-05-01T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/31-vainamoinen-iku-turso.claims.approved.adoc"
+    lines: 186
+  - file: "chapters/32-nanabozho-mishipeshu.claims.approved.adoc"
+    lines: 214
+  - file: "sources.yaml"
+    lines_delta: "0 (no entries added or removed; 4 in-place notes-field updates on Ch32 anchors johnston-ojibway-heritage, johnston-manitous, smith-island-anishnaabeg, vizenor-narrative-chance — trailing 'Identifier provisional pending factcheck verification' sentence replaced with 'Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)')"
+  - file: "briefs/31-vainamoinen-iku-turso.yaml"
+    lines_delta: "0 (UNCHANGED — no FC-finding required brief-level acknowledgement; FC-01 and FC-02 are body-prose-and-footnote canto-number / commemoration-date corrections not encoded at the brief level; FC-03 is the deferred Siikala year-ambiguity NOTE on sources.yaml with no brief-level counterpart)"
+  - file: "briefs/32-nanabozho-mishipeshu.yaml"
+    lines_delta: "0 (UNCHANGED — no FC-finding required brief-level acknowledgement; the four ISBNs are already correctly recorded in brief 32 sources blocks per commit 996bb16; the Hallowell ISBN FC-INFO-01 is deferred to inventory-audit; the Vizenor essay full-title FC-INFO-02 is deferred to chapter-draft)"
+summary: "Promoted Ch31 (verdict REVISE; 2 HIGH + 1 LOW + 2 INFO) and Ch32 (verdict functionally PASS; 0 HIGH + 0 MEDIUM + 0 LOW + 2 INFO with verification clearing on four newly-pinned ISBNs) to .claims.approved.adoc with post-human-normalize provenance footers. Ch31 dispositions: FC-01 HIGH (canto location for Iku-Turso's principal Kalevala appearance — '50th canto' wrong; principal appearance is 42nd canto / Rune XLII per Wikipedia *Iku-Turso (creature)* and *Cantos of the Kalevala*) MODIFY at body-prose line 133 + matching footnote; FC-02 HIGH (Kalevalan päivä date — '28 February 1849' wrong; the date commemorates Lönnrot's signing the preface to the FIRST edition (1835 Vanha Kalevala), not the 1849 New Kalevala whose preface is dated April 1849, per Wikipedia *Kalevala Day*) MODIFY at body-prose line 139 + matching footnote; FC-03 LOW (Siikala year ambiguity 2002 vs FFC catalogue 2003) NOTE-only and DEFER per task-instructions guidance — the 2002 dating is defensible per Open Library / Project MUSE / Semantic Scholar and matches the predominant secondary-source convention; INFO-01 (LACUNA marker '+ index volumes' for SKVR) and INFO-02 (LACUNA marker 'SKS Folklore Archives' historical name) NOTE-only — both are minor naming-convention imprecisions explicitly classified as INFO-level non-finding observations. Ch32 dispositions: all four newly-pinned ISBNs from commit 996bb16 (johnston-ojibway-heritage 9780803275720, johnston-manitous 9780060171995, smith-island-anishnaabeg 9780893011710, vizenor-narrative-chance 9780826311177) VERIFIED by factcheck — the four sources.yaml notes fields had the trailing 'Identifier provisional pending factcheck verification' sentence replaced with the verification-cleared statement; FC-INFO-01 LOW (Hallowell 1960 ISBN 9780231024853 unverifiable — 1960 first edition predates ISBN-10) FLAGGED-ONLY and deferred to inventory-audit per task-instructions guidance (out of newly-pinned scope); FC-INFO-02 LOW (Vizenor essay full title 'Trickster Discourse: Comic Holotropes and Language Games') FLAGGED-ONLY for chapter-draft per task-instructions guidance (no claims-file changes needed). Source-count delta: 0 (entries unchanged). Both .claims.approved.adoc files preserve the 1:1 invariant (Ch31 38/38; Ch32 45/45); no claims added, no claims removed; original .claims.adoc files for both chapters confirmed UNMODIFIED via git status."
+notes: |
+  ──────────────────────────────────────────────────────────────────────────────
+  Sources.yaml in-place updates (Ch32 verification clearing; 0 entries added):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  Per the task-instructions guidance ("in sources.yaml notes for these four
+  entries, REMOVE the trailing 'Identifier provisional pending factcheck
+  verification (...)' sentence"), the four newly-pinned Ch32 anchor entries
+  pinned in commit 996bb16 (and verified by the Ch32 claims-factcheck
+  auditor's NEWLY-PINNED IDENTIFIER VERIFICATION section) had the trailing
+  provisional sentence removed and replaced with the verification-cleared
+  statement. The four edits are notes-field-only; no identifier_value,
+  year, full_citation, author, or title field changed.
+
+  - johnston-ojibway-heritage (Ch32):
+    notes: trailing "Identifier provisional pending factcheck verification
+      (Ch27/Ch30 source-pinning precedent)." removed and replaced with
+      "Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck
+      VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - johnston-manitous (Ch32):
+    notes: trailing "Identifier provisional pending factcheck verification."
+      removed and replaced with the same verification-cleared statement.
+
+  - smith-island-anishnaabeg (Ch32):
+    notes: trailing "Identifier provisional pending factcheck verification."
+      removed and replaced with the same verification-cleared statement.
+
+  - vizenor-narrative-chance (Ch32):
+    notes: trailing "Identifier provisional pending factcheck verification."
+      removed and replaced with the same verification-cleared statement.
+
+  Source count delta: 0. Confirmed via
+    grep -c "^  - id:" books/chaoskampf/sources.yaml → 73 (unchanged).
+  Confirmed via
+    grep -c "Identifier provisional pending factcheck verification"
+    books/chaoskampf/sources.yaml → 0 (all four removed).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Briefs / governing-document changes:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/31-vainamoinen-iku-turso.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement at this stage.
+    FC-01 (canto-number correction) is a body-prose-and-footnote correction
+    that has no brief-level counterpart since the brief does not currently
+    encode the specific canto-number assertion. FC-02 (Kalevalan päivä
+    commemoration date and edition) is a body-prose-and-footnote correction
+    similarly not encoded at the brief level. FC-03 (Siikala year ambiguity)
+    is a sources.yaml-level NOTE-only deferral with no brief-level
+    counterpart. INFO-01 and INFO-02 are LACUNA-marker minor naming notes
+    deferred. Brief line count unchanged.
+
+  - briefs/32-nanabozho-mishipeshu.yaml (UNCHANGED):
+    No FC-finding required brief-level acknowledgement at this stage.
+    The four ISBNs are already correctly recorded in brief 32 sources
+    blocks per commit 996bb16; no identifier-correction required since
+    the auditor verified the four ISBNs as correct. The Hallowell ISBN
+    FC-INFO-01 is deferred to inventory-audit; the Vizenor essay full-
+    title FC-INFO-02 is deferred to chapter-draft. Brief line count
+    unchanged.
+
+  No edits to scope.md, glossary.yaml, toc.yaml, catalog.yaml, or
+    inventory.approved.yaml were required — neither chapter's findings
+    touched governing-document material outside the four notes-field
+    updates to sources.yaml.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch31 dispositions (5 findings: 2 HIGH + 0 MEDIUM + 1 LOW + 2 INFO):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - FC-01 HIGH (CITATION-WRONG, canto location for Iku-Turso's principal
+    Kalevala appearance at body-prose line 133): MODIFY per task-
+    instructions guidance. The auditor flagged the chapter's "50th canto"
+    assertion as wrong; per Wikipedia *Iku-Turso (creature)* and *Cantos
+    of the Kalevala*, Iku-Turso appears principally in Cantos II (2) and
+    XLII (42) of the New Kalevala, with Canto 42 being the Sampo-cycle
+    subjugation episode the chapter correctly describes elsewhere (Louhi
+    summons Iku-Turso to devour the Kalevala heroes returning with the
+    Sampo, Väinämöinen grabs him by the ears and binds him with magical
+    words to never return from the bottom of the sea), and Canto 50
+    being the Marjatta and Väinämöinen's-departure final canto unrelated
+    to the Iku-Turso encounter.
+    Body prose at line 133 revised from "the *Kalevala*'s 50th canto
+    (in the 1849 *Uusi Kalevala* numbering) and in adjacent passages
+    connected with the Sampo-cycle and the Pohjola material" to "the
+    *Kalevala*'s 42nd canto (Rune XLII, in the 1849 *Uusi Kalevala*
+    numbering — the Sampo-cycle and Pohjola material in which Louhi
+    summons Iku-Turso to stop the Kalevala heroes' return with the
+    Sampo and Väinämöinen subdues him by song), with an earlier brief
+    appearance in the 2nd canto (the rising-from-the-sea-and-burning-
+    the-hay episode that produces the great oak)" per the auditor's
+    recommended_fix. Matching footnote tightened identically with
+    explicit Louhi-summons-and-Väinämöinen-binds-by-the-ears narrative
+    detail per the auditor's evidence note. No EVIDENCE-token
+    disposition change since the source_id siikala-finnish was already
+    correctly the anchor; the canto-number claim is brought into
+    alignment with what the Kalevala source actually contains.
+
+  - FC-02 HIGH (CITATION-WRONG, Kalevalan päivä commemoration date and
+    edition at body-prose line 139): MODIFY per task-instructions
+    guidance. The auditor flagged the chapter's "1849 publication date —
+    28 February 1849" formulation as conflating two distinct facts; per
+    Wikipedia *Kalevala Day*, the date 28 February commemorates Lönnrot's
+    signing the preface to the FIRST edition (1835 Vanha Kalevala), NOT
+    the 1849 New Kalevala — whose preface is dated April 1849. Kalevala
+    Day today celebrates the Kalevala broadly (both editions), but the
+    date itself derives from the 1835 preface signature.
+    Body prose at line 139 revised from "since the 1849 *Uusi Kalevala*
+    (with the publication date — 28 February 1849 — celebrated annually
+    in Finland as *Kalevalan päivä*, 'Kalevala Day', and as the Day of
+    Finnish Culture)" to "since the 1835 *Vanha Kalevala* and especially
+    since the 1849 *Uusi Kalevala* became the standard text (with the
+    date 28 February 1835, on which Lönnrot signed the preface to the
+    first edition, celebrated annually in Finland as *Kalevalan päivä*,
+    'Kalevala Day', and as the Day of Finnish Culture)" per the
+    auditor's recommended_fix. Matching footnote tightened identically
+    with explicit "Kalevala Day commemorates Lönnrot's signing of the
+    1835 preface, not the 1849 edition's publication date, which is in
+    April 1849" qualifier per the auditor's evidence note. No EVIDENCE-
+    token disposition change since the source_id siikala-finnish was
+    already correctly the anchor; the commemoration-date-and-edition
+    claim is brought into alignment with what the Kalevala Day
+    commemoration actually celebrates.
+
+  - FC-03 LOW (identifier_year_ambiguity, Siikala 2002 vs Folklore
+    Fellows official catalogue 2003 in sources.yaml siikala-finnish
+    entry): NOTE-only / DEFER per task-instructions guidance ("your
+    call — either ACCEPT the year correction in sources.yaml, or
+    NOTE-only and defer"). The 2002 dating in sources.yaml is
+    defensible per multiple library catalogues (Open Library, Project
+    MUSE, Semantic Scholar) and matches the predominant secondary-
+    source convention; the FFC official page lists 2003, apparently a
+    late-2002 publication with general circulation beginning in 2003.
+    The discrepancy is a minor bibliographic ambiguity that does not
+    affect any claim's accuracy; pinned ISBN 9789514109027 is verified
+    correct per the auditor's plausibility check. The year-ambiguity is
+    left at NOTE-only with no sources.yaml change at this stage; if
+    the user prefers the FFC official-catalogue 2003 dating, the
+    sources.yaml entry's year field can be updated at inventory-audit.
+
+  - INFO-01 NOTE (LACUNA marker reference to "+ index volumes" for
+    SKVR at line 59): NOTE-only per task-instructions guidance. The
+    auditor explicitly classified this as INFO-level non-finding
+    observation. The "+ index volumes" formulation is a slight
+    imprecision per Wikipedia *Suomen kansan vanhat runot* (the
+    original publication ran 1908-1948 in approximately 32 physical
+    volumes containing the original 14 volumes of poems; a supplement
+    — not "index volumes" per se — was added in 1997), but is not
+    substantively wrong. The LACUNA marker text is left unchanged.
+
+  - INFO-02 NOTE (LACUNA marker reference to "SKS Folklore Archives"
+    historical name at line 59): NOTE-only per task-instructions
+    guidance. The Folklore Archives (founded 1937) were merged with
+    the SKS Literature Archives in 2016 to form the new SKS Archives;
+    the historical name "SKS Folklore Archives" is widely used in the
+    secondary literature. This is not a factual error but a minor
+    naming convention. The LACUNA marker text is left unchanged.
+
+  Ch31 counts after revision:
+  - 38 footnotes / 38 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 178 → 186 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=siikala-finnish EVIDENCE tags: 37 → 37 (no change).
+  - source_id=forsyth-1987 EVIDENCE tags: 1 → 1 (no change).
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 1 → 1 (no change).
+  - [APPROPRIATION-FLAG:] markers: 1 → 1 (no change; the existing
+    marker at line 158 is verified as complete per the auditor's
+    appropriation_flag_check section).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Ch32 dispositions (verdict functionally PASS; 0 HIGH + 0 MEDIUM + 0 LOW + 2 INFO):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  Ch32 verdict is functionally PASS. The auditor's NEWLY-PINNED
+  IDENTIFIER VERIFICATION section verified all four ISBNs pinned in
+  commit 996bb16 as correct; the four sources.yaml notes fields had
+  the trailing "Identifier provisional pending factcheck verification"
+  sentence cleared per task-instructions guidance. No body-prose,
+  footnote, marker, or COMPARATIVE-HOOK comment in the .claims.adoc
+  required correction. The file was copied to .claims.approved.adoc
+  verbatim with the addition of the trailing provenance footer.
+
+  Newly-pinned ISBN verification (per the auditor's NEWLY-PINNED
+  IDENTIFIER VERIFICATION section):
+  - johnston-ojibway-heritage: ISBN 9780803275720 VERIFIED (University
+    of Nebraska Press / Bison Books 1990 reprint of the 1976
+    McClelland and Stewart original).
+  - johnston-manitous: ISBN 9780060171995 VERIFIED (HarperCollins 1995
+    first edition).
+  - smith-island-anishnaabeg: ISBN 9780893011710 VERIFIED (University
+    of Idaho Press 1995 first edition).
+  - vizenor-narrative-chance: ISBN 9780826311177 VERIFIED (University
+    of New Mexico Press 1989 first edition).
+
+  - FC-INFO-01 LOW (Hallowell 1960 ISBN 9780231024853 cannot be
+    verified via Open Library/WorldCat — the 1960 first edition
+    predates ISBN-10): FLAGGED-ONLY per task-instructions guidance.
+    The Hallowell entry is the only Ch32 ISBN that the auditor did
+    NOT verify; the auditor explicitly classified this as out of
+    newly-pinned scope (the ISBN was in sources.yaml before commit
+    996bb16 — pre-existing rather than freshly pinned) and the 1960
+    edition genuinely predates the ISBN-10 standard, so a defensible
+    identifier-substitution is not actionable at post-human-normalize
+    without additional sourcing. No sources.yaml change at this
+    stage; the entry is left as-is for inventory-audit's broader
+    bibliographic-housekeeping pass.
+
+  - FC-INFO-02 LOW (Vizenor essay short-formed as "'Trickster
+    Discourse' essay" throughout; full title is "Trickster Discourse:
+    Comic Holotropes and Language Games"): FLAGGED-ONLY for chapter-
+    draft per task-instructions guidance. No claims-file changes
+    needed; the chapter-draft can use the full essay title at first
+    mention.
+
+  Ch32 counts after revision:
+  - 45 footnotes / 45 EVIDENCE tokens (1:1 invariant preserved).
+  - Line count: 206 → 214 (+8 = 7-line trailing provenance footer +
+    blank separator).
+  - source_id=hallowell-ojibwa-world EVIDENCE tags: unchanged.
+  - source_id=johnston-ojibway-heritage EVIDENCE tags: unchanged.
+  - source_id=johnston-manitous EVIDENCE tags: unchanged.
+  - source_id=smith-island-anishnaabeg EVIDENCE tags: unchanged.
+  - source_id=vizenor-narrative-chance EVIDENCE tags: unchanged.
+  - source_id=forsyth-1987 EVIDENCE tags: unchanged.
+  - [LACUNA] markers: 1 → 1 (no change).
+  - [INFERENCE] markers: 1 → 1 (no change).
+  - [VARIANT] markers: 1 → 1 (no change).
+  - [APPROPRIATION-FLAG:] markers: 1 → 1 (no change; sixth in book
+    after Ch23/Ch26/Ch27/Ch28/Ch29/Ch30/Ch31 — actually the seventh).
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Invariant verification:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch31: 38 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "^// EVIDENCE: source_id=" → 38 on both .claims.adoc and
+    .claims.approved.adoc.
+  - Ch32: 45 EVIDENCE tokens (1:1 HOLDS). Confirmed via
+    grep -c "^// EVIDENCE: source_id=" → 45 on both .claims.adoc and
+    .claims.approved.adoc.
+  - Source-id whitelist: all source_ids in both .claims.approved.adoc
+    files resolve to entries in sources.yaml.
+    Ch31: siikala-finnish, forsyth-1987 — both resolve.
+    Ch32: hallowell-ojibwa-world, johnston-ojibway-heritage, johnston-
+    manitous, smith-island-anishnaabeg, vizenor-narrative-chance,
+    forsyth-1987 — all resolve.
+  - Original .claims.adoc files for Ch31 and Ch32 confirmed UNMODIFIED
+    via git status (neither file appears in the modified list).
+    Cycle constraint (do NOT modify the original .claims.adoc files;
+    fixes go ONLY into the new .claims.approved.adoc copies) HELD.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Banned-umbrella-term grep result for body prose:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch31: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+  - Ch32: "chaos-figure", "chaos-monster", "chaos-serpent" not present
+    in body prose, footnotes, markers, or COMPARATIVE-HOOK comments.
+    "chaos-vs-order" appears as the standard scholarly form and is not
+    a banned umbrella term per the established Ch28-Ch30 precedents.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Glossary-discipline check:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Ch31: All entity and term names (Väinämöinen, Iku-Turso, Lönnrot,
+    Kalevala, Vanha Kalevala, Uusi Kalevala, Kalevalan päivä, Karelia,
+    Viena Karelia, Aunus / Olonets, Ingria, Pohjola, Louhi, Ilmarinen,
+    Lemminkäinen, Sampo, runonlaulajat, Suomalainen Kirjallisuuden
+    Seura / SKS, Suomen Kansan Vanhat Runot / SKVR, Siikala, Honko,
+    DuBois, Akseli Gallen-Kallela, Jean Sibelius, Mikael Agricola,
+    Arhippa Perttunen, Latvajärvi, Ontrei Malinen, Vuonninen, Daniel
+    Europaeus, August Ahlqvist, Arvid Genetz, Krohn, Forsyth,
+    Macpherson, Ossian, Ivanov, Toporov, Perun, Veles) use conventional
+    scholarly forms throughout. Forsyth disclaimer wording at line 53
+    verified as correct per the framing-only (non-exception) precedent.
+  - Ch32: All entity and term names (Nanabozho, Mishipeshu, Anishinaabe
+    / Anishinaabeg / Ojibwe / Ojibway / Chippewa, Animikiig /
+    Thunderers, manitou / manitouk, aadizookaanag, Mide / Midewiwin /
+    Grand Medicine Society, Hallowell, Johnston, Smith, Vizenor,
+    Forsyth, Berens River, Lake Superior, Agawa Rock, Lake Superior
+    Provincial Park, Boundary Waters, Council of Three Fires, Odawa,
+    Potawatomi, Algonquin / Algonquian, Nokomis, Gross, Bohaker,
+    Borrows, Phillips, Brown, Riddington) use conventional scholarly
+    forms throughout. Forsyth disclaimer wording at line 45 verified
+    as correct per the framing-only (non-exception) precedent.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Source-count delta (sources.yaml):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - Before: 73 entries.
+  - After:  73 entries (no change).
+  - In-place updates: 4 notes-field updates on Ch32 anchors
+    (johnston-ojibway-heritage, johnston-manitous, smith-island-
+    anishnaabeg, vizenor-narrative-chance) to remove the trailing
+    "Identifier provisional pending factcheck verification" sentence
+    and replace it with the verification-cleared statement.
+  - Confirmed via grep -c "^  - id:" books/chaoskampf/sources.yaml → 73.
+  - Confirmed via grep -c "Identifier provisional pending factcheck
+    verification" books/chaoskampf/sources.yaml → 0.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Brief-modifications log:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - briefs/31-vainamoinen-iku-turso.yaml (UNCHANGED): No FC-finding
+    required brief-level acknowledgement at this stage. Brief line
+    count unchanged.
+
+  - briefs/32-nanabozho-mishipeshu.yaml (UNCHANGED): No FC-finding
+    required brief-level acknowledgement at this stage. Brief line
+    count unchanged.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Original .claims.adoc files unchanged (cycle constraint verification):
+  ──────────────────────────────────────────────────────────────────────────────
+
+  Per the explicit cycle constraint repeated this run (do NOT modify
+  the original .claims.adoc files; fixes go ONLY into the new
+  .claims.approved.adoc copies; the Ch25/Ch26 cycle had a leakage bug
+  that the Ch27/Ch28 cycle closed and that this Ch31/Ch32 cycle
+  must keep closed), both originals were verified UNMODIFIED via
+  git status:
+    - chapters/31-vainamoinen-iku-turso.claims.adoc: NOT in git status
+      modified list (clean).
+    - chapters/32-nanabozho-mishipeshu.claims.adoc: NOT in git status
+      modified list (clean).
+  Confirmed: 38 EVIDENCE tokens in the original Ch31 .claims.adoc;
+  45 EVIDENCE tokens in the original Ch32 .claims.adoc — invariants
+  preserved on the originals as well as on the .approved copies.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Files produced:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  - chapters/31-vainamoinen-iku-turso.claims.approved.adoc (186 lines;
+    38/38 invariant; FC-01 + FC-02 fixes applied at lines 133 and 139;
+    FC-03 + INFO-01 + INFO-02 deferred / NOTE-only; provenance footer)
+  - chapters/32-nanabozho-mishipeshu.claims.approved.adoc (214 lines;
+    45/45 invariant; no body-prose corrections required since verdict
+    is functionally PASS; FC-INFO-01 + FC-INFO-02 deferred; provenance
+    footer noting the four ISBNs verified and provisional flags
+    cleared in sources.yaml)
+  - sources.yaml (4 in-place notes-field updates on Ch32 anchors;
+    73 entries unchanged in count; 0 "Identifier provisional pending
+    factcheck verification" sentences remain)
+  - briefs/31-vainamoinen-iku-turso.yaml (UNCHANGED)
+  - briefs/32-nanabozho-mishipeshu.yaml (UNCHANGED)
+
+  Both .claims.approved.adoc files render cleanly. All EVIDENCE
+  source_ids resolve to entries in sources.yaml. Glossary discipline
+  holds. Both files ready for chapter-draft.
+
+  ──────────────────────────────────────────────────────────────────────────────
+  Judgment calls flagged for user review:
+  ──────────────────────────────────────────────────────────────────────────────
+
+  1. Ch31 FC-03 (Siikala year ambiguity 2002 vs FFC catalogue 2003)
+     handled via NOTE-only / DEFER rather than ACCEPT. The 2002
+     dating in sources.yaml matches the predominant secondary-source
+     convention (Open Library, Project MUSE, Semantic Scholar) and
+     is defensible. The user may want to update the sources.yaml
+     siikala-finnish entry's year field to 2003 at inventory-audit
+     if precision per the FFC official-catalogue is preferred (the
+     auditor's recommended_fix offered both options without
+     preference).
+
+  2. Ch31 FC-01 fix at line 133 expands the body-prose claim to
+     include both Canto 42 (the principal Sampo-cycle subjugation)
+     AND Canto II (the earlier oak-tree origin episode) per the
+     auditor's optional-also-note recommended_fix; the matching
+     footnote was tightened identically. The user may want to verify
+     against a printed copy of the Kalevala at chapter-draft and
+     either retain the dual-canto framing or restrict to Canto 42
+     alone if the chapter prefers a more focused presentation.
+
+  3. Ch31 FC-02 fix at line 139 reframes the Kalevalan päivä
+     parenthetical to clarify that the date commemorates Lönnrot's
+     signing the preface to the FIRST edition (1835) per the
+     auditor's recommended_fix; the matching footnote adds an
+     explicit "Kalevala Day commemorates Lönnrot's signing of the
+     1835 preface, not the 1849 edition's publication date, which is
+     in April 1849" qualifier. The user may want to verify against
+     Wikipedia *Kalevala Day* and Finnish-language scholarly sources
+     at chapter-draft to confirm the 1835-preface dating.
+
+  4. Ch32 FC-INFO-01 (Hallowell 1960 ISBN unverifiable — 1960 first
+     edition predates ISBN-10) deferred to inventory-audit per task-
+     instructions guidance. The user may want to identify a defensible
+     identifier-substitution (e.g., a later Columbia University Press
+     reprint with a verifiable ISBN, or the OCLC for the 1960 first
+     edition, or a reprint of the essay in a 1976 Hallowell collection
+     such as *Contributions to Anthropology* University of Chicago
+     Press) at inventory-audit. The current sources.yaml ISBN
+     9780231024853 should be verified or replaced with a verifiable
+     identifier for institutional stability.
+
+  5. Ch32 FC-INFO-02 (Vizenor essay full title "Trickster Discourse:
+     Comic Holotropes and Language Games") deferred to chapter-draft.
+     The user may want to ensure the chapter-draft uses the full
+     essay title at first mention and the short form thereafter, per
+     the standard scholarly citation convention.
+
+  6. Ch31 INFO-01 ("+ index volumes" for SKVR) and INFO-02 ("SKS
+     Folklore Archives" historical name) NOTE-only with no LACUNA
+     marker text changes. The user may want to update the LACUNA
+     marker text at chapter-draft to reflect (a) the 1997 SKVR
+     supplement (rather than "index volumes") and (b) the post-2016
+     "SKS Archives" institutional name (rather than "SKS Folklore
+     Archives"); both are minor naming-convention refinements that
+     do not affect any claim's accuracy.
