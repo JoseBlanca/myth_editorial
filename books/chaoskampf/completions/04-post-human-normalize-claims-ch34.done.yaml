@@ -1,0 +1,379 @@
+stage: "post-human-normalize-claims"
+chapter: 34
+chapter_slug: "C1-combat-as-cosmogony"
+timestamp: "2026-05-02T18:44:47Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+inputs:
+  - file: "chapters/34-C1-combat-as-cosmogony.claims.adoc"
+    lines: 368
+    md5: "3b6b1f6b18f1eaac81cc74b65506a17d"
+  - file: "chapters/34-C1-combat-as-cosmogony.claims.factcheck.yaml"
+    findings: 6   # 2 MEDIUM + 4 LOW
+    notes: 3
+outputs:
+  - file: "chapters/34-C1-combat-as-cosmogony.claims.approved.adoc"
+    lines: 375
+summary: |
+  Triaged the six factcheck findings (2 MEDIUM, 4 LOW) and three NOTEs on
+  Ch34 (C1. Combat as Cosmogony, the first of eight Part-II comparative
+  chapters). All six findings ACCEPTED; the recommended fixes were
+  applied verbatim from Ch3, Ch14, Ch24, and the factchecker's
+  fix-suggestions, producing chapters/34-C1-combat-as-cosmogony.claims.approved.adoc
+  with 375 lines (368 original + 1 added EVIDENCE token at FIND-04 +
+  1 added EVIDENCE token at FIND-06 + 5 lines provenance block).
+  Original 34-C1-combat-as-cosmogony.claims.adoc is unmodified
+  (md5 3b6b1f6b18f1eaac81cc74b65506a17d preserved).
+
+dispositions:
+  FIND-01:
+    severity: MEDIUM
+    disposition: ACCEPT
+    summary: >
+      §I Marduk-Tiamat compression at line 53 was rewritten to match
+      Ch3 line 374's framing of the Tablet V detail-set
+      (mountains-from-thighs, Tigris/Euphrates-from-opened-eyes,
+      springs-from-nostrils, cosmic-bond-from-coiled-tail,
+      arched-crotch-supporting-heavens). The "wounds in her eyes"
+      gloss — not attested in Ch3 / Lambert 2013 / Foster 2005 — was
+      replaced with "Marduk opens [her eyes] for the sources of the
+      Tigris and Euphrates" (the Ch3 line 374 phrasing). The
+      "earth-and-waters below as the other half" flat compression was
+      replaced with the explicit detail-set list. The footnote was
+      updated to point at Foster 2005 pp. 463-464 (Ch3 loc) instead
+      of pp. 467-470 (a different Tablet-V passage). EVIDENCE token
+      source_id (lambert-2013) unchanged.
+  FIND-02:
+    severity: MEDIUM
+    disposition: ACCEPT
+    summary: >
+      §V RV 4.18 framing at line 287 was reframed to match Ch14's
+      framing (lines 238-242). The "Indra's prenatal-and-natal vigour
+      and the slaying of his 'father' or rival" sub-clause was dropped
+      entirely (the patricide reading rests on the controversial RV
+      4.18.12 verse, which Ch14 chose not to feature) and replaced
+      with the "embryonic Indra" + "irregular sideways birth (forced
+      exit from his mother's womb against the natural mode of birth)
+      as anticipating the irregular and combat-decisive character of
+      his later career" framing — verbatim-substitutable from Ch14
+      line 238. The footnote was updated to anchor the new framing
+      to Ch14's reading. EVIDENCE token source_id
+      (jamison-brereton-2014) unchanged.
+  FIND-03:
+    severity: LOW
+    disposition: ACCEPT
+    summary: >
+      §I Huitzilopochtli case introduction at line 98: "Sahagún
+      (1545–1590)" replaced with "compiled by Sahagún with Nahua
+      informants between c. 1545 and 1590 CE" — the Ch24 line 36
+      disambiguating phrasing. The original wording could be misread
+      as Sahagún's lifespan (he was born c. 1499, not 1545). Body
+      prose only; no EVIDENCE-token change.
+  FIND-04:
+    severity: LOW
+    disposition: ACCEPT
+    summary: >
+      §V structural-parallel claim at line 285: added a second
+      EVIDENCE token `// EVIDENCE: source_id=west-2007 ; loc=ch. 6,
+      Indra-Vṛtra and Marduk-Tiamat as structural parallels without
+      transmission` immediately after the existing watkins-1995 token,
+      to cover the body-prose attribution to West 2007 that the
+      footnote already cites. west-2007 is registered in
+      sources.yaml (line 139, in_scope: true). Net new EVIDENCE
+      token; brings the chapter to 132 tokens.
+  FIND-05:
+    severity: LOW
+    disposition: ACCEPT
+    summary: >
+      §III geographical-separation paragraph at line 219: re-phrased
+      "the trans-Pacific or trans-Atlantic distance with no
+      pre-Columbian transmission route plausibly reconstructible" to
+      "Atlantic and Pacific distances with no pre-Columbian
+      transmission route plausibly reconstructible across either
+      ocean" — the factchecker's recommended phrasing. Body prose
+      only; no EVIDENCE-token change. (Factchecker noted this as
+      "not worth a revision pass on its own"; applied for cleanliness
+      since it's a non-substantive wording polish.)
+  FIND-06:
+    severity: LOW
+    disposition: ACCEPT
+    summary: >
+      §I Marduk's full cosmogonic-and-sovereign work paragraph at
+      line 60: added a second EVIDENCE token
+      `// EVIDENCE: source_id=lambert-2013 ; loc=Tablets V-VII,
+      cosmogonic-and-sovereign work` after the existing foster-2005
+      token, strengthening the doubled-token discipline. lambert-2013
+      was already cited in the footnote; the token-addition closes
+      the token-coverage gap. Net new EVIDENCE token; brings the
+      chapter to 133 tokens.
+  NOTE-01:
+    disposition: SUPERSEDED-BY-FIND-04
+    summary: >
+      West 2007 named-but-flagged note. The factchecker's note
+      acknowledges that FIND-04 addresses this; FIND-04 was ACCEPTED
+      so the underlying token-coverage gap is now closed
+      (west-2007 EVIDENCE token added). No additional action.
+  NOTE-02:
+    disposition: FLAGGED-ONLY
+    summary: >
+      [SPECULATION:] block at line 213 verified well-formed. Both
+      basis: and counterargument: sub-fields are present and
+      substantive (basis cites Lincoln 2012, Carrasco 1999, Lewis
+      2006, Forsyth 1987; counterargument cites Witzel 2012's
+      Laurasian as the alternative reading). The speculative claim
+      (typological recurrence as shared political-charter response
+      rather than deep-time inheritance) is properly hedged
+      ("may reflect", "is offered as one plausible reading rather
+      than as the chapter's settled position", "the present chapter
+      does not claim to adjudicate"). No edit required. SPECULATION
+      marker preserved exactly.
+  NOTE-03:
+    disposition: FLAGGED-ONLY
+    summary: >
+      No-monomyth disclaimer scan. §III line 207 explicitly disclaims
+      universal-monomyth, "all-cosmogonies-are-combat-cosmogonies",
+      and Pleistocene-deep-time-inheritance claims; §VI line 351
+      registers the four-part modesty claim about what the
+      typological-recurrence claim does not prove. The
+      no-monomyth-no-single-origin discipline is preserved per Ch33
+      §VII and per brief 34's comparative_argument. No edit required.
+
+re_anchored_evidence_source_ids:
+  - none
+  # FIND-01 and FIND-02 are body/footnote prose changes only; the
+  # EVIDENCE-token source_ids (lambert-2013 and jamison-brereton-2014
+  # respectively) are unchanged. FIND-04 ADDS a new west-2007
+  # EVIDENCE token but does not RE-ANCHOR an existing one. FIND-06
+  # ADDS a new lambert-2013 EVIDENCE token but does not RE-ANCHOR
+  # an existing one. Zero re-anchorings; two token-additions.
+
+claim_paragraph_count:
+  before: 93
+  after: 93
+  delta: 0
+  # No claim-paragraphs added, removed, split, or merged. The fixes
+  # are all body/footnote prose changes (FIND-01, FIND-02, FIND-03,
+  # FIND-05) or EVIDENCE-token additions to existing paragraphs
+  # (FIND-04, FIND-06).
+
+evidence_token_count:
+  before: 131
+  after: 133
+  delta: +2
+  # FIND-04 added 1 west-2007 token (line ~286 of approved file).
+  # FIND-06 added 1 lambert-2013 token (line ~62 of approved file).
+
+per_source_id_evidence_distribution_after:
+  forsyth-1987: 25                    # unchanged
+  lambert-2013: 17                    # +1 (FIND-06)
+  ballentine-2015: 13                 # unchanged
+  lincoln-2012: 10                    # unchanged
+  lopez-austin-myths: 9               # unchanged
+  lewis-2006-flood: 9                 # unchanged
+  jamison-brereton-2014: 8            # unchanged
+  matos-moctezuma-templo-mayor: 7     # unchanged
+  carrasco-1999-city: 5               # unchanged
+  annus-2001-anzu: 5                  # unchanged
+  watkins-1995: 4                     # unchanged
+  gunkel-1895: 4                      # unchanged
+  etcsl: 4                            # unchanged
+  witzel-2012: 3                      # unchanged
+  scurlock-beal-2013: 3               # unchanged
+  vandijk-1983-lugale: 2              # unchanged
+  west-2007: 1                        # NEW (FIND-04)
+  ogden-2013: 1                       # unchanged
+  foster-2005: 1                      # unchanged
+  benveniste-renou-1934: 1            # unchanged
+  anderson-dibble-florentine: 1       # unchanged
+  total_distinct_source_ids: 21       # was 20; +1 (west-2007)
+
+original_file_integrity:
+  path: "chapters/34-C1-combat-as-cosmogony.claims.adoc"
+  md5_before_normalize: "3b6b1f6b18f1eaac81cc74b65506a17d"
+  md5_after_normalize: "3b6b1f6b18f1eaac81cc74b65506a17d"
+  match: true
+  note: >
+    Original Ch34 chapter-claims file is byte-identical to its
+    pre-normalize state. The post-human-normalize stage wrote only
+    to chapters/34-C1-combat-as-cosmogony.claims.approved.adoc, the
+    new file specified by the stage prompt §2. (At the time this
+    stage ran, the original file was untracked-but-uncommitted in
+    git on this branch; the md5 invariant above is the byte-level
+    verification of integrity.)
+
+self_checks_passed:
+  - one_claim_per_paragraph
+  - every_paragraph_has_footnote_and_EVIDENCE
+  - every_evidence_source_id_resolves_in_sources_yaml
+  - section_structure_preserved_source_overview_then_I_through_VI
+  - 14_COMPARATIVE_HOOK_lines_preserved_exactly
+  - 1_SPECULATION_marker_preserved_with_basis_and_counterargument
+  - doubled_token_discipline_preserved_on_comparative_claims
+  - banned_term_grep_clean_zero_unquoted_chaos_figure_chaos_monster_chaos_serpent
+  - glossary_yaml_renderings_unchanged
+  - typological_recurrence_without_monomyth_discipline_preserved
+  - provenance_block_appended_to_approved_file
+  - original_file_md5_unchanged
+
+notes: |
+  Disposition summary (per finding and per NOTE):
+
+    FIND-01 (MEDIUM, §I Marduk-Tiamat compression at line 53):
+      ACCEPT. The "earth-and-waters below as the other half" flat
+      compression and the unattested "wounds in her eyes" gloss were
+      replaced with verbatim-substitutable language from Ch3 line 374
+      (mountains-from-thighs, Tigris/Euphrates-from-opened-eyes,
+      springs-from-nostrils, cosmic-bond-from-coiled-tail,
+      arched-crotch-supporting-heavens). The footnote was retargeted
+      from Foster 2005 pp. 467-470 to pp. 463-464 to match Ch3's loc
+      pointer. EVIDENCE token source_id (lambert-2013) unchanged.
+
+    FIND-02 (MEDIUM, §V RV 4.18 framing at line 287):
+      ACCEPT (drop-the-patricide-sub-clause variant of the recommended
+      fix). The "slaying of his 'father' or rival" sub-clause was
+      dropped entirely and replaced with the "embryonic Indra" +
+      "irregular sideways birth as anticipation of his combat-decisive
+      career" framing taken verbatim-substitutable from Ch14 line 238.
+      The patricide reading rests on the controversial RV 4.18.12
+      verse, which Ch14 chose not to feature; the chapter's settled
+      position is to follow Ch14's selection rather than to anchor a
+      reading Ch14 explicitly did not foreground. EVIDENCE token
+      source_id (jamison-brereton-2014) unchanged.
+
+    FIND-03 (LOW, §I Huitzilopochtli case introduction at line 98):
+      ACCEPT. "Sahagún (1545–1590)" was disambiguated to "compiled by
+      Sahagún with Nahua informants between c. 1545 and 1590 CE" per
+      Ch24 line 36. The original phrasing could be misread as
+      Sahagún's lifespan (he was born c. 1499, not 1545); the
+      replacement is Ch24's exact disambiguating phrasing.
+
+    FIND-04 (LOW, §V West 2007 token-coverage at line 285):
+      ACCEPT. Added a second EVIDENCE token routing through west-2007
+      (which is registered in sources.yaml at line 139 with
+      in_scope: true) immediately after the existing watkins-1995
+      token. The body prose at line 284 names "West 2007" twice as a
+      load-bearing source for the structural-parallel reading; the
+      EVIDENCE token now matches the body-prose attribution. Net new
+      token: brings the chapter from 131 to 132 EVIDENCE tokens.
+
+    FIND-05 (LOW, §III geographical-separation phrasing at line 219):
+      ACCEPT. Re-phrased "the trans-Pacific or trans-Atlantic distance
+      with no pre-Columbian transmission route plausibly
+      reconstructible" to "Atlantic and Pacific distances with no
+      pre-Columbian transmission route plausibly reconstructible
+      across either ocean" — the factchecker's recommended phrasing.
+      Factchecker noted this as "not worth a revision pass on its own
+      (LOW severity wording quibble)"; applied for cleanliness as a
+      non-substantive wording polish.
+
+    FIND-06 (LOW, §I Marduk's cosmogonic-and-sovereign work
+      single-token coverage at line 60-61):
+      ACCEPT. Added a second EVIDENCE token routing through
+      lambert-2013 (which is already cited in the same paragraph's
+      footnote alongside foster-2005) immediately after the existing
+      foster-2005 token. The doubled-token discipline applied to the
+      rest of §I is now applied here. Net new token: brings the
+      chapter from 132 to 133 EVIDENCE tokens.
+
+    NOTE-01 (West 2007 named-but-flagged):
+      SUPERSEDED-BY-FIND-04. The note explicitly defers to FIND-04
+      for the corrective token-addition. FIND-04 was ACCEPTED, so
+      the underlying token-coverage gap is closed. No additional
+      action required.
+
+    NOTE-02 ([SPECULATION:] block well-formedness):
+      FLAGGED-ONLY. The factchecker confirms the speculation marker
+      is structurally well-formed with substantive basis and
+      counterargument sub-fields and properly hedged speculative
+      claim. No claim-level edit required. SPECULATION marker
+      preserved exactly as in the original.
+
+    NOTE-03 (no-monomyth disclaimer scan):
+      FLAGGED-ONLY. The factchecker confirms the no-monomyth-no-
+      single-origin discipline is preserved per Ch33 §VII and per
+      brief 34's comparative_argument's "without asserting monomyth
+      or single origin" stance. No claim-level edit required.
+
+  Re-anchored EVIDENCE source_ids (old → new): NONE.
+  Two NEW EVIDENCE tokens were added (FIND-04 west-2007;
+  FIND-06 lambert-2013), but no existing token was re-anchored.
+
+  Final claim-paragraph count: 93 (unchanged from chapter-claims).
+  Final EVIDENCE-token count: 133 (was 131; +2 from FIND-04 and
+  FIND-06).
+  Final distinct source-id count: 21 (was 20; +1 from FIND-04
+  introducing west-2007).
+
+  Per-source-id distribution delta (chapter-claims → approved):
+    forsyth-1987:                     25 → 25  (Δ 0)
+    lambert-2013:                     16 → 17  (Δ +1, FIND-06)
+    ballentine-2015:                  13 → 13  (Δ 0)
+    lincoln-2012:                     10 → 10  (Δ 0)
+    lopez-austin-myths:                9 →  9  (Δ 0)
+    lewis-2006-flood:                  9 →  9  (Δ 0)
+    jamison-brereton-2014:             8 →  8  (Δ 0)
+    matos-moctezuma-templo-mayor:      7 →  7  (Δ 0)
+    carrasco-1999-city:                5 →  5  (Δ 0)
+    annus-2001-anzu:                   5 →  5  (Δ 0)
+    watkins-1995:                      4 →  4  (Δ 0)
+    gunkel-1895:                       4 →  4  (Δ 0)
+    etcsl:                             4 →  4  (Δ 0)
+    witzel-2012:                       3 →  3  (Δ 0)
+    scurlock-beal-2013:                3 →  3  (Δ 0)
+    vandijk-1983-lugale:               2 →  2  (Δ 0)
+    ogden-2013:                        1 →  1  (Δ 0)
+    foster-2005:                       1 →  1  (Δ 0)
+    benveniste-renou-1934:             1 →  1  (Δ 0)
+    anderson-dibble-florentine:        1 →  1  (Δ 0)
+    west-2007:                         0 →  1  (Δ +1, FIND-04)
+  All deltas correspond exactly to the documented FIND-04 and
+  FIND-06 token-additions; no other source-id counts changed.
+
+  Original file integrity: 34-C1-combat-as-cosmogony.claims.adoc
+  is unmodified (md5 3b6b1f6b18f1eaac81cc74b65506a17d preserved
+  before and after the normalize stage). The approved-claims file
+  is at chapters/34-C1-combat-as-cosmogony.claims.approved.adoc
+  (375 lines: 368 original + 1 line for FIND-04 EVIDENCE token +
+  1 line for FIND-06 EVIDENCE token + 5 lines provenance block,
+  including the trailing blank line introduced before the
+  provenance block).
+
+  Self-checks (per skill):
+    - One claim per paragraph: PASS (93 footnoted paragraphs, no
+      bundled claims; the two new EVIDENCE tokens added by FIND-04
+      and FIND-06 are added to existing paragraphs without splitting
+      or merging them).
+    - Every paragraph has a footnote AND an EVIDENCE token: PASS.
+    - Every EVIDENCE token's source_id resolves in sources.yaml:
+      PASS (21 distinct IDs verified — the original 20 plus
+      west-2007 added by FIND-04, all registered).
+    - Section structure preserved: PASS (=== Source overview, then
+      === I, === II, === III, === IV, === V, === VI — 7 sections,
+      same as input).
+    - 14 COMPARATIVE-HOOK lines preserved exactly: PASS (FIND-01
+      through FIND-06 do not touch any COMPARATIVE-HOOK line).
+    - 1 [SPECULATION:] marker preserved with both basis: and
+      counterargument: sub-fields: PASS (line 213 unchanged).
+    - Doubled-token discipline preserved on comparative claims:
+      PASS, with FIND-06 strengthening the discipline by adding a
+      second token to a §I paragraph that previously carried only
+      one. FIND-04 brings the §V structural-parallel paragraph to
+      doubled-token coverage matching its body-prose attribution.
+    - Banned-term grep clean: PASS (zero un-quoted instances of
+      "chaos-figure", "chaos-monster", or "chaos-serpent"; the five
+      quoted instances on lines 48, 312, 320, 324, 327 are all in
+      scare-quotes per glossary.yaml policy and per §VI's
+      registration of the Ballentine critique).
+    - glossary.yaml renderings unchanged: PASS (Tiamat, Qingu,
+      Šarur, Vṛtra, Nüwa, akītu, Esagil, Coyolxauhqui, Tenochtitlán
+      all preserved with diacritics; no glossary-locked term was
+      altered by the FIND-01 through FIND-06 fixes).
+    - Typological-recurrence-without-monomyth discipline preserved:
+      PASS (the FIND-01 through FIND-06 fixes are body/footnote
+      prose changes and EVIDENCE-token additions only; none of them
+      shifts the chapter's typological-recurrence stance toward
+      monomyth, single-origin, or universalist framing).
+    - Provenance block appended at bottom of approved file: PASS
+      (4-line block: "// Validated by post-human-normalize",
+      timestamp, checks-passed list, warnings line; immediately
+      after the last COMPARATIVE-HOOK line).
