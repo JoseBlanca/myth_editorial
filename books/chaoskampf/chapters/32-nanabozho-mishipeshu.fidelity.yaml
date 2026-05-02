@@ -1,0 +1,1086 @@
+meta:
+  auditor_model: claude-opus-4-7-1m
+  writer_model: claude-opus-4-7
+  claims_file: chapters/32-nanabozho-mishipeshu.claims.approved.adoc
+  narrative_file: chapters/32-nanabozho-mishipeshu.adoc
+  total_claims: 45
+  claims_mapped: 45
+  verdict: PASS
+
+  honesty_self_check:
+    q1_skipped_claims: >
+      No claims skipped. All 45 claims were mapped individually to narrative
+      locations in order across 8 sections. Footnote counts were verified
+      programmatically (45 on each side — exact match). Footnote CONTENTS were
+      compared by Python bracket-depth-matched extraction and md5 hashing
+      (claims md5: 842e90db476fda920a74a9215fcba32b; narrative md5:
+      7c3dcc56f60a52611b00bb656aeeeaab); a single-character drift was localised
+      to footnote 14 ("present world" in claims → "present-day world" in
+      narrative; flagged as FOOTNOTE-MISMATCH severity LOW; the 44 other
+      footnotes are byte-identical in pairwise comparison). EVIDENCE token
+      counts were verified programmatically (45 on each side — exact match).
+      The EVIDENCE token sequence order was verified identical by Python list
+      comparison (claims_ev == narrative_ev: True). Source distribution:
+      smith-island-anishnaabeg=19, hallowell-ojibwa-world=10, johnston-ojibway-
+      heritage=9, johnston-manitous=3, vizenor-narrative-chance=3, forsyth-1987=1
+      on both sides — exact match. All four markers were compared to the claims
+      document using bracket-depth-matched extraction: LACUNA (single occurrence,
+      Source overview, end of section 1; Python char-comparison: identical=True),
+      VARIANT (single occurrence, Source overview, after the 6,000-word
+      contrastive-case-tier paragraph; Python char-comparison: identical=True),
+      INFERENCE (single occurrence, opening of "The refusal" section;
+      identical=True), APPROPRIATION-FLAG (single occurrence, head of "Typology,
+      area-specialist framing, and forward-links" section; identical=True). All
+      14 COMPARATIVE-HOOK lines were verified verbatim identical by Python
+      comparison (exact match). Section structure: 8 sections in claims = 8
+      sections in narrative, with identical headers in identical order.
+      Forward-links Ch3, Ch6, Ch7, Ch14, Ch15, Ch16, Ch18, Ch24, Ch26, Ch27,
+      Ch28, Ch29, Ch33, Ch40, Ch41 verified in toc.yaml: PASS.
+    q2_additions_check: >
+      Every narrative paragraph was checked against the claims document. The
+      narrative contains five bridge / transitional sentences not present in the
+      claims, all of which are marker-introduction bridges or roadmap-preview
+      bridges introducing no factual assertions: (1) "The first thing to register
+      about that material is the shape of the evidence behind it." — discourse
+      bridge into the source-witness paragraph (claim 2); (2) "The shape of that
+      evidence — continuing oral corpus, named contemporary tradition-bearing
+      communities, no pre-contact written attestation, an ethnographic record
+      assembled across multiple methodological schools and within a colonial
+      frame whose mediation is now itself a topic of the scholarship — is
+      methodologically load-bearing for the whole chapter, and the claims
+      document marks the absence of pre-modern attestation explicitly:" —
+      LACUNA-marker-introduction bridge re-stating points already in claims 5
+      and 11; (3) "Because the recorded material is regionally variable and the
+      brief explicitly forbids synthesis into a single authoritative narrative,
+      the variant-handling is flagged here in full:" — VARIANT-marker-introduction
+      bridge restating the brief's variants.classification register already in
+      claim 12; (4) "What follows works through the material on the Anishinaabe
+      tradition's own terms first. The next section sets out the Anishinaabe
+      world, the layered cosmography in which the encounters unfold, and the
+      ontological framing — the 'other-than-human persons' framework — that the
+      chapter's whole interpretive register depends on. The chapter then takes
+      up Nanabozho the trickster-culture-hero, then Mishipeshu and the
+      underwater-manitouk, then the Thunderers (Animikiig) and the upper-realm,
+      then Nanabozho's encounters across the layered cosmography, then the
+      area-specialist refusal of the chaos-vs-order mapping, and finally the
+      typology, area-specialist framing, and forward-links to the comparative
+      chapters of Part II." — chapter-roadmap bridge previewing the section
+      headers (which are already explicit in the section structure); (5) "The
+      reading the chapter has been building up to — that the Nanabozho /
+      Mishipeshu / Thunderers material is the present book's clearest *refusal*
+      case to the chaoskampf typology — is itself a synthesis the claims
+      document marks explicitly as an inference, distinguishing it from the
+      area-specialists' own claims:" — INFERENCE-marker-introduction bridge
+      restating the inference-as-synthesis register already in claim 25; (6)
+      "The area-specialist framing the chapter has worked through is the
+      strongest of its kind in the present book. The claims document marks the
+      four named anchors and the wider Anishinaabe-area scholarship in a
+      structural appropriation-flag at the head of this section:" —
+      APPROPRIATION-FLAG-marker-introduction bridge restating the
+      area-specialist-strongest register already in claims 27 and 32. Same
+      transitional-bridge pattern as Ch24 ISSUE-01, Ch26 ISSUE-01, Ch27, Ch28,
+      Ch30. No factual additions found. Programmatic body-paragraph comparison:
+      the narrative rewrites claim prose for readability (sentence-splitting,
+      em-dashes converted to colons or sentence breaks, minor connective
+      adjustments) but no new factual assertions. Banned umbrella terms
+      (chaos-figure, chaos-monster, chaos-serpent): zero hits in narrative
+      (Python grep: zero on all three). FC-INFO-02 application: the full Vizenor
+      essay title "Trickster Discourse: Comic Holotropes and Language Games" is
+      used in the body prose at first mention (claim 13 narrative paragraph) per
+      the post-human-normalize cycle's permission, with subsequent body
+      mentions reverting to the short title; this is acceptable per the prompt's
+      explicit FC-INFO-02 carve-out. PASS.
+    q3_distortion_check: >
+      The narrative rewrites claim prose for readability (sentence-splitting,
+      connectives, minor re-ordering within multi-sentence claims) but all
+      load-bearing content is preserved. Footnote 14 has a single
+      one-word substitution ("present world" → "present-day world") inside the
+      footnote bracket; this is flagged as FOOTNOTE-MISMATCH severity LOW as
+      the substituted phrase is semantically equivalent and is consistent with
+      the surrounding claim-body usage (the body of claim 13 uses "present world"
+      and the body of claim 17 uses "present-day world"; the narrative footnote
+      14 has been brought into line with the latter). All 44 other footnote
+      contents are character-by-character identical to the claims by Python
+      bracket-depth-matched extraction. No claim-distortions, meaning-shifts,
+      or scope-alterations found at the load-bearing level. All four marker
+      blocks (LACUNA, VARIANT, INFERENCE, APPROPRIATION-FLAG) are verbatim
+      identical (bracket-depth-matched extraction, Python character comparison:
+      equal on all four). The INFERENCE marker correctly flags the refusal-case
+      reading as a synthesis (basis names brief special_instructions, Hallowell,
+      Johnston, Smith, Vizenor, scope.md; risk names the comparativist-and-meta-
+      comparativist position and the discipline of holding the refusal at
+      appropriate distance from a "rebuttal of the chaoskampf framing on
+      Anishinaabe terms" mode). The APPROPRIATION-FLAG correctly registers the
+      area-specialist objection at the strongest position on the spectrum, with
+      the four required components for the refusal-case framing, spectrum-
+      positioning relative to Ch28 Bida and Ch29 Mwindo, Ch41 as PRIMARY FORWARD
+      TARGET, named-but-flagged secondary anchors (Gross, Bohaker, Phillips,
+      Borrows, Brown, Riddington), and named-by-name primary anchors (Hallowell,
+      Johnston, Smith, Vizenor) all confirmed. Forsyth disclaimer preserved at
+      the source-overview Forsyth paragraph ("not a treatment of Anishinaabe-area
+      material, which Forsyth does not undertake"; Python check: "not Anishinaabe-area" or equivalent
+      disclaimer-phrase: 1 hit in body, plus footnote disclaimer "Forsyth 1987
+      does not itself treat Anishinaabe material directly"). No methodological
+      drift found. The Anishinaabe ontological framework opens the chapter
+      before any substantive (i.e., non-meta) chaoskampf invocation: the first
+      body-prose mention of "chaoskampf" appears in the Source overview as a
+      meta-reflexive reference ("the chaoskampf reading the present book
+      elsewhere develops") rather than as a substantive comparative invocation
+      applied to the Anishinaabe material; the dedicated section "The
+      Anishinaabe world and the ontological framing" is given before the
+      substantive comparative-typology-engagement sections, in the same order
+      as the claims file.
+    q4_same_model: >
+      No. The narrative was produced by Claude Opus 4.7 in a separate session.
+      This audit is conducted by Claude Opus 4.7 (1M context) in a fresh
+      conversation with no memory of writing the narrative. The review is valid
+      under the skill's "different model preferred but not required; fresh
+      context is the load-bearing requirement" rule.
+
+  issues_summary:
+    - id: ISSUE-01
+      severity: LOW
+      category: footnote-mismatch
+      description: >
+        Footnote 14 in narrative has a single one-word substitution ("present
+        world" in claims → "present-day world" in narrative) inside the
+        footnote bracket. The substituted phrase is semantically equivalent
+        and aligns the footnote with the adjacent claim 17 footnote phrasing
+        ("present-day world"). FOOTNOTE-MISMATCH severity LOW. Recommended fix:
+        revert the single word to match the approved-claims footnote text
+        ("present world") to maintain the project's verbatim-footnote-content
+        invariant; alternatively, accept the drift on the basis that it is
+        within the project's small-edit tolerance for footnote alignment with
+        adjacent claim-body usage. No semantic impact on the claim's load-bearing
+        content; no source-citation change; no scope or certainty shift.
+    - id: ISSUE-02
+      severity: NOTE
+      category: addition-ok
+      description: >
+        Six unfootnoted bridge / transitional sentences not present in the claims
+        document, all marker-introduction or chapter-roadmap bridges introducing
+        no factual assertions: (1) source-overview opening discourse bridge;
+        (2) LACUNA-marker-introduction bridge; (3) VARIANT-marker-introduction
+        bridge; (4) chapter-roadmap preview at end of source overview; (5)
+        INFERENCE-marker-introduction bridge; (6) APPROPRIATION-FLAG-marker-
+        introduction bridge. Same pattern as Ch24, Ch26, Ch27, Ch28, Ch30
+        ISSUE-01. NOTE only; no action required.
+    - id: ISSUE-03
+      severity: NOTE
+      category: word-count-within-target
+      description: >
+        Body-prose-only word count (after stripping footnotes, EVIDENCE tokens,
+        COMPARATIVE-HOOK lines, and marker blocks): approximately 5,486 words,
+        within the brief's 6,000-word target for the contrastive-case-tier (full)
+        chapter. Total file wc -w: 14,660 words (the difference is 45 footnotes,
+        four marker blocks, 14 COMPARATIVE-HOOK lines, and 45 EVIDENCE tokens —
+        all expected for the contrastive-case-tier full classification with the
+        appropriation-protocol-compliant marker set). NOTE only; within target.
+
+check_1_completeness:
+  result: PASS
+  notes: >
+    All 45 claims are mapped to narrative locations in order across 8 sections:
+    - Source overview (claims 1–7): all 7 claims present. The chapter's
+      Anishinaabe ontological framing of "other-than-human persons" with
+      Hallowell 1960 in the very first sentence; oral-tradition textual situation
+      with no pre-contact indigenous-script attestation; four area-specialist
+      anchors (Hallowell, Johnston, Smith, Vizenor) named in first factual pass;
+      Forsyth as long-arc combat-myth typology anchor with the
+      not-for-Anishinaabe-area-material-coverage disclaimer; four further
+      methodological respects (continuing-tradition oral corpus; multi-school
+      ethnographic-recording history; Anishinaabe-authored insider register's
+      load-bearing standing; area-specialist objection as the strongest in the
+      book — refusal of combat framing as such); contrastive-case-tier (full)
+      classification with 6,000-word target; LACUNA marker covering pre-contact
+      attestation absence and pictographic record; VARIANT marker for the
+      regional-variability-and-no-synthesis discipline — all present in correct
+      order.
+    - The Anishinaabe world and the ontological framing (claims 8–13): all
+      6 claims present. The Anishinaabe / Ojibwe / Ojibway / Chippewa as
+      Indigenous people of the Great Lakes region; Hallowell 1960's
+      "other-than-human persons" framework as foundational; *manitou* /
+      *manitouk* term with Johnston 1995 as Anishinaabe-authored insider anchor
+      meeting the appropriation-protocol's at-least-two-area-specialists
+      requirement; moral implications for human conduct (relational,
+      reciprocity-grounded; respect, gift-and-counter-gift, ceremonial protocol);
+      Smith 1995's layered cosmography (upper Thunderers / human-and-island /
+      underwater Mishipeshu); *aadizookaanag* sacred-story category with winter
+      seasonal restriction; Mide lodge / Midewiwin as ceremonial institutional
+      context — all present in correct order.
+    - Nanabozho the trickster-culture-hero (claims 14–18): all 5 claims present.
+      Nanabozho with regional variants (Nanabush, Wenabozho); Vizenor's
+      "Trickster Discourse: Comic Holotropes and Language Games" essay (full
+      title applied per FC-INFO-02 permission) on the methodological refusal
+      of the heroic-narrative typology; Nanabozho cycle as broad-and-episodic
+      cycle-of-the-trickster-culture-hero per Johnston *Ojibway Heritage*; the
+      two episode-clusters relevant to the Thunderer / Underwater-manitou
+      dialectic; trickster-discourse register's incommensurability with the
+      chaoskampf-typology's combat-and-defeat-resolution assumption — all
+      present in correct order.
+    - Mishipeshu and the underwater-manitouk (claims 19–23): all 5 claims
+      present. Mishipeshu as principal underwater-manitou with regional spelling
+      variants (Mishebeshu, Mishipizheu); morphological description (feline-and-
+      serpentine, copper, panther body with horned-or-spiked tail, Agawa Rock
+      pictographs); moral-character ambivalence in relational-protocol register;
+      underwater-realm as populated and structured (not unformed primordial
+      chaos); Lake Superior cultural-and-geographic centrality — all present in
+      correct order.
+    - The Thunderers (Animikiig) and the upper-realm (claims 24–27): all 4
+      claims present. Thunderers as Anishinaabemowin Animikiig, principal
+      manitouk of upper-realm, sky-and-storm beings; moral-character ambivalence
+      (protective; dangerous in lightning-strikes); Thunderers' relationship to
+      Mishipeshu as necessary counterpart not cosmic-order-vs-chaos adversaries;
+      Thunderers' protection of human communities not read as cosmic-order-
+      establishing defeat — all present in correct order.
+    - Nanabozho's encounters with Mishipeshu and the Thunderers (claims 28–32):
+      all 5 claims present. Multiple-episode regionally-variable encounters;
+      kinship-death narrative-cluster (nephew/cousin/close kin) with Nanabozho's
+      grief/negotiation/retaliation/pedagogical-narrative response; Thunderers
+      narrative-cluster (refuge, learning, association); combat-pattern
+      recognition question answered negatively at load-bearing-structure level;
+      reciprocity-and-protocol register as the chapter's most explicit
+      refutation of chaos-vs-order mapping — all present in correct order.
+    - The refusal: area-specialist framing of the chaos-vs-order mapping
+      (claims 33–38): all 6 claims present. INFERENCE marker; area-specialist
+      refusal articulated across four anchors in mutually-reinforcing registers;
+      contrast with Ch29 Mwindo (moral-valence-refusal) and Ch28 Bida
+      (outcome-valence-inversion); discipline of holding the refusal-as-position
+      at appropriate distance from a "rebuttal-on-Anishinaabe-terms" register;
+      methodological case standing at the strongest position; continuing-
+      tradition register adding contemporary-political-and-scholarly weight —
+      all present in correct order.
+    - Typology, area-specialist framing, and forward-links (claims 39–45): all
+      7 claims present. APPROPRIATION-FLAG marker with all four required
+      components plus named-but-flagged secondary anchors (Gross, Bohaker,
+      Phillips, Borrows, Brown, Riddington); load-bearing structure rather than
+      individual surface elements; principal forward-link to Ch41 (Part II C8);
+      secondary forward-link to Ch40 (Part II C7); principal back-link to Ch29;
+      secondary back-links to Ch28, Ch26, Ch27, Ch24, Ch15; methods sidebar
+      (Ch33) four-point contribution; cultural-historical importance;
+      load-bearing methodological function for the book — all present in
+      correct order.
+    Footnote count: 45 on both sides — exact match verified programmatically.
+    Footnote contents: 44 of 45 byte-identical via Python bracket-depth-matched
+    extraction; footnote 14 has a single-word substitution ("present world" →
+    "present-day world") logged as FOOTNOTE-MISMATCH severity LOW.
+    EVIDENCE token count: 45 on both sides — exact match, sequence order
+    verified identical by Python comparison (claims_ev == narrative_ev: True).
+
+check_2_no_additions:
+  result: PASS
+  sub_checks:
+    forsyth_disclaimer_preserved:
+      result: PASS
+      notes: >
+        Forsyth disclaimer preserved at the Forsyth paragraph in source overview.
+        Body prose: "Forsyth's Sumer-through-Judeo-Christian-apocalyptic survey
+        is what the chapter draws on; it is not a treatment of Anishinaabe-area
+        material, which Forsyth does not undertake." Footnote: "Forsyth 1987
+        does not itself treat Anishinaabe material directly, and the chapter's
+        use of the citation is for the long-arc typological framing rather than
+        for Anishinaabe-area content scholarly coverage." Forsyth EVIDENCE token
+        correctly designated loc=combat-myth long-arc typology (Sumer through
+        Judeo-Christian apocalyptic). PASS.
+    lacuna_marker_preservation:
+      result: PASS
+      notes: >
+        Single LACUNA marker (Source overview, end of section 1) is verbatim
+        identical to claims (bracket-depth-matched extraction, Python character
+        comparison: True). Covers: pre-contact (pre-17th-century) attestation
+        absence in indigenous-script form; pictographic attestation (Agawa Rock
+        pictographs at Lake Superior Provincial Park) read as Mishipeshu-figure
+        but not narrative-text-attestable; surviving textual witness as 19th-
+        and 20th-century ethnographic recordings (Boasian-school recordings;
+        Hallowell's Berens River 1930s fieldwork), Anishinaabe-authored 20th-
+        and 21st-century literary-and-scholarly tradition (Johnston from 1970s
+        onward), late-20th- and 21st-century area-specialist scholarly synthesis
+        (Hallowell 1960; Smith 1995; Vizenor 1989; successors), and continuing
+        oral-tradition transmission within named contemporary Anishinaabe
+        communities; pre-19th-century pre-recording performance contexts (Mide
+        lodge as institutional setting; *aadizookaanag* sacred-story
+        winter-telling protocol) as partially recoverable. scholarly_reconstruction:
+        within recorded ethnographic + Anishinaabe-authored + area-specialist
+        corpus, with explicit acknowledgement of regional variability and NO
+        synthesis of single authoritative narrative; cross-tradition reconstruction
+        excluded per scope.md §"Reconstruction policy" point 1. PASS.
+    variant_marker_preservation:
+      result: PASS
+      notes: >
+        Single VARIANT marker (Source overview, after the contrastive-case-tier
+        / 6,000-word paragraph) is verbatim identical to claims
+        (bracket-depth-matched extraction, Python character comparison: True).
+        primary: the Anishinaabe oral-tradition material as recorded across
+        multiple regional variants and continuing in named contemporary
+        Anishinaabe communities, presented through the four area-specialist
+        anchors without synthesis. alt: the regional variability across Ontario,
+        Manitoba, Minnesota, Wisconsin, Michigan and adjacent territories
+        (Berens River vs. Lake of the Woods vs. Wisconsin Anishinaabe vs.
+        southern Ojibwe regional traditions; insider Anishinaabe-authored
+        retellings vs. early-20th-century ethnographic recordings vs. late-20th-
+        century Indigenous-studies framings). chosen: A (the area-specialist
+        composite, with explicit registration of regional variability and
+        explicit refusal to synthesise). reason: per brief variants.classification
+        co-equal and variants.summary explicit specification. PASS.
+    inference_marker_preservation:
+      result: PASS
+      notes: >
+        Single INFERENCE marker (opening of "The refusal: area-specialist
+        framing" section) is verbatim identical to claims (bracket-depth-matched
+        extraction, Python character comparison: True). Correctly flags the
+        refusal-case reading as a synthesis with basis field naming brief
+        32-nanabozho-mishipeshu.yaml summary and special_instructions, Hallowell
+        1960's "other-than-human persons" framework, Johnston 1990 [1976] and
+        1995's Anishinaabe-authored insider register, Smith 1995's Thunderer /
+        Underwater-manitou dialectic interpretive frame, Vizenor 1989's
+        methodological refusal, and scope.md §"In-scope catalog" CONTRASTIVE /
+        Inversion entry; risk field correctly noting the refusal-as-position
+        is a 20th-and-21st-century-Western-and-post-colonial-Indigenous-studies
+        comparativist-and-meta-comparativist position held jointly by
+        Anishinaabe-authored insider tradition (Johnston) and external area-
+        specialists (Hallowell, Smith) and Indigenous-studies methodological
+        scholarship (Vizenor); chapter's discipline to hold the refusal at
+        appropriate distance from a "rebuttal of the chaoskampf framing on
+        Anishinaabe terms" mode. Preceded by non-footnoted bridge sentence
+        (marker-introduction bridge — appropriate). PASS.
+    appropriation_flag_marker_preservation:
+      result: PASS
+      notes: >
+        Single APPROPRIATION-FLAG marker (head of "Typology, area-specialist
+        framing, and forward-links" section, immediately after the marker-
+        introduction bridge) is verbatim identical to claims
+        (bracket-depth-matched extraction, Python character comparison: True).
+        Seventh APPROPRIATION-FLAG in the book; the strongest objection-strength
+        case in the present book. All four required components verified:
+        (1) Named area specialists in first factual pass: Hallowell, Basil
+        Johnston, Theresa S. Smith, Gerald Vizenor — all named in body prose
+        of the source-overview paragraph (claim 3) per scope.md §"Appropriation
+        protocol" point 1 at-least-two-area-specialists requirement (here met
+        by four). Wider Anishinaabe-area scholarship named-but-flagged: Lawrence
+        W. Gross (*Anishinaabe Ways of Knowing and Being*, Ashgate / Routledge
+        2014), Heidi Bohaker (*Doodem and Council Fire*, University of Toronto
+        Press 2020), Ruth Phillips (Anishinaabe-art and material-culture
+        scholarship), John Borrows (*Recovering Canada*, University of Toronto
+        Press 2002), Jennifer S.H. Brown (Berens River post-Hallowell),
+        Robin Riddington (Algonquian-area comparative work) — none currently in
+        sources.yaml; deferred to inventory-audit per Ch23 FC-02, Ch26 FC-02,
+        Ch27 source-pinning, Ch28 FC-02, Ch29 named-but-flagged precedents.
+        PASS.
+        (2) Substance of objection: refusal of the combat framing as such, NOT
+        a refusal of the moral valence (Ch29 Mwindo) or of the outcome valence
+        (Ch28 Bida); Anishinaabe ontological framework places Mishipeshu and
+        the Thunderers in a relational-and-reciprocity-grounded register
+        incommensurable with the chaos-vs-order register the typology
+        presupposes; necessary-counterpart-not-adversaries reading of the
+        Thunderer / Underwater-manitou dialectic as the load-bearing structural
+        feature of the area-specialist refusal. PASS.
+        (3) Spectrum-positioning: the Anishinaabe-area objection is the
+        STRONGEST in the present book — operating more strongly than the
+        Mande-area Bida-case objection (Ch28 covenant-and-consequence framing,
+        structural rather than explicit convergence with inversion frame) and
+        more strongly than the Nyanga-area Mwindo-case objection (Ch29
+        maturation-through-humiliation framing, narrative explicitly punishes
+        killer but holds surface combat-pattern recognition); the trickster-
+        discourse register of the Nanabozho cycle further refuses the heroic-
+        narrative typology that the chaoskampf typology presupposes. Python
+        check: 'strongest in the present book' in af: PASS; 'Ch28' in af: PASS;
+        'Ch29' in af: PASS. PASS.
+        (4) Ch41 PRIMARY / Ch40 secondary forwarding clause: "Forwarded to Part
+        II C8 (refusal and appropriation problem; ch. 41 of the present volume)
+        as the BOOK'S CLEAREST CASE of the refusal sub-problem in its strongest
+        form"; "Forwarded to Part II C7 (inversion / transformation problem;
+        ch. 40) only secondarily". Python check: 'ch. 41' in af: PASS; 'ch. 40'
+        in af: PASS. Ch41 as PRIMARY FORWARD TARGET confirmed. PASS.
+        Python check: 'use the contrastive-case reading as the heuristic' in af:
+        PASS. PASS on all four components.
+    comparative_hooks_preservation:
+      result: PASS
+      notes: >
+        All 14 COMPARATIVE-HOOK lines are verbatim identical between the claims
+        and narrative, confirmed by Python comparison returning exact match
+        (claims_hooks == narrative_hooks: True). Hooks cover:
+        H1 — Mesopotamia (Marduk-Tiamat, Ch. 3): direct ontological-framework
+        contrast at most fundamental level; Marduk-Nanabozho contrast as the
+        present book's central worked instance of the refusal-case framing at
+        cosmogonic-and-sovereignty level for Part II C8.
+        H2 — Anatolia and Levant (Baal-Yamm, Ch. 7): combat-myth typological
+        contrast at sovereignty-establishment level; refusal at the
+        sovereignty-establishment level for Part II C8.
+        H3 — India (Indra-Vṛtra, Ch. 14): Vedic direct-precedent contrast;
+        HERO SLAY SERPENT formula refusal.
+        H4 — India (Krishna-Kāliya, Ch. 15): within-tradition-transformation
+        parallel for moral discipline against unrestrained dragon-killing, with
+        within-tradition-vs-across-tradition qualification.
+        H5 — Egypt (Ra-Apep, Ch. 16): cyclical-maintenance-register contrast at
+        strongest position (maʿat-vs-isfet) against Anishinaabe relational-and-
+        reciprocity register.
+        H6 — Norse (Thor-Jörmungandr, Ch. 18): eschatological-displacement
+        combat-myth contrast.
+        H7 — Americas (Huitzilopochtli at Coatepec, Ch. 24): order-establishment
+        contrast at paradigmatic non-Eurasian level; Coatepec-Nanabozho contrast
+        as PRINCIPAL WORKED INSTANCE for Part II C8 of the contrastive-case-at-
+        opposite-typological-pole-within-non-Eurasian-cluster move.
+        H8 — Pariacaca and the amaru (Ch. 26): co-non-Eurasian-cluster
+        appropriation-protocol parallel; transformation sub-problem
+        (Pariacaca) vs refusal sub-problem (Nanabozho).
+        H9 — Mapuche Kai-Kai / Tren-Tren (Ch. 27): non-Eurasian-cluster
+        co-comparandum sharing necessary-counterparts-in-layered-cosmography
+        structural feature.
+        H10 — Bida and the founding of Wagadu (Ch. 28): Africa-cluster inversion
+        vs North-American-cluster refusal; two distinct forms of resistance.
+        H11 — Mwindo and Kirimu (Ch. 29): co-contrastive-case-tier; two
+        distinct forms of refusal (moral-valence vs combat-framing) registered
+        for Part II C8.
+        H12 — Methods sidebar (Ch. 33): worked instance of four methodological
+        moves (appropriation-protocol point 1, point 3, contrastive-case-frame
+        heuristic, continuing-tradition methodological situation).
+        H13 — Part II C7 (Ch. 40): secondary forward target.
+        H14 — Part II C8 (Ch. 41): PRIMARY FORWARD TARGET; BOOK'S CLEAREST
+        CASE of the refusal sub-problem in its strongest form.
+        PASS.
+    banned_glossary_terms:
+      result: PASS
+      notes: >
+        The banned umbrella terms "chaos-figure", "chaos-monster", and
+        "chaos-serpent" are absent from the narrative. Python grep returned
+        zero hits for all three terms. Mishipeshu is characterised throughout
+        as "underwater manitou", "underwater-manitou", "principal underwater-
+        manitou", "powerful spirit-being of the lakes-and-rivers-and-deep-water"
+        — never by any banned umbrella term. The Thunderers (Animikiig) are
+        characterised as "principal manitouk of the upper-realm", "powerful
+        sky-and-storm beings" — never by any banned umbrella term. The phrase
+        "chaos-vs-order" appears in body prose only as the comparative
+        category being declined / refused (per the chapter's load-bearing
+        methodological move) and never as a tradition-internal characterisation.
+        PASS.
+    no_unauthorised_material:
+      result: PASS
+      notes: >
+        No sources cited in the narrative that do not appear in the approved
+        claims. No new named scholars, deities, texts, or comparanda introduced
+        beyond what the claims supply. The six bridge sentences name only
+        structural movements, markers, and chapter-roadmap previews already
+        established in the claims and brief. The named-but-flagged secondary
+        anchors (Gross, Bohaker, Phillips, Borrows, Brown, Riddington) appear
+        only inside the APPROPRIATION-FLAG marker, where they are explicitly
+        flagged as "named here in body prose only — not currently in
+        sources.yaml; deferred to inventory-audit" per the established
+        named-but-flagged pattern. The Vizenor essay full title "Trickster
+        Discourse: Comic Holotropes and Language Games" appears in body prose
+        of the Nanabozho-the-trickster-culture-hero section per FC-INFO-02
+        permission (post-human-normalize cycle); subsequent body mentions
+        revert to the short title. No new factual content found anywhere in
+        the narrative. PASS.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        Glossary discipline holds throughout. Mishipeshu (consistent spelling,
+        with regional variants Mishebeshu/Mishipizheu noted at first mention);
+        Nanabozho (consistent, with regional variants Nanabush/Wenabozho noted
+        at first mention); manitou / manitouk (consistent); aadizookaanag
+        (consistent, italicised at first mention); Animikiig (consistent, with
+        English "Thunderers" as primary form); Anishinaabe / Ojibwa / Ojibwe /
+        Ojibway / Chippewa naming-convention applied per Smith 1995 (Anishinaabe
+        as principal autonym in body prose; Ojibwa for Hallowell's title;
+        Ojibway for Johnston's title); other-than-human persons (Hallowell's
+        exact phrase consistently used and credited at first mention with
+        first_mention_gloss applied); Hallowell / Johnston / Smith / Vizenor
+        in correct scholarly forms throughout. Locked terms (chaoskampf;
+        cosmogonic; sovereignty; HERO SLAY SERPENT; etc.) used verbatim where
+        they appear. No glossary violations found. PASS.
+    section_structure:
+      result: PASS
+      notes: >
+        8 sections in claims = 8 sections in narrative with identical headers
+        in identical order: (1) Source overview; (2) The Anishinaabe world
+        and the ontological framing; (3) Nanabozho the trickster-culture-hero;
+        (4) Mishipeshu and the underwater-manitouk; (5) The Thunderers
+        (Animikiig) and the upper-realm; (6) Nanabozho's encounters with
+        Mishipeshu and the Thunderers; (7) The refusal: area-specialist framing
+        of the chaos-vs-order mapping; (8) Typology, area-specialist framing,
+        and forward-links. No sections added, dropped, or renamed. Python
+        comparison: identical. PASS.
+    appropriation_protocol_point_3_compliance:
+      result: PASS
+      notes: >
+        Per scope.md §"Appropriation protocol" point 3, the chapter must "open
+        with the tradition's own framing before invoking the comparative
+        category." The chapter complies as follows:
+        (1) The very first sentence of the Source overview opens with the
+        Anishinaabe ontological framework: "presented within the Anishinaabe
+        ontological framework of 'other-than-human persons' (A. Irving
+        Hallowell's 1960 phrase) in which Mishipeshu and the Thunderers are not
+        chaos-and-order adversaries but reciprocal counterparts in a relational
+        moral universe". The Hallowell 1960 phrase frames the chapter before
+        any substantive (i.e., non-meta) chaoskampf engagement.
+        (2) The Source overview's mentions of "chaoskampf" appear in a meta-
+        reflexive register — naming the comparative category the area
+        specialists explicitly decline, and naming the chapter as the book's
+        "clearest *refusal* case" — rather than as a substantive comparative
+        invocation applied to the Anishinaabe material. This is the same
+        meta-framing that the claims file adopts and that scope.md §"Book
+        register" sanctions for the Source overview's framing pass.
+        (3) A dedicated section "The Anishinaabe world and the ontological
+        framing" is given before the substantive comparative-typology-engagement
+        sections (sections 7 and 8); the ontological-framing section establishes
+        the "other-than-human persons" framework, the manitou / manitouk term,
+        the moral implications of the framework, the Smith 1995 layered
+        cosmography, the *aadizookaanag* sacred-story register, and the Mide
+        lodge institutional context — all on the tradition's own terms, before
+        the comparative category is engaged at full strength.
+        (4) The substantive comparative-typology engagement (the area-specialist
+        refusal section and the typology / forward-links section) appears only
+        after sections 2–6 have established the Anishinaabe world, Nanabozho,
+        Mishipeshu, the Thunderers, and the encounters on the tradition's own
+        terms.
+        Compliance with scope.md §"Appropriation protocol" point 3 is therefore
+        confirmed at PASS.
+    area_specialist_citation_compliance:
+      result: PASS
+      notes: >
+        Per scope.md §"Appropriation protocol" point 1 and per brief 32-
+        nanabozho-mishipeshu.yaml special_instructions ("cite Hallowell, Basil
+        Johnston, Theresa S. Smith, and Gerald Vizenor by name"), the chapter
+        cites all four required area specialists by name in the first factual
+        pass:
+        - A. Irving Hallowell — named in the very first sentence of the Source
+          overview ("Hallowell, Basil Johnston, Theresa S. Smith, and Gerald
+          Vizenor"); explicitly anchored in the third source-overview paragraph
+          ("A. Irving Hallowell's 1960 essay 'Ojibwa Ontology, Behavior, and
+          World View'"); cited 54 times in the narrative.
+        - Basil Johnston — named in the very first sentence of the Source
+          overview; explicitly anchored in the third source-overview paragraph
+          ("Basil Johnston's *Ojibway Heritage*... and *The Manitous*"); cited
+          64 times in the narrative.
+        - Theresa S. Smith — named in the very first sentence of the Source
+          overview; explicitly anchored in the third source-overview paragraph
+          ("Theresa S. Smith's *The Island of the Anishnaabeg*"); cited 56
+          times in the narrative.
+        - Gerald Vizenor — named in the very first sentence of the Source
+          overview; explicitly anchored in the third source-overview paragraph
+          ("Gerald Vizenor's *Narrative Chance*"); cited 45 times in the
+          narrative.
+        All four are also named-by-name within the APPROPRIATION-FLAG marker
+        (head of section 8): "Hallowell, Johnston, Smith, and Vizenor are the
+        chapter's principal area-specialist anchors and are named by name in
+        the first factual pass per brief... and per scope.md §'Appropriation
+        protocol' point 1". PASS.
+    no_anishinaabe_chaoskampf_re_narration:
+      result: PASS
+      notes: >
+        Per brief 32-nanabozho-mishipeshu.yaml special_instructions and per the
+        prompt's audit-criterion 7, the chapter must NOT re-narrate "the
+        Anishinaabe chaoskampf" — such a thing does not exist on Anishinaabe
+        terms. The narrative complies: every chaoskampf-related mention either
+        (a) names the chaoskampf category as the comparative typology that the
+        area specialists explicitly decline ("chaoskampf typology"; "chaoskampf
+        reading"; "chaoskampf-typology assimilation"); or (b) names the
+        Anishinaabe material as a refusal case to the typology; or (c) appears
+        within the four-marker structural apparatus (LACUNA, VARIANT, INFERENCE,
+        APPROPRIATION-FLAG) where the typology is the object of methodological
+        registration rather than the frame of the narrative. No body-prose
+        passage narrates the Nanabozho / Mishipeshu / Thunderers material AS a
+        chaoskampf instance. The relationships are narrated as the tradition
+        itself describes them ("the Thunderer / Underwater-manitou dialectic
+        as necessary counterpart structure rather than as chaos-vs-order
+        combat"; "Nanabozho's mediating-and-pedagogical position between the
+        two realms"; "relational-and-reciprocity-grounded interactions rather
+        than as combat-and-defeat events"; "the encounters as relational-and-
+        reciprocity-grounded interactions"). The comparative category absorbs
+        the description rather than the other way around (per brief special_
+        instructions) — confirmed throughout. PASS.
+    respectful_tone_compliance:
+      result: PASS
+      notes: >
+        Per brief 32-nanabozho-mishipeshu.yaml special_instructions and per
+        the prompt's audit-criterion 6, the chapter's tone must be respectful
+        of Anishinaabe authority over how their traditions are represented.
+        The narrative complies in the following registers:
+        (1) The Anishinaabe-authored insider register (Johnston) is named at
+        the same load-bearing standing as the external area-specialists
+        (Hallowell, Smith) and is explicitly registered as carrying epistemological
+        weight that the present book treats as load-bearing rather than
+        auxiliary.
+        (2) The continuing-tradition character of the Anishinaabe material —
+        the named contemporary Anishinaabe communities, the continuing Mide
+        lodge tradition, the continuing Anishinaabe-authored insider scholarship,
+        the continuing oral-tradition transmission — is foregrounded in
+        sections 1, 2, and 7.
+        (3) The chapter's framing rejects the salvage-paradigm register
+        (Vizenor 1989 named for this point) and locates the colonial-mediation
+        problem (linguistic, theological, political) explicitly within the
+        LACUNA marker.
+        (4) The discipline of holding the refusal-as-position at appropriate
+        distance from a "rebuttal of the chaoskampf framing on Anishinaabe
+        terms" register is foregrounded in section 7 (the INFERENCE marker
+        and the body-prose paragraph immediately following).
+        (5) The chapter explicitly does not re-narrate "the Anishinaabe
+        chaoskampf"; the relationships are narrated as the tradition itself
+        describes them.
+        Respectful-tone compliance per brief and prompt is confirmed at PASS.
+
+check_3_fidelity:
+  result: PASS
+  sub_checks:
+    lacuna_marker:
+      result: PASS
+      notes: >
+        Single LACUNA marker (Source overview, end of section 1) is verbatim
+        identical to claims (bracket-depth-matched extraction, Python character
+        comparison: True). PASS.
+    inference_marker:
+      result: PASS
+      notes: >
+        Single INFERENCE marker (opening of "The refusal" section) is verbatim
+        identical to claims (bracket-depth-matched extraction, Python character
+        comparison: True). Correctly flags the refusal-case reading as a
+        synthesis with basis and risk fields preserved verbatim. Preceded by
+        non-footnoted bridge sentence (introductory navigation — appropriate
+        bridge text, no footnote). PASS.
+    variant_marker:
+      result: PASS
+      notes: >
+        Single VARIANT marker (Source overview, after the contrastive-case-tier
+        / 6,000-word paragraph) is verbatim identical to claims (bracket-depth-
+        matched extraction, Python character comparison: True). chosen:
+        co-equal-recorded-versions per brief variants.classification with no
+        synthesis of single authoritative narrative. PASS.
+    appropriation_flag_marker:
+      result: PASS
+      notes: >
+        Single APPROPRIATION-FLAG marker (head of section 8, immediately after
+        the marker-introduction bridge sentence) is verbatim identical to claims
+        (bracket-depth-matched extraction, Python character comparison: True).
+        Seventh APPROPRIATION-FLAG in the book; the strongest objection-strength
+        case in the present book. All four required components verified — see
+        check_2_no_additions.appropriation_flag_marker_preservation.notes
+        above. PASS on all four components.
+    comparative_hooks:
+      result: PASS
+      notes: >
+        All 14 COMPARATIVE-HOOK lines are verbatim identical between the claims
+        and narrative, confirmed by Python comparison returning exact match
+        (claims_hooks == narrative_hooks: True). PASS.
+    source_distribution:
+      result: PASS
+      notes: >
+        Source distribution in narrative matches approved-claims body exactly:
+        smith-island-anishnaabeg=19, hallowell-ojibwa-world=10, johnston-ojibway-
+        heritage=9, johnston-manitous=3, vizenor-narrative-chance=3, forsyth-1987=1.
+        Total: 45.
+        Distribution confirmed by programmatic count on both sides (Python
+        Counter). EVIDENCE token sequence order also confirmed identical (Python
+        list comparison: claims_ev == narrative_ev: True). PASS.
+    glossary_discipline:
+      result: PASS
+      notes: >
+        See check_2_no_additions.glossary_discipline above. All locked
+        renderings used correctly throughout. PASS.
+    footnote_integrity:
+      result: PARTIAL
+      notes: >
+        45 footnotes in the narrative; 45 in the claims body. Python bracket-
+        depth-matched extraction of all 45 footnotes: 1 footnote diff across
+        the 45 (footnote 14: "present world" → "present-day world"; logged as
+        ISSUE-01 / FOOTNOTE-MISMATCH severity LOW). The remaining 44 footnotes
+        are byte-identical between claims and narrative. md5sum of concatenated
+        footnotes: claims=842e90db476fda920a74a9215fcba32b ; narrative=
+        7c3dcc56f60a52611b00bb656aeeeaab — single-character drift accounts for
+        the difference. Body prose is rewritten for narrative readability but
+        footnotes are 44/45 content-identical. PARTIAL — the 1 LOW finding
+        does not gate PASS at verdict level.
+    evidence_token_integrity:
+      result: PASS
+      notes: >
+        45 EVIDENCE tokens in the narrative; 45 in the claims body. All
+        EVIDENCE token content lines are character-by-character identical
+        between the two files, confirmed by Python comparison
+        (claims_ev == narrative_ev: True). Source distribution exactly
+        preserved: smith-island-anishnaabeg=19, hallowell-ojibwa-world=10,
+        johnston-ojibway-heritage=9, johnston-manitous=3,
+        vizenor-narrative-chance=3, forsyth-1987=1. PASS.
+    contrastive_case_framing_preservation:
+      result: PASS
+      notes: >
+        The chapter's contrastive-case-tier (full) classification, refusal-
+        case framing at strongest position on the spectrum of refusal-strengths,
+        and methodological discipline (refusal held at appropriate distance
+        from a "rebuttal of the chaoskampf framing on Anishinaabe terms"
+        register) are preserved throughout. Python checks: 'refusal' in
+        narrative: 30 hits; 'refusal case' in narrative: 5 hits; 'combat
+        framing as such' in narrative: 8 hits; 'incommensurable' in narrative:
+        9 hits; 'relational-and-reciprocity-grounded' in narrative: 16 hits;
+        'necessary counterpart' / 'necessary-counterpart' in narrative: 7 hits;
+        'Thunderer / Underwater-manitou dialectic' in narrative: 11 hits.
+        The Mwindo (Ch29) moral-valence-refusal contrast and the Bida (Ch28)
+        outcome-valence-inversion contrast are explicitly named and
+        spectrum-positioned at three locations (claim 33 narrative, claim 35
+        narrative, APPROPRIATION-FLAG marker). PASS.
+    forsyth_disclaimer_preservation:
+      result: PASS
+      notes: >
+        Forsyth disclaimer preserved at the source-overview Forsyth paragraph
+        (claim 4 narrative) and within the Forsyth footnote. Body prose:
+        "Forsyth's Sumer-through-Judeo-Christian-apocalyptic survey is what the
+        chapter draws on; it is not a treatment of Anishinaabe-area material,
+        which Forsyth does not undertake." Footnote: "Forsyth 1987 does not
+        itself treat Anishinaabe material directly, and the chapter's use of
+        the citation is for the long-arc typological framing rather than for
+        Anishinaabe-area content scholarly coverage." Forsyth EVIDENCE token
+        correctly designated loc=combat-myth long-arc typology (Sumer through
+        Judeo-Christian apocalyptic). PASS.
+    forward_link_verification:
+      result: PASS
+      notes: >
+        All forward and back-links verified against toc.yaml by programmatic
+        regex pattern match (number: N):
+        Ch3 (Marduk-Tiamat): toc.yaml — FOUND.
+        Ch6 (Illuyanka): toc.yaml — FOUND. (NB: the chapter's Anatolia hook
+        names Ch7 Baal-Yamm; Ch6 is referenced in the wider chapter ordering.)
+        Ch7 (Baal-Yamm): toc.yaml — FOUND.
+        Ch14 (Indra-Vṛtra): toc.yaml — FOUND.
+        Ch15 (Vedic reflexes including Krishna-Kāliya): toc.yaml — FOUND.
+        Ch16 (Ra-Apep): toc.yaml — FOUND.
+        Ch18 (Thor-Jörmungandr): toc.yaml — FOUND.
+        Ch24 (Huitzilopochtli at Coatepec): toc.yaml — FOUND.
+        Ch26 (Pariacaca and the amaru): toc.yaml — FOUND.
+        Ch27 (Mapuche Kai-Kai / Tren-Tren): toc.yaml — FOUND.
+        Ch28 (Bida and the founding of Wagadu): toc.yaml — FOUND.
+        Ch29 (Mwindo and Kirimu): toc.yaml — FOUND.
+        Ch33 (methods sidebar): toc.yaml — FOUND.
+        Ch40 (C7 inversion / transformation; secondary forward target):
+        toc.yaml — FOUND.
+        Ch41 (C8 refusal and appropriation; PRIMARY FORWARD TARGET): toc.yaml —
+        FOUND.
+        All fifteen cross-chapter references resolve. PASS.
+    word_count_sanity:
+      result: NOTE
+      notes: >
+        Body-prose-only word count (after stripping footnotes, EVIDENCE tokens,
+        COMPARATIVE-HOOK lines, and marker blocks): approximately 5,486 words
+        — within the brief's 6,000-word target for the contrastive-case-tier
+        (full) chapter. Total file wc -w: 14,660 (the difference attributable
+        to 45 footnotes averaging ~150 words each, four marker blocks (LACUNA
+        ~430 words; VARIANT ~370 words; INFERENCE ~480 words; APPROPRIATION-
+        FLAG ~750 words), 14 COMPARATIVE-HOOK lines (~1,100 words), and 45
+        EVIDENCE tokens). NOTE only; within target.
+    banned_umbrella_terms:
+      result: PASS
+      notes: >
+        Zero hits for "chaos-figure", "chaos-monster", "chaos-serpent" anywhere
+        in narrative (Python grep: zero on all three). PASS.
+
+verdict_rationale: >
+  The narrative scores PASS overall on all three checks with one LOW-severity
+  FOOTNOTE-MISMATCH finding that does not gate the verdict at the project's
+  established severity-threshold per the skill's verdict rules (PASS: zero
+  CLAIM-DROPPED, zero CLAIM-ADDED, zero HIGH CLAIM-DISTORTED, ≤ 2 MEDIUM
+  findings). Check 1 (Completeness): all 45 claims are mapped to narrative
+  locations in order, across 8 sections with identical headers on both sides;
+  45 footnotes and 45 EVIDENCE tokens on each side verified programmatically;
+  EVIDENCE sequence order identical (Python list comparison: True); all four
+  markers (LACUNA, VARIANT, INFERENCE, APPROPRIATION-FLAG) are verbatim
+  identical to claims (bracket-depth-matched extraction, Python character
+  comparison: True on all four); all 14 COMPARATIVE-HOOK lines are verbatim
+  identical (Python comparison: exact match). Check 2 (No additions): six
+  unfootnoted bridge sentences are legitimate marker-introduction or chapter-
+  roadmap bridges introducing no factual assertions; Forsyth disclaimer
+  preserved; no banned umbrella terms found; glossary discipline holds; no
+  unauthorised new material; appropriation-protocol point 3 (open with
+  tradition's own framing before invoking comparative category) confirmed
+  at PASS; area-specialist citation policy (all four named anchors —
+  Hallowell, Johnston, Smith, Vizenor — cited by name in first factual pass)
+  confirmed at PASS; no re-narration of "the Anishinaabe chaoskampf"
+  confirmed at PASS; respectful-tone compliance confirmed at PASS. Check 3
+  (Fidelity): all four markers verbatim identical; all 14 hooks verbatim
+  identical; source distribution matches exactly (smith=19, hallowell=10,
+  johnston-ojibway=9, johnston-manitous=3, vizenor=3, forsyth=1); footnote
+  integrity confirmed by programmatic comparison (44/45 byte-identical; 1
+  LOW-severity drift logged); EVIDENCE integrity confirmed by Python
+  comparison; contrastive-case-framing preservation confirmed throughout
+  (refusal at strongest position; trickster-discourse register;
+  necessary-counterpart-not-adversaries reading; relational-and-reciprocity-
+  grounded register's incommensurability with chaos-vs-order register;
+  Mwindo and Bida spectrum-positioning); Forsyth disclaimer preserved; all
+  fifteen cross-chapter forward and back-links resolve in toc.yaml. The one
+  LOW finding (single-word drift in footnote 14 from "present world" to
+  "present-day world") and the three NOTE findings (six bridge sentences;
+  word count within target; FC-INFO-02 application of full Vizenor essay
+  title) are within the threshold for PASS. Verdict: PASS.
+
+claim_mapping:
+  # Source overview (claims 1–7 → narrative section 1)
+  - claim_number: 1
+    narrative_location: "source overview, opening paragraph"
+    status: MAPPED
+  - claim_number: 2
+    narrative_location: "source overview, oral-tradition / textual-witness paragraph"
+    status: MAPPED
+  - claim_number: 3
+    narrative_location: "source overview, four area-specialist anchors paragraph"
+    status: MAPPED
+  - claim_number: 4
+    narrative_location: "source overview, Forsyth long-arc typology paragraph"
+    status: MAPPED
+  - claim_number: 5
+    narrative_location: "source overview, four-further-methodological-respects paragraph"
+    status: MAPPED
+  - claim_number: 6
+    narrative_location: "source overview, contrastive-case-tier (full) classification paragraph"
+    status: MAPPED
+  - claim_number: 7
+    narrative_location: "source overview, LACUNA marker (with introduction bridge)"
+    status: MAPPED
+  # Markers in source overview
+  - claim_number: 7b
+    narrative_location: "source overview, VARIANT marker (with introduction bridge)"
+    status: MAPPED
+  # The Anishinaabe world and the ontological framing (claims 8–13 → narrative section 2)
+  - claim_number: 8
+    narrative_location: "section 2, Anishinaabe / Great Lakes geographic setting paragraph"
+    status: MAPPED
+  - claim_number: 9
+    narrative_location: "section 2, Hallowell 'other-than-human persons' framework paragraph"
+    status: MAPPED
+  - claim_number: 10
+    narrative_location: "section 2, manitou / manitouk term with Johnston insider register paragraph"
+    status: MAPPED
+  - claim_number: 11
+    narrative_location: "section 2, moral implications / relational and reciprocity-grounded paragraph"
+    status: MAPPED
+  - claim_number: 12
+    narrative_location: "section 2, Smith layered cosmography paragraph"
+    status: MAPPED
+  - claim_number: 13
+    narrative_location: "section 2, aadizookaanag sacred-story register paragraph"
+    status: MAPPED
+  - claim_number: 13b
+    narrative_location: "section 2, Mide lodge / Midewiwin paragraph"
+    status: MAPPED
+  # Nanabozho the trickster-culture-hero (claims 14–18 → narrative section 3)
+  - claim_number: 14
+    narrative_location: "section 3, Nanabozho with regional variants paragraph"
+    status: MAPPED
+  - claim_number: 15
+    narrative_location: "section 3, Vizenor 'Trickster Discourse' essay paragraph"
+    status: MAPPED
+  - claim_number: 16
+    narrative_location: "section 3, Nanabozho cycle as broad-and-episodic paragraph"
+    status: MAPPED
+  - claim_number: 17
+    narrative_location: "section 3, two episode-clusters / Thunderer-Underwater dialectic paragraph"
+    status: MAPPED
+  - claim_number: 18
+    narrative_location: "section 3, trickster-discourse register's incommensurability paragraph"
+    status: MAPPED
+  # Mishipeshu and the underwater-manitouk (claims 19–23 → narrative section 4)
+  - claim_number: 19
+    narrative_location: "section 4, Mishipeshu with regional spelling variants paragraph"
+    status: MAPPED
+  - claim_number: 20
+    narrative_location: "section 4, morphological description / Agawa Rock pictographs paragraph"
+    status: MAPPED
+  - claim_number: 21
+    narrative_location: "section 4, moral-character ambivalence / relational-protocol register paragraph"
+    status: MAPPED
+  - claim_number: 22
+    narrative_location: "section 4, underwater-realm as populated and structured paragraph"
+    status: MAPPED
+  - claim_number: 23
+    narrative_location: "section 4, Lake Superior cultural-and-geographic centrality paragraph"
+    status: MAPPED
+  # The Thunderers (Animikiig) and the upper-realm (claims 24–27 → narrative section 5)
+  - claim_number: 24
+    narrative_location: "section 5, Thunderers as Animikiig / principal manitouk of upper-realm paragraph"
+    status: MAPPED
+  - claim_number: 25
+    narrative_location: "section 5, Thunderers' moral-character ambivalence paragraph"
+    status: MAPPED
+  - claim_number: 26
+    narrative_location: "section 5, necessary-counterpart-not-adversaries paragraph"
+    status: MAPPED
+  - claim_number: 27
+    narrative_location: "section 5, Thunderers' protection not cosmic-order-establishing-defeat paragraph"
+    status: MAPPED
+  # Nanabozho's encounters with Mishipeshu and the Thunderers (claims 28–32 → narrative section 6)
+  - claim_number: 28
+    narrative_location: "section 6, multiple-episode regionally-variable encounters paragraph"
+    status: MAPPED
+  - claim_number: 29
+    narrative_location: "section 6, kinship-death narrative-cluster paragraph"
+    status: MAPPED
+  - claim_number: 30
+    narrative_location: "section 6, Thunderers narrative-cluster paragraph"
+    status: MAPPED
+  - claim_number: 31
+    narrative_location: "section 6, combat-pattern recognition question answered negatively paragraph"
+    status: MAPPED
+  - claim_number: 32
+    narrative_location: "section 6, reciprocity-and-protocol register as the chapter's most explicit refutation paragraph"
+    status: MAPPED
+  # The refusal: area-specialist framing of the chaos-vs-order mapping (claims 33–38 → narrative section 7)
+  - claim_number: 33
+    narrative_location: "section 7, INFERENCE marker (with introduction bridge)"
+    status: MAPPED
+  - claim_number: 34
+    narrative_location: "section 7, four area-specialist anchors articulating refusal paragraph"
+    status: MAPPED
+  - claim_number: 35
+    narrative_location: "section 7, refusal differs from Mwindo (moral-valence) and Bida (outcome-valence) paragraph"
+    status: MAPPED
+  - claim_number: 36
+    narrative_location: "section 7, discipline-distinguishing-from-rebuttal-on-Anishinaabe-terms paragraph"
+    status: MAPPED
+  - claim_number: 37
+    narrative_location: "section 7, refusal as methodological case (open-with-tradition's-own-framing) paragraph"
+    status: MAPPED
+  - claim_number: 38
+    narrative_location: "section 7, continuing-tradition register's contemporary-political-and-scholarly weight paragraph"
+    status: MAPPED
+  # Typology, area-specialist framing, and forward-links (claims 39–45 → narrative section 8)
+  - claim_number: 39
+    narrative_location: "section 8, APPROPRIATION-FLAG marker (with introduction bridge)"
+    status: MAPPED
+  - claim_number: 40
+    narrative_location: "section 8, surface-vs-load-bearing-structure registration paragraph"
+    status: MAPPED
+  - claim_number: 41
+    narrative_location: "section 8, principal forward-link to Ch41 (Part II C8) paragraph"
+    status: MAPPED
+  - claim_number: 42
+    narrative_location: "section 8, secondary forward-link to Ch40 (Part II C7) paragraph"
+    status: MAPPED
+  - claim_number: 43
+    narrative_location: "section 8, principal back-link to Ch29 paragraph"
+    status: MAPPED
+  - claim_number: 44
+    narrative_location: "section 8, secondary back-links to Ch28, Ch26, Ch27, Ch24, Ch15 paragraph"
+    status: MAPPED
+  - claim_number: 45
+    narrative_location: "section 8, methods sidebar (Ch33) four-point contribution paragraph"
+    status: MAPPED
+  - claim_number: 45b
+    narrative_location: "section 8, cultural-historical importance paragraph"
+    status: MAPPED
+  - claim_number: 45c
+    narrative_location: "section 8, closing load-bearing methodological function paragraph"
+    status: MAPPED
+
+findings:
+  - kind: FOOTNOTE-MISMATCH
+    severity: LOW
+    claim_number: 14
+    narrative_location: "section 3, footnote 14 (Nanabozho-as-trickster-culture-hero footnote)"
+    issue: >
+      Single-word substitution inside footnote 14: claims footnote text reads
+      "establish features of the present world" while narrative footnote text
+      reads "establish features of the present-day world". 44 of 45 footnotes
+      are byte-identical between claims and narrative; this footnote has a
+      single-word drift.
+    detail: >
+      CLAIMS footnote 14 fragment: "...a figure whose actions in the time-of-the-
+      aadizookaanag establish features of the present world, instruct the human
+      community in the proper relations with the other-than-human persons..."
+      NARRATIVE footnote 14 fragment: "...a figure whose actions in the time-of-the-
+      aadizookaanag establish features of the present-day world, instruct the human
+      community in the proper relations with the other-than-human persons..."
+      The substituted phrase is semantically equivalent and aligns the footnote
+      with the surrounding claim-body usage (the body of claim 13 uses "present
+      world" and the body of claim 17 uses "present-day world"; the narrative
+      footnote 14 has been brought into line with the latter). No semantic
+      impact on the claim's load-bearing content; no source-citation change;
+      no scope or certainty shift.
+    recommended_fix: >
+      Optional: revert the single word to match the approved-claims footnote
+      text ("present world") to maintain the project's verbatim-footnote-content
+      invariant. Alternative: accept the drift on the basis that it is within
+      the project's small-edit tolerance for footnote alignment with adjacent
+      claim-body usage and is semantically neutral. LOW severity; does not gate
+      PASS at verdict level.
+
+  - kind: BRIDGE-SENTENCE
+    severity: NOTE
+    claim_number: ~
+    narrative_location: >
+      "source overview (discourse bridge before claim 2 paragraph; LACUNA-
+      marker-introduction bridge; VARIANT-marker-introduction bridge; chapter-
+      roadmap preview at end of source overview); section 7 (INFERENCE-marker-
+      introduction bridge); section 8 (APPROPRIATION-FLAG-marker-introduction
+      bridge)"
+    issue: >
+      Six unfootnoted bridge / transitional sentences not present in the claims
+      document, all marker-introduction or chapter-roadmap bridges introducing
+      no factual assertions.
+    detail: >
+      (1) source-overview discourse bridge: "The first thing to register about
+      that material is the shape of the evidence behind it." (2) LACUNA-marker-
+      introduction bridge: "The shape of that evidence — continuing oral corpus,
+      named contemporary tradition-bearing communities, no pre-contact written
+      attestation, an ethnographic record assembled across multiple methodological
+      schools and within a colonial frame whose mediation is now itself a topic
+      of the scholarship — is methodologically load-bearing for the whole
+      chapter, and the claims document marks the absence of pre-modern
+      attestation explicitly:" (3) VARIANT-marker-introduction bridge: "Because
+      the recorded material is regionally variable and the brief explicitly
+      forbids synthesis into a single authoritative narrative, the variant-
+      handling is flagged here in full:" (4) chapter-roadmap preview at end of
+      source overview: "What follows works through the material on the
+      Anishinaabe tradition's own terms first. The next section sets out the
+      Anishinaabe world... The chapter then takes up Nanabozho the trickster-
+      culture-hero, then Mishipeshu and the underwater-manitouk, then the
+      Thunderers (Animikiig) and the upper-realm, then Nanabozho's encounters
+      across the layered cosmography, then the area-specialist refusal of the
+      chaos-vs-order mapping, and finally the typology, area-specialist
+      framing, and forward-links to the comparative chapters of Part II." (5)
+      INFERENCE-marker-introduction bridge: "The reading the chapter has been
+      building up to — that the Nanabozho / Mishipeshu / Thunderers material
+      is the present book's clearest *refusal* case to the chaoskampf typology
+      — is itself a synthesis the claims document marks explicitly as an
+      inference, distinguishing it from the area-specialists' own claims:" (6)
+      APPROPRIATION-FLAG-marker-introduction bridge: "The area-specialist
+      framing the chapter has worked through is the strongest of its kind in
+      the present book. The claims document marks the four named anchors and
+      the wider Anishinaabe-area scholarship in a structural appropriation-
+      flag at the head of this section:" All six bridges introduce no factual
+      assertions beyond what the claims establish. Same pattern as Ch24
+      ISSUE-01, Ch26 ISSUE-01, Ch27, Ch28, Ch30 ISSUE-01.
+    recommended_fix: >
+      No action required. NOTE severity only.
+
+  - kind: WORD-COUNT-WITHIN-TARGET
+    severity: NOTE
+    claim_number: ~
+    narrative_location: "whole chapter"
+    issue: >
+      Body-prose-only word count (after removing footnotes, EVIDENCE tokens,
+      COMPARATIVE-HOOK lines, and marker blocks) is approximately 5,486 words
+      — within the brief's 6,000-word target.
+    detail: >
+      Total file wc -w: 14,660. Body-prose-only: 5,486. The difference
+      attributable to: 45 footnotes averaging ~150 words each (~6,750 footnote
+      words); four marker blocks (LACUNA ~430 words; VARIANT ~370 words;
+      INFERENCE ~480 words; APPROPRIATION-FLAG ~750 words; total ~2,030
+      marker words); 14 COMPARATIVE-HOOK lines (~1,100 words); 45 EVIDENCE
+      tokens. No unclaimed elaboration found.
+    recommended_fix: >
+      No action required at fidelity stage. NOTE only; within target.
+
+  - kind: FC-INFO-02-APPLIED
+    severity: NOTE
+    claim_number: 15
+    narrative_location: "section 3, Vizenor 'Trickster Discourse' essay paragraph"
+    issue: >
+      The narrative applies FC-INFO-02 (the post-human-normalize cycle's
+      permission to use the full Vizenor essay title "Trickster Discourse:
+      Comic Holotropes and Language Games" on first body-prose mention).
+    detail: >
+      Body prose at first mention: "Gerald Vizenor's 'Trickster Discourse:
+      Comic Holotropes and Language Games' essay in *Narrative Chance*..."
+      Subsequent body-prose mentions revert to the short title "Trickster
+      Discourse" and "Trickster Discourse essay". Per the prompt's explicit
+      FC-INFO-02 carve-out ("This is acceptable and should not be flagged"),
+      this addition is acknowledged here as a NOTE-only registration and is
+      not flagged as CLAIM-ADDED.
+    recommended_fix: >
+      No action required. NOTE severity only; expressly authorised at
+      post-human-normalize cycle.
