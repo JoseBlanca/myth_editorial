@@ -1,0 +1,3799 @@
+# Stage 11 of 19: chapter-draft
+# Book: chaoskampf
+# Generated: 2026-05-02T15:04:39Z
+
+---
+
+# Governing file: scope.md
+
+```
+# Scope: Chaoskampf Across Cultures
+
+## Book type
+**Cross-cultural comparison.** Unlike the other books in this project (one-culture-per-book), this book's subject is a *motif family* — the combat-with-chaos myth — traced across ~15 ancient traditions. The comparison is the point, not a capstone. The `comparative` stage of the pipeline is therefore the engine of the book rather than the final chapter.
+
+## Subject definition
+"Chaoskampf" here means: a narrative in which a sovereign or would-be sovereign deity (or heroic champion) defeats a serpentine / monstrous adversary, and that combat does one or more of the following order-making kinds of work:
+1. **Cosmogonic** — the cosmos is established from or after the combat (e.g., Marduk/Tiamat, Ninurta/Asag, Gonggong).
+2. **Kingship / sovereignty** — the victor's rule over gods and/or humans is established (Baal/Yamm, Zeus/Typhon, Indra/Vṛtra).
+3. **Cyclical maintenance** — the combat is re-enacted, preserving an order that is always under threat (Ra/Apep, Illuyanka in the *purulli* festival).
+4. **Eschatological** — the combat closes cosmic time (Thor/Jörmungandr at Ragnarök, Rev 12, Frashokereti).
+
+This working definition is operational, not doctrinal. The book will explicitly flag that the category "Chaoskampf" is contested in current scholarship (see §"Terminological position" below).
+
+## Terminological position
+The term *Chaoskampf* was coined by Hermann Gunkel (*Schöpfung und Chaos in Urzeit und Endzeit*, 1895). It has been critiqued in successive waves, most consequentially in:
+- *Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis*, ed. JoAnn Scurlock & Richard Beal (Eisenbrauns, 2013).
+- Debra Scoggins Ballentine, *The Conflict Myth and the Biblical Tradition* (OUP, 2015), who argues "chaos" is the wrong word — adversaries are better read as agents of an alternative divine power structure.
+
+The book will include a **dedicated introductory chapter** titled provisionally "What Chaoskampf is, and why the word is contested." The term is retained because it is what readers will search for and what scholars still (if uneasily) use, but the book acknowledges the critique and adopts "combat myth" as an interchangeable term where precision matters.
+
+## Period
+- Earliest in-scope primary source: Sumerian *Lugal-e* (Ninurta vs. Asag), Old Babylonian copies of Ur III originals — c. 2000 BCE.
+- Latest in-scope primary source: Zoroastrian *Bundahišn*, late Sasanian / early Islamic redaction — c. 8th–9th c. CE.
+- Secondary (scholarly) literature is contemporary (1895–present).
+
+Post-medieval reworkings (Milton's Satan, Tolkien's Smaug, etc.) are explicitly **out of scope as primary material** but may appear briefly in the concluding chapter as reception history.
+
+## Languages of primary sources
+Sumerian, Akkadian, Hurrian, Hittite, Ugaritic, Biblical Hebrew, Koine Greek, Classical Greek, Latin, Vedic Sanskrit, Classical Sanskrit, Avestan, Middle Persian (Pahlavi), Old Egyptian (and later Egyptian through Demotic), Old Norse (Eddic + skaldic), Old English, Classical Nahuatl, Quechua, Classical Chinese, Old Japanese (*man'yōgana*), Classical Armenian, Old Church Slavonic / later East Slavic, Old Irish, Middle Welsh, Old Finnish (Kalevala-era runes), and oral-tradition records in Nyanga, Soninke, Visayan/Bikol, and Mapudungun.
+
+The book is **translation-mediated**. The author does not read most of these languages. The source-whitelist strategy (see §"Source strategy") requires two things for each language: (1) a single scholar-standard translation that will be cited first, and (2) at least one secondary-scholarship cross-check. Where a translation is disputed, the chapter will flag the variant and footnote both readings.
+
+## In-scope catalog
+
+**CORE (15 stories)** — full chapters, each treating the primary text(s), the combat narrative in plain-English retelling, and the scholarly debate. See `catalog.yaml` for the complete list with key scholars.
+
+**RELATED (~30 stories)** — shorter treatments. See `catalog.yaml`. Two options for format (see DECIDE_SCOPE.md §1):
+- (A) Each gets an abbreviated chapter (2–5 pages).
+- (B) Grouped into "family" chapters by tradition or subtype (e.g., "Greek dragon-slayings after Zeus-Typhon"; "Indo-European reflexes of Watkins's *HERO SLAY SERPENT*"; "Mesopotamian minor combats").
+
+**PROVISIONAL / Methodological** — Rainbow Serpent as the dedicated critique case; Yu the Great as a sidebar contrasting hydraulic-ordering with combat-ordering.
+
+**CONTRASTIVE / Inversion** — dedicated chapters for:
+- **The inversion (Bida)** — where slaying the serpent *destroys* prosperity rather than establishing it.
+- **The refusal (Nanabozho / Mishipeshu)** — where area specialists explicitly reject the chaos-vs-order mapping, and the Thunderer / Underwater-manitouk dialectic is necessary rather than adversarial.
+
+**EXCLUDED** — see `catalog.yaml` §"exclude".
+
+## Inclusion / exclusion criteria (the operational test)
+A story is in CORE if it meets **all** of:
+1. The adversary is a serpentine / monstrous figure.
+2. The combat is explicitly attested in a primary source (not a modern reconstruction alone).
+3. The combat does cosmogonic, kingship, cyclical, or eschatological order-making work as identified by *area specialists*, not only by pattern-matching comparativists.
+4. The scholarly corpus treating it is robust enough that we can cite multiple independent area-specialist readings.
+
+A story is RELATED if it meets (1)–(2) but (3) is weaker, or if (3) holds only under a comparativist reading that area specialists qualify. Apollo/Python and Susanoo/Orochi were moved here for this reason.
+
+A story is PROVISIONAL / CRITIQUE if area specialists explicitly reject the chaoskampf framing (Rainbow Serpent, Yu/Xiangliu), or if the combat is absent or inverted (Nanabozho, Bida handled in dedicated chapters with the right framing).
+
+## Appropriation protocol
+Given scholarly warnings about forcing Near Eastern / Indo-European templates onto non-Eurasian traditions (explicitly flagged for Rainbow Serpent, Nanabozho, Mwindo in the research notes), every RELATED chapter on a non-Eurasian tradition must:
+1. Cite at least two area specialists **by name** in the first factual pass.
+2. Record any specialist objection to the chaoskampf framing in an `[APPROPRIATION-FLAG:]` marker, which the `comparative` chapter must address rather than paper over.
+3. Open with the tradition's own framing (*maʿat*/*isfet*, *vṛ-*/"obstruction," *wak'a* succession, etc.) before invoking the comparative category.
+
+## Excluded adjacent motifs (contamination risks)
+A cross-cultural book does not exclude neighboring *cultures* (that would defeat its purpose); it excludes *adjacent motifs* that readers and lazy comparativists conflate with chaoskampf. The book explicitly excludes:
+1. **Dismemberment cosmogonies without combat** (Ymir, Puruṣa, Pangu, arguably Cipactli) — these are order-making but not combat-order-making. Cipactli is kept in RELATED precisely to mark this boundary, not ignore it.
+2. **Hero-initiation monster fights** (Fionn vs. Aillen, most of Herakles's non-Hydra labours outside the serpent-combat corpus) — order-making for the hero, not for the cosmos.
+3. **Inter-species enmity / folkloric monsters** (Garuḍa vs. nāgas, Welsh Afanc, Sedna) — no cosmogonic or sovereignty function.
+4. **Trickster-demiurge tales without serpent-adversary** (Māui fishing the land).
+5. **Storm-god theophanies without a dragon combat** (most Yoruba Ṣàngó material, Korean foundation myths).
+6. **Post-medieval literary reworkings** as primary sources (see §"Period").
+
+## Reconstruction policy
+Because every chapter is a different tradition with a different textual situation, reconstruction is handled **per chapter** in the brief, not book-globally. The governing principles are:
+1. **No cross-tradition reconstruction.** A gap in the *Hymiskviða* may not be filled from the *Baal Cycle*, even if structurally analogous.
+2. **In-tradition reconstruction** must specify the donor source and period-proximity tolerance (e.g., "any Rigvedic hymn; never post-Vedic").
+3. All reconstructions carry `[RECONSTRUCTION:]` markers naming the donor source.
+4. For fragmentary cases (*Marduk vs. Labbu*, *Song of Hedammu*, some vishap material), the chapter explicitly states the fragmentary status and presents both the securely attested material and the reconstructed narrative separately.
+
+## Variant presentation policy
+- When one variant dominates a tradition's scholarly corpus (e.g., Snorri's version of the Thor fishing episode), it is presented in the body with minor variants in footnotes.
+- When variants are roughly co-equal within a tradition (the two Illuyanka versions on the same tablet group; the Homeric Hymn vs. Ovidian Apollo/Python), they are presented side by side with source attributions.
+- Cross-tradition comparison is never performed inline in a story-chapter; it is confined to the `comparative` material (see §"Comparative pipeline shape").
+
+## Book structure (locked 2026-04-23)
+
+### Part I — story chapters, geographic clusters
+Part I is organised geographically, in a sequence that respects the known Near-Eastern → Mediterranean transmission chain (West, Burkert, López-Ruiz) and then moves outward. Within each cluster, CORE stories get full chapters; closely related RELATED stories are bundled into "family" chapters rather than spun out as individual mini-chapters.
+
+Provisional geographic clusters:
+1. Mesopotamia — Ninurta/Asag, Ninurta/Anzû, Marduk/Tiamat (full chapters each); family chapter on minor Mesopotamian combats (Marduk/Labbu).
+2. Anatolia & Levant — Kumarbi Cycle / Ullikummi, Illuyanka, Baal/Yamm-Lotan (full chapters each).
+3. Hebrew Bible & Early Christianity — Yahweh vs. Leviathan/Rahab (full); Revelation 12 Red Dragon (full); family chapter on Christian reception (St. George / Michael lineage, Ogden 2021).
+4. Greece & Rome — Zeus vs. Typhon (full); family chapter "Greek dragon-combats after Zeus-Typhon" (Apollo/Python, Herakles/Hydra-Ladon-Geryon, Perseus/Ketos, Kadmos, Bellerophon, Cacus).
+5. Iran — Thraētaona vs. Aži Dahāka (full); Frashokereti as its eschatological pendant.
+6. India — Indra vs. Vṛtra (full); family chapter on Vedic and post-Vedic reflexes (Trita Āptya; Krishna/Kāliya as bhakti reworking).
+7. Egypt — Ra vs. Apep (full); shorter treatment of Horus vs. Seth as the debated adjacent case.
+8. Norse, Germanic, and IE reflexes — Thor vs. Jörmungandr (full); family chapter "Indo-European reflexes of HERO SLAY SERPENT" (Sigurd/Fáfnir, Beowulf, Lugh/Balor, Welsh Red vs. White Dragon, Batraz, Vahagn/Vishaps); family chapter on Slavic-Baltic combat (Perun/Veles reconstruction, Dobrynya byliny).
+9. East Asia — Gonggong (full); family chapter on other Chinese combats (Hou Yi); Susanoo vs. Orochi (full chapter, with explicit framing that the chaoskampf label is applied from outside, per Naumann / Isomae / Como). Yu the Great appears as a sidebar contrasting hydraulic-ordering with combat-ordering, not as a chaoskampf.
+10. Americas — Huitzilopochtli / Coatepec (full); family chapter on other Mesoamerican combats (Cipactli as dismemberment-boundary; Quetzalcoatl vs. Tezcatlipoca); Andean Pariacaca vs. amaru; Mapuche Kai-Kai vs. Tren-Tren.
+11. Africa — Bida and the founding of Wagadu (full chapter; the inversion anchor); Mwindo vs. Kirimu (contrastive case: the hero is punished for the killing).
+12. Southeast Asia & Oceania — Bakunawa. (Rainbow Serpent is held for the Part II critique chapter, not placed geographically.)
+13. Finnic — Väinämöinen vs. Iku-Turso (RELATED transformed-variant chapter).
+14. North America (contrastive) — Nanabozho and Mishipeshu: the refusal — the chapter where area specialists (Hallowell, Johnston, T. Smith, Vizenor) are foregrounded and the chaoskampf framing is explicitly declined.
+
+### Part II — thematic comparative chapters
+Part II is where the comparative work happens. Load-bearing (confirmed):
+- **C1. Combat as cosmogony** — Marduk, Ninurta/Asag, Gonggong, Huitzilopochtli.
+- **C2. Combat as sovereignty** — Baal/Yamm, Zeus/Typhon, Indra/Vṛtra, Thraētaona, Kumarbi/Ullikummi, Ninurta/Anzû.
+- **C3. Cyclical maintenance** — Ra/Apep, Illuyanka.
+- **C4. Eschatological displacement** — Thor/Jörmungandr, Rev 12, Frashokereti.
+
+Recommended additional comparative chapters (confirmed at scope-lock):
+- **C5. The Indo-European HERO SLAY SERPENT formula** — Watkins's argument from Indra through Sigurd to Beowulf.
+- **C6. The Near Eastern → Mediterranean transmission** — West / Burkert / López-Ruiz: Kumarbi → Hesiod; Baal/Yamm → Typhonomachy.
+- **C7. The inversion problem** — Bida anchor; the ambiguous status of Sigurd's slaying.
+- **C8. The refusal and the appropriation problem** — Nanabozho, Mwindo, Rainbow Serpent, and how not to flatten traditions into chaoskampf.
+
+### Front matter, back matter, and appendices
+- **Pre-chapter (00A-introduction)**: "What Chaoskampf is, and why the word is contested." Front-loaded framing of the category, Gunkel's 1895 thesis, the 20th/21st-century critiques (Scurlock & Beal, Ballentine), and the book's operational definition (§"Subject definition").
+- **Methods sidebar** between Part I and Part II: tier-ranking method, appropriation protocol, area-specialist citation policy.
+- **Reception coda** (final chapter, ~20–25 pages): traces the afterlife of the imagery in Milton's Satan, Christian iconography of St. Michael / St. George, Tolkien's dragons (and the 1936 Beowulf essay), modern kaiju (Godzilla and the Orochi lineage), and the continuing use of "chaos vs. order" rhetoric in contemporary religious interpretation. Explicitly *not* classified as chaoskampf; this is reception, not primary material.
+- **Adversaries + champions appendix** (replaces the single-culture "character appendix"): one entry per monster (Tiamat, Yamm, Lôtan, Leviathan, Rahab, Vṛtra, Aži Dahāka, Apep, Jörmungandr, Typhon, Illuyanka, Ullikummi, Hedammu, the Red Dragon, Coyolxauhqui, etc.) plus one entry per champion. This is load-bearing because the cross-cultural comparisons happen across *figures*, not plots.
+- **Bibliography**: preliminary estimate 150–250 entries.
+
+### Terminology default (locked)
+Headings and catalog use "Chaoskampf" (reader expectation, search-term coverage). Body prose uses "combat myth" as the default, reserving "Chaoskampf" for quotations, discussions of Gunkel's term, and the Part I and Part II passages where the specificity matters. This lets the book engage the Ballentine critique substantively rather than tokenistically.
+
+### Deferred decisions
+- Spanish edition (deferred at scope-lock; no effect on Part I/II work, but glossary-lock will need to re-check if/when this is decided).
+- Cover image (deferred; decide before `format-finalize`).
+
+## Book register
+Asimov-style retelling. Narrative prose in the body. Citations in AsciiDoc footnotes. Inferences, lacunae, reconstructions, appropriation warnings, and variants flagged inline with explicit markers. Plain-English register — no unexplained technical terms on first use; every ancient-language term glossed at first occurrence and collected in the glossary.
+
+## Meta
+- Book slug: `chaoskampf`
+- Version: scope v1 — draft of 2026-04-23
+- Author: Jose Blanca
+- Open questions before scope-lock closes: see `DECIDE_SCOPE.md`
+```
+
+---
+
+# Governing file: sources.yaml
+
+```
+# Source registry for the Chaoskampf book.
+# This file is a SEED: the comparative-scholarship backbone + the anchor critical edition for each CORE story.
+# Per-story additional sources (more translations, specialist monographs, journal articles) will accrue at chapter-briefs time.
+# All entries below are drawn from the research notes in books/chaoskampf/research/ — no guessed citations.
+
+meta:
+  stage: scope-lock
+  version: v1-seed
+  date: 2026-04-23
+  note: "Seeded from DECISION_REPORT + the seven research notes. Additional per-story sources will be added at chapter-briefs."
+
+registry:
+  # ── Digital primary corpora ─────────────────────────────────────────
+
+  - id: etcsl
+    source_tier: primary-translation
+    in_scope: true
+    author: "Black, Jeremy; Cunningham, Graham; Flückiger-Hawker, Esther; Robson, Eleanor; Zólyomi, Gábor"
+    title: "The Electronic Text Corpus of Sumerian Literature"
+    year: 1998
+    full_citation: "Black, J.A., Cunningham, G., Flückiger-Hawker, E., Robson, E., and Zólyomi, G., *The Electronic Text Corpus of Sumerian Literature* (https://etcsl.orinst.ox.ac.uk/), Oxford, 1998–2006."
+    short_citation: "ETCSL"
+    identifier_type: stable-url
+    identifier_value: "https://etcsl.orinst.ox.ac.uk/"
+    access_url: "https://etcsl.orinst.ox.ac.uk/"
+    notes: "Standard digital corpus of transliterated and translated Sumerian literary texts. Primary reference for Ninurta/Asag (Lugal-e, ETCSL 1.6.2) and the Sumerian background of Ninurta/Anzû."
+
+  # ── Comparative / theoretical spine ─────────────────────────────────
+
+  - id: gunkel-1895
+    source_tier: secondary
+    in_scope: true
+    author: "Gunkel, Hermann"
+    title: "Schöpfung und Chaos in Urzeit und Endzeit"
+    year: 1895
+    full_citation: "Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit: Eine religionsgeschichtliche Untersuchung über Gen 1 und Ap Joh 12* (Göttingen: Vandenhoeck & Ruprecht, 1895)."
+    short_citation: "Gunkel 1895"
+    identifier_type: stable-url
+    identifier_value: "https://archive.org/details/schpfungundchao00gunkgoog"
+    notes: "Coined the term Chaoskampf. Retain as historical anchor even where later scholarship has superseded the framing."
+
+  - id: fontenrose-1959
+    source_tier: secondary
+    in_scope: true
+    author: "Fontenrose, Joseph"
+    title: "Python: A Study of Delphic Myth and Its Origins"
+    year: 1959
+    full_citation: "Fontenrose, J., *Python: A Study of Delphic Myth and Its Origins* (Berkeley: University of California Press, 1959)."
+    short_citation: "Fontenrose 1959"
+    identifier_type: ISBN
+    identifier_value: "9780520040915"
+    notes: "Foundational comparative treatment of dragon-combat, including the Apollo/Python cult-foundation argument."
+
+  - id: wakeman-1973
+    source_tier: secondary
+    in_scope: true
+    author: "Wakeman, Mary K."
+    title: "God's Battle with the Monster: A Study in Biblical Imagery"
+    year: 1973
+    full_citation: "Wakeman, M.K., *God's Battle with the Monster: A Study in Biblical Imagery* (Leiden: Brill, 1973)."
+    short_citation: "Wakeman 1973"
+    identifier_type: ISBN
+    identifier_value: "9789004037526"
+    notes: "Core comparative treatment linking Mesopotamian combat-myth to Hebrew Bible imagery."
+
+  - id: day-1985
+    source_tier: secondary
+    in_scope: true
+    author: "Day, John"
+    title: "God's Conflict with the Dragon and the Sea: Echoes of a Canaanite Myth in the Old Testament"
+    year: 1985
+    full_citation: "Day, J., *God's Conflict with the Dragon and the Sea: Echoes of a Canaanite Myth in the Old Testament* (Cambridge: Cambridge University Press, 1985)."
+    short_citation: "Day 1985"
+    identifier_type: ISBN
+    identifier_value: "9781532692659"
+    notes: "Canonical monograph on the Leviathan/Rahab corpus and its Ugaritic background."
+
+  - id: forsyth-1987
+    source_tier: secondary
+    in_scope: true
+    author: "Forsyth, Neil"
+    title: "The Old Enemy: Satan and the Combat Myth"
+    year: 1987
+    full_citation: "Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987)."
+    short_citation: "Forsyth 1987"
+    identifier_type: ISBN
+    identifier_value: "9780691014746"
+    notes: "Traces the combat myth from Sumer through Judeo-Christian apocalyptic. Full catalog-level treatment."
+
+  - id: burkert-1992
+    source_tier: secondary
+    in_scope: true
+    author: "Burkert, Walter"
+    title: "The Orientalizing Revolution: Near Eastern Influence on Greek Culture in the Early Archaic Age"
+    year: 1992
+    full_citation: "Burkert, W., *The Orientalizing Revolution: Near Eastern Influence on Greek Culture in the Early Archaic Age*, trans. M.E. Pinder and W. Burkert (Cambridge, MA: Harvard University Press, 1992)."
+    short_citation: "Burkert 1992"
+    identifier_type: ISBN
+    identifier_value: "9780674643642"
+    notes: "Key for the Near-Eastern-to-Greek transmission of combat myth."
+
+  - id: watkins-1995
+    source_tier: secondary
+    in_scope: true
+    author: "Watkins, Calvert"
+    title: "How to Kill a Dragon: Aspects of Indo-European Poetics"
+    year: 1995
+    full_citation: "Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995)."
+    short_citation: "Watkins 1995"
+    identifier_type: ISBN
+    identifier_value: "9780195085952"
+    notes: "The 'HERO SLAY SERPENT' formula. Anchor for all IE entries (Indra, Thraētaona, Illuyanka, Thor, Sigurd, Beowulf, Zeus)."
+
+  - id: tolkien-1936-monsters
+    source_tier: secondary
+    in_scope: true
+    author: "Tolkien, J.R.R."
+    title: "Beowulf: The Monsters and the Critics"
+    year: 1936
+    container_title: "Proceedings of the British Academy"
+    full_citation: "Tolkien, J.R.R., 'Beowulf: The Monsters and the Critics', *Proceedings of the British Academy* 22 (1936): 245–295; reprinted in *The Monsters and the Critics and Other Essays*, ed. Christopher Tolkien (London: George Allen & Unwin, 1983): 5–48."
+    short_citation: "Tolkien 1936"
+    identifier_type: stable-url
+    identifier_value: "https://www.britac.ac.uk/pubs/proc/files/22p245.pdf"
+    notes: "British Academy lecture (delivered 25 November 1936); the load-bearing critical move that re-established the mythic register of the *Beowulf* monsters within twentieth-century Old English scholarship. Cited in Ch19 (Beowulf sub-section); literary-critical afterlife deferred to Ch42 (reception coda)."
+
+  - id: west-1997
+    source_tier: secondary
+    in_scope: true
+    author: "West, M.L."
+    title: "The East Face of Helicon: West Asiatic Elements in Greek Poetry and Myth"
+    year: 1997
+    full_citation: "West, M.L., *The East Face of Helicon: West Asiatic Elements in Greek Poetry and Myth* (Oxford: Clarendon Press, 1997)."
+    short_citation: "West 1997"
+    identifier_type: ISBN
+    identifier_value: "9780198150428"
+    notes: "Greek-Near Eastern interface. Central for Zeus-Typhon, Kumarbi-Ullikummi."
+
+  - id: west-2007
+    source_tier: secondary
+    in_scope: true
+    author: "West, M.L."
+    title: "Indo-European Poetry and Myth"
+    year: 2007
+    full_citation: "West, M.L., *Indo-European Poetry and Myth* (Oxford: Oxford University Press, 2007)."
+    short_citation: "West 2007"
+    identifier_type: ISBN
+    identifier_value: "9780199280759"
+    notes: "Comparative IE. Chapter 6 ('Storm and Stream') places Thor with the IE storm-god/water-dragon complex."
+
+  - id: scurlock-beal-2013
+    source_tier: secondary
+    in_scope: true
+    author: "Scurlock, JoAnn; Beal, Richard (eds.)"
+    title: "Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis"
+    year: 2013
+    full_citation: "Scurlock, J. and Beal, R. (eds.), *Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis* (Winona Lake: Eisenbrauns, 2013)."
+    short_citation: "Scurlock & Beal 2013"
+    identifier_type: ISBN
+    identifier_value: "9781575062792"
+    notes: "Direct reassessment of Gunkel. Essential for the book's terminological framing."
+
+  - id: ogden-2013
+    source_tier: secondary
+    in_scope: true
+    author: "Ogden, Daniel"
+    title: "Drakōn: Dragon Myth and Serpent Cult in the Greek and Roman Worlds"
+    year: 2013
+    full_citation: "Ogden, D., *Drakōn: Dragon Myth and Serpent Cult in the Greek and Roman Worlds* (Oxford: Oxford University Press, 2013)."
+    short_citation: "Ogden 2013"
+    identifier_type: ISBN
+    identifier_value: "9780199557325"
+    notes: "Current Greek/Roman survey. Classifies drakontes and their adversaries."
+
+  - id: ballentine-2015
+    source_tier: secondary
+    in_scope: true
+    author: "Ballentine, Debra Scoggins"
+    title: "The Conflict Myth and the Biblical Tradition"
+    year: 2015
+    full_citation: "Ballentine, D.S., *The Conflict Myth and the Biblical Tradition* (New York: Oxford University Press, 2015)."
+    short_citation: "Ballentine 2015"
+    identifier_type: ISBN
+    identifier_value: "9780199370252"
+    notes: "Argues 'chaos' is the wrong word. Central dissenting position the book must engage."
+
+  - id: lincoln-2012
+    source_tier: secondary
+    in_scope: true
+    author: "Lincoln, Bruce"
+    title: "Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions"
+    year: 2012
+    full_citation: "Lincoln, B., *Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions* (Chicago: University of Chicago Press, 2012)."
+    short_citation: "Lincoln 2012"
+    identifier_type: ISBN
+    identifier_value: "9780226481876"
+    notes: "Treats combat myths as political-ideological."
+
+  - id: witzel-2012
+    source_tier: comparative
+    in_scope: true
+    author: "Witzel, Michael"
+    title: "The Origins of the World's Mythologies"
+    year: 2012
+    full_citation: "Witzel, M., *The Origins of the World's Mythologies* (New York: Oxford University Press, 2012)."
+    short_citation: "Witzel 2012"
+    identifier_type: ISBN
+    identifier_value: "9780199812851"
+    notes: "Use with caution — the 'Laurasian' macro-scheme is controversial. Cited where it engages specific stories, not as framework."
+
+  # ── Critical-edition anchor per CORE story ──────────────────────────
+
+  - id: vandijk-1983-lugale
+    source_tier: primary-translation
+    in_scope: true
+    author: "van Dijk, J.J.A."
+    title: "LUGAL UD ME-LÁM-bi NIR-ĜÁL: Le récit épique et didactique des Travaux de Ninurta, du Déluge et de la Nouvelle Création"
+    year: 1983
+    full_citation: "van Dijk, J.J.A., *LUGAL UD ME-LÁM-bi NIR-ĜÁL: Le récit épique et didactique des Travaux de Ninurta, du Déluge et de la Nouvelle Création*, 2 vols. (Leiden: Brill, 1983)."
+    short_citation: "van Dijk 1983"
+    identifier_type: ISBN
+    identifier_value: "9789004069169"
+    notes: "Standard critical edition of Lugal-e. Anchor for the Ninurta/Asag chapter."
+
+  - id: annus-2001-anzu
+    source_tier: primary-translation
+    in_scope: true
+    author: "Annus, Amar"
+    title: "The Standard Babylonian Epic of Anzu: Introduction, Cuneiform Text, Transliteration, Score, Glossary, Indices and Sign List"
+    year: 2001
+    full_citation: "Annus, A., *The Standard Babylonian Epic of Anzu* (State Archives of Assyria Cuneiform Texts 3, Helsinki: Neo-Assyrian Text Corpus Project, 2001)."
+    short_citation: "Annus 2001"
+    identifier_type: ISBN
+    identifier_value: "9789514590511"
+    notes: "Anchor for Ninurta/Anzû. Verify format before final citation — SAACT series numbering."
+
+  - id: lambert-2013
+    source_tier: primary-translation
+    in_scope: true
+    author: "Lambert, W.G."
+    title: "Babylonian Creation Myths"
+    year: 2013
+    full_citation: "Lambert, W.G., *Babylonian Creation Myths*, Mesopotamian Civilizations 16 (Winona Lake: Eisenbrauns, 2013)."
+    short_citation: "Lambert 2013"
+    identifier_type: ISBN
+    identifier_value: "9781575062471"
+    notes: "Definitive critical edition of Enūma Eliš and related material. Anchor for Marduk/Tiamat."
+
+  - id: foster-2005
+    source_tier: primary-translation
+    in_scope: true
+    author: "Foster, Benjamin R."
+    title: "Before the Muses: An Anthology of Akkadian Literature"
+    year: 2005
+    full_citation: "Foster, B.R., *Before the Muses: An Anthology of Akkadian Literature*, 3rd ed. (Bethesda: CDL Press, 2005)."
+    short_citation: "Foster 2005"
+    identifier_type: ISBN
+    identifier_value: "9781883053765"
+    notes: "Standard English anthology. Used for Enūma Eliš, Anzu, Atrahasis, Labbu."
+
+  - id: hoffner-1998
+    source_tier: primary-translation
+    in_scope: true
+    author: "Hoffner, Harry A. Jr."
+    title: "Hittite Myths"
+    year: 1998
+    full_citation: "Hoffner, H.A., *Hittite Myths*, 2nd ed., SBL Writings from the Ancient World 2 (Atlanta: Society of Biblical Literature, 1998)."
+    short_citation: "Hoffner 1998"
+    identifier_type: ISBN
+    identifier_value: "9780788504884"
+    notes: "Anchor for Illuyanka and the Kumarbi Cycle (Song of Ullikummi, Song of Hedammu, Kingship in Heaven)."
+
+  - id: beckman-1982-illuyanka
+    source_tier: secondary
+    in_scope: true
+    author: "Beckman, Gary"
+    title: "The Anatolian Myth of Illuyanka"
+    year: 1982
+    container_title: "Journal of the Ancient Near Eastern Society"
+    full_citation: "Beckman, G., 'The Anatolian Myth of Illuyanka', *Journal of the Ancient Near Eastern Society* 14 (1982): 11–25."
+    short_citation: "Beckman 1982"
+    identifier_type: stable-url
+    identifier_value: "https://janes.scholasticahq.com/"
+    notes: "Standard philological edition and translation of Illuyanka."
+
+  - id: smith-1994-baal-i
+    source_tier: primary-translation
+    in_scope: true
+    author: "Smith, Mark S."
+    title: "The Ugaritic Baal Cycle, Volume I: Introduction with Text, Translation and Commentary of KTU 1.1–1.2"
+    year: 1994
+    full_citation: "Smith, M.S., *The Ugaritic Baal Cycle, Volume I: Introduction with Text, Translation and Commentary of KTU 1.1–1.2* (Leiden: Brill, 1994)."
+    short_citation: "Smith 1994"
+    identifier_type: ISBN
+    identifier_value: "9789004099951"
+    notes: "Baal-Yamm arc. Anchor for the Baal chapter."
+
+  - id: smith-pitard-2009-baal-ii
+    source_tier: primary-translation
+    in_scope: true
+    author: "Smith, Mark S.; Pitard, Wayne T."
+    title: "The Ugaritic Baal Cycle, Volume II: Introduction with Text, Translation and Commentary of KTU/CAT 1.3–1.4"
+    year: 2009
+    full_citation: "Smith, M.S. and Pitard, W.T., *The Ugaritic Baal Cycle, Volume II: Introduction with Text, Translation and Commentary of KTU/CAT 1.3–1.4* (Leiden: Brill, 2009)."
+    short_citation: "Smith & Pitard 2009"
+    identifier_type: ISBN
+    identifier_value: "9789004153486"
+    notes: "Palace-building cycle. Second half of the Baal anchor."
+
+  - id: west-1966-theogony
+    source_tier: primary-translation
+    in_scope: true
+    author: "West, M.L. (ed.)"
+    title: "Hesiod: Theogony"
+    year: 1966
+    full_citation: "West, M.L. (ed.), *Hesiod: Theogony* (Oxford: Clarendon Press, 1966)."
+    short_citation: "West 1966"
+    identifier_type: ISBN
+    identifier_value: "9780198141693"
+    notes: "Critical edition with commentary. Anchor for Zeus/Typhon."
+
+  - id: jamison-brereton-2014
+    source_tier: primary-translation
+    in_scope: true
+    author: "Jamison, Stephanie; Brereton, Joel"
+    title: "The Rigveda: The Earliest Religious Poetry of India"
+    year: 2014
+    full_citation: "Jamison, S.W. and Brereton, J.P., *The Rigveda: The Earliest Religious Poetry of India*, 3 vols. (New York: Oxford University Press, 2014)."
+    short_citation: "Jamison & Brereton 2014"
+    identifier_type: ISBN
+    identifier_value: "9780199370184"
+    notes: "Current scholarly-standard English Rigveda. Anchor for Indra/Vṛtra and Trita Āptya."
+
+  - id: tagare-bhagavata
+    source_tier: primary-translation
+    in_scope: true
+    author: "Tagare, Ganesh Vasudeo"
+    title: "The Bhāgavata Purāṇa, Translated and Annotated"
+    year: 1976-1979
+    full_citation: "Tagare, G.V., *The Bhāgavata Purāṇa, Translated and Annotated*, 5 vols., Ancient Indian Tradition and Mythology series 7–11 (Delhi: Motilal Banarsidass, 1976–1978)."
+    short_citation: "Tagare 1976–78"
+    identifier_type: series
+    identifier_value: "Ancient Indian Tradition and Mythology 7–11"
+    notes: "Standard scholarly English translation of the Bhāgavata Purāṇa. Anchor for the Krishna-Kāliya episode (book 10 chs. 15–17) in Ch15."
+
+  - id: benveniste-renou-1934
+    source_tier: secondary
+    in_scope: true
+    author: "Benveniste, Émile; Renou, Louis"
+    title: "Vṛtra et Vṛθragna: Étude de mythologie indo-iranienne"
+    year: 1934
+    full_citation: "Benveniste, É. and Renou, L., *Vṛtra et Vṛθragna: Étude de mythologie indo-iranienne*, Cahiers de la Société Asiatique 3 (Paris: Imprimerie Nationale, 1934)."
+    short_citation: "Benveniste & Renou 1934"
+    identifier_type: stable-url
+    identifier_value: "https://gallica.bnf.fr/"
+    notes: "Foundational Indo-Iranian comparative study. Essential for Indra/Vṛtra and Thraētaona/Aži Dahāka."
+
+  - id: faulkner-1972-bod
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkner, Raymond O."
+    title: "The Ancient Egyptian Book of the Dead"
+    year: 1972
+    full_citation: "Faulkner, R.O., *The Ancient Egyptian Book of the Dead*, rev. ed., ed. Carol Andrews (London: British Museum, 1985; orig. 1972)."
+    short_citation: "Faulkner 1972 (rev. 1985)"
+    identifier_type: ISBN
+    identifier_value: "9780292704251"
+    notes: "Standard English Book of the Dead including Apep-slaying spells."
+
+  - id: faulkner-1936-bremner-rhind
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkner, Raymond O."
+    title: "The Bremner-Rhind Papyrus I–IV"
+    year: 1936
+    full_citation: "Faulkner, R.O., 'The Bremner-Rhind Papyrus I–IV', *Journal of Egyptian Archaeology* 22 (1936): 121–140; 23 (1937): 10–16, 166–185; 24 (1938): 41–53."
+    short_citation: "Faulkner 1936–38 (JEA 22–24)"
+    identifier_type: jstor-collection
+    identifier_value: "JEA 22, 23, 24"
+    notes: "Faulkner's four-part philological edition of Papyrus BM EA 10188 (Bremner-Rhind) — the *Book of Overthrowing Apep* — published as articles in JEA across 1936–38. Distinct from Faulkner's 1972 Book of the Dead translation. Anchor for Ch16 ritual-embedding section."
+
+  - id: te-velde-1967
+    source_tier: secondary
+    in_scope: true
+    author: "te Velde, Herman"
+    title: "Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion"
+    year: 1967
+    full_citation: "te Velde, H., *Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion*, 2nd ed. (Leiden: Brill, 1977; orig. 1967)."
+    short_citation: "te Velde 1967"
+    identifier_type: ISBN
+    identifier_value: "9789004054028"
+    notes: "Core study of Seth as Apep-slayer and as ambivalent figure. Anchors both Ra/Apep and Horus/Seth."
+
+  - id: assmann-2001-search
+    source_tier: secondary
+    in_scope: true
+    author: "Assmann, Jan"
+    title: "The Search for God in Ancient Egypt"
+    year: 2001
+    full_citation: "Assmann, J., *The Search for God in Ancient Egypt*, trans. David Lorton (Ithaca: Cornell University Press, 2001)."
+    short_citation: "Assmann 2001"
+    identifier_type: ISBN
+    identifier_value: "9780801487293"
+    notes: "maʿat vs. isfet framework. Central to Ra/Apep chapter."
+
+  - id: yarbro-collins-1976
+    source_tier: secondary
+    in_scope: true
+    author: "Yarbro Collins, Adela"
+    title: "The Combat Myth in the Book of Revelation"
+    year: 1976
+    full_citation: "Yarbro Collins, A., *The Combat Myth in the Book of Revelation*, Harvard Dissertations in Religion 9 (Missoula: Scholars Press, 1976)."
+    short_citation: "Yarbro Collins 1976"
+    identifier_type: ISBN
+    identifier_value: "9780891300571"
+    notes: "Central study of Rev 12. Traces the NT eschatologisation of the Hebrew Bible combat tradition."
+
+  - id: aune-revelation
+    source_tier: secondary
+    in_scope: true
+    author: "Aune, David E."
+    title: "Revelation"
+    year: 1997
+    full_citation: "Aune, D.E., *Revelation*, Word Biblical Commentary 52A–C, 3 vols. (Dallas: Word Books / Nashville: Nelson, 1997–1998)."
+    short_citation: "Aune 1997–98"
+    identifier_type: ISBN
+    identifier_value: "9780849902512"
+    notes: "Standard historical-critical commentary including the Rev 12 dragon passage."
+
+  - id: larrington-poetic-edda
+    source_tier: primary-translation
+    in_scope: true
+    author: "Larrington, Carolyne"
+    title: "The Poetic Edda"
+    year: 2014
+    full_citation: "Larrington, C. (trans.), *The Poetic Edda*, rev. ed. (Oxford: Oxford University Press, 2014)."
+    short_citation: "Larrington 2014"
+    identifier_type: ISBN
+    identifier_value: "9780199675340"
+    notes: "Working translation. For philological anchor use Dronke or Neckel/Kuhn as cross-check."
+
+  - id: faulkes-snorri
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkes, Anthony (ed. and trans.)"
+    title: "Edda (by Snorri Sturluson)"
+    year: 1987
+    full_citation: "Sturluson, S., *Edda*, trans. A. Faulkes (London: Dent / Everyman, 1987; Viking Society for Northern Research ed. 2005)."
+    short_citation: "Faulkes 1987"
+    identifier_type: ISBN
+    identifier_value: "9780460876162"
+    notes: "Standard English Prose Edda. Anchor for Thor/Jörmungandr."
+
+  - id: lewis-2006-flood
+    source_tier: secondary
+    in_scope: true
+    author: "Lewis, Mark Edward"
+    title: "The Flood Myths of Early China"
+    year: 2006
+    full_citation: "Lewis, M.E., *The Flood Myths of Early China* (Albany: SUNY Press, 2006)."
+    short_citation: "Lewis 2006"
+    identifier_type: ISBN
+    identifier_value: "9780791466636"
+    notes: "Anchor for Gonggong and the Yu-sidebar."
+
+  - id: birrell-1993
+    source_tier: secondary
+    in_scope: true
+    author: "Birrell, Anne"
+    title: "Chinese Mythology: An Introduction"
+    year: 1993
+    full_citation: "Birrell, A., *Chinese Mythology: An Introduction* (Baltimore: Johns Hopkins University Press, 1993)."
+    short_citation: "Birrell 1993"
+    identifier_type: ISBN
+    identifier_value: "9780801849954"
+    notes: "General Chinese reference — use with Lewis and Mathieu for triangulation."
+
+  - id: matos-moctezuma-templo-mayor
+    source_tier: secondary
+    in_scope: true
+    author: "Matos Moctezuma, Eduardo"
+    title: "The Great Temple of the Aztecs: Treasures of Tenochtitlan"
+    year: 1988
+    full_citation: "Matos Moctezuma, E., *The Great Temple of the Aztecs: Treasures of Tenochtitlan* (London: Thames & Hudson, 1988)."
+    short_citation: "Matos Moctezuma 1988"
+    identifier_type: ISBN
+    identifier_value: "9780500390245"
+    notes: "Templo Mayor = Coatepec interpretation. Anchor for Huitzilopochtli chapter."
+
+  - id: carrasco-1999-city
+    source_tier: secondary
+    in_scope: true
+    author: "Carrasco, Davíd"
+    title: "City of Sacrifice: The Aztec Empire and the Role of Violence in Civilization"
+    year: 1999
+    full_citation: "Carrasco, D., *City of Sacrifice: The Aztec Empire and the Role of Violence in Civilization* (Boston: Beacon Press, 1999)."
+    short_citation: "Carrasco 1999"
+    identifier_type: ISBN
+    identifier_value: "9780807046425"
+    notes: "Huitzilopochtli ritual/political reading."
+
+  - id: lopez-austin-myths
+    source_tier: secondary
+    in_scope: true
+    author: "López Austin, Alfredo"
+    title: "The Myths of the Opossum: Pathways of Mesoamerican Mythology"
+    year: 1993
+    full_citation: "López Austin, A., *The Myths of the Opossum: Pathways of Mesoamerican Mythology*, trans. B.R. Ortiz de Montellano and T. Ortiz de Montellano (Albuquerque: University of New Mexico Press, 1993)."
+    short_citation: "López Austin 1993"
+    identifier_type: ISBN
+    identifier_value: "9780826313942"
+    notes: "Used for Cipactli, Huitzilopochtli, Quetzalcoatl/Tezcatlipoca."
+
+  - id: anderson-dibble-florentine
+    source_tier: primary-translation
+    in_scope: true
+    author: "Anderson, Arthur J.O.; Dibble, Charles E. (trans. and eds.)"
+    title: "Florentine Codex: General History of the Things of New Spain"
+    year: "1950-1982"
+    full_citation: "Sahagún, B. de, *Florentine Codex: General History of the Things of New Spain*, trans. and ed. A.J.O. Anderson and C.E. Dibble, 13 vols. (Santa Fe: School of American Research / Salt Lake City: University of Utah Press, 1950-1982)."
+    short_citation: "Anderson-Dibble 1950-82"
+    identifier_type: ISBN
+    identifier_value: "9780874800821"
+    notes: "Standard scholarly English translation of the Nahuatl Florentine Codex (Sahagún, c. 1545-1590). Book 3 (\"The Origin of the Gods\") is the principal narrative anchor for the Coatepec / Huitzilopochtli / Coyolxauhqui / Centzon Huitznahua episode. Added at post-human-normalize for Ch24 FC-03 to anchor Florentine Codex narrative-detail citations directly at the chapter-draft stage rather than routing through Matos Moctezuma 1988 / Carrasco 1999 as secondary interpreters."
+
+  # ── Tradition-specific anchors for RELATED entries ──────────────────
+
+  - id: salomon-urioste-huarochiri
+    source_tier: primary-translation
+    in_scope: true
+    author: "Salomon, Frank; Urioste, George L. (trans. and eds.)"
+    title: "The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion"
+    year: 1991
+    full_citation: "Salomon, F. and Urioste, G.L. (trans. and eds.), *The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion* (Austin: University of Texas Press, 1991)."
+    short_citation: "Salomon & Urioste 1991"
+    identifier_type: ISBN
+    identifier_value: "9780292730533"
+    notes: "Anchor for Pariacaca."
+
+  - id: koessler-ilg-cuentan
+    source_tier: primary-translation
+    in_scope: true
+    author: "Koessler-Ilg, Bertha"
+    title: "Cuentan los araucanos: Mitos, leyendas y tradiciones"
+    year: 1954
+    full_citation: "Koessler-Ilg, B., *Cuentan los araucanos: Mitos, leyendas y tradiciones* (Buenos Aires: Espasa-Calpe, Colección Austral no. 1208, 1954)."
+    short_citation: "Koessler-Ilg 1954"
+    identifier_type: stable-url
+    identifier_value: "https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/BDUNCU_f331a4b9b4ecdd61224cf08ff45c49bd"
+    notes: "Foundational Spanish-language compilation of Mapuche oral narratives recorded in the 1920s-30s. Expansion of the German original *Märchenerzähler ohne Buch* (Stuttgart, 1928). Principal narrative anchor for the Kai-Kai / Tren-Tren cosmogony and adjacent material. Edition correction at post-human-normalize per Ch27 FC-04: the 1954 Espasa-Calpe Austral edition (Colección Austral no. 1208, Buenos Aires, 153 pp.) is the canonical Spanish-language scholarly citation; an earlier 1962 Editorial Mar Océano edition recorded in this entry could not be independently confirmed in WorldCat or in the Argentine mincyt repository. The stable-url identifier points to the Argentine government repositoriosdigitales.mincyt.gob.ar entry that confirms the 1954 Espasa-Calpe Austral edition. OCLC pending verification at chapter-draft."
+
+  - id: foerster-religiosidad-mapuche
+    source_tier: secondary
+    in_scope: true
+    author: "Foerster González, Rolf"
+    title: "Introducción a la religiosidad mapuche"
+    year: 1993
+    full_citation: "Foerster González, R., *Introducción a la religiosidad mapuche* (Santiago: Editorial Universitaria, 1993)."
+    short_citation: "Foerster 1993"
+    identifier_type: ISBN
+    identifier_value: "9789561109124"
+    notes: "Modern ethnographic-religious anchor for Mapuche cosmology, the Wenu Mapu / Naq Mapu / Minche Mapu cosmographic system, and the ngillatun ritual. Anchor for the Ch27 area-specialist framing. ISBN corrected at post-human-normalize per Ch27 FC-01 (digit-transposition data-entry error: 9789561109315 → 9789561109124, confirmed against AbeBooks, Amazon, University of Chile repository, buscalibre.cl, serindigena.org, and the University of Chicago catalog record)."
+
+  - id: bacigalupo-shamans-foye
+    source_tier: secondary
+    in_scope: true
+    author: "Bacigalupo, Ana Mariella"
+    title: "Shamans of the Foye Tree: Gender, Power, and Healing among Chilean Mapuche"
+    year: 2007
+    full_citation: "Bacigalupo, A.M., *Shamans of the Foye Tree: Gender, Power, and Healing among Chilean Mapuche* (Austin: University of Texas Press, 2007)."
+    short_citation: "Bacigalupo 2007"
+    identifier_type: ISBN
+    identifier_value: "9780292716599"
+    notes: "Anthropological anchor on contemporary Mapuche shamanism (machi) and ritual practice. Used in Ch27 for the area-specialist appropriation framing alongside Foerster, Course, and Faron."
+
+  - id: course-becoming-mapuche
+    source_tier: secondary
+    in_scope: true
+    author: "Course, Magnus"
+    title: "Becoming Mapuche: Person and Ritual in Indigenous Chile"
+    year: 2011
+    full_citation: "Course, M., *Becoming Mapuche: Person and Ritual in Indigenous Chile* (Urbana: University of Illinois Press, 2011)."
+    short_citation: "Course 2011"
+    identifier_type: ISBN
+    identifier_value: "9780252078231"
+    notes: "Modern ethnographic anchor on Mapuche personhood, the cosmological framework underpinning ritual practice, and the area-specialist reading that resists chaos-vs-order framings of Mapuche cosmogonic material. ISBN corrected at post-human-normalize per Ch27 FC-02 (the previous identifier 9780252078163 did not match any confirmed catalogue record; 9780252078231 is the paperback ISBN per the University of Illinois Press catalogue and Amazon; the hardcover ISBN 9780252036477 is the alternative). Paperback selected as the more accessible standard."
+
+  - id: faron-hawks-of-sun
+    source_tier: secondary
+    in_scope: true
+    author: "Faron, Louis C."
+    title: "Hawks of the Sun: Mapuche Morality and Its Ritual Attributes"
+    year: 1964
+    full_citation: "Faron, L.C., *Hawks of the Sun: Mapuche Morality and Its Ritual Attributes* (Pittsburgh: University of Pittsburgh Press, 1964)."
+    short_citation: "Faron 1964"
+    identifier_type: OCLC
+    identifier_value: "320079821"
+    notes: "Mid-20th-century classic anthropological anchor in the English-language Mapuche-studies bibliography. Pre-dates the modern area-specialist tradition (Foerster, Bacigalupo, Course) but supplies the structural-ritual framework on which they build. OCLC corrected at post-human-normalize per Ch27 FC-03 (the previous identifier 247070 could not be confirmed as the dominant WorldCat record; 320079821 is the verified WorldCat record per https://search.worldcat.org/es/title/Hawks-of-the-sun-:-Mapuche-morality-and-its-ritual-attributes/oclc/320079821)."
+
+  - id: biebuyck-mateene-mwindo
+    source_tier: primary-translation
+    in_scope: true
+    author: "Biebuyck, Daniel; Mateene, Kahombo C. (trans. and eds.)"
+    title: "The Mwindo Epic from the Banyanga"
+    year: 1969
+    full_citation: "Biebuyck, D. and Mateene, K.C. (trans. and eds.), *The Mwindo Epic from the Banyanga (Zaire)* (Berkeley: University of California Press, 1969)."
+    short_citation: "Biebuyck & Mateene 1969"
+    identifier_type: ISBN
+    identifier_value: "9780520003767"
+    notes: "Used for the Mwindo contrastive case."
+
+  - id: eugenio-philippine-myths
+    source_tier: primary-translation
+    in_scope: true
+    author: "Eugenio, Damiana L. (ed.)"
+    title: "Philippine Folk Literature: The Myths"
+    year: 2001
+    full_citation: "Eugenio, D.L. (ed.), *Philippine Folk Literature: The Myths* (Quezon City: University of the Philippines Press, 2001)."
+    short_citation: "Eugenio 2001"
+    identifier_type: ISBN
+    identifier_value: "9789715422918"
+    notes: "Volume II in Eugenio's eight-volume Philippine Folk Literature series (Quezon City: University of the Philippines Press, 2001; 546 pp.), the standard scholarly compilation of Philippine oral-tradition narratives across the archipelago. Principal anchor for the Bakunawa material. ISBN corrected at post-human-normalize 2026-05-01 per Ch30 FC-01: the originally-pinned ISBN 9789715421140 was wrong; the correct ISBN-13 is 9789715422918, confirmed via the UP Press product page (https://press.up.edu.ph/product/philippine-folk-literature-the-myths/), Amazon (ASIN 9715422918 → ISBN-13 9789715422918), AbeBooks listing for Vol. 2, and the Philippine-Books retailer catalog. Provisional flag removed; correction follows the Ch20 FC-03 / Ch24 FC-03 / Ch27 ISBN-correction-in-place pattern."
+
+  - id: eliade-shamanism
+    source_tier: secondary
+    in_scope: true
+    author: "Eliade, Mircea"
+    title: "Shamanism: Archaic Techniques of Ecstasy"
+    year: 1964
+    full_citation: "Eliade, M., *Shamanism: Archaic Techniques of Ecstasy*, trans. W.R. Trask, Bollingen Series LXXVI (Princeton: Princeton University Press, 1964; reprinted 2004)."
+    short_citation: "Eliade 1964"
+    identifier_type: ISBN
+    identifier_value: "9780691119427"
+    notes: "ISBN corresponds to the 2004 Princeton Classics paperback reprint of the 1964 Bollingen Series translation by Willard R. Trask of Eliade's *Le Chamanisme et les techniques archaïques de l'extase* (Paris: Payot, 1951). Standard scholarly anchor for shamanic-cosmological treatments of Erlik / Ülgen and the broader Altaic-Siberian material."
+
+  - id: harva-altaic-religious
+    source_tier: secondary
+    in_scope: true
+    author: "Harva, Uno"
+    title: "Die religiösen Vorstellungen der altaischen Völker"
+    year: 1938
+    full_citation: "Harva, U., *Die religiösen Vorstellungen der altaischen Völker*, Folklore Fellows Communications no. 125 (Helsinki: Suomalainen Tiedeakatemia / Academia Scientiarum Fennica, 1938)."
+    short_citation: "Harva 1938"
+    identifier_type: stable-url
+    identifier_value: "https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker"
+    notes: "Standard early-20th-century reference for the religious cosmology of the Altaic / Turkic-Mongol peoples; the canonical scholarly anchor for the Erlik / Ülgen pairing. 1938 FFC publication has no ISBN. Stable-url corrected at post-human-normalize 2026-05-01 per Ch30 FC-02: the originally-pinned URL https://archive.org/details/diereligiosenvor0000unkn did not resolve; the correct archive.org identifier is DieReligioenVorstellungenDerAltaischenVolker (verified by direct WebFetch on 2026-05-01: archive.org confirms title 'Die religiösen Vorstellungen der altaischen Völker' attributed to 'Uno Holmberg' — Harva's birth-name, which he changed to Harva in 1935 before FFC 125 was published in 1938; the post-1935 scholarly citation name is Harva). Note: the original sources.yaml annotation recommended also checking OCLC at post-human-normalize as a more institutionally stable identifier; web-search via the available tools (CiNii, OpenLibrary, Heidelberg, AbeBooks) returned bibliographic confirmations of the work but did not surface a verifiable WorldCat OCLC for the FFC 125 1938 edition; OCLC pending verification at chapter-draft. Correction follows the Ch27 source-pinning / Ch24 FC-03 stable-url-correction-in-place pattern."
+
+  - id: philippi-kojiki
+    source_tier: primary-translation
+    in_scope: true
+    author: "Philippi, Donald L. (trans.)"
+    title: "Kojiki"
+    year: 1968
+    full_citation: "Philippi, D.L. (trans.), *Kojiki* (Tokyo: University of Tokyo Press / Princeton: Princeton University Press, 1968)."
+    short_citation: "Philippi 1968"
+    identifier_type: ISBN
+    identifier_value: "9780691611358"
+    notes: "Scholarly-standard English Kojiki. Anchor for Susanoo/Orochi. ISBN 9780691611358 corresponds to the Princeton paperback reprint of the 1968 joint U Tokyo Press / Princeton University Press edition; content is identical across editions."
+
+  - id: naumann-mythen
+    source_tier: secondary
+    in_scope: true
+    author: "Naumann, Nelly"
+    title: "Die Mythen des alten Japan"
+    year: 1996
+    full_citation: "Naumann, N., *Die Mythen des alten Japan* (München: C.H. Beck, 1996)."
+    short_citation: "Naumann 1996"
+    identifier_type: ISBN
+    identifier_value: "9783406421648"
+    notes: "Metallurgical-allegory reading of Susanoo/Orochi."
+
+  - id: russell-zoroastrianism-armenia
+    source_tier: secondary
+    in_scope: true
+    author: "Russell, James R."
+    title: "Zoroastrianism in Armenia"
+    year: 1987
+    full_citation: "Russell, J.R., *Zoroastrianism in Armenia*, Harvard Iranian Series 5 (Cambridge, MA: Harvard University, Department of Near Eastern Languages and Civilizations, 1987)."
+    short_citation: "Russell 1987"
+    identifier_type: ISBN
+    identifier_value: "9780674968509"
+    notes: "Anchor for Vahagn/Vishaps."
+
+  - id: bailey-ivanova-1998
+    source_tier: secondary
+    in_scope: true
+    author: "Bailey, James; Ivanova, Tatyana (eds.)"
+    title: "An Anthology of Russian Folk Epics"
+    year: 1998
+    full_citation: "Bailey, J. and Ivanova, T. (eds.), *An Anthology of Russian Folk Epics* (Armonk, NY: M.E. Sharpe, 1998)."
+    short_citation: "Bailey & Ivanova 1998"
+    identifier_type: ISBN
+    identifier_value: "9781563244889"
+    notes: "Major English-language anthology of the East Slavic *bylina* tradition, with introduction surveying the genre, the 19th-century collection history (Rybnikov, Hilferding), and the individual epics including the Dobrynya-Zmey-Gorynych cycle. Specialist anchor for Ch20 Dobrynya-cycle narrative and collection-history claims."
+
+  - id: siikala-finnish
+    source_tier: secondary
+    in_scope: true
+    author: "Siikala, Anna-Leena"
+    title: "Mythic Images and Shamanism: A Perspective on Kalevala Poetry"
+    year: 2002
+    full_citation: "Siikala, A.-L., *Mythic Images and Shamanism: A Perspective on Kalevala Poetry*, Folklore Fellows' Communications 280 (Helsinki: Academia Scientiarum Fennica, 2002)."
+    short_citation: "Siikala 2002"
+    identifier_type: ISBN
+    identifier_value: "9789514109027"
+    notes: "Anchor for Väinämöinen/Iku-Turso as transformed shamanic binding."
+
+  - id: conrad-west-africa
+    source_tier: secondary
+    in_scope: true
+    author: "Conrad, David C."
+    title: "Empires of Medieval West Africa: Ghana, Mali, and Songhay"
+    year: 2005
+    full_citation: "Conrad, D.C., *Empires of Medieval West Africa: Ghana, Mali, and Songhay* (New York: Facts on File, 2005)."
+    short_citation: "Conrad 2005"
+    identifier_type: ISBN
+    identifier_value: "9780816052622"
+    notes: "Anchor for Bida / Wagadu inversion chapter."
+
+  - id: belcher-epic
+    source_tier: secondary
+    in_scope: true
+    author: "Belcher, Stephen"
+    title: "Epic Traditions of Africa"
+    year: 1999
+    full_citation: "Belcher, S., *Epic Traditions of Africa* (Bloomington: Indiana University Press, 1999)."
+    short_citation: "Belcher 1999"
+    identifier_type: ISBN
+    identifier_value: "9780253212818"
+    notes: "Used for Mwindo and Bida."
+
+  - id: hallowell-ojibwa-world
+    source_tier: secondary
+    in_scope: true
+    author: "Hallowell, A. Irving"
+    title: "Ojibwa Ontology, Behavior, and World View"
+    year: 1960
+    full_citation: "Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in *Culture in History: Essays in Honor of Paul Radin*, ed. Stanley Diamond (New York: Columbia University Press, 1960), 19–52."
+    short_citation: "Hallowell 1960"
+    identifier_type: ISBN
+    identifier_value: "9780231024853"
+    notes: "Foundational 'other-than-human persons' framework. Anchor for the Nanabozho contrastive case."
+
+  - id: johnston-ojibway-heritage
+    source_tier: secondary
+    in_scope: true
+    author: "Johnston, Basil"
+    title: "Ojibway Heritage"
+    year: 1990
+    full_citation: "Johnston, Basil, *Ojibway Heritage* (Lincoln: University of Nebraska Press / Bison Books, 1990; orig. Toronto: McClelland and Stewart, 1976)."
+    short_citation: "Johnston 1990 [1976]"
+    identifier_type: ISBN
+    identifier_value: "9780803275720"
+    notes: "Insider Anishinaabe overview of cosmology, manitous, and the Nanabozho cycle; anchors the emic frame against which the chaoskampf reading is judged. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: johnston-manitous
+    source_tier: secondary
+    in_scope: true
+    author: "Johnston, Basil"
+    title: "The Manitous: The Spiritual World of the Ojibway"
+    year: 1995
+    full_citation: "Johnston, Basil, *The Manitous: The Spiritual World of the Ojibway* (New York: HarperCollins, 1995)."
+    short_citation: "Johnston 1995"
+    identifier_type: ISBN
+    identifier_value: "9780060171995"
+    notes: "Anishinaabe-authored treatment of manitous including Mishipeshu and Nanabozho; supports a relational rather than combat-cosmogonic reading. Minnesota Historical Society Press paperback (ISBN 9780873514118, 2001) is a widely cited alternate edition. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: smith-island-anishnaabeg
+    source_tier: secondary
+    in_scope: true
+    author: "Smith, Theresa S."
+    title: "The Island of the Anishnaabeg: Thunderers and Water Monsters in the Traditional Ojibwe Life-World"
+    year: 1995
+    full_citation: "Smith, Theresa S., *The Island of the Anishnaabeg: Thunderers and Water Monsters in the Traditional Ojibwe Life-World* (Moscow, ID: University of Idaho Press, 1995; paperback reprint Lincoln: University of Nebraska Press, 2012, ISBN 9780803238329)."
+    short_citation: "Smith 1995"
+    identifier_type: ISBN
+    identifier_value: "9780893011710"
+    notes: "Book-length study of the Thunderer / Underwater-manitou dialectic; key area-specialist source for reading Mishipeshu and the Thunderbirds as complementary rather than chaos-vs-order. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: vizenor-narrative-chance
+    source_tier: secondary
+    in_scope: true
+    author: "Vizenor, Gerald"
+    title: "Narrative Chance: Postmodern Discourse on Native American Indian Literatures"
+    year: 1989
+    full_citation: "Vizenor, Gerald (ed.), *Narrative Chance: Postmodern Discourse on Native American Indian Literatures* (Albuquerque: University of New Mexico Press, 1989; reprint Norman: University of Oklahoma Press, 1993, ISBN 9780806125619)."
+    short_citation: "Vizenor 1989"
+    identifier_type: ISBN
+    identifier_value: "9780826311177"
+    notes: "Contains Vizenor's 'Trickster Discourse' essay; anchors the methodological refusal to subordinate Nanabozho to Western combat-myth or hero/villain typologies. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: merlan-caging-rainbow
+    source_tier: secondary
+    in_scope: true
+    author: "Merlan, Francesca"
+    title: "Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town"
+    year: 1998
+    full_citation: "Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998)."
+    short_citation: "Merlan 1998"
+    identifier_type: ISBN
+    identifier_value: "9780824819668"
+    notes: "Central for the Rainbow Serpent methodological chapter."
+
+blacklist:
+  - pattern: "theoi.com"
+    reason: "Unattributed compilations; cite only the ancient sources it paraphrases, never theoi.com itself."
+  - pattern: "sacred-texts.com"
+    reason: "Archive of public-domain 19th-century translations, often superseded. Use only when a 19th-c. translation is itself the object of discussion."
+  - pattern: "Wikipedia citation as sole source"
+    reason: "Wikipedia may be used for orientation and for locating primary references; never as a terminal citation."
+  - pattern: "ancient-origins.net"
+    reason: "Sensationalist popularization. Never cite."
+  - pattern: "New Age / 'universal mythology' popularizations (Campbell's *Masks of God* as primary, Graves's *Greek Myths*, Pinsent, Cotterell popular compilations)"
+    reason: "Not peer-reviewed; often conflates traditions. Campbell and Graves may appear as reception/history-of-interpretation but never as factual anchors."
+
+triangulation_databases:
+  - id: etcsl
+    url: "https://etcsl.orinst.ox.ac.uk/"
+    covers: "Sumerian literary texts (Lugal-e, Sumerian flood story, Sumerian Anzu background)."
+  - id: cdli
+    url: "https://cdli.ucla.edu/"
+    covers: "Cuneiform tablet database; verify specific tablet numbers."
+  - id: oracc
+    url: "https://oracc.museum.upenn.edu/"
+    covers: "Open Richly Annotated Cuneiform Corpus — composite normalized texts, incl. Enūma Eliš, Anzu Epic."
+  - id: ctr-ugaritic
+    url: "https://www.zotero.org/groups/ugaritic/"
+    covers: "Ugaritic text references; cross-check KTU/CAT numbering."
+  - id: perseus
+    url: "http://www.perseus.tufts.edu/"
+    covers: "Greek and Latin primary texts — Hesiod, Apollodorus, Nonnus, Ovid, Virgil."
+  - id: titus
+    url: "https://titus.uni-frankfurt.de/"
+    covers: "Indo-European text archive — Vedic, Avestan, Hittite."
+  - id: kotenbunko
+    url: "https://www.nijl.ac.jp/"
+    covers: "Japanese classical texts (Kojiki, Nihon Shoki, Fudoki). Japanese-language; use with Philippi/Aston translations."
+  - id: worldcat
+    url: "https://www.worldcat.org/"
+    covers: "Catalog lookup for verifying edition/ISBN details of hard-to-find works (van Dijk 1983, Annus 2001)."
+
+notes:
+  scope: |
+    This registry is deliberately INCOMPLETE at scope-lock. It covers:
+    (a) the comparative / theoretical spine that every chapter must engage with;
+    (b) one anchor critical edition per CORE story;
+    (c) tradition-specific anchors for the most load-bearing RELATED and contrastive entries.
+    Additional per-story sources — alternative translations, specialist journal articles,
+    monographs on individual combats — will accrue at the chapter-briefs stage.
+    The `inventory-audit` stage is expected to flag additional required entries.
+```
+
+---
+
+# Governing file: glossary.yaml
+
+```
+meta:
+  stage: glossary-lock
+  version: v1-locked
+  status: user-confirmed
+  date: 2026-04-24
+  note: "User-confirmed on 2026-04-24. All DECIDE_GLOSSARY.md items resolved. Changes from v1-draft: (3) Yahweh replaces YHWH as primary form; (7) wak'a replaces huaca; (13) tehôm kept italicised throughout body prose rather than switching to 'the deep'; (15) 'the adversary' added as the neutral category term, with 'the dragon' reserved for morphologically draconic figures and 'chaos-figure' banned. All other draft choices confirmed. Meta-diacritics policy: full scholarly diacritics across the glossary (option A)."
+  agent_model: "claude-opus-4-7[1m]"
+
+terms:
+
+  # ══════════════════════════════════════════════════════════════════════
+  # CATEGORY TERMS — the vocabulary of the book itself
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "Chaoskampf"
+    renderings_considered:
+      - { form: "Chaoskampf", source: "Gunkel 1895; still standard" }
+      - { form: "combat myth", source: "Forsyth 1987; Yarbro Collins 1976; Ballentine 2015" }
+      - { form: "conflict myth", source: "Ballentine 2015 preferred term" }
+    chosen: "Chaoskampf (in headings and as technical term); 'combat myth' in body prose"
+    rationale: "Scope.md §'Terminology default (locked)': Chaoskampf in headings/catalog; combat myth as default in body; reserves Chaoskampf for quotations and Gunkel discussion."
+    first_mention_gloss: "the scholarly category, coined by Hermann Gunkel in 1895, for narratives in which a sovereign or champion deity defeats a monstrous adversary to establish or preserve cosmic order"
+    never_use: ["dragon myth (too narrow)", "dragon-slaying myth (misses the cosmogonic function)"]
+
+  - native: "cosmogonic combat"
+    renderings_considered:
+      - { form: "cosmogonic combat", source: "book-internal" }
+      - { form: "cosmogonic chaoskampf", source: "Scurlock & Beal 2013" }
+      - { form: "combat-cosmogony", source: "Forsyth 1987" }
+    chosen: "cosmogonic combat"
+    rationale: "Clearest plain-English form; the category is one of four subtypes the book defines."
+    first_mention_gloss: "a combat myth in which the cosmos itself is established out of or immediately after the combat — for example, Marduk building sky and earth from Tiamat's body"
+    never_use: []
+
+  - native: "sovereignty combat"
+    renderings_considered:
+      - { form: "sovereignty combat", source: "book-internal; cf. Lincoln 2012" }
+      - { form: "kingship combat", source: "Forsyth 1987" }
+    chosen: "sovereignty combat"
+    rationale: "Matches scope.md subtype naming; 'sovereignty' is the category that captures Baal/Yamm, Zeus/Typhon, Indra/Vṛtra, Ninurta/Anzû."
+    first_mention_gloss: "a combat myth in which the victor's rule over gods and humans is established or secured by the combat"
+    never_use: []
+
+  - native: "cyclical-maintenance combat"
+    renderings_considered:
+      - { form: "cyclical-maintenance combat", source: "book-internal" }
+      - { form: "recurrent combat", source: "Assmann 2001 on maʿat" }
+    chosen: "cyclical-maintenance combat"
+    rationale: "Captures the Ra/Apep and Illuyanka/purulli subtype; the combat is re-enacted rather than once-and-done."
+    first_mention_gloss: "a combat myth that is re-enacted on a recurring schedule (daily, annually, calendrically) to preserve an order that is always under threat"
+    never_use: []
+
+  - native: "eschatological combat"
+    renderings_considered:
+      - { form: "eschatological combat", source: "book-internal; cf. Yarbro Collins 1976" }
+      - { form: "end-time combat", source: "popular usage" }
+    chosen: "eschatological combat"
+    rationale: "Standard scholarly term; captures Ragnarök, Rev 12, Frashokereti."
+    first_mention_gloss: "a combat myth that closes cosmic time — the final combat that ends the present age"
+    never_use: []
+
+  - native: "theogony / theogonic"
+    renderings_considered:
+      - { form: "theogony", source: "Hesiod title; standard scholarly use" }
+      - { form: "divine genealogy", source: "popularizing" }
+    chosen: "theogony / theogonic"
+    rationale: "Standard; used in West 1966, West 1997, Hoffner 1998 for the Kumarbi Cycle."
+    first_mention_gloss: "a narrative of the generation of the gods; the theogonic 'kingship in heaven' pattern tracks successions of divine rulers (Alalu → Anu → Kumarbi → Teshub)"
+    never_use: []
+
+  - native: "cosmogony / cosmogonic"
+    renderings_considered:
+      - { form: "cosmogony", source: "standard scholarly" }
+      - { form: "creation myth", source: "popular" }
+    chosen: "cosmogony / cosmogonic"
+    rationale: "Precision — creation-myth is broader and includes dismemberment-without-combat cases that the book explicitly separates."
+    first_mention_gloss: "a narrative of the origin of the ordered cosmos"
+    never_use: ["creation myth (used only informally)"]
+
+  - native: "reception / reception history"
+    renderings_considered:
+      - { form: "reception", source: "standard in biblical and classical studies (Ogden 2013)" }
+      - { form: "Nachleben", source: "German scholarly usage" }
+      - { form: "afterlife", source: "popular" }
+    chosen: "reception"
+    rationale: "Discipline-standard; understood by lay readers; scope.md §'Period' marks the reception coda explicitly as reception, not primary."
+    first_mention_gloss: "the afterlife of an image, narrative, or motif in later traditions (e.g., Leviathan reworked in Milton, Tolkien's dragons, kaiju cinema)"
+    never_use: []
+
+  - native: "appropriation"
+    renderings_considered:
+      - { form: "appropriation", source: "current critical scholarship; scope.md §'Appropriation protocol'" }
+      - { form: "cultural appropriation", source: "popular" }
+    chosen: "appropriation"
+    rationale: "Used in scope.md and in the Merlan 1998 / Hallowell 1960 literature without 'cultural' prefix; the prefix is redundant in context."
+    first_mention_gloss: "the distortion that occurs when a comparative category developed in one tradition is imposed on another whose own conceptual framework rejects the category"
+    never_use: []
+
+  - native: "comparativist / comparative mythology"
+    renderings_considered:
+      - { form: "comparativist", source: "Lincoln 2012; contemporary critical scholarship" }
+      - { form: "comparative mythologist", source: "older scholarship" }
+    chosen: "comparativist"
+    rationale: "The book uses 'comparativist' with its critical edge; 'comparative mythologist' would sound neutral where the book's critique is sharper."
+    first_mention_gloss: "a scholar who compares myths across traditions for shared patterns; the book engages comparativism as a method while flagging its historical entanglement with universalising and colonial projects"
+    never_use: []
+
+  - native: "area specialist"
+    renderings_considered:
+      - { form: "area specialist", source: "scope.md §'Appropriation protocol'; internal term" }
+      - { form: "area expert", source: "informal" }
+    chosen: "area specialist"
+    rationale: "Locked by scope.md; the contrast area-specialist / comparativist is load-bearing throughout."
+    first_mention_gloss: "a scholar whose primary expertise is a single tradition (language, texts, ritual context); the book's appropriation protocol requires area-specialist citations before invoking any comparative frame for non-Eurasian traditions"
+    never_use: []
+
+  - native: "the adversary (category term)"
+    renderings_considered:
+      - { form: "the adversary", source: "book-internal; neutral category term" }
+      - { form: "the dragon", source: "book-internal; morphological descriptor" }
+      - { form: "the monstrous adversary", source: "book-internal" }
+      - { form: "the chaos-figure", source: "popularising usage" }
+    chosen: "'the adversary' as the default neutral category term; 'the dragon' only where the figure is visually or morphologically draconic (Leviathan, Aži Dahāka, Fáfnir, Zmey Gorynych, Typhon, etc.)"
+    rationale: "Cross-chapter consistency benefits from one general term for the class of figure the champion confronts. 'The adversary' is the neutral choice and fits every case including those (Anzû the lion-headed eagle, Asag the stone-demon, Mishipeshu the underwater manitou) where 'dragon' would misrepresent the figure. 'Chaos-figure' is banned because it begs the very question the book is investigating (Ballentine 2015's critique)."
+    first_mention_gloss: "the book's umbrella term for the class of figure the champion confronts in a combat myth; the term is deliberately neutral between dragon, serpent, sea-monster, stone-demon, rebel deity, and other morphologies"
+    never_use: ["chaos-figure (begs the question); chaos-monster (same reason; the corpus is not uniformly 'chaos')"]
+
+  # ══════════════════════════════════════════════════════════════════════
+  # METHODOLOGICAL TERMS
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "HERO SLAY SERPENT (formula)"
+    renderings_considered:
+      - { form: "HERO SLAY SERPENT", source: "Watkins 1995 (small capitals)" }
+      - { form: "hero-slay-serpent formula", source: "Watkins 1995, running text" }
+    chosen: "HERO SLAY SERPENT (in small capitals when naming Watkins's reconstructed formula; 'hero-slay-serpent formula' in running body prose)"
+    rationale: "Small-capital convention is Watkins's own and should be preserved when naming the formula as a term of art; but body prose should not overuse the SMALL CAPS typography."
+    first_mention_gloss: "Calvert Watkins's reconstructed Indo-European poetic formula (subject + verb-of-killing + serpent-object), attested in Vedic áhann áhim, Hittite kuenta... illuyanka, and elsewhere"
+    never_use: []
+
+  - native: "áhann áhim"
+    renderings_considered:
+      - { form: "áhann áhim", source: "Watkins 1995; Jamison & Brereton 2014" }
+      - { form: "ahann ahim", source: "non-diacritical" }
+    chosen: "áhann áhim"
+    rationale: "Diacritics standard in Vedic scholarship; Watkins and Jamison-Brereton both use the accented form; the formula is the load-bearing exemplar and must be rendered as scholarship renders it."
+    first_mention_gloss: "'he slew the serpent' — the Rigvedic formula (RV 1.32.1) that Watkins argues preserves the Indo-European poetic diction of combat-myth"
+    never_use: []
+
+  - native: "basic myth (Ivanov-Toporov)"
+    renderings_considered:
+      - { form: "basic myth", source: "Ivanov & Toporov 1965–74; now standard in translation" }
+      - { form: "основной миф", source: "Russian original; not used in English body" }
+    chosen: "'basic myth' (in quotation marks on first mention)"
+    rationale: "The quotation marks flag it as a technical reconstruction whose status is contested (per Ch. 20 framing)."
+    first_mention_gloss: "Ivanov and Toporov's 1965–74 reconstruction of a shared Slavic storm-god-vs-serpent narrative, drawn from folklore and toponyms, and now criticised for methodological circularity"
+    never_use: []
+
+  - native: "tier-ranking"
+    renderings_considered:
+      - { form: "tier-ranking", source: "book-internal; methods sidebar Ch. 33" }
+    chosen: "tier-ranking"
+    rationale: "Internal book term referring to CORE / RELATED / PROVISIONAL / CONTRASTIVE categorisation."
+    first_mention_gloss: "the book's scheme for categorising chapters by the strength and type of primary attestation and by whether the chaoskampf framing is contested (CORE / RELATED / PROVISIONAL / CONTRASTIVE)"
+    never_use: []
+
+  - native: "other-than-human persons"
+    renderings_considered:
+      - { form: "other-than-human persons", source: "Hallowell 1960" }
+      - { form: "non-human persons", source: "some later ethnographic writing" }
+    chosen: "other-than-human persons"
+    rationale: "Hallowell's exact phrase; central to the Anishinaabe (Ch. 32) and C8 chapters."
+    first_mention_gloss: "A. Irving Hallowell's 1960 term for the Anishinaabe ontological category that includes animals, plants, thunder-beings, and manitouk as persons on equal standing with human persons"
+    never_use: []
+
+  - native: "Gunkel's thesis (Schöpfung und Chaos)"
+    renderings_considered:
+      - { form: "Gunkel's Chaoskampf thesis", source: "Scurlock & Beal 2013 subtitle" }
+      - { form: "Gunkel's 1895 thesis", source: "standard" }
+    chosen: "Gunkel's 1895 thesis"
+    rationale: "Disambiguates from Gunkel's other work; the date is load-bearing (book emphasises how the term travelled for 130 years)."
+    first_mention_gloss: "Hermann Gunkel's argument (1895) that Genesis 1 and Revelation 12 both preserve the demythologised remnants of a Near Eastern combat myth, of which Enūma Eliš is the paradigm"
+    never_use: []
+
+  - native: "Ballentine critique"
+    renderings_considered:
+      - { form: "Ballentine's critique", source: "Ballentine 2015; used internally" }
+      - { form: "the conflict-myth re-reading", source: "Ballentine 2015's own phrase" }
+    chosen: "the Ballentine critique (on first mention); thereafter 'Ballentine 2015'"
+    rationale: "Short and clear; flags that this is a contemporary critical position."
+    first_mention_gloss: "Debra Scoggins Ballentine's 2015 argument that 'chaos' is the wrong word for the adversaries in the combat-myth corpus, because they are presented in the ancient texts as rival sovereigns with their own retinue and power structure, not as inchoate disorder"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # DEITIES AND CHAMPIONS
+  # ══════════════════════════════════════════════════════════════════════
+
+  # ── Mesopotamia ──────────────────────────────────────────────────────
+
+  - native: "Ninurta"
+    renderings_considered:
+      - { form: "Ninurta", source: "ETCSL; van Dijk 1983; Annus 2001; Lambert 2013" }
+      - { form: "Ningirsu", source: "Lagash-tradition name; distinct deity" }
+    chosen: "Ninurta"
+    rationale: "Universal in the Lugal-e and Anzû scholarship; Ningirsu is a distinct Lagash deity and must not be conflated."
+    first_mention_gloss: "Sumerian warrior-god, son of Enlil, lord of Nippur; champion against Asag in Lugal-e and against Anzû in the Anzû Epic"
+    never_use: ["Ningirsu"]
+
+  - native: "Marduk"
+    renderings_considered:
+      - { form: "Marduk", source: "Lambert 2013; Foster 2005; universal" }
+      - { form: "Bēl", source: "cult epithet 'Lord'" }
+    chosen: "Marduk"
+    rationale: "Universal name for the deity; Bēl is an epithet, not an alternative name."
+    first_mention_gloss: "patron god of Babylon; storm-god champion who slays Tiamat and reorders the cosmos in Enūma Eliš"
+    never_use: []
+
+  - native: "Enlil"
+    renderings_considered:
+      - { form: "Enlil", source: "standard in all major editions" }
+      - { form: "Ellil", source: "later Akkadian transliteration variant" }
+    chosen: "Enlil"
+    rationale: "Standard Sumerian/Akkadian form in the combat-myth corpus."
+    first_mention_gloss: "chief god of the Mesopotamian pantheon, lord of air and command, resident of Nippur"
+    never_use: ["Ellil"]
+
+  - native: "Ea / Enki"
+    renderings_considered:
+      - { form: "Ea", source: "Akkadian; Annus 2001; Lambert 2013" }
+      - { form: "Enki", source: "Sumerian; ETCSL" }
+    chosen: "Ea in Akkadian-language contexts (Anzû, Enūma Eliš, Kumarbi Cycle); Enki in Sumerian-language contexts (Lugal-e and Sumerian materials)"
+    rationale: "The book is cross-linguistic; using the language-appropriate name preserves textual integrity. Flag dual identity at first mention of each."
+    first_mention_gloss: "god of wisdom and fresh water (Sumerian Enki / Akkadian Ea); counselor of Ninurta and father of Marduk"
+    never_use: []
+
+  - native: "Anšar"
+    renderings_considered:
+      - { form: "Anšar", source: "Lambert 2013; Foster 2005 (with š)" }
+      - { form: "Anshar", source: "non-diacritical anglicization" }
+    chosen: "Anšar"
+    rationale: "The diacritical form is standard in the critical editions; the book has several š-containing names and should be consistent in retaining the háček."
+    first_mention_gloss: "elder sky-god; commissions Marduk as champion of the gods"
+    never_use: ["Anshar"]
+
+  - native: "Tiamat"
+    renderings_considered:
+      - { form: "Tiamat", source: "Lambert 2013; universal" }
+      - { form: "Tiāmat", source: "with length-mark, less common" }
+    chosen: "Tiamat"
+    rationale: "Standard anglicization; cognate with Hebrew tehôm and thus load-bearing across Mesopotamian / biblical chapters."
+    first_mention_gloss: "primordial salt-sea goddess; mother of the first gods; cast as monstrous adversary in Enūma Eliš"
+    never_use: []
+
+  - native: "Apsû"
+    renderings_considered:
+      - { form: "Apsû", source: "Lambert 2013" }
+      - { form: "Apsu", source: "anglicized" }
+      - { form: "Abzu", source: "Sumerian form" }
+    chosen: "Apsû in Akkadian (Enūma Eliš) contexts; Abzu only where Sumerian usage is specifically invoked"
+    rationale: "Matches Ea/Enki handling: use the language-appropriate form."
+    first_mention_gloss: "primordial fresh-water; Tiamat's consort; killed by Ea in the Enūma Eliš prologue (Sumerian: Abzu)"
+    never_use: []
+
+  - native: "Qingu"
+    renderings_considered:
+      - { form: "Qingu", source: "Lambert 2013" }
+      - { form: "Kingu", source: "older anglicizations (Speiser ANET)" }
+    chosen: "Qingu"
+    rationale: "Lambert 2013's critical-edition form; supersedes Speiser's 'Kingu'."
+    first_mention_gloss: "Tiamat's appointed consort-general; holds the Tablet of Destinies; executed so that humans can be formed from his blood"
+    never_use: ["Kingu"]
+
+  - native: "Anzû"
+    renderings_considered:
+      - { form: "Anzû", source: "Annus 2001; Foster 2005" }
+      - { form: "Anzu", source: "non-diacritical" }
+      - { form: "Zu", source: "older, superseded" }
+    chosen: "Anzû"
+    rationale: "Standard in current critical edition; 'Zu' is a misreading long since corrected."
+    first_mention_gloss: "lion-headed eagle-monster; rebel who steals the Tablet of Destinies from Enlil; slain by Ninurta"
+    never_use: ["Zu"]
+
+  - native: "Asag"
+    renderings_considered:
+      - { form: "Asag", source: "ETCSL; van Dijk 1983" }
+      - { form: "Asakku", source: "Akkadian form" }
+    chosen: "Asag in Sumerian (Lugal-e) contexts"
+    rationale: "Lugal-e is Sumerian; Asakku appears in Akkadian bilingual and later material, which the book treats as reception."
+    first_mention_gloss: "Sumerian demon of the mountains, commander of a stone-army; Ninurta's adversary in Lugal-e"
+    never_use: []
+
+  - native: "Šarur"
+    renderings_considered:
+      - { form: "Šarur", source: "ETCSL; van Dijk 1983" }
+      - { form: "Sharur", source: "non-diacritical" }
+    chosen: "Šarur"
+    rationale: "Diacritical standard; the animate-mace motif recurs and needs a stable rendering."
+    first_mention_gloss: "Ninurta's animate talking mace; scout and messenger; appears in both Lugal-e and the Anzû Epic"
+    never_use: ["Sharur"]
+
+  - native: "Labbu"
+    renderings_considered:
+      - { form: "Labbu", source: "Foster 2005; standard" }
+    chosen: "Labbu"
+    rationale: "Universal; fragmentary tablet is typically called the 'Labbu myth'."
+    first_mention_gloss: "dragon in the fragmentary Akkadian 'Labbu myth'; slain by a storm-god whose identification is uncertain"
+    never_use: []
+
+  - native: "Tablet of Destinies"
+    renderings_considered:
+      - { form: "Tablet of Destinies", source: "Annus 2001; Lambert 2013; universal" }
+      - { form: "Tablet of Fates", source: "older translations" }
+      - { form: "dup šīmāti", source: "Akkadian cuneiform reading" }
+    chosen: "Tablet of Destinies"
+    rationale: "Standard English; dup šīmāti noted on first mention only."
+    first_mention_gloss: "the cosmic decree-document (Akkadian dup šīmāti); possessing it is tantamount to kingship; central in Anzû and Enūma Eliš"
+    never_use: ["Tablet of Fates"]
+
+  - native: "Esagil"
+    renderings_considered:
+      - { form: "Esagil", source: "Lambert 2013" }
+      - { form: "Esagila", source: "older anglicization" }
+      - { form: "É-sag-íl", source: "Sumerian with hyphenation" }
+    chosen: "Esagil"
+    rationale: "Lambert's form; standard in current Assyriological use."
+    first_mention_gloss: "Marduk's temple in Babylon; built at the cosmic axis as the post-combat capital of the gods"
+    never_use: []
+
+  - native: "akītu"
+    renderings_considered:
+      - { form: "akītu", source: "standard Akkadian with long vowel" }
+      - { form: "akitu", source: "anglicized" }
+      - { form: "akiti", source: "Sumerian" }
+    chosen: "akītu"
+    rationale: "Long-vowel form is scholarly standard; the festival's name should be recognisable."
+    first_mention_gloss: "Mesopotamian New Year festival; Enūma Eliš was recited on its fourth day, tying the combat-myth to the annual ritual calendar"
+    never_use: []
+
+  # ── Anatolia / Levant ────────────────────────────────────────────────
+
+  - native: "Tarḫunna / Teshub"
+    renderings_considered:
+      - { form: "Tarḫunna", source: "Hoffner 1998 (Hittite form, with dot under ḫ)" }
+      - { form: "Tarhunna", source: "non-diacritical" }
+      - { form: "Teshub", source: "Hurrian form; Hoffner 1998" }
+      - { form: "Teššub", source: "diacritical Hurrian" }
+    chosen: "Tarḫunna in Hittite-language contexts; Teshub in Hurrian-language contexts (Kumarbi Cycle)"
+    rationale: "Scope.md's translation-mediated policy; each name is appropriate to its own language stratum. First mention glosses the pair."
+    first_mention_gloss: "Anatolian storm-god (Hittite Tarḫunna / Hurrian Teshub); champion in the Illuyanka myth and in the Kumarbi Cycle"
+    never_use: []
+
+  - native: "Kumarbi"
+    renderings_considered:
+      - { form: "Kumarbi", source: "Hoffner 1998" }
+    chosen: "Kumarbi"
+    rationale: "Universal form; no significant variant."
+    first_mention_gloss: "Hurrian father-god deposed by Teshub; generates the monstrous adversaries of the Kumarbi Cycle (Ullikummi, Hedammu)"
+    never_use: []
+
+  - native: "Ullikummi"
+    renderings_considered:
+      - { form: "Ullikummi", source: "Hoffner 1998" }
+    chosen: "Ullikummi"
+    rationale: "Universal form."
+    first_mention_gloss: "stone monster; Kumarbi's progeny by a rock; grows on the shoulder of Upelluri to threaten Teshub's kingship"
+    never_use: []
+
+  - native: "Hedammu"
+    renderings_considered:
+      - { form: "Hedammu", source: "Hoffner 1998" }
+    chosen: "Hedammu"
+    rationale: "Standard."
+    first_mention_gloss: "sea-monster progeny of Kumarbi in the fragmentary Song of Hedammu; seduced by Ishtar/Šauška"
+    never_use: []
+
+  - native: "Upelluri"
+    renderings_considered:
+      - { form: "Upelluri", source: "Hoffner 1998" }
+    chosen: "Upelluri"
+    rationale: "Standard."
+    first_mention_gloss: "the giant on whose shoulder Ullikummi is planted and grows"
+    never_use: []
+
+  - native: "Illuyanka"
+    renderings_considered:
+      - { form: "Illuyanka", source: "Hoffner 1998; Beckman 1982; Watkins 1995" }
+      - { form: "Illuyankaš", source: "with Hittite nominative ending" }
+    chosen: "Illuyanka"
+    rationale: "Current scholarly English drops the case-ending."
+    first_mention_gloss: "serpent-monster, the storm-god's adversary in the purulli-festival aetiology"
+    never_use: ["Illuyankaš (outside philological footnotes)"]
+
+  - native: "Inara"
+    renderings_considered:
+      - { form: "Inara", source: "Hoffner 1998" }
+    chosen: "Inara"
+    rationale: "Standard."
+    first_mention_gloss: "daughter of the storm-god; ritual actor in Version 1 of the Illuyanka myth"
+    never_use: []
+
+  - native: "Hupasiya"
+    renderings_considered:
+      - { form: "Hupasiya", source: "Hoffner 1998" }
+    chosen: "Hupasiya"
+    rationale: "Standard."
+    first_mention_gloss: "mortal man who binds Illuyanka; Inara's partner in Version 1 of the myth"
+    never_use: []
+
+  - native: "purulli"
+    renderings_considered:
+      - { form: "purulli", source: "Hoffner 1998; Beckman 1982" }
+      - { form: "purulliyaš", source: "with case ending" }
+    chosen: "purulli"
+    rationale: "Shorter form standard in translations."
+    first_mention_gloss: "Hittite spring festival at which the Illuyanka myth was recited as liturgical aetiology"
+    never_use: []
+
+  - native: "Baal / Haddu / Baʿlu"
+    renderings_considered:
+      - { form: "Baal", source: "popular and most Hebrew-Bible scholarship" }
+      - { form: "Baʿlu", source: "Smith 1994 (Ugaritic)" }
+      - { form: "Haddu", source: "Ugaritic personal-name form" }
+    chosen: "Baal (in body prose); first-mention gloss names Baʿlu / Haddu as the Ugaritic forms"
+    rationale: "Reader recognition; the Ugaritic specificity is preserved in the gloss and in philological footnotes."
+    first_mention_gloss: "Ugaritic storm-god (Baʿlu / Haddu in Ugaritic spelling); son of Dagan; combat-champion of the Baal Cycle"
+    never_use: []
+
+  - native: "Yamm"
+    renderings_considered:
+      - { form: "Yamm", source: "Smith 1994; universal in Ugaritic scholarship" }
+      - { form: "Yam", source: "Hebrew cognate; used in Ch. 8 for biblical usage" }
+    chosen: "Yamm in Ugaritic contexts (Ch. 7); Yam in Hebrew-Bible contexts (Ch. 8)"
+    rationale: "Language-appropriate; the Ugaritic form has the long consonant."
+    first_mention_gloss: "'Sea'; Ugaritic god of the sea and Baal's primary adversary in the Cycle (Hebrew cognate: Yam)"
+    never_use: []
+
+  - native: "Lôtan"
+    renderings_considered:
+      - { form: "Lôtan", source: "Smith 1994" }
+      - { form: "Lotan", source: "non-diacritical" }
+      - { form: "ltn", source: "unvocalized Ugaritic" }
+    chosen: "Lôtan"
+    rationale: "Circumflex-o preserves vowel length; cognate with Hebrew Leviathan and the correspondence must be visible."
+    first_mention_gloss: "seven-headed serpent adversary at Ugarit (ltn in unvocalized Ugaritic); cognate with Hebrew Leviathan"
+    never_use: []
+
+  - native: "Mot"
+    renderings_considered:
+      - { form: "Mot", source: "Smith 1994" }
+      - { form: "Môt", source: "with length-mark" }
+    chosen: "Mot"
+    rationale: "Shorter form standard in English Ugaritic scholarship."
+    first_mention_gloss: "'Death'; Ugaritic god of death; Baal's adversary in the second half of the Cycle"
+    never_use: []
+
+  - native: "Kothar-wa-Khasis"
+    renderings_considered:
+      - { form: "Kothar-wa-Khasis", source: "Smith 1994" }
+      - { form: "Kothar", source: "short form" }
+      - { form: "Kôtaru-wa-Ḫasīsu", source: "philological" }
+    chosen: "Kothar-wa-Khasis"
+    rationale: "Matches Smith's translation; the doubled name preserves the Ugaritic epithet-pair."
+    first_mention_gloss: "Ugaritic craftsman-god; forges Baal's maces Ayyamur and Yagrush"
+    never_use: []
+
+  - native: "El (Ugaritic)"
+    renderings_considered:
+      - { form: "El", source: "Smith 1994; universal" }
+      - { form: "ʾIlu", source: "philological" }
+    chosen: "El"
+    rationale: "Standard English."
+    first_mention_gloss: "chief Ugaritic god; father of the divine assembly; decision-maker in the Baal Cycle"
+    never_use: []
+
+  - native: "ʿAnat"
+    renderings_considered:
+      - { form: "ʿAnat", source: "Smith 1994 (with ʿayin)" }
+      - { form: "Anat", source: "non-diacritical" }
+      - { form: "ʿAnatu", source: "philological" }
+    chosen: "ʿAnat"
+    rationale: "The ʿayin is the standard diacritic in current Ugaritic scholarship."
+    first_mention_gloss: "Ugaritic warrior-goddess; Baal's sister and combat-ally"
+    never_use: []
+
+  - native: "Ayyamur / Yagrush"
+    renderings_considered:
+      - { form: "Ayyamur and Yagrush", source: "Smith 1994" }
+      - { form: "ʾayamarri / yagarriš", source: "philological" }
+    chosen: "Ayyamur and Yagrush"
+    rationale: "Smith's translations; retaining both names preserves the mace-pair motif that parallels Ninurta's Šarur."
+    first_mention_gloss: "Baal's two named maces, forged by Kothar; the storm-god's dual combat-weapons"
+    never_use: []
+
+  - native: "Ṣapānu / Mount Zaphon"
+    renderings_considered:
+      - { form: "Ṣapānu", source: "Smith 1994 (Ugaritic)" }
+      - { form: "Mount Zaphon", source: "Hebrew-Bible tradition" }
+      - { form: "Jebel al-Aqra", source: "modern Arabic place-name" }
+    chosen: "Ṣapānu at first mention (Ugaritic context); 'Mount Zaphon' when the Hebrew-Bible reception is in view"
+    rationale: "Preserves the same mountain across languages and chapters."
+    first_mention_gloss: "Baal's sacred mountain; the modern Jebel al-Aqra on the Syrian–Turkish border; his palace-seat after victory over Yamm"
+    never_use: []
+
+  # ── Hebrew Bible and New Testament ──────────────────────────────────
+
+  - native: "Yahweh"
+    renderings_considered:
+      - { form: "Yahweh", source: "vocalized reconstruction; Day 1985 uses this form" }
+      - { form: "YHWH", source: "standard unvocalized tetragrammaton" }
+      - { form: "the LORD", source: "translation convention" }
+    chosen: "Yahweh"
+    rationale: "The vocalised form is common enough in academic and general English that the unvocalised YHWH becomes awkward in sustained body prose; 'Yahweh' reads naturally in narrative discussion of the deity as a character. YHWH may still appear in direct quotation of sources that use the unvocalised form."
+    first_mention_gloss: "the God of Israel (Hebrew tetragrammaton YHWH, vocalised Yahweh); depicted in the combat-myth passages as storm-god who defeats the sea, Leviathan, and Rahab"
+    never_use: ["Jehovah"]
+
+  - native: "Leviathan"
+    renderings_considered:
+      - { form: "Leviathan", source: "English Bible tradition; Day 1985" }
+      - { form: "Liwyātān", source: "Hebrew transliteration" }
+    chosen: "Leviathan"
+    rationale: "Universal English form; reader recognition across Hebrew Bible, Rev 12, reception."
+    first_mention_gloss: "multi-headed sea-serpent of the Hebrew Bible (Psalm 74; Isaiah 27; Job 41); cognate with Ugaritic Lôtan"
+    never_use: []
+
+  - native: "Rahab"
+    renderings_considered:
+      - { form: "Rahab", source: "Day 1985; English Bible tradition" }
+      - { form: "Rahav", source: "modern Hebrew transliteration" }
+    chosen: "Rahab"
+    rationale: "Standard English; distinguish the proud sea-monster from the unrelated Rahab-of-Jericho by context (always clear)."
+    first_mention_gloss: "'proud one'; monstrous figure of Hebrew Bible poetry (Psalm 89; Isaiah 51; Job 26), associated with the sea and — in Isaiah — with Egypt"
+    never_use: []
+
+  - native: "Tannīn"
+    renderings_considered:
+      - { form: "Tannīn", source: "Day 1985" }
+      - { form: "tannin", source: "non-diacritical, lower-case common-noun" }
+    chosen: "Tannīn (when naming the mythic figure); tannin (as the common noun 'serpent / sea-creature')"
+    rationale: "Capital/diacritics for the personified figure; lowercase for ordinary common-noun use."
+    first_mention_gloss: "'serpent / sea-creature' (Hebrew); used both as common noun and, in combat passages, as a personified figure often synonymous with Leviathan"
+    never_use: []
+
+  - native: "tehôm"
+    renderings_considered:
+      - { form: "tehôm", source: "Day 1985" }
+      - { form: "tehom", source: "non-diacritical" }
+      - { form: "the deep", source: "English translation" }
+    chosen: "tehôm (italicised) throughout body prose; 'the deep' reserved for direct Bible quotations where English translation is required"
+    rationale: "Genesis 1:2 is quoted and referenced repeatedly across Ch. 8, the introduction, and the Gunkel–Ballentine discussions; keeping tehôm as the technical term through every mention preserves the philological cognancy argument (tehôm / Tiamat) without switching registers mid-paragraph."
+    first_mention_gloss: "'the deep' (Genesis 1:2); the primordial waters; linguistically cognate with Akkadian Tiamat, the cornerstone of Gunkel's 1895 argument"
+    never_use: []
+
+  - native: "the dragon (Rev 12)"
+    renderings_considered:
+      - { form: "the dragon", source: "Rev 12; standard English" }
+      - { form: "the great red dragon", source: "Rev 12:3 descriptor" }
+      - { form: "ὁ δράκων", source: "Greek" }
+    chosen: "the (red) dragon of Rev 12"
+    rationale: "'Dragon' alone is the noun; 'red' marks the specific Revelation figure when contrast is needed."
+    first_mention_gloss: "the seven-headed red dragon of Revelation 12:3, glossed in v. 9 as 'the ancient serpent, called the devil and Satan'"
+    never_use: []
+
+  - native: "Michael (archangel)"
+    renderings_considered:
+      - { form: "Michael", source: "English Bible; universal" }
+      - { form: "Mikaʾel", source: "Hebrew transliteration" }
+    chosen: "Michael"
+    rationale: "Universal English form for this figure."
+    first_mention_gloss: "archangel-warrior; leads the heavenly host against the dragon in Revelation 12"
+    never_use: []
+
+  - native: "Satan / the devil"
+    renderings_considered:
+      - { form: "Satan", source: "English Bible; Forsyth 1987" }
+      - { form: "the satan", source: "Second Temple usage, when the term is a title" }
+      - { form: "the devil (ho diabolos)", source: "NT Greek" }
+    chosen: "Satan (for the figure in Rev 12 and later Christian reception); 'the satan' (lowercase) in Hebrew Bible contexts where the term is a title rather than a name"
+    rationale: "The difference in capitalisation flags the Second Temple evolution; Forsyth 1987 tracks it."
+    first_mention_gloss: "'the adversary'; in Rev 12:9 identified with the dragon and the ancient serpent — completing the assimilation of the combat-myth adversary to the Second-Temple satanology"
+    never_use: []
+
+  # ── Greek and Roman ──────────────────────────────────────────────────
+
+  - native: "Zeus"
+    renderings_considered:
+      - { form: "Zeus", source: "universal" }
+    chosen: "Zeus"
+    rationale: "Universal."
+    first_mention_gloss: "king of the Olympian gods; wields the thunderbolt in combat with Typhon"
+    never_use: []
+
+  - native: "Typhon / Typhoeus"
+    renderings_considered:
+      - { form: "Typhon", source: "Apollodorus; most translations" }
+      - { form: "Typhoeus", source: "Hesiod Theogony; West 1966" }
+    chosen: "Typhon as body-prose default; Typhoeus when specifically discussing the Theogony"
+    rationale: "Both names are ancient; the distinction tracks the specific text under discussion."
+    first_mention_gloss: "the hundred-headed, serpent-limbed earth-born monster, child of Gaia and Tartarus; Zeus's last and greatest adversary"
+    never_use: []
+
+  - native: "drakōn / dragon"
+    renderings_considered:
+      - { form: "drakōn", source: "Ogden 2013 title" }
+      - { form: "drakon", source: "non-diacritical" }
+      - { form: "dragon", source: "English translation" }
+    chosen: "drakōn (Greek technical term); 'dragon' in body prose"
+    rationale: "Ogden's classification vocabulary uses drakōn as a genre-term; body prose can say 'dragon'."
+    first_mention_gloss: "'dragon' (Greek δράκων); the Greek and Roman serpent-adversary category that Ogden 2013 catalogues and classifies"
+    never_use: []
+
+  - native: "Apollo"
+    renderings_considered:
+      - { form: "Apollo", source: "universal" }
+      - { form: "Apollon", source: "Greek form" }
+    chosen: "Apollo"
+    rationale: "Reader recognition."
+    first_mention_gloss: "Olympian god of prophecy, music, and plague; slays Python to found the Delphic oracle"
+    never_use: []
+
+  - native: "Python (Delphic)"
+    renderings_considered:
+      - { form: "Python", source: "Ovid; Fontenrose 1959 title" }
+      - { form: "Pytho (drakaina)", source: "Homeric Hymn to Apollo" }
+    chosen: "Python"
+    rationale: "Fontenrose's title; the later tradition names the (originally female) dragon Python."
+    first_mention_gloss: "the Delphic serpent slain by Apollo; originally unnamed and female (a drakaina) in the Homeric Hymn; named Python in Ovid and later tradition"
+    never_use: []
+
+  - native: "Herakles / Hercules"
+    renderings_considered:
+      - { form: "Herakles", source: "Greek contexts" }
+      - { form: "Hercules", source: "Roman / Latin contexts (Cacus episode)" }
+    chosen: "Herakles in Greek-text contexts; Hercules in Roman-text contexts (Virgil Aeneid 8, Ovid Fasti)"
+    rationale: "Preserves the text-specific register."
+    first_mention_gloss: "hero of the twelve labours (Greek Herakles / Latin Hercules); slays Hydra, Ladon, Geryon, and Cacus"
+    never_use: []
+
+  - native: "Perseus"
+    renderings_considered:
+      - { form: "Perseus", source: "universal" }
+    chosen: "Perseus"
+    rationale: "Universal."
+    first_mention_gloss: "hero who beheads Medusa and rescues Andromeda from Ketos; iconographic antecedent of the medieval St. George type"
+    never_use: []
+
+  - native: "Kadmos"
+    renderings_considered:
+      - { form: "Kadmos", source: "Greek" }
+      - { form: "Cadmus", source: "Latinised; Ovid" }
+    chosen: "Kadmos"
+    rationale: "Preserves Greek form; the story is Theban and Greek in origin."
+    first_mention_gloss: "Theban hero; slays the dragon of Ares at Thebes and sows its teeth to raise the Spartoi"
+    never_use: []
+
+  - native: "Bellerophon"
+    renderings_considered:
+      - { form: "Bellerophon", source: "Homer; standard" }
+    chosen: "Bellerophon"
+    rationale: "Universal."
+    first_mention_gloss: "Lycian hero; slays the Chimaera while riding Pegasus"
+    never_use: []
+
+  # ── Iran ─────────────────────────────────────────────────────────────
+
+  - native: "Thraētaona / Fereydun"
+    renderings_considered:
+      - { form: "Thraētaona", source: "Avestan; Benveniste & Renou 1934" }
+      - { form: "Fereydun", source: "New Persian (Shāhnāmeh)" }
+      - { form: "Frēdōn", source: "Middle Persian (Pahlavi)" }
+    chosen: "Thraētaona in Avestan-context body prose; first mention glosses the Middle/New-Persian descendants"
+    rationale: "The Avestan form is the book's primary-source register; the Pahlavi/New-Persian afterlife is tracked in the gloss."
+    first_mention_gloss: "Avestan hero-slayer of Aži Dahāka (Middle Persian Frēdōn; New Persian Fereydun in the Shāhnāmeh)"
+    never_use: []
+
+  - native: "Aži Dahāka"
+    renderings_considered:
+      - { form: "Aži Dahāka", source: "Avestan; Benveniste & Renou 1934" }
+      - { form: "Azhi Dahaka", source: "non-diacritical" }
+      - { form: "Dahāg", source: "Middle Persian" }
+      - { form: "Zahhāk", source: "New Persian (Shāhnāmeh)" }
+    chosen: "Aži Dahāka (with diacritics) as primary form; thereafter 'the dragon' where context allows; Zahhāk flagged only when the Shāhnāmeh is under discussion"
+    rationale: "Avestan form is the scholarly anchor; the three-headed philological cognancy with Vedic tri-śīrṣan vṛtra depends on the Avestan name."
+    first_mention_gloss: "three-headed, six-eyed, three-jawed dragon-tyrant of the Avestan tradition; originally a creature of Angra Mainyu; bound under Mount Damāvand until Frashokereti (Middle Persian Dahāg; New Persian Zahhāk)"
+    never_use: ["Azhi Dahaka (without diacritics, outside non-scholarly contexts)"]
+
+  - native: "Ahura Mazdā"
+    renderings_considered:
+      - { form: "Ahura Mazdā", source: "Avestan with long ā" }
+      - { form: "Ahura Mazda", source: "non-diacritical" }
+      - { form: "Ohrmazd", source: "Middle Persian" }
+    chosen: "Ahura Mazdā in Avestan contexts; Ohrmazd where Pahlavi sources are cited"
+    rationale: "Standard diacritical; matches Aži Dahāka handling."
+    first_mention_gloss: "'the Wise Lord'; creator-god in Zoroastrian cosmology (Middle Persian Ohrmazd)"
+    never_use: []
+
+  - native: "Angra Mainyu"
+    renderings_considered:
+      - { form: "Angra Mainyu", source: "Avestan" }
+      - { form: "Ahriman", source: "Middle Persian" }
+    chosen: "Angra Mainyu in Avestan contexts; Ahriman where Pahlavi sources are under discussion"
+    rationale: "Matches Ahura Mazdā handling."
+    first_mention_gloss: "'the evil spirit'; cosmic adversary of Ahura Mazdā in Zoroastrian dualism (Middle Persian Ahriman)"
+    never_use: []
+
+  - native: "Frashokereti"
+    renderings_considered:
+      - { form: "Frashokereti", source: "Avestan; Bundahišn scholarship" }
+      - { form: "Frashegird", source: "Middle Persian" }
+    chosen: "Frashokereti"
+    rationale: "Most common form in English Zoroastrian studies."
+    first_mention_gloss: "the final renovation; Zoroastrian eschatological end-time in which Aži Dahāka is slain a second (and final) time by the revived Kərəsāspa"
+    never_use: []
+
+  - native: "Kərəsāspa"
+    renderings_considered:
+      - { form: "Kərəsāspa", source: "Avestan with schwa-diacritics" }
+      - { form: "Keresaspa", source: "anglicized" }
+      - { form: "Garshāsp", source: "New Persian" }
+    chosen: "Kərəsāspa at first scholarly mention; 'Keresaspa' in subsequent body prose"
+    rationale: "Full diacritical form preserves the Avestan philology; simpler spelling keeps body prose readable."
+    first_mention_gloss: "Avestan hero (anglicized Keresaspa); sleeps in a long stasis and is revived at Frashokereti to slay the rebound Aži Dahāka"
+    never_use: []
+
+  - native: "Damāvand"
+    renderings_considered:
+      - { form: "Damāvand", source: "Persian with long ā" }
+      - { form: "Damavand", source: "anglicized" }
+    chosen: "Damāvand"
+    rationale: "The long ā is standard in Iranian studies transliteration."
+    first_mention_gloss: "mountain of the Alborz range in northern Iran under which Aži Dahāka is bound in the Pahlavi tradition"
+    never_use: []
+
+  # ── India ────────────────────────────────────────────────────────────
+
+  - native: "Indra"
+    renderings_considered:
+      - { form: "Indra", source: "Jamison & Brereton 2014; universal" }
+    chosen: "Indra"
+    rationale: "Universal."
+    first_mention_gloss: "Vedic storm-god; chief of the Rigvedic gods; wielder of the vajra; slayer of Vṛtra"
+    never_use: []
+
+  - native: "Vṛtra"
+    renderings_considered:
+      - { form: "Vṛtra", source: "Jamison & Brereton 2014; Benveniste & Renou 1934" }
+      - { form: "Vritra", source: "non-diacritical" }
+    chosen: "Vṛtra"
+    rationale: "Diacritical (vocalic ṛ) is standard in Vedic scholarship and preserves the etymology vṛ- 'to obstruct'."
+    first_mention_gloss: "serpent-demon whose name derives from Vedic vṛ- 'to obstruct'; the obstacle that blocks the cosmic waters; slain by Indra in RV 1.32"
+    never_use: ["Vritra (outside titles of older sources)"]
+
+  - native: "vajra"
+    renderings_considered:
+      - { form: "vajra", source: "Jamison & Brereton 2014" }
+      - { form: "thunderbolt", source: "translation" }
+    chosen: "vajra (on first mention); 'the vajra' or 'Indra's thunderbolt' in body prose"
+    rationale: "Sanskrit term retains distinctness from Thor's Mjöllnir and Zeus's keraunos; translated at first mention."
+    first_mention_gloss: "Indra's thunderbolt-mace, forged by Tvaṣṭṛ; the cosmic combat-weapon of the Rigveda"
+    never_use: []
+
+  - native: "Tvaṣṭṛ"
+    renderings_considered:
+      - { form: "Tvaṣṭṛ", source: "Jamison & Brereton 2014" }
+      - { form: "Tvashtr", source: "anglicized" }
+      - { form: "Tvashtar", source: "older older anglicization" }
+    chosen: "Tvaṣṭṛ"
+    rationale: "Diacritical standard in current Vedic scholarship."
+    first_mention_gloss: "Vedic divine artisan; forges Indra's vajra"
+    never_use: []
+
+  - native: "soma"
+    renderings_considered:
+      - { form: "soma", source: "universal in Vedic studies" }
+    chosen: "soma (lowercase, italicised on first mention)"
+    rationale: "Common-noun Sanskrit term; italics on first mention only."
+    first_mention_gloss: "the ritual drink (and deified plant) that fortifies Indra for combat"
+    never_use: []
+
+  - native: "ahi"
+    renderings_considered:
+      - { form: "ahi", source: "Jamison & Brereton 2014; Watkins 1995" }
+    chosen: "ahi"
+    rationale: "The load-bearing Vedic word for 'serpent' in the áhann áhim formula."
+    first_mention_gloss: "'serpent' (Sanskrit); the word for Vṛtra in the áhann áhim formula; philologically cognate with Avestan aži"
+    never_use: []
+
+  - native: "Trita Āptya"
+    renderings_considered:
+      - { form: "Trita Āptya", source: "Jamison & Brereton 2014" }
+      - { form: "Trita Aptya", source: "non-diacritical" }
+    chosen: "Trita Āptya"
+    rationale: "Diacritical; the figure's philological cognancy with Avestan Thraētaona is load-bearing."
+    first_mention_gloss: "Vedic dragon-slayer cognate with Avestan Thraētaona; the older Indo-Iranian figure of the combat-myth stratum that Indra-Vṛtra superseded"
+    never_use: []
+
+  - native: "Krishna"
+    renderings_considered:
+      - { form: "Krishna", source: "universal English" }
+      - { form: "Kṛṣṇa", source: "diacritical Sanskrit" }
+    chosen: "Krishna (in body prose); Kṛṣṇa only in strict philological footnotes"
+    rationale: "Reader recognition; the diacritical form would be pedantic outside citation."
+    first_mention_gloss: "avatar of Viṣṇu; in the post-Vedic tradition subdues the serpent Kāliya by dancing on his heads"
+    never_use: []
+
+  - native: "Kāliya"
+    renderings_considered:
+      - { form: "Kāliya", source: "Sanskrit with ā" }
+      - { form: "Kaliya", source: "non-diacritical" }
+    chosen: "Kāliya"
+    rationale: "Diacritical long-ā standard; the story is central to Vaishnava iconography."
+    first_mention_gloss: "many-headed water-serpent of the Yamunā who poisons the river; subdued (not slain) by the child Krishna"
+    never_use: []
+
+  - native: "līlā"
+    renderings_considered:
+      - { form: "līlā", source: "Sanskrit; Vaishnava studies" }
+      - { form: "lila", source: "anglicized" }
+      - { form: "play", source: "translation" }
+    chosen: "līlā (italicised, on first mention); 'sacred play' in body translation"
+    rationale: "Technical Sanskrit; the Krishna-Kāliya episode is one of the classic examples."
+    first_mention_gloss: "'sacred play'; the Vaishnava category in which divine action is construed as play rather than as combat"
+    never_use: []
+
+  - native: "nāga"
+    renderings_considered:
+      - { form: "nāga", source: "Sanskrit; Indic studies standard" }
+      - { form: "naga", source: "non-diacritical" }
+    chosen: "nāga (italicised on first mention)"
+    rationale: "Technical Indic serpent-category; diacritical preferred."
+    first_mention_gloss: "'serpent' (Sanskrit); a broad Indic category of serpent-beings, often of ambivalent moral valence — Kāliya is a nāga"
+    never_use: []
+
+  # ── Egypt ────────────────────────────────────────────────────────────
+
+  - native: "Ra"
+    renderings_considered:
+      - { form: "Ra", source: "Faulkner 1972; most current Egyptology" }
+      - { form: "Rē", source: "older scholarly with long-mark" }
+      - { form: "Re", source: "variant without long-mark" }
+    chosen: "Ra"
+    rationale: "Current Egyptological convention; reader recognition."
+    first_mention_gloss: "Egyptian sun-god; traverses the sky by day and the Duat by night in his solar barque; combats Apep nightly"
+    never_use: []
+
+  - native: "Apep / Apophis"
+    renderings_considered:
+      - { form: "Apep", source: "Egyptian-language form; Faulkner 1972" }
+      - { form: "Apophis", source: "Greek form of the name; te Velde 1967" }
+    chosen: "Apep in body prose; 'Apophis' noted as the Greek form at first mention"
+    rationale: "Apep preserves the Egyptian register; Apophis is the Hellenistic reception-name and appears in some secondary scholarship."
+    first_mention_gloss: "the chaos-serpent; Ra's nightly adversary in the Duat; embodiment of isfet (Greek: Apophis)"
+    never_use: []
+
+  - native: "Seth / Sutekh"
+    renderings_considered:
+      - { form: "Seth", source: "Faulkner 1972; te Velde 1967" }
+      - { form: "Sutekh", source: "Hittite treaty usage; Ramesside period" }
+      - { form: "Sēt", source: "with length-mark, less common" }
+    chosen: "Seth as body-prose default; 'Sutekh' only where the Hittite-Egyptian interface is under discussion (Ramesses II treaties)"
+    rationale: "Reader recognition; the Sutekh variant carries specific diplomatic-historical context."
+    first_mention_gloss: "Egyptian god of storms and desert; Apep-slayer at the prow of the solar barque (Ch. 16) and, separately, murderer of Osiris (Ch. 17)"
+    never_use: []
+
+  - native: "Mehen"
+    renderings_considered:
+      - { form: "Mehen", source: "Faulkner 1972" }
+    chosen: "Mehen"
+    rationale: "Standard."
+    first_mention_gloss: "serpent-coil deity who encircles and protects Ra in the solar barque"
+    never_use: []
+
+  - native: "Isis"
+    renderings_considered:
+      - { form: "Isis", source: "Greek and English standard" }
+      - { form: "Aset", source: "Egyptian form" }
+    chosen: "Isis"
+    rationale: "Universal reader recognition."
+    first_mention_gloss: "magic-working goddess; binds Apep with spells in the combat-corpus; in the Osiris cycle, wife of Osiris and mother of Horus"
+    never_use: []
+
+  - native: "Horus"
+    renderings_considered:
+      - { form: "Horus", source: "Greek and English standard" }
+      - { form: "Hor", source: "Egyptian" }
+    chosen: "Horus"
+    rationale: "Universal."
+    first_mention_gloss: "falcon-headed god; son of Isis and Osiris; opposes and eventually succeeds Seth in the Contendings"
+    never_use: []
+
+  - native: "maʿat"
+    renderings_considered:
+      - { form: "maʿat", source: "Assmann 2001; standard Egyptological" }
+      - { form: "maat", source: "anglicized" }
+      - { form: "Ma'at", source: "sometimes used for the personified goddess" }
+    chosen: "maʿat (with the ʿayin) for the concept; 'Maʿat' capitalised when the personified goddess is meant"
+    rationale: "Assmann's diacritical is standard in English-language Egyptology."
+    first_mention_gloss: "truth, order, justice; the cosmic order preserved by Ra's victory over Apep"
+    never_use: []
+
+  - native: "isfet"
+    renderings_considered:
+      - { form: "isfet", source: "Assmann 2001" }
+    chosen: "isfet"
+    rationale: "Standard; paired with maʿat throughout."
+    first_mention_gloss: "disorder, injustice, chaos; the condition Apep personifies; the antithesis of maʿat"
+    never_use: []
+
+  - native: "Duat"
+    renderings_considered:
+      - { form: "Duat", source: "Faulkner 1972" }
+      - { form: "Dat", source: "older transliteration" }
+    chosen: "Duat"
+    rationale: "Current standard."
+    first_mention_gloss: "the Egyptian netherworld through which Ra's solar barque travels at night"
+    never_use: []
+
+  # ── Norse / Germanic / Celtic ────────────────────────────────────────
+
+  - native: "Thor"
+    renderings_considered:
+      - { form: "Thor", source: "Larrington 2014; universal" }
+      - { form: "Þórr", source: "Old Norse" }
+    chosen: "Thor (body prose); 'Þórr' only in philological footnotes"
+    rationale: "Reader recognition."
+    first_mention_gloss: "Norse storm-god; son of Óðinn; wielder of Mjöllnir; adversary of Jörmungandr"
+    never_use: []
+
+  - native: "Jörmungandr / Midgard Serpent"
+    renderings_considered:
+      - { form: "Jörmungandr", source: "Faulkes 1987; standard" }
+      - { form: "Miðgarðsormr", source: "Old Norse 'Midgard-serpent'" }
+      - { form: "Midgard Serpent", source: "English translation" }
+    chosen: "Jörmungandr (with umlaut) as name; 'the Midgard Serpent' as descriptive English gloss"
+    rationale: "Both are ancient; the name-and-epithet pairing is how Snorri and the Eddic poems both handle it."
+    first_mention_gloss: "the world-encircling serpent; Loki's son; slain by and slaying Thor at Ragnarök (Old Norse Miðgarðsormr)"
+    never_use: []
+
+  - native: "Mjöllnir"
+    renderings_considered:
+      - { form: "Mjöllnir", source: "Larrington 2014; standard English" }
+      - { form: "Mjǫllnir", source: "normalized Old Norse" }
+    chosen: "Mjöllnir"
+    rationale: "Standard English rendering with the umlaut."
+    first_mention_gloss: "Thor's hammer; forged by the dwarves; the storm-god's combat-weapon"
+    never_use: []
+
+  - native: "Ragnarök"
+    renderings_considered:
+      - { form: "Ragnarök", source: "standard English with umlaut" }
+      - { form: "Ragnarǫk", source: "normalized Old Norse" }
+      - { form: "Ragnarok", source: "without umlaut" }
+    chosen: "Ragnarök"
+    rationale: "Umlaut preserved; standard in English scholarship."
+    first_mention_gloss: "'doom of the gods'; the Norse eschatological end, at which Thor and Jörmungandr slay each other"
+    never_use: []
+
+  - native: "Miðgarðr"
+    renderings_considered:
+      - { form: "Miðgarðr", source: "Old Norse; Faulkes 1987" }
+      - { form: "Midgard", source: "anglicized" }
+    chosen: "Midgard (body prose); Miðgarðr at first mention and in philological notes"
+    rationale: "Reader recognition; the Old Norse form is preserved at first mention."
+    first_mention_gloss: "'middle enclosure'; the world of humans, encircled by Jörmungandr"
+    never_use: []
+
+  - native: "Loki"
+    renderings_considered:
+      - { form: "Loki", source: "universal" }
+    chosen: "Loki"
+    rationale: "Universal."
+    first_mention_gloss: "Norse trickster god; father of Jörmungandr, Fenrir, and Hel"
+    never_use: []
+
+  - native: "Sigurd / Siegfried"
+    renderings_considered:
+      - { form: "Sigurd", source: "Larrington 2014 (Old Norse)" }
+      - { form: "Sigurðr", source: "Old Norse philological" }
+      - { form: "Siegfried", source: "Middle High German (Nibelungenlied)" }
+    chosen: "Sigurd in Old-Norse contexts; Siegfried where the Nibelungenlied is under discussion"
+    rationale: "Each form belongs to a distinct textual tradition."
+    first_mention_gloss: "Norse hero (Middle High German Siegfried); slays the dragon Fáfnir and tastes his blood, gaining knowledge of birdspeech"
+    never_use: []
+
+  - native: "Fáfnir"
+    renderings_considered:
+      - { form: "Fáfnir", source: "Larrington 2014" }
+      - { form: "Fafnir", source: "without diacritic" }
+    chosen: "Fáfnir"
+    rationale: "Diacritical standard."
+    first_mention_gloss: "dwarf transformed into a dragon by cursed gold; slain by Sigurd in Fáfnismál"
+    never_use: []
+
+  - native: "Beowulf"
+    renderings_considered:
+      - { form: "Beowulf", source: "universal; Klaeber 2008" }
+    chosen: "Beowulf"
+    rationale: "Universal."
+    first_mention_gloss: "Geatish hero of the Old English poem Beowulf; kills Grendel, Grendel's mother, and finally the hoard-dragon"
+    never_use: []
+
+  - native: "Grendel"
+    renderings_considered:
+      - { form: "Grendel", source: "universal" }
+    chosen: "Grendel"
+    rationale: "Universal."
+    first_mention_gloss: "man-eating monster of the poem Beowulf; descendant of Cain"
+    never_use: []
+
+  - native: "Lugh"
+    renderings_considered:
+      - { form: "Lugh", source: "Irish; Cath Maige Tuired scholarship" }
+      - { form: "Lug", source: "older orthography" }
+    chosen: "Lugh"
+    rationale: "Modern Irish scholarly standard."
+    first_mention_gloss: "Tuatha Dé Danann warrior-king; slays Balor of the Fomorians at the Second Battle of Mag Tuired"
+    never_use: []
+
+  - native: "Balor"
+    renderings_considered:
+      - { form: "Balor", source: "Cath Maige Tuired" }
+    chosen: "Balor"
+    rationale: "Standard."
+    first_mention_gloss: "evil-eyed Fomorian; grandfather-adversary of Lugh; killed by a sling-stone to the eye"
+    never_use: []
+
+  - native: "Vahagn"
+    renderings_considered:
+      - { form: "Vahagn", source: "Russell 1987 (Armenian)" }
+      - { form: "Vahagn Vishapakagh", source: "with dragon-slayer epithet" }
+    chosen: "Vahagn"
+    rationale: "Short form in body prose; the epithet glossed at first mention."
+    first_mention_gloss: "Armenian storm-god, called Vishapakagh 'dragon-reaper'; combat-hero of Armenian mythology; attestation is fragmentary (Khorenatsi's paraphrase)"
+    never_use: []
+
+  - native: "vishap"
+    renderings_considered:
+      - { form: "vishap", source: "Russell 1987" }
+      - { form: "višap", source: "diacritical transliteration" }
+    chosen: "vishap (lowercase, as common noun)"
+    rationale: "English-language Armenian studies uses the sh-spelling."
+    first_mention_gloss: "Armenian 'dragon'; also the name given to the second-millennium-BCE stone stelae (vishapakar) associated with the cult"
+    never_use: []
+
+  - native: "Batraz"
+    renderings_considered:
+      - { form: "Batraz", source: "Nart saga scholarship; Dumézil" }
+      - { form: "Batyr'adz", source: "Ossetic alternative" }
+    chosen: "Batraz"
+    rationale: "Standard form in Indo-European comparative studies."
+    first_mention_gloss: "steel-bodied Nart warrior of Ossetic epic tradition; Dumézil reads him as the Scytho-Alanic IE dragon-slayer reflex"
+    never_use: []
+
+  # ── Slavic ───────────────────────────────────────────────────────────
+
+  - native: "Perun"
+    renderings_considered:
+      - { form: "Perun", source: "West 2007; Ivanov & Toporov" }
+    chosen: "Perun"
+    rationale: "Universal."
+    first_mention_gloss: "Slavic storm-god; in Ivanov and Toporov's contested reconstruction, the pursuer of Veles"
+    never_use: []
+
+  - native: "Veles"
+    renderings_considered:
+      - { form: "Veles", source: "standard" }
+      - { form: "Volos", source: "East Slavic variant" }
+    chosen: "Veles"
+    rationale: "Standard in Ivanov/Toporov and the scholarly literature on the 'basic myth'."
+    first_mention_gloss: "Slavic earth / cattle / underworld deity; reconstructed as Perun's adversary in the 'basic myth' — a reconstruction contested by Jakobson, Lajoye, and others"
+    never_use: []
+
+  - native: "Dobrynya Nikitich"
+    renderings_considered:
+      - { form: "Dobrynya Nikitich", source: "bylina scholarship; Oinas" }
+      - { form: "Dobrynia", source: "variant transliteration" }
+    chosen: "Dobrynya Nikitich"
+    rationale: "Standard transliteration."
+    first_mention_gloss: "bogatyr of the East Slavic bylina tradition; slays the dragon Zmey Gorynych"
+    never_use: []
+
+  - native: "Zmey Gorynych"
+    renderings_considered:
+      - { form: "Zmey Gorynych", source: "bylina scholarship" }
+      - { form: "Zmei Gorynich", source: "variant" }
+    chosen: "Zmey Gorynych"
+    rationale: "Common in English bylina translation."
+    first_mention_gloss: "three-headed dragon of East Slavic epic; adversary of Dobrynya Nikitich"
+    never_use: []
+
+  # ── East Asia ────────────────────────────────────────────────────────
+
+  - native: "Gonggong"
+    renderings_considered:
+      - { form: "Gonggong", source: "Pinyin; Lewis 2006" }
+      - { form: "Kung-kung", source: "Wade-Giles" }
+    chosen: "Gonggong"
+    rationale: "Pinyin is current standard; reader recognition."
+    first_mention_gloss: "Chinese water-god, often red-haired and serpent-bodied; defeated combatant who shatters Mount Buzhou, the sky-pillar"
+    never_use: ["Kung-kung (outside Wade-Giles-era source discussions)"]
+
+  - native: "Zhuanxu"
+    renderings_considered:
+      - { form: "Zhuanxu", source: "Pinyin; Lewis 2006" }
+      - { form: "Chuan-hsü", source: "Wade-Giles" }
+    chosen: "Zhuanxu"
+    rationale: "Pinyin standard."
+    first_mention_gloss: "sky-emperor who defeats Gonggong in the most widely attested version"
+    never_use: []
+
+  - native: "Zhurong"
+    renderings_considered:
+      - { form: "Zhurong", source: "Pinyin" }
+      - { form: "Chu-jung", source: "Wade-Giles" }
+    chosen: "Zhurong"
+    rationale: "Pinyin."
+    first_mention_gloss: "fire-god; alternative combatant against Gonggong in some variants"
+    never_use: []
+
+  - native: "Nüwa"
+    renderings_considered:
+      - { form: "Nüwa", source: "Pinyin with umlaut" }
+      - { form: "Nügua", source: "alternative Pinyin" }
+      - { form: "Nü-kua", source: "Wade-Giles" }
+    chosen: "Nüwa"
+    rationale: "Current Pinyin standard; umlaut preserved."
+    first_mention_gloss: "serpent-tailed creator-goddess; repairs the broken sky with five-coloured stones after Gonggong's combat"
+    never_use: []
+
+  - native: "Mount Buzhou"
+    renderings_considered:
+      - { form: "Mount Buzhou", source: "Pinyin" }
+      - { form: "Buzhoushan", source: "Chinese one-word form" }
+      - { form: "Pu-chou", source: "Wade-Giles" }
+    chosen: "Mount Buzhou"
+    rationale: "English-reader-friendly with Pinyin core."
+    first_mention_gloss: "'mountain-that-is-not-whole'; the cosmic pillar broken by Gonggong's head-blow"
+    never_use: []
+
+  - native: "Yu the Great"
+    renderings_considered:
+      - { form: "Yu the Great", source: "universal" }
+      - { form: "Da Yu", source: "Pinyin" }
+      - { form: "Yü", source: "Wade-Giles" }
+    chosen: "Yu the Great"
+    rationale: "Standard English."
+    first_mention_gloss: "post-combat flood-controller in Chinese tradition; his hydraulic-ordering role is the sidebar contrast within the Gonggong chapter"
+    never_use: []
+
+  - native: "Hou Yi"
+    renderings_considered:
+      - { form: "Hou Yi", source: "Pinyin; Lewis 2006; Birrell 1993" }
+      - { form: "Hou I", source: "Wade-Giles" }
+    chosen: "Hou Yi"
+    rationale: "Pinyin."
+    first_mention_gloss: "Chinese archer-hero; shoots down nine of the ten suns and slays monstrous beasts under sage-king Yao"
+    never_use: []
+
+  - native: "Susanoo"
+    renderings_considered:
+      - { form: "Susanoo", source: "Philippi 1968" }
+      - { form: "Susanoo-no-Mikoto", source: "with honorific" }
+      - { form: "Susano-o", source: "hyphenated variant" }
+    chosen: "Susanoo"
+    rationale: "Philippi's form; standard in current English-language Japanese studies."
+    first_mention_gloss: "Japanese storm-god; expelled from heaven for misdeeds; slays Yamata no Orochi at Izumo"
+    never_use: []
+
+  - native: "Yamata no Orochi"
+    renderings_considered:
+      - { form: "Yamata no Orochi", source: "Philippi 1968" }
+      - { form: "Yamato no Orochi", source: "misreading, avoid" }
+      - { form: "the eight-forked serpent", source: "translation" }
+    chosen: "Yamata no Orochi"
+    rationale: "Philippi's form; the -ta- (not -to-) is correct."
+    first_mention_gloss: "eight-headed, eight-tailed serpent of Izumo; slain by Susanoo; its tail contains the sword Kusanagi"
+    never_use: ["Yamato no Orochi"]
+
+  - native: "Kusanagi"
+    renderings_considered:
+      - { form: "Kusanagi", source: "Philippi 1968" }
+      - { form: "Kusanagi-no-Tsurugi", source: "with sword-noun" }
+    chosen: "Kusanagi"
+    rationale: "Shorter form in body prose."
+    first_mention_gloss: "'grass-cutter'; the sword found in Orochi's tail; one of the Three Sacred Treasures of the Japanese imperial regalia"
+    never_use: []
+
+  - native: "Ülgen / Erlik"
+    renderings_considered:
+      - { form: "Ülgen", source: "Turkic/Altaic; Eliade" }
+      - { form: "Erlik", source: "standard Turkic/Altaic" }
+    chosen: "Ülgen (with umlaut) and Erlik"
+    rationale: "Standard in Altaic/Turkic studies; umlaut preserved on Ülgen."
+    first_mention_gloss: "paired Altaic/Turkic-Mongol sky-god and underworld-god; a dualistic cosmology rather than a decisive combat"
+    never_use: []
+
+  - native: "Bakunawa"
+    renderings_considered:
+      - { form: "Bakunawa", source: "Philippine folklore scholarship; Eugenio" }
+    chosen: "Bakunawa"
+    rationale: "Standard across Visayan / Bikol / English sources."
+    first_mention_gloss: "Philippine (Visayan / Bikol) serpent-dragon; devours six of the seven original moons; driven off during eclipses by communal noise-making"
+    never_use: []
+
+  # ── Americas ─────────────────────────────────────────────────────────
+
+  - native: "Huitzilopochtli"
+    renderings_considered:
+      - { form: "Huitzilopochtli", source: "Nahuatl; Matos Moctezuma 1988; Carrasco 1999" }
+    chosen: "Huitzilopochtli"
+    rationale: "Universal."
+    first_mention_gloss: "'Hummingbird-of-the-South'; Mexica patron god; sun-warrior born fully armed at Coatepec"
+    never_use: []
+
+  - native: "Coatlicue"
+    renderings_considered:
+      - { form: "Coatlicue", source: "Nahuatl standard" }
+    chosen: "Coatlicue"
+    rationale: "Universal."
+    first_mention_gloss: "'She-of-the-Serpent-Skirt'; earth-goddess mother of Huitzilopochtli"
+    never_use: []
+
+  - native: "Coyolxauhqui"
+    renderings_considered:
+      - { form: "Coyolxauhqui", source: "Nahuatl; Matos Moctezuma 1988" }
+    chosen: "Coyolxauhqui"
+    rationale: "Universal."
+    first_mention_gloss: "'Bells-on-Her-Cheeks'; moon-goddess; Huitzilopochtli's elder sister; dismembered in the combat and represented on the massive Templo Mayor stone"
+    never_use: []
+
+  - native: "Centzon Huitznahua"
+    renderings_considered:
+      - { form: "Centzon Huitznahua", source: "Nahuatl; Matos Moctezuma 1988" }
+      - { form: "Centzonhuitznahua", source: "one-word variant" }
+    chosen: "Centzon Huitznahua"
+    rationale: "Two-word form standard in current Nahuatl scholarship."
+    first_mention_gloss: "'Four Hundred Southerners'; Huitzilopochtli's stellar brothers; defeated with Coyolxauhqui"
+    never_use: []
+
+  - native: "Coatepec"
+    renderings_considered:
+      - { form: "Coatepec", source: "Nahuatl; Matos Moctezuma 1988" }
+    chosen: "Coatepec"
+    rationale: "Universal."
+    first_mention_gloss: "'Mountain of Serpents'; the cosmic mountain of Huitzilopochtli's birth and combat; architecturally re-embodied as the Templo Mayor"
+    never_use: []
+
+  - native: "Templo Mayor"
+    renderings_considered:
+      - { form: "Templo Mayor", source: "Spanish; universal" }
+      - { form: "Great Temple", source: "English translation" }
+    chosen: "Templo Mayor"
+    rationale: "Spanish is the discipline-standard name."
+    first_mention_gloss: "the great double-stair pyramid at the center of Tenochtitlan; built as Coatepec — the architecture embodies the combat-narrative"
+    never_use: []
+
+  - native: "Panquetzaliztli"
+    renderings_considered:
+      - { form: "Panquetzaliztli", source: "Nahuatl" }
+    chosen: "Panquetzaliztli"
+    rationale: "Standard."
+    first_mention_gloss: "Mexica winter-solstice festival commemorating Huitzilopochtli's victory"
+    never_use: []
+
+  - native: "Quetzalcoatl"
+    renderings_considered:
+      - { form: "Quetzalcoatl", source: "Nahuatl standard" }
+    chosen: "Quetzalcoatl"
+    rationale: "Universal."
+    first_mention_gloss: "'Feathered Serpent'; Mesoamerican creator-deity; alternating with Tezcatlipoca across the Suns cycle"
+    never_use: []
+
+  - native: "Tezcatlipoca"
+    renderings_considered:
+      - { form: "Tezcatlipoca", source: "Nahuatl standard" }
+    chosen: "Tezcatlipoca"
+    rationale: "Universal."
+    first_mention_gloss: "'Smoking Mirror'; Mesoamerican sorcerer-deity; alternates sovereignty with Quetzalcoatl"
+    never_use: []
+
+  - native: "Cipactli"
+    renderings_considered:
+      - { form: "Cipactli", source: "Nahuatl; López Austin 1993" }
+    chosen: "Cipactli"
+    rationale: "Standard."
+    first_mention_gloss: "primordial earth-monster dismembered by Quetzalcoatl and Tezcatlipoca to form sky and earth; the book's boundary case for dismemberment-vs-combat cosmogony"
+    never_use: []
+
+  - native: "Pariacaca"
+    renderings_considered:
+      - { form: "Pariacaca", source: "Salomon & Urioste 1991" }
+      - { form: "Pariaqaqa", source: "modern Quechua orthography" }
+    chosen: "Pariacaca"
+    rationale: "Matches the Huarochirí Manuscript's 1608 spelling as edited by Salomon & Urioste."
+    first_mention_gloss: "Andean storm-wak'a of the Huarochirí region; defeats rival wak'as and their summoned amaru"
+    never_use: []
+
+  - native: "wak'a"
+    renderings_considered:
+      - { form: "wak'a", source: "modern Quechua orthography; post-2010 decolonial Andean scholarship" }
+      - { form: "huaca", source: "Salomon & Urioste 1991; Huarochirí-Manuscript-era Spanish-derived spelling" }
+    chosen: "wak'a (lowercase, italicised on first mention)"
+    rationale: "Modern Quechua orthography, now standard in post-2010 decolonial Andean scholarship; lay English readers are not heavily invested in the older 'huaca' form, so adopting the Quechua-native spelling comes at low cost. First-mention parenthetical may note the older Spanish-colonial form 'huaca' where helpful for readers consulting Salomon & Urioste 1991."
+    first_mention_gloss: "Andean 'sacred power-being' (Quechua; older Spanish-derived spelling: huaca); the Huarochirí Manuscript records a landscape populated with wak'as in hierarchical and combative relationships — the pattern is wak'a-succession, not chaos-versus-order"
+    never_use: []
+
+  - native: "amaru"
+    renderings_considered:
+      - { form: "amaru", source: "Salomon & Urioste 1991" }
+      - { form: "amaro", source: "variant" }
+    chosen: "amaru (lowercase, italicised on first mention)"
+    rationale: "Andean serpent-figure; common noun."
+    first_mention_gloss: "Andean serpent-figure; often summoned as an ally-monster by a defeated rival wak'a, rather than a primordial chaos"
+    never_use: []
+
+  - native: "Kai-Kai / Tren-Tren"
+    renderings_considered:
+      - { form: "Kai-Kai and Tren-Tren", source: "Mapuche ethnographic literature" }
+      - { form: "Caicai / Trentren", source: "Spanish-orthography variants" }
+    chosen: "Kai-Kai and Tren-Tren (hyphenated, with capital initials)"
+    rationale: "Most common form in English-language Mapuche scholarship."
+    first_mention_gloss: "paired Mapuche marine and mountain serpents; their combat raises flood-and-mountain, generating the Mapuche landscape"
+    never_use: []
+
+  - native: "Bida"
+    renderings_considered:
+      - { form: "Bida", source: "Conrad 2005; Belcher 1999" }
+    chosen: "Bida"
+    rationale: "Standard."
+    first_mention_gloss: "seven-headed serpent-protector of Wagadu (ancient Ghana) in Soninke tradition; his slaying ends Wagadu's prosperity — the inversion case"
+    never_use: []
+
+  - native: "Wagadu"
+    renderings_considered:
+      - { form: "Wagadu", source: "Conrad 2005; Belcher 1999" }
+      - { form: "ancient Ghana", source: "historical name of the polity" }
+    chosen: "Wagadu (tradition-internal name); 'ancient Ghana' for the historical-polity reading"
+    rationale: "Each name belongs to a distinct register."
+    first_mention_gloss: "the Soninke city/polity protected by Bida; historical ancient Ghana; abandoned after Bida's death"
+    never_use: []
+
+  - native: "Mamadi Sefe Dekote"
+    renderings_considered:
+      - { form: "Mamadi Sefe Dekote", source: "Conrad 2005; Belcher 1999" }
+    chosen: "Mamadi Sefe Dekote"
+    rationale: "Standard Soninke-tradition form in English."
+    first_mention_gloss: "the suitor who kills Bida to save his beloved, thereby ending Wagadu"
+    never_use: []
+
+  - native: "Mwindo"
+    renderings_considered:
+      - { form: "Mwindo", source: "Biebuyck & Mateene 1969" }
+    chosen: "Mwindo"
+    rationale: "Standard."
+    first_mention_gloss: "Nyanga epic hero; kills the dragon Kirimu and is punished by the sky-god Nkuba — the contrastive case"
+    never_use: []
+
+  - native: "Kirimu"
+    renderings_considered:
+      - { form: "Kirimu", source: "Biebuyck & Mateene 1969" }
+    chosen: "Kirimu"
+    rationale: "Standard."
+    first_mention_gloss: "Nyanga dragon slain by Mwindo"
+    never_use: []
+
+  - native: "Nkuba"
+    renderings_considered:
+      - { form: "Nkuba", source: "Biebuyck & Mateene 1969" }
+    chosen: "Nkuba"
+    rationale: "Standard."
+    first_mention_gloss: "Nyanga sky-god; punishes Mwindo for the killing of Kirimu"
+    never_use: []
+
+  - native: "Nanabozho"
+    renderings_considered:
+      - { form: "Nanabozho", source: "Hallowell 1960; standard in Anishinaabe studies" }
+      - { form: "Nanabush", source: "alternative spelling" }
+      - { form: "Wenabozho", source: "other regional variant" }
+    chosen: "Nanabozho"
+    rationale: "Most common in Hallowell and the Great Lakes scholarship; area-specialist citation policy dictates following the specialists."
+    first_mention_gloss: "Anishinaabe trickster-culture-hero; his relations with the underwater manitou Mishipeshu and the Thunderers are the book's clearest case of a tradition whose own framework declines the chaoskampf reading"
+    never_use: []
+
+  - native: "Mishipeshu"
+    renderings_considered:
+      - { form: "Mishipeshu", source: "Anishinaabe studies standard" }
+      - { form: "Mishebeshu", source: "Theresa S. Smith 1995" }
+      - { form: "Mishipizheu", source: "variant" }
+    chosen: "Mishipeshu"
+    rationale: "Most common in English-language Anishinaabe studies; variant spellings flagged in the Ch. 32 footnotes."
+    first_mention_gloss: "Anishinaabe underwater manitou; in the tradition's own framework a necessary counterpart to the Thunderers, not a chaos-adversary to be defeated"
+    never_use: []
+
+  - native: "manitou / manitouk / aadizookaanag"
+    renderings_considered:
+      - { form: "manitou (sing.) / manitouk (pl.)", source: "Hallowell 1960" }
+      - { form: "manito / manidoog", source: "other orthography" }
+      - { form: "aadizookaanag", source: "Basil Johnston's term for the sacred-story beings" }
+    chosen: "manitou (singular) / manitouk (plural); 'aadizookaanag' glossed separately for the sacred-story class of beings"
+    rationale: "Hallowell's orthography is the scholarly standard; Johnston's aadizookaanag is a distinct category that some of the Ch. 32 material invokes."
+    first_mention_gloss: "'other-than-human person' in the Anishinaabe ontological category; the Thunderers and Mishipeshu are manitouk"
+    never_use: []
+
+  - native: "the Thunderers"
+    renderings_considered:
+      - { form: "the Thunderers", source: "Hallowell 1960; standard in English" }
+      - { form: "Animikiig", source: "Anishinaabemowin" }
+    chosen: "the Thunderers (English); Animikiig in first-mention gloss"
+    rationale: "English form is accessible; the native term is preserved for attribution."
+    first_mention_gloss: "the Anishinaabe thunder-beings (Animikiig); counterparts of Mishipeshu in the reciprocal cosmic-dialectic"
+    never_use: []
+
+  - native: "Väinämöinen"
+    renderings_considered:
+      - { form: "Väinämöinen", source: "Finnish standard" }
+      - { form: "Vainamoinen", source: "without umlauts" }
+    chosen: "Väinämöinen"
+    rationale: "Umlauts preserved; the name is the iconic Kalevala hero."
+    first_mention_gloss: "Finnish shaman-sage hero; subdues the sea-monster Iku-Turso by song rather than combat, in the older rune tradition and in Lönnrot's Kalevala"
+    never_use: []
+
+  - native: "Iku-Turso"
+    renderings_considered:
+      - { form: "Iku-Turso", source: "Siikala 2002" }
+      - { form: "Ikuturso", source: "one-word variant" }
+    chosen: "Iku-Turso"
+    rationale: "Hyphenated form standard in English-language Kalevala scholarship."
+    first_mention_gloss: "Finnic sea-monster; subdued by Väinämöinen's song; presentation in the chapter separates older rune material from Lönnrot's 19th-century editorial synthesis"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # PLACE NAMES AND CULT SITES
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "Nerik"
+    renderings_considered:
+      - { form: "Nerik", source: "Hoffner 1998" }
+    chosen: "Nerik"
+    rationale: "Standard."
+    first_mention_gloss: "northern Hittite cult-centre of the storm-god; locus of the purulli festival"
+    never_use: []
+
+  - native: "Delphi / Pytho"
+    renderings_considered:
+      - { form: "Delphi", source: "later standard" }
+      - { form: "Pytho", source: "Homeric Hymn; earlier name" }
+    chosen: "Delphi (body-prose default); Pytho when naming the older / Homeric-Hymn-era site"
+    rationale: "Preserves textual specificity."
+    first_mention_gloss: "Apollo's oracle-site in Phocis (earlier name Pytho); the Septerion festival re-enacted the Python-slaying there every eight years"
+    never_use: []
+
+  - native: "Mount Etna"
+    renderings_considered:
+      - { form: "Mount Etna", source: "standard English" }
+      - { form: "Aitnē", source: "Greek" }
+    chosen: "Mount Etna"
+    rationale: "Reader recognition."
+    first_mention_gloss: "Sicilian volcano under which Typhon is said to be buried in the post-Hesiodic tradition"
+    never_use: []
+
+  - native: "Tartarus"
+    renderings_considered:
+      - { form: "Tartarus", source: "Hesiod; standard English" }
+      - { form: "Tartaros", source: "Greek" }
+    chosen: "Tartarus"
+    rationale: "Reader recognition."
+    first_mention_gloss: "the lowest realm of the Greek underworld; father of Typhon in the Theogony; prison of the defeated Titans"
+    never_use: []
+
+  - native: "Coatepec (place name)"
+    renderings_considered:
+      - { form: "Coatepec", source: "as per deity-name entry" }
+    chosen: "Coatepec"
+    rationale: "See deity-context entry; the place-name and the combat-site are the same name."
+    first_mention_gloss: "see Huitzilopochtli entry — the mountain, the birth-place, and the Templo Mayor's architectural referent are the same Coatepec"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # RITUAL, CULTIC, AND TECHNICAL TERMS
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "bogatyr"
+    renderings_considered:
+      - { form: "bogatyr", source: "Russian bylina scholarship" }
+      - { form: "bogatyr'", source: "with soft-sign transliteration" }
+    chosen: "bogatyr"
+    rationale: "Standard English form in bylina scholarship."
+    first_mention_gloss: "Russian-epic (bylina) warrior-hero; Dobrynya Nikitich is a bogatyr"
+    never_use: []
+
+  - native: "bylina"
+    renderings_considered:
+      - { form: "bylina (sing.) / byliny (pl.)", source: "Russian folklore scholarship" }
+    chosen: "bylina (singular) / byliny (plural)"
+    rationale: "Standard English form."
+    first_mention_gloss: "East Slavic heroic epic-song genre, recorded from oral performance in the 19th century"
+    never_use: []
+
+  - native: "kenning"
+    renderings_considered:
+      - { form: "kenning", source: "Old Norse / Old English poetics; universal" }
+    chosen: "kenning"
+    rationale: "Standard."
+    first_mention_gloss: "an Old Norse / Old English compressed metaphorical phrase; kennings for Jörmungandr (e.g., 'band of all lands') preserve the IE serpent-combat vocabulary that Watkins analyses"
+    never_use: []
+
+  - native: "bhakti"
+    renderings_considered:
+      - { form: "bhakti", source: "Indic studies standard" }
+    chosen: "bhakti (italicised on first mention)"
+    rationale: "Technical Sanskrit."
+    first_mention_gloss: "'devotion'; the devotional-religious movement (Harivaṃśa, Viṣṇu Purāṇa, Bhāgavata Purāṇa onward) in which the Krishna-Kāliya story takes its classical form"
+    never_use: []
+
+  - native: "Contendings of Horus and Seth"
+    renderings_considered:
+      - { form: "Contendings of Horus and Seth", source: "standard English translation" }
+      - { form: "Chester Beatty I", source: "papyrus designation" }
+    chosen: "the Contendings (body prose); 'Chester Beatty I' at first mention and for papyrological contexts"
+    rationale: "The text is usually cited by its English title in body prose and by papyrus number in source-critical contexts."
+    first_mention_gloss: "the bawdy literary papyrus Chester Beatty I (c. 1160 BCE); the longest single narrative of the Horus-Seth contention"
+    never_use: []
+
+  - native: "Septerion"
+    renderings_considered:
+      - { form: "Septerion", source: "Plutarch; Fontenrose 1959" }
+      - { form: "Stepterion", source: "variant spelling" }
+    chosen: "Septerion"
+    rationale: "Standard English spelling."
+    first_mention_gloss: "Delphic festival held every eight years re-enacting Apollo's slaying of Python"
+    never_use: []
+
+  - native: "Shāhnāmeh"
+    renderings_considered:
+      - { form: "Shāhnāmeh", source: "Persian with diacritics" }
+      - { form: "Shahnameh", source: "anglicized" }
+      - { form: "Shāh-nāma", source: "philological" }
+    chosen: "Shāhnāmeh"
+    rationale: "Long-vowel diacriticals retained as scholarly standard."
+    first_mention_gloss: "Ferdowsi's c. 1000 CE Persian national epic; the Zahhāk story is the New-Persian reception of the Aži-Dahāka myth"
+    never_use: []
+
+  - native: "Bundahišn"
+    renderings_considered:
+      - { form: "Bundahišn", source: "Middle-Persian scholarly" }
+      - { form: "Bundahishn", source: "anglicized" }
+    chosen: "Bundahišn"
+    rationale: "Diacritical š preserved as standard in Iranian studies."
+    first_mention_gloss: "Middle Persian (Pahlavi) compendium of Zoroastrian cosmology; late Sasanian / early Islamic redaction; principal source for the Frashokereti material"
+    never_use: []
+
+  - native: "Rigveda"
+    renderings_considered:
+      - { form: "Rigveda", source: "Jamison & Brereton 2014" }
+      - { form: "Ṛgveda", source: "philological" }
+      - { form: "Rig Veda", source: "older" }
+    chosen: "Rigveda (body prose); Ṛgveda in diacritical citations"
+    rationale: "Jamison & Brereton's book-title form."
+    first_mention_gloss: "the earliest layer of Vedic Sanskrit religious poetry (c. 1500–1000 BCE); chief primary source for Indra-Vṛtra"
+    never_use: ["Rig Veda (two words)"]
+
+  - native: "Enūma Eliš"
+    renderings_considered:
+      - { form: "Enūma Eliš", source: "Lambert 2013 with diacriticals" }
+      - { form: "Enuma Elish", source: "anglicized" }
+    chosen: "Enūma Eliš"
+    rationale: "Scholarly-standard diacriticals in current Assyriological writing."
+    first_mention_gloss: "'When on High'; the Babylonian creation-and-combat epic; canonical Chaoskampf type-text since Gunkel 1895"
+    never_use: []
+
+  - native: "Lugal-e"
+    renderings_considered:
+      - { form: "Lugal-e", source: "van Dijk 1983; ETCSL (short title)" }
+      - { form: "LUGAL UD ME-LÁM-bi NIR-ĜÁL", source: "full Sumerian incipit" }
+    chosen: "Lugal-e"
+    rationale: "Standard short title."
+    first_mention_gloss: "'O King': the Sumerian composition narrating Ninurta's combat with Asag; named from its opening line"
+    never_use: []
+
+  - native: "Huarochirí Manuscript"
+    renderings_considered:
+      - { form: "Huarochirí Manuscript", source: "Salomon & Urioste 1991" }
+      - { form: "Manuscrito de Huarochirí", source: "Spanish" }
+    chosen: "Huarochirí Manuscript"
+    rationale: "English scholarly standard."
+    first_mention_gloss: "c. 1608 Quechua-language manuscript; the sole substantial primary source for pre-Columbian Huarochirí religion; principal anchor for the Pariacaca chapter"
+    never_use: []
+
+  - native: "Kalevala"
+    renderings_considered:
+      - { form: "Kalevala", source: "Finnish standard" }
+    chosen: "Kalevala"
+    rationale: "Universal."
+    first_mention_gloss: "Elias Lönnrot's 1835 / 1849 composite epic of Finnic rune-poetry; the Iku-Turso material is partly older and partly Lönnrot's editorial synthesis"
+    never_use: []
+
+  - native: "Baal Cycle"
+    renderings_considered:
+      - { form: "Baal Cycle", source: "Smith 1994; standard" }
+      - { form: "Baʿlu Cycle", source: "philological" }
+    chosen: "Baal Cycle"
+    rationale: "Standard in English Ugaritic scholarship."
+    first_mention_gloss: "the Ugaritic tablet-group (KTU 1.1–1.6) comprising the Baal-Yamm combat, the palace-building, and the Baal-Mot narrative"
+    never_use: []
+
+  - native: "Kumarbi Cycle"
+    renderings_considered:
+      - { form: "Kumarbi Cycle", source: "Hoffner 1998" }
+      - { form: "Song-cycle of Kumarbi", source: "alternative" }
+    chosen: "Kumarbi Cycle"
+    rationale: "Standard."
+    first_mention_gloss: "the Hurro-Hittite song-cycle on the succession of kingship in heaven (Kingship in Heaven, Song of Ullikummi, Song of Hedammu, Song of the Sea)"
+    never_use: []
+
+  - native: "kur"
+    renderings_considered:
+      - { form: "kur", source: "ETCSL; Sumerian scholarship" }
+    chosen: "kur (italicised)"
+    rationale: "Technical Sumerian term; multiple senses flagged in gloss."
+    first_mention_gloss: "Sumerian 'mountain / foreign land / netherworld'; the domain from which Asag's stone-army comes"
+    never_use: []
+
+  - native: "drakaina"
+    renderings_considered:
+      - { form: "drakaina", source: "Homeric Hymn to Apollo; Fontenrose 1959" }
+    chosen: "drakaina (italicised)"
+    rationale: "Technical Greek; the Python is originally a female drakaina in the Homeric Hymn."
+    first_mention_gloss: "Greek 'she-dragon'; the feminine form of drakōn; the original Homeric-Hymn designation of the Delphic serpent before she is named Python"
+    never_use: []
+
+  - native: "Ouroboros"
+    renderings_considered:
+      - { form: "Ouroboros", source: "Greek-derived standard" }
+      - { form: "Uroboros", source: "variant spelling" }
+    chosen: "Ouroboros"
+    rationale: "Most common English spelling."
+    first_mention_gloss: "'tail-devourer'; the self-encircling serpent image widely spread across traditions; named as Greek in Hellenistic alchemical contexts; referenced in the reception coda"
+    never_use: []
+
+  - native: "Spartoi"
+    renderings_considered:
+      - { form: "Spartoi", source: "standard Greek-studies" }
+      - { form: "Spartae", source: "Latinised" }
+    chosen: "Spartoi"
+    rationale: "Greek preserved."
+    first_mention_gloss: "'Sown Men'; the warriors who spring from the teeth of the dragon Kadmos sows at Thebes"
+    never_use: []
+
+  - native: "the five Suns"
+    renderings_considered:
+      - { form: "the five Suns", source: "Mesoamerican studies; Carrasco 1999; López Austin 1993" }
+      - { form: "the five ages", source: "alternative" }
+    chosen: "the five Suns"
+    rationale: "Standard in Mesoamericanist English."
+    first_mention_gloss: "the Mesoamerican cycle of cosmic world-ages; Quetzalcoatl and Tezcatlipoca alternate as rulers, each age ending in catastrophe; the present age is the Fifth Sun"
+    never_use: []
+
+  - native: "Nart"
+    renderings_considered:
+      - { form: "Nart", source: "Ossetic studies standard" }
+      - { form: "Narts", source: "pluralized in English" }
+    chosen: "Nart (singular) / Narts (plural)"
+    rationale: "Standard English form."
+    first_mention_gloss: "heroic figures of the Ossetic and broader North Caucasian epic tradition; Batraz is a Nart"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # INDO-EUROPEAN AND COMPARATIVE-PHILOLOGICAL VOCABULARY
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "Proto-Indo-European / PIE"
+    renderings_considered:
+      - { form: "Proto-Indo-European", source: "linguistic standard" }
+      - { form: "PIE", source: "abbreviation" }
+    chosen: "Proto-Indo-European (on first mention); PIE in subsequent technical use"
+    rationale: "Standard."
+    first_mention_gloss: "the reconstructed common ancestor of the Indo-European language family, spoken c. 4500–2500 BCE; Watkins's HERO SLAY SERPENT formula is a reconstructed PIE poetic element"
+    never_use: []
+
+  - native: "Indo-Iranian"
+    renderings_considered:
+      - { form: "Indo-Iranian", source: "standard" }
+      - { form: "Aryan", source: "older; superseded and potentially problematic" }
+    chosen: "Indo-Iranian"
+    rationale: "'Aryan' is avoided outside specific historical-scholarship contexts where the term is itself the object of discussion."
+    first_mention_gloss: "the branch of the Indo-European family that includes Indic (Vedic Sanskrit etc.) and Iranian (Avestan etc.); the Trita Āptya / Thraētaona cognancy is the clearest Indo-Iranian poetic pairing"
+    never_use: ["Aryan (as a modern cover-term; older scholarly usage only when discussed as historiography)"]
+
+  - native: "Watkins formula"
+    renderings_considered:
+      - { form: "Watkins formula", source: "internal shorthand" }
+      - { form: "áhann áhim formula", source: "source-language shorthand" }
+      - { form: "HERO SLAY SERPENT formula", source: "Watkins's own label" }
+    chosen: "HERO SLAY SERPENT formula (technical); 'Watkins formula' (conversational shorthand)"
+    rationale: "See HERO SLAY SERPENT entry; this entry locks the shorthand for running text."
+    first_mention_gloss: "Calvert Watkins's reconstructed Indo-European poetic formula for dragon-slaying; see HERO SLAY SERPENT entry"
+    never_use: []
+
+deviations_from_instructions:
+  - note: |
+      The glossary includes several language-pair entries (e.g., "Ea / Enki", "Tarḫunna / Teshub",
+      "Apep / Apophis", "Thraētaona / Fereydun") where a single deity figures in two or more
+      language-strata used in the book. In each case, the chosen field specifies the
+      context-conditional rendering rather than a single locked form. This is a slight
+      expansion of the skill's single-rendering convention, but scope.md's "translation-mediated"
+      policy and cross-cultural structure make context-sensitivity unavoidable.
+  - note: |
+      `never_use` is kept empty or minimal for most entries (per the stage instructions
+      about cross-cultural books), used only where actual cross-tradition confusion risk
+      exists (e.g., "Ningirsu" for Ninurta; "Yamato no Orochi" for Yamata no Orochi;
+      "Kingu" for Qingu; "Zu" for Anzû).
+
+self_checks:
+  target_count_60_120: "181 terms — above the 60–120 target. The cross-cultural scope (15+ traditions) and the need to lock transliteration choices (per scope.md §'Languages of primary sources') justify the overshoot. On user review, some single-chapter proper nouns with unambiguous transliteration could be trimmed."
+  every_recurring_figure_included: "Leviathan (Chs. 8, 9, 42, 43), Aži Dahāka (Chs. 13, 37, 43), Ninurta (Chs. 1, 2, 43), Tiamat (Chs. 3, 43), maʿat/isfet (Ch. 16, 17, 36), purulli (Ch. 6, 36), HERO SLAY SERPENT (Ch. 19, 38), Chaoskampf/combat myth (every chapter) — all present"
+  cross_tradition_confusion_guarded:
+    - "Ninurta vs. Ningirsu"
+    - "Qingu vs. Kingu (orthographic only, but flagged)"
+    - "Ea vs. Enki (language-context conditional)"
+    - "Zu vs. Anzû (the old misreading)"
+    - "Yamato vs. Yamata (for Orochi)"
+  decision_flags_elevated_to_DECIDE_GLOSSARY: true
+```
+
+---
+
+# Governing file: toc.yaml
+
+```
+# Table of Contents — Chaoskampf Across Cultures
+# Final reading order, locked at chapter-briefs stage (2026-04-23).
+# Structure follows scope.md §"Book structure" (v1, 2026-04-23).
+# Every chapter listed here has a corresponding brief in briefs/NN-<slug>.yaml.
+
+meta:
+  book_slug: chaoskampf
+  stage: chapter-briefs
+  version: v1
+  date: 2026-04-23
+  agent_model: "claude-opus-4-7[1m]"
+
+chapters:
+
+  # ── Front matter ─────────────────────────────────────────────────
+  - number: 0
+    slug: introduction
+    title: "What Chaoskampf is, and why the word is contested"
+    part: front-matter
+    chapter_anchor: "ch-00-introduction"
+    brief: briefs/00-introduction.yaml
+
+  # ── Part I — geographic clusters ─────────────────────────────────
+  # Mesopotamia
+  - number: 1
+    slug: ninurta-asag
+    title: "Ninurta vs. Asag (Lugal-e)"
+    part: "part-i-mesopotamia"
+    tier: core
+    chapter_anchor: "ch-01-ninurta-asag"
+    brief: briefs/01-ninurta-asag.yaml
+
+  - number: 2
+    slug: ninurta-anzu
+    title: "Ninurta vs. Anzû"
+    part: "part-i-mesopotamia"
+    tier: core
+    chapter_anchor: "ch-02-ninurta-anzu"
+    brief: briefs/02-ninurta-anzu.yaml
+
+  - number: 3
+    slug: marduk-tiamat
+    title: "Marduk vs. Tiamat (Enūma Eliš)"
+    part: "part-i-mesopotamia"
+    tier: core
+    chapter_anchor: "ch-03-marduk-tiamat"
+    brief: briefs/03-marduk-tiamat.yaml
+
+  - number: 4
+    slug: mesopotamian-minor
+    title: "Minor Mesopotamian combats (Marduk/Labbu)"
+    part: "part-i-mesopotamia"
+    tier: related-family
+    chapter_anchor: "ch-04-mesopotamian-minor"
+    brief: briefs/04-mesopotamian-minor.yaml
+
+  # Anatolia and Levant
+  - number: 5
+    slug: kumarbi-ullikummi
+    title: "The Kumarbi Cycle (Ullikummi, Hedammu, Song of the Sea)"
+    part: "part-i-anatolia-levant"
+    tier: core
+    chapter_anchor: "ch-05-kumarbi-ullikummi"
+    brief: briefs/05-kumarbi-ullikummi.yaml
+    note: "Hedammu and Song of the Sea treated as explicit sub-sections per audit-review-log.md decision."
+
+  - number: 6
+    slug: illuyanka
+    title: "Tarḫunna vs. Illuyanka"
+    part: "part-i-anatolia-levant"
+    tier: core
+    chapter_anchor: "ch-06-illuyanka"
+    brief: briefs/06-illuyanka.yaml
+
+  - number: 7
+    slug: baal-yamm-lotan
+    title: "Baal vs. Yamm and Baal vs. Lôtan"
+    part: "part-i-anatolia-levant"
+    tier: core
+    chapter_anchor: "ch-07-baal-yamm-lotan"
+    brief: briefs/07-baal-yamm-lotan.yaml
+
+  # Hebrew Bible and Early Christianity
+  - number: 8
+    slug: yahweh-leviathan-rahab
+    title: "Yahweh vs. Leviathan and Rahab"
+    part: "part-i-hebrew-christian"
+    tier: core
+    chapter_anchor: "ch-08-yahweh-leviathan-rahab"
+    brief: briefs/08-yahweh-leviathan-rahab.yaml
+    note: "Bundled per audit-review-log.md decision — the Pss/Isa/Job/Hab corpus presented as one chapter with sub-sections."
+
+  - number: 9
+    slug: revelation-red-dragon
+    title: "Michael vs. the Red Dragon (Revelation 12)"
+    part: "part-i-hebrew-christian"
+    tier: core
+    chapter_anchor: "ch-09-revelation-red-dragon"
+    brief: briefs/09-revelation-red-dragon.yaml
+
+  - number: 10
+    slug: christian-reception
+    title: "St. George, St. Michael, and the Christian reception"
+    part: "part-i-hebrew-christian"
+    tier: related-family
+    chapter_anchor: "ch-10-christian-reception"
+    brief: briefs/10-christian-reception.yaml
+
+  # Greece and Rome
+  - number: 11
+    slug: zeus-typhon
+    title: "Zeus vs. Typhon"
+    part: "part-i-greece-rome"
+    tier: core
+    chapter_anchor: "ch-11-zeus-typhon"
+    brief: briefs/11-zeus-typhon.yaml
+
+  - number: 12
+    slug: greek-dragons-after-typhon
+    title: "Greek dragon-combats after Zeus-Typhon (Apollo/Python, Herakles, Perseus, Kadmos, Bellerophon, Cacus)"
+    part: "part-i-greece-rome"
+    tier: related-family
+    chapter_anchor: "ch-12-greek-dragons-after-typhon"
+    brief: briefs/12-greek-dragons-after-typhon.yaml
+
+  # Iran
+  - number: 13
+    slug: thraetaona-azidahaka
+    title: "Thraētaona vs. Aži Dahāka (and Frashokereti)"
+    part: "part-i-iran"
+    tier: core
+    chapter_anchor: "ch-13-thraetaona-azidahaka"
+    brief: briefs/13-thraetaona-azidahaka.yaml
+    note: "Frashokereti treated as eschatological sub-section of this chapter."
+
+  # India
+  - number: 14
+    slug: indra-vrtra
+    title: "Indra vs. Vṛtra"
+    part: "part-i-india"
+    tier: core
+    chapter_anchor: "ch-14-indra-vrtra"
+    brief: briefs/14-indra-vrtra.yaml
+
+  - number: 15
+    slug: vedic-reflexes
+    title: "Vedic and post-Vedic reflexes (Trita Āptya, Krishna/Kāliya)"
+    part: "part-i-india"
+    tier: related-family
+    chapter_anchor: "ch-15-vedic-reflexes"
+    brief: briefs/15-vedic-reflexes.yaml
+
+  # Egypt
+  - number: 16
+    slug: ra-apep
+    title: "Ra vs. Apep"
+    part: "part-i-egypt"
+    tier: core
+    chapter_anchor: "ch-16-ra-apep"
+    brief: briefs/16-ra-apep.yaml
+
+  - number: 17
+    slug: horus-seth
+    title: "Horus vs. Seth (an edge case)"
+    part: "part-i-egypt"
+    tier: related
+    chapter_anchor: "ch-17-horus-seth"
+    brief: briefs/17-horus-seth.yaml
+    note: "INCLUSION-MARGINAL per audit-review-log.md; framing marker required in chapter."
+
+  # Norse, Germanic, and IE reflexes
+  - number: 18
+    slug: thor-jormungandr
+    title: "Thor vs. Jörmungandr (the Midgard Serpent)"
+    part: "part-i-norse-ie"
+    tier: core
+    chapter_anchor: "ch-18-thor-jormungandr"
+    brief: briefs/18-thor-jormungandr.yaml
+
+  - number: 19
+    slug: ie-reflexes
+    title: "Indo-European reflexes of HERO SLAY SERPENT (Sigurd/Fáfnir, Beowulf, Lugh/Balor, Welsh Red-White, Batraz, Vahagn)"
+    part: "part-i-norse-ie"
+    tier: related-family
+    chapter_anchor: "ch-19-ie-reflexes"
+    brief: briefs/19-ie-reflexes.yaml
+
+  - number: 20
+    slug: slavic-baltic
+    title: "Slavic and Baltic combat (Perun/Veles, Dobrynya byliny)"
+    part: "part-i-slavic-baltic"
+    tier: related-family
+    chapter_anchor: "ch-20-slavic-baltic"
+    brief: briefs/20-slavic-baltic.yaml
+
+  # East Asia
+  - number: 21
+    slug: gonggong
+    title: "Gonggong and the broken pillar"
+    part: "part-i-east-asia"
+    tier: core
+    chapter_anchor: "ch-21-gonggong"
+    brief: briefs/21-gonggong.yaml
+    note: "Yu the Great referenced as sidebar within this chapter."
+
+  - number: 22
+    slug: hou-yi
+    title: "Hou Yi and the suns"
+    part: "part-i-east-asia"
+    tier: related
+    chapter_anchor: "ch-22-hou-yi"
+    brief: briefs/22-hou-yi.yaml
+
+  - number: 23
+    slug: susanoo-orochi
+    title: "Susanoo vs. Yamata no Orochi"
+    part: "part-i-east-asia"
+    tier: related
+    chapter_anchor: "ch-23-susanoo-orochi"
+    brief: briefs/23-susanoo-orochi.yaml
+    note: "Demoted from CORE per scope-lock; framing that chaoskampf label is applied from outside."
+
+  # Americas
+  - number: 24
+    slug: huitzilopochtli-coatepec
+    title: "Huitzilopochtli, Coyolxauhqui, and Coatepec"
+    part: "part-i-americas"
+    tier: core
+    chapter_anchor: "ch-24-huitzilopochtli-coatepec"
+    brief: briefs/24-huitzilopochtli-coatepec.yaml
+
+  - number: 25
+    slug: mesoamerican-cluster
+    title: "Other Mesoamerican combats (Cipactli, Quetzalcoatl vs. Tezcatlipoca)"
+    part: "part-i-americas"
+    tier: related-family
+    chapter_anchor: "ch-25-mesoamerican-cluster"
+    brief: briefs/25-mesoamerican-cluster.yaml
+
+  - number: 26
+    slug: pariacaca-amaru
+    title: "Pariacaca and the amaru (Huarochirí)"
+    part: "part-i-americas"
+    tier: related
+    chapter_anchor: "ch-26-pariacaca-amaru"
+    brief: briefs/26-pariacaca-amaru.yaml
+
+  - number: 27
+    slug: mapuche-kai-tren
+    title: "Kai-Kai vs. Tren-Tren (Mapuche)"
+    part: "part-i-americas"
+    tier: related-family
+    chapter_anchor: "ch-27-mapuche-kai-tren"
+    brief: briefs/27-mapuche-kai-tren.yaml
+
+  # Africa
+  - number: 28
+    slug: bida-wagadu
+    title: "Bida and the founding of Wagadu (the inversion)"
+    part: "part-i-africa"
+    tier: related
+    chapter_anchor: "ch-28-bida-wagadu"
+    brief: briefs/28-bida-wagadu.yaml
+    note: "Inversion anchor for Part II C7."
+
+  - number: 29
+    slug: mwindo-kirimu
+    title: "Mwindo and Kirimu (the contrastive case)"
+    part: "part-i-africa"
+    tier: contrastive
+    chapter_anchor: "ch-29-mwindo-kirimu"
+    brief: briefs/29-mwindo-kirimu.yaml
+
+  # Southeast Asia & Oceania + Altaic
+  - number: 30
+    slug: bakunawa
+    title: "Bakunawa and the moons (with Erlik/Ülgen as Altaic comparandum)"
+    part: "part-i-se-asia-oceania"
+    tier: related-family
+    chapter_anchor: "ch-30-bakunawa"
+    brief: briefs/30-bakunawa.yaml
+    rationale: "Erlik/Ülgen placed here rather than in 19-ie-reflexes. Altaic/Turkic traditions are neither geographically Indo-European nor genetically IE; grouping the two 'eclipse-and-dualism' non-slaying cases together preserves the IE family chapter's coherence and lets 30-bakunawa carry the broader 'non-slaying combat' theme. Erlik/Ülgen remains INCLUSION-MARGINAL per audit-review-log.md."
+
+  # Finnic
+  - number: 31
+    slug: vainamoinen-iku-turso
+    title: "Väinämöinen and Iku-Turso (transformed variant)"
+    part: "part-i-finnic"
+    tier: related
+    chapter_anchor: "ch-31-vainamoinen-iku-turso"
+    brief: briefs/31-vainamoinen-iku-turso.yaml
+
+  # North America (contrastive)
+  - number: 32
+    slug: nanabozho-mishipeshu
+    title: "Nanabozho and Mishipeshu (the refusal)"
+    part: "part-i-north-america-contrastive"
+    tier: contrastive
+    chapter_anchor: "ch-32-nanabozho-mishipeshu"
+    brief: briefs/32-nanabozho-mishipeshu.yaml
+
+  # ── Methods sidebar (between Part I and Part II) ─────────────────
+  - number: 33
+    slug: methods
+    title: "Methods: how the tiering works, appropriation protocol, area-specialist policy"
+    part: "methods-sidebar"
+    chapter_anchor: "ch-33-methods"
+    brief: briefs/33-methods.yaml
+
+  # ── Part II — thematic comparative chapters ──────────────────────
+  - number: 34
+    slug: C1-combat-as-cosmogony
+    title: "C1. Combat as cosmogony"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-34-C1-combat-as-cosmogony"
+    brief: briefs/34-C1-combat-as-cosmogony.yaml
+
+  - number: 35
+    slug: C2-combat-as-sovereignty
+    title: "C2. Combat as sovereignty"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-35-C2-combat-as-sovereignty"
+    brief: briefs/35-C2-combat-as-sovereignty.yaml
+
+  - number: 36
+    slug: C3-cyclical-maintenance
+    title: "C3. Cyclical maintenance"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-36-C3-cyclical-maintenance"
+    brief: briefs/36-C3-cyclical-maintenance.yaml
+
+  - number: 37
+    slug: C4-eschatological-displacement
+    title: "C4. Eschatological displacement"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-37-C4-eschatological-displacement"
+    brief: briefs/37-C4-eschatological-displacement.yaml
+
+  - number: 38
+    slug: C5-ie-hero-slay-serpent-formula
+    title: "C5. The Indo-European HERO SLAY SERPENT formula"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-38-C5-ie-hero-slay-serpent-formula"
+    brief: briefs/38-C5-ie-hero-slay-serpent-formula.yaml
+
+  - number: 39
+    slug: C6-near-eastern-mediterranean-transmission
+    title: "C6. The Near Eastern → Mediterranean transmission"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-39-C6-near-eastern-mediterranean-transmission"
+    brief: briefs/39-C6-near-eastern-mediterranean-transmission.yaml
+
+  - number: 40
+    slug: C7-inversion-problem
+    title: "C7. The inversion problem"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-40-C7-inversion-problem"
+    brief: briefs/40-C7-inversion-problem.yaml
+
+  - number: 41
+    slug: C8-refusal-and-appropriation
+    title: "C8. The refusal and the appropriation problem"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-41-C8-refusal-and-appropriation"
+    brief: briefs/41-C8-refusal-and-appropriation.yaml
+
+  # ── Back matter ──────────────────────────────────────────────────
+  - number: 42
+    slug: reception-coda
+    title: "Reception coda: Milton, St. George/Michael, Tolkien, kaiju, and 'chaos vs. order' rhetoric"
+    part: "back-matter"
+    chapter_anchor: "ch-42-reception-coda"
+    brief: briefs/42-reception-coda.yaml
+
+  - number: 43
+    slug: adversaries-champions-appendix
+    title: "Adversaries and champions: an appendix"
+    part: "back-matter"
+    chapter_anchor: "ch-43-adversaries-champions-appendix"
+    brief: briefs/43-adversaries-champions-appendix.yaml
+
+deviations_from_instructions:
+  - note: |
+      The 30-bakunawa chapter absorbs Erlik/Ülgen as an Altaic comparandum in the
+      "communal / non-slaying combat" frame. This is the explicit choice offered
+      in the stage instructions ("add Erlik/Ülgen here OR put Erlik in 19-ie-reflexes
+      — your call, document in toc").
+  - note: |
+      32-nanabozho-mishipeshu is labelled "part-i-north-america-contrastive" rather
+      than bundled into Americas (24–27). This matches scope.md §"Book structure",
+      which lists the Nanabozho chapter as its own Cluster 14 after Cluster 10 Americas.
+
+self_checks:
+  every_inventory_story_represented: true
+  inventory_story_to_chapter_map:
+    ninurta-asag: 1
+    ninurta-anzu: 2
+    marduk-tiamat: 3
+    marduk-labbu: 4
+    kumarbi-ullikummi: 5
+    illuyanka: 6
+    baal-yamm-lotan: 7
+    yahweh-leviathan-rahab: 8
+    revelation-12-dragon: 9
+    st-george-michael: 10
+    zeus-typhon: 11
+    apollo-python: 12
+    herakles-dragons: 12
+    perseus-ketos: 12
+    kadmos-dragon: 12
+    bellerophon-chimaera: 12
+    cacus: 12
+    thraetaona-azidahaka: 13
+    frashokereti: 13
+    indra-vrtra: 14
+    trita-aptya: 15
+    krishna-kaliya: 15
+    ra-apep: 16
+    horus-seth: 17
+    thor-jormungandr: 18
+    sigurd-fafnir: 19
+    beowulf-dragons: 19
+    lugh-balor: 19
+    welsh-red-white-dragon: 19
+    batraz-nart: 19
+    vahagn-vishaps: 19
+    perun-veles: 20
+    dobrynya-zmey: 20
+    gonggong: 21
+    hou-yi: 22
+    susanoo-orochi: 23
+    erlik-ulgen: 30
+    huitzilopochtli-coatepec: 24
+    cipactli: 25
+    quetzalcoatl-tezcatlipoca: 25
+    pariacaca-amaru: 26
+    mapuche-kai-tren: 27
+    bida: 28
+    mwindo-kirimu: 29
+    bakunawa: 30
+    vainamoinen-iku-turso: 31
+    nanabozho-mishipeshu: 32
+    rainbow-serpent-critique: 41   # folded into C8
+    yu-sidebar: 21                  # sidebar within Gonggong chapter
+```
+
+---
+
+# Skill instructions: chapter-draft
+
+---
+name: chapter-draft
+description: Transforms the verified facts into Asimov-style narrative prose. The AI's only job is writing — the facts are already checked. No new facts may be introduced. Every verified claim must appear in the narrative, and nothing unverified may be added.
+---
+
+# chapter-draft
+
+## For the human
+
+This is the creative stage — and it is much safer now that the facts are already locked. The AI is not simultaneously researching, citing, and writing. It is only writing. The factual skeleton has already been written and verified. The AI's job is to turn a list of numbered, checked facts into a narrative that reads like Asimov at his best.
+
+The main risk is no longer inventing facts (those are locked) but **drift during the prose transformation**: dropping a verified fact because it doesn't fit the narrative flow, softening a claim until its meaning changes, or inserting a "helpful" detail that was never in the verified facts. The next step (`narrative-fidelity`) will catch these, but the writing AI should work to prevent them.
+
+Importantly, the writing AI does **not** receive the original source texts. It only receives the verified claims document. This is deliberate: giving it the sources would tempt it to "improve" the chapter with additional details that were never fact-checked.
+
+## Hard rules
+1. **Every factual assertion in the narrative must correspond to a claim in the approved claims document.** No new facts, no new citations, no "I happen to know" additions.
+2. **Every claim in the approved document must appear in the narrative.** Do not silently drop claims because they are inconvenient for the prose flow. If a claim is genuinely irrelevant, flag it rather than omitting it.
+3. Use exactly the English renderings locked in `glossary.yaml`.
+4. All markers from the claims document survive into the narrative. Do not paraphrase them away.
+5. Citations carry over from the claims document. Do not add, remove, or reassign footnotes.
+
+## Inputs
+- `scope.md`, `sources.yaml`, `glossary.yaml`
+- `chapters/NN-<slug>.claims.approved.adoc` (fact-checked, human-reviewed claims)
+- `briefs/NN-<slug>.yaml` (for variant classification, target length, special instructions)
+
+**Not** primary source translations. The drafter does not need the sources — the claims document already contains everything verified. Providing sources would tempt the drafter to "improve" claims with additional details.
+
+## Style: the Asimov method
+
+Treat the reader as intelligent and uninformed. Gloss proper nouns with functional roles, not poetic epithets. Short paragraphs, one idea each. Plain modern English. Where the source is ambiguous, say so. Where scholars disagree, name it briefly. Use etymology and geography when they illuminate a specific point, never as mandatory ornament.
+
+### Exemplar passage
+
+> The Sumerians believed that before anything else existed, there was a primeval sea. They called her Nammu, and she seems to have been thought of as a kind of cosmic mother — though the texts that survive are maddeningly brief on this point. From Nammu came heaven and earth, conceived of as a single mountain with the sky (An) on top and the earth (Ki) below. An and Ki were the first divine couple, and their union produced Enlil, the god of the air.
+>
+> Enlil then did something that requires explanation. He separated his father An from his mother Ki, pushing the sky upward and leaving the earth below. This is a motif found in many mythologies — the violent separation of sky and earth by a younger god — but the Sumerian version is unusually matter-of-fact about it. There is no battle, no castration, no cosmic drama. Enlil simply separates them, and the world as we know it comes into being.
+
+### Forbidden words
+
+Do not use, in this register: *shimmering, ancient* (as ornament), *mystical, unfathomable, primordial* (as ornament), *ineffable, sacred* (as filler), *mighty, fearsome, dread, eternal, boundless, infinite, veiled, shrouded*. Avoid openings like "Long ago...", "In the time before time...", "It is said that...". These mark imitation-sacred prose, not Asimov.
+
+## Variant handling (from brief)
+
+- If `variants.classification` is **single-prevalent**: present the prevalent version in the body. Put alternate versions in AsciiDoc footnotes.
+- If **co-equal**: present the variants inline in the body, each introduced with its source ("One tradition, preserved in [source], describes... Another, in [source], gives a different account...").
+
+## Narrative transitions
+
+The claims document has no connective tissue — that is your job. You may add:
+- **Transitional sentences** that connect one claim to the next ("Having established the cosmic order, the narrative turns to...")
+- **Orienting context** that helps the reader follow the story ("At this point in the text, the setting shifts to...")
+- **Explanatory asides** that help the reader understand why something matters ("This is worth pausing on, because...")
+
+These are **not** factual claims — they are prose scaffolding. They must not introduce new information about the myth. If a transition requires a factual bridge, that bridge should already be in the claims document as an `[INFERENCE:]` marker.
+
+## Length
+
+Per brief's `target_length_words`, driven by source volume. If you find yourself padding, stop and return the shorter version with a note.
+
+## Source overview opening
+
+Every chapter begins with a short prose passage (2–5 paragraphs) that orients the reader in the physical evidence before the story begins. This passage is built from the `=== Source overview` claims in the approved claims document and covers:
+
+- **What we have**: the tablets, fragments, or manuscripts — named by museum number or corpus ID where possible — and where they were found.
+- **What condition it is in**: complete, fragmentary, or composite. Where the major gaps are.
+- **How we read it**: which critical edition or translation the retelling follows.
+
+This passage sets the Asimov register immediately: the reader understands they are about to hear a story reconstructed from physical artifacts, not received from some mystical tradition. It is the scholarly equivalent of "here is the evidence, now here is the story it tells."
+
+The source overview is separated from the narrative body by a blank line or a section transition (e.g., "The story, as the tablets preserve it, goes as follows."). It is not a dry bibliography — it is narrative prose about artifacts, written in the same Asimov register as the rest of the chapter.
+
+## Output: `chapters/NN-<slug>.adoc`
+
+```asciidoc
+== <Chapter Title>
+
+<Source overview — 2-5 paragraphs on the physical evidence: tablets, sites, preservation, edition. Built from the Source overview claims.>
+
+<Transition to narrative.>
+
+<Body — the verified claims, woven into narrative prose. Every claim present, no claims added.>
+
+<Closing — brief note on the story's place in the culture's corpus. No cross-cultural comparison. Carry over `// COMPARATIVE-HOOK:` comments from claims document.>
+```
+
+## Self-check before returning
+1. **Source overview present**: the chapter opens with 2–5 paragraphs on the physical evidence, built from the Source overview claims. No source overview = incomplete chapter.
+2. **Completeness**: walk the approved claims document claim by claim — including Source overview claims. Is every claim represented in the narrative? List any you cannot find — they are bugs.
+3. **No additions**: scan the narrative for any factual assertion that does not correspond to a claim in the approved document. Flag it.
+3. Scan for forbidden words — each hit is a drift signal; revise.
+4. Every proper noun was glossed on first mention using `glossary.yaml`.
+5. Variant handling matches the brief's classification.
+6. Every marker has survived from claims to narrative.
+7. All footnotes carried over unchanged.
+8. Length matches the brief's target. Not padded.
+9. `// COMPARATIVE-HOOK:` comments carried over.
+
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
+## Handoff
+To `narrative-fidelity`, in a fresh conversation (a different AI model is preferred but not required).
+
+---
+
+# Input file: chapters/33-methods.claims.approved.adoc
+
+```
+[[ch-33-methods-claims]]
+== Methods: Tiering, Appropriation, and Area-Specialist Policy — Claims
+
+// One claim per paragraph; chapter-draft will transform this into narrative.
+// Methods sidebar (between Part I and Part II) per brief 33-methods.yaml.
+// The chapter's job is to make explicit the methodological machinery the
+// book has been using throughout Part I and will use more intensely in
+// Part II. Per the brief, the chapter is read by critics; tone is
+// explanatory rather than argumentative; each section ends with concrete
+// examples drawn from Part I chapters. Target length 6,000 body-prose
+// words. Variant handling does not apply (no narrative); markers
+// [LACUNA:], [VARIANT:], [INFERENCE:], [RECONSTRUCTION:] do not apply
+// (no reconstructed narrative); the appropriation-protocol material in
+// section II describes the protocol that [APPROPRIATION-FLAG:] markers in
+// Chs 23, 26, 27, 28, 29, 30, 32 implement, rather than itself bearing a
+// marker. Section structure follows the brief's I–VII outline directly,
+// preceded by the standard === Source overview required by the skill.
+
+=== Source overview
+
+This chapter draws on a methodological-scholarship corpus rather than on a single tradition's primary-source corpus, and the body of work it cites can be sorted into eight functional roles: Hermann Gunkel as historical anchor (the 1895 thesis that named the category and supplies the title-word the book retains); Debra Scoggins Ballentine as the load-bearing dissenting position of the present generation (the alternative-sovereign critique that methodically shapes Part II); the Scurlock and Beal 2013 reassessment collection as the principal twenty-first-century re-examination of Gunkel's thesis; Calvert Watkins as the standard for Indo-European philology and the comparativist methodology the book uses critically; Neil Forsyth as the long-arc historical genealogy of the combat-myth category (Sumer through Judeo-Christian apocalyptic); Bruce Lincoln for the political-ideological framing that grounds the book's reading of combat-myth in power-relations rather than in cosmology alone; Francesca Merlan for the Aboriginal Australian appropriation critique that supplies the Rainbow Serpent material's methodological frame; and A. Irving Hallowell for the "other-than-human persons" framework that supplies the Anishinaabe refusal-case its conceptual register.footnote:[Per brief 33-methods.yaml sources.anchor on the eight methodological-scholarship anchors: Gunkel 1895 as historical starting point; Ballentine 2015 for the alternative-sovereign critique; Scurlock & Beal 2013 as the reassessment collection; Watkins 1995 as the IE comparativist methodology used critically; Forsyth 1987 for the historical framing; Lincoln 2012 for the political-ideological framing; Merlan 1998 for the appropriation critique; Hallowell 1960 for the "other-than-human persons" framework and the refusal of chaoskampf; Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit* (Göttingen: Vandenhoeck & Ruprecht, 1895), as the historical anchor for the Chaoskampf category.]
+// EVIDENCE: source_id=gunkel-1895 ; loc=Schöpfung und Chaos in Urzeit und Endzeit, 1895 thesis on Gen 1 and Rev 12 as Chaoskampf reflexes
+
+The chapter's body specialises this corpus per section: section I (tier-ranking) is anchored to the inclusion-test logic in the book's own scope and to the long-arc typology of Forsyth, but its concrete tier-demotion examples (Apollo–Python, Susanoo–Orochi) are anchored through the area-specialist scholarship the book elsewhere uses to handle those traditions; section II (appropriation protocol) is anchored to Merlan for the Rainbow Serpent material that supplies the protocol its hardest case and to Hallowell for the "other-than-human persons" framing on which the Anishinaabe refusal depends; section III (area-specialist citation policy) is anchored chapter-by-chapter to the area-specialist sources that the book's tradition-chapter briefs themselves use, with the methods chapter naming the area specialists by name as principal users rather than constructing a separate scholarly apparatus; section IV (reconstruction policy) is anchored to Watkins (for the IE-reflexes-not-cross-tradition discipline) and to the area-specialist editions for the test cases; section V (variant-presentation policy) is anchored to the same scholarly editions whose own variant-handling decisions the book follows; section VI (term glossary) is anchored to the methodologists who coined or are responsible for each term's usage; section VII (what the book does not claim) is anchored to the scholarship that shows each over-claim would be unsupportable.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover sections I–VII and per the chapter-claims skill instructions on routing every EVIDENCE token through a sources.yaml ID; the methods chapter is the book's only chapter that documents methodology rather than narrating a myth, and its anchors are the methodological-scholarship corpus rather than a single-tradition primary-source corpus; Ballentine, D.S., *The Conflict Myth and the Biblical Tradition* (New York: Oxford University Press, 2015), for the alternative-sovereign critique that shapes Part II.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=The Conflict Myth and the Biblical Tradition, the alternative-sovereign critique
+
+The chapter's secondary scholarly framing — beyond the eight methodological anchors — comes from area-specialist sources in sources.yaml that the chapter cites as named principal users of methods I and III rather than as their methodological warrants: van Dijk and Annus as the Sumerian–Akkadian editors named in section III; Hoffner and Beckman as the Hurro-Hittite editors; Smith and Pitard as the Ugaritic editors; Day as the Hebrew Bible specialist; West and Ogden as the Greek specialists; te Velde and Assmann as the Egyptian specialists; Jamison and Brereton as the Vedic editors; Benveniste and Renou as the Indo-Iranian comparativists; Lewis and Birrell as the Chinese specialists; Matos Moctezuma, Carrasco, and López Austin as the Mexica specialists; Salomon and Urioste as the Andean editors; Biebuyck, Mateene, and Belcher as the African specialists; Johnston, Smith (Theresa), and Vizenor as the Anishinaabe specialists alongside Hallowell; Naumann as the Japanese specialist; Siikala as the Finnic specialist.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on area-specialist citation policy and the chapter-by-chapter list of area specialists the book uses; per sources.yaml registry entries for each named area specialist (van Dijk 1983, Annus 2001, Hoffner 1998, Beckman 1982, Smith 1994, Smith & Pitard 2009, Day 1985, West 1966, West 1997, Ogden 2013, te Velde 1967, Assmann 2001, Jamison & Brereton 2014, Benveniste & Renou 1934, Lewis 2006, Birrell 1993, Matos Moctezuma 1988, Carrasco 1999, López Austin 1993, Salomon & Urioste 1991, Biebuyck & Mateene 1969, Belcher 1999, Johnston 1990 [1976], Smith 1995, Vizenor 1989, Naumann 1996, Siikala 2002); Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), for the long-arc historical genealogy of the combat-myth category against which all of these area-specialist anchors are deployed.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, Sumer through Judeo-Christian apocalyptic genealogy
+
+The chapter does not draw on a critical edition of any primary text and does not include a "what survives / state of preservation" pass of the kind the standard Source overview template requires for narrative chapters; the closest analogue here is the survival-and-status of the methodological literature itself, which the chapter treats as a living scholarly conversation rather than as a finished textual corpus, and which is therefore registered through citation to the principal landmark publications rather than through manuscript-witness-and-lacuna registers.footnote:[Per the chapter-claims skill instructions on the Source overview section's ordinary requirements (claims about physical artifacts, preservation state, composite character, discovery context, scholarly edition), and on the methods chapter as the book's only chapter that documents methodology rather than narrating a myth — the standard requirements are reframed for a methodological-scholarship corpus; Scurlock, J. and Beal, R. (eds.), *Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis* (Winona Lake: Eisenbrauns, 2013), as the principal twenty-first-century reassessment collection that exemplifies the methodological literature's character as a living scholarly conversation.]
+// EVIDENCE: source_id=scurlock-beal-2013 ; loc=Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis, reassessment collection
+
+=== I. The tier-ranking rubric
+
+The book sorts its chapters into five tiers — CORE, RELATED, PROVISIONAL/CRITIQUE, CONTRASTIVE, and SIDEBAR (with "PROVISIONAL/CRITIQUE" the locked single label for the third tier, matching scope.md's usage) — and the present section makes explicit the operational test by which each chapter was assigned to its tier at scope-lock and at the inventory-audit stage that followed.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the tier-ranking rubric as derived from scope.md §"Inclusion / exclusion criteria" and on the audit-stage assignment of chapters to tiers; Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), as the long-arc combat-myth genealogy whose catalog-level treatment supplies the historical baseline against which the book's tier classifications are made.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, catalog-level treatment of the combat-myth corpus
+
+A story is classified CORE if it meets all four operational criteria simultaneously: a serpentine or monstrous adversary; a combat explicitly attested in a primary source rather than in modern reconstruction alone; cosmogonic, kingship, cyclical, or eschatological order-making work as identified by area specialists rather than only by pattern-matching comparativists; and a scholarly corpus robust enough that the chapter can cite multiple independent area-specialist readings.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the four-criterion operational test and on the area-specialist requirement that distinguishes CORE from RELATED; Forsyth 1987, *The Old Enemy*, on the requirement that combat be explicitly attested in a primary source rather than reconstructed comparatively, which is the load-bearing first move in any catalog-level treatment of the combat-myth corpus.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, on the criterion of explicit primary-source attestation
+
+The third criterion in particular — that the order-making work be identified by area specialists, not only by pattern-matching comparativists — is the load-bearing distinction that separates the book's tier-ranking from a purely comparativist catalog, and it is the criterion that has done the most work in moving stories between tiers since scope-lock.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the area-specialist requirement as the load-bearing tier-distinction; Lincoln, B., *Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions* (Chicago: University of Chicago Press, 2012), on the methodological priority of area-specialist readings over comparativist pattern-matching in the political-ideological reading of combat-myth.]
+// EVIDENCE: source_id=lincoln-2012 ; loc=Gods and Demons, Priests and Scholars, on area-specialist priority
+
+A story is classified RELATED if it meets criteria one and two but the third is weaker, or if the third holds only under a comparativist reading that area specialists qualify; the test is sufficient on its own to demote a story from CORE to RELATED without further argument.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the RELATED tier as (1)–(2) but with (3) weaker; Lincoln 2012, *Gods and Demons, Priests and Scholars*, on comparativist readings as appropriately qualifiable by area-specialist objection.]
+// EVIDENCE: source_id=lincoln-2012 ; loc=Gods and Demons, Priests and Scholars, on comparativist-vs-area-specialist epistemic priority
+
+A story is classified PROVISIONAL/CRITIQUE if area specialists explicitly reject the chaoskampf framing for it (as for Rainbow Serpent and Yu / Xiangliu) or if the combat is absent or inverted from the typological pattern, in which case it gets a dedicated chapter with the right framing rather than being silently excluded.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the PROVISIONAL/CRITIQUE classification for cases where area specialists reject the framing; Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998), on the area-specialist objection to imposing the Chaoskampf or Rainbow-Serpent-as-chaos framing on Aboriginal Australian material.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, on the appropriation critique that motivates the PROVISIONAL/CRITIQUE classification
+
+A story is classified CONTRASTIVE in the inversion-of-valence sub-case if the combat is genuinely present in the tradition's primary sources but its valence is inverted, with Bida — where slaying the serpent destroys prosperity rather than establishing it — as the principal worked example.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the CONTRASTIVE classification for the inversion-of-valence sub-case (Bida); Conrad, D.C., *Empires of Medieval West Africa: Ghana, Mali, and Songhay* (New York: Facts on File, 2005), as the book's pinned area-specialist anchor for the Bida / Wagadu inversion material.]
+// EVIDENCE: source_id=conrad-west-africa ; loc=Empires of Medieval West Africa, on the Bida / Wagadu inversion of valence
+
+A story is classified CONTRASTIVE in the refusal-of-mapping sub-case if the area-specialist tradition declines the chaos-vs-order mapping while a surface combat is recorded, with Nanabozho / Mishipeshu / Thunderers — where the Anishinaabe ontological framework treats the figures as "other-than-human persons" rather than as chaos-vs-order antagonists — as the principal worked example.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the CONTRASTIVE classification for the refusal-of-mapping sub-case (Nanabozho); Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in *Culture in History: Essays in Honor of Paul Radin*, ed. Stanley Diamond (New York: Columbia University Press, 1960), 19–52, on the "other-than-human persons" framework that grounds the Anishinaabe refusal of the chaos-vs-order mapping.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+
+A story is classified SIDEBAR if it is not itself a chaoskampf but its inclusion sharpens the book's chaoskampf analysis by contrast — Yu the Great as a hydraulic-ordering pattern that contrasts with combat-ordering is the clear case.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the SIDEBAR classification and the Yu-the-Great example; Lewis, M.E., *The Flood Myths of Early China* (Albany: SUNY Press, 2006), on Yu's hydraulic-ordering pattern as the relevant Chinese contrast-case to combat-ordering.]
+// EVIDENCE: source_id=lewis-2006-flood ; loc=The Flood Myths of Early China, hydraulic-ordering of Yu
+
+The Apollo–Python case was demoted from CORE to RELATED at scope-lock because the third criterion — area-specialist identification of cosmogonic or sovereignty work — was found to hold only under a comparativist reading that classical area specialists qualify; Greek-area scholarship treats Apollo's killing of Python primarily as a cult-foundation aetiology for Delphi rather than as a cosmogonic or sovereignty combat in the Mesopotamian sense.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the Apollo–Python tier-demotion as a worked example of criterion (3); Ogden, D., *Drakōn: Dragon Myth and Serpent Cult in the Greek and Roman Worlds* (Oxford: Oxford University Press, 2013), on the Greek-area scholarly treatment of Apollo–Python as primarily a cult-foundation aetiology for Delphi.]
+// EVIDENCE: source_id=ogden-2013 ; loc=Drakōn, Apollo-Python as Delphic cult-foundation
+
+The Susanoo–Orochi case was demoted from CORE to RELATED at scope-lock because Japanese-area specialists (Naumann, Isomae, Como) read the Yamata-no-Orochi episode primarily as a metallurgical or political allegory rather than as a cosmogonic or sovereignty combat in the chaoskampf sense, and the chapter is therefore framed with explicit attention to the area-specialist re-reading rather than narrating an "Eastern Marduk".footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the Susanoo–Orochi tier-demotion and on the named Japanese-area specialists Naumann, Isomae, and Como as the principal proponents of the area-specialist re-reading; Naumann, N., *Die Mythen des alten Japan* (München: C.H. Beck, 1996), on the metallurgical-allegory reading of Susanoo–Orochi.]
+// EVIDENCE: source_id=naumann-mythen ; loc=Die Mythen des alten Japan, metallurgical-allegory reading of Susanoo-Orochi
+
+The book's tier-ranking is not stable across the comparative literature — Forsyth's catalog and Watkins's IE corpus would each generate a different CORE / RELATED split, because each has a different theoretical commitment — and the present rubric is therefore presented as the book's operational decision-procedure rather than as a discovery about the underlying corpus.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section I on the tier-ranking as the book's operational decision rather than as a corpus-discovery; Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995), as the principal Indo-European comparativist corpus whose CORE / RELATED split would differ from the present book's.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, IE comparativist corpus and its CORE-set
+
+=== II. The appropriation protocol
+
+The book's appropriation protocol is a three-part rule applied to every RELATED chapter on a non-Eurasian tradition (per scope.md §"Appropriation protocol"): cite at least two area specialists by name in the first factual pass; record any area-specialist objection to the chaoskampf framing in an [APPROPRIATION-FLAG:] marker that the comparative chapters address rather than paper over; and open with the tradition's own framing before invoking the comparative category — and CONTRASTIVE chapters in this book (Susanoo–Orochi, Bida, Mwindo, Nanabozho) operate under their own brief-level appropriation discipline driven by the chapter's specific brief rather than under a global protocol expansion.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the three-part appropriation protocol derived from scope.md §"Appropriation protocol" (which specifies RELATED-only) and on CONTRASTIVE chapters as governed by brief-level appropriation discipline rather than by a global protocol extension; Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998), as the central methodological anchor for the appropriation critique on which the protocol depends.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, the appropriation critique
+
+The two-area-specialists-by-name requirement is calibrated against the failure-mode of comparativist chapters that cite only the comparativist's own corpus when treating a non-Eurasian tradition; the requirement is meant to ensure that the area's own scholarly tradition has at minimum a structural role in shaping how the tradition is presented before any cross-cultural comparison is attempted.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the two-area-specialists requirement as a calibration against comparativist failure-mode; Merlan 1998, *Caging the Rainbow*, on the methodological problem of treating Aboriginal Australian material through comparativist categories without first grounding the treatment in the area's own scholarly tradition.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, on the methodological problem of comparativist-only treatment
+
+The [APPROPRIATION-FLAG:] marker requirement records the specialist objection in the chapter's claims-and-draft files in a structured form that the book's comparative chapters (C1–C8) can engage in detail rather than as a footnote that the comparative apparatus can absorb without engagement; the marker is the protocol's principal mechanism for keeping the area-specialist objection alive across the book's own internal cross-references.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the [APPROPRIATION-FLAG:] marker as the structured record of specialist objection; Hallowell 1960, "Ojibwa Ontology, Behavior, and World View", as the canonical example of an area-specialist position whose objection to the chaos-vs-order mapping the present book's protocol must keep methodologically live.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, on the area-specialist objection that the protocol keeps live
+
+The opening-with-the-tradition's-own-framing requirement is meant to prevent the rhetorical move in which a non-Eurasian tradition is introduced through the comparative category and only later allowed to register its own framing as a qualification; the order matters because the reader's first impression is what the chapter's argument is testing, and burying the area-specialist framing in a later paragraph undercuts the protocol.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the opening-framing requirement and on the order-matters argument; Merlan 1998, *Caging the Rainbow*, on the methodological priority of presenting Aboriginal Australian material through its own framing before invoking the imposed comparative category.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, on the priority of tradition-internal framing over imposed comparative categories
+
+The Ra–Apep chapter (Ch16) opens with maʿat / isfet — the Egyptian polarity of cosmic order and disorder that area specialists consider the principal frame for the Apep-slaying material — before invoking the comparative chaoskampf category, in implementation of the protocol's third clause.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the Ra–Apep opening-with-maʿat as a worked example of the third clause; Assmann, J., *The Search for God in Ancient Egypt*, trans. David Lorton (Ithaca: Cornell University Press, 2001), on the maʿat-vs-isfet framework as the principal area-specialist frame for the Apep material.]
+// EVIDENCE: source_id=assmann-2001-search ; loc=The Search for God in Ancient Egypt, on the maʿat / isfet framework
+
+The Pariacaca chapter opens with wak'a-succession — the Andean conceptual framework in which mountain-deities (wak'as) accede to dominance over a region by displacing prior wak'as — before invoking the comparative chaoskampf category; the framing comes from the area-specialist scholarship rather than from comparativist machinery.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the Pariacaca opening-with-wak'a-succession as a worked example of the third clause; Salomon, F. and Urioste, G.L. (trans. and eds.), *The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion* (Austin: University of Texas Press, 1991), on the wak'a-succession framework that the area-specialist scholarship uses to read the Pariacaca-vs-Amaru material.]
+// EVIDENCE: source_id=salomon-urioste-huarochiri ; loc=The Huarochirí Manuscript, on wak'a-succession framework
+
+The Nanabozho / Mishipeshu chapter (Ch32) opens with the Anishinaabe ontological framework of "other-than-human persons" — Hallowell's 1960 phrase — and with the Thunderer / Underwater-manitou dialectic before invoking (and refusing) the comparative chaoskampf category, in the most explicit single application of the protocol's third clause anywhere in Part I.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the Nanabozho opening-with-other-than-human-persons as a worked example of the third clause; Hallowell 1960, "Ojibwa Ontology, Behavior, and World View", on the "other-than-human persons" framework as the load-bearing Anishinaabe ontological frame for the Mishipeshu and Thunderers material.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, on the "other-than-human persons" framework
+
+The protocol applies most stringently in Part II's C8 chapter (the refusal and the appropriation problem), where the present book's overall comparative apparatus is itself the object of critique; the protocol's three clauses are operationalised there as a sustained methodological self-check rather than as a per-chapter discipline.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the protocol's most stringent application in C8; Merlan 1998, *Caging the Rainbow*, on the methodological self-check that the appropriation critique requires when comparativist machinery is itself the object of review.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, on the methodological self-check requirement
+
+The protocol is asymmetric: it applies to non-Eurasian RELATED chapters and not to non-Eurasian CORE chapters because the book's CORE entries are by definition cases where area specialists themselves identify the chaoskampf-relevant order-making work, so the appropriation risk is materially smaller; CONTRASTIVE chapters carry equally serious appropriation-risk but are addressed under brief-level discipline rather than under the present three-clause protocol, and the asymmetry is documented here so that critics can see the rule rather than infer it.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section II on the asymmetric application of the protocol to RELATED chapters and on CONTRASTIVE chapters as governed by chapter-brief discipline; Hallowell 1960, "Ojibwa Ontology, Behavior, and World View", as the canonical instance of an area-specialist position whose presence in CORE-tier scholarship would itself satisfy criterion (3) — the asymmetry follows directly from the tier-ranking rubric.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, on the area-specialist criterion underlying the asymmetric application
+
+=== III. Area-specialist citation policy
+
+The book's area-specialist citation policy is that every tradition's primary sources go through the area's own specialists rather than through comparativist framers, and the chapter-briefs themselves were assembled by selecting the area-specialist anchor first and the comparative anchor only after the area-specialist anchor was in place.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on the area-specialist citation policy as the chapter-brief assembly priority; Lincoln 2012, *Gods and Demons, Priests and Scholars*, on the political-ideological priority of area-specialist epistemic standing over comparativist framing.]
+// EVIDENCE: source_id=lincoln-2012 ; loc=Gods and Demons, Priests and Scholars, on area-specialist epistemic priority
+
+For the Sumerian–Akkadian materials, the book uses J.J.A. van Dijk for Lugal-e (the Ninurta–Asag chapter) and Amar Annus for the Standard Babylonian Anzu Epic (the Ninurta–Anzû chapter), with W.G. Lambert's Babylonian Creation Myths as the anchor edition for Enūma Eliš (the Marduk–Tiamat chapter).footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on the Sumerian–Akkadian area specialists; van Dijk, J.J.A., *LUGAL UD ME-LÁM-bi NIR-ĜÁL: Le récit épique et didactique des Travaux de Ninurta, du Déluge et de la Nouvelle Création*, 2 vols. (Leiden: Brill, 1983), as the standard critical edition of Lugal-e.]
+// EVIDENCE: source_id=vandijk-1983-lugale ; loc=van Dijk 1983, the standard critical edition of Lugal-e
+
+The Anzû Epic anchor is the Annus 2001 SAACT 3 edition with Foster's *Before the Muses* as the standard English anthology cross-check, in keeping with the book's policy that area-specialist editions take precedence over anthology translations for primary citations of narrative content.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on the Annus and Foster pairing for Anzû; Annus, A., *The Standard Babylonian Epic of Anzu* (State Archives of Assyria Cuneiform Texts 3, Helsinki: Neo-Assyrian Text Corpus Project, 2001), as the area-specialist critical edition of the Anzû Epic.]
+// EVIDENCE: source_id=annus-2001-anzu ; loc=Annus 2001, critical edition of the Anzû Epic
+
+For the Hurro-Hittite materials, the book uses Harry A. Hoffner Jr.'s *Hittite Myths* (SBL Writings from the Ancient World) for the Kumarbi Cycle, Song of Hedammu, Kingship in Heaven, and Illuyanka, with Gary Beckman's 1982 philological edition of the Illuyanka tablets as the cross-check.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Hoffner and Beckman for the Hurro-Hittite area; Hoffner, H.A., *Hittite Myths*, 2nd ed., SBL Writings from the Ancient World 2 (Atlanta: Society of Biblical Literature, 1998), as the standard area-specialist anchor for the Hurro-Hittite combat-myth corpus.]
+// EVIDENCE: source_id=hoffner-1998 ; loc=Hittite Myths, on the Kumarbi Cycle and Illuyanka
+
+For the Ugaritic Baal Cycle, the book uses Mark S. Smith's volume I (KTU 1.1–1.2, the Baal–Yamm arc) and Smith and Pitard's volume II (KTU/CAT 1.3–1.4, the palace-building cycle) as the chapter's twin anchors, with the area-specialist scholarly apparatus rather than a popular anthology supplying the philological backbone.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Smith and Pitard for the Ugaritic area; Smith, M.S., *The Ugaritic Baal Cycle, Volume I: Introduction with Text, Translation and Commentary of KTU 1.1–1.2* (Leiden: Brill, 1994), as the area-specialist anchor for the Baal–Yamm arc.]
+// EVIDENCE: source_id=smith-1994-baal-i ; loc=The Ugaritic Baal Cycle, Volume I, Baal-Yamm arc
+
+For the Hebrew Bible chaoskampf reflexes, the book uses John Day's *God's Conflict with the Dragon and the Sea* as the canonical monograph on the Leviathan / Rahab corpus and its Ugaritic background, alongside Ballentine 2015 as the dissenting position the book is most concerned to engage.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Day and Ballentine for the Hebrew Bible area; Day, J., *God's Conflict with the Dragon and the Sea: Echoes of a Canaanite Myth in the Old Testament* (Cambridge: Cambridge University Press, 1985), as the canonical monograph on the Leviathan / Rahab corpus.]
+// EVIDENCE: source_id=day-1985 ; loc=God's Conflict with the Dragon and the Sea, on the Leviathan / Rahab corpus
+
+The Hebrew Bible material's area-specialist register is deliberately bivalent: Day's reading is the principal historical-critical anchor while Ballentine 2015 supplies the alternative-sovereign critique that the book treats as a live methodological challenge rather than as a settled minority view.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on the Hebrew Bible area's bivalent area-specialist register and on Ballentine as a live methodological challenge; Ballentine 2015, *The Conflict Myth and the Biblical Tradition*, on the alternative-sovereign critique that contests the "chaos" framing of the Hebrew Bible adversaries.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=The Conflict Myth and the Biblical Tradition, the alternative-sovereign critique
+
+For the Greek and Roman material, the book uses M.L. West's edition and commentary on Hesiod's Theogony as the philological anchor for Zeus–Typhon and Daniel Ogden's *Drakōn* as the current Greek and Roman survey, with Joseph Fontenrose's 1959 *Python* as the foundational comparative treatment retained for its historiographic register.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on West and Ogden for the Greek and Roman area; West, M.L. (ed.), *Hesiod: Theogony* (Oxford: Clarendon Press, 1966), as the standard critical edition of the Theogony with commentary on Zeus–Typhon.]
+// EVIDENCE: source_id=west-1966-theogony ; loc=Hesiod: Theogony, on Zeus-Typhon
+
+Ogden's 2013 *Drakōn* is the book's principal current-survey anchor for the Greek dragon-corpus more broadly — including the Apollo–Python, Herakles–Hydra, Perseus–Ketos, Kadmos, Bellerophon, and Cacus material handled in the family-chapter on Greek dragon-combats after Zeus–Typhon.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Ogden for the Greek dragon-corpus; Ogden, D., *Drakōn: Dragon Myth and Serpent Cult in the Greek and Roman Worlds* (Oxford: Oxford University Press, 2013), as the current Greek and Roman survey.]
+// EVIDENCE: source_id=ogden-2013 ; loc=Drakōn, classification of drakontes and adversaries
+
+For the Egyptian material, the book uses Herman te Velde's *Seth, God of Confusion* as the core area-specialist study of Seth as Apep-slayer and as ambivalent figure, alongside Jan Assmann's *Search for God in Ancient Egypt* for the maʿat-vs-isfet framework that the Ra–Apep chapter uses as its opening register.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on te Velde and Assmann for the Egyptian area; te Velde, H., *Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion*, 2nd ed. (Leiden: Brill, 1977; orig. 1967), as the core area-specialist study of Seth.]
+// EVIDENCE: source_id=te-velde-1967 ; loc=Seth, God of Confusion, on Seth as Apep-slayer
+
+For the Vedic material, the book uses Jamison and Brereton's 2014 three-volume Rigveda — the current scholarly-standard English edition — as the principal area-specialist anchor for Indra–Vṛtra and the Trita Āptya material in the Vedic-and-post-Vedic family chapter.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Jamison and Brereton for the Vedic area; Jamison, S.W. and Brereton, J.P., *The Rigveda: The Earliest Religious Poetry of India*, 3 vols. (New York: Oxford University Press, 2014), as the current scholarly-standard English Rigveda.]
+// EVIDENCE: source_id=jamison-brereton-2014 ; loc=The Rigveda, Indra-Vṛtra and Trita Āptya
+
+For the Indo-Iranian comparative dimension, the book uses Émile Benveniste and Louis Renou's 1934 *Vṛtra et Vṛθragna* as the foundational study, recognised that this is a 1934 work and that current Indo-Iranian comparative scholarship has refined some of its claims but that the structural argument remains the philological backbone for the Indra–Vṛtra / Thraētaona–Aži Dahāka pairing.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Benveniste and Renou as the Indo-Iranian comparative anchor; Benveniste, É. and Renou, L., *Vṛtra et Vṛθragna: Étude de mythologie indo-iranienne*, Cahiers de la Société Asiatique 3 (Paris: Imprimerie Nationale, 1934), as the foundational Indo-Iranian comparative study.]
+// EVIDENCE: source_id=benveniste-renou-1934 ; loc=Vṛtra et Vṛθragna, Indo-Iranian comparative
+
+For the Indo-European philology underlying the HERO SLAY SERPENT formula, the book uses Calvert Watkins's 1995 *How to Kill a Dragon* as the canonical anchor for the formula's reconstruction across Vedic, Hittite, Greek, Germanic, Celtic, and Slavic traditions, with West's 2007 *Indo-European Poetry and Myth* as a structural cross-check.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Watkins for IE philology; Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995), as the IE philology anchor for the HERO SLAY SERPENT formula.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, the HERO SLAY SERPENT formula
+
+For the Chinese material, the book uses Mark Edward Lewis's *Flood Myths of Early China* and Anne Birrell's *Chinese Mythology* as the principal area-specialist anchors for Gonggong, the Yu-the-Great sidebar, and the Hou Yi family-chapter material.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Lewis and Birrell for the Chinese area; Lewis, M.E., *The Flood Myths of Early China* (Albany: SUNY Press, 2006), as the area-specialist anchor for Gonggong and the Yu-sidebar.]
+// EVIDENCE: source_id=lewis-2006-flood ; loc=The Flood Myths of Early China, on Gonggong and Yu
+
+For the Mexica material, the book uses Eduardo Matos Moctezuma's archaeological treatment (the Templo Mayor as Coatepec interpretation), Davíd Carrasco's ritual-and-political reading, and Alfredo López Austin's mythological synthesis as the three principal area-specialist anchors for the Huitzilopochtli / Coatepec / Coyolxauhqui material, with the Anderson-Dibble Florentine Codex translation supplying the primary-source register at the chapter-draft stage.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Matos Moctezuma, Carrasco, and López Austin for the Mexica area; Matos Moctezuma, E., *The Great Temple of the Aztecs: Treasures of Tenochtitlan* (London: Thames & Hudson, 1988), as the archaeological anchor for the Templo Mayor / Coatepec interpretation.]
+// EVIDENCE: source_id=matos-moctezuma-templo-mayor ; loc=The Great Temple of the Aztecs, Templo Mayor as Coatepec
+
+For the Andean material, the book uses Frank Salomon and George Urioste's *Huarochirí Manuscript* as the primary-translation anchor for Pariacaca and the wak'a-succession material, with Gerald Taylor as a further Andean-studies specialist consulted at the chapter-briefs stage and the area's broader Andean-studies scholarship as the contextualising frame.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Salomon, Urioste, and Taylor for the Andean area (Taylor named in body prose under the named-but-flagged pattern, with no specific publication yet in sources.yaml); Salomon, F. and Urioste, G.L. (trans. and eds.), *The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion* (Austin: University of Texas Press, 1991), as the area-specialist primary-translation anchor for Pariacaca.]
+// EVIDENCE: source_id=salomon-urioste-huarochiri ; loc=The Huarochirí Manuscript, on Pariacaca
+
+For the African material, the book uses Daniel Biebuyck and Kahombo Mateene's *Mwindo Epic from the Banyanga* as the primary-translation anchor for Mwindo, Stephen Belcher's *Epic Traditions of Africa* as the comparative-Africanist register, and David Conrad's *Empires of Medieval West Africa* as the Bida / Wagadu anchor.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Biebuyck, Mateene, and Belcher for the African area; Biebuyck, D. and Mateene, K.C. (trans. and eds.), *The Mwindo Epic from the Banyanga (Zaire)* (Berkeley: University of California Press, 1969), as the primary-translation anchor for Mwindo.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, Mwindo and Kirimu
+
+For the Anishinaabe material, the book uses A. Irving Hallowell's 1960 essay (the "other-than-human persons" framework), Basil Johnston's *Ojibway Heritage* and *Manitous* (the Anishinaabe-authored insider register), Theresa S. Smith's *Island of the Anishnaabeg* (the Thunderer / Underwater-manitou dialectic), and Gerald Vizenor's *Narrative Chance* (the methodological refusal to subordinate Nanabozho to combat-myth typology) as a four-source area-specialist apparatus that exceeds the protocol's two-area-specialist minimum because the chapter's contrastive-case status places extra evidentiary weight on the area's own scholarship.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Hallowell, Johnston, Smith, and Vizenor for the Anishinaabe area; Hallowell 1960, "Ojibwa Ontology, Behavior, and World View", as the foundational "other-than-human persons" framework anchor.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, "other-than-human persons" framework
+
+For the Aboriginal Australian material handled in the C8 comparative chapter (the Rainbow Serpent critique-case), the book uses Francesca Merlan's *Caging the Rainbow* as the principal area-specialist anchor for the appropriation critique; the further specialists named in the brief (Morphy, Rose, Keen) are treated under the named-but-flagged pattern where their specific publications are not yet in sources.yaml.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Merlan as the principal Aboriginal Australian anchor and on Morphy, Rose, and Keen as further area specialists; Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998), as the principal area-specialist anchor for the Aboriginal Australian appropriation critique.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, the Aboriginal Australian appropriation critique
+
+For the Japanese material, the book uses Donald Philippi's Kojiki translation as the primary-translation anchor and Nelly Naumann's *Mythen des alten Japan* as the principal area-specialist anchor for the metallurgical-allegory reading of Susanoo–Orochi; the further specialists named in the brief (Isomae, Como, Ooms) are treated under the named-but-flagged pattern.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Naumann, Isomae, Como, and Ooms for the Japanese area; Naumann, N., *Die Mythen des alten Japan* (München: C.H. Beck, 1996), as the principal area-specialist anchor for the metallurgical-allegory reading of Susanoo–Orochi.]
+// EVIDENCE: source_id=naumann-mythen ; loc=Die Mythen des alten Japan, Susanoo-Orochi reading
+
+For the Finnic material, the book uses Anna-Leena Siikala's *Mythic Images and Shamanism* as the principal area-specialist anchor for Väinämöinen and Iku-Turso, with the Kalevala-poetry tradition treated as the recorded Finnic textual register through which the Iku-Turso material survives.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on Siikala for the Finnic area; Siikala, A.-L., *Mythic Images and Shamanism: A Perspective on Kalevala Poetry*, Folklore Fellows' Communications 280 (Helsinki: Academia Scientiarum Fennica, 2002), as the area-specialist anchor for the Finnic combat-myth register.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, Väinämöinen and Iku-Turso
+
+The area-specialist citation policy is operationalised at the chapter-brief stage rather than at the chapter-draft stage; chapter-briefs lock the area-specialist anchors before the chapter-claims and chapter-draft stages run, so that the primary-source citations are already routed through the area's own scholarship by the time the narrative is written.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on the chapter-brief stage as the locus of area-specialist anchor selection; Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), on the catalog-level treatment that the book's chapter-brief structure operationalises through area-specialist routing.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, on the catalog-level treatment
+
+The policy permits comparativist anchors (Forsyth, Watkins, West, Burkert, Lincoln, Yarbro Collins) to appear alongside the area-specialist anchors, but never as the chapter's only or primary-most anchor for the tradition's narrative content; the comparativist-only failure-mode is what the policy is designed to prevent.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section III on the comparativist-only failure-mode that the policy prevents; Watkins 1995, *How to Kill a Dragon*, as a comparativist anchor that the policy permits alongside but not as the only or primary-most anchor for any single tradition's narrative content.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, the comparativist anchor used alongside area specialists
+
+=== IV. Reconstruction policy
+
+The book's reconstruction policy has four governing principles: no cross-tradition reconstruction; in-tradition reconstruction must specify the donor source and period-proximity tolerance; [RECONSTRUCTION:] markers name the donor source; and fragmentary cases are presented as fragmentary rather than composited from analogs.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the four governing principles derived from scope.md §"Reconstruction policy"; Watkins 1995, *How to Kill a Dragon*, as the canonical Indo-European comparativist text whose reflexes-not-cross-tradition discipline the book's policy generalises.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on IE reflexes as the model of in-tradition reconstruction
+
+The no-cross-tradition-reconstruction clause is the most important: a gap in the *Hymiskviða* may not be filled from the *Baal Cycle*, even where the structural analogue is striking, because doing so collapses the very evidentiary structure on which the comparative argument depends.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the no-cross-tradition clause and the Hymiskviða / Baal Cycle illustration; Watkins 1995, *How to Kill a Dragon*, on the methodological priority of in-tradition reflexes over cross-tradition borrowings in IE comparative analysis.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on the in-tradition-reflex priority
+
+The in-tradition-reconstruction clause requires that any reconstruction filling a gap in a tradition's primary text specify the donor source within the same tradition and the period-proximity tolerance — for example, "any Rigvedic hymn; never post-Vedic" — so that the reconstruction's evidentiary scope is recoverable rather than implicit.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the in-tradition clause and the period-proximity-tolerance requirement; Jamison, S.W. and Brereton, J.P., *The Rigveda: The Earliest Religious Poetry of India*, 3 vols. (New York: Oxford University Press, 2014), on the area-specialist treatment of Rigvedic-versus-post-Vedic period-proximity in interpretive reconstruction.]
+// EVIDENCE: source_id=jamison-brereton-2014 ; loc=The Rigveda, on Rigvedic / post-Vedic period-proximity
+
+The [RECONSTRUCTION:] marker requirement records the donor source explicitly in the chapter's claims and draft files, so that the reader can tell at a glance which content is attested in the primary source and which has been filled from another in-tradition source under the policy's discipline.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the [RECONSTRUCTION:] marker requirement and on the donor-source-specification rule; Watkins 1995, *How to Kill a Dragon*, on the methodological discipline of explicit donor-source attribution in reconstructive comparative analysis.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on explicit donor-source attribution
+
+The fragmentary-cases-presented-as-fragmentary clause covers the Marduk-vs-Labbu fragment, the Song of Hedammu, and some vishap material; these chapters present the securely attested material first and any reconstructed narrative material separately, with the boundary marked rather than smoothed over.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the fragmentary-cases-presented-as-fragmentary clause and on the named test cases (Marduk vs. Labbu, Song of Hedammu, vishap material); Hoffner, H.A., *Hittite Myths*, 2nd ed., SBL Writings from the Ancient World 2 (Atlanta: Society of Biblical Literature, 1998), on the fragmentary state of the Song of Hedammu and on the area-specialist convention of presenting fragmentary material as fragmentary.]
+// EVIDENCE: source_id=hoffner-1998 ; loc=Hittite Myths, on the fragmentary state of the Song of Hedammu
+
+The Kumarbi Cycle's Hedammu and Song of the Sea are not filled from Ugaritic material in any chapter of the book, despite the structural analogues with the Baal Cycle, in direct application of the no-cross-tradition clause; the chapters present the Hurrian-Hittite material as it survives in Hoffner's edition without Ugaritic supplementation.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the Kumarbi Cycle / Ugaritic non-supplementation as a worked test case; Hoffner 1998, *Hittite Myths*, as the area-specialist edition that the chapters use without Ugaritic supplementation.]
+// EVIDENCE: source_id=hoffner-1998 ; loc=Hittite Myths, on Hedammu and the Song of the Sea
+
+The Baal Cycle's Lôtan passage is not narrativised from the Hebrew Bible's Leviathan material in any chapter of the book, despite the etymological cognation, in direct application of the no-cross-tradition clause; the Ugaritic passage is presented as it survives in Smith's edition without Hebrew Bible expansion, and the cognation is registered as a comparative observation rather than as a narrative supplement.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the Baal Cycle Lôtan / Hebrew Bible Leviathan non-supplementation as a worked test case; Smith, M.S., *The Ugaritic Baal Cycle, Volume I: Introduction with Text, Translation and Commentary of KTU 1.1–1.2* (Leiden: Brill, 1994), as the area-specialist edition that the chapters use without Hebrew Bible expansion.]
+// EVIDENCE: source_id=smith-1994-baal-i ; loc=The Ugaritic Baal Cycle, Volume I, on Lôtan
+
+The Perun–Veles material is presented as a reconstruction throughout, with the Ivanov-and-Toporov "basic myth" thesis registered as the principal reconstruction and the Jakobson, Lajoye, and Kapović critiques registered alongside; the material is not presented as a narrative-with-confidence but as a contested philological-and-folkloric reconstruction whose status is itself part of the chapter's content.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on Perun–Veles as a worked reconstructive test case with the Jakobson / Lajoye / Kapović critiques; Watkins 1995, *How to Kill a Dragon*, on the Indo-European philological framework within which the Perun-Veles reconstruction is positioned (Watkins himself is more cautious about Slavic reflexes than Ivanov and Toporov are).]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on the IE philological framework for Slavic reflexes
+
+The reconstruction policy is most stringently exercised in the C5 comparative chapter (the Indo-European HERO SLAY SERPENT formula), where Watkins's reconstruction-discipline is itself the chapter's subject, and in the C6 comparative chapter (Near Eastern → Mediterranean transmission), where the Hurro-Hittite / Ugaritic / Greek transmission chain is treated under the policy's no-cross-tradition clause as a documented historical contact rather than as a free reconstructive licence.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section IV on the reconstruction policy's most stringent exercise in C5 and C6; Watkins 1995, *How to Kill a Dragon*, as the C5-chapter's own subject and the principal anchor for the IE reconstruction-discipline.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, the IE HERO SLAY SERPENT formula reconstruction
+
+=== V. Variant-presentation policy
+
+The book classifies variants under four headings drawn from scope.md §"Variant presentation policy" and operationalised in each chapter's brief: single-prevalent (one version dominant in the area's scholarly corpus, with minor variants in footnotes); single-prevalent-reconstructed (the same, with [RECONSTRUCTION:] markers covering the gap-filling); co-equal (two or more variants treated side by side in body prose, each attributed to its source); composite-editorial (a scholarly composite reconstructed from multiple witnesses, presented in body prose with the witness-variant divergences in footnotes).footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the four variant classifications and on each chapter's brief specifying its classification; Hoffner 1998, *Hittite Myths*, as the area-specialist edition whose own variant-handling decisions the book's classification system follows for the Hurro-Hittite material.]
+// EVIDENCE: source_id=hoffner-1998 ; loc=Hittite Myths, on variant-handling for the Hurro-Hittite corpus
+
+The single-prevalent classification is appropriate where one version dominates a tradition's scholarly corpus — Snorri's version of the Thor fishing episode is the textbook case — and the chapter's body presents that version with the minor variants registered in footnotes rather than in the body.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the single-prevalent classification and the Snorri Thor-fishing example; Faulkes, A. (ed. and trans.), *Edda* (by Snorri Sturluson), trans. Anthony Faulkes (London: Dent / Everyman, 1987), as the standard English Snorri edition that supplies the prevalent version.]
+// EVIDENCE: source_id=faulkes-snorri ; loc=Edda (Snorri), on the Thor-fishing episode as the prevalent variant
+
+The co-equal classification is appropriate where variants are roughly co-equal within a tradition's corpus — the two Illuyanka versions on the same tablet group are the textbook case — and the chapter's body presents them in sequence with explicit source attribution rather than synthesising them into a single "Illuyanka myth".footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the co-equal classification and the Illuyanka-on-the-same-tablet example; Beckman, G., 'The Anatolian Myth of Illuyanka', *Journal of the Ancient Near Eastern Society* 14 (1982): 11–25, as the standard philological edition of the two Illuyanka versions.]
+// EVIDENCE: source_id=beckman-1982-illuyanka ; loc=Beckman 1982, the two Illuyanka versions
+
+The Apollo–Python material is co-equal between the Homeric Hymn and the Ovidian variant, and the chapter's body presents both with their source attributions; the choice is not which variant is "true" but which variant is being cited at each step of the chapter's argument.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the Apollo–Python material as a co-equal case; Ogden 2013, *Drakōn*, on the Homeric Hymn / Ovidian variant pair and on the area-specialist convention of treating them as co-equal in the Greek dragon-corpus.]
+// EVIDENCE: source_id=ogden-2013 ; loc=Drakōn, on Apollo-Python variants
+
+The composite-editorial classification is appropriate where a scholarly editor has reconstructed a composite text from multiple manuscript witnesses, and the book follows the editor's composite in body prose while registering significant witness-variant divergences in footnotes; the policy's effect is that the book transparently follows the area-specialist edition's own editorial decisions rather than re-editing the witnesses for itself.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the composite-editorial classification; Lambert, W.G., *Babylonian Creation Myths*, Mesopotamian Civilizations 16 (Winona Lake: Eisenbrauns, 2013), as the canonical composite-editorial edition (of Enūma Eliš) whose composite the chapter follows in body prose.]
+// EVIDENCE: source_id=lambert-2013 ; loc=Babylonian Creation Myths, the Enūma Eliš composite
+
+The single-prevalent-reconstructed classification combines the single-prevalent register with [RECONSTRUCTION:] markers covering any gap-filling that the editor's edition or the chapter's own discussion has applied; the classification is appropriate where the prevalent version is itself a partial witness and the book's body prose extends its content under the in-tradition reconstruction discipline.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the single-prevalent-reconstructed classification; Annus, A., *The Standard Babylonian Epic of Anzu* (SAACT 3, Helsinki: Neo-Assyrian Text Corpus Project, 2001), as the canonical single-prevalent-reconstructed case (the SAACT composite of the Standard Babylonian Anzu Epic with reconstructed gaps).]
+// EVIDENCE: source_id=annus-2001-anzu ; loc=Annus 2001, the SAACT Anzu composite
+
+The classification choice is fixed at the chapter-brief stage rather than the chapter-draft stage, so that the chapter's claims-and-draft files can be reviewed against an explicit classification rather than against a tacit one; the brief's `variants.classification` field is the locus of the decision.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the chapter-brief stage as the locus of variant classification; Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), on the catalog-level treatment that the book's chapter-brief structure operationalises through explicit variant classification.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, the catalog-level treatment
+
+The four classifications are exhaustive of the cases the book has encountered in chapters 1 through 32; no fifth classification has been required, and the absence of such a fifth case is itself a methodological observation worth registering.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section V on the four classifications as exhaustive of Part I cases; Forsyth 1987, *The Old Enemy*, as the long-arc combat-myth corpus survey within which the four-classification scheme has been observed sufficient.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, on the long-arc combat-myth corpus
+
+=== VI. Term glossary for methodological words
+
+The book uses "chaoskampf" as Hermann Gunkel's 1895 term for the narrative pattern in which a sovereign or champion deity defeats a monstrous adversary to establish or preserve cosmic order, and retains it per scope.md's terminology default in headings and as a technical term while using "combat myth" interchangeably in body prose; the term is retained because it is what readers will search for and what scholars still use, and the Ballentine 2015 critique is acknowledged in the same paragraph rather than allowed to displace the term silently.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "chaoskampf" as Gunkel 1895's term and on the scope.md terminology default; Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit: Eine religionsgeschichtliche Untersuchung über Gen 1 und Ap Joh 12* (Göttingen: Vandenhoeck & Ruprecht, 1895), as the work that coined the term.]
+// EVIDENCE: source_id=gunkel-1895 ; loc=Schöpfung und Chaos, the work that coined the term
+
+The book uses "combat myth" as Forsyth 1987's preferred term — also adopted by Yarbro Collins 1976 and Ballentine 2015 — for the same narrative pattern as "chaoskampf", with the load-bearing register of the term being its neutrality between cosmogonic, sovereignty, cyclical, and eschatological subtypes; the term is the body-prose default per scope.md's terminology lock.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "combat myth" as Forsyth's, Yarbro Collins's, and Ballentine's preferred term; Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), as the principal scholarly anchor for the "combat myth" register.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, on "combat myth" as the preferred term
+
+The book uses "contamination" only in the text-criticism sense — cross-influence between manuscripts producing a witness whose readings cannot be cleanly traced to a single recension — and not in the comparative-scholarship sense in which one tradition's narrative is held to "contaminate" another; the comparative-scholarship usage carries a value-judgment the book's appropriation protocol declines.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "contamination" restricted to the text-criticism sense; Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995), on the philological-text-criticism register within which "contamination" is the load-bearing technical term.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on the text-criticism register of "contamination"
+
+The book uses "reconstruction" for the inference of an unattested earlier form (linguistic) or unattested narrative content (mythographic) from extant witnesses, and the term is always flagged at point-of-use through the [RECONSTRUCTION:] marker rather than being absorbed into body prose without flag; the convention is the only one consistent with the reconstruction policy of section IV.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "reconstruction" as inference and the always-flagged convention; Watkins 1995, *How to Kill a Dragon*, as the IE-philology source whose reconstruction-discipline the book's term-usage operationalises.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on reconstruction as inference
+
+The book uses "inheritance" for shared features traced to common linguistic ancestry, in the Indo-European sense in which Vedic, Greek, and Hittite reflexes of the HERO SLAY SERPENT formula are inherited from a common Indo-European parent rather than borrowed across traditions; the term is reserved for cases where the inheritance hypothesis is the philological consensus.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "inheritance" as shared features traced to common linguistic ancestry; Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995), as the canonical IE-inheritance source for the HERO SLAY SERPENT formula.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on inheritance as the IE-philological category
+
+The book uses "transmission" for shared features traced to documented historical contact, in the Near Eastern → Mediterranean sense in which the Hesiodic Typhonomachy is held to descend from the Hurrian-Hittite Kumarbi Cycle through documented Anatolian-and-Syrian intermediaries; the term is reserved for cases where the historical-contact pathway is sufficiently documented to support the inference.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "transmission" as shared features traced to documented historical contact; West, M.L., *The East Face of Helicon: West Asiatic Elements in Greek Poetry and Myth* (Oxford: Clarendon Press, 1997), as the principal scholarly anchor for the Near Eastern → Mediterranean transmission of combat-myth narrative material.]
+// EVIDENCE: source_id=west-1997 ; loc=The East Face of Helicon, on Near-Eastern-to-Greek transmission
+
+The book uses "convergence" for shared features arising independently — the default null hypothesis that the comparative argument must displace through positive evidence of inheritance or transmission — and the term is the principal mechanism by which the book registers areas where the comparative case is weak rather than absent.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "convergence" as the default null hypothesis; Watkins 1995, *How to Kill a Dragon*, on the methodological priority of inheritance and transmission over convergence in IE comparative analysis (and on convergence as the appropriate default elsewhere).]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on convergence as the default null hypothesis
+
+The book uses "area specialist" for a scholar primarily trained in the tradition under discussion — its language, texts, ritual context — as distinct from a comparativist who works across traditions; the contrast is load-bearing throughout the book and is locked at glossary-lock, with "area specialist" as the chosen rendering and "area expert" as the rejected informal alternative.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "area specialist" as the chosen rendering; per scope.md §"Appropriation protocol" and per glossary.yaml entry on "area specialist"; Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in *Culture in History*, ed. Stanley Diamond (New York: Columbia University Press, 1960), 19–52, as the canonical example of an area-specialist position whose epistemic standing the book's term-usage codifies.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, the area-specialist exemplar
+
+The book uses "comparativist" with a critical edge — a term in current critical scholarship for which Lincoln 2012 is the book's principal anchor — to mark the position of a scholar who compares myths across traditions for shared patterns, and engages comparativism as a method while flagging its historical entanglement with universalising and colonial projects; "comparative mythologist" is rejected as the informal alternative because its tone is too neutral for the book's critical register.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "comparativist" as a term in the critical register Lincoln 2012 makes use of (and not as Lincoln's coinage; the term is current in the History of Religions field across multiple critical scholars); per glossary.yaml entry on "comparativist", which credits the term to "Lincoln 2012; contemporary critical scholarship"; Lincoln, B., *Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions* (Chicago: University of Chicago Press, 2012), as the book's principal anchor for the critical-edge usage.]
+// EVIDENCE: source_id=lincoln-2012 ; loc=Gods and Demons, Priests and Scholars, the critical-edge usage of "comparativist"
+
+The book uses "appropriation" — without the "cultural" prefix — for the inappropriate application of a comparative category that does violence to a tradition's own self-understanding, in the sense in which Merlan 1998 and Vizenor 1989 use the term; the prefix is rejected as redundant in this scholarly context where the meaning is clear from the surrounding apparatus.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "appropriation" without the "cultural" prefix; per glossary.yaml entry on "appropriation"; Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998), as the principal source of the term's usage in the Aboriginal Australian appropriation literature, paired with Vizenor, G. (ed.), *Narrative Chance: Postmodern Discourse on Native American Indian Literatures* (Albuquerque: University of New Mexico Press, 1989), for the parallel methodological-vocabulary use in the Native American academic-discourse-appropriation literature.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, the appropriation usage
+
+The book uses "Gunkel's 1895 thesis" as the technical name for Hermann Gunkel's argument in *Schöpfung und Chaos* that Genesis 1 and Revelation 12 both preserve the demythologised remnants of a Near Eastern combat myth, of which Enūma Eliš is the paradigm; the date is load-bearing because the book emphasises that the term has travelled for over 130 years.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "Gunkel's 1895 thesis" as a defined term; per glossary.yaml entry; Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit: Eine religionsgeschichtliche Untersuchung über Gen 1 und Ap Joh 12* (Göttingen: Vandenhoeck & Ruprecht, 1895), as the work containing the thesis.]
+// EVIDENCE: source_id=gunkel-1895 ; loc=Schöpfung und Chaos, the 1895 thesis
+
+The book uses "the Ballentine critique" on first mention and "Ballentine 2015" thereafter for Debra Scoggins Ballentine's 2015 argument that "chaos" is the wrong word for the adversaries in the combat-myth corpus, because they are presented in the ancient texts as rival sovereigns with their own retinue and power structure rather than as inchoate disorder; the term flags Ballentine's position as a contemporary critical position the book treats as live.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "the Ballentine critique" as a defined term; per glossary.yaml entry; Ballentine, D.S., *The Conflict Myth and the Biblical Tradition* (New York: Oxford University Press, 2015), as the source of the critique.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=The Conflict Myth and the Biblical Tradition, the alternative-sovereign critique
+
+The book uses "HERO SLAY SERPENT" in small capitals when naming Watkins's reconstructed Indo-European poetic formula — as Watkins's own typographic convention requires — and "hero-slay-serpent formula" in body prose, with the small-capital convention reserved for the formal naming and not overused.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "HERO SLAY SERPENT" as Watkins's typographic convention; per glossary.yaml entry; Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995), as the work that names the formula in small capitals.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, the HERO SLAY SERPENT formula
+
+The book uses "tier-ranking" as an internal book term referring to the CORE / RELATED / PROVISIONAL/CRITIQUE / CONTRASTIVE / SIDEBAR categorisation operationalised in section I (with SIDEBAR formalised as the fifth tier in this chapter; glossary.yaml's tier-ranking entry should be updated at post-human-normalize to reflect the full five-tier set); the term is not standard scholarly usage but is locked at glossary-lock for the book's own internal use.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "tier-ranking" as an internal book term; per glossary.yaml entry on "tier-ranking" as a methods-sidebar term (the entry's first_mention_gloss currently lists only four tiers and is to be updated to include SIDEBAR as the fifth); Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), as the long-arc combat-myth genealogy whose catalog-level treatment supplies the historical baseline against which the book's tier-ranking is calibrated.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, the catalog-level baseline for tier-ranking
+
+The book uses "other-than-human persons" — Hallowell's exact 1960 phrase — for the Anishinaabe ontological category that includes animals, plants, thunder-beings, and manitouk as persons on equal standing with human persons; the phrase is load-bearing in Chs 32 and C8 and is preserved without paraphrase out of respect for Hallowell's terminological precision.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "other-than-human persons" as Hallowell's exact phrase; per glossary.yaml entry; Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in *Culture in History: Essays in Honor of Paul Radin*, ed. Stanley Diamond (New York: Columbia University Press, 1960), 19–52, as the source of the phrase.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, the "other-than-human persons" phrase
+
+The book uses "the adversary" as the umbrella term for the class of figure the champion confronts in a combat myth, deliberately neutral between dragon, serpent, sea-monster, stone-demon, rebel deity, and other morphologies; "chaos-figure" is banned because it begs the very question the book is investigating, in direct application of the Ballentine critique.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on "the adversary" as the neutral category term; per glossary.yaml entry; Ballentine, D.S., *The Conflict Myth and the Biblical Tradition* (New York: Oxford University Press, 2015), on the question-begging character of "chaos-figure" as a category term.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=The Conflict Myth and the Biblical Tradition, on the question-begging character of "chaos"
+
+The book uses the four subtype-terms "cosmogonic combat", "sovereignty combat", "cyclical-maintenance combat", and "eschatological combat" as the operational categories within the chaoskampf / combat-myth umbrella, with each category mapped to specific traditions in scope.md §"Subject definition"; the four-subtype scheme is the book's primary analytic apparatus and is exercised most intensely in the C1–C4 comparative chapters.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VI on the four subtype-terms; per glossary.yaml entries on "cosmogonic combat", "sovereignty combat", "cyclical-maintenance combat", and "eschatological combat"; Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), as the long-arc combat-myth genealogy whose own typology the book's four-subtype scheme refines.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, on the long-arc combat-myth typology
+
+=== VII. What the book does not claim
+
+The book does not claim a universal chaoskampf monomyth — a single underlying narrative pattern instantiated across all human cultures — and explicitly disclaims the comparativist tradition (Campbell, Eliade in their universalising registers) within which such monomyth claims have historically been advanced; the book's pattern is one motif-family among many, not a structure of the human imagination.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer of universal monomyth and on Campbell-and-Eliade as the universalising register the book declines; Lincoln, B., *Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions* (Chicago: University of Chicago Press, 2012), on the political-ideological critique of the History of Religions tradition's universalising tendencies (Eliade-school) that motivates the monomyth-rejection.]
+// EVIDENCE: source_id=lincoln-2012 ; loc=Gods and Demons, Priests and Scholars, on the critique of History-of-Religions universalism that motivates the monomyth disclaimer
+
+The book does not claim a single origin for the chaoskampf pattern — neither a Mesopotamian Urtext that all other traditions descend from, nor a Proto-Indo-European nucleus that subsequently spread, nor a deep-cognitive substrate that all human minds share — and explicitly declines all three options as available frames; the book's account of similarity is plural (some inheritance, some transmission, some convergence, some independent invention) rather than monogenetic.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer of single origin; Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995), on the IE-philological framework's own caution against extrapolating its inherited reflexes into a single-origin claim across non-IE traditions.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on the bounded scope of IE inheritance claims
+
+The book does not claim that the chaoskampf pattern is the most important feature of any tradition in which it appears; the pattern's analytic salience for the book does not entail its salience for the tradition itself, and the book's treatment of any single tradition is therefore consciously partial — it covers the combat-myth dimension and the registers immediately adjacent to it, not the tradition as a whole.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that chaoskampf is not the most important feature of any tradition; Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in *Culture in History*, ed. Stanley Diamond (New York: Columbia University Press, 1960), 19–52, on the area-specialist register within which the chaoskampf pattern's salience is one of many dimensions of any single tradition.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, on the area-specialist register
+
+The book does not claim that every serpent-combat story is a chaoskampf; the inclusion-test of section I is meant precisely to separate combat-myth-relevant cases from inter-species-enmity, hero-initiation, folkloric-monster, and trickster-demiurge cases that scope.md §"Excluded adjacent motifs" excludes from the corpus.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that not every serpent-combat is chaoskampf and on the section-I inclusion-test as the separation mechanism; Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), on the long-arc combat-myth corpus's own boundaries against inter-species-enmity, hero-initiation, and folkloric-monster materials.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, on the corpus's boundaries
+
+The book does not claim that the Gunkel–Ballentine debate has been resolved in Gunkel's favour; the book retains "chaoskampf" as the title-word and the heading-form for reasons of reader-recognition and search-coverage rather than as a substantive endorsement of Gunkel's framing over Ballentine's, and the introduction (Ch00) and the present methods chapter both register the debate as live.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that the Gunkel–Ballentine debate is unresolved; Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit* (Göttingen: Vandenhoeck & Ruprecht, 1895), as the historical anchor for the Gunkel side of the debate.]
+// EVIDENCE: source_id=gunkel-1895 ; loc=Schöpfung und Chaos, the Gunkel side of the debate
+
+The book does not claim that the Ballentine critique resolves the debate in Ballentine's favour either; the alternative-sovereign reading is treated as a serious challenge that the comparative chapters (especially C2 on sovereignty) work through rather than as the settled new consensus, and the book's own analytic vocabulary preserves both registers — "the adversary" rather than "chaos-figure" follows Ballentine, while the four subtype-terms preserve the cosmogonic register Gunkel emphasises.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the symmetric non-resolution and on the four subtype-terms preserving Gunkel's register while "the adversary" follows Ballentine; Ballentine, D.S., *The Conflict Myth and the Biblical Tradition* (New York: Oxford University Press, 2015), as the alternative-sovereign reading whose status the book declines to resolve.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=The Conflict Myth and the Biblical Tradition, the alternative-sovereign reading
+
+The book does not claim that the Scurlock-and-Beal 2013 reassessment supersedes Gunkel's 1895 thesis as a whole; the reassessment collection contains heterogeneous voices and its individual essays argue for and against various aspects of Gunkel's framework, and the book treats the volume as a survey of the contemporary debate rather than as a unified counter-thesis.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that the Scurlock-and-Beal reassessment supersedes Gunkel; Scurlock, J. and Beal, R. (eds.), *Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis* (Winona Lake: Eisenbrauns, 2013), as the heterogeneous reassessment collection.]
+// EVIDENCE: source_id=scurlock-beal-2013 ; loc=Creation and Chaos: A Reconsideration of Gunkel's Chaoskampf Hypothesis, the reassessment collection
+
+The book does not claim authority over how Aboriginal Australian, Anishinaabe, Mwindo-tradition Banyanga, Andean, Mapuche, or other non-Eurasian area-specialists read their own materials; the book's comparative engagement is held alongside the area-specialist objection registered through the [APPROPRIATION-FLAG:] markers in the relevant chapters, rather than substituted for that engagement, and the C8 comparative chapter is the structural place where the substitution-failure-mode is most carefully resisted.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer of authority over non-Eurasian area-specialist readings; Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998), as the central methodological anchor for the disclaimer.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, on the methodological priority of area-specialist authority
+
+The book does not claim that the book itself is exempt from the appropriation problem; the present methods chapter is one of the project's principal mechanisms for being explicit about its appropriation-risk exposure, and the chapter is to be read by critics as a self-disclosure rather than as a defence — the failures the chapter discloses are real, and the disclosure is the project's way of holding them open for review.footnote:[Per brief 33-methods.yaml special_instructions on the chapter as read by critics with maximum methodological honesty and on the appropriation problem as a real constraint rather than a stylistic choice; Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in *Culture in History*, ed. Stanley Diamond (New York: Columbia University Press, 1960), 19–52, as the area-specialist register that the book's appropriation-disclosure is held against.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, the area-specialist register
+
+The book does not claim that the comparativist project is illegitimate — only that comparativism without area-specialist anchoring is the failure-mode the protocol is designed to prevent; comparative engagement that is grounded in area-specialist scholarship and that registers area-specialist objections through its own machinery is not only legitimate but, in the book's view, methodologically necessary if the cross-cultural-mythology subfield is to remain intellectually honest.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that comparativism is illegitimate; Lincoln, B., *Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions* (Chicago: University of Chicago Press, 2012), on the political-ideological reading of comparative mythology and on the conditions under which comparative work is methodologically defensible.]
+// EVIDENCE: source_id=lincoln-2012 ; loc=Gods and Demons, Priests and Scholars, on the conditions for defensible comparative work
+
+The book does not claim that the chaoskampf pattern's historical contact-network across the ancient Near East and the Mediterranean is fully reconstructed; the West, Burkert, and López-Ruiz transmission-chain (Hurrian-Hittite → Greek; Ugaritic → Greek) is a documented set of contact pathways but the corpus-level reconstruction of every transmission moment is provisional, and the book treats it as such throughout C6.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that the contact-network is fully reconstructed; West, M.L., *The East Face of Helicon: West Asiatic Elements in Greek Poetry and Myth* (Oxford: Clarendon Press, 1997), as the principal scholarly anchor whose treatment the book presents as provisional rather than definitive.]
+// EVIDENCE: source_id=west-1997 ; loc=The East Face of Helicon, on the Near-Eastern-to-Greek transmission as documented but provisional
+
+The book does not claim authority over reception-history readings of the chaoskampf imagery in Milton, Tolkien, kaiju cinema, or contemporary religious-political rhetoric; the reception coda (the book's final chapter) traces the afterlife of the imagery as a documentary observation rather than as a primary-material argument, and the methods of the present chapter do not extend to it.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII and per scope.md §"Period" on the reception coda as documentary rather than primary; Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), as the long-arc combat-myth genealogy whose own catalog-level treatment extends through the reception register without attempting authoritative reception-criticism.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=The Old Enemy, on the long-arc treatment extending through reception
+
+The book does not claim that the reconstruction policy of section IV resolves every fragmentary case in the corpus; the Marduk-vs-Labbu fragment is presented as fragmentary and is not narrativised under any in-tradition donor source, because no tolerably close in-tradition donor exists, and the chapter therefore leaves the fragment as a marked gap rather than as a reconstructed narrative.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that the reconstruction policy resolves every fragmentary case; Foster, B.R., *Before the Muses: An Anthology of Akkadian Literature*, 3rd ed. (Bethesda: CDL Press, 2005), as the standard English anthology that presents the Labbu fragment as fragmentary.]
+// EVIDENCE: source_id=foster-2005 ; loc=Before the Muses, the Labbu fragment as fragmentary
+
+The book does not claim that the variant-presentation policy of section V resolves every variant-coexistence problem in the corpus; the Mwindo material in particular survives in multiple recorded oral-performance variants whose relationship is not the same as that of manuscript-transmission variants in textual traditions, and the chapter handles the difference explicitly rather than absorbing it into the four-classification scheme.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that the variant policy resolves every variant problem; Biebuyck, D. and Mateene, K.C. (trans. and eds.), *The Mwindo Epic from the Banyanga (Zaire)* (Berkeley: University of California Press, 1969), as the principal Mwindo edition whose oral-performance-variant material the variant policy handles with explicit per-chapter accommodation.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, oral-performance variants
+
+The book does not claim that the area-specialist citation policy of section III replaces the need for translation-mediation; the book is translation-mediated per scope.md §"Languages of primary sources", and the area-specialist policy is a discipline applied within translation-mediation rather than a replacement for the linguistic competence the book's author does not have.footnote:[Per brief 33-methods.yaml structure_the_chapter_must_cover section VII on the disclaimer that area-specialist citation replaces translation-mediation; per scope.md §"Languages of primary sources" on the translation-mediated character of the project; Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995), as the IE-philology source whose linguistic register the area-specialist citation policy operates within rather than replacing.]
+// EVIDENCE: source_id=watkins-1995 ; loc=How to Kill a Dragon, on the philological register the area-specialist policy operates within
+
+The book does not claim that the present methods chapter is the final word on its own methodology; the chapter is a snapshot of the book's methodological commitments at the point of its publication, and the appropriate response to critique is not defence but revision in subsequent editions, with the present chapter serving as the auditable baseline against which revisions can be tracked.footnote:[Per brief 33-methods.yaml special_instructions on the chapter as a self-disclosure read by critics with maximum methodological honesty and on the chapter's auditable-baseline function — the auditable-baseline-and-revision commitment is the book's own, not Lincoln's; Lincoln, B., *Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions* (Chicago: University of Chicago Press, 2012), supplies the political-ideological reading of methodology as the register in which the commitment is articulated rather than as the source of the revision-in-subsequent-editions clause itself.]
+// EVIDENCE: source_id=lincoln-2012 ; loc=Gods and Demons, Priests and Scholars, on the political-ideological reading of methodology
+
+// COMPARATIVE-HOOK: Section I's tier-ranking rubric is exercised across all eight comparative chapters (C1–C8), where the CORE / RELATED / CONTRASTIVE distinction governs which traditions appear as anchor cases versus which appear as flanking material; the rubric's load-bearing third criterion (area-specialist identification of order-making work) is the through-line that the comparative chapters themselves operationalise.
+// COMPARATIVE-HOOK: Section II's appropriation protocol is exercised most intensely in C8 (Ch41, the refusal and the appropriation problem), where Nanabozho, Mwindo, and Rainbow Serpent are held together as the test cases that the comparative apparatus must hold its engagement with rather than override; C8 is the chapter where the protocol becomes the chapter's principal subject rather than its background discipline.
+// COMPARATIVE-HOOK: Section III's area-specialist citation policy is operationalised across all eight comparative chapters as the discipline of routing every tradition's primary-source citations through the area's own scholarship; C2 (sovereignty combat, Ch35) and C5 (IE HERO SLAY SERPENT, Ch38) are the chapters where the area-specialist-versus-comparativist tension is most explicit, since both chapters have a strong comparativist anchor (Lincoln; Watkins) that the area-specialist apparatus has to hold against.
+// COMPARATIVE-HOOK: Section IV's reconstruction policy is exercised in C5 (Ch38, the IE HERO SLAY SERPENT formula) and in C6 (Ch39, the Near Eastern → Mediterranean transmission, with the Hurro-Hittite / Ugaritic / Greek transmission chain); C5 is where the in-tradition-reflex discipline is the chapter's own subject, and C6 is where the documented-historical-contact criterion of "transmission" is exercised at length.
+// COMPARATIVE-HOOK: Section V's variant-presentation policy is operationalised across all eight comparative chapters but most explicitly in C3 (Ch36, cyclical maintenance), where the Ra/Apep and Illuyanka materials present co-equal-variant cases (Bremner-Rhind versus Book of the Dead; Illuyanka Version 1 versus Version 2) that the comparative chapter has to hold side by side rather than synthesise.
+// COMPARATIVE-HOOK: Section VI's term glossary feeds into every comparative chapter as the chapter-internal vocabulary lock; the four subtype-terms ("cosmogonic", "sovereignty", "cyclical-maintenance", "eschatological") are the principal operational categories of C1 through C4 (Ch34–37) respectively.
+// COMPARATIVE-HOOK: Section VII's "what the book does not claim" is the methodological contract that C1–C8 honour through the symmetric non-resolution of the Gunkel–Ballentine debate; the comparative chapters do not converge on either Gunkel or Ballentine as the corpus's settled framing, and the methods chapter's section VII is the explicit register of the non-convergence.
+// COMPARATIVE-HOOK: The chapter's section II appropriation-protocol material is also exercised in C7 (Ch40, the inversion problem; Bida and the ambiguous status of Sigurd's slaying), where the inversion-of-valence case (Bida) is held alongside the recognised-ambiguity case (Sigurd) and the appropriation-frame discipline is what allows the comparative chapter to read both without flattening either.
+// COMPARATIVE-HOOK: The chapter's section III area-specialist citation policy is the principal mechanism by which Part II's comparative chapters avoid the comparativist-only failure-mode; readers tracing the C1–C8 chapters' citation-density should expect to find area-specialist anchors substantially over-represented relative to comparativist anchors, and the disproportion is by design rather than by accident.
+// COMPARATIVE-HOOK: The chapter's section IV reconstruction-policy clauses (no-cross-tradition; in-tradition-with-donor-and-period; [RECONSTRUCTION:] markers; fragmentary-as-fragmentary) are tested most stringently against the Perun-Veles material in C5's Slavic-and-Baltic combat sub-section, where the Ivanov-and-Toporov "basic myth" reconstruction is held against the Jakobson, Lajoye, and Kapović critiques and the chapter has to present the contestation rather than choose a side.
+// COMPARATIVE-HOOK: The chapter's section VII disclaimers about universal monomyth and single origin set up C1 (Ch34, combat as cosmogony), where the Marduk, Ninurta-Asag, Gonggong, and Huitzilopochtli materials are presented as a typological pattern rather than as variants of a single underlying narrative; the disclaimers are what allow C1 to do typological rather than monogenetic comparison.
+// COMPARATIVE-HOOK: The chapter's section II appropriation-protocol clause about opening with the tradition's own framing is exercised structurally in C8 (Ch41) by ordering the Nanabozho, Mwindo, and Rainbow Serpent material before the comparative discussion rather than after; the order matters in the comparative chapter for the same reason it mattered in the per-chapter applications of the protocol.
+// COMPARATIVE-HOOK: The chapter's section I tier-ranking rubric, particularly the SIDEBAR classification for non-chaoskampf-but-illuminating cases, is exercised at the level of the East Asia material across both Part I and Part II: Yu-the-Great is a SIDEBAR in Part I and is invoked in C1 (Ch34) to sharpen the cosmogonic-combat category by contrast with hydraulic-ordering, in a structural pattern the methods chapter's tier-ranking section explicitly anticipates.
+// COMPARATIVE-HOOK: The chapter's section VI methodological-vocabulary distinctions among "inheritance", "transmission", and "convergence" are the principal apparatus through which C5 (Ch38, IE HERO SLAY SERPENT) and C6 (Ch39, Near Eastern → Mediterranean transmission) distinguish their cases from C1–C4's typological comparisons; the convergence-as-default-null discipline is what keeps C1–C4 from sliding into single-origin claims they explicitly disclaim.
+
+// Validated by post-human-normalize
+// Timestamp: 2026-05-02T15:01:32Z
+// Checks passed: one-claim-per-paragraph; every paragraph has footnote + EVIDENCE token; every EVIDENCE source_id resolves in sources.yaml; all 30 + 1 (conrad-west-africa, newly used here) source IDs registered; section structure preserved (Source overview + I–VII); 14 COMPARATIVE-HOOK lines preserved verbatim; glossary.yaml renderings unchanged in body; banned-term grep clean (chaos-figure scare-quoted only in §VI/§VII where ban is the topic; chaos-monster absent); FIND-01..08 dispositions applied per completion record
+// Warnings: glossary.yaml's tier-ranking entry (lines 159–165) currently lists four tiers (CORE/RELATED/PROVISIONAL/CONTRASTIVE) and omits SIDEBAR; this chapter's §VI tier-ranking paragraph now flags the gap explicitly and the glossary should be updated at a future post-human-normalize cycle to reflect the five-tier set including SIDEBAR; sources.yaml Day-1985 ISBN mismatch (NOTE-03) carried forward from earlier chapters and not Ch33-introduced; Burkert and López-Ruiz remain absent from sources.yaml (NOTE-01) and are correctly named-but-flagged in §VII
+```
+
+---
+
+# Input file: briefs/33-methods.yaml
+
+```
+chapter_number: 33
+slug: "methods"
+title: "Methods: Tiering, Appropriation, and Area-Specialist Policy"
+chapter_anchor: "ch-33-methods"
+
+chapter_type: "methods sidebar (between Part I and Part II)"
+
+purpose: |
+  A standalone methods sidebar, placed between Part I (the 32 story chapters) and Part II
+  (the 8 comparative chapters). Its job is to make explicit the methodological machinery
+  the book has been using quietly throughout Part I and will use more intensely in Part II.
+  Readers who want to critique or replicate the book's moves should be able to find the
+  rules here in one place.
+
+sources:
+  # The methods chapter cites the book's methodological anchors from sources.yaml.
+  anchor:
+    - id: gunkel-1895
+      loc: "as the historical starting point for the Chaoskampf category"
+    - id: ballentine-2015
+      loc: "for the alternative-sovereign critique that methodically shapes Part II"
+    - id: scurlock-beal-2013
+      loc: "as the reassessment collection"
+    - id: watkins-1995
+      loc: "as the IE comparativist methodology the book uses critically"
+    - id: forsyth-1987
+      loc: "for the book's historical framing of the category"
+    - id: lincoln-2012
+      loc: "for the political-ideological framing of combat-myth"
+    - id: merlan-caging-rainbow
+      loc: "for the appropriation critique (Rainbow Serpent / Aboriginal Studies material)"
+    - id: hallowell-ojibwa-world
+      loc: "for the 'other-than-human persons' framework and the refusal of chaoskampf"
+
+structure_the_chapter_must_cover:
+  - section: "I. The tier-ranking rubric"
+    summary: |
+      How CORE / RELATED / CONTRASTIVE / CRITIQUE / SIDEBAR were assigned in the inventory
+      and the audit. The operational test from scope.md §"Inclusion / exclusion criteria".
+      Why some cases (Apollo-Python, Susanoo-Orochi) were demoted from CORE at scope-lock.
+      The mechanics: (1) serpentine/monstrous adversary; (2) primary-source attested
+      combat; (3) order-making work as identified by area specialists (not only by pattern-
+      matching); (4) robust scholarly corpus. RELATED = (1)–(2) but (3) weaker; contrastive
+      = where area specialists decline the frame altogether.
+  - section: "II. The appropriation protocol"
+    summary: |
+      Derived from scope.md §"Appropriation protocol". For every RELATED chapter on a
+      non-Eurasian tradition: (a) cite at least two area specialists by name in the first
+      factual pass; (b) record any specialist objection to the chaoskampf framing with an
+      [APPROPRIATION-FLAG] marker; (c) open with the tradition's own framing (maʿat/isfet,
+      vṛ-/'obstruction,' wak'a succession, etc.) before invoking the comparative category.
+      Examples: Ra-Apep opens with maʿat; Pariacaca opens with wak'a-succession; Nanabozho
+      opens with 'other-than-human persons'.
+  - section: "III. Area-specialist citation policy"
+    summary: |
+      Every tradition's primary sources go through its area specialists, not through
+      comparativist framers. The book uses van Dijk and Annus for Sumerian-Akkadian;
+      Hoffner and Beckman for Hurro-Hittite; Smith and Pitard for Ugaritic; Day and
+      Ballentine for Hebrew Bible; West and Ogden for Greek; te Velde and Assmann for
+      Egyptian; Jamison & Brereton for Vedic; Benveniste & Renou for Iranian; Watkins for
+      IE philology; Lewis and Birrell for Chinese; Matos Moctezuma, Carrasco, López Austin
+      for Mexica; Salomon, Urioste, and Taylor for Andean; Biebuyck, Mateene, and Belcher
+      for African; Hallowell, Johnston, Smith, and Vizenor for Anishinaabe; Merlan,
+      Morphy, Rose, and Keen for Aboriginal Australian; Naumann, Isomae, Como, and Ooms
+      for Japanese; Siikala for Finnic.
+  - section: "IV. Reconstruction policy"
+    summary: |
+      From scope.md §"Reconstruction policy": no cross-tradition reconstruction; in-tradition
+      reconstruction must specify the donor source and period-proximity tolerance;
+      [RECONSTRUCTION:] markers name the donor source; fragmentary cases are presented as
+      fragmentary, not composited from analogs. Specific test cases: the Kumarbi Cycle's
+      Hedammu and Song of the Sea are NOT filled from Ugaritic; the Baal Cycle's
+      Lôtan passage is NOT narrativised from Lôtan-in-the-Hebrew-Bible; Perun-Veles is
+      presented AS reconstruction with the Jakobson / Lajoye / Kapović critiques.
+  - section: "V. Variant-presentation policy"
+    summary: |
+      Four classifications (from scope.md §"Variant presentation policy" and the skill's
+      schema): single-prevalent (one version dominant, others in footnotes);
+      single-prevalent-reconstructed (same, with [RECONSTRUCTION:] markers);
+      co-equal (variants side by side in body); composite-editorial (scholarly composite
+      in body, witness variants in footnotes). Each chapter's brief specifies its
+      classification.
+  - section: "VI. Term glossary for methodological words"
+    summary: |
+      Definitions of key methodological terms used throughout the book:
+        - "chaoskampf" — Gunkel 1895's term; retained per scope.md §"Terminology default";
+          used interchangeably with "combat myth" in body prose.
+        - "contamination" — in text-criticism: cross-influence between manuscripts.
+          NOT used in comparative scholarship sense in this book.
+        - "reconstruction" — inference of an unattested earlier form or unattested
+          narrative content from extant witnesses; always flagged.
+        - "inheritance" — shared feature traced to common linguistic ancestry (IE focus).
+        - "transmission" — shared feature traced to documented historical contact.
+        - "convergence" — shared feature arising independently; the default null hypothesis
+          absent evidence of inheritance or transmission.
+        - "area specialist" — a scholar primarily trained in the tradition under discussion,
+          as opposed to a comparativist who works across traditions.
+        - "appropriation" — inappropriate application of a comparative category that does
+          violence to a tradition's own self-understanding.
+  - section: "VII. What the book does not claim"
+    summary: |
+      The book does not claim: a universal chaoskampf monomyth; a single origin for the
+      pattern; that the pattern is the most important feature of any tradition; that every
+      serpent-combat story is chaoskampf; that the Gunkel-Ballentine debate has been
+      resolved in favour of Gunkel. The chapter should be explicit about these.
+
+triangulation_databases: []
+
+target_length_words: 6000
+
+special_instructions: |
+  This chapter is READ BY CRITICS. Write it with maximum methodological honesty. The
+  chapter should survive being quoted out of context by a reviewer who disagrees with the
+  book's overall thesis — meaning it should not over-claim, it should acknowledge genuine
+  limitations, and it should present the appropriation problem (Chapter 32, Chapter 41,
+  the Rainbow Serpent material in Part II C8) as real constraints on the project rather
+  than as stylistic choices. The chapter's tone is explanatory, not argumentative. Each
+  section ends with specific examples drawn from Part I chapters to make the methodology
+  concrete.
+```

@@ -1,0 +1,137 @@
+stage: chapter-draft
+chapter: 33
+chapter_slug: methods
+status: "completed"
+output_file: chapters/33-methods.adoc
+output_lines: 340
+target_word_count: 6000
+total_file_word_count: 12696
+body_prose_word_count: 6437
+
+notes: |
+  Ch33 chapter-draft completed for the methods sidebar between Part I and Part II.
+
+  Structure verification (section count and ordering match the approved-claims file
+  byte-for-byte):
+    - draft sections: Source overview, I. The tier-ranking rubric, II. The appropriation
+      protocol, III. Area-specialist citation policy, IV. Reconstruction policy,
+      V. Variant-presentation policy, VI. Term glossary for methodological words,
+      VII. What the book does not claim — 8 === sections, identical sequence to the
+      approved-claims file (which also has 8 === sections in identical order).
+    - chapter opens with [[ch-33-methods]] anchor matching brief.chapter_anchor and a
+      level-2 == heading carrying the brief's title verbatim ("Methods: Tiering,
+      Appropriation, and Area-Specialist Policy").
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 97 in draft / 97 in approved (verified by Python-based
+      bracket-balanced extractor; all 97 match in order, byte-for-byte).
+    - // EVIDENCE: lines: 97 in draft / 97 in approved (verified by `diff` of the
+      grep-extracted EVIDENCE lines — diff is empty).
+    - // COMPARATIVE-HOOK: lines: 14 in draft / 14 in approved (verified by `diff` —
+      empty; preserved verbatim in same order at end of file).
+
+  Per-source-id EVIDENCE distribution in draft (matches approved exactly):
+    watkins-1995: 15
+    forsyth-1987: 11
+    hallowell-ojibwa-world: 9
+    merlan-caging-rainbow: 8
+    lincoln-2012: 7
+    ballentine-2015: 5
+    hoffner-1998: 4
+    gunkel-1895: 4
+    ogden-2013: 3
+    west-1997: 2
+    smith-1994-baal-i: 2
+    scurlock-beal-2013: 2
+    salomon-urioste-huarochiri: 2
+    naumann-mythen: 2
+    lewis-2006-flood: 2
+    jamison-brereton-2014: 2
+    biebuyck-mateene-mwindo: 2
+    annus-2001-anzu: 2
+    west-1966-theogony: 1
+    vandijk-1983-lugale: 1
+    te-velde-1967: 1
+    siikala-finnish: 1
+    matos-moctezuma-templo-mayor: 1
+    lambert-2013: 1
+    foster-2005: 1
+    faulkes-snorri: 1
+    day-1985: 1
+    conrad-west-africa: 1
+    benveniste-renou-1934: 1
+    beckman-1982-illuyanka: 1
+    assmann-2001-search: 1
+    Total: 97 (matches approved-claims file)
+
+  Banned-term grep:
+    - "chaos-figure": 2 occurrences in draft, all scare-quoted in §VI (the term-glossary
+      paragraph that names "chaos-figure" as banned) and §VII (the symmetric
+      non-resolution paragraph that names "the adversary" rather than "chaos-figure" as
+      following Ballentine). Both occurrences are inside double quotes per the
+      methods-chapter exception (the ban itself being the topic). The approved-claims
+      file has the same 2 scare-quoted instances at the same paragraphs (a third instance
+      appears in the approved file's post-human-normalize provenance block at line 343,
+      which is correctly dropped from the draft per skill instructions).
+    - "chaos-monster": 0 occurrences (absent from both draft and approved).
+    - "chaos-serpent": 0 occurrences (absent from both draft and approved).
+
+  Word counts:
+    - total file `wc -w`: 12,696 (includes all footnote bodies, EVIDENCE tokens, and
+      COMPARATIVE-HOOK comment lines).
+    - body-prose-only estimate: ~6,437 words (computed by stripping all // comment
+      lines and all `footnote:[...]` blocks and counting word-tokens). This is modestly
+      over the 6,000-word brief target; the over-target is driven by the eight per-
+      section bridge sentences and the single source-overview-closing roadmap paragraph
+      (NOTE-level for narrative-fidelity, listed below) plus the 1:1 narrative
+      transformation of every claim-paragraph in the approved file. Over-target driven
+      by structural-prose bulk (rather than by added factual content) is consistent with
+      Ch28/Ch29/Ch30/Ch32 precedent.
+
+  Prose-only paragraphs added (NOTE-level for the narrative-fidelity stage):
+    - One roadmap paragraph after Source overview's claims, naming the eight-section
+      structure of the chapter (I–VII): "What follows is organised in seven sections.
+      Section I sets out the tier-ranking rubric; section II spells out the
+      appropriation protocol; section III names the area-specialist citation policy
+      chapter-by-chapter; section IV gives the reconstruction policy; section V the
+      variant-presentation policy; section VI the methodological-term glossary; and
+      section VII registers, in plain language, what the book does not claim." This is
+      explicitly permitted by the prompt (single roadmap paragraph after Source
+      overview's claims).
+    - Seven per-section bridge sentences, one each opening sections I, II, III, IV, V,
+      VI, and VII. Each bridge is a short structural orientation sentence with no
+      factual content beyond restating that the section is the next piece of
+      methodological machinery in the chapter's sequence (e.g. "The first piece of
+      methodological machinery the book makes explicit is the rubric that sorts its
+      chapters into tiers, and the worked examples by which the rubric was applied at
+      scope-lock."). All bridges are explicitly permitted by the prompt (single bridge
+      sentence per section opening for narrative orientation, NOTE-level for
+      narrative-fidelity).
+
+  Markers in [LACUNA:], [VARIANT:], [INFERENCE:], [RECONSTRUCTION:], or
+  [APPROPRIATION-FLAG:] classes: zero introduced (the methods chapter has none in those
+  classes per the approved-claims file; the draft introduces none).
+
+  Provenance block (// Validated by post-human-normalize ... // Warnings ...) at the
+  bottom of the approved-claims file (lines 341–344): correctly dropped from the draft
+  per skill instructions (the draft is a fresh artifact; downstream stages will re-run
+  their own provenance).
+
+  Self-checks executed and passed:
+    - Footnote count parity (97 = 97): PASS (verified by bracket-balanced Python
+      extractor; all 97 footnotes match in order verbatim).
+    - EVIDENCE token count parity (97 = 97): PASS (verified by `diff` — empty).
+    - COMPARATIVE-HOOK count parity (14 = 14): PASS (verified by `diff` — empty).
+    - Section count and section-title sequence parity (8 sections, identical sequence):
+      PASS.
+    - Per-source-id EVIDENCE distribution parity: PASS (full distribution matches
+      approved-claims file source-by-source).
+    - Verbatim diff of footnote bodies, EVIDENCE lines, and COMPARATIVE-HOOK lines:
+      empty in all three classes.
+    - Banned-term grep: PASS (only scare-quoted instances of "chaos-figure" remain, in
+      the §VI/§VII paragraphs where the ban is the explicit topic; "chaos-monster" and
+      "chaos-serpent" absent).
+    - Chapter anchor and title-line: PASS (matches brief's chapter_anchor and title
+      fields).
+
+  Ready for the narrative-fidelity stage.
