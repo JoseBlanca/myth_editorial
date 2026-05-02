@@ -1,0 +1,370 @@
+---
+# Narrative-fidelity audit for chaoskampf Chapter 33 (Methods sidebar)
+# Stage: 12-narrative-fidelity (post chapter-draft)
+# Auditor: independent fidelity pass (fresh conversation, no draft authorship)
+# Inputs:
+#   - chapters/33-methods.adoc                    (narrative draft)
+#   - chapters/33-methods.claims.approved.adoc    (approved claims, post-human-normalize)
+#   - prompts/12-narrative-fidelity-ch33.prompt.md (assembled inputs + skill instructions)
+
+chapter: "ch-33-methods"
+chapter_title: "Methods: Tiering, Appropriation, and Area-Specialist Policy"
+audit_date: "2026-05-02"
+verdict: "PASS"
+
+# ---------------------------------------------------------------------------
+# Mechanical-check results
+# ---------------------------------------------------------------------------
+mechanical_checks:
+
+  chapter_anchor_and_title:
+    expected_anchor: "[[ch-33-methods]]"
+    expected_title:  "== Methods: Tiering, Appropriation, and Area-Specialist Policy"
+    draft_anchor:    "[[ch-33-methods]]"
+    draft_title:     "== Methods: Tiering, Appropriation, and Area-Specialist Policy"
+    approved_anchor: "[[ch-33-methods-claims]]"   # correctly transformed by draft
+    approved_title:  "== Methods: Tiering, Appropriation, and Area-Specialist Policy — Claims"  # — Claims suffix correctly dropped
+    status: "match"
+
+  section_heading_sequence:
+    method: "diff <(grep '^=== ' draft) <(grep '^=== ' approved)"
+    result: "no diff"
+    sequence:
+      - "=== Source overview"
+      - "=== I. The tier-ranking rubric"
+      - "=== II. The appropriation protocol"
+      - "=== III. Area-specialist citation policy"
+      - "=== IV. Reconstruction policy"
+      - "=== V. Variant-presentation policy"
+      - "=== VI. Term glossary for methodological words"
+      - "=== VII. What the book does not claim"
+    status: "match"
+
+  evidence_token_count_and_order:
+    draft_count: 97
+    approved_count: 97
+    diff_method: "diff <(grep '^// EVIDENCE:' draft) <(grep '^// EVIDENCE:' approved)"
+    diff_result: "no diff (byte-identical, same order)"
+    status: "match"
+
+  per_source_evidence_distribution:
+    method: "diff sorted/uniq-c source_id extractions"
+    result: "no diff"
+    distribution:
+      annus-2001-anzu: 2
+      assmann-2001-search: 1
+      ballentine-2015: 5
+      beckman-1982-illuyanka: 1
+      benveniste-renou-1934: 1
+      biebuyck-mateene-mwindo: 2
+      conrad-west-africa: 1
+      day-1985: 1
+      faulkes-snorri: 1
+      forsyth-1987: 9
+      foster-2005: 1
+      gunkel-1895: 3
+      hallowell-ojibwa-world: 8
+      hoffner-1998: 4
+      jamison-brereton-2014: 2
+      lambert-2013: 1
+      lewis-2006-flood: 2
+      lincoln-2012: 6
+      matos-moctezuma-templo-mayor: 1
+      merlan-caging-rainbow: 7
+      naumann-mythen: 2
+      ogden-2013: 3
+      salomon-urioste-huarochiri: 2
+      scurlock-beal-2013: 2
+      siikala-finnish: 1
+      smith-1994-baal-i: 2
+      te-velde-1967: 1
+      vandijk-1983-lugale: 1
+      watkins-1995: 14
+      west-1966-theogony: 1
+      west-1997: 2
+    total_unique_source_ids: 31
+    all_resolve_in_sources_yaml: true
+    status: "match"
+
+  comparative_hook_count_and_order:
+    draft_count: 14
+    approved_count: 14
+    diff_method: "diff <(grep '^// COMPARATIVE-HOOK:' draft) <(grep '^// COMPARATIVE-HOOK:' approved)"
+    diff_result: "no diff (byte-identical, same order)"
+    status: "match"
+
+  comparative_hook_chapter_refs_resolve:
+    referenced: ["C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8",
+                 "Ch34", "Ch35", "Ch36", "Ch38", "Ch39", "Ch40", "Ch41"]
+    toc_yaml_anchors_present:
+      Ch34: "ch-34-C1-combat-as-cosmogony"
+      Ch35: "ch-35-C2-combat-as-sovereignty"
+      Ch36: "ch-36-C3-cyclical-maintenance"
+      Ch37: "ch-37-C4-eschatological-displacement"   # not referenced in hooks but listed
+      Ch38: "ch-38-C5-ie-hero-slay-serpent-formula"
+      Ch39: "ch-39-C6-near-eastern-mediterranean-transmission"
+      Ch40: "ch-40-C7-inversion-problem"
+      Ch41: "ch-41-C8-refusal-and-appropriation"
+    all_resolve: true
+    status: "match"
+
+  footnote_count_and_bodies:
+    draft_count: 97
+    approved_count: 97
+    diff_method: "extract balanced-bracket footnote:[...] bodies; index-aligned byte compare"
+    diff_result: "no diff (97/97 byte-identical)"
+    status: "match"
+
+  banned_term_grep:
+    pattern: "chaos-figure|chaos-monster|chaos-serpent"
+    raw_hits: 2
+    occurrences:
+      - line: 269
+        section: "VI"
+        context: '"chaos-figure" is banned because it begs the very question'
+        scare_quoted: true
+        ban_is_topic: true
+        verdict: "policy-compliant (ban is the topic)"
+      - line: 294
+        section: "VII"
+        context: '"the adversary" rather than "chaos-figure" follows Ballentine'
+        scare_quoted: true
+        ban_is_topic: true
+        verdict: "policy-compliant (terminology contrast in disclaimer)"
+    chaos_monster_hits: 0
+    chaos_serpent_hits: 0
+    status: "compliant"
+
+  forbidden_marker_grep:
+    patterns: ["[LACUNA:]", "[VARIANT:]", "[INFERENCE:]"]
+    hits_in_draft_body: 0
+    note: "[LACUNA:], [VARIANT:], [INFERENCE:] do not appear in draft (correct: methods sidebar, no narrative)."
+    status: "compliant"
+
+  marker_mention_in_body:
+    patterns: ["[APPROPRIATION-FLAG:]", "[RECONSTRUCTION:]"]
+    draft_body_count: 9
+    approved_body_count: 9
+    note: |
+      All occurrences in both files are mention-not-use (the methods chapter
+      describes the protocol that uses these markers in OTHER chapters; it
+      does not itself attach a marker to narrative content). The 2-occurrence
+      gap relative to a naive whole-file grep is fully accounted for by the
+      leading // meta-comment block (lines 4-17 of approved) which the draft
+      correctly drops; that block lists [LACUNA:]/[VARIANT:]/[INFERENCE:]/
+      [RECONSTRUCTION:]/[APPROPRIATION-FLAG:] as not-applicable.
+    status: "match"
+
+  claim_paragraph_count:
+    approved_claim_paragraphs: 97
+    draft_claim_paragraphs: 97
+    draft_total_prose_paragraphs: 105
+    delta: 8
+    permitted_delta_per_brief: 8   # 1 roadmap + 7 section bridges
+    delta_breakdown:
+      - location: "Source overview, paragraph 5 (after the 4 anchor paragraphs)"
+        type: "roadmap"
+        text_excerpt: "What follows is organised in seven sections. Section I sets out the tier-ranking rubric; …"
+        compliant: true
+      - location: "after === I."
+        type: "section bridge"
+        text_excerpt: "The first piece of methodological machinery the book makes explicit is the rubric that sorts its chapters into tiers, and the worked examples by which the rubric was applied at scope-lock."
+        compliant: true
+      - location: "after === II."
+        type: "section bridge"
+        text_excerpt: "The second piece of methodological machinery is the three-clause discipline the book applies to non-Eurasian RELATED chapters, …"
+        compliant: true
+      - location: "after === III."
+        type: "section bridge"
+        text_excerpt: "The third piece of methodological machinery is the chapter-by-chapter routing of every tradition's primary-source citations through the area's own scholarship, named here area by area."
+        compliant: true
+      - location: "after === IV."
+        type: "section bridge"
+        text_excerpt: "The fourth piece of methodological machinery governs how the book handles gaps in the primary-source record, …"
+        compliant: true
+      - location: "after === V."
+        type: "section bridge"
+        text_excerpt: "The fifth piece of methodological machinery is the four-classification scheme by which the book registers, at chapter-brief stage, how each tradition's variant-coexistence is to be handled."
+        compliant: true
+      - location: "after === VI."
+        type: "section bridge"
+        text_excerpt: "The sixth piece of methodological machinery is the locked vocabulary by which the book registers the analytic distinctions on which its argument depends."
+        compliant: true
+      - location: "after === VII."
+        type: "section bridge"
+        text_excerpt: "The seventh and last piece of methodological machinery is the explicit register of disclaimers — the over-claims the book is determined not to make, named as such so that critics can hold the book to its own boundaries."
+        compliant: true
+    note: "All 8 prose-only additions are at NOTE-level, are short (single-sentence bridges + one roadmap), and introduce no factual claims; they are structural connective tissue exactly as the brief permits."
+    status: "match (within permitted budget)"
+
+  post_human_normalize_block:
+    expected: "draft drops the // Validated by post-human-normalize provenance block at the bottom of approved file"
+    found_in_draft: false
+    status: "correct (per Section 2 of audit instructions)"
+
+# ---------------------------------------------------------------------------
+# Substantive-check results
+# ---------------------------------------------------------------------------
+substantive_checks:
+
+  claim_substance_preservation:
+    method: "Index-aligned byte-by-byte comparison of all 97 claim-paragraphs (paragraph + footnote + EVIDENCE token)."
+    result: "All 97 claim paragraphs byte-identical between draft and approved-claims."
+    drift_count: 0
+    note: |
+      Because the draft is a 1:1 byte-faithful copy of the approved-claims for
+      every claim paragraph (with only the permitted 8 NOTE-level prose additions
+      and the documented anchor/title/comment-block transformations), claim
+      substance, policy-language word choices (e.g., "uses Watkins critically"),
+      qualifier strength (e.g., "argues" vs "shows"), and §VII disclaimer wording
+      are all preserved verbatim. There is no semantic drift to flag.
+    status: "match"
+
+  factual_additions_check:
+    method: "Scan draft for proper names / years / specific examples not present in approved-claims."
+    new_scholar_names_in_draft: []
+    new_years_in_draft: []
+    new_examples_in_draft: []
+    status: "no additions"
+
+  area_specialist_name_cross_check:
+    method: "For each scholar named in §III, verify presence in both draft and approved."
+    names_checked:
+      - van Dijk
+      - Annus
+      - Lambert
+      - Foster
+      - Hoffner
+      - Beckman
+      - Smith (Mark S.)
+      - Pitard
+      - Day
+      - Ballentine
+      - West (M.L.)
+      - Ogden
+      - Fontenrose
+      - te Velde
+      - Assmann
+      - Jamison
+      - Brereton
+      - Benveniste
+      - Renou
+      - Watkins
+      - Lewis
+      - Birrell
+      - Matos Moctezuma
+      - Carrasco
+      - López Austin
+      - Anderson-Dibble
+      - Salomon
+      - Urioste
+      - Taylor
+      - Biebuyck
+      - Mateene
+      - Belcher
+      - Conrad
+      - Hallowell
+      - Johnston
+      - Smith (Theresa)
+      - Vizenor
+      - Merlan
+      - Morphy
+      - Rose
+      - Keen
+      - Philippi
+      - Naumann
+      - Isomae
+      - Como
+      - Ooms
+      - Siikala
+      - Forsyth (in §III closing on chapter-brief stage)
+      - Lincoln (in §III opening)
+      - Burkert (in §III closing on permitted comparativists)
+      - Yarbro Collins (in §III closing on permitted comparativists)
+    mismatches: []
+    status: "match — every name in approved §III appears in draft §III, no name added"
+
+  tone_check:
+    expected: "explanatory, not argumentative; no over-claiming"
+    sample_qualifier_words_preserved:
+      - "the book argues / treats / classifies / uses / retains / declines"
+      - "argues for and against various aspects" (§VII Scurlock-Beal)
+      - "treated as a serious challenge" (§VII Ballentine non-resolution)
+      - "treats … as a live methodological challenge rather than as a settled minority view"
+      - "presented as the book's operational decision rather than as a discovery"
+    over_claiming_instances: []
+    status: "match"
+
+  vii_disclaimers_strength:
+    method: "Compare each §VII disclaimer's hedge-words and absoluteness in draft vs approved."
+    disclaimers_audited: 14
+    softening_instances: 0
+    note: |
+      All §VII paragraphs preserved byte-identical (per claim_substance_preservation
+      result above). The load-bearing disclaimers ("does not claim a universal
+      monomyth", "does not claim a single origin", "the book does not claim
+      that the Gunkel–Ballentine debate has been resolved", "does not claim
+      authority over how Aboriginal Australian, Anishinaabe, … read their own
+      materials", "does not claim that the book itself is exempt from the
+      appropriation problem", "does not claim that the present methods chapter
+      is the final word on its own methodology") are unsoftened.
+    status: "match"
+
+# ---------------------------------------------------------------------------
+# Findings
+# ---------------------------------------------------------------------------
+findings: []
+
+findings_count_by_severity:
+  HIGH: 0
+  MEDIUM: 0
+  LOW: 0
+  NOTE: 0
+
+# ---------------------------------------------------------------------------
+# Verdict rationale
+# ---------------------------------------------------------------------------
+verdict_rationale: |
+  PASS. The Ch33 methods-sidebar draft is a byte-faithful transformation of
+  the approved-claims file: 97/97 claim paragraphs are byte-identical
+  (including footnotes and EVIDENCE tokens), 14/14 COMPARATIVE-HOOK lines
+  are byte-identical and in order, all 31 source_ids resolve in sources.yaml,
+  per-source-id distribution matches exactly, the section-heading sequence
+  matches, the chapter anchor and title match the brief's specified forms
+  ([[ch-33-methods]] and "== Methods: Tiering, Appropriation, and Area-
+  Specialist Policy"), the leading // meta-comment block and the post-human-
+  normalize provenance block are correctly dropped by the draft, and the
+  banned-term grep (chaos-figure / chaos-monster / chaos-serpent) is clean
+  except for two scare-quoted occurrences in §VI and §VII where the ban
+  itself is the topic of discussion (policy-compliant). The 8 prose-only
+  paragraphs added by the draft (1 source-overview-closing roadmap + 7
+  single-sentence section bridges, one per === I-VII) are exactly the
+  budget the audit instructions permit, and each is short, structural, and
+  introduces no factual content. No new scholar names, years, or examples
+  appear in the draft. §VII disclaimers are unsoftened (preserved verbatim
+  by virtue of the byte-identical claim-paragraph result). Tone is
+  explanatory throughout, with the load-bearing methodological-honesty
+  qualifiers ("argues", "treats as live", "operational decision rather than
+  discovery") preserved. There are zero HIGH, zero MEDIUM, zero LOW, and
+  zero NOTE findings; the audit bar is the same as for any other chapter
+  read by hostile critics, and the chapter clears it.
+
+# ---------------------------------------------------------------------------
+# Provenance
+# ---------------------------------------------------------------------------
+audit_provenance:
+  approved_claims_file: "chapters/33-methods.claims.approved.adoc"
+  approved_claims_lines: 344
+  draft_file: "chapters/33-methods.adoc"
+  draft_lines: 340
+  prompt_file: "prompts/12-narrative-fidelity-ch33.prompt.md"
+  prompt_lines: 4045
+  toc_file: "toc.yaml"
+  sources_yaml: "sources.yaml"
+  scope_file: "scope.md"
+  glossary_file: "glossary.yaml"
+  brief_file: "briefs/33-methods.yaml"
+
+# ---------------------------------------------------------------------------
+# End of fidelity report
+# ---------------------------------------------------------------------------

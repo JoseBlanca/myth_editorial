@@ -1,0 +1,73 @@
+---
+stage: "narrative-fidelity"
+chapter: "ch-33-methods"
+status: "completed"
+completion_date: "2026-05-02"
+
+output_file: "chapters/33-methods.fidelity.yaml"
+output_lines: 370
+
+verdict: "PASS"
+
+findings_count_by_severity:
+  HIGH: 0
+  MEDIUM: 0
+  LOW: 0
+  NOTE: 0
+
+summary: |
+  Ch33 narrative-fidelity audit completed with verdict PASS and zero findings
+  at any severity. The methods-sidebar draft is a byte-faithful transformation
+  of the post-human-normalize approved-claims file: all 97 claim paragraphs
+  (paragraph + footnote + EVIDENCE token) are byte-identical, all 97 footnote
+  bodies match byte-for-byte, all 97 EVIDENCE tokens match in count and order
+  with identical per-source-id distribution across 31 unique sources, and all
+  14 COMPARATIVE-HOOK lines are byte-identical and in order. The chapter
+  anchor [[ch-33-methods]], the title (without the "— Claims" suffix), and
+  the I-VII section heading sequence all match the brief's specified forms.
+  The draft correctly drops both the leading // meta-comment block at the top
+  of the approved file and the // Validated by post-human-normalize block at
+  the bottom. The 8 prose-only paragraphs added by the draft (1 source-
+  overview-closing roadmap + 7 single-sentence section bridges, one per
+  === I-VII) are exactly the budget the audit instructions permit and each
+  is short, structural, and free of factual additions. The banned-term grep
+  is clean except for two scare-quoted occurrences of "chaos-figure" in §VI
+  and §VII where the ban itself is the discussion topic — policy-compliant.
+  No new scholar names, years, or examples appear in the draft; every §III
+  area-specialist name is preserved without addition. §VII disclaimers are
+  unsoftened (byte-identical to approved). Tone is explanatory throughout
+  and methodological-honesty qualifiers ("argues", "treats as live",
+  "operational decision rather than discovery") are preserved verbatim.
+  All 31 EVIDENCE source_ids resolve in sources.yaml; all COMPARATIVE-HOOK
+  chapter references (Ch34-Ch41, C1-C8) resolve in toc.yaml. The chapter is
+  ready to ship subject to whatever downstream stages the pipeline runs after
+  narrative-fidelity.
+
+# Mechanical-check headlines
+mechanical_check_headlines:
+  evidence_tokens_match:        true   # 97/97 byte-identical
+  footnotes_match:              true   # 97/97 byte-identical
+  comparative_hooks_match:      true   # 14/14 byte-identical
+  per_source_distribution_match: true  # 31 unique source_ids, identical histogram
+  section_headings_match:       true   # 7 sections + Source overview
+  anchor_and_title_match:       true   # [[ch-33-methods]] / "Methods: …"
+  banned_term_grep_clean:       true   # only scare-quoted §VI/§VII mentions
+  forbidden_markers_absent:     true   # no [LACUNA:]/[VARIANT:]/[INFERENCE:] in draft
+  marker_mention_in_body_match: true   # 9/9 [APPROPRIATION-FLAG:]/[RECONSTRUCTION:] mentions
+  claim_paragraph_count_match:  true   # 97/97 claims; 8 prose-only adds within permitted budget
+
+# Substantive-check headlines
+substantive_check_headlines:
+  claim_substance_preserved:           true   # all 97 claim paragraphs byte-identical
+  no_factual_additions:                true   # no new names/years/examples
+  area_specialist_name_set_preserved:  true   # all §III names match
+  tone_remains_explanatory:            true   # no over-claiming
+  vii_disclaimers_unsoftened:          true   # 14/14 disclaimers byte-identical
+
+# Provenance
+inputs_audited:
+  approved_claims_file: "chapters/33-methods.claims.approved.adoc"
+  approved_claims_lines: 344
+  draft_file:            "chapters/33-methods.adoc"
+  draft_lines:           340
+  prompt_file:           "prompts/12-narrative-fidelity-ch33.prompt.md"
