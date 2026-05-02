@@ -1,0 +1,51 @@
+stage: "claims-factcheck"
+chapter: "33-methods"
+timestamp: "2026-05-02T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7-1m"
+inputs:
+  - file: "chapters/33-methods.claims.adoc"
+    claims_identified: 96
+  - file: "briefs/33-methods.yaml"
+  - file: "scope.md"
+  - file: "sources.yaml"
+  - file: "glossary.yaml"
+  - file: "toc.yaml"
+outputs:
+  - file: "chapters/33-methods.claims.factcheck.yaml"
+    lines: 697
+verdict: REVISE
+summary: >
+  Audited 96 claims in the methods sidebar against sources.yaml, scope.md,
+  glossary.yaml, and toc.yaml. All 30 unique source_ids referenced in
+  EVIDENCE tokens resolve to sources.yaml entries. All 14
+  COMPARATIVE-HOOK chapter-number references (C1=Ch34 through C8=Ch41)
+  resolve correctly against toc.yaml. Banned-term grep ("chaos-figure",
+  "chaos-monster") shows only scare-quoted instances in §VI and §VII
+  where the ban itself is the topic. Named-but-flagged pattern is
+  applied correctly for Isomae/Como/Ooms (Japanese), Morphy/Rose/Keen
+  (Aboriginal Australian), Taylor (Andean), Burkert/López-Ruiz
+  (NE-to-Greek transmission), Jakobson/Lajoye/Kapović (Slavic
+  basic-myth critics), and Campbell/Eliade (universalising
+  comparativists) — no EVIDENCE token routes through any of them.
+  Total findings: 8 (0 HIGH, 3 MEDIUM, 5 LOW) plus 4 NOTE entries
+  forwarded for inventory-audit follow-up. The three MEDIUM findings
+  are the most consequential: (FIND-01) the §VII universal-monomyth
+  disclaimer is anchored to Ballentine 2015 whose published critique
+  is about the chaos-framing of biblical adversaries, not about
+  monomyth claims — re-anchor to Lincoln 2012; (FIND-02) the §VI
+  "appropriation" definition is anchored to "Merlan 1998 and Hallowell
+  1960" but Hallowell's 1960 essay does not develop "appropriation" as
+  a methodological term — drop Hallowell or replace with Vizenor 1989;
+  (FIND-03) §II's appropriation protocol is extended from scope.md's
+  RELATED-only formulation to RELATED+CONTRASTIVE, which is a real
+  policy-expansion that should be acknowledged in the chapter or
+  reflected back into scope.md at post-human-normalize. Most
+  consequential single finding: FIND-01 (Ballentine misattributed as
+  the anchor for the universal-monomyth disclaimer); the methods
+  chapter is read by critics and a misattributed anchor for a Section
+  VII "what the book does not claim" disclaimer is the kind of error a
+  hostile reviewer would catch immediately. Verdict: REVISE
+  (borderline PASS / REVISE per skill rules; chosen REVISE because the
+  critic-readership of the methods chapter amplifies the cost of
+  leaving the three MEDIUM misattributions in place).
