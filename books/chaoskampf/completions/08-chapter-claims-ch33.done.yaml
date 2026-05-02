@@ -1,0 +1,104 @@
+stage: "chapter-claims"
+chapter: 33
+slug: "methods"
+timestamp: "2026-05-02T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/33-methods.claims.adoc"
+    lines: 336
+summary: "Produced the factual-skeleton claims document for Chapter 33 (the methods sidebar between Part I and Part II of the Chaoskampf book), covering the seven brief-mandated sections (tier-ranking rubric; appropriation protocol; area-specialist citation policy; reconstruction policy; variant-presentation policy; methodological-term glossary; and 'what the book does not claim'), preceded by a Source overview that describes the methodological-scholarship corpus on which the chapter draws, and closed with fourteen COMPARATIVE-HOOK lines pointing at the Part II comparative chapters (C1–C8 / Ch34–Ch41) where each methods-section is exercised at length."
+metrics:
+  claim_paragraphs: 96
+  evidence_tokens: 96
+  body_prose_word_count: 6049
+  target_word_count: 6000
+  comparative_hooks: 14
+  sections: 8  # Source overview + I + II + III + IV + V + VI + VII
+  unique_source_ids_referenced: 30
+  invented_source_ids: 0
+evidence_distribution:
+  watkins-1995: 15
+  forsyth-1987: 11
+  hallowell-ojibwa-world: 9
+  merlan-caging-rainbow: 8
+  lincoln-2012: 6
+  ballentine-2015: 6
+  hoffner-1998: 4
+  gunkel-1895: 4
+  ogden-2013: 3
+  west-1997: 2
+  smith-1994-baal-i: 2
+  scurlock-beal-2013: 2
+  salomon-urioste-huarochiri: 2
+  naumann-mythen: 2
+  lewis-2006-flood: 2
+  jamison-brereton-2014: 2
+  biebuyck-mateene-mwindo: 2
+  annus-2001-anzu: 2
+  west-1966-theogony: 1
+  vandijk-1983-lugale: 1
+  te-velde-1967: 1
+  siikala-finnish: 1
+  matos-moctezuma-templo-mayor: 1
+  lambert-2013: 1
+  foster-2005: 1
+  faulkes-snorri: 1
+  day-1985: 1
+  benveniste-renou-1934: 1
+  beckman-1982-illuyanka: 1
+  assmann-2001-search: 1
+notes: |
+  Pre-flight check exception applied per the task instructions. The methods chapter's
+  brief (briefs/33-methods.yaml) is structurally different from a story-chapter brief: it
+  has sources.anchor (eight methodological anchors: gunkel-1895, ballentine-2015,
+  scurlock-beal-2013, watkins-1995, forsyth-1987, lincoln-2012, merlan-caging-rainbow,
+  hallowell-ojibwa-world) rather than sources.primary. All eight anchor IDs verified to
+  resolve in sources.yaml. The methods sidebar is the book's only chapter that documents
+  methodology rather than narrating a myth, so its "primary sources" are the
+  methodological-scholarship anchors in sources.anchor. Treated sources.anchor as the
+  functional equivalent of sources.primary for this chapter only, per the task's
+  documented exception, and proceeded rather than stopping at the pre-flight check (which
+  is calibrated for story-chapter briefs and does not apply to the methods sidebar).
+
+  Named-but-flagged scholars (named in body prose without an EVIDENCE token routed
+  through their work because their specific publications are not yet in sources.yaml):
+    - Isomae (Japanese-area specialist named in section I and III for the Susanoo–Orochi
+      area-specialist re-reading; substantive citation routed through Naumann 1996)
+    - Como (Japanese-area specialist named in section I and III alongside Isomae;
+      substantive citation routed through Naumann 1996)
+    - Ooms (Japanese-area specialist named in section III; substantive citation routed
+      through Naumann 1996)
+    - Taylor (Andean-area specialist named in section III; substantive citation routed
+      through Salomon-Urioste 1991)
+    - Morphy (Aboriginal Australian area specialist named in section III; substantive
+      citation routed through Merlan 1998)
+    - Rose (Aboriginal Australian area specialist named in section III; substantive
+      citation routed through Merlan 1998)
+    - Keen (Aboriginal Australian area specialist named in section III; substantive
+      citation routed through Merlan 1998)
+    - Ivanov and Toporov (named in section IV in connection with Perun–Veles
+      reconstruction; substantive citation routed through Watkins 1995)
+    - Jakobson, Lajoye, Kapović (named in section IV as critics of Ivanov-and-Toporov;
+      substantive citation routed through Watkins 1995)
+    - Burkert and López-Ruiz (named in section VII alongside West for the Near Eastern →
+      Mediterranean transmission chain; substantive citation routed through West 1997 —
+      Burkert 1992 is in sources.yaml as burkert-1992 but the section-VII paragraph's
+      load-bearing anchor is the corpus-level transmission claim, which West 1997 carries
+      most directly)
+    - Yarbro Collins (named in section VI alongside Forsyth and Ballentine for the
+      "combat myth" register; substantive citation routed through Forsyth 1987 —
+      yarbro-collins-1976 is in sources.yaml but the section-VI paragraph's load-bearing
+      anchor is the term-of-art register, which Forsyth 1987 carries most directly)
+    - Campbell, Eliade (named in section VII as the universalising-monomyth register the
+      book disclaims; no substantive citation routed through them — they appear as
+      disclaimer-objects rather than as anchors)
+
+  No invented source IDs. The body word count of 6,049 lands within the 6,000-word
+  target band; the chapter has 96 claim paragraphs each with one footnote and one
+  EVIDENCE token (one-claim-per-paragraph held throughout); 14 COMPARATIVE-HOOK lines
+  point at the Part II chapters where each methods-section is exercised; the
+  glossary renderings (the adversary; comparativist; appropriation; area specialist;
+  HERO SLAY SERPENT; tier-ranking; other-than-human persons; Gunkel's 1895 thesis; the
+  Ballentine critique; the four subtype-terms cosmogonic / sovereignty /
+  cyclical-maintenance / eschatological combat) are used as locked.
