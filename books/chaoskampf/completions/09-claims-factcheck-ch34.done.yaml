@@ -1,0 +1,78 @@
+stage: "claims-factcheck"
+chapter: "34-C1-combat-as-cosmogony"
+timestamp: "2026-05-02T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7-1m"
+inputs:
+  - file: "chapters/34-C1-combat-as-cosmogony.claims.adoc"
+    claims_identified: 93
+    evidence_tokens: 131
+    speculation_markers: 1
+    comparative_hooks: 14
+  - file: "briefs/34-C1-combat-as-cosmogony.yaml"
+  - file: "briefs/03-marduk-tiamat.yaml"
+  - file: "briefs/01-ninurta-asag.yaml"
+  - file: "briefs/21-gonggong.yaml"
+  - file: "briefs/24-huitzilopochtli-coatepec.yaml"
+  - file: "briefs/25-mesoamerican-cluster.yaml"
+  - file: "briefs/14-indra-vrtra.yaml"
+  - file: "scope.md"
+  - file: "sources.yaml"
+  - file: "glossary.yaml"
+  - file: "toc.yaml"
+  - file: "chapters/01-ninurta-asag.claims.approved.adoc"
+  - file: "chapters/03-marduk-tiamat.claims.approved.adoc"
+  - file: "chapters/14-indra-vrtra.claims.approved.adoc"
+  - file: "chapters/21-gonggong.claims.approved.adoc"
+  - file: "chapters/24-huitzilopochtli-coatepec.claims.approved.adoc"
+outputs:
+  - file: "chapters/34-C1-combat-as-cosmogony.claims.factcheck.yaml"
+    lines: 767
+verdict: PASS
+summary: >
+  Audited 93 paragraph-claims (131 EVIDENCE tokens, 14 COMPARATIVE-HOOK
+  lines, 1 [SPECULATION:] block) in the first comparative chapter of Part
+  II against sources.yaml, brief 34, the seven Part-I briefs (Ch1, Ch2,
+  Ch3, Ch14, Ch21, Ch24, Ch25) and five Part-I claims-approved files. All
+  20 unique source_ids referenced in EVIDENCE tokens resolve to
+  sources.yaml entries. All 14 COMPARATIVE-HOOK forward-references
+  (C2=Ch35 through C8=Ch41) and back-references (Ch1, Ch2, Ch3, Ch14,
+  Ch21, Ch24, Ch25) resolve correctly against toc.yaml. Banned-term grep
+  ("chaos-figure", "chaos-monster", "chaos-serpent") shows five
+  occurrences, all scare-quoted in §VI Ballentine-critique discussion
+  where the typology's terminology is the topic — PASS. Doubled-token
+  discipline applied consistently across §II, §III, §IV, §V, §VI; the
+  §I four-case compressions use single-token-then-doubled-token within
+  each case, acceptable for the compression-then-comparison mode (~38
+  doubled-token paragraphs total, matching chapter-claims completion
+  record). The [SPECULATION:] block at line 213 is structurally
+  well-formed with substantive basis (Lincoln 2012; Carrasco 1999;
+  Lewis 2006; Forsyth 1987) and counterargument (Witzel 2012's
+  Laurasian) sub-fields, properly hedged. No-monomyth-no-single-origin
+  discipline preserved (§III line 207 disclaimer; §VI line 351 four-part
+  modesty). The Ballentine §VI critique is preserved faithfully and
+  correctly extended to the four §I adversaries in the alternative-
+  sovereign register Ballentine 2015 herself models for Tiamat. The
+  Cipactli §IV boundary case matches Ch25/López Austin precisely. The
+  Indra-Vṛtra §V near-case matches Ch14 except on the RV 4.18 framing
+  noted in FIND-02. Total findings: 6 (0 HIGH, 2 MEDIUM, 4 LOW) plus 3
+  NOTE entries forwarded to post-human-normalize. The two MEDIUM
+  findings are the most consequential: (FIND-01) §I Marduk-Tiamat
+  compression introduces a "wounds in her eyes" gloss not attested in
+  Ch3/Lambert/Foster and flattens the Tablet V detail-set to "earth-
+  and-waters" where Ch3 attests the specific mountains-rivers-springs-
+  cosmic-bond-arched-crotch detail-set — verbatim-substitutable fix from
+  Ch3 line 374 available; (FIND-02) §V RV 4.18 framing as "slaying of
+  his 'father' or rival" introduces a patricide reading that Ch14 does
+  not feature (Ch14 frames RV 4.18 as the "embryonic Indra" hymn with
+  the irregular-sideways-birth motif), recommended fix is to drop the
+  patricide sub-clause OR to anchor it explicitly to Jamison &
+  Brereton 2014's RV 4.18.12 commentary. Most consequential single
+  finding: FIND-01, because the §I four-case compression is the
+  load-bearing comparative datum the chapter offers and the Marduk-
+  Tiamat case is the type-specimen of the Chaoskampf category, so any
+  attribution drift on its narrative-content is the kind of error a
+  hostile reviewer would catch. Verdict: PASS (no HIGH findings; both
+  MEDIUM findings have verbatim-substitutable fixes from Part-I claims-
+  approved; the chapter is appropriate for forwarding to post-human-
+  normalize with FIND-01 and FIND-02 applied).

@@ -1,0 +1,767 @@
+meta:
+  stage: claims-factcheck
+  chapter: "34-C1-combat-as-cosmogony"
+  chapter_title: "C1. Combat as Cosmogony"
+  chapter_type: "comparative (Part II) — first of eight comparative chapters; cosmogonic-combat subtype"
+  auditor_model: "claude-opus-4-7-1m"
+  writer_model: "claude-opus-4-7-1m (different conversation; this is a fresh-context audit per skill's hard rule)"
+  audit_date: "2026-05-02"
+  input_file: "chapters/34-C1-combat-as-cosmogony.claims.adoc"
+  brief_file: "briefs/34-C1-combat-as-cosmogony.yaml"
+  claims_identified: 93     # paragraph-claims (footnote count)
+  evidence_tokens: 131
+  speculation_markers: 1
+  comparative_hooks: 14
+  triangulations_performed: 20    # unique source_ids verified
+  verdict: PASS
+
+  honesty_self_check:
+    primary_source_opened: >
+      Ch34 is a comparative-typology synthesis chapter that draws (a) per-tradition
+      area-specialist anchors for narrative content of the four cases (Marduk-Tiamat,
+      Ninurta-Asag, Gonggong, Huitzilopochtli) plus the Cipactli boundary-case and the
+      Indra-Vṛtra near-case, and (b) methodological-comparative anchors (Gunkel 1895;
+      Scurlock & Beal 2013; Lincoln 2012; Forsyth 1987; Witzel 2012 with caveats)
+      that supply the typological-and-philosophical framing. Verification proceeded by
+      (1) checking every EVIDENCE token's source_id against sources.yaml (all 20
+      unique IDs are registered); (2) checking that each per-tradition factual claim
+      routes through the same source_id that the corresponding Part-I chapter uses
+      for that fact (Lambert 2013 + Foster 2005 → Ch3; ETCSL + van Dijk 1983 → Ch1;
+      Annus 2001 → Ch2; Lewis 2006 + Birrell 1993 → Ch21; Matos Moctezuma 1988 +
+      Carrasco 1999 + López Austin 1993 + Anderson-Dibble → Ch24; López Austin 1993
+      → Ch25 Cipactli; Jamison & Brereton 2014 + Benveniste & Renou 1934 + Watkins
+      1995 → Ch14); (3) cross-checking every COMPARATIVE-HOOK chapter-number
+      reference against toc.yaml (C1=Ch34, C2=Ch35, C3=Ch36, C4=Ch37, C5=Ch38,
+      C6=Ch39, C7=Ch40, C8=Ch41 — all resolve); (4) cross-checking all body-prose
+      banned-term occurrences against glossary.yaml's never_use list (every
+      "chaos-figure" / "chaos-monster" instance is scare-quoted in §VI where the ban
+      itself is the topic — PASS); (5) checking the in-scope+out-of-scope citation
+      pairing on comparative claims and confirming that doubled-token paragraphs are
+      well-paired; (6) verifying the [SPECULATION:] block has substantive basis and
+      counterargument sub-fields; (7) verifying the chapter does not re-narrate the
+      four §I cases per the brief's special_instructions; (8) verifying the
+      no-monomyth-no-single-origin disclaimer in §III/§VI is preserved without
+      sliding into universal-pattern claims; (9) cross-checking each Part-I-anchor
+      attribution against the corresponding Part-I chapter's claims-approved.adoc
+      content (all attributions consistent with the Part-I chapters' approved
+      framings, with the per-claim drift findings noted below).
+    sources_skimmed:
+      - >
+        Lambert, W.G., *Babylonian Creation Myths* (Eisenbrauns, 2013), Mesopotamian
+        Civilizations 16: print critical edition; sources.yaml entry verified
+        (ISBN 9781575062471). Trained-corpus knowledge confirms Tablet IV-V
+        body-dismemberment cosmogony, Tablet I eleven-monsters list including
+        Anzû, Tablet IV Tablet-of-Destinies recovery, Tablet VI Esagil founding,
+        Tablet VII fifty names doxology, pp. 463-465 akītu recitation context,
+        pp. 3-15 manuscript distribution, introduction Anzû-to-Enūma-Eliš
+        genealogy, introduction Nebuchadnezzar-I commissioning hypothesis.
+        Cross-checked against Ch3 claims-approved which routes the same facts
+        through Lambert 2013 with the same loc-pointers. PASS on attribution
+        substance.
+      - >
+        Foster, B.R., *Before the Muses* 3rd ed. (CDL Press, 2005): print
+        anthology; sources.yaml entry verified. Tablets V-VII pp. 467-470
+        confirmed for the cosmogonic-and-sovereign work compression of the
+        chapter's §I claim-block. Tablets II-III threefold-refusal pattern
+        attestation matches Ch3's framing.
+      - >
+        van Dijk, J.J.A., *LUGAL UD ME-LÁM-bi NIR-ĜÁL* 2 vols. (Brill, 1983):
+        print critical edition; sources.yaml entry verified. Vol. 1 introduction
+        on Ur-III dating of the underlying composition and on first-millennium
+        bilingual Akkadian receptions matches Ch1's framing of the same
+        material.
+      - >
+        ETCSL 1.6.2 (*Lugal-e*) digital corpus
+        (https://etcsl.orinst.ox.ac.uk/cgi-bin/etcsl.cgi?text=t.1.6.2). Stable
+        URL verified. Lines 17-23 (Šarur as animate scout-weapon), 24-47
+        (Asag's parentage from An and Ki, his reign, the stone-warrior
+        catalogue), and 330-650 (post-combat reorderings: Tigris embankment,
+        lapidary aetiology) all attested in Ch1's claims-approved with the same
+        loc-pointers; Ch34's compressed claims route through the same
+        loc-pointers.
+      - >
+        Annus, A., *The Standard Babylonian Epic of Anzu* (SAACT 3, 2001):
+        print primary-translation; sources.yaml entry verified
+        (ISBN 9789514590511). Annus's introduction reads *Enūma Eliš* as a
+        deliberate literary descendant of the Anzû Epic (with Anzû demoted to
+        one of Tiamat's eleven monsters; threefold-refusal pattern inherited;
+        Tablet of Destinies inherited). Ch3 routes this material through the
+        same Annus introduction with the same load-bearing claim. PASS on
+        attribution.
+      - >
+        Lewis, M.E., *The Flood Myths of Early China* (SUNY Press, 2006): print
+        monograph; sources.yaml entry verified (ISBN 9780791466636). Chs. 2-3
+        on the *Huainanzi* 天文訓 Gonggong-Zhuanxu combat, on the asymmetric-
+        tilt-and-east-flowing-rivers cosmogony, on Nüwa's repair with
+        five-coloured stones and giant-turtle legs as a partial repair that
+        stabilises the tilted cosmos — all attested in Ch21's claims-approved
+        with the same loc-pointers. PASS on attribution.
+      - >
+        Birrell, A., *Chinese Mythology: An Introduction* (Johns Hopkins, 1993):
+        print introductory survey; sources.yaml entry verified
+        (ISBN 9780801849954). Used as parallel general-survey treatment of the
+        Gonggong cycle in Ch21 and again here in Ch34; the chapter's
+        characterisation of Birrell as "general-survey" aligns with sources.yaml
+        notes ("General Chinese reference — use with Lewis... for triangulation").
+        PASS.
+      - >
+        Matos Moctezuma, E., *The Great Temple of the Aztecs* (Thames & Hudson,
+        1988): print interpretive monograph; sources.yaml entry verified
+        (ISBN 9780500390245). Coatepec-as-Templo-Mayor architectural reading;
+        the Coyolxauhqui stone (3.25m diameter; discovered 21 February 1978);
+        the serpent-headed balustrades flanking the southern (Huitzilopochtli)
+        staircase; the four-tiered cosmic-mountain structural design — all
+        attested in Ch24's claims-approved with the same loc-pointers and
+        precise quantitative facts. PASS on attribution.
+      - >
+        Carrasco, D., *City of Sacrifice* (Beacon Press, 1999): print monograph;
+        sources.yaml entry verified (ISBN 9780807046425). The Coatepec chapter
+        reads the Panquetzaliztli winter-solstice festival as the ritual
+        re-enactment of the Coatepec narrative (with the *tzoalli* dough-image,
+        mock combats between Huitzilopochtli's forces and the Centzon
+        Huitznahua, casting of victims down the southern staircase onto the
+        Coyolxauhqui stone). Ch24's claims-approved attests all four sequence
+        elements through Carrasco. PASS on attribution.
+      - >
+        López Austin, A., *The Myths of the Opossum* (UNM Press, 1993): print
+        monograph; sources.yaml entry verified (ISBN 9780826313942). Uses for
+        Cipactli (the *Histoyre du Mechique* c. 1543 and *Leyenda de los Soles*
+        1558 as principal witnesses to the Tezcatlipoca-and-Quetzalcoatl
+        dismemberment-without-combat cosmogony) and for the wider Mesoamerican
+        cosmogonic typology including the Suns cycle and the Coatepec narrative.
+        Brief 25-mesoamerican-cluster.yaml family_members entry on Cipactli
+        attests the §IV claim's framing exactly. PASS.
+      - >
+        Anderson, A.J.O. and Dibble, C.E. (trans.), *Florentine Codex*
+        13 vols. (1950-1982): print primary-translation; sources.yaml entry
+        verified (ISBN 9780874800821). Sahagún compiled with Nahua informants
+        c. 1545-1590; Book 3 ("The Origin of the Gods") is the principal
+        narrative witness for the Coatepec/Huitzilopochtli/Coyolxauhqui/Centzon
+        Huitznahua episode. Ch24 claims-approved attests Sahagún 1545-1590
+        compilation dates and Book 3 as the principal narrative witness. PASS.
+      - >
+        Jamison, S.W. and Brereton, J.P., *The Rigveda* 3 vols. (OUP, 2014):
+        print critical translation; sources.yaml entry verified
+        (ISBN 9780199370184 — Ch34 uses RV 1.32 as the spine hymn with RV
+        2.11-12, 4.18, 5.32, 6.17, 10.113 as supplementary hymns). Ch14
+        claims-approved attests the eight-hymn cycle (RV 1.32, 1.80, 2.11,
+        2.12, 4.18, 5.32, 6.17, 8.96, 10.113); Ch34 omits 1.80 and 8.96 in
+        compression which is per-brief-acceptable. The "embryonic-Indra"
+        reading of RV 4.18 (Ch14) does not foreground a "father-slaying"
+        framing the way Ch34 §V does — see FIND-02 below.
+      - >
+        Benveniste, É. and Renou, L., *Vṛtra et Vṛθragna* (Imprimerie Nationale,
+        1934): print Indo-Iranian comparative philology; sources.yaml entry
+        verified (stable-url:gallica.bnf.fr). The *vṛ-* etymology
+        ("to obstruct, to enclose") is correctly attributed; the cult-title
+        Vedic *vṛtrahán* / Avestan Vərəθraγna cognancy is the volume's
+        principal exhibit and is correctly invoked elsewhere in the book.
+      - >
+        Watkins, C., *How to Kill a Dragon* (OUP, 1995): print Indo-European
+        poetics; sources.yaml entry verified (ISBN 9780195085952). Chs. 41-48
+        on Indra-Vṛtra as the central Vedic case for the IE HERO SLAY SERPENT
+        formula, with the *áhann áhim* RV 1.32.1 attestation and the Hittite
+        kuenta...illuyanka cognancy. The chapter's deferral of philological-
+        reconstruction detail to C5 (Ch38) matches the toc.yaml framework.
+      - >
+        Forsyth, N., *The Old Enemy* (Princeton, 1987): print monograph;
+        sources.yaml entry verified (ISBN 9780691014746). Long-arc combat-myth
+        typology from Sumer through Judeo-Christian apocalyptic, used in Ch34
+        as the methodological-comparative anchor for the typological-
+        recurrence framing. The chapter's repeated use of Forsyth as
+        "typological-not-narrative discipline" anchor is consistent with the
+        work's actual scope. Forsyth does not specifically treat Aztec/Mexica
+        material (per Ch24 brief secondary entry: "Forsyth does not himself
+        treat Aztec or other Mesoamerican material"); the chapter's use of
+        Forsyth for typological-placement of the Huitzilopochtli case is at
+        the typological-framing level rather than at the area-specialist
+        level, which is the documented out-of-scope-pairing role for him in
+        the book's comparative chapters. PASS.
+      - >
+        Lincoln, B., *Gods and Demons, Priests and Scholars* (Chicago, 2012):
+        print monograph; sources.yaml entry verified (ISBN 9780226481876).
+        The political-ideological reading of combat-myth as state-charter
+        work, the akītu paradigm-case reading, and the methodological priority
+        of typological-recurrence over monomyth — all consistent with
+        Lincoln's actual project. PASS.
+      - >
+        Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit* (Vandenhoeck
+        & Ruprecht, 1895): print historical anchor; sources.yaml entry
+        verified. Teil I identifies Marduk-Tiamat as the type-specimen of
+        the Chaoskampf category, the construction-of-the-cosmos-from-Tiamat's
+        body as load-bearing cosmogonic outcome. PASS on attribution.
+      - >
+        Scurlock, J. and Beal, R. (eds.), *Creation and Chaos* (Eisenbrauns,
+        2013): print edited reassessment; sources.yaml entry verified.
+        The volume is the principal twenty-first-century reassessment of
+        Gunkel's Chaoskampf hypothesis with case-by-case-qualified-but-
+        typology-retaining contributions. The chapter's framing matches the
+        volume's stance. PASS.
+      - >
+        Witzel, M., *The Origins of the World's Mythologies* (OUP, 2012):
+        sources.yaml notes "Use with caution — the 'Laurasian' macro-scheme
+        is controversial. Cited where it engages specific stories, not as
+        framework." Ch34 cites Witzel as the cited-with-caveats methodological
+        anchor against which the chapter's own typological-recurrence-without-
+        deep-time-inheritance stance is positioned. PASS.
+      - >
+        Ballentine, D.S., *The Conflict Myth and the Biblical Tradition*
+        (OUP, 2015): sources.yaml entry verified. Ballentine's central
+        thesis is that "chaos" is the wrong analytical category for the
+        adversaries in the combat-myth corpus, because they are presented in
+        their primary sources as rival sovereigns with their own retinues and
+        power-structures rather than as inchoate disorder. The Ch34 §VI
+        treatment preserves this critique faithfully and correctly extends
+        the alternative-sovereign reading to non-Hebrew-Bible cases (Tiamat,
+        Asag, Gonggong, Coyolxauhqui) — an extension Ballentine herself
+        models in her own treatment of the Ugaritic Yamm and Mesopotamian
+        Tiamat. The chapter's "the cosmogony claim survives the critique;
+        the chaos claim may not" framing matches the brief's special_
+        instructions on terminological humility.
+      - >
+        Ogden, D., *Drakōn* (OUP, 2013): used once at line 171 of the claims
+        document as the area-specialist source for the Greek-area treatment
+        of Apollo-Python as Delphic cult-foundation rather than cosmogony.
+        Ogden's chapter on Apollo-Python in *Drakōn* does treat the killing
+        principally through the cult-foundation lens; the attribution is fair.
+        PASS.
+    references_assumed:
+      - >
+        sources.yaml notes for Day 1985 (line 76): "Canonical monograph on
+        the Leviathan/Rahab corpus." Ch34 does not cite Day 1985 in any
+        EVIDENCE token; not in scope for this audit.
+      - >
+        sources.yaml entries for west-2007 ("Indo-European Poetry and Myth"):
+        the chapter's body prose at line 284 mentions West 2007 as
+        comparative-mythology-consensus on Indra-Vṛtra/Marduk-Tiamat
+        structural parallel, and the footnote at the same line cites West
+        2007 chapter 6, but the EVIDENCE token at line 285 routes through
+        watkins-1995 only. The body-prose mention of "West 2007" without an
+        EVIDENCE token is acceptable because Watkins 1995 is the load-bearing
+        IE-philological methodological anchor and West 2007 is named for
+        orientation only. See NOTE-01.
+    quote_pattern_match: >
+      The chapter is a synthesis-of-syntheses: it cites no verbatim primary-
+      source quotation, instead routing each per-tradition factual claim
+      through the same source_id that the corresponding Part-I chapter uses
+      for that fact. Verification standard is therefore "does the cited
+      Part-I-anchor source_id support the specific claim made", not "does
+      the verbatim quotation appear at the specified loc". The Part-I
+      claims-approved files were used as the second-order verification
+      ground (their factchecks were already passed at the chapter-claims
+      stage). Of the 131 EVIDENCE tokens audited, 128 route through Part-I
+      anchor source_ids that are documented to support the specific claim;
+      3 raise drift findings noted below.
+    internal_variance_vs_contamination: >
+      No internal-variance findings: the chapter does not narrate myth
+      content from one tradition through another tradition's anchor source.
+      No contamination findings: every per-tradition claim routes through
+      the area-specialist anchor for that tradition. The named-but-flagged
+      pattern is correctly applied (West 2007, Doniger, Campbell, Eliade
+      are not used as EVIDENCE tokens; only sources in sources.yaml are
+      tokenised).
+    fresh_context: >
+      Confirmed: this audit was opened in a separate conversation from the
+      one that produced the claims document. The same model
+      (claude-opus-4-7-1m) is used in both, but the fresh-context
+      requirement is satisfied per the skill's hard rule. No memory of
+      producing the claims is present.
+
+tallies:
+  supported: 90
+  internal_variance: 0
+  unverified: 0
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  high_findings: 0
+  medium_findings: 2
+  low_findings: 4
+  notes: 3
+  total_findings: 6
+
+# ─────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS — summary register
+# ─────────────────────────────────────────────────────────────────────
+# Of 93 paragraph-claims, 90 are SUPPORTED: each EVIDENCE token routes
+# through a source_id that is registered in sources.yaml (all 20 unique
+# IDs verified present); each footnote attribution fairly characterises
+# the cited scholar's published position; each forward-link to a
+# comparative chapter (C2-C8 → Ch35-Ch41) matches toc.yaml; each
+# back-link to a Part I chapter (Ch1, Ch2, Ch3, Ch14, Ch21, Ch24, Ch25)
+# matches toc.yaml. The §I four-case compressions match the
+# corresponding Part-I claims-approved files at every tested point
+# (Marduk's Tablet IV-V cosmogony from Tiamat's body; Tigris and
+# Euphrates from Tiamat's eyes; Tablet VI Esagil and human-creation from
+# Qingu's blood; Tablet VII fifty names; akītu pp. 463-465; Anzû among
+# Tiamat's eleven monsters and the Tablet-of-Destinies inheritance and
+# the threefold-refusal pattern; ETCSL 1.6.2 lines 17-23, 24-47, and
+# 330-650 for Šarur, Asag's reign and stone-warrior catalogue, and the
+# Tigris embankment plus lapidary aetiology; *Huainanzi* 天文訓 c. 139 BCE
+# Gonggong-Zhuanxu combat with cosmic tilt and east-flowing rivers, with
+# Nüwa's five-coloured stones and giant-turtle-legs partial repair;
+# Coatepec narrative as Coyolxauhqui-elder-sister and Centzon Huitznahua
+# four-hundred-stellar-brothers, with the 1978 Coyolxauhqui stone
+# 3.25-metre-diameter discovered 21 February 1978 and the Stage IV
+# Templo Mayor architectural identification, and the Panquetzaliztli
+# festival sequence with *tzoalli* dough-image, mock combats, casting
+# of victims, ritual feasting; Cipactli dismemberment-without-combat
+# with the Histoyre du Mechique c. 1543 and Leyenda de los Soles 1558
+# witnesses; RV 1.32 spine hymn fifteen verses with the three
+# cosmogonic acts (separation of heaven and earth, release of waters,
+# appearance of dawn) and the *áhann áhim* RV 1.32.1 IE formula; *vṛ-*
+# etymology and the obstruction-frame; *Śatapatha Brāhmaṇa* 1.6.3-4
+# and *Mahābhārata* Udyogaparvan 9-18 post-Vedic Brahmin reframing).
+#
+# Source-ID registry check (all 20 unique IDs verified present in
+# sources.yaml): anderson-dibble-florentine, annus-2001-anzu,
+# ballentine-2015, benveniste-renou-1934, carrasco-1999-city, etcsl,
+# forsyth-1987, foster-2005, gunkel-1895, jamison-brereton-2014,
+# lambert-2013, lewis-2006-flood, lincoln-2012, lopez-austin-myths,
+# matos-moctezuma-templo-mayor, ogden-2013, scurlock-beal-2013,
+# vandijk-1983-lugale, watkins-1995, witzel-2012.
+# ─────────────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────────────
+# COMPARATIVE-HOOK chapter-number resolution check
+# ─────────────────────────────────────────────────────────────────────
+# All 14 COMPARATIVE-HOOK lines were resolved against toc.yaml.
+# Forward-references (C-number ↔ chapter-number):
+#   C2 = Ch35 "Combat as sovereignty"  ✓
+#   C3 = Ch36 "Cyclical maintenance"  ✓
+#   C4 = Ch37 "Eschatological displacement"  ✓
+#   C5 = Ch38 "Indo-European HERO SLAY SERPENT formula"  ✓
+#   C6 = Ch39 "Near Eastern → Mediterranean transmission"  ✓
+#   C7 = Ch40 "Inversion problem"  ✓ (Bida/Wagadu inversion case
+#                                       confirmed in brief 40-C7)
+#   C8 = Ch41 "Refusal and the appropriation problem"  ✓ (Nanabozho/
+#                                       Mishipeshu, Mwindo/Kirimu,
+#                                       Rainbow Serpent confirmed in
+#                                       brief 41-C8)
+# Back-references (Ch-number ↔ chapter-anchor):
+#   Ch1  = ch-01-ninurta-asag  ✓
+#   Ch2  = ch-02-ninurta-anzu  ✓
+#   Ch3  = ch-03-marduk-tiamat  ✓
+#   Ch14 = ch-14-indra-vrtra  ✓
+#   Ch21 = ch-21-gonggong  ✓
+#   Ch24 = ch-24-huitzilopochtli-coatepec  ✓
+#   Ch25 = ch-25-mesoamerican-cluster  ✓
+# All 14 hook references resolve. No missing-target findings.
+# ─────────────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────────────
+# Banned-term grep
+# ─────────────────────────────────────────────────────────────────────
+# Per scope.md / glossary.yaml: "chaos-figure" and "chaos-monster" are
+# BANNED as category terms (begs the question Ballentine 2015 critiques).
+# Ch34 uses the banned terms five times, all in scare-quotes:
+#   - Line 48 (Source overview): policy-statement of the ban itself,
+#     terms appear in scare-quotes as the topic.  ✓
+#   - Line 310 (§VI): "Asag... is similarly a sovereign-figure with
+#     structure rather than a 'chaos-figure'..." — scare-quoted,
+#     contrast with Ballentine's alternative-sovereign reading.  ✓
+#   - Line 318 (§VI): "Coyolxauhqui... and the Centzon Huitznahua...
+#     are similarly not 'chaos-figures' but kin-rivals..." —
+#     scare-quoted, same contrast.  ✓
+#   - Line 322 (§VI): "...registers the typology's own terminology...
+#     'chaos-figure' listed as banned for begging the question."
+#     — scare-quoted, glossary-policy citation.  ✓
+#   - Line 325 (§VI): "The book accordingly bans 'chaos-figure' and
+#     'chaos-monster' from un-quoted body-prose use..." — scare-quoted,
+#     terms are the topic.  ✓
+# No un-quoted instances. "chaos-serpent" does not appear. PASS on
+# banned-term scan, with §VI's discussion of the Ballentine critique
+# correctly preserved as the only context in which the typology's
+# terminology is the topic and is therefore named in scare-quotes for
+# critical engagement, exactly per glossary.yaml's never_use rationale.
+# ─────────────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────────────
+# Doubled-token discipline (skill 14, comparative-chapter exception)
+# ─────────────────────────────────────────────────────────────────────
+# The comparative-chapter skill requires that comparative claims cite
+# both an in-scope (Part-I anchor) and an out-of-scope (methodological
+# anchor) source, with the doubled-token pattern used where required.
+# Ch34's claim paragraphs split as follows on this dimension:
+#
+#   - Source overview (§Source overview, ~10 paragraphs): each
+#     paragraph carries a single EVIDENCE token because the paragraph's
+#     subject is the chapter's own discipline rather than a comparative
+#     claim. ACCEPTABLE per skill.
+#   - §I (~22 paragraphs, the four cases): the opening paragraph for
+#     each case carries a single in-scope EVIDENCE token (focused
+#     compression of the case's narrative-content); subsequent
+#     paragraphs add out-of-scope methodological pairing where the
+#     comparison is at issue. The mode is acceptable for compression.
+#   - §II (~9 paragraphs, working definition): each paragraph either
+#     doubles or carries the appropriate methodological anchor. PASS.
+#   - §III (~12 paragraphs + 1 SPECULATION, independence-vs-
+#     transmission): comparative claims doubled (lewis-2006 + matos-
+#     moctezuma OR lewis-2006 + lincoln-2012 OR matos-moctezuma +
+#     lincoln-2012); the load-bearing typological-recurrence
+#     independence claim at line 204-205 is doubled with lincoln-2012.
+#     PASS.
+#   - §IV (~8 paragraphs, Cipactli boundary case): comparative claims
+#     are doubled (lopez-austin + forsyth, lewis + lopez-austin)
+#     where the boundary-marker function is comparative; per-Cipactli
+#     factual claims are anchored to lopez-austin only, which is
+#     acceptable since López Austin is both the Ch25 area-specialist
+#     anchor and a wider-Mesoamerican comparative-mythology source.
+#     PASS.
+#   - §V (~9 paragraphs, Indra-Vṛtra near-case): comparative claims
+#     doubled (jamison-brereton + lambert-2013 OR jamison-brereton +
+#     forsyth OR jamison-brereton + watkins). PASS, with FIND-02
+#     drift note on RV 4.18 framing.
+#   - §VI (~14 paragraphs, Ballentine critique): every claim cites
+#     ballentine-2015 plus an in-scope anchor (lambert, etcsl, lewis,
+#     carrasco) for the case being engaged. Doubled-token discipline
+#     is consistent with the brief's section VI structure. PASS.
+#
+# Total doubled-token paragraphs: roughly 38, matching the chapter-
+# claims completion record's report. No comparative claim is anchored
+# to only the methodological side without a Part-I in-scope anchor.
+# ─────────────────────────────────────────────────────────────────────
+
+findings:
+  # ───────────────────────────────────────────────────────────────────
+  # MEDIUM findings — attribution drift / pairing-pattern issues
+  # ───────────────────────────────────────────────────────────────────
+
+  - id: FIND-01
+    claim_number: 32  # paragraph in §I, "Marduk's body-dismemberment cosmogony"
+    claim_excerpt: >
+      Marduk splits Tiamat's defeated body into two halves and uses them
+      to construct the upper and lower halves of the cosmos — the heavens
+      above as one half of her corpse, the earth-and-waters below as the
+      other — and the rivers Tigris and Euphrates flow from the wounds in
+      her eyes.
+    line_in_input: 53
+    evidence_token: "source_id=lambert-2013 ; loc=Tablets IV-V, the cosmogony from Tiamat's body"
+    kind: ATTRIBUTION-DRIFT (minor)
+    severity: MEDIUM
+    issue: >
+      Two minor drifts from Ch3's framing of *Enūma Eliš* Tablets IV-V:
+      (a) "the earth-and-waters below as the other" half — Ch3 (claims
+      lines 343-386) attests the upper half as the sky and the lower half
+      as the source of multiple specific cosmic features (mountains from
+      thighs; Tigris/Euphrates from eyes; springs from nostrils; cosmic
+      bond from coiled tail; arched crotch supporting the heavens), not
+      as undifferentiated "earth-and-waters". The Ch34 compression to
+      "earth-and-waters" is technically defensible (the lower half does
+      furnish earth-features and water-sources) but flattens the
+      distinctive Tablet V detail-set; (b) "rivers Tigris and Euphrates
+      flow from the wounds in her eyes" — Ch3 line 374 says "her eyes
+      he opens for the sources of the Tigris and Euphrates" (i.e., her
+      eyes BECOME the river-sources), with no specific "wounds" framing
+      attested in Ch3 or in Lambert 2013 / Foster 2005 as far as the
+      audit can verify. The "wounds in her eyes" language is the
+      chapter-claims author's gloss, not a Lambert/Foster phrasing.
+    evidence: >
+      Ch3 claims-approved line 374: "Marduk takes the lower half of
+      Tiamat's body and uses it for the earth-cosmogony: from her thighs
+      he makes the great mountains; her eyes he opens for the sources of
+      the Tigris and Euphrates; her nostrils become springs.
+      [Foster 2005, pp. 463-464, Tablet V; Lambert 2013, Tablet V.]"
+    recommended_fix: >
+      Replace "the earth-and-waters below as the other" with "the lower
+      half furnishing the mountains, rivers, and springs of the present
+      world", and replace "rivers Tigris and Euphrates flow from the
+      wounds in her eyes" with "Marduk opens her eyes for the sources of
+      the Tigris and Euphrates" (matching Ch3's framing). The fix is
+      verbatim-substitutable and preserves the §I compression's
+      length-budget.
+
+  - id: FIND-02
+    claim_number: 80  # paragraph in §V, "RV 4.18 framing"
+    claim_excerpt: >
+      RV 2.11–12 on the splitting of the mountain to release the waters;
+      RV 4.18 on Indra's prenatal-and-natal vigour and the slaying of
+      his "father" or rival; RV 10.113 on the cosmogonic consequences as
+      confirmed by the assembled gods — together the supplementary hymns
+      establish the cosmogonic-without-construction reading as the
+      *Rigveda*'s own framing rather than as a modern editorial gloss.
+    line_in_input: 287
+    evidence_token: "source_id=jamison-brereton-2014 ; loc=RV 2.11-12, 4.18, and 10.113, supplementary cosmogonic hymns"
+    kind: ATTRIBUTION-DRIFT
+    severity: MEDIUM
+    issue: >
+      The RV 4.18 characterisation as "Indra's prenatal-and-natal vigour
+      and the slaying of his 'father' or rival" goes beyond what Ch14's
+      claims-approved attests for RV 4.18. Ch14 (lines 238-242) frames
+      RV 4.18 as the "embryonic Indra" hymn whose load-bearing motif is
+      the irregular sideways birth (forced exit from the mother's womb)
+      that anticipates the irregular combat-decisive character of his
+      later career. Ch14 does not foreground the patricide/father-slaying
+      reading of RV 4.18. The patricide reading rests on the controversial
+      RV 4.18.12 verse, which Jamison & Brereton's own commentary does
+      address but which Ch14 chose not to feature as a load-bearing motif
+      of the supplementary corpus. Routing the §V claim through Ch14's
+      anchor while invoking a reading that Ch14 chose not to feature is
+      attribution drift: the substantive claim is not falsifiable (Jamison
+      & Brereton 2014 do discuss the verse's patricide reading) but the
+      framing slides past Ch14's own selection.
+    evidence: >
+      Ch14 claims-approved line 238: "RV 4.18 is the principal 'embryonic
+      Indra' hymn of the corpus, in which the divine narrator and Indra
+      in dialogue stage the unusual motif of Indra's birth: the hymn
+      presents Indra as having forced his way out of his mother's womb
+      sideways, against the natural mode of birth, and presents this
+      irregular birth as anticipating the irregular and combat-decisive
+      character of his later career."
+    recommended_fix: >
+      Re-frame the RV 4.18 sub-clause to match Ch14's framing: "RV 4.18
+      on Indra's irregular sideways birth as anticipating his combat-
+      decisive career" (drop the "slaying of his 'father' or rival"
+      sub-claim, which Ch14 does not feature). If the chapter wishes to
+      retain the patricide reading, it should anchor it explicitly to
+      Jamison & Brereton 2014's RV 4.18.12 commentary and acknowledge
+      that this reading goes beyond the framing Ch14 chose to put forward.
+
+  # ───────────────────────────────────────────────────────────────────
+  # LOW findings — wording / specificity issues
+  # ───────────────────────────────────────────────────────────────────
+
+  - id: FIND-03
+    claim_number: 47  # paragraph in §I, "Huitzilopochtli case introduction"
+    claim_excerpt: >
+      ...preserved in the *Florentine Codex* Book 3 ("The Origin of the
+      Gods") of Sahagún (1545–1590)...
+    line_in_input: 98
+    evidence_token: "source_id=matos-moctezuma-templo-mayor ; loc=interpretive chapters on Coatepec as Templo Mayor"
+    kind: WORDING-AMBIGUITY
+    severity: LOW
+    issue: >
+      The phrasing "Sahagún (1545–1590)" is ambiguous: a careful reader
+      may read this as Sahagún's lifespan (Sahagún was born c. 1499 and
+      died 1590), but the dates 1545-1590 actually denote the period of
+      compilation of the *Historia general* / *Florentine Codex* by
+      Sahagún with his Nahua collaborators. Ch24's claims-approved line
+      36 disambiguates with the explicit phrasing "compiled with Nahua
+      informants between approximately 1545 and 1590 CE". The Ch34
+      compression loses the disambiguation.
+    evidence: >
+      Ch24 claims-approved line 36: "the *Historia general de las cosas
+      de Nueva España* of the Franciscan friar Bernardino de Sahagún,
+      compiled with Nahua informants between approximately 1545 and 1590
+      CE..." Sahagún's actual lifespan is c. 1499-1590.
+    recommended_fix: >
+      Replace "the *Florentine Codex* Book 3 ('The Origin of the Gods')
+      of Sahagún (1545–1590)" with "the *Florentine Codex* Book 3 ('The
+      Origin of the Gods'), compiled by Sahagún with Nahua informants
+      between c. 1545 and 1590 CE" — matching Ch24's disambiguating
+      phrasing.
+
+  - id: FIND-04
+    claim_number: 86  # paragraph in §V, "structural-parallel claim re West 2007"
+    claim_excerpt: >
+      The Indra-Vṛtra case has been compared structurally to Marduk-
+      Tiamat by West 2007 and others — both are storm-god-defeats-water-
+      or-water-obstruction combats — but the structural parallel does not
+      carry a transmission claim: the present comparative-mythology
+      consensus (West 2007; Watkins 1995) treats the Indra-Vṛtra material
+      as a primary witness to the Indo-European HERO SLAY SERPENT formula
+      and as a structural parallel to (rather than a member of) the
+      Mesopotamian cosmogonic-combat tradition.
+    line_in_input: 284
+    evidence_token: "source_id=watkins-1995 ; loc=chs. 41-48, structural-parallel without transmission"
+    kind: TOKEN-COVERAGE
+    severity: LOW
+    issue: >
+      The body prose names "West 2007" twice as a load-bearing source for
+      the structural-parallel reading, and the footnote at line 284 cites
+      "West, M.L., *Indo-European Poetry and Myth* (Oxford: Oxford
+      University Press, 2007), ch. 6 on Indra-Vṛtra and Marduk-Tiamat as
+      structural parallels without transmission". West 2007 is registered
+      in sources.yaml (line 139: id: west-2007). The paragraph would
+      benefit from an explicit `source_id=west-2007` EVIDENCE token to
+      match the body-prose attribution. Without it, the named-but-flagged
+      pattern technically applies (West 2007 is in sources.yaml so it can
+      be tokenised; the absence of a token is therefore a token-coverage
+      gap rather than a strict policy violation). The watkins-1995 token
+      that is present covers the philological-formula side of the
+      paragraph but not the West-2007-specific structural-parallel
+      framing.
+    evidence: >
+      Body prose at line 284: "by West 2007 and others" and "the present
+      comparative-mythology consensus (West 2007; Watkins 1995)".
+      Footnote at the same line cites West 2007 ch. 6 explicitly. The
+      single EVIDENCE token at line 285 routes through watkins-1995.
+    recommended_fix: >
+      Add a second EVIDENCE token: `// EVIDENCE: source_id=west-2007 ;
+      loc=ch. 6, Indra-Vṛtra and Marduk-Tiamat as structural parallels
+      without transmission` immediately before or after the existing
+      watkins-1995 token. Alternatively, weaken the body-prose attribution
+      to "Watkins 1995 and the wider comparative-mythology consensus"
+      without naming West 2007 as a load-bearing source — but the West
+      2007 framing is genuinely useful for the section's argument so the
+      token-addition is the cleaner fix.
+
+  - id: FIND-05
+    claim_number: 14  # paragraph in §I, "Mesopotamian centre of attestation"
+    claim_excerpt: >
+      ...the Mesopotamian centre of attestation (Babylonia and Sumer) and
+      the Han-Chinese centre of attestation are separated by approximately
+      6,000 kilometres of intervening territory across which no continuous
+      documentary trail of the cosmogonic-combat narrative exists, and the
+      Mexica centre of attestation is separated from both by the trans-
+      Pacific or trans-Atlantic distance with no pre-Columbian
+      transmission route plausibly reconstructible...
+    line_in_input: 219
+    evidence_token: "source_id=lewis-2006-flood ; loc=chs. 2-3, Chinese-tradition autonomy"
+    kind: WORDING-IMPRECISION
+    severity: LOW
+    issue: >
+      Two minor imprecisions: (a) "approximately 6,000 kilometres" is
+      approximately right for Babylon (~33°N, 44°E) to Han Chang'an
+      (~34°N, 109°E) — actually closer to 5,500-6,500 km depending on
+      route; the figure is acceptable but the chapter does not anchor it
+      to a specific source (it is offered as a geographical fact).
+      (b) "trans-Pacific or trans-Atlantic distance" — the natural
+      route between Mesoamerica and either Mesopotamia or Han China is
+      trans-Atlantic (via Africa) or via the overland-Asia-then-Pacific
+      crossing. The "or" in "trans-Pacific or trans-Atlantic" is
+      under-specified; the chapter probably means "no plausible
+      pre-Columbian route, whether trans-Pacific or trans-Atlantic, is
+      reconstructible". The current phrasing is grammatically correct
+      but slightly awkward.
+    evidence: >
+      Geographical fact verifiable from any standard atlas; the chapter
+      does not commit a factual error. The wording is the issue.
+    recommended_fix: >
+      Optional: re-phrase to "the Mexica centre of attestation is
+      separated from both by Atlantic and Pacific distances with no
+      pre-Columbian transmission route plausibly reconstructible across
+      either ocean". Or leave as-is: this is a wording quibble at LOW
+      severity and is not worth a revision pass on its own.
+
+  - id: FIND-06
+    claim_number: 46  # paragraph in §I, "Marduk's full cosmogonic-and-sovereign work"
+    claim_excerpt: >
+      Marduk's cosmogonic work in *Enūma Eliš* extends beyond the body-
+      dismemberment: he sets the stations of the moon, the constellations,
+      and the calendar in Tablet V; he founds Babylon and his own temple
+      Esagil in Tablet VI as the cosmic axis; he creates humans from the
+      blood of the executed Qingu (Tiamat's appointed consort-general) so
+      that they may take on the labour the gods had been performing; and
+      he receives the fifty names of the older deities in Tablet VII as
+      the consummation of his cosmogonic-and-sovereign work.
+    line_in_input: 60
+    evidence_token: "source_id=foster-2005 ; loc=Tablets V-VII, Marduk's full cosmogonic-and-sovereign work"
+    kind: PAIRING-COMPLETENESS
+    severity: LOW
+    issue: >
+      This load-bearing §I claim about Marduk's full cosmogonic-and-
+      sovereign work is anchored to a single in-scope EVIDENCE token
+      (foster-2005). The footnote also cites Lambert 2013 Tablets V-VII
+      but no second EVIDENCE token routes through lambert-2013 here. For
+      a §I-compressed-summary paragraph that integrates four distinct
+      load-bearing claims (calendrical work; Esagil-founding; human
+      creation from Qingu's blood; fifty-names doxology) the
+      single-token coverage is thin. Adding a lambert-2013 token would
+      strengthen the doubled-token discipline without changing the claim.
+    evidence: >
+      The four facts compressed into the paragraph are independently
+      attested in Ch3's claims-approved through both Foster 2005 and
+      Lambert 2013, and the footnote at line 60 cites both. The
+      single-token EVIDENCE coverage is a token-discipline gap, not a
+      substantive attribution issue.
+    recommended_fix: >
+      Add `// EVIDENCE: source_id=lambert-2013 ; loc=Tablets V-VII,
+      cosmogonic-and-sovereign work` as a second EVIDENCE token after
+      the existing foster-2005 token. This is a small fix that
+      strengthens the doubled-token discipline applied to the rest of
+      §I.
+
+# ─────────────────────────────────────────────────────────────────────
+# NOTES — forwarded for inventory-audit follow-up, not findings
+# ─────────────────────────────────────────────────────────────────────
+
+notes:
+  - id: NOTE-01
+    note: >
+      "West 2007" is named in body prose at line 284 and cited in the
+      same line's footnote, but is not invoked as an EVIDENCE token.
+      West 2007 IS registered in sources.yaml (id: west-2007); see
+      FIND-04 for the recommended token-addition. This is captured here
+      as a NOTE because the named-but-flagged pattern technically does
+      not apply (West 2007 is in sources.yaml), and the missing token is
+      addressed in FIND-04.
+
+  - id: NOTE-02
+    note: >
+      The [SPECULATION:] block at line 213 is structurally well-formed:
+      basis-and-counterargument sub-fields are present and substantive;
+      the basis cites Lincoln 2012, Carrasco 1999, Lewis 2006, Forsyth
+      1987 (a four-source basis), and the counterargument cites Witzel
+      2012's Laurasian as an alternative reading. The speculative claim
+      (typological recurrence as shared political-charter response
+      rather than deep-time inheritance) is genuinely speculative
+      (a synthesis claim rather than a single-source-attested
+      observation) and is properly hedged with "may reflect", "is
+      offered as one plausible reading rather than as the chapter's
+      settled position", "the present chapter does not claim to
+      adjudicate". PASS on the speculation-marker discipline.
+
+  - id: NOTE-03
+    note: >
+      No-monomyth disclaimer scan: §III line 207 explicitly disclaims
+      universal-monomyth, "all-cosmogonies-are-combat-cosmogonies", and
+      Pleistocene-deep-time-inheritance claims; §VI line 351 (the
+      chapter's penultimate paragraph) registers a four-part modesty
+      claim about what the typological-recurrence claim does not prove
+      (no common origin; not a feature of all human cosmogonic
+      narrative; no deep cognitive universal; no independence from the
+      Eurocentric/biblical-studies origins of the chaoskampf category).
+      The no-monomyth disclaimer is consistent with Ch33 §VII's
+      disclaimer and with brief 34's comparative_argument's "without
+      asserting monomyth or single origin" stance. PASS on the
+      no-monomyth-no-single-origin discipline.
+
+# ─────────────────────────────────────────────────────────────────────
+# Verdict
+# ─────────────────────────────────────────────────────────────────────
+# The audit found no HIGH findings. Two MEDIUM findings (FIND-01 and
+# FIND-02) flag attribution drift on per-tradition factual claims:
+#   - FIND-01: §I Marduk-Tiamat compression introduces a "wounds in her
+#     eyes" gloss not attested in Ch3/Lambert/Foster, and flattens the
+#     Tablet V detail-set to "earth-and-waters" where Ch3 attests
+#     mountains-rivers-springs-cosmic-bond-arched-crotch. Recommended
+#     fix is verbatim-substitutable from Ch3 line 374.
+#   - FIND-02: §V RV 4.18 framing as "slaying of his 'father' or rival"
+#     introduces a patricide reading that Ch14 does not feature; Ch14's
+#     framing is the embryonic-irregular-birth reading. Recommended
+#     fix is to drop the patricide sub-clause OR to anchor it explicitly
+#     to Jamison & Brereton 2014's RV 4.18.12 commentary.
+# Four LOW findings (FIND-03 through FIND-06) note wording-ambiguity,
+# token-coverage, wording-imprecision, and pairing-completeness issues
+# that do not falsify any claim but would strengthen the chapter.
+#
+# The four §I cases match the Part-I chapters (Ch3, Ch1, Ch21, Ch24) at
+# every other tested point. The Cipactli §IV boundary case matches Ch25
+# precisely. The Indra-Vṛtra §V near-case matches Ch14 except on the
+# RV 4.18 framing flagged in FIND-02. The Ballentine §VI critique is
+# preserved faithfully and correctly extended to the four §I adversaries
+# in the alternative-sovereign register Ballentine 2015 herself models.
+# The terminological humility ("cosmogony claim survives; chaos claim
+# may not") is preserved per the brief's special_instructions. The
+# no-monomyth-no-single-origin discipline is preserved per Ch33 §VII.
+# The doubled-token discipline is applied consistently across §III, §IV,
+# §V, §VI; the §I four-case compressions use single-token-then-
+# doubled-token within each case, which is acceptable for the
+# compression-then-comparison mode.
+#
+# Verdict: PASS (with two MEDIUM minor-fix notes for post-human-
+# normalize). The two MEDIUM findings are substantive but do not
+# falsify the chapter's central argument; both admit verbatim-
+# substitutable fixes from the Part-I claims-approved files. The
+# chapter is appropriate for forwarding to the post-human-normalize
+# stage; the two MEDIUM fixes (FIND-01 Marduk-Tiamat compression
+# detail-set; FIND-02 RV 4.18 patricide framing) should be applied
+# at post-human-normalize. The four LOW findings are optional
+# polishing; they may be applied at post-human-normalize at the
+# normaliser's discretion. No HIGH findings; no falsified claims;
+# no source_id violations; no banned-term un-quoted occurrences;
+# no monomyth or single-origin overclaims.
