@@ -1,0 +1,208 @@
+stage: "post-human-normalize-claims"
+chapter: 33
+slug: "methods"
+timestamp: "2026-05-02T15:01:32Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+inputs:
+  - file: "chapters/33-methods.claims.adoc"
+    role: "original (preserved unmodified)"
+  - file: "chapters/33-methods.claims.factcheck.yaml"
+    role: "factcheck input (3 MEDIUM + 5 LOW + 4 NOTEs)"
+  - file: "briefs/33-methods.yaml"
+    role: "chapter brief"
+  - file: "scope.md"
+    role: "scope and protocols"
+  - file: "sources.yaml"
+    role: "source-ID registry"
+  - file: "glossary.yaml"
+    role: "glossary lock"
+  - file: "toc.yaml"
+    role: "chapter-numbering reference"
+outputs:
+  - file: "chapters/33-methods.claims.approved.adoc"
+    lines: 344
+    role: "approved claims with factcheck fixes applied"
+metrics:
+  claim_paragraphs: 97       # 96 original + 1 new (FIND-07 split)
+  evidence_tokens: 97        # 1:1 with claim paragraphs
+  footnotes: 97              # 1:1 with claim paragraphs
+  comparative_hooks: 14      # unchanged from original
+  sections: 8                # Source overview + I + II + III + IV + V + VI + VII (unchanged)
+  unique_source_ids_referenced: 31   # was 30; +1 conrad-west-africa newly used by FIND-07 split
+  invented_source_ids: 0
+  findings_total: 8
+  findings_accepted: 6        # FIND-01, FIND-02, FIND-04, FIND-05, FIND-06, FIND-08
+  findings_modify: 2          # FIND-03, FIND-07 (accepted with documented modifications)
+  findings_reject: 0
+  findings_flagged_only: 0
+evidence_distribution:
+  watkins-1995: 15
+  forsyth-1987: 11
+  hallowell-ojibwa-world: 9
+  merlan-caging-rainbow: 8
+  lincoln-2012: 7            # was 6 in chapter-claims completion (+1 from FIND-01 swap)
+  ballentine-2015: 5         # was 6 (-1 from FIND-01 swap)
+  hoffner-1998: 4
+  gunkel-1895: 4
+  ogden-2013: 3
+  west-1997: 2
+  smith-1994-baal-i: 2
+  scurlock-beal-2013: 2
+  salomon-urioste-huarochiri: 2
+  naumann-mythen: 2
+  lewis-2006-flood: 2
+  jamison-brereton-2014: 2
+  biebuyck-mateene-mwindo: 2
+  annus-2001-anzu: 2
+  west-1966-theogony: 1
+  vandijk-1983-lugale: 1
+  te-velde-1967: 1
+  siikala-finnish: 1
+  matos-moctezuma-templo-mayor: 1
+  lambert-2013: 1
+  foster-2005: 1
+  faulkes-snorri: 1
+  day-1985: 1
+  conrad-west-africa: 1      # NEW; was 0 in chapter-claims completion (FIND-07 split adds Conrad as Bida sub-case anchor)
+  benveniste-renou-1934: 1
+  beckman-1982-illuyanka: 1
+  assmann-2001-search: 1
+distribution_delta_vs_chapter_claims:
+  lincoln-2012: "+1 (6 → 7) — FIND-01 re-anchor"
+  ballentine-2015: "-1 (6 → 5) — FIND-01 re-anchor"
+  conrad-west-africa: "+1 (0 → 1) — FIND-07 split, Bida sub-case anchored separately"
+  total_evidence_tokens: "+1 (96 → 97) — FIND-07 split adds one paragraph"
+  unique_source_ids: "+1 (30 → 31) — conrad-west-africa newly used"
+  all_other_sources: "unchanged"
+findings_dispositions:
+  - id: FIND-01
+    severity: MEDIUM
+    disposition: ACCEPT
+    action: "Re-anchored §VII universal-monomyth disclaimer (claim-paragraph at line 275 of original) from ballentine-2015 to lincoln-2012. Footnote rewritten to attribute the disclaimer's motivation to Lincoln's political-ideological critique of History-of-Religions universalism (Eliade-school), which is the actually-Lincoln-attested ground for monomyth-rejection. EVIDENCE token swapped accordingly."
+    source_id_change: "ballentine-2015 → lincoln-2012"
+  - id: FIND-02
+    severity: MEDIUM
+    disposition: ACCEPT
+    action: "Replaced 'Hallowell 1960' with 'Vizenor 1989' in the §VI 'appropriation' definition (claim-paragraph at line 249 of original). Body now reads 'in the sense in which Merlan 1998 and Vizenor 1989 use the term'. Vizenor 1989 (Narrative Chance) explicitly engages academic-discourse appropriation of Native American narratives, which is the term-usage the book actually means. EVIDENCE token (merlan-caging-rainbow) unchanged because Merlan remains the principal anchor; the swap is a body-prose+footnote-text fix only and does not change source_id."
+    source_id_change: "no EVIDENCE-token change; body+footnote text now cites Vizenor instead of Hallowell as the parallel methodological-vocabulary anchor"
+  - id: FIND-03
+    severity: MEDIUM
+    disposition: ACCEPT (with MODIFY adjustment)
+    action: "Brought §II appropriation protocol back to RELATED-only (matching scope.md as written) and added a one-sentence note that CONTRASTIVE chapters in this book (Susanoo–Orochi, Bida, Mwindo, Nanabozho) operate under their own brief-level appropriation discipline driven by chapter-specific briefs rather than under a global protocol expansion. Updated both the §II opening claim (line 67 of original) and the §II asymmetric-protocol claim (line 91 of original) to align with this RELATED-only formulation. Lower-risk option (a) chosen per task instructions: keeps scope.md unchanged and routes CONTRASTIVE-chapter appropriation discipline through the brief-level mechanism that the book's actual practice already uses. EVIDENCE tokens unchanged."
+    source_id_change: "none"
+  - id: FIND-04
+    severity: LOW
+    disposition: ACCEPT
+    action: "Softened 'Lincoln 2012's term' to 'a term in current critical scholarship for which Lincoln 2012 is the book's principal anchor' in the §VI 'comparativist' definition (claim-paragraph at line 246 of original). Footnote rewritten to reflect glossary.yaml's actual attribution ('Lincoln 2012; contemporary critical scholarship'). EVIDENCE token (lincoln-2012) unchanged."
+    source_id_change: "none"
+  - id: FIND-05
+    severity: LOW
+    disposition: ACCEPT
+    action: "Standardised on 'PROVISIONAL/CRITIQUE' as the locked single label for the third tier (matching scope.md's usage). Updated three locations: (1) §I five-tier list (line 35 of original) now reads 'CORE, RELATED, PROVISIONAL/CRITIQUE, CONTRASTIVE, and SIDEBAR' with parenthetical noting the lock; (2) §I third-tier classification paragraph (line 47 of original) now reads 'PROVISIONAL/CRITIQUE' (was 'PROVISIONAL or CRITIQUE'); (3) §VI tier-ranking glossary entry (line 261 of original) now reads 'CORE / RELATED / PROVISIONAL/CRITIQUE / CONTRASTIVE / SIDEBAR' and explicitly flags that glossary.yaml's tier-ranking entry should be updated at post-human-normalize to include SIDEBAR as the fifth tier. The chapter is now internally consistent on the third-tier name. Glossary.yaml itself is not modified by this stage; the gap is flagged in the provenance Warnings line for inventory-audit follow-up. EVIDENCE tokens unchanged."
+    source_id_change: "none"
+  - id: FIND-06
+    severity: LOW
+    disposition: ACCEPT
+    action: "Added 'Gerald Taylor' to the body of the §III Andean paragraph (line 141 of original): 'with Gerald Taylor as a further Andean-studies specialist consulted at the chapter-briefs stage'. Body now matches the footnote and the brief's named-list expectation. Taylor remains under the named-but-flagged pattern (no specific publication in sources.yaml; no EVIDENCE-token routing through him). EVIDENCE token (salomon-urioste-huarochiri) unchanged."
+    source_id_change: "none"
+  - id: FIND-07
+    severity: LOW
+    disposition: ACCEPT (with MODIFY: split-into-two implementation)
+    action: "Split the original CONTRASTIVE-classification claim (line 50 of original) into TWO claim paragraphs, one for each sub-case: (a) inversion-of-valence (Bida) anchored through conrad-west-africa, and (b) refusal-of-mapping (Nanabozho) anchored through hallowell-ojibwa-world (the Hallowell anchor preserved on the Anishinaabe sub-case). EVIDENCE token count incremented by one (96 → 97); the new EVIDENCE token routes through conrad-west-africa, which is in sources.yaml and is the book's pinned Bida / Wagadu anchor. One-claim-per-paragraph rule held."
+    source_id_change: "conrad-west-africa newly used (0 → 1); hallowell-ojibwa-world unchanged on the Nanabozho sub-case"
+  - id: FIND-08
+    severity: LOW
+    disposition: ACCEPT
+    action: "Reframed the §VII 'auditable baseline' footnote (claim-paragraph at line 320 of original) per recommended fix option (b): the auditable-baseline-and-revision-in-subsequent-editions commitment is now framed as the book's own commitment, with Lincoln 2012 supplying the political-ideological 'register' in which the commitment is articulated rather than as the 'source' of the revision-in-subsequent-editions clause itself. EVIDENCE-token loc-text shortened from 'on revisable methodology' (extrapolation beyond Lincoln) to 'on the political-ideological reading of methodology' (what Lincoln actually argues). Source_id (lincoln-2012) unchanged."
+    source_id_change: "none"
+  - id: NOTE-01
+    severity: NOTE
+    disposition: FLAGGED-ONLY (informational; no body change required)
+    action: "Named-but-flagged scholars (Isomae, Como, Ooms, Taylor, Morphy, Rose, Keen, Burkert, López-Ruiz, Jakobson, Lajoye, Kapović, Campbell, Eliade) verified to carry no EVIDENCE-token routing. Flagged for inventory-audit follow-up: Burkert and López-Ruiz are likely candidates for sources.yaml promotion given citation density. Note: the FIND-06 fix adds Taylor to the body but the named-but-flagged status is preserved (no EVIDENCE token routes through Taylor)."
+  - id: NOTE-02
+    severity: NOTE
+    disposition: FLAGGED-ONLY
+    action: "Brief 33-methods.yaml's sources.anchor schema (rather than sources.primary/secondary) is consistent with the methods-sidebar exception. No body change."
+  - id: NOTE-03
+    severity: NOTE
+    disposition: FLAGGED-ONLY
+    action: "Day 1985 ISBN mismatch in sources.yaml (9781532692659 is the 2017 reprint, not the 1985 first edition) is a sources.yaml-level issue carried forward from previous chapters. Not a Ch33-introduced finding; flagged in approved-file provenance Warnings line for future post-human-normalize cycle. No body change."
+  - id: NOTE-04
+    severity: NOTE
+    disposition: ACCEPT (partially addressed via FIND-05 body-text update)
+    action: "Glossary drift items: (a) SIDEBAR-as-fifth-tier — addressed in body via FIND-05's update to §VI tier-ranking entry, with the glossary.yaml-update-required note now explicit in body and in provenance Warnings line; (b) 'single-prevalent-reconstructed' as a variant classification — flagged to inventory-audit but no body change required (the chapter's §V is already the formal introduction); (c) four subtype-terms ('cosmogonic combat' etc.) verified to have glossary entries (lines 25–59 of glossary.yaml). The glossary.yaml file itself is NOT modified by this post-human-normalize-claims stage; the body now flags the SIDEBAR-tier gap explicitly so that a future glossary-update cycle can resolve it."
+selfchecks:
+  one_claim_per_paragraph: PASS
+  every_paragraph_has_footnote: PASS
+  every_paragraph_has_evidence_token: PASS
+  every_evidence_source_id_resolves: PASS  # 31 unique IDs; all present in sources.yaml; verified by comm-diff against sources.yaml id-list
+  section_structure_preserved: PASS  # === Source overview + I-VII (8 sections)
+  comparative_hooks_preserved_verbatim: PASS  # 14 hooks unchanged; FIND-01..08 do not touch them
+  glossary_yaml_renderings_unchanged: PASS  # body uses the same glossary-locked renderings (the adversary; comparativist; appropriation; area specialist; HERO SLAY SERPENT; tier-ranking; other-than-human persons; Gunkel's 1895 thesis; the Ballentine critique; cosmogonic/sovereignty/cyclical-maintenance/eschatological combat)
+  banned_term_grep:
+    chaos-figure: "appears 2x, both scare-quoted in §VI/§VII where the ban is the topic; same as original"
+    chaos-monster: "absent"
+  provenance_block_appended: PASS  # 4 lines (Validated by / Timestamp / Checks passed / Warnings) appended below the COMPARATIVE-HOOK lines
+  original_unmodified: PASS  # original at chapters/33-methods.claims.adoc is byte-identical to its 14:44 as-written version (93374 bytes); approved file is a separate 97473-byte file; git status shows both as untracked, neither modified relative to a committed version (both are new files in this pipeline cycle)
+notes: |
+  Triage of all 8 findings + 4 NOTEs from chapters/33-methods.claims.factcheck.yaml.
+  Every disposition recorded above. Disposition summary:
+    - 6 ACCEPT (FIND-01, FIND-02, FIND-04, FIND-05, FIND-06, FIND-08)
+    - 2 ACCEPT-with-MODIFY (FIND-03 brought protocol to RELATED-only with brief-level
+      note for CONTRASTIVE; FIND-07 split into two paragraphs each with own EVIDENCE)
+    - 0 REJECT
+    - 0 FLAGGED-ONLY among findings (all 8 findings result in body changes)
+    - 4 NOTEs flagged for inventory-audit follow-up: NOTE-01 (named-but-flagged
+      pattern verification), NOTE-02 (brief schema), NOTE-03 (Day 1985 ISBN
+      mismatch in sources.yaml — not Ch33-introduced), NOTE-04 (glossary drift on
+      SIDEBAR fifth-tier and on variant-classification names; partially addressed
+      in body via FIND-05's body-text update; full glossary.yaml update deferred
+      to a future cycle).
+
+  Re-anchored EVIDENCE source_ids (old → new):
+    - FIND-01: ballentine-2015 → lincoln-2012 (universal-monomyth disclaimer in §VII)
+    - FIND-07: split adds new EVIDENCE token routing through conrad-west-africa
+      (Bida inversion-of-valence sub-case); the Hallowell-anchored token on the
+      Nanabozho sub-case is preserved.
+
+  Final claim-paragraph count: 97 (was 96; +1 from FIND-07 split).
+  Final EVIDENCE-token count: 97 (1:1 with claim paragraphs).
+  Final unique source_id count: 31 (was 30; +1 from conrad-west-africa newly used).
+  Final body+provenance line count: 344 lines (file).
+
+  Per-source-id EVIDENCE distribution comparison vs. chapter-claims completion
+  record (08-chapter-claims-ch33.done.yaml lines 20-50):
+    - lincoln-2012: 6 → 7 (+1 from FIND-01 re-anchor)
+    - ballentine-2015: 6 → 5 (-1 from FIND-01 re-anchor)
+    - conrad-west-africa: 0 → 1 (+1 from FIND-07 split)
+    - all 28 other sources: unchanged from chapter-claims completion record
+
+  Total tokens: 96 → 97 (+1; FIND-07 split adds one paragraph). The three
+  documented changes are exactly what the factcheck-fix dispositions above
+  predict; no other distribution change occurred.
+
+  Original integrity: chapters/33-methods.claims.adoc is byte-identical to its
+  14:44 as-written version (93374 bytes, mtime May 2 14:44; verified via ls -la
+  showing the original's mtime is unchanged from before this stage ran). Both
+  the original and the approved file are currently untracked in git (?? status
+  in git status output); the constraint "do not write to the original" is
+  satisfied (only the approved file was written by this stage). Git status
+  output: '?? books/chaoskampf/chapters/33-methods.claims.adoc' and '??
+  books/chaoskampf/chapters/33-methods.claims.approved.adoc'.
+
+  Provenance block appended at end of approved file: 4 standard lines
+  (Validated by post-human-normalize / Timestamp 2026-05-02T15:01:32Z / Checks
+  passed: per the selfchecks above / Warnings: glossary.yaml SIDEBAR-tier
+  gap, Day-1985 ISBN mismatch carried forward, Burkert/López-Ruiz absent
+  from sources.yaml).
+
+  Followups for downstream stages:
+    - Chapter-draft (stage #4 in pipeline) will narrativise these 97 claim
+      paragraphs into the methods-sidebar prose.
+    - At a future glossary-update cycle, the glossary.yaml tier-ranking
+      entry should be updated to include SIDEBAR as the fifth tier and to
+      use 'PROVISIONAL/CRITIQUE' as the locked third-tier label (matching
+      the chapter's locked usage).
+    - Burkert and López-Ruiz are good candidates for sources.yaml promotion
+      at inventory-audit (NOTE-01 flag).
