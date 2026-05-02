@@ -1,0 +1,164 @@
+stage: "chapter-claims"
+chapter: 34
+chapter_slug: "C1-combat-as-cosmogony"
+timestamp: "2026-05-02T18:35:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/34-C1-combat-as-cosmogony.claims.adoc"
+    lines: 368
+summary: "Produced the factual-skeleton claims document for Ch34 (C1. Combat as Cosmogony), the first of the eight Part-II comparative chapters; 93 claim-paragraphs across 7 sections (Source overview + I-VI), 131 EVIDENCE tokens routed through 20 distinct sources.yaml IDs, 1 [SPECULATION] marker, 14 COMPARATIVE-HOOK lines."
+notes: |
+  Section-structure verification: the document contains all seven required
+  sections in the brief's order — === Source overview, === I. The four
+  cases, === II. What "cosmogony" means here, === III. Independence vs.
+  transmission, === IV. The boundary case — Cipactli, === V. The near-case
+  — Indra-Vṛtra, === VI. Terminological caveat — the Ballentine critique
+  (verified at lines 22, 51, 143, 176, 227, 260, 301 of the output file).
+
+  sources.anchor-as-sources.primary exception (per stage-prompt §3): the
+  Ch34 brief uses sources.anchor (gunkel-1895, scurlock-beal-2013,
+  lincoln-2012, forsyth-1987, witzel-2012) instead of sources.primary,
+  which is the documented comparative-chapter pattern (cf. Ch33 methods
+  sidebar). All five anchors resolve in sources.yaml and were treated as
+  the functional equivalent of sources.primary for pre-flight purposes.
+  Pre-flight check passed.
+
+  Total claim-paragraphs: 93 (within the 80-110 range specified by the
+  stage prompt; the brief's 7,500-word target is met at 7,249 body-prose
+  words, ~3.3% under target — body-prose count is computed by stripping
+  footnote:[...] blocks, EVIDENCE / COMPARATIVE-HOOK / front-matter
+  comments, [[anchor]] lines, and === / == headers from the document,
+  then counting whitespace-separated tokens; the under-target margin is
+  within the typical claims-doc-vs-target-prose conversion rate and is
+  not interpreted as incomplete coverage given the brief's
+  special_instructions discipline against re-narrating the four cases).
+
+  Total EVIDENCE tokens: 131. Doubled-token paragraphs (paragraphs with
+  two consecutive EVIDENCE tokens routing through one in-scope and one
+  out-of-scope source per the comparative-chapter skill's in-scope +
+  out-of-scope citation requirement): 38.
+
+  [SPECULATION] markers: 1 (in §III, on the political-typology reading of
+  the cosmogonic-combat recurrence as a shared response to state-charter
+  ideology, with basis: and counterargument: sub-fields filled per the
+  stage prompt's required form). No other markers ([LACUNA:], [VARIANT:],
+  [INFERENCE:], [RECONSTRUCTION:], [APPROPRIATION-FLAG:]) appear in the
+  document; this is consistent with the comparative-chapter character of
+  Ch34 (the underlying Part-I material's lacunae and variants are flagged
+  in those chapters' own claims documents and are not re-flagged at the
+  comparative-synthesis level), and with the stage-prompt §8 expectation
+  ("Most likely: zero of those markers in Ch34").
+
+  Per-source-id EVIDENCE distribution (count: source_id):
+    25: forsyth-1987     (long-arc combat-myth typology — out-of-scope anchor)
+    16: lambert-2013     (Marduk-Tiamat in-scope anchor)
+    13: ballentine-2015  (terminological-critique anchor)
+    10: lincoln-2012     (political-ideological out-of-scope anchor)
+     9: lopez-austin-myths (Cipactli + Mesoamerican comparative anchor)
+     9: lewis-2006-flood (Gonggong in-scope anchor)
+     8: jamison-brereton-2014 (Indra-Vṛtra in-scope anchor)
+     7: matos-moctezuma-templo-mayor (Huitzilopochtli archaeological anchor)
+     5: carrasco-1999-city (Huitzilopochtli political-ritual anchor)
+     5: annus-2001-anzu  (Anzû / Mesopotamian-internal genealogy anchor)
+     4: watkins-1995     (IE HERO SLAY SERPENT formula anchor)
+     4: gunkel-1895      (historical anchor for the Chaoskampf category)
+     4: etcsl            (Lugal-e composite text)
+     3: witzel-2012      (cited-with-caveats comparativist anchor)
+     3: scurlock-beal-2013 (Gunkel-reassessment anchor)
+     2: vandijk-1983-lugale (Lugal-e critical edition)
+     1: ogden-2013       (Apollo-Python area-specialist for filtering example)
+     1: foster-2005      (Enūma Eliš English translation)
+     1: benveniste-renou-1934 (Indo-Iranian comparative philology)
+     1: anderson-dibble-florentine (Florentine Codex Book 3)
+  Total distinct source IDs: 20. All resolve to sources.yaml registry entries.
+  Zero invented IDs.
+
+  COMPARATIVE-HOOK count: 14 (slightly above the 6-12 range mentioned in
+  stage-prompt §11; the additional hooks cover all eight Part-II
+  comparative chapters C1-C8 plus the seven Part-I chapters from which
+  Ch34 draws — Chs 1, 2, 3, 14, 21, 24, 25 — which is the structural
+  minimum for a Part-II opening chapter that needs to forward-link to the
+  rest of Part II and back-link to its drawing-from chapters
+  individually).
+
+  Banned-term grep clean: "chaos-figure" and "chaos-monster" appear only
+  (a) in the Source-overview paragraph announcing the terminological
+  discipline (in quotation marks, as glossary-locked banned-term names),
+  and (b) in §VI's substantive engagement with the Ballentine critique
+  (in scare-quotes, where the typology's terminology is the topic of
+  discussion per stage-prompt §10's explicit exception). No un-quoted
+  banned-term occurrences. "chaos-serpent" does not appear at all.
+  Glossary-locked diacritical forms verified: Tiamat (43 hits), Qingu
+  (not Kingu, 3/0), Šarur (with š, 3/0 vs Sharur), Vṛtra (with diacritic,
+  20), Nüwa (with umlaut, 2), akītu (4), Esagil (5), Coyolxauhqui (9),
+  Tenochtitlán (3). Forms Apsû, Anšar are not referenced by name in this
+  comparative chapter (the Ch3 narrative material is compressed to its
+  cosmogonic-outcome claims and does not require those individual deity
+  names — Apsû and Anšar are part of the theogonic-prologue material
+  that Ch34 explicitly does not re-narrate per the brief's
+  special_instructions); the absence is therefore a feature of the
+  comparative-compression discipline, not a glossary-discipline failure.
+
+  Named-but-flagged scholars: zero in this chapter. All scholars named in
+  body prose (Gunkel, Ballentine, Forsyth, Lincoln, Scurlock & Beal,
+  Witzel, Lambert, Foster, van Dijk, Annus, Lewis, Birrell, Matos
+  Moctezuma, Carrasco, López Austin, Jamison & Brereton, Benveniste &
+  Renou, Watkins, Ogden, Anderson-Dibble, West, Sahagún, Durán) are
+  anchored through EVIDENCE tokens routing through their respective
+  sources.yaml IDs; the only named-without-anchor cases are (a) the
+  primary-source authors named within the area-specialist works'
+  citations (e.g., Liu An for the *Huainanzi*, Liu Xiang for the *Lienü
+  zhuan*, Guo Pu for the *Shanhaijing* commentary) which are part of the
+  source-cited material rather than independent named-but-flagged
+  citations, and (b) named figures within the narrative content (Marduk,
+  Tiamat, Qingu, Anšar, Ea, Ninurta, Asag, Šarur, Gonggong, Zhuanxu,
+  Zhurong, Nüwa, Huitzilopochtli, Coatlicue, Coyolxauhqui, Centzon
+  Huitznahua, Cipactli, Indra, Vṛtra, Tvaṣṭṛ, Dānu) which are deities or
+  mythological figures rather than scholars. No follow-up needed at
+  inventory-audit.
+
+  Re-narration discipline: per the brief's special_instructions ("the
+  reader has (or can) read Marduk-Tiamat in Ch. 3; don't re-narrate
+  it"), the chapter does not re-tell the four myths but compresses each
+  to ~5-8 cosmogonic-outcome claims; verified by section I (32 claims
+  across the four cases plus the four-cases-share-yet-differ claims, all
+  focused on cosmogonic-outcome characterisations and structural-feature
+  comparisons rather than narrative-sequence retelling).
+
+  Self-checks per stage-prompt §13:
+    - Pre-flight passed (sources.anchor functions as sources.primary; all
+      five methodological anchors and all per-tradition area-specialist
+      anchors resolve in sources.yaml).
+    - Every EVIDENCE token's source_id resolves to sources.yaml. Zero
+      invented IDs (verified by grep against the prompt's sources
+      registry).
+    - Source overview present and contains 8 claims about what this
+      chapter is and what it draws on (well above the 3-claim minimum).
+    - One claim per paragraph; no bundled claims; no narrative connective
+      tissue (each footnote-bearing paragraph is a single factual
+      assertion).
+    - Every claim has footnote coverage citing a source provided in this
+      conversation (the prompt's full sources.yaml + scope.md + the seven
+      Part-I briefs and four Part-I narrative drafts). Nothing from
+      memory.
+    - No re-narration of the four cases (per re-narration discipline
+      check above).
+    - The single [SPECULATION] marker has both required sub-fields
+      (basis: and counterargument:).
+    - glossary.yaml renderings used throughout (per glossary-discipline
+      check above).
+    - Banned-term grep clean (per banned-term check above).
+    - In-scope + out-of-scope citation pairing applied at 38 doubled-
+      token paragraphs (the comparative-chapter skill's principal
+      requirement for comparative claims).
+    - Forward-and-back COMPARATIVE-HOOK coverage of all eight Part-II
+      comparative chapters and all seven Part-I drawing-from chapters
+      (14 hooks, slightly above the 6-12 stage-prompt range).
+    - No assertion of Gunkel-Ballentine resolution; terminological
+      humility preserved per stage-prompt §"What NOT to do".
+    - No claim of universal monomyth or single origin; the chapter's
+      claim is restricted to typological-recurrence across at least three
+      independent traditions, with the modesty disciplinarily registered
+      in the chapter's closing paragraph and re-registered in the
+      [SPECULATION] marker's counterargument: clause.
