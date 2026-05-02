@@ -1,0 +1,189 @@
+stage: chapter-draft
+chapter: 34
+chapter_slug: C1-combat-as-cosmogony
+status: "completed"
+output_file: chapters/34-C1-combat-as-cosmogony.adoc
+output_lines: 366
+target_word_count: 7500
+total_file_word_count: 13708
+body_prose_word_count: 7424
+
+notes: |
+  Ch34 chapter-draft completed for the first of the eight Part-II comparative
+  chapters (C1. Combat as Cosmogony).
+
+  Section-structure verification (section count and ordering match the approved-claims
+  file byte-for-byte):
+    - draft sections (7): Source overview, I. The four cases,
+      II. What "cosmogony" means here, III. Independence vs. transmission,
+      IV. The boundary case — Cipactli, V. The near-case — Indra-Vṛtra,
+      VI. Terminological caveat — the Ballentine critique.
+    - approved-claims sections (7): identical sequence and identical heading text.
+    - chapter opens with [[ch-34-C1-combat-as-cosmogony]] block-level anchor matching
+      brief.chapter_anchor and a level-2 == heading carrying the brief's title verbatim
+      ("C1. Combat as Cosmogony").
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 93 in draft / 93 in approved (verified by Python
+      bracket-balanced extractor; all 93 footnotes match in order, byte-for-byte;
+      footnote-mismatch count = 0).
+    - // EVIDENCE: lines: 133 in draft / 133 in approved (verified by `diff` of
+      grep-extracted EVIDENCE lines — diff is empty; matches the post-human-normalize
+      completion record's count of 133).
+    - // COMPARATIVE-HOOK: lines: 14 in draft / 14 in approved (verified by `diff` of
+      grep-extracted hook lines — diff is empty; preserved verbatim in same order at
+      end of file; matches the chapter-claims completion record's count of 14).
+    - [SPECULATION: ... | basis: ... | counterargument: ...] markers: 1 in draft /
+      1 in approved (verified by Python bracket-balanced extractor; the single marker
+      matches byte-for-byte). The marker sits in §III between the
+      typological-recurrence-not-monomyth claim-paragraph and the
+      sovereignty-to-cosmogonic-escalation claim-paragraph, registering the
+      political-typology-vs-deep-inheritance reading as one plausible explanatory
+      framing with both basis and counterargument.
+
+  Per-source-id EVIDENCE distribution in draft (matches approved-claims source-by-source;
+  21 distinct source IDs, matching the post-human-normalize completion record):
+    forsyth-1987: 25
+    lambert-2013: 17
+    ballentine-2015: 13
+    lincoln-2012: 10
+    lopez-austin-myths: 9
+    lewis-2006-flood: 9
+    jamison-brereton-2014: 8
+    matos-moctezuma-templo-mayor: 7
+    carrasco-1999-city: 5
+    annus-2001-anzu: 5
+    watkins-1995: 4
+    gunkel-1895: 4
+    etcsl: 4
+    witzel-2012: 3
+    scurlock-beal-2013: 3
+    vandijk-1983-lugale: 2
+    west-2007: 1
+    ogden-2013: 1
+    foster-2005: 1
+    benveniste-renou-1934: 1
+    anderson-dibble-florentine: 1
+    Total: 133 (matches approved-claims file; per-source diff is empty).
+
+  Doubled-token paragraph count:
+    - Paragraphs (separated by blank lines) carrying TWO EVIDENCE tokens (in-scope +
+      out-of-scope pairing per the comparative-chapter discipline): 40 in draft / 40 in
+      approved. Single-token paragraphs: 53 in draft / 53 in approved. Zero-token
+      paragraphs (headings, bridges, roadmap, [SPECULATION] block, COMPARATIVE-HOOK
+      block, blank): 11 in draft / 12 in approved (the 1-paragraph difference reflects
+      the dropped claims-file head-comment-block being replaced by the chapter
+      anchor+title in the draft; the body-paragraph EVIDENCE structure is byte-identical).
+
+  Banned-term grep on draft body prose:
+    - "chaos-figure": 5 occurrences, all scare-quoted in policy-compliant contexts —
+      §"Source overview" terminology-discipline paragraph (line 30) where the term is
+      named as banned; §VI Asag-as-rival-king paragraph (line 302) where Asag is
+      contrasted with the scare-quoted "chaos-figure" reading; §VI Coyolxauhqui paragraph
+      (line 310) on "chaos-figures" / kin-rivals; §VI Ballentine-critique paragraph
+      (line 314) on the "chaos" half (term itself in scare-quotes within the discussion
+      whose topic is the term); §VI ban-and-substitute paragraph (line 317) on the
+      banned terms. All instances are inside scare-quotes per the §VI Ballentine-critique
+      exception (the typology's terminology being the topic of discussion).
+    - "chaos-monster": 2 occurrences, both scare-quoted at lines 30 and 317 — the
+      terminology-discipline paragraph and the ban-and-substitute paragraph that name
+      the banned terms in scare-quotes.
+    - "chaos-serpent": 0 occurrences (absent from both draft and approved-claims body;
+      the only approved-file occurrence is in the dropped post-human-normalize
+      provenance block, not in body claims).
+    - Verified by Python regex pass that confirmed every banned-term hit is enclosed in
+      double-quote scare-marks in its local context — UNQUOTED hits = 0.
+
+  Word counts:
+    - total file `wc -w`: 13,708 (includes all footnote bodies, EVIDENCE tokens,
+      COMPARATIVE-HOOK comment lines, and the [SPECULATION:] marker block).
+    - body-prose-only word count: 7,424 (computed by stripping all `footnote:[...]`
+      bracket-balanced blocks, stripping the [SPECULATION:] bracket-balanced block, and
+      stripping all `//`-prefixed comment lines, then counting non-whitespace tokens).
+      This is 76 words under the 7,500-word brief target — comfortably on-target,
+      consistent with Ch28-Ch33 precedent on body-prose targeting.
+    - Total-file over-target relative to body-prose target (13,708 vs 7,500) is driven
+      by footnote, EVIDENCE-token, and COMPARATIVE-HOOK bulk per the prompt's
+      acceptable-overage clause for narrative-fidelity stage.
+
+  Prose-only paragraphs added (NOTE-level for the narrative-fidelity stage):
+    - One source-overview-closing roadmap paragraph naming the chapter's six-section
+      comparative argument, inserted after the last Source-overview claim and before
+      the "=== I. The four cases" heading: "What follows is organised in six body
+      sections. Section I presents the four cases — Marduk-Tiamat, Ninurta-Asag,
+      Gonggong-Zhuanxu, and Huitzilopochtli at Coatepec — in compressed comparative
+      form; section II articulates what 'cosmogony' means in the chapter's narrower
+      sense; section III examines the independence-versus-transmission distribution
+      that supports the typological-recurrence claim; section IV introduces the
+      Cipactli dismemberment-without-combat boundary case; section V engages
+      Indra-Vṛtra as the near-case of cosmogonic-work-without-construction; and
+      section VI registers the Ballentine terminological critique against the 'chaos'
+      half of the inherited Chaoskampf label." This is explicitly permitted by the
+      prompt as the single source-overview-closing roadmap paragraph.
+    - Six per-section bridge sentences, one each opening sections I, II, III, IV, V,
+      and VI. Each bridge is a short structural-orientation sentence with no factual
+      content beyond restating what the section is doing. The §I bridge names the
+      compressed-comparative-form discipline; §II names the working-definition focus;
+      §III names the independence-vs-transmission distribution; §IV names the
+      boundary-marker role of Cipactli; §V names the near-case role of Indra-Vṛtra;
+      §VI names the registering of the Ballentine critique and the chapter's settled
+      position on the inherited label. All six are explicitly permitted by the prompt
+      (one short bridge sentence per === section opening for narrative orientation,
+      NOTE-level for narrative-fidelity).
+
+  Markers in [LACUNA:], [VARIANT:], [INFERENCE:], [RECONSTRUCTION:], or
+  [APPROPRIATION-FLAG:] classes: zero introduced. The approved-claims file carries one
+  [SPECULATION:] marker and no others; the draft preserves that single marker
+  byte-identically and introduces no additional markers in any class.
+
+  Provenance block (// Validated by post-human-normalize ... // Timestamp ... //
+  Checks passed ... // Warnings) at the bottom of the approved-claims file (lines
+  372-375): correctly dropped from the draft per the prompt §6 ("the provenance block
+  at the bottom of the approved file: drop it from the draft"). The draft is a fresh
+  artifact for downstream stages to provenance themselves.
+
+  Comparative-chapter tone discipline (per prompt §4):
+    - Typological-recurrence claim made without monomyth or single-origin assertion
+      (preserved from approved-claims §III, especially the
+      typological-recurrence-not-monomyth paragraph and the [SPECULATION:] block which
+      explicitly refrains from adjudicating between political-typology and
+      deep-inheritance hypotheses).
+    - Compressed Part-I cases stay compressed: §I focuses on the cosmogonic-outcome
+      facet of each combat (cosmos-from-Tiamat's-body, Tigris embankment + lapidary
+      aetiology, asymmetric tilt + east-flowing rivers, diurnal solar-kingship at
+      Templo Mayor) rather than re-narrating the combats themselves, per the brief's
+      special_instructions.
+    - Terminological-humility stance preserved in §VI: the Ballentine critique is
+      registered with full force ("the Ballentine critique therefore lands a substantive
+      point on the 'chaos' half of the term 'Chaoskampf'", "'combat-cosmogony' is the
+      more precise term"), the cosmogonic-typology claim is held to survive the critique,
+      the philosophical question about "chaos" is left contested, and the chapter does
+      not assert resolution of the Gunkel-Ballentine debate.
+    - §III independence argument is held at the typological-recurrence level
+      ("three independent attestations on three continents") and is not strengthened
+      toward monomyth or single-origin claims.
+
+  Self-checks executed and passed:
+    - Footnote count parity (93 = 93): PASS (verified by Python bracket-balanced
+      extractor; all 93 footnotes match in order verbatim).
+    - EVIDENCE token count parity (133 = 133): PASS (verified by `diff` of EVIDENCE
+      lines — empty).
+    - COMPARATIVE-HOOK count parity (14 = 14): PASS (verified by `diff` — empty).
+    - [SPECULATION:] count parity (1 = 1): PASS (single marker, byte-identical).
+    - Section count and section-title sequence parity (7 sections, identical sequence):
+      PASS.
+    - Per-source-id EVIDENCE distribution parity (21 distinct sources): PASS (full
+      distribution matches approved-claims file source-by-source; total = 133).
+    - Doubled-token paragraph count parity (40 = 40): PASS.
+    - Verbatim diff of footnote bodies, EVIDENCE lines, COMPARATIVE-HOOK lines, and the
+      [SPECULATION:] marker: empty in all four classes.
+    - Banned-term grep: PASS (only scare-quoted instances of "chaos-figure" /
+      "chaos-monster" remain, in §"Source overview" and §VI paragraphs where the
+      typology's own terminology is the topic of discussion; "chaos-serpent" absent
+      from body; UNQUOTED-hits = 0).
+    - Chapter anchor and title-line: PASS (matches brief's chapter_anchor
+      "ch-34-C1-combat-as-cosmogony" and title "C1. Combat as Cosmogony").
+    - Section openers: PASS (all six numbered sections open with heading -> blank line
+      -> bridge sentence -> blank line -> first claim paragraph).
+
+  Ready for the narrative-fidelity stage (Ch34 Task #10).
