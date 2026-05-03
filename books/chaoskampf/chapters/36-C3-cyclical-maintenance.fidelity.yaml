@@ -1,0 +1,433 @@
+chapter: 36
+chapter_anchor: "ch-36-C3-cyclical-maintenance"
+chapter_title: "C3. Cyclical Maintenance"
+stage: "narrative-fidelity"
+inputs:
+  draft_path: "books/chaoskampf/chapters/36-C3-cyclical-maintenance.adoc"
+  approved_claims_path: "books/chaoskampf/chapters/36-C3-cyclical-maintenance.claims.approved.adoc"
+  brief_path: "books/chaoskampf/briefs/36-C3-cyclical-maintenance.yaml"
+  prompt_path: "books/chaoskampf/prompts/12-narrative-fidelity-ch36.prompt.md"
+verdict: "PASS"
+findings_summary:
+  HIGH: 0
+  MEDIUM: 0
+  LOW: 0
+  NOTE: 2
+
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  audit_date_utc: "2026-05-03"
+  audit_scope: "narrative-fidelity audit per stage-prompt 12-narrative-fidelity-ch36"
+  draft_lines: 265
+  draft_body_prose_words_target: 5500
+  approved_claims_lines: 299
+  approved_claims_body_lines: 265   # excluding 34-line post-human-normalize provenance block (lines 267-299)
+
+check_1_completeness:
+  claims_count_in_approved: 65
+  claims_mapped_in_narrative: 65
+  mapping_rule: "1:1 paragraph-by-paragraph in same sequence; every footnoted claim-paragraph in claims-approved has exactly one byte-identical body-paragraph in the narrative"
+  sequence_preserved: true
+  footnote_count:
+    expected: 65
+    narrative: 65
+    claims_approved: 65
+    byte_identical: true
+    match: true
+  evidence_token_count:
+    expected: 78
+    narrative: 78
+    claims_approved: 78
+    byte_identical: true
+    match: true
+    notes: |
+      Three EVIDENCE tokens added in post-human-normalize (FIND-02 lambert-2013
+      after §V Marduk-Tiamat paragraph; FIND-03 forsyth-1987 after §III
+      Hittite-kingship-Nerik paragraph; FIND-04 watkins-1995 after §V Aži Dahāka
+      paragraph) are all present in the narrative at lines 200, 148, and 204
+      respectively. Additionally watkins-1995 is also present at line 156 (the
+      pre-existing Watkins/IE-formula paragraph). All 78 tokens are byte-
+      identical to claims-approved (modulo the 81/78 raw count — the 3-token
+      surplus in claims-approved is from the provenance block lines 282-287,
+      not from the body claims).
+  comparative_hook_count:
+    expected: 11
+    narrative: 11
+    claims_approved: 11
+    byte_identical: true
+    match: true
+  marker_counts:
+    inference:
+      expected: 2
+      narrative: 2
+      claims_approved: 2
+      byte_identical: true
+      match: true
+      locations:
+        - "§III post-Nerik-kingship paragraph (narrative line 150 / claims line 156): 'recitation of both Version 1 and Version 2 in connection with the same festival suggests... narrative redundancy' with basis and risk fields"
+        - "§VI post-Hittite-no-native-concept-pair paragraph (narrative line 252 / claims line 252): 'Egyptian *maʿat* / *isfet* framework can be used as a typological analytic for the Hittite case without violating scope.md's no-cross-tradition-reconstruction policy' with basis and risk fields"
+    speculation:
+      expected: 1
+      narrative: 1
+      claims_approved: 1
+      byte_identical: true
+      match: true
+      location: "§I post-eschatological-contrast paragraph (narrative line 62 / claims line 72): 'cyclical-maintenance subtype... holds load-bearing weight... on the strength of only two strong attestations plus one minor reflex' with speculative_basis and scope fields"
+    variant:
+      expected: 1
+      narrative: 1
+      claims_approved: 1
+      byte_identical: true
+      match: true
+      location: "§III post-on-tablet-ritual-embedding paragraph (narrative line 129 / claims line 135): primary=Version 1, alt=Version 2, chosen=present-both with reason field; co-equal-presentation discipline preserved"
+    lacuna:
+      expected: 1
+      narrative: 1
+      claims_approved: 1
+      byte_identical: true
+      match: true
+      location: "§II post-morphological-stability paragraph (narrative line 102 / claims line 110): 'Bremner-Rhind liturgy is preserved but fragmentary in sections' with source and scholarly_reconstruction fields; FIND-08 'Faulkner's four-part *JEA* edition (Parts I-IV across *JEA* 22, 23, and 24)' precision preserved verbatim"
+    total_markers:
+      expected: 5
+      narrative: 5
+      claims_approved: 5
+      byte_identical: true
+      match: true
+  section_count_and_headings:
+    expected:
+      - "=== Source overview"
+      - "=== I. The pattern"
+      - "=== II. Ra and Apep — daily"
+      - "=== III. Tarḫunna and Illuyanka — annual"
+      - "=== IV. Apollo and Python — cult-foundation cognate"
+      - "=== V. Why these two and not others"
+      - "=== VI. The conceptual apparatus — _maʿat_ / _isfet_"
+    found:
+      - "=== Source overview"
+      - "=== I. The pattern"
+      - "=== II. Ra and Apep — daily"
+      - "=== III. Tarḫunna and Illuyanka — annual"
+      - "=== IV. Apollo and Python — cult-foundation cognate"
+      - "=== V. Why these two and not others"
+      - "=== VI. The conceptual apparatus — _maʿat_ / _isfet_"
+    sequence_preserved: true
+    section_count_narrative: 7
+    section_count_claims: 7
+    notes: |
+      §VI heading in claims uses *maʿat* / *isfet* (asterisk-bold). The narrative
+      heading uses _maʿat_ / _isfet_ (underscore-italic). This is the correct
+      glossary-discipline transform for body prose / headings (foreign-language
+      common nouns italicised with _term_, not asterisk-bold), per the audit
+      rubric explicitly. All other heading text is byte-identical.
+    match: true
+  source_id_distribution:
+    distinct_source_ids: 12
+    expected_distinct: 12
+    byte_identical_to_approved_claims: true
+    distribution:
+      assmann-2001-search: 27
+      hoffner-1998: 14
+      te-velde-1967: 12
+      fontenrose-1959: 11
+      faulkner-1972-bod: 3
+      beckman-1982-illuyanka: 3
+      watkins-1995: 2
+      faulkner-1936-bremner-rhind: 2
+      lambert-2013: 1
+      forsyth-1987: 1
+      benveniste-renou-1934: 1
+      ballentine-2015: 1
+    match: true
+
+check_2_no_additions:
+  permitted_prose_only_additions:
+    expected_per_brief: 7
+    found: 7
+    breakdown:
+      source_overview_closing_roadmap: 1
+      section_bridge_openings: 6
+    bridge_openings_located:
+      - "§I (line 37): 'The first body section isolates the cyclical-maintenance pattern at the structural-typological level...' (1 sentence)"
+      - "§II (line 72): 'The second body section turns to the Egyptian Ra-Apep combat as the chapter's daily-cycle case...' (1 sentence)"
+      - "§III (line 117): 'The third body section turns to the Hittite Tarḫunna-Illuyanka combat as the chapter's annual-cycle case...' (1 sentence)"
+      - "§IV (line 163): 'The fourth body section turns to the Apollo-Python combat at Delphi as the chapter's minor reflex...' (1 sentence)"
+      - "§V (line 193): 'The fifth body section develops the case-selection criterion that justifies the chapter's confinement to the Egyptian and Hittite strong cases...' (1 sentence)"
+      - "§VI (line 224): 'The sixth body section develops the Egyptian _maʿat_ / _isfet_ framework as the chapter's conceptual through-line...' (1 sentence)"
+    roadmap_located:
+      - "Source-overview closing (line 33): 'What follows is organised in six body sections. Section I isolates the cyclical-maintenance pattern... section VI articulates the Egyptian maʿat / isfet framework as the chapter's conceptual through-line and develops the structural contrast with C4.'"
+    notes: |
+      All 7 prose-only additions are NOTE-level: short (1-2 sentences),
+      structural-not-substantive, carry no footnote, no EVIDENCE token, and
+      introduce no new factual claims. Each bridge correctly previews the
+      section without anticipating its content. The roadmap correctly
+      enumerates all six numbered sections in sequence. This is exactly what
+      the comparative-chapter audit rubric permits.
+    match: true
+  taruna_illuyanka_naming_FIND_01:
+    discipline_required: "post-human-normalize FIND-01: §III case-label must be 'Tarḫunna and Illuyanka' or 'Tarḫunna-Illuyanka' (NOT 'Teshub'); §III opening parenthetical may mention Teshub as Hurrian counterpart-deity in non-Illuyanka material"
+    locations_checked:
+      - "Chapter-comment block: dropped from narrative (correct draft behaviour); not applicable"
+      - "Central-argument paragraph (line 12): 'Egyptian Ra-Apep and Hittite Tarḫunna-Illuyanka' — Tarḫunna form used"
+      - "Source-overview-closing roadmap (line 33): 'section III treats Tarḫunna and Illuyanka' — Tarḫunna form used"
+      - "§III heading (line 115): 'III. Tarḫunna and Illuyanka — annual' — Tarḫunna form used"
+      - "§III bridge sentence (line 117): 'Hittite Tarḫunna-Illuyanka combat' — Tarḫunna form used"
+      - "§III opening paragraph (line 119): 'Hittite Tarḫunna-Illuyanka combat is the chapter's annual-cycle case: the storm-god (Hittite Tarḫunna; the Hurrian counterpart-deity Teshub appears in Hurrian-derived material such as the Kumarbi Cycle but the Illuyanka tablets use Tarḫunna throughout)' — Tarḫunna form for the case-label, with the permitted parenthetical naming Teshub as Hurrian counterpart-deity in non-Illuyanka Kumarbi-Cycle material"
+    teshub_outside_parenthetical_check: "no occurrence of 'Teshub-Illuyanka' or 'Teshub and Illuyanka' anywhere in the narrative"
+    match: true
+  banned_term_scoping:
+    bare_chaos_unquoted_in_body_prose: 0
+    chaos_figure_in_narrative: 0
+    chaos_monster_in_narrative: 0
+    chaos_serpent_in_narrative: 0
+    bare_chaos_in_scare_quotes: 3
+    bare_chaos_locations_in_scare_quotes:
+      - "§VI line 226: 'useful for articulating what \"chaos\" is _not_ doing in the cyclical-maintenance subtype' (Ballentine-critique discussion)"
+      - "§VI line 232: 'designates \"disorder, injustice, chaos\"' — direct quotation of standard isfet-gloss; permitted as part of the verbatim quoted gloss"
+      - "§VI line 238: 'Ballentine 2015 critique of the \"chaos\" half of the inherited Chaoskampf label: Apep is _isfet_ — disorder, injustice, violation of order — not \"chaos\" in the inchoate-primordial-Western-philosophical sense' — Ballentine-critique discussion"
+    chaoskampf_token_compound: "appears unquoted as the technical compound term (line 9, 'chaoskampf typology'; line 264, 'Chaoskampf label') — not a banned-term violation, since the rubric bans bare 'chaos' / 'chaos-figure' / 'chaos-monster' / 'chaos-serpent', not the technical compound 'Chaoskampf' / 'chaoskampf'"
+    notes: |
+      Banned-term scoping fully preserved: every bare 'chaos' occurrence in the
+      narrative sits inside scare-quotes within §VI's Ballentine-critique or
+      isfet-gloss passages, exactly as permitted. No 'chaos-figure' /
+      'chaos-monster' / 'chaos-serpent' anywhere in the narrative. The
+      compound 'Chaoskampf' / 'chaoskampf' is the technical category-name and
+      is not subject to the banned-term scoping rule.
+    match: true
+  isfet_extension_caveat_FIND_05:
+    discipline_required: "post-human-normalize FIND-05: §VI eschatological-contrast paragraph must include a parenthetical caveat marking isfet-language as comparative-analytical-vocabulary not native to eschatological traditions"
+    location: "§VI line 254"
+    text_found: "'in the eschatological subtype the cosmos's _isfet_-content (using the Egyptian framework as comparative analytic, not as native vocabulary for the eschatological traditions, which articulate the same structure in their own terms)'"
+    byte_identical_to_claims: true
+    match: true
+  egypt_no_eschatology_formulation:
+    discipline_required: "verbatim formulation 'Egypt has no eschatology and the combat is perpetual; Revelation has an eschatology and the combat is final' (claims line 257)"
+    location: "narrative line 257"
+    text_found: "'Egypt has no eschatology and the combat is perpetual; Revelation has an eschatology and the combat is final'"
+    byte_identical_to_claims: true
+    match: true
+  hupasiya_bargain_reword_FIND_06:
+    discipline_required: "post-human-normalize FIND-06: §III Version 1 must read 'after the bargained night with Inara, is concealed at the banquet site and there binds the gorged serpent'"
+    location: "narrative line 131"
+    text_found: "'devises a stratagem with the mortal Hupasiya, who, after the bargained night with Inara, is concealed at the banquet site and there binds the gorged serpent'"
+    byte_identical_to_claims: true
+    match: true
+  at_the_sea_locus_FIND_07:
+    discipline_required: "post-human-normalize FIND-07: §III Version 2 must read 'joins Illuyanka in renewed combat at the sea and kills both the serpent and his own son'"
+    location: "narrative line 134"
+    text_found: "'the restored storm-god joins Illuyanka in renewed combat at the sea and kills both the serpent and his own son'"
+    byte_identical_to_claims: true
+    match: true
+  jea_edition_precision_FIND_08:
+    discipline_required: "[LACUNA:] block must read 'Faulkner's four-part *JEA* edition (Parts I–IV across *JEA* 22, 23, and 24)'"
+    location: "narrative line 102 (LACUNA scholarly_reconstruction field)"
+    text_found: "'Faulkner's four-part *JEA* edition (Parts I–IV across *JEA* 22, 23, and 24) reconstructs the philology section by section'"
+    byte_identical_to_claims: true
+    match: true
+  cross_reference_resolution:
+    refs_checked:
+      - "Ch6 (Illuyanka) → ch-06-illuyanka (resolved in toc.yaml)"
+      - "Ch12 (Greek dragons after Typhon) → ch-12-greek-dragons-after-typhon (resolved in toc.yaml)"
+      - "Ch16 (Ra-Apep) → ch-16-ra-apep (resolved in toc.yaml)"
+      - "Ch34 (C1) → ch-34-C1-combat-as-cosmogony (resolved in toc.yaml)"
+      - "Ch35 (C2) → ch-35-C2-combat-as-sovereignty (resolved in toc.yaml)"
+      - "Ch37 (C4) → ch-37-C4-eschatological-displacement (resolved in toc.yaml)"
+      - "Ch38 (C5) → ch-38-C5-ie-hero-slay-serpent-formula (resolved in toc.yaml)"
+      - "Ch40 (C7) → ch-40-C7-inversion-problem (resolved in toc.yaml)"
+    all_resolve: true
+    match: true
+  named_scholars_in_body_prose_check:
+    discipline_required: "every named scholar in body prose appears in a footnote that points to a real source registered in sources.yaml"
+    scholars_in_body_prose:
+      - "te Velde 1967 — footnoted to te-velde-1967 (sources.yaml ID)"
+      - "Faulkner 1972 / 1985 / 1936-38 — footnoted to faulkner-1972-bod / faulkner-1936-bremner-rhind"
+      - "Hoffner 1998 — footnoted to hoffner-1998"
+      - "Beckman 1982 — footnoted to beckman-1982-illuyanka"
+      - "Fontenrose 1959 — footnoted to fontenrose-1959"
+      - "Ogden 2013 — footnoted alongside fontenrose-1959 in §IV paragraphs (registered in sources.yaml)"
+      - "Assmann 2001 — footnoted to assmann-2001-search"
+      - "Watkins 1995 — footnoted to watkins-1995"
+      - "Forsyth 1987 — footnoted to forsyth-1987 (per FIND-03 EVIDENCE token added)"
+      - "Lambert 2013 — footnoted to lambert-2013 (per FIND-02 EVIDENCE token added)"
+      - "Benveniste & Renou 1934 — footnoted to benveniste-renou-1934"
+      - "Ballentine 2015 — footnoted to ballentine-2015"
+      - "Yarbro Collins 1976 — referenced in §VI line 254 footnote (forward-link to C4); registered in sources.yaml; no body-prose mention"
+      - "Joseph Fontenrose (full name) — line 171: 'the masculine name that Joseph Fontenrose's monograph takes as its title' — footnoted to fontenrose-1959"
+      - "Plutarch — line 177: 'attested in Plutarch and discussed at length in Fontenrose's monograph' — Plutarch is the ancient source, footnoted via fontenrose-1959; not a modern scholar"
+      - "Pausanias — line 183: ancient source, footnoted via fontenrose-1959"
+    no_unsourced_scholar_references: true
+    match: true
+  unauthorised_material_check:
+    no_new_factual_claims_introduced: true
+    no_unauthorised_paragraphs: true
+    notes: |
+      Beyond the 7 permitted NOTE-level prose additions (1 roadmap + 6 bridges),
+      the narrative introduces no new factual claims, no new EVIDENCE tokens
+      that aren't in the approved-claims file, no new footnotes, no new
+      scholarly attributions, and no new comparative observations. Body-prose
+      paragraphs map 1:1 to approved-claims paragraphs in identical sequence.
+      The chapter-internal commentary lines (//-comments at lines 5-16 of
+      claims) are correctly dropped from the narrative draft. The
+      post-human-normalize provenance block (claims lines 267-299) is
+      correctly dropped from the narrative draft.
+
+check_3_fidelity:
+  marker_byte_fidelity:
+    all_5_markers_byte_identical: true
+    pipe_fields_intact: true
+    notes: |
+      All 5 markers (1 SPECULATION at narrative line 62, 1 VARIANT at narrative
+      line 129, 1 LACUNA at narrative line 102, 2 INFERENCE at narrative lines
+      150 and 252) are byte-identical to claims-approved with all pipe-field
+      contents intact (speculative_basis / scope; primary / alt / chosen /
+      reason; source / scholarly_reconstruction; basis / risk).
+    match: true
+  glossary_discipline:
+    foreign_language_common_nouns_italicised_with_underscore: true
+    examples_verified:
+      - "_maʿat_ / _isfet_ in body prose (lines 33, 104, 107, 222 heading, 226, 229-260) — underscore-italic"
+      - "_purulli_ in body prose (18 occurrences) — underscore-italic"
+      - "_Septerion_ in body prose — underscore-italic"
+      - "_drakaina_ in body prose — underscore-italic"
+      - "_Duat_ / _Imy-Duat_ in body prose — underscore-italic"
+      - "_Enūma Eliš_ in body prose — underscore-italic"
+      - "_pythein_ / _Pythios_ / _Pythoktonos_ in body prose — underscore-italic"
+      - "_kuenta… illuyanka-_ / _áhann áhim_ in body prose — underscore-italic"
+      - "_editio princeps_ / _Hittite Myths_ / _Metamorphoses_ / _JANES_ / _JEA_ / _Description of Greece_ in body prose — underscore-italic"
+      - "_Book of Overthrowing Apep_ as a book-title in body prose — underscore-italic"
+    footnote_internals_preserved_as_asterisk_bold: true
+    notes: |
+      The narrative correctly applies the audit rubric's glossary discipline:
+      foreign-language common nouns and book-titles in BODY PROSE are
+      italicised with _term_ (proper AsciiDoc italic) rather than *term*
+      (which AsciiDoc renders as bold, not italic). This is the rubric's
+      stated discipline ('AsciiDoc italic, not asterisk-bold'). FOOTNOTE
+      contents preserve the *term* form byte-for-byte from claims-approved
+      (verified: 8 *purulli* occurrences inside footnotes match between
+      narrative and claims). EVIDENCE tokens, COMPARATIVE-HOOK comments, and
+      marker-block contents also preserve the *term* form byte-for-byte.
+      This split-discipline treatment (transform body prose to _term_,
+      preserve footnotes/markers/EVIDENCE in *term*) is the correct narrative-
+      drafting transform.
+    match: true
+  footnote_integrity:
+    all_65_footnote_bodies_byte_identical: true
+    sequence_preserved: true
+    notes: |
+      Diff of 'grep -o footnote:[.*]' between narrative and claims-approved
+      yields zero non-empty differences. All 65 footnote bodies (including
+      embedded *term* forms, em-dashes, scholarly attributions, page/section
+      locators, and dual-citation patterns) are byte-identical and appear in
+      the same sequence as claims-approved.
+    match: true
+  body_paragraph_byte_fidelity:
+    discipline_required: "claim paragraphs preserve approved-claims wording byte-for-byte modulo (a) the documented italic-format transform in body prose for foreign-language common nouns, (b) NOTE-level prose-only roadmap and bridge additions"
+    finding: "PASS — across the 65 footnoted claim paragraphs, every wording is byte-identical to claims-approved except for the AsciiDoc italic-format transform _term_ in body prose (which is the rubric's stated glossary discipline) and the 5 marker-block contents (also byte-identical). The 7 NOTE-level prose-only additions (lines 33, 37, 72, 117, 163, 193, 224) are short structural bridges/roadmap and introduce no factual material. Diff with the italic-format transform applied confirms zero substantive differences."
+    match: true
+  comparative_hook_byte_fidelity:
+    all_11_hooks_byte_identical: true
+    sequence_preserved: true
+    notes: |
+      Diff of '// COMPARATIVE-HOOK:' lines between narrative and claims-approved
+      yields zero differences. The 11 hooks (Ch34/Ch35 at end of §I; Ch16 at
+      end of §II; Ch6/C5-Ch38 at end of §III; Ch12 at end of §IV; C1-Ch34/
+      C4-Ch37 at end of §V; C4-Ch37/Intro-00A/C7-Ch40 at end of §VI) appear in
+      identical sequence with byte-identical contents.
+    match: true
+
+findings:
+  - id: NOTE-01
+    severity: NOTE
+    location: "all body-prose foreign-language common-noun and book-title italicisations"
+    description: |
+      The narrative consistently transforms claims-approved's *term*
+      (asterisk-bold) to _term_ (underscore-italic) for foreign-language common
+      nouns and book-titles in BODY PROSE only, while preserving *term* inside
+      footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker-block
+      contents. This is exactly the rubric's stated glossary discipline
+      ('AsciiDoc italic, not asterisk-bold'). Recording as a structural NOTE
+      because it is a load-bearing narrative-drafting transform that an
+      auditor should be aware of and that the byte-fidelity contract treats
+      as permitted (since the rubric explicitly calls for it).
+    action: "none"
+  - id: NOTE-02
+    severity: NOTE
+    location: "structural"
+    description: |
+      The narrative drops (a) the chapter-internal commentary block (claims
+      lines 4-16, the //-comments explaining the chapter's brief and
+      typological role) and (b) the post-human-normalize provenance block
+      (claims lines 267-299, the Validated-by-post-human-normalize block with
+      FIND-01 through FIND-10 acceptance records). Both drops are correct
+      draft behaviour: chapter-internal commentary is for the claims author's
+      use, and the provenance block lives only on the claims-approved
+      artifact, not on the narrative draft.
+    action: "none"
+
+audit_methodology:
+  byte_diff_summary: |
+    Across the 65 footnoted claim-paragraphs, the narrative is byte-identical
+    to the approved-claims file once the documented italic-format transform
+    (asterisk-bold → underscore-italic for foreign-language common nouns and
+    book-titles in body prose only) is normalised. The 5 marker blocks
+    (1 SPECULATION, 1 VARIANT, 1 LACUNA, 2 INFERENCE) are byte-identical with
+    all pipe-fields intact. The 65 footnotes are byte-identical. The 78
+    EVIDENCE tokens are byte-identical. The 11 COMPARATIVE-HOOK comments are
+    byte-identical and in identical sequence. The 7 section headings are
+    byte-identical (modulo the §VI heading's italic-format transform). The
+    narrative adds only 7 NOTE-level prose-only structural items (1 source-
+    overview-closing roadmap + 6 section-bridge openings, 1 sentence each)
+    and drops only the chapter-internal commentary (claims lines 4-16) and
+    the post-human-normalize provenance block (claims lines 267-299) — both
+    drops are correct draft behaviour. No new factual claims, footnotes,
+    EVIDENCE tokens, scholarly attributions, or comparative observations have
+    been introduced. The 1:1 invariant between draft body-paragraphs-with-
+    footnotes and approved-claims paragraphs-with-footnotes is preserved.
+  conclusion: |
+    The narrative is a faithful rendering of the approved-claims document
+    with permitted draft-format additions only (7 NOTE-level structural
+    bridges/roadmap) and the rubric-mandated italic-format transform applied
+    to body-prose foreign-language common nouns and book-titles. All 8 post-
+    human-normalize fixes (FIND-01 Tarḫunna naming in 4 places; FIND-02
+    lambert-2013 token; FIND-03 forsyth-1987 token; FIND-04 watkins-1995
+    eschatological-closure token; FIND-05 isfet comparative-analytical
+    caveat in §VI line 254; FIND-06 Hupasiya bargained-night reword;
+    FIND-07 Version-2 'at the sea' locus; FIND-08 Faulkner four-part JEA
+    edition Parts I-IV) are present and byte-identical in the narrative.
+    All mechanical and substantive checks pass. Zero HIGH, zero MEDIUM,
+    zero LOW findings. Two NOTE-level structural observations recorded (the
+    italic-format transform and the dropped chapter-internal-commentary +
+    provenance blocks). Verdict PASS.
+
+verdict_rationale: |
+  PASS. The narrative draft preserves the approved-claims document with byte-
+  fidelity across all 65 footnoted claim-paragraphs, all 78 EVIDENCE tokens
+  (including the three FIND-02/03/04 tokens added in post-human-normalize),
+  all 11 COMPARATIVE-HOOK lines, all 5 markers (1 SPECULATION + 1 VARIANT +
+  1 LACUNA + 2 INFERENCE) with all pipe-field contents intact, all 65
+  footnote bodies, the 12-source-id distribution, and the 7-section heading
+  sequence (Source overview + I–VI). The 7 permitted prose-only NOTE-level
+  additions (1 source-overview-closing roadmap + 6 section-bridge openings,
+  1 sentence each) match the comparative-chapter audit rubric exactly.
+  The italic-format transform of *term* → _term_ for foreign-language
+  common nouns and book-titles in body prose is the rubric's stated glossary
+  discipline, applied consistently and only in body prose. All eight post-
+  human-normalize fixes (FIND-01 through FIND-08) are present and byte-
+  identical: the Tarḫunna-Illuyanka case-label appears in all 4 required
+  places (central-argument paragraph, source-overview-closing roadmap, §III
+  heading, §III opening), the §III parenthetical correctly distinguishes the
+  Hittite Tarḫunna case-label from the Hurrian counterpart-deity Teshub in
+  Kumarbi-Cycle material, the §VI isfet-extension caveat is preserved
+  verbatim, the 'Egypt has no eschatology... Revelation has an eschatology'
+  formulation is byte-identical, the Hupasiya bargained-night reword and the
+  Version-2 at-the-sea-locus are byte-identical, and the [LACUNA:]
+  Faulkner-four-part-JEA-edition precision is byte-identical. Banned-term
+  scoping is fully preserved: every bare 'chaos' occurrence sits inside
+  scare-quotes within §VI's Ballentine-critique or isfet-gloss passages.
+  No 'chaos-figure' / 'chaos-monster' / 'chaos-serpent' anywhere. All cross-
+  references (Ch6, Ch12, Ch16; Ch34=C1, Ch35=C2, Ch37=C4, Ch38=C5, Ch40=C7)
+  resolve in toc.yaml. All named scholars in body prose are footnoted to
+  source-IDs registered in sources.yaml. Maʿat / isfet conceptual-through-
+  line discipline preserved throughout §VI without extension beyond
+  Assmann's framework. The chapter is defensible at the comparative-chapter
+  audit standard. Zero HIGH / zero MEDIUM / zero LOW findings; two NOTE-level
+  structural observations recorded.
