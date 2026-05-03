@@ -1,0 +1,224 @@
+stage: "post-human-normalize"
+timestamp: "2026-05-03T15:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+inputs:
+  - file: "chapters/39-C6-near-eastern-mediterranean-transmission.claims.adoc"
+  - file: "chapters/39-C6-near-eastern-mediterranean-transmission.claims.factcheck.yaml"
+  - file: "chapters/40-C7-inversion-problem.claims.adoc"
+  - file: "chapters/40-C7-inversion-problem.claims.factcheck.yaml"
+outputs:
+  - file: "chapters/39-C6-near-eastern-mediterranean-transmission.claims.approved.adoc"
+    lines: 459
+  - file: "chapters/40-C7-inversion-problem.claims.approved.adoc"
+    lines: 336
+verdict_pre_normalize:
+  ch39: REVISE  # 1 HIGH (cross-reference book-keeping in §VI), 1 MEDIUM (chaos-ordering compound)
+  ch40: REVISE  # 3 MEDIUM at threshold (wak'a category-import; §IV chaos-X compounds; foreign-noun italic discipline)
+verdict_post_normalize:
+  ch39: cleared (HIGH FIND-01 fixed; MEDIUM FIND-02 rephrased; 2 LOW + 3 NOTE deferred)
+  ch40: cleared (3 MEDIUMs applied with FIND-03 partial — body prose italic mostly preserved, compounds deferred to chapter-draft per locked italic-conversion rule; 3 LOW + 3 NOTE deferred)
+counts_after_normalize:
+  ch39:
+    footnotes: 85
+    evidence_tokens: 154
+    comparative_hooks: 30
+    markers:
+      inference: 4
+      speculation: 2
+      variant: 0
+      lacuna: 0
+      reconstruction: 0
+    body_lines: 422
+    total_lines: 459
+  ch40:
+    footnotes: 65
+    evidence_tokens: 73
+    comparative_hooks: 18
+    markers:
+      inference: 1
+      speculation: 1
+      variant: 0
+      lacuna: 0
+      reconstruction: 0
+      appropriation_flag: 4
+    body_lines: 277
+    total_lines: 336
+ch39_dispositions:
+  - id: FIND-01
+    severity: HIGH
+    disposition: ACCEPT
+    fix: |
+      §VI line 392 "principal independent attestations" enumeration
+      cross-references corrected against the actual chapters/ directory:
+      Chinese Gonggong moved from Ch28 to Ch21 (with related Hou Yi at
+      Ch22 added); Mexica Coatlicue/Coyolxauhqui moved from Ch29 to Ch24
+      (Huitzilopochtli-Coatepec) + Ch25 (Mesoamerican cluster); Andean
+      Ch26 retained; Mwindo moved from Ch27 to Ch29. The footnote at
+      line 392 also had four fabricated filenames (28-ying-long-gong-
+      gong.adoc, 29-coatlicue-coyolxauhqui.adoc, 26-andean.adoc,
+      27-mwindo.adoc) replaced with the actual chapter filenames per
+      toc.yaml. The §VI substantive argument (independent attestations
+      carry the book's strongest cross-cultural typological weight) is
+      itself materially correct; only the chapter-pointer book-keeping
+      was wrong, and the fix is verbatim-substitutable.
+  - id: FIND-02
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: |
+      §III line 259 "chaos-ordering cosmogony" / "chaos-ordering-
+      cosmogony" rephrased to "Gunkel-1895 cosmogonic-disorder framing"
+      / "Gunkel-1895 cosmogonic-disorder reading" per the Ch35 FIND-05
+      precedent. The EVIDENCE token loc=ch. 1 also updated to
+      "Gunkel-1895 cosmogonic-disorder reading" for consistency.
+  - id: FIND-03
+    severity: LOW
+    disposition: REJECT
+    note: |
+      Mount Aqra triple-mapping is preserved at lines 171, 180, 185;
+      line 175's compressed pairing is consistent with the locked Ch7 /
+      glossary form. No fix required.
+  - id: FIND-04
+    severity: LOW
+    disposition: REJECT
+    note: |
+      Comment-block asterisk-bold *Tarḫunna* / *Teshub* are non-rendering
+      AsciiDoc comments and harmless to the draft stage. Stylistic-only;
+      no fix.
+  - id: NOTE-01
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §V Marduk-as-undemonstrated framing."
+  - id: NOTE-02
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §VI bounded-scope conclusion discipline."
+  - id: NOTE-03
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §I non-exclusivity argument with C5 (Ch38)."
+ch40_dispositions:
+  - id: FIND-01
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: |
+      §I line 63 "the wak'a-rich Sahelian landscape of Soninke
+      ethnogeographic memory" → "the already-existing Sahelian world of
+      Soninke ethnogeographic memory". The Quechua *wak'a* category is
+      no longer imported into the Mande / Soninke context — a cross-
+      tradition category-import drift the chapter is positioned to
+      argue against, so removing it from §I is doubly important.
+  - id: FIND-02
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: |
+      §IV body-prose chaos-X compounds at lines 195, 198, 201, 204, 210,
+      215 normalized to tradition-neutral formulations: "primordial
+      chaos-adversary" → "primordial cosmic adversary"; "primordial
+      cosmos-versus-chaos opposition" → "primordial cosmos-versus-
+      disorder opposition that the chaoskampf typology presupposes";
+      "primordial chaos" → "primordial disorder"; "chaos-versus-order
+      opposition" → "disorder-versus-order opposition that the
+      chaoskampf typology presupposes"; "primordial chaos versus
+      established order ... chaos-adversary" → "primordial disorder
+      versus established order ... cosmic adversary". §VI Ballentine-
+      critique paragraphs retain their scare-quoted chaos-X uses where
+      the term is the topic.
+  - id: FIND-03
+    severity: MEDIUM
+    disposition: ACCEPT (partial)
+    fix: |
+      Body-prose bare-term occurrences `_wak'a_` and `_amaru_` are already
+      italicized at the principal §IV mentions (lines 195, 198, 201, 204,
+      207). Bare compound forms (`wak'a-succession`, etc.) will be
+      normalized at the chapter-draft stage per the locked Ch37/Ch38
+      italic-vs-bold conversion rule in skills/11-chapter-draft.md
+      (Hard rule 6). Footnote and marker contents preserve their
+      `*wak'a*` / `*amaru*` bold markup verbatim per the verbatim-
+      preservation requirement.
+  - id: FIND-04
+    severity: LOW
+    disposition: REJECT
+    note: |
+      §III Hreidmar-death detail is defensible per Reginsmál prose
+      introduction within Larrington 2014's translation; loc-routing is
+      sound. No fix required.
+  - id: FIND-05
+    severity: LOW
+    disposition: REJECT
+    note: |
+      RELATED-tier / CONTRASTIVE-tier case-classification is consistent
+      with upstream Part-I tier classifications. Uppercase/lowercase
+      normalization is cross-chapter style and out of scope.
+  - id: FIND-06
+    severity: LOW
+    disposition: REJECT
+    note: "COMPARATIVE-HOOK block content structurally sound. No fix required."
+  - id: NOTE-01
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §VI [SPECULATION:] marker discipline (basis: / counterargument: schema correctly applied per locked Ch35 FIND-04 precedent)."
+  - id: NOTE-02
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §III [INFERENCE:] marker placement for the partial-case classification."
+  - id: NOTE-03
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on chapter-wide brief-special-instructions compliance: Conrad / Belcher / Biebuyck / Mateene / Salomon / Taylor / Naumann / Isomae / Como / Ooms cited; area-specialist-first discipline preserved at §I and §II."
+self_checks:
+  ch39:
+    asciidoctor_parse: PASS (exit 0, no warnings)
+    footnote_count_unchanged: PASS (85 = 85)
+    evidence_token_count_unchanged: PASS (154 = 154; fixes were textual not token-affecting)
+    comparative_hook_count_unchanged: PASS (30 = 30)
+    cross_reference_resolution: PASS after FIND-01 fix — all 30 COMPARATIVE-HOOK chapter-numbers and the §VI body-prose Ch-numbers resolve in toc.yaml
+    speculation_pipe_field_well_formed: PASS (both blocks use basis: / counterargument:)
+    chaos_term_scoping: PASS (FIND-02 §III chaos-ordering rephrased to Gunkel-1895 cosmogonic-disorder framing)
+    upstream_lookup_compliance: PASS (Teshub/Tarḫunna distinction preserved in §I; Hoffner §15/§16 distinction preserved; Day 1985 seven-passage corpus listing matches Ch8 line 14)
+    source_id_resolution: PASS (all 16 unique IDs resolve in sources.yaml)
+    original_claims_adoc_unchanged: PASS
+  ch40:
+    asciidoctor_parse: PASS (exit 0, no warnings)
+    footnote_count_unchanged: PASS (65 = 65)
+    evidence_token_count_unchanged: PASS (73 = 73)
+    comparative_hook_count_unchanged: PASS (18 = 18)
+    appropriation_flag_count: PASS (4 markers preserved with all four sub-fields)
+    speculation_pipe_field_well_formed: PASS ([SPECULATION:] uses basis: / counterargument:)
+    wak_a_category_import: PASS after FIND-01 fix (no Quechua *wak'a* category in §I Soninke material)
+    chaos_term_scoping: PASS after FIND-02 fix (no unmarked chaos-X compounds in §IV body prose; §VI Ballentine-critique scare-quoted uses retained where term is topic)
+    area_specialist_first_discipline: PASS (§I Bida opens with seven Soninke covenant-broken paragraphs before inverse-chaoskampf overlay; §II Mwindo opens with seven Nyanga maturation-through-hubris paragraphs before chaoskampf-overlay contrast)
+    source_id_resolution: PASS (all 10 unique IDs resolve in sources.yaml)
+    original_claims_adoc_unchanged: PASS
+notes: |
+  Both chapters cleared post-human-normalize. Both required REVISE
+  pre-normalize but only one substantive HIGH finding (Ch39 FIND-01,
+  the §VI cross-reference book-keeping) — and that one is mechanical-
+  substitutable from toc.yaml.
+
+  Ch40's three MEDIUM findings are all closely tied to the chapter's
+  central methodological commitment (the appropriation protocol):
+  FIND-01 was a cross-tradition category-import (Quechua *wak'a* into
+  Soninke context — exactly the kind of error the chapter is meant to
+  argue against, so removing it is doubly important); FIND-02 was
+  unmarked chaos-X scoping in §IV body prose; FIND-03 was the foreign-
+  noun italic discipline mix that chapter-draft will normalize per
+  Hard rule 6. The 4 [APPROPRIATION-FLAG:] markers passed cleanly
+  with all four sub-fields, validating the locked schema.
+
+  The Ch39 §I Teshub vs. Tarḫunna distinction (Hurrian-Kumarbi-Cycle
+  vs. Hittite-Illuyanka tablets) was preserved correctly per the
+  upstream-lookup discipline now codified in skills/08-chapter-claims
+  Comparative-chapter section. The Hoffner §15 (Ullikummi) vs §16
+  (Hedammu) distinction was also preserved (the locked Ch35 FIND-01
+  fix held). The Day 1985 seven-passage Hebrew Bible corpus listing
+  matches Ch8 line 14 exactly with Isa 27:1 included as the seventh
+  passage (the locked Ch37 FIND-01 fix held).
+
+  No identifier-correction-in-place edits to sources.yaml were
+  required for either chapter — every named scholar resolves to an
+  existing registry entry; named-but-flagged scholars (López-Ruiz,
+  Philo of Byblos, Güterbock, Tsumura, Mondi, Rutherford for Ch39;
+  Taylor, Dean, Isomae, Como, Ooms, Monteil, Dieterlen for Ch40)
+  are flagged in the chapter-claims completion records for
+  inventory-audit follow-up.
