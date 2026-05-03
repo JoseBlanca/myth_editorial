@@ -18,7 +18,7 @@ The output of this stage is not text the reader will ever see. It is a verified 
 ## Hard rules
 1. Cite only sources whose text has been provided to you in this conversation or fetched by you via tool use. No citing from memory, even confidently.
 2. **Never invent a source ID.** Every `source_id` in an EVIDENCE token must resolve to an existing entry in `sources.yaml`. If the brief's `sources.primary` list is empty or names sources that aren't in `sources.yaml`, run the pre-flight check below and STOP. Do not work around the block by routing EVIDENCE tokens through the brief filename, an inventory entry, or a placeholder ID. (For scholars who need to be credited but have no `sources.yaml` entry yet, use the named-but-flagged pattern below — that is the supported workaround.)
-3. Use exactly the English renderings locked in `glossary.yaml`. If a needed term is missing, stop and ask.
+3. Use exactly the English renderings locked in `glossary.yaml`. Before italicising any foreign-language common noun or using any glossed proper noun, grep `glossary.yaml` for the locked rendering — body-prose terminology drifts from the glossary easily and the grep takes a second. If a needed term is missing, stop and ask.
 4. Omit material from excluded cultures. Note the temptation in a `// COMPARATIVE-HOOK:` comment for the comparative chapter.
 5. One claim per paragraph. No bundling. No narrative connective tissue.
 
@@ -77,6 +77,25 @@ Include claims covering:
 
 This section is factual and citeable — every claim about a tablet's provenance, museum number, or preservation state must have a footnote. It feeds directly into the chapter-draft's opening passage, which orients the reader before the story begins.
 
+## Comparative chapters (Part II)
+
+When the brief's `chapter_type` is `comparative (Part II)`, the chapter compresses material from upstream Part-I chapters listed in the brief's `chapters_drawn_from`. Two disciplines apply on top of the rest of this skill:
+
+### Upstream-lookup rule
+
+For every per-tradition compression in §I, §II, §III, or anywhere material is paraphrased from an upstream Part-I chapter:
+
+1. Open the upstream `chapters/MM-<slug>.claims.approved.adoc` for that tradition.
+2. Locate the specific fact you are about to compress — verse number, section number, character epithet, source loc, naming convention, etc.
+3. Route the EVIDENCE token through the same `source_id` and the same `loc` value the upstream uses.
+4. Use the upstream's character names, epithets, and terminology verbatim. The brief may use loose terminology and the upstream is canonical: e.g., the Hittite storm-god of CTH 321 is **Tarḫunna** (Hittite), not Teshub (the Hurrian counterpart used in non-Illuyanka material); the Vedic *áhann áhim* formula falls in **RV 1.32.2** (the second verse), not 1.32.1; Ninurta is the **warrior-god of Nippur**, not its lord (which is Enlil's title).
+
+This rule prevents the compression-from-memory failure mode (verse-number errors, section-number errors, epithet drift, terminology slips) that the factcheck stage would otherwise have to clean up.
+
+### Doubled-token discipline
+
+Comparative claims that bridge in-scope and out-of-scope material — transmission claims, structural-parallel claims, IE-inheritance claims, "as established in Ch. M" cross-references — should carry **two EVIDENCE tokens** on the same paragraph: an area-specialist anchor for the per-tradition fact and a comparative-mythology anchor for the typological reading. Single-token paragraphs are appropriate where a single source genuinely covers the claim (the chapter's own framing claims, brief-references, methodology anchors).
+
 ## Ordering
 
 Follow the narrative order of the myth as attested in the primary source(s). Where the brief specifies an ordering (e.g., following the tablet sequence), follow it. The claims should form a complete, ordered skeleton of the story — everything the narrative will need.
@@ -92,6 +111,8 @@ Same markers as the rest of the pipeline, but used at the claim level:
 
 - `[INFERENCE: <claim> | basis: <why this bridge is reasonable> | risk: <what is speculative>]`
   — A claim that bridges two attested claims. Needed to make the story skeleton coherent, but not directly attested. The fact-checker will verify the inference is genuinely inferential (not secretly attested) and that the basis is sound.
+- `[SPECULATION: <claim> | basis: <evidence supporting the reading> | counterargument: <substantive opposing position>]`
+  — A reading the chapter advances as its own analytical framing, distinct from `[INFERENCE:]` (which bridges between upstream attestations). Used principally in comparative (Part II) chapters where the chapter offers a typological reading or transmission-vs-typology judgement that goes beyond what any single upstream source attests. The `counterargument:` field must carry a substantive opposing position, not a methodological caveat or a restatement of the basis. Schema is locked: `basis:` / `counterargument:` — not `warrant`, `risk`, or `speculative_basis`.
 - `[LACUNA: <what is missing> | source: <exact ref> | scholarly_reconstruction: <if any, with citation>]`
   — A documented physical gap in the source.
 - `[RECONSTRUCTION: <filled content> | gap_source: <where the lacuna is> | fill_source: <which in-tradition source supplies the content, per scope.md's reconstruction policy> | confidence: high|medium|low]`
@@ -178,7 +199,10 @@ End the claims document with a section of `// COMPARATIVE-HOOK:` comments collec
 9. Any scholar named in body prose or inside a marker without a corresponding `sources.yaml` entry is handled via the named-but-flagged pattern (no EVIDENCE token routes through them) and listed in the completion record's `notes` for inventory-audit follow-up.
 10. No out-of-scope material.
 11. Variant handling matches the brief's classification.
-12. `glossary.yaml` renderings used throughout.
+12. `glossary.yaml` renderings used throughout — verified by grepping the glossary for every foreign term that appears italicised in body prose.
+13. Foreign-language common nouns in body prose use AsciiDoc italic (`_term_`), not bold (`*term*`). Asterisk-bold occurrences are acceptable only inside footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents (which carry through later stages verbatim).
+14. Every `[SPECULATION:]` block uses the locked schema `[SPECULATION: <claim> | basis: <text> | counterargument: <text>]`. The third pipe-field is `counterargument:` — not `warrant`, `risk`, `speculative_basis`, or any synonym — and supplies a substantive opposing position rather than a methodological caveat.
+15. (Comparative Part II chapters only.) Every per-tradition compression has been verified against the corresponding upstream `chapters/MM-<slug>.claims.approved.adoc` — character names, epithets, verse numbers, section numbers, and source locs match the upstream verbatim. Doubled-token paragraphs cover transmission and structural-parallel claims.
 
 ## Completion protocol
 

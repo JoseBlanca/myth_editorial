@@ -42,6 +42,19 @@ Walk the document paragraph by paragraph. Each paragraph is one claim. Assign a 
 - **⚠ CONTAMINATION** — Supported, but by an excluded-culture source per `scope.md`.
 - **✗ FABRICATION** — Not supported by any source you can locate.
 
+### Pass 1b — Upstream cross-check (comparative Part-II chapters only)
+
+When the brief's `chapter_type` is `comparative (Part II)`, the chapter compresses material from upstream Part-I chapters listed in `chapters_drawn_from`. The canonical truth for those facts is the upstream `chapters/MM-<slug>.claims.approved.adoc`, not the writer's paraphrase or the brief's drafting language.
+
+For every per-tradition compression in the chapter:
+
+1. Open the upstream `chapters/MM-<slug>.claims.approved.adoc` for that tradition.
+2. Locate the specific fact the chapter is compressing — verse number, section number, character epithet, source loc, naming convention.
+3. Compare. If the chapter's `source_id` or `loc` differs from the upstream, flag CITATION-WRONG (severity LOW for digit-transposition or near-misses, MEDIUM for substantive differences such as wrong verse number or wrong section number). If a character name, epithet, or terminology drifts from the upstream's locked rendering, flag ATTRIBUTION-DRIFT (MEDIUM).
+4. Record the disposition with a verbatim-substitutable fix from the upstream file.
+
+This pass catches the recurring failure mode in which the writer paraphrases per-tradition material from memory or from the brief's drafting language rather than from the upstream chapter — Hoffner section numbers, Vedic verse numbers, Hittite-vs-Hurrian storm-god names, character epithets, and corpus-listing conventions are the canonical examples.
+
 ### Pass 2 — Triangulation of references
 Verify each citation's tablet number, line range, or page reference resolves in a `triangulation_databases` entry. Non-resolving: CITATION-WRONG, HIGH severity, with verification URL.
 
@@ -61,7 +74,8 @@ Flag mismatches as CITATION-WRONG, severity LOW (digit-transposition) to MEDIUM 
 For each factual detail: is this detail attested in a document within the scope's date range and culture? Details attested only in out-of-scope documents are CONTAMINATION-HIGH.
 
 ### Pass 4 — Marker integrity
-- `[INFERENCE:]` — genuinely inferential? If a source directly attests it, flag MARKER-MISUSED.
+- `[INFERENCE:]` — genuinely inferential? If a source directly attests it, flag MARKER-MISUSED. Schema: `[INFERENCE: <claim> | basis: ... | risk: ...]`.
+- `[SPECULATION:]` — genuinely the chapter author's interpretive reading (not a derivation from the upstream that should be `[INFERENCE:]`)? Schema is locked: `[SPECULATION: <claim> | basis: ... | counterargument: ...]`. Third pipe-field must be `counterargument:` with a substantive opposing position — if labelled `warrant`, `risk`, `speculative_basis`, or any synonym, flag MARKER-SCHEMA-WRONG (MEDIUM). If the `counterargument:` field carries only a methodological caveat or a restatement of the basis, flag MARKER-COUNTERARGUMENT-WEAK (LOW or MEDIUM depending on materiality).
 - `[LACUNA:]` — source actually has the claimed gap?
 - `[RECONSTRUCTION:]` — fill source is in-tradition per `scope.md`?
 - `[VARIANT:]` — both quoted phrases present in cited sources?

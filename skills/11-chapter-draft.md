@@ -16,9 +16,10 @@ Importantly, the writing AI does **not** receive the original source texts. It o
 ## Hard rules
 1. **Every factual assertion in the narrative must correspond to a claim in the approved claims document.** No new facts, no new citations, no "I happen to know" additions.
 2. **Every claim in the approved document must appear in the narrative.** Do not silently drop claims because they are inconvenient for the prose flow. If a claim is genuinely irrelevant, flag it rather than omitting it.
-3. Use exactly the English renderings locked in `glossary.yaml`.
-4. All markers from the claims document survive into the narrative. Do not paraphrase them away.
+3. Use exactly the English renderings locked in `glossary.yaml`. Grep the glossary for any foreign term you are about to use in body prose to confirm the locked rendering before writing it.
+4. All markers from the claims document — including `[INFERENCE:]`, `[SPECULATION:]`, `[VARIANT:]`, `[LACUNA:]`, `[RECONSTRUCTION:]`, `[APPROPRIATION-FLAG:]` — survive into the narrative byte-for-byte, including all pipe-delimited sub-fields. Do not paraphrase them away or relabel pipe-fields.
 5. Citations carry over from the claims document. Do not add, remove, or reassign footnotes.
+6. Foreign-language common nouns and book titles in body prose render as AsciiDoc italic (`_term_`), not bold (`*term*`). Convert any asterisk-bold body-prose terms inherited from the claims file to underscore-italic. Footnote bodies, EVIDENCE tokens (`// EVIDENCE: …`), COMPARATIVE-HOOK comments, and marker contents preserve their original markup byte-for-byte — the verbatim-preservation requirement of rule 4/5 is not violated by the body-prose-only italic conversion.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
@@ -89,13 +90,14 @@ The source overview is separated from the narrative body by a blank line or a se
 1. **Source overview present**: the chapter opens with 2–5 paragraphs on the physical evidence, built from the Source overview claims. No source overview = incomplete chapter.
 2. **Completeness**: walk the approved claims document claim by claim — including Source overview claims. Is every claim represented in the narrative? List any you cannot find — they are bugs.
 3. **No additions**: scan the narrative for any factual assertion that does not correspond to a claim in the approved document. Flag it.
-3. Scan for forbidden words — each hit is a drift signal; revise.
-4. Every proper noun was glossed on first mention using `glossary.yaml`.
-5. Variant handling matches the brief's classification.
-6. Every marker has survived from claims to narrative.
-7. All footnotes carried over unchanged.
-8. Length matches the brief's target. Not padded.
-9. `// COMPARATIVE-HOOK:` comments carried over.
+4. Scan for forbidden words — each hit is a drift signal; revise.
+5. Every proper noun was glossed on first mention using `glossary.yaml`.
+6. Variant handling matches the brief's classification.
+7. Every marker has survived from claims to narrative byte-for-byte, including `[SPECULATION:]` blocks with their `basis:` / `counterargument:` pipe-fields.
+8. All footnotes carried over unchanged.
+9. Length matches the brief's target. Not padded.
+10. `// COMPARATIVE-HOOK:` comments carried over.
+11. Foreign-language common nouns and book titles in body prose are italicised with `_term_` (underscore), not bolded with `*term*` (asterisk). Asterisk markup remains only inside footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents.
 
 ## Completion protocol
 
