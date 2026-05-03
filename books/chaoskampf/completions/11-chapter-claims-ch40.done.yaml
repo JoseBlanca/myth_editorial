@@ -1,0 +1,150 @@
+stage: chapter-claims
+chapter: 40
+chapter_slug: C7-inversion-problem
+status: "completed"
+output_file: chapters/40-C7-inversion-problem.claims.adoc
+output_lines: 277
+target_word_count: 7000
+body_prose_word_count: 7261
+footnote_count: 65
+evidence_token_count: 73
+comparative_hook_count: 18
+markers:
+  inference: 1
+  speculation: 1
+  variant: 0
+  lacuna: 0
+  reconstruction: 0
+  appropriation_flag: 4
+sections:
+  - "Source overview"
+  - "I. The anchor case — Bida and the covenant-broken framing of the Soninke Wagadu narrative"
+  - "II. The full refusal — Mwindo and the Nyanga maturation-through-hubris framing"
+  - "III. The partial case — Sigurd, the IE formula, and the curse on the gold"
+  - "IV. The area-specialist refusal — Pariacaca, the amaru, and the wak'a-succession framing"
+  - "V. The metallurgical case — Susanoo, Yamata no Orochi, and the sword-etiology framing"
+  - "VI. What inversion teaches"
+notes: |
+  Pre-flight check passed: brief 40-C7-inversion-problem.yaml exists and is
+  structurally valid; all six brief.sources.anchor entries resolve in
+  sources.yaml (conrad-west-africa, belcher-epic, biebuyck-mateene-mwindo,
+  watkins-1995, naumann-mythen, salomon-urioste-huarochiri); brief uses
+  sources.anchor (not sources.primary) per the comparative-chapter pattern;
+  no primary_sources_to_pin_at_glossary_lock block present; no
+  identifier_missing comments present.
+
+  Source IDs used (all 10 resolve in sources.yaml): ballentine-2015,
+  belcher-epic, biebuyck-mateene-mwindo, conrad-west-africa, forsyth-1987,
+  larrington-poetic-edda, naumann-mythen, philippi-kojiki,
+  salomon-urioste-huarochiri, watkins-1995. Per-tradition factual claims
+  in §§I-V routed through the same source_ids the upstream Part-I chapters
+  (Ch28, Ch29, Ch19, Ch26, Ch23) use, per the upstream-lookup rule.
+
+  Named-but-flagged scholars (cited by name in body prose without routing
+  any EVIDENCE token through them, per scope.md §"Appropriation protocol"
+  and the named-but-flagged secondary-anchor pattern of the Part-I
+  chapters):
+    - In sources.yaml (EVIDENCE-token-bearing): Conrad (conrad-west-africa),
+      Belcher (belcher-epic), Biebuyck and Mateene
+      (biebuyck-mateene-mwindo), Salomon and Urioste
+      (salomon-urioste-huarochiri), Naumann (naumann-mythen).
+    - Named-but-flagged in body prose (no EVIDENCE token; flagged for
+      inventory-audit follow-up): Gérald Taylor (Lima IFEA critical edition
+      of the *Huarochirí Manuscript*) and Carolyn Dean (Andean ritual-
+      political imagination) at §IV; Jun'ichi Isomae, Michael Como, and
+      Herman Ooms (early-Japanese religion / metallurgical-allegory
+      reading) at §V; also Charles Monteil (1953 IFAN-Dakar) and Germaine
+      Dieterlen (École française de l'Afrique de l'Ouest) named in the §I
+      APPROPRIATION-FLAG body per the Ch28 pattern.
+
+  Area-specialist-first discipline implementation: §I (Bida) opens with
+  Conrad-and-Belcher's Soninke covenant-broken framing (the seven-headed
+  serpent as protector, the annual maiden-tribute as covenant, the
+  killing as covenant-breaking, the dispersal as consequence) for seven
+  paragraphs before invoking the modern comparativist "inverse
+  chaoskampf" overlay; the inversion-of-outcome reading is then
+  registered as a structural observation against the Eurasian typology
+  rather than as a tradition-internal feature. §II (Mwindo) opens with
+  Biebuyck-and-Mateene's Nyanga maturation-through-hubris framing (the
+  hero's biographical arc, the foreshadowing of correction, the killing
+  as transgression, Nkuba's lightning-punishment, the celestial
+  humiliation, the chastened return, the chiefly succession) before
+  noting that the moral valence is inverted from chaoskampf rather than
+  the outcome; the moral-valence inversion is the more pointed of the
+  two main weight cases.
+
+  APPROPRIATION-FLAG marker placements (4 markers, all with the four
+  required sub-fields substance / named_specialists / tier_implication /
+  forwards_to):
+    - §I: Bida — covenant-broken (Conrad, Belcher) vs. inverse-chaoskampf
+      overlay; tier RELATED (full, inversion anchor); forwards to Ch40
+      and Ch41.
+    - §II: Mwindo — maturation-through-hubris (Biebuyck and Mateene) vs.
+      inversion-of-cosmogony framing; tier CONTRASTIVE (full); forwards
+      to Ch40 (strongest case) and Ch41.
+    - §IV: Pariacaca — wak'a-succession (Salomon, Urioste, Taylor, Dean)
+      vs. chaoskampf framing; tier RELATED (full); forwards to Ch40
+      (categorical refusal short of inversion) and Ch41.
+    - §V: Susanoo — metallurgical-allegory (Naumann, Isomae, Como, Ooms)
+      vs. combat-cosmology framing; tier RELATED (full), strongest area-
+      specialist refusal; forwards to Ch40 and Ch41.
+
+  Per the brief's note, no APPROPRIATION-FLAG marker for §III (Sigurd) —
+  the IE-formula reading is internal to the IE-comparative tradition that
+  Watkins 1995 anchors, not an outside-imposition on a non-IE tradition;
+  Watkins's reading and the long-arc tragedy reading are jointly within
+  the IE-comparative apparatus rather than being area-specialist
+  objection vs. comparative imposition; an INFERENCE marker registers
+  the partial-case classification with the appropriate basis-and-risk
+  apparatus.
+
+  Doubled EVIDENCE tokens: present at the source-overview paragraphs that
+  bridge multiple per-tradition anchors (lines 31-32, 35-36, 39-40, 53-54,
+  79-80) and at §I, §II, §III where the chapter explicitly bridges
+  area-specialist anchors and comparative-typology anchors (notably the
+  Watkins-versus-Larrington bridge at §III where Watkins's IE-formula
+  reading and the Larrington translation's long-arc tragedy reading are
+  in tension); single-token default elsewhere per §§I-V's argument
+  running through area-specialists' own framings.
+
+  SPECULATION marker (1) at §VI registers the strong-form reading of the
+  second methodological lesson — that the comparativist pattern of
+  forcing every serpent-fight into the chaoskampf frame is itself a
+  category-imposition — with basis from Ballentine 2015 plus scope.md
+  §"Appropriation protocol" plus the chapter's §§I-V case-level
+  evidence, and counterargument from the typological recurrence still
+  detectable across the corpus per the standard chaoskampf-typology
+  scholarship.
+
+  Banned-term scoping: bare "chaos" appears only in (a) compound terms
+  that are themselves the topic of the critique ("chaos-versus-order
+  framing", "chaos-order opposition", "primordial chaos", "chaos-
+  adversary") and (b) scare-quoted invocations within explicit critique
+  paragraphs (mostly §VI on Ballentine's category-imposition critique;
+  §I, §II's discussion of the chaoskampf reading as additional analytic
+  move). All occurrences are within explicit Ballentine-critique or
+  comparative-typology-discussion paragraphs per the brief's special
+  instructions on banned-term scoping.
+
+  Glossary discipline: foreign-language common nouns _wak'a_, _amaru_,
+  _karisi_, _tatara_, _kushi_ italicised on first mention per glossary
+  entries; _Kusanagi_ italicised per glossary; _Yamata no Orochi_
+  rendered per glossary's preferred form (never "Yamato no Orochi"). All
+  italicisation uses AsciiDoc _term_ form, not bold *term*.
+
+  Self-checks: footnote count 65 (paragraph count similar); EVIDENCE
+  token count 73 (mostly single-token; doubled where explicit bridges
+  occur); 18 COMPARATIVE-HOOKs (within the 12-18 target range);
+  asciidoctor -o /tmp/ch40.html exits 0 with no warnings.
+
+  Reference scale check: Ch36 (the short C3 chapter) = 4,997 / 65 / 78 /
+  11; Ch40 = 7,261 / 65 / 73 / 18 — body prose hits the brief's 7,000
+  target; footnote count matches Ch36 (the chapter is denser per
+  paragraph than Ch36 because §§I-II carry more area-specialist-framing
+  prose between footnoted claims); EVIDENCE-token count is slightly
+  below Ch36 because the chapter is mostly single-token by design (the
+  argument runs through area-specialists' own framings rather than
+  through cross-cultural transmission); COMPARATIVE-HOOK count is at
+  the upper end of the 12-18 range because the chapter feeds forward to
+  Ch41 (C8) and back to Ch34 (C1), Ch35 (C2), Ch38 (C5) at multiple
+  points.

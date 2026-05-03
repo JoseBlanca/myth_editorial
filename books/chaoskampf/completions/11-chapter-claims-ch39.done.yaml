@@ -1,0 +1,259 @@
+stage: chapter-claims
+chapter: 39
+chapter_slug: C6-near-eastern-mediterranean-transmission
+status: "completed"
+timestamp: "2026-05-03T18:00:00Z"
+agent_model: "claude-opus-4-7[1m]"
+output_file: chapters/39-C6-near-eastern-mediterranean-transmission.claims.adoc
+output_lines: 422
+target_word_count: 7500
+body_prose_word_count: 7868
+footnote_count: 85
+evidence_token_count: 154
+comparative_hook_count: 30
+markers:
+  inference: 4
+  speculation: 2
+  variant: 0
+  lacuna: 0
+  reconstruction: 0
+sections:
+  - "Source overview"
+  - "I. The Hurro-Hittite → Greek route"
+  - "II. The Levantine → Aegean route"
+  - "III. The Ugaritic → Israelite route"
+  - "IV. The Jewish-Hellenistic → Revelation 12 synthesis"
+  - "V. Marduk as possible but undemonstrated source"
+  - "VI. Implications for the book's argument"
+notes: |
+  Pre-flight: brief 39-C6-near-eastern-mediterranean-transmission.yaml is
+  structurally valid; sources.anchor lists seven IDs (west-1997, burkert-1992,
+  day-1985, yarbro-collins-1976, hoffner-1998, smith-1994-baal-i,
+  smith-pitard-2009-baal-ii) all of which resolve in sources.yaml. Per
+  stage-prompt §3 (comparative-chapter exception), sources.anchor functions
+  as sources.primary; no source-pinning deferral. No
+  primary_sources_to_pin_at_glossary_lock block; no identifier_missing
+  comments.
+
+  Asciidoctor compile: clean (exit 0).
+
+  Source IDs used (16 total, all resolving in sources.yaml):
+    - aune-revelation        (Aune WBC 52B Revelation commentary, §IV)
+    - ballentine-2015        (rival-sovereignty reading, §III)
+    - burkert-1992           (Orientalizing Revolution, Phoenician mediation)
+    - day-1985               (God's Conflict; Ugaritic-Hebrew Bible continuity)
+    - fontenrose-1959        (Python; Leto-Apollo-Python plot, §IV)
+    - foster-2005            (Before the Muses; Enūma Eliš translation, §V)
+    - gunkel-1895            (Schöpfung und Chaos; tehôm-Tiamat, §V)
+    - hoffner-1998           (Hittite Myths 2nd ed.; Kumarbi Cycle §§14-18)
+    - lambert-2013           (Babylonian Creation Myths; Enūma Eliš, §V)
+    - ogden-2013             (Drakōn; Greek dragon material, §I, §II)
+    - smith-1994-baal-i      (KTU 1.1-1.2 critical edition)
+    - smith-pitard-2009-baal-ii  (KTU 1.3-1.4 + KTU 1.5 i 1-3 Lôtan passage)
+    - watkins-1995           (How to Kill a Dragon; IE-inheritance complement)
+    - west-1966-theogony     (Hesiod Theog. 820-880, etc.)
+    - west-1997              (East Face of Helicon; principal transmission anchor)
+    - yarbro-collins-1976    (Combat Myth in Revelation; §IV)
+
+  Teshub-vs-Tarḫunna usage in §I: the Kumarbi Cycle is a Hurrian-language
+  composition (in Hittite-language adaptation), and per the upstream Ch5
+  claims-approved.adoc lines 33, 36, 68, 71 the storm-god of the cycle is
+  named *Teshub* throughout. The chapter's §I therefore uses Teshub
+  consistently. Tarḫunna appears only (a) in the front-comment block defining
+  the locked Ch36 §III correction, (b) in §I where the chapter explicitly
+  distinguishes the Kumarbi-Cycle Teshub from the CTH-321 Tarḫunna, and (c)
+  in COMPARATIVE-HOOK comments referencing the Ch36/Ch38 cyclical-maintenance
+  and IE-inheritance treatment of the CTH-321 Illuyanka tablets. Tarḫunna
+  is never the storm-god of the Kumarbi Cycle in §I. This satisfies the
+  locked Ch36 §III correction while preserving Ch5's Hurrian-language Teshub
+  for the Kumarbi-Cycle material.
+
+  Day 1985's seven-passage corpus (§III): the chapter cites the seven-passage
+  enumeration from chapters/08-yahweh-leviathan-rahab.claims.approved.adoc
+  line 14 verbatim — Pss 74:12-17, 89:9-13, 104:6-9 with v. 26; Isa 27:1;
+  Isa 51:9-10; Job 26:12-13 with ch. 41; Hab 3. Isa 27:1 IS included as the
+  fourth entry. Job 26+41 is treated as one entry (per Ch8 enumeration and
+  the locked correction in the prompt).
+
+  Hoffner section numbers (§I): Song of Ullikummi at §15 (correctly cited),
+  Song of Hedammu at §16 (correctly cited), Song of the Sea at §17, all per
+  upstream Ch5 claims-approved usage. Kingship in Heaven at §14.
+
+  Upstream-lookup compliance — files grepped for verbatim per-tradition facts:
+    - chapters/05-kumarbi-ullikummi.claims.approved.adoc grepped for Teshub,
+      Tarḫunna, Ullikummi, Hedammu, Kingship in Heaven, §14, §15, §16, §17,
+      §18, Anu, Alalu, Kumarbi, succession-sequence; routed through
+      hoffner-1998 with the same loc values upstream uses.
+    - chapters/11-zeus-typhon.claims.approved.adoc grepped for Typhon,
+      Typhoeus, Theogony 820-880, Cilicia, Aqra, Corycian, Etna,
+      Phoenician, Mount Casius, west-1997, burkert-1992, Apollodoran sinew-
+      theft; routed through west-1966-theogony, ogden-2013, west-1997,
+      burkert-1992 with the same loc values upstream uses.
+    - chapters/07-baal-yamm-lotan.claims.approved.adoc grepped for Lôtan,
+      Yamm, Baal, KTU 1.5 i 1-3, KTU 1.1-1.2, Ayyamur, Yagrush, Kothar,
+      seven-headed, Ṣapānu, Mount Aqra, Jebel al-Aqra, Mount Casius;
+      routed through smith-1994-baal-i and smith-pitard-2009-baal-ii with
+      the same loc values upstream uses.
+    - chapters/08-yahweh-leviathan-rahab.claims.approved.adoc grepped for
+      Day 1985, Pss 74, Pss 89, Isa 27, Isa 51, Job 26, Hab 3, Lôtan, lwytn,
+      tehôm, seven-passage, RSV; routed through day-1985 and ballentine-2015
+      with the same loc values upstream uses; the seven-passage enumeration
+      comes verbatim from Ch8 line 14.
+    - chapters/09-revelation-red-dragon.claims.approved.adoc grepped for
+      Yarbro Collins, Leto, Apollo, Python, composite, Combat Myth,
+      seven-headed dragon, "ancient serpent", Domitianic, Aune; routed
+      through yarbro-collins-1976 and aune-revelation with the same loc
+      values upstream uses.
+    - chapters/03-marduk-tiamat.claims.approved.adoc grepped for Tiamat,
+      tehôm, Genesis 1, Enūma Eliš, Wellhausen, Gunkel, cosmogony, Lambert,
+      Foster; routed through gunkel-1895, day-1985, lambert-2013,
+      foster-2005 with the same loc values upstream uses.
+    - chapters/12-greek-dragons-after-typhon.claims.approved.adoc grepped
+      for Apollo-Python, Hellenistic, Hesiod, Fontenrose; supports §IV's
+      Leto-Apollo-Python framing.
+
+  §V Marduk-as-undemonstrated framing: presented as the chapter's weakest
+  documented transmission case. The §V SPECULATION block uses the locked
+  schema [SPECULATION: ... | basis: ... | counterargument: ...] with a
+  substantive opposing position in the counterargument field — namely, the
+  post-Wellhausen / Tsumura-tradition position that Genesis 1's tehôm is
+  best read as a Hebrew common noun denoting the pre-creation watery state
+  without specific Babylonian-derivation, the absence of a documented
+  mediating route comparable to the Phoenician corridor of §I-II or the
+  Northwest Semitic continuum of §III, the speech-act-vs-combat structural
+  difference between Genesis 1 and Enūma Eliš, and the Day 1985 / Tsumura
+  preference for a compositional reading in which the parallels are
+  explained by a shared ancient-Near-Eastern cosmogonic vocabulary rather
+  than by direct borrowing — which is the modern post-Wellhausen consensus.
+  Tsumura is named in body prose without a corresponding sources.yaml entry
+  (named-but-flagged below); EVIDENCE for the post-Wellhausen reading
+  routes through day-1985 ch. 1 as the chapter's anchor. The §V close
+  presents the Marduk-into-Genesis-1 case as undemonstrated rather than as
+  confirmed or refuted, in keeping with the brief's special_instructions.
+
+  §I Cilicia / Mount-Aqra contact-point SPECULATION (lines 147 of the
+  output file) uses the locked schema with a substantive counterargument:
+  the Cilician anchorage of Greek Typhon may be an internal-Greek
+  geographical innovation (a topographical specification of the post-
+  Hesiodic Tartarus locus by poets familiar with Cilician geography) rather
+  than a memory of a specific contact-point.
+
+  Markers:
+    - 4 [INFERENCE:] blocks — one in §I (Watkins-1995-ch46-Hesiod-Typhon
+      framing as the chapter's editorial reading of West 1997 in light of
+      the wider comparative consensus), one in §II (the Phoenician-trading-
+      network channel carrying specifically Ugaritic Baal-Cycle material
+      vs generic Northwest Semitic combat-myth material), one in §III (the
+      Northwest Semitic linguistic continuity sufficient to underwrite
+      direct Ugaritic-into-Hebrew literary transmission), one in §IV (the
+      Rev 12:3 seven-headed dragon as third-stage transmission of Ugaritic
+      Lôtan via Hebrew Bible Leviathan)
+    - 2 [SPECULATION:] blocks — one in §I (Cilicia-Mount-Aqra contact-point
+      localization), one in §V (Marduk-into-Genesis-1 mediated through
+      sixth-century-BCE Babylonian-exile contact); both use the locked
+      [SPECULATION: ... | basis: ... | counterargument: ...] schema with
+      substantive opposing positions in the counterargument fields
+    - 0 [LACUNA:] / [VARIANT:] / [RECONSTRUCTION:] blocks — appropriate to
+      the comparative-historical character of the chapter (no broken-tablet
+      or co-equal-version primary-source material in this chapter; LACUNAE
+      handled at the upstream level in Ch5 §15-§17 lacunae and Ch7 KTU 1.1
+      lacunae)
+
+  Glossary discipline: foreign common nouns in body prose use AsciiDoc italic
+  _term_ throughout (Lôtan; tehôm — italicised in §III, §IV, §V; purulli only
+  in COMPARATIVE-HOOK; Ṣapānu rendered without italic where used as a place-
+  name). Locked renderings respected: Lôtan (with circumflex-o); tehôm (with
+  circumflex-o); Ṣapānu / Mount Zaphon / Jebel al-Aqra (all three forms used
+  with the locked context-rules — Ṣapānu in Ugaritic context first mention,
+  Jebel al-Aqra as modern place-name, Mount Zaphon for Hebrew-Bible-reception
+  context); Chaoskampf (treated as a technical term, not used in this
+  chapter's body prose — the sovereignty-vs-chaos debate is named in §III
+  as the Day-Ballentine analytical-category disagreement, in scare-quote-
+  equivalent context, per the banned-term scoping discipline); Yamm
+  (preferred as Yamm at Ugaritic context); Tannīn (with macron when naming
+  the figure); Leviathan, Rahab, Marduk, Tiamat all per the locked
+  glossary forms.
+
+  Banned-term scoping (chaos / chaos-figure / chaos-monster / chaos-serpent):
+  no bare "chaos" usage outside the explicit Day-Ballentine analytical-
+  category-debate context in §III (line 259) and the corresponding Ch35 / C2
+  COMPARATIVE-HOOK reference (line 271). The §III mention is in the form
+  "chaos-ordering cosmogony" naming the Day-1985 position that Ballentine
+  critiques — appropriate scoping per the locked discipline. Ch36 § III
+  framing of the term is registered. No "chaos-figure / chaos-monster /
+  chaos-serpent" hyphenated forms.
+
+  Named-but-flagged scholars (no EVIDENCE token routes through them):
+    - Carolina López-Ruiz — *When the Gods Were Born* (Harvard University
+      Press, 2010), the post-1997 development of the West-Burkert
+      transmission framework; named in §I COMPARATIVE-HOOK, §II
+      COMPARATIVE-HOOK, and §VI COMPARATIVE-HOOK; substantive claims
+      anchored on west-1997 and burkert-1992. To be added at inventory-audit.
+    - Philo of Byblos / Herennios Philōn Byblios — late-1st / early-2nd-
+      century-CE Phoenician-Greek antiquarian author of the Sanchuniathon-
+      derived theogony preserved in Eusebius *Praeparatio Evangelica*;
+      named in §I body prose; substantive claims anchored on west-1997
+      ch. 6. To be added at inventory-audit.
+    - Hans Gustav Güterbock — foundational mid-twentieth-century philological
+      scholar of the Kumarbi Cycle whose editions established the framework
+      Hoffner 1998 inherits and updates; named in §VI COMPARATIVE-HOOK;
+      substantive claims anchored on hoffner-1998 introduction. To be added
+      at inventory-audit.
+    - David Toshio Tsumura — *Creation and Destruction* (Eisenbrauns,
+      revised edition 2005), the post-Wellhausen compositional reading of
+      Genesis 1 in which the tehôm of Gen 1:2 is read as a Hebrew common
+      noun without specific Babylonian-derivation; named in §V body prose
+      and §V SPECULATION counterargument; substantive claims anchored on
+      day-1985 ch. 1. To be added at inventory-audit.
+    - Mondi (Robert Mondi 1990, "Greek Mythic Thought in the Light of the
+      Near East") and Rutherford (Ian Rutherford 2020, *Hittite Texts and
+      Greek Religion*) — post-1997 corroborations of the West-Burkert
+      framework named only inside the §I [INFERENCE:] basis field; no
+      EVIDENCE token routes through them. To be added at inventory-audit.
+
+  Other scholars cited via sources.yaml entries (no flagging needed):
+    West (west-1997, west-1966-theogony); Burkert (burkert-1992); Day
+    (day-1985); Ballentine (ballentine-2015); Hoffner (hoffner-1998);
+    Smith (smith-1994-baal-i); Smith & Pitard (smith-pitard-2009-baal-ii);
+    Yarbro Collins (yarbro-collins-1976); Aune (aune-revelation);
+    Fontenrose (fontenrose-1959); Lambert (lambert-2013); Foster
+    (foster-2005); Gunkel (gunkel-1895); Watkins (watkins-1995); Ogden
+    (ogden-2013).
+
+  Comparative-hooks: 30 hooks distributed across Source overview (4),
+  §I (4), §II (4), §III (4), §IV (4), §V (4), and §VI (5 hooks at section
+  close including López-Ruiz, Güterbock, and the C5 / C7 / C8 forwards).
+  Hook content covers per-tradition back-links (Ch3, Ch5, Ch7, Ch8, Ch9,
+  Ch10, Ch11, Ch12, Ch36) and comparative-chapter cross-links (C1 Ch34,
+  C2 Ch35, C3 Ch36, C4 Ch37, C5 Ch38, C7 Ch40, C8 Ch41).
+
+  Body-prose word count of 7,868 is +4.9% over the 7,500 target — within
+  tolerance per Ch37 (+5.97%) precedent and below Ch37's count. The
+  chapter trimmed roughly 770 words from a first-pass draft (8,644 words)
+  by collapsing repetitive paragraphs in §I (convergence-of-evidence +
+  chronology + non-exclusivity recombined), §II (Levantine-route
+  conclusion paragraphs collapsed), §IV (composite + multi-resonance +
+  water-attack paragraphs collapsed), and §V (closing paragraphs
+  collapsed and final close-out folded into structural-vs-philological
+  paragraph). No content was deleted; the trim was cohesion-and-redundancy
+  rather than substantive reduction.
+
+  Self-checks: every footnote has citation pointing to a source provided
+  in this conversation; every source_id resolves in sources.yaml; the
+  Source overview has at least 3 claims (it has 9); no out-of-scope
+  material; variant handling matches the brief's classification (no co-
+  equal variants in the chapter; the Day-vs-Ballentine reading is
+  presented as common-ground-plus-disagreement on analytical category
+  rather than as VARIANT in the technical sense); glossary.yaml renderings
+  used throughout (Lôtan, Leviathan, tehôm, Ṣapānu / Mount Zaphon /
+  Jebel al-Aqra, Yamm, Tannīn, Marduk, Tiamat, Teshub, Tarḫunna with the
+  locked Hurrian-vs-Hittite distinction in §I); foreign common nouns in
+  body prose use AsciiDoc italic _term_ throughout (one stray asterisk-
+  bold *tehôm* in §V was corrected to _tehôm_); doubled-token discipline
+  applied across §I, §II, §III, §IV, §V transmission and structural-
+  parallel claims (West-Burkert + area-specialist anchors in §I; Burkert
+  + Smith / Smith-Pitard in §II; Day + Smith-Pitard / Day + Smith in §III;
+  Yarbro-Collins + Aune / Day in §IV; Day + Lambert / Foster + Gunkel in
+  §V).
+
+  Asciidoctor build verified clean (exit 0).
