@@ -1,0 +1,61 @@
+stage: claims-factcheck
+chapter: 38-C5-ie-hero-slay-serpent-formula
+timestamp: 2026-05-03T11:33:06Z
+status: completed
+agent_model: claude-opus-4-7-1m
+inputs:
+  - chapters/38-C5-ie-hero-slay-serpent-formula.claims.adoc
+  - briefs/38-C5-ie-hero-slay-serpent-formula.yaml
+  - chapters/06-illuyanka.claims.approved.adoc
+  - chapters/11-zeus-typhon.claims.approved.adoc
+  - chapters/13-thraetaona-azidahaka.claims.approved.adoc
+  - chapters/14-indra-vrtra.claims.approved.adoc
+  - chapters/15-vedic-reflexes.claims.approved.adoc
+  - chapters/18-thor-jormungandr.claims.approved.adoc
+  - chapters/19-ie-reflexes.claims.approved.adoc
+  - chapters/20-slavic-baltic.claims.approved.adoc
+  - chapters/35-C2-combat-as-sovereignty.claims.factcheck.yaml
+  - sources.yaml
+  - toc.yaml
+  - glossary.yaml
+outputs:
+  - file: chapters/38-C5-ie-hero-slay-serpent-formula.claims.factcheck.yaml
+    lines: 880
+verdict: PASS
+summary: >
+  Fresh-context audit of the Ch38 claims file (96 paragraph-claims;
+  142 EVIDENCE tokens; 26 COMPARATIVE-HOOK references; 3 INFERENCE,
+  3 LACUNA, 1 VARIANT, and 1 SPECULATION marker block). All 15
+  unique source_ids resolve in sources.yaml; all 26 chapter-number
+  references resolve in toc.yaml. Tarḫunna-vs-Teshub discipline is
+  correctly preserved (7 Tarḫunna body-prose occurrences; 4 Teshub
+  mentions confined to clarification/contrast contexts) per the
+  Ch36 §III locked correction. Banned-term scoping is clean (no
+  occurrences of bare "chaos", "chaos-figure", "chaos-monster",
+  "chaos-serpent"). Slavic-reconstruction dissent is developed in
+  three substantive paragraphs (§III VARIANT block + §IV three-
+  objection critique paragraphs) preserving the locked Ch20 framing
+  (Jakobson, Lajoye, Moszyński, Kapović). Mwindo control closes the
+  chapter as control rather than parallel, with the wider non-IE
+  catalogue cited as the book-internal warrant for the bounded
+  reading of Watkins's argument. 7 findings total: 0 HIGH, 2 MEDIUM
+  (FIND-01 the *áhann áhim* RV 1.32.1-vs-1.32.2 verse-number error;
+  FIND-03 the §IV SPECULATION block's "speculative_basis" pipe-field
+  label non-conformity to the Ch34 locked "basis" precedent), 2 LOW
+  (FIND-02 "girdle of all lands" translation drift relative to the
+  in-house glossary's "band of all lands" rendering; FIND-04 uneven
+  doubled-token coverage across §III for Beowulf draca/wyrm, Welsh,
+  Vahagn, and Slavic Perun-Veles paragraphs), and 3 NOTE-level
+  structural observations (NOTE-01 Burkert/Forsyth named in
+  footnote-prose without EVIDENCE tokens; NOTE-02 the Avestan
+  *janat aiim* form is reconstructed-counterpart per the brief's
+  framing rather than directly attested; NOTE-03 positive
+  observation that the chapter's compliance with the brief's
+  special_instructions is sound). Per the verdict rule "PASS if
+  zero HIGH and ≤3 MEDIUM; otherwise REVISE", the chapter satisfies
+  the threshold with 0 HIGH and 2 MEDIUM. Final verdict: PASS,
+  with FIND-01 prioritised for the post-human-normalize fix list
+  as the most consequential single finding (the chapter's most-
+  cited philological exhibit, the Vedic *áhann áhim* attestation,
+  is mislocated to "RV 1.32.1, the opening line" but Ch14 claims-
+  approved attests the formula in the second verse RV 1.32.2).

@@ -1,0 +1,51 @@
+stage: claims-factcheck
+chapter: 37-C4-eschatological-displacement
+timestamp: "2026-05-03T11:36:11Z"
+status: completed
+agent_model: "claude-opus-4-7-1m"
+inputs:
+  - chapters/37-C4-eschatological-displacement.claims.adoc
+  - briefs/37-C4-eschatological-displacement.yaml
+  - chapters/08-yahweh-leviathan-rahab.claims.approved.adoc
+  - chapters/09-revelation-red-dragon.claims.approved.adoc
+  - chapters/13-thraetaona-azidahaka.claims.approved.adoc
+  - chapters/18-thor-jormungandr.claims.approved.adoc
+  - chapters/35-C2-combat-as-sovereignty.claims.factcheck.yaml  # locked-precedent reference
+  - sources.yaml
+  - toc.yaml
+  - glossary.yaml
+  - prompts/09-claims-factcheck-ch37.prompt.md
+outputs:
+  - file: chapters/37-C4-eschatological-displacement.claims.factcheck.yaml
+    lines: 576
+verdict: PASS
+summary: |
+  Fresh-context audit of Ch37 (C4. Eschatological Displacement) walked
+  the 94 paragraph-claims sequentially against the four upstream Part-I
+  claims-approved files (Ch8 for Isa 27:1; Ch9 for Rev 12; Ch13 for
+  Aži Dahāka / Frashokereti; Ch18 for Thor-Jörmungandr Ragnarök) and
+  against sources.yaml. All 15 unique source_ids resolve, all 21
+  COMPARATIVE-HOOK chapter-references resolve in toc.yaml, all three
+  [SPECULATION:] blocks use the locked "counterargument:" third-pipe-
+  field discipline (the Ch35 FIND-04 lock is correctly absorbed), the
+  [VARIANT:] block at line 169 on Yarbro Collins vs. Aune is well-
+  formed with primary/alt/chosen=present-both/reason fields, the
+  [LACUNA:] block at line 183 on Pahlavi temporal-layering is well-
+  formed, and both [INFERENCE:] blocks use the convention third-pipe-
+  field "risk:". Doubled-token discipline is consistent across all
+  §IV transmission-and-influence claims. Body-prose "chaos" usage is
+  confined to (a) the verbatim Gunkel 1895 book title and (b) line
+  348's Ballentine-critique vocabulary (consistent with Ch8 line 244
+  and the locked Ch35 discipline) — zero bare "chaos-monster" /
+  "chaos-figure" / etc. occurrences. Two LOW findings recorded (one
+  corpus-enumeration compression error at line 322 on Day 1985's
+  seven-passage corpus; one minor-attribution-imprecision at line 144
+  on Yarbro Collins 1976 ch. 4 vs. Aune for the Rev 12 + Rev 20
+  bipartite framing) and four NOTE-level structural observations
+  (Dumézil/Puhvel handled correctly via no-invented-source-IDs
+  discipline; §II re-narration discipline well-followed; §VI
+  cognitive-implications development substantive; §IV doubled-token
+  coverage good). Zero HIGH and zero MEDIUM findings; per verdict
+  rule "PASS if zero HIGH and ≤3 MEDIUM", verdict is PASS. The two
+  LOW fixes are small and verbatim-substitutable and may be applied
+  in the post-human-normalize pass.
