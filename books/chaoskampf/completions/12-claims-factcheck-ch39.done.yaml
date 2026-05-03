@@ -1,0 +1,66 @@
+stage: claims-factcheck
+chapter: 39-C6-near-eastern-mediterranean-transmission
+timestamp: 2026-05-03T16:34:14Z
+status: completed
+agent_model: claude-opus-4-7-1m
+inputs:
+  - chapters/39-C6-near-eastern-mediterranean-transmission.claims.adoc
+  - prompts/09-claims-factcheck-ch39.prompt.md
+  - chapters/03-marduk-tiamat.claims.approved.adoc
+  - chapters/05-kumarbi-ullikummi.claims.approved.adoc
+  - chapters/07-baal-yamm-lotan.claims.approved.adoc
+  - chapters/08-yahweh-leviathan-rahab.claims.approved.adoc
+  - chapters/09-revelation-red-dragon.claims.approved.adoc
+  - chapters/10-christian-reception.claims.approved.adoc
+  - chapters/11-zeus-typhon.claims.approved.adoc
+  - chapters/12-greek-dragons-after-typhon.claims.approved.adoc
+  - chapters/35-C2-combat-as-sovereignty.claims.factcheck.yaml
+  - chapters/37-C4-eschatological-displacement.claims.factcheck.yaml
+  - chapters/38-C5-ie-hero-slay-serpent-formula.claims.adoc
+  - sources.yaml
+  - glossary.yaml
+  - toc.yaml
+outputs:
+  - file: chapters/39-C6-near-eastern-mediterranean-transmission.claims.factcheck.yaml
+    lines: 713
+verdict: REVISE
+summary: >
+  Fresh-context audit of Ch39 (C6, Near-Eastern → Mediterranean
+  Transmission) finds 7 total findings (1 HIGH, 1 MEDIUM, 2 LOW,
+  3 NOTE) on 85 paragraph-claims and 154 EVIDENCE tokens routing
+  through 16 source IDs (all 16 verified present in sources.yaml).
+  The single HIGH finding (FIND-01) is a localised cluster of four
+  broken chapter-number cross-references at line 392's enumeration of
+  the principal "independent attestations" outside the Mediterranean
+  chain — Chinese material is at Ch21 (not Ch28), Mexica at Ch24/Ch25
+  (not Ch29), Mwindo at Ch29 (not Ch27); only the Andean Ch26 pointer
+  is correct — and the line-392 footnote contains parallel fabricated
+  filenames. The §VI substantive argument is correct and load-bearing;
+  only the chapter-pointer book-keeping is wrong, and the fix is
+  verbatim-substitutable. The MEDIUM finding (FIND-02) is the
+  unscare-quoted "chaos-ordering" compound at line 259 in a Ballentine-
+  Day debate paragraph, paralleling Ch35 FIND-05's locked discipline.
+  Upstream-lookup compliance is otherwise excellent: §I correctly uses
+  Hurrian Teshub (not Tarḫunna) for the Kumarbi-Cycle storm-god with
+  an explicit cross-reference to the Ch6/Ch36 Tarḫunna form; Hoffner's
+  §15 (Song of Ullikummi) and §16 (Song of Hedammu) section-numbering
+  is correctly applied throughout §I (passing the Ch35 FIND-01 precise
+  point); §III enumerates the Day 1985 seven-passage corpus including
+  Isa 27:1 and the Job 26:12-13 + ch. 41 single entry, matching Ch8
+  line 14 exactly; §III develops the *bṯn brḥ* / *bṯn ʿqltn* verbatim
+  Isa 27:1 / KTU 1.5 epithet-pair correspondence; §II preserves the
+  Mount Casius / Ṣapānu / Jebel al-Aqra triple identification without
+  collapsing; §IV correctly attributes the Yarbro Collins primary-
+  substrate vs. Aune eclectic-composite split (since §IV is scoped to
+  Rev 12 only, the Ch37 FIND-02 bipartite Rev 12 + Rev 20 attribution
+  drift does not surface here); §V correctly presents the Marduk-into-
+  Genesis-1 case as less-decisively documented than the Ugaritic-into-
+  Israelite case per the brief's special-instructions and Day 1985's
+  awareness-and-response framing. The 4 INFERENCE markers correctly
+  use the `risk:` schema; the 2 SPECULATION markers correctly use the
+  locked `counterargument:` schema with substantive opposing positions.
+  Doubled-token discipline is consistently applied across §I-§IV
+  transmission-claim sections. Verdict REVISE on FIND-01 (one HIGH);
+  once the line-392 chapter-numbers and footnote-filenames are fixed
+  and FIND-02 is addressed for Ch35-precedent consistency, the chapter
+  passes.

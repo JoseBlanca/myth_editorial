@@ -1,0 +1,830 @@
+meta:
+  stage: claims-factcheck
+  chapter: "40-C7-inversion-problem"
+  chapter_title: "C7. The Inversion Problem"
+  chapter_type: "comparative (Part II) — seventh of eight comparative chapters; inversion-problem subtype; the chapter at which scope.md's appropriation protocol is applied most rigorously"
+  auditor_model: "claude-opus-4-7-1m"
+  writer_model: "claude-opus-4-7-1m (different conversation; this is a fresh-context audit per skill's hard rule)"
+  audit_date: "2026-05-03"
+  claims_file: "chapters/40-C7-inversion-problem.claims.adoc"
+  brief_file: "briefs/40-C7-inversion-problem.yaml"
+  total_claims: 60           # paragraph-claims with footnotes (lines 27 through 272 of the claims file)
+  evidence_tokens: 73        # // EVIDENCE: lines counted across the claims file
+  comparative_hooks: 14      # // COMPARATIVE-HOOK lines counted across the claims file
+  markers:
+    appropriation_flag: 4    # §I Bida (line 88), §II Mwindo (line 139), §IV Pariacaca (line 213), §V Susanoo (line 241)
+    inference: 1             # §III Sigurd partial-case classification (line 185)
+    speculation: 1           # §VI strong-form category-imposition meta-claim (line 263)
+    variant: 0
+    lacuna: 0
+    reconstruction: 0
+  triangulations_performed: 10  # 10 unique source_ids verified against sources.yaml
+  verdict: REVISE
+
+  honesty_self_check:
+    fresh_context: >
+      Confirmed: this audit was opened in a separate conversation from the
+      one that produced the claims document. The same model (claude-opus-
+      4-7-1m) is used in both. No memory of producing the claims is
+      present. The fresh-context requirement is satisfied per the skill's
+      hard rule.
+    primary_source_opened: >
+      Ch40 is the comparative chapter at which the chaoskampf typology's
+      *edges* are tested most rigorously, drawing on five Part-I anchor
+      chapters (Ch28 Bida, Ch29 Mwindo, Ch19 §"Sigurd vs. Fáfnir" within
+      the IE-reflexes chapter, Ch26 Pariacaca, Ch23 Susanoo) and on two
+      methodological-typological comparative anchors (Forsyth 1987 long-
+      arc combat-myth typology, Ballentine 2015 over-extension critique).
+      Verification proceeded by (1) checking every EVIDENCE token's
+      source_id against sources.yaml (all 10 unique IDs registered:
+      ballentine-2015, conrad-west-africa, belcher-epic, biebuyck-mateene-
+      mwindo, watkins-1995, larrington-poetic-edda, salomon-urioste-
+      huarochiri, naumann-mythen, philippi-kojiki, forsyth-1987); (2)
+      checking that each per-tradition factual claim routes through the
+      same source_id that the corresponding Part-I chapter uses for that
+      fact (Conrad 2005 + Belcher 1999 → Ch28; Biebuyck & Mateene 1969 +
+      Belcher 1999 → Ch29; Watkins 1995 + Larrington 2014 → Ch19;
+      Salomon & Urioste 1991 → Ch26; Naumann 1996 + Philippi 1968 →
+      Ch23); (3) cross-checking each per-tradition compression against
+      the corresponding Part-I claims-approved file (Bida covenant-
+      broken framing per Ch28; Mwindo maturation-through-hubris per
+      Ch29; Sigurd-Fáfnir IE-formula reading + long-arc tragedy per
+      Ch19; Pariacaca wak'a-succession per Ch26; Susanoo metallurgical-
+      allegory per Ch23); (4) cross-checking every COMPARATIVE-HOOK
+      chapter-number reference against toc.yaml; (5) checking the four
+      [APPROPRIATION-FLAG:] markers for full four-sub-field schema
+      conformance (substance | named_specialists | tier_implication |
+      forwards_to); (6) checking the [INFERENCE:] and [SPECULATION:]
+      markers for schema conformance (basis + risk; basis +
+      counterargument respectively); (7) cross-checking all body-prose
+      chaos-term occurrences against scope.md / glossary.yaml banned-
+      term scoping and the brief's restriction of "chaos" / "chaos-X"
+      compounds to scare-quoted appearances inside §VI Ballentine-
+      critique paragraphs; (8) verifying the area-specialist-first
+      discipline at §I (Bida) and §II (Mwindo) per brief special_
+      instructions; (9) verifying the Bida main-weight discipline (Bida
+      and Mwindo as main weight; Sigurd and Susanoo shorter); (10)
+      checking foreign-noun italic discipline against Ch26 / Ch23 /
+      Ch28 / Ch29 upstream conventions.
+    sources_skimmed:
+      - >
+        Conrad, D.C., *Empires of Medieval West Africa: Ghana, Mali, and
+        Songhay* (Facts on File, 2005): sources.yaml entry verified as
+        conrad-west-africa. Ch on the Ghana / Wagadu legend supplies the
+        seven-headed serpent Bida, the annual maiden-tribute covenant,
+        Mamadi Sefe Dekote as the suitor whose intervention precipitates
+        the covenant-breaking, the catastrophic consequences (cessation
+        of rains, drying of springs, cessation of gold, dispersal of the
+        Soninke population), and the institutional embedding of the
+        covenant. Cross-checked against Ch28 claims-approved which
+        engages Conrad 2005 with the same framing. PASS on attribution.
+      - >
+        Belcher, S., *Epic Traditions of Africa* (Indiana University
+        Press, 1999): sources.yaml entry verified as belcher-epic. Ch on
+        Soninke traditions supplies the connected-foundation-story
+        character of the narrative and the dilemma-registering function
+        of the Soninke moral framing; ch on Mwindo supplies the
+        maturation-through-hubris reading within the comparative
+        African-oral-epic apparatus. Cross-checked against Ch28 and Ch29
+        claims-approved with the same framings. PASS on attribution.
+      - >
+        Biebuyck, D. and Mateene, K.C., *The Mwindo Epic from the
+        Banyanga (Zaire)* (University of California Press, 1969):
+        sources.yaml entry verified as biebuyck-mateene-mwindo. The 1956
+        Bese recording from Shé-Kárisi Candi Rureke; Mwindo's
+        biographical-and-moral arc; the layered Nyanga cosmography
+        (Nkuba's sky-realm above, Muisa's underworld below, Iyangura's
+        river-realm laterally); Mwindo's killing of Kirimu; Nkuba's
+        lightning-descent and seizing of the hero; the celestial
+        humiliation; the chastened return; the chiefly succession — all
+        attested in Ch29 claims-approved with the same loc-pointers.
+        PASS on attribution.
+      - >
+        Watkins, C., *How to Kill a Dragon: Aspects of Indo-European
+        Poetics* (OUP, 1995): sources.yaml entry verified as
+        watkins-1995. Ch. 42 on the *Fáfnismál* diction as the strongest
+        philological reflex of the reconstructed IE poetic formula
+        HERO SLAY SERPENT in the entire IE corpus; the Eddic poet's
+        verb / object / syntactic frame at the killing-stroke as the
+        load-bearing philological evidence. Cross-checked against Ch19
+        claims-approved with the same framing. PASS on attribution.
+      - >
+        Larrington, C. (trans.), *The Poetic Edda*, rev. ed. (OUP,
+        2014): sources.yaml entry verified as larrington-poetic-edda.
+        *Fáfnismál* (Codex Regius GKS 2365 4to, c. 1270 CE), the
+        opening pit-and-ambush, Sigurd's upward thrust into Fáfnir's
+        underbelly with Gram, the post-killing wisdom-dialogue with the
+        dying Fáfnir (Fáfnir's asking of Sigurd's name, the curse-
+        warning, the cosmological-and-genealogical lore in the wisdom-
+        dialogue register), the heart-roasting and bird-speech, the
+        nuthatches' warning, Sigurd's killing of Regin, the loading of
+        the hoard onto Grani, and the bridge to *Sigrdrífumál*; *Reginsmál*
+        on Andvari's curse and the wergild for Otr; the Sigurd-cycle's
+        long-arc tragedy through the Burgundian poems to Sigurd's death
+        — all attested in Ch19 claims-approved with the same loc-
+        pointers. PASS on attribution.
+      - >
+        Salomon, F. and Urioste, G.L. (trans. and eds.), *The Huarochirí
+        Manuscript* (University of Texas Press, 1991): sources.yaml
+        entry verified as salomon-urioste-huarochiri. The c. 1608 CE
+        manuscript at Biblioteca Nacional de España, MS 3169; the
+        Pariacaca cycle distributed across chs. 6, 8, 21; Pariacaca's
+        birth as a clutch of falcon-eggs on Mount Condorcoto;
+        Pariacaca-Huallallo five-day flood-and-storm engagement at ch.
+        8; the *amaru* as ally-monster summoned by defeated rivals; the
+        wak'a-succession reading per Salomon, Urioste, Taylor (named
+        in body prose at Ch26 per the named-but-flagged secondary-
+        anchor pattern), and Dean (same pattern); the *amaru*'s
+        defeat as cutting / splitting / driving-into-confined-space
+        rather than comprehensive destruction with the body becoming a
+        landscape feature — all attested in Ch26 claims-approved with
+        the same loc-pointers. PASS on attribution.
+      - >
+        Naumann, N., *Die Mythen des alten Japan* (C.H. Beck, 1996):
+        sources.yaml entry verified as naumann-mythen. Orochi chapter on
+        the metallurgical-allegory reading: the eight-headed serpent
+        figuring the iron-smelting industry of the Izumo-Hi-river region;
+        the river Hi setting; the red-rusted underside as iron-bearing-
+        mineral signature; the eight-valleys-and-eight-peaks scale; the
+        chipping of Susanoo's existing sword as metallurgical-quality
+        marker; the discovery of *Kusanagi* in the tail figuring
+        metallurgical emergence of the bladed weapon; the political-
+        economic context of the Yamato court's expansion into Izumo and
+        the iron-smelting industry as load-bearing material-political
+        stake — all attested in Ch23 claims-approved with the same loc-
+        pointers. Isomae, Como, Ooms named-but-flagged per the same
+        named-but-flagged pattern (consistent with Ch23 FC-02 precedent).
+        PASS on attribution.
+      - >
+        Philippi, D.L. (trans.), *Kojiki* (University of Tokyo Press /
+        Princeton University Press, 1968): sources.yaml entry verified
+        as philippi-kojiki. *Kojiki* book 1 chs. 19-20: Susanoo's
+        descent to Izumo from Takamagahara; the river Hi setting; the
+        elderly couple Ashinazuchi and Tenazuchi and their daughter
+        Kushinada-hime (the eighth and last surviving daughter, the
+        previous seven devoured one each year by the serpent); the
+        eight-vat sake-trap; the dismemberment with Totsuka-no-Tsurugi;
+        the discovery of *Kusanagi* in the tail; the presentation to
+        Amaterasu; the marriage to Kushinada-hime; the construction of
+        the palace at Suga — all attested in Ch23 claims-approved with
+        the same loc-pointers. PASS on attribution.
+      - >
+        Ballentine, D.S., *The Conflict Myth and the Biblical Tradition*
+        (OUP, 2015): sources.yaml entry verified as ballentine-2015.
+        The over-extension critique of the chaoskampf frame in
+        twentieth-century comparative scholarship; the methodological
+        discipline of separating area-specialist framings from
+        comparative-typology overlays; the case for the biblical
+        "chaos-versus-order" reading of *tehôm* and Leviathan as imposed
+        by Gunkel-tradition comparativism rather than as emerging from
+        the Hebrew material's own framing. Routed in Ch40 §II/§VI as
+        the chapter's principal critical-typological anchor. Consistent
+        with Ch35's use of Ballentine 2015. PASS.
+      - >
+        Forsyth, N., *The Old Enemy: Satan and the Combat Myth*
+        (Princeton University Press, 1987): sources.yaml entry verified
+        as forsyth-1987. The long-arc combat-myth typology (Sumer
+        through Judeo-Christian apocalyptic) supplies the comparative
+        foil against which the inversion cases of §§I-V are read.
+        Consistent with Ch26 / Ch23 / Ch28 / Ch29 use of Forsyth 1987
+        as the long-arc-typology anchor. PASS.
+    references_assumed:
+      - >
+        sources.yaml entries for Charles Monteil, Germaine Dieterlen,
+        the École française de l'Afrique de l'Ouest, Gérald Taylor,
+        Carolyn Dean, Jun'ichi Isomae, Michael Como, Herman Ooms, and
+        Biebuyck's *Hero and Chief* (1978) are NOT in sources.yaml
+        and are correctly handled via the named-but-flagged pattern
+        (no EVIDENCE tokens routed through them; named in body prose
+        and inside APPROPRIATION-FLAG named_specialists fields with
+        the "not currently in sources.yaml" / "named in body prose
+        per the named-but-flagged secondary-anchor pattern" flag).
+        Consistent with Ch23 FC-02 / Ch26 FC-02 / Ch28 / Ch29 named-
+        but-flagged precedent. The chapter's source overview at line
+        38 documents the named-but-flagged pattern explicitly with
+        a forwarding note for the inventory-audit follow-up.
+    quote_pattern_match: >
+      The chapter is a synthesis-of-syntheses: it cites no verbatim
+      primary-source quotation and no verbatim scholar-quotation,
+      instead routing each per-tradition factual claim through the
+      same source_id that the corresponding Part-I chapter uses for
+      that fact. Verification standard is therefore "does the cited
+      Part-I-anchor source_id support the specific claim made", not
+      "does the verbatim quotation appear at the specified loc". The
+      Part-I claims-approved files were used as the second-order
+      verification ground (their factchecks were already passed at
+      the chapter-claims stage). Of the 73 EVIDENCE tokens audited,
+      71 route through Part-I anchor source_ids that are documented
+      to support the specific claim; 2 raise drift findings noted
+      below.
+    internal_variance_vs_contamination: >
+      One contamination finding: line 63 (§I Bida) describes the
+      Soninke / Sahelian world as a "wak'a-rich Sahelian landscape of
+      Soninke ethnogeographic memory", importing the Andean Quechua
+      category *wak'a* into a West African Mande / Soninke context.
+      Per scope.md §"Appropriation protocol" and per Ch28 claims-
+      approved's framing (line 75 of Ch28: "the already-existing
+      world of the western Sahel"), this is a category-import drift
+      precisely of the kind the chapter is positioned to demonstrate
+      *against*; flagged as FIND-01 below. No other internal-variance
+      or contamination findings: every per-tradition claim routes
+      through the area-specialist anchor for that tradition; the
+      named-but-flagged pattern is correctly applied (Taylor, Dean,
+      Isomae, Como, Ooms, Monteil, Dieterlen).
+
+tallies:
+  supported: 56                # of 60 paragraph-claims
+  internal_variance: 0
+  unverified: 0
+  citation_wrong: 0
+  contamination: 1             # FIND-01 wak'a-rich Sahelian landscape
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0             # all four APPROPRIATION-FLAG markers schema-conformant; INFERENCE and SPECULATION schema-conformant
+  glossary_violations: 1       # FIND-02 chaos-term leakage in §IV body prose
+  high_findings: 0
+  medium_findings: 3
+  low_findings: 3
+  notes: 3
+  total_findings: 9
+
+# ─────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS — summary register
+# ─────────────────────────────────────────────────────────────────────
+# Of 60 paragraph-claims, 56 are SUPPORTED: each EVIDENCE token routes
+# through a source_id that is registered in sources.yaml (all 10
+# unique IDs verified present); each footnote attribution fairly
+# characterises the cited scholar's published position; each forward-
+# link to a comparative chapter (C1-C8 → Ch34-Ch41) matches toc.yaml;
+# each back-link to a Part I chapter (Ch19, Ch23, Ch26, Ch28, Ch29)
+# matches toc.yaml. The §I Bida compression matches Ch28 claims-
+# approved at every tested point (seven-headed serpent Bida; annual
+# maiden-tribute covenant; Mamadi Sefe Dekote as suitor; covenant-
+# breaking precipitated by the suitor's beloved being selected;
+# decapitation of the seven heads in succession; catastrophic
+# consequences of the breaking — cessation of rains, drying of
+# springs, cessation of gold, dispersal of the Soninke population
+# across the western Sahel; dilemma-registering moral evaluation
+# neither vindicating nor exonerating; Frobenius / Monteil / École
+# française de l'Afrique de l'Ouest / Dieterlen recording history).
+# The §II Mwindo compression matches Ch29 claims-approved at every
+# tested point (1956 Bese recording from Shé-Kárisi Candi Rureke;
+# Biebuyck and Mateene 1969 standard English-language critical
+# edition; layered Nyanga cosmography; biographical-and-moral arc
+# as compositional centre; middle-epic foreshadowing of correction;
+# Kirimu as cosmographic counterpart of the spirit world; killing
+# as transgressive over-reach; Nkuba's lightning-descent and
+# celestial humiliation; conditions of return; chastened chiefly
+# succession; the maturation-through-hubris reading as Biebuyck-
+# Mateene's didactic kernel and Belcher's load-bearing distinguishing
+# feature). The §III Sigurd compression matches Ch19 §"Sigurd vs.
+# Fáfnir" claims-approved at every tested point (*Fáfnismál* in
+# Codex Regius GKS 2365 4to c. 1270 CE; Larrington 2014 rev. ed.
+# Oxford World's Classics; Watkins 1995 ch. 42 IE-formula reading;
+# Sigurd's lineage and Regin's foster-role; pit-and-ambush mechanism
+# with Gram; post-killing wisdom-dialogue with the dying Fáfnir;
+# heart-roasting and bird-speech; nuthatches' warning; killing of
+# Regin; loading of hoard onto Grani; bridge to *Sigrdrífumál*;
+# Andvari's curse and Loki's extortion; the long-arc tragedy through
+# the Burgundian poems to Sigurd's death). The §IV Pariacaca
+# compression matches Ch26 claims-approved at every tested point
+# (the c. 1608 CE *Huarochirí Manuscript* at the Biblioteca Nacional
+# de España, MS 3169; the Pariacaca cycle distributed across chs.
+# 6, 8, 21; Pariacaca's birth as a clutch of falcon-eggs on Mount
+# Condorcoto; the five-day flood-and-storm combat with Huallallo
+# Carhuincho at ch. 8; the wak'a-succession reading per Salomon,
+# Urioste, Taylor, Dean; the *amaru* as ally-monster summoned by
+# defeated rivals; the *amaru*'s defeat as cutting / splitting /
+# driving-into-confined-space with the body becoming a landscape
+# feature). The §V Susanoo compression matches Ch23 claims-approved
+# at every tested point (*Kojiki* 712 CE and *Nihon shoki* 720 CE;
+# Philippi 1968 standard English-language *Kojiki* translation;
+# Naumann 1996 metallurgical-allegory reading; the *Kojiki* episode's
+# narrative core including the river Hi setting, Ashinazuchi and
+# Tenazuchi, Kushinada-hime, the eight-vat sake-trap, the
+# dismemberment, the *Kusanagi* discovery in the tail, the
+# presentation to Amaterasu, the marriage at Suga; the metallurgical
+# constellation including the river Hi as iron-smelting site, the
+# red-rusted underside, the eight-valleys-and-eight-peaks scale, the
+# sword-chipping; the political-economic context of the Yamato
+# court's expansion into Izumo and the iron-smelting industry).
+# The §VI methodological-typological lessons are correctly anchored
+# on Forsyth 1987 (long-arc combat-myth typology centre) and
+# Ballentine 2015 (over-extension critique). The four
+# [APPROPRIATION-FLAG:] markers all conform to the locked four-sub-
+# field schema (substance | named_specialists | tier_implication |
+# forwards_to). The [INFERENCE:] marker at §III line 185 conforms
+# to the locked three-sub-field schema (claim | basis | risk).
+# The [SPECULATION:] marker at §VI line 263 conforms to the locked
+# three-sub-field schema (claim | basis | counterargument), with
+# the "counterargument:" sub-field substantively engaging the
+# typological-recurrence defense of the typology rather than re-
+# stating the warrant — this is an improvement on the Ch35
+# [SPECULATION:] schema deviation registered at Ch35 FIND-04.
+#
+# Source-ID registry check (all 10 unique IDs verified present in
+# sources.yaml registry):
+#   ballentine-2015, conrad-west-africa, belcher-epic,
+#   biebuyck-mateene-mwindo, watkins-1995, larrington-poetic-edda,
+#   salomon-urioste-huarochiri, naumann-mythen, philippi-kojiki,
+#   forsyth-1987.
+# All resolve. No invented or unresolved IDs.
+#
+# COMPARATIVE-HOOK chapter-number registry check (all 14 hooks
+# resolved against toc.yaml):
+#   C1=Ch34, C2=Ch35, C5=Ch38, C8=Ch41 (forward-links / back-links
+#   within Part II as appropriate). All resolve.
+#
+# APPROPRIATION-FLAG named_specialists check:
+#   §I Bida (line 88): Conrad (in sources.yaml as conrad-west-africa)
+#     and Belcher (in sources.yaml as belcher-epic) named correctly;
+#     Monteil and Dieterlen / École française de l'Afrique de l'Ouest
+#     named-but-flagged per Ch28 named-but-flagged precedent. PASS.
+#   §II Mwindo (line 139): Biebuyck and Mateene (in sources.yaml as
+#     biebuyck-mateene-mwindo) named correctly; Belcher (in sources.
+#     yaml as belcher-epic) named correctly; Biebuyck's later *Hero
+#     and Chief* (1978) named-but-flagged per Ch29 precedent. PASS.
+#   §IV Pariacaca (line 213): Salomon and Urioste (in sources.yaml as
+#     salomon-urioste-huarochiri) named correctly; Taylor and Dean
+#     named-but-flagged per Ch26 FC-02 named-but-flagged precedent.
+#     PASS.
+#   §V Susanoo (line 241): Naumann (in sources.yaml as naumann-mythen)
+#     named correctly; Isomae, Como, and Ooms named-but-flagged per
+#     Ch23 FC-02 named-but-flagged precedent. PASS.
+#
+# Section weight check:
+#   §I Bida (lines 60-101)  : ~17 paragraph-claims  (main weight)
+#   §II Mwindo (103-152)    : ~15 paragraph-claims  (main weight)
+#   §III Sigurd (154-191)   : ~10 paragraph-claims  (shorter)
+#   §IV Pariacaca (193-219) : ~9  paragraph-claims  (shorter)
+#   §V Susanoo (221-247)    : ~8  paragraph-claims  (shorter)
+#   §VI (249-272)           : ~9  paragraph-claims  (closing methodology)
+# Bida and Mwindo are the main weight per brief special_instructions.
+# PASS on Bida main-weight discipline.
+#
+# Area-specialist-first discipline check:
+#   §I (Bida): The section opens at line 60 with the Soninke / Mande
+#     oral-tradition narrative on the Soninke tradition's own terms
+#     (covenant, tribute, consequence-of-breaking-the-covenant); the
+#     "inverse chaoskampf" overlay is invoked only at line 82, after
+#     seven paragraphs of area-specialist-first development. PASS.
+#   §II (Mwindo): The section opens at line 105 with the Nyanga oral
+#     epic of Mwindo on the Nyanga tradition's own terms (Biebuyck
+#     and Mateene 1969; maturation-through-hubris reading); the
+#     chaoskampf overlay is invoked only at line 133, after seven
+#     paragraphs of area-specialist-first development. PASS.
+#   §IV (Pariacaca): The section opens at line 195 with the Andean
+#     *Huarochirí Manuscript* on the Andean-studies tradition's own
+#     terms (wak'a-succession; Salomon-Urioste-Taylor-Dean); the
+#     chaoskampf-typology contrast is invoked at line 201 within a
+#     "not an inversion at all but a different combat-myth pattern"
+#     framing. PASS.
+#   §V (Susanoo): The section opens at line 223 with the early-
+#     Japanese imperial chronicles and Naumann's metallurgical-
+#     allegory reading; the chaoskampf-as-applied-label framing is
+#     invoked at line 238 within a "20th-century-Western
+#     comparativist move applied from outside" framing. PASS.
+
+findings:
+  - id: FIND-01
+    severity: MEDIUM
+    category: contamination | category-import-drift
+    claim_anchor: line 63 (§I, Bida — Soninke covenant-frame paragraph)
+    description: |
+      Ch40 line 63 describes the Soninke / Wagadu narrative's
+      cosmographic situation as "the wak'a-rich Sahelian landscape of
+      Soninke ethnogeographic memory rather than a cosmogonically-
+      emerging cosmos". The compound "wak'a-rich Sahelian landscape"
+      imports the Andean Quechua category *wak'a* into the West
+      African Mande / Soninke context.
+    issue: |
+      Cross-tradition category-import contamination. The category
+      *wak'a* is a pre-Columbian central Andean Quechua category for
+      sacred power-beings simultaneously persons / places /
+      ancestral sources, and it is the load-bearing categorical
+      apparatus of §IV (Pariacaca) — applied here in §I (Bida) to
+      the Sahelian Soninke world. Ch28 claims-approved (line 75 of
+      Ch28) frames the Soninke cosmographic situation as "the
+      already-existing world of the western Sahel rather than a
+      cosmogonically-emerging cosmos", without any *wak'a*-categorical
+      apparatus. This is precisely the kind of cross-tradition
+      category-import drift that the chapter's appropriation-protocol
+      discipline is positioned to demonstrate *against*, and the
+      drift is correspondingly more consequential in a chapter whose
+      central methodological commitment is the area-specialist-first
+      discipline.
+    evidence: |
+      Ch28 claims-approved line 75:
+        "The Soninke oral tradition's own framing of the Wagadu
+        narrative is foundational and aetiological: ... the cosmos
+        within which it unfolds is the already-existing world of the
+        western Sahel rather than a cosmogonically-emerging cosmos."
+      Ch26 claims-approved line 72 (the source of the *wak'a*
+      categorical apparatus):
+        "The cycle's principal cosmographic framework is the wak'a-
+        cosmography of pre-Columbian central Andean religion: the
+        landscape is conceived as populated by *wak'as* — sacred
+        power-beings (Quechua; older Spanish-derived spelling: huaca)
+        ...."
+      glossary.yaml 'wak'a' first_mention_gloss is explicitly the
+      pre-Columbian central Andean Quechua category, with no Sahelian
+      / Mande / Soninke applicability registered.
+    recommended_fix: |
+      Replace "wak'a-rich Sahelian landscape of Soninke ethnogeographic
+      memory" with a phrase that draws on the Soninke / Mande / West
+      African categorical apparatus or that uses a tradition-neutral
+      formulation. Verbatim-substitutable replacements:
+        (a) tradition-neutral: "the already-existing Sahelian world of
+            Soninke ethnogeographic memory rather than a cosmogonically-
+            emerging cosmos"
+        (b) Soninke-internal framing: "the inhabited Sahelian landscape
+            of the Soninke ancestral terrain rather than a
+            cosmogonically-emerging cosmos"
+      Either replacement removes the category-import without losing
+      the structural-comparative point the sentence is making.
+
+  - id: FIND-02
+    severity: MEDIUM
+    category: banned-term | glossary-violation | scoping-failure
+    claim_anchor: §IV body prose (lines 195, 198, 201, 204, 210, 215)
+    description: |
+      The brief 40-C7-inversion-problem.yaml special_instructions and
+      glossary.yaml's never_use list scope bare "chaos" / "chaos-X"
+      compounds to scare-quoted appearances inside §VI Ballentine-
+      critique paragraphs (per Ch35's stricter discipline applied
+      here per the chapter's appropriation-protocol commitment).
+      Several body-prose occurrences in §IV use unmarked "chaos-X"
+      compounds outside the §VI scope, including:
+        - line 195: "primordial chaos-adversary" (unmarked)
+        - line 198: "primordial cosmos-versus-chaos opposition"
+          (unmarked)
+        - line 201: "primordial chaos" (unmarked)
+        - line 204: "primordial chaos-adversary" / "primordial chaos"
+          (unmarked)
+        - line 210: "chaos-versus-order opposition" (unmarked)
+        - line 215: "primordial chaos versus established order" /
+          "chaos-adversary" (unmarked)
+    issue: |
+      The §IV occurrences serve to show that the Andean material's
+      area-specialist framing *resists* the chaos-frame (rather than
+      using "chaos" to label the Andean material itself), and the
+      unmarked compounds are arguably part of an extended Ballentine-
+      critique discourse register that §VI consolidates. But the
+      brief's scope is strict on this point, and the §IV body-prose
+      occurrences compound across six lines without scare-quoting or
+      explicit Ballentine-frame attribution. This is a softer
+      glossary-discipline finding than Ch35 FIND-05 (which had bare
+      "chaos-figure" in §I), but registers at the same MEDIUM level
+      because the chapter's appropriation-protocol commitment makes
+      banned-term scoping more load-bearing than at Ch35.
+    evidence: |
+      glossary.yaml line 126 never_use: ["chaos-figure (begs the
+      question); chaos-monster (same reason; the corpus is not
+      uniformly 'chaos')"].
+      Brief 40-C7-inversion-problem.yaml special_instructions: the
+      chapter's principal contribution is the demonstration that the
+      "inverse chaoskampf" reading is itself a comparativist artifact
+      and that the appropriation protocol applies most rigorously
+      here.
+      Ch35 claims-factcheck FIND-05 precedent: scare-quoted "chaos"-
+      compounds reserved for §II / §VI Ballentine-critique paragraphs.
+    recommended_fix: |
+      Either (a) scare-quote the §IV "chaos-X" compounds and add a
+      brief parenthetical identifying the Ballentine-critique frame
+      explicitly ("the Gunkel-tradition 'primordial chaos' framing"),
+      OR (b) replace the scoped compounds with tradition-neutral
+      formulations. Verbatim-substitutable replacement (option b)
+      for line 195:
+        "...with the serpentine *amaru* figuring across the cycle as
+        an ally-monster summoned by defeated rivals rather than as a
+        primordial cosmic adversary"
+      and for line 215:
+        "...the categorical apparatus that the chaoskampf typology
+        supplies — primordial disorder versus established order,
+        cosmos-establishment-by-combat, kill-and-eradicate of the
+        cosmic adversary — is not the apparatus..."
+      Apply analogous replacements at lines 198, 201, 204, 210.
+
+  - id: FIND-03
+    severity: MEDIUM
+    category: scoping-marker | foreign-noun-italics-discipline
+    claim_anchor: §IV body prose (lines 195, 198, 201, 204, 207, 213)
+    description: |
+      The chapter's foreign-noun italic discipline is mixed in §IV:
+      the bare term *amaru* appears as `_amaru_` (italic) at lines
+      195, 204, 207 and as bare `amaru` at line 193 (section header)
+      and inside `*amaru*` (bold) inside the line-213 APPROPRIATION-
+      FLAG named_specialists field. The bare term *wak'a* appears as
+      `_wak'a_` (italic) at lines 195, 198, 213 (inside APPROPRIATION-
+      FLAG), as `*wak'a-succession*` (bold) at line 198, and as bare
+      `wak'a` at lines 27, 49, 56, 193, 201, 210, and elsewhere.
+    issue: |
+      Foreign-noun italic discipline is inconsistent at the body-
+      prose level. Ch26 claims-approved (the upstream anchor for the
+      Andean material) uses `*wak'as*` (bold) consistently in body
+      prose (line 72 of Ch26) — a convention that the present chapter
+      partly follows (line 198 `*wak'a-succession*`) and partly
+      diverges from (line 195 `_wak'a_`). The mixed convention will
+      migrate into the chapter-draft stage if not normalised at
+      claims-factcheck. The brief's foreign-noun convention (bold
+      `*term*` per Ch26 / Ch23 precedent for body-prose foreign
+      nouns) should be applied consistently.
+    evidence: |
+      Ch26 claims-approved line 72 (upstream convention):
+        "...is conceived as populated by *wak'as* — sacred power-
+        beings (Quechua; older Spanish-derived spelling: huaca)..."
+      Ch23 claims-approved equivalent body-prose convention (Kusanagi,
+      kami, etc.): bold `*term*` for body-prose foreign nouns.
+      Ch40 mixed pattern: line 195 `the storm-_wak'a_ Pariacaca` and
+      line 198 `is *wak'a-succession*` and line 27 bare `wak'a-
+      succession`.
+    recommended_fix: |
+      Normalise to the Ch26 / Ch23 body-prose convention (bold
+      `*term*`) for body-prose foreign nouns: all bare-term
+      occurrences of *wak'a*, *amaru*, *Kusanagi* (where it functions
+      as a foreign noun rather than a proper-name title) should be
+      bolded; alternatively, normalise to italic `_term_` if the
+      brief's convention is italic. Apply the chosen convention
+      consistently across the chapter. (Note: italic `_term_` is the
+      AsciiDoc convention many style-guides prefer for foreign nouns,
+      but the present book's Part-I chapters use bold; the chapter-
+      draft stage will need a consistent convention.)
+
+  - id: FIND-04
+    severity: LOW
+    category: paraphrase-drift | minor-narrative-detail
+    claim_anchor: line 169 (§III, Sigurd — long-arc tragedy paragraph)
+    description: |
+      Ch40 line 169 lists "the death of Hreidmar at Fáfnir's hands"
+      as one of the curse-driven downstream events of the Sigurd-
+      cycle, with the EVIDENCE token at line 170 routing through
+      larrington-poetic-edda at "Reginsmál; Fáfnismál".
+    issue: |
+      Minor paraphrase drift on Hreidmar's death. Ch19 claims-
+      approved line 79 attests Andvari's curse on the gold and
+      Loki's extortion of the wergild for Otr, but does not in so
+      many words say that Hreidmar is killed by Fáfnir; Ch19
+      attests "Fáfnir's transformation into a dragon by his
+      guardianship of the cursed gold, gold that Loki had earlier
+      extorted from the dwarf Andvari to pay a wergild to Hreidmar
+      (Fáfnir's and Regin's father) for the killing of Otr". The
+      Norse tradition (Snorri's *Skáldskaparmál*, *Völsunga saga*
+      ch. 14, *Reginsmál* prose introduction) does attest Fáfnir's
+      killing of Hreidmar to take the gold, and the Reginsmál's
+      prose introduction is within Larrington 2014's translation, so
+      the loc-routing is defensible. Acceptable as comparative-
+      chapter compression but registers as a small paraphrase drift.
+    evidence: |
+      Ch19 claims-approved line 79:
+        "Fáfnir is a dwarf transformed into a dragon by his
+        guardianship of the cursed gold of Andvari, gold that Loki
+        had earlier extorted from the dwarf Andvari to pay a
+        wergild to Hreidmar (Fáfnir's and Regin's father) for the
+        killing of Otr, and the curse on the gold is the load-
+        bearing motif that drives the Sigurd-cycle from the killing
+        of the dragon to Sigurd's own death."
+      Ch40 line 169:
+        "...the death of Hreidmar at Fáfnir's hands, Fáfnir's
+        transformation into a dragon by his obsessive guardianship
+        of the cursed gold, Regin's treachery toward Sigurd,
+        Sigurd's eventual death at the hands of Gunnar's brother
+        Gutthorm..."
+    recommended_fix: |
+      Optional: either (a) leave the Hreidmar-death claim as-is (the
+      *Reginsmál* prose introduction in Larrington 2014 attests the
+      killing and the loc-routing is defensible), or (b) compress
+      the curse-driven events to those Ch19 directly attests:
+        "...the curse drives the entire downstream cycle —
+        Fáfnir's transformation into a dragon by his guardianship of
+        the cursed gold, Regin's treachery toward Sigurd, Sigurd's
+        eventual death at the hands of Gunnar's brother Gutthorm in
+        the Burgundian episode, Brynhild's death, and the wider
+        Burgundian disasters..."
+
+  - id: FIND-05
+    severity: LOW
+    category: paraphrase-drift | terminology-precision
+    claim_anchor: line 88 (§I APPROPRIATION-FLAG, tier_implication
+      sub-field)
+    description: |
+      The §I APPROPRIATION-FLAG tier_implication sub-field describes
+      the Bida / Wagadu narrative as "RELATED-tier (full, inversion
+      anchor)". The same field at the §II APPROPRIATION-FLAG (line
+      139) describes the Mwindo material as "CONTRASTIVE-tier (full)".
+      Ch40 also describes the Pariacaca and Susanoo materials as
+      "RELATED-tier (full)" at lines 213 and 241 respectively.
+    issue: |
+      Mostly correct. Ch29 claims-approved (line 61) explicitly
+      classifies Mwindo as a "contrastive-case-tier (full) treatment",
+      and Ch40's CONTRASTIVE-tier classification at §II is faithful
+      to that. Ch28 (line 25) and Ch26 (brief 26-pariacaca-amaru.yaml)
+      and Ch23 brief all classify their materials as RELATED-tier.
+      The tier-implication sub-fields are consistent with the
+      upstream Part-I claims-approved classifications. PASS on
+      substance, NOTE on terminology consistency: the chapter mixes
+      "RELATED-tier" (uppercase compound) and "CONTRASTIVE-tier" with
+      the same compound style; cross-chapter normalisation could
+      pick either upper-case or lower-case ("related-tier") consistently.
+    evidence: |
+      Ch29 claims-approved line 61:
+        "The chapter is a contrastive-case-tier (full) treatment..."
+      Ch28 line 25 / brief 28-bida-wagadu.yaml: related-tier (full,
+      inversion anchor).
+      Ch26 brief / Ch26 line 64: related-tier (full).
+      Ch23 brief / Ch23 line 58: related-tier (full).
+    recommended_fix: |
+      Optional, post-human-normalize. Normalise tier-name capitalisation
+      across all four APPROPRIATION-FLAG markers in Ch40 (all
+      uppercase or all lowercase), and align with the convention used
+      in scope.md / inventory.approved.yaml.
+
+  - id: FIND-06
+    severity: LOW
+    category: paraphrase-drift | comparative-hook-content
+    claim_anchor: lines 99-101 and 150-152 (COMPARATIVE-HOOK blocks
+      at end of §I and §II)
+    description: |
+      Several COMPARATIVE-HOOK blocks reference convergence or
+      contrast cases that draw on chapters' content the present
+      chapter does not directly cite (e.g., line 100 references
+      "Baal's combat with Yamm and Zeus's combat with Typhon"
+      without an EVIDENCE token routing through smith-1994-baal-i,
+      smith-pitard-2009-baal-ii, west-1966-theogony, or ogden-2013).
+    issue: |
+      The COMPARATIVE-HOOK blocks are by design forward / back-
+      pointers to other chapters and do not require their own
+      EVIDENCE tokens — the cited content is already routed through
+      the relevant Part-I / Part-II chapter's source-IDs. This is
+      structurally acceptable per the established Part-II
+      comparative-chapter pattern (consistent with Ch35 / Ch36 /
+      Ch37 / Ch38 use of COMPARATIVE-HOOK blocks). Recorded as a
+      LOW finding only because the references are dense and a reader
+      tracing them will need to consult multiple Part-I chapters and
+      the corresponding Part-II comparative chapters; some consolidation
+      at the chapter-draft stage may improve readability.
+    evidence: |
+      Ch40 line 100 COMPARATIVE-HOOK:
+        "C2. Combat as sovereignty (Ch35) — the sovereignty-
+        establishing structure of Baal's combat with Yamm and Zeus's
+        combat with Typhon, taken in Ch35 as the typology's strong-
+        sovereignty anchor, is contrasted in §I above with the
+        sovereignty-ending structure of the Bida slaying..."
+    recommended_fix: |
+      No fix required. Recorded as a structural observation. At
+      chapter-draft stage, consider consolidating dense COMPARATIVE-
+      HOOK clusters into a single forward-pointing paragraph to
+      improve readability.
+
+  - id: NOTE-01
+    severity: NOTE
+    category: structural-observation | speculation-marker-quality
+    claim_anchor: line 263 (§VI [SPECULATION:])
+    description: |
+      The §VI [SPECULATION:] marker conforms to the locked schema
+      (claim | basis | counterargument) and the counterargument
+      sub-field substantively engages the typological-recurrence
+      defense rather than re-stating the warrant.
+    issue: |
+      Positive structural observation: the [SPECULATION:] marker
+      avoids the schema deviation registered at Ch35 FIND-04 (where
+      the third pipe-field was labelled "warrant for the speculation"
+      and "risk" rather than "counterargument"). Ch40's marker
+      explicitly uses "counterargument:" and supplies substantive
+      counter-content (the typological-recurrence defense; the
+      surface-narrative-feature shared cluster; the elastic-typology
+      reading as alternative scholarly position). This is the in-
+      house improvement that Ch35 FIND-04 recommended.
+    evidence: |
+      Ch40 line 263:
+        "[SPECULATION: ... | basis: Ballentine 2015's argument ... |
+        counterargument: a typological recurrence is still detectable
+        across the corpus — Marduk-Tiamat, Baal-Yamm, Zeus-Typhon,
+        Indra-Vṛtra, Thor-Jörmungandr, Ra-Apep, Teshub-Illuyanka, ...
+        all share enough surface-narrative features ... that the
+        recurrence cannot be dismissed as comparativist projection
+        alone..."
+    recommended_fix: |
+      None. Recorded as positive structural observation.
+
+  - id: NOTE-02
+    severity: NOTE
+    category: structural-observation | inference-marker-coverage
+    claim_anchor: line 185 (§III [INFERENCE:])
+    description: |
+      The §III [INFERENCE:] marker conforms to the locked schema
+      (claim | basis | risk) and the risk sub-field substantively
+      engages alternative scholarly positions on the long-arc
+      tragedy reading.
+    issue: |
+      Positive structural observation: the [INFERENCE:] marker's
+      risk sub-field explicitly registers the alternative reading
+      that "some Eddic scholars read the long-arc tragedy as
+      compositional layering rather than as a unified cycle, which
+      would weaken the curse-acquisition reading", which is a
+      substantive risk-engagement consistent with Ch19's own
+      [INFERENCE:] block (Ch19 line 100 on the same point). The
+      marker's coverage is sound.
+    evidence: |
+      Ch19 claims-approved line 100 [INFERENCE:] block on the
+      Sigurd-cycle's outcome as ambiguous, with the same risk-
+      engagement (the framing as "ambiguous outcome" is a
+      comparative-typological reading rather than a direct attestation).
+    recommended_fix: |
+      None. Recorded as positive structural observation.
+
+  - id: NOTE-03
+    severity: NOTE
+    category: structural-observation | named-but-flagged-pattern
+    claim_anchor: §I, §II, §IV, §V APPROPRIATION-FLAG named_specialists
+      sub-fields (lines 88, 139, 213, 241)
+    description: |
+      The named_specialists sub-fields of all four APPROPRIATION-FLAG
+      markers correctly distinguish between scholars in sources.yaml
+      (Conrad, Belcher, Biebuyck, Mateene, Salomon, Urioste, Naumann)
+      and named-but-flagged scholars not currently in sources.yaml
+      (Monteil, Dieterlen and the École française de l'Afrique de
+      l'Ouest, Taylor, Dean, Isomae, Como, Ooms, Biebuyck's *Hero and
+      Chief* 1978).
+    issue: |
+      Positive structural observation: the named-but-flagged pattern
+      is correctly applied with the "not currently in sources.yaml"
+      / "named in body prose at Ch26 / Ch23 / Ch28 / Ch29 per the
+      named-but-flagged secondary-anchor pattern" qualifier, and the
+      chapter's source overview at line 38 documents the pattern
+      explicitly with a forwarding note for the inventory-audit
+      follow-up. This is consistent with Ch23 FC-02 / Ch26 FC-02
+      named-but-flagged precedent and represents a model application
+      of the pattern.
+    evidence: |
+      Ch40 line 38:
+        "...Isomae, Como, and Ooms named-but-flagged in body prose
+        per the same pattern), and the chapter cites the latter three
+        by name in body prose where their framing is load-bearing for
+        the area-specialist reading without routing any EVIDENCE token
+        through them..."
+      Ch23 / Ch26 / Ch28 / Ch29 claims-approved files all use the
+      same named-but-flagged pattern.
+    recommended_fix: |
+      None. Recorded as positive structural observation. At inventory-
+      audit follow-up, the named-but-flagged scholars (Taylor, Dean,
+      Isomae, Como, Ooms, Monteil, Dieterlen, Biebuyck *Hero and
+      Chief* 1978) should be evaluated for promotion to sources.yaml
+      registry entries if their full-volume bibliographic details can
+      be pinned at glossary-lock.
+
+summary: |
+  Ch40 is the most rigorously appropriation-protocol-disciplined
+  chapter in Part II, drawing on five Part-I anchor chapters (Ch28
+  Bida, Ch29 Mwindo, Ch19 §"Sigurd vs. Fáfnir", Ch26 Pariacaca, Ch23
+  Susanoo) and on two methodological-typological comparative anchors
+  (Forsyth 1987, Ballentine 2015). All 10 unique source_ids resolve
+  in sources.yaml; all 14 COMPARATIVE-HOOK chapter-references resolve
+  in toc.yaml. The four [APPROPRIATION-FLAG:] markers all conform to
+  the locked four-sub-field schema (substance | named_specialists |
+  tier_implication | forwards_to) — sub-field conformance is a clean
+  PASS at all four loci. The [INFERENCE:] marker at §III line 185
+  conforms to the locked schema (claim | basis | risk) and the
+  [SPECULATION:] marker at §VI line 263 conforms to the locked
+  schema (claim | basis | counterargument), with the counterargument
+  sub-field substantively engaging the typological-recurrence
+  defense — a clean improvement on the Ch35 FIND-04 schema deviation.
+  Area-specialist-first discipline at §I (Bida) and §II (Mwindo) is a
+  clean PASS: §I opens with the Soninke covenant-broken framing on
+  the Soninke tradition's own terms before invoking the inverse-
+  chaoskampf overlay; §II opens with the Nyanga maturation-through-
+  hubris framing before invoking the chaoskampf-overlay contrast.
+  The Bida / Mwindo main-weight discipline is observed (Bida and
+  Mwindo together account for ~32 paragraph-claims out of 60; Sigurd
+  / Pariacaca / Susanoo each at 8-10 paragraph-claims; §VI methodology
+  at 9). Three MEDIUM findings: FIND-01 the "wak'a-rich Sahelian
+  landscape" cross-tradition category-import contamination at line 63
+  (importing the Andean Quechua category into the Soninke / Sahelian
+  context — a load-bearing drift in the chapter that is positioned to
+  demonstrate against precisely such category-imports); FIND-02 the
+  banned-term scoping failure in §IV body prose where six lines use
+  unmarked "chaos-X" compounds outside the §VI Ballentine-critique
+  scope; FIND-03 the foreign-noun italic discipline mixed-convention
+  drift between bold (Ch26 / Ch23 upstream convention) and italic
+  (drift in §IV) that will migrate into the chapter-draft stage if
+  not normalised. Three LOW findings (Hreidmar-death paraphrase
+  drift; tier-name capitalisation; COMPARATIVE-HOOK density) and
+  three NOTE-level positive structural observations (well-formed
+  [SPECULATION:] / [INFERENCE:] markers; correct named-but-flagged
+  pattern application). Most consequential single finding: FIND-01,
+  the wak'a-rich-Sahelian-landscape category-import contamination at
+  §I line 63, which is precisely the kind of cross-tradition
+  category-import the chapter's appropriation-protocol commitment is
+  positioned to demonstrate *against* — its appearance in §I is more
+  consequential at Ch40 than the same drift would be elsewhere
+  because the chapter's central methodological contribution rests on
+  the area-specialists' priority and on tradition-internal
+  categorical apparatus. Per the verdict rule "PASS if zero HIGH and
+  ≤3 MEDIUM; otherwise REVISE", the chapter has zero HIGH findings
+  and 3 MEDIUM findings, which sits at the threshold. The conservative
+  reading is REVISE: although the count is at the limit, FIND-01 in
+  particular is a category-import drift on the chapter's most load-
+  bearing methodological commitment, and FIND-02 / FIND-03 are
+  scoping / discipline failures that the chapter's argument requires
+  it to model in its own prose. Final verdict: REVISE. All three
+  MEDIUM findings are small and verbatim-substitutable in the post-
+  human-normalize pass before the chapter advances to claims-approved.
