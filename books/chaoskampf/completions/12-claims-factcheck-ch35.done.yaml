@@ -1,0 +1,93 @@
+stage: "claims-factcheck"
+chapter: "35-C2-combat-as-sovereignty"
+timestamp: "2026-05-03T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7-1m"
+inputs:
+  - file: "chapters/35-C2-combat-as-sovereignty.claims.adoc"
+    claims_identified: 81
+    evidence_tokens: 133
+    speculation_markers: 2
+    inference_markers: 2
+    comparative_hooks: 19
+  - file: "briefs/35-C2-combat-as-sovereignty.yaml"
+  - file: "scope.md"
+  - file: "sources.yaml"
+  - file: "glossary.yaml"
+  - file: "toc.yaml"
+  - file: "chapters/02-ninurta-anzu.claims.approved.adoc"
+  - file: "chapters/03-marduk-tiamat.claims.approved.adoc"
+  - file: "chapters/05-kumarbi-ullikummi.claims.approved.adoc"
+  - file: "chapters/07-baal-yamm-lotan.claims.approved.adoc"
+  - file: "chapters/08-yahweh-leviathan-rahab.claims.approved.adoc"
+  - file: "chapters/11-zeus-typhon.claims.approved.adoc"
+  - file: "chapters/13-thraetaona-azidahaka.claims.approved.adoc"
+  - file: "chapters/14-indra-vrtra.claims.approved.adoc"
+outputs:
+  - file: "chapters/35-C2-combat-as-sovereignty.claims.factcheck.yaml"
+    lines: 786
+verdict: REVISE
+summary: >
+  Audited 81 paragraph-claims (133 EVIDENCE tokens, 19 COMPARATIVE-HOOK
+  lines, 2 [INFERENCE:] blocks, 2 [SPECULATION:] blocks) in the second
+  comparative chapter of Part II against sources.yaml, the Ch35 brief,
+  and eight Part-I claims-approved files (Ch2 Ninurta-Anzû, Ch3 Marduk-
+  Tiamat, Ch5 Kumarbi-Ullikummi, Ch7 Baal-Yamm-Lôtan, Ch8 Yahweh-
+  Leviathan-Rahab, Ch11 Zeus-Typhon, Ch13 Thraētaona-Aži Dahāka, Ch14
+  Indra-Vṛtra). All 19 unique source_ids referenced in EVIDENCE tokens
+  resolve to sources.yaml entries (ballentine-2015, lincoln-2012,
+  forsyth-1987, smith-1994-baal-i, smith-pitard-2009-baal-ii, west-1966-
+  theogony, ogden-2013, jamison-brereton-2014, benveniste-renou-1934,
+  watkins-1995, hoffner-1998, annus-2001-anzu, foster-2005, lambert-
+  2013, day-1985, gunkel-1895, west-1997, west-2007, burkert-1992). All
+  19 COMPARATIVE-HOOK references resolve against toc.yaml: forward-links
+  C3=Ch36 through C8=Ch41, plus C1=Ch34 cross-link; back-links to Ch2,
+  Ch3, Ch5, Ch7, Ch8, Ch11, Ch13, Ch14, Ch33, Ch34 all resolve. The
+  brief's special_instructions are met on the load-bearing points: §II
+  is structured around the Ballentine 2015 alternative-sovereign reading
+  as principal interpretive frame for the sovereignty subtype; §IV
+  develops the Anzû-to-Marduk genealogy as the chapter's worked
+  example, with Lambert 2013 and Annus 2001 as paired anchors and the
+  cosmogonic-element-addition-to-sovereignty-skeleton reading correctly
+  attributed; §VI ritual-and-state pattern is correctly anchored on
+  Lincoln 2012's political-ideological reading; the chapter does not
+  re-narrate the seven cases at length per the no-re-narration
+  discipline. Total findings: 11 (0 HIGH, 5 MEDIUM, 3 LOW, 3 NOTE). The
+  five MEDIUM findings are: (FIND-01) Hoffner 1998 §16-vs-§15 section-
+  number error on the *Song of Ullikummi* (Ch5 attests §15 = Ullikummi,
+  §16 = Hedammu); (FIND-02) attribution-drift on Hesiodic Typhon
+  conception — Ch35 line 65 attributes the "to challenge Olympian
+  sovereignty" motive to Hesiod / West 1966, but Ch11 attests this
+  motive is Apollodorian (Bibliotheca 1.6.3) and Hesiod gives no
+  generative motive in Theog. 820–822; (FIND-03) epithet error
+  attributing "lord of Nippur" to Ninurta where Ch2 attests "warrior-
+  god of Nippur" (the lord-of-Nippur title is conventionally Enlil's);
+  (FIND-04) marker-syntax issue — both [SPECULATION:] blocks (lines
+  249, 292) use non-standard third pipe-field labels ("warrant for the
+  speculation", "risk") in place of the required "counterargument"
+  field, with Ch34 line 213 supplying the in-house precedent for the
+  correct format; (FIND-05) chaos-term leakage — line 91 has scare-
+  quoted "chaos-figure" in §I body prose (the brief restricts scare-
+  quoted "chaos" to §II/§VI), and lines 103/107/356 have unscare-
+  quoted "chaos-ordering" / "chaos-shorthand" compounds outside the
+  §II/§VI Ballentine-critique zone. The three LOW findings are: Vṛtra
+  hymn-list compression omitting RV 1.80 and 5.32 (FIND-06); Job 26/41
+  corpus-listing where Ch8 pairs as "Job 26 with ch. 41" (FIND-07);
+  Vṛtra "serpent-demon" gloss where Ch14 uses "serpent-adversary"
+  (FIND-08). Three NOTE-level structural observations are forwarded
+  to post-human-normalize. Most consequential single finding: FIND-01,
+  the Hoffner-1998 §16-vs-§15 section-number error on the *Song of
+  Ullikummi*, because it is a citation-wrong finding (not just a
+  paraphrase drift) that could mislead readers tracing the reference
+  back to Hoffner's edition, and because it appears in both the body
+  prose (line 88) and in two EVIDENCE-token loc fields (lines 89, 186);
+  the same error needs four-place correction. Verdict: REVISE — five
+  MEDIUM findings exceed the verdict-rule threshold (≤3 MEDIUM ⇒ PASS).
+  All five MEDIUM fixes are small and verbatim-substitutable; none
+  affect the chapter's central argument or its source-ID discipline.
+  Recommended path: apply the five MEDIUM fixes (Hoffner §15 four-
+  place correction; Hesiodic-vs-Apollodoran Typhon-motive split;
+  Ninurta epithet "warrior-god of Nippur"; SPECULATION-marker pipe-
+  field re-labeling with substantive counterargument content; chaos-
+  term scoping in §I lines 91/103/107) in post-human-normalize, then
+  forward to claims-approved.

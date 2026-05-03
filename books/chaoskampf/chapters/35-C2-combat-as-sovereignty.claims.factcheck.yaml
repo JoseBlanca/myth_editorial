@@ -1,0 +1,786 @@
+meta:
+  stage: claims-factcheck
+  chapter: "35-C2-combat-as-sovereignty"
+  chapter_title: "C2. Combat as Sovereignty"
+  chapter_type: "comparative (Part II) — second of eight comparative chapters; sovereignty-combat subtype"
+  auditor_model: "claude-opus-4-7-1m"
+  writer_model: "claude-opus-4-7-1m (different conversation; this is a fresh-context audit per skill's hard rule)"
+  audit_date: "2026-05-03"
+  claims_file: "chapters/35-C2-combat-as-sovereignty.claims.adoc"
+  brief_file: "briefs/35-C2-combat-as-sovereignty.yaml"
+  total_claims: 81           # paragraph-claims with footnotes
+  evidence_tokens: 133
+  comparative_hooks: 19
+  markers:
+    inference: 2
+    speculation: 2
+    variant: 0
+    lacuna: 0
+    reconstruction: 0
+  triangulations_performed: 19   # unique source_ids verified against sources.yaml
+  verdict: REVISE
+
+  honesty_self_check:
+    fresh_context: >
+      Confirmed: this audit was opened in a separate conversation from the one
+      that produced the claims document. The same model (claude-opus-4-7-1m)
+      is used in both, but the fresh-context requirement is satisfied per the
+      skill's hard rule. No memory of producing the claims is present.
+    primary_source_opened: >
+      Ch35 is a comparative-typology synthesis chapter that draws (a) per-
+      tradition area-specialist anchors for narrative content of the seven
+      cases (Baal-Yamm-Lôtan, Zeus-Typhon, Indra-Vṛtra, Thraētaona-Aži
+      Dahāka, Teshub-Ullikummi, Ninurta-Anzû, Yahweh-Leviathan-Rahab) plus
+      the Marduk-Tiamat supporting case for §IV's Anzû-to-Marduk genealogy,
+      and (b) methodological-comparative anchors (Ballentine 2015 as primary
+      interpretive frame, Lincoln 2012 on political-ideological reading,
+      Forsyth 1987 long-arc typology, Watkins 1995 IE philology, West 2007
+      IE storm-god sovereignty, Gunkel 1895 historical anchor for the
+      Chaoskampf hypothesis). Verification proceeded by (1) checking every
+      EVIDENCE token's source_id against sources.yaml (all 19 unique IDs
+      registered: ballentine-2015, lincoln-2012, forsyth-1987, smith-1994-
+      baal-i, smith-pitard-2009-baal-ii, west-1966-theogony, ogden-2013,
+      jamison-brereton-2014, benveniste-renou-1934, watkins-1995, hoffner-
+      1998, annus-2001-anzu, foster-2005, lambert-2013, day-1985, gunkel-
+      1895, west-1997, west-2007, burkert-1992); (2) checking that each
+      per-tradition factual claim routes through the same source_id that
+      the corresponding Part-I chapter uses for that fact (Smith 1994 +
+      Smith & Pitard 2009 → Ch7; West 1966 + Ogden 2013 → Ch11; Jamison &
+      Brereton 2014 + Watkins 1995 → Ch14; Benveniste & Renou 1934 +
+      Watkins 1995 → Ch13; Hoffner 1998 → Ch5; Annus 2001 + Foster 2005 →
+      Ch2; Day 1985 + Ballentine 2015 → Ch8; Lambert 2013 + Foster 2005 →
+      Ch3); (3) cross-checking every COMPARATIVE-HOOK chapter-number
+      reference against toc.yaml (C1=Ch34, C2=Ch35, C3=Ch36, C4=Ch37,
+      C5=Ch38, C6=Ch39, C7=Ch40, C8=Ch41 — all resolve; back-links to Ch2,
+      Ch3, Ch5, Ch7, Ch8, Ch11, Ch13, Ch14, Ch33, Ch34 — all resolve);
+      (4) cross-checking all body-prose chaos-term occurrences against
+      glossary.yaml's never_use list and the brief's special-instructions
+      that scare-quoted "chaos" appears only in §II/§VI Ballentine-critique
+      paragraphs; (5) checking the in-scope+out-of-scope citation pairing
+      on comparative-transmission claims and confirming that doubled-token
+      paragraphs are well-paired; (6) verifying the [SPECULATION:] and
+      [INFERENCE:] blocks have substantive basis and counterargument /
+      risk sub-fields; (7) verifying the chapter does not re-narrate the
+      seven cases per the brief's special_instructions on no-re-narration
+      discipline; (8) verifying the §II Ballentine-reading section is
+      structured as the chapter's principal interpretive frame per the
+      brief's special_instructions; (9) verifying §IV develops the Anzû-
+      to-Marduk genealogy as the worked example per the brief; (10) cross-
+      checking each Part-I-anchor attribution against the corresponding
+      Part-I chapter's claims-approved.adoc content (most attributions
+      consistent with the Part-I chapters' approved framings, with the
+      per-claim drift findings noted below).
+    sources_skimmed:
+      - >
+        Ballentine, D.S., *The Conflict Myth and the Biblical Tradition*
+        (OUP, 2015): sources.yaml entry verified. Ballentine's central
+        thesis is that "chaos" is the wrong analytical category for the
+        adversaries in the combat-myth corpus, because they are presented
+        in their primary sources as rival sovereigns with their own
+        retinues and power-structures rather than as inchoate disorder.
+        Ch35 §II/§VI treatment uses Ballentine as the principal
+        interpretive frame for the sovereignty subtype, per the brief's
+        special_instructions. Cross-checked against Ch7, Ch8 claims-
+        approved which both engage Ballentine 2015 with the same framing.
+        PASS on attribution.
+      - >
+        Smith, M.S., *The Ugaritic Baal Cycle, Vol. I*, VTSup 55 (Brill,
+        1994): sources.yaml entry verified. KTU 1.1–1.2 critical edition,
+        El's investiture of Yamm as kingship-claimant before the combat,
+        Yamm's name as "Sea" (literal), the maces Yagrush and Ayyamur
+        forged by Kothar-wa-Khasis, the Athtart-intervention, and the
+        ymlk acclamation formula's reuse first for Yamm then for Baal —
+        all attested in Ch7 claims-approved with the same loc-pointers.
+        PASS on attribution.
+      - >
+        Smith, M.S. and Pitard, W.T., *The Ugaritic Baal Cycle, Vol. II*,
+        VTSup 114 (Brill, 2009): sources.yaml entry verified. KTU 1.3–1.4
+        palace-building cycle as institution of Baal's kingship; KTU 1.5
+        i 1–3 as the principal preserved Lôtan reference embedded in
+        Mot's retrospective taunt. PASS on attribution.
+      - >
+        West, M.L., *Hesiod: Theogony* (OUP, 1966): sources.yaml entry
+        verified. Theogony 820–880 as the Typhonomachy passage. Ch11
+        claims-approved is explicit that the *vengeance/challenge motive*
+        for Typhon's conception by Gaia and Tartarus is **Apollodorian**,
+        not Hesiodic; Hesiod names Typhoeus as Gaia's last and youngest
+        offspring without giving the motive. Ch35 attributes the
+        challenge-motive to West 1966 / Hesiod. See FIND-02.
+      - >
+        Ogden, D., *Drakōn* (OUP, 2013): sources.yaml entry verified.
+        Chs. 2–3 on the Greek dragon-combat tradition's continuous
+        attestation across Hesiod, Apollodorus, Pindar, Aeschylus, and
+        Nonnus. PASS on attribution.
+      - >
+        Jamison, S.W. and Brereton, J.P., *The Rigveda* 3 vols. (OUP,
+        2014): sources.yaml entry verified. Ch14 claims-approved attests
+        the eight-hymn cycle (RV 1.32, 1.80, 2.11, 2.12, 4.18, 5.32, 6.17,
+        8.96, 10.113); Ch35 line 73 lists "supplementary hymns 2.11–12,
+        4.18, 6.17, 8.96, 10.113" omitting 1.80 and 5.32 — see NOTE-01.
+        RV 1.32's fifteen-verse length, Tvaṣṭṛ as forger of the vajra,
+        and the Indra-as-king-of-the-gods reading are all attested in
+        Ch14. PASS on substance.
+      - >
+        Benveniste, É. and Renou, L., *Vṛtra et Vṛθragna* (Imprimerie
+        Nationale, 1934): sources.yaml entry verified. Yt. 5.33–35,
+        Yt. 14, Yt. 19 as principal Avestan loci; Pahlavi *Bundahišn*
+        as fullest narrative; Aži Dahāka three-headed six-eyed three-
+        jawed dragon-tyrant — all attested in Ch13. PASS.
+      - >
+        Watkins, C., *How to Kill a Dragon* (OUP, 1995): sources.yaml
+        entry verified. Part V chs. 41–48 (Ch35 cites both "chs. 41–48"
+        and "Part V chs. 44–48" — both sub-ranges are within Watkins's
+        Part V on the IE serpent-slayer formula). The *áhann áhim* IE
+        formula reconstruction across Vedic, Avestan, Hittite, and
+        Greek witnesses is correctly attributed. PASS.
+      - >
+        Hoffner, H.A., *Hittite Myths*, 2nd ed. (SBL, 1998): sources.yaml
+        entry verified. Ch5 claims-approved is explicit that the *Song
+        of Ullikummi* is **§15** (not §16) in Hoffner; §16 is the *Song
+        of Hedammu*. Ch35 line 88 cites "§16 (*Song of Ullikummi*)" —
+        section-number error. See FIND-01.
+      - >
+        Annus, A., *The Standard Babylonian Epic of Anzu* (SAACT 3,
+        2001): sources.yaml entry verified. Ninurta-as-model-king theme,
+        the Tablet of Destinies as kingship-token, the threefold-refusal
+        pattern, the Anzû-to-*Enūma Eliš* literary genealogy, Anzû's
+        reuse as one of Tiamat's eleven monsters in *Enūma Eliš* — all
+        attested in Ch2 and Ch3 claims-approved. Ch2 says Ninurta is
+        "warrior-god of Nippur" not "lord of Nippur"; the latter is
+        normally Enlil's title. See FIND-03.
+      - >
+        Foster, B.R., *Before the Muses* 3rd ed. (CDL Press, 2005):
+        sources.yaml entry verified. Pp. 555–578 ("Anzu") for the Anzû
+        Epic English; pp. 436–486 for *Enūma Eliš*. Both attested in
+        Ch2 and Ch3 with the same loc-pointers. PASS.
+      - >
+        Day, J., *God's Conflict with the Dragon and the Sea* (CUP,
+        1985): sources.yaml entry verified. Chs. 1–5 on the seven-passage
+        Hebrew Bible corpus (Pss 74, 89, 104; Isa 27, 51; Job 26 with
+        ch. 41; Hab 3); Isaiah 27:1 epithets *bṯn brḥ* and *bṯn ʿqltn*
+        as verbatim Ugaritic preservation from KTU 1.5 i 1–3 — all
+        attested in Ch8 with the same loc-pointers. Ch35 line 103 lists
+        "Job 26, 41" as separate passages where Ch8 pairs them as "Job
+        26:12-13 with chapter 41" — minor compression. PASS on substance.
+      - >
+        Lambert, W.G., *Babylonian Creation Myths* (Eisenbrauns, 2013):
+        sources.yaml entry verified. Tablets I–V on the sovereignty-
+        establishment and cosmogony phases of *Enūma Eliš*; the
+        Nebuchadnezzar I commissioning hypothesis (c. 1125–1104 BCE);
+        Anzû's appearance among Tiamat's eleven monsters; pp. 463–465
+        on the akītu recitation context. Ch3 marks the Nebuchadnezzar I
+        commissioning hypothesis as INFERENCE because it is "consensus
+        but not unanimous"; Ch35 line 229 presents it with the soft
+        hedge "likely commissioned… on Lambert's reading" but without
+        an INFERENCE marker. See NOTE-02.
+      - >
+        Lincoln, B., *Gods and Demons, Priests and Scholars* (Chicago,
+        2012): sources.yaml entry verified. The political-ideological
+        reading of combat-myth as state-charter work; akītu as paradigm
+        case. PASS.
+      - >
+        Forsyth, N., *The Old Enemy* (Princeton, 1987): sources.yaml
+        entry verified. Long-arc combat-myth typology; ch. 4 on Greek
+        combat-myth; ch. 2 on Anzû as bridge to *Enūma Eliš*. Ch35's
+        repeated use of Forsyth as typological-recurrence anchor is
+        consistent with the work's actual scope. PASS.
+      - >
+        West, M.L., *The East Face of Helicon* (OUP, 1997): sources.yaml
+        entry verified. Ch. 6 on the Kumarbi-Hesiod relationship as the
+        principal Near-Eastern-into-Greek transmission case. PASS.
+      - >
+        West, M.L., *Indo-European Poetry and Myth* (OUP, 2007): sources.
+        yaml entry verified ("Use with caution" notes). Ch. 6 on IE
+        storm-god sovereignty and on the IE storm-god sovereignty
+        ritual as comparative-mythological anchor. PASS.
+      - >
+        Burkert, W., *The Orientalizing Revolution* (Harvard, 1992):
+        sources.yaml entry verified. Levantine-mediated transmission of
+        Near Eastern myth into Greek culture during the Orientalising
+        period (8th–7th c. BCE). PASS.
+      - >
+        Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit* (V&R,
+        1895): sources.yaml entry verified. Teil I on Pss 74 and Isa 27
+        as the Hebrew Bible corpus that anchors the Chaoskampf
+        hypothesis. Cited once at line 107. PASS.
+    references_assumed:
+      - >
+        sources.yaml entry for fontenrose-1959 (Apollo-Python comparative
+        anchor) is not used as an EVIDENCE token in Ch35; not in scope
+        for this audit.
+      - >
+        sources.yaml entry for wakeman-1973 (early Hebrew Bible combat-
+        imagery treatment) is not used as an EVIDENCE token in Ch35;
+        not in scope for this audit.
+    quote_pattern_match: >
+      The chapter is a synthesis-of-syntheses: it cites no verbatim
+      primary-source quotation and no verbatim scholar-quotation, instead
+      routing each per-tradition factual claim through the same source_id
+      that the corresponding Part-I chapter uses for that fact.
+      Verification standard is therefore "does the cited Part-I-anchor
+      source_id support the specific claim made", not "does the verbatim
+      quotation appear at the specified loc". The Part-I claims-approved
+      files were used as the second-order verification ground (their
+      factchecks were already passed at the chapter-claims stage). Of the
+      133 EVIDENCE tokens audited, 130 route through Part-I anchor
+      source_ids that are documented to support the specific claim; 3
+      raise drift findings noted below.
+    internal_variance_vs_contamination: >
+      No internal-variance findings: the chapter does not narrate myth
+      content from one tradition through another tradition's anchor
+      source. No contamination findings: every per-tradition claim routes
+      through the area-specialist anchor for that tradition. The named-
+      but-flagged pattern is correctly applied (West 2007 used as IE
+      comparative-mythological anchor, not as area-specialist source for
+      Vedic philology where Jamison & Brereton 2014 is anchor).
+
+tallies:
+  supported: 76                # of 81 paragraph-claims
+  internal_variance: 0
+  unverified: 0
+  citation_wrong: 1            # FIND-01 §16/§15 Hoffner section number
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1             # FIND-04 SPECULATION pipe-field labels
+  glossary_violations: 1       # FIND-05 chaos-term leakage in §I
+  high_findings: 0
+  medium_findings: 5
+  low_findings: 3
+  notes: 3
+  total_findings: 11
+
+# ─────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS — summary register
+# ─────────────────────────────────────────────────────────────────────
+# Of 81 paragraph-claims, 76 are SUPPORTED: each EVIDENCE token routes
+# through a source_id that is registered in sources.yaml (all 19 unique
+# IDs verified present); each footnote attribution fairly characterises
+# the cited scholar's published position; each forward-link to a
+# comparative chapter (C3-C8 → Ch36-Ch41) matches toc.yaml; each
+# back-link to a Part I chapter (Ch2, Ch3, Ch5, Ch7, Ch8, Ch11, Ch13,
+# Ch14, Ch33, Ch34) matches toc.yaml. The §I seven-case compressions
+# match the corresponding Part-I claims-approved files at every tested
+# point on substance (Baal as son of Dagan with Yagrush and Ayyamur
+# forged by Kothar-wa-Khasis, El's investiture of Yamm prior to combat,
+# Ṣapānu palace-founding as institution of kingship; Typhon hundred-
+# headed serpent-limbed monster generated by Gaia and Tartarus per
+# Hesiod Theogony 820–880 with the Apollodorus 1.6.3 and Nonnus 1–2
+# expansions; Indra-Vṛtra with vajra forged by Tvaṣṭṛ and water-release
+# at RV 1.32; Aži Dahāka three-headed six-eyed three-jawed dragon-tyrant
+# bound beneath Damāvand with Frashokereti pendant and revived
+# Kərəsāspa; Teshub-Ullikummi with Upelluri's shoulder, Ea's primordial
+# cutter, and Kumarbi succession Alalu → Anu → Kumarbi → Teshub via
+# genital-castration; Ninurta-Anzû Tablet-of-Destinies sovereignty-
+# combat with threefold-refusal pattern and Šarur as animate scout-
+# weapon; Yahweh-Leviathan-Rahab seven-passage corpus Pss 74, 89, 104,
+# Isa 27, 51, Job 26 with ch. 41, Hab 3 with verbatim Ugaritic *bṯn brḥ*
+# / *bṯn ʿqltn* preservation in Isa 27:1; Marduk-Tiamat sovereignty-
+# establishment phase with Tiamat installing Qingu and giving him the
+# Tablet of Destinies, Anzû's reuse as one of Tiamat's eleven monsters,
+# Tablets I–V escalation pattern, Nebuchadnezzar I commissioning
+# context). The §II Ballentine-reading is correctly framed as the
+# chapter's principal interpretive frame per the brief's
+# special_instructions. The §IV Anzû-to-Marduk genealogy is correctly
+# developed as the worked example per the brief. The §V transmission-
+# vs-typology balance is correctly framed with all four documented
+# transmission lines (Ugaritic-into-Hebrew, Hurro-Hittite-into-Greek,
+# IE inheritance, within-Mesopotamian Anzû-to-Marduk) attributed to
+# their canonical-anchor sources. The §VI ritual-and-state pattern is
+# correctly anchored on Lincoln 2012's political-ideological reading.
+#
+# Source-ID registry check (all 19 unique IDs verified present in
+# sources.yaml registry):
+#   ballentine-2015, lincoln-2012, forsyth-1987, smith-1994-baal-i,
+#   smith-pitard-2009-baal-ii, west-1966-theogony, ogden-2013,
+#   jamison-brereton-2014, benveniste-renou-1934, watkins-1995,
+#   hoffner-1998, annus-2001-anzu, foster-2005, lambert-2013, day-1985,
+#   gunkel-1895, west-1997, west-2007, burkert-1992.
+# All resolve. No invented or unresolved IDs.
+#
+# COMPARATIVE-HOOK chapter-number registry check (all 19 hooks
+# resolved against toc.yaml):
+#   Ch2, Ch3, Ch5, Ch7, Ch8, Ch11, Ch13, Ch14, Ch33, Ch34 (back-links),
+#   C3=Ch36, C4=Ch37, C5=Ch38, C6=Ch39, C7=Ch40, C8=Ch41 (forward-
+#   links). All resolve.
+
+findings:
+  - id: FIND-01
+    severity: MEDIUM
+    category: citation-wrong | section-number-error
+    claim_anchor: line 88 (§I, fifth case — Teshub-Ullikummi)
+    description: |
+      Ch35 line 88 introduces the fifth case as: "the Hurro-Hittite
+      Kumarbi Cycle (Hoffner 1998 §16, *Song of Ullikummi*)" and the
+      footnote and EVIDENCE token both cite "Hoffner, H.A., *Hittite
+      Myths*, 2nd ed. (...), 1998), §16 (*Song of Ullikummi*)".
+    issue: |
+      Section-number error. In Hoffner 1998 (and as attested in
+      ch-05-kumarbi-ullikummi.claims.approved.adoc), the *Song of
+      Ullikummi* is **§15**, not §16; **§16** is the *Song of Hedammu*.
+      Ch5's claims-approved attests this at lines 80, 86 (§15 = Ullikummi)
+      and at line 83 (§16 = Hedammu), and the EVIDENCE-token loc fields
+      throughout Ch5 use §15 for all Ullikummi-related claims.
+    evidence: |
+      From chapters/05-kumarbi-ullikummi.claims.approved.adoc line 80:
+        "Ea, the Akkadian wisdom-god, ... is the agent of the decisive
+        intervention that breaks Ullikummi: ... [footnote:][Hoffner 1998,
+        §15 (Song of Ullikummi), on Ea's counselor and agent role.]"
+      From the same file line 83:
+        "[footnote:][Hoffner 1998, §16 (Song of Hedammu), on Šauška/
+        Ishtar as Teshub's sister and the seductress of Hedammu.]"
+      And from line 18 (cycle song-roster):
+        "Kingship in Heaven (the cycle frame), the Song of Ullikummi,
+        the Song of Hedammu, the Song of the Sea, the Song of LAMMA,
+        and the Song of Silver."
+      The cycle's song-numbering in Hoffner 1998 is therefore: §14
+      Kingship in Heaven, §15 Song of Ullikummi, §16 Song of Hedammu,
+      §17 Song of the Sea, §18 Song of LAMMA / Silver. Ch35's "§16
+      (*Song of Ullikummi*)" misnumbers the song.
+    recommended_fix: |
+      Replace every occurrence of "Hoffner 1998 §16" / "§16, *Song of
+      Ullikummi*" / "loc=§16, Song of Ullikummi" in Ch35 with §15.
+      Specifically:
+        line 88 body: "(Hoffner 1998 §16, *Song of Ullikummi*)"
+          → "(Hoffner 1998 §15, *Song of Ullikummi*)"
+        line 88 footnote: "§16 (*Song of Ullikummi*)"
+          → "§15 (*Song of Ullikummi*)"
+        line 89 EVIDENCE: "loc=§16, Song of Ullikummi"
+          → "loc=§15, Song of Ullikummi"
+        line 186 footnote: "Hoffner 1998, *Hittite Myths*, §16 on
+          Teshub-Ullikummi without cosmogonic outcome"
+          → "Hoffner 1998, *Hittite Myths*, §15 on Teshub-Ullikummi
+          without cosmogonic outcome"
+
+  - id: FIND-02
+    severity: MEDIUM
+    category: attribution-drift
+    claim_anchor: line 65 (§I, second case — Zeus-Typhon)
+    description: |
+      Ch35 line 65: "Typhon is a hundred-headed serpent-limbed monster
+      generated by Gaia and Tartarus **precisely to challenge Olympian
+      sovereignty**, and Zeus's victory with the thunderbolt seals the
+      establishment of his rule…". Footnote cites "West 1966, *Hesiod:
+      Theogony* (...), critical edition with commentary on Theogony
+      820–880 on the Typhonomachy as the climactic sovereignty-combat
+      of the Hesiodic succession narrative".
+    issue: |
+      Attribution drift on Hesiod via West 1966. The motive-clause "to
+      challenge Olympian sovereignty" is **Apollodorian** (Bibliotheca
+      1.6.3 — vengeance after the Olympian defeat of the Giants), not
+      Hesiodic. Hesiod names Typhoeus as Gaia's last and youngest
+      offspring without giving the generative motive. Ch11 claims-
+      approved is explicit on this distinction.
+    evidence: |
+      From chapters/11-zeus-typhon.claims.approved.adoc line 71:
+        "Gaia, the primordial earth-goddess, is named explicitly in
+        Hesiod as Typhoeus's mother; she conceives him in her later
+        relationship with Tartarus, and the parental pairing earth-and-
+        underworld is itself a marker of the monster's chthonic origin."
+      And from line 74:
+        "The pairing of Gaia and Tartarus as Typhoeus's parents is
+        Hesiodic; in Apollodorus *Bibliotheca* 1.6.3, Gaia conceives
+        Typhon by Tartarus specifically in vengeance after the Olympian
+        defeat of the Giants, **providing a generative motive that
+        Hesiod does not name in lines 820–822**."
+      The "precisely to challenge Olympian sovereignty" motive in Ch35
+      §I is therefore drift-attributed to Hesiod / West 1966; the
+      challenge-motive belongs to Apollodorus.
+    recommended_fix: |
+      Either (a) split the citation across the two anchors and demote
+      the motive-clause to the Apollodoran source, or (b) drop the
+      motive-clause and let the structural function speak for itself.
+      Verbatim-substitutable replacement (option b):
+        "Typhon is a hundred-headed serpent-limbed monster generated
+        by Gaia and Tartarus as Gaia's last and youngest offspring
+        (Theogony 820–822), and Zeus's victory with the thunderbolt
+        seals the establishment of his rule over gods and humans —
+        the combat is the final and most dangerous episode of the
+        succession-and-sovereignty narrative…"
+      Or option (a), keeping the motive but doubled-tokening it:
+        "Typhon is a hundred-headed serpent-limbed monster generated
+        by Gaia and Tartarus (Theogony 820–822); Apollodorus 1.6.3
+        further specifies that the conception was in vengeance after
+        the Olympian defeat of the Giants, supplying the challenge-
+        motive that Hesiod does not name."
+        // EVIDENCE: source_id=west-1966-theogony ; loc=Theogony 820-822, Hesiodic parentage
+        // EVIDENCE: source_id=ogden-2013 ; loc=ch. 2, Apollodoran challenge-motive
+
+  - id: FIND-03
+    severity: MEDIUM
+    category: attribution-drift | epithet-error
+    claim_anchor: line 95 (§I, sixth case — Ninurta-Anzû)
+    description: |
+      Ch35 line 95: "the Sumerian warrior-god (son of Enlil, **lord of
+      Nippur**) defeats the lion-headed eagle-monster Anzû". The
+      parenthetical attributes the title "lord of Nippur" to Ninurta.
+    issue: |
+      Attribution drift / epithet error. Ch2 claims-approved attests
+      Ninurta as **"warrior-god of Nippur"**, not as **"lord of Nippur"**.
+      "Lord of Nippur" is conventionally Enlil's title (Enlil being the
+      head of the Mesopotamian pantheon and patron-god of Nippur);
+      Ninurta is Enlil's son and the warrior-god *associated with*
+      Nippur but not its lord. Additionally, calling Ninurta "the
+      Sumerian warrior-god" is a minor framing drift in the immediate
+      context of the **Standard Babylonian** Anzû Epic (the Akkadian-
+      language redaction). Ch2 frames Ninurta as figuring in "both the
+      Sumerian and Akkadian literary traditions".
+    evidence: |
+      From chapters/02-ninurta-anzu.claims.approved.adoc line 62:
+        "Ninurta is the **warrior-god of Nippur**, son of Enlil, and
+        the champion sent out to defeat enemies of the divine order in
+        both the Sumerian and Akkadian literary traditions.[footnote:
+        ...; Annus 2001, introduction on Ninurta's Nippur-warrior
+        identity.]"
+    recommended_fix: |
+      Replace the parenthetical "(son of Enlil, lord of Nippur)" with
+      "(son of Enlil, warrior-god of Nippur)". Verbatim-substitutable
+      replacement of the line 95 opening:
+        "The sixth case is Ninurta against Anzû in the Standard
+        Babylonian Anzû Epic, where the warrior-god of Nippur (son of
+        Enlil) defeats the lion-headed eagle-monster Anzû — originally
+        a minor divine servitor — who has stolen the Tablet of Destinies
+        from Enlil; …"
+
+  - id: FIND-04
+    severity: MEDIUM
+    category: marker-syntax | speculation-marker
+    claim_anchor: lines 249 and 292 (§IV and §V SPECULATION blocks)
+    description: |
+      Both [SPECULATION:] blocks in Ch35 use non-standard pipe-field
+      labels in place of the required "counterargument" sub-field.
+      Per the chapter-claims skill (and per the prompt's marker-
+      integrity check #5: "[SPECULATION: ... | basis: ... |
+      counterargument: ...]"), the third pipe-field must be labelled
+      `counterargument`.
+    issue: |
+      - Line 249 (§IV SPECULATION): the third pipe-field is labelled
+        "warrant for the speculation: ..." instead of "counterargument:
+        ...". The content under that label is itself a *warrant*
+        (supporting argument from Lincoln 2012), not a counterargument;
+        the block lacks a counterargument as a separate field.
+      - Line 292 (§V SPECULATION): the third pipe-field is labelled
+        "risk: ..." (using the [INFERENCE:] convention) instead of
+        "counterargument: ...". The content is closer to a methodological
+        caveat than to a counterargument, and the block again lacks a
+        true counterargument as a separate field.
+      The Ch34 [SPECULATION:] block (chapters/34-C1-combat-as-cosmogony.
+      claims.adoc line 213) uses "counterargument:" correctly as the
+      third pipe-field, providing the in-house precedent.
+    evidence: |
+      Ch34 (precedent), claims line 213:
+        "[SPECULATION: the convergence of three independent traditions ...
+         | basis: Lincoln 2012's political-ideological reading ...
+         | counterargument: the political-charter reading does not by
+         itself explain why the charter takes the specific form of a
+         combat-with-monstrous-adversary ... ]"
+      Ch35, claims line 249 (the §IV SPECULATION):
+        "[SPECULATION: that the sovereignty-to-cosmogony escalation ...
+         | basis: the parallel structural-and-verbal reproduction with
+         cosmogonic-element addition is documented ...
+         | warrant for the speculation: the Lincoln 2012 political-
+         ideological reading would predict ...]"
+      Ch35, claims line 292 (the §V SPECULATION):
+        "[SPECULATION: that the residual typological coherence ...
+         | basis: the documented transmission lines explain much of the
+         coherence but not all ...
+         | risk: that the transmission-vs-typology balance is impossible
+         to settle definitively ...]"
+    recommended_fix: |
+      Re-label the third pipe-field as "counterargument:" in both
+      blocks and supply substantive counter-content where the current
+      text is warrant or methodological caveat. Verbatim-substitutable
+      examples:
+        Line 249 (§IV) third pipe-field replacement:
+          "| counterargument: the deliberate-engineering reading is
+          tightly tied to the specific Babylonian theological-political
+          context (Marduk-elevation under Nebuchadnezzar I) and may
+          not generalise; the Yahweh-Leviathan-Rahab eschatological
+          reuse in Isaiah 27 lacks the line-by-line structural-and-
+          verbal reproduction that documents the Anzû-to-*Enūma Eliš*
+          escalation, and applying the escalation-template across the
+          corpus risks projecting the Babylonian pattern onto less-
+          documented cases."
+        Line 292 (§V) third pipe-field replacement:
+          "| counterargument: that the residual independent-typology
+          component is itself an artefact of asymmetric documentation
+          rather than a real category — what looks like residual
+          typological recurrence may simply be undocumented further
+          contact, in which case the cluster's coherence would reduce
+          fully to transmission-network effects and the typological
+          claim would lose its independent warrant."
+
+  - id: FIND-05
+    severity: MEDIUM
+    category: banned-term | glossary-violation
+    claim_anchor: lines 91, 103, 107 (§I body prose) and line 356 (§VI body prose)
+    description: |
+      Ch35's brief special_instructions and the chapter's own line 41
+      programmatic statement reserve "chaos," "chaos-figure," "chaos-
+      monster," "chaos-serpent," and the "chaos-ordering" frame for
+      scare-quoted appearances inside §II's and §VI's discussions of
+      the Ballentine critique. Several body-prose occurrences fall
+      outside that scoping.
+    issue: |
+      - Line 91 (§I, fifth case Teshub-Ullikummi paragraph): "...
+        rather than a single stable order against which a 'chaos-
+        figure' rebels". The term is scare-quoted, but the paragraph
+        is in §I (the seven-case-pattern section), not in §II/§VI.
+        The brief restricts scare-quoted use to §II/§VI.
+      - Line 103 (§I, seventh case Yahweh-Leviathan-Rahab): "Day 1985
+        reads the corpus as direct continuity of the Ugaritic Baal-
+        Lôtan imagery, while Ballentine 2015 reads it as a rival-
+        sovereignty rather than a chaos-ordering frame." The compound
+        "chaos-ordering" is unhyphenated and unmarked; appears in §I.
+      - Line 107 (§I, Yahweh-Leviathan-Rahab continuation): "Ballentine
+        arguing that the rival-sovereignty reading better accounts for
+        the philological and structural evidence than the chaos-
+        ordering reading does." Same compound, same §I location, no
+        scare-quotes, no marker.
+      - Line 356 (§VI final-caveat paragraph): "where adversaries have
+        hostile-rather-than-rival features, the chaos-shorthand may
+        carry useful informal weight". The compound "chaos-shorthand"
+        is unscare-quoted; the paragraph is in §VI but is a final-
+        caveat paragraph, not strictly a Ballentine-critique paragraph.
+        Marginal.
+      Glossary.yaml's never_use list: "chaos-figure (begs the question);
+      chaos-monster (same reason; the corpus is not uniformly 'chaos')".
+      The line-91 occurrence is the most clearly scoped-violation; the
+      line-103 / line-107 / line-356 occurrences are softer compound-
+      forms ("chaos-ordering frame", "chaos-ordering reading", "chaos-
+      shorthand") that the glossary does not explicitly list but that
+      the brief's special_instructions intends to scope to §II/§VI.
+    evidence: |
+      From glossary.yaml line 126: never_use: ["chaos-figure (begs the
+      question); chaos-monster (same reason; the corpus is not uniformly
+      'chaos')"].
+      From the brief 35-C2-combat-as-sovereignty.yaml special_
+      instructions: "the cosmogonic-combat chapter (C1) can keep 'chaos'
+      as informal shorthand; the sovereignty chapter (C2) really should
+      not."
+      From Ch35 line 41 (the chapter's own self-imposed discipline):
+      "...with bare 'chaos,' 'chaos-figure,' 'chaos-monster,' and
+      'chaos-serpent' reserved for scare-quoted appearances **inside
+      §II's and §VI's discussions of the Ballentine critique**."
+    recommended_fix: |
+      For line 91: either add a clarifying parenthetical that previews
+      the §II Ballentine-critique discussion, OR rephrase to avoid the
+      scoped term. Verbatim-substitutable replacement:
+        "...the cycle therefore presents a sequence of contested
+        sovereignty-claimants rather than a single stable order against
+        which an undifferentiated rebel rebels."
+      For lines 103 and 107: replace "chaos-ordering frame/reading"
+      with "primordial-disorder frame/reading" or "Gunkel-1895 framing":
+        line 103: "...while Ballentine 2015 reads it as a rival-
+          sovereignty rather than a Gunkel-1895 chaos-as-disorder frame."
+          (with quoted "chaos" preserving the scare-quoting discipline)
+        line 107: "...with Ballentine arguing that the rival-sovereignty
+          reading better accounts for the philological and structural
+          evidence than the Gunkel-1895 ordering-of-disorder reading
+          does."
+      For line 356: scare-quote and italicise the compound: '"chaos"-
+      shorthand' or rephrase as 'the chaos-as-disorder shorthand'.
+
+  - id: FIND-06
+    severity: LOW
+    category: paraphrase-drift | minor
+    claim_anchor: line 73 (§I, third case — Indra-Vṛtra)
+    description: |
+      Ch35 line 73 footnote lists "supplementary hymns 2.11–12, 4.18,
+      6.17, 8.96, 10.113" for the Vṛtra-corpus.
+    issue: |
+      Compression-omission. Ch14 claims-approved lists eight hymns:
+      RV 1.32, 1.80, 2.11, 2.12, 4.18, 5.32, 6.17, 8.96, 10.113.
+      Ch35 omits **1.80** and **5.32** from the supplementary list.
+      The omission is acceptable for a comparative-chapter compression
+      but is asymmetric with Ch34's own compression of the same eight-
+      hymn corpus (Ch34 omitted 1.80 and 8.96; Ch35 omits 1.80 and
+      5.32). Cross-chapter consistency would prefer one canonical
+      compression.
+    evidence: |
+      From chapters/14-indra-vrtra.claims.approved.adoc line 51:
+        "The eight Rigvedic hymns that constitute the working Vṛtra-
+        combat corpus for the chapter are RV 1.32 (the primary and
+        most concentrated Vṛtra hymn, fifteen verses), with RV 1.80,
+        2.11, 2.12, 4.18, 5.32, 6.17, 8.96, and 10.113 supplying
+        co-witness material..."
+      Ch35 line 73 footnote:
+        "...supplementary hymns 2.11–12, 4.18, 6.17, 8.96, 10.113."
+    recommended_fix: |
+      Either restore the full eight-hymn list (preferred) or align
+      with Ch34's compression. Verbatim-substitutable replacement
+      (full list):
+        "...supplementary hymns 1.80, 2.11, 2.12, 4.18, 5.32, 6.17,
+        8.96, 10.113."
+
+  - id: FIND-07
+    severity: LOW
+    category: paraphrase-drift | corpus-listing
+    claim_anchor: line 103 (§I, seventh case — Yahweh-Leviathan-Rahab)
+    description: |
+      Ch35 line 103 lists the Hebrew Bible combat-corpus as "Psalms
+      74, 89, 104; Isaiah 27, 51; Job 26, 41; Habakkuk 3" (and the
+      footnote uses "Pss 74, 89, 104; Isa 27, 51; Job 26, 41; Hab 3").
+    issue: |
+      Minor paraphrase drift on Job. Ch8 claims-approved at line 14
+      pairs "Job 26:12-13 with chapter 41" as a single compound
+      passage (Day 1985's treatment groups them); Ch35 separates them
+      as "Job 26, 41". The substantive content is the same; the
+      compression is a minor lexical drift.
+    evidence: |
+      From chapters/08-yahweh-leviathan-rahab.claims.approved.adoc
+      line 14:
+        "The seven passages on which the corpus is built are Psalm
+        74:12–17, Psalm 89:9–13, Psalm 104:6–9 with verse 26, Isaiah
+        27:1, Isaiah 51:9–10, **Job 26:12–13 with chapter 41**, and
+        Habakkuk 3..."
+    recommended_fix: |
+      Replace "Job 26, 41" with "Job 26 with ch. 41" to mirror Ch8's
+      compound passage convention. Verbatim-substitutable replacement
+      of the line-103 paren-list:
+        "(Psalms 74, 89, 104; Isaiah 27, 51; Job 26 with ch. 41;
+        Habakkuk 3)"
+      and footnote:
+        "Day, J., *God's Conflict with the Dragon and the Sea*
+        (Cambridge: Cambridge University Press, 1985), chs. 1–5 on
+        the Hebrew Bible combat-myth corpus (Pss 74, 89, 104; Isa 27,
+        51; Job 26 with ch. 41; Hab 3)..."
+
+  - id: FIND-08
+    severity: LOW
+    category: paraphrase-drift | redundant-evidence-token
+    claim_anchor: line 73 (§I, third case — Indra-Vṛtra; "serpent-demon")
+    description: |
+      Ch35 line 73 calls Vṛtra "the serpent-demon Vṛtra".
+    issue: |
+      Minor paraphrase drift on epithet choice. Ch14 claims-approved
+      uses "serpent-adversary" (line 105), "serpent" (line 129), and
+      *ahi* ("serpent") for Vṛtra; the gloss "demon" is an additional
+      lexical layer not used in Ch14's own framing of the Rigvedic
+      Vṛtra. Acceptable as comparative-chapter compression but
+      registers as a small paraphrase drift.
+    evidence: |
+      From chapters/14-indra-vrtra.claims.approved.adoc line 129:
+        "Vṛtra is also called *ahi* (Sanskrit अहि, 'serpent') in the
+        Rigvedic combat-vocabulary..."
+    recommended_fix: |
+      Replace "the serpent-demon Vṛtra" with "the serpent-adversary
+      Vṛtra" or simply "the serpent Vṛtra" to align with Ch14's
+      epithet usage.
+
+  - id: NOTE-01
+    severity: NOTE
+    category: structural-observation
+    claim_anchor: line 73 (§I, third case — Indra-Vṛtra hymn-list)
+    description: |
+      The chapter's compression of the Vṛtra-corpus is internally
+      consistent (RV 1.32 spine + supplementary hymns), but the
+      specific hymns dropped differ between Ch34 and Ch35.
+    issue: |
+      Not a fix-now issue; flagged for post-human-normalize so the
+      cross-chapter compressions can be aligned to a single canonical
+      Vṛtra-corpus list.
+    evidence: |
+      Ch34 omits 1.80 and 8.96; Ch35 omits 1.80 and 5.32. (See FIND-06.)
+    recommended_fix: |
+      No verdict-impact fix required. At post-human-normalize, decide
+      whether to canonicalise the comparative-chapter compression as
+      "1.32 + four supplementary hymns" or "1.32 + the full eight-hymn
+      cycle" and apply consistently across Ch34 and Ch35.
+
+  - id: NOTE-02
+    severity: NOTE
+    category: structural-observation | inference-marker-coverage
+    claim_anchor: line 229 (§IV, Nebuchadnezzar I commissioning)
+    description: |
+      Ch35 line 229: "the *Enūma Eliš* poet (likely commissioned by
+      Nebuchadnezzar I, c. 1125–1104 BCE, on Lambert's reading of the
+      historical context)".
+    issue: |
+      Ch3 claims-approved marks the Nebuchadnezzar I commissioning
+      hypothesis with an explicit [INFERENCE:] block (line 560 of
+      ch-03-marduk-tiamat.claims.approved.adoc): "the Nebuchadnezzar I
+      commissioning hypothesis is the prevailing scholarly view but
+      not universally accepted | basis: Lambert 2013 introduction
+      surveys the dating debate and presents Nebuchadnezzar I as the
+      likely commissioning patron | risk: alternative dates (earlier
+      Kassite, later Neo-Babylonian) have been argued; the
+      commissioning hypothesis is consensus but not unanimous." Ch35
+      uses the soft hedge "likely … on Lambert's reading" but does not
+      route the claim through an INFERENCE marker. The hedge is
+      arguably sufficient for a comparative-chapter compression that
+      defers to Ch3 for the full marker, but a forwarding INFERENCE-
+      marker would tighten the discipline.
+    evidence: |
+      Ch3 claims-approved line 560 [INFERENCE:] block (cited above).
+    recommended_fix: |
+      Optional, post-human-normalize. Consider adding a one-line
+      [INFERENCE:] forwarding-marker after line 230 that mirrors Ch3's
+      block, or strengthen the hedge to "the dominant scholarly view
+      attributes the *Enūma Eliš* commissioning to Nebuchadnezzar I…
+      though earlier and later dates have been argued."
+
+  - id: NOTE-03
+    severity: NOTE
+    category: structural-observation | doubled-token-coverage
+    claim_anchor: §V transmission paragraphs (lines 264–302)
+    description: |
+      The §V transmission-vs-typology section is the chapter's most
+      transmission-claim-dense section and uses doubled tokens
+      consistently for the transmission lines (Ugaritic-into-Hebrew
+      pairs day-1985 with smith-pitard-2009-baal-ii at line 268;
+      Hurro-Hittite-into-Greek pairs west-1997 with burkert-1992 at
+      line 273; IE inheritance pairs watkins-1995 with west-2007 at
+      lines 277, 279, 282; within-Mesopotamian pairs lambert-2013
+      with annus-2001-anzu at line 285).
+    issue: |
+      Coverage is good. One observation: the §V opening paragraph
+      (line 264) doubles west-1997 with watkins-1995 to anchor the
+      transmission-network framing — both are out-of-scope methodo-
+      logical anchors for this chapter's seven cases, and the doubled
+      pairing is methodologically sound. No fix needed.
+    evidence: |
+      Ch35 lines 264–302 doubled-token pattern (verified by inspection).
+    recommended_fix: |
+      None. Recorded as positive structural observation.
+
+summary: |
+  Ch35 is a tightly-disciplined comparative chapter that delivers the
+  Ballentine-2015 alternative-sovereign reading as the principal
+  interpretive frame for the sovereignty-combat subtype, develops the
+  Anzû-to-Marduk genealogy at length as the chapter's worked example,
+  and explicitly tightens the chaos-terminology discipline relative to
+  Ch34 (C1) per the brief's special_instructions. All 19 unique
+  source_ids resolve in sources.yaml and all 19 COMPARATIVE-HOOK
+  chapter-references resolve in toc.yaml. Of the 81 paragraph-claims
+  with 133 EVIDENCE tokens, 76 route through Part-I anchor source_ids
+  that are documented to support the specific claim. Five MEDIUM
+  findings (one citation-wrong on Hoffner section number §16 vs §15
+  Ullikummi, one attribution-drift on Hesiod-vs-Apollodorus motive for
+  Typhon's conception, one epithet-error on Ninurta as "lord of
+  Nippur" vs Ch2's "warrior-god of Nippur", one marker-syntax issue
+  on both [SPECULATION:] blocks using "warrant"/"risk" labels in
+  place of "counterargument", and one banned-term leakage in §I body
+  prose where the brief restricts scare-quoted "chaos" to §II/§VI),
+  three LOW findings (Vṛtra hymn-list omission of 1.80 and 5.32; Job
+  26/41 corpus-listing compression; Vṛtra "serpent-demon" gloss), and
+  three NOTE-level structural observations (cross-chapter Vṛtra-list
+  alignment; optional INFERENCE-marker forwarding for Nebuchadnezzar I
+  hypothesis; positive doubled-token coverage in §V). Most consequential
+  single finding: FIND-01, the §I/§III Hoffner-1998 §16-vs-§15 section-
+  number error on the *Song of Ullikummi*, which is a citation-wrong
+  finding that could mislead readers tracing the reference back to
+  Hoffner's edition. Per the verdict rule "PASS if zero HIGH and ≤3
+  MEDIUM; otherwise REVISE", the chapter has zero HIGH findings but
+  accumulates 5 MEDIUM findings, which crosses the ≤3-MEDIUM threshold
+  and triggers REVISE. All five MEDIUM findings are small and
+  verbatim-substitutable, and none affect the chapter's central
+  argument or its source-ID discipline; the chapter's comparative-
+  typology discipline, the strict in-scope / out-of-scope citation-
+  pairing on transmission claims, the correct framing of §II around
+  Ballentine and §IV around the Anzû-to-Marduk genealogy, the
+  resolved-source-IDs registry-check, the resolved-TOC cross-
+  references, and the substantively-correct seven-case per-tradition
+  synthesis are all sound. The five MEDIUM fixes should be applied in
+  the post-human-normalize pass before the chapter advances to
+  claims-approved. Final verdict: REVISE.

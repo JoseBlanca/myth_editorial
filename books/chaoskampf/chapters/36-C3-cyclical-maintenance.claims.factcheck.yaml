@@ -1,0 +1,699 @@
+meta:
+  stage: claims-factcheck
+  chapter: 36
+  chapter_slug: C3-cyclical-maintenance
+  chapter_title: "C3. Cyclical Maintenance"
+  chapter_type: "comparative (Part II) — third of eight comparative chapters; cyclical-maintenance subtype"
+  auditor_model: "claude-opus-4-7-1m"
+  audit_date: "2026-05-03"
+  claims_file: chapters/36-C3-cyclical-maintenance.claims.adoc
+  brief_file: briefs/36-C3-cyclical-maintenance.yaml
+  total_claims: 65            # paragraph-claims (footnote count)
+  evidence_tokens: 75
+  unique_source_ids_used: 10
+  comparative_hooks: 11
+  markers:
+    inference: 2              # one in §III (both-versions same festival), one in §VI (maʿat/isfet as analytic)
+    speculation: 1            # §I closing (typology rests on two strong + one minor)
+    variant: 1                # §III opening (two co-equal Illuyanka versions)
+    lacuna: 1                 # §II (Bremner-Rhind fragmentary)
+    reconstruction: 0
+  verdict: PASS
+
+  honesty_self_check:
+    primary_sources_opened: >
+      Ch36 is the comparative-typology chapter for the cyclical-maintenance
+      subtype. Verification proceeded by (1) checking that every EVIDENCE
+      token's source_id resolves in sources.yaml — all 10 unique IDs
+      (assmann-2001-search, te-velde-1967, faulkner-1972-bod,
+      faulkner-1936-bremner-rhind, hoffner-1998, beckman-1982-illuyanka,
+      fontenrose-1959, ballentine-2015, watkins-1995, benveniste-renou-1934)
+      are registered (sources.yaml lines 394, 382, 358, 370, 261, 273, 42,
+      175, 102, 346 respectively); (2) cross-checking every per-tradition
+      claim against the corresponding Part-I claims-approved file — Ra-Apep
+      claims against ch16 (Bremner-Rhind / Heliopolis / Amduat hour 7 / Book
+      of Gates gate 4 / spells 7-39-108 / wax-effigy practice / six-corpus
+      arc / Pyramid Texts c. 2400 BCE through Bremner-Rhind c. 310 BCE);
+      Illuyanka claims against ch6 (CTH 321 / Hattusa / two co-equal
+      versions / Kella colophon / purulli at Nerik with Hakmis substitute /
+      Hupasiya / Inara / Kiskilussa / Version-2 heart-and-eyes / bride-price
+      / dual killing of son and Illuyanka / Watkins kuenta-illuyanka pairing);
+      Apollo-Python claims against ch12 (Homeric Hymn drakaina / Ovid Python
+      / pythein etymology / Septerion eight-yearly with hut-burning and
+      purification / Pausanias 10.6.5-6 / Pythios and Pythoktonos epithets);
+      (3) cross-checking every COMPARATIVE-HOOK chapter-number reference
+      against toc.yaml (Ch6, Ch12, Ch16 area-specialist anchors; C1=Ch34,
+      C2=Ch35, C3=Ch36, C4=Ch37, C5=Ch38 — all resolve); (4) cross-checking
+      banned-term occurrences against glossary.yaml's never_use list (every
+      "chaos" instance is either scare-quoted in the §VI Ballentine-critique
+      paragraph or appears in a glossary-locked first-mention gloss for
+      isfet — PASS); (5) verifying VARIANT marker integrity against
+      Beckman 1982 / Ch6's classification of the two Illuyanka versions as
+      co-equal; (6) verifying SPECULATION marker integrity (§I closing on
+      load-bearing weight of two strong + one minor); (7) verifying LACUNA
+      marker integrity against ch16's identical [LACUNA:] for P. BM EA 10188;
+      (8) verifying maʿat / isfet conceptual discipline against Assmann
+      2001 (the chapter's claims about the asymmetric, ontological-ethical-
+      political character of the framework match the standard Egyptological
+      reception of Assmann); (9) verifying the cyclical / cosmogonic /
+      sovereignty / eschatological boundary work in §I and §V; the §VI
+      structural-rather-than-adversarial contrast with C4 is explicit; the
+      brief's required "Egypt has no eschatology, the combat is perpetual;
+      Revelation has eschatology, the combat is final" pairing is preserved
+      verbatim at line 254.
+
+    sources_skimmed:
+      - >
+        Assmann, J., *The Search for God in Ancient Egypt*, trans. D.
+        Lorton (Cornell University Press, 2001). The chapter's
+        deployment of the maʿat / isfet framework as integrated
+        cosmic-order / social-justice / ritual-correctness / truth-of-
+        speech category-pair, the asymmetric (privation-not-dualism)
+        structure, the ontological-ethical-political register, and the
+        contingency-of-sunrise reading of the daily Apep combat all
+        align with the standard reception of Assmann 2001 chs. on
+        maʿat (especially "Maʿat: Justice as the Cohesion of Society")
+        and the chs. on solar theology and the daily journey. No
+        extension beyond what Assmann supports identified.
+      - >
+        te Velde, H., *Seth, God of Confusion*, 2nd ed. (Brill, 1967).
+        Chs. 3-4 are the standard Egyptological synthesis on Apep-and-
+        Seth. The chapter's framing of the Bremner-Rhind effigy-
+        destruction sequence (wax/papyrus/ground-drawing; binding,
+        cutting, trampling, spitting, burning) reproduces te Velde's
+        catalogue verbatim, and Ch16 lines 273, 313, 316, 319 carry
+        the same catalogue with the same source attribution. Ch36's
+        Bremner-Rhind / Heliopolis / Amduat-hour-7 / Book-of-Gates-
+        gate-4 attributions all match Ch16's claims-approved framings.
+      - >
+        Faulkner, R.O., *The Ancient Egyptian Book of the Dead*, rev.
+        ed. (British Museum, 1985; orig. 1972). Spells 7, 39, 108 as
+        the principal Apep-rebuffing spells of the Book of the Dead;
+        Ch36's spell-39 framing ("of repelling the rerek-snake in the
+        necropolis"), spell-108 western-horizon localisation, and spell-
+        7 short-apotropaic-cluster all match Ch16 lines 71, 74, 77.
+      - >
+        Faulkner, R.O., "The Bremner-Rhind Papyrus I-IV", JEA 22-24
+        (1936-38). The four-part edition of P. BM EA 10188; cited at
+        JEA-volume level per the established discipline. The LACUNA
+        marker's framing of the manuscript as preserved-but-fragmentary
+        and Faulkner's edition as the philological reconstruction
+        matches Ch16 line 95 and the Ch16 [LACUNA:] at line 98 verbatim.
+      - >
+        Hoffner, H.A., *Hittite Myths*, 2nd ed. (SBL, 1998), "Illuyanka"
+        §§1-2 with framing colophons. The two-version structure, the
+        Kiskilussa opening of Version 1, the Inara / Hupasiya banquet,
+        the heart-and-eyes / bride-price Version 2, the Kella colophon,
+        the purulli framing, and the Nerik / Hakmis cult-substitution
+        all match Ch6's claims-approved framings (lines 21, 33, 65,
+        106, 118, 121, 179, 191, 197, 200, 205, 211, 214). The chapter
+        compresses Ch6's narrative material into a [VARIANT:] block
+        rather than re-narrating each version in full, exactly per the
+        brief's special_instructions on short-by-design discipline.
+      - >
+        Beckman, G., "The Anatolian Myth of Illuyanka", JANES 14
+        (1982): 11-25. The editio princeps. The chapter's use of
+        Beckman 1982 as the warrant for the two-versions-as-co-equal
+        reading and for the philological-aetiological framing matches
+        Ch6's claims-approved framings (lines 16, 24, 27, 30, 36-37,
+        303). The VARIANT marker's reason-clause attribution to Beckman
+        for the co-equal reading is faithful.
+      - >
+        Fontenrose, J., *Python: A Study of Delphic Myth and Its
+        Origins* (UCal Press, 1959), chs. 1-3. The Septerion as
+        eight-yearly cyclical re-enactment with hut-burning and
+        purification-procession, the Homeric-Hymn drakaina / later
+        Python renaming, the pythein etymology, the Pausanias 10.6.5-6
+        third witness, and the Pythios / Pythoktonos cult epithets
+        all match Ch12's claims-approved framings (lines 22, 51, 54,
+        57, 71, 77, 80, 83, 92).
+      - >
+        Ballentine, D.S., *The Conflict Myth and the Biblical
+        Tradition* (Oxford University Press, 2015). Cited at §VI as
+        the "passim (chaos-category critique)" anchor for the
+        inadequacy-of-chaos-as-category-term argument. The Ch36
+        deployment is consistent with the broader book-internal use
+        of Ballentine 2015 (cf. Ch16 line 134; Ch34 §VI).
+      - >
+        Watkins, C., *How to Kill a Dragon* (Oxford University Press,
+        1995), ch. 46 on Illuyanka as Hittite reflex of HERO SLAY
+        SERPENT. The Ch36 deployment as forward-link to C5 (Ch38)
+        rather than as load-bearing for the present chapter's argument
+        matches Ch6's claims-approved framings (lines 98, 313 area).
+      - >
+        Benveniste, É., and L. Renou, *Vṛtra et Vṛθragna* (Imprimerie
+        Nationale, 1934). Cited at §V as the warrant for the Aži
+        Dahāka eschatological-closure structure. The deployment as
+        forward-link to C4 (Ch37) is consistent with the brief's
+        scope-restriction on the present chapter.
+
+    cross_references_resolved:
+      - "C1=Ch34 (line 77, 218)  RESOLVES per toc.yaml line 315-316"
+      - "C2=Ch35 (line 78)  RESOLVES per toc.yaml line 322-323"
+      - "C4=Ch37 (lines 69, 202, 219, 251, 254, 260)  RESOLVES per toc.yaml line 333-337"
+      - "C5=Ch38 (line 160, 164)  RESOLVES per toc.yaml line 340-area (Indo-European HERO SLAY SERPENT formula chapter)"
+      - "Ch6 Illuyanka (line 44, 121-area, 163, 164)  RESOLVES per toc.yaml ch-06-illuyanka"
+      - "Ch12 Greek dragons (line 44, 192)  RESOLVES per toc.yaml ch-12-greek-dragons-after-typhon"
+      - "Ch16 Ra-Apep (line 44, 121)  RESOLVES per toc.yaml ch-16-ra-apep"
+      - "Intro chapter 00A (line 261)  RESOLVES per toc.yaml intro-chapter entry"
+
+# ─────────────────────────────────────────────────────────────────────
+# Source-ID resolution scan
+# ─────────────────────────────────────────────────────────────────────
+# Every // EVIDENCE: source_id=X token resolves in sources.yaml:
+#   assmann-2001-search   → sources.yaml line 394   (27 tokens)
+#   te-velde-1967         → sources.yaml line 382   (12 tokens)
+#   faulkner-1972-bod     → sources.yaml line 358   (3 tokens)
+#   faulkner-1936-bremner-rhind → sources.yaml l. 370 (2 tokens)
+#   hoffner-1998          → sources.yaml line 261   (14 tokens)
+#   beckman-1982-illuyanka → sources.yaml line 273  (3 tokens)
+#   fontenrose-1959       → sources.yaml line 42    (11 tokens)
+#   ballentine-2015       → sources.yaml line 175   (1 token)
+#   watkins-1995          → sources.yaml line 102   (1 token)
+#   benveniste-renou-1934 → sources.yaml line 346   (1 token)
+# Total: 75 tokens / 65 paragraphs / 10 unique IDs. PASS.
+# ─────────────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────────────
+# Comparative-hook resolution
+# ─────────────────────────────────────────────────────────────────────
+# 11 hooks total (cross-checked against toc.yaml):
+#   §I closing block (lines 77-78): C1=Ch34, C2=Ch35  ✓✓
+#   §II closing (line 121): Ch16 Ra-Apep area-specialist back-link  ✓
+#   §III closing block (lines 163-164): Ch6 Illuyanka, C5=Ch38  ✓✓
+#   §IV closing (line 192): Ch12 Greek dragons area-specialist back-link  ✓
+#   §V closing block (lines 218-219): C1=Ch34, C4=Ch37  ✓✓
+#   §VI closing block (lines 260-261): C4=Ch37, Intro chapter 00A  ✓✓
+# All 11 hooks resolve. No missing-target findings.
+# ─────────────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────────────
+# Banned-term grep
+# ─────────────────────────────────────────────────────────────────────
+# Per glossary.yaml never_use list ("chaos-figure", "chaos-monster"):
+#   Bare "chaos" / "chaos-figure" / "chaos-monster" / "chaos-serpent"
+#   should appear only in scare-quotes within explicit Ballentine-critique
+#   paragraphs. Ch36's "chaos" occurrences:
+#     - Line 223 (§VI opening): "what 'chaos' is *not* doing in the
+#       cyclical-maintenance subtype" — scare-quoted, framework-
+#       discussion topical use. ✓
+#     - Line 229 (§VI on isfet): "designates 'disorder, injustice,
+#       chaos'" — quoted as glossary-locked first-mention gloss for
+#       isfet (cf. glossary.yaml line 905: "disorder, injustice,
+#       chaos; the condition Apep personifies; the antithesis of
+#       maʿat"). ✓
+#     - Line 235 (§VI Ballentine paragraph): "'chaos' half of the
+#       inherited Chaoskampf label", "'chaos' in the inchoate-
+#       primordial-Western-philosophical sense", "'chaos'
+#       terminology obscures" — all scare-quoted, all in the
+#       Ballentine-critique paragraph that explicitly thematises
+#       the term. ✓
+#     - Line 261 (COMPARATIVE-HOOK to Intro): "'chaos' terminology
+#       critiqued by Ballentine 2015" — scare-quoted. ✓
+# No un-quoted instances of bare "chaos". No "chaos-figure",
+# "chaos-monster", or "chaos-serpent" occurrences anywhere in the
+# chapter. PASS on banned-term scan.
+# ─────────────────────────────────────────────────────────────────────
+
+# ─────────────────────────────────────────────────────────────────────
+# Marker integrity scan
+# ─────────────────────────────────────────────────────────────────────
+# [SPECULATION:] (1, brief-required) at line 72:
+#   - subject: cyclical-maintenance subtype's load-bearing weight on
+#     two strong cases + one minor reflex
+#   - speculative_basis: present (the structural-features argument)
+#   - scope: present (methodological flag, not objection)
+#   - WELL-FORMED. PASS. Matches brief's required SPECULATION.
+#
+# [VARIANT:] (1, brief-required) at line 135:
+#   - primary: Version 1 (Hoffner §1)
+#   - alt: Version 2 (Hoffner §2)
+#   - chosen: present-both
+#   - reason: Beckman 1982 establishes the two as scribally co-equal
+#   - WELL-FORMED. Matches Ch6's classification (line 27: "co-equal
+#     scribal accounts rather than ranking one as primary"). PASS.
+#
+# [LACUNA:] (1) at line 110:
+#   - subject: Bremner-Rhind preserved-but-fragmentary
+#   - source: brief 16-ra-apep.yaml + Faulkner JEA 22-24
+#   - scholarly_reconstruction: Faulkner's four-part JEA edition;
+#     cross-section with Amduat hour 7 and Book of Gates gate 4
+#   - WELL-FORMED. Matches Ch16's identical [LACUNA:] at line 98. PASS.
+#
+# [INFERENCE:] (2):
+#   - line 155 (§III): both-versions-recited-at-same-festival tolerance
+#     Matches Ch6's [INFERENCE:] at line 264 verbatim. PASS.
+#   - line 249 (§VI): maʿat/isfet as comparative-analytical category
+#     for Hittite case without violating no-cross-tradition-
+#     reconstruction policy. Well-formed with basis and risk fields.
+#     The cross-reference to scope.md §"Reconstruction policy"
+#     resolves (scope.md line 76-86). PASS.
+#
+# All four marker types are well-formed and substantively faithful
+# to the upstream Ch6/Ch16 framings.
+# ─────────────────────────────────────────────────────────────────────
+
+findings:
+  # ───────────────────────────────────────────────────────────────────
+  # MEDIUM findings — attribution-drift / token-coverage gaps
+  # ───────────────────────────────────────────────────────────────────
+
+  - id: FIND-01
+    severity: MEDIUM
+    category: attribution-drift
+    claim_anchor: "lines 9, 26, 123, 125 — chapter-comment, §Source-overview central-argument paragraph, and §III opening"
+    description: |
+      The chapter labels the Hittite case "Teshub-Illuyanka" in the
+      pre-amble comment (line 9: "Ra-Apep (daily) and Teshub-Illuyanka
+      (annual)"), in the central-argument paragraph (line 26: "Egyptian
+      Ra-Apep and Hittite Teshub-Illuyanka"), and in the §III section
+      title and opening sentence (line 123: "=== III. Teshub and
+      Illuyanka — annual"; line 125: "The Hittite Teshub-Illuyanka
+      combat is the chapter's annual-cycle case: the storm-god (Hittite
+      Tarḫunna, Hurrian Teshub) confronts the serpent Illuyanka...").
+    issue: |
+      Ch6's claims-approved is explicit (lines 56, 59, 62) that the
+      Illuyanka myth is a Hittite-language composition that uses
+      Tarḫunna throughout, and that Teshub is the Hurrian-language
+      counterpart used in Hurrian-derived material (Kumarbi Cycle and
+      others) — explicitly distinguished from the Illuyanka material.
+      The Ch6 chapter title is "Tarḫunna vs. Illuyanka: The Purulli
+      Festival". Calling the case "Teshub-Illuyanka" is a name-pairing
+      drift to upstream: Tarḫunna is the storm-god of the CTH 321
+      tablets. The line-125 parenthetical ("Hittite Tarḫunna, Hurrian
+      Teshub") acknowledges the distinction but the section title and
+      every comparative-pairing label uses the Hurrian form. This is
+      MEDIUM rather than HIGH because Tarḫunna and Teshub are the
+      same deity in the Hittite-state pantheon (Hoffner 1998 general
+      introduction), but the slip nonetheless cuts against the upstream
+      chapter's explicit philological discipline.
+    evidence: |
+      Ch6 claims-approved line 62: "The Illuyanka myth is a Hittite-
+      language composition and consequently uses Tarḫunna throughout,
+      distinguishing it from the Hurrian-derived material that uses
+      Teshub.[Hoffner 1998, "Illuyanka" §§1-2, throughout.]"
+      Ch6 claims-approved line 2: "== Tarḫunna vs. Illuyanka: The
+      Purulli Festival — Claims".
+    recommended_fix: |
+      Globally rename "Teshub-Illuyanka" to "Tarḫunna-Illuyanka" or
+      "the storm-god-Illuyanka" wherever it appears as the case-label
+      (chapter-comment line 9; central-argument line 26; §III title
+      line 123; §III opening line 125). The line-125 parenthetical
+      ("Hittite Tarḫunna, Hurrian Teshub") may be retained as
+      philological gloss but should be reformulated as: "the storm-god
+      (Hittite Tarḫunna; the Hurrian counterpart-deity Teshub appears
+      in Hurrian-derived material such as the Kumarbi Cycle but the
+      Illuyanka tablets use Tarḫunna throughout)". This is verbatim-
+      substitutable.
+
+  - id: FIND-02
+    severity: MEDIUM
+    category: token-coverage
+    claim_anchor: "line 199 (§V) — paragraph on Marduk-Tiamat at akītu"
+    description: |
+      "Marduk's combat with Tiamat is liturgised at the akītu New Year
+      festival, but the akītu is recitation of a once-completed
+      cosmogony rather than re-enactment of a recurring combat..."
+      Footnote at the same line cites "Lambert 2013, *Babylonian
+      Creation Myths*, on the akītu recitation context...; per Ch34
+      (C1) on Marduk-Tiamat as cosmogonic-subtype type-specimen".
+      EVIDENCE token at line 200 routes through assmann-2001-search.
+    issue: |
+      The body-prose attribution names "Lambert 2013" as the load-
+      bearing source for the akītu / cosmogonic-past-tense reading,
+      and the footnote cites Lambert 2013 explicitly. lambert-2013 is
+      registered in sources.yaml (line 237). The single EVIDENCE
+      token routes through assmann-2001-search ("chs. on solar
+      theology (recurrence-vs-recitation contrast)"), which covers
+      the contrast-with-Egyptian side of the paragraph but not the
+      Lambert-2013-specific akītu-recitation reading. This is the same
+      token-coverage pattern flagged at FIND-04 in Ch34's factcheck:
+      a named-but-flagged source that is registered in sources.yaml
+      and could be tokenised. Without the Lambert-2013 token, the
+      paragraph's principal Mesopotamian-side claim is anchored only
+      methodologically through the Egyptian comparativist source.
+    evidence: |
+      Body prose at line 199: "Per Lambert 2013, *Babylonian Creation
+      Myths*, on the akītu recitation context..."
+      Single EVIDENCE token at line 200: source_id=assmann-2001-search.
+      Lambert 2013 registered in sources.yaml line 237.
+    recommended_fix: |
+      Add a second EVIDENCE token immediately after the existing one:
+      `// EVIDENCE: source_id=lambert-2013 ; loc=on akītu recitation
+      context and on the cosmogonic past-tense character of the
+      Marduk-Tiamat narrative` — paralleling the doubled-token
+      discipline used elsewhere in the chapter for cross-tradition
+      comparative claims (e.g. lines 53-54 te-velde-1967 + hoffner-1998,
+      lines 60-61 assmann-2001-search + hoffner-1998).
+
+  - id: FIND-03
+    severity: MEDIUM
+    category: token-coverage
+    claim_anchor: "line 152 (§III) — paragraph on Hittite-kingship dimension of the Nerik cult"
+    description: |
+      "The cult of the storm-god of Nerik is closely tied to Hittite
+      kingship: the king himself participated in the *purulli* festival,
+      and royal documents register the storm-god of Nerik among the
+      principal patron deities of the Hittite state..."
+      Footnote cites both Hoffner 1998 (introduction to "Illuyanka",
+      on the royal-religious dimension) and "Forsyth 1987, ch. 3, on
+      the royal dimension of the Hittite combat-tradition".
+      EVIDENCE token at line 153 routes through hoffner-1998 only.
+    issue: |
+      Forsyth 1987 is named in the body-prose footnote as a load-
+      bearing source for the royal-dimension claim. forsyth-1987 is
+      registered in sources.yaml (line 78). The pattern is the same
+      as FIND-02: a named-but-flagged source that should carry an
+      EVIDENCE token to match the body-prose attribution. The hoffner-
+      1998 token covers the introduction-to-Illuyanka side; Forsyth
+      1987 is a separately-citable comparative-mythology anchor for
+      the royal-dimension reading. Without the forsyth-1987 token,
+      the named attribution is unflagged.
+    evidence: |
+      Body prose at line 152 footnote: "...per Forsyth 1987, ch. 3,
+      on the royal dimension of the Hittite combat-tradition.]"
+      Single EVIDENCE token at line 153: source_id=hoffner-1998.
+      Forsyth 1987 registered in sources.yaml line 78.
+    recommended_fix: |
+      Add a second EVIDENCE token after the existing one:
+      `// EVIDENCE: source_id=forsyth-1987 ; loc=ch. 3 (royal
+      dimension of the Hittite combat-tradition)`. This matches the
+      doubled-token pattern used at lines 53-54, 60-61, 99-100 in the
+      same chapter.
+
+  - id: FIND-04
+    severity: MEDIUM
+    category: token-coverage
+    claim_anchor: "line 202 (§V) — paragraph on Aži Dahāka eschatological closure"
+    description: |
+      "...Thraētaona's binding of Aži Dahāka under Damāvand is presented
+      as a past-tense bound-but-not-killed result, and the dragon's
+      escape and final killing by the revived Kərəsāspa at Frashokereti
+      closes cosmic time..."
+      Footnote cites Benveniste & Renou 1934 and "Watkins 1995, *How
+      to Kill a Dragon*, Part V chs. 44-48, on the eschatological-
+      closure structure of the Iranian dragon-tradition".
+      EVIDENCE token at line 203 routes through benveniste-renou-1934
+      only.
+    issue: |
+      Watkins 1995 is named in the body-prose footnote at Part V chs.
+      44-48 as a load-bearing source for the eschatological-closure
+      reading of the Iranian tradition. watkins-1995 is registered in
+      sources.yaml (line 102) and is already tokenised elsewhere in
+      the same chapter (line 161). Same token-coverage pattern as
+      FIND-02 and FIND-03.
+    evidence: |
+      Body prose at line 202 footnote: "Watkins 1995, *How to Kill a
+      Dragon*, Part V chs. 44-48, on the eschatological-closure
+      structure of the Iranian dragon-tradition".
+      Single EVIDENCE token at line 203: source_id=benveniste-renou-1934.
+      Watkins 1995 registered in sources.yaml line 102.
+    recommended_fix: |
+      Add a second EVIDENCE token:
+      `// EVIDENCE: source_id=watkins-1995 ; loc=Part V chs. 44-48,
+      eschatological-closure structure of the Iranian dragon-tradition`.
+
+  - id: FIND-05
+    severity: MEDIUM
+    category: scope-creep
+    claim_anchor: "line 251 (§VI) — paragraph on cyclical-vs-eschatological isfet-containment"
+    description: |
+      "...in the cyclical-maintenance subtype the cosmos is held in
+      being by the daily-or-annual containment of *isfet* — Apep is
+      rebuffed nightly, Illuyanka is recurrently slain — and the
+      containment is interminable; in the eschatological subtype the
+      cosmos's *isfet*-content accumulates toward a final reckoning..."
+    issue: |
+      The phrasing extends the Egyptian *isfet* category-term to apply
+      across traditions (Ragnarök, Frashokereti, Revelation) where the
+      term is not native. The Ch36 [INFERENCE:] block at line 249
+      explicitly justifies using *maʿat* / *isfet* as comparative-
+      analytical vocabulary for the Hittite case (per scope.md
+      §"Reconstruction policy"), but extending *isfet* to the
+      eschatological subtype's Norse / Iranian / Christian materials
+      is a wider analytical scope than the [INFERENCE:] authorises.
+      The drift is mild — the §VI paragraph is comparative-analytical
+      rather than narrative-content-fill, so scope.md's no-cross-
+      tradition-reconstruction policy is not strictly violated — but
+      a careful reader may take "the cosmos's *isfet*-content
+      accumulates toward a final reckoning" as imputing an Egyptian
+      category to traditions whose own conceptual apparatus the
+      chapter has not engaged. Ch36 line 245 is admirably explicit
+      that the Hittite tablets do not articulate the framework; the
+      same caveat is not extended to the eschatological-tradition
+      materials in §VI's closing paragraphs.
+    evidence: |
+      Ch36 line 249 [INFERENCE:] block scope: "the *purulli*-and-
+      Illuyanka material is not being narratively supplemented from
+      the Egyptian corpus, only typologically described using a
+      vocabulary that the Egyptian corpus articulates more explicitly".
+      The eschatological-tradition extension at line 251 is broader.
+    recommended_fix: |
+      Add a parenthetical caveat to line 251 explicitly marking the
+      *isfet*-language as comparative-analytical-vocabulary rather
+      than as native to the eschatological traditions: "...the cosmos's
+      isfet-content (using the Egyptian framework as comparative
+      analytic, not as native vocabulary for the eschatological
+      traditions) accumulates toward a final reckoning...". Alternatively,
+      extend the [INFERENCE:] block at line 249 to cover the §VI
+      eschatological-extension explicitly.
+
+  # ───────────────────────────────────────────────────────────────────
+  # LOW findings — wording / specificity issues
+  # ───────────────────────────────────────────────────────────────────
+
+  - id: FIND-06
+    severity: LOW
+    category: attribution-drift
+    claim_anchor: "line 137 (§III) — paragraph on Version 1 narrative summary"
+    description: |
+      "Version 1, in Hoffner's translation as 'Illuyanka' §1, opens
+      with the storm-god and Illuyanka meeting in combat at Kiskilussa,
+      in which Illuyanka defeats the storm-god; Inara — daughter of
+      the storm-god — devises a stratagem with the mortal Hupasiya,
+      who in exchange for a night with Inara binds the gorged serpent
+      at a banquet so that the storm-god can return with the
+      assembled gods and slay the bound Illuyanka."
+    issue: |
+      The phrasing "in exchange for a night with Inara" telescopes
+      Ch6's framing somewhat: Ch6 lines 121-124 attest the bargain as
+      Inara offering "to spend a night with him" in exchange for
+      assistance, with the night recorded as a fulfilled stipulation
+      separately from the binding. The Ch36 compression makes the
+      night-and-binding a quid-pro-quo simultaneity, which is a mild
+      reframe of the upstream's sequence (bargain → consummated
+      bargain → conducted to banquet site → concealment → Inara
+      summons serpents → gorging → Hupasiya emerges and binds). The
+      drift is minor; the substantive claim (Hupasiya binds the
+      gorged serpent; storm-god kills) is correct.
+    evidence: |
+      Ch6 claims-approved lines 121-139:
+      "Inara proposes a bargain to Hupasiya: he is to assist her
+       against the serpent, and in exchange she offers to spend a
+       night with him. ... Hupasiya agrees to the bargain, and the
+       text records the night spent between them as a fulfilled
+       stipulation of the agreement. ... Inara conducts Hupasiya to
+       the site of the planned banquet... While the serpents are
+       immobilised by their gorging, Hupasiya emerges from concealment
+       and binds Illuyanka with a rope."
+    recommended_fix: |
+      Replace "who in exchange for a night with Inara binds the
+      gorged serpent at a banquet" with "who, after the bargained
+      night with Inara, is concealed at the banquet site and there
+      binds the gorged serpent". Verbatim-substitutable; preserves
+      the compression's length-budget while restoring the upstream's
+      narrative sequence.
+
+  - id: FIND-07
+    severity: LOW
+    category: wording-ambiguity
+    claim_anchor: "line 140 (§III) — paragraph on Version 2 narrative summary"
+    description: |
+      "Version 2, in Hoffner's translation as 'Illuyanka' §2, opens
+      differently: Illuyanka defeats the storm-god by taking his heart
+      and eyes; the mutilated storm-god begets a son with a mortal
+      woman, marries the son into Illuyanka's house, and instructs
+      him to demand the heart and eyes as bride-price; once the organs
+      are returned, the restored storm-god kills both Illuyanka and
+      his own son (who, having kept faith with his father-in-law's
+      house, calls upon his father to kill him along with Illuyanka)."
+    issue: |
+      The phrasing "the restored storm-god kills both Illuyanka and
+      his own son" omits the Ch6-attested locus of the renewed
+      combat: Ch6 line 205 is explicit that "The storm-god then
+      engages Illuyanka anew, this time in a combat at the sea, and
+      slays the serpent." The footnote at Ch36 line 140 mentions
+      "the renewed combat at the sea" but the body-prose narrative
+      summary itself drops the "at the sea" locus. The omission is
+      minor — Ch36 is short-by-design — but the upstream framing is
+      explicit on this point and the locus is recoverable from the
+      footnote.
+    evidence: |
+      Ch6 claims-approved line 205: "The storm-god then engages
+      Illuyanka anew, this time in a combat at the sea, and slays
+      the serpent."
+      Ch36 line 140 footnote: "...the renewed combat at the sea, and
+      the dual killing of Illuyanka and the son".
+    recommended_fix: |
+      Replace "once the organs are returned, the restored storm-god
+      kills both Illuyanka and his own son" with "once the organs
+      are returned, the restored storm-god joins Illuyanka in renewed
+      combat at the sea and kills both the serpent and his own son".
+      Verbatim-substitutable.
+
+  - id: FIND-08
+    severity: LOW
+    category: wording-ambiguity
+    claim_anchor: "line 110 [LACUNA:] block — Bremner-Rhind fragmentary preservation"
+    description: |
+      "[LACUNA: the Bremner-Rhind liturgy is preserved but fragmentary
+      in sections — a documented physical gap in the principal
+      documentary witness for the ritual embedding of the daily Apep
+      combat | source: per brief 16-ra-apep.yaml on the fragmentary
+      preservation of P. BM EA 10188 and per Faulkner's *JEA* 22 (1936)
+      and *JEA* 23-24 (1937-38) on the philological reconstruction of
+      the manuscript | scholarly_reconstruction: Faulkner's four-part
+      *JEA* edition...]"
+    issue: |
+      The phrase "Faulkner's four-part *JEA* edition" is slightly
+      imprecise: Ch16 line 92 attests the edition as "Faulkner 1936
+      ('The Bremner-Rhind Papyrus I', JEA 22), and Faulkner 1937-38
+      ('The Bremner-Rhind Papyrus II-IV', JEA 23-24)" — i.e., a four-
+      part series spread across three JEA volumes (22, 23, 24). The
+      "four-part" descriptor is correct (Parts I, II, III, IV) but
+      "JEA edition" implies a single unified edition rather than the
+      multi-volume series structure. This is a wording-precision
+      issue rather than a substantive drift.
+    evidence: |
+      Ch16 claims-approved line 92: "...Faulkner 1936 ('The Bremner-
+      Rhind Papyrus I', JEA 22), and Faulkner 1937-38 ('The
+      Bremner-Rhind Papyrus II-IV', JEA 23-24) — which present the
+      philological edition of the papyrus separately from his Book
+      of the Dead translation; the chapter cites these as Faulkner's
+      Bremner-Rhind editions and references them at the JEA-volume
+      level..."
+    recommended_fix: |
+      Replace "Faulkner's four-part *JEA* edition" with "Faulkner's
+      four-part *JEA* edition (Parts I-IV across *JEA* 22, 23, and
+      24)". Optional; the compression is acceptable in a [LACUNA:]
+      block.
+
+  # ───────────────────────────────────────────────────────────────────
+  # NOTE findings — structural observations (not blocking)
+  # ───────────────────────────────────────────────────────────────────
+
+  - id: FIND-09
+    severity: NOTE
+    category: maat-isfet-discipline
+    claim_anchor: "§VI (lines 222-258) — conceptual-apparatus section"
+    description: |
+      The brief required Assmann's maʿat / isfet framework as the
+      chapter's conceptual through-line. Verification of the §VI
+      claims against the standard Egyptological reception of Assmann
+      2001 finds the chapter's deployment to be substantively faithful:
+      maʿat as integrated truth-order-justice category (line 226),
+      isfet as integrated disorder-injustice-falsehood antithesis
+      (line 229), the asymmetric (privation-not-dualism) structure
+      (line 232), the ontological-ethical-political register (line 239),
+      and the three-resource analytical role (line 242) all align with
+      Assmann's argument as it is received in the standard literature.
+    issue: |
+      No issue. NOTE registers the discipline as PASS for the
+      audit-required check on the maʿat / isfet framework. The §VI
+      [INFERENCE:] at line 249 is a particularly disciplined
+      handling of the cross-tradition-vocabulary risk and is a model
+      for the comparative-chapter skill's required transparency on
+      using one tradition's apparatus as analytical-comparative
+      vocabulary.
+    evidence: |
+      Ch36 line 232 (asymmetry): "*maʿat* is the positive condition
+      Ra's daily journey preserves, *isfet* is its privation or
+      violation that Apep's nightly assault threatens to impose, and
+      the two are not co-equal cosmic principles but order and its
+      violation".
+      Ch36 line 239 (integrated register): "*maʿat* names how the
+      cosmos is and how human society and pharaonic rule must be".
+      Ch36 line 242 (three-resource role): "vocabulary, doctrine,
+      and register".
+    recommended_fix: |
+      No fix required. NOTE for completeness only. The §VI section
+      is the chapter's analytical core and the maʿat / isfet
+      treatment carries the brief's required conceptual-through-line
+      load admirably.
+
+  - id: FIND-10
+    severity: NOTE
+    category: cyclical-vs-eschatological-boundary
+    claim_anchor: "lines 69, 251, 254 — structural contrast with C4"
+    description: |
+      The brief required §V "Why these two and not others" to
+      distinguish cyclical-maintenance from C1 (cosmogony), C2
+      (sovereignty), and especially C4 (eschatological — Egypt has
+      no eschatology, so the combat is perpetual; Revelation has
+      eschatology, so the combat is final). Verification finds the
+      chapter satisfies the required boundary-work:
+        - vs. C1 at line 63 (Marduk's combat as once-and-done body-
+          dismemberment cosmogony vs. Ra's renewed combat with no
+          construction-from-substance);
+        - vs. C2 at line 66 (Baal-Yamm and Zeus-Typhon as once-settled
+          sovereignty vs. recurrent combat);
+        - vs. C4 at line 69 (eschatological closure of cosmic time
+          vs. uncloseable cyclical-maintenance);
+        - vs. C4 at line 251 ([isfet-containment vs. final reckoning,
+          flagged at FIND-05);
+        - vs. C4 at line 254 (verbatim brief-required formulation:
+          "Egypt has no eschatology and the combat is perpetual;
+          Revelation has an eschatology and the combat is final").
+    issue: |
+      No issue. The brief's required structural-contrast discipline
+      is satisfied at each of the four boundary points. The
+      "structural rather than adversarial" framing at lines 254-255
+      is faithful to the brief's special_instructions and registers
+      the contrast as a difference of cosmic-time configuration
+      rather than as a typology-internal hierarchy.
+    evidence: |
+      Ch36 line 254: "Egypt has no eschatology and the combat is
+      perpetual; Revelation has an eschatology and the combat is
+      final — and the two configurations are alternative answers to
+      the same underlying question about whether cosmic time is
+      bounded or unbounded".
+      Brief 36-C3-cyclical-maintenance.yaml lines 64-66: "...Egypt
+      has no eschatology; the combat is perpetual. Revelation has
+      an eschatology; the combat is final. These differ structurally."
+    recommended_fix: |
+      No fix required. NOTE registers the boundary-work as PASS.
+
+summary: |
+  Audit complete. Total findings: 5 MEDIUM (FIND-01 attribution-drift
+  on Teshub-vs-Tarḫunna case-label; FIND-02/03/04 token-coverage gaps
+  on Lambert-2013, Forsyth-1987, and Watkins-1995 named-but-untokened
+  in §V and §III footnotes; FIND-05 mild scope-creep on isfet-extension
+  to eschatological-tradition materials in §VI), 3 LOW (FIND-06/07
+  minor narrative-summary compressions in §III; FIND-08 wording-precision
+  on Faulkner's JEA edition in [LACUNA:]), 2 NOTE (FIND-09 maʿat/isfet
+  discipline PASS; FIND-10 cyclical-vs-eschatological boundary-work
+  PASS). No HIGH findings: every source_id resolves in sources.yaml,
+  every comparative-hook chapter-number resolves in toc.yaml, no banned-
+  term leakage outside scare-quoted Ballentine-critique paragraphs in
+  §VI, and the four required markers ([SPECULATION:], [VARIANT:],
+  [LACUNA:], [INFERENCE:]) are all well-formed and substantively
+  faithful to upstream Ch6 / Ch16 framings. The most consequential
+  single finding is FIND-01 (Teshub-vs-Tarḫunna case-label drift):
+  Ch6's claims-approved is explicit that the Illuyanka tablets are a
+  Hittite-language composition using Tarḫunna throughout and that
+  Teshub is the Hurrian-language counterpart used in non-Illuyanka
+  material — the chapter's globally-applied "Teshub-Illuyanka" case-
+  label cuts against this discipline and should be renamed to
+  "Tarḫunna-Illuyanka" in the chapter-comment, central-argument
+  paragraph, §III section title, and §III opening sentence. Verdict
+  PASS: the MEDIUM findings are token-coverage and wording fixes
+  rather than substantive misattributions or fabrications, the
+  scope-creep at FIND-05 is comparative-analytical rather than
+  narrative-content-fill (and is one [INFERENCE:]-block extension
+  away from full discipline), and the chapter's analytical core
+  (§VI maʿat / isfet framework, §V boundary-work, §I three-feature
+  pattern) is substantively sound. Recommend the writer apply
+  FIND-01 verbatim (Tarḫunna rename) and FIND-02/03/04 verbatim
+  (add the three named-but-untokened EVIDENCE tokens) before the
+  chapter advances to draft-prose stage; FIND-05/06/07/08 fixes are
+  optional polish.

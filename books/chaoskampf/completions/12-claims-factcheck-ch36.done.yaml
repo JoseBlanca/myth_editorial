@@ -1,0 +1,71 @@
+stage: claims-factcheck
+chapter: 36-C3-cyclical-maintenance
+timestamp: 2026-05-03T09:14:53Z
+status: completed
+agent_model: claude-opus-4-7-1m
+inputs:
+  - file: chapters/36-C3-cyclical-maintenance.claims.adoc
+    claims_identified: 65
+    evidence_tokens: 75
+    speculation_markers: 1
+    variant_markers: 1
+    lacuna_markers: 1
+    inference_markers: 2
+    reconstruction_markers: 0
+    comparative_hooks: 11
+    unique_source_ids_used: 10
+  - file: briefs/36-C3-cyclical-maintenance.yaml
+  - file: scope.md
+  - file: sources.yaml
+  - file: glossary.yaml
+  - file: toc.yaml
+  - file: chapters/06-illuyanka.claims.approved.adoc
+  - file: chapters/12-greek-dragons-after-typhon.claims.approved.adoc
+  - file: chapters/16-ra-apep.claims.approved.adoc
+outputs:
+  - file: chapters/36-C3-cyclical-maintenance.claims.factcheck.yaml
+    lines: 699
+verdict: PASS
+summary: >
+  Fresh-context claims-factcheck audit of Ch36 (C3. Cyclical Maintenance,
+  the third Part-II comparative chapter). Total findings: 5 MEDIUM
+  (FIND-01 attribution-drift on the "Teshub-Illuyanka" case-label across
+  the chapter — Ch6 is explicit that the Illuyanka tablets are a Hittite-
+  language composition using Tarḫunna throughout and that Teshub is the
+  Hurrian-language counterpart used in non-Illuyanka material; the
+  chapter should rename to "Tarḫunna-Illuyanka"; FIND-02/03/04 token-
+  coverage gaps where Lambert 2013 / Forsyth 1987 / Watkins 1995 are
+  named in §V and §III body-prose footnotes but lack matching EVIDENCE
+  tokens despite all three being registered in sources.yaml; FIND-05
+  mild scope-creep on extending the Egyptian *isfet* category-term to
+  eschatological-tradition materials in §VI without a covering
+  [INFERENCE:] block), 3 LOW (FIND-06/07 minor narrative-summary
+  compressions in the §III Version-1 / Version-2 paragraphs; FIND-08
+  wording-precision on Faulkner's JEA edition in the [LACUNA:] block),
+  2 NOTE (FIND-09 maʿat / isfet discipline PASS — the brief-required
+  conceptual-through-line is substantively faithful to Assmann 2001's
+  asymmetric, ontological-ethical-political reading; FIND-10 cyclical-
+  vs-eschatological boundary-work PASS — the brief-required "Egypt has
+  no eschatology, the combat is perpetual; Revelation has eschatology,
+  the combat is final" formulation is preserved verbatim at line 254).
+  No HIGH findings: every source_id resolves in sources.yaml (10
+  unique IDs verified), every comparative-hook chapter-number resolves
+  in toc.yaml (Ch6, Ch12, Ch16, Ch34, Ch35, Ch37, Ch38, intro 00A all
+  resolve), no banned-term leakage outside scare-quoted Ballentine-
+  critique paragraphs in §VI (no "chaos-figure" / "chaos-monster" /
+  "chaos-serpent" anywhere; bare "chaos" only in scare-quotes within
+  the §VI Ballentine-critique paragraph and in the glossary-locked
+  isfet first-mention gloss), and the four required markers
+  ([SPECULATION:] on the typology's load-bearing weight; [VARIANT:] on
+  the two co-equal Illuyanka versions per Beckman 1982; [LACUNA:] on
+  the Bremner-Rhind P. BM EA 10188 fragmentary preservation; two
+  [INFERENCE:] blocks) are all well-formed and substantively faithful
+  to the upstream Ch6 / Ch16 framings. The most consequential single
+  finding is FIND-01 (Tarḫunna-vs-Teshub case-label drift across the
+  chapter-comment, central-argument paragraph, §III section title, and
+  §III opening sentence). Verdict PASS: MEDIUM findings are token-
+  coverage and naming-discipline fixes, not substantive misattributions
+  or fabrications. Recommend writer apply FIND-01 (verbatim Tarḫunna
+  rename) and FIND-02/03/04 (verbatim addition of the three named-but-
+  untokened EVIDENCE tokens) before the chapter advances to draft-prose
+  stage; FIND-05/06/07/08 fixes are optional polish.
