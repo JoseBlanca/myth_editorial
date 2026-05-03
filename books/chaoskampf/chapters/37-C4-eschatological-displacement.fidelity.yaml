@@ -1,0 +1,414 @@
+meta:
+  stage: "15-narrative-fidelity"
+  auditor_model: "claude-opus-4-7[1m]"
+  audit_date: "2026-05-03"
+  claims_file: "chapters/37-C4-eschatological-displacement.claims.approved.adoc"
+  narrative_file: "chapters/37-C4-eschatological-displacement.adoc"
+  total_claims: 94
+  claims_mapped: 94
+  verdict: PASS
+  honesty_self_check: |
+    Fresh-context audit performed against the claims-approved file as the
+    canonical source; the writer's completion record was not consulted to
+    pre-judge findings. Every paragraph-claim was sequentially mapped from
+    the claims-approved (lines 30..438) onto the corresponding narrative
+    paragraph (lines 6..436), and the seven markers, all 94 footnote
+    bodies, all 168 EVIDENCE tokens, and all 21 COMPARATIVE-HOOK lines
+    were checked byte-for-byte via in-order diff. The two
+    post-human-normalize fixes (FIND-01 §V six-+-Isa-27:1 enumeration,
+    FIND-02 §II Case-2 Yarbro Collins / Aune attribution split) were
+    verified byte-for-byte on the canonical paragraphs. The permitted
+    prose additions were enumerated and confirmed (1 roadmap closer to
+    the source-overview block + 6 section-opener bridges I..VI + 3
+    §II sub-case bridges = 10 unfootnoted prose additions, exactly the
+    pattern the prompt specifies). The auditor identified no HIGH and
+    no MEDIUM findings; only structural NOTEs. Verdict PASS.
+  issues_summary:
+    high: 0
+    medium: 0
+    low: 0
+    note: 4
+
+check_1_completeness:
+  description: |
+    Every paragraph-claim from claims-approved is mapped to a narrative
+    location in the same sequence; footnote, EVIDENCE, COMPARATIVE-HOOK,
+    and marker counts all reach byte-level parity.
+  claims_mapped_count: 94
+  claims_mapped_to_narrative_lines:
+    source_overview:
+      claim_01_lines_30: narrative_line_6   # Source overview opener (two-layer evidence)
+      claim_02_lines_33: narrative_line_9   # Fourth Part-II comparative chapter; subtype-locked term
+      claim_03_lines_36: narrative_line_12  # Central argument (four-feature pattern)
+      claim_04_lines_39: narrative_line_15  # Norse anchors (Faulkes / Larrington / West)
+      claim_05_lines_44: narrative_line_20  # Christian-apocalyptic anchors
+      claim_06_lines_50: narrative_line_26  # Zoroastrian anchors (Benveniste-Renou / Watkins)
+      claim_07_lines_54: narrative_line_30  # Evidentiary discipline (doubled-token pattern)
+      claim_08_lines_58: narrative_line_34  # No-re-narrate discipline; per-tradition Part-I anchors
+      hooks_lines_61_62: narrative_lines_37_38  # Ch33-methods + C3-Ch36 hooks
+    section_I_the_pattern:
+      claim_09_lines_66: narrative_line_46   # Four-stage structural sequence
+      claim_10_lines_69: narrative_line_49   # Feature 1: binding-or-reservation
+      claim_11_lines_74: narrative_line_54   # Feature 2: undoing of constraint
+      claim_12_lines_78: narrative_line_58   # Feature 3: final combat at end of cosmic time
+      claim_13_lines_83: narrative_line_63   # Feature 4: post-combat condition
+      claim_14_lines_88: narrative_line_68   # Four-feature pattern distinguishing C4
+      claim_15_lines_91: narrative_line_71   # Three-traditions / three-continents finding
+      marker_speculation_lines_94: narrative_line_74  # SPECULATION: subtype as late innovation
+      claim_16_lines_96: narrative_line_76   # Bound-or-encircled feature as distinctive marker
+      claim_17_lines_100: narrative_line_80  # Signature feature as deferred-because-bound
+      hooks_lines_103_105: narrative_lines_83_85  # C1/C2/C3 hooks
+    section_II_the_three_cases:
+      claim_18_lines_109: narrative_line_91   # Compressed comparative treatment
+      case_1_thor_jormungandr:
+        claim_19_lines_114: narrative_line_98   # Norse case opens (Gylfaginning ch. 34)
+        claim_20_lines_117: narrative_line_101  # Encircling as binding-or-reservation
+        claim_21_lines_121: narrative_line_105  # Two pre-eschatological encounters
+        claim_22_lines_125: narrative_line_109  # Release of Jörmungandr at Ragnarök
+        claim_23_lines_128: narrative_line_112  # Final combat: mutual killing
+        claim_24_lines_132: narrative_line_116  # Norse renewal-narrative
+        claim_25_lines_136: narrative_line_120  # West 2007 IE eschatologisation reading
+        hook_line_140: narrative_line_124       # Ch18 hook
+      case_2_michael_red_dragon:
+        claim_26_lines_144: narrative_line_130  # Bipartite Rev 12 + Rev 20 (FIND-02 fix)
+        claim_27_lines_148: narrative_line_134  # Rev 12:7-9 war in heaven, RSV
+        claim_28_lines_152: narrative_line_138  # Rev 12:9 double-gloss
+        claim_29_lines_156: narrative_line_142  # Post-expulsion narrative
+        claim_30_lines_159: narrative_line_145  # Rev 20:1-3 binding
+        claim_31_lines_162: narrative_line_148  # Rev 20:7-10 final combat
+        claim_32_lines_165: narrative_line_151  # Rev 21:1 new heavens-and-new-earth
+        marker_variant_lines_169: narrative_line_155  # VARIANT: Yarbro Collins vs. Aune
+        hook_line_171: narrative_line_157       # Ch9 hook
+      case_3_azi_dahaka:
+        claim_33_lines_175: narrative_line_163  # Avestan combat: Yašt 5.33-35
+        claim_34_lines_179: narrative_line_167  # Damāvand-binding (Pahlavi-only)
+        marker_lacuna_lines_183: narrative_line_171  # LACUNA: Pahlavi temporal-layering
+        claim_35_lines_185: narrative_line_173  # Release of Aži Dahāka
+        claim_36_lines_188: narrative_line_176  # Revived Kərəsāspa kills the freed dragon
+        claim_37_lines_191: narrative_line_179  # Frashokereti renovation
+        claim_38_lines_195: narrative_line_183  # Iranian doubled-combat structure
+        hook_line_200: narrative_line_188       # Ch13 hook
+    section_III_the_binding:
+      claim_39_lines_204: narrative_line_194    # Binding as signature
+      claim_40_lines_208: narrative_line_198    # Norse cosmographic-encircling
+      claim_41_lines_212: narrative_line_202    # Norse encircling without fetters
+      claim_42_lines_216: narrative_line_206    # Iranian chained-and-mountain-sealed
+      claim_43_lines_219: narrative_line_209    # Iranian permanent under-mountain captive
+      claim_44_lines_222: narrative_line_212    # Christian-apocalyptic bipartite binding
+      claim_45_lines_226: narrative_line_216    # Thousand-year duration of Rev 20:1-3
+      claim_46_lines_230: narrative_line_220    # Contrast w/ cosmogonic disposal (Marduk-Tiamat)
+      claim_47_lines_234: narrative_line_224    # Contrast w/ sovereignty disposal (Baal-Yamm)
+      claim_48_lines_238: narrative_line_228    # Contrast w/ cyclical-maintenance (Ra-Apep)
+      claim_49_lines_242: narrative_line_232    # Binding as structural fulcrum
+      marker_inference_lines_246: narrative_line_236  # INFERENCE: three-articulation variants
+      claim_50_lines_248: narrative_line_238    # Cultural-and-theological specificity
+      hooks_lines_251_253: narrative_lines_241_243  # C1/C2/C5 hooks
+    section_IV_influence_or_convergence:
+      claim_51_lines_257: narrative_line_249    # Three influence-possibilities frame
+      claim_52_lines_260: narrative_line_252    # religionsgeschichtliche Schule history
+      claim_53_lines_264: narrative_line_256    # Persian-period contact (Yehud / Judaea)
+      claim_54_lines_268: narrative_line_260    # Four candidate Iranian-derivation features
+      claim_55_lines_272: narrative_line_264    # Aži Dahāka / Rev 20 structural pivot
+      claim_56_lines_276: narrative_line_268    # Temporal-layering caveat
+      claim_57_lines_280: narrative_line_272    # Counterevidence-set
+      claim_58_lines_284: narrative_line_276    # Jewish-Christian → Norse hypothesis
+      claim_59_lines_288: narrative_line_280    # Four-stone iconographic dossier
+      claim_60_lines_291: narrative_line_283    # Iconographic dossier limits
+      claim_61_lines_294: narrative_line_286    # IE comparative reading (West / Watkins)
+      claim_62_lines_298: narrative_line_290    # Independent-convergence hypothesis
+      marker_speculation_lines_302: narrative_line_294  # SPECULATION: partial-but-not-exhaustive Iranian
+      claim_63_lines_304: narrative_line_296    # Charitable-presentation discipline
+      claim_64_lines_308: narrative_line_300    # Settled position
+      claim_65_lines_313: narrative_line_305    # Partition-rather-than-uniform-decision
+      hooks_lines_316_318: narrative_lines_308_310  # C6/C5/Ch13 hooks
+    section_V_isaiah_27_1:
+      claim_66_lines_322: narrative_line_316    # Six dominantly-retrospective + Isa 27:1 (FIND-01 fix)
+      claim_67_lines_325: narrative_line_319    # Ps 74:12-17 retrospective
+      claim_68_lines_328: narrative_line_322    # Job 26:12-13 retrospective wisdom-poetry
+      claim_69_lines_331: narrative_line_325    # Isa 27:1 as principal exception
+      claim_70_lines_334: narrative_line_328    # Isa 27:1 RSV text + bayyôm hahû'
+      claim_71_lines_337: narrative_line_331    # Dual-epithet verbatim correspondence (KTU 1.5 i 1-3)
+      claim_72_lines_341: narrative_line_335    # Post-exilic dating; Persian-period setting
+      claim_73_lines_345: narrative_line_339    # Day's inner-Israelite eschatologisation reading
+      claim_74_lines_348: narrative_line_342    # Ballentine 2015 ch. 5 political-theological reading
+      claim_75_lines_351: narrative_line_345    # Bridge-function of Isa 27:1 to Rev 12
+      claim_76_lines_356: narrative_line_350    # Single-text status of Isa 27:1
+      claim_77_lines_359: narrative_line_353    # Transitional-text reading
+      claim_78_lines_363: narrative_line_357    # Isa 27:1 future-tense projection as hinge
+      marker_inference_lines_367: narrative_line_361  # INFERENCE: Isa 27:1 → Rev 12 textual datum
+      claim_79_lines_369: narrative_line_363    # Structural difference: projection w/o binding
+      hooks_lines_373_374: narrative_lines_367_368  # Ch8/Ch9 hooks
+    section_VI_what_eschatology_changes:
+      claim_80_lines_378: narrative_line_374    # Three-axis analytical contribution
+      claim_81_lines_382: narrative_line_378    # First axis — relationship to monster
+      claim_82_lines_385: narrative_line_381    # Patient-awaiting in Christian-apocalyptic register
+      claim_83_lines_389: narrative_line_385    # Zoroastrian register (druj glossed)
+      claim_84_lines_393: narrative_line_389    # Norse cosmographic register
+      claim_85_lines_397: narrative_line_393    # Second axis — relationship to history
+      marker_speculation_lines_401: narrative_line_397  # SPECULATION: meaningful-linear-history precondition
+      claim_86_lines_403: narrative_line_399    # Political-theological implications
+      claim_87_lines_408: narrative_line_404    # Third axis — relationship to hero
+      claim_88_lines_413: narrative_line_409    # Christian-apocalyptic inverted royal-legitimation
+      claim_89_lines_417: narrative_line_413    # Three-axis collective signature
+      claim_90_lines_421: narrative_line_417    # Lived-religious practice consequences
+      claim_91_lines_426: narrative_line_422    # Contrast w/ Ch36 maʿat / isfet framework
+      claim_92_lines_430: narrative_line_426    # Asymmetric articulation across cases
+      claim_93_lines_435: narrative_line_431    # Asymmetry does not undermine typology
+      claim_94_lines_438: narrative_line_434    # Closing settled position
+      hooks_lines_442_447: narrative_lines_438_443  # C3/C1/C2/C5 + Closing hook
+  parity_checks:
+    footnote_count: { claims: 94, narrative: 94, status: PASS }
+    evidence_token_count: { claims: 168, narrative: 168, status: PASS }
+    comparative_hook_count: { claims: 21, narrative: 21, status: PASS }
+    marker_count: { claims: 7, narrative: 7, status: PASS }
+    section_count: { claims: 7, narrative: 7, status: PASS }
+    sub_case_count: { claims: 3, narrative: 3, status: PASS }
+    footnote_byte_identity: PASS  # in-order diff returned zero diff lines
+    evidence_byte_identity: PASS  # in-order diff returned zero diff lines
+    comparative_hook_byte_identity: PASS  # in-order diff returned zero diff lines
+    marker_byte_identity: PASS  # all 7 markers byte-identical with all pipe-fields
+  status: PASS
+
+check_2_no_additions:
+  description: |
+    The narrative adds no unauthorised material. Permitted prose additions
+    (one source-overview-closing roadmap paragraph + six section-opener
+    bridge sentences I..VI + three §II sub-case bridges = ten total) are
+    enumerated and confirmed; banned-term scoping is policy-compliant.
+  permitted_prose_additions:
+    expected_count: 10
+    found_count: 10
+    inventory:
+      - { id: addn_01, location: narrative_line_40, kind: source-overview-closing-roadmap, content_summary: "Six-section roadmap (I..VI) closing the source-overview block; restates §I..§VI subject matter without introducing new claims." }
+      - { id: addn_02, location: narrative_line_44, kind: section-opener-bridge, section: I, content_summary: "One sentence; restates §I's structural-typological remit before the four-feature pattern." }
+      - { id: addn_03, location: narrative_line_89, kind: section-opener-bridge, section: II, content_summary: "One sentence; previews the three principal cases in compressed form, no new attribution." }
+      - { id: addn_04, location: narrative_line_96, kind: sub-case-bridge, section: II.1, content_summary: "One sentence; names Snorri / Gylfaginning / Poetic Edda / West 2007 ch. 6 — all named in the immediately-following footnoted claim-paragraphs." }
+      - { id: addn_05, location: narrative_line_128, kind: sub-case-bridge, section: II.2, content_summary: "One sentence; encodes the FIND-02 attribution split (Yarbro Collins ch. 4 carrying Rev 12 eschatological function; Aune WBC 52B-C carrying philology and the bipartite binding-and-final-loosing structure)." }
+      - { id: addn_06, location: narrative_line_161, kind: sub-case-bridge, section: II.3, content_summary: "One sentence; flags the temporal-layering caveat without introducing new attributions; bridges into the LACUNA marker." }
+      - { id: addn_07, location: narrative_line_192, kind: section-opener-bridge, section: III, content_summary: "One sentence; restates §III's binding-as-fulcrum thesis and the three articulations." }
+      - { id: addn_08, location: narrative_line_247, kind: section-opener-bridge, section: IV, content_summary: "One sentence; restates §IV's question and the brief's charitable-presentation discipline." }
+      - { id: addn_09, location: narrative_line_314, kind: section-opener-bridge, section: V, content_summary: "One sentence; restates §V's reading of Isa 27:1 as the seventh and exceptional passage in Day's corpus." }
+      - { id: addn_10, location: narrative_line_372, kind: section-opener-bridge, section: VI, content_summary: "One sentence; restates §VI's three-axis cognitive-functional articulation." }
+    status: PASS
+  find_01_section_V_six_plus_isa_27_1:
+    expected_phrasing: "the six dominantly-retrospective passages within the Hebrew Bible combat corpus that Day 1985 identifies … the seventh passage in Day's corpus, Isaiah 27:1, is the principal eschatological-projection exception treated below"
+    location_in_narrative: line 316
+    location_in_claims: line 322
+    byte_identity_with_claims: PASS
+    status: PASS
+  find_02_section_II_case_2_attribution_split:
+    expected_phrasing: "Yarbro Collins 1976, ch. 4, on Rev 12's eschatological function within the end-of-times visionary narrative; Aune 1997–98, commentary on Rev 12:7–9 and on Rev 20:1–10, on the binding-and-final-loosing structure that links the two chapters."
+    location_in_narrative: line 130 (paragraph) and line 128 (sub-case bridge restates)
+    location_in_claims: line 144
+    byte_identity_with_claims: PASS
+    status: PASS
+  speculation_blocks_pipe_field_audit:
+    description: All 3 SPECULATION blocks must use the locked Ch35 'counterargument:' pipe-field.
+    block_1_section_I_late_innovation:
+      location: narrative_line_74
+      pipe_fields_present: [basis, counterargument]
+      counterargument_substantive: true
+      status: PASS
+    block_2_section_IV_partial_iranian_explanation:
+      location: narrative_line_294
+      pipe_fields_present: [basis, counterargument]
+      counterargument_substantive: true
+      status: PASS
+    block_3_section_VI_meaningful_linear_history:
+      location: narrative_line_397
+      pipe_fields_present: [basis, counterargument]
+      counterargument_substantive: true
+      status: PASS
+    status: PASS
+  variant_marker_audit:
+    location: narrative_line_155
+    pipe_fields_present: [primary, alt, chosen, reason]
+    chosen_value: "present-both"
+    well_formed: true
+    status: PASS
+  lacuna_marker_audit:
+    location: narrative_line_171
+    pipe_fields_present: [source, scholarly_reconstruction]
+    well_formed: true
+    status: PASS
+  inference_marker_audit:
+    block_1_section_III:
+      location: narrative_line_236
+      pipe_fields_present: [basis, risk]
+      well_formed: true
+      status: PASS
+    block_2_section_V:
+      location: narrative_line_361
+      pipe_fields_present: [basis, risk]
+      well_formed: true
+      status: PASS
+    status: PASS
+  banned_term_scoping:
+    bare_chaos_in_body_prose:
+      total_occurrences_in_narrative: 8  # case-insensitive grep returns 8 hits
+      classification:
+        gunkel_book_title_six_occurrences:
+          lines: [6, 12, 46, 68, 252, 434]
+          context: "All six are inside the title-string 'Schöpfung und Chaos in Urzeit und Endzeit' (italicised or starred as a book title); these are inherently exempt as proper-noun citations."
+          policy_compliant: true
+        ballentine_typology_discussion_two_occurrences:
+          line: 342
+          phrases: ["chaos-ordering cosmogony", "chaos-cosmogonic framing"]
+          context: "Ballentine 2015 ch. 5 typology-vs-rival-sovereignty discussion; the chaos-cosmogonic framing is invoked as a typology-discussion descriptor that Ballentine herself rejects, with the contrast-term used to define her competing rival-sovereignty thesis."
+          policy_compliant: true
+      effective_bare_chaos_count_in_body_prose: 2  # the writer's report's count is correct on the policy-relevant gloss
+    chaos_figure_chaos_monster_chaos_serpent:
+      narrative_occurrences: 0
+      status: PASS
+    status: PASS
+  cross_reference_resolution:
+    forward_refs:
+      - { ref: "C5 (Ch38)", resolves_in_toc_yaml: true, toc_line: 339 }
+      - { ref: "C6 (Ch39)", resolves_in_toc_yaml: true, toc_line: 346 }
+      - { ref: "C7 (Ch40)", resolves_in_toc_yaml: true, toc_line: 353 }
+      - { ref: "C8 (Ch41)", resolves_in_toc_yaml: true, toc_line: 360 }
+    back_refs:
+      - { ref: "Ch8 (Yahweh-Leviathan-Rahab)", resolves_in_toc_yaml: true, toc_line: 84 }
+      - { ref: "Ch9 (Revelation 12)", resolves_in_toc_yaml: true, toc_line: 93 }
+      - { ref: "Ch13 (Thraētaona-Aži Dahāka)", resolves_in_toc_yaml: true, toc_line: 127 }
+      - { ref: "Ch18 (Thor-Jörmungandr)", resolves_in_toc_yaml: true, toc_line: 172 }
+      - { ref: "Ch33 (methods)", resolves_in_toc_yaml: true, toc_line: 303 }
+      - { ref: "Ch34 (C1)", resolves_in_toc_yaml: true, toc_line: 311 }
+      - { ref: "Ch35 (C2)", resolves_in_toc_yaml: true, toc_line: 318 }
+      - { ref: "Ch36 (C3)", resolves_in_toc_yaml: true, toc_line: 325 }
+    status: PASS
+  scholar_attribution_in_body_prose:
+    description: |
+      Every named scholar in body prose appears in a footnote that points
+      to a real source registered in sources.yaml. The bridge sentences at
+      lines 96, 128 name scholars (West 2007, Yarbro Collins 1976, Aune
+      1997-98) — all are introduced in the bridge before being fully
+      footnoted in the next paragraph; this is the standard
+      bridge-as-preview pattern and not an unauthorised addition.
+    sources_yaml_resolution_for_15_source_ids: ALL_RESOLVE
+    status: PASS
+  status: PASS
+
+check_3_fidelity:
+  description: |
+    All 7 markers preserved character-for-character with all pipe-fields
+    intact; glossary discipline (italicised foreign common nouns)
+    consistently applied; footnote integrity verified by in-order diff.
+  marker_byte_identity:
+    method: "extracted all '[(SPECULATION|VARIANT|LACUNA|INFERENCE):...]' tokens via grep -oE; in-order diff against claims-approved"
+    diff_result: "zero differences"
+    status: PASS
+  glossary_italicisation_audit:
+    convention: |
+      The narrative consistently converts foreign-language common nouns
+      (Old Norse Gylfaginning, Hymiskviða, Völuspá, Edda, Poetic Edda,
+      Codex Regius; Avestan / Pahlavi Bundahišn, Dēnkard, Yašt, Ābān
+      Yašt, Frashokereti-glossing context, druj; Hebrew bayyôm hahû',
+      maʿat, isfet; Hittite purulli; Akkadian Enūma Eliš; Ugaritic qrb
+      ym, bṯn brḥ, bṯn ʿqltn; German Urzeit, Endzeit,
+      religionsgeschichtliche; reconstructed-IE HERO SLAY SERPENT;
+      Vṛtra et Vṛθragna title) to AsciiDoc italic _term_ in body prose,
+      while preserving the *term* (asterisk-bold, the citation-style
+      convention of the locked Ch35 / Ch36 fidelity yamls) inside
+      footnotes for source-titles and Avestan-Pahlavi citation-keys.
+      This matches the locked Ch35 / Ch36 glossary discipline.
+    body_prose_italicisation_correct: true
+    footnote_citation_styling_correct: true
+    first_mention_glosses_preserved:
+      - { term: "_druj_", body_first_mention: "narrative_line_385", gloss: "(\"falsehood,\" \"deception\")", status: PASS }
+      - { term: "_bayyôm hahû'_", body_first_mention: "narrative_line_328", gloss: "Hebrew prophetic-eschatological idiom", status: PASS }
+      - { term: "_bṯn brḥ_, _bṯn ʿqltn_", body_first_mention: "narrative_line_331", gloss: "fleeing serpent / twisting serpent", status: PASS }
+      - { term: "_qrb ym_", body_first_mention: "narrative_line_224", gloss: "Baal-Yamm combat-name", status: PASS }
+    status: PASS
+  footnote_integrity:
+    method: "extracted all 'footnote:[...]' tokens via grep -oE; in-order diff against claims-approved"
+    claims_count: 94
+    narrative_count: 94
+    diff_result: "zero differences"
+    status: PASS
+  status: PASS
+
+verdict_rationale: |
+  PASS. All three load-bearing checks return clean parity. Check 1
+  (completeness): all 94 paragraph-claims map sequentially from the
+  claims-approved file (lines 30..438) to the narrative (lines 6..436);
+  the 94 footnote bodies, 168 EVIDENCE tokens, and 21 COMPARATIVE-HOOK
+  lines all show byte-level identity in order via in-order diff; the 7
+  markers (2 INFERENCE + 3 SPECULATION + 1 VARIANT + 1 LACUNA) match
+  byte-for-byte with all pipe-fields preserved; section count (7) and
+  sub-case count (3) match. Check 2 (no additions): the 10 expected
+  permitted prose additions (1 source-overview roadmap + 6 section-opener
+  bridges I..VI + 3 §II sub-case bridges) are all present and confined
+  to the prompt's permitted scope; no other unfootnoted prose appears in
+  body sections; the FIND-01 §V six-+-Isa-27:1 corpus enumeration and
+  the FIND-02 §II Case-2 Yarbro Collins / Aune attribution split are
+  byte-identical with the claims-approved fixed text; all 3 SPECULATION
+  blocks use the locked 'counterargument:' pipe-field with substantive
+  counter-content; the VARIANT marker is well-formed with primary, alt,
+  chosen, reason; the LACUNA marker is well-formed with source and
+  scholarly_reconstruction; banned-term scoping is policy-compliant
+  (the eight 'chaos' tokens in narrative body break down as six
+  Gunkel-book-title proper-noun citations plus two Ballentine-typology
+  discussion descriptors, exactly as the writer's report and the
+  prompt's policy specify); cross-references to Chs 8, 9, 13, 18, 33,
+  34, 35, 36, 38, 39, 40, 41 all resolve in toc.yaml; all 15 source_ids
+  resolve in sources.yaml. Check 3 (fidelity): markers byte-identical;
+  glossary discipline (italic _term_ in body, asterisk-style preserved
+  in footnotes) consistently applied; footnote bodies byte-identical
+  in order. Total findings: 0 HIGH, 0 MEDIUM, 0 LOW, 4 NOTE
+  (structural observations only). Verdict PASS.
+
+issues:
+  - id: NOTE-01
+    severity: NOTE
+    location: narrative_line_40 (source-overview-closing roadmap paragraph)
+    finding: |
+      The roadmap paragraph exceeds the typical one-sentence bridge in
+      length but performs the prompt-permitted source-overview-closing
+      roadmap function. It introduces no new claims and adds no
+      attributions; every section it previews is then developed with
+      its own claim-paragraphs and footnotes. Structural observation
+      only — the roadmap's length is consistent with the Ch36 §closing-
+      roadmap precedent (Ch36's closing-summary block is similarly
+      multi-clause).
+    action: none
+  - id: NOTE-02
+    severity: NOTE
+    location: narrative_line_128 (§II Case-2 sub-case bridge)
+    finding: |
+      The Case-2 bridge incorporates the FIND-02 attribution split
+      verbatim into the bridge sentence (Yarbro Collins 1976 ch. 4 /
+      Aune 1997-98 WBC 52B-C). The bridge thereby restates content
+      from the immediately-following footnoted claim-paragraph
+      (line 130). This is the bridge-as-preview pattern; the named
+      scholars are then formally footnoted at the next paragraph.
+      No fix needed.
+    action: none
+  - id: NOTE-03
+    severity: NOTE
+    location: section-wide (the narrative consistently uses _term_ for
+      foreign-language common nouns in body prose while the
+      claims-approved file uses *term*)
+    finding: |
+      The narrative converts the claims-approved's *term* foreign-noun
+      styling to _term_ AsciiDoc italic in body prose. This matches
+      the locked Ch35 / Ch36 glossary discipline (italic in body,
+      asterisk-style preserved in footnotes for source-titles and
+      Avestan-Pahlavi citation-keys). Marker pipe-content and
+      footnote bodies remain byte-identical with the claims-approved.
+      The transformation is the intended narrative-stage glossary
+      polish, not a fidelity drift.
+    action: none
+  - id: NOTE-04
+    severity: NOTE
+    location: full-chapter
+    finding: |
+      The narrative draft is an exemplary transmission of the
+      claims-approved: 94/94 claim mapping, 168/168 EVIDENCE byte-
+      identity, 21/21 COMPARATIVE-HOOK byte-identity, 7/7 marker
+      byte-identity, and a clean ten-bridge prose-addition pattern.
+      The two post-human-normalize fixes (FIND-01 §V six-+-Isa-27:1
+      enumeration, FIND-02 §II Case-2 attribution split) are
+      preserved verbatim. Banned-term scoping is policy-compliant.
+      No corrective action required at this stage.
+    action: none
