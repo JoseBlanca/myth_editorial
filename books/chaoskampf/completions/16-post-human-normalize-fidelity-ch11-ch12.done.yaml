@@ -1,0 +1,57 @@
+stage: "post-human-normalize"
+timestamp: "2026-05-03T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/11-zeus-typhon.adoc"
+    lines: 415
+  - file: "chapters/12-greek-dragons-after-typhon.adoc"
+    lines: 354
+summary: "Ch11 and Ch12 both PASSed narrative-fidelity cleanly with NOTE-level findings only; no revisions applied to either chapter. Both files render cleanly via asciidoctor."
+notes: |
+  Ch11 (Zeus vs. Typhon) PASSed cleanly — no fixes applied.
+  - All 127 claims mapped to narrative locations in sequence.
+  - 127 footnotes in narrative / 127 in claims-approved (exact match).
+  - 5 markers verbatim-identical to claims (2 INFERENCE, 3 VARIANT).
+  - 5 COMPARATIVE-HOOK comments preserved.
+  - Sole NOTE finding (ISSUE-01): one unfootnoted three-movement
+    chapter-navigation sentence at line 49 introduces no factual claim
+    and is authorised by the brief's three-movement structure. No
+    action required.
+  - Three-stage timeline attribution discipline (sinew-theft labelled
+    Apollodoran throughout, never retrojected to Hesiod) is
+    rigorously preserved.
+  - Aigipan-as-Pan-epithet correction, Prometheus Bound contested-
+    authorship caveat, and concrete Kumarbi-Cycle parallels (Hedammu,
+    Ullikummi, Elkunirsa) all preserved verbatim.
+
+  Ch12 (Greek dragons after Typhon) PASSed cleanly — no fixes applied.
+  - All 108 claims mapped to narrative locations in sequence.
+  - 108 footnotes in narrative / 108 in claims-approved (exact match).
+  - 4 markers verbatim-identical to claims (2 INFERENCE, 2 VARIANT).
+  - 3 COMPARATIVE-HOOK comments preserved.
+  - NOTE finding ISSUE-01: one unfootnoted six-combat chapter-
+    navigation sentence at line 40; introduces no factual claim. No
+    action required.
+  - NOTE finding ISSUE-02: the narrative correctly converts the
+    claims' AsciiDoc bold (`*term*`) for Greek foreign common nouns
+    (drakaina, Spartoi, Septerion, Ketos, purulli) to italics
+    (`_term_`). The narrative is more correct than the claims per
+    glossary policy. Per Hard rule #1 of post-human-normalize the
+    upstream claims-approved file is left unchanged; the narrative
+    needs no edit.
+  - Factcheck-corrected facts (Hesiod Theogony 313–318 / 333–335
+    "some twenty lines later", Kadmos "the dragon's teeth" not
+    "half of", "infant Typhaon" not "giant", Dumézil 1971 +
+    West 2007 chained citation) all preserved correctly.
+  - Family-chapter brevity 7,292 words, within 7,500 target.
+  - Herakles / Hercules naming discipline clean (Herakles in Greek
+    sections, Hercules in the Cacus / Italic-tradition section).
+
+  Counts after the no-op stage (unchanged):
+    Ch11 = 127 footnotes / 127 evidence tokens, 5 comparative hooks,
+           2 INFERENCE + 3 VARIANT, 415 lines.
+    Ch12 = 108 footnotes / 108 evidence tokens, 3 comparative hooks,
+           2 INFERENCE + 2 VARIANT, 354 lines.
+
+  Both files re-render cleanly via asciidoctor (exit 0, no warnings).
