@@ -1,0 +1,564 @@
+meta:
+  stage: "15-narrative-fidelity"
+  auditor_model: "claude-opus-4-7[1m]"
+  audit_date: "2026-05-03"
+  claims_file: "chapters/40-C7-inversion-problem.claims.approved.adoc"
+  narrative_file: "chapters/40-C7-inversion-problem.adoc"
+  total_claims: 65
+  claims_mapped: 65
+  verdict: PASS
+  honesty_self_check: |
+    Fresh-context audit performed against the claims-approved file as the
+    canonical source; the writer's completion record was not consulted to
+    pre-judge findings. Every paragraph-claim was sequentially mapped from
+    the claims-approved (lines 27..271) onto the corresponding narrative
+    paragraph (lines 6..264), and the six markers, all 65 footnote bodies,
+    all 73 EVIDENCE tokens, and all 18 COMPARATIVE-HOOK lines were checked
+    byte-for-byte via in-order diff. The two locked post-human-normalize
+    fixes (FIND-01 §I "already-existing Sahelian world"; FIND-02 §IV
+    chaos-X compound normalization to "primordial cosmic adversary",
+    "primordial cosmos-versus-disorder opposition...", "primordial
+    disorder", "disorder-versus-order opposition...", and "primordial
+    disorder versus established order ... cosmic adversary") were verified
+    byte-for-byte on the canonical paragraphs. The permitted prose
+    additions were enumerated and confirmed (1 source-overview-closing
+    roadmap + 6 section-opener bridges I..VI = 7 unfootnoted prose
+    additions, exactly the pattern the prompt specifies). All 4
+    APPROPRIATION-FLAG markers preserve the four sub-fields (substance |
+    named_specialists | tier_implication | forwards_to) byte-identically;
+    the §VI SPECULATION block uses the locked basis: / counterargument:
+    schema; the §III INFERENCE block uses basis: / risk: schema. The
+    auditor identified no HIGH and no MEDIUM findings; only structural
+    NOTEs. Verdict PASS.
+  issues_summary:
+    high: 0
+    medium: 0
+    low: 0
+    note: 4
+
+check_1_completeness:
+  description: |
+    Every paragraph-claim from claims-approved is mapped to a narrative
+    location in the same sequence; footnote, EVIDENCE, COMPARATIVE-HOOK,
+    and marker counts all reach byte-level parity.
+  claims_mapped_count: 65
+  claims_mapped_to_narrative_lines:
+    source_overview:
+      claim_01_lines_27: narrative_line_6    # Source overview opener (chaoskampf typology's edges)
+      claim_02_lines_30: narrative_line_9    # Five Part-I chapters drawn upon
+      claim_03_lines_34: narrative_line_13   # Six anchor sources
+      claim_04_lines_38: narrative_line_17   # Named area-specialists not in sources.yaml
+      claim_05_lines_42: narrative_line_21   # Forsyth + Ballentine comparative anchors
+      claim_06_lines_46: narrative_line_25   # Evidentiary discipline (single-token default)
+      claim_07_lines_49: narrative_line_28   # Six-section structure outline
+      claim_08_lines_52: narrative_line_31   # Central methodological commitment (area-specialists speak first)
+      hooks_lines_55_56: narrative_lines_34_35  # C1-Ch34 + C8-Ch41 source-overview hooks
+      bridge_at_narrative_line_37: source-overview-closing roadmap (1 of 7 permitted)
+    section_I_bida_anchor_case:
+      bridge_at_narrative_line_41: §I opener bridge (2 of 7 permitted)
+      claim_09_lines_60: narrative_line_43   # Soninke / Mande oral-tradition narrative
+      claim_10_lines_63: narrative_line_46   # Covenant's narrative-structural role (FIND-01 already-existing)
+      claim_11_lines_66: narrative_line_49   # Maiden-tribute as social-political institution
+      claim_12_lines_69: narrative_line_52   # Mamadi Sefe Dekote suitor / killing
+      claim_13_lines_72: narrative_line_55   # Catastrophic consequences of covenant-breaking
+      claim_14_lines_75: narrative_line_58   # Internal moral evaluation (dilemma)
+      claim_15_lines_78: narrative_line_61   # Covenant-broken framing complete in own categories
+      claim_16_lines_82: narrative_line_65   # Inverse chaoskampf as comparativist overlay
+      claim_17_lines_85: narrative_line_68   # Inverse chaoskampf framing as modern overlay
+      marker_appflag_lines_88: narrative_line_71  # APPROPRIATION-FLAG: Bida (Conrad/Belcher)
+      claim_18_lines_90: narrative_line_73   # Methodological pay-off
+      claim_19_lines_93: narrative_line_76   # Recording-history situation (Frobenius/Monteil/Dieterlen)
+      claim_20_lines_96: narrative_line_79   # Comparative observation taken from §I
+      hooks_lines_99_101: narrative_lines_82_84  # C1/C2/C8 §I hooks
+    section_II_mwindo_full_refusal:
+      bridge_at_narrative_line_88: §II opener bridge (3 of 7 permitted)
+      claim_21_lines_105: narrative_line_90  # Nyanga oral epic of Mwindo (1956 Bese recording)
+      claim_22_lines_108: narrative_line_93  # Nyanga tradition's connected biographical-and-moral framing
+      claim_23_lines_111: narrative_line_96  # Middle-epic accumulating-power foreshadowing
+      claim_24_lines_114: narrative_line_99  # Kirimu as cosmographic-counterpart
+      claim_25_lines_117: narrative_line_102 # Killing without order-establishing apparatus
+      claim_26_lines_120: narrative_line_105 # Nkuba's response (lightning-seizing, celestial humiliation)
+      claim_27_lines_123: narrative_line_108 # Conditions of return; chastened restoration
+      claim_28_lines_126: narrative_line_111 # Post-Kirimu chiefly succession; maturation-through-humiliation
+      claim_29_lines_129: narrative_line_114 # Nyanga framing complete in own categories
+      claim_30_lines_133: narrative_line_118 # Inversion-of-moral-valence diagnosis
+      claim_31_lines_136: narrative_line_121 # Refusal of chaoskampf typology's apparatus
+      marker_appflag_lines_139: narrative_line_124 # APPROPRIATION-FLAG: Mwindo (Biebuyck/Mateene)
+      claim_32_lines_141: narrative_line_126 # Recording-history situation (1956 Bese)
+      claim_33_lines_144: narrative_line_129 # Methodological pay-off
+      claim_34_lines_147: narrative_line_132 # Bida-Mwindo contrast
+      hooks_lines_150_152: narrative_lines_135_137  # C1/C5/C8 §II hooks
+    section_III_sigurd_partial_case:
+      bridge_at_narrative_line_141: §III opener bridge (4 of 7 permitted)
+      claim_35_lines_156: narrative_line_143 # Old Norse Eddic Sigurd-cycle (Fáfnismál) anchor
+      claim_36_lines_160: narrative_line_147 # Narrative core of Fáfnismál (pit-and-ambush)
+      claim_37_lines_163: narrative_line_150 # Watkins's IE-formula reading at diction-level
+      claim_38_lines_166: narrative_line_153 # Surface trajectory: vindication-of-the-hero
+      claim_39_lines_169: narrative_line_156 # Long-arc tragedy (curse on Andvari's gold)
+      claim_40_lines_172: narrative_line_159 # Dying Fáfnir's warning of curse
+      claim_41_lines_175: narrative_line_162 # IE-formula reading vs curse-on-the-gold reading at typological level
+      claim_42_lines_179: narrative_line_166 # Sigurd as partial inversion case
+      claim_43_lines_182: narrative_line_169 # Methodological distinction (IE-internal vs area-specialist)
+      marker_inference_lines_185: narrative_line_172 # INFERENCE: partial-case classification
+      claim_44_lines_187: narrative_line_174 # Sigurd case's contribution: graded categories
+      hooks_lines_190_191: narrative_lines_177_178  # C5/C2 §III hooks
+    section_IV_pariacaca_area_specialist_refusal:
+      bridge_at_narrative_line_182: §IV opener bridge (5 of 7 permitted)
+      claim_45_lines_195: narrative_line_184 # Huarochirí Manuscript anchor; Pariacaca / amaru
+      claim_46_lines_198: narrative_line_187 # Wak'a-succession framing (FIND-02 cosmos-versus-disorder)
+      claim_47_lines_201: narrative_line_190 # Wak'a-succession differs from inversion (FIND-02 primordial disorder)
+      claim_48_lines_204: narrative_line_193 # Amaru's narrative role (FIND-02 primordial cosmic adversary)
+      claim_49_lines_207: narrative_line_196 # Amaru's defeat as cutting/splitting/landscape-feature
+      claim_50_lines_210: narrative_line_199 # Categorical area-specialist refusal (FIND-02 disorder-versus-order)
+      marker_appflag_lines_213: narrative_line_202 # APPROPRIATION-FLAG: Pariacaca (Salomon/Urioste/Taylor/Dean)
+      claim_51_lines_215: narrative_line_204 # Categorical-inapplicability finding (FIND-02 primordial disorder, cosmic adversary)
+      hooks_lines_218_219: narrative_lines_207_208  # C2/C8 §IV hooks
+    section_V_susanoo_metallurgical_case:
+      bridge_at_narrative_line_212: §V opener bridge (6 of 7 permitted)
+      claim_52_lines_223: narrative_line_214 # Kojiki / Nihon shoki anchor; Naumann
+      claim_53_lines_226: narrative_line_217 # Narrative core: descent / sake-trap / Kusanagi
+      claim_54_lines_229: narrative_line_220 # Metallurgical-allegory reading (Naumann + Isomae/Como/Ooms)
+      claim_55_lines_232: narrative_line_223 # Constellation of metallurgical features (river Hi, red rust, etc.)
+      claim_56_lines_235: narrative_line_226 # Yamato-court political-economic context (iron-smelting)
+      claim_57_lines_238: narrative_line_229 # Implication: chaoskampf label as 20th-century-Western move
+      marker_appflag_lines_241: narrative_line_232 # APPROPRIATION-FLAG: Susanoo (Naumann/Isomae/Como/Ooms)
+      claim_58_lines_243: narrative_line_234 # Susanoo as refusal of combat-myth framing itself
+      hooks_lines_246_247: narrative_lines_237_238  # C1/C8 §V hooks
+    section_VI_what_inversion_teaches:
+      bridge_at_narrative_line_242: §VI opener bridge (7 of 7 permitted)
+      claim_59_lines_251: narrative_line_244 # Five cases together teach two lessons
+      claim_60_lines_254: narrative_line_247 # First lesson: typology's semantic edges
+      claim_61_lines_257: narrative_line_250 # First-lesson precise form (convergence vs edges)
+      claim_62_lines_260: narrative_line_253 # Second lesson: category-imposition critique
+      marker_speculation_lines_263: narrative_line_256 # SPECULATION: strong-form category-imposition
+      claim_63_lines_265: narrative_line_258 # Two lessons together support area-specialist-first
+      claim_64_lines_268: narrative_line_261 # Inversion problem ↔ appropriation problem
+      claim_65_lines_271: narrative_line_264 # Closing: typology's most rigorous test
+      hooks_lines_274_277: narrative_lines_267_270  # C1/C2/C5/C8 §VI hooks
+  footnote_count_audit:
+    claims_count: 65
+    narrative_count: 65
+    method: "grep -c 'footnote:\\[' on both files; in-order diff of all 65 footnote bodies via grep -oE 'footnote:\\[[^]]*\\]'"
+    diff_result: "zero differences"
+    status: PASS
+  evidence_token_count_audit:
+    claims_count: 73
+    narrative_count: 73
+    method: "grep -c '// EVIDENCE:' on both files; in-order diff of source_id+loc tokens"
+    diff_result: "zero differences"
+    status: PASS
+  comparative_hook_count_audit:
+    claims_count: 18
+    narrative_count: 18
+    method: "grep -c '// COMPARATIVE-HOOK:' on both files; in-order diff"
+    diff_result: "zero differences"
+    status: PASS
+  marker_count_audit:
+    appropriation_flag_claims: 4
+    appropriation_flag_narrative: 4
+    speculation_claims: 1
+    speculation_narrative: 1
+    inference_claims: 1
+    inference_narrative: 1
+    variant_claims: 0
+    variant_narrative: 0
+    lacuna_claims: 0
+    lacuna_narrative: 0
+    total_markers_claims: 6
+    total_markers_narrative: 6
+    method: "grep -c on each marker token type; in-order diff of marker contents via grep -oE; pipe-field counts verified per marker"
+    diff_result: "zero differences"
+    status: PASS
+  section_count_audit:
+    expected: 7
+    found: 7
+    headings_match_claims: PASS (only difference: §IV heading body-prose italicizes _amaru_, _wak'a_-succession per Hard Rule 6)
+    status: PASS
+  status: PASS
+
+check_2_no_additions:
+  description: |
+    Permitted prose additions: 1 source-overview-closing roadmap + 6
+    numbered-section bridges (I-VI) = 7 expected. Locked-fix verifications:
+    §I "already-existing" (FIND-01); §IV chaos-X tradition-neutral
+    formulations (FIND-02); APPROPRIATION-FLAG byte-identity with all
+    four sub-fields; SPECULATION basis/counterargument and INFERENCE
+    basis/risk schemas; area-specialist-first discipline at §I and §II;
+    banned-term scoping; cross-references; named-but-flagged scholar
+    convention.
+  permitted_prose_additions:
+    expected: 7
+    found: 7
+    enumeration:
+      - { id: bridge_1, location: narrative_line_37, type: source-overview-closing-roadmap, function: "What follows is organised in six body sections..." }
+      - { id: bridge_2, location: narrative_line_41, type: §I-opener-bridge, function: "The Bida narrative is the chapter's anchor case..." }
+      - { id: bridge_3, location: narrative_line_88, type: §II-opener-bridge, function: "The Mwindo / Kirimu episode is the chapter's most pointed area-specialist refusal..." }
+      - { id: bridge_4, location: narrative_line_141, type: §III-opener-bridge, function: "Sigurd is the chapter's partial case..." }
+      - { id: bridge_5, location: narrative_line_182, type: §IV-opener-bridge, function: "The Pariacaca cycle is the chapter's case of categorical area-specialist refusal short of inversion..." }
+      - { id: bridge_6, location: narrative_line_212, type: §V-opener-bridge, function: "The Susanoo / Yamata no Orochi episode is the chapter's strongest area-specialist refusal..." }
+      - { id: bridge_7, location: narrative_line_242, type: §VI-opener-bridge, function: "The chapter's five cases together teach two methodological-typological lessons..." }
+    no_other_unfootnoted_body_prose: true
+    status: PASS
+  locked_fix_verification_FIND_01_already_existing:
+    description: |
+      §I body prose at narrative_line_46 must read "the already-existing
+      Sahelian world of Soninke ethnogeographic memory" (NOT "the wak'a-rich
+      Sahelian landscape"). Per locked Ch40 FIND-01.
+    canonical_phrase: "the already-existing Sahelian world of Soninke ethnogeographic memory"
+    found_in_narrative: true
+    location_in_narrative: narrative_line_46
+    location_in_claims: line_63
+    byte_identity_with_claims: PASS
+    regression_check_wak_a_rich_landscape: not present
+    status: PASS
+  locked_fix_verification_FIND_02_chaos_X_normalisation:
+    description: |
+      §IV body-prose chaos-X compounds must be tradition-neutral per locked
+      Ch40 FIND-02. All five replacements verified byte-for-byte against
+      claims-approved.
+    replacements_verified:
+      - phrase: "primordial cosmic adversary"
+        narrative_locations: [184, 193]
+        claims_locations: [195, 204]
+        status: PASS
+        regression_check_primordial_chaos_adversary: not present in body prose
+      - phrase: "primordial cosmos-versus-disorder opposition that the chaoskampf typology presupposes"
+        narrative_location: 187
+        claims_location: 198
+        status: PASS
+        regression_check_primordial_cosmos_versus_chaos_opposition: not present in body prose
+      - phrase: "primordial disorder"
+        narrative_location: 190
+        claims_location: 201
+        status: PASS
+        regression_check_primordial_chaos_in_body_prose_at_201: not present (body-prose §IV only — line 193 narrative is inside footnote, line 61/114 are scare-quoted §I/§II attributions byte-identical with claims)
+      - phrase: "disorder-versus-order opposition that the chaoskampf typology presupposes"
+        narrative_location: 199
+        claims_location: 210
+        status: PASS
+        regression_check_chaos_versus_order_opposition: not present in §IV body prose (the L202 marker and L247 §VI body-prose retentions are byte-identical with claims)
+      - phrase: "primordial disorder versus established order ... cosmic adversary"
+        narrative_location: 204
+        claims_location: 215
+        status: PASS
+        regression_check_primordial_chaos_chaos_adversary: not present in body prose
+    status: PASS
+  appropriation_flag_marker_audit:
+    description: All 4 APPROPRIATION-FLAG markers byte-identical with claims-approved, with all four sub-fields (substance | named_specialists | tier_implication | forwards_to) preserved.
+    marker_1_§I_bida:
+      location_narrative: line_71
+      location_claims: line_88
+      sub_fields_present: [substance, named_specialists, tier_implication, forwards_to]
+      named_specialists_listed: [Conrad, Belcher, Monteil (named-but-flagged), Dieterlen (named-but-flagged)]
+      byte_identity_with_claims: PASS
+      status: PASS
+    marker_2_§II_mwindo:
+      location_narrative: line_124
+      location_claims: line_139
+      sub_fields_present: [substance, named_specialists, tier_implication, forwards_to]
+      named_specialists_listed: [Biebuyck, Mateene, Belcher, Biebuyck-1978-Hero-and-Chief (named-but-flagged)]
+      byte_identity_with_claims: PASS
+      status: PASS
+    marker_3_§IV_pariacaca:
+      location_narrative: line_202
+      location_claims: line_213
+      sub_fields_present: [substance, named_specialists, tier_implication, forwards_to]
+      named_specialists_listed: [Salomon, Urioste, Taylor (named-but-flagged), Dean (named-but-flagged)]
+      byte_identity_with_claims: PASS
+      status: PASS
+    marker_4_§V_susanoo:
+      location_narrative: line_232
+      location_claims: line_241
+      sub_fields_present: [substance, named_specialists, tier_implication, forwards_to]
+      named_specialists_listed: [Naumann, Isomae (named-but-flagged), Como (named-but-flagged), Ooms (named-but-flagged)]
+      byte_identity_with_claims: PASS
+      status: PASS
+    method: "extracted all '[APPROPRIATION-FLAG: ...]' tokens via grep -oE; in-order diff against claims-approved (filtering out the trailing comment-block summary 'APPROPRIATION-FLAG' references); all 4 markers byte-identical with all three pipe-separated sub-field labels present"
+    status: PASS
+  speculation_marker_audit:
+    description: §VI strong-form category-imposition SPECULATION block; locked Ch35 FIND-04 schema (basis: / counterargument:).
+    location_narrative: line_256
+    location_claims: line_263
+    sub_fields_present: [basis, counterargument]
+    counterargument_substantive: true (Marduk-Tiamat / Baal-Yamm / Zeus-Typhon / Indra-Vṛtra typological-recurrence corpus, Bida-Mamadi / Mwindo-Kirimu / Sigurd-Fáfnir qualifications, defender-of-the-typology counter-position)
+    byte_identity_with_claims: PASS
+    status: PASS
+  inference_marker_audit:
+    description: §III partial-case classification INFERENCE block; basis: / risk: schema.
+    location_narrative: line_172
+    location_claims: line_185
+    sub_fields_present: [basis, risk]
+    risk_substantive: true (alternative readings: compositional-layering reading would weaken curse-acquisition reading; partial-case classification is the chapter's reading not the only available scholarly position)
+    byte_identity_with_claims: PASS
+    status: PASS
+  area_specialist_first_discipline:
+    description: |
+      Per brief special_instructions; load-bearing. §I (Bida) must open with
+      multi-paragraph Soninke covenant-broken framing BEFORE invoking the
+      modern "inverse chaoskampf" overlay. §II (Mwindo) must open with
+      multi-paragraph Nyanga maturation-through-hubris framing BEFORE noting
+      moral-valence inversion.
+    section_I_bida:
+      area_specialist_paragraphs_before_overlay: 7
+      paragraph_lines: [43, 46, 49, 52, 55, 58, 61]
+      content: "Soninke / Mande oral-tradition narrative; covenant's narrative-structural role (already-existing Sahelian world); maiden-tribute's social-political institutions; Mamadi Sefe Dekote's killing; catastrophic consequences; internal moral evaluation (dilemma); covenant-broken framing complete within own categories"
+      overlay_first_invocation_at_line: 65
+      overlay_phrase: "Once the area-specialists' framing is in place, the comparativist's 'inverse chaoskampf' reading of the narrative can be registered..."
+      status: PASS
+    section_II_mwindo:
+      area_specialist_paragraphs_before_overlay: 9
+      paragraph_lines: [90, 93, 96, 99, 102, 105, 108, 111, 114]
+      content: "Nyanga oral epic of Mwindo (1956 Bese recording); Nyanga tradition's biographical-and-moral framing; middle-epic accumulating-power foreshadowing; Kirimu as cosmographic-counterpart; killing without order-establishing apparatus; Nkuba's response; conditions of return; chiefly succession; framing complete within own categories"
+      overlay_first_invocation_at_line: 118
+      overlay_phrase: "The Mwindo / Kirimu episode is therefore not an inversion of the chaoskampf typology in the sense of Bida..., but an inversion of moral valence..."
+      status: PASS
+    status: PASS
+  banned_term_scoping:
+    description: |
+      Bare 'chaos' / 'chaos-figure' / 'chaos-monster' / 'chaos-serpent' —
+      scare-quoted use is expected in §VI Ballentine-critique paragraphs;
+      bare-and-unmarked occurrences elsewhere = MEDIUM.
+    chaos_figure_chaos_monster_chaos_serpent_chaos_adversary:
+      narrative_occurrences: 0
+      status: PASS
+    bare_chaos_in_body_prose:
+      total_occurrences_classification:
+        scare_quoted_§I_§II_attributions:
+          locations: [narrative_line_61, narrative_line_114]
+          phrase: '"primordial chaos"'
+          context: "scare-quoted attribution of the chaoskampf concept being discussed; both byte-identical with claims (lines 78 and 129); appropriate scare-quoted use of the typology's own term"
+          policy_compliant: true
+        §VI_ballentine_critique_paragraphs:
+          locations: [narrative_line_247, narrative_line_256]
+          phrases: ["chaos-versus-order opposition", "chaos-order moral-cosmographic apparatus", '"chaos-versus-order"']
+          context: "§VI Ballentine-critique scope; the chaoskampf typology IS the topic; scope.md and prompt explicitly permit scare-quoted use here; line 247 'typology's chaos-versus-order opposition' byte-identical with claims line 254; line 256 SPECULATION marker preserves verbatim"
+          policy_compliant: true
+        §IV_marker_contents_and_footnotes:
+          locations: [narrative_line_193 (footnote body), narrative_line_202 (APPROPRIATION-FLAG marker), narrative_line_232 (APPROPRIATION-FLAG marker), narrative_line_187 (footnote body 'wak'a-succession-not-chaos-versus-order')]
+          context: "all inside footnote bodies or markers; preserved byte-identically per Hard Rule 6 verbatim-preservation requirement; the marker contents and footnote contents are not body prose"
+          policy_compliant: true
+        comparative_hook_marker_at_line_35:
+          location: narrative_line_35
+          phrase: "chaos-order framing in favour of wak'a-succession"
+          context: "COMPARATIVE-HOOK comment block; preserved byte-identically from claims line 56"
+          policy_compliant: true
+        comparative_hook_marker_at_line_245:
+          location: narrative_line_245
+          phrase: "chaos-order frame's overextension"
+          context: "EVIDENCE token loc field; preserved byte-identically from claims"
+          policy_compliant: true
+      effective_unauthorised_bare_chaos_count_in_body_prose: 0
+      status: PASS
+    status: PASS
+  cross_reference_resolution:
+    forward_refs:
+      - { ref: "C8 (Ch41)", resolves_in_toc_yaml: true }
+    back_refs:
+      - { ref: "Ch19 (IE-reflexes / Sigurd vs. Fáfnir)", resolves_in_toc_yaml: true }
+      - { ref: "Ch23 (Susanoo vs. Yamata no Orochi)", resolves_in_toc_yaml: true }
+      - { ref: "Ch26 (Pariacaca and the amaru)", resolves_in_toc_yaml: true }
+      - { ref: "Ch28 (Bida and the founding of Wagadu)", resolves_in_toc_yaml: true }
+      - { ref: "Ch29 (Mwindo and Kirimu)", resolves_in_toc_yaml: true }
+      - { ref: "Ch34 (C1 cosmogony)", resolves_in_toc_yaml: true }
+      - { ref: "Ch35 (C2 sovereignty)", resolves_in_toc_yaml: true }
+      - { ref: "Ch37 (C4 eschatological displacement)", resolves_in_toc_yaml: true }
+      - { ref: "Ch38 (C5 IE HERO SLAY SERPENT)", resolves_in_toc_yaml: true }
+    status: PASS
+  scholar_attribution_in_body_prose:
+    description: |
+      Every named scholar in body prose appears in a footnote that points
+      to a real source registered in sources.yaml. Named-but-flagged
+      scholars (Taylor, Dean, Isomae, Como, Ooms, Monteil, Dieterlen)
+      acceptable per the named-but-flagged convention. The chapter's
+      §V says explicitly that no EVIDENCE token is routed through
+      Isomae, Como, or Ooms; verified.
+    sources_yaml_resolution:
+      conrad-west-africa: RESOLVES
+      belcher-epic: RESOLVES
+      biebuyck-mateene-mwindo: RESOLVES
+      watkins-1995: RESOLVES
+      larrington-poetic-edda: RESOLVES
+      salomon-urioste-huarochiri: RESOLVES
+      naumann-mythen: RESOLVES
+      philippi-kojiki: RESOLVES
+      forsyth-1987: RESOLVES
+      ballentine-2015: RESOLVES
+    named_but_flagged_scholars_list:
+      - Gérald Taylor (§IV Pariacaca; flagged at Ch26 named-but-flagged pattern; no EVIDENCE token routed)
+      - Carolyn Dean (§IV Pariacaca; flagged at Ch26 pattern; no EVIDENCE token routed)
+      - Jun'ichi Isomae (§V Susanoo; flagged at Ch23 pattern; no EVIDENCE token routed)
+      - Michael Como (§V Susanoo; flagged at Ch23 pattern; no EVIDENCE token routed)
+      - Herman Ooms (§V Susanoo; flagged at Ch23 pattern; no EVIDENCE token routed)
+      - Charles Monteil (§I Bida; named in body prose at Ch28 pattern; no EVIDENCE token routed)
+      - Germaine Dieterlen (§I Bida; named at Ch28 pattern; no EVIDENCE token routed)
+    status: PASS
+  status: PASS
+
+check_3_fidelity:
+  description: |
+    All 6 markers preserved character-for-character with all pipe-fields
+    intact; glossary discipline (italicised foreign common nouns)
+    consistently applied per Hard rule 6; footnote integrity verified
+    by in-order diff.
+  marker_byte_identity:
+    method: "extracted all '[(APPROPRIATION-FLAG|SPECULATION|INFERENCE):...]' tokens via grep -oE; in-order diff against claims-approved (filtering out trailing comment-block summary references)"
+    diff_result: "zero differences"
+    status: PASS
+  glossary_italicisation_audit:
+    convention: |
+      Per Hard rule 6: foreign-language common nouns in body prose use
+      _term_ italic, NOT *term* bold. The narrative consistently converts
+      the claims-approved's *amaru* / *wak'a* / *wak'a*-X bare/asterisk
+      styling to _amaru_ / _wak'a_ / _wak'a_-X AsciiDoc italic in body
+      prose, while preserving the *term* (asterisk-bold) inside footnotes
+      for source-titles and marker contents. Footnote bodies, EVIDENCE
+      tokens, COMPARATIVE-HOOK comments, and marker contents preserve
+      their original markup byte-for-byte.
+    body_prose_wak_a_compounds:
+      _wak'a_-succession_count_in_body_prose: 9 (lines 180, 182, 187, 190, 193, 199, 244, 253, 258 — narrative-stage italic conversion)
+      _wak'a_-cosmography: line_187 (italicised in body)
+      _wak'a_-political: line_190 (italicised in body)
+      _wak'a_-cosmos: line_190, line_202-marker (line 190 body italicised; line 202 inside marker preserves bare 'wak'a-cosmos' verbatim)
+      _wak'a_-combat: line_193 (italicised in body)
+      bare_wak_a_X_in_body_prose_count: 0 (the bare 'wak'a-X' compounds appear only in COMPARATIVE-HOOK markers, footnote bodies, and APPROPRIATION-FLAG / SPECULATION marker contents — all preserved verbatim per Hard rule 6)
+      status: PASS
+    body_prose_amaru:
+      _amaru__count_in_body_prose: 9 (lines 9, 17, 180, 184, 193 (multiple), 196, 199, 204, 212 — narrative-stage italic conversion; line 9 is in a paragraph-text reference; the bare 'amaru' occurrences inside footnotes and EVIDENCE tokens preserve original markup verbatim)
+      bare_amaru_in_body_prose_count: 0 (bare 'amaru' occurrences are all inside footnote bodies, EVIDENCE token locs, or filename-references; all preserved verbatim)
+      status: PASS
+    foreign_term_first_mention_glosses_preserved:
+      - { term: "_wak'a_", body_first_mention: "narrative_line_184 (storm-_wak'a_ Pariacaca)", gloss_via_glossary: "yes — first_mention_gloss in glossary 'wak'a'", status: PASS }
+      - { term: "_amaru_", body_first_mention: "narrative_line_9 (back-ref) and narrative_line_184 (Pariacaca cycle)", gloss_via_glossary: "yes — first_mention_gloss in glossary 'amaru'", status: PASS }
+      - { term: "_Kusanagi_", body_first_mention: "narrative_line_217 (within Kojiki episode)", gloss_via_glossary: "yes — first_mention_gloss in glossary 'Kusanagi'", status: PASS }
+      - { term: "_tatara_", body_first_mention: "narrative_line_223 (river Hi smelting context)", gloss: "tatara smelting in Japan; established as italicised body-prose foreign term", status: PASS }
+    status: PASS
+  footnote_integrity:
+    method: "extracted all 'footnote:[...]' tokens via grep -oE; in-order diff against claims-approved"
+    claims_count: 65
+    narrative_count: 65
+    diff_result: "zero differences"
+    status: PASS
+  status: PASS
+
+verdict_rationale: |
+  PASS. All three load-bearing checks return clean parity. Check 1
+  (completeness): all 65 paragraph-claims map sequentially from the
+  claims-approved file (lines 27..271) to the narrative (lines 6..264);
+  the 65 footnote bodies, 73 EVIDENCE tokens, and 18 COMPARATIVE-HOOK
+  lines all show byte-level identity in order via in-order diff; the 6
+  markers (4 APPROPRIATION-FLAG + 1 SPECULATION + 1 INFERENCE) match
+  byte-for-byte with all pipe-fields preserved; section count (7) and
+  heading-text match (the §IV heading's body-prose italics _amaru_ /
+  _wak'a_-succession is the locked Hard-rule-6 narrative-stage
+  conversion). Check 2 (no additions): the 7 expected permitted prose
+  additions (1 source-overview-closing roadmap + 6 section-opener
+  bridges I..VI) are all present and confined to the prompt's permitted
+  scope; no other unfootnoted prose appears in body sections; the
+  locked Ch40 FIND-01 §I "already-existing Sahelian world of Soninke
+  ethnogeographic memory" phrasing is byte-identical with claims line 63
+  at narrative line 46 (no "wak'a-rich" regression); the locked Ch40
+  FIND-02 §IV chaos-X normalisation is byte-identical with claims at
+  all five replacement points (lines 184, 187, 190, 193, 199, 204) —
+  "primordial cosmic adversary", "primordial cosmos-versus-disorder
+  opposition that the chaoskampf typology presupposes", "primordial
+  disorder", "disorder-versus-order opposition that the chaoskampf
+  typology presupposes", and "primordial disorder versus established
+  order ... cosmic adversary" are all present in §IV body prose with
+  no regression to "primordial chaos-adversary" / "primordial chaos" /
+  "chaos-versus-order opposition" / "chaos-adversary" formulations;
+  all 4 APPROPRIATION-FLAG markers preserve the four sub-fields
+  (substance | named_specialists | tier_implication | forwards_to)
+  byte-identically across §I (Conrad/Belcher/Monteil/Dieterlen), §II
+  (Biebuyck/Mateene/Belcher), §IV (Salomon/Urioste/Taylor/Dean), and
+  §V (Naumann/Isomae/Como/Ooms); the §VI SPECULATION block uses the
+  locked Ch35 basis: / counterargument: schema with substantive
+  counter-content; the §III INFERENCE block uses basis: / risk:
+  schema; the area-specialist-first discipline is observed at §I
+  (7 Soninke-framing paragraphs at lines 43–61 BEFORE the inverse-
+  chaoskampf overlay invocation at line 65) and at §II (9 Nyanga-
+  framing paragraphs at lines 90–114 BEFORE the moral-valence-inversion
+  diagnosis at line 118); banned-term scoping is policy-compliant
+  (the bare-"chaos" tokens in narrative body break down as scare-
+  quoted §I/§II attributions at lines 61/114 byte-identical with
+  claims, §VI Ballentine-critique scope at lines 247/256 by-design
+  permitted, and marker / footnote contents preserved verbatim); no
+  bare "chaos-figure" / "chaos-monster" / "chaos-serpent" / "chaos-
+  adversary" tokens in narrative body; cross-references to Chs 19, 23,
+  26, 28, 29, 34, 35, 37, 38, 41 all resolve in toc.yaml; all 10
+  source_ids resolve in sources.yaml; named-but-flagged scholars
+  (Taylor, Dean, Isomae, Como, Ooms, Monteil, Dieterlen) appear in
+  body prose only where the brief and the Ch26 / Ch23 / Ch28 named-but-
+  flagged secondary-anchor patterns license their appearance, and no
+  EVIDENCE token is routed through them. Check 3 (fidelity): markers
+  byte-identical; glossary discipline (italic _term_ in body, asterisk-
+  style preserved in footnotes / EVIDENCE locs / marker contents)
+  consistently applied per Hard rule 6; footnote bodies byte-identical
+  in order. Total findings: 0 HIGH, 0 MEDIUM, 0 LOW, 4 NOTE
+  (structural observations only). Verdict PASS.
+
+issues:
+  - id: NOTE-01
+    severity: NOTE
+    location: narrative_line_37 (source-overview-closing roadmap paragraph)
+    finding: |
+      The roadmap paragraph performs the prompt-permitted source-overview-
+      closing roadmap function, restating the §28 structural-outline
+      claim's section-by-section content in non-claim prose form. It
+      introduces no new claims and adds no attributions; every section
+      it previews is then developed with its own claim-paragraphs and
+      footnotes. Structural observation only — the roadmap's length is
+      consistent with the Ch36 / Ch37 §closing-roadmap precedent.
+    action: none
+  - id: NOTE-02
+    severity: NOTE
+    location: section-wide (narrative italicises foreign-language common
+      nouns in body prose while the claims-approved file uses bare or
+      *term* asterisk-bold styling)
+    finding: |
+      The narrative converts the claims-approved's bare 'wak'a' /
+      'amaru' / 'wak'a-succession' / 'wak'a-political' / 'wak'a-cosmography'
+      / 'wak'a-cosmos' / 'wak'a-combat' tokens to AsciiDoc italic
+      _wak'a_ / _amaru_ / _wak'a_-succession etc. in body prose, while
+      preserving *amaru* / *wak'a* asterisk-bold inside footnotes,
+      EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents
+      verbatim per Hard rule 6's verbatim-preservation requirement.
+      This matches the locked Ch37 / Ch38 glossary discipline. The
+      transformation is the intended narrative-stage glossary polish,
+      not a fidelity drift.
+    action: none
+  - id: NOTE-03
+    severity: NOTE
+    location: full-chapter (area-specialist-first discipline)
+    finding: |
+      The chapter's load-bearing methodological commitment — area-
+      specialists speak first — is observed with the kind of multi-
+      paragraph patience the brief special_instructions require.
+      §I gives 7 Soninke-tradition paragraphs (Conrad / Belcher /
+      Monteil / Dieterlen anchors) before the inverse-chaoskampf
+      overlay is registered; §II gives 9 Nyanga-tradition paragraphs
+      (Biebuyck / Mateene / Belcher anchors) before the moral-valence-
+      inversion diagnosis is offered. The discipline at §IV (Pariacaca,
+      Salomon / Urioste / Taylor / Dean) and §V (Susanoo, Naumann /
+      Isomae / Como / Ooms) is similarly area-specialist-first. The
+      §III Sigurd treatment correctly registers itself as the IE-
+      internal partial case at which the appropriation protocol's
+      area-specialist-first discipline does not apply in the same way
+      (the Eddic philological tradition and the IE-comparative tradition
+      are part of the same scholarly apparatus). Structural observation
+      only.
+    action: none
+  - id: NOTE-04
+    severity: NOTE
+    location: full-chapter
+    finding: |
+      The narrative draft is an exemplary transmission of the claims-
+      approved: 65/65 claim mapping, 73/73 EVIDENCE byte-identity, 18/18
+      COMPARATIVE-HOOK byte-identity, 6/6 marker byte-identity (4
+      APPROPRIATION-FLAG with all four sub-fields each + 1 SPECULATION
+      with basis/counterargument + 1 INFERENCE with basis/risk), and a
+      clean seven-bridge prose-addition pattern. The two locked post-
+      human-normalize fixes (FIND-01 §I "already-existing Sahelian
+      world", FIND-02 §IV chaos-X tradition-neutral normalisation) are
+      preserved verbatim. Banned-term scoping is policy-compliant. No
+      corrective action required at this stage.
+    action: none
