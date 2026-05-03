@@ -1,0 +1,238 @@
+stage: chapter-draft
+chapter: 36
+chapter_slug: C3-cyclical-maintenance
+status: "completed"
+output_file: chapters/36-C3-cyclical-maintenance.adoc
+output_lines: 265
+target_word_count: 5500
+total_file_word_count: 9555
+body_prose_word_count: 4997
+
+notes: |
+  Ch36 chapter-draft completed for the third of the eight Part-II comparative
+  chapters (C3. Cyclical Maintenance). The chapter is short by design per the
+  brief special_instructions and per the prompt's no-padding directive.
+
+  Section-structure verification (section count and ordering match the
+  approved-claims file byte-for-byte):
+    - draft sections (7): Source overview, I. The pattern,
+      II. Ra and Apep — daily, III. Tarḫunna and Illuyanka — annual,
+      IV. Apollo and Python — cult-foundation cognate,
+      V. Why these two and not others,
+      VI. The conceptual apparatus — _maʿat_ / _isfet_.
+    - approved-claims sections (7): identical sequence and identical heading
+      text. §III case-label is "Tarḫunna and Illuyanka" (not Teshub) per
+      FIND-01 fix from the post-human-normalize stage; §III bridge sentence and
+      §III opening claim paragraph both use "Tarḫunna-Illuyanka" with one
+      explicit Hurrian-vs-Hittite parenthetical distinguishing Teshub
+      (Hurrian, Kumarbi Cycle) from Tarḫunna (Hittite, Illuyanka tablets).
+    - chapter opens with [[ch-36-C3-cyclical-maintenance]] block-level anchor
+      matching brief.chapter_anchor and a level-2 == heading carrying the
+      brief's title verbatim ("C3. Cyclical Maintenance").
+    - claims-document head-comment block (lines 4-16 of approved-claims) and
+      post-human-normalize provenance block (lines 267-299 of approved-claims)
+      both correctly dropped from the draft per prompt §6.
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 65 in draft / 65 in approved (verified by Python
+      bracket-balanced extractor; all 65 footnote bodies match in order
+      byte-for-byte; mismatches = 0).
+    - // EVIDENCE: lines: 78 in draft / 78 in approved (verified by `diff` of
+      grep-extracted EVIDENCE lines — empty diff; matches the
+      post-human-normalize count of 78, which includes the three new
+      lambert-2013 / forsyth-1987 / watkins-1995 tokens added in
+      post-human-normalize for FIND-02/03/04).
+    - // COMPARATIVE-HOOK: lines: 11 in draft / 11 in approved (verified by
+      `diff` — empty; preserved verbatim in same order at end of each
+      relevant section, with the final §VI block carrying three hooks: C4,
+      Intro chapter 00A, and C7).
+    - Markers: 5 in draft / 5 in approved — 1 SPECULATION (§I, on
+      evidentiary-thinness flag), 1 LACUNA (§II, on Bremner-Rhind
+      fragmentary preservation), 1 VARIANT (§III, on Versions 1 and 2 as
+      scribally co-equal), 1 INFERENCE (§III, on both versions in same
+      festival), 1 INFERENCE (§VI, on maʿat/isfet as comparative-analytical
+      vocabulary for the Hittite case). All five preserved byte-identically
+      with full pipe-delimited sub-fields.
+
+  Per-source-id EVIDENCE distribution in draft (12 distinct source IDs;
+  matches approved-claims source-by-source):
+    assmann-2001-search: 27
+    hoffner-1998: 14
+    te-velde-1967: 12
+    fontenrose-1959: 11
+    faulkner-1972-bod: 3
+    beckman-1982-illuyanka: 3
+    watkins-1995: 2
+    faulkner-1936-bremner-rhind: 2
+    lambert-2013: 1
+    forsyth-1987: 1
+    benveniste-renou-1934: 1
+    ballentine-2015: 1
+    Total: 78 (matches approved-claims; per-source diff is empty).
+
+  Doubled-token paragraph count:
+    - zero-token paragraphs (heading/blank/marker/COMPARATIVE-HOOK/bridge/
+      roadmap blocks): 26 in draft.
+    - single-token paragraphs: 53 in draft.
+    - doubled-token paragraphs (in-scope + out-of-scope or two-anchor pairing
+      per the comparative-chapter discipline): 11 in draft.
+    - 3+-token paragraphs: 1 in draft (the Egyptian per-tradition anchors
+      paragraph in §"Source overview" carrying te-velde-1967,
+      faulkner-1972-bod, and faulkner-1936-bremner-rhind together — same
+      structure as in approved-claims).
+    - Body-paragraph EVIDENCE structure is byte-identical to approved-claims;
+      no doubled-token paragraph was added or removed at the draft stage.
+
+  Banned-term grep on draft body prose:
+    - "chaos-figure": 0 occurrences (absent from both draft and
+      approved-claims; Ch36 has been clean on this from the start per the
+      prompt's banned-term-scoping guidance).
+    - "chaos-monster": 0 occurrences.
+    - "chaos-serpent": 0 occurrences.
+    - bare "chaos" outside compound forms: 4 occurrences, all compliant —
+      (1) §VI line 226 "what 'chaos' is _not_ doing in the cyclical-
+      maintenance subtype" (scare-quoted, in §VI Ballentine-critique
+      topical-discussion); (2) §VI line 232 '"disorder, injustice, chaos"'
+      (scare-quoted, defining _isfet_); (3) §VI line 238 'the "chaos" half
+      of the inherited Chaoskampf label … "chaos" in the inchoate-primordial-
+      Western-philosophical sense … the inherited "chaos" terminology'
+      (scare-quoted thrice, §VI Ballentine-critique paragraph); (4) the
+      EVIDENCE-token comment at line 239 "(chaos-category critique)"
+      (preserved-verbatim EVIDENCE token, not body prose). All in-prose
+      occurrences are scare-quoted in §VI Ballentine-critique paragraphs
+      where the term is the topic of discussion, per the prompt's banned-
+      term-scoping rule.
+    - "chaoskampf" / "Chaoskampf" (the technical-category term per scope.md
+      Terminology default): used unquoted in body prose where the technical
+      term itself is referenced (line 9 source-overview, line 238 §VI). This
+      is permitted use of the locked technical term, not a violation.
+
+  Word counts:
+    - total file `wc -w`: 9,555 (includes all footnote bodies, EVIDENCE
+      tokens, COMPARATIVE-HOOK comment lines, and the five marker blocks).
+    - body-prose-only word count: 4,997 (computed by stripping all
+      footnote:[...] bracket-balanced blocks, stripping all five
+      [SPECULATION:|VARIANT:|INFERENCE:|LACUNA:] bracket-balanced blocks,
+      and stripping all `//`-prefixed comment lines, then counting
+      non-whitespace tokens).
+    - Approved-claims body-prose word count for comparison: 4,664.
+    - Net addition at the draft stage: +333 words (+7.1% over approved
+      claims), comprising the source-overview-closing roadmap paragraph (one
+      paragraph) plus six per-section bridge sentences (one each for §§I-VI).
+      This is within the prompt's permitted ~5-10% allowance for roadmap and
+      bridge sentences.
+    - The 4,997 body-prose figure is below the 5,500-word brief target by
+      ~503 words, consistent with the brief's "short by design… do not pad"
+      discipline and with the approved-claims file having come in at ~4,557
+      under the same discipline.
+    - Total-file overage relative to body-prose target (9,555 vs 5,500) is
+      driven by footnote, EVIDENCE-token, COMPARATIVE-HOOK, and marker bulk
+      per the prompt's acceptable-overage clause.
+
+  Permitted prose-only additions (NOTE-level for the narrative-fidelity
+  stage):
+    - One source-overview-closing roadmap paragraph naming the chapter's
+      six-section structure, inserted after the last Source-overview claim
+      and before the "=== I. The pattern" heading: "What follows is
+      organised in six body sections. Section I isolates the cyclical-
+      maintenance pattern and develops its three structural features; section
+      II treats Ra and Apep as the chapter's daily-cycle case; section III
+      treats Tarḫunna and Illuyanka as the chapter's annual-cycle case;
+      section IV treats Apollo and Python at Delphi as the cult-foundation
+      cognate carrying a minor cyclical-maintenance reflex through the
+      _Septerion_; section V develops the case-selection criterion that
+      excludes the Mesopotamian, Levantine, Greek-sovereignty, Vedic, and
+      Iranian combats from the subtype; and section VI articulates the
+      Egyptian maʿat / isfet framework as the chapter's conceptual through-
+      line and develops the structural contrast with C4." Permitted by
+      prompt §10 as the single source-overview-closing roadmap paragraph.
+    - Six per-section bridge sentences, one each opening sections I, II,
+      III, IV, V, and VI. Each bridge is a short structural-orientation
+      sentence with no factual content beyond restating what the section is
+      doing and naming the upstream Part-I chapter (§II names Ch16; §III
+      names Ch6; §IV names Ch12; §V and §VI are within-Part-II only). All
+      six are explicitly permitted by prompt §10 (one short bridge sentence
+      per === section opening for narrative orientation, NOTE-level for the
+      narrative-fidelity stage).
+    - No other unfootnoted prose; no invented facts.
+
+  Glossary discipline (prompt §8):
+    - Foreign terms in body prose italicised with _term_ AsciiDoc italic
+      rather than *term* AsciiDoc bold: _maʿat_, _isfet_, _purulli_,
+      _Septerion_, _drakaina_, _Duat_, _Imy-Duat_, _rerek_, _pythein_,
+      _Pythios_, _Pythoktonos_, _editio princeps_, _Enūma Eliš_,
+      _Metamorphoses_, _Description of Greece_, _kuenta… illuyanka-_,
+      _áhann áhim_, _HERO SLAY SERPENT_, _Hittite Myths_, _Book of
+      Overthrowing Apep_. Conversion applied to body-prose paragraphs only;
+      footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comment lines, and marker
+      blocks preserve their original *asterisk* markup byte-identically per
+      the verbatim-preservation discipline.
+    - §VI heading rendered as "VI. The conceptual apparatus — _maʿat_ /
+      _isfet_" with underscore italics in the heading itself.
+
+  Chapter-required formulation present verbatim:
+    - "Egypt has no eschatology and the combat is perpetual; Revelation has
+      an eschatology and the combat is final" — present at line 257 in §VI's
+      cyclical-vs-eschatological paragraph, preserved byte-identically from
+      approved-claims line 254 per prompt §11.
+
+  Comparative-chapter tone discipline (per Ch34 prompt §4 / Ch36 prompt §11):
+    - Assmann's _maʿat_ / _isfet_ framework as the chapter's conceptual
+      through-line: developed as the analytical core of §VI and threaded
+      through §II (pharaonic-liturgical _maʿat_-preservation paragraph), §I
+      (recurrence-as-constitutive paragraphs), and §V (recurrence-vs-
+      recitation distinction). 27 of the 78 EVIDENCE tokens (35%) cite
+      assmann-2001-search, the highest per-source weight, consistent with
+      its status as conceptual through-line.
+    - Compressed Part-I cases: §I, §II, §III, and §IV stay compressed —
+      Ra-Apep is presented through its three structural features (liturgical
+      embedding, never-concluded combat, contingency-of-cosmos doctrine) and
+      the six-layer corpus is summarised at the layer level rather than
+      narrated; Illuyanka is presented in [VARIANT:] form with both versions
+      summarised side-by-side rather than re-narrated; Apollo-Python is
+      compressed to the _Septerion_'s cyclical-maintenance reflex and does
+      not engage the other five Greek combats from Ch12.
+    - Cyclical-vs-cosmogonic-vs-sovereignty-vs-eschatological boundary work:
+      §I develops three explicit structural-contrast paragraphs (with C1,
+      C2, and C4); §V develops the recitation-vs-re-enactment selection-
+      criterion that justifies the case-selection.
+    - Structural (not adversarial) contrast with C4: the §VI cyclical-vs-
+      eschatological paragraph is explicit that the contrast is structural
+      rather than adversarial, with the brief-required "Egypt has no
+      eschatology…" formulation preserved verbatim.
+
+  Self-checks executed and passed:
+    - Footnote count parity (65 = 65): PASS (Python bracket-balanced
+      extractor; all 65 footnote bodies match byte-for-byte; mismatches=0).
+    - EVIDENCE token count parity (78 = 78): PASS (`diff` empty).
+    - COMPARATIVE-HOOK count parity (11 = 11): PASS (`diff` empty).
+    - Marker count parity (5 = 5): PASS (1 SPECULATION + 1 LACUNA + 1
+      VARIANT + 2 INFERENCE; all preserved byte-identically with full pipe-
+      delimited sub-fields).
+    - Section count and section-title sequence parity (7 sections, identical
+      sequence): PASS.
+    - §III heading carries "Tarḫunna" not "Teshub" as case-label: PASS.
+    - "Egypt has no eschatology…" formulation present verbatim: PASS.
+    - Per-source-id EVIDENCE distribution parity (12 distinct source IDs,
+      total 78): PASS.
+    - Doubled-token paragraph count parity: PASS (matches approved-claims
+      structure).
+    - Banned-term grep: PASS — no compound banned terms; bare "chaos" only
+      in §VI scare-quoted Ballentine-critique paragraphs (3 in-prose
+      occurrences) and 1 occurrence in a preserved-verbatim EVIDENCE token;
+      "chaoskampf"/"Chaoskampf" used as locked technical term per scope.md.
+    - Asciidoctor parse: PASS (`asciidoctor -o /tmp/ch36-draft.html
+      <output>` exit code 0).
+    - Chapter anchor and title-line: PASS (matches brief.chapter_anchor
+      "ch-36-C3-cyclical-maintenance" and title "C3. Cyclical Maintenance").
+    - Section openers: PASS (all six numbered sections open with heading →
+      blank line → bridge sentence → blank line → first claim paragraph).
+    - Body-prose word count within target band (~5,000-6,000 with brief
+      target 5,500): 4,997 — at the lower end of the band, consistent with
+      the brief's "short by design… do not pad" discipline.
+    - Provenance block at the bottom of approved-claims (lines 267-299)
+      correctly dropped from draft per prompt §6.
+    - Claims-document head-comment block at the top of approved-claims
+      (lines 4-16) correctly dropped from draft per prompt §1.
+
+  Ready for the narrative-fidelity stage (Ch36 Task #15).

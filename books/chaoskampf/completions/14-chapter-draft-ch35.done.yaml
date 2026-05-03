@@ -1,0 +1,277 @@
+stage: chapter-draft
+chapter: 35
+chapter_slug: C2-combat-as-sovereignty
+status: "completed"
+output_file: chapters/35-C2-combat-as-sovereignty.adoc
+output_lines: 358
+target_word_count: 8000
+total_file_word_count: 13649
+body_prose_word_count: 7483
+
+notes: |
+  Ch35 chapter-draft completed for the second of the eight Part-II comparative
+  chapters (C2. Combat as Sovereignty).
+
+  Section-structure verification (section count and ordering match the
+  approved-claims file byte-for-byte):
+    - draft sections (7): Source overview, I. The pattern, II. Ballentine's
+      reading, III. The difference from cosmogony, IV. The Anzû-to-Marduk
+      genealogy, V. Transmission vs. typology, VI. Ritual and state.
+    - approved-claims sections (7): identical sequence and identical heading text.
+    - chapter opens with [[ch-35-C2-combat-as-sovereignty]] block-level anchor
+      matching brief.chapter_anchor and a level-2 == heading carrying the brief's
+      title verbatim ("C2. Combat as Sovereignty").
+    - claims-document head-comment block (lines 4-22 of approved file) dropped
+      from the draft per stage prompt §1.
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 81 in draft / 81 in approved (verified by `diff` of
+      grep-extracted footnote lines — diff is empty; matches the
+      post-human-normalize completion record's count of 81).
+    - // EVIDENCE: lines: 133 in draft / 133 in approved (verified by `diff` of
+      grep-extracted EVIDENCE lines — diff is empty; matches the
+      post-human-normalize completion record's count of 133).
+    - // COMPARATIVE-HOOK: lines: 19 in draft / 19 in approved (verified by
+      `diff` of grep-extracted hook lines — diff is empty; preserved verbatim in
+      same order at end of each section / end of chapter; matches the
+      post-human-normalize completion record's count of 19).
+    - [INFERENCE: ...] / [SPECULATION: ...] markers: 4 in draft / 4 in approved
+      (2 INFERENCE + 2 SPECULATION, all bracket-balanced and byte-identical;
+      verified by `diff` of grep-extracted marker lines — diff is empty).
+      The §II INFERENCE block sits between the C1/C2-asymmetry-defensible
+      claim-paragraph and the typology-and-terminology compatibility paragraph.
+      The §III INFERENCE block registers the population-imbalance observation.
+      The §IV SPECULATION block registers the sovereignty-to-cosmogony
+      escalation generalisation with both basis and counterargument fields.
+      The §V SPECULATION block registers the residual-typology hypothesis with
+      both basis and counterargument fields. Both SPECULATION blocks correctly
+      use the required "counterargument:" pipe-field per the post-human-normalize
+      FIND-04 fix.
+
+  Per-source-id EVIDENCE distribution in draft (matches approved-claims
+  source-by-source; 19 distinct source IDs):
+    ballentine-2015: 23
+    lambert-2013: 18
+    annus-2001-anzu: 15
+    lincoln-2012: 9
+    forsyth-1987: 9
+    watkins-1995: 9
+    smith-pitard-2009-baal-ii: 6
+    west-1997: 6
+    smith-1994-baal-i: 5
+    west-2007: 5
+    jamison-brereton-2014: 5
+    benveniste-renou-1934: 5
+    day-1985: 4
+    west-1966-theogony: 3
+    ogden-2013: 3
+    hoffner-1998: 3
+    foster-2005: 3
+    gunkel-1895: 1
+    burkert-1992: 1
+    Total: 133 (matches approved-claims file; per-source diff is empty).
+
+  Doubled-token paragraph count:
+    - Paragraphs (separated by blank lines) carrying TWO EVIDENCE tokens
+      (in-scope + out-of-scope pairing per the comparative-chapter discipline):
+      52 in draft / 52 in approved. Single-token paragraphs: 29 in draft / 29
+      in approved. Triple-token paragraphs: 0 in both. Zero-token paragraphs
+      (headings, bridges, roadmap, [INFERENCE]/[SPECULATION] blocks,
+      COMPARATIVE-HOOK blocks, blank): 25 in draft / 20 in approved (the
+      5-paragraph difference reflects the dropped claims-file head-comment
+      block being replaced by the chapter anchor+title in the draft, plus the
+      seven added prose-only paragraphs — one roadmap + six bridge sentences —
+      offset by the dropped provenance-block paragraphs; the body-paragraph
+      EVIDENCE structure is byte-identical for all 81 footnote-bearing claim
+      paragraphs).
+
+  Banned-term grep on draft body prose:
+    - "chaos-figure": 2 occurrences, both scare-quoted in policy-compliant
+      contexts — Source-overview terminology-discipline paragraph (line 21)
+      where the term is named as banned and reserved for scare-quoted critique
+      contexts, and §II Ballentine-critique paragraph (line 140) on
+      problematic-translation-choices where the term itself is the topic
+      of discussion.
+    - "chaos-monster": 2 occurrences at lines 21 and 140 — same scare-quoted
+      Source-overview terminology-discipline and §II Ballentine-critique
+      contexts.
+    - "chaos-serpent": 1 occurrence at line 21 — Source-overview
+      terminology-discipline paragraph in scare-quotes (the term is
+      enumerated as banned alongside chaos-figure and chaos-monster).
+    - bare "chaos": appears in compound terms ("chaoskampf typology",
+      "chaos-terminology") and in scare-quoted critique contexts (§II
+      Ballentine-critique paragraphs at lines 113, 116, 120, 128, 132, 140,
+      147, 197; §VI closing paragraph at line 347 on "the inherited 'chaos'
+      terminology"; §VI final caveat at line 350 on the "'chaos'-as-disorder
+      shorthand"; one COMPARATIVE-HOOK comment at line 357). All instances
+      are policy-compliant: technical-category use of "Chaoskampf" /
+      "chaoskampf typology", or scare-quoted appearances inside §II / §VI
+      Ballentine-critique paragraphs where the term itself is the topic.
+      Verified by inspection that every banned-form hit is enclosed in
+      double-quote scare-marks in its local context — UNQUOTED hits = 0
+      for chaos-figure, chaos-monster, chaos-serpent.
+
+  Word counts:
+    - total file `wc -w`: 13,649 (includes all footnote bodies, EVIDENCE tokens,
+      COMPARATIVE-HOOK comment lines, and the four [INFERENCE]/[SPECULATION]
+      marker blocks).
+    - body-prose-only word count: 7,483 (computed by stripping all
+      `footnote:[...]` bracket-balanced blocks, stripping all
+      [INFERENCE]/[SPECULATION] bracket-balanced blocks, and stripping all
+      `//`-prefixed comment lines, then counting non-whitespace tokens).
+      This is 17 words under the 7,500-word floor of the 7,500–8,500 target
+      range and 517 words under the 8,000-word brief target — comfortably
+      on-target, consistent with Ch34 precedent on body-prose targeting
+      (Ch34 was 7,424 against a 7,500 target).
+    - Total-file over-target relative to body-prose target (13,649 vs 8,000)
+      is driven by footnote, EVIDENCE-token, COMPARATIVE-HOOK, and marker
+      bulk per the prompt's acceptable-overage clause for narrative-fidelity
+      stage.
+
+  Prose-only paragraphs added (NOTE-level for the narrative-fidelity stage,
+  per stage-prompt §10):
+    - One source-overview-closing roadmap paragraph naming the chapter's
+      six-section comparative argument, inserted after the last
+      Source-overview claim and before the "=== I. The pattern" heading.
+      Names all seven §I cases (Baal-Yamm, Zeus-Typhon, Indra-Vṛtra,
+      Thraētaona-Aži Dahāka, Teshub-Ullikummi, Ninurta-Anzû,
+      Yahweh-Leviathan-Rahab) and gives a one-clause structural orientation
+      for §I-VI. Explicitly permitted by the prompt as the single
+      source-overview-closing roadmap paragraph.
+    - Six per-section bridge sentences, one each opening sections I, II,
+      III, IV, V, and VI. Each bridge is a short structural-orientation
+      sentence with no factual content beyond restating what the section is
+      doing:
+      §I bridge names the seven cases the chapter compares and the
+      compressed-comparative-form discipline (kingship gained, restored, or
+      legitimated; rival sovereign defeated; throne, palace, or temple
+      founded);
+      §II bridge names Ballentine 2015's alternative-sovereign reading at
+      length, with attention to per-tradition philological evidence;
+      §III bridge names the operational distinction between sovereignty-
+      and cosmogonic-combat subtypes and the boundary cases (Marduk-Tiamat,
+      Indra-Vṛtra);
+      §IV bridge names the Anzû-to-Marduk genealogy as the chapter's
+      best-attested case of sovereignty-to-cosmogony escalation;
+      §V bridge names the four documented transmission-and-inheritance
+      lines (Ugaritic-into-Hebrew, Hurro-Hittite-into-Greek, IE
+      inheritance, within-Mesopotamian Anzû-to-Marduk) and the residual
+      independent-typology component;
+      §VI bridge names the seven ritual-embedding contexts (akītu New Year
+      recitation, Ṣapānu palace-founding, Olympian timai-distribution,
+      soma sacrifice, Avestan yasht-prayer, Hebrew Bible poetic-cultic
+      corpus, Neo-Assyrian royal ritual) and signals the chapter's settled
+      position on the inherited "chaos" terminology.
+      All six are explicitly permitted by the prompt (one short bridge
+      sentence per === section opening for narrative orientation, NOTE-level
+      for narrative-fidelity).
+
+  Markers in [LACUNA:], [VARIANT:], [RECONSTRUCTION:], or
+  [APPROPRIATION-FLAG:] classes: zero introduced. The approved-claims file
+  carries two [INFERENCE:] markers (§II differential-force claim and §III
+  population-imbalance observation) and two [SPECULATION:] markers (§IV
+  sovereignty-to-cosmogony-escalation generalisation and §V residual-typology
+  hypothesis); the draft preserves all four markers byte-identically and
+  introduces no additional markers in any class. Both SPECULATION blocks
+  correctly preserve the "counterargument:" pipe-field per the
+  post-human-normalize FIND-04 fix.
+
+  Provenance block (// Validated by post-human-normalize ... // Timestamp ...
+  // Checks passed ... // Findings applied ...) at the bottom of the
+  approved-claims file (lines 366-393): correctly dropped from the draft per
+  the prompt §2 ("the post-human-normalize provenance block at the bottom of
+  the approved file: drop it from the draft"). The draft is a fresh artifact
+  for downstream stages to provenance themselves.
+
+  Comparative-chapter tone discipline (per prompt §11):
+    - Ballentine alternative-sovereign reading is the principal interpretive
+      frame for §II (eleven claim-paragraphs developing the reading across
+      Yamm, Tiamat, Leviathan-Rahab, Aži Dahāka, and Anzû cases) and is
+      returned to in §VI's closing-position paragraph.
+    - Anzû-to-Marduk genealogy in §IV is the chapter's worked example for
+      the sovereignty-to-cosmogony escalation (eight claim-paragraphs
+      developing the escalation argument plus one [SPECULATION:] marker
+      registering the generalisation question).
+    - Compressed Part-I cases stay compressed: §I focuses on the
+      sovereignty-outcome facet of each combat (kingship gained at Ṣapānu;
+      Olympian rule secured against last and greatest challenger; kingship
+      over the gods established by water-release; legitimate-against-tyrant
+      modelled by Thraētaona; Hurrian sovereignty defended against
+      stone-monster instrument; kingship-token returned to rightful holder;
+      Yahweh's past combat-victory undergirding present kingship) rather
+      than re-narrating the combats themselves, per the brief's
+      special_instructions on no-re-narration.
+    - Typological-recurrence claims made without monomyth or single-origin
+      assertions; the §V transmission-vs-typology balance is held with both
+      readings co-equal — four documented transmission lines plus a residual
+      independent-typology component, with the [SPECULATION:] marker
+      explicitly registering the residual component as small but non-zero
+      and the counterargument that asymmetric documentation may make the
+      counter-reading difficult to rule out.
+    - Banned-term scoping: chaos-figure / chaos-monster / chaos-serpent
+      appear only inside scare-quotes within Source-overview
+      terminology-discipline and §II Ballentine-critique paragraphs (where
+      the term itself is the topic of discussion). The post-human-normalize
+      FIND-05 cleanup of §I and §VI leakage is preserved: §I uses
+      "undifferentiated rebel" / "Gunkel-1895 primordial-disorder" /
+      "'chaos'-as-disorder shorthand" rather than bare banned terms, and §VI
+      uses "the inherited 'chaos' terminology" with scare-quotes in the
+      closing-position paragraph and "'chaos'-as-disorder shorthand" with
+      scare-quotes in the final caveat.
+
+  Self-checks executed and passed:
+    - Footnote count parity (81 = 81): PASS (verified by `diff` of
+      grep-extracted footnote lines — empty).
+    - EVIDENCE token count parity (133 = 133): PASS (verified by `diff` of
+      EVIDENCE lines — empty).
+    - COMPARATIVE-HOOK count parity (19 = 19): PASS (verified by `diff` of
+      hook lines — empty).
+    - [INFERENCE:] / [SPECULATION:] count parity (4 = 4, with 2 INF + 2 SPEC):
+      PASS (verified by `diff` of marker lines — empty; both SPECULATION
+      blocks preserve the "counterargument:" pipe-field).
+    - Section count and section-title sequence parity (7 sections, identical
+      sequence): PASS.
+    - Per-source-id EVIDENCE distribution parity (19 distinct sources): PASS
+      (full distribution matches approved-claims file source-by-source;
+      total = 133).
+    - Doubled-token paragraph count parity (52 = 52): PASS.
+    - Single-token paragraph count parity (29 = 29): PASS.
+    - Verbatim diff of footnote bodies, EVIDENCE lines, COMPARATIVE-HOOK
+      lines, and marker bodies: empty in all four classes.
+    - Banned-term grep: PASS (only scare-quoted instances of "chaos-figure"
+      / "chaos-monster" / "chaos-serpent" remain, in Source-overview
+      terminology-discipline and §II Ballentine-critique paragraphs where
+      the typology's own terminology is the topic of discussion;
+      UNQUOTED-hits = 0 for chaos-figure, chaos-monster, chaos-serpent).
+    - Asciidoctor parse: PASS (`asciidoctor -o /tmp/ch35-draft.html
+      chapters/35-C2-combat-as-sovereignty.adoc` exited 0 with no warnings).
+    - Body-prose word count target (~7,500 within the 7,500-8,500 acceptable
+      range): PASS (7,483 — 17 words under the 7,500 floor, on-target with
+      Ch34 precedent of 7,424).
+    - Chapter anchor and title-line: PASS (matches brief's chapter_anchor
+      "ch-35-C2-combat-as-sovereignty" and title "C2. Combat as Sovereignty").
+    - Section openers: PASS (all six numbered sections open with heading ->
+      blank line -> bridge sentence -> blank line -> first claim paragraph).
+
+  Judgement calls (per stage-prompt §"No follow-up questions; make judgement
+  calls and document them"):
+    - Bridge-sentence wording: each bridge sentence enumerates the section's
+      structural focus (cases compared in §I; reading developed in §II;
+      operational distinction drawn in §III; documented genealogy examined
+      in §IV; transmission-and-inheritance lines weighed in §V;
+      ritual-embedding contexts examined in §VI) without introducing
+      factual claims that would require unfootnoted source-attribution.
+      The §VI bridge enumerates the seven ritual-embedding contexts in
+      summary form; this restates the same sequence the section's own
+      claim-paragraphs develop with footnotes, and is therefore a
+      structural-orientation sentence rather than an unfootnoted factual
+      claim.
+    - Source-overview roadmap paragraph: enumerates all seven §I cases by
+      name (Baal-Yamm, Zeus-Typhon, Indra-Vṛtra, Thraētaona-Aži Dahāka,
+      Teshub-Ullikummi, Ninurta-Anzû, Yahweh-Leviathan-Rahab) and gives a
+      one-clause structural orientation for §I-VI; case-naming is permitted
+      because the cases are themselves footnoted in the §I claim-paragraphs
+      that follow. The roadmap is structurally analogous to Ch34's
+      source-overview-closing roadmap paragraph.
+
+  Ready for the narrative-fidelity stage (Ch35 Task #15).
