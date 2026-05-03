@@ -39,6 +39,20 @@ COMMON_PODMAN_ARGS=(
     -e TERM="${TERM:-xterm-256color}"
 )
 
+# Forward the host's git identity so commits made inside the container are
+# attributed correctly. GIT_AUTHOR_*/GIT_COMMITTER_* are honored by git without
+# needing user.name/user.email to be set in the container's gitconfig.
+_host_git_name="$(git config --global user.name 2>/dev/null || true)"
+_host_git_email="$(git config --global user.email 2>/dev/null || true)"
+if [[ -n "$_host_git_name" && -n "$_host_git_email" ]]; then
+    COMMON_PODMAN_ARGS+=(
+        -e "GIT_AUTHOR_NAME=$_host_git_name"
+        -e "GIT_AUTHOR_EMAIL=$_host_git_email"
+        -e "GIT_COMMITTER_NAME=$_host_git_name"
+        -e "GIT_COMMITTER_EMAIL=$_host_git_email"
+    )
+fi
+
 # Ensure the named volume exists before we try to mount it.
 ensure_volume() {
     if ! podman volume inspect "$CLAUDE_VOLUME" >/dev/null 2>&1; then
