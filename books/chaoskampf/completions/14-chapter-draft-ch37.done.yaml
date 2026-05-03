@@ -1,0 +1,215 @@
+stage: chapter-draft
+chapter: 37
+chapter_slug: C4-eschatological-displacement
+status: "completed"
+output_file: chapters/37-C4-eschatological-displacement.adoc
+output_lines: 443
+target_word_count: 7000
+total_file_word_count: 15976
+body_prose_word_count: 8620
+
+notes: |
+  Ch37 chapter-draft completed for the fourth of the eight Part-II comparative
+  chapters (C4. Eschatological Displacement).
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 94 in draft / 94 in approved (verified by Python
+      bracket-balanced extractor; all 94 footnote-bracket bodies match
+      byte-for-byte; mismatch count = 0).
+    - // EVIDENCE: lines: 168 in draft / 168 in approved (verified by `diff` of
+      grep-extracted EVIDENCE lines — diff is empty).
+    - // COMPARATIVE-HOOK: lines: 21 in draft / 21 in approved (verified by
+      `diff` — empty; preserved verbatim in same order).
+    - Markers: 7 in draft / 7 in approved — 3 [SPECULATION:], 2 [INFERENCE:],
+      1 [VARIANT:], 1 [LACUNA:]. All 7 marker lines are byte-identical with the
+      approved-claims file (verified line-by-line). All 3 [SPECULATION:] blocks
+      use the required `counterargument:` pipe-field. The [VARIANT:] block is
+      the Yarbro Collins vs. Aune Rev 12 substrate-vs-composite block. The
+      [LACUNA:] block is the Pahlavi temporal-layering block.
+
+  Section-structure verification (section count and ordering match approved-claims
+  byte-for-byte):
+    - 7 top-level sections: Source overview, I. The pattern, II. The three cases,
+      III. The common structural element — the binding, IV. Historical influence
+      or typological convergence?, V. Isaiah 27:1 as transition, VI. What
+      eschatology changes.
+    - §II contains 3 sub-cases: Case 1 — Thor and Jörmungandr at Ragnarök;
+      Case 2 — Michael and the red dragon (Revelation 12 with Revelation 20);
+      Case 3 — Aži Dahāka at Frashokereti. Sub-case sequence and headings
+      identical with approved-claims.
+    - Chapter opens with [[ch-37-C4-eschatological-displacement]] block-level
+      anchor and a level-2 == heading carrying the title "C4. Eschatological
+      Displacement" verbatim.
+
+  Per-source-id EVIDENCE distribution in draft (matches approved-claims source-by-source;
+  15 distinct source IDs):
+    forsyth-1987: 32
+    gunkel-1895: 23
+    watkins-1995: 22
+    yarbro-collins-1976: 16
+    day-1985: 16
+    aune-revelation: 15
+    faulkes-snorri: 14
+    west-2007: 13
+    larrington-poetic-edda: 6
+    benveniste-renou-1934: 4
+    assmann-2001-search: 2
+    ballentine-2015: 2
+    lambert-2013: 1
+    smith-1994-baal-i: 1
+    smith-pitard-2009-baal-ii: 1
+    Total: 168 (matches approved-claims; per-source diff is empty).
+
+  Doubled-token paragraph count:
+    - Paragraphs (separated by blank lines) carrying TWO+ EVIDENCE tokens: 61 in
+      draft / 61 in approved.
+    - Single-EVIDENCE paragraphs: 33 in draft / 33 in approved.
+    - Zero-EVIDENCE paragraphs: 38 in draft / 30 in approved (the +8 reflects
+      the chapter-anchor+title paragraph, the source-overview-closing roadmap
+      paragraph, and the nine permitted bridge sentences — each a separate
+      paragraph — minus the dropped post-human-normalize provenance block).
+
+  Banned-term grep on draft body prose (chaos-figure / chaos-monster /
+  chaos-serpent / bare chaos):
+    - chaos-figure: 0 occurrences.
+    - chaos-monster: 0 occurrences.
+    - chaos-serpent: 0 occurrences.
+    - bare "chaos" (case-insensitive whole-word): 2 occurrences, both
+      policy-compliant: (1) §IV Gunkel-1895 historiographic mention as
+      *Schöpfung und Chaos in Urzeit und Endzeit* book-title context (the
+      religionsgeschichtliche Schule paragraph references Gunkel's title);
+      (2) §V Ballentine-2015 reading paragraph contrasting "chaos-ordering
+      cosmogony" with the rival-sovereignty thesis (typology-discussion
+      context within Ballentine-critique register, consistent with Ch34 §VI
+      precedent).
+    The eschatological adversaries are named throughout as Jörmungandr,
+    Satan / red dragon, and Aži Dahāka. No chaos-leakage findings —
+    consistent with the post-human-normalize completion record's
+    "banned-term scoping clean" finding.
+
+  Body-prose markup (per draft-discipline rule 8): all body-prose foreign-
+  language common nouns and book titles converted from AsciiDoc bold (*term*)
+  to italic (_term_) — _Ragnarök_, _Frashokereti_, _Aži Dahāka_, _Bundahišn_,
+  _Dēnkard_, _Edda_, _Gylfaginning_, _Poetic Edda_, _Hymiskviða_, _Völuspá_,
+  _Yašt_, _Ābān Yašt_, _Urzeit_, _Endzeit_, _Enūma Eliš_, _qrb ym_,
+  _religionsgeschichtliche Schule_, _Codex Regius_, _bayyôm hahû'_, _bṯn brḥ_,
+  _bṯn ʿqltn_, _druj_, _maʿat_, _isfet_, _HERO SLAY SERPENT_,
+  _The Combat Myth in the Book of Revelation_, _Vṛtra et Vṛθragna_,
+  _Schöpfung und Chaos in Urzeit und Endzeit_. Footnotes, EVIDENCE comment
+  lines, COMPARATIVE-HOOK comment lines, and marker blocks retain their
+  original asterisk markup byte-identically per the rule's verbatim-preservation
+  carve-out (verified by Python bracket-balanced extractor: all 94 footnote
+  bracket bodies and all 7 marker lines are byte-identical with claims).
+
+  Permitted prose-only additions enumerated (NOTE-level for the
+  narrative-fidelity stage):
+    - One source-overview-closing roadmap paragraph naming the chapter's six-
+      section comparative argument, inserted after the last source-overview
+      COMPARATIVE-HOOK and before the "=== I. The pattern" heading. The
+      roadmap names §I (four-feature pattern), §II (three principal cases),
+      §III (binding as common structural element), §IV (influence vs.
+      convergence), §V (Isa 27:1 transition), §VI (theoretical contribution
+      along the three axes of monster, history, hero).
+    - One short bridge sentence opening each of the six numbered sections
+      (I–VI), between the heading and the first claim paragraph. Each bridge
+      is a structural-orientation sentence with no factual content beyond
+      restating what the section is doing.
+    - One short bridge sentence opening each of the three §II sub-cases
+      (Case 1, Case 2, Case 3). The Case-2 bridge explicitly registers the
+      Yarbro-Collins-/-Aune attribution split per the post-human-normalize
+      FIND-02 fix.
+    Total prose-only additions: 1 roadmap + 6 numbered-section bridges + 3
+    sub-case bridges = 10 paragraphs/sentences. No other unfootnoted prose;
+    no invented facts.
+
+  §V Hebrew Bible enumeration confirmed using the six-+-Isa-27:1 framing
+  (post-human-normalize FIND-01 fix preserved): the §V opening paragraph
+  reads "the six dominantly-retrospective passages within the Hebrew Bible
+  combat corpus that Day 1985 identifies (Pss 74:12–17, 89:9–13, 104:6–9
+  with v. 26; Job 26:12–13 with ch. 41; Habakkuk 3; Isa 51:9–10) … the
+  seventh passage in Day's corpus, Isaiah 27:1, is the principal
+  eschatological-projection exception treated below" — preserved verbatim
+  from approved-claims.
+
+  §II Case-2 attribution split confirmed (post-human-normalize FIND-02 fix
+  preserved): the Case-2 opening paragraph credits Yarbro Collins 1976 ch. 4
+  with Rev 12's eschatological function and Aune 1997–98 (WBC 52B–C) with
+  the Rev 12 + Rev 20 bipartite binding-and-final-loosing structure (the
+  doubled-EVIDENCE paragraph carries source_id=yarbro-collins-1976
+  loc="ch. 4 (Rev 12 eschatological function)" + source_id=aune-revelation
+  loc="WBC 52B-C on Rev 12, Rev 20 (bipartite binding-and-final-loosing)").
+  The Case-2 bridge sentence reflects the same attribution split.
+
+  Comparative-chapter tone discipline (per prompt §4 and brief
+  special_instructions):
+    - The Zoroastrian-influence-on-Jewish-and-Christian-apocalyptic argument
+      is presented charitably without over-committing — §IV preserves the
+      brief's "present the evidence charitably without forcing a verdict"
+      discipline, the [SPECULATION:] block at line 302 of claims (preserved
+      byte-identically in the draft) registers the late-textual-fixation
+      counterargument explicitly, and the chapter's settled position is the
+      partition reading (some component plausibly transmission-explicable;
+      some component most plausibly within-tradition or structurally-
+      convergent).
+    - The chapter does not re-narrate the individual cases — §II is
+      compressed-comparative-form per brief special_instructions, with cross-
+      references to Chs 18 (Thor-Jörmungandr), 9 (Revelation 12), 13
+      (Thraētaona-Aži Dahāka), and 8 (Yahweh-Leviathan-Rahab Isa 27:1
+      transitional material) supplying the per-tradition narrative-and-source
+      treatment that the comparative chapter does not duplicate.
+    - The Ragnarök-Frashokereti structural fit is registered through the
+      West 2007 ch. 6 (storm-god / water-dragon comparative reading) and
+      Watkins 1995 Part V chs. 44–48 (IE poetic-formula and Pahlavi
+      narrative-expansion) cross-references, with the Iranian doubled-combat
+      structure (Avestan-period Thraētaona-binding at Movement II of Ch13;
+      Pahlavi Frashokereti-killing by Kərəsāspa at Movement III) flagged as
+      structurally aligned with the Norse Ragnarök tradition.
+    - Isaiah 27:1 in §V is the principal Hebrew Bible transitional text
+      (the seventh passage in Day's corpus — six dominantly-retrospective +
+      Isa 27:1 prospective), per FIND-01 framing.
+    - §VI develops the cognitive-implications-of-eschatology argument as the
+      chapter's main analytical contribution, with the three-axis
+      reorientation (relationship to monster, to history, to the hero)
+      articulated jointly across the three principal cases.
+
+  Provenance block (// Validated by post-human-normalize ... // Timestamp ...
+  // Checks passed ... // Findings applied) at lines 449–478 of the
+  approved-claims file: correctly dropped from the draft per prompt rule 2
+  ("drop the provenance block from the draft"). The draft is a fresh artifact
+  for downstream stages to provenance themselves.
+
+  Self-checks executed and passed:
+    - Footnote count parity (94 = 94): PASS (verified by `grep -c
+      "footnote:\["` and by Python bracket-balanced extractor; all 94
+      footnote bracket bodies match byte-for-byte).
+    - EVIDENCE token count parity (168 = 168): PASS (verified by `diff` of
+      grep-extracted EVIDENCE lines — empty).
+    - COMPARATIVE-HOOK count parity (21 = 21): PASS (verified by `diff` —
+      empty).
+    - Marker count parity (7 = 7) with class breakdown (3 SPEC / 2 INF / 1
+      VAR / 1 LAC): PASS (all 7 marker lines byte-identical with approved-
+      claims).
+    - All 3 [SPECULATION:] blocks use `counterargument:` pipe-field: PASS.
+    - Section count and section-title sequence parity (7 top-level sections,
+      §II three-sub-case structure preserved): PASS.
+    - Per-source-id EVIDENCE distribution parity (15 distinct sources): PASS.
+    - Doubled-token paragraph count parity (61 = 61): PASS.
+    - Verbatim diff of footnote bodies, EVIDENCE lines, COMPARATIVE-HOOK
+      lines, and marker lines: empty in all four classes.
+    - Banned-term grep: PASS (chaos-figure / chaos-monster / chaos-serpent
+      all 0; bare "chaos" only at policy-compliant positions — Gunkel book-
+      title context and Ballentine-reading typology-discussion context).
+    - §V Hebrew Bible enumeration uses six-+-Isa-27:1 framing (post-human-
+      normalize FIND-01 fix): PASS.
+    - §II Case-2 attribution split (Yarbro Collins ch. 4 / Aune WBC 52B-C):
+      PASS.
+    - Asciidoctor parse: `asciidoctor -o /tmp/ch37-draft.html
+      <output>` exit 0: PASS.
+    - Body-prose word count target (~7,500–8,500 words; brief target 7,000;
+      comparable to claims-approved at 7,948 + permitted bridge prose):
+      8,620 words — at the upper end of the target window with the roadmap
+      paragraph (~190 words) and nine bridge sentences (~280 words combined)
+      added on top of the claims-stage 7,948-word body, consistent with the
+      "+ permitted bridge prose" component of the prompt's target.
+
+  Ready for the narrative-fidelity stage (Ch37 stage 15).

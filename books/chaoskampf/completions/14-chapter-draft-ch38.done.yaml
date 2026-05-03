@@ -1,0 +1,297 @@
+stage: chapter-draft
+chapter: 38
+chapter_slug: C5-ie-hero-slay-serpent-formula
+status: "completed"
+output_file: chapters/38-C5-ie-hero-slay-serpent-formula.adoc
+output_lines: 422
+target_word_count: 7500
+total_file_word_count: 16504
+body_prose_word_count: 8255
+
+notes: |
+  Ch38 chapter-draft completed for the fifth of the eight Part-II comparative
+  chapters (C5. The Indo-European HERO SLAY SERPENT Formula). This is the book's
+  most philologically technical chapter; the draft preserves the approved-claims
+  philological apparatus byte-for-byte and adds only the prompt-permitted
+  prose-only NOTE-level additions for narrative-fidelity.
+
+  Section-structure verification (section count and ordering match the
+  approved-claims file byte-for-byte):
+    - draft sections (7): Source overview, I. The formula,
+      II. The direct philological cases, III. The extended typological cases,
+      IV. Where the argument is strong, where it is weak,
+      V. Transmission vs. inheritance, VI. The Mwindo problem as a control.
+    - approved-claims sections (7): identical sequence and identical heading text.
+    - chapter opens with [[ch-38-C5-ie-hero-slay-serpent-formula]] block-level
+      anchor matching brief.chapter_anchor and a level-2 == heading carrying
+      the brief's title verbatim ("C5. The Indo-European HERO SLAY SERPENT
+      Formula").
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 96 in draft / 96 in approved (verified by
+      grep-c "footnote:\["; diff of grep-extracted footnote lines is empty).
+    - // EVIDENCE: lines: 144 in draft / 144 in approved (verified by `diff`
+      of grep-extracted EVIDENCE lines — empty; matches the post-human-normalize
+      completion record's count of 144, which includes the FIND-04 doubled-token
+      additions for Welsh and Vahagn).
+    - // COMPARATIVE-HOOK: lines: 26 in draft / 26 in approved (verified by
+      `diff` — empty; preserved verbatim in same order across the seven sections).
+    - markers (INFERENCE / SPECULATION / VARIANT / LACUNA): 8 in draft / 8 in
+      approved (verified by grep -E "^\\[(INFERENCE|SPECULATION|VARIANT|LACUNA):"
+      | wc -l = 8; diff of grep-extracted marker first-lines is empty).
+
+  Marker preservation (per prompt §6 requirement):
+    - 3 [INFERENCE:] markers preserved (§I philological-vs-structural framing
+      inference; §IV Greek Zeus-Typhon weak-case classification inference;
+      §VI Mwindo control-vs-parallel classification inference). Each retains
+      its `basis:` and `risk:` pipe-fields.
+    - 1 [SPECULATION:] marker preserved (§IV poetic-inheritance vs.
+      combat-myth-inheritance reading). The marker uses `basis:` and
+      `counterargument:` pipe-fields per the post-human-normalize FIND-03 fix
+      (the approved-claims file already has the corrected labels; the draft
+      preserves them byte-identically).
+    - 1 [VARIANT:] marker preserved (§III Slavic Ivanov-Toporov vs. dissent
+      variant) with `primary=` / `alt=` / `chosen:` / `reason:` pipe-fields
+      intact and the area-specialist-dissent (Jakobson, Lajoye, Moszyński,
+      Kapović) framing preserved per the locked Ch20 framing.
+    - 3 [LACUNA:] markers preserved: Avestan no continuous narrative (§II);
+      CTH 321 manuscript breaks (§II); Vahagn lost hymn (§III). Each retains
+      its `source:` and `scholarly_reconstruction:` pipe-fields.
+
+  Per-source-id EVIDENCE distribution in draft (matches approved-claims
+  source-by-source; 15 distinct source IDs, total = 144):
+    watkins-1995: 57
+    west-2007: 20
+    benveniste-renou-1934: 14
+    biebuyck-mateene-mwindo: 9
+    jamison-brereton-2014: 8
+    ogden-2013: 6
+    hoffner-1998: 6
+    west-1997: 4
+    russell-zoroastrianism-armenia: 4
+    tolkien-1936-monsters: 3
+    larrington-poetic-edda: 3
+    beckman-1982-illuyanka: 3
+    bailey-ivanova-1998: 3
+    west-1966-theogony: 2
+    faulkes-snorri: 2
+    Total: 144 (matches approved-claims file; per-source diff is empty).
+
+  Doubled-token paragraph count:
+    - Paragraphs (separated by blank lines) carrying the EVIDENCE-token
+      distribution (matches approved-claims file paragraph-by-paragraph):
+      127 paragraphs total in draft;
+        zero EVIDENCE tokens (headings, bridges, roadmap, marker blocks,
+          comparative-hook clusters, blank): 31
+        single EVIDENCE tokens: 56
+        double EVIDENCE tokens: 37
+        multi (>=3) EVIDENCE tokens: 3
+      The 37 doubled-token paragraphs include the post-human-normalize FIND-04
+      additions for the Welsh case (now ogden-2013 + west-2007) and the
+      Vahagn case (now russell-zoroastrianism-armenia + west-2007).
+
+  Banned-term grep on draft body prose:
+    - "chaos-figure": 0 occurrences (clean).
+    - "chaos-monster": 0 occurrences (clean).
+    - "chaos-serpent": 0 occurrences (clean).
+    - bare "chaos" (word-boundary): 0 occurrences (clean).
+    Verified by grep -niE "\\bchaos[- ]?(figure|monster|serpent)" and
+    grep -ni "\\bchaos\\b" — both return zero hits, consistent with the
+    post-human-normalize finding "no chaos-* leakage". The chapter's focus
+    on the formulaic verb-and-object pairing (HERO SLAY SERPENT) does not
+    require the banned terminology and the approved-claims authorial
+    discipline scoped them out cleanly.
+
+  §II Tarḫunna usage confirmed (per the locked Ch36 §III correction):
+    - Tarḫunna body-prose occurrences (in non-comment lines): 9 total
+      (1 in roadmap; 1 in §II opening; 2 in §II Hittite-case paragraph at
+      line 154 within the inline clarification "the chapter renders the
+      storm-god as Tarḫunna in keeping with the Ch36 §III correction, since
+      Tarḫunna is the Hittite-language name…"; 1 in §IV strong-and-weak
+      ordering; 4 in §V Hittite-dual-context paragraphs).
+    - Tarḫunna total occurrences (whole file, including //COMPARATIVE-HOOK
+      and //EVIDENCE comment lines): 11 (the additional 2 are in the
+      C3-cyclical-maintenance and Ch6+Ch36-§III COMPARATIVE-HOOKs that
+      preserve the Tarḫunna rendering verbatim from the approved-claims).
+    - Teshub total occurrences (whole file): 4, all in clarification /
+      contrast contexts (Hurrian-counterpart-deity in non-Illuyanka
+      material): 3 in the §II inline clarification at line 154 ("Teshub is
+      the Hurrian-language name attested in the Kumarbi Cycle"; the
+      glossary-citation "Tarḫunna / Teshub"; "Teshub in Hurrian-language
+      contexts"); 1 in the §II COMPARATIVE-HOOK at line 180 ("rather than
+      as Teshub (the Hurrian-language form attested in the Kumarbi
+      Cycle)"). All 4 Teshub mentions are clarification-only and never
+      attached to "Illuyanka" — DO-NOT-regress-to-"Teshub-Illuyanka"
+      check passes.
+    - Verified by grep -o pattern counts; no Teshub appears outside
+      Hurrian-counterpart-deity clarification contexts.
+
+  *áhann áhim* RV 1.32.2 attribution confirmed at all loci (per
+  post-human-normalize FIND-01 fix):
+    - §I (line 64 in draft): "*áhann áhim* — 'he slew the serpent' — from
+      Rigveda 1.32.2, the second verse of the principal Indra-Vṛtra hymn
+      whose opening verse announces the theme of Indra's manly deeds".
+      Footnote-prose at the same locus: "Jamison and Brereton 2014, RV
+      1.32.1–2, on the opening verse's announcement of Indra's manly deeds
+      and on the *áhann áhim* phrasing in the second verse".
+    - §II (line 120 in draft): "*áhann áhim*, 'he slew the serpent' — the
+      formula's most-cited lexical exhibit; the chapter cites RV 1.32 as
+      the working text via Jamison and Brereton 2014 … and reads the
+      *áhann áhim* phrase at 1.32.2 as the Vedic instantiation". Footnote
+      at same locus: "the *áhann áhim* phrasing at 1.32.2 (the second
+      verse, with the opening verse announcing the theme of Indra's manly
+      deeds)".
+    - EVIDENCE token loc in draft (line 65) reads
+      "loc=RV 1.32.1-2" matching Ch14's loc convention per the FIND-01
+      ACCEPT.
+    - No "1.32.1, the opening line" wording remains anywhere in the draft.
+
+  "band of all lands" usage confirmed at both occurrences (per
+  post-human-normalize FIND-02 fix):
+    - §I kennings paragraph (line 96 in draft): "*umbgjǫrð allra landa*
+      'band of all lands' for Jörmungandr".
+    - §IV Thor-Jörmungandr paragraph (line 288 in draft):
+      "*umbgjǫrð allra landa* 'band of all lands' and similar phrases for
+      the Midgard Serpent".
+    - Footnote at line 96 also carries "kennings for Jörmungandr (e.g.,
+      'band of all lands')" matching the glossary-locked rendering.
+    - No "girdle of all lands" wording remains anywhere in the draft;
+      grep for "girdle" returns zero hits.
+
+  Permitted prose-only additions enumerated (NOTE-level for the
+  narrative-fidelity stage, per prompt §11):
+    - One source-overview-closing roadmap paragraph naming the chapter's
+      six-section comparative argument, inserted after the last
+      Source-overview COMPARATIVE-HOOK and before the "=== I. The formula"
+      heading. Single sentence, six clauses naming sections I–VI in
+      sequence, mentions Vedic-Avestan-Hittite for §II, the eight
+      §III instances, the strong-and-weak gradient and Slavic dissent for
+      §IV, the inheritance-versus-transmission distinction and C6 (Ch39)
+      defer-link for §V, and the Mwindo control for §VI. Italicises
+      _Beowulf_ and _vishaps_ per the prompt's glossary-discipline.
+    - Six per-section bridge sentences, one each opening sections I, II,
+      III, IV, V, and VI. Each bridge is a short structural-orientation
+      sentence with no factual content beyond restating what the section
+      is doing. The §I bridge names the formula-reconstruction focus and
+      the three lexical anchors; §II names the three direct philological
+      cases; §III names the eight extended typological cases on the
+      philological-evidence spectrum; §IV names the strong-and-weak
+      gradient and the area-specialist dissent; §V names the
+      inheritance-versus-transmission distinction and the C6 (Ch39)
+      defer; §VI names the Mwindo control as IE-scope-bounding. All six
+      bridges are explicitly permitted by prompt §11 (one short bridge
+      sentence per === section opening for narrative orientation,
+      NOTE-level for narrative-fidelity).
+    - Zero inter-case transitions added to §III's eight extended cases
+      per the prompt's "use sparingly; the philological register prefers
+      compressed transitions" guidance — the approved-claims paragraphs
+      already flow case-by-case at the philologically-technical register
+      and any inter-case bridge would be either redundant or would
+      dilute the register.
+    - No other unfootnoted prose. No invented facts. No new EVIDENCE
+      tokens, COMPARATIVE-HOOK comments, footnotes, or markers.
+
+  Comparative-chapter tone discipline (per prompt §12 special instructions):
+    - Watkins's argument is presented respectfully but not as
+      book-shaping truth: §I and §V repeatedly frame the formula as
+      explaining the IE distribution of the combat-myth rather than its
+      broader global existence; the [INFERENCE:] block at end of §I flags
+      the philological-emphasis framing as one reasonable reading rather
+      than the only available reading; §IV registers the typological-
+      and-reconstructive edges where the philological signal weakens.
+    - Slavic-reconstruction problem clear-eyed in §III + §IV: the
+      Ivanov-Toporov reconstruction is presented (§III) and held up to
+      the area-specialist dissent (Jakobson, Lajoye, Moszyński, Kapović)
+      across three distinct lines of methodological objection in §IV
+      (toponym-circularity; late-and-Christianised-chronicles;
+      folklore-over-interpretation), with the chapter explicit that the
+      Slavic case sits at the weakest end of the gradient and cannot
+      bear significant evidential weight in the consolidated argument.
+    - Celtic / Welsh / Armenian fragmentary attestations handled with
+      scope.md-mandated care: §III Lugh-Balor case marked as principally
+      typological-and-dynastic-structural rather than philological;
+      Welsh case marked as morphologically-distinctive (dragon-on-dragon)
+      and structurally bordering rather than central; Armenian Vahagn
+      case marked as the most fragmentary (lost hymn; Khorenatsi
+      paraphrase only) with the [LACUNA:] block making the gap explicit.
+    - Chapter closes with §VI Mwindo control: IE inheritance is a real
+      finding but not a totalising explanation; non-IE serpent-combat
+      traditions in the wider book catalogue (Mesopotamian, Egyptian,
+      Levantine, Mesoamerican, Andean) reinforce the boundedness of
+      Watkins's argument.
+    - §V transmission-vs-inheritance distinction crucial and preserved:
+      Watkins claims inheritance from PIE poetic tradition, not contact-
+      borrowing; the chapter is explicit about the methodological
+      distinction (regular-phonological-correspondences vs. structural-
+      or-narrative-correspondences; PIE-stage-depth vs. documented-contact-
+      horizon; lexical-syntactic-structure vs. narrative-or-theological-
+      content); C6 (Ch39) is named as the chapter that addresses
+      transmission separately for the Hesiodic / Kumarbi-Cycle /
+      Baal-Yamm material.
+    - Vedic *áhann áhim* correctly attributed to RV 1.32.2 throughout
+      (the second verse, with the opening verse announcing the theme of
+      Indra's manly deeds) per the post-human-normalize FIND-01 fix.
+
+  Markers in [LACUNA:], [VARIANT:], [INFERENCE:], [SPECULATION:],
+  [RECONSTRUCTION:], or [APPROPRIATION-FLAG:] classes: zero introduced.
+  The approved-claims file carries 3 [INFERENCE:], 1 [SPECULATION:],
+  1 [VARIANT:], 3 [LACUNA:] markers; the draft preserves all 8 markers
+  byte-identically and introduces no additional markers in any class.
+
+  Provenance block (// Validated by post-human-normalize ... // Timestamp ...
+  // Checks passed ... // Findings applied ... // NOTEs deferred) at the
+  bottom of the approved-claims file (lines 428-477): correctly dropped
+  from the draft per the prompt §2 ("drop the provenance block from the
+  draft"). The draft is a fresh artifact for downstream stages to
+  provenance themselves.
+
+  Self-checks executed and passed:
+    - Footnote count parity (96 = 96): PASS (grep -c "footnote:\\[" $OUT;
+      diff of grep-extracted footnote lines is empty).
+    - EVIDENCE token count parity (144 = 144): PASS (grep -c "^// EVIDENCE:";
+      diff of EVIDENCE lines is empty).
+    - COMPARATIVE-HOOK count parity (26 = 26): PASS (grep -c
+      "^// COMPARATIVE-HOOK:"; diff is empty).
+    - Marker count parity (8 = 8): PASS (grep -E "^\\[(INFERENCE|
+      SPECULATION|VARIANT|LACUNA):" | wc -l = 8; diff of marker
+      first-lines is empty).
+    - Section count and section-title sequence parity (7 sections,
+      identical sequence): PASS.
+    - Per-source-id EVIDENCE distribution parity (15 distinct sources):
+      PASS (full distribution matches approved-claims source-by-source;
+      total = 144).
+    - Doubled-token paragraph distribution parity: PASS.
+    - Verbatim diff of footnote bodies, EVIDENCE lines, COMPARATIVE-HOOK
+      lines, and the [INFERENCE]/[SPECULATION]/[VARIANT]/[LACUNA] markers:
+      empty in all four classes.
+    - SPECULATION pipe-fields use `basis:` / `counterargument:`: PASS
+      (verified by grep on the SPECULATION block; the marker pipe-fields
+      are exactly "basis:" and "counterargument:" per the locked schema).
+    - Banned-term grep: PASS (zero "chaos-figure", zero "chaos-monster",
+      zero "chaos-serpent", zero bare "chaos").
+    - §II Tarḫunna usage: PASS (9 body-prose occurrences plus 2 in
+      COMPARATIVE-HOOK comment-lines = 11 file-wide; 4 Teshub mentions
+      all confined to Hurrian-counterpart-deity clarification context;
+      no "Teshub-Illuyanka" regression).
+    - *áhann áhim* RV 1.32.2 attribution: PASS at all loci (§I line 64;
+      §II line 120; EVIDENCE-token loc=RV 1.32.1-2 at line 65; footnote
+      prose at both loci correctly cites "the second verse, with the
+      opening verse announcing the theme of Indra's manly deeds").
+    - "band of all lands" usage: PASS at both occurrences (§I line 96;
+      §IV line 288); no "girdle of all lands" remaining.
+    - Asciidoctor parse: PASS (`asciidoctor -o /tmp/ch38-draft.html
+      $OUT` exits 0 with no errors or warnings on the body content).
+    - Body-prose word count: 8,255 words — within the brief target
+      range of 7,500–8,500 (brief target 7,500; claims-approved at
+      ~7,572 + permitted bridge prose and roadmap paragraph). The
+      modest overage relative to the lower bound is driven by the seven
+      bridge sentences and the roadmap paragraph being counted as
+      body prose; comfortably under the 8,500 ceiling.
+    - Chapter anchor and title-line: PASS (matches brief's
+      chapter_anchor "ch-38-C5-ie-hero-slay-serpent-formula" and title
+      "C5. The Indo-European HERO SLAY SERPENT Formula").
+    - Section openers: PASS (all six numbered sections open with
+      heading -> blank line -> bridge sentence -> blank line -> first
+      claim paragraph).
+
+  Ready for the narrative-fidelity stage (Ch38 Task #15).
