@@ -1,0 +1,172 @@
+stage: "post-human-normalize"
+timestamp: "2026-05-03T09:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+inputs:
+  - file: "chapters/35-C2-combat-as-sovereignty.claims.adoc"
+  - file: "chapters/35-C2-combat-as-sovereignty.claims.factcheck.yaml"
+  - file: "chapters/36-C3-cyclical-maintenance.claims.adoc"
+  - file: "chapters/36-C3-cyclical-maintenance.claims.factcheck.yaml"
+outputs:
+  - file: "chapters/35-C2-combat-as-sovereignty.claims.approved.adoc"
+    lines: 393
+  - file: "chapters/36-C3-cyclical-maintenance.claims.approved.adoc"
+    lines: 299
+verdict_pre_normalize:
+  ch35: REVISE  # 5 MEDIUM > 3 threshold
+  ch36: PASS    # 5 MEDIUM = threshold; auditor verdict PASS
+verdict_post_normalize:
+  ch35: cleared (all 5 MEDIUM + 3 LOW applied; 3 NOTEs deferred)
+  ch36: cleared (all 5 MEDIUM + 3 LOW applied; 2 positive NOTEs require no fix)
+counts_after_normalize:
+  ch35:
+    footnotes: 81
+    evidence_tokens: 133
+    comparative_hooks: 19
+    markers:
+      inference: 2
+      speculation: 2
+      variant: 0
+      lacuna: 0
+      reconstruction: 0
+    body_lines: 364           # claims body before provenance block
+    total_lines: 393          # including 29-line provenance block
+  ch36:
+    footnotes: 65
+    evidence_tokens: 78       # was 75 pre-normalize; +3 for FIND-02/03/04
+    comparative_hooks: 11
+    markers:
+      inference: 2
+      speculation: 1
+      variant: 1
+      lacuna: 1
+      reconstruction: 0
+    body_lines: 265           # claims body before provenance block (262 pre-normalize + 3 added EVIDENCE lines)
+    total_lines: 299          # including 34-line provenance block
+ch35_dispositions:
+  - id: FIND-01
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: "Hoffner §16 → §15 for Song of Ullikummi (3 places: line 88 body+footnote, line 89 EVIDENCE loc, line 186 footnote within §III paragraph)."
+  - id: FIND-02
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: "Split Hesiodic vs. Apollodoran motive at line 65 with doubled tokens — Theogony 820-822 supplies parentage; Apollodorus 1.6.3 supplies the vengeance-after-Giants challenge-motive. Verbatim per the auditor's option (a)."
+  - id: FIND-03
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: 'Ninurta epithet on line 95: "(son of Enlil, lord of Nippur)" → "the warrior-god of Nippur (son of Enlil)" per Ch2 claims-approved line 62.'
+  - id: FIND-04
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: 'Both [SPECULATION:] blocks (§IV line 249, §V line 292) relabelled the third pipe-field from "warrant for the speculation:" / "risk:" → "counterargument:" with substantive counter-content per the auditor''s verbatim-substitutable text.'
+  - id: FIND-05
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: |
+      §I line 91 'a "chaos-figure"' → "an undifferentiated rebel".
+      §I line 103 "a chaos-ordering frame" → "a Gunkel-1895 primordial-disorder frame" (also in matching footnote loc).
+      §I line 107 "the chaos-ordering reading" → "the Gunkel-1895 primordial-disorder reading".
+      §VI line 356 "the chaos-shorthand" → 'the "chaos"-as-disorder shorthand'.
+  - id: FIND-06
+    severity: LOW
+    disposition: ACCEPT
+    fix: 'Vṛtra hymn list on line 73 restored to full eight: "1.80, 2.11, 2.12, 4.18, 5.32, 6.17, 8.96, 10.113".'
+  - id: FIND-07
+    severity: LOW
+    disposition: ACCEPT
+    fix: 'Job listing on line 103 (twice — body and footnote): "Job 26, 41" → "Job 26 with ch. 41".'
+  - id: FIND-08
+    severity: LOW
+    disposition: ACCEPT
+    fix: 'Vṛtra epithet on line 73: "the serpent-demon Vṛtra" → "the serpent Vṛtra" per Ch14 idiom.'
+  - id: NOTE-01
+    severity: NOTE
+    disposition: FLAGGED-ONLY
+    note: "Cross-chapter Vṛtra-list canonicalisation. Ch35 now carries the full eight; Ch34 still uses a six-hymn compression. Reconcile at marker-resolve / line-edit if uniform compression is desired across the comparative chapters."
+  - id: NOTE-02
+    severity: NOTE
+    disposition: REJECT
+    note: "Optional INFERENCE-marker forwarding for the Nebuchadnezzar I commissioning hypothesis at line 229. Current soft hedge ('likely … on Lambert's reading') judged sufficient for a comparative-chapter compression that defers to Ch3 for the full marker. Adding a forwarding INFERENCE block would over-discipline a paragraph whose only function is to date the Marduk-Tiamat narrative for the Anzû-to-Marduk genealogy worked example."
+  - id: NOTE-03
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §V doubled-token coverage. No fix required."
+ch36_dispositions:
+  - id: FIND-01
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: "Teshub-Illuyanka → Tarḫunna-Illuyanka in 4 case-label locations (chapter-comment line 9, central-argument paragraph line 26, §III section title line 123, §III opening line 125). §III opening parenthetical reformulated to make the Hittite-language-throughout vs. Hurrian-counterpart distinction explicit per Ch6 lines 56, 59, 62."
+  - id: FIND-02
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: "Added // EVIDENCE: source_id=lambert-2013 ; loc=on akītu recitation context and on the cosmogonic past-tense character of the Marduk-Tiamat narrative immediately after the existing assmann-2001-search EVIDENCE token at the §V Marduk-Tiamat paragraph (was line 201)."
+  - id: FIND-03
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: "Added // EVIDENCE: source_id=forsyth-1987 ; loc=ch. 3, royal dimension of the Hittite combat-tradition immediately after the existing hoffner-1998 EVIDENCE token at the §III Hittite-kingship-Nerik paragraph (was line 153)."
+  - id: FIND-04
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: "Added // EVIDENCE: source_id=watkins-1995 ; loc=Part V chs. 44-48, eschatological-closure structure of the Iranian dragon-tradition immediately after the existing benveniste-renou-1934 EVIDENCE token at the §V Aži Dahāka paragraph (was line 204)."
+  - id: FIND-05
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: "Added comparative-analytical-vocabulary caveat to the §VI line 254 isfet-extension paragraph: '(using the Egyptian framework as comparative analytic, not as native vocabulary for the eschatological traditions, which articulate the same structure in their own terms)' inserted parenthetically."
+  - id: FIND-06
+    severity: LOW
+    disposition: ACCEPT
+    fix: '§III Version-1 (line 137): "who in exchange for a night with Inara binds the gorged serpent at a banquet" → "who, after the bargained night with Inara, is concealed at the banquet site and there binds the gorged serpent" per Ch6 lines 121-139 sequence.'
+  - id: FIND-07
+    severity: LOW
+    disposition: ACCEPT
+    fix: '§III Version-2 (line 140): "the restored storm-god kills both Illuyanka and his own son" → "the restored storm-god joins Illuyanka in renewed combat at the sea and kills both the serpent and his own son" per Ch6 line 205.'
+  - id: FIND-08
+    severity: LOW
+    disposition: ACCEPT
+    fix: '[LACUNA:] block scholarly_reconstruction field: "Faulkner''s four-part *JEA* edition" → "Faulkner''s four-part *JEA* edition (Parts I–IV across *JEA* 22, 23, and 24)".'
+  - id: FIND-09
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive observation: maʿat/isfet discipline PASS for the audit-required check on the conceptual-through-line. No fix required."
+  - id: FIND-10
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive observation: cyclical-vs-eschatological structural-contrast boundary-work PASS at all four required points (vs. C1 line 63, vs. C2 line 66, vs. C4 lines 69, 251, 254). No fix required."
+self_checks:
+  ch35:
+    asciidoctor_parse: PASS (exit 0, no warnings)
+    footnote_count_unchanged: PASS (81 = 81)
+    evidence_token_count_unchanged: PASS (133 = 133; FIND-02 split a single token across two — net zero)
+    comparative_hook_count_unchanged: PASS (19 = 19)
+    speculation_pipe_field_well_formed: PASS (both blocks now use "counterargument:")
+    chaos_term_scoping: PASS (no bare chaos-figure/chaos-monster/chaos-serpent/chaos-ordering outside §II/§VI scare-quoted topical-discussion paragraphs)
+    source_id_resolution: PASS (all 19 unique IDs resolve in sources.yaml)
+    cross_reference_resolution: PASS (all 19 COMPARATIVE-HOOK chapter-numbers resolve in toc.yaml)
+    original_claims_adoc_unchanged: PASS (git diff empty against the .claims.adoc input — file is untracked, written-once by chapter-claims agent, never re-opened for write here)
+  ch36:
+    asciidoctor_parse: PASS (exit 0, no warnings)
+    footnote_count_unchanged: PASS (65 = 65)
+    evidence_token_count_increased_as_expected: PASS (75 → 78; +3 for FIND-02/03/04 token-coverage additions)
+    comparative_hook_count_unchanged: PASS (11 = 11)
+    marker_count_unchanged: PASS (2 INF + 1 SPEC + 1 VAR + 1 LAC = 5)
+    case_label_renamed: PASS (Tarḫunna-Illuyanka in all 4 case-label locations; the line-125 parenthetical retains both names with the philological gloss)
+    source_id_resolution: PASS (all 10 unique IDs resolve in sources.yaml; forsyth-1987, lambert-2013, watkins-1995 newly tokenised here)
+    cross_reference_resolution: PASS (all 11 COMPARATIVE-HOOK chapter-numbers resolve in toc.yaml)
+    isfet_caveat_present: PASS (§VI line 254 paragraph now flags the cross-tradition vocabulary-use)
+    original_claims_adoc_unchanged: PASS (git diff empty against the .claims.adoc input — file is untracked, written-once by chapter-claims agent, never re-opened for write here)
+notes: |
+  Both chapters cleared post-human-normalize and are forwarded to chapter-draft.
+  Ch35's pre-normalize REVISE verdict was driven by 5 MEDIUM accumulating
+  past the ≤3 threshold; all five are mechanical-substitutable and have
+  been applied. Ch36 pre-normalize verdict was PASS; all 5 MEDIUM still
+  applied for substantive accuracy plus all 3 LOW applied. The two NOTE
+  findings on Ch36 are positive structural observations recorded in the
+  factcheck (§VI maʿat/isfet discipline PASS; cyclical-vs-eschatological
+  boundary-work PASS) and require no fix.
+
+  No identifier-correction-in-place edits to sources.yaml were required
+  for either chapter — every named scholar resolves to an existing
+  registry entry; FIND-02/03/04 in Ch36 simply tokenised three sources
+  that were already named in body-prose footnotes and registered in
+  sources.yaml but lacked machine-readable EVIDENCE tokens.
