@@ -1,0 +1,329 @@
+stage: chapter-draft
+chapter: 40
+chapter_slug: C7-inversion-problem
+status: "completed"
+output_file: chapters/40-C7-inversion-problem.adoc
+output_lines: 271
+target_word_count: 7000
+total_file_word_count: 15883
+body_prose_word_count: 7870
+
+notes: |
+  Ch40 chapter-draft completed for the seventh of the eight Part-II
+  comparative chapters (C7. The Inversion Problem).
+
+  Section-structure verification (section count and ordering match the
+  approved-claims file byte-for-byte):
+    - draft sections (7): Source overview, I. The anchor case — Bida and
+      the covenant-broken framing of the Soninke Wagadu narrative,
+      II. The full refusal — Mwindo and the Nyanga maturation-through-hubris
+      framing, III. The partial case — Sigurd, the IE formula, and the curse
+      on the gold, IV. The area-specialist refusal — Pariacaca, the _amaru_,
+      and the _wak'a_-succession framing (foreign-noun italics applied to
+      heading per Hard rule 6), V. The metallurgical case — Susanoo,
+      Yamata no Orochi, and the sword-etiology framing,
+      VI. What inversion teaches.
+    - approved-claims sections (7): identical sequence and identical heading
+      text (modulo the §IV foreign-noun italic conversion, which is the
+      Hard-rule-6 body-prose discipline, not a content change).
+    - chapter opens with [[ch-40-C7-inversion-problem]] block-level anchor
+      matching brief.chapter_anchor and a level-2 == heading carrying the
+      brief's title verbatim ("C7. The Inversion Problem").
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 65 in draft / 65 in approved (verified by
+      Python bracket-balanced extractor; all 65 footnote bodies match in
+      order, byte-for-byte; footnote-content-mismatch count = 0). The
+      apparent diff at the line level reflects body-prose italic conversion
+      (bare `wak'a-succession` → `_wak'a_-succession`; bare `amaru` →
+      `_amaru_`) per Hard rule 6 applied OUTSIDE the footnote brackets only;
+      footnote bracket contents themselves are byte-identical.
+    - // EVIDENCE: lines: 73 in draft / 73 in approved (verified by `diff`
+      of grep-extracted EVIDENCE lines — diff is empty).
+    - // COMPARATIVE-HOOK: lines: 18 in draft / 18 in approved (verified by
+      `diff` — empty; preserved verbatim in same order).
+    - [APPROPRIATION-FLAG: ... | named_specialists: ... | tier_implication:
+      ... | forwards_to: ...] markers: 4 in draft / 4 in approved (verified
+      by `diff` of grep-extracted lines — empty; all four markers
+      byte-identical with all four required sub-fields preserved verbatim).
+      Markers placed at §I (Bida, Conrad/Belcher anchors), §II (Mwindo,
+      Biebuyck/Mateene anchors), §IV (Pariacaca, Salomon/Urioste/Taylor/Dean
+      anchors), §V (Susanoo, Naumann/Isomae/Como/Ooms anchors).
+    - [SPECULATION: ... | basis: ... | counterargument: ...] marker:
+      1 in draft / 1 in approved (byte-identical; uses locked basis: /
+      counterargument: pipe-field schema; sits at §VI registering the
+      strong-form category-imposition reading with both basis and
+      counterargument).
+    - [INFERENCE: ... | basis: ... | risk: ...] marker: 1 in draft /
+      1 in approved (byte-identical; sits at §III registering the
+      partial-case classification of the Sigurd material).
+    - Total markers: 6 in draft / 6 in approved (4 APPROPRIATION-FLAG +
+      1 SPECULATION + 1 INFERENCE).
+
+  Per-source-id EVIDENCE distribution in draft (matches approved-claims
+  source-by-source; 10 distinct source IDs):
+    ballentine-2015: 16
+    biebuyck-mateene-mwindo: 11
+    belcher-epic: 8
+    watkins-1995: 7
+    salomon-urioste-huarochiri: 7
+    conrad-west-africa: 7
+    naumann-mythen: 6
+    larrington-poetic-edda: 6
+    forsyth-1987: 3
+    philippi-kojiki: 2
+    Total: 73 (matches approved-claims file; per-source diff is empty).
+
+  Doubled-token paragraph count (in-scope area-specialist anchor + comparative-
+  typology anchor pairings per the comparative-chapter discipline; doubled
+  tokens reserved for explicit area-specialist-vs-comparativist-anchor
+  bridges, primarily at the source overview and at §III where Watkins's
+  IE-formula reading is bridged to Larrington's translation, per the
+  approved-claims source overview's stated discipline). Most §I, II, IV, V
+  body paragraphs are single-token because the chapter's argument runs
+  through the area-specialists' own framings rather than through cross-
+  cultural transmission, per the approved-claims source overview.
+
+  Banned-term grep on draft body prose (after stripping footnotes,
+  markers, and // comment lines):
+    - "chaos-figure": 0 occurrences in body prose.
+    - "chaos-monster": 0 occurrences in body prose.
+    - "chaos-serpent": 0 occurrences in body prose.
+    - "chaos-adversary": 0 occurrences in body prose.
+    - bare "chaos" word: 6 occurrences, all in policy-compliant contexts:
+        (1) "chaos-order framing" in §"Source overview" structure paragraph
+            (line 28) and roadmap paragraph (line 37) — naming the framing
+            the typology applies, with §IV positioned as the refusal of it.
+        (2) "primordial chaos" (×2) — both in scare-quotes in §I and §II
+            ("does not require any concept of 'primordial chaos' or
+            'cosmos-establishing combat'") where the typology's categories
+            are the topic of negation.
+        (3) "cosmos versus chaos" — describing the typology's apparatus in §I
+            ("a categorical apparatus (cosmos versus chaos) that the Soninke
+            material does not employ") — critical-typology discussion, the
+            chapter's whole point.
+        (4) "chaos-versus-order opposition" — in §VI Ballentine-critique
+            paragraph naming the typology's chaos-vs-order frame as the
+            object of Ballentine's overextension critique. Per the prompt's
+            explicit scoping ("appropriate scare-quoted use is expected in
+            §VI Ballentine-critique paragraphs").
+    - §IV body prose: NO unmarked chaos-X compounds. The post-human-
+      normalize FIND-02 fix is preserved byte-for-byte: "primordial cosmic
+      adversary" (lines 184, 193), "primordial cosmos-versus-disorder
+      opposition that the chaoskampf typology presupposes" (line 187),
+      "primordial disorder" (line 190), "disorder-versus-order opposition
+      that the chaoskampf typology presupposes" (line 199), and "primordial
+      disorder versus established order ... cosmic adversary" (line 204).
+
+  Locked-correction preservation:
+    - §I Bida cosmography: "the already-existing Sahelian world of Soninke
+      ethnogeographic memory" preserved verbatim at line 46 (not "wak'a-rich
+      Sahelian landscape"). FIND-01 fix preserved byte-for-byte.
+    - §IV chaos-X compounds normalized to tradition-neutral wording per
+      FIND-02 (see banned-term grep above for the verbatim list).
+    - Both locked corrections re-verified by grep against the draft.
+
+  Area-specialist-first discipline confirmed for §I and §II per brief
+  special_instructions:
+    - §I Bida: opens (after the ===-heading bridge sentence) with the
+      Conrad-and-Belcher Soninke covenant-broken framing developed across
+      seven multi-paragraph claim paragraphs (the Soninke / Mande
+      oral-tradition narrative and Conrad/Belcher anchors; the covenant's
+      narrative-structural role; the maiden-tribute's institutional
+      embedding; the suitor Mamadi Sefe Dekote and the killing; the
+      catastrophic consequences as covenant-broken-state-coming-due; the
+      internal moral evaluation as dilemma-registration; the completeness
+      of the covenant-broken framing within the Soninke tradition's own
+      categories). Only AFTER this seven-paragraph development does the
+      chapter invoke the modern comparativist "inverse chaoskampf" overlay
+      (line 64 onward) and register the inversion as a real comparative
+      observation but a modern overlay (line 67). The APPROPRIATION-FLAG
+      marker (line 70) summarises the Conrad/Belcher anchors and the
+      tier-classification's recognition of their priority.
+    - §II Mwindo: opens (after the ===-heading bridge sentence) with the
+      Biebuyck-and-Mateene Nyanga maturation-through-hubris framing
+      developed across seven multi-paragraph claim paragraphs (the 1956
+      Bese recording from Shé-Kárisi Candi Rureke and Biebuyck/Mateene
+      anchors; the Nyanga tradition's biographical-and-moral framing; the
+      middle-epic foreshadowing pattern; Kirimu's narrative-structural
+      role as cosmographic equilibrium-figure; the structural absence of
+      order-establishing apparatus at the killing; Nkuba's lightning-
+      response and celestial humiliation; the conditions on Mwindo's
+      return and the chastened chiefly succession). Only AFTER this
+      multi-paragraph area-specialist development does the chapter
+      register the Mwindo / Kirimu episode as moral-valence inversion
+      (line 121) and as a CONTRASTIVE-tier full refusal of the typology's
+      moral-cosmographic apparatus (line 124). The APPROPRIATION-FLAG
+      marker (line 127) summarises the Biebuyck/Mateene anchors and the
+      contrastive-tier classification.
+    - §I and §II are the chapter's main weight; §III (Sigurd), §IV
+      (Pariacaca), and §V (Susanoo) are correspondingly shorter, per
+      brief special_instructions. Susanoo (§V) is the shortest of the
+      five case sections.
+
+  Foreign-noun italic conversion applied per Hard rule 6 (body prose
+  only; footnote/marker/EVIDENCE/COMPARATIVE-HOOK contents preserve
+  their original markup byte-for-byte):
+    - bare `wak'a-succession` → `_wak'a_-succession` (8 occurrences in
+      body prose: source overview structure paragraph, methodological-
+      commitment paragraph, roadmap paragraph, §IV heading, §IV
+      area-specialist-reading paragraph, §IV framing-differs-from-Bida-
+      and-Mwindo paragraph, §IV amaru's-narrative-role paragraph, §IV
+      methodological-distinctiveness paragraph, §VI five-cases paragraph,
+      §VI two-lessons-together paragraph).
+    - bare `wak'a-political` → `_wak'a_-political` (1 occurrence in §IV
+      framing-differs paragraph).
+    - bare `wak'a-cosmography` → `_wak'a_-cosmography` (1 occurrence in
+      §IV area-specialist-reading paragraph).
+    - bare `wak'a-cosmos` → `_wak'a_-cosmos` (1 occurrence in §IV
+      framing-differs paragraph).
+    - bare `wak'a-combat` → `_wak'a_-combat` (1 occurrence in §IV
+      amaru's-narrative-role paragraph).
+    - bare `amaru` → `_amaru_` (2 occurrences in body prose: source
+      overview five-Part-I-chapters paragraph (Ch26 reference); source
+      overview anchors paragraph (Salomon/Urioste anchor); §IV heading).
+      Other body-prose `_amaru_` occurrences were already italicised
+      in the approved-claims file (per FIND-03 PARTIAL note); the
+      chapter-draft stage applied the bare-compound conversion only.
+    - The footnote bracket contents at §IV preserve the bold `*amaru*`
+      and `*wak'a*` markup verbatim per the verbatim-preservation
+      requirement (FIND-03 PARTIAL note); the body-prose conversion
+      does not touch footnote contents.
+
+  Permitted prose-only additions (NOTE-level for narrative-fidelity
+  stage; explicitly allowed by the prompt §11):
+    - One source-overview-closing roadmap paragraph (line 37) naming
+      the chapter's six-section structure, inserted between the last
+      Source-overview COMPARATIVE-HOOK comment and the "=== I." heading.
+      The roadmap is a structural orientation paragraph with no factual
+      content beyond restating what the six sections do.
+    - Six per-section bridge sentences, one each opening sections I, II,
+      III, IV, V, and VI (lines 41, 88, 141, 182, 212, 242). Each bridge
+      is a short structural-orientation sentence positioning the section
+      within the chapter's typology-and-area-specialist argument; no
+      factual content beyond restating what the section is doing.
+      Section I bridge: anchor-case framing (Soninke covenant-broken
+      framing as inversion-of-outcome). Section II bridge: most-pointed
+      area-specialist refusal (Nyanga maturation-through-hubris and
+      moral-valence inversion). Section III bridge: partial case
+      (Watkins's IE-formula reading vs the long-arc tragedy at different
+      analytic levels). Section IV bridge: categorical area-specialist
+      refusal short of inversion (_wak'a_-succession framing). Section V
+      bridge: refusal at the level of the combat-myth framing itself
+      (metallurgical allegory and sword-etiology). Section VI bridge:
+      the chapter's two methodological-typological lessons and its
+      settled position on the inversion-problem-and-appropriation-problem
+      relation.
+    - All seven additions (one roadmap + six bridges) are prose
+      scaffolding only; no new factual claims, no new EVIDENCE tokens,
+      no new footnotes, no new markers introduced.
+
+  Markers in [LACUNA:], [VARIANT:], [RECONSTRUCTION:] classes: zero
+  introduced. The approved-claims file carries 4 [APPROPRIATION-FLAG:],
+  1 [SPECULATION:], and 1 [INFERENCE:] marker; the draft preserves all
+  six byte-identically and introduces no additional markers in any
+  class.
+
+  Provenance block (// Validated by post-human-normalize ... // Timestamp
+  ... // Checks passed ... // Findings applied) at the bottom of the
+  approved-claims file (lines 279-336): correctly dropped from the draft
+  per the prompt §2 ("drop the provenance block from the draft"). The
+  draft is a fresh artifact for downstream stages to provenance
+  themselves.
+
+  Head-comment block (// One claim per paragraph; chapter-draft will
+  transform this into narrative ... // Bida and Mwindo are the main
+  weight per brief special_instructions; Sigurd and Susanoo are
+  shorter.) at the top of the approved-claims file (lines 4-23):
+  correctly dropped from the draft per the prompt §1 ("Drop the
+  // claim-document head-comment block").
+
+  Asciidoctor parse: `asciidoctor -o /tmp/ch40-draft.html
+  chapters/40-C7-inversion-problem.adoc` exits 0 (PASS).
+
+  Word counts:
+    - total file `wc -w`: 15,883 (includes all footnote bodies, EVIDENCE
+      tokens, COMPARATIVE-HOOK comment lines, APPROPRIATION-FLAG /
+      SPECULATION / INFERENCE marker bodies).
+    - body-prose-only word count: 7,870 (computed by stripping all
+      `footnote:[...]` bracket-balanced blocks, all marker bracket-
+      balanced blocks, and all `//`-prefixed comment lines, then counting
+      non-whitespace tokens). This is in the prompt's stated target range
+      of ~7,000-8,000 words (claims-approved 7,261 + permitted bridges
+      and roadmap), 870 words above the brief's 7,000 floor and 130
+      below the 8,000 ceiling.
+    - Total-file over-target relative to body-prose target (15,883 vs
+      7,000) is driven by footnote, EVIDENCE-token, COMPARATIVE-HOOK,
+      and marker bulk per the prompt's acceptable-overage clause for
+      narrative-fidelity stage. The chapter's heavy APPROPRIATION-FLAG
+      bulk (four full markers with all four sub-fields each, the most
+      of any chapter in the book) accounts for much of the over-target
+      file size.
+
+  Self-checks executed and passed:
+    - Footnote count parity (65 = 65): PASS (verified by Python
+      bracket-balanced extractor; all 65 footnote bodies byte-identical;
+      footnote-content-mismatch count = 0).
+    - EVIDENCE token count parity (73 = 73): PASS (verified by `diff` of
+      EVIDENCE lines — empty).
+    - COMPARATIVE-HOOK count parity (18 = 18): PASS (verified by `diff` —
+      empty).
+    - [APPROPRIATION-FLAG:] count parity (4 = 4): PASS (verified by
+      `diff` — empty; all four sub-fields per marker preserved
+      byte-identically).
+    - [SPECULATION:] count parity (1 = 1): PASS (verified by `diff` —
+      empty; uses basis:/counterargument: pipe-field schema).
+    - [INFERENCE:] count parity (1 = 1): PASS (verified by `diff` —
+      empty).
+    - Section count and section-title sequence parity (7 sections,
+      identical sequence; §IV heading foreign-noun italics applied per
+      Hard rule 6): PASS.
+    - Per-source-id EVIDENCE distribution parity (10 distinct sources):
+      PASS (full distribution matches approved-claims file source-by-
+      source; total = 73).
+    - Verbatim diff of footnote bodies, EVIDENCE lines, COMPARATIVE-HOOK
+      lines, and the four marker classes: empty in all six classes.
+    - Locked correction §I "already-existing Sahelian world": PASS
+      (preserved at line 46; "wak'a-rich Sahelian" not present in draft).
+    - Locked correction §IV chaos-X tradition-neutral: PASS (no unmarked
+      chaos-X compounds in §IV body prose; "primordial cosmic adversary",
+      "primordial disorder", "disorder-versus-order opposition that the
+      chaoskampf typology presupposes", "primordial disorder versus
+      established order ... cosmic adversary" all preserved
+      byte-for-byte).
+    - Body-prose foreign-noun italic conversion (Hard rule 6): PASS
+      (bare `wak'a-X` compounds and bare `amaru` converted to
+      `_wak'a_-X` and `_amaru_` in body prose only; footnote / marker /
+      EVIDENCE / COMPARATIVE-HOOK contents preserve their original
+      markup byte-for-byte).
+    - Banned-term grep: PASS (zero unmarked chaos-X compounds in §IV
+      body prose; bare-chaos occurrences are policy-compliant scoped
+      uses in source-overview/roadmap (chaos-order framing as the
+      typology's own apparatus), §I and §II scare-quoted negations
+      ("primordial chaos"), §I critical-typology description (cosmos
+      versus chaos), and §VI Ballentine-critique discussion (chaos-
+      versus-order opposition)).
+    - Asciidoctor parse: PASS (exit 0).
+    - Chapter anchor and title-line: PASS (matches brief's
+      chapter_anchor "ch-40-C7-inversion-problem" and title "C7. The
+      Inversion Problem").
+    - Section openers: PASS (all six numbered sections open with
+      heading -> blank line -> bridge sentence -> blank line -> first
+      claim paragraph; source overview opens with heading -> blank line
+      -> first claim paragraph (no bridge for Source overview, which is
+      not numbered)).
+    - Source-overview-closing roadmap inserted before "=== I.": PASS
+      (line 37, between the last source-overview COMPARATIVE-HOOK
+      comment and the "=== I. The anchor case ..." heading; explicitly
+      permitted by prompt §11).
+    - Area-specialist-first discipline at §I and §II: PASS (Conrad-
+      Belcher Soninke covenant-broken framing developed across seven
+      multi-paragraph claim paragraphs before "inverse chaoskampf"
+      overlay invoked in §I; Biebuyck-Mateene Nyanga maturation-
+      through-hubris framing developed across seven multi-paragraph
+      claim paragraphs before moral-valence-inversion framing
+      registered in §II).
+
+  Ready for the narrative-fidelity stage (Ch40 Task #10, the post-
+  draft narrative-fidelity audit per the locked Ch37/Ch38 / Ch34
+  pipeline pattern).
