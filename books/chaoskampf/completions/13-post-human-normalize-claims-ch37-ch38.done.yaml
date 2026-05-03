@@ -1,0 +1,204 @@
+stage: "post-human-normalize"
+timestamp: "2026-05-03T14:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+inputs:
+  - file: "chapters/37-C4-eschatological-displacement.claims.adoc"
+  - file: "chapters/37-C4-eschatological-displacement.claims.factcheck.yaml"
+  - file: "chapters/38-C5-ie-hero-slay-serpent-formula.claims.adoc"
+  - file: "chapters/38-C5-ie-hero-slay-serpent-formula.claims.factcheck.yaml"
+outputs:
+  - file: "chapters/37-C4-eschatological-displacement.claims.approved.adoc"
+    lines: 478
+  - file: "chapters/38-C5-ie-hero-slay-serpent-formula.claims.approved.adoc"
+    lines: 477
+verdict_pre_normalize:
+  ch37: PASS  # 0 HIGH, 0 MEDIUM, 2 LOW, 4 NOTE
+  ch38: PASS  # 0 HIGH, 2 MEDIUM, 2 LOW, 3 NOTE (well under ≤3 MEDIUM threshold)
+verdict_post_normalize:
+  ch37: cleared (both LOWs applied; 4 NOTEs deferred — all positive observations or non-blocking)
+  ch38: cleared (both MEDIUMs + both LOWs applied; 3 NOTEs deferred)
+counts_after_normalize:
+  ch37:
+    footnotes: 94
+    evidence_tokens: 168
+    comparative_hooks: 21
+    markers:
+      inference: 2
+      speculation: 3
+      variant: 1
+      lacuna: 1
+      reconstruction: 0
+    body_lines: 447           # claims body before provenance block
+    total_lines: 478          # including 31-line provenance block
+  ch38:
+    footnotes: 96
+    evidence_tokens: 144      # was 142 pre-normalize; +2 for FIND-04 Welsh and Vahagn doubled tokens
+    comparative_hooks: 26
+    markers:
+      inference: 3
+      speculation: 1
+      variant: 1
+      lacuna: 3
+      reconstruction: 0
+    body_lines: 426           # claims body before provenance block (424 pre-normalize + 2 added EVIDENCE lines)
+    total_lines: 477          # including 51-line provenance block
+ch37_dispositions:
+  - id: FIND-01
+    severity: LOW
+    disposition: ACCEPT
+    fix: |
+      §V opening corpus enumeration realigned with Ch8: was "the seven core passages
+      that Day 1985 identifies as the Hebrew Bible combat corpus (Pss 74:12–17,
+      89:9–13, 104:6–9 and 26; Job 26:12–13; Job 41; Habakkuk 3; Isa 51:9–10) refer
+      to Yahweh's combat … as a past accomplishment"; now "the six dominantly-
+      retrospective passages within the Hebrew Bible combat corpus that Day 1985
+      identifies (Pss 74:12–17, 89:9–13, 104:6–9 with v. 26; Job 26:12–13 with ch.
+      41; Habakkuk 3; Isa 51:9–10) … the seventh passage in Day's corpus, Isaiah
+      27:1, is the principal eschatological-projection exception treated below."
+      Resolves the Day-attests-7-incl-Isa-27:1 vs. Ch37-attests-7-excl-Isa-27:1
+      inconsistency.
+  - id: FIND-02
+    severity: LOW
+    disposition: ACCEPT
+    fix: |
+      §II Case-2 Yarbro Collins / Aune attribution split: was "Yarbro Collins 1976,
+      ch. 4, on Rev 12 and Rev 20 as the bipartite articulation"; now "Yarbro
+      Collins 1976, ch. 4, on Rev 12's eschatological function within the end-of-
+      times visionary narrative; Aune 1997–98, commentary on Rev 12:7–9 and on
+      Rev 20:1–10, on the binding-and-final-loosing structure that links the two
+      chapters." Yarbro Collins's monograph is centred on Rev 12; Rev 20 verse-by-
+      verse is principally Aune's WBC 52C contribution.
+  - id: NOTE-01
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §II compression discipline."
+  - id: NOTE-02
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on doubled-token discipline across §IV transmission paragraphs."
+  - id: NOTE-03
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on SPECULATION-block pipe-field convergence with the Ch35 FIND-04 lock (all 3 SPECULATION blocks use 'counterargument:'; the §I and §VI blocks supply substantive counter-content)."
+  - id: NOTE-04
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: "Positive structural observation on §VI cognitive-implications development as the chapter's main analytical contribution per brief special_instructions."
+ch38_dispositions:
+  - id: FIND-01
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: |
+      *áhann áhim* loc realigned with Ch14's RV 1.32.2 attestation. Three loci:
+      line 79 body ("Rigveda 1.32.1, the opening line" → "Rigveda 1.32.2, the
+      second verse … whose opening verse announces the theme of Indra's manly
+      deeds"); line 80 EVIDENCE token (loc=RV 1.32.1 → loc=RV 1.32.1-2 to match
+      Ch14's convention); line 133 body ("opening line" → "second verse contains
+      *áhann áhim*"). Footnotes for both paragraphs updated accordingly.
+  - id: FIND-02
+    severity: LOW
+    disposition: ACCEPT
+    fix: |
+      "girdle of all lands" → "band of all lands" at both occurrences (line 111 §I
+      kennings paragraph; line 295 §IV Thor-Jörmungandr paragraph) per glossary.yaml
+      line 1503 locked rendering and Ch18 line 405 attestation. The Old Norse form
+      *umbgjǫrð allra landa* is retained.
+  - id: FIND-03
+    severity: MEDIUM
+    disposition: ACCEPT
+    fix: |
+      §IV [SPECULATION:] block second pipe-field relabelled "speculative_basis:" →
+      "basis:" per Ch34 locked precedent and Ch35 FIND-04 schema. Also corrected
+      the third-pipe-field separator from semicolon to "|" so that "counterargument:"
+      reads as a proper pipe-field. The substantive content of all three fields is
+      unchanged.
+  - id: FIND-04
+    severity: LOW
+    disposition: ACCEPT (partial)
+    fix: |
+      Added doubled west-2007 ch. 6 tokens for the under-doubled cases:
+      - Welsh (line 233 area): now ogden-2013 + west-2007 (Welsh dragon-on-dragon
+        as IE comparative anchor).
+      - Vahagn (line 242 area): now russell-zoroastrianism-armenia + west-2007
+        (Vahagn as Indo-Iranian storm-god / dragon-slayer comparative reflex).
+      The Beowulf draca/wyrm and Slavic Perun-Veles paragraphs retain single
+      tokens per the auditor's "could remain single" / "acceptable per the locked
+      Ch20 framing" notes — Watkins is the natural area-specialist anchor for
+      Beowulf draca/wyrm and the area-specialist coverage for Perun-Veles is
+      registered through named-but-flagged Ivanov / Toporov / Jakobson / Lajoye /
+      Moszyński / Kapović citations.
+  - id: NOTE-01
+    severity: NOTE
+    disposition: FLAGGED-ONLY
+    note: |
+      Structural observation that Burkert 1992 (lines 206, 346, 364) and Forsyth
+      1987 (lines 206, 346) are named in §III/§V footnote-prose without EVIDENCE
+      tokens despite being registered in sources.yaml. The under-tokenisation is
+      non-blocking and can be tightened at line-edit if the doubled-token
+      discipline is later extended across the §V transmission paragraphs.
+  - id: NOTE-02
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: |
+      Positive structural observation: the Avestan *janat aiim* reflex is
+      correctly handled with reconstructed-counterpart hedges (it is not directly
+      attested in the Avestan corpus in this exact form; the chapter's framing is
+      faithful to Watkins 1995 and to Ch13 claims-approved).
+  - id: NOTE-03
+    severity: NOTE
+    disposition: ACCEPT-AS-IS
+    note: |
+      Positive structural observation on chapter-wide brief-special-instructions
+      compliance: Watkins respectfully-but-not-totalisingly presented; Slavic
+      Ivanov-Toporov dissent fairly handled with VARIANT marker and three §IV
+      paragraphs developing the area-specialist objections; Mwindo control in §VI
+      shows IE inheritance is real but not totalising; transmission-vs-inheritance
+      distinction in §V preserved (with C6=Ch39 forward-pointer for the
+      Near-Eastern → Greek transmission case).
+self_checks:
+  ch37:
+    asciidoctor_parse: PASS (exit 0, no warnings)
+    footnote_count_unchanged: PASS (94 = 94)
+    evidence_token_count_unchanged: PASS (168 = 168 — fixes were textual, not token-count-affecting)
+    comparative_hook_count_unchanged: PASS (21 = 21)
+    speculation_pipe_field_well_formed: PASS (all 3 [SPECULATION:] blocks use "counterargument:")
+    chaos_term_scoping: PASS (no naked chaos-* tokens; rare appearances inside scare-quotes for topical discussion only)
+    source_id_resolution: PASS (all 15 unique IDs resolve in sources.yaml)
+    cross_reference_resolution: PASS (all 21 COMPARATIVE-HOOK chapter-numbers resolve in toc.yaml)
+    original_claims_adoc_unchanged: PASS (input file is untracked, written-once by chapter-claims agent, not re-opened for write)
+  ch38:
+    asciidoctor_parse: PASS (exit 0, no warnings)
+    footnote_count_unchanged: PASS (96 = 96)
+    evidence_token_count_increased_as_expected: PASS (142 → 144; +2 for FIND-04 Welsh and Vahagn doubled-token additions)
+    comparative_hook_count_unchanged: PASS (26 = 26)
+    marker_count_unchanged: PASS (3 INF + 1 SPEC + 1 VAR + 3 LAC = 8)
+    speculation_pipe_field_well_formed: PASS ([SPECULATION:] now uses "basis:" / "counterargument:")
+    tarhunna_vs_teshub: PASS (7 Tarḫunna body-prose occurrences; 4 Teshub mentions confined to Hurrian-vs-Hittite clarification contexts)
+    source_id_resolution: PASS (all 15 unique IDs resolve in sources.yaml)
+    cross_reference_resolution: PASS (all 26 COMPARATIVE-HOOK chapter-numbers resolve in toc.yaml)
+    original_claims_adoc_unchanged: PASS (input file is untracked, written-once, not re-opened for write)
+notes: |
+  Both chapters cleared post-human-normalize and are forwarded to chapter-draft.
+
+  Ch37 was the most disciplined comparative-chapter claims output to date:
+  zero MEDIUM findings out of 94 paragraph-claims. The two LOW fixes were a
+  Hebrew Bible enumeration realignment (six retrospective + Isa 27:1 prospective
+  rather than seven undifferentiated) and a Yarbro Collins / Aune attribution
+  split.
+
+  Ch38 carried the project's most contested philological material (Watkins's
+  IE HERO SLAY SERPENT formula reconstruction with the Slavic-reconstruction
+  problem) and emerged with two MEDIUM findings (the *áhann áhim* RV 1.32.1-vs-
+  1.32.2 verse-number error and the [SPECULATION:] "speculative_basis" → "basis"
+  schema fix), both verbatim-substitutable. The Tarḫunna-not-Teshub locked
+  Ch36 §III correction was preserved cleanly throughout. The brief's required
+  Slavic-dissent discipline (Ivanov-Toporov as contested by Jakobson, Lajoye,
+  Moszyński, Kapović) was handled fairly via a [VARIANT:] marker plus three
+  §IV paragraphs developing the area-specialist objections, with the locked
+  Ch20 framing preserved.
+
+  No identifier-correction-in-place edits to sources.yaml were required for
+  either chapter — every named scholar resolves to an existing registry entry;
+  FIND-04's two added Ch38 tokens simply extended doubled-token coverage to
+  registered sources that the writer named but did not tokenise.
