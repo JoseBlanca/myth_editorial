@@ -2,6 +2,17 @@
 
 Step-by-step operational instructions. For each stage: what to run, which AI to use, what to paste, and where to save the output.
 
+## Try to be autonomous
+
+You are creating the chaoskampft book.
+
+Check the completions records directory and continue with the next pair.
+Remember:
+- you can use agents, but only two at a time.
+- you have a container available to operate completely autonomously with full permissions granted in a safe way.
+- I'm busy, so try to avoid asking me too many questions.
+Go on with the project. You will have to report to me when you complete the next pair of chapters.
+
 ## Execution environment (preferred: container)
 
 Run the pipeline **inside the myth-claude container** whenever possible. It bundles Claude Code, Python, the full Asciidoctor toolchain (including `asciidoctor-bibtex`), Pandoc, and Git, and only sees this project's directory as `/workspace` — nothing outside. That lets Claude Code run with `--dangerously-skip-permissions` without any risk of touching files elsewhere on the host.
