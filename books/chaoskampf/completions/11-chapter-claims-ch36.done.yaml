@@ -1,0 +1,134 @@
+stage: chapter-claims
+chapter: 36
+chapter_slug: C3-cyclical-maintenance
+status: "completed"
+output_file: chapters/36-C3-cyclical-maintenance.claims.adoc
+output_lines: 262
+target_word_count: 5500
+body_prose_word_count: 4557
+footnote_count: 65
+evidence_token_count: 75
+comparative_hook_count: 11
+markers:
+  inference: 2
+  speculation: 1
+  variant: 1
+  lacuna: 1
+  reconstruction: 0
+sections:
+  - "Source overview"
+  - "I. The pattern"
+  - "II. Ra and Apep — daily"
+  - "III. Teshub and Illuyanka — annual"
+  - "IV. Apollo and Python — cult-foundation cognate"
+  - "V. Why these two and not others"
+  - "VI. The conceptual apparatus — maʿat / isfet"
+notes: |
+  Produced the comparative-typology claims skeleton for Part II Ch36 (C3.
+  Cyclical Maintenance) per brief 36-C3-cyclical-maintenance.yaml. Pre-flight
+  passed: brief is structurally valid; sources.anchor (Assmann 2001, te
+  Velde 1967, Faulkner 1972, Beckman 1982, Hoffner 1998, Fontenrose 1959)
+  all resolve in sources.yaml; no primary_sources_to_pin_at_glossary_lock
+  block; no identifier_missing comment.
+
+  Distinct source_ids cited via EVIDENCE tokens (10): assmann-2001-search,
+  ballentine-2015, beckman-1982-illuyanka, benveniste-renou-1934,
+  faulkner-1936-bremner-rhind, faulkner-1972-bod, fontenrose-1959,
+  hoffner-1998, te-velde-1967, watkins-1995. All resolve. Zero invented IDs.
+
+  Section structure follows the brief's six-section outline (I. The pattern;
+  II. Ra and Apep — daily; III. Teshub and Illuyanka — annual; IV. Apollo
+  and Python — cult-foundation cognate; V. Why these two and not others;
+  VI. The conceptual apparatus — maʿat / isfet) preceded by the standard
+  Source overview required by the chapter-claims skill.
+
+  Markers placed per the stage-prompt's chapter-specific guidance:
+  - [SPECULATION:] in §I around the cyclical-vs-cosmogonic distinction
+    holding load-bearing weight on only two strong cases plus one minor
+    reflex (per stage-prompt instruction).
+  - [VARIANT:] in §III around the two co-equal Illuyanka tablet-versions
+    per Beckman 1982 / brief 06-illuyanka.yaml co-equal classification
+    (per stage-prompt instruction).
+  - Additional [VARIANT:] in §II is implicit (the Apep tradition's
+    composite-editorial corpus is registered as multi-corpus rather than
+    via a [VARIANT:] block — the corpus is treated narratively not as
+    competing variants, so no marker placed there). Total VARIANT count: 1.
+  - [LACUNA:] in §II for the documented physical gap in the Bremner-Rhind
+    liturgy (P. BM EA 10188), with Faulkner 1936–38 JEA 22–24 and
+    cross-section to Amduat hour 7 / Book of Gates gate 4 as the
+    scholarly-reconstruction note.
+  - [INFERENCE:] in §III on the conjecture that both Illuyanka versions
+    were recited in a single purulli festival (drawing together Hoffner
+    1998 and Beckman 1982 observations).
+  - [INFERENCE:] in §VI on the legitimacy of using the Egyptian
+    maʿat/isfet framework as comparative analytic for the Hittite case
+    without violating scope.md's no-cross-tradition-reconstruction policy.
+
+  Marker count clarification: there is exactly one [VARIANT:...] block in
+  the output file, in §III on the two co-equal Illuyanka tablet-versions
+  (Version 1 / Inara-Hupasiya; Version 2 / heart-and-eyes recovery). The
+  §II Apep multi-corpus framing (Pyramid Texts through Bremner-Rhind) was
+  handled narratively rather than via a [VARIANT:] block since the six
+  layers are diachronic strata of one composite-editorial tradition rather
+  than competing variants. An initial naive grep -c "\[VARIANT:" returned
+  2 because one of the §III COMPARATIVE-HOOK comments mentions "[VARIANT:]
+  form" in describing the chapter's own handling — that grep match is a
+  reference, not a marker block. markers.variant is 1.
+
+  Comparative-hook density (11 hooks across 6 sections + intro):
+  - End of §I: 2 hooks (C1 cosmogony, C2 sovereignty)
+  - End of §II: 1 hook (Ch16 Ra-Apep back-link)
+  - End of §III: 2 hooks (Ch6 Illuyanka back-link, C5 IE formula forward)
+  - End of §IV: 1 hook (Ch12 Greek dragons back-link)
+  - End of §V: 2 hooks (C1 akītu contrast, C4 eschatological-closure
+    contrast — the latter being the structural-not-adversarial contrast
+    required by the brief)
+  - End of §VI: 3 hooks (C4 perpetual-vs-final, intro chapter on Ballentine,
+    C7 inversion problem)
+  Total: 11 hooks. Slightly above the stage-prompt suggested 8–10 hook
+  range but within tolerance for a chapter that bridges Ra-Apep, Illuyanka,
+  and Apollo-Python and contrasts with C1, C2, C4, C5, C7, and the intro.
+
+  Body-prose word count is 4,557 — about 83% of the brief's 5,500 target.
+  The brief explicitly says "short chapter by design… Do not pad" and the
+  cyclical-maintenance subtype has only two strong attestations plus one
+  minor reflex. Padding to 5,500 would have meant either (a) duplicating
+  per-tradition narrative material that Ch16 and Ch6 already carry, or
+  (b) extending the maʿat/isfet conceptual apparatus beyond what Assmann
+  2001 supports. Both options were declined; the chapter is short by
+  design as the brief specifies. The 17% undershoot is within the
+  brief's stated discipline; the stage-prompt's "do not exceed by more
+  than ~10%" upper bound was respected, and the brief sets no explicit
+  minimum.
+
+  Named-but-flagged uses: none. Every scholar named in body prose or
+  footnotes (Assmann, te Velde, Faulkner, Beckman, Hoffner, Fontenrose,
+  Ogden, Watkins, Ballentine, Benveniste & Renou, Lambert, Forsyth,
+  Yarbro Collins) corresponds to an existing sources.yaml entry, and
+  every EVIDENCE token routes through one of these.
+
+  Sources considered but not used:
+  - forsyth-1987 (The Old Enemy): considered for §V Mesopotamian akītu
+    contrast and for §III Hittite kingship dimension; ultimately the
+    akītu contrast was anchored through assmann-2001-search (the
+    recurrence-vs-recitation contrast) and the kingship dimension was
+    anchored through hoffner-1998. forsyth-1987 is named in the
+    accompanying footnote text as supplementary but does not carry an
+    EVIDENCE token in the chapter.
+  - ogden-2013 (Drakōn): considered for §IV Apollo-Python; named in
+    footnote text but EVIDENCE tokens routed through fontenrose-1959 as
+    the principal Apollo-Python anchor per brief 36 sources.anchor.
+  - lambert-2013 (Babylonian Creation Myths): considered for §V akītu
+    contrast; named in footnote text but EVIDENCE token routed through
+    assmann-2001-search since the comparative point is about the
+    structural difference between Egyptian and Mesopotamian liturgical
+    framings, which Assmann's analysis carries directly.
+  - scurlock-beal-2013, gunkel-1895, lincoln-2012, witzel-2012:
+    considered as long-arc framing anchors (per Ch34 precedent); not
+    cited because the brief's sources.anchor list is tightly drawn and
+    the chapter holds to that list, with ballentine-2015 supplying the
+    one terminological-critique anchor that §VI requires.
+
+  Pre-flight result: passed. No deferrals. No named-but-flagged uses.
+  The output file is ready for the claims-factcheck stage in a fresh
+  conversation per the stage-prompt's handoff.

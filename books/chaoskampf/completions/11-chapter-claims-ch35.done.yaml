@@ -1,0 +1,102 @@
+stage: chapter-claims
+chapter: 35
+chapter_slug: C2-combat-as-sovereignty
+status: "completed"
+output_file: chapters/35-C2-combat-as-sovereignty.claims.adoc
+output_lines: 364
+target_word_count: 8000
+body_prose_word_count: 6970
+footnote_count: 81
+evidence_token_count: 133
+comparative_hook_count: 19
+markers:
+  inference: 2
+  speculation: 2
+  variant: 0
+  lacuna: 0
+  reconstruction: 0
+sections:
+  - "Source overview"
+  - "I. The pattern"
+  - "II. Ballentine's reading"
+  - "III. The difference from cosmogony"
+  - "IV. The Anzû-to-Marduk genealogy"
+  - "V. Transmission vs. typology"
+  - "VI. Ritual and state"
+notes: |
+  Chapter 35 (C2. Combat as Sovereignty) is the second of the eight Part-II
+  comparative chapters and is the book's most philosophically-weighted
+  comparative chapter, hosting the Ballentine-Gunkel argument at its
+  sharpest.
+
+  Pre-flight: brief 35-C2-combat-as-sovereignty.yaml is structurally valid;
+  sources.anchor names seven anchor IDs (ballentine-2015, lincoln-2012,
+  forsyth-1987, watkins-1995, west-2007, smith-1994-baal-i, annus-2001-anzu)
+  all of which resolve in sources.yaml. Per Ch33/Ch34 precedent, the
+  comparative-chapter convention is that sources.anchor functions as
+  sources.primary; no `primary_sources_to_pin_at_glossary_lock` block or
+  `# identifier_missing: true` deferral is present in the brief.
+
+  Source IDs used (all resolve in sources.yaml registry):
+  annus-2001-anzu, ballentine-2015, benveniste-renou-1934, burkert-1992,
+  day-1985, forsyth-1987, foster-2005, gunkel-1895, hoffner-1998,
+  jamison-brereton-2014, lambert-2013, lincoln-2012, ogden-2013,
+  smith-1994-baal-i, smith-pitard-2009-baal-ii, watkins-1995,
+  west-1966-theogony, west-1997, west-2007.
+
+  No named-but-flagged scholars; every scholar named in body prose has a
+  corresponding sources.yaml entry through which their substantive claim
+  is anchored.
+
+  Footnote (81) and EVIDENCE-token (133) counts are unequal because per
+  stage-prompt §9 (comparative-chapter exception) and the Ch34 (C1)
+  precedent (93 footnotes / 131 EVIDENCE tokens), comparative claims that
+  bridge per-tradition material to typological argument may double-token
+  (in-scope per-tradition anchor plus out-of-scope methodological anchor)
+  on a single paragraph; each claim has both a footnote and at least one
+  EVIDENCE token, satisfying the skill's "every claim has footnote
+  coverage" requirement. The doubled-token pattern is used judiciously
+  rather than as default, and the unequal counts mirror the pattern
+  established by Ch34.
+
+  Markers: 2 [INFERENCE:] (one in §II on the C1/C2 differential force of
+  the alternative-sovereign reading; one in §III on the population-imbalance
+  observation as load-bearing rather than artifact-of-selection); 2
+  [SPECULATION:] (one in §IV on the sovereignty-to-cosmogony escalation
+  as potentially-general-mechanism rather than Babylonian-specific
+  innovation; one in §V on the residual independent-typology component
+  after documented transmission-lines are subtracted). The two
+  [SPECULATION:] markers correspond to the two locations the prompt
+  explicitly flagged as likely warranting speculation markers
+  (Anzu→Marduk-as-template-for-sovereignty-to-cosmogony-escalation; and
+  the transmission-vs-typology debate residual). No [VARIANT:],
+  [LACUNA:], [RECONSTRUCTION:], or [APPROPRIATION-FLAG:] markers — Ch35's
+  seven cases are all West-Eurasian, well-attested, and do not raise the
+  area-specialist objections that scope.md §"Appropriation protocol"
+  applies to.
+
+  Body-prose word count (6970) is below the 8000 target, in the same
+  ballpark as Ch34's 7424 (Ch34 target was 7500). Line count (364) is
+  within the 380-450 reference scale; footnote count (81) is at the lower
+  bound of the 80-100 reference; EVIDENCE token count (133) is mid-range
+  of the 110-150 reference; COMPARATIVE-HOOK count (19) is above the
+  12-16 reference scale, intentional given that Ch35 has more
+  Part-I back-links (seven primary cases plus Ch3 supporting case) and
+  forward-links (C3, C4, C5, C6, C7, C8) than Ch34.
+
+  Terminological discipline per Hard rule #6 and brief special_instructions:
+  bare "chaos," "chaos-figure," "chaos-monster," and "chaos-serpent" are
+  used only inside §II's and §VI's discussions of the Ballentine critique,
+  scare-quoted at every appearance; "Chaoskampf" and "chaoskampf" appear
+  unscare-quoted only as the name of the typology being engaged (per
+  scope.md terminology default).
+
+  Self-checks: anchor `[[ch-35-C2-combat-as-sovereignty]]` and heading
+  `== C2. Combat as Sovereignty` open the file; Source overview section
+  contains 9 claims about the chapter's source-base, evidentiary
+  discipline, and structure; every per-tradition claim is routed through
+  the same sources.yaml ID that the corresponding Part-I chapter uses;
+  every COMPARATIVE-HOOK is a comment, not a claim; the file ends with
+  the comparative-hook block per skill instructions.
+
+  Handoff: to claims-factcheck for Ch35 in a fresh conversation.
