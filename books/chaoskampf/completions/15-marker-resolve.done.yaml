@@ -1,0 +1,114 @@
+stage: "marker-resolve"
+timestamp: "2026-05-04T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+summary: "Stage 13 (marker-resolve, runbook step 15) complete. 188 placeholder markers across 43 chapters rendered into reader-facing prose; all skill self-checks pass."
+
+input_marker_counts:
+  INFERENCE: 83
+  LACUNA: 34
+  RECONSTRUCTION: 2
+  VARIANT: 40
+  SPECULATION: 14
+  APPROPRIATION-FLAG: 15
+  total: 188
+
+self_checks:
+  raw_markers_remaining: 0
+  placeholder_literal_leaks: 0
+  empty_slot_artefacts: 0
+  sentinel_hedge_leaks: 0
+  double_period_artefacts: 0
+  per_marker_round_trip_mismatches: 0
+
+execution:
+  batches: 4
+  parallelism: "two-at-a-time per RUNBOOK.md max-2-concurrent-agents rule"
+  fixup_pass: "one APPROPRIATION-FLAG fix-up across batch-C chapters (ch23, ch26, ch27, ch28, ch29, ch30, ch31, ch32) — the batch-C agent prompt did not initially include APPROPRIATION-FLAG handling because that marker shape was assumed to live only in Part-II chapters; six were rendered by a second agent before it hit a rate limit, the remaining two (ch31, ch32) were rendered directly by the parent context using the same italicised-bracket template."
+
+non_canonical_renderings:
+  - kind: short_form_INFERENCE
+    location: "ch00 line 40"
+    handling: "rendered as plain prose (no parenthetical, no footnote) per skill rule for short-form INFERENCE without basis/risk; flagged for upstream stage 11 to add fields"
+  - kind: narrative_form_markers
+    location: "ch08 lines 61, 407; ch09 lines 204, 208; ch10 lines 86, 184"
+    handling: "descriptive paragraphs without standard slot structure; rendered as plain prose with the orphan footnote attached inline"
+  - kind: empty_VARIANT
+    location: "ch10 line 125"
+    handling: "marker token removed; orphan footnote attached"
+  - kind: VARIANT_chosen_B
+    location: "ch01 line 27"
+    handling: "swapped semantics so the alt source became body text and the original primary moved to footnote"
+  - kind: VARIANT_chosen_both_or_present_all
+    location: "ch03 line 533, ch04 line 77, ch05 lines 375 and 453, ch22 lines 80/95, ch23 line 179, ch26 line 103, ch28 line 101, ch30 lines 61/98, ch31 line 42, ch36 line 129, ch37 line 155, ch38 line 243"
+    handling: "rendered as italicised editorial bracket _[...]_ describing how both/all readings are presented side by side"
+  - kind: INFERENCE_with_source_scope_fields
+    location: "various in chapters 12-15, 18-21"
+    handling: "preserved original field labels in footnote (Inference. Source: ... Scope: ...) rather than relabel as Risk"
+  - kind: LACUNA_with_in_tradition_fill
+    location: "ch13 line 43"
+    handling: "rendered as Shape A with the in-tradition-fill content as the proposed reading"
+  - kind: SPECULATION_without_counterargument
+    location: "ch36 line 62"
+    handling: "rendered as a footnote with Basis and Scope (no counterargument slot) since the canonical counterargument was absent"
+  - kind: empty_body_marker_references
+    location: "ch33 lines 61, 67, 165, 174, 196, 211, 233, 300, 336; ch36 line 158"
+    handling: "these were prose mentions of marker syntax (e.g. \"the [RECONSTRUCTION:] marker\"), not real placeholders; rendered as bare uppercase identifier (e.g. \"RECONSTRUCTION marker\") to remove the raw bracket token"
+
+upstream_flags:
+  - chapter: "00-introduction"
+    issue: "stage 11 produced an INFERENCE marker without basis/risk fields"
+    severity: low
+  - chapters: ["08", "09", "10"]
+    issue: "stage 11 produced narrative-form markers (descriptive paragraphs without canonical slot structure) followed by orphan footnote lines"
+    severity: low
+  - chapters: ["multiple"]
+    issue: "stage 11 produced VARIANT markers with non-canonical chosen= values like present-both, co-equal, composite-editorial; the skill template handles only single-prevalent cases"
+    severity: low
+
+outputs:
+  - { file: "chapters/00-introduction.resolved.adoc", lines: 141 }
+  - { file: "chapters/01-ninurta-asag.resolved.adoc", lines: 333 }
+  - { file: "chapters/02-ninurta-anzu.resolved.adoc", lines: 332 }
+  - { file: "chapters/03-marduk-tiamat.resolved.adoc", lines: 605 }
+  - { file: "chapters/04-mesopotamian-minor.resolved.adoc", lines: 107 }
+  - { file: "chapters/05-kumarbi-ullikummi.resolved.adoc", lines: 462 }
+  - { file: "chapters/06-illuyanka.resolved.adoc", lines: 260 }
+  - { file: "chapters/07-baal-yamm-lotan.resolved.adoc", lines: 373 }
+  - { file: "chapters/08-yahweh-leviathan-rahab.resolved.adoc", lines: 479 }
+  - { file: "chapters/09-revelation-red-dragon.resolved.adoc", lines: 289 }
+  - { file: "chapters/10-christian-reception.resolved.adoc", lines: 219 }
+  - { file: "chapters/11-zeus-typhon.resolved.adoc", lines: 415 }
+  - { file: "chapters/12-greek-dragons-after-typhon.resolved.adoc", lines: 354 }
+  - { file: "chapters/13-thraetaona-azidahaka.resolved.adoc", lines: 388 }
+  - { file: "chapters/14-indra-vrtra.resolved.adoc", lines: 456 }
+  - { file: "chapters/15-vedic-reflexes.resolved.adoc", lines: 258 }
+  - { file: "chapters/16-ra-apep.resolved.adoc", lines: 454 }
+  - { file: "chapters/17-horus-seth.resolved.adoc", lines: 175 }
+  - { file: "chapters/18-thor-jormungandr.resolved.adoc", lines: 471 }
+  - { file: "chapters/19-ie-reflexes.resolved.adoc", lines: 333 }
+  - { file: "chapters/20-slavic-baltic.resolved.adoc", lines: 227 }
+  - { file: "chapters/21-gonggong.resolved.adoc", lines: 217 }
+  - { file: "chapters/22-hou-yi.resolved.adoc", lines: 160 }
+  - { file: "chapters/23-susanoo-orochi.resolved.adoc", lines: 219 }
+  - { file: "chapters/24-huitzilopochtli-coatepec.resolved.adoc", lines: 220 }
+  - { file: "chapters/25-mesoamerican-cluster.resolved.adoc", lines: 128 }
+  - { file: "chapters/26-pariacaca-amaru.resolved.adoc", lines: 162 }
+  - { file: "chapters/27-mapuche-kai-tren.resolved.adoc", lines: 110 }
+  - { file: "chapters/28-bida-wagadu.resolved.adoc", lines: 182 }
+  - { file: "chapters/29-mwindo-kirimu.resolved.adoc", lines: 193 }
+  - { file: "chapters/30-bakunawa.resolved.adoc", lines: 155 }
+  - { file: "chapters/31-vainamoinen-iku-turso.resolved.adoc", lines: 159 }
+  - { file: "chapters/32-nanabozho-mishipeshu.resolved.adoc", lines: 186 }
+  - { file: "chapters/33-methods.resolved.adoc", lines: 340 }
+  - { file: "chapters/34-C1-combat-as-cosmogony.resolved.adoc", lines: 366 }
+  - { file: "chapters/35-C2-combat-as-sovereignty.resolved.adoc", lines: 358 }
+  - { file: "chapters/36-C3-cyclical-maintenance.resolved.adoc", lines: 265 }
+  - { file: "chapters/37-C4-eschatological-displacement.resolved.adoc", lines: 443 }
+  - { file: "chapters/38-C5-ie-hero-slay-serpent-formula.resolved.adoc", lines: 422 }
+  - { file: "chapters/39-C6-near-eastern-mediterranean-transmission.resolved.adoc", lines: 403 }
+  - { file: "chapters/40-C7-inversion-problem.resolved.adoc", lines: 271 }
+  - { file: "chapters/41-C8-refusal-and-appropriation.resolved.adoc", lines: 246 }
+  - { file: "chapters/42-reception-coda.resolved.adoc", lines: 259 }
+
+handoff: "to stage 15b grammar-check, then stage 16 line-edit"
