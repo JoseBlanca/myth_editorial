@@ -1,0 +1,156 @@
+stage: "format-finalize"
+timestamp: "2026-05-05T13:31:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+
+slug: "chaoskampf_across_cultures"
+slug_derivation: |
+  scope.md has no explicit `slug:` field. Derived from the book title
+  "Chaoskampf Across Cultures" per the skill's derivation rule:
+  lowercase, replace runs of non-alphanumerics with `_`, strip trailing.
+
+book_title: "Chaoskampf Across Cultures"
+author: "Jose Blanca"
+
+inputs:
+  intro: "chapters/00-introduction.edited.adoc"
+  story_chapters: 32
+  comparative_chapters: 10
+  reception_coda: "chapters/42-reception-coda.edited.adoc"
+  character_appendix: "character-appendix.adoc"
+  total_chapter_files: 43
+  comparative_adoc_present: false
+  rationale: |
+    Unlike sumer (which has a separate comparative.edited.adoc), chaoskampf
+    integrates the comparative work as chapters 33-42 in toc.yaml. There is
+    no separate comparative.adoc; the master adoc includes 33-methods,
+    34-C1 through 41-C8, and 42-reception-coda directly.
+  front_matter_adoc_present: false
+  back_matter_adoc_present: false
+
+outputs:
+  - file: "chaoskampf_across_cultures.adoc"
+    lines: 96
+    description: "Master AsciiDoc with includes for intro + 42 chapters + character-appendix"
+  - file: "bibliography.bib"
+    lines: 529
+    description: "BibTeX bibliography with 65 entries (one per used source_id from EVIDENCE tokens). All 65 used IDs resolve to in_scope sources.yaml registry entries."
+  - file: "output/chaoskampf_across_cultures.pdf"
+    size_bytes: 19505612
+    description: "Rendered PDF (asciidoctor-pdf 2.0.x with asciidoctor-bibtex)"
+  - file: "output/chaoskampf_across_cultures.epub"
+    size_bytes: 1691343
+    description: "Rendered EPUB (asciidoctor-epub3 2.0.x with asciidoctor-bibtex)"
+  - file: "reports/validation-report.md"
+    lines: 15
+    description: "Asciidoctor build log; both renderers exited 0 with no WARNING or ERROR after the marker-strip and content-fix passes"
+
+bibliography_extraction:
+  unique_source_ids_in_evidence_tokens: 65
+  registry_entries: 65
+  unresolved_ids: 0
+  unused_in_evidence_tokens: 0
+  triangulation_databases_excluded: 8
+  notes: |
+    All 65 in-scope registry entries are cited via EVIDENCE tokens in at
+    least one chapter. The 8 triangulation_databases entries (cdli,
+    ctr-ugaritic, kotenbunko, oracc, perseus, titus, worldcat, etc.) are
+    deliberately excluded since they are reference databases, not citation
+    sources.
+
+marker_strip_pre_assembly:
+  evidence_tokens_dropped: 3811
+  comparative_hook_tokens_dropped: 421
+  whole_line_drops: 4232
+  mid_line_strips: 0
+  notes: |
+    Per the skill's step 2 (marker strip): all production markers
+    `// EVIDENCE:` and `// COMPARATIVE-HOOK:` were stripped from the
+    `chapters/*.edited.adoc` files. The `.resolved.adoc` and
+    `.grammar-checked.adoc` files preserve the markers as the audit trail.
+
+content_fix_pre_render:
+  pipeline_meta_prose_cleanup:
+    files_affected: 11
+    paragraph_deletions: 9
+    sentence_rewordings: 11
+    rationale: |
+      20 prose references to "EVIDENCE token" or "COMPARATIVE-HOOK"
+      had leaked into final chapters as pipeline meta-commentary. The
+      render helper greps the EPUB for these bare strings and would
+      have failed. Pipeline-discipline paragraphs (whole-paragraph
+      meta-commentary about citation routing) were deleted; legitimate
+      scholarly paragraphs containing the words had the words rewritten
+      ("EVIDENCE token" → "primary citation" / "load-bearing claim";
+      "// COMPARATIVE-HOOK" → "structural-comparative cross-reference").
+  asciidoctor_render_blockers:
+    inclusion_marginal_block_removed: 1
+    list_index_J_dot_escaped: 1
+    inner_italic_unconstrained_conversions: 5
+    constrained_strong_with_plural_suffix_fixes: 4
+    notes: |
+      Initial PDF render produced 5 ERRORs (failed to parse formatted
+      text) and 1 WARNING. Root causes:
+        1. ch17 line 4 had a [INCLUSION-MARGINAL: ...] paragraph block
+           that should have been resolved at marker-resolve. Removed.
+        2. ch19 line 102 starts with "J. R. R. Tolkien", which AsciiDoc
+           parsed as a J-th list-marker item where A. was expected.
+           Wrapped the J. in pass:[J.] inline pass-through.
+        3. Five paragraphs had italic-paren `_(...footnote:[...].)_`
+           with single-underscore italics inside the footnote, which
+           breaks asciidoctor-pdf's prawn formatter (the inner italic
+           closes the outer span). Converted inner `_word_` to
+           unconstrained `__word__` only inside footnotes that appear
+           inside italic-paren paragraphs.
+        4. ch13 had four `*Yašt*s` patterns where constrained strong
+           is immediately followed by a lowercase plural suffix that
+           breaks the constrained-quote boundary. Converted to
+           `**Yašt**s` (unconstrained).
+
+self_checks:
+  no_old_markers_remain:
+    INFERENCE: 0
+    LACUNA: 0
+    RECONSTRUCTION: 0
+    VARIANT: 0
+    SPECULATION: 0
+  no_evidence_or_hook_after_strip:
+    EVIDENCE_in_edited_adoc: 0
+    COMPARATIVE_HOOK_in_edited_adoc: 0
+    EVIDENCE_in_rendered_epub_xhtml: 0
+    COMPARATIVE_HOOK_in_rendered_epub_xhtml: 0
+  no_placeholder_leaks:
+    "<claim>": 0
+    "<basis>": 0
+    "<risk>": 0
+    "<reconstruction>": 0
+    "<what>": 0
+    "<gap_source>": 0
+  no_empty_slot_artefacts:
+    empty_paren_dot_bracket: 0
+    empty_inference_paren: 0
+  no_double_period_artefacts:
+    "..]_": 0
+    "..footnote:": 0
+  bibliography_resolution:
+    unresolved_evidence_ids: 0
+    bibliography_entries_off_whitelist: 0
+  cross_references:
+    character_appendix_to_chapter_anchors: "all 41 used <<ch-NN-slug>> xrefs resolve"
+  cover_image:
+    file: "cover/cover.jpg"
+    referenced_in_master: ":front-cover-image: image:cover/cover.jpg[]"
+    exists: true
+  output_files:
+    pdf_exists: true
+    pdf_non_empty: true
+    epub_exists: true
+    epub_non_empty: true
+  no_legacy_book_files: true
+  asciidoctor_clean_exit:
+    pdf: 0
+    epub: 0
+
+handoff: "Book complete. Ready for stage 19 translate-spanish (deferred per scope-lock)."
+
+summary: "Format-finalize stage complete. Bibliography (65 BibTeX entries) extracted from 3811 EVIDENCE tokens with zero unresolved IDs. Production markers stripped. Pipeline meta-commentary cleaned from 11 chapters. Five render-blocker content issues fixed (one INCLUSION-MARGINAL leak, one list-index J. escape, five inner-italic conversions, four constrained-strong-plural fixes). Master adoc assembled and rendered to PDF (19.5MB) and EPUB (1.69MB) with zero asciidoctor warnings or errors. All EPUB anti-pattern checks pass (zero EVIDENCE, COMPARATIVE-HOOK, empty-paren, or _(.footnote artefacts in xhtml)."
