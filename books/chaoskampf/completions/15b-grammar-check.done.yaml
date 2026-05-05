@@ -1,0 +1,96 @@
+stage: "grammar-check"
+timestamp: "2026-05-04T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+summary: "Grammar-check stage complete across 43 chapters. 1 grammar fix applied (ch13 comma splice → semicolon); 31 post-resolve capitalisation fix-ups applied as a marker-resolve hotfix in 9 Part-II chapters where SPECULATION/INFERENCE marker claim slots had been rendered without paragraph-initial capitalisation. All AsciiDoc structure preserved."
+
+execution:
+  batches: 4
+  parallelism: "two-at-a-time per RUNBOOK.md max-2-concurrent-agents rule"
+
+results:
+  total_chapters: 43
+  grammar_changes_total: 1
+  grammar_changes:
+    - chapter: "13-thraetaona-azidahaka"
+      line: 269
+      kind: comma_splice
+      fix: "comma replaced with semicolon between two independent clauses"
+  long_sentences_left_unchanged: "many; the book's deliberately academic register chains dependent clauses with semicolons and em-dashes; agents applied the >50-word rule with judgment per the prompt's guidance and left clear sentences alone"
+
+post_resolve_capitalisation_hotfix:
+  total_fixes: 31
+  rationale: "marker-resolve agents rendered SPECULATION (and some INFERENCE) marker claim slots verbatim from the input field, which often started with a lowercase 'that' or 'the' because it was originally drafted as a continuation clause rather than as a standalone sentence; when those markers became their own paragraphs in the resolved file, the lowercase paragraph-initial letter became a copy-edit bug; capitalisation is part of the skill's 'rendered as prose' requirement, so this is a marker-resolve fix-up rather than a grammar edit"
+  affected_chapters:
+    - "34-C1-combat-as-cosmogony (1)"
+    - "35-C2-combat-as-sovereignty (4)"
+    - "36-C3-cyclical-maintenance (3)"
+    - "37-C4-eschatological-displacement (5)"
+    - "38-C5-ie-hero-slay-serpent-formula (4)"
+    - "39-C6-near-eastern-mediterranean-transmission (5)"
+    - "40-C7-inversion-problem (2)"
+    - "41-C8-refusal-and-appropriation (2)"
+    - "42-reception-coda (5)"
+  preserved_lowercase_intentionally:
+    - "16-ra-apep line 16: 'te Velde's monograph...' — Dutch surname particle, kept lowercase"
+
+structural_preservation:
+  footnote_counts: "preserved between .resolved.adoc and .grammar-checked.adoc for all 43 chapters"
+  evidence_token_counts: "preserved for all 43 chapters"
+  comparative_hook_counts: "preserved for all 43 chapters"
+  asciidoc_anchors: "preserved verbatim"
+  asciidoc_headings: "preserved verbatim"
+  italic_marker_brackets: "preserved verbatim apart from the 31 paragraph-initial capitalisations noted above"
+
+flagged_for_downstream_review:
+  - kind: orphan_footnote_lines
+    chapter: "42-reception-coda"
+    locations: ["line 99", "line 158", "line 205", "line 241"]
+    description: "AsciiDoc-orphaned footnote:[...] lines following INFERENCE/SPECULATION rendered markers; predates marker-resolve (already present in chapter-draft .adoc); functionally OK for AsciiDoc rendering (the orphan attaches as an extra footnote to the preceding paragraph) but slightly redundant with the marker's own embedded footnote; deferred to line-edit / human review"
+
+outputs:
+  - { file: "chapters/00-introduction.grammar-checked.adoc", lines: 141, diff: "chapters/00-introduction.grammar-diff.md" }
+  - { file: "chapters/01-ninurta-asag.grammar-checked.adoc", lines: 333, diff: "chapters/01-ninurta-asag.grammar-diff.md" }
+  - { file: "chapters/02-ninurta-anzu.grammar-checked.adoc", lines: 332, diff: "chapters/02-ninurta-anzu.grammar-diff.md" }
+  - { file: "chapters/03-marduk-tiamat.grammar-checked.adoc", lines: 605, diff: "chapters/03-marduk-tiamat.grammar-diff.md" }
+  - { file: "chapters/04-mesopotamian-minor.grammar-checked.adoc", lines: 107, diff: "chapters/04-mesopotamian-minor.grammar-diff.md" }
+  - { file: "chapters/05-kumarbi-ullikummi.grammar-checked.adoc", lines: 462, diff: "chapters/05-kumarbi-ullikummi.grammar-diff.md" }
+  - { file: "chapters/06-illuyanka.grammar-checked.adoc", lines: 260, diff: "chapters/06-illuyanka.grammar-diff.md" }
+  - { file: "chapters/07-baal-yamm-lotan.grammar-checked.adoc", lines: 373, diff: "chapters/07-baal-yamm-lotan.grammar-diff.md" }
+  - { file: "chapters/08-yahweh-leviathan-rahab.grammar-checked.adoc", lines: 479, diff: "chapters/08-yahweh-leviathan-rahab.grammar-diff.md" }
+  - { file: "chapters/09-revelation-red-dragon.grammar-checked.adoc", lines: 289, diff: "chapters/09-revelation-red-dragon.grammar-diff.md" }
+  - { file: "chapters/10-christian-reception.grammar-checked.adoc", lines: 219, diff: "chapters/10-christian-reception.grammar-diff.md" }
+  - { file: "chapters/11-zeus-typhon.grammar-checked.adoc", lines: 415, diff: "chapters/11-zeus-typhon.grammar-diff.md" }
+  - { file: "chapters/12-greek-dragons-after-typhon.grammar-checked.adoc", lines: 354, diff: "chapters/12-greek-dragons-after-typhon.grammar-diff.md" }
+  - { file: "chapters/13-thraetaona-azidahaka.grammar-checked.adoc", lines: 388, diff: "chapters/13-thraetaona-azidahaka.grammar-diff.md" }
+  - { file: "chapters/14-indra-vrtra.grammar-checked.adoc", lines: 456, diff: "chapters/14-indra-vrtra.grammar-diff.md" }
+  - { file: "chapters/15-vedic-reflexes.grammar-checked.adoc", lines: 258, diff: "chapters/15-vedic-reflexes.grammar-diff.md" }
+  - { file: "chapters/16-ra-apep.grammar-checked.adoc", lines: 454, diff: "chapters/16-ra-apep.grammar-diff.md" }
+  - { file: "chapters/17-horus-seth.grammar-checked.adoc", lines: 175, diff: "chapters/17-horus-seth.grammar-diff.md" }
+  - { file: "chapters/18-thor-jormungandr.grammar-checked.adoc", lines: 471, diff: "chapters/18-thor-jormungandr.grammar-diff.md" }
+  - { file: "chapters/19-ie-reflexes.grammar-checked.adoc", lines: 333, diff: "chapters/19-ie-reflexes.grammar-diff.md" }
+  - { file: "chapters/20-slavic-baltic.grammar-checked.adoc", lines: 227, diff: "chapters/20-slavic-baltic.grammar-diff.md" }
+  - { file: "chapters/21-gonggong.grammar-checked.adoc", lines: 217, diff: "chapters/21-gonggong.grammar-diff.md" }
+  - { file: "chapters/22-hou-yi.grammar-checked.adoc", lines: 160, diff: "chapters/22-hou-yi.grammar-diff.md" }
+  - { file: "chapters/23-susanoo-orochi.grammar-checked.adoc", lines: 219, diff: "chapters/23-susanoo-orochi.grammar-diff.md" }
+  - { file: "chapters/24-huitzilopochtli-coatepec.grammar-checked.adoc", lines: 220, diff: "chapters/24-huitzilopochtli-coatepec.grammar-diff.md" }
+  - { file: "chapters/25-mesoamerican-cluster.grammar-checked.adoc", lines: 128, diff: "chapters/25-mesoamerican-cluster.grammar-diff.md" }
+  - { file: "chapters/26-pariacaca-amaru.grammar-checked.adoc", lines: 162, diff: "chapters/26-pariacaca-amaru.grammar-diff.md" }
+  - { file: "chapters/27-mapuche-kai-tren.grammar-checked.adoc", lines: 110, diff: "chapters/27-mapuche-kai-tren.grammar-diff.md" }
+  - { file: "chapters/28-bida-wagadu.grammar-checked.adoc", lines: 182, diff: "chapters/28-bida-wagadu.grammar-diff.md" }
+  - { file: "chapters/29-mwindo-kirimu.grammar-checked.adoc", lines: 193, diff: "chapters/29-mwindo-kirimu.grammar-diff.md" }
+  - { file: "chapters/30-bakunawa.grammar-checked.adoc", lines: 155, diff: "chapters/30-bakunawa.grammar-diff.md" }
+  - { file: "chapters/31-vainamoinen-iku-turso.grammar-checked.adoc", lines: 159, diff: "chapters/31-vainamoinen-iku-turso.grammar-diff.md" }
+  - { file: "chapters/32-nanabozho-mishipeshu.grammar-checked.adoc", lines: 186, diff: "chapters/32-nanabozho-mishipeshu.grammar-diff.md" }
+  - { file: "chapters/33-methods.grammar-checked.adoc", lines: 340, diff: "chapters/33-methods.grammar-diff.md" }
+  - { file: "chapters/34-C1-combat-as-cosmogony.grammar-checked.adoc", lines: 366, diff: "chapters/34-C1-combat-as-cosmogony.grammar-diff.md" }
+  - { file: "chapters/35-C2-combat-as-sovereignty.grammar-checked.adoc", lines: 358, diff: "chapters/35-C2-combat-as-sovereignty.grammar-diff.md" }
+  - { file: "chapters/36-C3-cyclical-maintenance.grammar-checked.adoc", lines: 265, diff: "chapters/36-C3-cyclical-maintenance.grammar-diff.md" }
+  - { file: "chapters/37-C4-eschatological-displacement.grammar-checked.adoc", lines: 443, diff: "chapters/37-C4-eschatological-displacement.grammar-diff.md" }
+  - { file: "chapters/38-C5-ie-hero-slay-serpent-formula.grammar-checked.adoc", lines: 422, diff: "chapters/38-C5-ie-hero-slay-serpent-formula.grammar-diff.md" }
+  - { file: "chapters/39-C6-near-eastern-mediterranean-transmission.grammar-checked.adoc", lines: 403, diff: "chapters/39-C6-near-eastern-mediterranean-transmission.grammar-diff.md" }
+  - { file: "chapters/40-C7-inversion-problem.grammar-checked.adoc", lines: 271, diff: "chapters/40-C7-inversion-problem.grammar-diff.md" }
+  - { file: "chapters/41-C8-refusal-and-appropriation.grammar-checked.adoc", lines: 246, diff: "chapters/41-C8-refusal-and-appropriation.grammar-diff.md" }
+  - { file: "chapters/42-reception-coda.grammar-checked.adoc", lines: 259, diff: "chapters/42-reception-coda.grammar-diff.md" }
+
+handoff: "to stage 16 line-edit"
