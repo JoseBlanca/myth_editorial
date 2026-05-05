@@ -1,0 +1,397 @@
+meta:
+  stage: "15-narrative-fidelity"
+  auditor_model: "claude-opus-4-7[1m]"
+  audit_date: "2026-05-04"
+  claims_file: "chapters/42-reception-coda.claims.approved.adoc"
+  narrative_file: "chapters/42-reception-coda.adoc"
+  total_claims: 62
+  claims_mapped: 62
+  verdict: PASS
+  honesty_self_check: |
+    Fresh-context audit performed against the claims-approved file as the
+    canonical source; the writer's chapter-draft completion record was not
+    consulted before findings were formed, and no other chapter's fidelity
+    file was opened until the verdict had been settled. Every paragraph-
+    claim in claims-approved (lines 22..242) was sequentially mapped to
+    its narrative paragraph (lines 6..244). The four markers (one §II
+    INFERENCE, one §IV SPECULATION, one §V SPECULATION, one §VI
+    INFERENCE), all 62 footnote bodies, all 65 EVIDENCE tokens, and all
+    25 COMPARATIVE-HOOK lines were checked for byte-level parity; the
+    four marker bodies are byte-identical in basis-and-risk and basis-
+    and-counterargument structure. The permitted prose additions were
+    enumerated and confirmed: 1 source-overview-closing roadmap (L36) +
+    6 section-opener bridges (§I L40, §II L75, §III L107, §IV L138, §V
+    L172, §VI implicit at L226) + 2 mid-section transitional bridges
+    that frame the SPECULATION blocks (§IV L155 pre-marker; §V L202
+    pre-marker) = 9 unfootnoted prose lines, all of which are reader-
+    orienting transitions or paraphrastic register-bridges introducing
+    no new factual content beyond the claim that follows. The §V "chaos-
+    figure" occurrences at narrative L189 and L192 were checked against
+    the claims-approved versions at L191 and L194 — both are attributed
+    to Ballentine's critique-target (i.e., the rhetoric the chapter is
+    refuting) rather than used in book voice, and both appear in the
+    same metalinguistic frame in the approved claims; no GLOSSARY-
+    VIOLATION flag is warranted. The narrative's body-prose stylistic
+    transformations (em-dash parenthetical → period sentence-split;
+    *italic* asterisk-emphasis → _italic_ underscore-emphasis;
+    "Vandenhoeck & Ruprecht" → "Vandenhoeck and Ruprecht"; dropped
+    publisher-city repetition in the source-overview anchor list at
+    narrative L12) are stylistic register changes that preserve every
+    factual claim without distortion, and the corresponding footnote
+    bodies are byte-identical. The auditor identified no HIGH and no
+    MEDIUM findings; only structural NOTEs for the bridge inventory
+    and the body-prose stylistic transformations. Verdict PASS.
+    Auditor model is the same family (claude-opus-4-7[1m]) as the
+    likely writer model; the audit was performed in a fresh context
+    window with no access to writer-stage state.
+  issues_summary:
+    high: 0
+    medium: 0
+    low: 0
+    note: 4
+
+check_1_completeness:
+  description: |
+    Every paragraph-claim from claims-approved is mapped to a narrative
+    location in the same sequence. Footnote, EVIDENCE, COMPARATIVE-HOOK,
+    and marker counts all reach byte-level parity (62 footnotes, 65
+    EVIDENCE tokens, 25 COMPARATIVE-HOOK lines, 4 markers).
+  claims_mapped_count: 62
+  claims_mapped_to_narrative_lines:
+    source_overview:
+      claim_01_lines_22: narrative_line_6     # toc.yaml positioning of ch42 in back matter
+      claim_02_lines_25: narrative_line_9     # five domains (Milton / iconography / Tolkien / kaiju / chaos-vs-order)
+      claim_03_lines_28: narrative_line_12    # three principal scholarly anchors (Forsyth, Ogden, Yarbro Collins)
+      claim_04_lines_32: narrative_line_16    # fourth anchor for §V (Ballentine)
+      claim_05_lines_35: narrative_line_19    # historical anchor for "chaos" terminology (Gunkel 1895)
+      claim_06_lines_38: narrative_line_22    # §III treatment of Tolkien (1936 lecture)
+      claim_07_lines_41: narrative_line_25    # evidentiary discipline (primary works named-but-flagged)
+      claim_08_lines_44: narrative_line_28    # lighter register / closing framing question
+      claim_09_lines_47: narrative_line_31    # defers classificatory work back to Parts I/II
+      hook_line_50: narrative_line_34         # Ch10 source-overview hook
+      bridge_at_narrative_line_36: source-overview-closing roadmap (1 of 9 permitted bridges)
+    section_I_milton:
+      bridge_at_narrative_line_40: §I opener bridge (2 of 9)
+      claim_10_lines_54: narrative_line_42    # Paradise Lost as dominant early-modern realisation
+      claim_11_lines_57: narrative_line_45    # Rev 12:9 identification (dragon/devil/ancient serpent)
+      claim_12_lines_60: narrative_line_48    # heavenly war central books V-VI (recounted by Raphael)
+      claim_13_lines_63: narrative_line_51    # Satan as epic protagonist (epithet/voice/itinerary/arc)
+      claim_14_lines_66: narrative_line_54    # Blake "Devil's party" dictum / Romantic reception
+      claim_15_lines_69: narrative_line_57    # Miltonic Chaos-figure / Gunkel anachronism
+      claim_16_lines_72: narrative_line_60    # Paradise Regained 1671 / Christ-vs-Satan harrowing form
+      claim_17_lines_75: narrative_line_63    # preserves three / transforms liturgical-ritual embedding
+      claim_18_lines_78: narrative_line_66    # post-Miltonic 18th-19th century reception (Martin/Blake/Romantic)
+      hooks_lines_81_82_83: narrative_lines_69_70_71  # Ch9 / Ch10 / Ch3+Ch6 §I hooks
+    section_II_iconographic:
+      bridge_at_narrative_line_75: §II opener bridge (3 of 9)
+      claim_19_lines_87: narrative_line_77    # high-medieval codification of George / Michael types
+      claim_20_lines_90: narrative_line_80    # Renaissance painters (Uccello / Carpaccio / Raphael)
+      claim_21_lines_93: narrative_line_83    # St. Michael trajectory (Reni / Counter-Reformation / modern revival)
+      claim_22_lines_96: narrative_line_86    # St. George cross / Order of the Garter 1348 / English flag
+      claim_23_lines_99: narrative_line_89    # princess-and-dragon-rescue (Perseus-Andromeda substrate / fairy-tale)
+      claim_24_lines_102: narrative_line_92   # three preserved strata / loosened devotional anchoring
+      claim_25_lines_105: narrative_line_95   # terminus on national flags / one-way migration
+      marker_inference_lines_108: narrative_line_98  # INFERENCE: one-way directionality / basis / risk
+      hooks_lines_112_113: narrative_lines_102_103  # Ch10 / Ch12 §II hooks
+    section_III_tolkien:
+      bridge_at_narrative_line_107: §III opener bridge (4 of 9)
+      claim_26_lines_117: narrative_line_109  # 1936 British Academy lecture (Beowulf monsters mythic register)
+      claim_27_lines_120: narrative_line_112  # central argument (deliberate artistic-mythic move)
+      claim_28_lines_123: narrative_line_115  # broader effect (rehabilitation of myth-monster combat)
+      claim_29_lines_126: narrative_line_118  # The Hobbit 1937 / Smaug killed by Bard / Battle of Five Armies
+      claim_30_lines_129: narrative_line_121  # Smaug preserves features / cosmic-religious framing transformed
+      claim_31_lines_132: narrative_line_124  # Ancalagon the Black / Eärendil / War of Wrath / cosmic-scale
+      claim_32_lines_135: narrative_line_127  # post-Tolkienian fantasy / RPG / video-game reception
+      claim_33_lines_138: narrative_line_130  # preserves three / transforms religious-ritual embedding
+      hooks_lines_141_142: narrative_lines_133_134  # Ch19 / Ch10 §III hooks
+    section_IV_kaiju:
+      bridge_at_narrative_line_138: §IV opener bridge (5 of 9)
+      claim_34_lines_146: narrative_line_140  # Yamata no Orochi upstream tradition (Ch23)
+      claim_35_lines_149: narrative_line_143  # Gojira 1954 / Honda / Toho / Oxygen Destroyer
+      claim_36_lines_152: narrative_line_146  # Lucky Dragon No. 5 / Castle Bravo / Serizawa anti-nuclear
+      claim_37_lines_155: narrative_line_149  # Toho kaiju genre (Mothra / Rodan / Ghidorah / Gamera)
+      claim_38_lines_158: narrative_line_152  # serpentine features structurally continuous with Orochi
+      bridge_at_narrative_line_155: §IV pre-SPECULATION transitional bridge (6 of 9)
+      marker_speculation_lines_161: narrative_line_157  # SPECULATION: kaiju as living afterlife of Orochi / counterargument
+      claim_39_lines_165: narrative_line_161  # preserves three / transforms cosmological + religious-ritual
+      claim_40_lines_168: narrative_line_164  # Godzilla franchise longevity (seven decades / global markets)
+      hooks_lines_171_172: narrative_lines_167_168  # Ch23 / Ch40 §IV hooks
+    section_V_chaos_vs_order:
+      bridge_at_narrative_line_172: §V opener bridge (7 of 9)
+      claim_41_lines_176: narrative_line_174  # contemporary "chaos vs order" / fundamentalist + New Age deployment
+      claim_42_lines_179: narrative_line_177  # Gunkel 1895 inheritance direct (unified Gen 1 / Rev 12 framework)
+      claim_43_lines_182: narrative_line_180  # Ballentine critique (rival sovereigns vs inchoate disorder)
+      claim_44_lines_185: narrative_line_183  # Tiamat as structured rival (council / Kingu / Tablet of Destinies)
+      claim_45_lines_188: narrative_line_186  # Leviathan + Rahab as named adversaries (Job 41 / Isa 51)
+      claim_46_lines_191: narrative_line_189  # Genesis 1 invocation / tehom not personified / Gen 1 not combat-myth
+      claim_47_lines_194: narrative_line_192  # Revelation 12 invocation / dragon=devil=serpent vs unfigured chaos
+      claim_48_lines_198: narrative_line_196  # political-rhetorical use (preachers / activists / present-day warrant)
+      claim_49_lines_201: narrative_line_199  # chapter's posture (sharper register permitted / philological substance done)
+      bridge_at_narrative_line_202: §V pre-SPECULATION transitional bridge (8 of 9)
+      marker_speculation_lines_204: narrative_line_204  # SPECULATION: rhetoric as second-order Gunkelian reception / counterargument
+      hooks_lines_208_209_210: narrative_lines_208_209_210  # Ch3 / Ch8 / Ch9 §V hooks
+    section_VI_what_reception_preserves:
+      claim_50_lines_214: narrative_line_214  # five domains preserve some / transform others
+      claim_51_lines_217: narrative_line_217  # preserved feature 1: monstrous identification of adversary
+      claim_52_lines_220: narrative_line_220  # preserved feature 2: cosmic-or-cosmic-scale stakes
+      claim_53_lines_223: narrative_line_223  # preserved feature 3: hero's transformative role
+      bridge_at_narrative_line_226: §VI internal transitional bridge (9 of 9)
+      claim_54_lines_226: narrative_line_228  # transformed feature 1: liturgical-ritual embedding dissolved
+      claim_55_lines_229: narrative_line_231  # transformed feature 2: ritual-aetiological function dissolved
+      claim_56_lines_232: narrative_line_234  # transformed feature 3: cultural centrality dissolved
+      claim_57_lines_235: narrative_line_237  # closing reflection / framing question / religious anchoring optional
+      marker_inference_lines_238: narrative_line_240  # INFERENCE: reception-is-transformation / basis / risk
+      claim_58_lines_242: narrative_line_244  # last claim / volume's closing observation / chaoskampf retention
+      hooks_lines_246_to_257: narrative_lines_248_to_259  # 12 §VI closing hooks (Ch3/6/7/8/9/10/12/18/19/23/Ch34-41/Ch41)
+  parity_counts:
+    footnotes:
+      claims: 62
+      narrative: 62
+      delta: 0
+    evidence_tokens:
+      claims: 65
+      narrative: 65
+      delta: 0
+    comparative_hooks:
+      claims: 25
+      narrative: 25
+      delta: 0
+    markers:
+      claims: 4
+      narrative: 4
+      delta: 0
+      breakdown: { inference: 2, speculation: 2, variant: 0, lacuna: 0, reconstruction: 0, appropriation_flag: 0 }
+
+check_2_no_additions:
+  description: |
+    Every factual assertion in the narrative is anchored to a corresponding
+    paragraph-claim or marker in claims-approved. The narrative's
+    unfootnoted prose lines are exclusively reader-orienting transitional
+    bridges or paraphrastic register-changes; no new factual content has
+    been introduced.
+  unfootnoted_bridge_inventory:
+    - line: 36
+      kind: source-overview-closing roadmap
+      text_snippet: "What follows takes the five domains in turn..."
+      verdict: permitted (transition; no factual addition)
+    - line: 40
+      kind: §I opener bridge
+      text_snippet: "The chapter's first reception case is the most ambitious literary engagement..."
+      verdict: permitted (paraphrase of claim_10's "dominant early-modern English-language literary realisation"; "most ambitious" is reader-orienting evaluative gloss)
+    - line: 75
+      kind: §II opener bridge
+      text_snippet: "The second reception case is visual rather than literary..."
+      verdict: permitted (transition; no factual addition)
+    - line: 107
+      kind: §III opener bridge
+      text_snippet: "The chapter's third reception case is the twentieth-century literary-critical and creative move..."
+      verdict: permitted (transition; "the move has a precise date" forward-points to claim_26)
+    - line: 138
+      kind: §IV opener bridge
+      text_snippet: "The fourth reception case takes the survey out of European materials..."
+      verdict: permitted (transition; "least cited and most striking" is the chapter's own analytical framing pointer for §IV's SPECULATION block, paraphrasing claim_38's "structurally continuous... but the genre does not narratively cite the Orochi tradition")
+    - line: 155
+      kind: §IV pre-SPECULATION transitional bridge
+      text_snippet: "The continuity is striking enough to be worth registering as the section's analytical framing..."
+      verdict: permitted (introduces the SPECULATION marker; no new factual content)
+    - line: 172
+      kind: §V opener bridge
+      text_snippet: "The chapter's fifth case is rhetorical rather than literary..."
+      verdict: permitted (transition; references brief's special_instructions on §V's permitted sharper register, paraphrasing claim_49)
+    - line: 202
+      kind: §V pre-SPECULATION transitional bridge
+      text_snippet: "The section's own analytical framing for the contemporary rhetoric..."
+      verdict: permitted (introduces the SPECULATION marker; no new factual content)
+    - line: 226
+      kind: §VI internal transitional bridge
+      text_snippet: "So much for what the receptions preserve. The transformations are no less consistent."
+      verdict: permitted (pure transition between the three preserved-features and three transformed-features blocks; no factual addition)
+  invented_assertions: []
+
+check_3_fidelity:
+  description: |
+    Every claim-to-narrative mapping was checked for preservation of
+    certainty-level, causal direction, scope, and marker survival. All
+    four markers are byte-identical in their basis-and-risk or basis-
+    and-counterargument structure; no INFERENCE has been promoted to
+    fact, no SPECULATION has been hardened, no scope has been broadened
+    or narrowed. Footnote bodies are byte-identical between claims and
+    narrative throughout, and EVIDENCE-token source_id and loc fields
+    are byte-identical at all 65 token sites. Body-prose stylistic
+    transformations (asterisk-italic to underscore-italic in the AsciiDoc
+    rendering; em-dash parenthetical to period-split sentences in the
+    narrative register; ampersand to "and" at one publisher reference;
+    dropped repetition of city-of-publication in the source-overview
+    anchor list) preserve factual meaning without distortion.
+  marker_preservation:
+    - marker_kind: INFERENCE
+      claims_line: 108
+      narrative_line: 98
+      preservation: byte-identical (basis: / risk: schema preserved)
+    - marker_kind: SPECULATION
+      claims_line: 161
+      narrative_line: 157
+      preservation: byte-identical (basis: / counterargument: schema preserved)
+    - marker_kind: SPECULATION
+      claims_line: 204
+      narrative_line: 204
+      preservation: byte-identical (basis: / counterargument: schema preserved)
+    - marker_kind: INFERENCE
+      claims_line: 238
+      narrative_line: 240
+      preservation: byte-identical (basis: / risk: schema preserved)
+  certainty_level_preservation: |
+    Each of the four markers retains its register (INFERENCE = "inferential
+    reading"; SPECULATION = "the chapter's analytical framing... held
+    against a substantive counterargument"). No marker has been silently
+    promoted to a fact-claim. The §V "chaos vs order" critique remains
+    framed as Ballentine's critique attributed to her, not as a general
+    consensus, throughout claims_43..claim_47 and SPECULATION-204.
+  causal_direction_preservation: |
+    No causal-direction reversals identified. The Gunkel-1895-precedes-
+    contemporary-rhetoric chronology is preserved at claim_42 / N-177
+    and at SPECULATION-204 / N-204; the Milton-1667-precedes-Gunkel-1895
+    chronology is preserved at claim_15 / N-57.
+  scope_preservation: |
+    No scope distortions identified. "Some scholars" / "Ballentine argues"
+    framings preserved at claim_43, claim_44, claim_45, claim_46, claim_47.
+    "Often without explicit awareness" preserved at claim_42 / N-177.
+
+forbidden_words_and_glossary:
+  forbidden_words_check: |
+    The glossary entry for chaoskampf bans "dragon myth (too narrow)" and
+    "dragon-slaying myth (misses the cosmogonic function)". Neither phrase
+    appears in the narrative as a book-voice category-label; "dragon myth"
+    appears only inside Ogden's book-title (*Drakōn: Dragon Myth and
+    Serpent Cult in the Greek and Roman Worlds*), which is permitted as
+    title-citation. The glossary entry for "the adversary" bans "chaos-
+    figure" and "chaos-monster" as book-voice category-labels; "chaos-
+    figure" appears at narrative L189 and L192, but in both occurrences
+    the term names the rhetoric the chapter is refuting (Ballentine's
+    critique-target) rather than functioning as the book's own category-
+    label. Both occurrences are present in the approved claims at L191
+    and L194 in identical metalinguistic frames; both are permitted in
+    a §V critique-of-rhetoric register. No GLOSSARY-VIOLATION.
+  glossary_renderings_check: |
+    "chaoskampf" rendered consistently in lower-case as the book's term-
+    of-art, with one capitalized "Chaoskampf" at narrative L19 inside
+    quotation in the body-prose discussion of Gunkel's coinage (matches
+    claims-approved L35 byte-identically in the footnote body). Tiamat,
+    Marduk, Yahweh, Leviathan, Rahab, Lotan, Yamm rendered per
+    glossary-locked diacritical conventions. *Enūma Eliš*, *purulli*,
+    *tehôm* / *tehom* italicized as expected (note: claims-approved uses
+    "tehom" without macron at L191; narrative L189 uses "tehôm" with
+    circumflex per glossary lock — narrative is the glossary-correct
+    rendering. The footnote bodies at narrative L189 and claims L191
+    both render "tehom" without diacritic, byte-identically; the
+    body-prose diacritical correction at narrative L189 is consistent
+    with glossary v2 convention).
+
+footnote_integrity:
+  description: |
+    All 62 footnote bodies in the narrative are byte-identical to the
+    corresponding 62 footnote bodies in claims-approved. No additions,
+    no removals, no reassignments. Spot-checks: claim L22 footnote
+    (toc.yaml positioning) → narrative L6 footnote: identical. Claim
+    L75 footnote (preservations + Akitu / purulli liturgical embedding)
+    → narrative L63 footnote: identical. Claim L188 footnote (Leviathan
+    in Job 41 / Rahab in Isaiah 51) → narrative L186 footnote:
+    identical. Claim L242 footnote (closing observation / chaoskampf
+    retention / Ballentine philological complication) → narrative L244
+    footnote: identical. EVIDENCE-token parity: 65 tokens at the same
+    paragraph positions in both files; source_id and loc fields are
+    byte-identical at every site.
+
+findings:
+  - id: NOTE-01
+    kind: note
+    severity: NOTE
+    claim_number: null
+    narrative_location: "L6, L9, L12, L16, L19, L22, L25, L28 (source overview)"
+    issue: |
+      The source-overview body prose makes minor stylistic transformations
+      relative to the claims-approved body prose: asterisk-italic to
+      underscore-italic; em-dash parenthetical phrases split into period-
+      separated sentences; "Vandenhoeck & Ruprecht" rendered as
+      "Vandenhoeck and Ruprecht" at narrative L19; the publisher-city
+      repetition ("Princeton: Princeton University Press") simplified to
+      "published by Princeton University Press" at narrative L12.
+    detail: |
+      All transformations preserve factual meaning. Footnote bodies are
+      byte-identical at every site. The transformations are register-
+      consistent with the chapter's "lighter" reception-history register
+      per the brief's special_instructions.
+    recommended_fix: none (NOTE only; structural register-change permitted by brief)
+  - id: NOTE-02
+    kind: note
+    severity: NOTE
+    claim_number: null
+    narrative_location: "L36, L40, L75, L107, L138, L155, L172, L202, L226"
+    issue: |
+      Nine unfootnoted prose bridges appear in the narrative: one source-
+      overview-closing roadmap, six section-opener bridges (one per §I-§VI
+      with the §VI bridge appearing internally at L226), and two pre-
+      SPECULATION transitional bridges (§IV L155, §V L202).
+    detail: |
+      All nine are reader-orienting transitions or paraphrastic register-
+      bridges; none introduces a factual claim that is not already
+      established by the surrounding claim-paragraph or marker. The
+      pattern is consistent with the previous chapter (ch40 had 7 bridges:
+      1 source-overview-closing + 6 section-opener); ch42 has two
+      additional pre-SPECULATION bridges that frame the §IV and §V
+      analytical framings.
+    recommended_fix: none (NOTE only; permitted transitional pattern)
+  - id: NOTE-03
+    kind: note
+    severity: NOTE
+    claim_number: null
+    narrative_location: "L189, L192 (§V chaos-figure usage)"
+    issue: |
+      The term "chaos-figure" — banned by the glossary entry for "the
+      adversary" as a book-voice category-label — appears at narrative
+      L189 and L192.
+    detail: |
+      In both occurrences "chaos-figure" names the framing the chapter is
+      refuting (Ballentine's critique-target / the contemporary rhetorical
+      deployment that conflates figured adversaries into an unfigured
+      chaos), not the book's own typological category-label. Both
+      occurrences appear byte-identically in the approved claims at
+      L191 and L194 in the same metalinguistic frame. The §V critique-of-
+      rhetoric register requires the term to be quotable and refutable;
+      removing it would damage the §V argument. Not a glossary violation.
+    recommended_fix: none (NOTE only; metalinguistic critique-register usage permitted)
+  - id: NOTE-04
+    kind: note
+    severity: NOTE
+    claim_number: null
+    narrative_location: "L189 (tehôm body-prose) vs claims L191 (tehom body-prose)"
+    issue: |
+      Body-prose diacritic on "tehôm" at narrative L189 (with circumflex)
+      vs claims-approved "tehom" at L191 (no diacritic).
+    detail: |
+      Glossary lock v2 (per scope-lock note 2026-04-24) retains "tehôm"
+      italicised throughout body prose; the narrative's circumflex form
+      is the glossary-correct rendering. Footnote bodies at narrative
+      L189 and claims L191 both render "tehom" without diacritic, byte-
+      identically, so the EVIDENCE-token side is preserved. The body-
+      prose diacritical correction is glossary-fidelity-compliant
+      relative to the locked convention.
+    recommended_fix: none (NOTE only; glossary-correct rendering)
+
+verdict_rationale: |
+  Verdict: PASS. Zero CLAIM-DROPPED, zero CLAIM-ADDED, zero HIGH CLAIM-
+  DISTORTED, zero MEDIUM findings. All 58 paragraph-claims and 4 markers
+  are mapped; all 62 footnotes, 65 EVIDENCE tokens, and 25 COMPARATIVE-
+  HOOK lines are byte-identical at the per-site level; the four markers
+  preserve their basis-and-risk and basis-and-counterargument structure
+  byte-for-byte. The four NOTE-level findings document permitted
+  transitional bridges, register-consistent body-prose stylistic
+  transformations, the §V metalinguistic chaos-figure usage, and one
+  glossary-correct diacritical body-prose correction; none rises to LOW
+  severity by the prompt's verdict rules. The reception-coda register
+  permitted by brief 42-reception-coda.yaml special_instructions
+  (lighter register; non-apologetic popular-culture treatment; sharper
+  §V register against the rhetorical deployment) is honored throughout
+  without compromising claim-to-narrative fidelity.
+
+output_file: chapters/42-reception-coda.fidelity.yaml

@@ -1,0 +1,563 @@
+meta:
+  stage: "15-narrative-fidelity"
+  auditor_model: "claude-opus-4-7[1m]"
+  audit_date: "2026-05-04"
+  claims_file: "chapters/41-C8-refusal-and-appropriation.claims.approved.adoc"
+  narrative_file: "chapters/41-C8-refusal-and-appropriation.adoc"
+  total_claims: 59
+  claims_mapped: 59
+  verdict: PASS
+  honesty_self_check: |
+    Fresh-context audit performed against the claims-approved file as the
+    canonical source; the writer's chapter-draft completion record was not
+    consulted to pre-judge findings. Every paragraph-claim was sequentially
+    mapped from the claims-approved (lines 37..256) onto the corresponding
+    narrative paragraph (lines 6..239), and the five markers, all 59
+    footnote bodies, all 64 EVIDENCE tokens, and all 17 COMPARATIVE-HOOK
+    lines were checked byte-for-byte via in-order diff. The permitted
+    prose additions were enumerated and confirmed (1 source-overview-
+    closing roadmap + 6 section-opener bridges I..VI = 7 unfootnoted
+    prose additions, exactly the pattern the prompt and Ch40 precedent
+    specify). All 3 APPROPRIATION-FLAG markers preserve the four
+    sub-fields (substance | named_specialists | tier_implication |
+    forwards_to) byte-identically; the §IV INFERENCE block uses the
+    locked basis: / risk: schema; the §VI SPECULATION block uses the
+    locked basis: / counterargument: schema. The auditor identified no
+    HIGH and no MEDIUM findings; only structural NOTEs. Verdict PASS.
+  issues_summary:
+    high: 0
+    medium: 0
+    low: 0
+    note: 4
+
+check_1_completeness:
+  description: |
+    Every paragraph-claim from claims-approved is mapped to a narrative
+    location in the same sequence; footnote, EVIDENCE, COMPARATIVE-HOOK,
+    and marker counts all reach byte-level parity.
+  claims_mapped_count: 59
+  claims_mapped_to_narrative_lines:
+    source_overview:
+      claim_01_lines_37: narrative_line_6     # Source overview opener (Part-II methodological consummation)
+      claim_02_lines_40: narrative_line_9     # Five Part-I chapters drawn on; per-tradition source-IDs
+      claim_03_lines_44: narrative_line_13    # Four anchor sources (Merlan, Hallowell, Biebuyck/Mateene, Siikala)
+      claim_04_lines_48: narrative_line_17    # Named area-specialists not in sources.yaml (Radcliffe-Brown, Morphy, Rose, Keen, Johnston, Smith, Vizenor)
+      claim_05_lines_51: narrative_line_20    # Forsyth + Ballentine comparative anchors
+      claim_06_lines_55: narrative_line_24    # Evidentiary discipline (single-token default)
+      claim_07_lines_58: narrative_line_27    # Six-section structure outline
+      claim_08_lines_61: narrative_line_30    # Central methodological commitment (area-specialists speak first)
+      claim_09_lines_64: narrative_line_33    # Chapter self-awareness about book's own limits
+      hooks_lines_67_68: narrative_lines_36_37 # C7-Ch40 + C1-Ch34 source-overview hooks
+      bridge_at_narrative_line_39: source-overview-closing roadmap (1 of 7 permitted)
+    section_I_rainbow_serpent_anchor_case:
+      bridge_at_narrative_line_43: §I opener bridge (2 of 7 permitted)
+      claim_10_lines_72: narrative_line_45    # "Rainbow Serpent" as 20th-century scholarly construct (Radcliffe-Brown 1926; Merlan 1998)
+      claim_11_lines_75: narrative_line_48    # Regionally distinct ancestral beings (Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul; Merlan/Morphy/Rose/Keen)
+      claim_12_lines_78: narrative_line_51    # Named beings differ load-bearingly per regional area-specialist scholarship
+      claim_13_lines_81: narrative_line_54    # Radcliffe-Brown 1926 as structural-functionalist project; dismantled by ethnographic literature
+      claim_14_lines_84: narrative_line_57    # Methodological-historical situation; recording-history as part of appropriation problem
+      claim_15_lines_87: narrative_line_60    # Chaoskampf-relevant feature; area-specialist dismantling = refusal of typological extension
+      claim_16_lines_90: narrative_line_63    # Distinctive contribution: appropriation problem in purest form; category itself
+      marker_appflag_lines_93: narrative_line_66 # APPROPRIATION-FLAG: Rainbow Serpent (Merlan/Morphy/Rose/Keen/Radcliffe-Brown)
+      claim_17_lines_95: narrative_line_68    # Rainbow Serpent prepares §§II-III; appropriation tendency at multiple levels
+      hooks_lines_98_99: narrative_lines_71_72 # C1-Ch34 + C7-Ch40 §I hooks
+    section_II_anishinaabe_principled_refusal:
+      bridge_at_narrative_line_76: §II opener bridge (3 of 7 permitted)
+      claim_18_lines_103: narrative_line_78   # Anishinaabe trickster-culture-hero Nanabozho; encounters with Mishipeshu and the Thunderers; four area-specialist anchors
+      claim_19_lines_106: narrative_line_81   # "Other-than-human persons" framework (Hallowell 1960 from Berens River fieldwork)
+      claim_20_lines_109: narrative_line_84   # Thunderer / Underwater-manitou dialectic (Smith 1995); layered cosmographic equilibrium
+      claim_21_lines_112: narrative_line_87   # Reciprocal-counterpart character of dialectic as load-bearing; offerings, ritual address
+      claim_22_lines_115: narrative_line_90   # Mishipeshu's chaoskampf-relevant features; area-specialist refusal of chaos-adversary identification
+      claim_23_lines_118: narrative_line_93   # Nanabozho's encounters as pedagogical-and-reciprocal rather than triumphal
+      claim_24_lines_121: narrative_line_96   # Vizenor 1989 "Trickster Discourse" anchor for methodological refusal
+      claim_25_lines_124: narrative_line_99   # Anishinaabe refusal not of comparison but of specific apparatus; substitution of relational apparatus
+      claim_26_lines_127: narrative_line_102  # Anishinaabe material as contrastive-tier (full); refusal at categorical apparatus level
+      marker_appflag_lines_130: narrative_line_105 # APPROPRIATION-FLAG: Nanabozho/Mishipeshu (Hallowell/Johnston/Smith/Vizenor)
+      claim_27_lines_132: narrative_line_107  # Distinctive contribution: typology fails at encounter-framing level
+      hooks_lines_135_136: narrative_lines_110_111 # C1-Ch34 + C7-Ch40 §II hooks
+    section_III_mwindo_revisited:
+      bridge_at_narrative_line_115: §III opener bridge (4 of 7 permitted)
+      claim_28_lines_140: narrative_line_117  # Nyanga oral epic of Mwindo (1956 Bese recording from Shé-Kárisi Candi Rureke; Biebuyck and Mateene 1969)
+      claim_29_lines_143: narrative_line_120  # Mwindo epic's own pedagogy as structured instruction (Biebuyck/Mateene + Belcher)
+      claim_30_lines_146: narrative_line_123  # Nkuba's lightning-seizing as narrative's own moral correction
+      claim_31_lines_149: narrative_line_126  # Conditions Nkuba imposes; content of epic's pedagogy
+      claim_32_lines_152: narrative_line_129  # Fuller methodological implication: pedagogy is specifically Nyanga
+      claim_33_lines_155: narrative_line_132  # Mwindo refusal at level of moral evaluation of existing combat-narrative
+      claim_34_lines_158: narrative_line_135  # Only case where surface agrees but meaning differs (cosmos-establishing vs hubris)
+      marker_appflag_lines_161: narrative_line_139 # APPROPRIATION-FLAG: Mwindo/Kirimu (Biebuyck/Mateene/Belcher)
+      claim_35_lines_164: narrative_line_141  # Distinctive contribution: meaning-within-framing as level of appropriation
+      hooks_lines_167_168: narrative_lines_144_145 # C7-Ch40 + C5-Ch38 §III hooks
+    section_IV_kalevala_lonnrot:
+      bridge_at_narrative_line_149: §IV opener bridge (5 of 7 permitted)
+      claim_36_lines_172: narrative_line_151  # Iku-Turso material; two-layer textual situation; Lönnrot as nineteenth-century compiler
+      claim_37_lines_175: narrative_line_154  # Siikala 2002 anchor; older-rune / Lönnrot-synthesis distinction; binding-by-song
+      claim_38_lines_178: narrative_line_157  # Older rune-tradition material as laconic, fragmentary, regionally variable; rune-collectors
+      claim_39_lines_181: narrative_line_160  # Lönnrot's 1835/1849 Kalevala as editorial syntheses; compositional decisions
+      claim_40_lines_184: narrative_line_163  # Iku-Turso "binding" episode as partly older rune material + partly Lönnrot's compositional synthesis
+      claim_41_lines_187: narrative_line_166  # Species of appropriation distinct from §§I-III in three respects
+      marker_inference_lines_190: narrative_line_169 # INFERENCE: Lönnrot as "different kind of appropriation"
+      claim_42_lines_192: narrative_line_171  # Distinctive contribution: appropriation can begin in source-text construction
+      claim_43_lines_195: narrative_line_174  # Chapter's claim about "Finnic chaoskampf" disciplined by two-layer situation
+      hooks_lines_198_199: narrative_lines_177_178 # C5-Ch38 + C7-Ch40 §IV hooks
+    section_V_bakunawa_communal_case:
+      bridge_at_narrative_line_182: §V opener bridge (6 of 7 permitted)
+      claim_44_lines_203: narrative_line_184  # Visayan and Bikol Philippine oral tradition of Bakunawa; seven moons; communal noise-making (Eugenio 2001)
+      claim_45_lines_206: narrative_line_187  # Surface motif fits but load-bearing apparatus does not (no hero, no slaying, communal, recurring)
+      claim_46_lines_209: narrative_line_190  # Communal-and-recurring engagement as load-bearing; ritual noise-making as continuing practice
+      claim_47_lines_212: narrative_line_193  # Bakunawa as inclusion-marginal; lacks hero, slaying, once-and-done establishment
+      claim_48_lines_215: narrative_line_196  # Relevance: chaoskampf typology's inclusion practices (which cases count, on what criteria)
+      claim_49_lines_218: narrative_line_199  # Excluding case = different kind of error; include while marking inclusion-marginal
+      claim_50_lines_221: narrative_line_202  # Mapuche Kai-Kai vs. Tren-Tren as supporting case (Koessler-Ilg, Foerster); regional variation; layered cosmography
+      claim_51_lines_225: narrative_line_206  # Combined effect: alternative-structural-pattern cases as load-bearing
+      hooks_lines_228_229: narrative_lines_209_210 # C3-Ch36 + C7-Ch40 §V hooks
+    section_VI_what_refusal_teaches:
+      bridge_at_narrative_line_214: §VI opener bridge (7 of 7 permitted)
+      claim_52_lines_233: narrative_line_216  # Five cases together teach three methodological-typological lessons
+      claim_53_lines_236: narrative_line_219  # First lesson: appropriation problem operates at multiple levels
+      claim_54_lines_239: narrative_line_222  # Second lesson: comparativist project does not require every tradition to fit
+      claim_55_lines_242: narrative_line_225  # Third lesson: refusing comparison on typology's standard terms = principled comparison
+      marker_speculation_lines_245: narrative_line_228 # SPECULATION: third lesson in strong form
+      claim_56_lines_247: narrative_line_230  # Three lessons together support area-specialists-speak-first commitment
+      claim_57_lines_250: narrative_line_233  # Self-aware engagement with colonial / universalising criticism
+      claim_58_lines_253: narrative_line_236  # Inversion problem and appropriation problem as same problem at different levels
+      claim_59_lines_256: narrative_line_239  # Closing observation: typology robust at strong-centre and disciplined at edges
+      hooks_lines_259_262: narrative_lines_242_245 # C1/C2/C3/C5/C7 §VI hooks
+  footnote_count_audit:
+    claims_count: 59
+    narrative_count: 59
+    method: "grep -c 'footnote:\\[' on both files; in-order diff of all 59 footnote bodies via the per-paragraph-text comparison"
+    diff_result: "zero differences"
+    status: PASS
+  evidence_token_count_audit:
+    claims_count: 64
+    narrative_count: 64
+    method: "grep -c '// EVIDENCE:' on both files; in-order diff of source_id+loc tokens"
+    diff_result: "zero differences"
+    status: PASS
+  comparative_hook_count_audit:
+    claims_count: 17
+    narrative_count: 17
+    method: "grep -c '// COMPARATIVE-HOOK:' on both files; in-order diff"
+    diff_result: "zero differences"
+    status: PASS
+  marker_count_audit:
+    appropriation_flag_claims: 3
+    appropriation_flag_narrative: 3
+    speculation_claims: 1
+    speculation_narrative: 1
+    inference_claims: 1
+    inference_narrative: 1
+    variant_claims: 0
+    variant_narrative: 0
+    lacuna_claims: 0
+    lacuna_narrative: 0
+    reconstruction_claims: 0
+    reconstruction_narrative: 0
+    total_markers_claims: 5
+    total_markers_narrative: 5
+    method: "grep -c on each marker token type; in-order diff of marker contents; pipe-field counts verified per marker"
+    diff_result: "zero differences"
+    status: PASS
+  section_count_audit:
+    expected: 7  # Source overview + §§I-VI
+    found: 7
+    headings_match_claims: PASS
+    status: PASS
+  status: PASS
+
+check_2_no_additions:
+  description: |
+    Permitted prose additions: 1 source-overview-closing roadmap + 6
+    numbered-section bridges (I-VI) = 7 expected. The additions are
+    structural reader-orienting summaries that restate (in non-claim
+    prose) the section's argument that is then developed in the claim
+    paragraphs that follow; they introduce no new factual assertions
+    and add no attributions. APPROPRIATION-FLAG byte-identity with all
+    four sub-fields; INFERENCE basis/risk schema and SPECULATION
+    basis/counterargument schema; area-specialist-first discipline at
+    §I, §II, and §III; banned-term scoping; cross-references; named-but-
+    flagged scholar convention.
+  permitted_prose_additions:
+    expected: 7
+    found: 7
+    enumeration:
+      - { id: bridge_1, location: narrative_line_39, type: source-overview-closing-roadmap, function: "What follows is organised in six body sections..." }
+      - { id: bridge_2, location: narrative_line_43, type: §I-opener-bridge, function: "The Rainbow Serpent case is the chapter's anchor for the appropriation problem in its purest form..." }
+      - { id: bridge_3, location: narrative_line_76, type: §II-opener-bridge, function: "The Anishinaabe case is the chapter's most principled area-specialist refusal..." }
+      - { id: bridge_4, location: narrative_line_115, type: §III-opener-bridge, function: "Section III revisits the Nyanga material that Ch29 anchored and Ch40 §II registered..." }
+      - { id: bridge_5, location: narrative_line_149, type: §IV-opener-bridge, function: "The Kalevala question presents a different species of appropriation..." }
+      - { id: bridge_6, location: narrative_line_182, type: §V-opener-bridge, function: "Section V addresses the chapter's inclusion-marginal case..." }
+      - { id: bridge_7, location: narrative_line_214, type: §VI-opener-bridge, function: "The chapter closes with three methodological lessons drawn from §§I-V..." }
+    no_other_unfootnoted_body_prose: true
+    status: PASS
+  bridge_content_review:
+    description: |
+      Each bridge restates a structural / argumentative point that is
+      developed (with footnote attribution) in the immediately following
+      claim paragraphs. None introduces a new factual assertion not
+      represented in the canonical claims; all are reader-orienting
+      transitions consistent with the prompt's allowance for
+      "transitions, not explanatory asides, not reader-orienting context"
+      that introduce no new information.
+    bridge_1_source_overview_roadmap:
+      content_summary: "Six-section structural outline previewing what each section addresses."
+      restates_claim_07_lines_58: yes (the structural outline of §§I-VI is also the canonical claim's content)
+      adds_new_facts: false
+      status: PASS
+    bridge_2_§I:
+      content_summary: "Rainbow Serpent case is the appropriation problem in its purest form; comparative item turns out to be a 20th-century scholarly construct."
+      restates_claim_10_lines_72_and_claim_16_lines_90: yes (both canonical claims register this exact thesis)
+      adds_new_facts: false
+      status: PASS
+    bridge_3_§II:
+      content_summary: "Anishinaabe case is the most principled refusal; refusal at the level of encounter-framing apparatus itself."
+      restates_claim_26_lines_127_and_claim_27_lines_132: yes (both canonical claims register this exact thesis)
+      adds_new_facts: false
+      status: PASS
+    bridge_4_§III:
+      content_summary: "§III revisits Nyanga material; pedagogy is specifically Nyanga; meaning-within-framing as level of appropriation."
+      restates_claim_32_lines_152_and_claim_35_lines_164: yes (both canonical claims register this exact thesis)
+      adds_new_facts: false
+      status: PASS
+    bridge_5_§IV:
+      content_summary: "Kalevala question; Lönnrot as known historical figure; appropriation within source-text construction."
+      restates_claim_36_lines_172_and_claim_41_lines_187_and_claim_42_lines_192: yes (all three canonical claims register this thesis)
+      adds_new_facts: false
+      status: PASS
+    bridge_6_§V:
+      content_summary: "Bakunawa as chapter's inclusion-marginal case; surface motif fits but load-bearing apparatus does not."
+      restates_claim_45_lines_206_and_claim_47_lines_212: yes (both canonical claims register this thesis)
+      adds_new_facts: false
+      status: PASS
+    bridge_7_§VI:
+      content_summary: "Closing with three methodological lessons; book's settled position; typology robust at strong-centre + disciplined at edges."
+      restates_claim_52_lines_233_and_claim_59_lines_256: yes (both canonical claims register this thesis)
+      adds_new_facts: false
+      status: PASS
+    status: PASS
+  appropriation_flag_marker_audit:
+    description: All 3 APPROPRIATION-FLAG markers byte-identical with claims-approved, with all four sub-fields (substance | named_specialists | tier_implication | forwards_to) preserved.
+    marker_1_§I_rainbow_serpent:
+      location_narrative: line_66
+      location_claims: line_93
+      sub_fields_present: [substance, named_specialists, tier_implication, forwards_to]
+      named_specialists_listed: [Merlan, Morphy (named-but-flagged), Rose (named-but-flagged), Keen (named-but-flagged), Radcliffe-Brown (named-but-flagged originator)]
+      byte_identity_with_claims: PASS
+      status: PASS
+    marker_2_§II_nanabozho_mishipeshu:
+      location_narrative: line_105
+      location_claims: line_130
+      sub_fields_present: [substance, named_specialists, tier_implication, forwards_to]
+      named_specialists_listed: [Hallowell, Johnston (Ojibway Heritage 1976/1990 + Manitous 1995), T. Smith, Vizenor]
+      byte_identity_with_claims: PASS
+      status: PASS
+    marker_3_§III_mwindo:
+      location_narrative: line_139
+      location_claims: line_161
+      sub_fields_present: [substance, named_specialists, tier_implication, forwards_to]
+      named_specialists_listed: [Biebuyck, Mateene, Belcher, Biebuyck-1978-Hero-and-Chief (named-but-flagged)]
+      byte_identity_with_claims: PASS
+      status: PASS
+    method: "extracted all '[APPROPRIATION-FLAG: ...]' tokens via grep; in-order diff against claims-approved; all 3 markers byte-identical with all four pipe-separated sub-field labels present"
+    status: PASS
+  inference_marker_audit:
+    description: §IV Lönnrot "different kind of appropriation" classification INFERENCE block; basis: / risk: schema.
+    location_narrative: line_169
+    location_claims: line_190
+    sub_fields_present: [basis, risk]
+    risk_substantive: true (alternative framings would treat Lönnrot's editorial synthesis as belonging to a different problem-domain — textual editing; nineteenth-century nationalism; folkloristics — rather than as a species of the appropriation problem)
+    byte_identity_with_claims: PASS
+    status: PASS
+  speculation_marker_audit:
+    description: §VI third-lesson strong-form SPECULATION block; basis: / counterargument: schema.
+    location_narrative: line_228
+    location_claims: line_245
+    sub_fields_present: [basis, counterargument]
+    counterargument_substantive: true (defender of more elastic chaoskampf typology could read refusal cases as evidence for broader typological category — combat-and-encounter-myth with both adversarial and reciprocal-counterpart subtypes — within which area-specialist objections register as subtype-classifications rather than refusals)
+    byte_identity_with_claims: PASS
+    status: PASS
+  area_specialist_first_discipline:
+    description: |
+      Per brief special_instructions; load-bearing. §I (Rainbow Serpent),
+      §II (Nanabozho/Mishipeshu), and §III (Mwindo revisited) must each
+      open with multi-paragraph area-specialist framing BEFORE invoking
+      the chaoskampf-typological extension; per scope.md §"Appropriation
+      protocol" every Anishinaabe / Aboriginal-Australian / Nyanga claim
+      must cite a named area specialist in body prose.
+    section_I_rainbow_serpent:
+      area_specialist_paragraphs_before_typological_critique: 5
+      paragraph_lines: [45, 48, 51, 54, 57]
+      content: "Pan-Aboriginal Rainbow Serpent as 20th-century scholarly construct (Radcliffe-Brown 1926); regionally distinct ancestral beings (Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul) per Merlan/Morphy/Rose/Keen; load-bearing differences treated as load-bearing by area-specialist scholarship; structural-functionalist project dismantled; methodological-historical situation"
+      typological_critique_first_invocation_at_line: 60
+      typological_phrase: "The Rainbow Serpent consolidation's specifically chaoskampf-relevant feature is that it has been used in twentieth-century comparative-mythology scholarship as an Aboriginal-Australian addition to the chaoskampf typology..."
+      area_specialists_named_in_body_prose: [Radcliffe-Brown, Merlan, Morphy, Rose, Keen]
+      status: PASS
+    section_II_nanabozho_mishipeshu:
+      area_specialist_paragraphs_before_typological_critique: 8
+      paragraph_lines: [78, 81, 84, 87, 90, 93, 96, 99]
+      content: "Nanabozho's encounters with Mishipeshu and the Thunderers presented within Anishinaabe ontological framework of 'other-than-human persons' (Hallowell 1960); Berens River fieldwork; Thunderer / Underwater-manitou dialectic (Smith 1995); reciprocal-counterpart character; Mishipeshu's surface features and area-specialist refusal of chaos-adversary identification; pedagogical-and-reciprocal encounters; Vizenor's methodological refusal; Anishinaabe refusal as substitution of relational apparatus"
+      typological_critique_first_invocation_at_line: 102
+      typological_phrase: "The Nanabozho / Mishipeshu / Thunderers material is, in the present book's classification, the contrastive-tier (full) case in which the area-specialist refusal is the most principled..."
+      area_specialists_named_in_body_prose: [Hallowell, Johnston, T. Smith, Vizenor]
+      status: PASS
+    section_III_mwindo:
+      area_specialist_paragraphs_before_typological_critique: 4
+      paragraph_lines: [117, 120, 123, 126]
+      content: "1956 Bese recording from Shé-Kárisi Candi Rureke; Biebuyck and Mateene 1969 critical edition; Mwindo epic's own pedagogy as structured instruction (Biebuyck/Mateene + Belcher); Nkuba's lightning-seizing as narrative's own moral correction; conditions of return as content of pedagogy"
+      typological_critique_first_invocation_at_line: 129
+      typological_phrase: "The fuller methodological implication of the Mwindo material that the present chapter's §III develops, beyond the moral-valence-inversion observation that Ch40 §II registered, is that the epic's pedagogy is *specifically Nyanga*..."
+      area_specialists_named_in_body_prose: [Biebuyck, Mateene, Belcher]
+      status: PASS
+    status: PASS
+  banned_term_scoping:
+    description: |
+      Glossary terms.adversary.never_use bans 'chaos-figure' / 'chaos-monster';
+      glossary.cosmogony.never_use bans 'creation myth (used only informally)';
+      glossary.Chaoskampf.never_use bans 'dragon myth' / 'dragon-slaying myth'.
+      Bare-and-unmarked occurrences in body prose = MEDIUM.
+    chaos_figure_chaos_monster_chaos_adversary:
+      narrative_occurrences_total: 5
+      classification:
+        - location: narrative_line_99 (body-prose)
+          phrase: "(chaos-figure vs. cosmos-figure; serpent vs. champion)"
+          context: "Quoting / describing the chaoskampf typology's adversarial-pairs apparatus that the chapter is critiquing; the parenthetical lists the typology's own categories as the chapter argues against them; byte-identical with claims line 124. Used in scholarly description of the apparatus being refused, not as the chapter's own reference to a figure."
+          policy_compliant: true (descriptive-of-the-apparatus-being-critiqued use; the chapter's argument depends on naming the typology's own categorical pairs)
+        - location: narrative_line_90 (body-prose); narrative_line_99 (body-prose); narrative_line_102 (body-prose)
+          phrase: "chaos-adversary"
+          context: "Used at three points to describe the typology's category to which area-specialists refuse to assign Mishipeshu / Anishinaabe material; each occurrence describes the typology being refused, not the chapter's positive identification of any figure as chaos-adversary; byte-identical with claims lines 115, 124, 127. The glossary's 'never_use' for 'the adversary (category term)' bans 'chaos-figure' / 'chaos-monster' specifically; 'chaos-adversary' is not in the never_use list and is used to name the typology-category that the area-specialists refuse."
+          policy_compliant: true (descriptive of the category being refused; not the book's own positive use)
+      effective_unauthorised_bare_chaos_figure_count_in_body_prose: 0
+      status: PASS
+    creation_myth_in_body_prose:
+      narrative_occurrences: 0
+      status: PASS
+    dragon_myth_dragon_slaying_myth:
+      narrative_occurrences:
+        - location: narrative_line_187 (body-prose)
+          phrase: '"world dragon-myths"'
+          context: "Scare-quoted as the title-phrase of twentieth-century comparative-mythology surveys that have included the Bakunawa case on surface-similarity grounds; the chapter is critiquing this very inclusion; byte-identical with claims line 206. Quoted as a third-party survey-category, not the book's own use."
+          policy_compliant: true (scare-quoted attribution to external surveys whose surface-similarity inclusion is being critiqued)
+      effective_unauthorised_bare_dragon_myth_count_in_body_prose: 0
+      status: PASS
+    status: PASS
+  cross_reference_resolution:
+    forward_refs:
+      - { ref: "C8 (Ch41)", note: "self-reference; narrative is C8 itself" }
+    back_refs:
+      - { ref: "Ch27 (Mapuche Kai-Kai vs. Tren-Tren)", resolves_in_toc_yaml: true }
+      - { ref: "Ch28 (Bida)", resolves_in_toc_yaml: true }
+      - { ref: "Ch29 (Mwindo and Kirimu)", resolves_in_toc_yaml: true }
+      - { ref: "Ch30 (Bakunawa)", resolves_in_toc_yaml: true }
+      - { ref: "Ch31 (Väinämöinen and Iku-Turso)", resolves_in_toc_yaml: true }
+      - { ref: "Ch32 (Nanabozho and Mishipeshu)", resolves_in_toc_yaml: true }
+      - { ref: "Ch34 (C1 cosmogony)", resolves_in_toc_yaml: true }
+      - { ref: "Ch35 (C2 sovereignty)", resolves_in_toc_yaml: true }
+      - { ref: "Ch36 (C3 cyclical maintenance)", resolves_in_toc_yaml: true }
+      - { ref: "Ch38 (C5 IE HERO SLAY SERPENT)", resolves_in_toc_yaml: true }
+      - { ref: "Ch40 (C7 inversion problem)", resolves_in_toc_yaml: true }
+    status: PASS
+  scholar_attribution_in_body_prose:
+    description: |
+      Every named scholar in body prose either appears in a footnote that
+      points to a real source registered in sources.yaml, or is named-but-
+      flagged per the brief and source overview's named-but-flagged
+      convention. Per scope.md §"Appropriation protocol" every Anishinaabe /
+      Aboriginal-Australian / Nyanga claim cites a named area specialist in
+      body prose; the chapter satisfies this for all three traditions.
+    sources_yaml_resolution:
+      merlan-caging-rainbow: RESOLVES
+      hallowell-ojibwa-world: RESOLVES
+      johnston-ojibway-heritage: RESOLVES
+      johnston-manitous: RESOLVES
+      smith-island-anishnaabeg: RESOLVES
+      vizenor-narrative-chance: RESOLVES
+      biebuyck-mateene-mwindo: RESOLVES
+      belcher-epic: RESOLVES
+      siikala-finnish: RESOLVES
+      eugenio-philippine-myths: RESOLVES
+      koessler-ilg-cuentan: RESOLVES
+      foerster-religiosidad-mapuche: RESOLVES
+      forsyth-1987: RESOLVES
+      ballentine-2015: RESOLVES
+    named_but_flagged_scholars_list:
+      - A. R. Radcliffe-Brown (§I; named-but-flagged per the chapter's source-overview disclosure; not in sources.yaml; named in body prose at lines 45, 48, 51, 54, 57, 60; declared in footnote bodies)
+      - Howard Morphy (§I; named-but-flagged per source-overview; not in sources.yaml; named in body prose at lines 39, 48, 51; declared in footnote bodies)
+      - Deborah Bird Rose (§I; named-but-flagged per source-overview; not in sources.yaml; named in body prose at lines 39, 48; declared in footnote bodies)
+      - Ian Keen (§I; named-but-flagged per source-overview; not in sources.yaml; named in body prose at lines 39, 48; declared in footnote bodies)
+      - Hermann Gunkel (referenced in source-overview at line 17 as the originating chaoskampf framing; not in body prose §§I-V; not the chapter's anchor; covered by gunkel-1895 in sources.yaml)
+    status: PASS
+  status: PASS
+
+check_3_fidelity:
+  description: |
+    All 5 markers preserved character-for-character with all pipe-fields
+    intact; glossary discipline (italicised foreign common nouns) checked
+    per Hard rule 6; footnote integrity verified by in-order diff. The
+    narrative paragraphs map byte-for-byte onto the claims-approved
+    paragraphs (excluding the 7 permitted bridge additions).
+  marker_byte_identity:
+    method: "extracted all '[(APPROPRIATION-FLAG|SPECULATION|INFERENCE|VARIANT|LACUNA|RECONSTRUCTION):...]' tokens via grep -E; in-order diff against claims-approved (filtering out trailing comment-block summary references in claims header)"
+    diff_result: "zero differences"
+    status: PASS
+  glossary_italicisation_audit:
+    convention: |
+      Per Hard rule 6: foreign-language common nouns in body prose use
+      _term_ italic markup. The narrative preserves the claims-approved's
+      *Animikiig* / *djang* / *Kalevala* / *Caging the Rainbow* etc.
+      asterisk-bold styling unchanged. Per glossary 'Animikiig',
+      'manitou / manitouk / aadizookaanag', 'Mishipeshu', 'Nanabozho',
+      'Nkuba', 'Mwindo', 'Kirimu', 'Iku-Turso', 'Väinämöinen', 'Kalevala',
+      'Bakunawa', 'Kai-Kai / Tren-Tren', 'wak'a' first-mention glosses
+      are all routed through footnote-attribution per the established
+      Part-II discipline.
+    body_prose_foreign_terms:
+      Animikiig: present at narrative_line_78 ("the Anishinaabe thunder-beings; *Animikiig* in the Anishinaabe-language register"); preserves claims styling
+      djang: present at narrative_line_51 ("particular *djang* (Dreaming) sites"); preserves claims styling
+      manitouk: present at narrative_line_78, 81, 87, 93 (multiple body-prose occurrences); preserves claims styling
+      status: PASS
+    foreign_term_first_mention_glosses_preserved:
+      - { term: "Nanabozho", body_first_mention: "narrative_line_78", gloss: "spelling varies — Nanabush, Wenebojo, Wisakedjak, Manabozho", status: PASS }
+      - { term: "Mishipeshu", body_first_mention: "narrative_line_78 (within paragraph)", gloss: "underwater manitou; horned-and-spined body, long tail, copper-related associations; sometimes glossed as 'Underwater Panther' or 'Great Lynx'", status: PASS }
+      - { term: "the Thunderers / Animikiig", body_first_mention: "narrative_line_78", gloss: "Anishinaabe thunder-beings; *Animikiig* in the Anishinaabe-language register", status: PASS }
+      - { term: "Mwindo", body_first_mention: "narrative_line_117", gloss: "Nyanga oral epic hero; recorded 1956 from Shé-Kárisi Candi Rureke", status: PASS }
+      - { term: "Kirimu", body_first_mention: "narrative_line_117 (within paragraph)", gloss: "the dragon Mwindo kills; the killing registered as hubris", status: PASS }
+      - { term: "Nkuba", body_first_mention: "narrative_line_120 (within paragraph)", gloss: "the sky-god whose lightning-seizing punishes Mwindo", status: PASS }
+      - { term: "Iku-Turso", body_first_mention: "narrative_line_151", gloss: "Finnic sea-monster subdued by Väinämöinen", status: PASS }
+      - { term: "Väinämöinen", body_first_mention: "narrative_line_151", gloss: "Finnic shaman-sage hero", status: PASS }
+      - { term: "Kalevala", body_first_mention: "narrative_line_147 (in section heading); body line 151", gloss: "Lönnrot's 1835 / 1849 Finnish national epic", status: PASS }
+      - { term: "Bakunawa", body_first_mention: "narrative_line_184", gloss: "Visayan and Bikol Philippine serpent-dragon; devours moons during eclipses", status: PASS }
+      - { term: "Kai-Kai / Tren-Tren", body_first_mention: "narrative_line_202", gloss: "Mapuche serpent-and-flood narrative", status: PASS }
+    status: PASS
+  footnote_integrity:
+    method: "extracted all 'footnote:[...]' tokens via grep; in-order diff against claims-approved"
+    claims_count: 59
+    narrative_count: 59
+    diff_result: "zero differences"
+    status: PASS
+  status: PASS
+
+verdict_rationale: |
+  PASS. All three load-bearing checks return clean parity. Check 1
+  (completeness): all 59 paragraph-claims map sequentially from the
+  claims-approved file (lines 37..256) to the narrative (lines 6..239);
+  the 59 footnote bodies, 64 EVIDENCE tokens, and 17 COMPARATIVE-HOOK
+  lines all show byte-level identity in order via in-order diff; the 5
+  markers (3 APPROPRIATION-FLAG + 1 INFERENCE + 1 SPECULATION) match
+  byte-for-byte with all pipe-fields preserved; section count (7) and
+  heading-text match. Check 2 (no additions): the 7 expected permitted
+  prose additions (1 source-overview-closing roadmap + 6 section-opener
+  bridges I..VI) are all present and confined to the prompt's permitted
+  scope; no other unfootnoted prose appears in body sections; each
+  bridge is a structural reader-orienting summary that restates a
+  thesis developed in the immediately following claim paragraphs and
+  introduces no new factual assertion or attribution; all 3
+  APPROPRIATION-FLAG markers preserve the four sub-fields (substance |
+  named_specialists | tier_implication | forwards_to) byte-identically
+  across §I (Merlan/Morphy/Rose/Keen/Radcliffe-Brown), §II
+  (Hallowell/Johnston/Smith/Vizenor), and §III (Biebuyck/Mateene/
+  Belcher); the §IV INFERENCE block uses the locked basis: / risk:
+  schema with substantive risk-content; the §VI SPECULATION block
+  uses the locked basis: / counterargument: schema with substantive
+  counter-content; the area-specialist-first discipline is observed at
+  §I (5 Aboriginal-Australian-framing paragraphs at lines 45-57 BEFORE
+  the chaoskampf-typological-extension critique at line 60), at §II
+  (8 Anishinaabe-framing paragraphs at lines 78-99 BEFORE the
+  contrastive-tier classification at line 102), and at §III (4
+  Nyanga-framing paragraphs at lines 117-126 BEFORE the fuller
+  methodological implication at line 129); banned-term scoping is
+  policy-compliant (the 'chaos-figure vs. cosmos-figure' parenthetical
+  at line 99 byte-identical with claims line 124 describes the
+  typology's own apparatus that the chapter is critiquing; the
+  'chaos-adversary' references at lines 90/99/102 byte-identical with
+  claims lines 115/124/127 describe the typology-category to which
+  area-specialists refuse to assign the Anishinaabe / Mwindo material;
+  the scare-quoted "world dragon-myths" at line 187 byte-identical with
+  claims line 206 is an external survey-category being critiqued); no
+  unauthorised bare 'chaos-figure' / 'chaos-monster' / 'creation myth'
+  / 'dragon myth' tokens; cross-references to Chs 27, 28, 29, 30, 31,
+  32, 34, 35, 36, 38, 40 all resolve in toc.yaml; all 14 source_ids
+  resolve in sources.yaml; named-but-flagged scholars (Radcliffe-Brown,
+  Morphy, Rose, Keen) appear in body prose only where the source-
+  overview's named-but-flagged disclosure licenses their appearance,
+  and no EVIDENCE token is routed through them (each Aboriginal-
+  Australian EVIDENCE token routes through merlan-caging-rainbow per
+  the named-but-flagged secondary-anchor pattern). Check 3 (fidelity):
+  markers byte-identical; glossary discipline (italic _term_ in body
+  prose, asterisk-style preserved in footnotes / EVIDENCE locs / marker
+  contents per Hard rule 6 verbatim-preservation) consistently applied;
+  footnote bodies byte-identical in order. Total findings: 0 HIGH,
+  0 MEDIUM, 0 LOW, 4 NOTE (structural observations only). Verdict PASS.
+
+issues:
+  - id: NOTE-01
+    severity: NOTE
+    location: narrative_line_39 (source-overview-closing roadmap paragraph)
+    finding: |
+      The roadmap paragraph performs the prompt-permitted source-overview-
+      closing roadmap function, restating the §28 structural-outline
+      claim's section-by-section content (claim_07 at claims line 58) in
+      non-claim prose form. It introduces no new claims and adds no
+      attributions; every section it previews is then developed with
+      its own claim-paragraphs and footnotes. Structural observation
+      only — the roadmap matches the Ch40 §closing-roadmap precedent.
+    action: none
+  - id: NOTE-02
+    severity: NOTE
+    location: narrative_lines_43, 76, 115, 149, 182, 214 (six §-opener bridges)
+    finding: |
+      Each section-opener bridge is a one-or-two-sentence structural
+      reader-orienting paragraph that restates the section's principal
+      thesis (the thesis is then developed in the immediately following
+      claim paragraphs with their canonical footnote attributions).
+      None introduces a new factual assertion. The §I bridge restates
+      claim_10 / claim_16 (Rainbow Serpent as 20th-century scholarly
+      construct in its purest form); §II restates claim_26 / claim_27
+      (Anishinaabe refusal at the level of encounter-framing apparatus);
+      §III restates claim_32 / claim_35 (Nyanga pedagogy specifically
+      Nyanga; meaning-within-framing as level of appropriation); §IV
+      restates claim_36 / claim_41 / claim_42 (Lönnrot as known
+      historical figure, intervention within source-text construction);
+      §V restates claim_45 / claim_47 (Bakunawa inclusion-marginal,
+      surface motif fits but apparatus does not); §VI restates
+      claim_52 / claim_59 (three lessons; typology robust at strong-
+      centre and disciplined at edges). Structural observation only.
+    action: none
+  - id: NOTE-03
+    severity: NOTE
+    location: full-chapter (area-specialist-first discipline)
+    finding: |
+      The chapter's load-bearing methodological commitment — area-
+      specialists speak first — is observed with the kind of multi-
+      paragraph patience the brief special_instructions require. §I
+      gives 5 Aboriginal-Australian-framing paragraphs (Radcliffe-
+      Brown / Merlan / Morphy / Rose / Keen anchors) before the
+      chaoskampf-typological-extension critique is registered; §II
+      gives 8 Anishinaabe-framing paragraphs (Hallowell / Johnston /
+      Smith / Vizenor anchors) before the contrastive-tier
+      classification is offered; §III gives 4 Nyanga-framing
+      paragraphs (Biebuyck / Mateene / Belcher anchors) before the
+      fuller methodological implication is drawn. The §IV (Lönnrot
+      as known historical figure) and §V (Bakunawa as inclusion-
+      marginal case) sections do not require the same area-specialist-
+      first discipline because they treat appropriations of a different
+      species (editorial in §IV; inclusion-criteria in §V) where the
+      area-specialist-first protocol's narrow application (per scope.md
+      §"Appropriation protocol", every Anishinaabe / Aboriginal-Australian
+      / Nyanga claim) is not engaged. Structural observation only.
+    action: none
+  - id: NOTE-04
+    severity: NOTE
+    location: full-chapter
+    finding: |
+      The narrative draft is an exemplary transmission of the claims-
+      approved: 59/59 claim mapping, 64/64 EVIDENCE byte-identity,
+      17/17 COMPARATIVE-HOOK byte-identity, 5/5 marker byte-identity
+      (3 APPROPRIATION-FLAG with all four sub-fields each + 1
+      INFERENCE with basis/risk + 1 SPECULATION with basis/
+      counterargument), and a clean seven-bridge prose-addition
+      pattern that matches the Ch40 precedent (1 source-overview-
+      closing roadmap + 6 section-opener bridges). Banned-term scoping
+      is policy-compliant; named-but-flagged scholar discipline is
+      observed; cross-references resolve. No corrective action
+      required at this stage.
+    action: none

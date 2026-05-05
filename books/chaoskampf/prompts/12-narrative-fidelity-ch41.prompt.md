@@ -1,0 +1,3870 @@
+# Stage 12 of 19: narrative-fidelity
+# Book: chaoskampf
+# Generated: 2026-05-04T10:07:32Z
+
+---
+
+# Governing file: scope.md
+
+```
+# Scope: Chaoskampf Across Cultures
+
+## Book type
+**Cross-cultural comparison.** Unlike the other books in this project (one-culture-per-book), this book's subject is a *motif family* — the combat-with-chaos myth — traced across ~15 ancient traditions. The comparison is the point, not a capstone. The `comparative` stage of the pipeline is therefore the engine of the book rather than the final chapter.
+
+## Subject definition
+"Chaoskampf" here means: a narrative in which a sovereign or would-be sovereign deity (or heroic champion) defeats a serpentine / monstrous adversary, and that combat does one or more of the following order-making kinds of work:
+1. **Cosmogonic** — the cosmos is established from or after the combat (e.g., Marduk/Tiamat, Ninurta/Asag, Gonggong).
+2. **Kingship / sovereignty** — the victor's rule over gods and/or humans is established (Baal/Yamm, Zeus/Typhon, Indra/Vṛtra).
+3. **Cyclical maintenance** — the combat is re-enacted, preserving an order that is always under threat (Ra/Apep, Illuyanka in the *purulli* festival).
+4. **Eschatological** — the combat closes cosmic time (Thor/Jörmungandr at Ragnarök, Rev 12, Frashokereti).
+
+This working definition is operational, not doctrinal. The book will explicitly flag that the category "Chaoskampf" is contested in current scholarship (see §"Terminological position" below).
+
+## Terminological position
+The term *Chaoskampf* was coined by Hermann Gunkel (*Schöpfung und Chaos in Urzeit und Endzeit*, 1895). It has been critiqued in successive waves, most consequentially in:
+- *Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis*, ed. JoAnn Scurlock & Richard Beal (Eisenbrauns, 2013).
+- Debra Scoggins Ballentine, *The Conflict Myth and the Biblical Tradition* (OUP, 2015), who argues "chaos" is the wrong word — adversaries are better read as agents of an alternative divine power structure.
+
+The book will include a **dedicated introductory chapter** titled provisionally "What Chaoskampf is, and why the word is contested." The term is retained because it is what readers will search for and what scholars still (if uneasily) use, but the book acknowledges the critique and adopts "combat myth" as an interchangeable term where precision matters.
+
+## Period
+- Earliest in-scope primary source: Sumerian *Lugal-e* (Ninurta vs. Asag), Old Babylonian copies of Ur III originals — c. 2000 BCE.
+- Latest in-scope primary source: Zoroastrian *Bundahišn*, late Sasanian / early Islamic redaction — c. 8th–9th c. CE.
+- Secondary (scholarly) literature is contemporary (1895–present).
+
+Post-medieval reworkings (Milton's Satan, Tolkien's Smaug, etc.) are explicitly **out of scope as primary material** but may appear briefly in the concluding chapter as reception history.
+
+## Languages of primary sources
+Sumerian, Akkadian, Hurrian, Hittite, Ugaritic, Biblical Hebrew, Koine Greek, Classical Greek, Latin, Vedic Sanskrit, Classical Sanskrit, Avestan, Middle Persian (Pahlavi), Old Egyptian (and later Egyptian through Demotic), Old Norse (Eddic + skaldic), Old English, Classical Nahuatl, Quechua, Classical Chinese, Old Japanese (*man'yōgana*), Classical Armenian, Old Church Slavonic / later East Slavic, Old Irish, Middle Welsh, Old Finnish (Kalevala-era runes), and oral-tradition records in Nyanga, Soninke, Visayan/Bikol, and Mapudungun.
+
+The book is **translation-mediated**. The author does not read most of these languages. The source-whitelist strategy (see §"Source strategy") requires two things for each language: (1) a single scholar-standard translation that will be cited first, and (2) at least one secondary-scholarship cross-check. Where a translation is disputed, the chapter will flag the variant and footnote both readings.
+
+## In-scope catalog
+
+**CORE (15 stories)** — full chapters, each treating the primary text(s), the combat narrative in plain-English retelling, and the scholarly debate. See `catalog.yaml` for the complete list with key scholars.
+
+**RELATED (~30 stories)** — shorter treatments. See `catalog.yaml`. Two options for format (see DECIDE_SCOPE.md §1):
+- (A) Each gets an abbreviated chapter (2–5 pages).
+- (B) Grouped into "family" chapters by tradition or subtype (e.g., "Greek dragon-slayings after Zeus-Typhon"; "Indo-European reflexes of Watkins's *HERO SLAY SERPENT*"; "Mesopotamian minor combats").
+
+**PROVISIONAL / Methodological** — Rainbow Serpent as the dedicated critique case; Yu the Great as a sidebar contrasting hydraulic-ordering with combat-ordering.
+
+**CONTRASTIVE / Inversion** — dedicated chapters for:
+- **The inversion (Bida)** — where slaying the serpent *destroys* prosperity rather than establishing it.
+- **The refusal (Nanabozho / Mishipeshu)** — where area specialists explicitly reject the chaos-vs-order mapping, and the Thunderer / Underwater-manitouk dialectic is necessary rather than adversarial.
+
+**EXCLUDED** — see `catalog.yaml` §"exclude".
+
+## Inclusion / exclusion criteria (the operational test)
+A story is in CORE if it meets **all** of:
+1. The adversary is a serpentine / monstrous figure.
+2. The combat is explicitly attested in a primary source (not a modern reconstruction alone).
+3. The combat does cosmogonic, kingship, cyclical, or eschatological order-making work as identified by *area specialists*, not only by pattern-matching comparativists.
+4. The scholarly corpus treating it is robust enough that we can cite multiple independent area-specialist readings.
+
+A story is RELATED if it meets (1)–(2) but (3) is weaker, or if (3) holds only under a comparativist reading that area specialists qualify. Apollo/Python and Susanoo/Orochi were moved here for this reason.
+
+A story is PROVISIONAL / CRITIQUE if area specialists explicitly reject the chaoskampf framing (Rainbow Serpent, Yu/Xiangliu), or if the combat is absent or inverted (Nanabozho, Bida handled in dedicated chapters with the right framing).
+
+## Appropriation protocol
+Given scholarly warnings about forcing Near Eastern / Indo-European templates onto non-Eurasian traditions (explicitly flagged for Rainbow Serpent, Nanabozho, Mwindo in the research notes), every RELATED chapter on a non-Eurasian tradition must:
+1. Cite at least two area specialists **by name** in the first factual pass.
+2. Record any specialist objection to the chaoskampf framing in an `[APPROPRIATION-FLAG:]` marker, which the `comparative` chapter must address rather than paper over.
+3. Open with the tradition's own framing (*maʿat*/*isfet*, *vṛ-*/"obstruction," *wak'a* succession, etc.) before invoking the comparative category.
+
+## Excluded adjacent motifs (contamination risks)
+A cross-cultural book does not exclude neighboring *cultures* (that would defeat its purpose); it excludes *adjacent motifs* that readers and lazy comparativists conflate with chaoskampf. The book explicitly excludes:
+1. **Dismemberment cosmogonies without combat** (Ymir, Puruṣa, Pangu, arguably Cipactli) — these are order-making but not combat-order-making. Cipactli is kept in RELATED precisely to mark this boundary, not ignore it.
+2. **Hero-initiation monster fights** (Fionn vs. Aillen, most of Herakles's non-Hydra labours outside the serpent-combat corpus) — order-making for the hero, not for the cosmos.
+3. **Inter-species enmity / folkloric monsters** (Garuḍa vs. nāgas, Welsh Afanc, Sedna) — no cosmogonic or sovereignty function.
+4. **Trickster-demiurge tales without serpent-adversary** (Māui fishing the land).
+5. **Storm-god theophanies without a dragon combat** (most Yoruba Ṣàngó material, Korean foundation myths).
+6. **Post-medieval literary reworkings** as primary sources (see §"Period").
+
+## Reconstruction policy
+Because every chapter is a different tradition with a different textual situation, reconstruction is handled **per chapter** in the brief, not book-globally. The governing principles are:
+1. **No cross-tradition reconstruction.** A gap in the *Hymiskviða* may not be filled from the *Baal Cycle*, even if structurally analogous.
+2. **In-tradition reconstruction** must specify the donor source and period-proximity tolerance (e.g., "any Rigvedic hymn; never post-Vedic").
+3. All reconstructions carry `[RECONSTRUCTION:]` markers naming the donor source.
+4. For fragmentary cases (*Marduk vs. Labbu*, *Song of Hedammu*, some vishap material), the chapter explicitly states the fragmentary status and presents both the securely attested material and the reconstructed narrative separately.
+
+## Variant presentation policy
+- When one variant dominates a tradition's scholarly corpus (e.g., Snorri's version of the Thor fishing episode), it is presented in the body with minor variants in footnotes.
+- When variants are roughly co-equal within a tradition (the two Illuyanka versions on the same tablet group; the Homeric Hymn vs. Ovidian Apollo/Python), they are presented side by side with source attributions.
+- Cross-tradition comparison is never performed inline in a story-chapter; it is confined to the `comparative` material (see §"Comparative pipeline shape").
+
+## Book structure (locked 2026-04-23)
+
+### Part I — story chapters, geographic clusters
+Part I is organised geographically, in a sequence that respects the known Near-Eastern → Mediterranean transmission chain (West, Burkert, López-Ruiz) and then moves outward. Within each cluster, CORE stories get full chapters; closely related RELATED stories are bundled into "family" chapters rather than spun out as individual mini-chapters.
+
+Provisional geographic clusters:
+1. Mesopotamia — Ninurta/Asag, Ninurta/Anzû, Marduk/Tiamat (full chapters each); family chapter on minor Mesopotamian combats (Marduk/Labbu).
+2. Anatolia & Levant — Kumarbi Cycle / Ullikummi, Illuyanka, Baal/Yamm-Lotan (full chapters each).
+3. Hebrew Bible & Early Christianity — Yahweh vs. Leviathan/Rahab (full); Revelation 12 Red Dragon (full); family chapter on Christian reception (St. George / Michael lineage, Ogden 2021).
+4. Greece & Rome — Zeus vs. Typhon (full); family chapter "Greek dragon-combats after Zeus-Typhon" (Apollo/Python, Herakles/Hydra-Ladon-Geryon, Perseus/Ketos, Kadmos, Bellerophon, Cacus).
+5. Iran — Thraētaona vs. Aži Dahāka (full); Frashokereti as its eschatological pendant.
+6. India — Indra vs. Vṛtra (full); family chapter on Vedic and post-Vedic reflexes (Trita Āptya; Krishna/Kāliya as bhakti reworking).
+7. Egypt — Ra vs. Apep (full); shorter treatment of Horus vs. Seth as the debated adjacent case.
+8. Norse, Germanic, and IE reflexes — Thor vs. Jörmungandr (full); family chapter "Indo-European reflexes of HERO SLAY SERPENT" (Sigurd/Fáfnir, Beowulf, Lugh/Balor, Welsh Red vs. White Dragon, Batraz, Vahagn/Vishaps); family chapter on Slavic-Baltic combat (Perun/Veles reconstruction, Dobrynya byliny).
+9. East Asia — Gonggong (full); family chapter on other Chinese combats (Hou Yi); Susanoo vs. Orochi (full chapter, with explicit framing that the chaoskampf label is applied from outside, per Naumann / Isomae / Como). Yu the Great appears as a sidebar contrasting hydraulic-ordering with combat-ordering, not as a chaoskampf.
+10. Americas — Huitzilopochtli / Coatepec (full); family chapter on other Mesoamerican combats (Cipactli as dismemberment-boundary; Quetzalcoatl vs. Tezcatlipoca); Andean Pariacaca vs. amaru; Mapuche Kai-Kai vs. Tren-Tren.
+11. Africa — Bida and the founding of Wagadu (full chapter; the inversion anchor); Mwindo vs. Kirimu (contrastive case: the hero is punished for the killing).
+12. Southeast Asia & Oceania — Bakunawa. (Rainbow Serpent is held for the Part II critique chapter, not placed geographically.)
+13. Finnic — Väinämöinen vs. Iku-Turso (RELATED transformed-variant chapter).
+14. North America (contrastive) — Nanabozho and Mishipeshu: the refusal — the chapter where area specialists (Hallowell, Johnston, T. Smith, Vizenor) are foregrounded and the chaoskampf framing is explicitly declined.
+
+### Part II — thematic comparative chapters
+Part II is where the comparative work happens. Load-bearing (confirmed):
+- **C1. Combat as cosmogony** — Marduk, Ninurta/Asag, Gonggong, Huitzilopochtli.
+- **C2. Combat as sovereignty** — Baal/Yamm, Zeus/Typhon, Indra/Vṛtra, Thraētaona, Kumarbi/Ullikummi, Ninurta/Anzû.
+- **C3. Cyclical maintenance** — Ra/Apep, Illuyanka.
+- **C4. Eschatological displacement** — Thor/Jörmungandr, Rev 12, Frashokereti.
+
+Recommended additional comparative chapters (confirmed at scope-lock):
+- **C5. The Indo-European HERO SLAY SERPENT formula** — Watkins's argument from Indra through Sigurd to Beowulf.
+- **C6. The Near Eastern → Mediterranean transmission** — West / Burkert / López-Ruiz: Kumarbi → Hesiod; Baal/Yamm → Typhonomachy.
+- **C7. The inversion problem** — Bida anchor; the ambiguous status of Sigurd's slaying.
+- **C8. The refusal and the appropriation problem** — Nanabozho, Mwindo, Rainbow Serpent, and how not to flatten traditions into chaoskampf.
+
+### Front matter, back matter, and appendices
+- **Pre-chapter (00A-introduction)**: "What Chaoskampf is, and why the word is contested." Front-loaded framing of the category, Gunkel's 1895 thesis, the 20th/21st-century critiques (Scurlock & Beal, Ballentine), and the book's operational definition (§"Subject definition").
+- **Methods sidebar** between Part I and Part II: tier-ranking method, appropriation protocol, area-specialist citation policy.
+- **Reception coda** (final chapter, ~20–25 pages): traces the afterlife of the imagery in Milton's Satan, Christian iconography of St. Michael / St. George, Tolkien's dragons (and the 1936 Beowulf essay), modern kaiju (Godzilla and the Orochi lineage), and the continuing use of "chaos vs. order" rhetoric in contemporary religious interpretation. Explicitly *not* classified as chaoskampf; this is reception, not primary material.
+- **Adversaries + champions appendix** (replaces the single-culture "character appendix"): one entry per monster (Tiamat, Yamm, Lôtan, Leviathan, Rahab, Vṛtra, Aži Dahāka, Apep, Jörmungandr, Typhon, Illuyanka, Ullikummi, Hedammu, the Red Dragon, Coyolxauhqui, etc.) plus one entry per champion. This is load-bearing because the cross-cultural comparisons happen across *figures*, not plots.
+- **Bibliography**: preliminary estimate 150–250 entries.
+
+### Terminology default (locked)
+Headings and catalog use "Chaoskampf" (reader expectation, search-term coverage). Body prose uses "combat myth" as the default, reserving "Chaoskampf" for quotations, discussions of Gunkel's term, and the Part I and Part II passages where the specificity matters. This lets the book engage the Ballentine critique substantively rather than tokenistically.
+
+### Deferred decisions
+- Spanish edition (deferred at scope-lock; no effect on Part I/II work, but glossary-lock will need to re-check if/when this is decided).
+- Cover image (deferred; decide before `format-finalize`).
+
+## Book register
+Asimov-style retelling. Narrative prose in the body. Citations in AsciiDoc footnotes. Inferences, lacunae, reconstructions, appropriation warnings, and variants flagged inline with explicit markers. Plain-English register — no unexplained technical terms on first use; every ancient-language term glossed at first occurrence and collected in the glossary.
+
+## Meta
+- Book slug: `chaoskampf`
+- Version: scope v1 — draft of 2026-04-23
+- Author: Jose Blanca
+- Open questions before scope-lock closes: see `DECIDE_SCOPE.md`
+```
+
+---
+
+# Governing file: sources.yaml
+
+```
+# Source registry for the Chaoskampf book.
+# This file is a SEED: the comparative-scholarship backbone + the anchor critical edition for each CORE story.
+# Per-story additional sources (more translations, specialist monographs, journal articles) will accrue at chapter-briefs time.
+# All entries below are drawn from the research notes in books/chaoskampf/research/ — no guessed citations.
+
+meta:
+  stage: scope-lock
+  version: v1-seed
+  date: 2026-04-23
+  note: "Seeded from DECISION_REPORT + the seven research notes. Additional per-story sources will be added at chapter-briefs."
+
+registry:
+  # ── Digital primary corpora ─────────────────────────────────────────
+
+  - id: etcsl
+    source_tier: primary-translation
+    in_scope: true
+    author: "Black, Jeremy; Cunningham, Graham; Flückiger-Hawker, Esther; Robson, Eleanor; Zólyomi, Gábor"
+    title: "The Electronic Text Corpus of Sumerian Literature"
+    year: 1998
+    full_citation: "Black, J.A., Cunningham, G., Flückiger-Hawker, E., Robson, E., and Zólyomi, G., *The Electronic Text Corpus of Sumerian Literature* (https://etcsl.orinst.ox.ac.uk/), Oxford, 1998–2006."
+    short_citation: "ETCSL"
+    identifier_type: stable-url
+    identifier_value: "https://etcsl.orinst.ox.ac.uk/"
+    access_url: "https://etcsl.orinst.ox.ac.uk/"
+    notes: "Standard digital corpus of transliterated and translated Sumerian literary texts. Primary reference for Ninurta/Asag (Lugal-e, ETCSL 1.6.2) and the Sumerian background of Ninurta/Anzû."
+
+  # ── Comparative / theoretical spine ─────────────────────────────────
+
+  - id: gunkel-1895
+    source_tier: secondary
+    in_scope: true
+    author: "Gunkel, Hermann"
+    title: "Schöpfung und Chaos in Urzeit und Endzeit"
+    year: 1895
+    full_citation: "Gunkel, H., *Schöpfung und Chaos in Urzeit und Endzeit: Eine religionsgeschichtliche Untersuchung über Gen 1 und Ap Joh 12* (Göttingen: Vandenhoeck & Ruprecht, 1895)."
+    short_citation: "Gunkel 1895"
+    identifier_type: stable-url
+    identifier_value: "https://archive.org/details/schpfungundchao00gunkgoog"
+    notes: "Coined the term Chaoskampf. Retain as historical anchor even where later scholarship has superseded the framing."
+
+  - id: fontenrose-1959
+    source_tier: secondary
+    in_scope: true
+    author: "Fontenrose, Joseph"
+    title: "Python: A Study of Delphic Myth and Its Origins"
+    year: 1959
+    full_citation: "Fontenrose, J., *Python: A Study of Delphic Myth and Its Origins* (Berkeley: University of California Press, 1959)."
+    short_citation: "Fontenrose 1959"
+    identifier_type: ISBN
+    identifier_value: "9780520040915"
+    notes: "Foundational comparative treatment of dragon-combat, including the Apollo/Python cult-foundation argument."
+
+  - id: wakeman-1973
+    source_tier: secondary
+    in_scope: true
+    author: "Wakeman, Mary K."
+    title: "God's Battle with the Monster: A Study in Biblical Imagery"
+    year: 1973
+    full_citation: "Wakeman, M.K., *God's Battle with the Monster: A Study in Biblical Imagery* (Leiden: Brill, 1973)."
+    short_citation: "Wakeman 1973"
+    identifier_type: ISBN
+    identifier_value: "9789004037526"
+    notes: "Core comparative treatment linking Mesopotamian combat-myth to Hebrew Bible imagery."
+
+  - id: day-1985
+    source_tier: secondary
+    in_scope: true
+    author: "Day, John"
+    title: "God's Conflict with the Dragon and the Sea: Echoes of a Canaanite Myth in the Old Testament"
+    year: 1985
+    full_citation: "Day, J., *God's Conflict with the Dragon and the Sea: Echoes of a Canaanite Myth in the Old Testament* (Cambridge: Cambridge University Press, 1985)."
+    short_citation: "Day 1985"
+    identifier_type: ISBN
+    identifier_value: "9781532692659"
+    notes: "Canonical monograph on the Leviathan/Rahab corpus and its Ugaritic background."
+
+  - id: forsyth-1987
+    source_tier: secondary
+    in_scope: true
+    author: "Forsyth, Neil"
+    title: "The Old Enemy: Satan and the Combat Myth"
+    year: 1987
+    full_citation: "Forsyth, N., *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987)."
+    short_citation: "Forsyth 1987"
+    identifier_type: ISBN
+    identifier_value: "9780691014746"
+    notes: "Traces the combat myth from Sumer through Judeo-Christian apocalyptic. Full catalog-level treatment."
+
+  - id: burkert-1992
+    source_tier: secondary
+    in_scope: true
+    author: "Burkert, Walter"
+    title: "The Orientalizing Revolution: Near Eastern Influence on Greek Culture in the Early Archaic Age"
+    year: 1992
+    full_citation: "Burkert, W., *The Orientalizing Revolution: Near Eastern Influence on Greek Culture in the Early Archaic Age*, trans. M.E. Pinder and W. Burkert (Cambridge, MA: Harvard University Press, 1992)."
+    short_citation: "Burkert 1992"
+    identifier_type: ISBN
+    identifier_value: "9780674643642"
+    notes: "Key for the Near-Eastern-to-Greek transmission of combat myth."
+
+  - id: watkins-1995
+    source_tier: secondary
+    in_scope: true
+    author: "Watkins, Calvert"
+    title: "How to Kill a Dragon: Aspects of Indo-European Poetics"
+    year: 1995
+    full_citation: "Watkins, C., *How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995)."
+    short_citation: "Watkins 1995"
+    identifier_type: ISBN
+    identifier_value: "9780195085952"
+    notes: "The 'HERO SLAY SERPENT' formula. Anchor for all IE entries (Indra, Thraētaona, Illuyanka, Thor, Sigurd, Beowulf, Zeus)."
+
+  - id: tolkien-1936-monsters
+    source_tier: secondary
+    in_scope: true
+    author: "Tolkien, J.R.R."
+    title: "Beowulf: The Monsters and the Critics"
+    year: 1936
+    container_title: "Proceedings of the British Academy"
+    full_citation: "Tolkien, J.R.R., 'Beowulf: The Monsters and the Critics', *Proceedings of the British Academy* 22 (1936): 245–295; reprinted in *The Monsters and the Critics and Other Essays*, ed. Christopher Tolkien (London: George Allen & Unwin, 1983): 5–48."
+    short_citation: "Tolkien 1936"
+    identifier_type: stable-url
+    identifier_value: "https://www.britac.ac.uk/pubs/proc/files/22p245.pdf"
+    notes: "British Academy lecture (delivered 25 November 1936); the load-bearing critical move that re-established the mythic register of the *Beowulf* monsters within twentieth-century Old English scholarship. Cited in Ch19 (Beowulf sub-section); literary-critical afterlife deferred to Ch42 (reception coda)."
+
+  - id: west-1997
+    source_tier: secondary
+    in_scope: true
+    author: "West, M.L."
+    title: "The East Face of Helicon: West Asiatic Elements in Greek Poetry and Myth"
+    year: 1997
+    full_citation: "West, M.L., *The East Face of Helicon: West Asiatic Elements in Greek Poetry and Myth* (Oxford: Clarendon Press, 1997)."
+    short_citation: "West 1997"
+    identifier_type: ISBN
+    identifier_value: "9780198150428"
+    notes: "Greek-Near Eastern interface. Central for Zeus-Typhon, Kumarbi-Ullikummi."
+
+  - id: west-2007
+    source_tier: secondary
+    in_scope: true
+    author: "West, M.L."
+    title: "Indo-European Poetry and Myth"
+    year: 2007
+    full_citation: "West, M.L., *Indo-European Poetry and Myth* (Oxford: Oxford University Press, 2007)."
+    short_citation: "West 2007"
+    identifier_type: ISBN
+    identifier_value: "9780199280759"
+    notes: "Comparative IE. Chapter 6 ('Storm and Stream') places Thor with the IE storm-god/water-dragon complex."
+
+  - id: scurlock-beal-2013
+    source_tier: secondary
+    in_scope: true
+    author: "Scurlock, JoAnn; Beal, Richard (eds.)"
+    title: "Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis"
+    year: 2013
+    full_citation: "Scurlock, J. and Beal, R. (eds.), *Creation and Chaos: A Reconsideration of Hermann Gunkel's Chaoskampf Hypothesis* (Winona Lake: Eisenbrauns, 2013)."
+    short_citation: "Scurlock & Beal 2013"
+    identifier_type: ISBN
+    identifier_value: "9781575062792"
+    notes: "Direct reassessment of Gunkel. Essential for the book's terminological framing."
+
+  - id: ogden-2013
+    source_tier: secondary
+    in_scope: true
+    author: "Ogden, Daniel"
+    title: "Drakōn: Dragon Myth and Serpent Cult in the Greek and Roman Worlds"
+    year: 2013
+    full_citation: "Ogden, D., *Drakōn: Dragon Myth and Serpent Cult in the Greek and Roman Worlds* (Oxford: Oxford University Press, 2013)."
+    short_citation: "Ogden 2013"
+    identifier_type: ISBN
+    identifier_value: "9780199557325"
+    notes: "Current Greek/Roman survey. Classifies drakontes and their adversaries."
+
+  - id: ballentine-2015
+    source_tier: secondary
+    in_scope: true
+    author: "Ballentine, Debra Scoggins"
+    title: "The Conflict Myth and the Biblical Tradition"
+    year: 2015
+    full_citation: "Ballentine, D.S., *The Conflict Myth and the Biblical Tradition* (New York: Oxford University Press, 2015)."
+    short_citation: "Ballentine 2015"
+    identifier_type: ISBN
+    identifier_value: "9780199370252"
+    notes: "Argues 'chaos' is the wrong word. Central dissenting position the book must engage."
+
+  - id: lincoln-2012
+    source_tier: secondary
+    in_scope: true
+    author: "Lincoln, Bruce"
+    title: "Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions"
+    year: 2012
+    full_citation: "Lincoln, B., *Gods and Demons, Priests and Scholars: Critical Explorations in the History of Religions* (Chicago: University of Chicago Press, 2012)."
+    short_citation: "Lincoln 2012"
+    identifier_type: ISBN
+    identifier_value: "9780226481876"
+    notes: "Treats combat myths as political-ideological."
+
+  - id: witzel-2012
+    source_tier: comparative
+    in_scope: true
+    author: "Witzel, Michael"
+    title: "The Origins of the World's Mythologies"
+    year: 2012
+    full_citation: "Witzel, M., *The Origins of the World's Mythologies* (New York: Oxford University Press, 2012)."
+    short_citation: "Witzel 2012"
+    identifier_type: ISBN
+    identifier_value: "9780199812851"
+    notes: "Use with caution — the 'Laurasian' macro-scheme is controversial. Cited where it engages specific stories, not as framework."
+
+  # ── Critical-edition anchor per CORE story ──────────────────────────
+
+  - id: vandijk-1983-lugale
+    source_tier: primary-translation
+    in_scope: true
+    author: "van Dijk, J.J.A."
+    title: "LUGAL UD ME-LÁM-bi NIR-ĜÁL: Le récit épique et didactique des Travaux de Ninurta, du Déluge et de la Nouvelle Création"
+    year: 1983
+    full_citation: "van Dijk, J.J.A., *LUGAL UD ME-LÁM-bi NIR-ĜÁL: Le récit épique et didactique des Travaux de Ninurta, du Déluge et de la Nouvelle Création*, 2 vols. (Leiden: Brill, 1983)."
+    short_citation: "van Dijk 1983"
+    identifier_type: ISBN
+    identifier_value: "9789004069169"
+    notes: "Standard critical edition of Lugal-e. Anchor for the Ninurta/Asag chapter."
+
+  - id: annus-2001-anzu
+    source_tier: primary-translation
+    in_scope: true
+    author: "Annus, Amar"
+    title: "The Standard Babylonian Epic of Anzu: Introduction, Cuneiform Text, Transliteration, Score, Glossary, Indices and Sign List"
+    year: 2001
+    full_citation: "Annus, A., *The Standard Babylonian Epic of Anzu* (State Archives of Assyria Cuneiform Texts 3, Helsinki: Neo-Assyrian Text Corpus Project, 2001)."
+    short_citation: "Annus 2001"
+    identifier_type: ISBN
+    identifier_value: "9789514590511"
+    notes: "Anchor for Ninurta/Anzû. Verify format before final citation — SAACT series numbering."
+
+  - id: lambert-2013
+    source_tier: primary-translation
+    in_scope: true
+    author: "Lambert, W.G."
+    title: "Babylonian Creation Myths"
+    year: 2013
+    full_citation: "Lambert, W.G., *Babylonian Creation Myths*, Mesopotamian Civilizations 16 (Winona Lake: Eisenbrauns, 2013)."
+    short_citation: "Lambert 2013"
+    identifier_type: ISBN
+    identifier_value: "9781575062471"
+    notes: "Definitive critical edition of Enūma Eliš and related material. Anchor for Marduk/Tiamat."
+
+  - id: foster-2005
+    source_tier: primary-translation
+    in_scope: true
+    author: "Foster, Benjamin R."
+    title: "Before the Muses: An Anthology of Akkadian Literature"
+    year: 2005
+    full_citation: "Foster, B.R., *Before the Muses: An Anthology of Akkadian Literature*, 3rd ed. (Bethesda: CDL Press, 2005)."
+    short_citation: "Foster 2005"
+    identifier_type: ISBN
+    identifier_value: "9781883053765"
+    notes: "Standard English anthology. Used for Enūma Eliš, Anzu, Atrahasis, Labbu."
+
+  - id: hoffner-1998
+    source_tier: primary-translation
+    in_scope: true
+    author: "Hoffner, Harry A. Jr."
+    title: "Hittite Myths"
+    year: 1998
+    full_citation: "Hoffner, H.A., *Hittite Myths*, 2nd ed., SBL Writings from the Ancient World 2 (Atlanta: Society of Biblical Literature, 1998)."
+    short_citation: "Hoffner 1998"
+    identifier_type: ISBN
+    identifier_value: "9780788504884"
+    notes: "Anchor for Illuyanka and the Kumarbi Cycle (Song of Ullikummi, Song of Hedammu, Kingship in Heaven)."
+
+  - id: beckman-1982-illuyanka
+    source_tier: secondary
+    in_scope: true
+    author: "Beckman, Gary"
+    title: "The Anatolian Myth of Illuyanka"
+    year: 1982
+    container_title: "Journal of the Ancient Near Eastern Society"
+    full_citation: "Beckman, G., 'The Anatolian Myth of Illuyanka', *Journal of the Ancient Near Eastern Society* 14 (1982): 11–25."
+    short_citation: "Beckman 1982"
+    identifier_type: stable-url
+    identifier_value: "https://janes.scholasticahq.com/"
+    notes: "Standard philological edition and translation of Illuyanka."
+
+  - id: smith-1994-baal-i
+    source_tier: primary-translation
+    in_scope: true
+    author: "Smith, Mark S."
+    title: "The Ugaritic Baal Cycle, Volume I: Introduction with Text, Translation and Commentary of KTU 1.1–1.2"
+    year: 1994
+    full_citation: "Smith, M.S., *The Ugaritic Baal Cycle, Volume I: Introduction with Text, Translation and Commentary of KTU 1.1–1.2* (Leiden: Brill, 1994)."
+    short_citation: "Smith 1994"
+    identifier_type: ISBN
+    identifier_value: "9789004099951"
+    notes: "Baal-Yamm arc. Anchor for the Baal chapter."
+
+  - id: smith-pitard-2009-baal-ii
+    source_tier: primary-translation
+    in_scope: true
+    author: "Smith, Mark S.; Pitard, Wayne T."
+    title: "The Ugaritic Baal Cycle, Volume II: Introduction with Text, Translation and Commentary of KTU/CAT 1.3–1.4"
+    year: 2009
+    full_citation: "Smith, M.S. and Pitard, W.T., *The Ugaritic Baal Cycle, Volume II: Introduction with Text, Translation and Commentary of KTU/CAT 1.3–1.4* (Leiden: Brill, 2009)."
+    short_citation: "Smith & Pitard 2009"
+    identifier_type: ISBN
+    identifier_value: "9789004153486"
+    notes: "Palace-building cycle. Second half of the Baal anchor."
+
+  - id: west-1966-theogony
+    source_tier: primary-translation
+    in_scope: true
+    author: "West, M.L. (ed.)"
+    title: "Hesiod: Theogony"
+    year: 1966
+    full_citation: "West, M.L. (ed.), *Hesiod: Theogony* (Oxford: Clarendon Press, 1966)."
+    short_citation: "West 1966"
+    identifier_type: ISBN
+    identifier_value: "9780198141693"
+    notes: "Critical edition with commentary. Anchor for Zeus/Typhon."
+
+  - id: jamison-brereton-2014
+    source_tier: primary-translation
+    in_scope: true
+    author: "Jamison, Stephanie; Brereton, Joel"
+    title: "The Rigveda: The Earliest Religious Poetry of India"
+    year: 2014
+    full_citation: "Jamison, S.W. and Brereton, J.P., *The Rigveda: The Earliest Religious Poetry of India*, 3 vols. (New York: Oxford University Press, 2014)."
+    short_citation: "Jamison & Brereton 2014"
+    identifier_type: ISBN
+    identifier_value: "9780199370184"
+    notes: "Current scholarly-standard English Rigveda. Anchor for Indra/Vṛtra and Trita Āptya."
+
+  - id: tagare-bhagavata
+    source_tier: primary-translation
+    in_scope: true
+    author: "Tagare, Ganesh Vasudeo"
+    title: "The Bhāgavata Purāṇa, Translated and Annotated"
+    year: 1976-1979
+    full_citation: "Tagare, G.V., *The Bhāgavata Purāṇa, Translated and Annotated*, 5 vols., Ancient Indian Tradition and Mythology series 7–11 (Delhi: Motilal Banarsidass, 1976–1978)."
+    short_citation: "Tagare 1976–78"
+    identifier_type: series
+    identifier_value: "Ancient Indian Tradition and Mythology 7–11"
+    notes: "Standard scholarly English translation of the Bhāgavata Purāṇa. Anchor for the Krishna-Kāliya episode (book 10 chs. 15–17) in Ch15."
+
+  - id: benveniste-renou-1934
+    source_tier: secondary
+    in_scope: true
+    author: "Benveniste, Émile; Renou, Louis"
+    title: "Vṛtra et Vṛθragna: Étude de mythologie indo-iranienne"
+    year: 1934
+    full_citation: "Benveniste, É. and Renou, L., *Vṛtra et Vṛθragna: Étude de mythologie indo-iranienne*, Cahiers de la Société Asiatique 3 (Paris: Imprimerie Nationale, 1934)."
+    short_citation: "Benveniste & Renou 1934"
+    identifier_type: stable-url
+    identifier_value: "https://gallica.bnf.fr/"
+    notes: "Foundational Indo-Iranian comparative study. Essential for Indra/Vṛtra and Thraētaona/Aži Dahāka."
+
+  - id: faulkner-1972-bod
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkner, Raymond O."
+    title: "The Ancient Egyptian Book of the Dead"
+    year: 1972
+    full_citation: "Faulkner, R.O., *The Ancient Egyptian Book of the Dead*, rev. ed., ed. Carol Andrews (London: British Museum, 1985; orig. 1972)."
+    short_citation: "Faulkner 1972 (rev. 1985)"
+    identifier_type: ISBN
+    identifier_value: "9780292704251"
+    notes: "Standard English Book of the Dead including Apep-slaying spells."
+
+  - id: faulkner-1936-bremner-rhind
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkner, Raymond O."
+    title: "The Bremner-Rhind Papyrus I–IV"
+    year: 1936
+    full_citation: "Faulkner, R.O., 'The Bremner-Rhind Papyrus I–IV', *Journal of Egyptian Archaeology* 22 (1936): 121–140; 23 (1937): 10–16, 166–185; 24 (1938): 41–53."
+    short_citation: "Faulkner 1936–38 (JEA 22–24)"
+    identifier_type: jstor-collection
+    identifier_value: "JEA 22, 23, 24"
+    notes: "Faulkner's four-part philological edition of Papyrus BM EA 10188 (Bremner-Rhind) — the *Book of Overthrowing Apep* — published as articles in JEA across 1936–38. Distinct from Faulkner's 1972 Book of the Dead translation. Anchor for Ch16 ritual-embedding section."
+
+  - id: te-velde-1967
+    source_tier: secondary
+    in_scope: true
+    author: "te Velde, Herman"
+    title: "Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion"
+    year: 1967
+    full_citation: "te Velde, H., *Seth, God of Confusion: A Study of His Role in Egyptian Mythology and Religion*, 2nd ed. (Leiden: Brill, 1977; orig. 1967)."
+    short_citation: "te Velde 1967"
+    identifier_type: ISBN
+    identifier_value: "9789004054028"
+    notes: "Core study of Seth as Apep-slayer and as ambivalent figure. Anchors both Ra/Apep and Horus/Seth."
+
+  - id: assmann-2001-search
+    source_tier: secondary
+    in_scope: true
+    author: "Assmann, Jan"
+    title: "The Search for God in Ancient Egypt"
+    year: 2001
+    full_citation: "Assmann, J., *The Search for God in Ancient Egypt*, trans. David Lorton (Ithaca: Cornell University Press, 2001)."
+    short_citation: "Assmann 2001"
+    identifier_type: ISBN
+    identifier_value: "9780801487293"
+    notes: "maʿat vs. isfet framework. Central to Ra/Apep chapter."
+
+  - id: yarbro-collins-1976
+    source_tier: secondary
+    in_scope: true
+    author: "Yarbro Collins, Adela"
+    title: "The Combat Myth in the Book of Revelation"
+    year: 1976
+    full_citation: "Yarbro Collins, A., *The Combat Myth in the Book of Revelation*, Harvard Dissertations in Religion 9 (Missoula: Scholars Press, 1976)."
+    short_citation: "Yarbro Collins 1976"
+    identifier_type: ISBN
+    identifier_value: "9780891300571"
+    notes: "Central study of Rev 12. Traces the NT eschatologisation of the Hebrew Bible combat tradition."
+
+  - id: aune-revelation
+    source_tier: secondary
+    in_scope: true
+    author: "Aune, David E."
+    title: "Revelation"
+    year: 1997
+    full_citation: "Aune, D.E., *Revelation*, Word Biblical Commentary 52A–C, 3 vols. (Dallas: Word Books / Nashville: Nelson, 1997–1998)."
+    short_citation: "Aune 1997–98"
+    identifier_type: ISBN
+    identifier_value: "9780849902512"
+    notes: "Standard historical-critical commentary including the Rev 12 dragon passage."
+
+  - id: larrington-poetic-edda
+    source_tier: primary-translation
+    in_scope: true
+    author: "Larrington, Carolyne"
+    title: "The Poetic Edda"
+    year: 2014
+    full_citation: "Larrington, C. (trans.), *The Poetic Edda*, rev. ed. (Oxford: Oxford University Press, 2014)."
+    short_citation: "Larrington 2014"
+    identifier_type: ISBN
+    identifier_value: "9780199675340"
+    notes: "Working translation. For philological anchor use Dronke or Neckel/Kuhn as cross-check."
+
+  - id: faulkes-snorri
+    source_tier: primary-translation
+    in_scope: true
+    author: "Faulkes, Anthony (ed. and trans.)"
+    title: "Edda (by Snorri Sturluson)"
+    year: 1987
+    full_citation: "Sturluson, S., *Edda*, trans. A. Faulkes (London: Dent / Everyman, 1987; Viking Society for Northern Research ed. 2005)."
+    short_citation: "Faulkes 1987"
+    identifier_type: ISBN
+    identifier_value: "9780460876162"
+    notes: "Standard English Prose Edda. Anchor for Thor/Jörmungandr."
+
+  - id: lewis-2006-flood
+    source_tier: secondary
+    in_scope: true
+    author: "Lewis, Mark Edward"
+    title: "The Flood Myths of Early China"
+    year: 2006
+    full_citation: "Lewis, M.E., *The Flood Myths of Early China* (Albany: SUNY Press, 2006)."
+    short_citation: "Lewis 2006"
+    identifier_type: ISBN
+    identifier_value: "9780791466636"
+    notes: "Anchor for Gonggong and the Yu-sidebar."
+
+  - id: birrell-1993
+    source_tier: secondary
+    in_scope: true
+    author: "Birrell, Anne"
+    title: "Chinese Mythology: An Introduction"
+    year: 1993
+    full_citation: "Birrell, A., *Chinese Mythology: An Introduction* (Baltimore: Johns Hopkins University Press, 1993)."
+    short_citation: "Birrell 1993"
+    identifier_type: ISBN
+    identifier_value: "9780801849954"
+    notes: "General Chinese reference — use with Lewis and Mathieu for triangulation."
+
+  - id: matos-moctezuma-templo-mayor
+    source_tier: secondary
+    in_scope: true
+    author: "Matos Moctezuma, Eduardo"
+    title: "The Great Temple of the Aztecs: Treasures of Tenochtitlan"
+    year: 1988
+    full_citation: "Matos Moctezuma, E., *The Great Temple of the Aztecs: Treasures of Tenochtitlan* (London: Thames & Hudson, 1988)."
+    short_citation: "Matos Moctezuma 1988"
+    identifier_type: ISBN
+    identifier_value: "9780500390245"
+    notes: "Templo Mayor = Coatepec interpretation. Anchor for Huitzilopochtli chapter."
+
+  - id: carrasco-1999-city
+    source_tier: secondary
+    in_scope: true
+    author: "Carrasco, Davíd"
+    title: "City of Sacrifice: The Aztec Empire and the Role of Violence in Civilization"
+    year: 1999
+    full_citation: "Carrasco, D., *City of Sacrifice: The Aztec Empire and the Role of Violence in Civilization* (Boston: Beacon Press, 1999)."
+    short_citation: "Carrasco 1999"
+    identifier_type: ISBN
+    identifier_value: "9780807046425"
+    notes: "Huitzilopochtli ritual/political reading."
+
+  - id: lopez-austin-myths
+    source_tier: secondary
+    in_scope: true
+    author: "López Austin, Alfredo"
+    title: "The Myths of the Opossum: Pathways of Mesoamerican Mythology"
+    year: 1993
+    full_citation: "López Austin, A., *The Myths of the Opossum: Pathways of Mesoamerican Mythology*, trans. B.R. Ortiz de Montellano and T. Ortiz de Montellano (Albuquerque: University of New Mexico Press, 1993)."
+    short_citation: "López Austin 1993"
+    identifier_type: ISBN
+    identifier_value: "9780826313942"
+    notes: "Used for Cipactli, Huitzilopochtli, Quetzalcoatl/Tezcatlipoca."
+
+  - id: anderson-dibble-florentine
+    source_tier: primary-translation
+    in_scope: true
+    author: "Anderson, Arthur J.O.; Dibble, Charles E. (trans. and eds.)"
+    title: "Florentine Codex: General History of the Things of New Spain"
+    year: "1950-1982"
+    full_citation: "Sahagún, B. de, *Florentine Codex: General History of the Things of New Spain*, trans. and ed. A.J.O. Anderson and C.E. Dibble, 13 vols. (Santa Fe: School of American Research / Salt Lake City: University of Utah Press, 1950-1982)."
+    short_citation: "Anderson-Dibble 1950-82"
+    identifier_type: ISBN
+    identifier_value: "9780874800821"
+    notes: "Standard scholarly English translation of the Nahuatl Florentine Codex (Sahagún, c. 1545-1590). Book 3 (\"The Origin of the Gods\") is the principal narrative anchor for the Coatepec / Huitzilopochtli / Coyolxauhqui / Centzon Huitznahua episode. Added at post-human-normalize for Ch24 FC-03 to anchor Florentine Codex narrative-detail citations directly at the chapter-draft stage rather than routing through Matos Moctezuma 1988 / Carrasco 1999 as secondary interpreters."
+
+  # ── Tradition-specific anchors for RELATED entries ──────────────────
+
+  - id: salomon-urioste-huarochiri
+    source_tier: primary-translation
+    in_scope: true
+    author: "Salomon, Frank; Urioste, George L. (trans. and eds.)"
+    title: "The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion"
+    year: 1991
+    full_citation: "Salomon, F. and Urioste, G.L. (trans. and eds.), *The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion* (Austin: University of Texas Press, 1991)."
+    short_citation: "Salomon & Urioste 1991"
+    identifier_type: ISBN
+    identifier_value: "9780292730533"
+    notes: "Anchor for Pariacaca."
+
+  - id: koessler-ilg-cuentan
+    source_tier: primary-translation
+    in_scope: true
+    author: "Koessler-Ilg, Bertha"
+    title: "Cuentan los araucanos: Mitos, leyendas y tradiciones"
+    year: 1954
+    full_citation: "Koessler-Ilg, B., *Cuentan los araucanos: Mitos, leyendas y tradiciones* (Buenos Aires: Espasa-Calpe, Colección Austral no. 1208, 1954)."
+    short_citation: "Koessler-Ilg 1954"
+    identifier_type: stable-url
+    identifier_value: "https://repositoriosdigitales.mincyt.gob.ar/vufind/Record/BDUNCU_f331a4b9b4ecdd61224cf08ff45c49bd"
+    notes: "Foundational Spanish-language compilation of Mapuche oral narratives recorded in the 1920s-30s. Expansion of the German original *Märchenerzähler ohne Buch* (Stuttgart, 1928). Principal narrative anchor for the Kai-Kai / Tren-Tren cosmogony and adjacent material. Edition correction at post-human-normalize per Ch27 FC-04: the 1954 Espasa-Calpe Austral edition (Colección Austral no. 1208, Buenos Aires, 153 pp.) is the canonical Spanish-language scholarly citation; an earlier 1962 Editorial Mar Océano edition recorded in this entry could not be independently confirmed in WorldCat or in the Argentine mincyt repository. The stable-url identifier points to the Argentine government repositoriosdigitales.mincyt.gob.ar entry that confirms the 1954 Espasa-Calpe Austral edition. OCLC pending verification at chapter-draft."
+
+  - id: foerster-religiosidad-mapuche
+    source_tier: secondary
+    in_scope: true
+    author: "Foerster González, Rolf"
+    title: "Introducción a la religiosidad mapuche"
+    year: 1993
+    full_citation: "Foerster González, R., *Introducción a la religiosidad mapuche* (Santiago: Editorial Universitaria, 1993)."
+    short_citation: "Foerster 1993"
+    identifier_type: ISBN
+    identifier_value: "9789561109124"
+    notes: "Modern ethnographic-religious anchor for Mapuche cosmology, the Wenu Mapu / Naq Mapu / Minche Mapu cosmographic system, and the ngillatun ritual. Anchor for the Ch27 area-specialist framing. ISBN corrected at post-human-normalize per Ch27 FC-01 (digit-transposition data-entry error: 9789561109315 → 9789561109124, confirmed against AbeBooks, Amazon, University of Chile repository, buscalibre.cl, serindigena.org, and the University of Chicago catalog record)."
+
+  - id: bacigalupo-shamans-foye
+    source_tier: secondary
+    in_scope: true
+    author: "Bacigalupo, Ana Mariella"
+    title: "Shamans of the Foye Tree: Gender, Power, and Healing among Chilean Mapuche"
+    year: 2007
+    full_citation: "Bacigalupo, A.M., *Shamans of the Foye Tree: Gender, Power, and Healing among Chilean Mapuche* (Austin: University of Texas Press, 2007)."
+    short_citation: "Bacigalupo 2007"
+    identifier_type: ISBN
+    identifier_value: "9780292716599"
+    notes: "Anthropological anchor on contemporary Mapuche shamanism (machi) and ritual practice. Used in Ch27 for the area-specialist appropriation framing alongside Foerster, Course, and Faron."
+
+  - id: course-becoming-mapuche
+    source_tier: secondary
+    in_scope: true
+    author: "Course, Magnus"
+    title: "Becoming Mapuche: Person and Ritual in Indigenous Chile"
+    year: 2011
+    full_citation: "Course, M., *Becoming Mapuche: Person and Ritual in Indigenous Chile* (Urbana: University of Illinois Press, 2011)."
+    short_citation: "Course 2011"
+    identifier_type: ISBN
+    identifier_value: "9780252078231"
+    notes: "Modern ethnographic anchor on Mapuche personhood, the cosmological framework underpinning ritual practice, and the area-specialist reading that resists chaos-vs-order framings of Mapuche cosmogonic material. ISBN corrected at post-human-normalize per Ch27 FC-02 (the previous identifier 9780252078163 did not match any confirmed catalogue record; 9780252078231 is the paperback ISBN per the University of Illinois Press catalogue and Amazon; the hardcover ISBN 9780252036477 is the alternative). Paperback selected as the more accessible standard."
+
+  - id: faron-hawks-of-sun
+    source_tier: secondary
+    in_scope: true
+    author: "Faron, Louis C."
+    title: "Hawks of the Sun: Mapuche Morality and Its Ritual Attributes"
+    year: 1964
+    full_citation: "Faron, L.C., *Hawks of the Sun: Mapuche Morality and Its Ritual Attributes* (Pittsburgh: University of Pittsburgh Press, 1964)."
+    short_citation: "Faron 1964"
+    identifier_type: OCLC
+    identifier_value: "320079821"
+    notes: "Mid-20th-century classic anthropological anchor in the English-language Mapuche-studies bibliography. Pre-dates the modern area-specialist tradition (Foerster, Bacigalupo, Course) but supplies the structural-ritual framework on which they build. OCLC corrected at post-human-normalize per Ch27 FC-03 (the previous identifier 247070 could not be confirmed as the dominant WorldCat record; 320079821 is the verified WorldCat record per https://search.worldcat.org/es/title/Hawks-of-the-sun-:-Mapuche-morality-and-its-ritual-attributes/oclc/320079821)."
+
+  - id: biebuyck-mateene-mwindo
+    source_tier: primary-translation
+    in_scope: true
+    author: "Biebuyck, Daniel; Mateene, Kahombo C. (trans. and eds.)"
+    title: "The Mwindo Epic from the Banyanga"
+    year: 1969
+    full_citation: "Biebuyck, D. and Mateene, K.C. (trans. and eds.), *The Mwindo Epic from the Banyanga (Zaire)* (Berkeley: University of California Press, 1969)."
+    short_citation: "Biebuyck & Mateene 1969"
+    identifier_type: ISBN
+    identifier_value: "9780520003767"
+    notes: "Used for the Mwindo contrastive case."
+
+  - id: eugenio-philippine-myths
+    source_tier: primary-translation
+    in_scope: true
+    author: "Eugenio, Damiana L. (ed.)"
+    title: "Philippine Folk Literature: The Myths"
+    year: 2001
+    full_citation: "Eugenio, D.L. (ed.), *Philippine Folk Literature: The Myths* (Quezon City: University of the Philippines Press, 2001)."
+    short_citation: "Eugenio 2001"
+    identifier_type: ISBN
+    identifier_value: "9789715422918"
+    notes: "Volume II in Eugenio's eight-volume Philippine Folk Literature series (Quezon City: University of the Philippines Press, 2001; 546 pp.), the standard scholarly compilation of Philippine oral-tradition narratives across the archipelago. Principal anchor for the Bakunawa material. ISBN corrected at post-human-normalize 2026-05-01 per Ch30 FC-01: the originally-pinned ISBN 9789715421140 was wrong; the correct ISBN-13 is 9789715422918, confirmed via the UP Press product page (https://press.up.edu.ph/product/philippine-folk-literature-the-myths/), Amazon (ASIN 9715422918 → ISBN-13 9789715422918), AbeBooks listing for Vol. 2, and the Philippine-Books retailer catalog. Provisional flag removed; correction follows the Ch20 FC-03 / Ch24 FC-03 / Ch27 ISBN-correction-in-place pattern."
+
+  - id: eliade-shamanism
+    source_tier: secondary
+    in_scope: true
+    author: "Eliade, Mircea"
+    title: "Shamanism: Archaic Techniques of Ecstasy"
+    year: 1964
+    full_citation: "Eliade, M., *Shamanism: Archaic Techniques of Ecstasy*, trans. W.R. Trask, Bollingen Series LXXVI (Princeton: Princeton University Press, 1964; reprinted 2004)."
+    short_citation: "Eliade 1964"
+    identifier_type: ISBN
+    identifier_value: "9780691119427"
+    notes: "ISBN corresponds to the 2004 Princeton Classics paperback reprint of the 1964 Bollingen Series translation by Willard R. Trask of Eliade's *Le Chamanisme et les techniques archaïques de l'extase* (Paris: Payot, 1951). Standard scholarly anchor for shamanic-cosmological treatments of Erlik / Ülgen and the broader Altaic-Siberian material."
+
+  - id: harva-altaic-religious
+    source_tier: secondary
+    in_scope: true
+    author: "Harva, Uno"
+    title: "Die religiösen Vorstellungen der altaischen Völker"
+    year: 1938
+    full_citation: "Harva, U., *Die religiösen Vorstellungen der altaischen Völker*, Folklore Fellows Communications no. 125 (Helsinki: Suomalainen Tiedeakatemia / Academia Scientiarum Fennica, 1938)."
+    short_citation: "Harva 1938"
+    identifier_type: stable-url
+    identifier_value: "https://archive.org/details/DieReligioenVorstellungenDerAltaischenVolker"
+    notes: "Standard early-20th-century reference for the religious cosmology of the Altaic / Turkic-Mongol peoples; the canonical scholarly anchor for the Erlik / Ülgen pairing. 1938 FFC publication has no ISBN. Stable-url corrected at post-human-normalize 2026-05-01 per Ch30 FC-02: the originally-pinned URL https://archive.org/details/diereligiosenvor0000unkn did not resolve; the correct archive.org identifier is DieReligioenVorstellungenDerAltaischenVolker (verified by direct WebFetch on 2026-05-01: archive.org confirms title 'Die religiösen Vorstellungen der altaischen Völker' attributed to 'Uno Holmberg' — Harva's birth-name, which he changed to Harva in 1935 before FFC 125 was published in 1938; the post-1935 scholarly citation name is Harva). Note: the original sources.yaml annotation recommended also checking OCLC at post-human-normalize as a more institutionally stable identifier; web-search via the available tools (CiNii, OpenLibrary, Heidelberg, AbeBooks) returned bibliographic confirmations of the work but did not surface a verifiable WorldCat OCLC for the FFC 125 1938 edition; OCLC pending verification at chapter-draft. Correction follows the Ch27 source-pinning / Ch24 FC-03 stable-url-correction-in-place pattern."
+
+  - id: philippi-kojiki
+    source_tier: primary-translation
+    in_scope: true
+    author: "Philippi, Donald L. (trans.)"
+    title: "Kojiki"
+    year: 1968
+    full_citation: "Philippi, D.L. (trans.), *Kojiki* (Tokyo: University of Tokyo Press / Princeton: Princeton University Press, 1968)."
+    short_citation: "Philippi 1968"
+    identifier_type: ISBN
+    identifier_value: "9780691611358"
+    notes: "Scholarly-standard English Kojiki. Anchor for Susanoo/Orochi. ISBN 9780691611358 corresponds to the Princeton paperback reprint of the 1968 joint U Tokyo Press / Princeton University Press edition; content is identical across editions."
+
+  - id: naumann-mythen
+    source_tier: secondary
+    in_scope: true
+    author: "Naumann, Nelly"
+    title: "Die Mythen des alten Japan"
+    year: 1996
+    full_citation: "Naumann, N., *Die Mythen des alten Japan* (München: C.H. Beck, 1996)."
+    short_citation: "Naumann 1996"
+    identifier_type: ISBN
+    identifier_value: "9783406421648"
+    notes: "Metallurgical-allegory reading of Susanoo/Orochi."
+
+  - id: russell-zoroastrianism-armenia
+    source_tier: secondary
+    in_scope: true
+    author: "Russell, James R."
+    title: "Zoroastrianism in Armenia"
+    year: 1987
+    full_citation: "Russell, J.R., *Zoroastrianism in Armenia*, Harvard Iranian Series 5 (Cambridge, MA: Harvard University, Department of Near Eastern Languages and Civilizations, 1987)."
+    short_citation: "Russell 1987"
+    identifier_type: ISBN
+    identifier_value: "9780674968509"
+    notes: "Anchor for Vahagn/Vishaps."
+
+  - id: bailey-ivanova-1998
+    source_tier: secondary
+    in_scope: true
+    author: "Bailey, James; Ivanova, Tatyana (eds.)"
+    title: "An Anthology of Russian Folk Epics"
+    year: 1998
+    full_citation: "Bailey, J. and Ivanova, T. (eds.), *An Anthology of Russian Folk Epics* (Armonk, NY: M.E. Sharpe, 1998)."
+    short_citation: "Bailey & Ivanova 1998"
+    identifier_type: ISBN
+    identifier_value: "9781563244889"
+    notes: "Major English-language anthology of the East Slavic *bylina* tradition, with introduction surveying the genre, the 19th-century collection history (Rybnikov, Hilferding), and the individual epics including the Dobrynya-Zmey-Gorynych cycle. Specialist anchor for Ch20 Dobrynya-cycle narrative and collection-history claims."
+
+  - id: siikala-finnish
+    source_tier: secondary
+    in_scope: true
+    author: "Siikala, Anna-Leena"
+    title: "Mythic Images and Shamanism: A Perspective on Kalevala Poetry"
+    year: 2002
+    full_citation: "Siikala, A.-L., *Mythic Images and Shamanism: A Perspective on Kalevala Poetry*, Folklore Fellows' Communications 280 (Helsinki: Academia Scientiarum Fennica, 2002)."
+    short_citation: "Siikala 2002"
+    identifier_type: ISBN
+    identifier_value: "9789514109027"
+    notes: "Anchor for Väinämöinen/Iku-Turso as transformed shamanic binding."
+
+  - id: conrad-west-africa
+    source_tier: secondary
+    in_scope: true
+    author: "Conrad, David C."
+    title: "Empires of Medieval West Africa: Ghana, Mali, and Songhay"
+    year: 2005
+    full_citation: "Conrad, D.C., *Empires of Medieval West Africa: Ghana, Mali, and Songhay* (New York: Facts on File, 2005)."
+    short_citation: "Conrad 2005"
+    identifier_type: ISBN
+    identifier_value: "9780816052622"
+    notes: "Anchor for Bida / Wagadu inversion chapter."
+
+  - id: belcher-epic
+    source_tier: secondary
+    in_scope: true
+    author: "Belcher, Stephen"
+    title: "Epic Traditions of Africa"
+    year: 1999
+    full_citation: "Belcher, S., *Epic Traditions of Africa* (Bloomington: Indiana University Press, 1999)."
+    short_citation: "Belcher 1999"
+    identifier_type: ISBN
+    identifier_value: "9780253212818"
+    notes: "Used for Mwindo and Bida."
+
+  - id: hallowell-ojibwa-world
+    source_tier: secondary
+    in_scope: true
+    author: "Hallowell, A. Irving"
+    title: "Ojibwa Ontology, Behavior, and World View"
+    year: 1960
+    full_citation: "Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in *Culture in History: Essays in Honor of Paul Radin*, ed. Stanley Diamond (New York: Columbia University Press, 1960), 19–52."
+    short_citation: "Hallowell 1960"
+    identifier_type: ISBN
+    identifier_value: "9780231024853"
+    notes: "Foundational 'other-than-human persons' framework. Anchor for the Nanabozho contrastive case."
+
+  - id: johnston-ojibway-heritage
+    source_tier: secondary
+    in_scope: true
+    author: "Johnston, Basil"
+    title: "Ojibway Heritage"
+    year: 1990
+    full_citation: "Johnston, Basil, *Ojibway Heritage* (Lincoln: University of Nebraska Press / Bison Books, 1990; orig. Toronto: McClelland and Stewart, 1976)."
+    short_citation: "Johnston 1990 [1976]"
+    identifier_type: ISBN
+    identifier_value: "9780803275720"
+    notes: "Insider Anishinaabe overview of cosmology, manitous, and the Nanabozho cycle; anchors the emic frame against which the chaoskampf reading is judged. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: johnston-manitous
+    source_tier: secondary
+    in_scope: true
+    author: "Johnston, Basil"
+    title: "The Manitous: The Spiritual World of the Ojibway"
+    year: 1995
+    full_citation: "Johnston, Basil, *The Manitous: The Spiritual World of the Ojibway* (New York: HarperCollins, 1995)."
+    short_citation: "Johnston 1995"
+    identifier_type: ISBN
+    identifier_value: "9780060171995"
+    notes: "Anishinaabe-authored treatment of manitous including Mishipeshu and Nanabozho; supports a relational rather than combat-cosmogonic reading. Minnesota Historical Society Press paperback (ISBN 9780873514118, 2001) is a widely cited alternate edition. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: smith-island-anishnaabeg
+    source_tier: secondary
+    in_scope: true
+    author: "Smith, Theresa S."
+    title: "The Island of the Anishnaabeg: Thunderers and Water Monsters in the Traditional Ojibwe Life-World"
+    year: 1995
+    full_citation: "Smith, Theresa S., *The Island of the Anishnaabeg: Thunderers and Water Monsters in the Traditional Ojibwe Life-World* (Moscow, ID: University of Idaho Press, 1995; paperback reprint Lincoln: University of Nebraska Press, 2012, ISBN 9780803238329)."
+    short_citation: "Smith 1995"
+    identifier_type: ISBN
+    identifier_value: "9780893011710"
+    notes: "Book-length study of the Thunderer / Underwater-manitou dialectic; key area-specialist source for reading Mishipeshu and the Thunderbirds as complementary rather than chaos-vs-order. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: vizenor-narrative-chance
+    source_tier: secondary
+    in_scope: true
+    author: "Vizenor, Gerald"
+    title: "Narrative Chance: Postmodern Discourse on Native American Indian Literatures"
+    year: 1989
+    full_citation: "Vizenor, Gerald (ed.), *Narrative Chance: Postmodern Discourse on Native American Indian Literatures* (Albuquerque: University of New Mexico Press, 1989; reprint Norman: University of Oklahoma Press, 1993, ISBN 9780806125619)."
+    short_citation: "Vizenor 1989"
+    identifier_type: ISBN
+    identifier_value: "9780826311177"
+    notes: "Contains Vizenor's 'Trickster Discourse' essay; anchors the methodological refusal to subordinate Nanabozho to Western combat-myth or hero/villain typologies. Identifier verified at post-human-normalize Ch31/Ch32 cycle (factcheck VERIFIED via AbeBooks/WorldCat/OpenLibrary/publisher-catalogue)."
+
+  - id: merlan-caging-rainbow
+    source_tier: secondary
+    in_scope: true
+    author: "Merlan, Francesca"
+    title: "Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town"
+    year: 1998
+    full_citation: "Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998)."
+    short_citation: "Merlan 1998"
+    identifier_type: ISBN
+    identifier_value: "9780824819668"
+    notes: "Central for the Rainbow Serpent methodological chapter."
+
+blacklist:
+  - pattern: "theoi.com"
+    reason: "Unattributed compilations; cite only the ancient sources it paraphrases, never theoi.com itself."
+  - pattern: "sacred-texts.com"
+    reason: "Archive of public-domain 19th-century translations, often superseded. Use only when a 19th-c. translation is itself the object of discussion."
+  - pattern: "Wikipedia citation as sole source"
+    reason: "Wikipedia may be used for orientation and for locating primary references; never as a terminal citation."
+  - pattern: "ancient-origins.net"
+    reason: "Sensationalist popularization. Never cite."
+  - pattern: "New Age / 'universal mythology' popularizations (Campbell's *Masks of God* as primary, Graves's *Greek Myths*, Pinsent, Cotterell popular compilations)"
+    reason: "Not peer-reviewed; often conflates traditions. Campbell and Graves may appear as reception/history-of-interpretation but never as factual anchors."
+
+triangulation_databases:
+  - id: etcsl
+    url: "https://etcsl.orinst.ox.ac.uk/"
+    covers: "Sumerian literary texts (Lugal-e, Sumerian flood story, Sumerian Anzu background)."
+  - id: cdli
+    url: "https://cdli.ucla.edu/"
+    covers: "Cuneiform tablet database; verify specific tablet numbers."
+  - id: oracc
+    url: "https://oracc.museum.upenn.edu/"
+    covers: "Open Richly Annotated Cuneiform Corpus — composite normalized texts, incl. Enūma Eliš, Anzu Epic."
+  - id: ctr-ugaritic
+    url: "https://www.zotero.org/groups/ugaritic/"
+    covers: "Ugaritic text references; cross-check KTU/CAT numbering."
+  - id: perseus
+    url: "http://www.perseus.tufts.edu/"
+    covers: "Greek and Latin primary texts — Hesiod, Apollodorus, Nonnus, Ovid, Virgil."
+  - id: titus
+    url: "https://titus.uni-frankfurt.de/"
+    covers: "Indo-European text archive — Vedic, Avestan, Hittite."
+  - id: kotenbunko
+    url: "https://www.nijl.ac.jp/"
+    covers: "Japanese classical texts (Kojiki, Nihon Shoki, Fudoki). Japanese-language; use with Philippi/Aston translations."
+  - id: worldcat
+    url: "https://www.worldcat.org/"
+    covers: "Catalog lookup for verifying edition/ISBN details of hard-to-find works (van Dijk 1983, Annus 2001)."
+
+notes:
+  scope: |
+    This registry is deliberately INCOMPLETE at scope-lock. It covers:
+    (a) the comparative / theoretical spine that every chapter must engage with;
+    (b) one anchor critical edition per CORE story;
+    (c) tradition-specific anchors for the most load-bearing RELATED and contrastive entries.
+    Additional per-story sources — alternative translations, specialist journal articles,
+    monographs on individual combats — will accrue at the chapter-briefs stage.
+    The `inventory-audit` stage is expected to flag additional required entries.
+```
+
+---
+
+# Governing file: glossary.yaml
+
+```
+meta:
+  stage: glossary-lock
+  version: v1-locked
+  status: user-confirmed
+  date: 2026-04-24
+  note: "User-confirmed on 2026-04-24. All DECIDE_GLOSSARY.md items resolved. Changes from v1-draft: (3) Yahweh replaces YHWH as primary form; (7) wak'a replaces huaca; (13) tehôm kept italicised throughout body prose rather than switching to 'the deep'; (15) 'the adversary' added as the neutral category term, with 'the dragon' reserved for morphologically draconic figures and 'chaos-figure' banned. All other draft choices confirmed. Meta-diacritics policy: full scholarly diacritics across the glossary (option A)."
+  agent_model: "claude-opus-4-7[1m]"
+
+terms:
+
+  # ══════════════════════════════════════════════════════════════════════
+  # CATEGORY TERMS — the vocabulary of the book itself
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "Chaoskampf"
+    renderings_considered:
+      - { form: "Chaoskampf", source: "Gunkel 1895; still standard" }
+      - { form: "combat myth", source: "Forsyth 1987; Yarbro Collins 1976; Ballentine 2015" }
+      - { form: "conflict myth", source: "Ballentine 2015 preferred term" }
+    chosen: "Chaoskampf (in headings and as technical term); 'combat myth' in body prose"
+    rationale: "Scope.md §'Terminology default (locked)': Chaoskampf in headings/catalog; combat myth as default in body; reserves Chaoskampf for quotations and Gunkel discussion."
+    first_mention_gloss: "the scholarly category, coined by Hermann Gunkel in 1895, for narratives in which a sovereign or champion deity defeats a monstrous adversary to establish or preserve cosmic order"
+    never_use: ["dragon myth (too narrow)", "dragon-slaying myth (misses the cosmogonic function)"]
+
+  - native: "cosmogonic combat"
+    renderings_considered:
+      - { form: "cosmogonic combat", source: "book-internal" }
+      - { form: "cosmogonic chaoskampf", source: "Scurlock & Beal 2013" }
+      - { form: "combat-cosmogony", source: "Forsyth 1987" }
+    chosen: "cosmogonic combat"
+    rationale: "Clearest plain-English form; the category is one of four subtypes the book defines."
+    first_mention_gloss: "a combat myth in which the cosmos itself is established out of or immediately after the combat — for example, Marduk building sky and earth from Tiamat's body"
+    never_use: []
+
+  - native: "sovereignty combat"
+    renderings_considered:
+      - { form: "sovereignty combat", source: "book-internal; cf. Lincoln 2012" }
+      - { form: "kingship combat", source: "Forsyth 1987" }
+    chosen: "sovereignty combat"
+    rationale: "Matches scope.md subtype naming; 'sovereignty' is the category that captures Baal/Yamm, Zeus/Typhon, Indra/Vṛtra, Ninurta/Anzû."
+    first_mention_gloss: "a combat myth in which the victor's rule over gods and humans is established or secured by the combat"
+    never_use: []
+
+  - native: "cyclical-maintenance combat"
+    renderings_considered:
+      - { form: "cyclical-maintenance combat", source: "book-internal" }
+      - { form: "recurrent combat", source: "Assmann 2001 on maʿat" }
+    chosen: "cyclical-maintenance combat"
+    rationale: "Captures the Ra/Apep and Illuyanka/purulli subtype; the combat is re-enacted rather than once-and-done."
+    first_mention_gloss: "a combat myth that is re-enacted on a recurring schedule (daily, annually, calendrically) to preserve an order that is always under threat"
+    never_use: []
+
+  - native: "eschatological combat"
+    renderings_considered:
+      - { form: "eschatological combat", source: "book-internal; cf. Yarbro Collins 1976" }
+      - { form: "end-time combat", source: "popular usage" }
+    chosen: "eschatological combat"
+    rationale: "Standard scholarly term; captures Ragnarök, Rev 12, Frashokereti."
+    first_mention_gloss: "a combat myth that closes cosmic time — the final combat that ends the present age"
+    never_use: []
+
+  - native: "theogony / theogonic"
+    renderings_considered:
+      - { form: "theogony", source: "Hesiod title; standard scholarly use" }
+      - { form: "divine genealogy", source: "popularizing" }
+    chosen: "theogony / theogonic"
+    rationale: "Standard; used in West 1966, West 1997, Hoffner 1998 for the Kumarbi Cycle."
+    first_mention_gloss: "a narrative of the generation of the gods; the theogonic 'kingship in heaven' pattern tracks successions of divine rulers (Alalu → Anu → Kumarbi → Teshub)"
+    never_use: []
+
+  - native: "cosmogony / cosmogonic"
+    renderings_considered:
+      - { form: "cosmogony", source: "standard scholarly" }
+      - { form: "creation myth", source: "popular" }
+    chosen: "cosmogony / cosmogonic"
+    rationale: "Precision — creation-myth is broader and includes dismemberment-without-combat cases that the book explicitly separates."
+    first_mention_gloss: "a narrative of the origin of the ordered cosmos"
+    never_use: ["creation myth (used only informally)"]
+
+  - native: "reception / reception history"
+    renderings_considered:
+      - { form: "reception", source: "standard in biblical and classical studies (Ogden 2013)" }
+      - { form: "Nachleben", source: "German scholarly usage" }
+      - { form: "afterlife", source: "popular" }
+    chosen: "reception"
+    rationale: "Discipline-standard; understood by lay readers; scope.md §'Period' marks the reception coda explicitly as reception, not primary."
+    first_mention_gloss: "the afterlife of an image, narrative, or motif in later traditions (e.g., Leviathan reworked in Milton, Tolkien's dragons, kaiju cinema)"
+    never_use: []
+
+  - native: "appropriation"
+    renderings_considered:
+      - { form: "appropriation", source: "current critical scholarship; scope.md §'Appropriation protocol'" }
+      - { form: "cultural appropriation", source: "popular" }
+    chosen: "appropriation"
+    rationale: "Used in scope.md and in the Merlan 1998 / Hallowell 1960 literature without 'cultural' prefix; the prefix is redundant in context."
+    first_mention_gloss: "the distortion that occurs when a comparative category developed in one tradition is imposed on another whose own conceptual framework rejects the category"
+    never_use: []
+
+  - native: "comparativist / comparative mythology"
+    renderings_considered:
+      - { form: "comparativist", source: "Lincoln 2012; contemporary critical scholarship" }
+      - { form: "comparative mythologist", source: "older scholarship" }
+    chosen: "comparativist"
+    rationale: "The book uses 'comparativist' with its critical edge; 'comparative mythologist' would sound neutral where the book's critique is sharper."
+    first_mention_gloss: "a scholar who compares myths across traditions for shared patterns; the book engages comparativism as a method while flagging its historical entanglement with universalising and colonial projects"
+    never_use: []
+
+  - native: "area specialist"
+    renderings_considered:
+      - { form: "area specialist", source: "scope.md §'Appropriation protocol'; internal term" }
+      - { form: "area expert", source: "informal" }
+    chosen: "area specialist"
+    rationale: "Locked by scope.md; the contrast area-specialist / comparativist is load-bearing throughout."
+    first_mention_gloss: "a scholar whose primary expertise is a single tradition (language, texts, ritual context); the book's appropriation protocol requires area-specialist citations before invoking any comparative frame for non-Eurasian traditions"
+    never_use: []
+
+  - native: "the adversary (category term)"
+    renderings_considered:
+      - { form: "the adversary", source: "book-internal; neutral category term" }
+      - { form: "the dragon", source: "book-internal; morphological descriptor" }
+      - { form: "the monstrous adversary", source: "book-internal" }
+      - { form: "the chaos-figure", source: "popularising usage" }
+    chosen: "'the adversary' as the default neutral category term; 'the dragon' only where the figure is visually or morphologically draconic (Leviathan, Aži Dahāka, Fáfnir, Zmey Gorynych, Typhon, etc.)"
+    rationale: "Cross-chapter consistency benefits from one general term for the class of figure the champion confronts. 'The adversary' is the neutral choice and fits every case including those (Anzû the lion-headed eagle, Asag the stone-demon, Mishipeshu the underwater manitou) where 'dragon' would misrepresent the figure. 'Chaos-figure' is banned because it begs the very question the book is investigating (Ballentine 2015's critique)."
+    first_mention_gloss: "the book's umbrella term for the class of figure the champion confronts in a combat myth; the term is deliberately neutral between dragon, serpent, sea-monster, stone-demon, rebel deity, and other morphologies"
+    never_use: ["chaos-figure (begs the question); chaos-monster (same reason; the corpus is not uniformly 'chaos')"]
+
+  # ══════════════════════════════════════════════════════════════════════
+  # METHODOLOGICAL TERMS
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "HERO SLAY SERPENT (formula)"
+    renderings_considered:
+      - { form: "HERO SLAY SERPENT", source: "Watkins 1995 (small capitals)" }
+      - { form: "hero-slay-serpent formula", source: "Watkins 1995, running text" }
+    chosen: "HERO SLAY SERPENT (in small capitals when naming Watkins's reconstructed formula; 'hero-slay-serpent formula' in running body prose)"
+    rationale: "Small-capital convention is Watkins's own and should be preserved when naming the formula as a term of art; but body prose should not overuse the SMALL CAPS typography."
+    first_mention_gloss: "Calvert Watkins's reconstructed Indo-European poetic formula (subject + verb-of-killing + serpent-object), attested in Vedic áhann áhim, Hittite kuenta... illuyanka, and elsewhere"
+    never_use: []
+
+  - native: "áhann áhim"
+    renderings_considered:
+      - { form: "áhann áhim", source: "Watkins 1995; Jamison & Brereton 2014" }
+      - { form: "ahann ahim", source: "non-diacritical" }
+    chosen: "áhann áhim"
+    rationale: "Diacritics standard in Vedic scholarship; Watkins and Jamison-Brereton both use the accented form; the formula is the load-bearing exemplar and must be rendered as scholarship renders it."
+    first_mention_gloss: "'he slew the serpent' — the Rigvedic formula (RV 1.32.1) that Watkins argues preserves the Indo-European poetic diction of combat-myth"
+    never_use: []
+
+  - native: "basic myth (Ivanov-Toporov)"
+    renderings_considered:
+      - { form: "basic myth", source: "Ivanov & Toporov 1965–74; now standard in translation" }
+      - { form: "основной миф", source: "Russian original; not used in English body" }
+    chosen: "'basic myth' (in quotation marks on first mention)"
+    rationale: "The quotation marks flag it as a technical reconstruction whose status is contested (per Ch. 20 framing)."
+    first_mention_gloss: "Ivanov and Toporov's 1965–74 reconstruction of a shared Slavic storm-god-vs-serpent narrative, drawn from folklore and toponyms, and now criticised for methodological circularity"
+    never_use: []
+
+  - native: "tier-ranking"
+    renderings_considered:
+      - { form: "tier-ranking", source: "book-internal; methods sidebar Ch. 33" }
+    chosen: "tier-ranking"
+    rationale: "Internal book term referring to CORE / RELATED / PROVISIONAL / CONTRASTIVE categorisation."
+    first_mention_gloss: "the book's scheme for categorising chapters by the strength and type of primary attestation and by whether the chaoskampf framing is contested (CORE / RELATED / PROVISIONAL / CONTRASTIVE)"
+    never_use: []
+
+  - native: "other-than-human persons"
+    renderings_considered:
+      - { form: "other-than-human persons", source: "Hallowell 1960" }
+      - { form: "non-human persons", source: "some later ethnographic writing" }
+    chosen: "other-than-human persons"
+    rationale: "Hallowell's exact phrase; central to the Anishinaabe (Ch. 32) and C8 chapters."
+    first_mention_gloss: "A. Irving Hallowell's 1960 term for the Anishinaabe ontological category that includes animals, plants, thunder-beings, and manitouk as persons on equal standing with human persons"
+    never_use: []
+
+  - native: "Gunkel's thesis (Schöpfung und Chaos)"
+    renderings_considered:
+      - { form: "Gunkel's Chaoskampf thesis", source: "Scurlock & Beal 2013 subtitle" }
+      - { form: "Gunkel's 1895 thesis", source: "standard" }
+    chosen: "Gunkel's 1895 thesis"
+    rationale: "Disambiguates from Gunkel's other work; the date is load-bearing (book emphasises how the term travelled for 130 years)."
+    first_mention_gloss: "Hermann Gunkel's argument (1895) that Genesis 1 and Revelation 12 both preserve the demythologised remnants of a Near Eastern combat myth, of which Enūma Eliš is the paradigm"
+    never_use: []
+
+  - native: "Ballentine critique"
+    renderings_considered:
+      - { form: "Ballentine's critique", source: "Ballentine 2015; used internally" }
+      - { form: "the conflict-myth re-reading", source: "Ballentine 2015's own phrase" }
+    chosen: "the Ballentine critique (on first mention); thereafter 'Ballentine 2015'"
+    rationale: "Short and clear; flags that this is a contemporary critical position."
+    first_mention_gloss: "Debra Scoggins Ballentine's 2015 argument that 'chaos' is the wrong word for the adversaries in the combat-myth corpus, because they are presented in the ancient texts as rival sovereigns with their own retinue and power structure, not as inchoate disorder"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # DEITIES AND CHAMPIONS
+  # ══════════════════════════════════════════════════════════════════════
+
+  # ── Mesopotamia ──────────────────────────────────────────────────────
+
+  - native: "Ninurta"
+    renderings_considered:
+      - { form: "Ninurta", source: "ETCSL; van Dijk 1983; Annus 2001; Lambert 2013" }
+      - { form: "Ningirsu", source: "Lagash-tradition name; distinct deity" }
+    chosen: "Ninurta"
+    rationale: "Universal in the Lugal-e and Anzû scholarship; Ningirsu is a distinct Lagash deity and must not be conflated."
+    first_mention_gloss: "Sumerian warrior-god, son of Enlil, lord of Nippur; champion against Asag in Lugal-e and against Anzû in the Anzû Epic"
+    never_use: ["Ningirsu"]
+
+  - native: "Marduk"
+    renderings_considered:
+      - { form: "Marduk", source: "Lambert 2013; Foster 2005; universal" }
+      - { form: "Bēl", source: "cult epithet 'Lord'" }
+    chosen: "Marduk"
+    rationale: "Universal name for the deity; Bēl is an epithet, not an alternative name."
+    first_mention_gloss: "patron god of Babylon; storm-god champion who slays Tiamat and reorders the cosmos in Enūma Eliš"
+    never_use: []
+
+  - native: "Enlil"
+    renderings_considered:
+      - { form: "Enlil", source: "standard in all major editions" }
+      - { form: "Ellil", source: "later Akkadian transliteration variant" }
+    chosen: "Enlil"
+    rationale: "Standard Sumerian/Akkadian form in the combat-myth corpus."
+    first_mention_gloss: "chief god of the Mesopotamian pantheon, lord of air and command, resident of Nippur"
+    never_use: ["Ellil"]
+
+  - native: "Ea / Enki"
+    renderings_considered:
+      - { form: "Ea", source: "Akkadian; Annus 2001; Lambert 2013" }
+      - { form: "Enki", source: "Sumerian; ETCSL" }
+    chosen: "Ea in Akkadian-language contexts (Anzû, Enūma Eliš, Kumarbi Cycle); Enki in Sumerian-language contexts (Lugal-e and Sumerian materials)"
+    rationale: "The book is cross-linguistic; using the language-appropriate name preserves textual integrity. Flag dual identity at first mention of each."
+    first_mention_gloss: "god of wisdom and fresh water (Sumerian Enki / Akkadian Ea); counselor of Ninurta and father of Marduk"
+    never_use: []
+
+  - native: "Anšar"
+    renderings_considered:
+      - { form: "Anšar", source: "Lambert 2013; Foster 2005 (with š)" }
+      - { form: "Anshar", source: "non-diacritical anglicization" }
+    chosen: "Anšar"
+    rationale: "The diacritical form is standard in the critical editions; the book has several š-containing names and should be consistent in retaining the háček."
+    first_mention_gloss: "elder sky-god; commissions Marduk as champion of the gods"
+    never_use: ["Anshar"]
+
+  - native: "Tiamat"
+    renderings_considered:
+      - { form: "Tiamat", source: "Lambert 2013; universal" }
+      - { form: "Tiāmat", source: "with length-mark, less common" }
+    chosen: "Tiamat"
+    rationale: "Standard anglicization; cognate with Hebrew tehôm and thus load-bearing across Mesopotamian / biblical chapters."
+    first_mention_gloss: "primordial salt-sea goddess; mother of the first gods; cast as monstrous adversary in Enūma Eliš"
+    never_use: []
+
+  - native: "Apsû"
+    renderings_considered:
+      - { form: "Apsû", source: "Lambert 2013" }
+      - { form: "Apsu", source: "anglicized" }
+      - { form: "Abzu", source: "Sumerian form" }
+    chosen: "Apsû in Akkadian (Enūma Eliš) contexts; Abzu only where Sumerian usage is specifically invoked"
+    rationale: "Matches Ea/Enki handling: use the language-appropriate form."
+    first_mention_gloss: "primordial fresh-water; Tiamat's consort; killed by Ea in the Enūma Eliš prologue (Sumerian: Abzu)"
+    never_use: []
+
+  - native: "Qingu"
+    renderings_considered:
+      - { form: "Qingu", source: "Lambert 2013" }
+      - { form: "Kingu", source: "older anglicizations (Speiser ANET)" }
+    chosen: "Qingu"
+    rationale: "Lambert 2013's critical-edition form; supersedes Speiser's 'Kingu'."
+    first_mention_gloss: "Tiamat's appointed consort-general; holds the Tablet of Destinies; executed so that humans can be formed from his blood"
+    never_use: ["Kingu"]
+
+  - native: "Anzû"
+    renderings_considered:
+      - { form: "Anzû", source: "Annus 2001; Foster 2005" }
+      - { form: "Anzu", source: "non-diacritical" }
+      - { form: "Zu", source: "older, superseded" }
+    chosen: "Anzû"
+    rationale: "Standard in current critical edition; 'Zu' is a misreading long since corrected."
+    first_mention_gloss: "lion-headed eagle-monster; rebel who steals the Tablet of Destinies from Enlil; slain by Ninurta"
+    never_use: ["Zu"]
+
+  - native: "Asag"
+    renderings_considered:
+      - { form: "Asag", source: "ETCSL; van Dijk 1983" }
+      - { form: "Asakku", source: "Akkadian form" }
+    chosen: "Asag in Sumerian (Lugal-e) contexts"
+    rationale: "Lugal-e is Sumerian; Asakku appears in Akkadian bilingual and later material, which the book treats as reception."
+    first_mention_gloss: "Sumerian demon of the mountains, commander of a stone-army; Ninurta's adversary in Lugal-e"
+    never_use: []
+
+  - native: "Šarur"
+    renderings_considered:
+      - { form: "Šarur", source: "ETCSL; van Dijk 1983" }
+      - { form: "Sharur", source: "non-diacritical" }
+    chosen: "Šarur"
+    rationale: "Diacritical standard; the animate-mace motif recurs and needs a stable rendering."
+    first_mention_gloss: "Ninurta's animate talking mace; scout and messenger; appears in both Lugal-e and the Anzû Epic"
+    never_use: ["Sharur"]
+
+  - native: "Labbu"
+    renderings_considered:
+      - { form: "Labbu", source: "Foster 2005; standard" }
+    chosen: "Labbu"
+    rationale: "Universal; fragmentary tablet is typically called the 'Labbu myth'."
+    first_mention_gloss: "dragon in the fragmentary Akkadian 'Labbu myth'; slain by a storm-god whose identification is uncertain"
+    never_use: []
+
+  - native: "Tablet of Destinies"
+    renderings_considered:
+      - { form: "Tablet of Destinies", source: "Annus 2001; Lambert 2013; universal" }
+      - { form: "Tablet of Fates", source: "older translations" }
+      - { form: "dup šīmāti", source: "Akkadian cuneiform reading" }
+    chosen: "Tablet of Destinies"
+    rationale: "Standard English; dup šīmāti noted on first mention only."
+    first_mention_gloss: "the cosmic decree-document (Akkadian dup šīmāti); possessing it is tantamount to kingship; central in Anzû and Enūma Eliš"
+    never_use: ["Tablet of Fates"]
+
+  - native: "Esagil"
+    renderings_considered:
+      - { form: "Esagil", source: "Lambert 2013" }
+      - { form: "Esagila", source: "older anglicization" }
+      - { form: "É-sag-íl", source: "Sumerian with hyphenation" }
+    chosen: "Esagil"
+    rationale: "Lambert's form; standard in current Assyriological use."
+    first_mention_gloss: "Marduk's temple in Babylon; built at the cosmic axis as the post-combat capital of the gods"
+    never_use: []
+
+  - native: "akītu"
+    renderings_considered:
+      - { form: "akītu", source: "standard Akkadian with long vowel" }
+      - { form: "akitu", source: "anglicized" }
+      - { form: "akiti", source: "Sumerian" }
+    chosen: "akītu"
+    rationale: "Long-vowel form is scholarly standard; the festival's name should be recognisable."
+    first_mention_gloss: "Mesopotamian New Year festival; Enūma Eliš was recited on its fourth day, tying the combat-myth to the annual ritual calendar"
+    never_use: []
+
+  # ── Anatolia / Levant ────────────────────────────────────────────────
+
+  - native: "Tarḫunna / Teshub"
+    renderings_considered:
+      - { form: "Tarḫunna", source: "Hoffner 1998 (Hittite form, with dot under ḫ)" }
+      - { form: "Tarhunna", source: "non-diacritical" }
+      - { form: "Teshub", source: "Hurrian form; Hoffner 1998" }
+      - { form: "Teššub", source: "diacritical Hurrian" }
+    chosen: "Tarḫunna in Hittite-language contexts; Teshub in Hurrian-language contexts (Kumarbi Cycle)"
+    rationale: "Scope.md's translation-mediated policy; each name is appropriate to its own language stratum. First mention glosses the pair."
+    first_mention_gloss: "Anatolian storm-god (Hittite Tarḫunna / Hurrian Teshub); champion in the Illuyanka myth and in the Kumarbi Cycle"
+    never_use: []
+
+  - native: "Kumarbi"
+    renderings_considered:
+      - { form: "Kumarbi", source: "Hoffner 1998" }
+    chosen: "Kumarbi"
+    rationale: "Universal form; no significant variant."
+    first_mention_gloss: "Hurrian father-god deposed by Teshub; generates the monstrous adversaries of the Kumarbi Cycle (Ullikummi, Hedammu)"
+    never_use: []
+
+  - native: "Ullikummi"
+    renderings_considered:
+      - { form: "Ullikummi", source: "Hoffner 1998" }
+    chosen: "Ullikummi"
+    rationale: "Universal form."
+    first_mention_gloss: "stone monster; Kumarbi's progeny by a rock; grows on the shoulder of Upelluri to threaten Teshub's kingship"
+    never_use: []
+
+  - native: "Hedammu"
+    renderings_considered:
+      - { form: "Hedammu", source: "Hoffner 1998" }
+    chosen: "Hedammu"
+    rationale: "Standard."
+    first_mention_gloss: "sea-monster progeny of Kumarbi in the fragmentary Song of Hedammu; seduced by Ishtar/Šauška"
+    never_use: []
+
+  - native: "Upelluri"
+    renderings_considered:
+      - { form: "Upelluri", source: "Hoffner 1998" }
+    chosen: "Upelluri"
+    rationale: "Standard."
+    first_mention_gloss: "the giant on whose shoulder Ullikummi is planted and grows"
+    never_use: []
+
+  - native: "Illuyanka"
+    renderings_considered:
+      - { form: "Illuyanka", source: "Hoffner 1998; Beckman 1982; Watkins 1995" }
+      - { form: "Illuyankaš", source: "with Hittite nominative ending" }
+    chosen: "Illuyanka"
+    rationale: "Current scholarly English drops the case-ending."
+    first_mention_gloss: "serpent-monster, the storm-god's adversary in the purulli-festival aetiology"
+    never_use: ["Illuyankaš (outside philological footnotes)"]
+
+  - native: "Inara"
+    renderings_considered:
+      - { form: "Inara", source: "Hoffner 1998" }
+    chosen: "Inara"
+    rationale: "Standard."
+    first_mention_gloss: "daughter of the storm-god; ritual actor in Version 1 of the Illuyanka myth"
+    never_use: []
+
+  - native: "Hupasiya"
+    renderings_considered:
+      - { form: "Hupasiya", source: "Hoffner 1998" }
+    chosen: "Hupasiya"
+    rationale: "Standard."
+    first_mention_gloss: "mortal man who binds Illuyanka; Inara's partner in Version 1 of the myth"
+    never_use: []
+
+  - native: "purulli"
+    renderings_considered:
+      - { form: "purulli", source: "Hoffner 1998; Beckman 1982" }
+      - { form: "purulliyaš", source: "with case ending" }
+    chosen: "purulli"
+    rationale: "Shorter form standard in translations."
+    first_mention_gloss: "Hittite spring festival at which the Illuyanka myth was recited as liturgical aetiology"
+    never_use: []
+
+  - native: "Baal / Haddu / Baʿlu"
+    renderings_considered:
+      - { form: "Baal", source: "popular and most Hebrew-Bible scholarship" }
+      - { form: "Baʿlu", source: "Smith 1994 (Ugaritic)" }
+      - { form: "Haddu", source: "Ugaritic personal-name form" }
+    chosen: "Baal (in body prose); first-mention gloss names Baʿlu / Haddu as the Ugaritic forms"
+    rationale: "Reader recognition; the Ugaritic specificity is preserved in the gloss and in philological footnotes."
+    first_mention_gloss: "Ugaritic storm-god (Baʿlu / Haddu in Ugaritic spelling); son of Dagan; combat-champion of the Baal Cycle"
+    never_use: []
+
+  - native: "Yamm"
+    renderings_considered:
+      - { form: "Yamm", source: "Smith 1994; universal in Ugaritic scholarship" }
+      - { form: "Yam", source: "Hebrew cognate; used in Ch. 8 for biblical usage" }
+    chosen: "Yamm in Ugaritic contexts (Ch. 7); Yam in Hebrew-Bible contexts (Ch. 8)"
+    rationale: "Language-appropriate; the Ugaritic form has the long consonant."
+    first_mention_gloss: "'Sea'; Ugaritic god of the sea and Baal's primary adversary in the Cycle (Hebrew cognate: Yam)"
+    never_use: []
+
+  - native: "Lôtan"
+    renderings_considered:
+      - { form: "Lôtan", source: "Smith 1994" }
+      - { form: "Lotan", source: "non-diacritical" }
+      - { form: "ltn", source: "unvocalized Ugaritic" }
+    chosen: "Lôtan"
+    rationale: "Circumflex-o preserves vowel length; cognate with Hebrew Leviathan and the correspondence must be visible."
+    first_mention_gloss: "seven-headed serpent adversary at Ugarit (ltn in unvocalized Ugaritic); cognate with Hebrew Leviathan"
+    never_use: []
+
+  - native: "Mot"
+    renderings_considered:
+      - { form: "Mot", source: "Smith 1994" }
+      - { form: "Môt", source: "with length-mark" }
+    chosen: "Mot"
+    rationale: "Shorter form standard in English Ugaritic scholarship."
+    first_mention_gloss: "'Death'; Ugaritic god of death; Baal's adversary in the second half of the Cycle"
+    never_use: []
+
+  - native: "Kothar-wa-Khasis"
+    renderings_considered:
+      - { form: "Kothar-wa-Khasis", source: "Smith 1994" }
+      - { form: "Kothar", source: "short form" }
+      - { form: "Kôtaru-wa-Ḫasīsu", source: "philological" }
+    chosen: "Kothar-wa-Khasis"
+    rationale: "Matches Smith's translation; the doubled name preserves the Ugaritic epithet-pair."
+    first_mention_gloss: "Ugaritic craftsman-god; forges Baal's maces Ayyamur and Yagrush"
+    never_use: []
+
+  - native: "El (Ugaritic)"
+    renderings_considered:
+      - { form: "El", source: "Smith 1994; universal" }
+      - { form: "ʾIlu", source: "philological" }
+    chosen: "El"
+    rationale: "Standard English."
+    first_mention_gloss: "chief Ugaritic god; father of the divine assembly; decision-maker in the Baal Cycle"
+    never_use: []
+
+  - native: "ʿAnat"
+    renderings_considered:
+      - { form: "ʿAnat", source: "Smith 1994 (with ʿayin)" }
+      - { form: "Anat", source: "non-diacritical" }
+      - { form: "ʿAnatu", source: "philological" }
+    chosen: "ʿAnat"
+    rationale: "The ʿayin is the standard diacritic in current Ugaritic scholarship."
+    first_mention_gloss: "Ugaritic warrior-goddess; Baal's sister and combat-ally"
+    never_use: []
+
+  - native: "Ayyamur / Yagrush"
+    renderings_considered:
+      - { form: "Ayyamur and Yagrush", source: "Smith 1994" }
+      - { form: "ʾayamarri / yagarriš", source: "philological" }
+    chosen: "Ayyamur and Yagrush"
+    rationale: "Smith's translations; retaining both names preserves the mace-pair motif that parallels Ninurta's Šarur."
+    first_mention_gloss: "Baal's two named maces, forged by Kothar; the storm-god's dual combat-weapons"
+    never_use: []
+
+  - native: "Ṣapānu / Mount Zaphon"
+    renderings_considered:
+      - { form: "Ṣapānu", source: "Smith 1994 (Ugaritic)" }
+      - { form: "Mount Zaphon", source: "Hebrew-Bible tradition" }
+      - { form: "Jebel al-Aqra", source: "modern Arabic place-name" }
+    chosen: "Ṣapānu at first mention (Ugaritic context); 'Mount Zaphon' when the Hebrew-Bible reception is in view"
+    rationale: "Preserves the same mountain across languages and chapters."
+    first_mention_gloss: "Baal's sacred mountain; the modern Jebel al-Aqra on the Syrian–Turkish border; his palace-seat after victory over Yamm"
+    never_use: []
+
+  # ── Hebrew Bible and New Testament ──────────────────────────────────
+
+  - native: "Yahweh"
+    renderings_considered:
+      - { form: "Yahweh", source: "vocalized reconstruction; Day 1985 uses this form" }
+      - { form: "YHWH", source: "standard unvocalized tetragrammaton" }
+      - { form: "the LORD", source: "translation convention" }
+    chosen: "Yahweh"
+    rationale: "The vocalised form is common enough in academic and general English that the unvocalised YHWH becomes awkward in sustained body prose; 'Yahweh' reads naturally in narrative discussion of the deity as a character. YHWH may still appear in direct quotation of sources that use the unvocalised form."
+    first_mention_gloss: "the God of Israel (Hebrew tetragrammaton YHWH, vocalised Yahweh); depicted in the combat-myth passages as storm-god who defeats the sea, Leviathan, and Rahab"
+    never_use: ["Jehovah"]
+
+  - native: "Leviathan"
+    renderings_considered:
+      - { form: "Leviathan", source: "English Bible tradition; Day 1985" }
+      - { form: "Liwyātān", source: "Hebrew transliteration" }
+    chosen: "Leviathan"
+    rationale: "Universal English form; reader recognition across Hebrew Bible, Rev 12, reception."
+    first_mention_gloss: "multi-headed sea-serpent of the Hebrew Bible (Psalm 74; Isaiah 27; Job 41); cognate with Ugaritic Lôtan"
+    never_use: []
+
+  - native: "Rahab"
+    renderings_considered:
+      - { form: "Rahab", source: "Day 1985; English Bible tradition" }
+      - { form: "Rahav", source: "modern Hebrew transliteration" }
+    chosen: "Rahab"
+    rationale: "Standard English; distinguish the proud sea-monster from the unrelated Rahab-of-Jericho by context (always clear)."
+    first_mention_gloss: "'proud one'; monstrous figure of Hebrew Bible poetry (Psalm 89; Isaiah 51; Job 26), associated with the sea and — in Isaiah — with Egypt"
+    never_use: []
+
+  - native: "Tannīn"
+    renderings_considered:
+      - { form: "Tannīn", source: "Day 1985" }
+      - { form: "tannin", source: "non-diacritical, lower-case common-noun" }
+    chosen: "Tannīn (when naming the mythic figure); tannin (as the common noun 'serpent / sea-creature')"
+    rationale: "Capital/diacritics for the personified figure; lowercase for ordinary common-noun use."
+    first_mention_gloss: "'serpent / sea-creature' (Hebrew); used both as common noun and, in combat passages, as a personified figure often synonymous with Leviathan"
+    never_use: []
+
+  - native: "tehôm"
+    renderings_considered:
+      - { form: "tehôm", source: "Day 1985" }
+      - { form: "tehom", source: "non-diacritical" }
+      - { form: "the deep", source: "English translation" }
+    chosen: "tehôm (italicised) throughout body prose; 'the deep' reserved for direct Bible quotations where English translation is required"
+    rationale: "Genesis 1:2 is quoted and referenced repeatedly across Ch. 8, the introduction, and the Gunkel–Ballentine discussions; keeping tehôm as the technical term through every mention preserves the philological cognancy argument (tehôm / Tiamat) without switching registers mid-paragraph."
+    first_mention_gloss: "'the deep' (Genesis 1:2); the primordial waters; linguistically cognate with Akkadian Tiamat, the cornerstone of Gunkel's 1895 argument"
+    never_use: []
+
+  - native: "the dragon (Rev 12)"
+    renderings_considered:
+      - { form: "the dragon", source: "Rev 12; standard English" }
+      - { form: "the great red dragon", source: "Rev 12:3 descriptor" }
+      - { form: "ὁ δράκων", source: "Greek" }
+    chosen: "the (red) dragon of Rev 12"
+    rationale: "'Dragon' alone is the noun; 'red' marks the specific Revelation figure when contrast is needed."
+    first_mention_gloss: "the seven-headed red dragon of Revelation 12:3, glossed in v. 9 as 'the ancient serpent, called the devil and Satan'"
+    never_use: []
+
+  - native: "Michael (archangel)"
+    renderings_considered:
+      - { form: "Michael", source: "English Bible; universal" }
+      - { form: "Mikaʾel", source: "Hebrew transliteration" }
+    chosen: "Michael"
+    rationale: "Universal English form for this figure."
+    first_mention_gloss: "archangel-warrior; leads the heavenly host against the dragon in Revelation 12"
+    never_use: []
+
+  - native: "Satan / the devil"
+    renderings_considered:
+      - { form: "Satan", source: "English Bible; Forsyth 1987" }
+      - { form: "the satan", source: "Second Temple usage, when the term is a title" }
+      - { form: "the devil (ho diabolos)", source: "NT Greek" }
+    chosen: "Satan (for the figure in Rev 12 and later Christian reception); 'the satan' (lowercase) in Hebrew Bible contexts where the term is a title rather than a name"
+    rationale: "The difference in capitalisation flags the Second Temple evolution; Forsyth 1987 tracks it."
+    first_mention_gloss: "'the adversary'; in Rev 12:9 identified with the dragon and the ancient serpent — completing the assimilation of the combat-myth adversary to the Second-Temple satanology"
+    never_use: []
+
+  # ── Greek and Roman ──────────────────────────────────────────────────
+
+  - native: "Zeus"
+    renderings_considered:
+      - { form: "Zeus", source: "universal" }
+    chosen: "Zeus"
+    rationale: "Universal."
+    first_mention_gloss: "king of the Olympian gods; wields the thunderbolt in combat with Typhon"
+    never_use: []
+
+  - native: "Typhon / Typhoeus"
+    renderings_considered:
+      - { form: "Typhon", source: "Apollodorus; most translations" }
+      - { form: "Typhoeus", source: "Hesiod Theogony; West 1966" }
+    chosen: "Typhon as body-prose default; Typhoeus when specifically discussing the Theogony"
+    rationale: "Both names are ancient; the distinction tracks the specific text under discussion."
+    first_mention_gloss: "the hundred-headed, serpent-limbed earth-born monster, child of Gaia and Tartarus; Zeus's last and greatest adversary"
+    never_use: []
+
+  - native: "drakōn / dragon"
+    renderings_considered:
+      - { form: "drakōn", source: "Ogden 2013 title" }
+      - { form: "drakon", source: "non-diacritical" }
+      - { form: "dragon", source: "English translation" }
+    chosen: "drakōn (Greek technical term); 'dragon' in body prose"
+    rationale: "Ogden's classification vocabulary uses drakōn as a genre-term; body prose can say 'dragon'."
+    first_mention_gloss: "'dragon' (Greek δράκων); the Greek and Roman serpent-adversary category that Ogden 2013 catalogues and classifies"
+    never_use: []
+
+  - native: "Apollo"
+    renderings_considered:
+      - { form: "Apollo", source: "universal" }
+      - { form: "Apollon", source: "Greek form" }
+    chosen: "Apollo"
+    rationale: "Reader recognition."
+    first_mention_gloss: "Olympian god of prophecy, music, and plague; slays Python to found the Delphic oracle"
+    never_use: []
+
+  - native: "Python (Delphic)"
+    renderings_considered:
+      - { form: "Python", source: "Ovid; Fontenrose 1959 title" }
+      - { form: "Pytho (drakaina)", source: "Homeric Hymn to Apollo" }
+    chosen: "Python"
+    rationale: "Fontenrose's title; the later tradition names the (originally female) dragon Python."
+    first_mention_gloss: "the Delphic serpent slain by Apollo; originally unnamed and female (a drakaina) in the Homeric Hymn; named Python in Ovid and later tradition"
+    never_use: []
+
+  - native: "Herakles / Hercules"
+    renderings_considered:
+      - { form: "Herakles", source: "Greek contexts" }
+      - { form: "Hercules", source: "Roman / Latin contexts (Cacus episode)" }
+    chosen: "Herakles in Greek-text contexts; Hercules in Roman-text contexts (Virgil Aeneid 8, Ovid Fasti)"
+    rationale: "Preserves the text-specific register."
+    first_mention_gloss: "hero of the twelve labours (Greek Herakles / Latin Hercules); slays Hydra, Ladon, Geryon, and Cacus"
+    never_use: []
+
+  - native: "Perseus"
+    renderings_considered:
+      - { form: "Perseus", source: "universal" }
+    chosen: "Perseus"
+    rationale: "Universal."
+    first_mention_gloss: "hero who beheads Medusa and rescues Andromeda from Ketos; iconographic antecedent of the medieval St. George type"
+    never_use: []
+
+  - native: "Kadmos"
+    renderings_considered:
+      - { form: "Kadmos", source: "Greek" }
+      - { form: "Cadmus", source: "Latinised; Ovid" }
+    chosen: "Kadmos"
+    rationale: "Preserves Greek form; the story is Theban and Greek in origin."
+    first_mention_gloss: "Theban hero; slays the dragon of Ares at Thebes and sows its teeth to raise the Spartoi"
+    never_use: []
+
+  - native: "Bellerophon"
+    renderings_considered:
+      - { form: "Bellerophon", source: "Homer; standard" }
+    chosen: "Bellerophon"
+    rationale: "Universal."
+    first_mention_gloss: "Lycian hero; slays the Chimaera while riding Pegasus"
+    never_use: []
+
+  # ── Iran ─────────────────────────────────────────────────────────────
+
+  - native: "Thraētaona / Fereydun"
+    renderings_considered:
+      - { form: "Thraētaona", source: "Avestan; Benveniste & Renou 1934" }
+      - { form: "Fereydun", source: "New Persian (Shāhnāmeh)" }
+      - { form: "Frēdōn", source: "Middle Persian (Pahlavi)" }
+    chosen: "Thraētaona in Avestan-context body prose; first mention glosses the Middle/New-Persian descendants"
+    rationale: "The Avestan form is the book's primary-source register; the Pahlavi/New-Persian afterlife is tracked in the gloss."
+    first_mention_gloss: "Avestan hero-slayer of Aži Dahāka (Middle Persian Frēdōn; New Persian Fereydun in the Shāhnāmeh)"
+    never_use: []
+
+  - native: "Aži Dahāka"
+    renderings_considered:
+      - { form: "Aži Dahāka", source: "Avestan; Benveniste & Renou 1934" }
+      - { form: "Azhi Dahaka", source: "non-diacritical" }
+      - { form: "Dahāg", source: "Middle Persian" }
+      - { form: "Zahhāk", source: "New Persian (Shāhnāmeh)" }
+    chosen: "Aži Dahāka (with diacritics) as primary form; thereafter 'the dragon' where context allows; Zahhāk flagged only when the Shāhnāmeh is under discussion"
+    rationale: "Avestan form is the scholarly anchor; the three-headed philological cognancy with Vedic tri-śīrṣan vṛtra depends on the Avestan name."
+    first_mention_gloss: "three-headed, six-eyed, three-jawed dragon-tyrant of the Avestan tradition; originally a creature of Angra Mainyu; bound under Mount Damāvand until Frashokereti (Middle Persian Dahāg; New Persian Zahhāk)"
+    never_use: ["Azhi Dahaka (without diacritics, outside non-scholarly contexts)"]
+
+  - native: "Ahura Mazdā"
+    renderings_considered:
+      - { form: "Ahura Mazdā", source: "Avestan with long ā" }
+      - { form: "Ahura Mazda", source: "non-diacritical" }
+      - { form: "Ohrmazd", source: "Middle Persian" }
+    chosen: "Ahura Mazdā in Avestan contexts; Ohrmazd where Pahlavi sources are cited"
+    rationale: "Standard diacritical; matches Aži Dahāka handling."
+    first_mention_gloss: "'the Wise Lord'; creator-god in Zoroastrian cosmology (Middle Persian Ohrmazd)"
+    never_use: []
+
+  - native: "Angra Mainyu"
+    renderings_considered:
+      - { form: "Angra Mainyu", source: "Avestan" }
+      - { form: "Ahriman", source: "Middle Persian" }
+    chosen: "Angra Mainyu in Avestan contexts; Ahriman where Pahlavi sources are under discussion"
+    rationale: "Matches Ahura Mazdā handling."
+    first_mention_gloss: "'the evil spirit'; cosmic adversary of Ahura Mazdā in Zoroastrian dualism (Middle Persian Ahriman)"
+    never_use: []
+
+  - native: "Frashokereti"
+    renderings_considered:
+      - { form: "Frashokereti", source: "Avestan; Bundahišn scholarship" }
+      - { form: "Frashegird", source: "Middle Persian" }
+    chosen: "Frashokereti"
+    rationale: "Most common form in English Zoroastrian studies."
+    first_mention_gloss: "the final renovation; Zoroastrian eschatological end-time in which Aži Dahāka is slain a second (and final) time by the revived Kərəsāspa"
+    never_use: []
+
+  - native: "Kərəsāspa"
+    renderings_considered:
+      - { form: "Kərəsāspa", source: "Avestan with schwa-diacritics" }
+      - { form: "Keresaspa", source: "anglicized" }
+      - { form: "Garshāsp", source: "New Persian" }
+    chosen: "Kərəsāspa at first scholarly mention; 'Keresaspa' in subsequent body prose"
+    rationale: "Full diacritical form preserves the Avestan philology; simpler spelling keeps body prose readable."
+    first_mention_gloss: "Avestan hero (anglicized Keresaspa); sleeps in a long stasis and is revived at Frashokereti to slay the rebound Aži Dahāka"
+    never_use: []
+
+  - native: "Damāvand"
+    renderings_considered:
+      - { form: "Damāvand", source: "Persian with long ā" }
+      - { form: "Damavand", source: "anglicized" }
+    chosen: "Damāvand"
+    rationale: "The long ā is standard in Iranian studies transliteration."
+    first_mention_gloss: "mountain of the Alborz range in northern Iran under which Aži Dahāka is bound in the Pahlavi tradition"
+    never_use: []
+
+  # ── India ────────────────────────────────────────────────────────────
+
+  - native: "Indra"
+    renderings_considered:
+      - { form: "Indra", source: "Jamison & Brereton 2014; universal" }
+    chosen: "Indra"
+    rationale: "Universal."
+    first_mention_gloss: "Vedic storm-god; chief of the Rigvedic gods; wielder of the vajra; slayer of Vṛtra"
+    never_use: []
+
+  - native: "Vṛtra"
+    renderings_considered:
+      - { form: "Vṛtra", source: "Jamison & Brereton 2014; Benveniste & Renou 1934" }
+      - { form: "Vritra", source: "non-diacritical" }
+    chosen: "Vṛtra"
+    rationale: "Diacritical (vocalic ṛ) is standard in Vedic scholarship and preserves the etymology vṛ- 'to obstruct'."
+    first_mention_gloss: "serpent-demon whose name derives from Vedic vṛ- 'to obstruct'; the obstacle that blocks the cosmic waters; slain by Indra in RV 1.32"
+    never_use: ["Vritra (outside titles of older sources)"]
+
+  - native: "vajra"
+    renderings_considered:
+      - { form: "vajra", source: "Jamison & Brereton 2014" }
+      - { form: "thunderbolt", source: "translation" }
+    chosen: "vajra (on first mention); 'the vajra' or 'Indra's thunderbolt' in body prose"
+    rationale: "Sanskrit term retains distinctness from Thor's Mjöllnir and Zeus's keraunos; translated at first mention."
+    first_mention_gloss: "Indra's thunderbolt-mace, forged by Tvaṣṭṛ; the cosmic combat-weapon of the Rigveda"
+    never_use: []
+
+  - native: "Tvaṣṭṛ"
+    renderings_considered:
+      - { form: "Tvaṣṭṛ", source: "Jamison & Brereton 2014" }
+      - { form: "Tvashtr", source: "anglicized" }
+      - { form: "Tvashtar", source: "older older anglicization" }
+    chosen: "Tvaṣṭṛ"
+    rationale: "Diacritical standard in current Vedic scholarship."
+    first_mention_gloss: "Vedic divine artisan; forges Indra's vajra"
+    never_use: []
+
+  - native: "soma"
+    renderings_considered:
+      - { form: "soma", source: "universal in Vedic studies" }
+    chosen: "soma (lowercase, italicised on first mention)"
+    rationale: "Common-noun Sanskrit term; italics on first mention only."
+    first_mention_gloss: "the ritual drink (and deified plant) that fortifies Indra for combat"
+    never_use: []
+
+  - native: "ahi"
+    renderings_considered:
+      - { form: "ahi", source: "Jamison & Brereton 2014; Watkins 1995" }
+    chosen: "ahi"
+    rationale: "The load-bearing Vedic word for 'serpent' in the áhann áhim formula."
+    first_mention_gloss: "'serpent' (Sanskrit); the word for Vṛtra in the áhann áhim formula; philologically cognate with Avestan aži"
+    never_use: []
+
+  - native: "Trita Āptya"
+    renderings_considered:
+      - { form: "Trita Āptya", source: "Jamison & Brereton 2014" }
+      - { form: "Trita Aptya", source: "non-diacritical" }
+    chosen: "Trita Āptya"
+    rationale: "Diacritical; the figure's philological cognancy with Avestan Thraētaona is load-bearing."
+    first_mention_gloss: "Vedic dragon-slayer cognate with Avestan Thraētaona; the older Indo-Iranian figure of the combat-myth stratum that Indra-Vṛtra superseded"
+    never_use: []
+
+  - native: "Krishna"
+    renderings_considered:
+      - { form: "Krishna", source: "universal English" }
+      - { form: "Kṛṣṇa", source: "diacritical Sanskrit" }
+    chosen: "Krishna (in body prose); Kṛṣṇa only in strict philological footnotes"
+    rationale: "Reader recognition; the diacritical form would be pedantic outside citation."
+    first_mention_gloss: "avatar of Viṣṇu; in the post-Vedic tradition subdues the serpent Kāliya by dancing on his heads"
+    never_use: []
+
+  - native: "Kāliya"
+    renderings_considered:
+      - { form: "Kāliya", source: "Sanskrit with ā" }
+      - { form: "Kaliya", source: "non-diacritical" }
+    chosen: "Kāliya"
+    rationale: "Diacritical long-ā standard; the story is central to Vaishnava iconography."
+    first_mention_gloss: "many-headed water-serpent of the Yamunā who poisons the river; subdued (not slain) by the child Krishna"
+    never_use: []
+
+  - native: "līlā"
+    renderings_considered:
+      - { form: "līlā", source: "Sanskrit; Vaishnava studies" }
+      - { form: "lila", source: "anglicized" }
+      - { form: "play", source: "translation" }
+    chosen: "līlā (italicised, on first mention); 'sacred play' in body translation"
+    rationale: "Technical Sanskrit; the Krishna-Kāliya episode is one of the classic examples."
+    first_mention_gloss: "'sacred play'; the Vaishnava category in which divine action is construed as play rather than as combat"
+    never_use: []
+
+  - native: "nāga"
+    renderings_considered:
+      - { form: "nāga", source: "Sanskrit; Indic studies standard" }
+      - { form: "naga", source: "non-diacritical" }
+    chosen: "nāga (italicised on first mention)"
+    rationale: "Technical Indic serpent-category; diacritical preferred."
+    first_mention_gloss: "'serpent' (Sanskrit); a broad Indic category of serpent-beings, often of ambivalent moral valence — Kāliya is a nāga"
+    never_use: []
+
+  # ── Egypt ────────────────────────────────────────────────────────────
+
+  - native: "Ra"
+    renderings_considered:
+      - { form: "Ra", source: "Faulkner 1972; most current Egyptology" }
+      - { form: "Rē", source: "older scholarly with long-mark" }
+      - { form: "Re", source: "variant without long-mark" }
+    chosen: "Ra"
+    rationale: "Current Egyptological convention; reader recognition."
+    first_mention_gloss: "Egyptian sun-god; traverses the sky by day and the Duat by night in his solar barque; combats Apep nightly"
+    never_use: []
+
+  - native: "Apep / Apophis"
+    renderings_considered:
+      - { form: "Apep", source: "Egyptian-language form; Faulkner 1972" }
+      - { form: "Apophis", source: "Greek form of the name; te Velde 1967" }
+    chosen: "Apep in body prose; 'Apophis' noted as the Greek form at first mention"
+    rationale: "Apep preserves the Egyptian register; Apophis is the Hellenistic reception-name and appears in some secondary scholarship."
+    first_mention_gloss: "the chaos-serpent; Ra's nightly adversary in the Duat; embodiment of isfet (Greek: Apophis)"
+    never_use: []
+
+  - native: "Seth / Sutekh"
+    renderings_considered:
+      - { form: "Seth", source: "Faulkner 1972; te Velde 1967" }
+      - { form: "Sutekh", source: "Hittite treaty usage; Ramesside period" }
+      - { form: "Sēt", source: "with length-mark, less common" }
+    chosen: "Seth as body-prose default; 'Sutekh' only where the Hittite-Egyptian interface is under discussion (Ramesses II treaties)"
+    rationale: "Reader recognition; the Sutekh variant carries specific diplomatic-historical context."
+    first_mention_gloss: "Egyptian god of storms and desert; Apep-slayer at the prow of the solar barque (Ch. 16) and, separately, murderer of Osiris (Ch. 17)"
+    never_use: []
+
+  - native: "Mehen"
+    renderings_considered:
+      - { form: "Mehen", source: "Faulkner 1972" }
+    chosen: "Mehen"
+    rationale: "Standard."
+    first_mention_gloss: "serpent-coil deity who encircles and protects Ra in the solar barque"
+    never_use: []
+
+  - native: "Isis"
+    renderings_considered:
+      - { form: "Isis", source: "Greek and English standard" }
+      - { form: "Aset", source: "Egyptian form" }
+    chosen: "Isis"
+    rationale: "Universal reader recognition."
+    first_mention_gloss: "magic-working goddess; binds Apep with spells in the combat-corpus; in the Osiris cycle, wife of Osiris and mother of Horus"
+    never_use: []
+
+  - native: "Horus"
+    renderings_considered:
+      - { form: "Horus", source: "Greek and English standard" }
+      - { form: "Hor", source: "Egyptian" }
+    chosen: "Horus"
+    rationale: "Universal."
+    first_mention_gloss: "falcon-headed god; son of Isis and Osiris; opposes and eventually succeeds Seth in the Contendings"
+    never_use: []
+
+  - native: "maʿat"
+    renderings_considered:
+      - { form: "maʿat", source: "Assmann 2001; standard Egyptological" }
+      - { form: "maat", source: "anglicized" }
+      - { form: "Ma'at", source: "sometimes used for the personified goddess" }
+    chosen: "maʿat (with the ʿayin) for the concept; 'Maʿat' capitalised when the personified goddess is meant"
+    rationale: "Assmann's diacritical is standard in English-language Egyptology."
+    first_mention_gloss: "truth, order, justice; the cosmic order preserved by Ra's victory over Apep"
+    never_use: []
+
+  - native: "isfet"
+    renderings_considered:
+      - { form: "isfet", source: "Assmann 2001" }
+    chosen: "isfet"
+    rationale: "Standard; paired with maʿat throughout."
+    first_mention_gloss: "disorder, injustice, chaos; the condition Apep personifies; the antithesis of maʿat"
+    never_use: []
+
+  - native: "Duat"
+    renderings_considered:
+      - { form: "Duat", source: "Faulkner 1972" }
+      - { form: "Dat", source: "older transliteration" }
+    chosen: "Duat"
+    rationale: "Current standard."
+    first_mention_gloss: "the Egyptian netherworld through which Ra's solar barque travels at night"
+    never_use: []
+
+  # ── Norse / Germanic / Celtic ────────────────────────────────────────
+
+  - native: "Thor"
+    renderings_considered:
+      - { form: "Thor", source: "Larrington 2014; universal" }
+      - { form: "Þórr", source: "Old Norse" }
+    chosen: "Thor (body prose); 'Þórr' only in philological footnotes"
+    rationale: "Reader recognition."
+    first_mention_gloss: "Norse storm-god; son of Óðinn; wielder of Mjöllnir; adversary of Jörmungandr"
+    never_use: []
+
+  - native: "Jörmungandr / Midgard Serpent"
+    renderings_considered:
+      - { form: "Jörmungandr", source: "Faulkes 1987; standard" }
+      - { form: "Miðgarðsormr", source: "Old Norse 'Midgard-serpent'" }
+      - { form: "Midgard Serpent", source: "English translation" }
+    chosen: "Jörmungandr (with umlaut) as name; 'the Midgard Serpent' as descriptive English gloss"
+    rationale: "Both are ancient; the name-and-epithet pairing is how Snorri and the Eddic poems both handle it."
+    first_mention_gloss: "the world-encircling serpent; Loki's son; slain by and slaying Thor at Ragnarök (Old Norse Miðgarðsormr)"
+    never_use: []
+
+  - native: "Mjöllnir"
+    renderings_considered:
+      - { form: "Mjöllnir", source: "Larrington 2014; standard English" }
+      - { form: "Mjǫllnir", source: "normalized Old Norse" }
+    chosen: "Mjöllnir"
+    rationale: "Standard English rendering with the umlaut."
+    first_mention_gloss: "Thor's hammer; forged by the dwarves; the storm-god's combat-weapon"
+    never_use: []
+
+  - native: "Ragnarök"
+    renderings_considered:
+      - { form: "Ragnarök", source: "standard English with umlaut" }
+      - { form: "Ragnarǫk", source: "normalized Old Norse" }
+      - { form: "Ragnarok", source: "without umlaut" }
+    chosen: "Ragnarök"
+    rationale: "Umlaut preserved; standard in English scholarship."
+    first_mention_gloss: "'doom of the gods'; the Norse eschatological end, at which Thor and Jörmungandr slay each other"
+    never_use: []
+
+  - native: "Miðgarðr"
+    renderings_considered:
+      - { form: "Miðgarðr", source: "Old Norse; Faulkes 1987" }
+      - { form: "Midgard", source: "anglicized" }
+    chosen: "Midgard (body prose); Miðgarðr at first mention and in philological notes"
+    rationale: "Reader recognition; the Old Norse form is preserved at first mention."
+    first_mention_gloss: "'middle enclosure'; the world of humans, encircled by Jörmungandr"
+    never_use: []
+
+  - native: "Loki"
+    renderings_considered:
+      - { form: "Loki", source: "universal" }
+    chosen: "Loki"
+    rationale: "Universal."
+    first_mention_gloss: "Norse trickster god; father of Jörmungandr, Fenrir, and Hel"
+    never_use: []
+
+  - native: "Sigurd / Siegfried"
+    renderings_considered:
+      - { form: "Sigurd", source: "Larrington 2014 (Old Norse)" }
+      - { form: "Sigurðr", source: "Old Norse philological" }
+      - { form: "Siegfried", source: "Middle High German (Nibelungenlied)" }
+    chosen: "Sigurd in Old-Norse contexts; Siegfried where the Nibelungenlied is under discussion"
+    rationale: "Each form belongs to a distinct textual tradition."
+    first_mention_gloss: "Norse hero (Middle High German Siegfried); slays the dragon Fáfnir and tastes his blood, gaining knowledge of birdspeech"
+    never_use: []
+
+  - native: "Fáfnir"
+    renderings_considered:
+      - { form: "Fáfnir", source: "Larrington 2014" }
+      - { form: "Fafnir", source: "without diacritic" }
+    chosen: "Fáfnir"
+    rationale: "Diacritical standard."
+    first_mention_gloss: "dwarf transformed into a dragon by cursed gold; slain by Sigurd in Fáfnismál"
+    never_use: []
+
+  - native: "Beowulf"
+    renderings_considered:
+      - { form: "Beowulf", source: "universal; Klaeber 2008" }
+    chosen: "Beowulf"
+    rationale: "Universal."
+    first_mention_gloss: "Geatish hero of the Old English poem Beowulf; kills Grendel, Grendel's mother, and finally the hoard-dragon"
+    never_use: []
+
+  - native: "Grendel"
+    renderings_considered:
+      - { form: "Grendel", source: "universal" }
+    chosen: "Grendel"
+    rationale: "Universal."
+    first_mention_gloss: "man-eating monster of the poem Beowulf; descendant of Cain"
+    never_use: []
+
+  - native: "Lugh"
+    renderings_considered:
+      - { form: "Lugh", source: "Irish; Cath Maige Tuired scholarship" }
+      - { form: "Lug", source: "older orthography" }
+    chosen: "Lugh"
+    rationale: "Modern Irish scholarly standard."
+    first_mention_gloss: "Tuatha Dé Danann warrior-king; slays Balor of the Fomorians at the Second Battle of Mag Tuired"
+    never_use: []
+
+  - native: "Balor"
+    renderings_considered:
+      - { form: "Balor", source: "Cath Maige Tuired" }
+    chosen: "Balor"
+    rationale: "Standard."
+    first_mention_gloss: "evil-eyed Fomorian; grandfather-adversary of Lugh; killed by a sling-stone to the eye"
+    never_use: []
+
+  - native: "Vahagn"
+    renderings_considered:
+      - { form: "Vahagn", source: "Russell 1987 (Armenian)" }
+      - { form: "Vahagn Vishapakagh", source: "with dragon-slayer epithet" }
+    chosen: "Vahagn"
+    rationale: "Short form in body prose; the epithet glossed at first mention."
+    first_mention_gloss: "Armenian storm-god, called Vishapakagh 'dragon-reaper'; combat-hero of Armenian mythology; attestation is fragmentary (Khorenatsi's paraphrase)"
+    never_use: []
+
+  - native: "vishap"
+    renderings_considered:
+      - { form: "vishap", source: "Russell 1987" }
+      - { form: "višap", source: "diacritical transliteration" }
+    chosen: "vishap (lowercase, as common noun)"
+    rationale: "English-language Armenian studies uses the sh-spelling."
+    first_mention_gloss: "Armenian 'dragon'; also the name given to the second-millennium-BCE stone stelae (vishapakar) associated with the cult"
+    never_use: []
+
+  - native: "Batraz"
+    renderings_considered:
+      - { form: "Batraz", source: "Nart saga scholarship; Dumézil" }
+      - { form: "Batyr'adz", source: "Ossetic alternative" }
+    chosen: "Batraz"
+    rationale: "Standard form in Indo-European comparative studies."
+    first_mention_gloss: "steel-bodied Nart warrior of Ossetic epic tradition; Dumézil reads him as the Scytho-Alanic IE dragon-slayer reflex"
+    never_use: []
+
+  # ── Slavic ───────────────────────────────────────────────────────────
+
+  - native: "Perun"
+    renderings_considered:
+      - { form: "Perun", source: "West 2007; Ivanov & Toporov" }
+    chosen: "Perun"
+    rationale: "Universal."
+    first_mention_gloss: "Slavic storm-god; in Ivanov and Toporov's contested reconstruction, the pursuer of Veles"
+    never_use: []
+
+  - native: "Veles"
+    renderings_considered:
+      - { form: "Veles", source: "standard" }
+      - { form: "Volos", source: "East Slavic variant" }
+    chosen: "Veles"
+    rationale: "Standard in Ivanov/Toporov and the scholarly literature on the 'basic myth'."
+    first_mention_gloss: "Slavic earth / cattle / underworld deity; reconstructed as Perun's adversary in the 'basic myth' — a reconstruction contested by Jakobson, Lajoye, and others"
+    never_use: []
+
+  - native: "Dobrynya Nikitich"
+    renderings_considered:
+      - { form: "Dobrynya Nikitich", source: "bylina scholarship; Oinas" }
+      - { form: "Dobrynia", source: "variant transliteration" }
+    chosen: "Dobrynya Nikitich"
+    rationale: "Standard transliteration."
+    first_mention_gloss: "bogatyr of the East Slavic bylina tradition; slays the dragon Zmey Gorynych"
+    never_use: []
+
+  - native: "Zmey Gorynych"
+    renderings_considered:
+      - { form: "Zmey Gorynych", source: "bylina scholarship" }
+      - { form: "Zmei Gorynich", source: "variant" }
+    chosen: "Zmey Gorynych"
+    rationale: "Common in English bylina translation."
+    first_mention_gloss: "three-headed dragon of East Slavic epic; adversary of Dobrynya Nikitich"
+    never_use: []
+
+  # ── East Asia ────────────────────────────────────────────────────────
+
+  - native: "Gonggong"
+    renderings_considered:
+      - { form: "Gonggong", source: "Pinyin; Lewis 2006" }
+      - { form: "Kung-kung", source: "Wade-Giles" }
+    chosen: "Gonggong"
+    rationale: "Pinyin is current standard; reader recognition."
+    first_mention_gloss: "Chinese water-god, often red-haired and serpent-bodied; defeated combatant who shatters Mount Buzhou, the sky-pillar"
+    never_use: ["Kung-kung (outside Wade-Giles-era source discussions)"]
+
+  - native: "Zhuanxu"
+    renderings_considered:
+      - { form: "Zhuanxu", source: "Pinyin; Lewis 2006" }
+      - { form: "Chuan-hsü", source: "Wade-Giles" }
+    chosen: "Zhuanxu"
+    rationale: "Pinyin standard."
+    first_mention_gloss: "sky-emperor who defeats Gonggong in the most widely attested version"
+    never_use: []
+
+  - native: "Zhurong"
+    renderings_considered:
+      - { form: "Zhurong", source: "Pinyin" }
+      - { form: "Chu-jung", source: "Wade-Giles" }
+    chosen: "Zhurong"
+    rationale: "Pinyin."
+    first_mention_gloss: "fire-god; alternative combatant against Gonggong in some variants"
+    never_use: []
+
+  - native: "Nüwa"
+    renderings_considered:
+      - { form: "Nüwa", source: "Pinyin with umlaut" }
+      - { form: "Nügua", source: "alternative Pinyin" }
+      - { form: "Nü-kua", source: "Wade-Giles" }
+    chosen: "Nüwa"
+    rationale: "Current Pinyin standard; umlaut preserved."
+    first_mention_gloss: "serpent-tailed creator-goddess; repairs the broken sky with five-coloured stones after Gonggong's combat"
+    never_use: []
+
+  - native: "Mount Buzhou"
+    renderings_considered:
+      - { form: "Mount Buzhou", source: "Pinyin" }
+      - { form: "Buzhoushan", source: "Chinese one-word form" }
+      - { form: "Pu-chou", source: "Wade-Giles" }
+    chosen: "Mount Buzhou"
+    rationale: "English-reader-friendly with Pinyin core."
+    first_mention_gloss: "'mountain-that-is-not-whole'; the cosmic pillar broken by Gonggong's head-blow"
+    never_use: []
+
+  - native: "Yu the Great"
+    renderings_considered:
+      - { form: "Yu the Great", source: "universal" }
+      - { form: "Da Yu", source: "Pinyin" }
+      - { form: "Yü", source: "Wade-Giles" }
+    chosen: "Yu the Great"
+    rationale: "Standard English."
+    first_mention_gloss: "post-combat flood-controller in Chinese tradition; his hydraulic-ordering role is the sidebar contrast within the Gonggong chapter"
+    never_use: []
+
+  - native: "Hou Yi"
+    renderings_considered:
+      - { form: "Hou Yi", source: "Pinyin; Lewis 2006; Birrell 1993" }
+      - { form: "Hou I", source: "Wade-Giles" }
+    chosen: "Hou Yi"
+    rationale: "Pinyin."
+    first_mention_gloss: "Chinese archer-hero; shoots down nine of the ten suns and slays monstrous beasts under sage-king Yao"
+    never_use: []
+
+  - native: "Susanoo"
+    renderings_considered:
+      - { form: "Susanoo", source: "Philippi 1968" }
+      - { form: "Susanoo-no-Mikoto", source: "with honorific" }
+      - { form: "Susano-o", source: "hyphenated variant" }
+    chosen: "Susanoo"
+    rationale: "Philippi's form; standard in current English-language Japanese studies."
+    first_mention_gloss: "Japanese storm-god; expelled from heaven for misdeeds; slays Yamata no Orochi at Izumo"
+    never_use: []
+
+  - native: "Yamata no Orochi"
+    renderings_considered:
+      - { form: "Yamata no Orochi", source: "Philippi 1968" }
+      - { form: "Yamato no Orochi", source: "misreading, avoid" }
+      - { form: "the eight-forked serpent", source: "translation" }
+    chosen: "Yamata no Orochi"
+    rationale: "Philippi's form; the -ta- (not -to-) is correct."
+    first_mention_gloss: "eight-headed, eight-tailed serpent of Izumo; slain by Susanoo; its tail contains the sword Kusanagi"
+    never_use: ["Yamato no Orochi"]
+
+  - native: "Kusanagi"
+    renderings_considered:
+      - { form: "Kusanagi", source: "Philippi 1968" }
+      - { form: "Kusanagi-no-Tsurugi", source: "with sword-noun" }
+    chosen: "Kusanagi"
+    rationale: "Shorter form in body prose."
+    first_mention_gloss: "'grass-cutter'; the sword found in Orochi's tail; one of the Three Sacred Treasures of the Japanese imperial regalia"
+    never_use: []
+
+  - native: "Ülgen / Erlik"
+    renderings_considered:
+      - { form: "Ülgen", source: "Turkic/Altaic; Eliade" }
+      - { form: "Erlik", source: "standard Turkic/Altaic" }
+    chosen: "Ülgen (with umlaut) and Erlik"
+    rationale: "Standard in Altaic/Turkic studies; umlaut preserved on Ülgen."
+    first_mention_gloss: "paired Altaic/Turkic-Mongol sky-god and underworld-god; a dualistic cosmology rather than a decisive combat"
+    never_use: []
+
+  - native: "Bakunawa"
+    renderings_considered:
+      - { form: "Bakunawa", source: "Philippine folklore scholarship; Eugenio" }
+    chosen: "Bakunawa"
+    rationale: "Standard across Visayan / Bikol / English sources."
+    first_mention_gloss: "Philippine (Visayan / Bikol) serpent-dragon; devours six of the seven original moons; driven off during eclipses by communal noise-making"
+    never_use: []
+
+  # ── Americas ─────────────────────────────────────────────────────────
+
+  - native: "Huitzilopochtli"
+    renderings_considered:
+      - { form: "Huitzilopochtli", source: "Nahuatl; Matos Moctezuma 1988; Carrasco 1999" }
+    chosen: "Huitzilopochtli"
+    rationale: "Universal."
+    first_mention_gloss: "'Hummingbird-of-the-South'; Mexica patron god; sun-warrior born fully armed at Coatepec"
+    never_use: []
+
+  - native: "Coatlicue"
+    renderings_considered:
+      - { form: "Coatlicue", source: "Nahuatl standard" }
+    chosen: "Coatlicue"
+    rationale: "Universal."
+    first_mention_gloss: "'She-of-the-Serpent-Skirt'; earth-goddess mother of Huitzilopochtli"
+    never_use: []
+
+  - native: "Coyolxauhqui"
+    renderings_considered:
+      - { form: "Coyolxauhqui", source: "Nahuatl; Matos Moctezuma 1988" }
+    chosen: "Coyolxauhqui"
+    rationale: "Universal."
+    first_mention_gloss: "'Bells-on-Her-Cheeks'; moon-goddess; Huitzilopochtli's elder sister; dismembered in the combat and represented on the massive Templo Mayor stone"
+    never_use: []
+
+  - native: "Centzon Huitznahua"
+    renderings_considered:
+      - { form: "Centzon Huitznahua", source: "Nahuatl; Matos Moctezuma 1988" }
+      - { form: "Centzonhuitznahua", source: "one-word variant" }
+    chosen: "Centzon Huitznahua"
+    rationale: "Two-word form standard in current Nahuatl scholarship."
+    first_mention_gloss: "'Four Hundred Southerners'; Huitzilopochtli's stellar brothers; defeated with Coyolxauhqui"
+    never_use: []
+
+  - native: "Coatepec"
+    renderings_considered:
+      - { form: "Coatepec", source: "Nahuatl; Matos Moctezuma 1988" }
+    chosen: "Coatepec"
+    rationale: "Universal."
+    first_mention_gloss: "'Mountain of Serpents'; the cosmic mountain of Huitzilopochtli's birth and combat; architecturally re-embodied as the Templo Mayor"
+    never_use: []
+
+  - native: "Templo Mayor"
+    renderings_considered:
+      - { form: "Templo Mayor", source: "Spanish; universal" }
+      - { form: "Great Temple", source: "English translation" }
+    chosen: "Templo Mayor"
+    rationale: "Spanish is the discipline-standard name."
+    first_mention_gloss: "the great double-stair pyramid at the center of Tenochtitlan; built as Coatepec — the architecture embodies the combat-narrative"
+    never_use: []
+
+  - native: "Panquetzaliztli"
+    renderings_considered:
+      - { form: "Panquetzaliztli", source: "Nahuatl" }
+    chosen: "Panquetzaliztli"
+    rationale: "Standard."
+    first_mention_gloss: "Mexica winter-solstice festival commemorating Huitzilopochtli's victory"
+    never_use: []
+
+  - native: "Quetzalcoatl"
+    renderings_considered:
+      - { form: "Quetzalcoatl", source: "Nahuatl standard" }
+    chosen: "Quetzalcoatl"
+    rationale: "Universal."
+    first_mention_gloss: "'Feathered Serpent'; Mesoamerican creator-deity; alternating with Tezcatlipoca across the Suns cycle"
+    never_use: []
+
+  - native: "Tezcatlipoca"
+    renderings_considered:
+      - { form: "Tezcatlipoca", source: "Nahuatl standard" }
+    chosen: "Tezcatlipoca"
+    rationale: "Universal."
+    first_mention_gloss: "'Smoking Mirror'; Mesoamerican sorcerer-deity; alternates sovereignty with Quetzalcoatl"
+    never_use: []
+
+  - native: "Cipactli"
+    renderings_considered:
+      - { form: "Cipactli", source: "Nahuatl; López Austin 1993" }
+    chosen: "Cipactli"
+    rationale: "Standard."
+    first_mention_gloss: "primordial earth-monster dismembered by Quetzalcoatl and Tezcatlipoca to form sky and earth; the book's boundary case for dismemberment-vs-combat cosmogony"
+    never_use: []
+
+  - native: "Pariacaca"
+    renderings_considered:
+      - { form: "Pariacaca", source: "Salomon & Urioste 1991" }
+      - { form: "Pariaqaqa", source: "modern Quechua orthography" }
+    chosen: "Pariacaca"
+    rationale: "Matches the Huarochirí Manuscript's 1608 spelling as edited by Salomon & Urioste."
+    first_mention_gloss: "Andean storm-wak'a of the Huarochirí region; defeats rival wak'as and their summoned amaru"
+    never_use: []
+
+  - native: "wak'a"
+    renderings_considered:
+      - { form: "wak'a", source: "modern Quechua orthography; post-2010 decolonial Andean scholarship" }
+      - { form: "huaca", source: "Salomon & Urioste 1991; Huarochirí-Manuscript-era Spanish-derived spelling" }
+    chosen: "wak'a (lowercase, italicised on first mention)"
+    rationale: "Modern Quechua orthography, now standard in post-2010 decolonial Andean scholarship; lay English readers are not heavily invested in the older 'huaca' form, so adopting the Quechua-native spelling comes at low cost. First-mention parenthetical may note the older Spanish-colonial form 'huaca' where helpful for readers consulting Salomon & Urioste 1991."
+    first_mention_gloss: "Andean 'sacred power-being' (Quechua; older Spanish-derived spelling: huaca); the Huarochirí Manuscript records a landscape populated with wak'as in hierarchical and combative relationships — the pattern is wak'a-succession, not chaos-versus-order"
+    never_use: []
+
+  - native: "amaru"
+    renderings_considered:
+      - { form: "amaru", source: "Salomon & Urioste 1991" }
+      - { form: "amaro", source: "variant" }
+    chosen: "amaru (lowercase, italicised on first mention)"
+    rationale: "Andean serpent-figure; common noun."
+    first_mention_gloss: "Andean serpent-figure; often summoned as an ally-monster by a defeated rival wak'a, rather than a primordial chaos"
+    never_use: []
+
+  - native: "Kai-Kai / Tren-Tren"
+    renderings_considered:
+      - { form: "Kai-Kai and Tren-Tren", source: "Mapuche ethnographic literature" }
+      - { form: "Caicai / Trentren", source: "Spanish-orthography variants" }
+    chosen: "Kai-Kai and Tren-Tren (hyphenated, with capital initials)"
+    rationale: "Most common form in English-language Mapuche scholarship."
+    first_mention_gloss: "paired Mapuche marine and mountain serpents; their combat raises flood-and-mountain, generating the Mapuche landscape"
+    never_use: []
+
+  - native: "Bida"
+    renderings_considered:
+      - { form: "Bida", source: "Conrad 2005; Belcher 1999" }
+    chosen: "Bida"
+    rationale: "Standard."
+    first_mention_gloss: "seven-headed serpent-protector of Wagadu (ancient Ghana) in Soninke tradition; his slaying ends Wagadu's prosperity — the inversion case"
+    never_use: []
+
+  - native: "Wagadu"
+    renderings_considered:
+      - { form: "Wagadu", source: "Conrad 2005; Belcher 1999" }
+      - { form: "ancient Ghana", source: "historical name of the polity" }
+    chosen: "Wagadu (tradition-internal name); 'ancient Ghana' for the historical-polity reading"
+    rationale: "Each name belongs to a distinct register."
+    first_mention_gloss: "the Soninke city/polity protected by Bida; historical ancient Ghana; abandoned after Bida's death"
+    never_use: []
+
+  - native: "Mamadi Sefe Dekote"
+    renderings_considered:
+      - { form: "Mamadi Sefe Dekote", source: "Conrad 2005; Belcher 1999" }
+    chosen: "Mamadi Sefe Dekote"
+    rationale: "Standard Soninke-tradition form in English."
+    first_mention_gloss: "the suitor who kills Bida to save his beloved, thereby ending Wagadu"
+    never_use: []
+
+  - native: "Mwindo"
+    renderings_considered:
+      - { form: "Mwindo", source: "Biebuyck & Mateene 1969" }
+    chosen: "Mwindo"
+    rationale: "Standard."
+    first_mention_gloss: "Nyanga epic hero; kills the dragon Kirimu and is punished by the sky-god Nkuba — the contrastive case"
+    never_use: []
+
+  - native: "Kirimu"
+    renderings_considered:
+      - { form: "Kirimu", source: "Biebuyck & Mateene 1969" }
+    chosen: "Kirimu"
+    rationale: "Standard."
+    first_mention_gloss: "Nyanga dragon slain by Mwindo"
+    never_use: []
+
+  - native: "Nkuba"
+    renderings_considered:
+      - { form: "Nkuba", source: "Biebuyck & Mateene 1969" }
+    chosen: "Nkuba"
+    rationale: "Standard."
+    first_mention_gloss: "Nyanga sky-god; punishes Mwindo for the killing of Kirimu"
+    never_use: []
+
+  - native: "Nanabozho"
+    renderings_considered:
+      - { form: "Nanabozho", source: "Hallowell 1960; standard in Anishinaabe studies" }
+      - { form: "Nanabush", source: "alternative spelling" }
+      - { form: "Wenabozho", source: "other regional variant" }
+    chosen: "Nanabozho"
+    rationale: "Most common in Hallowell and the Great Lakes scholarship; area-specialist citation policy dictates following the specialists."
+    first_mention_gloss: "Anishinaabe trickster-culture-hero; his relations with the underwater manitou Mishipeshu and the Thunderers are the book's clearest case of a tradition whose own framework declines the chaoskampf reading"
+    never_use: []
+
+  - native: "Mishipeshu"
+    renderings_considered:
+      - { form: "Mishipeshu", source: "Anishinaabe studies standard" }
+      - { form: "Mishebeshu", source: "Theresa S. Smith 1995" }
+      - { form: "Mishipizheu", source: "variant" }
+    chosen: "Mishipeshu"
+    rationale: "Most common in English-language Anishinaabe studies; variant spellings flagged in the Ch. 32 footnotes."
+    first_mention_gloss: "Anishinaabe underwater manitou; in the tradition's own framework a necessary counterpart to the Thunderers, not a chaos-adversary to be defeated"
+    never_use: []
+
+  - native: "manitou / manitouk / aadizookaanag"
+    renderings_considered:
+      - { form: "manitou (sing.) / manitouk (pl.)", source: "Hallowell 1960" }
+      - { form: "manito / manidoog", source: "other orthography" }
+      - { form: "aadizookaanag", source: "Basil Johnston's term for the sacred-story beings" }
+    chosen: "manitou (singular) / manitouk (plural); 'aadizookaanag' glossed separately for the sacred-story class of beings"
+    rationale: "Hallowell's orthography is the scholarly standard; Johnston's aadizookaanag is a distinct category that some of the Ch. 32 material invokes."
+    first_mention_gloss: "'other-than-human person' in the Anishinaabe ontological category; the Thunderers and Mishipeshu are manitouk"
+    never_use: []
+
+  - native: "the Thunderers"
+    renderings_considered:
+      - { form: "the Thunderers", source: "Hallowell 1960; standard in English" }
+      - { form: "Animikiig", source: "Anishinaabemowin" }
+    chosen: "the Thunderers (English); Animikiig in first-mention gloss"
+    rationale: "English form is accessible; the native term is preserved for attribution."
+    first_mention_gloss: "the Anishinaabe thunder-beings (Animikiig); counterparts of Mishipeshu in the reciprocal cosmic-dialectic"
+    never_use: []
+
+  - native: "Väinämöinen"
+    renderings_considered:
+      - { form: "Väinämöinen", source: "Finnish standard" }
+      - { form: "Vainamoinen", source: "without umlauts" }
+    chosen: "Väinämöinen"
+    rationale: "Umlauts preserved; the name is the iconic Kalevala hero."
+    first_mention_gloss: "Finnish shaman-sage hero; subdues the sea-monster Iku-Turso by song rather than combat, in the older rune tradition and in Lönnrot's Kalevala"
+    never_use: []
+
+  - native: "Iku-Turso"
+    renderings_considered:
+      - { form: "Iku-Turso", source: "Siikala 2002" }
+      - { form: "Ikuturso", source: "one-word variant" }
+    chosen: "Iku-Turso"
+    rationale: "Hyphenated form standard in English-language Kalevala scholarship."
+    first_mention_gloss: "Finnic sea-monster; subdued by Väinämöinen's song; presentation in the chapter separates older rune material from Lönnrot's 19th-century editorial synthesis"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # PLACE NAMES AND CULT SITES
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "Nerik"
+    renderings_considered:
+      - { form: "Nerik", source: "Hoffner 1998" }
+    chosen: "Nerik"
+    rationale: "Standard."
+    first_mention_gloss: "northern Hittite cult-centre of the storm-god; locus of the purulli festival"
+    never_use: []
+
+  - native: "Delphi / Pytho"
+    renderings_considered:
+      - { form: "Delphi", source: "later standard" }
+      - { form: "Pytho", source: "Homeric Hymn; earlier name" }
+    chosen: "Delphi (body-prose default); Pytho when naming the older / Homeric-Hymn-era site"
+    rationale: "Preserves textual specificity."
+    first_mention_gloss: "Apollo's oracle-site in Phocis (earlier name Pytho); the Septerion festival re-enacted the Python-slaying there every eight years"
+    never_use: []
+
+  - native: "Mount Etna"
+    renderings_considered:
+      - { form: "Mount Etna", source: "standard English" }
+      - { form: "Aitnē", source: "Greek" }
+    chosen: "Mount Etna"
+    rationale: "Reader recognition."
+    first_mention_gloss: "Sicilian volcano under which Typhon is said to be buried in the post-Hesiodic tradition"
+    never_use: []
+
+  - native: "Tartarus"
+    renderings_considered:
+      - { form: "Tartarus", source: "Hesiod; standard English" }
+      - { form: "Tartaros", source: "Greek" }
+    chosen: "Tartarus"
+    rationale: "Reader recognition."
+    first_mention_gloss: "the lowest realm of the Greek underworld; father of Typhon in the Theogony; prison of the defeated Titans"
+    never_use: []
+
+  - native: "Coatepec (place name)"
+    renderings_considered:
+      - { form: "Coatepec", source: "as per deity-name entry" }
+    chosen: "Coatepec"
+    rationale: "See deity-context entry; the place-name and the combat-site are the same name."
+    first_mention_gloss: "see Huitzilopochtli entry — the mountain, the birth-place, and the Templo Mayor's architectural referent are the same Coatepec"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # RITUAL, CULTIC, AND TECHNICAL TERMS
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "bogatyr"
+    renderings_considered:
+      - { form: "bogatyr", source: "Russian bylina scholarship" }
+      - { form: "bogatyr'", source: "with soft-sign transliteration" }
+    chosen: "bogatyr"
+    rationale: "Standard English form in bylina scholarship."
+    first_mention_gloss: "Russian-epic (bylina) warrior-hero; Dobrynya Nikitich is a bogatyr"
+    never_use: []
+
+  - native: "bylina"
+    renderings_considered:
+      - { form: "bylina (sing.) / byliny (pl.)", source: "Russian folklore scholarship" }
+    chosen: "bylina (singular) / byliny (plural)"
+    rationale: "Standard English form."
+    first_mention_gloss: "East Slavic heroic epic-song genre, recorded from oral performance in the 19th century"
+    never_use: []
+
+  - native: "kenning"
+    renderings_considered:
+      - { form: "kenning", source: "Old Norse / Old English poetics; universal" }
+    chosen: "kenning"
+    rationale: "Standard."
+    first_mention_gloss: "an Old Norse / Old English compressed metaphorical phrase; kennings for Jörmungandr (e.g., 'band of all lands') preserve the IE serpent-combat vocabulary that Watkins analyses"
+    never_use: []
+
+  - native: "bhakti"
+    renderings_considered:
+      - { form: "bhakti", source: "Indic studies standard" }
+    chosen: "bhakti (italicised on first mention)"
+    rationale: "Technical Sanskrit."
+    first_mention_gloss: "'devotion'; the devotional-religious movement (Harivaṃśa, Viṣṇu Purāṇa, Bhāgavata Purāṇa onward) in which the Krishna-Kāliya story takes its classical form"
+    never_use: []
+
+  - native: "Contendings of Horus and Seth"
+    renderings_considered:
+      - { form: "Contendings of Horus and Seth", source: "standard English translation" }
+      - { form: "Chester Beatty I", source: "papyrus designation" }
+    chosen: "the Contendings (body prose); 'Chester Beatty I' at first mention and for papyrological contexts"
+    rationale: "The text is usually cited by its English title in body prose and by papyrus number in source-critical contexts."
+    first_mention_gloss: "the bawdy literary papyrus Chester Beatty I (c. 1160 BCE); the longest single narrative of the Horus-Seth contention"
+    never_use: []
+
+  - native: "Septerion"
+    renderings_considered:
+      - { form: "Septerion", source: "Plutarch; Fontenrose 1959" }
+      - { form: "Stepterion", source: "variant spelling" }
+    chosen: "Septerion"
+    rationale: "Standard English spelling."
+    first_mention_gloss: "Delphic festival held every eight years re-enacting Apollo's slaying of Python"
+    never_use: []
+
+  - native: "Shāhnāmeh"
+    renderings_considered:
+      - { form: "Shāhnāmeh", source: "Persian with diacritics" }
+      - { form: "Shahnameh", source: "anglicized" }
+      - { form: "Shāh-nāma", source: "philological" }
+    chosen: "Shāhnāmeh"
+    rationale: "Long-vowel diacriticals retained as scholarly standard."
+    first_mention_gloss: "Ferdowsi's c. 1000 CE Persian national epic; the Zahhāk story is the New-Persian reception of the Aži-Dahāka myth"
+    never_use: []
+
+  - native: "Bundahišn"
+    renderings_considered:
+      - { form: "Bundahišn", source: "Middle-Persian scholarly" }
+      - { form: "Bundahishn", source: "anglicized" }
+    chosen: "Bundahišn"
+    rationale: "Diacritical š preserved as standard in Iranian studies."
+    first_mention_gloss: "Middle Persian (Pahlavi) compendium of Zoroastrian cosmology; late Sasanian / early Islamic redaction; principal source for the Frashokereti material"
+    never_use: []
+
+  - native: "Rigveda"
+    renderings_considered:
+      - { form: "Rigveda", source: "Jamison & Brereton 2014" }
+      - { form: "Ṛgveda", source: "philological" }
+      - { form: "Rig Veda", source: "older" }
+    chosen: "Rigveda (body prose); Ṛgveda in diacritical citations"
+    rationale: "Jamison & Brereton's book-title form."
+    first_mention_gloss: "the earliest layer of Vedic Sanskrit religious poetry (c. 1500–1000 BCE); chief primary source for Indra-Vṛtra"
+    never_use: ["Rig Veda (two words)"]
+
+  - native: "Enūma Eliš"
+    renderings_considered:
+      - { form: "Enūma Eliš", source: "Lambert 2013 with diacriticals" }
+      - { form: "Enuma Elish", source: "anglicized" }
+    chosen: "Enūma Eliš"
+    rationale: "Scholarly-standard diacriticals in current Assyriological writing."
+    first_mention_gloss: "'When on High'; the Babylonian creation-and-combat epic; canonical Chaoskampf type-text since Gunkel 1895"
+    never_use: []
+
+  - native: "Lugal-e"
+    renderings_considered:
+      - { form: "Lugal-e", source: "van Dijk 1983; ETCSL (short title)" }
+      - { form: "LUGAL UD ME-LÁM-bi NIR-ĜÁL", source: "full Sumerian incipit" }
+    chosen: "Lugal-e"
+    rationale: "Standard short title."
+    first_mention_gloss: "'O King': the Sumerian composition narrating Ninurta's combat with Asag; named from its opening line"
+    never_use: []
+
+  - native: "Huarochirí Manuscript"
+    renderings_considered:
+      - { form: "Huarochirí Manuscript", source: "Salomon & Urioste 1991" }
+      - { form: "Manuscrito de Huarochirí", source: "Spanish" }
+    chosen: "Huarochirí Manuscript"
+    rationale: "English scholarly standard."
+    first_mention_gloss: "c. 1608 Quechua-language manuscript; the sole substantial primary source for pre-Columbian Huarochirí religion; principal anchor for the Pariacaca chapter"
+    never_use: []
+
+  - native: "Kalevala"
+    renderings_considered:
+      - { form: "Kalevala", source: "Finnish standard" }
+    chosen: "Kalevala"
+    rationale: "Universal."
+    first_mention_gloss: "Elias Lönnrot's 1835 / 1849 composite epic of Finnic rune-poetry; the Iku-Turso material is partly older and partly Lönnrot's editorial synthesis"
+    never_use: []
+
+  - native: "Baal Cycle"
+    renderings_considered:
+      - { form: "Baal Cycle", source: "Smith 1994; standard" }
+      - { form: "Baʿlu Cycle", source: "philological" }
+    chosen: "Baal Cycle"
+    rationale: "Standard in English Ugaritic scholarship."
+    first_mention_gloss: "the Ugaritic tablet-group (KTU 1.1–1.6) comprising the Baal-Yamm combat, the palace-building, and the Baal-Mot narrative"
+    never_use: []
+
+  - native: "Kumarbi Cycle"
+    renderings_considered:
+      - { form: "Kumarbi Cycle", source: "Hoffner 1998" }
+      - { form: "Song-cycle of Kumarbi", source: "alternative" }
+    chosen: "Kumarbi Cycle"
+    rationale: "Standard."
+    first_mention_gloss: "the Hurro-Hittite song-cycle on the succession of kingship in heaven (Kingship in Heaven, Song of Ullikummi, Song of Hedammu, Song of the Sea)"
+    never_use: []
+
+  - native: "kur"
+    renderings_considered:
+      - { form: "kur", source: "ETCSL; Sumerian scholarship" }
+    chosen: "kur (italicised)"
+    rationale: "Technical Sumerian term; multiple senses flagged in gloss."
+    first_mention_gloss: "Sumerian 'mountain / foreign land / netherworld'; the domain from which Asag's stone-army comes"
+    never_use: []
+
+  - native: "drakaina"
+    renderings_considered:
+      - { form: "drakaina", source: "Homeric Hymn to Apollo; Fontenrose 1959" }
+    chosen: "drakaina (italicised)"
+    rationale: "Technical Greek; the Python is originally a female drakaina in the Homeric Hymn."
+    first_mention_gloss: "Greek 'she-dragon'; the feminine form of drakōn; the original Homeric-Hymn designation of the Delphic serpent before she is named Python"
+    never_use: []
+
+  - native: "Ouroboros"
+    renderings_considered:
+      - { form: "Ouroboros", source: "Greek-derived standard" }
+      - { form: "Uroboros", source: "variant spelling" }
+    chosen: "Ouroboros"
+    rationale: "Most common English spelling."
+    first_mention_gloss: "'tail-devourer'; the self-encircling serpent image widely spread across traditions; named as Greek in Hellenistic alchemical contexts; referenced in the reception coda"
+    never_use: []
+
+  - native: "Spartoi"
+    renderings_considered:
+      - { form: "Spartoi", source: "standard Greek-studies" }
+      - { form: "Spartae", source: "Latinised" }
+    chosen: "Spartoi"
+    rationale: "Greek preserved."
+    first_mention_gloss: "'Sown Men'; the warriors who spring from the teeth of the dragon Kadmos sows at Thebes"
+    never_use: []
+
+  - native: "the five Suns"
+    renderings_considered:
+      - { form: "the five Suns", source: "Mesoamerican studies; Carrasco 1999; López Austin 1993" }
+      - { form: "the five ages", source: "alternative" }
+    chosen: "the five Suns"
+    rationale: "Standard in Mesoamericanist English."
+    first_mention_gloss: "the Mesoamerican cycle of cosmic world-ages; Quetzalcoatl and Tezcatlipoca alternate as rulers, each age ending in catastrophe; the present age is the Fifth Sun"
+    never_use: []
+
+  - native: "Nart"
+    renderings_considered:
+      - { form: "Nart", source: "Ossetic studies standard" }
+      - { form: "Narts", source: "pluralized in English" }
+    chosen: "Nart (singular) / Narts (plural)"
+    rationale: "Standard English form."
+    first_mention_gloss: "heroic figures of the Ossetic and broader North Caucasian epic tradition; Batraz is a Nart"
+    never_use: []
+
+  # ══════════════════════════════════════════════════════════════════════
+  # INDO-EUROPEAN AND COMPARATIVE-PHILOLOGICAL VOCABULARY
+  # ══════════════════════════════════════════════════════════════════════
+
+  - native: "Proto-Indo-European / PIE"
+    renderings_considered:
+      - { form: "Proto-Indo-European", source: "linguistic standard" }
+      - { form: "PIE", source: "abbreviation" }
+    chosen: "Proto-Indo-European (on first mention); PIE in subsequent technical use"
+    rationale: "Standard."
+    first_mention_gloss: "the reconstructed common ancestor of the Indo-European language family, spoken c. 4500–2500 BCE; Watkins's HERO SLAY SERPENT formula is a reconstructed PIE poetic element"
+    never_use: []
+
+  - native: "Indo-Iranian"
+    renderings_considered:
+      - { form: "Indo-Iranian", source: "standard" }
+      - { form: "Aryan", source: "older; superseded and potentially problematic" }
+    chosen: "Indo-Iranian"
+    rationale: "'Aryan' is avoided outside specific historical-scholarship contexts where the term is itself the object of discussion."
+    first_mention_gloss: "the branch of the Indo-European family that includes Indic (Vedic Sanskrit etc.) and Iranian (Avestan etc.); the Trita Āptya / Thraētaona cognancy is the clearest Indo-Iranian poetic pairing"
+    never_use: ["Aryan (as a modern cover-term; older scholarly usage only when discussed as historiography)"]
+
+  - native: "Watkins formula"
+    renderings_considered:
+      - { form: "Watkins formula", source: "internal shorthand" }
+      - { form: "áhann áhim formula", source: "source-language shorthand" }
+      - { form: "HERO SLAY SERPENT formula", source: "Watkins's own label" }
+    chosen: "HERO SLAY SERPENT formula (technical); 'Watkins formula' (conversational shorthand)"
+    rationale: "See HERO SLAY SERPENT entry; this entry locks the shorthand for running text."
+    first_mention_gloss: "Calvert Watkins's reconstructed Indo-European poetic formula for dragon-slaying; see HERO SLAY SERPENT entry"
+    never_use: []
+
+deviations_from_instructions:
+  - note: |
+      The glossary includes several language-pair entries (e.g., "Ea / Enki", "Tarḫunna / Teshub",
+      "Apep / Apophis", "Thraētaona / Fereydun") where a single deity figures in two or more
+      language-strata used in the book. In each case, the chosen field specifies the
+      context-conditional rendering rather than a single locked form. This is a slight
+      expansion of the skill's single-rendering convention, but scope.md's "translation-mediated"
+      policy and cross-cultural structure make context-sensitivity unavoidable.
+  - note: |
+      `never_use` is kept empty or minimal for most entries (per the stage instructions
+      about cross-cultural books), used only where actual cross-tradition confusion risk
+      exists (e.g., "Ningirsu" for Ninurta; "Yamato no Orochi" for Yamata no Orochi;
+      "Kingu" for Qingu; "Zu" for Anzû).
+
+self_checks:
+  target_count_60_120: "181 terms — above the 60–120 target. The cross-cultural scope (15+ traditions) and the need to lock transliteration choices (per scope.md §'Languages of primary sources') justify the overshoot. On user review, some single-chapter proper nouns with unambiguous transliteration could be trimmed."
+  every_recurring_figure_included: "Leviathan (Chs. 8, 9, 42, 43), Aži Dahāka (Chs. 13, 37, 43), Ninurta (Chs. 1, 2, 43), Tiamat (Chs. 3, 43), maʿat/isfet (Ch. 16, 17, 36), purulli (Ch. 6, 36), HERO SLAY SERPENT (Ch. 19, 38), Chaoskampf/combat myth (every chapter) — all present"
+  cross_tradition_confusion_guarded:
+    - "Ninurta vs. Ningirsu"
+    - "Qingu vs. Kingu (orthographic only, but flagged)"
+    - "Ea vs. Enki (language-context conditional)"
+    - "Zu vs. Anzû (the old misreading)"
+    - "Yamato vs. Yamata (for Orochi)"
+  decision_flags_elevated_to_DECIDE_GLOSSARY: true
+```
+
+---
+
+# Governing file: toc.yaml
+
+```
+# Table of Contents — Chaoskampf Across Cultures
+# Final reading order, locked at chapter-briefs stage (2026-04-23).
+# Structure follows scope.md §"Book structure" (v1, 2026-04-23).
+# Every chapter listed here has a corresponding brief in briefs/NN-<slug>.yaml.
+
+meta:
+  book_slug: chaoskampf
+  stage: chapter-briefs
+  version: v1
+  date: 2026-04-23
+  agent_model: "claude-opus-4-7[1m]"
+
+chapters:
+
+  # ── Front matter ─────────────────────────────────────────────────
+  - number: 0
+    slug: introduction
+    title: "What Chaoskampf is, and why the word is contested"
+    part: front-matter
+    chapter_anchor: "ch-00-introduction"
+    brief: briefs/00-introduction.yaml
+
+  # ── Part I — geographic clusters ─────────────────────────────────
+  # Mesopotamia
+  - number: 1
+    slug: ninurta-asag
+    title: "Ninurta vs. Asag (Lugal-e)"
+    part: "part-i-mesopotamia"
+    tier: core
+    chapter_anchor: "ch-01-ninurta-asag"
+    brief: briefs/01-ninurta-asag.yaml
+
+  - number: 2
+    slug: ninurta-anzu
+    title: "Ninurta vs. Anzû"
+    part: "part-i-mesopotamia"
+    tier: core
+    chapter_anchor: "ch-02-ninurta-anzu"
+    brief: briefs/02-ninurta-anzu.yaml
+
+  - number: 3
+    slug: marduk-tiamat
+    title: "Marduk vs. Tiamat (Enūma Eliš)"
+    part: "part-i-mesopotamia"
+    tier: core
+    chapter_anchor: "ch-03-marduk-tiamat"
+    brief: briefs/03-marduk-tiamat.yaml
+
+  - number: 4
+    slug: mesopotamian-minor
+    title: "Minor Mesopotamian combats (Marduk/Labbu)"
+    part: "part-i-mesopotamia"
+    tier: related-family
+    chapter_anchor: "ch-04-mesopotamian-minor"
+    brief: briefs/04-mesopotamian-minor.yaml
+
+  # Anatolia and Levant
+  - number: 5
+    slug: kumarbi-ullikummi
+    title: "The Kumarbi Cycle (Ullikummi, Hedammu, Song of the Sea)"
+    part: "part-i-anatolia-levant"
+    tier: core
+    chapter_anchor: "ch-05-kumarbi-ullikummi"
+    brief: briefs/05-kumarbi-ullikummi.yaml
+    note: "Hedammu and Song of the Sea treated as explicit sub-sections per audit-review-log.md decision."
+
+  - number: 6
+    slug: illuyanka
+    title: "Tarḫunna vs. Illuyanka"
+    part: "part-i-anatolia-levant"
+    tier: core
+    chapter_anchor: "ch-06-illuyanka"
+    brief: briefs/06-illuyanka.yaml
+
+  - number: 7
+    slug: baal-yamm-lotan
+    title: "Baal vs. Yamm and Baal vs. Lôtan"
+    part: "part-i-anatolia-levant"
+    tier: core
+    chapter_anchor: "ch-07-baal-yamm-lotan"
+    brief: briefs/07-baal-yamm-lotan.yaml
+
+  # Hebrew Bible and Early Christianity
+  - number: 8
+    slug: yahweh-leviathan-rahab
+    title: "Yahweh vs. Leviathan and Rahab"
+    part: "part-i-hebrew-christian"
+    tier: core
+    chapter_anchor: "ch-08-yahweh-leviathan-rahab"
+    brief: briefs/08-yahweh-leviathan-rahab.yaml
+    note: "Bundled per audit-review-log.md decision — the Pss/Isa/Job/Hab corpus presented as one chapter with sub-sections."
+
+  - number: 9
+    slug: revelation-red-dragon
+    title: "Michael vs. the Red Dragon (Revelation 12)"
+    part: "part-i-hebrew-christian"
+    tier: core
+    chapter_anchor: "ch-09-revelation-red-dragon"
+    brief: briefs/09-revelation-red-dragon.yaml
+
+  - number: 10
+    slug: christian-reception
+    title: "St. George, St. Michael, and the Christian reception"
+    part: "part-i-hebrew-christian"
+    tier: related-family
+    chapter_anchor: "ch-10-christian-reception"
+    brief: briefs/10-christian-reception.yaml
+
+  # Greece and Rome
+  - number: 11
+    slug: zeus-typhon
+    title: "Zeus vs. Typhon"
+    part: "part-i-greece-rome"
+    tier: core
+    chapter_anchor: "ch-11-zeus-typhon"
+    brief: briefs/11-zeus-typhon.yaml
+
+  - number: 12
+    slug: greek-dragons-after-typhon
+    title: "Greek dragon-combats after Zeus-Typhon (Apollo/Python, Herakles, Perseus, Kadmos, Bellerophon, Cacus)"
+    part: "part-i-greece-rome"
+    tier: related-family
+    chapter_anchor: "ch-12-greek-dragons-after-typhon"
+    brief: briefs/12-greek-dragons-after-typhon.yaml
+
+  # Iran
+  - number: 13
+    slug: thraetaona-azidahaka
+    title: "Thraētaona vs. Aži Dahāka (and Frashokereti)"
+    part: "part-i-iran"
+    tier: core
+    chapter_anchor: "ch-13-thraetaona-azidahaka"
+    brief: briefs/13-thraetaona-azidahaka.yaml
+    note: "Frashokereti treated as eschatological sub-section of this chapter."
+
+  # India
+  - number: 14
+    slug: indra-vrtra
+    title: "Indra vs. Vṛtra"
+    part: "part-i-india"
+    tier: core
+    chapter_anchor: "ch-14-indra-vrtra"
+    brief: briefs/14-indra-vrtra.yaml
+
+  - number: 15
+    slug: vedic-reflexes
+    title: "Vedic and post-Vedic reflexes (Trita Āptya, Krishna/Kāliya)"
+    part: "part-i-india"
+    tier: related-family
+    chapter_anchor: "ch-15-vedic-reflexes"
+    brief: briefs/15-vedic-reflexes.yaml
+
+  # Egypt
+  - number: 16
+    slug: ra-apep
+    title: "Ra vs. Apep"
+    part: "part-i-egypt"
+    tier: core
+    chapter_anchor: "ch-16-ra-apep"
+    brief: briefs/16-ra-apep.yaml
+
+  - number: 17
+    slug: horus-seth
+    title: "Horus vs. Seth (an edge case)"
+    part: "part-i-egypt"
+    tier: related
+    chapter_anchor: "ch-17-horus-seth"
+    brief: briefs/17-horus-seth.yaml
+    note: "INCLUSION-MARGINAL per audit-review-log.md; framing marker required in chapter."
+
+  # Norse, Germanic, and IE reflexes
+  - number: 18
+    slug: thor-jormungandr
+    title: "Thor vs. Jörmungandr (the Midgard Serpent)"
+    part: "part-i-norse-ie"
+    tier: core
+    chapter_anchor: "ch-18-thor-jormungandr"
+    brief: briefs/18-thor-jormungandr.yaml
+
+  - number: 19
+    slug: ie-reflexes
+    title: "Indo-European reflexes of HERO SLAY SERPENT (Sigurd/Fáfnir, Beowulf, Lugh/Balor, Welsh Red-White, Batraz, Vahagn)"
+    part: "part-i-norse-ie"
+    tier: related-family
+    chapter_anchor: "ch-19-ie-reflexes"
+    brief: briefs/19-ie-reflexes.yaml
+
+  - number: 20
+    slug: slavic-baltic
+    title: "Slavic and Baltic combat (Perun/Veles, Dobrynya byliny)"
+    part: "part-i-slavic-baltic"
+    tier: related-family
+    chapter_anchor: "ch-20-slavic-baltic"
+    brief: briefs/20-slavic-baltic.yaml
+
+  # East Asia
+  - number: 21
+    slug: gonggong
+    title: "Gonggong and the broken pillar"
+    part: "part-i-east-asia"
+    tier: core
+    chapter_anchor: "ch-21-gonggong"
+    brief: briefs/21-gonggong.yaml
+    note: "Yu the Great referenced as sidebar within this chapter."
+
+  - number: 22
+    slug: hou-yi
+    title: "Hou Yi and the suns"
+    part: "part-i-east-asia"
+    tier: related
+    chapter_anchor: "ch-22-hou-yi"
+    brief: briefs/22-hou-yi.yaml
+
+  - number: 23
+    slug: susanoo-orochi
+    title: "Susanoo vs. Yamata no Orochi"
+    part: "part-i-east-asia"
+    tier: related
+    chapter_anchor: "ch-23-susanoo-orochi"
+    brief: briefs/23-susanoo-orochi.yaml
+    note: "Demoted from CORE per scope-lock; framing that chaoskampf label is applied from outside."
+
+  # Americas
+  - number: 24
+    slug: huitzilopochtli-coatepec
+    title: "Huitzilopochtli, Coyolxauhqui, and Coatepec"
+    part: "part-i-americas"
+    tier: core
+    chapter_anchor: "ch-24-huitzilopochtli-coatepec"
+    brief: briefs/24-huitzilopochtli-coatepec.yaml
+
+  - number: 25
+    slug: mesoamerican-cluster
+    title: "Other Mesoamerican combats (Cipactli, Quetzalcoatl vs. Tezcatlipoca)"
+    part: "part-i-americas"
+    tier: related-family
+    chapter_anchor: "ch-25-mesoamerican-cluster"
+    brief: briefs/25-mesoamerican-cluster.yaml
+
+  - number: 26
+    slug: pariacaca-amaru
+    title: "Pariacaca and the amaru (Huarochirí)"
+    part: "part-i-americas"
+    tier: related
+    chapter_anchor: "ch-26-pariacaca-amaru"
+    brief: briefs/26-pariacaca-amaru.yaml
+
+  - number: 27
+    slug: mapuche-kai-tren
+    title: "Kai-Kai vs. Tren-Tren (Mapuche)"
+    part: "part-i-americas"
+    tier: related-family
+    chapter_anchor: "ch-27-mapuche-kai-tren"
+    brief: briefs/27-mapuche-kai-tren.yaml
+
+  # Africa
+  - number: 28
+    slug: bida-wagadu
+    title: "Bida and the founding of Wagadu (the inversion)"
+    part: "part-i-africa"
+    tier: related
+    chapter_anchor: "ch-28-bida-wagadu"
+    brief: briefs/28-bida-wagadu.yaml
+    note: "Inversion anchor for Part II C7."
+
+  - number: 29
+    slug: mwindo-kirimu
+    title: "Mwindo and Kirimu (the contrastive case)"
+    part: "part-i-africa"
+    tier: contrastive
+    chapter_anchor: "ch-29-mwindo-kirimu"
+    brief: briefs/29-mwindo-kirimu.yaml
+
+  # Southeast Asia & Oceania + Altaic
+  - number: 30
+    slug: bakunawa
+    title: "Bakunawa and the moons (with Erlik/Ülgen as Altaic comparandum)"
+    part: "part-i-se-asia-oceania"
+    tier: related-family
+    chapter_anchor: "ch-30-bakunawa"
+    brief: briefs/30-bakunawa.yaml
+    rationale: "Erlik/Ülgen placed here rather than in 19-ie-reflexes. Altaic/Turkic traditions are neither geographically Indo-European nor genetically IE; grouping the two 'eclipse-and-dualism' non-slaying cases together preserves the IE family chapter's coherence and lets 30-bakunawa carry the broader 'non-slaying combat' theme. Erlik/Ülgen remains INCLUSION-MARGINAL per audit-review-log.md."
+
+  # Finnic
+  - number: 31
+    slug: vainamoinen-iku-turso
+    title: "Väinämöinen and Iku-Turso (transformed variant)"
+    part: "part-i-finnic"
+    tier: related
+    chapter_anchor: "ch-31-vainamoinen-iku-turso"
+    brief: briefs/31-vainamoinen-iku-turso.yaml
+
+  # North America (contrastive)
+  - number: 32
+    slug: nanabozho-mishipeshu
+    title: "Nanabozho and Mishipeshu (the refusal)"
+    part: "part-i-north-america-contrastive"
+    tier: contrastive
+    chapter_anchor: "ch-32-nanabozho-mishipeshu"
+    brief: briefs/32-nanabozho-mishipeshu.yaml
+
+  # ── Methods sidebar (between Part I and Part II) ─────────────────
+  - number: 33
+    slug: methods
+    title: "Methods: how the tiering works, appropriation protocol, area-specialist policy"
+    part: "methods-sidebar"
+    chapter_anchor: "ch-33-methods"
+    brief: briefs/33-methods.yaml
+
+  # ── Part II — thematic comparative chapters ──────────────────────
+  - number: 34
+    slug: C1-combat-as-cosmogony
+    title: "C1. Combat as cosmogony"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-34-C1-combat-as-cosmogony"
+    brief: briefs/34-C1-combat-as-cosmogony.yaml
+
+  - number: 35
+    slug: C2-combat-as-sovereignty
+    title: "C2. Combat as sovereignty"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-35-C2-combat-as-sovereignty"
+    brief: briefs/35-C2-combat-as-sovereignty.yaml
+
+  - number: 36
+    slug: C3-cyclical-maintenance
+    title: "C3. Cyclical maintenance"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-36-C3-cyclical-maintenance"
+    brief: briefs/36-C3-cyclical-maintenance.yaml
+
+  - number: 37
+    slug: C4-eschatological-displacement
+    title: "C4. Eschatological displacement"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-37-C4-eschatological-displacement"
+    brief: briefs/37-C4-eschatological-displacement.yaml
+
+  - number: 38
+    slug: C5-ie-hero-slay-serpent-formula
+    title: "C5. The Indo-European HERO SLAY SERPENT formula"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-38-C5-ie-hero-slay-serpent-formula"
+    brief: briefs/38-C5-ie-hero-slay-serpent-formula.yaml
+
+  - number: 39
+    slug: C6-near-eastern-mediterranean-transmission
+    title: "C6. The Near Eastern → Mediterranean transmission"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-39-C6-near-eastern-mediterranean-transmission"
+    brief: briefs/39-C6-near-eastern-mediterranean-transmission.yaml
+
+  - number: 40
+    slug: C7-inversion-problem
+    title: "C7. The inversion problem"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-40-C7-inversion-problem"
+    brief: briefs/40-C7-inversion-problem.yaml
+
+  - number: 41
+    slug: C8-refusal-and-appropriation
+    title: "C8. The refusal and the appropriation problem"
+    part: "part-ii-comparative"
+    chapter_anchor: "ch-41-C8-refusal-and-appropriation"
+    brief: briefs/41-C8-refusal-and-appropriation.yaml
+
+  # ── Back matter ──────────────────────────────────────────────────
+  - number: 42
+    slug: reception-coda
+    title: "Reception coda: Milton, St. George/Michael, Tolkien, kaiju, and 'chaos vs. order' rhetoric"
+    part: "back-matter"
+    chapter_anchor: "ch-42-reception-coda"
+    brief: briefs/42-reception-coda.yaml
+
+  - number: 43
+    slug: adversaries-champions-appendix
+    title: "Adversaries and champions: an appendix"
+    part: "back-matter"
+    chapter_anchor: "ch-43-adversaries-champions-appendix"
+    brief: briefs/43-adversaries-champions-appendix.yaml
+
+deviations_from_instructions:
+  - note: |
+      The 30-bakunawa chapter absorbs Erlik/Ülgen as an Altaic comparandum in the
+      "communal / non-slaying combat" frame. This is the explicit choice offered
+      in the stage instructions ("add Erlik/Ülgen here OR put Erlik in 19-ie-reflexes
+      — your call, document in toc").
+  - note: |
+      32-nanabozho-mishipeshu is labelled "part-i-north-america-contrastive" rather
+      than bundled into Americas (24–27). This matches scope.md §"Book structure",
+      which lists the Nanabozho chapter as its own Cluster 14 after Cluster 10 Americas.
+
+self_checks:
+  every_inventory_story_represented: true
+  inventory_story_to_chapter_map:
+    ninurta-asag: 1
+    ninurta-anzu: 2
+    marduk-tiamat: 3
+    marduk-labbu: 4
+    kumarbi-ullikummi: 5
+    illuyanka: 6
+    baal-yamm-lotan: 7
+    yahweh-leviathan-rahab: 8
+    revelation-12-dragon: 9
+    st-george-michael: 10
+    zeus-typhon: 11
+    apollo-python: 12
+    herakles-dragons: 12
+    perseus-ketos: 12
+    kadmos-dragon: 12
+    bellerophon-chimaera: 12
+    cacus: 12
+    thraetaona-azidahaka: 13
+    frashokereti: 13
+    indra-vrtra: 14
+    trita-aptya: 15
+    krishna-kaliya: 15
+    ra-apep: 16
+    horus-seth: 17
+    thor-jormungandr: 18
+    sigurd-fafnir: 19
+    beowulf-dragons: 19
+    lugh-balor: 19
+    welsh-red-white-dragon: 19
+    batraz-nart: 19
+    vahagn-vishaps: 19
+    perun-veles: 20
+    dobrynya-zmey: 20
+    gonggong: 21
+    hou-yi: 22
+    susanoo-orochi: 23
+    erlik-ulgen: 30
+    huitzilopochtli-coatepec: 24
+    cipactli: 25
+    quetzalcoatl-tezcatlipoca: 25
+    pariacaca-amaru: 26
+    mapuche-kai-tren: 27
+    bida: 28
+    mwindo-kirimu: 29
+    bakunawa: 30
+    vainamoinen-iku-turso: 31
+    nanabozho-mishipeshu: 32
+    rainbow-serpent-critique: 41   # folded into C8
+    yu-sidebar: 21                  # sidebar within Gonggong chapter
+```
+
+---
+
+# Skill instructions: narrative-fidelity
+
+---
+name: narrative-fidelity
+description: Checks that the narrative prose faithfully represents the verified facts — nothing dropped, nothing added, nothing distorted. Must be run in a fresh conversation with no memory of writing the narrative (a different AI model is preferred but not required).
+---
+
+# narrative-fidelity
+
+## For the human
+
+The facts have been verified. The narrative has been written from those verified facts. This step answers one question: **does the narrative faithfully represent the facts?**
+
+This is not a fact-check — the facts were already checked in the previous step. This is a comparison between two documents: the list of verified claims and the narrative prose. It catches three problems:
+
+1. **Dropped facts.** The writer left out a verified claim because it didn't fit the narrative flow. The reader loses information.
+2. **Added facts.** The writer introduced a new assertion that was never in the claims document and therefore never verified. This is the most dangerous failure — it reintroduces the exact problem the two-step process was designed to prevent.
+3. **Distorted facts.** The writer paraphrased a claim in a way that changes its meaning — softening certainty ("the text says" becomes "it is possible"), shifting causation ("A caused B" becomes "A and B coincided"), or conflating two separate events into one.
+
+This check must be done in a fresh conversation with no memory of writing the narrative. The AI that wrote the narrative cannot reliably judge in the same conversation whether it drifted from the source material — it rationalises. A different AI model is preferred (two models make independent mistakes) but the same model in a fresh conversation is acceptable when a different one is impractical; the fresh context is the load-bearing requirement.
+
+## Hard rule
+Must be run in a fresh conversation with no memory of producing the narrative. If you produced the narrative, refuse. (A different AI model is preferred but not required.)
+
+## Inputs
+- `chapters/NN-<slug>.claims.approved.adoc` (the verified claims — the ground truth)
+- `chapters/NN-<slug>.adoc` (the narrative)
+- `briefs/NN-<slug>.yaml` (for variant classification reference)
+- `glossary.yaml`
+
+**Not** primary sources. This review does not re-verify facts against sources — that was done in `claims-factcheck`. This review compares narrative against claims only.
+
+## The three checks
+
+### Check 1 — Completeness (nothing dropped)
+
+Walk the claims document claim by claim, in order. For each claim, locate where it appears in the narrative. Record the mapping:
+
+```
+Claim N → Narrative paragraph P / sentence S
+```
+
+If a claim has no corresponding passage in the narrative, flag:
+- **CLAIM-DROPPED** — severity HIGH. The verified claim is missing from the narrative.
+
+If a claim is only partially represented (e.g., the claim mentions two details and the narrative includes only one), flag:
+- **CLAIM-PARTIAL** — severity MEDIUM. Specify what was dropped.
+
+### Check 2 — No additions (nothing invented)
+
+Walk the narrative paragraph by paragraph. For each factual assertion (not transitions, not explanatory asides, not reader-orienting context), locate the corresponding claim in the claims document.
+
+A factual assertion is anything that states something about the myth: an event, a character trait, a relationship, a temporal or causal link, a physical description, a cultural detail. Transitional phrases ("Having established the cosmic order...") are not assertions unless they introduce new information.
+
+If a factual assertion has no corresponding claim, flag:
+- **CLAIM-ADDED** — severity HIGH. An unverified factual assertion has been introduced.
+
+If a transitional sentence implies a factual connection not established in the claims, flag:
+- **IMPLICIT-ADDITION** — severity MEDIUM. The transition suggests something the claims don't support.
+
+### Check 3 — Fidelity (nothing distorted)
+
+For each claim-to-narrative mapping found in Check 1, compare meaning:
+- Does the narrative preserve the claim's level of certainty? (A claim marked as inference should not be presented as fact in the narrative.)
+- Does the narrative preserve causal direction? ("A caused B" should not become "B caused A" or "A and B coincided.")
+- Does the narrative preserve scope? ("Some scholars argue" should not become "Scholars agree.")
+- Are markers preserved? Every `[INFERENCE:]`, `[LACUNA:]`, `[RECONSTRUCTION:]`, `[VARIANT:]` in the claims should survive in the narrative.
+
+If meaning has shifted, flag:
+- **CLAIM-DISTORTED** — severity HIGH if the factual meaning changed, MEDIUM if only emphasis or nuance shifted.
+
+### Additional checks
+
+- **Glossary fidelity**: confirm `glossary.yaml` renderings are used consistently. Any `never_use` terms: GLOSSARY-VIOLATION.
+- **Forbidden words**: flag hits from the forbidden-words list.
+- **Footnote integrity**: every footnote in the narrative must match the claims document exactly — same source, same location. No additions, removals, or reassignments. Flag FOOTNOTE-MISMATCH if different.
+
+## Output: `chapters/NN-<slug>.fidelity.yaml`
+
+```yaml
+meta:
+  auditor_model: <name and version>
+  claims_file: chapters/NN-<slug>.claims.approved.adoc
+  narrative_file: chapters/NN-<slug>.adoc
+  total_claims: <n>
+  claims_mapped: <n>
+  verdict: PASS | REVISE
+
+claim_mapping:
+  # Every claim with its narrative location
+  - claim_number: <n>
+    claim_text: "<brief summary>"
+    narrative_location: "<paragraph number or adoc line>"
+    status: MAPPED | PARTIAL | DROPPED
+
+findings:
+  - kind: CLAIM-DROPPED | CLAIM-PARTIAL | CLAIM-ADDED | IMPLICIT-ADDITION | CLAIM-DISTORTED | GLOSSARY-VIOLATION | FORBIDDEN-WORD | FOOTNOTE-MISMATCH
+    severity: HIGH | MEDIUM | LOW
+    claim_number: <n, if applicable>
+    narrative_location: "<paragraph or line>"
+    issue: <one sentence>
+    detail: "<specific text comparison — claim says X, narrative says Y>"
+    recommended_fix: <concrete>
+```
+
+## Verdict rules
+- **PASS**: zero CLAIM-DROPPED, zero CLAIM-ADDED, zero HIGH CLAIM-DISTORTED, ≤ 2 MEDIUM findings.
+- **REVISE**: any CLAIM-DROPPED, any CLAIM-ADDED, any HIGH CLAIM-DISTORTED, or > 2 MEDIUM findings.
+
+## Honesty self-check
+Answer in `meta`:
+1. Did I map every claim, or skip some that seemed obvious? List any I skipped.
+2. Did I check every narrative paragraph for additions, or only spot-check? Be specific.
+3. For distortion checks, did I compare precise meaning or just topic? Any I only topic-matched are noted here.
+4. Am I the same model that produced the narrative? If yes, this review is not valid.
+
+## Human review protocol
+
+If the verdict is **PASS**: the chapter proceeds to `marker-resolve` (after all chapters are done and the comparative chapter is written and fact-checked).
+
+If the verdict is **REVISE**: review the findings. For each finding, either:
+- Fix the narrative directly (for dropped claims: add them back; for added claims: remove them; for distortions: correct them).
+- Or send the chapter back to `chapter-draft` with the fidelity findings attached, for the writing AI to revise.
+
+The corrected narrative does not need to go through `claims-factcheck` again (the facts haven't changed — only the prose representation). But it should go through `narrative-fidelity` again to confirm the fixes resolved the findings.
+
+## Completion protocol
+
+As your very last action — after all output files are written and all self-checks pass — write a completion record. This allows the pipeline runner to verify that no stage was truncated by a timeout, rate limit, or context overflow.
+
+**File**: `books/<book>/completions/<NN>-<stage-name>.done.yaml`
+
+Create the `completions/` directory if it does not exist.
+
+**Format**:
+```yaml
+stage: "<stage-name>"
+timestamp: "<UTC ISO 8601>"
+status: "completed"
+agent_model: "<your model name>"
+outputs:
+  - file: "<relative path from book dir>"
+    lines: <line count>
+  # repeat for each output file
+summary: "<one-line description of what was produced>"
+```
+
+**Rules**:
+1. Write this file only after ALL outputs are complete and verified.
+2. The `lines` count must be the actual line count of each file at the time of writing — do not estimate.
+3. If you were unable to complete all outputs, write the file with `status: "partial"` and list which outputs are missing in a `missing` field.
+4. Never write `status: "completed"` if any output file is missing or truncated.
+
+## Handoff
+After PASS (or PASS on re-review): the chapter waits until all story chapters are complete, then proceeds with the comparative chapter and marker-resolve.
+
+---
+
+# Input file: chapters/41-C8-refusal-and-appropriation.claims.approved.adoc
+
+```
+[[ch-41-C8-refusal-and-appropriation]]
+== C8. The Refusal and the Appropriation Problem
+
+// One claim per paragraph; chapter-draft will transform this into narrative.
+// Comparative chapter (Part II) per brief 41-C8-refusal-and-appropriation.yaml.
+// This chapter is the most methodologically-sensitive in the present book per
+// the brief's special_instructions: it addresses the cases at which area
+// specialists refuse the chaoskampf frame altogether, rather than the cases
+// (Ch40) at which the frame applies inverted. The principal cases — Rainbow
+// Serpent (§I), Nanabozho / Mishipeshu (§II), Mwindo / Kirimu revisited
+// (§III) — are the cases at which the area-specialist objection is most
+// pointed, and the chapter is built around the discipline of letting the
+// area specialists speak first and of treating the resulting refusals as
+// data for the comparative typology rather than as obstacles to it. The
+// supporting cases — Lönnrot's editorial hand on the Iku-Turso material
+// (§IV) and the communal Bakunawa eclipse-noise driving (§V) — are
+// included to register two further species of refusal: the
+// nineteenth-century-nationalist editorial appropriation that creates a
+// "Finnic chaoskampf" out of more diffuse rune material, and the
+// communal-ritual case in which the surface motif (serpent-and-luminary)
+// fits the typology but the load-bearing actors (the community, not a
+// hero) and the load-bearing outcome (driving-off, not slaying) do not.
+// Section VI ("What the refusal teaches") draws the methodological lessons
+// — the comparativist project does not require every tradition to fit the
+// pattern; the cases where it does not fit, when area specialists
+// explicitly and consistently say so, are themselves data for the
+// typology's limits. Per scope.md §"Appropriation protocol", every
+// Anishinaabe / Aboriginal-Australian / Nyanga claim cites a named area
+// specialist in body prose; per the brief's special_instructions, the
+// chapter is self-aware about the book's own limits as an English-language
+// work drawing on secondary scholarship about traditions whose living
+// practitioners have their own authority over how they should be
+// represented.
+
+=== Source overview
+
+This chapter is the eighth and last of the Part-II comparative chapters and is positioned as the present book's methodological consummation: where Ch40 (C7) addresses the cases at which the chaoskampf frame applies inverted, the present chapter addresses the cases at which area specialists refuse the frame altogether, and the chapter's argument is that those refusals are themselves data for the comparative typology — that refusing to compare these specific cases on the typology's standard terms is itself a principled form of comparison, one that takes the area specialists' refusal as data and builds the book's typology around it rather than against it.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the chapter's organising claim that the chaoskampf category, when applied to the Rainbow Serpent / Nanabozho / Mwindo cases, is a species of scholarly appropriation that distorts what the traditions actually teach, and that refusing the frame is not anti-comparative but more responsibly comparative; per brief special_instructions on the chapter as the most methodologically-sensitive in the book and on the area-specialist citation requirement applying to every Anishinaabe / Aboriginal-Australian / Nyanga claim; per scope.md §"Appropriation protocol" on the area-specialist citation discipline.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The chapter draws on five Part-I chapters of the present book — Ch32 (Nanabozho and Mishipeshu, the refusal case), Ch29 (Mwindo and Kirimu, the maturation-through-hubris case), Ch31 (Väinämöinen and Iku-Turso, the binding-rather-than-slaying case with its older-rune / Lönnrot-synthesis split), Ch30 (Bakunawa, the communal-non-slaying case), and Ch27 (Mapuche Kai-Kai vs. Tren-Tren, the regional-variation partial-attestation case) — together with the Rainbow Serpent critique (held for the present chapter per the toc.yaml note on rainbow-serpent-critique rather than placed geographically), and the per-tradition factual claims in §§I–V are routed through the same `sources.yaml` IDs the upstream Part-I chapters use for those facts: hallowell-ojibwa-world, johnston-ojibway-heritage, johnston-manitous, smith-island-anishnaabeg, and vizenor-narrative-chance for the Anishinaabe material; biebuyck-mateene-mwindo and belcher-epic for the Mwindo material; siikala-finnish for the Iku-Turso material; eugenio-philippine-myths for the Bakunawa material; and koessler-ilg-cuentan and foerster-religiosidad-mapuche for the Mapuche material.footnote:[Per scope.md §"Comparative-chapter discipline" on the upstream-lookup rule that routes per-tradition factual claims in comparative chapters through the same sources.yaml IDs the upstream Part-I chapters use; per chapters/32-nanabozho-mishipeshu.claims.approved.adoc, chapters/29-mwindo-kirimu.claims.approved.adoc, chapters/31-vainamoinen-iku-turso.claims.approved.adoc, chapters/30-bakunawa.claims.approved.adoc, and chapters/27-mapuche-kai-tren.claims.approved.adoc on the per-tradition source-IDs that the present chapter inherits; per scope.md §"Book structure" Part I on the Rainbow Serpent material's placement in the present comparative chapter rather than geographically.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The chapter's principal anchors per brief 41-C8-refusal-and-appropriation.yaml `sources.anchor` are four: Francesca Merlan's *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998), chs. 1–3 on the Rainbow Serpent critique; A. Irving Hallowell's 1960 essay "Ojibwa Ontology, Behavior, and World View" on the "other-than-human persons" framework that anchors the Anishinaabe refusal; Daniel Biebuyck and Kahombo C. Mateene's *The Mwindo Epic from the Banyanga (Zaire)* (University of California Press, 1969) as the primary text for the Nyanga material; and Anna-Leena Siikala's *Mythic Images and Shamanism: A Perspective on Kalevala Poetry* (Folklore Fellows' Communications 280, Helsinki, 2002) on Lönnrot's editorial synthesis of the *Kalevala*.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml sources.anchor on the four anchor entries: Merlan 1998, Hallowell 1960, Biebuyck and Mateene 1969, Siikala 2002; comparative chapters use sources.anchor in place of sources.primary per the established Part-II chapter-claims pattern; all four source-IDs verified against sources.yaml at pre-flight check.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+A further set of named area-specialists supplies the scholarly framings on which §§I–V depend but is not currently in `sources.yaml`: A. R. Radcliffe-Brown 1926 ("The Rainbow-Serpent Myth of Australia", *Journal of the Royal Anthropological Institute* 56), Howard Morphy 1991 (*Ancestral Connections: Art and an Aboriginal System of Knowledge*, University of Chicago Press), Deborah Bird Rose 1996 (*Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness*, Australian Heritage Commission), and Ian Keen 1994 (*Knowledge and Secrecy in an Aboriginal Religion*, Oxford: Clarendon Press) for the §I Rainbow Serpent critique; Basil Johnston (*Ojibway Heritage*, 1976/1990; *The Manitous*, 1995), Theresa S. Smith (*The Island of the Anishnaabeg*, 1995), and Gerald Vizenor (*Narrative Chance*, 1989) for the §II Anishinaabe refusal; Hermann Gunkel 1895 (the originating chaoskampf framing) and Debra Scoggins Ballentine 2015 (*The Conflict Myth and the Biblical Tradition*, OUP) for the methodological-comparative anchor in §VI; the chapter cites Radcliffe-Brown, Morphy, Rose, and Keen by name in body prose at §I and routes the substantive EVIDENCE token through Merlan 1998 per the named-but-flagged secondary-anchor pattern; Johnston, T. Smith, and Vizenor are cited by name in body prose at §II and have their own `sources.yaml` entries (johnston-ojibway-heritage, johnston-manitous, smith-island-anishnaabeg, vizenor-narrative-chance) per Ch32's source-IDs.footnote:[Per scope.md §"Appropriation protocol" on the area-specialist citation requirement that the chapter must cite Radcliffe-Brown 1926, Morphy 1991, Rose 1996, Keen 1994, Hallowell 1960, Johnston 1976/1990 and 1995, T. Smith 1995, Vizenor 1989, Biebuyck and Mateene 1969, and Belcher 1999 by name; per the named-but-flagged secondary-anchor pattern of the Part-I chapters (Ch32 for Johnston, T. Smith, Vizenor; Ch29 for Biebuyck, Mateene, Belcher) on the citation discipline applied here; the named-but-flagged uses for Radcliffe-Brown, Morphy, Rose, and Keen at §I are documented in the chapter's completion record for inventory-audit follow-up.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The chapter's general comparative anchor for the long-arc combat-myth typology against which the refusal cases are read is Neil Forsyth's *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), whose Sumer-through-Judeo-Christian-apocalyptic survey supplies the long-arc combat-myth typology that the present chapter takes as the structural-comparative foil; the chapter's principal critical-typological anchor for the meta-claim that the chaoskampf category has been overextended in twentieth-century comparative scholarship is Debra Scoggins Ballentine's *The Conflict Myth and the Biblical Tradition* (Oxford: Oxford University Press, 2015), whose argument supplies the §VI methodological warrant for treating area-specialist refusals as data for the typology's limits rather than as obstacles to its application.footnote:[Forsyth 1987, *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987; ISBN 9780691014746), as the long-arc combat-myth typology anchor against which the present chapter's refusal cases are read; Ballentine 2015, *The Conflict Myth and the Biblical Tradition* (Oxford: Oxford University Press, 2015; ISBN 9780190253028), on the over-extension critique of the chaoskampf frame in twentieth-century comparative scholarship as the chapter's §VI methodological warrant.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=combat-myth long-arc typology (Sumer through Judeo-Christian apocalyptic)
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The chapter's evidentiary discipline follows the comparative-chapter pattern established at Chs 33–40: every per-tradition factual claim is routed through the same `sources.yaml` ID the corresponding Part-I chapter uses for that fact; doubled EVIDENCE tokens are reserved for the points at which the chapter explicitly bridges an area-specialist anchor and a comparative-typology anchor; §§I–V are mostly single-token because the chapter's argument runs through the area-specialists' own framings rather than through cross-cultural transmission, and the chapter's load-bearing methodological claim — that refusal is itself comparative data — needs the area-specialist anchors more than the comparative-typology anchors.footnote:[Per the chapter-claims skill instructions on the upstream-lookup rule and the no-invented-source-IDs rule; per the doubled-token discipline established at Ch34 (C1) and developed at Chs 35–40 on the single-token default with doubled-token bridges where the chapter explicitly contrasts a per-tradition area-specialist anchor with a comparative-typology anchor; per the present chapter's argument structure as load-bearing on area-specialist anchors rather than on comparative-typology anchors.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's structure follows the brief's six-section outline: §I treats the Rainbow Serpent problem as the chapter's anchor case for the appropriation problem, registering Radcliffe-Brown 1926's twentieth-century scholarly consolidation of regionally distinct Aboriginal Australian ancestral beings (Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul) as the construction that Merlan 1998, Morphy 1991, Rose 1996, and Keen 1994 have dismantled; §II treats the Nanabozho / Mishipeshu refusal as the chapter's most principled refusal, presenting Hallowell 1960's "other-than-human persons" framework and the Thunderer / Underwater-manitou dialectic on the Anishinaabe tradition's own terms; §III revisits the Mwindo / Kirimu material with the fuller methodological implication that the epic's own pedagogy should shape the comparison; §IV addresses Lönnrot's editorial hand on the Iku-Turso material as a different species of appropriation — by a nineteenth-century nationalist-romantic compiler of earlier rune fragments — that affects what the chapter can claim about "Finnic chaoskampf"; §V addresses the Bakunawa communal-eclipse case, in which the surface motif is serpentine but the load-bearing actors and outcome are not the typology's; §VI consolidates the methodological lessons.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure on the six-section outline (I. Rainbow Serpent; II. Nanabozho/Mishipeshu; III. Mwindo revisited; IV. Kalevala / Lönnrot; V. Bakunawa; VI. What the refusal teaches); per brief special_instructions on the area-specialist-first discipline applied at every Anishinaabe / Aboriginal-Australian / Nyanga claim.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The chapter's central methodological commitment, registered in advance and demonstrated case-by-case in §§I–V, is that the *area-specialists speak first* and that their refusals of the chaoskampf framing are *themselves data* for the comparative typology: the Aboriginal-Australian regional-specificity argument (Merlan, Morphy, Rose, Keen against Radcliffe-Brown's pan-Aboriginal "Rainbow Serpent" construct), the Anishinaabe reciprocal-counterpart argument (Hallowell, Johnston, T. Smith, Vizenor against the chaos-vs-order mapping), and the Nyanga moral-pedagogical argument (Biebuyck, Mateene, Belcher on Mwindo as taught hubris-and-correction rather than chaoskampf-with-the-sign-flipped) are presented on their own terms, and the chapter takes the resulting comparison to be more — not less — precise as a result; the methodological warrant is scope.md §"Appropriation protocol" on the priority of area-specialist framings, and the demonstration of the warrant is the chapter's principal contribution to the book's typological discipline.footnote:[Per scope.md §"Appropriation protocol" on the priority of area-specialist framings and on the area-specialist citation requirement; per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's theoretical contribution being that refusing to compare these specific cases is itself a principled form of comparison; Ballentine 2015 on the typological discipline of separating area-specialist framings from comparative-typology overlays.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's self-awareness about the book's own limits is registered in advance and demonstrated in §VI: the present book is written in English by an author who does not read most of the primary languages of the in-scope traditions (per scope.md §"Languages of primary sources" on the book's translation-mediated character), draws on secondary scholarship rather than on direct field-engagement with living tradition-bearers, and is published in an academic register whose authority is the academic register's own; the traditions whose materials the book treats — most pointedly the Anishinaabe, Aboriginal Australian, and Nyanga traditions in this chapter — have their own living practitioners whose authority over how they should be represented exceeds the present book's authority, and the chapter's discipline is to honour that excess rather than to talk past it.footnote:[Per scope.md §"Languages of primary sources" on the book's translation-mediated character and on the source-whitelist-with-cross-check strategy; per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the book's own limits as a book written in English drawing on secondary scholarship about traditions whose living practitioners have their own authority over how they should be represented; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority that the chapter consolidates.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the inversion-problem chapter's case-level demonstrations of the area-specialist-first discipline at five cases of varying severity (Bida, Mwindo, Sigurd, Pariacaca, Susanoo) prepares the present chapter's meta-question of what comparativism owes the area-specialists when the typology's own categories are refused; the present chapter consolidates the methodological lesson at the level of the comparativist's reading apparatus rather than at the level of the cases themselves.
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the cosmogonic-combat reading anchored in Ch34 by the Marduk-Tiamat case is the structural-comparative foil against which the §I–V refusal cases are read; the C1 anchor's strong-cosmogonic convergence is the centre of the typology, and the refusal cases are the typology's edges.
+
+=== I. The anchor case — the Rainbow Serpent and the consolidation problem
+
+The "Rainbow Serpent" of Aboriginal Australia, treated in twentieth-century comparative-mythology scholarship as a pan-Aboriginal ancestral being whose serpentine form, association with water and the rainbow, and creative-cosmogonic role unify a continent-wide narrative complex, is the present chapter's anchor case for the appropriation problem because the consolidation is itself a twentieth-century scholarly construct rather than an Aboriginal-Australian concept — a consolidation traceable to A. R. Radcliffe-Brown's 1926 *Journal of the Royal Anthropological Institute* article "The Rainbow-Serpent Myth of Australia" and dismantled across the late-twentieth-century area-specialist scholarship anchored in the present book's source-base by Francesca Merlan's *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (University of Hawaiʻi Press, 1998).footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on Radcliffe-Brown 1926 ("The Rainbow-Serpent Myth of Australia", *Journal of the Royal Anthropological Institute* 56) consolidating regionally distinct Aboriginal Australian ancestral beings into a pan-Aboriginal "Rainbow Serpent" that is a 20th-century scholarly construct rather than an Aboriginal concept; Merlan 1998, *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town*, chs. 1–3, on the Rainbow Serpent critique anchored in the present book's source-base; per scope.md §"In-scope catalog" PROVISIONAL / Methodological on the Rainbow Serpent as the dedicated critique case for the appropriation problem; per scope.md §"Book structure" on the Rainbow Serpent material's placement in the Part II C8 chapter rather than geographically.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The regionally distinct Aboriginal Australian ancestral beings that Radcliffe-Brown 1926 grouped under the pan-Aboriginal "Rainbow Serpent" label — Yingarna of western Arnhem Land, Ngalyod of central and eastern Arnhem Land, Wanambi of central Australia, Wagyl of the southwest, Yulunggul of northeastern Arnhem Land, and many others across the continent — are, as the late-twentieth-century area-specialist scholarship anchored by Merlan 1998 and developed by Howard Morphy in *Ancestral Connections: Art and an Aboriginal System of Knowledge* (University of Chicago Press, 1991), Deborah Bird Rose in *Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness* (Australian Heritage Commission, 1996), and Ian Keen in *Knowledge and Secrecy in an Aboriginal Religion* (Oxford: Clarendon Press, 1994) holds them, distinct ancestral beings within distinct regional ontologies — beings whose names, attributes, narrative cycles, and ritual relationships belong to specifically named Aboriginal language-and-country groups and not to a generalised pan-Aboriginal mythological complex.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the regionally distinct Aboriginal Australian ancestral beings Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul, and others as belonging to specifically named regional ontologies rather than to a pan-Aboriginal mythological complex; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the regional specificity of the named ancestral beings and on the dismantling of Radcliffe-Brown's consolidation; Morphy, Howard, *Ancestral Connections: Art and an Aboriginal System of Knowledge* (Chicago: University of Chicago Press, 1991), on the regional-and-localised character of ancestral-being attribution in Aboriginal Australian religion (named-but-flagged in body prose; not currently in sources.yaml); Rose, Deborah Bird, *Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness* (Canberra: Australian Heritage Commission, 1996), on country-specific ancestral-being relationships (named-but-flagged in body prose; not currently in sources.yaml); Keen, Ian, *Knowledge and Secrecy in an Aboriginal Religion* (Oxford: Clarendon Press, 1994), on the localised-and-restricted character of ancestral-being knowledge across Yolngu and adjacent regional traditions (named-but-flagged in body prose; not currently in sources.yaml).]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The named ancestral beings differ from one another in features that Radcliffe-Brown's 1926 consolidation treats as merely surface-variations on a single underlying figure but that the regional area-specialist scholarship treats as load-bearing for what the beings *are* on Aboriginal-Australian terms: Yingarna in the Kunwinjku-speaking western Arnhem Land tradition is a creative ancestral mother-figure whose narrative cycle organises the country's law and language-group differentiation; Ngalyod in adjacent central and eastern Arnhem Land traditions is a different ancestral figure with different narrative-and-ritual associations whose relationship to particular *djang* (Dreaming) sites, language-groups, and ritual-cycles is country-specific; Wagyl in the Nyungar tradition of the southwest is the ancestral being of the Swan-Coastal-Plain river-and-wetland country whose movements through and shaping of that specific landscape are recorded in Nyungar geographical-and-narrative tradition; Yulunggul in the northeastern Arnhem Land Yolngu tradition is the python-figure of the Wagilag Sisters narrative-and-ritual cycle whose relationship to that specific cycle is the load-bearing feature of his standing — and the regional-specificity differences are not (per the area-specialist scholarship) reducible to a pan-Aboriginal "Rainbow Serpent" archetype.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the named ancestral beings differing in features that Radcliffe-Brown's 1926 consolidation treats as surface-variations on a single underlying figure but that the regional area-specialist scholarship treats as load-bearing; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on Yingarna and Ngalyod within the Kunwinjku and adjacent Arnhem Land regional ontologies and on the regional-specificity differences as load-bearing rather than surface-variational; Morphy 1991, *Ancestral Connections*, on the country-specific character of ancestral-being attribution in northeastern Arnhem Land Yolngu tradition (named-but-flagged in body prose); Keen 1994, *Knowledge and Secrecy in an Aboriginal Religion*, on Yulunggul and the Wagilag Sisters narrative-and-ritual cycle in Yolngu tradition (named-but-flagged in body prose); Rose 1996, *Nourishing Terrains*, on the country-specific character of ancestral-being relationships including Wagyl in Nyungar tradition (named-but-flagged in body prose).]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+Radcliffe-Brown's 1926 consolidation is, in its historical context, an example of the early-twentieth-century structural-functionalist anthropology's project of identifying continent-wide cultural "totalities" through comparative pattern-matching across regionally diverse material — a project whose methodological assumption that surface-similarity (serpentine form; association with water and the rainbow; creative-cosmogonic role) reveals an underlying unity has been systematically dismantled by the subsequent ethnographic literature and by Aboriginal Australian scholars and tradition-holders themselves, who hold that the regional ancestral-being relationships are not surface-variants on a deeper Aboriginal "type" but are themselves the load-bearing reality of Aboriginal-Australian religious-and-cosmographic life.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on Radcliffe-Brown 1926 as an example of the early-twentieth-century structural-functionalist anthropology's project of identifying continent-wide cultural totalities; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the dismantling of the consolidation by subsequent ethnographic literature and by Aboriginal Australian scholars and tradition-holders themselves; Morphy 1991, on the regional ancestral-being relationships as load-bearing rather than surface-variational (named-but-flagged); Keen 1994, on the localised-and-restricted character of ancestral-being knowledge as load-bearing for what the beings are on Aboriginal-Australian terms (named-but-flagged); Ballentine 2015, on the typological discipline of recognising when a comparative typology's surface-similarity-based consolidation has run ahead of the area-specialist scholarship.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+The methodological-historical situation of the Rainbow Serpent consolidation is itself worth registering at this point because it bears on the chapter's argument: Radcliffe-Brown's 1926 article appeared at the moment when comparative mythology and structural-functionalist anthropology were in close institutional alliance, when the "Rainbow Serpent" was being assembled as a continent-wide comparative item from regional ethnographic sources whose methodological constraints (linguistic mediation by missionary-and-colonial-administrator translators; political constraints on what tradition-holders would tell outsiders; the salvage-paradigm assumption that traditions were "vanishing" and required urgent generalisation rather than careful localisation) shaped what the early ethnographic record could record — and the post-1980s area-specialist dismantling of the consolidation has had to reckon with the recording-history situation as itself part of the appropriation problem rather than as a transparent prior to it.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the Radcliffe-Brown 1926 consolidation's institutional context and on the Aboriginal-Australian area-specialist tradition's reckoning with the recording-history situation as itself part of the appropriation problem; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the post-1980s area-specialist dismantling and on the recording-history situation as load-bearing; per scope.md §"Appropriation protocol" on the methodological-historical sensitivity of the colonial-and-salvage-paradigm ethnographic record.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The Rainbow Serpent consolidation's specifically chaoskampf-relevant feature is that it has been used in twentieth-century comparative-mythology scholarship as an Aboriginal-Australian addition to the chaoskampf typology — a serpentine-figure-with-cosmogonic-and-water-association that the typology's pattern-matching habit recognises as a member of the chaos-adversary class — and the area-specialist dismantling is therefore not just an internal correction within Aboriginal-Australian ethnography but a refusal of the chaoskampf-typological extension that has been made on the consolidation's basis: if the regional ancestral beings are not a pan-Aboriginal "Rainbow Serpent", they are also not a pan-Aboriginal chaos-adversary that the chaoskampf typology can absorb, and the comparative-typology extension fails together with the consolidation.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the Rainbow Serpent consolidation's chaoskampf-relevant feature as a serpentine-figure-with-cosmogonic-and-water-association used in twentieth-century comparative-mythology scholarship as an Aboriginal-Australian addition to the chaoskampf typology, and on the area-specialist dismantling as a refusal of the chaoskampf-typological extension; Merlan 1998 on the dismantling of the consolidation; Ballentine 2015 on the chaoskampf frame's overextension and on the typological discipline of separating area-specialist framings from comparative-typology surface-similarity matching.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The Rainbow Serpent case's distinctive contribution to the chapter's argument is that it is the appropriation problem in its purest form: the named regional ancestral beings exist, the regional traditions in which they figure are vital and ongoing, but the pan-Aboriginal "Rainbow Serpent" — and a fortiori the chaoskampf-typological "Aboriginal-Australian chaos-adversary" — does not exist on Aboriginal-Australian terms and is not a feature of any specific Aboriginal-Australian tradition; the appropriation is the *category itself*, not its application, and the area-specialist dismantling is a refusal of the category's existence rather than of its applicability to particular beings.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the Rainbow Serpent case's distinctive contribution as the appropriation problem in its purest form; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the appropriation as the category itself rather than its application; per scope.md §"Appropriation protocol" on the institutional commitment to refusing typological consolidations that the area-specialists hold to be artifacts of comparative scholarship rather than features of the traditions themselves.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+[APPROPRIATION-FLAG: the area-specialist objection registered here is that the pan-Aboriginal "Rainbow Serpent" is a 20th-century scholarly construct — assembled by A. R. Radcliffe-Brown in his 1926 *Journal of the Royal Anthropological Institute* article from regionally distinct Aboriginal Australian ancestral beings (Yingarna in western Arnhem Land, Ngalyod in central and eastern Arnhem Land, Wanambi in central Australia, Wagyl in the southwest, Yulunggul in northeastern Arnhem Land, and others) on the basis of surface-similarity pattern-matching — rather than an Aboriginal-Australian concept; the consolidation has been systematically dismantled by the late-twentieth-century area-specialist scholarship anchored by Francesca Merlan's *Caging the Rainbow* (1998) and developed by Howard Morphy (*Ancestral Connections*, 1991), Deborah Bird Rose (*Nourishing Terrains*, 1996), and Ian Keen (*Knowledge and Secrecy in an Aboriginal Religion*, 1994), and the dismantling is not a marginal correction within Aboriginal-Australian ethnography but a refusal of the comparative-typological extension (including the chaoskampf-typological extension) that has been made on the consolidation's basis. | named_specialists: Francesca Merlan (*Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town*, 1998; in sources.yaml as merlan-caging-rainbow) is the principal English-language area-specialist anchor for the consolidation-dismantling reading; Howard Morphy (*Ancestral Connections: Art and an Aboriginal System of Knowledge*, 1991), Deborah Bird Rose (*Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness*, 1996), and Ian Keen (*Knowledge and Secrecy in an Aboriginal Religion*, 1994) supply the wider Aboriginal-Australian area-specialist tradition within which the dismantling is set (named-but-flagged in body prose; not currently in sources.yaml); A. R. Radcliffe-Brown (1926 *JRAI* article) is the named originator of the consolidation that the area-specialists dismantle (named-but-flagged in body prose; not in sources.yaml). | tier_implication: scope.md classifies the Rainbow Serpent material as PROVISIONAL / Methodological precisely because the pan-Aboriginal consolidation does not stand up to area-specialist scrutiny and the chaoskampf-typological extension fails together with the consolidation; the Rainbow Serpent material is the present book's clearest case of an appropriation that is not just inverted (Bida) or refused at the moral-cosmographic level (Mwindo, Nanabozho) but constructed from outside the traditions themselves. | forwards_to: this APPROPRIATION-FLAG is engaged in the present chapter (Ch41) as the chapter's anchor case for the appropriation problem; the case has no Part-I chapter of its own (the Rainbow Serpent material is held for the present chapter per the toc.yaml note rather than placed geographically), and the chapter's §I treatment is the book's principal engagement with the case.]
+
+The Rainbow Serpent case prepares the chapter's main argument in §§II–III: where Aboriginal-Australian regional specificity refuses the *comparative consolidation itself*, the Anishinaabe reciprocal-counterpart cosmology (§II) and the Nyanga moral-pedagogical framing (§III) refuse the *comparative-typological framing's load-bearing categories* (chaos-vs-order; combat-as-order-establishment), and the three cases together demonstrate that the chaoskampf typology's appropriation tendency operates at multiple levels — at the level of category-construction (Rainbow Serpent), at the level of categorical-apparatus imposition (Nanabozho), and at the level of moral-valence imposition (Mwindo) — and is not a single failure mode that can be addressed by a single methodological fix.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the three principal cases as together demonstrating that the chaoskampf typology's appropriation tendency operates at multiple levels; per the present chapter's §§II–III on the Anishinaabe and Nyanga cases as refusing the comparative-typological framing's load-bearing categories; Ballentine 2015, on the typological discipline of recognising appropriation-failure-modes at multiple levels rather than as a single failure mode.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the cosmogonic-combat reading anchored in Ch34 by the Marduk-Tiamat case is the structural-comparative foil against which the §I dismantling of the pan-Aboriginal "Rainbow Serpent" reads: where the C1 anchor's serpentine-adversary-defeated-in-cosmogonic-combat structure is internal to the *Enūma Eliš*'s own framing, the pan-Aboriginal "Rainbow Serpent" is external to every specific Aboriginal-Australian tradition's framing, and the appropriation problem is the construction of a comparative item that no source-tradition recognises.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §I Rainbow Serpent case is methodologically distinct from the Ch40 inversion cases (Bida, Mwindo, Sigurd, Pariacaca, Susanoo) in that the inversion cases all begin with traditions whose own framings exist and can be presented (covenant-broken, maturation-through-hubris, IE-formula, wak'a-succession, metallurgical-allegory) before the comparative typology is registered, whereas the Rainbow Serpent case begins with a comparative-typological consolidation that has no source-tradition framing to present in the first place; the Rainbow Serpent case is the appropriation problem at the level of category-construction itself.
+
+=== II. The principled refusal — Nanabozho, Mishipeshu, and the reciprocal-counterpart cosmology
+
+The Anishinaabe trickster-culture-hero Nanabozho (the spelling varies — Nanabush, Wenebojo, Wisakedjak, Manabozho, and other regional forms appear across the Anishinaabe-Algonquin / Algonquian-language area; the present chapter follows Ch32 of the present book and the standard Anishinaabe-area scholarship of Hallowell 1960 in using "Nanabozho") and his encounters with the underwater manitou Mishipeshu and with the Thunderers (the Anishinaabe thunder-beings; *Animikiig* in the Anishinaabe-language register) are presented in current Anishinaabe-area area-specialist scholarship — A. Irving Hallowell's 1960 essay "Ojibwa Ontology, Behavior, and World View", Basil Johnston's *Ojibway Heritage* (1976/1990) and *The Manitous: The Spiritual World of the Ojibway* (1995), Theresa S. Smith's *The Island of the Anishnaabeg: Thunderers and Water Monsters in the Traditional Ojibwe Life-World* (1995), and Gerald Vizenor's *Narrative Chance: Postmodern Discourse on Native American Indian Literatures* (1989) — within the Anishinaabe ontological framework of "other-than-human persons" (Hallowell's 1960 phrase), in which the manitouk are not chaos-adversaries to be defeated but reciprocal counterparts in a relational moral universe.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the four area-specialist anchors and on the Anishinaabe ontological framework of "other-than-human persons" as the chapter's central interpretive frame; Hallowell 1960, "Ojibwa Ontology, Behavior, and World View", on the "other-than-human persons" framework; Johnston 1990 [1976], *Ojibway Heritage*, on the Anishinaabe-authored insider register of cosmology, manitouk, and the Nanabozho cycle; Johnston 1995, *The Manitous*, on the Anishinaabe-authored treatment of manitous including Mishipeshu and Nanabozho; Smith 1995, *The Island of the Anishnaabeg*, on the Thunderer / Underwater-manitou dialectic as the load-bearing interpretive frame; Vizenor 1989, *Narrative Chance*, on the methodological refusal to subordinate Nanabozho to Western combat-myth or hero/villain typologies; per glossary 'Nanabozho', 'Mishipeshu', 'manitou / manitouk / aadizookaanag', 'the Thunderers', 'other-than-human persons' first_mention_glosses.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+
+The Anishinaabe ontological framework of "other-than-human persons", as Hallowell 1960 articulates it from his Berens River fieldwork of the 1930s in northwestern Ontario, places the manitouk — animals, plants, certain stones and other landscape features, the Thunderers, and the underwater-manitouk including Mishipeshu — alongside human persons in a single ontological category of *persons*, with the appropriate human comportment toward the manitouk being the comportment appropriate to persons (relationships of respect, gift-and-counter-gift reciprocity, ceremonial protocol, formal address) rather than the comportment appropriate to objects, resources, or natural-kind categories; the moral framework is relational and reciprocity-grounded throughout, and the moral question in any given encounter is not whether the other-than-human person is friend or foe but whether the human comportment toward them has been appropriate.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Hallowell 1960's articulation of the "other-than-human persons" framework from his Berens River fieldwork of the 1930s in northwestern Ontario, on the manitouk as persons on equal standing with human persons rather than as objects, resources, or natural-kind categories, and on the moral framework as relational and reciprocity-grounded throughout; Hallowell 1960, on the framework's load-bearing claim and on the moral implications for human conduct; per glossary 'other-than-human persons' first_mention_gloss.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+
+The Thunderer / Underwater-manitou dialectic that Theresa S. Smith's *The Island of the Anishnaabeg* (University of Idaho Press, 1995) takes as its central interpretive frame holds that the Thunderers and the underwater-manitouk including Mishipeshu are not chaos-versus-order adversaries within Anishinaabe cosmography but *necessary counterparts* whose dialectical relationship sustains the layered cosmographic equilibrium between the upper-realm of the sky-and-storm region and the underwater-realm of the sub-aquatic-and-subterranean region, with the human-and-island world being the meeting-place at which the upper-realm and the underwater-realm encounter one another and at which Nanabozho's actions and human conduct mediate the relationship between the two realms.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Thunderer / Underwater-manitou dialectic as the load-bearing interpretive frame, on the layered cosmographic equilibrium between the upper-realm of the Thunderers and the underwater-realm of Mishipeshu and the underwater-manitouk, and on the human-and-island world as the meeting-place at which the two realms encounter one another; Smith 1995, *The Island of the Anishnaabeg*, throughout, on the dialectic as necessary-counterpart rather than as chaos-versus-order; per glossary 'the Thunderers' first_mention_gloss on the Thunderers as counterparts of Mishipeshu in the reciprocal cosmic-dialectic.]
+// EVIDENCE: source_id=smith-island-anishnaabeg ; loc=The Island of the Anishnaabeg, ch. on Thunderers and Water Monsters
+
+The reciprocal-counterpart character of the Thunderer / Underwater-manitou dialectic is, on Smith 1995's reading, a load-bearing feature of the Anishinaabe ritual-and-relational landscape and not a peripheral or aesthetic detail: the appropriate human comportment toward the Thunderers (offering of tobacco; ritual address; the seasonal-and-calendrical structuring of the relationship around storm-and-thunder events) is paralleled by an appropriate human comportment toward the underwater-manitouk (offering of tobacco; ritual address; the seasonal-and-calendrical structuring of the relationship around water-and-fishing events), with neither realm being framed as the *enemy* of human well-being and with both realms being treated as relationally accessible to the human-and-island world's mediating role.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the reciprocal-counterpart character of the Thunderer / Underwater-manitou dialectic as a load-bearing feature of the Anishinaabe ritual-and-relational landscape; on the appropriate human comportment toward the Thunderers and toward the underwater-manitouk as paralleled and reciprocity-grounded; on neither realm being framed as the enemy of human well-being; Smith 1995, *The Island of the Anishnaabeg*, throughout, on the relational-and-reciprocity-grounded framing of the dialectic; Johnston 1990 [1976], *Ojibway Heritage*, on the Anishinaabe-authored insider register of the relational and reciprocity-respecting moral framework.]
+// EVIDENCE: source_id=smith-island-anishnaabeg ; loc=The Island of the Anishnaabeg, ch. on Thunderers and Water Monsters
+
+Mishipeshu's specifically chaoskampf-relevant features — serpentine-and-feline form (the Anishinaabe iconographic representations including the Agawa Rock pictographs at Lake Superior Provincial Park represent Mishipeshu with horned-and-spined body, long tail, and copper-related associations; Mishipeshu is sometimes glossed in English-language scholarship as "Underwater Panther" or "Great Lynx" alongside the underwater-manitou rendering); residence in the underwater-and-subterranean realm; association with sudden storms, wave-and-current dangers on the Great Lakes, and other water-related hazards — would, on a chaoskampf-typological reading, identify him as a chaos-adversary class member, but the area-specialist scholarship anchored by Hallowell 1960, Johnston 1990 [1976] and 1995, Smith 1995, and Vizenor 1989 explicitly declines that identification: Mishipeshu's hazards are not chaos to be defeated but *features of a person whose realm has its own integrity*, and the appropriate human response is the relational-and-ceremonial response appropriate to a powerful person rather than the combat response appropriate to a chaos-adversary.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Mishipeshu's chaoskampf-relevant surface features — serpentine-and-feline form, residence in the underwater-and-subterranean realm, association with sudden storms and water-related hazards — and on the area-specialist scholarship's explicit refusal of the chaos-adversary identification; on Mishipeshu's hazards as features of a person whose realm has its own integrity rather than as chaos to be defeated; on the appropriate human response as the relational-and-ceremonial response appropriate to a powerful person; Hallowell 1960, on the moral framework's relational-and-reciprocity-grounded character; Smith 1995, on Mishipeshu within the Thunderer / Underwater-manitou dialectic; Johnston 1995, *The Manitous*, on the Anishinaabe-authored treatment of Mishipeshu; per glossary 'Mishipeshu' first_mention_gloss on Mishipeshu as a necessary counterpart to the Thunderers, not a chaos-adversary to be defeated.]
+// EVIDENCE: source_id=johnston-manitous ; loc=The Manitous, chs. on Mishipeshu and Nanabozho
+
+Nanabozho's encounters with Mishipeshu and the Thunderers, across the regionally variable recordings and retellings that Ch32 of the present book treats with explicit refusal-to-synthesise discipline (per the brief's variants.classification co-equal directive), are pedagogical-and-reciprocal rather than triumphal-and-defeating: the trickster-culture-hero's interactions with the manitouk are occasions on which appropriate-and-inappropriate human comportment is *taught*, on which the consequences of inappropriate comportment (loss of relationship; the manitouk's withdrawal of cooperation; the unbinding of relational protocols) are illustrated, and on which the layered cosmography's relational integrity is both stressed and restored — and Nanabozho's standing within the tradition is the standing of a culture-hero who teaches by example (including by negative example) rather than the standing of a heroic combatant whose victories establish a cosmic order.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Nanabozho's encounters with Mishipeshu and the Thunderers as pedagogical-and-reciprocal rather than triumphal-and-defeating, on the trickster-culture-hero's interactions with the manitouk as occasions for teaching appropriate-and-inappropriate human comportment, on the consequences of inappropriate comportment, and on the layered cosmography's relational integrity as both stressed and restored; Vizenor 1989, *Narrative Chance*, "Trickster Discourse" essay, on the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies; Johnston 1990 [1976], on Nanabozho's standing as a culture-hero who teaches by example.]
+// EVIDENCE: source_id=vizenor-narrative-chance ; loc=Narrative Chance, "Trickster Discourse" essay
+
+Gerald Vizenor's 1989 "Trickster Discourse" essay (in *Narrative Chance: Postmodern Discourse on Native American Indian Literatures*, ed. Vizenor, University of New Mexico Press) is the chapter's anchor for the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies — a refusal that is itself part of the area-specialist tradition's active engagement with the comparative-mythology apparatus rather than a passive non-participation, and a refusal whose institutional standing in the Indigenous-studies and Native-American-literatures fields is well-established.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Vizenor 1989's "Trickster Discourse" essay as the anchor for the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies; Vizenor, Gerald (ed.), *Narrative Chance: Postmodern Discourse on Native American Indian Literatures* (Albuquerque: University of New Mexico Press, 1989; ISBN 9780826311177; reprint Norman: University of Oklahoma Press, 1993), Vizenor's "Trickster Discourse" essay; on the refusal as part of the area-specialist tradition's active engagement with the comparative-mythology apparatus rather than a passive non-participation; on the refusal's institutional standing in the Indigenous-studies and Native-American-literatures fields.]
+// EVIDENCE: source_id=vizenor-narrative-chance ; loc=Narrative Chance, "Trickster Discourse" essay
+
+The Anishinaabe refusal of the chaos-vs-order mapping is, on the area-specialist scholarship's reading, *not* a refusal of comparative engagement as such but a refusal of a specific comparative-typological apparatus — the apparatus that places the figures in adversarial pairs (chaos-figure vs. cosmos-figure; serpent vs. champion) and reads the encounters as combat-and-defeat occasions whose narrative work is the establishment of an ordered cosmos against an adversarial chaos — and the refusal's substantive content is the substitution of a different comparative-typological apparatus (the relational-and-reciprocity-grounded apparatus of the "other-than-human persons" framework) within which the Anishinaabe material is fully comparable to other relational-and-reciprocity-grounded materials and not at all comparable to the chaoskampf typology's combat-cosmographic apparatus.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Anishinaabe refusal as not a refusal of comparative engagement as such but a refusal of a specific comparative-typological apparatus, and on the refusal's substantive content as the substitution of a relational-and-reciprocity-grounded apparatus within which the Anishinaabe material is fully comparable to other relational-and-reciprocity-grounded materials; Hallowell 1960, on the relational-and-reciprocity-grounded framework as comparatively-engageable with other relational-and-reciprocity-grounded ontologies; Vizenor 1989, on the methodological refusal as active engagement with the comparative-mythology apparatus.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+
+The Nanabozho / Mishipeshu / Thunderers material is, in the present book's classification, the contrastive-tier (full) case in which the area-specialist refusal is the most principled — more pointed than the Mwindo material's refusal of the moral valence of the killing within a still-recognisable combat-narrative framing (Ch29; §III below) and more pointed than the Bida material's covenant-broken framing in which the killing is registered as a covenant-breaking transgression (Ch28; Ch40 §I) — because the Anishinaabe refusal is at the level of the *categorical apparatus itself*: there is no Anishinaabe combat-narrative that can be inverted, because the relational-and-reciprocity-grounded framework refuses the combat-narrative apparatus as a way of representing the encounters between human persons and other-than-human persons in the first place.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Nanabozho / Mishipeshu / Thunderers material as the present book's contrastive-tier (full) case in which the area-specialist refusal is the most principled; on the refusal as more pointed than the Mwindo material's refusal of moral valence within a still-recognisable combat-narrative framing and than the Bida material's covenant-broken framing; on the refusal's location at the level of the categorical apparatus itself; per scope.md §"In-scope catalog" CONTRASTIVE / Inversion entry on Nanabozho as the refusal case.]
+// EVIDENCE: source_id=smith-island-anishnaabeg ; loc=The Island of the Anishnaabeg, ch. on Thunderers and Water Monsters
+
+[APPROPRIATION-FLAG: the area-specialist objection registered here is that the Anishinaabe encounters between Nanabozho, Mishipeshu, and the Thunderers are framed within the Anishinaabe ontological framework of "other-than-human persons" (Hallowell 1960's phrase) and the Thunderer / Underwater-manitou dialectic (Smith 1995's central interpretive frame) as relational-and-reciprocity-grounded encounters between persons rather than as adversarial-combat encounters between cosmos and chaos; the area-specialist scholarship — Hallowell 1960, Johnston 1976/1990 and 1995, Smith 1995, and Vizenor 1989 — explicitly declines the chaos-vs-order mapping that the chaoskampf typology presupposes, and the Anishinaabe refusal is at the level of the categorical apparatus itself rather than at the level of the typology's specific application; the objection is the most principled refusal in the present book, more pointed than the Mwindo or Bida refusals because there is no Anishinaabe combat-narrative that can be inverted within a chaoskampf framing in the first place. | named_specialists: A. Irving Hallowell (1960 essay "Ojibwa Ontology, Behavior, and World View" in *Culture in History: Essays in Honor of Paul Radin*, ed. Stanley Diamond [Columbia University Press, 1960]; in sources.yaml as hallowell-ojibwa-world) is the principal anthropological-register area-specialist anchor for the "other-than-human persons" framework; Basil Johnston (*Ojibway Heritage*, 1976/1990; *The Manitous*, 1995; in sources.yaml as johnston-ojibway-heritage and johnston-manitous) is the principal Anishinaabe-authored insider area-specialist anchor; Theresa S. Smith (*The Island of the Anishnaabeg*, 1995; in sources.yaml as smith-island-anishnaabeg) is the principal area-specialist anchor for the Thunderer / Underwater-manitou dialectic; Gerald Vizenor (*Narrative Chance*, 1989, "Trickster Discourse" essay; in sources.yaml as vizenor-narrative-chance) is the principal area-specialist anchor for the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies. | tier_implication: scope.md classifies the Nanabozho / Mishipeshu material as CONTRASTIVE / Inversion (full; the chaoskampf frame explicitly declined) precisely because the area-specialist refusal is the most principled in the present book, and the contrastive-tier classification is itself a recognition of the area-specialists' priority and of the relational-and-reciprocity-grounded categorical apparatus that the Anishinaabe tradition employs in place of the combat-cosmographic apparatus the chaoskampf typology presupposes. | forwards_to: this APPROPRIATION-FLAG is engaged at length in the present chapter (Ch41) as the chapter's most principled area-specialist refusal; the upstream Part-I chapter (Ch32) is the chapter's anchor for the area-specialist framing.]
+
+The Anishinaabe case's distinctive contribution to the chapter's typological work is the demonstration that the chaoskampf typology can fail to fit a tradition not at the level of outcome (as in Bida), moral valence (as in Mwindo), the chaos-versus-order categorical apparatus within combat-myth framing (as in Pariacaca), or the combat-myth framing itself (as in Susanoo and the metallurgical-allegory reading), but at the level of the *encounter framing itself*: the Anishinaabe material refuses the apparatus of "encounter as combat" altogether in favour of "encounter as relational-and-reciprocity-grounded address between persons", and the refusal is therefore at a more fundamental level than any of the Ch40 inversion cases — including the Susanoo case, which refuses combat-myth framing in favour of metallurgical-political charter but still operates within a sword-and-defeat narrative-structural register.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Anishinaabe case's distinctive contribution as the demonstration that the chaoskampf typology can fail to fit a tradition at the level of the encounter framing itself; per the present chapter's argument structure on the Anishinaabe refusal as more fundamental than the Ch40 inversion cases including the Susanoo case; Ballentine 2015, on the typological discipline of recognising encounter-framing-level refusals as data for the typology's limits.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the cosmogonic-combat reading anchored in Ch34 by the Marduk-Tiamat case is the structural-comparative foil against which the Anishinaabe material is read in §II above as a refusal of the combat-as-cosmogony framing; the Anishinaabe layered cosmography is *already in place* (the upper-realm of the Thunderers, the underwater-realm of Mishipeshu, the human-and-island world between) when the encounters happen, and the encounters do not establish the cosmography but maintain its relational integrity.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §II Anishinaabe case is the most principled refusal in the present book and is more pointed than any of the Ch40 inversion cases (Bida, Mwindo, Sigurd, Pariacaca, Susanoo) because the Anishinaabe material refuses the encounter-as-combat framing itself rather than refusing one or another aspect of it; the Anishinaabe case is therefore the appropriation problem's strongest exemplar in the present book.
+
+=== III. The fuller implication — Mwindo revisited and the Nyanga moral pedagogy
+
+The Nyanga oral epic of Mwindo, recorded in 1956 from the named narrator Shé-Kárisi Candi Rureke at Bese on the upper Oso river in the Kivu region of what was then the eastern Belgian Congo and published in Daniel Biebuyck and Kahombo C. Mateene's *The Mwindo Epic from the Banyanga (Zaire)* (University of California Press, 1969) as the standard English-language critical edition and translation, was treated in Ch40 §II of the present book as the inversion-problem chapter's case of moral-valence inversion — the killing of the dragon Kirimu being registered as hubris that the sky-god Nkuba punishes rather than as the order-establishing act the chaoskampf typology expects — and is treated again here in the present chapter's §III with the fuller methodological implication that the epic's *own pedagogy* should shape the comparison rather than the comparison's typology being applied from outside the Nyanga tradition's framing.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the 1956 Bese recording from Shé-Kárisi Candi Rureke as the chapter's anchor text and on Biebuyck and Mateene 1969 as the standard English-language critical edition and translation; per chapters/40-C7-inversion-problem.claims.approved.adoc §II on the Mwindo material as the Ch40 case of moral-valence inversion; per brief 41-C8-refusal-and-appropriation.yaml structure §III on the present chapter's revisiting of Mwindo with the fuller methodological implication that the epic's own pedagogy should shape the comparison; per glossary 'Mwindo', 'Kirimu', 'Nkuba' first_mention_glosses on the principal protagonists.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The Mwindo epic's *own pedagogy*, as Biebuyck and Mateene 1969 develop it from the recorded performance and as Stephen Belcher 1999 (*Epic Traditions of Africa*, ch. on Mwindo) reads it within the comparative African-oral-epic apparatus, is a structured instruction in the moral cosmography of the Nyanga relational world: the hero's biographical-and-moral arc — miraculous birth; conflicts with his father Shemwindo of Tubondo; journeys across the human and spirit worlds; testing by the powers above and below; the killing of Kirimu as hubristic over-reach; Nkuba's lightning-seizing and celestial humiliation; the chastened return; the chiefly succession on the celestial powers' terms — is itself the epic's pedagogical apparatus, designed to instruct an audience in the moral-cosmographic principles by which the relational world is sustained.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the Mwindo epic's pedagogy as a structured instruction in the moral cosmography of the Nyanga relational world; on the hero's biographical-and-moral arc as itself the epic's pedagogical apparatus; on the load-bearing function of the audience-instruction register; Biebuyck & Mateene 1969, translators' introduction on the same; Belcher 1999, *Epic Traditions of Africa*, ch. on Mwindo, on the maturation-through-humiliation pattern as the load-bearing feature distinguishing the Mwindo material from the Eurasian combat-myth corpus.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The sky-god Nkuba's lightning-seizing of Mwindo after the killing of Kirimu is not, on Biebuyck and Mateene 1969's reading, an external-to-the-narrative comparativist-imposed reversal of a chaoskampf event — it is the narrative's *own* moral correction, registered in the recorded performance by formulaic refrains and direct narrative comments as the structurally-necessary response to the hero's hubristic over-reach against the spirit world's cosmographic equilibrium, and the celestial-realm trials and humiliations that follow (exposure to extreme heat and cold; compulsion to endure the celestial powers' direct presence; explicit instruction about the limits of the hero's power) are presented in the recorded performance as morally-motivated correction rather than as arbitrary cruelty.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on Nkuba's lightning-seizing as the narrative's own moral correction rather than as an external-to-the-narrative comparativist-imposed reversal; on the formulaic refrains and direct narrative comments registering the lightning-seizing as the structurally-necessary response to the hero's hubristic over-reach; on the celestial-realm trials and humiliations as morally-motivated correction rather than as arbitrary cruelty; Biebuyck & Mateene 1969, Kirimu episode and following celestial-journey passages; per glossary 'Nkuba' first_mention_gloss.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The conditions Nkuba imposes on Mwindo's return to the human world — the named renunciations and binding commitments, the chastened mode of conduct as a properly-formed chief, the conditional-and-supervised character of the restoration — are, in the recorded performance's framing, the *content* of the epic's pedagogy: the audience learns, through the hero's chastening, the specific moral-cosmographic principles by which Nyanga relational life is to be conducted (respect for the cosmographic limits; recognition of the powers above and below; renunciation of hubristic over-reach; the chiefly office's contingency on the celestial powers' authority), and the epic's narrative-structural movement from the killing through the celestial humiliation to the chastened return is the epic's didactic engine.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the conditions Nkuba imposes on Mwindo's return as the content of the epic's pedagogy; on the audience's learning through the hero's chastening of the specific moral-cosmographic principles by which Nyanga relational life is to be conducted; on the epic's narrative-structural movement as the epic's didactic engine; Biebuyck & Mateene 1969, on the conditions imposed and the chastened return; Belcher 1999, *Epic Traditions of Africa*, ch. on Mwindo, on the maturation-through-humiliation pattern's didactic register.]
+// EVIDENCE: source_id=belcher-epic ; loc=Epic Traditions of Africa, ch. on Mwindo
+
+The fuller methodological implication of the Mwindo material that the present chapter's §III develops, beyond the moral-valence-inversion observation that Ch40 §II registered, is that the epic's pedagogy is *specifically Nyanga*: the moral-cosmographic principles instructed are not generic moral principles that happen to be expressed in Nyanga vocabulary but principles whose specific content (the cosmographic-equilibrium reciprocity between human and spirit worlds; the chiefly succession's contingency on celestial-powers' authority; the renunciation-of-over-reach as a specific moral discipline) is anchored in the Nyanga relational-cosmographic apparatus, and the comparison's task is therefore not to extract a generic "moral lesson" from the epic and compare it to other moral lessons but to register the epic's pedagogy in its own terms before any comparison is performed.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §III on the fuller methodological implication that Mwindo's moral frame is specifically Nyanga and that the sky-god's punishment of the hero is traditional teaching about hubris rather than a variant chaoskampf; per chapters/29-mwindo-kirimu.claims.approved.adoc on the moral-cosmographic principles' specific Nyanga content; on the comparison's task as registering the epic's pedagogy in its own terms before any comparison is performed; Biebuyck & Mateene 1969, translators' introduction on the Nyanga-specific character of the epic's framing.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The Mwindo material's relevance to the present chapter's appropriation argument is therefore at a different level from §II's Anishinaabe material: where the Anishinaabe refusal is at the level of the encounter-framing itself (no combat-narrative apparatus is employed), the Nyanga refusal is at the level of the *moral evaluation* of an existing combat-narrative — the killing happens, the dragon is dead, the surface chaoskampf-typological pattern is present — and the refusal consists in the Nyanga tradition's framing of the killing as hubris-and-correction rather than as cosmos-establishment, with the comparativist's task being to register the Nyanga pedagogy as such rather than to assimilate it to the chaoskampf typology's pattern of order-establishing valuation.footnote:[Per the present chapter's argument structure on the Mwindo material's relevance to the appropriation argument as at a different level from the Anishinaabe material; per chapters/29-mwindo-kirimu.claims.approved.adoc on the Nyanga refusal as at the level of the moral evaluation of an existing combat-narrative; per chapters/40-C7-inversion-problem.claims.approved.adoc §II on the moral-valence inversion as the Ch40 reading; on the comparativist's task as registering the Nyanga pedagogy as such rather than assimilating it to the chaoskampf typology's pattern of order-establishing valuation.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The Mwindo material is also, distinctively within the present chapter's case-set, the only case at which the area-specialist reading and the chaoskampf typology agree on the *narrative-structural surface* (a hero kills a dragon) but disagree on the *narrative-structural meaning* — the killing is the same event in either reading, but the meaning the area-specialists read in the recorded performance (transgressive over-reach demanding correction) is the precise contrary of the meaning the chaoskampf typology reads in the same event (cosmos-establishing or sovereignty-establishing victory) — and the Mwindo case is therefore the chapter's clearest demonstration that the appropriation problem is not just a problem of *what events are recorded* but a problem of *what the recorded events mean within their own framing*.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the Mwindo material as the case at which the area-specialist reading and the chaoskampf typology agree on the narrative-structural surface but disagree on the narrative-structural meaning; on the killing as the same event in either reading; on the meaning the area-specialists read as the precise contrary of the meaning the chaoskampf typology reads; Biebuyck & Mateene 1969 on the area-specialists' meaning-reading; Ballentine 2015, on the appropriation problem as a problem of meaning-within-framing rather than a problem of events-recorded.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+[APPROPRIATION-FLAG: the area-specialist objection registered here, in its present-chapter form (the Ch29 and Ch40 forms of this APPROPRIATION-FLAG focus on the maturation-through-hubris reading at the level of the recorded performance; the present-chapter form develops the fuller methodological implication that the epic's pedagogy is specifically Nyanga and that the comparativist's task is to register that pedagogy in its own terms before any comparison is performed), is that the Mwindo / Kirimu episode's *own* moral-pedagogical framing within the Nyanga oral tradition is hubris-and-correction within the cosmographic-equilibrium reciprocity between human and spirit worlds — a framing whose substantive content is anchored in the Nyanga relational-cosmographic apparatus — and not "variant chaoskampf"; the objection is at the level of the *moral evaluation* of an existing combat-narrative rather than at the level of the encounter-framing itself (as in §II), and the comparativist's task is to register the Nyanga pedagogy as such rather than to assimilate it to the chaoskampf typology's pattern of order-establishing valuation. | named_specialists: Daniel Biebuyck and Kahombo C. Mateene (*The Mwindo Epic from the Banyanga (Zaire)*, 1969; in sources.yaml as biebuyck-mateene-mwindo) are the principal area-specialist anchors for the maturation-through-hubris reading; Stephen Belcher (*Epic Traditions of Africa*, 1999, ch. on Mwindo; in sources.yaml as belcher-epic) is the principal comparative African-oral-epic synthesis anchor; the wider Nyanga-area area-specialist tradition associated with Biebuyck's later *Hero and Chief: Epic Literature from the Banyanga* (1978; named in body prose at Ch29 per the named-but-flagged secondary-anchor pattern) supplies the wider area-specialist scholarly tradition. | tier_implication: scope.md classifies the Mwindo material as CONTRASTIVE-tier (full) precisely because the area-specialist framing refuses the chaoskampf typology's order-establishing valuation in favour of the maturation-through-hubris pedagogy, and the contrastive-tier classification is itself a recognition of the area-specialists' priority and of the meaning-within-framing discipline that the present chapter consolidates. | forwards_to: this APPROPRIATION-FLAG is engaged in the upstream Part-I chapter (Ch29) at the level of the recorded performance, in the Ch40 inversion-problem chapter at the level of moral-valence inversion, and in the present chapter (Ch41) at the level of the fuller methodological implication that the epic's pedagogy is specifically Nyanga and that the comparativist's task is to register that pedagogy in its own terms before any comparison is performed.]
+
+The Mwindo case's distinctive contribution to the present chapter's argument is therefore the demonstration that *meaning-within-framing* is itself a level at which appropriation can occur: the comparativist who treats the killing of Kirimu as a chaoskampf event and the celestial humiliation as an "inversion" or "exception" within the typology has *imposed a meaning* on the recorded performance from outside the Nyanga tradition's own pedagogical apparatus — even though the events recorded are the same — and the area-specialist scholarship's discipline is to register the Nyanga meaning before any comparative meaning is allowed to operate.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the Mwindo case's contribution as the demonstration that meaning-within-framing is itself a level at which appropriation can occur; per the present chapter's argument structure on the comparativist's discipline as registering the Nyanga meaning before any comparative meaning is allowed to operate; Ballentine 2015, on the typological discipline of recognising meaning-within-framing as a level at which appropriation can occur and on the area-specialist priority that the discipline implements.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §III treatment of Mwindo here develops the fuller methodological implication that Ch40 §II's moral-valence-inversion reading itself depended on: that the Nyanga pedagogy is *specifically Nyanga*, that the comparativist's task is to register that pedagogy in its own terms before any comparison is performed, and that the appropriation problem operates at the level of meaning-within-framing rather than only at the level of events-recorded.
+// COMPARATIVE-HOOK: C5. The IE HERO SLAY SERPENT formula (Ch38) — the IE-formula reading of dragon-slaying as a heroic deed-template that establishes the hero's standing, taken in Ch38 as the IE-comparative reading of Sigurd-Fáfnir, is the structural-comparative foil against which the Mwindo case is read in §III above as a case in which the dragon-slaying establishes nothing (the hero is punished, not vindicated, by the slaying); the contrast is at the level of moral evaluation of an otherwise structurally-recognisable serpent-killing event.
+
+=== IV. The Kalevala question — Lönnrot's editorial hand and the construction of "Finnic chaoskampf"
+
+The Finnic encounter in which the sea-monster Iku-Turso emerges from the sea and is subdued by the shaman-sage hero Väinämöinen, treated in Ch31 of the present book as a binding-rather-than-slaying narrative whose two-layer textual situation — older rune-tradition material recorded by nineteenth-century rune-collectors from Karelian and Finnish singers, alongside Elias Lönnrot's 1835 *Kalevala* and 1849 *New Kalevala* editorial synthesis — must be kept explicitly distinct, presents in the present chapter's §IV a *different species of appropriation* from the area-specialist refusals of §§I–III: the appropriation here is performed not by twentieth-century comparativist scholars upon the source-traditions but by Lönnrot himself, the nineteenth-century nationalist-romantic compiler, upon the rune-tradition material he collected and synthesised into the modern Finnish national epic.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the two-layer textual situation of the Iku-Turso material — older rune-tradition material recorded by nineteenth-century rune-collectors from Karelian and Finnish singers, alongside Lönnrot's 1835 *Kalevala* and 1849 *New Kalevala* editorial synthesis — and on the chapter's discipline of keeping the two layers explicitly distinct; per brief 41-C8-refusal-and-appropriation.yaml structure §IV on Lönnrot's editorial hand as a different kind of appropriation, of earlier material by a nationalist-romantic compiler; per glossary 'Väinämöinen', 'Iku-Turso', 'Kalevala' first_mention_glosses.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+Anna-Leena Siikala's *Mythic Images and Shamanism: A Perspective on Kalevala Poetry* (Folklore Fellows' Communications 280, Academia Scientiarum Fennica, Helsinki, 2002) is the present chapter's anchor for the Iku-Turso material and for the older-rune / Lönnrot-synthesis distinction, and Siikala's reading of the older rune-tradition material as a shamanic-encounter complex of binding-and-knowledge-exchange (Väinämöinen subduing the sea-monster by song and knowledge rather than by weapon-combat) is the area-specialist framing on which the chapter's two-layer treatment depends — a framing that holds the older rune material and Lönnrot's nineteenth-century editorial synthesis to be different kinds of textual object, with different textual statuses and different relations to the chaoskampf typology.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Siikala 2002 as the chapter's anchor for the Iku-Turso material and for the older-rune / Lönnrot-synthesis distinction; on Siikala's reading of the older rune-tradition material as a shamanic-encounter complex of binding-and-knowledge-exchange; on Väinämöinen subduing the sea-monster by song and knowledge rather than by weapon-combat; Siikala 2002, *Mythic Images and Shamanism*, chs. on Kalevala combat and on Väinämöinen as shaman-sage hero.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The older rune-tradition material on Väinämöinen's encounter with Iku-Turso, recorded by the nineteenth-century rune-collectors (Lönnrot himself in his collecting expeditions of the 1820s–1840s; Daniel Europaeus; August Ahlqvist; Arvid Genetz; Julius and Kaarle Krohn; and the wider Finnish Literature Society [SKS] rune-collecting apparatus that Lönnrot drew on), is laconic, fragmentary, regionally variable across Karelian and Finnish singing traditions, and not synthesised into a single connected narrative within the singing tradition itself — the older rune material is a corpus of related-but-independent rune-fragments rather than a unified epic narrative — and the Iku-Turso encounter as a connected episode within a larger epic structure is, on Siikala 2002's reading, *Lönnrot's compositional achievement* rather than a feature of the older rune material as recorded.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the older rune-tradition material as laconic, fragmentary, regionally variable across Karelian and Finnish singing traditions, and not synthesised into a single connected narrative within the singing tradition itself; on the older rune material as a corpus of related-but-independent rune-fragments rather than a unified epic narrative; on the Iku-Turso encounter as a connected episode within a larger epic structure as Lönnrot's compositional achievement rather than a feature of the older rune material as recorded; Siikala 2002, *Mythic Images and Shamanism*, on the older-rune / Lönnrot-synthesis distinction.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+Lönnrot's 1835 *Kalevala* (the "Old Kalevala") and his expanded 1849 *New Kalevala* — the latter being the standard reference text for the modern Finnish national epic — are, on Siikala 2002's and the wider Finnish-folkloristics scholarly tradition's reading, *editorial syntheses* assembled from rune-fragments collected across multiple singers, regions, and recording occasions, with Lönnrot exercising compositional decisions about the assembly's order, the connecting-passage construction, the terminological harmonisation across regional variants, and the narrative-structural framing that gives the modern *Kalevala* its connected-epic shape; the *Kalevala* is therefore not a transparent record of pre-modern Finnic oral epic but a nineteenth-century literary-and-nationalist construction whose textual status is closer to a critical edition with extensive editorial intervention than to a faithful transcription of singer-performances.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Lönnrot's 1835 *Kalevala* (Old Kalevala) and 1849 *New Kalevala* as editorial syntheses assembled from rune-fragments; on Lönnrot's compositional decisions about assembly order, connecting-passage construction, terminological harmonisation, and narrative-structural framing; on the *Kalevala*'s textual status as closer to a critical edition with extensive editorial intervention than to a faithful transcription of singer-performances; Siikala 2002, *Mythic Images and Shamanism*, on the *Kalevala*'s nineteenth-century literary-and-nationalist construction; per glossary 'Kalevala' first_mention_gloss.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The Iku-Turso "binding" episode as it appears in the *Kalevala* — the connected narrative passage in which Väinämöinen encounters the sea-monster, subdues him by song and knowledge, and binds him not to come up from the sea again — is, on the chapter's two-layer reading, partly older rune material (the Iku-Turso figure is attested in the older rune corpus; the binding-by-song register is consistent with the wider shamanic-encounter complex Siikala 2002 documents) and partly Lönnrot's compositional synthesis (the connected-episode structure, the integration into the Lemminkäinen / Pohjola-expedition narrative arc of the modern *Kalevala*, the terminological-and-formulaic harmonisation that makes the episode read as a unified narrative passage), and the present chapter's discipline is to keep the two layers explicitly distinct in any comparative claim about "Finnic chaoskampf".footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the Iku-Turso "binding" episode as partly older rune material (the Iku-Turso figure attested in the older rune corpus; the binding-by-song register consistent with the wider shamanic-encounter complex) and partly Lönnrot's compositional synthesis (the connected-episode structure, the integration into the larger epic narrative arc, the terminological-and-formulaic harmonisation); on the chapter's discipline of keeping the two layers explicitly distinct; Siikala 2002 on the layered textual situation.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The species of appropriation registered at §IV is therefore distinct from the area-specialist-refusal cases of §§I–III in three respects: the appropriator is a known historical figure (Elias Lönnrot, 1802–1884) rather than an institution-of-comparative-scholarship; the appropriation occurs at the level of the source-text's editorial construction rather than at the level of the typology's external application to a stable source-text; and the appropriation has a specific historical-political function (the construction of a Finnish national epic in the early-nineteenth-century context of Finnish national-romantic identity-formation under Russian-imperial rule) rather than the more diffuse comparative-mythological function of twentieth-century chaoskampf-typological extension.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Lönnrot 1802–1884 as the named historical figure performing the editorial synthesis; on the appropriation as occurring at the level of the source-text's editorial construction rather than at the level of typological external application; on the appropriation's historical-political function in the construction of a Finnish national epic in the early-nineteenth-century context of Finnish national-romantic identity-formation under Russian-imperial rule; Siikala 2002 on the wider Finnish-folkloristics scholarly tradition's analysis of Lönnrot's editorial intervention.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+[INFERENCE: the present chapter's classification of Lönnrot's editorial synthesis as a "different kind of appropriation" from the area-specialist-refusal cases of §§I–III rests on the recognition that *both* are species of an underlying problem — the imposition of a connected-narrative framing on materials whose own textual situation is more fragmented or more relationally-grounded — but that the two species differ in agent, level, and historical-political function as just registered. | basis: chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Lönnrot's editorial synthesis as a known historical-figure intervention with specific historical-political function; brief 41-C8-refusal-and-appropriation.yaml structure §IV explicitly characterises Lönnrot's editorial hand as a different kind of appropriation; the comparison between the §§I–III area-specialist-refusal cases and the §IV Lönnrot editorial synthesis is the present chapter's framing rather than the only available scholarly position. | risk: the classification depends on accepting the species-of-an-underlying-problem framing, which is the chapter's analytical move rather than an established comparative-mythology framework; alternative framings would treat Lönnrot's editorial synthesis as belonging to a different problem-domain (textual editing; nineteenth-century nationalism; folkloristics) rather than as a species of the appropriation problem the present chapter addresses, and the species-classification is therefore the chapter's reading.]
+
+The Kalevala question's distinctive contribution to the chapter's argument is therefore that *the appropriation problem can begin within the source-text-construction process itself*, not only at the comparative typology's external application: when the reader of the modern *Kalevala* encounters Iku-Turso bound by Väinämöinen's song and reads the passage as a Finnic instance of the chaoskampf typology, the reader is engaging with a text whose connected-episode structure was itself the achievement of a nineteenth-century compiler with specific national-romantic compositional aims, and the apparent fit between the Iku-Turso passage and the chaoskampf typology is partly the achievement of Lönnrot's harmonising hand rather than a feature of the older rune material as recorded.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the appropriation problem's beginning within the source-text-construction process itself; on the apparent fit between the Iku-Turso passage and the chaoskampf typology as partly the achievement of Lönnrot's harmonising hand; on the older rune material's distinct textual status; Siikala 2002 on the layered textual situation; per brief 41-C8-refusal-and-appropriation.yaml structure §IV on the chapter's claim that this affects what the chapter can claim about "Finnic chaoskampf".]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The chapter's claim about "Finnic chaoskampf" is therefore disciplined by the two-layer textual situation: the older rune-tradition material attests an Iku-Turso figure and a binding-by-song shamanic-encounter complex that Siikala 2002 reads as such; the modern *Kalevala* presents the Iku-Turso encounter as a connected episode within a larger epic structure that fits the chaoskampf typology more readily than the older rune material does on its own; the comparativist who claims a "Finnic chaoskampf" must therefore distinguish what is attested in the older rune material (less, and differently structured) from what appears in Lönnrot's editorial synthesis (more, and synthesised toward the connected-narrative apparatus that the chaoskampf typology presupposes), and the chapter's discipline is to make the distinction explicit at every comparative claim.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the chapter's claim about "Finnic chaoskampf" being disciplined by the two-layer textual situation; on the older rune-tradition material's attestation of the Iku-Turso figure and the binding-by-song shamanic-encounter complex; on the modern *Kalevala*'s connected-episode structure; on the comparativist's task of distinguishing what is attested in the older rune material from what appears in Lönnrot's editorial synthesis; Siikala 2002 on the two-layer textual situation.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+// COMPARATIVE-HOOK: C5. The IE HERO SLAY SERPENT formula (Ch38) — the IE-formula reading of dragon-slaying anchored in Ch38 by Watkins 1995's reconstruction is the structural-comparative foil against which the Iku-Turso "binding" passage is read in §IV above as a case in which the connected-narrative structure that fits the IE-formula reading is partly the achievement of Lönnrot's nineteenth-century editorial synthesis rather than of the older rune material; the §IV case is the chapter's evidence that even structurally-recognisable serpent-encounter passages can owe their structure to compilation and editorial intervention rather than to source-tradition transmission.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §IV Lönnrot case is methodologically distinct from the Ch40 inversion cases because the appropriator is a known historical figure (Lönnrot, 1802–1884) rather than an institution-of-comparative-scholarship, and the appropriation occurs at the level of the source-text's editorial construction rather than at the level of the typology's external application; the §IV case extends the chapter's case-set beyond the area-specialist-refusal pattern of §§I–III.
+
+=== V. The communal case — Bakunawa and the absent hero
+
+The Visayan and Bikol Philippine oral tradition of Bakunawa, treated in Ch30 of the present book as the related-tier (family, "communal / non-slaying combat") chapter's principal half, narrates the serpent-dragon Bakunawa devouring six of the seven original moons (the Philippine archipelago's pre-Spanish-contact-period oral tradition recording an aetiological seven-original-moons cosmology of which only one moon survives) and being driven off — *not slain* — during eclipses by communal noise-making, with the chapter's Philippine-language-mediated source for the eclipse-aetiology narrative being Damiana L. Eugenio's *Philippine Folk Literature: The Myths* (Quezon City: University of the Philippines Press, 2001).footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa material's Visayan and Bikol Philippine oral-tradition setting; on the seven-original-moons aetiology; on the communal noise-making during eclipses driving Bakunawa off rather than slaying him; on Eugenio 2001 as the chapter's principal source for the eclipse-aetiology narrative as recorded in twentieth-century Philippine folkloric scholarship; per glossary 'Bakunawa' first_mention.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case differs from the §§I–IV cases in a load-bearing way: the surface motif (a serpentine being threatening cosmic-luminary integrity) *does* fit the chaoskampf typology's pattern-matching heuristic, and the case has been included in twentieth-century comparative-mythology surveys of "world dragon-myths" on that basis; what does *not* fit the typology, however, is the load-bearing apparatus of the engagement — there is no hero who does the driving-off; there is no slaying; the engagement is communal (the village or town as a collective acts to drive the serpent off by noise-making) and recurring (the engagement happens at every eclipse, not as a once-and-done cosmogonic establishment) — and the case asks the comparativist whether a tradition counts as a chaoskampf when its surface motif fits but its load-bearing actors and outcomes do not.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa case's surface motif fitting the chaoskampf typology's pattern-matching heuristic; on the absence of a hero, the absence of slaying, the communal character of the engagement (the village or town as a collective acts to drive the serpent off), and the recurring character of the engagement (at every eclipse, not as a once-and-done cosmogonic establishment); per brief 41-C8-refusal-and-appropriation.yaml structure §V on the question of whether this counts as chaoskampf at all and what excluding it would cost the comparison.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The communal-and-recurring character of the Bakunawa engagement is, as Eugenio 2001 develops the eclipse-aetiology narrative across the Visayan and Bikol regional traditions, the load-bearing feature of the case for what the engagement *is* on Philippine-tradition terms: the villagers' ritual noise-making during eclipses (the beating of pots and pans, the firing of guns in later periods, the collective-vocal noise-making that interrupts the eclipse's progression) is itself a continuing cultural practice in some Philippine regions, with the practice's eclipse-aetiology being the narrative's load-bearing function and the absence-of-a-hero being a structural feature of the narrative rather than a gap to be filled.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the communal-and-recurring character of the Bakunawa engagement as the load-bearing feature on Philippine-tradition terms; on the villagers' ritual noise-making during eclipses (the beating of pots and pans, the firing of guns, the collective-vocal noise-making) as a continuing cultural practice in some Philippine regions; on the eclipse-aetiology as the narrative's load-bearing function; on the absence-of-a-hero as a structural feature of the narrative rather than a gap to be filled; Eugenio 2001 on the eclipse-aetiology narrative.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case's specifically chaoskampf-typological status is, on the Ch30 chapter's classification, *inclusion-marginal*: the case is included in the present book because excluding it would impoverish the comparison (the case is one of the book's clearest examples of a non-Eurasian serpent-and-luminary aetiology that is not a Eurasian-style chaoskampf at the load-bearing-apparatus level), but the inclusion is hedged at the load-bearing-apparatus level because the case lacks the hero, the slaying, and the once-and-done cosmogonic establishment that the chaoskampf typology's strong cases all share, and the chapter classifies the case as a related-tier (family, "communal / non-slaying combat") inclusion-marginal case for the typology rather than as a member of any subtype within the typology's strong centre.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa case's inclusion-marginal classification; on the case's inclusion as preventing the impoverishment of the comparison while being hedged at the load-bearing-apparatus level; on the absence of the hero, the slaying, and the once-and-done cosmogonic establishment as the case's distinguishing features from the typology's strong centre; per scope.md §"Inclusion / exclusion criteria" on the operational test by which the case is RELATED rather than CORE.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case's relevance to the present chapter's appropriation argument is at a different level from the §§I–IV cases: where §I addresses appropriation at the level of category-construction (the pan-Aboriginal "Rainbow Serpent" as a twentieth-century scholarly construct), §II addresses appropriation at the level of the encounter-framing apparatus (the Anishinaabe relational-counterpart cosmology refusing the chaos-vs-order encounter-framing), §III addresses appropriation at the level of meaning-within-framing (the Nyanga moral pedagogy refusing the chaoskampf's order-establishing valuation of the killing), and §IV addresses appropriation at the level of source-text editorial construction (Lönnrot's nineteenth-century synthesis), §V addresses the chaoskampf typology's *inclusion practices*: which serpent-and-luminary aetiologies count as chaoskampf, on what criteria, and at what cost to the comparison if certain cases are excluded for failing to meet the typology's strong-centre features (hero; slaying; once-and-done cosmogonic establishment).footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa case's relevance to the chaoskampf typology's inclusion practices; per the present chapter's argument structure on the §V case as addressing the typology's inclusion criteria rather than the appropriation problem at the levels addressed in §§I–IV; per brief 41-C8-refusal-and-appropriation.yaml structure §V on the question of what excluding the Bakunawa case would cost the comparison.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The chapter's reading of the §V case is that excluding the Bakunawa material from the comparison would be a *different kind of error* from including it on the wrong terms: excluding the case would lose a load-bearing piece of evidence that the chaoskampf typology's strong centre is not the only way that serpent-and-luminary aetiologies can be organised — that communal-and-recurring engagements, no-hero engagements, and driving-off-rather-than-slaying engagements are real and load-bearing features of some traditions' cosmographic-and-ritual practice — and the chapter's discipline is therefore to *include the case while marking it inclusion-marginal*, with explicit registration of the load-bearing-apparatus differences from the typology's strong centre and explicit refusal to read the case as a member of any subtype within that strong centre.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the chapter's discipline of including the case while marking it inclusion-marginal; on the explicit registration of the load-bearing-apparatus differences from the typology's strong centre; on the explicit refusal to read the case as a member of any subtype within that strong centre; per the present chapter's argument structure on the inclusion-marginal classification as the chapter's mode of comparing without forcing the case into the typology's strong-centre apparatus.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case is also worth registering alongside the Ch27 Mapuche Kai-Kai vs. Tren-Tren material, which the brief includes among the chapter's `chapters_drawn_from` as a supporting case of regional variation and partial attestation: the Mapuche serpent-and-flood narrative recorded in Bertha Koessler-Ilg's *Cuentan los araucanos* and treated within the wider Mapuche-area scholarly tradition (Rolf Foerster's *Introducción a la religiosidad mapuche*) is regionally variable across Mapuche communities, partial in attestation across the recording-history corpus, and structurally distinct from the Eurasian chaoskampf typology in ways that parallel some of the Bakunawa case's features (cosmographic-equilibrium framing rather than once-and-done cosmogonic establishment; the Wenu / Naq / Minche Mapu layered cosmography within which the serpent-engagement is set rather than a simple chaos-versus-order opposition), and the two cases together extend the chapter's case-set beyond the §I–IV principal-cases axis.footnote:[Per chapters/27-mapuche-kai-tren.claims.approved.adoc on the Mapuche Kai-Kai vs. Tren-Tren material as recorded in Koessler-Ilg's *Cuentan los araucanos*; on the regional variability across Mapuche communities; on the partial attestation across the recording-history corpus; on the Wenu / Naq / Minche Mapu layered cosmography within which the serpent-engagement is set; Foerster, R., *Introducción a la religiosidad mapuche* (Santiago: Editorial Universitaria, 1993), on the cosmographic-and-ritual framing; per brief 41-C8-refusal-and-appropriation.yaml chapters_drawn_from on the Mapuche material as a supporting case of regional variation and partial attestation; per glossary 'Kai-Kai / Tren-Tren' first_mention_gloss.]
+// EVIDENCE: source_id=koessler-ilg-cuentan ; loc=Cuentan los araucanos, sections on Kai-Kai / Tren-Tren and the flood-and-height cosmogony
+// EVIDENCE: source_id=foerster-religiosidad-mapuche ; loc=Introducción a la religiosidad mapuche, on the Wenu / Naq / Minche Mapu cosmographic system and ngillatun ritual
+
+The combined effect of the Bakunawa and Mapuche cases on the present chapter's argument is to register that the chaoskampf typology's strong-centre features (hero; slaying; once-and-done cosmogonic establishment within a chaos-versus-order opposition) are not the only structural patterns by which traditions narrate engagements between cosmic-order-relevant figures and serpentine-or-monstrous adversaries — that communal-and-recurring engagements, layered-cosmographic-equilibrium engagements, and partial-attestation regionally-variable engagements are real and load-bearing features of some traditions' practice — and the chapter's discipline is to register these alternative-structural-pattern cases without forcing them into the typology's strong-centre apparatus, while also without excluding them from the comparison on the basis of their load-bearing-apparatus differences.footnote:[Per chapters/30-bakunawa.claims.approved.adoc and chapters/27-mapuche-kai-tren.claims.approved.adoc on the combined effect of the two cases on the typology's strong-centre features; per the present chapter's argument structure on the alternative-structural-pattern cases as load-bearing features of some traditions' practice; per Ballentine 2015 on the typological discipline of recognising alternative-structural-pattern cases without forcing them into the typology's strong-centre apparatus and without excluding them from the comparison.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C3. Cyclical maintenance (Ch36) — the cyclical-maintenance reading of recurring combat-myth engagements anchored in Ch36 by the Ra / Apep and Illuyanka cases is the structural-comparative foil against which the §V Bakunawa case is read: the Bakunawa engagement is recurring (at every eclipse) in a way that *resembles* the C3 cyclical-maintenance pattern at the surface but differs at the load-bearing-apparatus level (no hero; communal noise-making rather than ritual-and-divine combat; eclipse-aetiology rather than maʿat / sun-cycle ritual maintenance); the contrast is at the level of the ritual-and-cosmographic apparatus that the recurrence runs on.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §V Bakunawa case is methodologically distinct from the Ch40 inversion cases because the case's chaoskampf-typological status is *inclusion-marginal* rather than inversion: the case fits the typology's pattern-matching heuristic at the surface but lacks the load-bearing apparatus (hero; slaying; once-and-done cosmogonic establishment) that the typology's strong-centre cases all share, and the §V case extends the chapter's case-set into the typology's edges-of-applicability rather than into its inversion-subtype.
+
+=== VI. What the refusal teaches
+
+The chapter's five cases — the Rainbow Serpent (§I, appropriation at the level of category-construction), Nanabozho / Mishipeshu / the Thunderers (§II, refusal at the level of the encounter-framing apparatus), Mwindo / Kirimu (§III, refusal at the level of meaning-within-framing), the Lönnrot *Kalevala* / Iku-Turso material (§IV, appropriation at the level of source-text editorial construction), and Bakunawa with its Mapuche supporting case (§V, inclusion-marginality at the level of the typology's strong-centre apparatus) — together teach three methodological-typological lessons that the refusal-and-appropriation chapter is positioned to consolidate as the closing chapter of Part II of the present book.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §VI on the chapter's methodological-typological lessons; per the present chapter's §§I–V on the five cases that supply the evidence for the lessons; per scope.md §"Book structure" Part II on Ch41 (C8) as the closing chapter of Part II's eight comparative chapters.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The first lesson is that the appropriation problem is not a single failure mode but operates at *multiple levels* of the comparativist's reading apparatus — at the level of category-construction (where the comparative item is assembled from regionally-distinct sources that the source-traditions themselves do not consolidate), at the level of encounter-framing (where the chaoskampf typology's combat-cosmographic apparatus is imposed on traditions whose relational-and-reciprocity-grounded apparatus does not employ the encounter-as-combat framing), at the level of meaning-within-framing (where the typology's order-establishing valuation is imposed on traditions whose own moral-pedagogical framing reads the same events differently), at the level of source-text editorial construction (where a nineteenth-century compiler's harmonising hand has produced the connected-narrative apparatus that the typology then matches), and at the level of inclusion-criteria (where surface-similar cases lacking the typology's load-bearing apparatus are either forced in on surface grounds or excluded on apparatus grounds).footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §VI on the first lesson; per the present chapter's §§I–V on the five levels at which the appropriation problem operates; Ballentine 2015 on the typological discipline of recognising appropriation-failure-modes at multiple levels; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority that the multi-level recognition implements.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The second lesson is that the comparativist project does *not* require every tradition to fit the pattern: the cases at which the pattern does not fit, when area specialists explicitly and consistently say so, are *themselves data* — they tell the comparative typology where its limits are, what features of the typology are contingent on certain types of cosmology (combat-cosmographic apparatus; hero-and-once-and-done structure; chaos-versus-order categorical apparatus), what features are contingent on certain types of source-text construction (connected-narrative editorial syntheses; pre-modern-attested unified narratives; nineteenth-century compiler-syntheses), and how to do comparison responsibly when the typology's strong-centre cases and the typology's edges-of-applicability cases are both present in the comparison.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §VI on the second lesson; per the present chapter's §§I–V on the cases at which the pattern does not fit and on the area-specialists' explicit refusals as themselves data; Ballentine 2015, on the chaos-order frame's overextension and on the typological discipline of recognising the typology's limits as themselves data for the comparison; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The third lesson is that *refusing to compare these specific cases on the typology's standard terms is itself a principled form of comparison* — not the refusal of comparison as such, but the refusal of a specific comparative-typological apparatus in favour of a more responsibly-comparative apparatus that takes the area specialists' refusal as data and builds the typology around the refusal rather than against it; the Anishinaabe relational-and-reciprocity-grounded apparatus, the Nyanga moral-pedagogical apparatus, and the Aboriginal-Australian regional-specificity apparatus are *available for comparison* on their own terms (with other relational-and-reciprocity-grounded ontologies, with other moral-pedagogical epic traditions, with other regional-specificity-respecting ethnographic apparatuses), and the chapter's discipline is to make those comparisons available rather than to substitute the chaoskampf typology for them.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's theoretical contribution being that refusing to compare these specific cases on the typology's standard terms is itself a principled form of comparison; per the present chapter's §§II–III on the Anishinaabe and Nyanga apparatuses as available for comparison on their own terms; per scope.md §"Appropriation protocol" on the institutional commitment to the area-specialist-first comparative discipline that the third lesson consolidates.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+[SPECULATION: the third lesson, taken in its strong form, holds that the chaoskampf typology's continued usefulness as a comparative apparatus depends on its being applied with the area-specialist-first discipline that this chapter and Ch40 demonstrate — that the typology's strong-centre cases (Marduk-Tiamat, Baal-Yamm, Zeus-Typhon, Indra-Vṛtra, Thor-Jörmungandr, Ra-Apep, Teshub-Illuyanka, the early-Christian-apocalyptic Red Dragon, and the IE-formula reflexes) remain robust and the typology's analytic discipline at those cases is the comparative-mythological apparatus that the present book takes as its principal organising scheme; but that extending the typology beyond those cases requires the area-specialist-first discipline at every step, and the cases at which the area-specialists explicitly refuse the extension are themselves data for the typology's limits rather than obstacles to its application. | basis: Ballentine 2015's argument that the chaoskampf frame has been overextended in twentieth-century comparative scholarship supplies the methodological warrant; scope.md §"Appropriation protocol" supplies the institutional commitment; the present chapter's §§I–V supply the case-level evidence (the Rainbow Serpent at the level of category-construction; Nanabozho at the level of encounter-framing apparatus; Mwindo at the level of meaning-within-framing; Lönnrot at the level of source-text editorial construction; Bakunawa at the level of inclusion-criteria). | counterargument: a defender of a more elastic chaoskampf typology could read the present chapter's refusal cases as evidence for an even *broader* typological category (combat-and-encounter-myth, with both adversarial and reciprocal-counterpart subtypes) within which the area-specialist objections register as subtype-classifications rather than as refusals of the typology as such; on this counterargument, the chapter's third lesson is too restrictive in its discipline and the typology's reach should be expanded rather than constrained by the area-specialist objections. The chapter's reading of the third lesson is therefore the chapter's reading rather than the only available scholarly position.]
+
+The three lessons together support the chapter's central methodological commitment, registered in advance in the source overview and demonstrated case-by-case in §§I–V: the *area-specialists speak first*, and the comparative typology is more — not less — precise as a result; the Aboriginal-Australian regional-specificity argument (Merlan, Morphy, Rose, Keen against Radcliffe-Brown's pan-Aboriginal "Rainbow Serpent" construct), the Anishinaabe reciprocal-counterpart cosmology argument (Hallowell, Johnston, T. Smith, Vizenor against the chaos-vs-order encounter-framing), the Nyanga moral-pedagogical argument (Biebuyck and Mateene, Belcher on Mwindo as taught hubris-and-correction rather than chaoskampf-with-the-sign-flipped), the Finnish-folkloristics argument about Lönnrot's editorial hand (Siikala on the older-rune / *Kalevala*-synthesis distinction), and the Philippine-folkloristics argument about the communal-and-recurring engagement (Eugenio on the eclipse-aetiology) are each presented on their own terms before the chapter invokes the chaoskampf category, and the resulting comparison is at the level of *structural observation about the typology's reach and limits* rather than at the level of categorical-apparatus imposition.footnote:[Per scope.md §"Appropriation protocol" on the priority of area-specialist framings; per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's theoretical contribution; per the present chapter's §§I–V on the case-level demonstrations of the methodological commitment; Ballentine 2015 on the typological discipline of separating area-specialist framings from comparative typology.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's self-aware engagement with the methodological criticism that comparative mythology has historically been a colonial / universalising project, registered in advance at the source overview and developed case-by-case in §§I–V, is the chapter's principal substantive answer to that criticism: the present book does not deny the criticism's historical accuracy — the Radcliffe-Brown 1926 consolidation, the wider early-twentieth-century structural-functionalist project of identifying continent-wide cultural totalities, and the twentieth-century chaoskampf-typological extension's incorporation of Aboriginal-Australian, Anishinaabe, and Nyanga material on surface-similarity grounds are all historical examples of the comparative-mythology project's colonial / universalising tendencies — but tries to do better by applying the area-specialist-first discipline at every case where the typology's strong-centre apparatus does not fit the source-tradition's own framing, by registering the area specialists' refusals as data rather than as obstacles, and by treating the refusals as themselves the engine of the comparative argument rather than as marginal correctives to it.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's engagement with the methodological criticism that comparative mythology has historically been a colonial / universalising project; on the chapter's principal substantive answer being the area-specialist-first discipline applied at every case where the typology's strong-centre apparatus does not fit the source-tradition's own framing; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority; per the present chapter's §§I–V on the case-level demonstrations of the area-specialist-first discipline.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's final methodological observation is that the inversion problem (Ch40) and the appropriation problem (the present chapter) are not separate problems but the same problem viewed at different levels of the typology's reach: the inversion problem is what the typology's edges look like *at the level of the cases themselves*, when the comparativist tries to fit the cases into the typology's apparatus and the cases push back; the appropriation problem is what the typology's edges look like *at the level of the comparativist's reading apparatus*, when the comparativist asks what is owed to the area-specialists whose framings have pushed back; and the two problems' shared resolution is the area-specialist-first discipline that the two chapters have demonstrated, with the present chapter's case-set extending the demonstration from the inversion-cases of Ch40 to the multiple-level appropriation-cases of §§I–V here.footnote:[Per chapters/40-C7-inversion-problem.claims.approved.adoc §VI on the inversion problem and the appropriation problem as the same problem viewed at different levels of the typology's reach; per the present chapter's §§I–V on the multiple-level appropriation-cases extending the demonstration from the inversion-cases of Ch40; per scope.md §"Book structure" Part II on Ch40 (C7) and Ch41 (C8) as the closing two chapters of Part II.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of integrating area-specialist framings into comparative typology
+
+The chapter therefore closes Part II of the present book with the observation that the chaoskampf typology, applied with the area-specialist-first discipline that the eight Part-II comparative chapters have together demonstrated, is at once *robust* at its strong-centre cases (Part II's first four comparative chapters anchored at C1–C4) and *disciplined* at its edges (Part II's closing four comparative chapters anchored at C5–C8) — and the typology's analytic discipline is to register the convergence-or-not at the level of the area-specialists' framings rather than to extend the typology's reach by force, with the refusal-and-appropriation problem of the present chapter being the typology's most rigorous test and the test the typology passes only when the area-specialists are allowed to speak first.footnote:[Per scope.md §"Subject definition" on the chaoskampf typology as the present book's principal organising scheme; per scope.md §"Book structure" Part II on the eight comparative chapters as the typology's articulation; per brief 41-C8-refusal-and-appropriation.yaml comparative_argument and special_instructions on the chapter's theoretical contribution; per chapters/40-C7-inversion-problem.claims.approved.adoc §VI on the same closing observation as registered at the inversion-problem chapter; Ballentine 2015 on the typological discipline applied at the chapter's closing observation.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of registering convergence-or-not at the area-specialist-framing level
+
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the §VI observation that the typology is robust at its strong-centre cases is registered against the C1 anchor (Marduk-Tiamat) as the typology's strong-cosmogonic convergence case; the present chapter's §§I–V are the typology's edges-of-applicability cases against which the C1 anchor's convergence is contrasted.
+// COMPARATIVE-HOOK: C2. Combat as sovereignty (Ch35) — the §VI observation is similarly registered against the C2 anchors (Baal-Yamm, Zeus-Typhon) as the typology's strong-sovereignty convergence cases; the present chapter's §§I–V are the typology's edges-of-applicability cases against which the C2 anchors' convergence is contrasted.
+// COMPARATIVE-HOOK: C3. Cyclical maintenance (Ch36) — the §V Bakunawa case's recurring-engagement structure resembles the C3 anchor's cyclical-maintenance pattern at the surface but differs at the load-bearing-apparatus level; the contrast is at the level of the ritual-and-cosmographic apparatus that the recurrence runs on, with the C3 cases (Ra / Apep, Illuyanka) running on a ritual-and-divine-combat apparatus that the Bakunawa case does not employ.
+// COMPARATIVE-HOOK: C5. The IE HERO SLAY SERPENT formula (Ch38) — the §IV Lönnrot case is the chapter's evidence that even structurally-recognisable serpent-encounter passages can owe their structure to compilation and editorial intervention rather than to source-tradition transmission; the C5 anchor's IE-formula reflexes are by contrast attested across a deep diachronic and broad geographic range that the §IV case is not.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §VI observation that the inversion problem and the appropriation problem are the same problem viewed at different levels of the typology's reach is the chapter's closing methodological consolidation; Ch40's case-level demonstrations and the present chapter's reading-apparatus-level demonstrations together complete the typology's edges-of-applicability articulation as the closing pair of Part II.
+```
+
+---
+
+# Input file: chapters/41-C8-refusal-and-appropriation.adoc
+
+```
+[[ch-41-C8-refusal-and-appropriation]]
+== C8. The Refusal and the Appropriation Problem
+
+=== Source overview
+
+This chapter is the eighth and last of the Part-II comparative chapters and is positioned as the present book's methodological consummation: where Ch40 (C7) addresses the cases at which the chaoskampf frame applies inverted, the present chapter addresses the cases at which area specialists refuse the frame altogether, and the chapter's argument is that those refusals are themselves data for the comparative typology — that refusing to compare these specific cases on the typology's standard terms is itself a principled form of comparison, one that takes the area specialists' refusal as data and builds the book's typology around it rather than against it.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the chapter's organising claim that the chaoskampf category, when applied to the Rainbow Serpent / Nanabozho / Mwindo cases, is a species of scholarly appropriation that distorts what the traditions actually teach, and that refusing the frame is not anti-comparative but more responsibly comparative; per brief special_instructions on the chapter as the most methodologically-sensitive in the book and on the area-specialist citation requirement applying to every Anishinaabe / Aboriginal-Australian / Nyanga claim; per scope.md §"Appropriation protocol" on the area-specialist citation discipline.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The chapter draws on five Part-I chapters of the present book — Ch32 (Nanabozho and Mishipeshu, the refusal case), Ch29 (Mwindo and Kirimu, the maturation-through-hubris case), Ch31 (Väinämöinen and Iku-Turso, the binding-rather-than-slaying case with its older-rune / Lönnrot-synthesis split), Ch30 (Bakunawa, the communal-non-slaying case), and Ch27 (Mapuche Kai-Kai vs. Tren-Tren, the regional-variation partial-attestation case) — together with the Rainbow Serpent critique (held for the present chapter per the toc.yaml note on rainbow-serpent-critique rather than placed geographically), and the per-tradition factual claims in §§I–V are routed through the same `sources.yaml` IDs the upstream Part-I chapters use for those facts: hallowell-ojibwa-world, johnston-ojibway-heritage, johnston-manitous, smith-island-anishnaabeg, and vizenor-narrative-chance for the Anishinaabe material; biebuyck-mateene-mwindo and belcher-epic for the Mwindo material; siikala-finnish for the Iku-Turso material; eugenio-philippine-myths for the Bakunawa material; and koessler-ilg-cuentan and foerster-religiosidad-mapuche for the Mapuche material.footnote:[Per scope.md §"Comparative-chapter discipline" on the upstream-lookup rule that routes per-tradition factual claims in comparative chapters through the same sources.yaml IDs the upstream Part-I chapters use; per chapters/32-nanabozho-mishipeshu.claims.approved.adoc, chapters/29-mwindo-kirimu.claims.approved.adoc, chapters/31-vainamoinen-iku-turso.claims.approved.adoc, chapters/30-bakunawa.claims.approved.adoc, and chapters/27-mapuche-kai-tren.claims.approved.adoc on the per-tradition source-IDs that the present chapter inherits; per scope.md §"Book structure" Part I on the Rainbow Serpent material's placement in the present comparative chapter rather than geographically.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The chapter's principal anchors per brief 41-C8-refusal-and-appropriation.yaml `sources.anchor` are four: Francesca Merlan's *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (Honolulu: University of Hawaiʻi Press, 1998), chs. 1–3 on the Rainbow Serpent critique; A. Irving Hallowell's 1960 essay "Ojibwa Ontology, Behavior, and World View" on the "other-than-human persons" framework that anchors the Anishinaabe refusal; Daniel Biebuyck and Kahombo C. Mateene's *The Mwindo Epic from the Banyanga (Zaire)* (University of California Press, 1969) as the primary text for the Nyanga material; and Anna-Leena Siikala's *Mythic Images and Shamanism: A Perspective on Kalevala Poetry* (Folklore Fellows' Communications 280, Helsinki, 2002) on Lönnrot's editorial synthesis of the *Kalevala*.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml sources.anchor on the four anchor entries: Merlan 1998, Hallowell 1960, Biebuyck and Mateene 1969, Siikala 2002; comparative chapters use sources.anchor in place of sources.primary per the established Part-II chapter-claims pattern; all four source-IDs verified against sources.yaml at pre-flight check.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+A further set of named area-specialists supplies the scholarly framings on which §§I–V depend but is not currently in `sources.yaml`: A. R. Radcliffe-Brown 1926 ("The Rainbow-Serpent Myth of Australia", *Journal of the Royal Anthropological Institute* 56), Howard Morphy 1991 (*Ancestral Connections: Art and an Aboriginal System of Knowledge*, University of Chicago Press), Deborah Bird Rose 1996 (*Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness*, Australian Heritage Commission), and Ian Keen 1994 (*Knowledge and Secrecy in an Aboriginal Religion*, Oxford: Clarendon Press) for the §I Rainbow Serpent critique; Basil Johnston (*Ojibway Heritage*, 1976/1990; *The Manitous*, 1995), Theresa S. Smith (*The Island of the Anishnaabeg*, 1995), and Gerald Vizenor (*Narrative Chance*, 1989) for the §II Anishinaabe refusal; Hermann Gunkel 1895 (the originating chaoskampf framing) and Debra Scoggins Ballentine 2015 (*The Conflict Myth and the Biblical Tradition*, OUP) for the methodological-comparative anchor in §VI; the chapter cites Radcliffe-Brown, Morphy, Rose, and Keen by name in body prose at §I and routes the substantive EVIDENCE token through Merlan 1998 per the named-but-flagged secondary-anchor pattern; Johnston, T. Smith, and Vizenor are cited by name in body prose at §II and have their own `sources.yaml` entries (johnston-ojibway-heritage, johnston-manitous, smith-island-anishnaabeg, vizenor-narrative-chance) per Ch32's source-IDs.footnote:[Per scope.md §"Appropriation protocol" on the area-specialist citation requirement that the chapter must cite Radcliffe-Brown 1926, Morphy 1991, Rose 1996, Keen 1994, Hallowell 1960, Johnston 1976/1990 and 1995, T. Smith 1995, Vizenor 1989, Biebuyck and Mateene 1969, and Belcher 1999 by name; per the named-but-flagged secondary-anchor pattern of the Part-I chapters (Ch32 for Johnston, T. Smith, Vizenor; Ch29 for Biebuyck, Mateene, Belcher) on the citation discipline applied here; the named-but-flagged uses for Radcliffe-Brown, Morphy, Rose, and Keen at §I are documented in the chapter's completion record for inventory-audit follow-up.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The chapter's general comparative anchor for the long-arc combat-myth typology against which the refusal cases are read is Neil Forsyth's *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987), whose Sumer-through-Judeo-Christian-apocalyptic survey supplies the long-arc combat-myth typology that the present chapter takes as the structural-comparative foil; the chapter's principal critical-typological anchor for the meta-claim that the chaoskampf category has been overextended in twentieth-century comparative scholarship is Debra Scoggins Ballentine's *The Conflict Myth and the Biblical Tradition* (Oxford: Oxford University Press, 2015), whose argument supplies the §VI methodological warrant for treating area-specialist refusals as data for the typology's limits rather than as obstacles to its application.footnote:[Forsyth 1987, *The Old Enemy: Satan and the Combat Myth* (Princeton: Princeton University Press, 1987; ISBN 9780691014746), as the long-arc combat-myth typology anchor against which the present chapter's refusal cases are read; Ballentine 2015, *The Conflict Myth and the Biblical Tradition* (Oxford: Oxford University Press, 2015; ISBN 9780190253028), on the over-extension critique of the chaoskampf frame in twentieth-century comparative scholarship as the chapter's §VI methodological warrant.]
+// EVIDENCE: source_id=forsyth-1987 ; loc=combat-myth long-arc typology (Sumer through Judeo-Christian apocalyptic)
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The chapter's evidentiary discipline follows the comparative-chapter pattern established at Chs 33–40: every per-tradition factual claim is routed through the same `sources.yaml` ID the corresponding Part-I chapter uses for that fact; doubled EVIDENCE tokens are reserved for the points at which the chapter explicitly bridges an area-specialist anchor and a comparative-typology anchor; §§I–V are mostly single-token because the chapter's argument runs through the area-specialists' own framings rather than through cross-cultural transmission, and the chapter's load-bearing methodological claim — that refusal is itself comparative data — needs the area-specialist anchors more than the comparative-typology anchors.footnote:[Per the chapter-claims skill instructions on the upstream-lookup rule and the no-invented-source-IDs rule; per the doubled-token discipline established at Ch34 (C1) and developed at Chs 35–40 on the single-token default with doubled-token bridges where the chapter explicitly contrasts a per-tradition area-specialist anchor with a comparative-typology anchor; per the present chapter's argument structure as load-bearing on area-specialist anchors rather than on comparative-typology anchors.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's structure follows the brief's six-section outline: §I treats the Rainbow Serpent problem as the chapter's anchor case for the appropriation problem, registering Radcliffe-Brown 1926's twentieth-century scholarly consolidation of regionally distinct Aboriginal Australian ancestral beings (Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul) as the construction that Merlan 1998, Morphy 1991, Rose 1996, and Keen 1994 have dismantled; §II treats the Nanabozho / Mishipeshu refusal as the chapter's most principled refusal, presenting Hallowell 1960's "other-than-human persons" framework and the Thunderer / Underwater-manitou dialectic on the Anishinaabe tradition's own terms; §III revisits the Mwindo / Kirimu material with the fuller methodological implication that the epic's own pedagogy should shape the comparison; §IV addresses Lönnrot's editorial hand on the Iku-Turso material as a different species of appropriation — by a nineteenth-century nationalist-romantic compiler of earlier rune fragments — that affects what the chapter can claim about "Finnic chaoskampf"; §V addresses the Bakunawa communal-eclipse case, in which the surface motif is serpentine but the load-bearing actors and outcome are not the typology's; §VI consolidates the methodological lessons.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure on the six-section outline (I. Rainbow Serpent; II. Nanabozho/Mishipeshu; III. Mwindo revisited; IV. Kalevala / Lönnrot; V. Bakunawa; VI. What the refusal teaches); per brief special_instructions on the area-specialist-first discipline applied at every Anishinaabe / Aboriginal-Australian / Nyanga claim.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The chapter's central methodological commitment, registered in advance and demonstrated case-by-case in §§I–V, is that the *area-specialists speak first* and that their refusals of the chaoskampf framing are *themselves data* for the comparative typology: the Aboriginal-Australian regional-specificity argument (Merlan, Morphy, Rose, Keen against Radcliffe-Brown's pan-Aboriginal "Rainbow Serpent" construct), the Anishinaabe reciprocal-counterpart argument (Hallowell, Johnston, T. Smith, Vizenor against the chaos-vs-order mapping), and the Nyanga moral-pedagogical argument (Biebuyck, Mateene, Belcher on Mwindo as taught hubris-and-correction rather than chaoskampf-with-the-sign-flipped) are presented on their own terms, and the chapter takes the resulting comparison to be more — not less — precise as a result; the methodological warrant is scope.md §"Appropriation protocol" on the priority of area-specialist framings, and the demonstration of the warrant is the chapter's principal contribution to the book's typological discipline.footnote:[Per scope.md §"Appropriation protocol" on the priority of area-specialist framings and on the area-specialist citation requirement; per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's theoretical contribution being that refusing to compare these specific cases is itself a principled form of comparison; Ballentine 2015 on the typological discipline of separating area-specialist framings from comparative-typology overlays.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's self-awareness about the book's own limits is registered in advance and demonstrated in §VI: the present book is written in English by an author who does not read most of the primary languages of the in-scope traditions (per scope.md §"Languages of primary sources" on the book's translation-mediated character), draws on secondary scholarship rather than on direct field-engagement with living tradition-bearers, and is published in an academic register whose authority is the academic register's own; the traditions whose materials the book treats — most pointedly the Anishinaabe, Aboriginal Australian, and Nyanga traditions in this chapter — have their own living practitioners whose authority over how they should be represented exceeds the present book's authority, and the chapter's discipline is to honour that excess rather than to talk past it.footnote:[Per scope.md §"Languages of primary sources" on the book's translation-mediated character and on the source-whitelist-with-cross-check strategy; per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the book's own limits as a book written in English drawing on secondary scholarship about traditions whose living practitioners have their own authority over how they should be represented; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority that the chapter consolidates.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the inversion-problem chapter's case-level demonstrations of the area-specialist-first discipline at five cases of varying severity (Bida, Mwindo, Sigurd, Pariacaca, Susanoo) prepares the present chapter's meta-question of what comparativism owes the area-specialists when the typology's own categories are refused; the present chapter consolidates the methodological lesson at the level of the comparativist's reading apparatus rather than at the level of the cases themselves.
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the cosmogonic-combat reading anchored in Ch34 by the Marduk-Tiamat case is the structural-comparative foil against which the §I–V refusal cases are read; the C1 anchor's strong-cosmogonic convergence is the centre of the typology, and the refusal cases are the typology's edges.
+
+What follows is organised in six body sections. Section I treats the Rainbow Serpent problem as the chapter's anchor case for appropriation at the level of category-construction itself, setting out Radcliffe-Brown's 1926 pan-Aboriginal consolidation and the late-twentieth-century Aboriginal-Australian area-specialist scholarship — Merlan, Morphy, Rose, Keen — that has dismantled it. Section II presents the Anishinaabe refusal of the encounter-as-combat framing through the "other-than-human persons" cosmology of Hallowell 1960 and the Thunderer / Underwater-manitou dialectic of Smith 1995, with Johnston and Vizenor as further area-specialist anchors. Section III revisits the Mwindo / Kirimu material to draw out the fuller methodological implication that the Nyanga epic's pedagogy is specifically Nyanga and that meaning-within-framing is itself a level at which appropriation can occur. Section IV addresses the *Kalevala* question — Lönnrot's nineteenth-century editorial hand on the older Karelian and Finnish rune material that the modern *Kalevala* presents as connected epic — as a different species of appropriation in which the appropriator is a known historical figure and the intervention occurs within the source-text-construction process itself. Section V addresses the Bakunawa case, with the Mapuche Kai-Kai vs. Tren-Tren material as a supporting case, as the chapter's inclusion-marginal exemplar at which the typology's strong-centre features are absent though the surface motif fits. Section VI consolidates the chapter's three methodological lessons and registers the present book's settled position on the relation between the inversion problem of Ch40 and the appropriation problem of the present chapter.
+
+=== I. The anchor case — the Rainbow Serpent and the consolidation problem
+
+The Rainbow Serpent case is the chapter's anchor for the appropriation problem in its purest form, the case at which the comparative item being matched against the chaoskampf typology turns out, on the area-specialist scholarship's reading, not to exist on the source-traditions' own terms at all but to be a twentieth-century scholarly construct assembled from regionally distinct ancestral beings.
+
+The "Rainbow Serpent" of Aboriginal Australia, treated in twentieth-century comparative-mythology scholarship as a pan-Aboriginal ancestral being whose serpentine form, association with water and the rainbow, and creative-cosmogonic role unify a continent-wide narrative complex, is the present chapter's anchor case for the appropriation problem because the consolidation is itself a twentieth-century scholarly construct rather than an Aboriginal-Australian concept — a consolidation traceable to A. R. Radcliffe-Brown's 1926 *Journal of the Royal Anthropological Institute* article "The Rainbow-Serpent Myth of Australia" and dismantled across the late-twentieth-century area-specialist scholarship anchored in the present book's source-base by Francesca Merlan's *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town* (University of Hawaiʻi Press, 1998).footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on Radcliffe-Brown 1926 ("The Rainbow-Serpent Myth of Australia", *Journal of the Royal Anthropological Institute* 56) consolidating regionally distinct Aboriginal Australian ancestral beings into a pan-Aboriginal "Rainbow Serpent" that is a 20th-century scholarly construct rather than an Aboriginal concept; Merlan 1998, *Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town*, chs. 1–3, on the Rainbow Serpent critique anchored in the present book's source-base; per scope.md §"In-scope catalog" PROVISIONAL / Methodological on the Rainbow Serpent as the dedicated critique case for the appropriation problem; per scope.md §"Book structure" on the Rainbow Serpent material's placement in the Part II C8 chapter rather than geographically.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The regionally distinct Aboriginal Australian ancestral beings that Radcliffe-Brown 1926 grouped under the pan-Aboriginal "Rainbow Serpent" label — Yingarna of western Arnhem Land, Ngalyod of central and eastern Arnhem Land, Wanambi of central Australia, Wagyl of the southwest, Yulunggul of northeastern Arnhem Land, and many others across the continent — are, as the late-twentieth-century area-specialist scholarship anchored by Merlan 1998 and developed by Howard Morphy in *Ancestral Connections: Art and an Aboriginal System of Knowledge* (University of Chicago Press, 1991), Deborah Bird Rose in *Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness* (Australian Heritage Commission, 1996), and Ian Keen in *Knowledge and Secrecy in an Aboriginal Religion* (Oxford: Clarendon Press, 1994) holds them, distinct ancestral beings within distinct regional ontologies — beings whose names, attributes, narrative cycles, and ritual relationships belong to specifically named Aboriginal language-and-country groups and not to a generalised pan-Aboriginal mythological complex.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the regionally distinct Aboriginal Australian ancestral beings Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul, and others as belonging to specifically named regional ontologies rather than to a pan-Aboriginal mythological complex; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the regional specificity of the named ancestral beings and on the dismantling of Radcliffe-Brown's consolidation; Morphy, Howard, *Ancestral Connections: Art and an Aboriginal System of Knowledge* (Chicago: University of Chicago Press, 1991), on the regional-and-localised character of ancestral-being attribution in Aboriginal Australian religion (named-but-flagged in body prose; not currently in sources.yaml); Rose, Deborah Bird, *Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness* (Canberra: Australian Heritage Commission, 1996), on country-specific ancestral-being relationships (named-but-flagged in body prose; not currently in sources.yaml); Keen, Ian, *Knowledge and Secrecy in an Aboriginal Religion* (Oxford: Clarendon Press, 1994), on the localised-and-restricted character of ancestral-being knowledge across Yolngu and adjacent regional traditions (named-but-flagged in body prose; not currently in sources.yaml).]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The named ancestral beings differ from one another in features that Radcliffe-Brown's 1926 consolidation treats as merely surface-variations on a single underlying figure but that the regional area-specialist scholarship treats as load-bearing for what the beings *are* on Aboriginal-Australian terms: Yingarna in the Kunwinjku-speaking western Arnhem Land tradition is a creative ancestral mother-figure whose narrative cycle organises the country's law and language-group differentiation; Ngalyod in adjacent central and eastern Arnhem Land traditions is a different ancestral figure with different narrative-and-ritual associations whose relationship to particular *djang* (Dreaming) sites, language-groups, and ritual-cycles is country-specific; Wagyl in the Nyungar tradition of the southwest is the ancestral being of the Swan-Coastal-Plain river-and-wetland country whose movements through and shaping of that specific landscape are recorded in Nyungar geographical-and-narrative tradition; Yulunggul in the northeastern Arnhem Land Yolngu tradition is the python-figure of the Wagilag Sisters narrative-and-ritual cycle whose relationship to that specific cycle is the load-bearing feature of his standing — and the regional-specificity differences are not (per the area-specialist scholarship) reducible to a pan-Aboriginal "Rainbow Serpent" archetype.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the named ancestral beings differing in features that Radcliffe-Brown's 1926 consolidation treats as surface-variations on a single underlying figure but that the regional area-specialist scholarship treats as load-bearing; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on Yingarna and Ngalyod within the Kunwinjku and adjacent Arnhem Land regional ontologies and on the regional-specificity differences as load-bearing rather than surface-variational; Morphy 1991, *Ancestral Connections*, on the country-specific character of ancestral-being attribution in northeastern Arnhem Land Yolngu tradition (named-but-flagged in body prose); Keen 1994, *Knowledge and Secrecy in an Aboriginal Religion*, on Yulunggul and the Wagilag Sisters narrative-and-ritual cycle in Yolngu tradition (named-but-flagged in body prose); Rose 1996, *Nourishing Terrains*, on the country-specific character of ancestral-being relationships including Wagyl in Nyungar tradition (named-but-flagged in body prose).]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+Radcliffe-Brown's 1926 consolidation is, in its historical context, an example of the early-twentieth-century structural-functionalist anthropology's project of identifying continent-wide cultural "totalities" through comparative pattern-matching across regionally diverse material — a project whose methodological assumption that surface-similarity (serpentine form; association with water and the rainbow; creative-cosmogonic role) reveals an underlying unity has been systematically dismantled by the subsequent ethnographic literature and by Aboriginal Australian scholars and tradition-holders themselves, who hold that the regional ancestral-being relationships are not surface-variants on a deeper Aboriginal "type" but are themselves the load-bearing reality of Aboriginal-Australian religious-and-cosmographic life.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on Radcliffe-Brown 1926 as an example of the early-twentieth-century structural-functionalist anthropology's project of identifying continent-wide cultural totalities; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the dismantling of the consolidation by subsequent ethnographic literature and by Aboriginal Australian scholars and tradition-holders themselves; Morphy 1991, on the regional ancestral-being relationships as load-bearing rather than surface-variational (named-but-flagged); Keen 1994, on the localised-and-restricted character of ancestral-being knowledge as load-bearing for what the beings are on Aboriginal-Australian terms (named-but-flagged); Ballentine 2015, on the typological discipline of recognising when a comparative typology's surface-similarity-based consolidation has run ahead of the area-specialist scholarship.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+The methodological-historical situation of the Rainbow Serpent consolidation is itself worth registering at this point because it bears on the chapter's argument: Radcliffe-Brown's 1926 article appeared at the moment when comparative mythology and structural-functionalist anthropology were in close institutional alliance, when the "Rainbow Serpent" was being assembled as a continent-wide comparative item from regional ethnographic sources whose methodological constraints (linguistic mediation by missionary-and-colonial-administrator translators; political constraints on what tradition-holders would tell outsiders; the salvage-paradigm assumption that traditions were "vanishing" and required urgent generalisation rather than careful localisation) shaped what the early ethnographic record could record — and the post-1980s area-specialist dismantling of the consolidation has had to reckon with the recording-history situation as itself part of the appropriation problem rather than as a transparent prior to it.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the Radcliffe-Brown 1926 consolidation's institutional context and on the Aboriginal-Australian area-specialist tradition's reckoning with the recording-history situation as itself part of the appropriation problem; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the post-1980s area-specialist dismantling and on the recording-history situation as load-bearing; per scope.md §"Appropriation protocol" on the methodological-historical sensitivity of the colonial-and-salvage-paradigm ethnographic record.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+The Rainbow Serpent consolidation's specifically chaoskampf-relevant feature is that it has been used in twentieth-century comparative-mythology scholarship as an Aboriginal-Australian addition to the chaoskampf typology — a serpentine-figure-with-cosmogonic-and-water-association that the typology's pattern-matching habit recognises as a member of the chaos-adversary class — and the area-specialist dismantling is therefore not just an internal correction within Aboriginal-Australian ethnography but a refusal of the chaoskampf-typological extension that has been made on the consolidation's basis: if the regional ancestral beings are not a pan-Aboriginal "Rainbow Serpent", they are also not a pan-Aboriginal chaos-adversary that the chaoskampf typology can absorb, and the comparative-typology extension fails together with the consolidation.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the Rainbow Serpent consolidation's chaoskampf-relevant feature as a serpentine-figure-with-cosmogonic-and-water-association used in twentieth-century comparative-mythology scholarship as an Aboriginal-Australian addition to the chaoskampf typology, and on the area-specialist dismantling as a refusal of the chaoskampf-typological extension; Merlan 1998 on the dismantling of the consolidation; Ballentine 2015 on the chaoskampf frame's overextension and on the typological discipline of separating area-specialist framings from comparative-typology surface-similarity matching.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The Rainbow Serpent case's distinctive contribution to the chapter's argument is that it is the appropriation problem in its purest form: the named regional ancestral beings exist, the regional traditions in which they figure are vital and ongoing, but the pan-Aboriginal "Rainbow Serpent" — and a fortiori the chaoskampf-typological "Aboriginal-Australian chaos-adversary" — does not exist on Aboriginal-Australian terms and is not a feature of any specific Aboriginal-Australian tradition; the appropriation is the *category itself*, not its application, and the area-specialist dismantling is a refusal of the category's existence rather than of its applicability to particular beings.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the Rainbow Serpent case's distinctive contribution as the appropriation problem in its purest form; Merlan 1998, *Caging the Rainbow*, chs. 1–3, on the appropriation as the category itself rather than its application; per scope.md §"Appropriation protocol" on the institutional commitment to refusing typological consolidations that the area-specialists hold to be artifacts of comparative scholarship rather than features of the traditions themselves.]
+// EVIDENCE: source_id=merlan-caging-rainbow ; loc=Caging the Rainbow, chs. 1-3 on the Rainbow Serpent critique
+
+[APPROPRIATION-FLAG: the area-specialist objection registered here is that the pan-Aboriginal "Rainbow Serpent" is a 20th-century scholarly construct — assembled by A. R. Radcliffe-Brown in his 1926 *Journal of the Royal Anthropological Institute* article from regionally distinct Aboriginal Australian ancestral beings (Yingarna in western Arnhem Land, Ngalyod in central and eastern Arnhem Land, Wanambi in central Australia, Wagyl in the southwest, Yulunggul in northeastern Arnhem Land, and others) on the basis of surface-similarity pattern-matching — rather than an Aboriginal-Australian concept; the consolidation has been systematically dismantled by the late-twentieth-century area-specialist scholarship anchored by Francesca Merlan's *Caging the Rainbow* (1998) and developed by Howard Morphy (*Ancestral Connections*, 1991), Deborah Bird Rose (*Nourishing Terrains*, 1996), and Ian Keen (*Knowledge and Secrecy in an Aboriginal Religion*, 1994), and the dismantling is not a marginal correction within Aboriginal-Australian ethnography but a refusal of the comparative-typological extension (including the chaoskampf-typological extension) that has been made on the consolidation's basis. | named_specialists: Francesca Merlan (*Caging the Rainbow: Places, Politics, and Aborigines in a North Australian Town*, 1998; in sources.yaml as merlan-caging-rainbow) is the principal English-language area-specialist anchor for the consolidation-dismantling reading; Howard Morphy (*Ancestral Connections: Art and an Aboriginal System of Knowledge*, 1991), Deborah Bird Rose (*Nourishing Terrains: Australian Aboriginal Views of Landscape and Wilderness*, 1996), and Ian Keen (*Knowledge and Secrecy in an Aboriginal Religion*, 1994) supply the wider Aboriginal-Australian area-specialist tradition within which the dismantling is set (named-but-flagged in body prose; not currently in sources.yaml); A. R. Radcliffe-Brown (1926 *JRAI* article) is the named originator of the consolidation that the area-specialists dismantle (named-but-flagged in body prose; not in sources.yaml). | tier_implication: scope.md classifies the Rainbow Serpent material as PROVISIONAL / Methodological precisely because the pan-Aboriginal consolidation does not stand up to area-specialist scrutiny and the chaoskampf-typological extension fails together with the consolidation; the Rainbow Serpent material is the present book's clearest case of an appropriation that is not just inverted (Bida) or refused at the moral-cosmographic level (Mwindo, Nanabozho) but constructed from outside the traditions themselves. | forwards_to: this APPROPRIATION-FLAG is engaged in the present chapter (Ch41) as the chapter's anchor case for the appropriation problem; the case has no Part-I chapter of its own (the Rainbow Serpent material is held for the present chapter per the toc.yaml note rather than placed geographically), and the chapter's §I treatment is the book's principal engagement with the case.]
+
+The Rainbow Serpent case prepares the chapter's main argument in §§II–III: where Aboriginal-Australian regional specificity refuses the *comparative consolidation itself*, the Anishinaabe reciprocal-counterpart cosmology (§II) and the Nyanga moral-pedagogical framing (§III) refuse the *comparative-typological framing's load-bearing categories* (chaos-vs-order; combat-as-order-establishment), and the three cases together demonstrate that the chaoskampf typology's appropriation tendency operates at multiple levels — at the level of category-construction (Rainbow Serpent), at the level of categorical-apparatus imposition (Nanabozho), and at the level of moral-valence imposition (Mwindo) — and is not a single failure mode that can be addressed by a single methodological fix.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml comparative_argument on the three principal cases as together demonstrating that the chaoskampf typology's appropriation tendency operates at multiple levels; per the present chapter's §§II–III on the Anishinaabe and Nyanga cases as refusing the comparative-typological framing's load-bearing categories; Ballentine 2015, on the typological discipline of recognising appropriation-failure-modes at multiple levels rather than as a single failure mode.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the cosmogonic-combat reading anchored in Ch34 by the Marduk-Tiamat case is the structural-comparative foil against which the §I dismantling of the pan-Aboriginal "Rainbow Serpent" reads: where the C1 anchor's serpentine-adversary-defeated-in-cosmogonic-combat structure is internal to the *Enūma Eliš*'s own framing, the pan-Aboriginal "Rainbow Serpent" is external to every specific Aboriginal-Australian tradition's framing, and the appropriation problem is the construction of a comparative item that no source-tradition recognises.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §I Rainbow Serpent case is methodologically distinct from the Ch40 inversion cases (Bida, Mwindo, Sigurd, Pariacaca, Susanoo) in that the inversion cases all begin with traditions whose own framings exist and can be presented (covenant-broken, maturation-through-hubris, IE-formula, wak'a-succession, metallurgical-allegory) before the comparative typology is registered, whereas the Rainbow Serpent case begins with a comparative-typological consolidation that has no source-tradition framing to present in the first place; the Rainbow Serpent case is the appropriation problem at the level of category-construction itself.
+
+=== II. The principled refusal — Nanabozho, Mishipeshu, and the reciprocal-counterpart cosmology
+
+The Anishinaabe case is the chapter's most principled area-specialist refusal because the refusal is at the level of the encounter-framing apparatus itself: there is no Anishinaabe combat-narrative that can be inverted within a chaoskampf framing because the relational-and-reciprocity-grounded apparatus refuses the encounter-as-combat framing in the first place.
+
+The Anishinaabe trickster-culture-hero Nanabozho (the spelling varies — Nanabush, Wenebojo, Wisakedjak, Manabozho, and other regional forms appear across the Anishinaabe-Algonquin / Algonquian-language area; the present chapter follows Ch32 of the present book and the standard Anishinaabe-area scholarship of Hallowell 1960 in using "Nanabozho") and his encounters with the underwater manitou Mishipeshu and with the Thunderers (the Anishinaabe thunder-beings; *Animikiig* in the Anishinaabe-language register) are presented in current Anishinaabe-area area-specialist scholarship — A. Irving Hallowell's 1960 essay "Ojibwa Ontology, Behavior, and World View", Basil Johnston's *Ojibway Heritage* (1976/1990) and *The Manitous: The Spiritual World of the Ojibway* (1995), Theresa S. Smith's *The Island of the Anishnaabeg: Thunderers and Water Monsters in the Traditional Ojibwe Life-World* (1995), and Gerald Vizenor's *Narrative Chance: Postmodern Discourse on Native American Indian Literatures* (1989) — within the Anishinaabe ontological framework of "other-than-human persons" (Hallowell's 1960 phrase), in which the manitouk are not chaos-adversaries to be defeated but reciprocal counterparts in a relational moral universe.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the four area-specialist anchors and on the Anishinaabe ontological framework of "other-than-human persons" as the chapter's central interpretive frame; Hallowell 1960, "Ojibwa Ontology, Behavior, and World View", on the "other-than-human persons" framework; Johnston 1990 [1976], *Ojibway Heritage*, on the Anishinaabe-authored insider register of cosmology, manitouk, and the Nanabozho cycle; Johnston 1995, *The Manitous*, on the Anishinaabe-authored treatment of manitous including Mishipeshu and Nanabozho; Smith 1995, *The Island of the Anishnaabeg*, on the Thunderer / Underwater-manitou dialectic as the load-bearing interpretive frame; Vizenor 1989, *Narrative Chance*, on the methodological refusal to subordinate Nanabozho to Western combat-myth or hero/villain typologies; per glossary 'Nanabozho', 'Mishipeshu', 'manitou / manitouk / aadizookaanag', 'the Thunderers', 'other-than-human persons' first_mention_glosses.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+
+The Anishinaabe ontological framework of "other-than-human persons", as Hallowell 1960 articulates it from his Berens River fieldwork of the 1930s in northwestern Ontario, places the manitouk — animals, plants, certain stones and other landscape features, the Thunderers, and the underwater-manitouk including Mishipeshu — alongside human persons in a single ontological category of *persons*, with the appropriate human comportment toward the manitouk being the comportment appropriate to persons (relationships of respect, gift-and-counter-gift reciprocity, ceremonial protocol, formal address) rather than the comportment appropriate to objects, resources, or natural-kind categories; the moral framework is relational and reciprocity-grounded throughout, and the moral question in any given encounter is not whether the other-than-human person is friend or foe but whether the human comportment toward them has been appropriate.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Hallowell 1960's articulation of the "other-than-human persons" framework from his Berens River fieldwork of the 1930s in northwestern Ontario, on the manitouk as persons on equal standing with human persons rather than as objects, resources, or natural-kind categories, and on the moral framework as relational and reciprocity-grounded throughout; Hallowell 1960, on the framework's load-bearing claim and on the moral implications for human conduct; per glossary 'other-than-human persons' first_mention_gloss.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+
+The Thunderer / Underwater-manitou dialectic that Theresa S. Smith's *The Island of the Anishnaabeg* (University of Idaho Press, 1995) takes as its central interpretive frame holds that the Thunderers and the underwater-manitouk including Mishipeshu are not chaos-versus-order adversaries within Anishinaabe cosmography but *necessary counterparts* whose dialectical relationship sustains the layered cosmographic equilibrium between the upper-realm of the sky-and-storm region and the underwater-realm of the sub-aquatic-and-subterranean region, with the human-and-island world being the meeting-place at which the upper-realm and the underwater-realm encounter one another and at which Nanabozho's actions and human conduct mediate the relationship between the two realms.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Thunderer / Underwater-manitou dialectic as the load-bearing interpretive frame, on the layered cosmographic equilibrium between the upper-realm of the Thunderers and the underwater-realm of Mishipeshu and the underwater-manitouk, and on the human-and-island world as the meeting-place at which the two realms encounter one another; Smith 1995, *The Island of the Anishnaabeg*, throughout, on the dialectic as necessary-counterpart rather than as chaos-versus-order; per glossary 'the Thunderers' first_mention_gloss on the Thunderers as counterparts of Mishipeshu in the reciprocal cosmic-dialectic.]
+// EVIDENCE: source_id=smith-island-anishnaabeg ; loc=The Island of the Anishnaabeg, ch. on Thunderers and Water Monsters
+
+The reciprocal-counterpart character of the Thunderer / Underwater-manitou dialectic is, on Smith 1995's reading, a load-bearing feature of the Anishinaabe ritual-and-relational landscape and not a peripheral or aesthetic detail: the appropriate human comportment toward the Thunderers (offering of tobacco; ritual address; the seasonal-and-calendrical structuring of the relationship around storm-and-thunder events) is paralleled by an appropriate human comportment toward the underwater-manitouk (offering of tobacco; ritual address; the seasonal-and-calendrical structuring of the relationship around water-and-fishing events), with neither realm being framed as the *enemy* of human well-being and with both realms being treated as relationally accessible to the human-and-island world's mediating role.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the reciprocal-counterpart character of the Thunderer / Underwater-manitou dialectic as a load-bearing feature of the Anishinaabe ritual-and-relational landscape; on the appropriate human comportment toward the Thunderers and toward the underwater-manitouk as paralleled and reciprocity-grounded; on neither realm being framed as the enemy of human well-being; Smith 1995, *The Island of the Anishnaabeg*, throughout, on the relational-and-reciprocity-grounded framing of the dialectic; Johnston 1990 [1976], *Ojibway Heritage*, on the Anishinaabe-authored insider register of the relational and reciprocity-respecting moral framework.]
+// EVIDENCE: source_id=smith-island-anishnaabeg ; loc=The Island of the Anishnaabeg, ch. on Thunderers and Water Monsters
+
+Mishipeshu's specifically chaoskampf-relevant features — serpentine-and-feline form (the Anishinaabe iconographic representations including the Agawa Rock pictographs at Lake Superior Provincial Park represent Mishipeshu with horned-and-spined body, long tail, and copper-related associations; Mishipeshu is sometimes glossed in English-language scholarship as "Underwater Panther" or "Great Lynx" alongside the underwater-manitou rendering); residence in the underwater-and-subterranean realm; association with sudden storms, wave-and-current dangers on the Great Lakes, and other water-related hazards — would, on a chaoskampf-typological reading, identify him as a chaos-adversary class member, but the area-specialist scholarship anchored by Hallowell 1960, Johnston 1990 [1976] and 1995, Smith 1995, and Vizenor 1989 explicitly declines that identification: Mishipeshu's hazards are not chaos to be defeated but *features of a person whose realm has its own integrity*, and the appropriate human response is the relational-and-ceremonial response appropriate to a powerful person rather than the combat response appropriate to a chaos-adversary.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Mishipeshu's chaoskampf-relevant surface features — serpentine-and-feline form, residence in the underwater-and-subterranean realm, association with sudden storms and water-related hazards — and on the area-specialist scholarship's explicit refusal of the chaos-adversary identification; on Mishipeshu's hazards as features of a person whose realm has its own integrity rather than as chaos to be defeated; on the appropriate human response as the relational-and-ceremonial response appropriate to a powerful person; Hallowell 1960, on the moral framework's relational-and-reciprocity-grounded character; Smith 1995, on Mishipeshu within the Thunderer / Underwater-manitou dialectic; Johnston 1995, *The Manitous*, on the Anishinaabe-authored treatment of Mishipeshu; per glossary 'Mishipeshu' first_mention_gloss on Mishipeshu as a necessary counterpart to the Thunderers, not a chaos-adversary to be defeated.]
+// EVIDENCE: source_id=johnston-manitous ; loc=The Manitous, chs. on Mishipeshu and Nanabozho
+
+Nanabozho's encounters with Mishipeshu and the Thunderers, across the regionally variable recordings and retellings that Ch32 of the present book treats with explicit refusal-to-synthesise discipline (per the brief's variants.classification co-equal directive), are pedagogical-and-reciprocal rather than triumphal-and-defeating: the trickster-culture-hero's interactions with the manitouk are occasions on which appropriate-and-inappropriate human comportment is *taught*, on which the consequences of inappropriate comportment (loss of relationship; the manitouk's withdrawal of cooperation; the unbinding of relational protocols) are illustrated, and on which the layered cosmography's relational integrity is both stressed and restored — and Nanabozho's standing within the tradition is the standing of a culture-hero who teaches by example (including by negative example) rather than the standing of a heroic combatant whose victories establish a cosmic order.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Nanabozho's encounters with Mishipeshu and the Thunderers as pedagogical-and-reciprocal rather than triumphal-and-defeating, on the trickster-culture-hero's interactions with the manitouk as occasions for teaching appropriate-and-inappropriate human comportment, on the consequences of inappropriate comportment, and on the layered cosmography's relational integrity as both stressed and restored; Vizenor 1989, *Narrative Chance*, "Trickster Discourse" essay, on the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies; Johnston 1990 [1976], on Nanabozho's standing as a culture-hero who teaches by example.]
+// EVIDENCE: source_id=vizenor-narrative-chance ; loc=Narrative Chance, "Trickster Discourse" essay
+
+Gerald Vizenor's 1989 "Trickster Discourse" essay (in *Narrative Chance: Postmodern Discourse on Native American Indian Literatures*, ed. Vizenor, University of New Mexico Press) is the chapter's anchor for the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies — a refusal that is itself part of the area-specialist tradition's active engagement with the comparative-mythology apparatus rather than a passive non-participation, and a refusal whose institutional standing in the Indigenous-studies and Native-American-literatures fields is well-established.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on Vizenor 1989's "Trickster Discourse" essay as the anchor for the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies; Vizenor, Gerald (ed.), *Narrative Chance: Postmodern Discourse on Native American Indian Literatures* (Albuquerque: University of New Mexico Press, 1989; ISBN 9780826311177; reprint Norman: University of Oklahoma Press, 1993), Vizenor's "Trickster Discourse" essay; on the refusal as part of the area-specialist tradition's active engagement with the comparative-mythology apparatus rather than a passive non-participation; on the refusal's institutional standing in the Indigenous-studies and Native-American-literatures fields.]
+// EVIDENCE: source_id=vizenor-narrative-chance ; loc=Narrative Chance, "Trickster Discourse" essay
+
+The Anishinaabe refusal of the chaos-vs-order mapping is, on the area-specialist scholarship's reading, *not* a refusal of comparative engagement as such but a refusal of a specific comparative-typological apparatus — the apparatus that places the figures in adversarial pairs (chaos-figure vs. cosmos-figure; serpent vs. champion) and reads the encounters as combat-and-defeat occasions whose narrative work is the establishment of an ordered cosmos against an adversarial chaos — and the refusal's substantive content is the substitution of a different comparative-typological apparatus (the relational-and-reciprocity-grounded apparatus of the "other-than-human persons" framework) within which the Anishinaabe material is fully comparable to other relational-and-reciprocity-grounded materials and not at all comparable to the chaoskampf typology's combat-cosmographic apparatus.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Anishinaabe refusal as not a refusal of comparative engagement as such but a refusal of a specific comparative-typological apparatus, and on the refusal's substantive content as the substitution of a relational-and-reciprocity-grounded apparatus within which the Anishinaabe material is fully comparable to other relational-and-reciprocity-grounded materials; Hallowell 1960, on the relational-and-reciprocity-grounded framework as comparatively-engageable with other relational-and-reciprocity-grounded ontologies; Vizenor 1989, on the methodological refusal as active engagement with the comparative-mythology apparatus.]
+// EVIDENCE: source_id=hallowell-ojibwa-world ; loc=Ojibwa Ontology, Behavior, and World View, 19-52
+
+The Nanabozho / Mishipeshu / Thunderers material is, in the present book's classification, the contrastive-tier (full) case in which the area-specialist refusal is the most principled — more pointed than the Mwindo material's refusal of the moral valence of the killing within a still-recognisable combat-narrative framing (Ch29; §III below) and more pointed than the Bida material's covenant-broken framing in which the killing is registered as a covenant-breaking transgression (Ch28; Ch40 §I) — because the Anishinaabe refusal is at the level of the *categorical apparatus itself*: there is no Anishinaabe combat-narrative that can be inverted, because the relational-and-reciprocity-grounded framework refuses the combat-narrative apparatus as a way of representing the encounters between human persons and other-than-human persons in the first place.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Nanabozho / Mishipeshu / Thunderers material as the present book's contrastive-tier (full) case in which the area-specialist refusal is the most principled; on the refusal as more pointed than the Mwindo material's refusal of moral valence within a still-recognisable combat-narrative framing and than the Bida material's covenant-broken framing; on the refusal's location at the level of the categorical apparatus itself; per scope.md §"In-scope catalog" CONTRASTIVE / Inversion entry on Nanabozho as the refusal case.]
+// EVIDENCE: source_id=smith-island-anishnaabeg ; loc=The Island of the Anishnaabeg, ch. on Thunderers and Water Monsters
+
+[APPROPRIATION-FLAG: the area-specialist objection registered here is that the Anishinaabe encounters between Nanabozho, Mishipeshu, and the Thunderers are framed within the Anishinaabe ontological framework of "other-than-human persons" (Hallowell 1960's phrase) and the Thunderer / Underwater-manitou dialectic (Smith 1995's central interpretive frame) as relational-and-reciprocity-grounded encounters between persons rather than as adversarial-combat encounters between cosmos and chaos; the area-specialist scholarship — Hallowell 1960, Johnston 1976/1990 and 1995, Smith 1995, and Vizenor 1989 — explicitly declines the chaos-vs-order mapping that the chaoskampf typology presupposes, and the Anishinaabe refusal is at the level of the categorical apparatus itself rather than at the level of the typology's specific application; the objection is the most principled refusal in the present book, more pointed than the Mwindo or Bida refusals because there is no Anishinaabe combat-narrative that can be inverted within a chaoskampf framing in the first place. | named_specialists: A. Irving Hallowell (1960 essay "Ojibwa Ontology, Behavior, and World View" in *Culture in History: Essays in Honor of Paul Radin*, ed. Stanley Diamond [Columbia University Press, 1960]; in sources.yaml as hallowell-ojibwa-world) is the principal anthropological-register area-specialist anchor for the "other-than-human persons" framework; Basil Johnston (*Ojibway Heritage*, 1976/1990; *The Manitous*, 1995; in sources.yaml as johnston-ojibway-heritage and johnston-manitous) is the principal Anishinaabe-authored insider area-specialist anchor; Theresa S. Smith (*The Island of the Anishnaabeg*, 1995; in sources.yaml as smith-island-anishnaabeg) is the principal area-specialist anchor for the Thunderer / Underwater-manitou dialectic; Gerald Vizenor (*Narrative Chance*, 1989, "Trickster Discourse" essay; in sources.yaml as vizenor-narrative-chance) is the principal area-specialist anchor for the methodological refusal to subordinate Anishinaabe trickster narrative to Western combat-myth or hero/villain typologies. | tier_implication: scope.md classifies the Nanabozho / Mishipeshu material as CONTRASTIVE / Inversion (full; the chaoskampf frame explicitly declined) precisely because the area-specialist refusal is the most principled in the present book, and the contrastive-tier classification is itself a recognition of the area-specialists' priority and of the relational-and-reciprocity-grounded categorical apparatus that the Anishinaabe tradition employs in place of the combat-cosmographic apparatus the chaoskampf typology presupposes. | forwards_to: this APPROPRIATION-FLAG is engaged at length in the present chapter (Ch41) as the chapter's most principled area-specialist refusal; the upstream Part-I chapter (Ch32) is the chapter's anchor for the area-specialist framing.]
+
+The Anishinaabe case's distinctive contribution to the chapter's typological work is the demonstration that the chaoskampf typology can fail to fit a tradition not at the level of outcome (as in Bida), moral valence (as in Mwindo), the chaos-versus-order categorical apparatus within combat-myth framing (as in Pariacaca), or the combat-myth framing itself (as in Susanoo and the metallurgical-allegory reading), but at the level of the *encounter framing itself*: the Anishinaabe material refuses the apparatus of "encounter as combat" altogether in favour of "encounter as relational-and-reciprocity-grounded address between persons", and the refusal is therefore at a more fundamental level than any of the Ch40 inversion cases — including the Susanoo case, which refuses combat-myth framing in favour of metallurgical-political charter but still operates within a sword-and-defeat narrative-structural register.footnote:[Per chapters/32-nanabozho-mishipeshu.claims.approved.adoc on the Anishinaabe case's distinctive contribution as the demonstration that the chaoskampf typology can fail to fit a tradition at the level of the encounter framing itself; per the present chapter's argument structure on the Anishinaabe refusal as more fundamental than the Ch40 inversion cases including the Susanoo case; Ballentine 2015, on the typological discipline of recognising encounter-framing-level refusals as data for the typology's limits.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the cosmogonic-combat reading anchored in Ch34 by the Marduk-Tiamat case is the structural-comparative foil against which the Anishinaabe material is read in §II above as a refusal of the combat-as-cosmogony framing; the Anishinaabe layered cosmography is *already in place* (the upper-realm of the Thunderers, the underwater-realm of Mishipeshu, the human-and-island world between) when the encounters happen, and the encounters do not establish the cosmography but maintain its relational integrity.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §II Anishinaabe case is the most principled refusal in the present book and is more pointed than any of the Ch40 inversion cases (Bida, Mwindo, Sigurd, Pariacaca, Susanoo) because the Anishinaabe material refuses the encounter-as-combat framing itself rather than refusing one or another aspect of it; the Anishinaabe case is therefore the appropriation problem's strongest exemplar in the present book.
+
+=== III. The fuller implication — Mwindo revisited and the Nyanga moral pedagogy
+
+Section III revisits the Nyanga material that Ch29 anchored and Ch40 §II registered as moral-valence inversion, drawing out the fuller implication that the epic's pedagogy is *specifically Nyanga* and that meaning-within-framing is itself a level at which appropriation can occur.
+
+The Nyanga oral epic of Mwindo, recorded in 1956 from the named narrator Shé-Kárisi Candi Rureke at Bese on the upper Oso river in the Kivu region of what was then the eastern Belgian Congo and published in Daniel Biebuyck and Kahombo C. Mateene's *The Mwindo Epic from the Banyanga (Zaire)* (University of California Press, 1969) as the standard English-language critical edition and translation, was treated in Ch40 §II of the present book as the inversion-problem chapter's case of moral-valence inversion — the killing of the dragon Kirimu being registered as hubris that the sky-god Nkuba punishes rather than as the order-establishing act the chaoskampf typology expects — and is treated again here in the present chapter's §III with the fuller methodological implication that the epic's *own pedagogy* should shape the comparison rather than the comparison's typology being applied from outside the Nyanga tradition's framing.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the 1956 Bese recording from Shé-Kárisi Candi Rureke as the chapter's anchor text and on Biebuyck and Mateene 1969 as the standard English-language critical edition and translation; per chapters/40-C7-inversion-problem.claims.approved.adoc §II on the Mwindo material as the Ch40 case of moral-valence inversion; per brief 41-C8-refusal-and-appropriation.yaml structure §III on the present chapter's revisiting of Mwindo with the fuller methodological implication that the epic's own pedagogy should shape the comparison; per glossary 'Mwindo', 'Kirimu', 'Nkuba' first_mention_glosses on the principal protagonists.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The Mwindo epic's *own pedagogy*, as Biebuyck and Mateene 1969 develop it from the recorded performance and as Stephen Belcher 1999 (*Epic Traditions of Africa*, ch. on Mwindo) reads it within the comparative African-oral-epic apparatus, is a structured instruction in the moral cosmography of the Nyanga relational world: the hero's biographical-and-moral arc — miraculous birth; conflicts with his father Shemwindo of Tubondo; journeys across the human and spirit worlds; testing by the powers above and below; the killing of Kirimu as hubristic over-reach; Nkuba's lightning-seizing and celestial humiliation; the chastened return; the chiefly succession on the celestial powers' terms — is itself the epic's pedagogical apparatus, designed to instruct an audience in the moral-cosmographic principles by which the relational world is sustained.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the Mwindo epic's pedagogy as a structured instruction in the moral cosmography of the Nyanga relational world; on the hero's biographical-and-moral arc as itself the epic's pedagogical apparatus; on the load-bearing function of the audience-instruction register; Biebuyck & Mateene 1969, translators' introduction on the same; Belcher 1999, *Epic Traditions of Africa*, ch. on Mwindo, on the maturation-through-humiliation pattern as the load-bearing feature distinguishing the Mwindo material from the Eurasian combat-myth corpus.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The sky-god Nkuba's lightning-seizing of Mwindo after the killing of Kirimu is not, on Biebuyck and Mateene 1969's reading, an external-to-the-narrative comparativist-imposed reversal of a chaoskampf event — it is the narrative's *own* moral correction, registered in the recorded performance by formulaic refrains and direct narrative comments as the structurally-necessary response to the hero's hubristic over-reach against the spirit world's cosmographic equilibrium, and the celestial-realm trials and humiliations that follow (exposure to extreme heat and cold; compulsion to endure the celestial powers' direct presence; explicit instruction about the limits of the hero's power) are presented in the recorded performance as morally-motivated correction rather than as arbitrary cruelty.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on Nkuba's lightning-seizing as the narrative's own moral correction rather than as an external-to-the-narrative comparativist-imposed reversal; on the formulaic refrains and direct narrative comments registering the lightning-seizing as the structurally-necessary response to the hero's hubristic over-reach; on the celestial-realm trials and humiliations as morally-motivated correction rather than as arbitrary cruelty; Biebuyck & Mateene 1969, Kirimu episode and following celestial-journey passages; per glossary 'Nkuba' first_mention_gloss.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The conditions Nkuba imposes on Mwindo's return to the human world — the named renunciations and binding commitments, the chastened mode of conduct as a properly-formed chief, the conditional-and-supervised character of the restoration — are, in the recorded performance's framing, the *content* of the epic's pedagogy: the audience learns, through the hero's chastening, the specific moral-cosmographic principles by which Nyanga relational life is to be conducted (respect for the cosmographic limits; recognition of the powers above and below; renunciation of hubristic over-reach; the chiefly office's contingency on the celestial powers' authority), and the epic's narrative-structural movement from the killing through the celestial humiliation to the chastened return is the epic's didactic engine.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the conditions Nkuba imposes on Mwindo's return as the content of the epic's pedagogy; on the audience's learning through the hero's chastening of the specific moral-cosmographic principles by which Nyanga relational life is to be conducted; on the epic's narrative-structural movement as the epic's didactic engine; Biebuyck & Mateene 1969, on the conditions imposed and the chastened return; Belcher 1999, *Epic Traditions of Africa*, ch. on Mwindo, on the maturation-through-humiliation pattern's didactic register.]
+// EVIDENCE: source_id=belcher-epic ; loc=Epic Traditions of Africa, ch. on Mwindo
+
+The fuller methodological implication of the Mwindo material that the present chapter's §III develops, beyond the moral-valence-inversion observation that Ch40 §II registered, is that the epic's pedagogy is *specifically Nyanga*: the moral-cosmographic principles instructed are not generic moral principles that happen to be expressed in Nyanga vocabulary but principles whose specific content (the cosmographic-equilibrium reciprocity between human and spirit worlds; the chiefly succession's contingency on celestial-powers' authority; the renunciation-of-over-reach as a specific moral discipline) is anchored in the Nyanga relational-cosmographic apparatus, and the comparison's task is therefore not to extract a generic "moral lesson" from the epic and compare it to other moral lessons but to register the epic's pedagogy in its own terms before any comparison is performed.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §III on the fuller methodological implication that Mwindo's moral frame is specifically Nyanga and that the sky-god's punishment of the hero is traditional teaching about hubris rather than a variant chaoskampf; per chapters/29-mwindo-kirimu.claims.approved.adoc on the moral-cosmographic principles' specific Nyanga content; on the comparison's task as registering the epic's pedagogy in its own terms before any comparison is performed; Biebuyck & Mateene 1969, translators' introduction on the Nyanga-specific character of the epic's framing.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The Mwindo material's relevance to the present chapter's appropriation argument is therefore at a different level from §II's Anishinaabe material: where the Anishinaabe refusal is at the level of the encounter-framing itself (no combat-narrative apparatus is employed), the Nyanga refusal is at the level of the *moral evaluation* of an existing combat-narrative — the killing happens, the dragon is dead, the surface chaoskampf-typological pattern is present — and the refusal consists in the Nyanga tradition's framing of the killing as hubris-and-correction rather than as cosmos-establishment, with the comparativist's task being to register the Nyanga pedagogy as such rather than to assimilate it to the chaoskampf typology's pattern of order-establishing valuation.footnote:[Per the present chapter's argument structure on the Mwindo material's relevance to the appropriation argument as at a different level from the Anishinaabe material; per chapters/29-mwindo-kirimu.claims.approved.adoc on the Nyanga refusal as at the level of the moral evaluation of an existing combat-narrative; per chapters/40-C7-inversion-problem.claims.approved.adoc §II on the moral-valence inversion as the Ch40 reading; on the comparativist's task as registering the Nyanga pedagogy as such rather than assimilating it to the chaoskampf typology's pattern of order-establishing valuation.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+
+The Mwindo material is also, distinctively within the present chapter's case-set, the only case at which the area-specialist reading and the chaoskampf typology agree on the *narrative-structural surface* (a hero kills a dragon) but disagree on the *narrative-structural meaning* — the killing is the same event in either reading, but the meaning the area-specialists read in the recorded performance (transgressive over-reach demanding correction) is the precise contrary of the meaning the chaoskampf typology reads in the same event (cosmos-establishing or sovereignty-establishing victory) — and the Mwindo case is therefore the chapter's clearest demonstration that the appropriation problem is not just a problem of *what events are recorded* but a problem of *what the recorded events mean within their own framing*.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the Mwindo material as the case at which the area-specialist reading and the chaoskampf typology agree on the narrative-structural surface but disagree on the narrative-structural meaning; on the killing as the same event in either reading; on the meaning the area-specialists read as the precise contrary of the meaning the chaoskampf typology reads; Biebuyck & Mateene 1969 on the area-specialists' meaning-reading; Ballentine 2015, on the appropriation problem as a problem of meaning-within-framing rather than a problem of events-recorded.]
+// EVIDENCE: source_id=biebuyck-mateene-mwindo ; loc=The Mwindo Epic, episode of Kirimu
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+[APPROPRIATION-FLAG: the area-specialist objection registered here, in its present-chapter form (the Ch29 and Ch40 forms of this APPROPRIATION-FLAG focus on the maturation-through-hubris reading at the level of the recorded performance; the present-chapter form develops the fuller methodological implication that the epic's pedagogy is specifically Nyanga and that the comparativist's task is to register that pedagogy in its own terms before any comparison is performed), is that the Mwindo / Kirimu episode's *own* moral-pedagogical framing within the Nyanga oral tradition is hubris-and-correction within the cosmographic-equilibrium reciprocity between human and spirit worlds — a framing whose substantive content is anchored in the Nyanga relational-cosmographic apparatus — and not "variant chaoskampf"; the objection is at the level of the *moral evaluation* of an existing combat-narrative rather than at the level of the encounter-framing itself (as in §II), and the comparativist's task is to register the Nyanga pedagogy as such rather than to assimilate it to the chaoskampf typology's pattern of order-establishing valuation. | named_specialists: Daniel Biebuyck and Kahombo C. Mateene (*The Mwindo Epic from the Banyanga (Zaire)*, 1969; in sources.yaml as biebuyck-mateene-mwindo) are the principal area-specialist anchors for the maturation-through-hubris reading; Stephen Belcher (*Epic Traditions of Africa*, 1999, ch. on Mwindo; in sources.yaml as belcher-epic) is the principal comparative African-oral-epic synthesis anchor; the wider Nyanga-area area-specialist tradition associated with Biebuyck's later *Hero and Chief: Epic Literature from the Banyanga* (1978; named in body prose at Ch29 per the named-but-flagged secondary-anchor pattern) supplies the wider area-specialist scholarly tradition. | tier_implication: scope.md classifies the Mwindo material as CONTRASTIVE-tier (full) precisely because the area-specialist framing refuses the chaoskampf typology's order-establishing valuation in favour of the maturation-through-hubris pedagogy, and the contrastive-tier classification is itself a recognition of the area-specialists' priority and of the meaning-within-framing discipline that the present chapter consolidates. | forwards_to: this APPROPRIATION-FLAG is engaged in the upstream Part-I chapter (Ch29) at the level of the recorded performance, in the Ch40 inversion-problem chapter at the level of moral-valence inversion, and in the present chapter (Ch41) at the level of the fuller methodological implication that the epic's pedagogy is specifically Nyanga and that the comparativist's task is to register that pedagogy in its own terms before any comparison is performed.]
+
+The Mwindo case's distinctive contribution to the present chapter's argument is therefore the demonstration that *meaning-within-framing* is itself a level at which appropriation can occur: the comparativist who treats the killing of Kirimu as a chaoskampf event and the celestial humiliation as an "inversion" or "exception" within the typology has *imposed a meaning* on the recorded performance from outside the Nyanga tradition's own pedagogical apparatus — even though the events recorded are the same — and the area-specialist scholarship's discipline is to register the Nyanga meaning before any comparative meaning is allowed to operate.footnote:[Per chapters/29-mwindo-kirimu.claims.approved.adoc on the Mwindo case's contribution as the demonstration that meaning-within-framing is itself a level at which appropriation can occur; per the present chapter's argument structure on the comparativist's discipline as registering the Nyanga meaning before any comparative meaning is allowed to operate; Ballentine 2015, on the typological discipline of recognising meaning-within-framing as a level at which appropriation can occur and on the area-specialist priority that the discipline implements.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §III treatment of Mwindo here develops the fuller methodological implication that Ch40 §II's moral-valence-inversion reading itself depended on: that the Nyanga pedagogy is *specifically Nyanga*, that the comparativist's task is to register that pedagogy in its own terms before any comparison is performed, and that the appropriation problem operates at the level of meaning-within-framing rather than only at the level of events-recorded.
+// COMPARATIVE-HOOK: C5. The IE HERO SLAY SERPENT formula (Ch38) — the IE-formula reading of dragon-slaying as a heroic deed-template that establishes the hero's standing, taken in Ch38 as the IE-comparative reading of Sigurd-Fáfnir, is the structural-comparative foil against which the Mwindo case is read in §III above as a case in which the dragon-slaying establishes nothing (the hero is punished, not vindicated, by the slaying); the contrast is at the level of moral evaluation of an otherwise structurally-recognisable serpent-killing event.
+
+=== IV. The Kalevala question — Lönnrot's editorial hand and the construction of "Finnic chaoskampf"
+
+The *Kalevala* question presents a different species of appropriation from the area-specialist refusals of §§I–III: the appropriator is a known historical figure (Elias Lönnrot, 1802–1884), the intervention is editorial rather than typological, and the appropriation occurs within the source-text-construction process itself, before any comparative typology is brought to bear.
+
+The Finnic encounter in which the sea-monster Iku-Turso emerges from the sea and is subdued by the shaman-sage hero Väinämöinen, treated in Ch31 of the present book as a binding-rather-than-slaying narrative whose two-layer textual situation — older rune-tradition material recorded by nineteenth-century rune-collectors from Karelian and Finnish singers, alongside Elias Lönnrot's 1835 *Kalevala* and 1849 *New Kalevala* editorial synthesis — must be kept explicitly distinct, presents in the present chapter's §IV a *different species of appropriation* from the area-specialist refusals of §§I–III: the appropriation here is performed not by twentieth-century comparativist scholars upon the source-traditions but by Lönnrot himself, the nineteenth-century nationalist-romantic compiler, upon the rune-tradition material he collected and synthesised into the modern Finnish national epic.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the two-layer textual situation of the Iku-Turso material — older rune-tradition material recorded by nineteenth-century rune-collectors from Karelian and Finnish singers, alongside Lönnrot's 1835 *Kalevala* and 1849 *New Kalevala* editorial synthesis — and on the chapter's discipline of keeping the two layers explicitly distinct; per brief 41-C8-refusal-and-appropriation.yaml structure §IV on Lönnrot's editorial hand as a different kind of appropriation, of earlier material by a nationalist-romantic compiler; per glossary 'Väinämöinen', 'Iku-Turso', 'Kalevala' first_mention_glosses.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+Anna-Leena Siikala's *Mythic Images and Shamanism: A Perspective on Kalevala Poetry* (Folklore Fellows' Communications 280, Academia Scientiarum Fennica, Helsinki, 2002) is the present chapter's anchor for the Iku-Turso material and for the older-rune / Lönnrot-synthesis distinction, and Siikala's reading of the older rune-tradition material as a shamanic-encounter complex of binding-and-knowledge-exchange (Väinämöinen subduing the sea-monster by song and knowledge rather than by weapon-combat) is the area-specialist framing on which the chapter's two-layer treatment depends — a framing that holds the older rune material and Lönnrot's nineteenth-century editorial synthesis to be different kinds of textual object, with different textual statuses and different relations to the chaoskampf typology.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Siikala 2002 as the chapter's anchor for the Iku-Turso material and for the older-rune / Lönnrot-synthesis distinction; on Siikala's reading of the older rune-tradition material as a shamanic-encounter complex of binding-and-knowledge-exchange; on Väinämöinen subduing the sea-monster by song and knowledge rather than by weapon-combat; Siikala 2002, *Mythic Images and Shamanism*, chs. on Kalevala combat and on Väinämöinen as shaman-sage hero.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The older rune-tradition material on Väinämöinen's encounter with Iku-Turso, recorded by the nineteenth-century rune-collectors (Lönnrot himself in his collecting expeditions of the 1820s–1840s; Daniel Europaeus; August Ahlqvist; Arvid Genetz; Julius and Kaarle Krohn; and the wider Finnish Literature Society [SKS] rune-collecting apparatus that Lönnrot drew on), is laconic, fragmentary, regionally variable across Karelian and Finnish singing traditions, and not synthesised into a single connected narrative within the singing tradition itself — the older rune material is a corpus of related-but-independent rune-fragments rather than a unified epic narrative — and the Iku-Turso encounter as a connected episode within a larger epic structure is, on Siikala 2002's reading, *Lönnrot's compositional achievement* rather than a feature of the older rune material as recorded.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the older rune-tradition material as laconic, fragmentary, regionally variable across Karelian and Finnish singing traditions, and not synthesised into a single connected narrative within the singing tradition itself; on the older rune material as a corpus of related-but-independent rune-fragments rather than a unified epic narrative; on the Iku-Turso encounter as a connected episode within a larger epic structure as Lönnrot's compositional achievement rather than a feature of the older rune material as recorded; Siikala 2002, *Mythic Images and Shamanism*, on the older-rune / Lönnrot-synthesis distinction.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+Lönnrot's 1835 *Kalevala* (the "Old Kalevala") and his expanded 1849 *New Kalevala* — the latter being the standard reference text for the modern Finnish national epic — are, on Siikala 2002's and the wider Finnish-folkloristics scholarly tradition's reading, *editorial syntheses* assembled from rune-fragments collected across multiple singers, regions, and recording occasions, with Lönnrot exercising compositional decisions about the assembly's order, the connecting-passage construction, the terminological harmonisation across regional variants, and the narrative-structural framing that gives the modern *Kalevala* its connected-epic shape; the *Kalevala* is therefore not a transparent record of pre-modern Finnic oral epic but a nineteenth-century literary-and-nationalist construction whose textual status is closer to a critical edition with extensive editorial intervention than to a faithful transcription of singer-performances.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Lönnrot's 1835 *Kalevala* (Old Kalevala) and 1849 *New Kalevala* as editorial syntheses assembled from rune-fragments; on Lönnrot's compositional decisions about assembly order, connecting-passage construction, terminological harmonisation, and narrative-structural framing; on the *Kalevala*'s textual status as closer to a critical edition with extensive editorial intervention than to a faithful transcription of singer-performances; Siikala 2002, *Mythic Images and Shamanism*, on the *Kalevala*'s nineteenth-century literary-and-nationalist construction; per glossary 'Kalevala' first_mention_gloss.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The Iku-Turso "binding" episode as it appears in the *Kalevala* — the connected narrative passage in which Väinämöinen encounters the sea-monster, subdues him by song and knowledge, and binds him not to come up from the sea again — is, on the chapter's two-layer reading, partly older rune material (the Iku-Turso figure is attested in the older rune corpus; the binding-by-song register is consistent with the wider shamanic-encounter complex Siikala 2002 documents) and partly Lönnrot's compositional synthesis (the connected-episode structure, the integration into the Lemminkäinen / Pohjola-expedition narrative arc of the modern *Kalevala*, the terminological-and-formulaic harmonisation that makes the episode read as a unified narrative passage), and the present chapter's discipline is to keep the two layers explicitly distinct in any comparative claim about "Finnic chaoskampf".footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the Iku-Turso "binding" episode as partly older rune material (the Iku-Turso figure attested in the older rune corpus; the binding-by-song register consistent with the wider shamanic-encounter complex) and partly Lönnrot's compositional synthesis (the connected-episode structure, the integration into the larger epic narrative arc, the terminological-and-formulaic harmonisation); on the chapter's discipline of keeping the two layers explicitly distinct; Siikala 2002 on the layered textual situation.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The species of appropriation registered at §IV is therefore distinct from the area-specialist-refusal cases of §§I–III in three respects: the appropriator is a known historical figure (Elias Lönnrot, 1802–1884) rather than an institution-of-comparative-scholarship; the appropriation occurs at the level of the source-text's editorial construction rather than at the level of the typology's external application to a stable source-text; and the appropriation has a specific historical-political function (the construction of a Finnish national epic in the early-nineteenth-century context of Finnish national-romantic identity-formation under Russian-imperial rule) rather than the more diffuse comparative-mythological function of twentieth-century chaoskampf-typological extension.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Lönnrot 1802–1884 as the named historical figure performing the editorial synthesis; on the appropriation as occurring at the level of the source-text's editorial construction rather than at the level of typological external application; on the appropriation's historical-political function in the construction of a Finnish national epic in the early-nineteenth-century context of Finnish national-romantic identity-formation under Russian-imperial rule; Siikala 2002 on the wider Finnish-folkloristics scholarly tradition's analysis of Lönnrot's editorial intervention.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+[INFERENCE: the present chapter's classification of Lönnrot's editorial synthesis as a "different kind of appropriation" from the area-specialist-refusal cases of §§I–III rests on the recognition that *both* are species of an underlying problem — the imposition of a connected-narrative framing on materials whose own textual situation is more fragmented or more relationally-grounded — but that the two species differ in agent, level, and historical-political function as just registered. | basis: chapters/31-vainamoinen-iku-turso.claims.approved.adoc on Lönnrot's editorial synthesis as a known historical-figure intervention with specific historical-political function; brief 41-C8-refusal-and-appropriation.yaml structure §IV explicitly characterises Lönnrot's editorial hand as a different kind of appropriation; the comparison between the §§I–III area-specialist-refusal cases and the §IV Lönnrot editorial synthesis is the present chapter's framing rather than the only available scholarly position. | risk: the classification depends on accepting the species-of-an-underlying-problem framing, which is the chapter's analytical move rather than an established comparative-mythology framework; alternative framings would treat Lönnrot's editorial synthesis as belonging to a different problem-domain (textual editing; nineteenth-century nationalism; folkloristics) rather than as a species of the appropriation problem the present chapter addresses, and the species-classification is therefore the chapter's reading.]
+
+The Kalevala question's distinctive contribution to the chapter's argument is therefore that *the appropriation problem can begin within the source-text-construction process itself*, not only at the comparative typology's external application: when the reader of the modern *Kalevala* encounters Iku-Turso bound by Väinämöinen's song and reads the passage as a Finnic instance of the chaoskampf typology, the reader is engaging with a text whose connected-episode structure was itself the achievement of a nineteenth-century compiler with specific national-romantic compositional aims, and the apparent fit between the Iku-Turso passage and the chaoskampf typology is partly the achievement of Lönnrot's harmonising hand rather than a feature of the older rune material as recorded.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the appropriation problem's beginning within the source-text-construction process itself; on the apparent fit between the Iku-Turso passage and the chaoskampf typology as partly the achievement of Lönnrot's harmonising hand; on the older rune material's distinct textual status; Siikala 2002 on the layered textual situation; per brief 41-C8-refusal-and-appropriation.yaml structure §IV on the chapter's claim that this affects what the chapter can claim about "Finnic chaoskampf".]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+The chapter's claim about "Finnic chaoskampf" is therefore disciplined by the two-layer textual situation: the older rune-tradition material attests an Iku-Turso figure and a binding-by-song shamanic-encounter complex that Siikala 2002 reads as such; the modern *Kalevala* presents the Iku-Turso encounter as a connected episode within a larger epic structure that fits the chaoskampf typology more readily than the older rune material does on its own; the comparativist who claims a "Finnic chaoskampf" must therefore distinguish what is attested in the older rune material (less, and differently structured) from what appears in Lönnrot's editorial synthesis (more, and synthesised toward the connected-narrative apparatus that the chaoskampf typology presupposes), and the chapter's discipline is to make the distinction explicit at every comparative claim.footnote:[Per chapters/31-vainamoinen-iku-turso.claims.approved.adoc on the chapter's claim about "Finnic chaoskampf" being disciplined by the two-layer textual situation; on the older rune-tradition material's attestation of the Iku-Turso figure and the binding-by-song shamanic-encounter complex; on the modern *Kalevala*'s connected-episode structure; on the comparativist's task of distinguishing what is attested in the older rune material from what appears in Lönnrot's editorial synthesis; Siikala 2002 on the two-layer textual situation.]
+// EVIDENCE: source_id=siikala-finnish ; loc=Mythic Images and Shamanism, chs. on Kalevala combat
+
+// COMPARATIVE-HOOK: C5. The IE HERO SLAY SERPENT formula (Ch38) — the IE-formula reading of dragon-slaying anchored in Ch38 by Watkins 1995's reconstruction is the structural-comparative foil against which the Iku-Turso "binding" passage is read in §IV above as a case in which the connected-narrative structure that fits the IE-formula reading is partly the achievement of Lönnrot's nineteenth-century editorial synthesis rather than of the older rune material; the §IV case is the chapter's evidence that even structurally-recognisable serpent-encounter passages can owe their structure to compilation and editorial intervention rather than to source-tradition transmission.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §IV Lönnrot case is methodologically distinct from the Ch40 inversion cases because the appropriator is a known historical figure (Lönnrot, 1802–1884) rather than an institution-of-comparative-scholarship, and the appropriation occurs at the level of the source-text's editorial construction rather than at the level of the typology's external application; the §IV case extends the chapter's case-set beyond the area-specialist-refusal pattern of §§I–III.
+
+=== V. The communal case — Bakunawa and the absent hero
+
+Section V addresses the chapter's inclusion-marginal case: a tradition whose surface motif (a serpentine being threatening cosmic-luminary integrity) fits the chaoskampf typology's pattern-matching heuristic but whose load-bearing apparatus — communal noise-making rather than heroic combat, driving-off rather than slaying, recurring eclipse-aetiology rather than once-and-done cosmogonic establishment — does not.
+
+The Visayan and Bikol Philippine oral tradition of Bakunawa, treated in Ch30 of the present book as the related-tier (family, "communal / non-slaying combat") chapter's principal half, narrates the serpent-dragon Bakunawa devouring six of the seven original moons (the Philippine archipelago's pre-Spanish-contact-period oral tradition recording an aetiological seven-original-moons cosmology of which only one moon survives) and being driven off — *not slain* — during eclipses by communal noise-making, with the chapter's Philippine-language-mediated source for the eclipse-aetiology narrative being Damiana L. Eugenio's *Philippine Folk Literature: The Myths* (Quezon City: University of the Philippines Press, 2001).footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa material's Visayan and Bikol Philippine oral-tradition setting; on the seven-original-moons aetiology; on the communal noise-making during eclipses driving Bakunawa off rather than slaying him; on Eugenio 2001 as the chapter's principal source for the eclipse-aetiology narrative as recorded in twentieth-century Philippine folkloric scholarship; per glossary 'Bakunawa' first_mention.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case differs from the §§I–IV cases in a load-bearing way: the surface motif (a serpentine being threatening cosmic-luminary integrity) *does* fit the chaoskampf typology's pattern-matching heuristic, and the case has been included in twentieth-century comparative-mythology surveys of "world dragon-myths" on that basis; what does *not* fit the typology, however, is the load-bearing apparatus of the engagement — there is no hero who does the driving-off; there is no slaying; the engagement is communal (the village or town as a collective acts to drive the serpent off by noise-making) and recurring (the engagement happens at every eclipse, not as a once-and-done cosmogonic establishment) — and the case asks the comparativist whether a tradition counts as a chaoskampf when its surface motif fits but its load-bearing actors and outcomes do not.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa case's surface motif fitting the chaoskampf typology's pattern-matching heuristic; on the absence of a hero, the absence of slaying, the communal character of the engagement (the village or town as a collective acts to drive the serpent off), and the recurring character of the engagement (at every eclipse, not as a once-and-done cosmogonic establishment); per brief 41-C8-refusal-and-appropriation.yaml structure §V on the question of whether this counts as chaoskampf at all and what excluding it would cost the comparison.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The communal-and-recurring character of the Bakunawa engagement is, as Eugenio 2001 develops the eclipse-aetiology narrative across the Visayan and Bikol regional traditions, the load-bearing feature of the case for what the engagement *is* on Philippine-tradition terms: the villagers' ritual noise-making during eclipses (the beating of pots and pans, the firing of guns in later periods, the collective-vocal noise-making that interrupts the eclipse's progression) is itself a continuing cultural practice in some Philippine regions, with the practice's eclipse-aetiology being the narrative's load-bearing function and the absence-of-a-hero being a structural feature of the narrative rather than a gap to be filled.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the communal-and-recurring character of the Bakunawa engagement as the load-bearing feature on Philippine-tradition terms; on the villagers' ritual noise-making during eclipses (the beating of pots and pans, the firing of guns, the collective-vocal noise-making) as a continuing cultural practice in some Philippine regions; on the eclipse-aetiology as the narrative's load-bearing function; on the absence-of-a-hero as a structural feature of the narrative rather than a gap to be filled; Eugenio 2001 on the eclipse-aetiology narrative.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case's specifically chaoskampf-typological status is, on the Ch30 chapter's classification, *inclusion-marginal*: the case is included in the present book because excluding it would impoverish the comparison (the case is one of the book's clearest examples of a non-Eurasian serpent-and-luminary aetiology that is not a Eurasian-style chaoskampf at the load-bearing-apparatus level), but the inclusion is hedged at the load-bearing-apparatus level because the case lacks the hero, the slaying, and the once-and-done cosmogonic establishment that the chaoskampf typology's strong cases all share, and the chapter classifies the case as a related-tier (family, "communal / non-slaying combat") inclusion-marginal case for the typology rather than as a member of any subtype within the typology's strong centre.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa case's inclusion-marginal classification; on the case's inclusion as preventing the impoverishment of the comparison while being hedged at the load-bearing-apparatus level; on the absence of the hero, the slaying, and the once-and-done cosmogonic establishment as the case's distinguishing features from the typology's strong centre; per scope.md §"Inclusion / exclusion criteria" on the operational test by which the case is RELATED rather than CORE.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case's relevance to the present chapter's appropriation argument is at a different level from the §§I–IV cases: where §I addresses appropriation at the level of category-construction (the pan-Aboriginal "Rainbow Serpent" as a twentieth-century scholarly construct), §II addresses appropriation at the level of the encounter-framing apparatus (the Anishinaabe relational-counterpart cosmology refusing the chaos-vs-order encounter-framing), §III addresses appropriation at the level of meaning-within-framing (the Nyanga moral pedagogy refusing the chaoskampf's order-establishing valuation of the killing), and §IV addresses appropriation at the level of source-text editorial construction (Lönnrot's nineteenth-century synthesis), §V addresses the chaoskampf typology's *inclusion practices*: which serpent-and-luminary aetiologies count as chaoskampf, on what criteria, and at what cost to the comparison if certain cases are excluded for failing to meet the typology's strong-centre features (hero; slaying; once-and-done cosmogonic establishment).footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the Bakunawa case's relevance to the chaoskampf typology's inclusion practices; per the present chapter's argument structure on the §V case as addressing the typology's inclusion criteria rather than the appropriation problem at the levels addressed in §§I–IV; per brief 41-C8-refusal-and-appropriation.yaml structure §V on the question of what excluding the Bakunawa case would cost the comparison.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The chapter's reading of the §V case is that excluding the Bakunawa material from the comparison would be a *different kind of error* from including it on the wrong terms: excluding the case would lose a load-bearing piece of evidence that the chaoskampf typology's strong centre is not the only way that serpent-and-luminary aetiologies can be organised — that communal-and-recurring engagements, no-hero engagements, and driving-off-rather-than-slaying engagements are real and load-bearing features of some traditions' cosmographic-and-ritual practice — and the chapter's discipline is therefore to *include the case while marking it inclusion-marginal*, with explicit registration of the load-bearing-apparatus differences from the typology's strong centre and explicit refusal to read the case as a member of any subtype within that strong centre.footnote:[Per chapters/30-bakunawa.claims.approved.adoc on the chapter's discipline of including the case while marking it inclusion-marginal; on the explicit registration of the load-bearing-apparatus differences from the typology's strong centre; on the explicit refusal to read the case as a member of any subtype within that strong centre; per the present chapter's argument structure on the inclusion-marginal classification as the chapter's mode of comparing without forcing the case into the typology's strong-centre apparatus.]
+// EVIDENCE: source_id=eugenio-philippine-myths ; loc=Philippine Folk Literature: The Myths, sections on Bakunawa and the moons
+
+The Bakunawa case is also worth registering alongside the Ch27 Mapuche Kai-Kai vs. Tren-Tren material, which the brief includes among the chapter's `chapters_drawn_from` as a supporting case of regional variation and partial attestation: the Mapuche serpent-and-flood narrative recorded in Bertha Koessler-Ilg's *Cuentan los araucanos* and treated within the wider Mapuche-area scholarly tradition (Rolf Foerster's *Introducción a la religiosidad mapuche*) is regionally variable across Mapuche communities, partial in attestation across the recording-history corpus, and structurally distinct from the Eurasian chaoskampf typology in ways that parallel some of the Bakunawa case's features (cosmographic-equilibrium framing rather than once-and-done cosmogonic establishment; the Wenu / Naq / Minche Mapu layered cosmography within which the serpent-engagement is set rather than a simple chaos-versus-order opposition), and the two cases together extend the chapter's case-set beyond the §I–IV principal-cases axis.footnote:[Per chapters/27-mapuche-kai-tren.claims.approved.adoc on the Mapuche Kai-Kai vs. Tren-Tren material as recorded in Koessler-Ilg's *Cuentan los araucanos*; on the regional variability across Mapuche communities; on the partial attestation across the recording-history corpus; on the Wenu / Naq / Minche Mapu layered cosmography within which the serpent-engagement is set; Foerster, R., *Introducción a la religiosidad mapuche* (Santiago: Editorial Universitaria, 1993), on the cosmographic-and-ritual framing; per brief 41-C8-refusal-and-appropriation.yaml chapters_drawn_from on the Mapuche material as a supporting case of regional variation and partial attestation; per glossary 'Kai-Kai / Tren-Tren' first_mention_gloss.]
+// EVIDENCE: source_id=koessler-ilg-cuentan ; loc=Cuentan los araucanos, sections on Kai-Kai / Tren-Tren and the flood-and-height cosmogony
+// EVIDENCE: source_id=foerster-religiosidad-mapuche ; loc=Introducción a la religiosidad mapuche, on the Wenu / Naq / Minche Mapu cosmographic system and ngillatun ritual
+
+The combined effect of the Bakunawa and Mapuche cases on the present chapter's argument is to register that the chaoskampf typology's strong-centre features (hero; slaying; once-and-done cosmogonic establishment within a chaos-versus-order opposition) are not the only structural patterns by which traditions narrate engagements between cosmic-order-relevant figures and serpentine-or-monstrous adversaries — that communal-and-recurring engagements, layered-cosmographic-equilibrium engagements, and partial-attestation regionally-variable engagements are real and load-bearing features of some traditions' practice — and the chapter's discipline is to register these alternative-structural-pattern cases without forcing them into the typology's strong-centre apparatus, while also without excluding them from the comparison on the basis of their load-bearing-apparatus differences.footnote:[Per chapters/30-bakunawa.claims.approved.adoc and chapters/27-mapuche-kai-tren.claims.approved.adoc on the combined effect of the two cases on the typology's strong-centre features; per the present chapter's argument structure on the alternative-structural-pattern cases as load-bearing features of some traditions' practice; per Ballentine 2015 on the typological discipline of recognising alternative-structural-pattern cases without forcing them into the typology's strong-centre apparatus and without excluding them from the comparison.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+// COMPARATIVE-HOOK: C3. Cyclical maintenance (Ch36) — the cyclical-maintenance reading of recurring combat-myth engagements anchored in Ch36 by the Ra / Apep and Illuyanka cases is the structural-comparative foil against which the §V Bakunawa case is read: the Bakunawa engagement is recurring (at every eclipse) in a way that *resembles* the C3 cyclical-maintenance pattern at the surface but differs at the load-bearing-apparatus level (no hero; communal noise-making rather than ritual-and-divine combat; eclipse-aetiology rather than maʿat / sun-cycle ritual maintenance); the contrast is at the level of the ritual-and-cosmographic apparatus that the recurrence runs on.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §V Bakunawa case is methodologically distinct from the Ch40 inversion cases because the case's chaoskampf-typological status is *inclusion-marginal* rather than inversion: the case fits the typology's pattern-matching heuristic at the surface but lacks the load-bearing apparatus (hero; slaying; once-and-done cosmogonic establishment) that the typology's strong-centre cases all share, and the §V case extends the chapter's case-set into the typology's edges-of-applicability rather than into its inversion-subtype.
+
+=== VI. What the refusal teaches
+
+The chapter closes with three methodological lessons drawn from §§I–V, the present book's settled position on the relation between the inversion problem of Ch40 and the appropriation problem of the present chapter, and the consolidating observation that the chaoskampf typology — applied with the area-specialist-first discipline that Part II's eight comparative chapters together demonstrate — is at once robust at its strong-centre cases and disciplined at its edges.
+
+The chapter's five cases — the Rainbow Serpent (§I, appropriation at the level of category-construction), Nanabozho / Mishipeshu / the Thunderers (§II, refusal at the level of the encounter-framing apparatus), Mwindo / Kirimu (§III, refusal at the level of meaning-within-framing), the Lönnrot *Kalevala* / Iku-Turso material (§IV, appropriation at the level of source-text editorial construction), and Bakunawa with its Mapuche supporting case (§V, inclusion-marginality at the level of the typology's strong-centre apparatus) — together teach three methodological-typological lessons that the refusal-and-appropriation chapter is positioned to consolidate as the closing chapter of Part II of the present book.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §VI on the chapter's methodological-typological lessons; per the present chapter's §§I–V on the five cases that supply the evidence for the lessons; per scope.md §"Book structure" Part II on Ch41 (C8) as the closing chapter of Part II's eight comparative chapters.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The first lesson is that the appropriation problem is not a single failure mode but operates at *multiple levels* of the comparativist's reading apparatus — at the level of category-construction (where the comparative item is assembled from regionally-distinct sources that the source-traditions themselves do not consolidate), at the level of encounter-framing (where the chaoskampf typology's combat-cosmographic apparatus is imposed on traditions whose relational-and-reciprocity-grounded apparatus does not employ the encounter-as-combat framing), at the level of meaning-within-framing (where the typology's order-establishing valuation is imposed on traditions whose own moral-pedagogical framing reads the same events differently), at the level of source-text editorial construction (where a nineteenth-century compiler's harmonising hand has produced the connected-narrative apparatus that the typology then matches), and at the level of inclusion-criteria (where surface-similar cases lacking the typology's load-bearing apparatus are either forced in on surface grounds or excluded on apparatus grounds).footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §VI on the first lesson; per the present chapter's §§I–V on the five levels at which the appropriation problem operates; Ballentine 2015 on the typological discipline of recognising appropriation-failure-modes at multiple levels; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority that the multi-level recognition implements.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The second lesson is that the comparativist project does *not* require every tradition to fit the pattern: the cases at which the pattern does not fit, when area specialists explicitly and consistently say so, are *themselves data* — they tell the comparative typology where its limits are, what features of the typology are contingent on certain types of cosmology (combat-cosmographic apparatus; hero-and-once-and-done structure; chaos-versus-order categorical apparatus), what features are contingent on certain types of source-text construction (connected-narrative editorial syntheses; pre-modern-attested unified narratives; nineteenth-century compiler-syntheses), and how to do comparison responsibly when the typology's strong-centre cases and the typology's edges-of-applicability cases are both present in the comparison.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml structure §VI on the second lesson; per the present chapter's §§I–V on the cases at which the pattern does not fit and on the area-specialists' explicit refusals as themselves data; Ballentine 2015, on the chaos-order frame's overextension and on the typological discipline of recognising the typology's limits as themselves data for the comparison; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the chaos-order frame's overextension across traditions
+
+The third lesson is that *refusing to compare these specific cases on the typology's standard terms is itself a principled form of comparison* — not the refusal of comparison as such, but the refusal of a specific comparative-typological apparatus in favour of a more responsibly-comparative apparatus that takes the area specialists' refusal as data and builds the typology around the refusal rather than against it; the Anishinaabe relational-and-reciprocity-grounded apparatus, the Nyanga moral-pedagogical apparatus, and the Aboriginal-Australian regional-specificity apparatus are *available for comparison* on their own terms (with other relational-and-reciprocity-grounded ontologies, with other moral-pedagogical epic traditions, with other regional-specificity-respecting ethnographic apparatuses), and the chapter's discipline is to make those comparisons available rather than to substitute the chaoskampf typology for them.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's theoretical contribution being that refusing to compare these specific cases on the typology's standard terms is itself a principled form of comparison; per the present chapter's §§II–III on the Anishinaabe and Nyanga apparatuses as available for comparison on their own terms; per scope.md §"Appropriation protocol" on the institutional commitment to the area-specialist-first comparative discipline that the third lesson consolidates.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+[SPECULATION: the third lesson, taken in its strong form, holds that the chaoskampf typology's continued usefulness as a comparative apparatus depends on its being applied with the area-specialist-first discipline that this chapter and Ch40 demonstrate — that the typology's strong-centre cases (Marduk-Tiamat, Baal-Yamm, Zeus-Typhon, Indra-Vṛtra, Thor-Jörmungandr, Ra-Apep, Teshub-Illuyanka, the early-Christian-apocalyptic Red Dragon, and the IE-formula reflexes) remain robust and the typology's analytic discipline at those cases is the comparative-mythological apparatus that the present book takes as its principal organising scheme; but that extending the typology beyond those cases requires the area-specialist-first discipline at every step, and the cases at which the area-specialists explicitly refuse the extension are themselves data for the typology's limits rather than obstacles to its application. | basis: Ballentine 2015's argument that the chaoskampf frame has been overextended in twentieth-century comparative scholarship supplies the methodological warrant; scope.md §"Appropriation protocol" supplies the institutional commitment; the present chapter's §§I–V supply the case-level evidence (the Rainbow Serpent at the level of category-construction; Nanabozho at the level of encounter-framing apparatus; Mwindo at the level of meaning-within-framing; Lönnrot at the level of source-text editorial construction; Bakunawa at the level of inclusion-criteria). | counterargument: a defender of a more elastic chaoskampf typology could read the present chapter's refusal cases as evidence for an even *broader* typological category (combat-and-encounter-myth, with both adversarial and reciprocal-counterpart subtypes) within which the area-specialist objections register as subtype-classifications rather than as refusals of the typology as such; on this counterargument, the chapter's third lesson is too restrictive in its discipline and the typology's reach should be expanded rather than constrained by the area-specialist objections. The chapter's reading of the third lesson is therefore the chapter's reading rather than the only available scholarly position.]
+
+The three lessons together support the chapter's central methodological commitment, registered in advance in the source overview and demonstrated case-by-case in §§I–V: the *area-specialists speak first*, and the comparative typology is more — not less — precise as a result; the Aboriginal-Australian regional-specificity argument (Merlan, Morphy, Rose, Keen against Radcliffe-Brown's pan-Aboriginal "Rainbow Serpent" construct), the Anishinaabe reciprocal-counterpart cosmology argument (Hallowell, Johnston, T. Smith, Vizenor against the chaos-vs-order encounter-framing), the Nyanga moral-pedagogical argument (Biebuyck and Mateene, Belcher on Mwindo as taught hubris-and-correction rather than chaoskampf-with-the-sign-flipped), the Finnish-folkloristics argument about Lönnrot's editorial hand (Siikala on the older-rune / *Kalevala*-synthesis distinction), and the Philippine-folkloristics argument about the communal-and-recurring engagement (Eugenio on the eclipse-aetiology) are each presented on their own terms before the chapter invokes the chaoskampf category, and the resulting comparison is at the level of *structural observation about the typology's reach and limits* rather than at the level of categorical-apparatus imposition.footnote:[Per scope.md §"Appropriation protocol" on the priority of area-specialist framings; per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's theoretical contribution; per the present chapter's §§I–V on the case-level demonstrations of the methodological commitment; Ballentine 2015 on the typological discipline of separating area-specialist framings from comparative typology.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's self-aware engagement with the methodological criticism that comparative mythology has historically been a colonial / universalising project, registered in advance at the source overview and developed case-by-case in §§I–V, is the chapter's principal substantive answer to that criticism: the present book does not deny the criticism's historical accuracy — the Radcliffe-Brown 1926 consolidation, the wider early-twentieth-century structural-functionalist project of identifying continent-wide cultural totalities, and the twentieth-century chaoskampf-typological extension's incorporation of Aboriginal-Australian, Anishinaabe, and Nyanga material on surface-similarity grounds are all historical examples of the comparative-mythology project's colonial / universalising tendencies — but tries to do better by applying the area-specialist-first discipline at every case where the typology's strong-centre apparatus does not fit the source-tradition's own framing, by registering the area specialists' refusals as data rather than as obstacles, and by treating the refusals as themselves the engine of the comparative argument rather than as marginal correctives to it.footnote:[Per brief 41-C8-refusal-and-appropriation.yaml special_instructions on the chapter's engagement with the methodological criticism that comparative mythology has historically been a colonial / universalising project; on the chapter's principal substantive answer being the area-specialist-first discipline applied at every case where the typology's strong-centre apparatus does not fit the source-tradition's own framing; per scope.md §"Appropriation protocol" on the institutional commitment to area-specialist priority; per the present chapter's §§I–V on the case-level demonstrations of the area-specialist-first discipline.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of separating area-specialist framings from comparative typology
+
+The chapter's final methodological observation is that the inversion problem (Ch40) and the appropriation problem (the present chapter) are not separate problems but the same problem viewed at different levels of the typology's reach: the inversion problem is what the typology's edges look like *at the level of the cases themselves*, when the comparativist tries to fit the cases into the typology's apparatus and the cases push back; the appropriation problem is what the typology's edges look like *at the level of the comparativist's reading apparatus*, when the comparativist asks what is owed to the area-specialists whose framings have pushed back; and the two problems' shared resolution is the area-specialist-first discipline that the two chapters have demonstrated, with the present chapter's case-set extending the demonstration from the inversion-cases of Ch40 to the multiple-level appropriation-cases of §§I–V here.footnote:[Per chapters/40-C7-inversion-problem.claims.approved.adoc §VI on the inversion problem and the appropriation problem as the same problem viewed at different levels of the typology's reach; per the present chapter's §§I–V on the multiple-level appropriation-cases extending the demonstration from the inversion-cases of Ch40; per scope.md §"Book structure" Part II on Ch40 (C7) and Ch41 (C8) as the closing two chapters of Part II.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the methodological discipline of integrating area-specialist framings into comparative typology
+
+The chapter therefore closes Part II of the present book with the observation that the chaoskampf typology, applied with the area-specialist-first discipline that the eight Part-II comparative chapters have together demonstrated, is at once *robust* at its strong-centre cases (Part II's first four comparative chapters anchored at C1–C4) and *disciplined* at its edges (Part II's closing four comparative chapters anchored at C5–C8) — and the typology's analytic discipline is to register the convergence-or-not at the level of the area-specialists' framings rather than to extend the typology's reach by force, with the refusal-and-appropriation problem of the present chapter being the typology's most rigorous test and the test the typology passes only when the area-specialists are allowed to speak first.footnote:[Per scope.md §"Subject definition" on the chaoskampf typology as the present book's principal organising scheme; per scope.md §"Book structure" Part II on the eight comparative chapters as the typology's articulation; per brief 41-C8-refusal-and-appropriation.yaml comparative_argument and special_instructions on the chapter's theoretical contribution; per chapters/40-C7-inversion-problem.claims.approved.adoc §VI on the same closing observation as registered at the inversion-problem chapter; Ballentine 2015 on the typological discipline applied at the chapter's closing observation.]
+// EVIDENCE: source_id=ballentine-2015 ; loc=on the typological discipline of registering convergence-or-not at the area-specialist-framing level
+
+// COMPARATIVE-HOOK: C1. Combat as cosmogony (Ch34) — the §VI observation that the typology is robust at its strong-centre cases is registered against the C1 anchor (Marduk-Tiamat) as the typology's strong-cosmogonic convergence case; the present chapter's §§I–V are the typology's edges-of-applicability cases against which the C1 anchor's convergence is contrasted.
+// COMPARATIVE-HOOK: C2. Combat as sovereignty (Ch35) — the §VI observation is similarly registered against the C2 anchors (Baal-Yamm, Zeus-Typhon) as the typology's strong-sovereignty convergence cases; the present chapter's §§I–V are the typology's edges-of-applicability cases against which the C2 anchors' convergence is contrasted.
+// COMPARATIVE-HOOK: C3. Cyclical maintenance (Ch36) — the §V Bakunawa case's recurring-engagement structure resembles the C3 anchor's cyclical-maintenance pattern at the surface but differs at the load-bearing-apparatus level; the contrast is at the level of the ritual-and-cosmographic apparatus that the recurrence runs on, with the C3 cases (Ra / Apep, Illuyanka) running on a ritual-and-divine-combat apparatus that the Bakunawa case does not employ.
+// COMPARATIVE-HOOK: C5. The IE HERO SLAY SERPENT formula (Ch38) — the §IV Lönnrot case is the chapter's evidence that even structurally-recognisable serpent-encounter passages can owe their structure to compilation and editorial intervention rather than to source-tradition transmission; the C5 anchor's IE-formula reflexes are by contrast attested across a deep diachronic and broad geographic range that the §IV case is not.
+// COMPARATIVE-HOOK: C7. The inversion problem (Ch40) — the §VI observation that the inversion problem and the appropriation problem are the same problem viewed at different levels of the typology's reach is the chapter's closing methodological consolidation; Ch40's case-level demonstrations and the present chapter's reading-apparatus-level demonstrations together complete the typology's edges-of-applicability articulation as the closing pair of Part II.
+```
