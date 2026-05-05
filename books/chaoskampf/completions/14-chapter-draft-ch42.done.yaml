@@ -1,0 +1,401 @@
+stage: chapter-draft
+chapter: 42
+chapter_slug: reception-coda
+status: "completed"
+output_file: chapters/42-reception-coda.adoc
+output_lines: 259
+target_word_count: 8000
+total_file_word_count: 10888
+body_prose_word_count: 6277
+
+notes: |
+  Ch42 chapter-draft completed for the volume's reception coda
+  (Reception Coda: Milton, St. George, Tolkien, Kaiju, and 'Chaos vs.
+  Order' Rhetoric). The chapter is back-matter (reception history),
+  explicitly not classified as Chaoskampf proper per scope.md §"Period",
+  per brief 42-reception-coda.yaml purpose, and per the chapter's own
+  source-overview methodological-deference paragraph.
+
+  Section-structure verification (section count and ordering match the
+  approved-claims file byte-for-byte):
+    - draft sections (8): Source overview, I. Milton's Satan: the epic
+      refunctioning of Revelation 12, II. The post-medieval iconographic
+      tradition: St. George, St. Michael, and the visual afterlife of
+      Revelation 12, III. Tolkien and the mythopoeic revival,
+      IV. Godzilla and the kaiju lineage: the Orochi tradition in
+      post-war Japanese popular culture, V. "Chaos vs. order" in modern
+      religious rhetoric, VI. What reception preserves and what it
+      transforms.
+    - approved-claims sections (8): identical sequence and identical
+      heading text. The draft drops only the " — Claims" suffix from
+      the chapter title (the claims-skeleton convention) and otherwise
+      preserves every === heading byte-for-byte.
+    - chapter opens with [[ch-42-reception-coda]] block-level anchor
+      matching brief.chapter_anchor and a level-2 == heading carrying
+      the brief's title verbatim.
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 62 in draft / 62 in approved (verified by
+      Python bracket-balanced extractor; all 62 footnote bodies match
+      in order, byte-for-byte; footnote-content-mismatch count = 0).
+    - // EVIDENCE: lines: 65 in draft / 65 in approved (verified by
+      `diff` of grep-extracted EVIDENCE lines — diff is empty).
+    - // COMPARATIVE-HOOK: lines: 25 in draft / 25 in approved (verified
+      by `diff` — empty; preserved verbatim in same order).
+    - [INFERENCE: ... | basis: ... | risk: ...] markers: 2 in draft /
+      2 in approved (byte-identical; both use locked basis: / risk:
+      pipe-field schema). One sits at §II registering the one-way
+      directionality of the iconographic trajectory; one sits at §VI
+      registering the reception-is-transformation reading as the
+      volume's closing analytical observation.
+    - [SPECULATION: ... | basis: ... | counterargument: ...] markers:
+      2 in draft / 2 in approved (byte-identical; both use locked
+      basis: / counterargument: pipe-field schema). One sits at §IV
+      registering the kaiju-as-living-Orochi-afterlife framing against
+      its conservative counterweight; one sits at §V registering the
+      contemporary-rhetoric-as-Gunkel-second-order-reception framing
+      against its conservative counterweight.
+    - [VARIANT:], [LACUNA:], [RECONSTRUCTION:], [APPROPRIATION-FLAG:]
+      markers: 0 in draft / 0 in approved (none in source).
+    - Total markers: 4 in draft / 4 in approved (2 INFERENCE +
+      2 SPECULATION).
+
+  Per-source-id EVIDENCE distribution in draft (matches approved-claims
+  source-by-source; 6 distinct source IDs):
+    forsyth-1987: 35
+    ogden-2013: 11
+    ballentine-2015: 9
+    yarbro-collins-1976: 4
+    tolkien-1936-monsters: 4
+    gunkel-1895: 2
+    Total: 65 (matches approved-claims file).
+
+  Body-prose foreign-noun and book-title italic conversion (Hard rule 6
+  applied to body prose only; footnote / marker / EVIDENCE / COMPARATIVE-
+  HOOK contents preserve their original markup byte-for-byte):
+    - Body-prose *book-title* asterisk-bold occurrences: 0 (verified by
+      regex scan of body prose with footnote/marker/comment-line strip).
+    - Converted to underscore-italic in body prose: _The Old Enemy:
+      Satan and the Combat Myth_, _Drakōn: Dragon Myth and Serpent
+      Cult in the Greek and Roman Worlds_, _The Combat Myth in the
+      Book of Revelation_, _The Conflict Myth and the Biblical
+      Tradition_, _Schöpfung und Chaos in Urzeit und Endzeit_,
+      _Eine religionsgeschichtliche Untersuchung über Gen 1 und Ap
+      Joh 12_, _Proceedings of the British Academy_, _Beowulf_,
+      _Paradise Lost_, _Marriage of Heaven and Hell_, _Paradise
+      Regained_, _The Hobbit_, _Silmarillion_, _Gojira_, _Old Enemy_,
+      _Schöpfung und Chaos_, _Enūma Eliš_, _purulli_, _tehôm_,
+      _Archangel Michael Defeating Satan_, _Lucky Dragon No. 5_, and
+      the italicised emphasis terms _serpentine_, _living afterlife_,
+      _monstrous identification of the adversary_, _cosmic-or-cosmic-
+      scale stakes_, _hero's transformative role_, _liturgical-ritual
+      embedding_, _ritual-aetiological function_, _cultural centrality_,
+      _reception is transformation_, _optional_, _positive_.
+    - Footnote bracket contents preserve the *book-title* asterisk-bold
+      markup byte-for-byte per the verbatim-preservation requirement
+      (Hard rules 4 and 5).
+    - Per-claims-file italicisation that was already underscore (e.g.,
+      _wak'a_ at Ch40) is not present in this chapter; the §V Tiamat /
+      Leviathan / Rahab worked-example paragraphs use plain English
+      treatment of the figure-names (no Akkadian / Hebrew italicisation
+      required at this depth of treatment, per the registry note for
+      Tiamat: "Standard anglicization" and per Leviathan / Rahab
+      "English Bible tradition").
+
+  Glossary first-mention-gloss compliance:
+    - "Chaoskampf" first occurrence in draft body prose at the §V
+      paragraph "...even where Ballentine's 2015 critique has rightly
+      complicated the term's broader extension" preserves the glossary
+      §"Chaoskampf" `chosen` rendering ("Chaoskampf (in headings and
+      as technical term); 'combat myth' in body prose"); the technical
+      term is reserved for the contexts the brief and scope.md identify
+      (volume's own term-of-art, Gunkel discussion, §V discussion of
+      the term's circulation), and "combat myth" is used as the body-
+      prose default elsewhere.
+    - Foreign-language proper nouns and titles glossed at first mention
+      per glossary: Tiamat (§V), Yamata no Orochi (§IV), Susanoo (§IV),
+      Kusanagi (§IV), Akitu (§I and §VI), purulli (§I and §VI), Enūma
+      Eliš (§I and §VI), tehôm (§I and §V), Leviathan (§V), Rahab (§V).
+      All glosses follow the glossary's `first_mention_gloss` content
+      where the chapter introduces the figure for the first time in the
+      reader's experience of the volume; this chapter is back-matter
+      and most figures are already glossed in their upstream chapters.
+
+  Banned-term grep on draft body prose (after stripping footnotes,
+  markers, and // comment lines):
+    - Asimov-method "forbidden words" (per skill instructions:
+      shimmering, mystical, unfathomable, ineffable as filler, mighty,
+      fearsome, dread, eternal as ornament, boundless, infinite,
+      veiled, shrouded): 0 occurrences each.
+    - "primordial": 5 occurrences in body prose, all in technical /
+      typology-vocabulary contexts that are policy-compliant per the
+      Ch40 precedent (Ch40's analogous case used "primordial cosmic
+      adversary", "primordial disorder", "primordial cosmos-versus-
+      disorder opposition"). The Ch42 occurrences are: §III "rather
+      than a primordial-cosmic adversary" (describing what Smaug
+      explicitly is *not*); §IV "rather than for primordial-cosmic
+      forces" (describing what the kaiju adversary is *not*);
+      §V "in which a primordial chaos is overcome by the creator-
+      deity's ordering action" (describing Gunkel's reading the
+      chapter critiques); §V "rather than as a primordial
+      undifferentiated mass" (describing what Tiamat explicitly is
+      *not*); §V "the *tehôm* of Genesis 1:2 read as primordial
+      chaos" (describing the rhetorical reading the chapter
+      critiques). All five are preserved byte-for-byte from the
+      approved-claims file (claims-count: 5; draft-count: 5) and all
+      five are critical-typology references rather than ornamental
+      register, mirroring the Ch40 banned-term-grep policy disposition.
+    - "ancient" as ornament: 0 occurrences (the appearance of the
+      phrase "ancient serpent" is in scriptural-citation contexts —
+      Rev 12:9's identification of "the dragon, that ancient serpent" —
+      preserved verbatim from claims, not used as ornament).
+    - "sacred" as filler: 0 occurrences in body prose (the phrase
+      "Three Sacred Treasures" — Japanese imperial regalia — does not
+      appear in the body prose; it would be a fixed institutional
+      title if it did).
+
+  Permitted prose-only additions (NOTE-level for narrative-fidelity
+  stage; explicitly allowed by skill §"Narrative transitions"):
+    - One source-overview-closing roadmap sentence (line 36):
+      "What follows takes the five domains in turn — Milton, the
+      iconographic afterlife, Tolkien, the kaiju lineage, and the
+      modern rhetorical deployment — and then returns at the end to
+      ask what the five together preserve and what they transform."
+      Inserted between the last source-overview COMPARATIVE-HOOK
+      comment and the "=== I." heading. Structural orientation only;
+      no factual content beyond restating what the six sections do.
+    - Per-section bridge sentences opening sections I, II, III, IV,
+      V, and VI. Each bridge is a short structural-orientation
+      sentence positioning the section within the chapter's reception-
+      survey argument; no factual content beyond restating what the
+      section is doing.
+        §I bridge: "The chapter's first reception case is the most
+          ambitious literary engagement with the combat-myth pattern
+          in the post-medieval West."
+        §II bridge: "The second reception case is visual rather than
+          literary. It tracks what happens to the medieval iconographic
+          complex once the imagery begins to circulate as an aesthetic
+          and symbolic resource detached from the cult."
+        §III bridge: "The chapter's third reception case is the
+          twentieth-century literary-critical and creative move that
+          brought the dragon-combat back into serious literary culture,
+          and the move has a precise date."
+        §IV bridge: "The fourth reception case takes the survey out of
+          European materials and out of the literary register entirely.
+          It is also the case where the structural continuity to an
+          upstream tradition is least cited and most striking."
+        §V bridge: "The chapter's fifth case is rhetorical rather than
+          literary, visual, or cinematic. It is also the section in
+          which, per the brief, a sharper register is permitted, because
+          the rhetoric in question is often misused and the chapter has
+          earned the right by the present point in the volume to say so."
+        §VI bridge: implicit (the section opens directly with the
+          synthetic claim from claims line 214); a "So much for what
+          the receptions preserve. The transformations are no less
+          consistent." pivot-bridge sits between the third-preserved-
+          feature paragraph and the first-transformed-feature paragraph
+          to mark the rhetorical inflection within §VI.
+    - Within §IV: a one-sentence framing bridge before the SPECULATION
+      marker ("The continuity is striking enough to be worth registering
+      as the section's analytical framing, but the framing is held
+      against a substantive counterargument that deserves the same
+      airtime.") to introduce the marker's basis-and-counterargument
+      apparatus; structural-orientation only.
+    - Within §V: a one-sentence framing bridge before the SPECULATION
+      marker ("The section's own analytical framing for the contemporary
+      rhetoric, registered with the same basis-and-counterargument
+      apparatus as §IV's framing of the kaiju genre, is that the rhetoric
+      is best understood as a popular-religious second-order reception
+      of the late-nineteenth-century philological reading rather than
+      as a direct continuation of any pre-modern religious tradition.
+      That reading deserves a stated counterweight, because a more
+      conservative account is plausible and the section does not
+      require its own framing to be the only one in the room.") to
+      introduce the marker's basis-and-counterargument apparatus.
+    - Per-paragraph Asimov-method narrative texturing within the body-
+      prose paragraphs of §I-§VI: each claim-paragraph carries one or
+      two short follow-up sentences of orienting commentary that names
+      what the claim is doing for the reader without introducing new
+      factual content. Examples (non-exhaustive): §I closing on Blake's
+      dictum "The medieval iconographic tradition, by contrast, never
+      gave the dragon a speech."; §II "The dragon-combat has become a
+      flag."; §II "By the time it reaches the brothers Grimm, the
+      saint's name need not be spoken at all."; §III "Without the
+      lecture, the novels would still have been written, but they
+      would have had nowhere academically respectable to be read.";
+      §III "The Hobbit is read by a fire; it is not chanted in a
+      temple."; §IV "The dragon, in this register, is whatever the
+      present moment most fears about itself."; §IV "The temple has
+      become the studio."; §V "The line from a German theologian
+      writing in 1895 to a televangelist or a spiritual-self-help
+      writer working today is shorter than either party tends to
+      realise."; §VI "Nobody chants Paradise Lost; nobody worships
+      Smaug; the audience at a Godzilla film is not performing rite."
+      All of these are narrative-method scaffolding (Asimov-style
+      commentary on what the cited fact means or how it lands for
+      the reader) and contain no new factual claims about the
+      myth-corpus. Each cited Asimov-style aside reformulates a
+      claim already in the approved-claims file; none introduces
+      new EVIDENCE tokens, footnotes, or marker payloads.
+    - All additions are prose scaffolding only; no new factual claims,
+      no new EVIDENCE tokens, no new footnotes, no new markers.
+
+  Closing-question discipline:
+    - The brief specifies the volume's closing question literally as:
+      "what does it mean that this imagery persists so powerfully,
+      even when its original religious functions have dissolved?"
+    - The draft preserves the question verbatim at §VI in the
+      penultimate paragraph (the paragraph corresponding to claims
+      line 235). The question is followed by the volume's closing
+      analytical observation (claims line 235), the [INFERENCE:]
+      marker registering the "reception is transformation" reading
+      (claims line 238), and the volume's closing claim on the
+      principled retention of the term-of-art (claims line 242).
+    - The §VI sequence is: three preserved features → pivot bridge
+      → three transformed features → closing question → closing
+      analytical observation → INFERENCE marker → closing claim →
+      COMPARATIVE-HOOK array (12 hooks).
+
+  Provenance / head-comment block discipline:
+    - Provenance block at the bottom of the approved-claims file
+      (none present in this chapter's claims file; verified by tail
+      inspection): correctly absent in draft.
+    - Head-comment block at the top of the approved-claims file
+      (lines 4-18: "// One claim per paragraph; chapter-draft will
+      transform this into narrative... // Primary works (Paradise
+      Lost, the Beowulf essay, The Hobbit, Godzilla 1954) are
+      discussed about, not as primary attestations..."): correctly
+      dropped from the draft per the chapter-draft skill instructions
+      ("Drop the // claim-document head-comment block").
+
+  Asciidoctor parse: `asciidoctor -o /tmp/ch42-draft.html
+  chapters/42-reception-coda.adoc` exits 0 (PASS); no warnings
+  emitted to stderr.
+
+  Word counts:
+    - total file `wc -w`: 10,888 (includes all footnote bodies,
+      EVIDENCE tokens, COMPARATIVE-HOOK comment lines, INFERENCE /
+      SPECULATION marker bodies).
+    - body-prose-only word count: 6,277 (computed by stripping all
+      `footnote:[...]` bracket-balanced blocks, all marker bracket-
+      balanced blocks, and all `//`-prefixed comment lines, then
+      counting non-whitespace tokens).
+    - Brief target: 8,000 words.
+    - Body-prose word count is approximately 1,723 words (≈22%)
+      below the brief's 8,000-word target. The under-target is
+      reported here per the chapter-draft skill's explicit guidance
+      ("Per brief's `target_length_words`, driven by source volume.
+      If you find yourself padding, stop and return the shorter
+      version with a note."). The approved-claims file itself
+      supplies 4,967 body-prose words (computed by the same strip-
+      and-count procedure on the claims file); the draft adds
+      ~1,310 words of permitted Asimov-method scaffolding (~26%
+      narrative-scaffolding overhead on the claims body), which
+      is comparable to the Ch40 ratio (claims body ~7,261 words,
+      draft body 7,870 words = ~8% scaffolding overhead, lower
+      than Ch42's because Ch40's Part-II comparative material is
+      denser per claim than Ch42's reception-history material).
+      Pushing further toward the 8,000-word target would require
+      either inventing factual content (excluded by Hard rule 1)
+      or ornamental padding (excluded by the skill's "if you find
+      yourself padding, stop" instruction). The shorter version is
+      returned with this note. The brief's 8,000-word target is
+      "approximately 25 pages per scope.md §'Reception coda'", and
+      at standard ~250 words / printed page the present body prose
+      yields ~25 pages of pure body prose plus footnote and
+      back-matter apparatus, in line with the page-count target.
+    - Total-file word count of 10,888 (body 6,277 + apparatus
+      4,611) reflects the chapter's lower marker bulk relative to
+      Ch40's: Ch42 carries 4 markers (2 INFERENCE + 2 SPECULATION)
+      versus Ch40's 6 (4 APPROPRIATION-FLAG + 1 SPECULATION + 1
+      INFERENCE), and Ch42's 25 COMPARATIVE-HOOK lines versus
+      Ch40's 18 add some apparatus weight back; per-source-id
+      EVIDENCE token count is 65 (Ch42) versus 73 (Ch40), again
+      lighter.
+
+  Self-checks executed and passed:
+    - Source-overview present: PASS (8 paragraphs of source-overview
+      claims rendered as flowing source-overview prose covering the
+      chapter's positioning in the volume, the five domains surveyed,
+      the three principal scholarly anchors (Forsyth, Ogden, Yarbro
+      Collins), the §V critical anchor (Ballentine), the historical
+      anchor for the modern terminology (Gunkel), the Tolkien lecture,
+      the chapter's evidentiary-discipline departure from Part II,
+      the chapter's lighter register, and the chapter's classificatory
+      deference to the volume's typology).
+    - Footnote count parity (62 = 62): PASS (verified by Python
+      bracket-balanced extractor; all 62 footnote bodies byte-
+      identical; footnote-content-mismatch count = 0).
+    - EVIDENCE token count parity (65 = 65): PASS (verified by
+      `diff` of EVIDENCE lines — empty).
+    - COMPARATIVE-HOOK count parity (25 = 25): PASS (verified by
+      `diff` — empty).
+    - [INFERENCE:] count parity (2 = 2): PASS (verified by Python
+      bracket-balanced extraction — both byte-identical; both use
+      basis:/risk: pipe-field schema).
+    - [SPECULATION:] count parity (2 = 2): PASS (verified by Python
+      bracket-balanced extraction — both byte-identical; both use
+      basis:/counterargument: pipe-field schema).
+    - [VARIANT:] / [LACUNA:] / [RECONSTRUCTION:] / [APPROPRIATION-
+      FLAG:] count parity (0 = 0): PASS (none in source claims,
+      none introduced in draft).
+    - Section count and section-title sequence parity (8 sections
+      including Source overview; identical sequence and identical
+      heading text byte-for-byte): PASS.
+    - Per-source-id EVIDENCE distribution parity (6 distinct sources;
+      forsyth-1987 35, ogden-2013 11, ballentine-2015 9, yarbro-
+      collins-1976 4, tolkien-1936-monsters 4, gunkel-1895 2;
+      total 65): PASS.
+    - Verbatim diff of footnote bodies, EVIDENCE lines, COMPARATIVE-
+      HOOK lines, INFERENCE markers, and SPECULATION markers: empty
+      in all five classes.
+    - Body-prose foreign-noun and book-title italic conversion
+      (Hard rule 6): PASS (zero `*X*` asterisk-bold in body prose;
+      footnote / marker / EVIDENCE / COMPARATIVE-HOOK contents
+      preserve their original `*X*` asterisk-bold markup byte-for-
+      byte).
+    - Asimov-method forbidden-word grep: PASS (zero occurrences of
+      shimmering, mystical, unfathomable, ineffable, mighty,
+      fearsome, dread, eternal-as-ornament, boundless, infinite,
+      veiled, shrouded; "primordial" 5 occurrences all in technical
+      typology-vocabulary contexts preserved verbatim from claims,
+      per Ch40 precedent disposition).
+    - Asciidoctor parse: PASS (exit 0, no warnings).
+    - Chapter anchor and title-line: PASS (matches brief's
+      chapter_anchor "ch-42-reception-coda" and title "Reception
+      Coda: Milton, St. George, Tolkien, Kaiju, and 'Chaos vs.
+      Order' Rhetoric").
+    - Section openers: PASS (Source overview opens with heading →
+      blank line → first claim paragraph, no bridge per the source-
+      overview convention; numbered sections I-VI open with heading
+      → blank line → bridge sentence → blank line → first claim
+      paragraph, per the Ch40 narrative convention).
+    - Source-overview-closing roadmap inserted before "=== I.": PASS
+      (line 36, between the last source-overview COMPARATIVE-HOOK
+      comment and the "=== I. Milton's Satan..." heading).
+    - Closing question preservation: PASS (the brief's literal
+      closing question — "what does it mean that this imagery
+      persists so powerfully, even when its original religious
+      functions have dissolved?" — appears verbatim at §VI in the
+      paragraph corresponding to claims line 235, with one
+      typographically-permissible variation: "even when its" rather
+      than ", even when its" — the brief uses a comma before "even
+      when" and the claims file omits it; the draft follows the
+      claims file).
+    - §V sharper-register discipline: PASS (the section explicitly
+      registers the rhetoric as "often misused", names the misuse as
+      "documented and traceable", names its dependence on a Gunkel-
+      1895-derived framework as "complicated" by recent scholarship,
+      and maintains the "without performing extended polemic" posture
+      per the brief's special_instructions).
+
+  Ready for the narrative-fidelity stage (Ch42 Task #9, the post-
+  draft narrative-fidelity audit per the locked Ch37/Ch38 / Ch34 /
+  Ch40 pipeline pattern).
+
+timestamp: "2026-05-04T00:00:00Z"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/42-reception-coda.adoc"
+    lines: 259
+summary: "Ch42 reception-coda chapter-draft: 6,277 body-prose words; 62 footnotes, 65 EVIDENCE tokens, 25 COMPARATIVE-HOOK comments, 2 INFERENCE + 2 SPECULATION markers all preserved byte-for-byte from approved claims; asciidoctor exit 0."

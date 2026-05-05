@@ -1,0 +1,297 @@
+stage: chapter-draft
+chapter: 41
+chapter_slug: C8-refusal-and-appropriation
+status: "completed"
+output_file: chapters/41-C8-refusal-and-appropriation.adoc
+output_lines: 246
+target_word_count: 7500
+total_file_word_count: 15619
+body_prose_word_count: 7714
+
+notes: |
+  Ch41 chapter-draft completed for the eighth and final Part-II
+  comparative chapter (C8. The Refusal and the Appropriation Problem).
+  Per the brief's special_instructions, this is the most methodologically-
+  sensitive chapter in the book: every Anishinaabe / Aboriginal-Australian
+  / Nyanga claim cites a named area specialist in body prose per scope.md
+  §"Appropriation protocol".
+
+  Section-structure verification (section count and ordering match the
+  approved-claims file byte-for-byte):
+    - draft sections (7): Source overview, I. The anchor case — the
+      Rainbow Serpent and the consolidation problem, II. The principled
+      refusal — Nanabozho, Mishipeshu, and the reciprocal-counterpart
+      cosmology, III. The fuller implication — Mwindo revisited and the
+      Nyanga moral pedagogy, IV. The Kalevala question — Lönnrot's
+      editorial hand and the construction of "Finnic chaoskampf",
+      V. The communal case — Bakunawa and the absent hero, VI. What the
+      refusal teaches.
+    - approved-claims sections (7): identical sequence and identical
+      heading text byte-for-byte (`diff` of `grep "^=== "` lines: empty).
+    - chapter opens with [[ch-41-C8-refusal-and-appropriation]] block-
+      level anchor matching brief.chapter_anchor and a level-2 ==
+      heading carrying the brief's title verbatim ("C8. The Refusal and
+      the Appropriation Problem").
+
+  Verbatim-preservation counts (draft vs approved-claims):
+    - footnote:[...] blocks: 59 in draft / 59 in approved (verified by
+      Python bracket-balanced extractor; all 59 footnote bodies match in
+      order, byte-for-byte; footnote-content-mismatch count = 0).
+    - // EVIDENCE: lines: 64 in draft / 64 in approved (verified by `diff`
+      of grep-extracted EVIDENCE lines — diff is empty).
+    - // COMPARATIVE-HOOK: lines: 17 in draft / 17 in approved (verified
+      by `diff` — empty; preserved verbatim in same order).
+    - [APPROPRIATION-FLAG: ... | named_specialists: ... | tier_implication:
+      ... | forwards_to: ...] markers: 3 in draft / 3 in approved
+      (verified by `diff` of grep-extracted lines — empty; all three
+      markers byte-identical with all four required sub-fields preserved
+      verbatim). Markers placed at §I (Rainbow Serpent — Merlan / Morphy
+      / Rose / Keen / Radcliffe-Brown anchors), §II (Nanabozho /
+      Mishipeshu — Hallowell / Johnston / T. Smith / Vizenor anchors),
+      §III (Mwindo revisited — Biebuyck / Mateene / Belcher anchors;
+      present-chapter form developing the meaning-within-framing
+      implication beyond the Ch29/Ch40 forms).
+    - [SPECULATION: ... | basis: ... | counterargument: ...] marker:
+      1 in draft / 1 in approved (byte-identical; uses locked basis: /
+      counterargument: pipe-field schema; sits at §VI registering the
+      strong-form area-specialist-first reading with both basis and
+      counterargument).
+    - [INFERENCE: ... | basis: ... | risk: ...] marker: 1 in draft /
+      1 in approved (byte-identical; sits at §IV registering the
+      species-of-an-underlying-problem classification of Lönnrot's
+      editorial synthesis as a different kind of appropriation).
+    - [LACUNA:] / [VARIANT:] markers: zero in draft / zero in approved
+      (chapter is methodologically-sensitive but does not carry
+      lacuna-or-variant markers in the approved-claims file).
+    - Total markers: 5 in draft / 5 in approved (3 APPROPRIATION-FLAG +
+      1 SPECULATION + 1 INFERENCE).
+
+  Per-source-id EVIDENCE distribution in draft (matches approved-claims
+  source-by-source; verified by `diff` of `grep -oE "source_id=[a-z0-9-]+"
+  | sort | uniq -c | sort -rn` output: empty):
+    ballentine-2015: 17
+    siikala-finnish: 9
+    merlan-caging-rainbow: 8
+    biebuyck-mateene-mwindo: 7
+    eugenio-philippine-myths: 6
+    hallowell-ojibwa-world: 4
+    smith-island-anishnaabeg: 3
+    vizenor-narrative-chance: 2
+    foerster-religiosidad-mapuche: 1
+    forsyth-1987: 1
+    johnston-manitous: 1
+    koessler-ilg-cuentan: 1
+    belcher-epic: 1
+    Total: 64 source_id tokens (some lines carry both `source_id=` and
+    `loc=`; total // EVIDENCE: line count = 64; matches approved-claims
+    file source-by-source).
+
+  Doubled-token paragraph count (in-scope area-specialist anchor +
+  comparative-typology anchor pairings per the comparative-chapter
+  discipline; doubled tokens reserved for explicit area-specialist-
+  vs-comparativist-anchor bridges, primarily at the source overview
+  (Hallowell/Biebuyck-and-Mateene paragraph; Merlan/Siikala paragraph;
+  Forsyth/Ballentine paragraph) and at §III (Biebuyck/Mateene + Ballentine
+  meaning-within-framing bridge) and §V (Koessler-Ilg + Foerster Mapuche
+  bridge), per the approved-claims source overview's stated discipline).
+  Most §I, II, III, IV, V body paragraphs are single-token because the
+  chapter's argument runs through the area-specialists' own framings
+  rather than through cross-cultural transmission, per the approved-claims
+  source overview's load-bearing-on-area-specialist-anchors-rather-than-
+  on-comparative-typology-anchors clause.
+
+  Area-specialist citation discipline confirmed (per scope.md
+  §"Appropriation protocol" and the brief's special_instructions
+  requiring every Anishinaabe / Aboriginal-Australian / Nyanga claim to
+  cite a named area specialist in body prose):
+    - §I Rainbow Serpent: Radcliffe-Brown 1926 (originator), Merlan 1998
+      (principal English-language anchor), Morphy 1991, Rose 1996, Keen
+      1994 (named-but-flagged area specialists) all cited by name in
+      body prose; substantive EVIDENCE token routed through
+      merlan-caging-rainbow per the named-but-flagged secondary-anchor
+      pattern.
+    - §II Nanabozho / Mishipeshu / Thunderers: Hallowell 1960, Basil
+      Johnston (1976/1990 *Ojibway Heritage*; 1995 *The Manitous*),
+      Theresa S. Smith 1995, Gerald Vizenor 1989 all cited by name in
+      body prose; EVIDENCE tokens routed through hallowell-ojibwa-world,
+      smith-island-anishnaabeg, johnston-manitous, vizenor-narrative-
+      chance per Ch32's source-IDs.
+    - §III Mwindo / Kirimu: Daniel Biebuyck and Kahombo C. Mateene 1969
+      (principal anchor), Stephen Belcher 1999 cited by name in body
+      prose; EVIDENCE tokens routed through biebuyck-mateene-mwindo and
+      belcher-epic per Ch29's source-IDs.
+    - §IV Kalevala / Iku-Turso: Anna-Leena Siikala 2002 (principal
+      Finnish-folkloristics anchor), Elias Lönnrot (named historical
+      figure of the editorial synthesis), Daniel Europaeus, August
+      Ahlqvist, Arvid Genetz, Julius and Kaarle Krohn (the nineteenth-
+      century rune-collectors) all cited by name in body prose;
+      EVIDENCE tokens routed through siikala-finnish per Ch31's source-
+      IDs.
+    - §V Bakunawa: Damiana L. Eugenio 2001 cited by name in body prose;
+      Ch27 Mapuche supporting case cites Bertha Koessler-Ilg and Rolf
+      Foerster by name; EVIDENCE tokens routed through eugenio-
+      philippine-myths, koessler-ilg-cuentan, foerster-religiosidad-
+      mapuche per Ch30 and Ch27 source-IDs.
+    - §VI What the refusal teaches: Hermann Gunkel 1895 (the originating
+      chaoskampf framing) and Debra Scoggins Ballentine 2015 cited by
+      name in source-overview / methodological framings; comparative-
+      typology EVIDENCE routed through ballentine-2015 and forsyth-1987.
+
+  Banned-term grep on draft body prose (after stripping footnotes,
+  markers, and // comment lines):
+    - "chaos-figure": 0 occurrences in body prose.
+    - "chaos-monster": 0 occurrences in body prose.
+    - "chaos-serpent": 0 occurrences in body prose.
+    - "chaos-adversary": 7 occurrences, all in policy-compliant
+      area-specialist-refusal contexts: §I anchor sentence ("a
+      pan-Aboriginal chaos-adversary that the chaoskampf typology can
+      absorb"); §II Mishipeshu surface-features paragraph naming the
+      class the area specialists explicitly decline ("would, on a
+      chaoskampf-typological reading, identify him as a chaos-adversary
+      class member"; "the relational-and-ceremonial response appropriate
+      to a powerful person rather than the combat response appropriate
+      to a chaos-adversary"); APPROPRIATION-FLAG marker text. All
+      occurrences are within sentences whose grammatical operator is
+      explicit refusal of the chaoskampf-typological identification —
+      the typology's own term is the topic of the area-specialist
+      refusal, not the chapter's own categorisation of the figures.
+    - "chaos-vs-order" / "chaos-versus-order": 9 occurrences, all in
+      policy-compliant critical-typology / Ballentine-critique contexts
+      naming the chaoskampf typology's own apparatus as the object of
+      area-specialist refusal or of Ballentine 2015's overextension
+      critique.
+    - bare "chaos" word in unmarked compound: 0 occurrences. All
+      "chaos-X" hyphenated forms are scoped uses naming the typology's
+      own apparatus as the object of refusal or critique.
+
+  Permitted prose-only additions (NOTE-level for narrative-fidelity
+  stage; explicitly allowed by the prompt §11):
+    - One source-overview-closing roadmap paragraph naming the chapter's
+      six-section structure, inserted between the last source-overview
+      COMPARATIVE-HOOK comment and the "=== I." heading. The roadmap is
+      a structural orientation paragraph with no factual content beyond
+      restating what the six sections do.
+    - Six per-section bridge sentences, one each opening sections I, II,
+      III, IV, V, and VI. Each bridge is a short structural-orientation
+      sentence positioning the section within the chapter's typology-
+      and-area-specialist argument; no factual content beyond restating
+      what the section is doing.
+      Section I bridge: anchor case for appropriation at the level of
+      category-construction itself (Rainbow Serpent as 20th-century
+      scholarly construct).
+      Section II bridge: most principled area-specialist refusal
+      (Anishinaabe relational-and-reciprocity-grounded refusal at the
+      level of the encounter-framing apparatus).
+      Section III bridge: Mwindo revisited with the fuller implication
+      (epic's pedagogy specifically Nyanga; meaning-within-framing as
+      a level at which appropriation can occur).
+      Section IV bridge: different species of appropriation (Lönnrot
+      as known historical figure performing editorial intervention
+      within source-text-construction process).
+      Section V bridge: inclusion-marginal case (Bakunawa fits surface
+      motif but lacks load-bearing apparatus of strong-centre cases).
+      Section VI bridge: three methodological lessons; book's settled
+      position on the inversion-problem-and-appropriation-problem
+      relation; closing observation on robust strong centre and
+      disciplined edges.
+    - All seven additions (one roadmap + six bridges) are prose
+      scaffolding only; no new factual claims, no new EVIDENCE tokens,
+      no new footnotes, no new markers introduced.
+
+  Markers in [LACUNA:] / [VARIANT:] / [RECONSTRUCTION:] classes: zero
+  introduced. The approved-claims file carries 3 [APPROPRIATION-FLAG:],
+  1 [SPECULATION:], and 1 [INFERENCE:] marker; the draft preserves all
+  five byte-identically and introduces no additional markers in any
+  class.
+
+  Provenance block (// Validated by post-human-normalize ... // Timestamp
+  ... // Checks passed ... // Findings applied) at the bottom of the
+  approved-claims file: correctly dropped from the draft per the prompt
+  §2 ("drop the provenance block from the draft"). The draft is a fresh
+  artifact for downstream stages to provenance themselves.
+
+  Head-comment block (// One claim per paragraph; chapter-draft will
+  transform this into narrative ... // Per scope.md §"Appropriation
+  protocol" ...) at the top of the approved-claims file (lines 4-33):
+  correctly dropped from the draft per the prompt §1 ("Drop the
+  // claim-document head-comment block").
+
+  Asciidoctor parse: `asciidoctor -o /tmp/ch41-draft.html
+  chapters/41-C8-refusal-and-appropriation.adoc` exits 0 (PASS); no
+  warnings emitted on stderr.
+
+  Word counts:
+    - total file `wc -w`: 15,619 (includes all footnote bodies, EVIDENCE
+      tokens, COMPARATIVE-HOOK comment lines, APPROPRIATION-FLAG /
+      SPECULATION / INFERENCE marker bodies).
+    - body-prose-only word count: 7,714 (computed by stripping all
+      `footnote:[...]` bracket-balanced blocks, all marker bracket-
+      balanced blocks, and all `//`-prefixed comment lines, then
+      counting non-whitespace tokens). This is in the brief's stated
+      target range of ~7,500 words (the brief calls for ~7500), 214
+      words above the 7,500 target — within acceptable tolerance for
+      the comparative-chapter pattern given the chapter's six sections
+      and the chapter's central methodological-consummation function
+      as the closing chapter of Part II.
+    - Total-file over-target relative to body-prose target (15,619 vs
+      7,500) is driven by footnote, EVIDENCE-token, COMPARATIVE-HOOK,
+      and marker bulk per the prompt's acceptable-overage clause for
+      narrative-fidelity stage. The chapter's three full APPROPRIATION-
+      FLAG markers (each with all four sub-fields) and one full
+      SPECULATION marker (with basis: / counterargument: pipe-fields)
+      account for much of the over-target file size.
+
+  Self-checks executed and passed:
+    - Footnote count parity (59 = 59): PASS (verified by Python
+      bracket-balanced extractor; all 59 footnote bodies byte-identical;
+      footnote-content-mismatch count = 0).
+    - EVIDENCE token count parity (64 = 64): PASS (verified by `diff` of
+      EVIDENCE lines — empty).
+    - COMPARATIVE-HOOK count parity (17 = 17): PASS (verified by `diff` —
+      empty).
+    - [APPROPRIATION-FLAG:] count parity (3 = 3): PASS (verified by
+      `diff` — empty; all four sub-fields per marker preserved
+      byte-identically).
+    - [SPECULATION:] count parity (1 = 1): PASS (verified by `diff` —
+      empty; uses basis:/counterargument: pipe-field schema).
+    - [INFERENCE:] count parity (1 = 1): PASS (verified by `diff` —
+      empty; uses basis:/risk: pipe-field schema).
+    - Section count and section-title sequence parity (7 sections,
+      identical sequence; no foreign-noun italic conversions required at
+      Ch41 headings): PASS.
+    - Per-source-id EVIDENCE distribution parity (13 distinct sources):
+      PASS (full distribution matches approved-claims file source-by-
+      source; total = 64).
+    - Verbatim diff of EVIDENCE lines, COMPARATIVE-HOOK lines, and the
+      three marker classes: empty in all five classes.
+    - Asciidoctor parse: PASS (exit 0; no warnings on stderr).
+    - Chapter anchor and title-line: PASS (matches brief's
+      chapter_anchor "ch-41-C8-refusal-and-appropriation" and title
+      "C8. The Refusal and the Appropriation Problem").
+    - Section openers: PASS (all six numbered sections open with
+      heading -> blank line -> bridge sentence -> blank line -> first
+      claim paragraph; source overview opens with heading -> blank line
+      -> first claim paragraph (no bridge for Source overview, which is
+      not numbered)).
+    - Source-overview-closing roadmap inserted before "=== I.": PASS
+      (between the last source-overview COMPARATIVE-HOOK comment and
+      the "=== I. The anchor case ..." heading; explicitly permitted by
+      prompt §11).
+    - Area-specialist-first discipline at §§I–III: PASS (Radcliffe-
+      Brown / Merlan / Morphy / Rose / Keen Aboriginal-Australian
+      regional-specificity argument developed across eight multi-
+      paragraph claim paragraphs in §I before the comparative-typology
+      observation that the consolidation underwrites the chaoskampf-
+      typological extension; Hallowell / Johnston / T. Smith / Vizenor
+      Anishinaabe relational-and-reciprocity-grounded apparatus
+      developed across nine multi-paragraph claim paragraphs in §II
+      before the demonstration that the refusal is at the level of the
+      encounter-framing itself; Biebuyck / Mateene / Belcher Nyanga
+      moral-pedagogical apparatus developed across seven multi-paragraph
+      claim paragraphs in §III before the demonstration that meaning-
+      within-framing is itself a level at which appropriation can
+      occur).
+
+  Ready for the narrative-fidelity stage (Ch41 Task #8, the post-draft
+  narrative-fidelity audit per the locked Ch37 / Ch38 / Ch34 pipeline
+  pattern).
