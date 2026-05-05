@@ -1,0 +1,239 @@
+stage: chapter-claims
+chapter: 41
+chapter_slug: C8-refusal-and-appropriation
+chapter_title: "C8. The Refusal and the Appropriation Problem"
+status: "completed"
+completed: "2026-05-04"
+agent_model: "claude-opus-4-7[1m]"
+output_file: chapters/41-C8-refusal-and-appropriation.claims.adoc
+output_lines: 263
+target_word_count: 7500
+body_prose_word_count: 7370
+footnote_count: 59
+evidence_token_count: 64
+comparative_hook_count: 17
+markers:
+  inference: 1
+  speculation: 1
+  variant: 0
+  lacuna: 0
+  reconstruction: 0
+  appropriation_flag: 3
+sections:
+  - "Source overview"
+  - "I. The anchor case — the Rainbow Serpent and the consolidation problem"
+  - "II. The principled refusal — Nanabozho, Mishipeshu, and the reciprocal-counterpart cosmology"
+  - "III. The fuller implication — Mwindo revisited and the Nyanga moral pedagogy"
+  - "IV. The Kalevala question — Lönnrot's editorial hand and the construction of \"Finnic chaoskampf\""
+  - "V. The communal case — Bakunawa and the absent hero"
+  - "VI. What the refusal teaches"
+notes: |
+  Pre-flight check passed: brief 41-C8-refusal-and-appropriation.yaml exists
+  and is structurally valid; all four brief.sources.anchor entries resolve
+  in sources.yaml (merlan-caging-rainbow, hallowell-ojibwa-world,
+  biebuyck-mateene-mwindo, siikala-finnish); brief uses sources.anchor (not
+  sources.primary) per the comparative-chapter pattern; no
+  primary_sources_to_pin_at_glossary_lock block present; no
+  identifier_missing comments present.
+
+  Source IDs used (all 13 resolve in sources.yaml): ballentine-2015,
+  belcher-epic, biebuyck-mateene-mwindo, eugenio-philippine-myths,
+  foerster-religiosidad-mapuche, forsyth-1987, hallowell-ojibwa-world,
+  johnston-manitous, koessler-ilg-cuentan, merlan-caging-rainbow,
+  siikala-finnish, smith-island-anishnaabeg, vizenor-narrative-chance.
+  Per-tradition factual claims in §§I-V routed through the same source_ids
+  the upstream Part-I chapters (Ch32, Ch29, Ch31, Ch30, Ch27) use, per the
+  upstream-lookup rule. Note: johnston-ojibway-heritage is in sources.yaml
+  and is named in body prose at §II as one of the four Anishinaabe
+  area-specialist anchors per the brief and per Ch32, but no EVIDENCE
+  token is routed through it in this chapter (the Anishinaabe per-claim
+  routing in §II goes through hallowell-ojibwa-world,
+  smith-island-anishnaabeg, johnston-manitous, and vizenor-narrative-chance
+  per Ch32's principal source-ID distribution); johnston-ojibway-heritage
+  remains the body-prose-cited Anishinaabe-authored insider anchor.
+
+  Named-but-flagged scholars (cited by name in body prose without routing
+  any EVIDENCE token through them, per scope.md §"Appropriation protocol"
+  and the named-but-flagged secondary-anchor pattern of the Part-I
+  chapters):
+    - In sources.yaml (EVIDENCE-token-bearing): Francesca Merlan
+      (merlan-caging-rainbow), A. Irving Hallowell (hallowell-ojibwa-world),
+      Theresa S. Smith (smith-island-anishnaabeg), Basil Johnston
+      (johnston-manitous; johnston-ojibway-heritage cited body-prose only),
+      Gerald Vizenor (vizenor-narrative-chance), Daniel Biebuyck and
+      Kahombo C. Mateene (biebuyck-mateene-mwindo), Stephen Belcher
+      (belcher-epic), Anna-Leena Siikala (siikala-finnish), Damiana L.
+      Eugenio (eugenio-philippine-myths), Bertha Koessler-Ilg
+      (koessler-ilg-cuentan), Rolf Foerster (foerster-religiosidad-mapuche).
+    - Named-but-flagged in body prose at §I (no EVIDENCE token; flagged for
+      inventory-audit follow-up): A. R. Radcliffe-Brown 1926 ("The
+      Rainbow-Serpent Myth of Australia", *Journal of the Royal
+      Anthropological Institute* 56) as the named originator of the
+      consolidation that the area-specialists dismantle; Howard Morphy
+      (*Ancestral Connections: Art and an Aboriginal System of Knowledge*,
+      University of Chicago Press, 1991); Deborah Bird Rose (*Nourishing
+      Terrains: Australian Aboriginal Views of Landscape and Wilderness*,
+      Australian Heritage Commission, 1996); Ian Keen (*Knowledge and
+      Secrecy in an Aboriginal Religion*, Oxford: Clarendon Press, 1994).
+      All four are recommended for sources.yaml addition at the
+      inventory-audit cycle, since they are the principal English-language
+      area-specialist anchors for the Aboriginal-Australian
+      consolidation-dismantling reading and the chapter cites them
+      substantively at §I.
+    - Named-but-flagged at §IV (Lönnrot's editorial synthesis): the
+      named historical figure Elias Lönnrot (1802-1884) and his rune-
+      collecting contemporaries David Emmanuel Daniel Europaeus and Henrik
+      Reinhold Antell are named in body prose as collectors of the older
+      rune material; Lönnrot's 1835 *Kalevala* (Old Kalevala) and 1849
+      *New Kalevala* are cited as historical-textual objects with their
+      compiler named; the EVIDENCE token routes through Siikala 2002 per
+      Ch31's source-ID distribution.
+
+  Area-specialist-first discipline implementation: §I (Rainbow Serpent)
+  opens with Merlan 1998's dismantling of Radcliffe-Brown 1926's
+  consolidation (the regionally distinct ancestral beings Yingarna,
+  Ngalyod, Wanambi, Wagyl, Yulunggul; the late-twentieth-century area-
+  specialist scholarship's treatment of the regional-specificity
+  differences as load-bearing rather than surface-variational; the
+  consolidation as a 20th-century scholarly construct rather than an
+  Aboriginal-Australian concept) before invoking the chaoskampf-typological
+  extension that fails together with the consolidation. §II (Nanabozho /
+  Mishipeshu) opens with Hallowell 1960's "other-than-human persons"
+  framework and Smith 1995's Thunderer / Underwater-manitou dialectic
+  (relational-and-reciprocity-grounded apparatus; Mishipeshu and the
+  Thunderers as necessary counterparts; Nanabozho's encounters as
+  pedagogical-and-reciprocal rather than triumphal-and-defeating) for
+  seven paragraphs before registering the Anishinaabe refusal as the
+  most principled refusal in the present book. §III (Mwindo revisited)
+  develops the fuller methodological implication of the moral-valence-
+  inversion observation Ch40 §II registered: that the Nyanga pedagogy is
+  specifically Nyanga and the comparativist's task is to register that
+  pedagogy in its own terms before any comparison is performed.
+
+  APPROPRIATION-FLAG marker placements (3 markers, all with the four
+  required sub-fields substance / named_specialists / tier_implication /
+  forwards_to):
+    - §I: Rainbow Serpent — pan-Aboriginal consolidation (Radcliffe-Brown
+      1926) vs. regional-specificity dismantling (Merlan, Morphy, Rose,
+      Keen); tier PROVISIONAL / Methodological; forwards to Ch41 only
+      (no Part-I chapter for the case; held for the present chapter per
+      the toc.yaml note).
+    - §II: Nanabozho / Mishipeshu — relational-and-reciprocity-grounded
+      cosmology (Hallowell, Johnston, T. Smith, Vizenor) vs. chaos-vs-
+      order encounter-framing; tier CONTRASTIVE / Inversion (full; the
+      chaoskampf frame explicitly declined); forwards to Ch41 only (the
+      upstream Ch32 carries its own APPROPRIATION-FLAG; the present
+      chapter's flag develops the chapter's most-principled-refusal
+      claim).
+    - §III: Mwindo / Kirimu — maturation-through-hubris pedagogy
+      (Biebuyck, Mateene, Belcher) vs. variant-chaoskampf framing; tier
+      CONTRASTIVE (full); forwards to Ch29, Ch40, and Ch41 (the present
+      chapter's flag develops the fuller methodological implication that
+      the epic's pedagogy is specifically Nyanga, distinct from the Ch29
+      and Ch40 forms of the same flag).
+
+  Per the brief's structure, no APPROPRIATION-FLAG marker for §IV
+  (Lönnrot's editorial synthesis) — the appropriation here is by a known
+  historical figure (Lönnrot, 1802-1884) at the level of source-text
+  editorial construction rather than at the level of comparative-typology
+  external application, and the standard APPROPRIATION-FLAG schema
+  (tradition vs. comparative typology) does not apply; an INFERENCE
+  marker registers the species-of-an-underlying-problem classification
+  with the appropriate basis-and-risk apparatus. No APPROPRIATION-FLAG
+  marker for §V (Bakunawa) — the chaoskampf-typological status of the
+  case is inclusion-marginal rather than refused, and the standard
+  APPROPRIATION-FLAG schema (area-specialist objection vs. comparative
+  typology) does not apply; the §V argument runs through the inclusion-
+  criteria question rather than through the area-specialist-refusal
+  pattern.
+
+  Doubled EVIDENCE tokens: present at the source-overview paragraphs that
+  bridge multiple per-tradition anchors (lines 47-49, 56-58, 84-86) and
+  at the §III paragraph where the chapter explicitly bridges the area-
+  specialist meaning-reading and the comparative-typology meaning-
+  reading; single-token default elsewhere per §§I-V's argument running
+  through area-specialists' own framings rather than through cross-
+  cultural transmission, per the chapter's load-bearing methodological
+  claim that refusal is itself comparative data.
+
+  SPECULATION marker (1) at §VI registers the strong-form reading of the
+  third methodological lesson — that the chaoskampf typology's continued
+  usefulness depends on its being applied with the area-specialist-first
+  discipline that this chapter and Ch40 demonstrate, and that extending
+  the typology beyond its strong-centre cases requires the discipline at
+  every step — with basis from Ballentine 2015 plus scope.md
+  §"Appropriation protocol" plus the chapter's §§I-V case-level
+  evidence, and counterargument from the more elastic typological
+  reading per which the area-specialist objections register as subtype-
+  classifications rather than as refusals.
+
+  INFERENCE marker (1) at §IV registers the species-of-an-underlying-
+  problem classification of Lönnrot's editorial synthesis as the chapter's
+  analytical move rather than as an established comparative-mythology
+  framework; basis from Ch31's analysis and the brief's structure; risk
+  registered as the alternative framings that would treat Lönnrot's
+  editorial synthesis as belonging to a different problem-domain.
+
+  Banned-term scoping: bare "chaos" appears only in (a) compound terms
+  that are themselves the topic of the critique ("chaos-versus-order
+  framing", "chaos-vs-order mapping", "chaos-adversary",
+  "chaos-cosmographic apparatus") and (b) scare-quoted invocations
+  within explicit critique paragraphs (mostly §VI on the area-specialist-
+  first discipline; §I, §II's discussion of the chaoskampf reading as
+  appropriation). All occurrences are within explicit
+  appropriation-critique or comparative-typology-discussion paragraphs.
+
+  Glossary discipline: foreign-language common nouns _manitou_ /
+  _manitouk_, _aadizookaanag_, _Animikiig_, _djang_ italicised on first
+  mention per glossary entries; glossary first_mention_glosses cited
+  for 'Mwindo', 'Kirimu', 'Nkuba', 'Nanabozho', 'Mishipeshu',
+  'manitou / manitouk / aadizookaanag', 'the Thunderers',
+  'other-than-human persons', 'Väinämöinen', 'Iku-Turso', 'Kalevala',
+  'Bakunawa', 'Kai-Kai / Tren-Tren'. All italicisation uses AsciiDoc
+  _term_ form, not bold *term*. Rainbow Serpent regional ancestral-being
+  names (Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul) are NOT in the
+  glossary and are introduced in body prose at §I with regional-specifier
+  context (western Arnhem Land Kunwinjku tradition; central and eastern
+  Arnhem Land tradition; central Australia; Nyungar tradition of the
+  southwest; northeastern Arnhem Land Yolngu tradition) per the §I
+  area-specialist citation discipline.
+
+  Self-checks: footnote count 59 (paragraph count similar); EVIDENCE
+  token count 64 (mostly single-token; doubled where explicit bridges
+  occur); 17 COMPARATIVE-HOOKs (within the 12-18 target range);
+  asciidoctor -o /tmp/ch41.html exits 0 with no warnings.
+
+  Reference scale check: Ch40 = 7,261 / 65 / 73 / 18; Ch41 = 7,370 / 59 /
+  64 / 17 — body prose hits the brief's 7,500 target; footnote count
+  slightly below Ch40 (the chapter is denser per paragraph because
+  §§II-III carry more area-specialist-framing prose between footnoted
+  claims, and the chapter's load-bearing methodological argument runs
+  through fewer per-claim citations in favour of more substantive area-
+  specialist prose); EVIDENCE-token count slightly below Ch40 because
+  the chapter is mostly single-token by design (the argument runs
+  through area-specialists' own framings rather than through cross-
+  cultural transmission); COMPARATIVE-HOOK count is at the upper end
+  of the 12-18 range because the chapter is the closing chapter of
+  Part II and feeds back to Ch34 (C1), Ch35 (C2), Ch36 (C3), Ch38 (C5),
+  and Ch40 (C7) at multiple points.
+
+  Self-aware engagement with methodological criticism: per brief
+  special_instructions, the chapter must engage directly with the
+  methodological criticism that comparative mythology historically has
+  been a colonial / universalising project, and explain how this book
+  tries to do better. The source overview's penultimate paragraph
+  registers the book's own limits explicitly (English-language work;
+  secondary-scholarship-mediated; living practitioners' authority over
+  representation); §VI develops the chapter's substantive answer (the
+  area-specialist-first discipline as the principal answer; the
+  refusals as data rather than obstacles; the third lesson on
+  refusing-to-compare-on-typology's-terms-as-itself-principled-comparison
+  as the chapter's theoretical contribution).
+
+  Pre-flight surprises: none. All four brief.sources.anchor IDs resolved
+  cleanly at pre-flight; all 13 EVIDENCE-token source_ids resolve; the
+  upstream-lookup rule applies cleanly to Ch32, Ch29, Ch31, Ch30, Ch27
+  source-ID distributions; no source-pinning deferral block in the
+  brief; the named-but-flagged pattern at §I (Radcliffe-Brown 1926,
+  Morphy 1991, Rose 1996, Keen 1994) is the only source-inventory
+  follow-up the chapter requires.
