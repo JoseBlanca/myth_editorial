@@ -1,15 +1,18 @@
 stage: "format-finalize"
-timestamp: "2026-05-05T13:31:00Z"
+timestamp: "2026-05-05T13:43:00Z"
 status: "completed"
 agent_model: "claude-opus-4-7[1m]"
 
-slug: "chaoskampf_across_cultures"
+slug: "the_slayer_and_the_dragon"
 slug_derivation: |
-  scope.md has no explicit `slug:` field. Derived from the book title
-  "Chaoskampf Across Cultures" per the skill's derivation rule:
-  lowercase, replace runs of non-alphanumerics with `_`, strip trailing.
+  scope.md has no explicit `slug:` field. Derived from the portion of
+  the book title before the colon ("The Slayer and the Dragon"),
+  lowercased, with runs of non-alphanumerics replaced by `_`. The
+  earlier rendering (under slug `chaoskampf_across_cultures`) was
+  superseded when the book title was changed and the cover artwork
+  was updated; the master adoc and output files were renamed.
 
-book_title: "Chaoskampf Across Cultures"
+book_title: "The Slayer and the Dragon: Chaoskampf Across Cultures"
 author: "Jose Blanca"
 
 inputs:
@@ -29,17 +32,17 @@ inputs:
   back_matter_adoc_present: false
 
 outputs:
-  - file: "chaoskampf_across_cultures.adoc"
+  - file: "the_slayer_and_the_dragon.adoc"
     lines: 96
     description: "Master AsciiDoc with includes for intro + 42 chapters + character-appendix"
   - file: "bibliography.bib"
     lines: 529
     description: "BibTeX bibliography with 65 entries (one per used source_id from EVIDENCE tokens). All 65 used IDs resolve to in_scope sources.yaml registry entries."
-  - file: "output/chaoskampf_across_cultures.pdf"
-    size_bytes: 19505612
+  - file: "output/the_slayer_and_the_dragon.pdf"
+    size_bytes: 19503356
     description: "Rendered PDF (asciidoctor-pdf 2.0.x with asciidoctor-bibtex)"
-  - file: "output/chaoskampf_across_cultures.epub"
-    size_bytes: 1691343
+  - file: "output/the_slayer_and_the_dragon.epub"
+    size_bytes: 1688780
     description: "Rendered EPUB (asciidoctor-epub3 2.0.x with asciidoctor-bibtex)"
   - file: "reports/validation-report.md"
     lines: 15
