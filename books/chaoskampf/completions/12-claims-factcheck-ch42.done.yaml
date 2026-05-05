@@ -1,0 +1,80 @@
+stage: claims-factcheck
+chapter: 42-reception-coda
+timestamp: 2026-05-04T00:00:00Z
+status: completed
+agent_model: claude-opus-4-7-1m
+inputs:
+  - chapters/42-reception-coda.claims.adoc
+  - prompts/09-claims-factcheck-ch42.prompt.md
+  - briefs/42-reception-coda.yaml
+  - sources.yaml
+  - toc.yaml
+  - glossary.yaml
+  - scope.md
+  - chapters/40-C7-inversion-problem.claims.factcheck.yaml  # most recent comparative-chapter precedent for output structure
+  - chapters/10-christian-reception.claims.factcheck.yaml   # closest reception-history precedent for output structure
+outputs:
+  - file: chapters/42-reception-coda.claims.factcheck.yaml
+    lines: 839
+verdict: PASS
+summary: |
+  Ch42 is the volume's reception coda — back-matter reception
+  history, explicitly NOT classified as chaoskampf proper per
+  scope.md §"Period". The chapter surveys five reception domains
+  (Milton's Satan; the post-medieval iconographic trajectory of
+  St. George and St. Michael; the Tolkienian mythopoeic revival;
+  the post-war Japanese kaiju lineage from *Gojira* onward; and
+  the contemporary "chaos versus order" rhetorical deployment) and
+  closes with a §VI reflection on what reception preserves and
+  what it transforms. All 6 unique source_ids resolve in
+  sources.yaml (forsyth-1987, ogden-2013, yarbro-collins-1976,
+  ballentine-2015, gunkel-1895, tolkien-1936-monsters); the brief's
+  three named anchors (forsyth-1987, ogden-2013, yarbro-collins-
+  1976) all appear and resolve, with the three added anchors
+  defensibly tied to specific brief-required section content.
+  All 25 COMPARATIVE-HOOK chapter-references resolve in toc.yaml.
+  INFERENCE / SPECULATION marker schema-conformance status: CLEAN
+  PASS at all four loci (§II line 108 INFERENCE, §IV line 161
+  SPECULATION, §V line 204 SPECULATION, §VI line 238 INFERENCE) —
+  every marker has the locked schema (claim | basis | risk for
+  INFERENCE; claim | basis | counterargument for SPECULATION) with
+  substantive counter-content rather than methodological caveats.
+  Section-structure conformance with the brief's six-section
+  structure block is CLEAN PASS at all six sections. Date-and-
+  attribution checks pass on Milton (1667 / 1674 / 1671), Tolkien
+  (25 November 1936 lecture; *Hobbit* 1937; *Silmarillion* 1977),
+  Toho (Honda 1954; *Lucky Dragon No. 5* / Castle Bravo March 1954),
+  Renaissance and Counter-Reformation iconography (Uccello,
+  Carpaccio, Raphael, Reni dates), and Edward III / Order of the
+  Garter 1348. Named-but-flagged-equivalent pattern for primary
+  reception works (Milton's poems, Tolkien's novels, Toho's film,
+  named iconographic figures, named historical events) cleanly
+  applied with explicit qualifier and no-EVIDENCE-routing
+  discipline. One MEDIUM finding: FIND-01 banned-term "chaos-
+  figure" / "chaos-figures" appearance at line 229 (footnote) and
+  line 249 (COMPARATIVE-HOOK), both outside the §V Ballentine-
+  critique scope where critique-frame use is defensible (within-§V
+  appearances at lines 191, 194 PASS; Milton-character-specific
+  capitalised "Chaos-figure" at line 69 PASS). Two LOW findings
+  (FIND-02 brief-fidelity source-anchor expansion from three named
+  anchors to six, defensible as compression-with-justified-
+  expansion; FIND-03 paraphrase-precision on Edward III / Order of
+  the Garter / cross-of-St.-George trajectory) and three NOTE-level
+  positive structural observations. Per the verdict rule "PASS if
+  zero HIGH and ≤3 MEDIUM; otherwise REVISE", with zero HIGH
+  findings and 1 MEDIUM finding (well within the ≤3 threshold),
+  the verdict is PASS. The single MEDIUM finding is verbatim-
+  substitutable in the post-human-normalize pass before the chapter
+  advances to claims-approved (replace "the chaos-figures" with
+  "Leviathan and Rahab" at lines 229 and 249).
+findings_count:
+  high: 0
+  medium: 1
+  low: 2
+  notes: 3
+  total: 6
+most_consequential_finding: FIND-01 (banned-term "chaos-figure" / "chaos-figures" at line 229 footnote and line 249 COMPARATIVE-HOOK, both outside the §V Ballentine-critique scope)
+brief_fidelity_three_anchors_check: clean PASS — forsyth-1987, ogden-2013, yarbro-collins-1976 all named and resolve in sources.yaml; the three added anchors (ballentine-2015, gunkel-1895, tolkien-1936-monsters) are defensibly tied to specific brief-required section content
+inference_speculation_marker_schema_conformance: clean PASS at all four loci — §II line 108 INFERENCE, §IV line 161 SPECULATION, §V line 204 SPECULATION, §VI line 238 INFERENCE all conform to locked schemas with substantive counter-content
+six_section_structure_conformance: clean PASS — §I Milton (lines 52-83), §II St. George/Michael (85-113), §III Tolkien (115-142), §IV Godzilla/kaiju (144-172), §V "chaos vs. order" rhetoric (174-210), §VI what reception preserves and transforms (212-257) all match brief structure block
+named_but_flagged_equivalent_pattern_application: clean PASS — primary reception works (Milton's *Paradise Lost* / *Paradise Regained*; Tolkien's *The Hobbit* / *The Silmarillion*; Toho's *Gojira*) and named-but-flagged figures (Renaissance and Counter-Reformation painters; Romantic-era visual artists; historical events such as *Lucky Dragon No. 5* and Castle Bravo) all named in body prose with explicit qualifier and no EVIDENCE token routes through any of them

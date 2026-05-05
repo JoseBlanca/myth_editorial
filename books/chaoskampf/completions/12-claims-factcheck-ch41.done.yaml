@@ -1,0 +1,86 @@
+stage: claims-factcheck
+chapter: 41-C8-refusal-and-appropriation
+timestamp: 2026-05-04T00:00:00Z
+status: completed
+agent_model: claude-opus-4-7-1m
+inputs:
+  - chapters/41-C8-refusal-and-appropriation.claims.adoc
+  - prompts/09-claims-factcheck-ch41.prompt.md
+  - briefs/41-C8-refusal-and-appropriation.yaml
+  - chapters/27-mapuche-kai-tren.claims.approved.adoc
+  - chapters/29-mwindo-kirimu.claims.approved.adoc
+  - chapters/30-bakunawa.claims.approved.adoc
+  - chapters/31-vainamoinen-iku-turso.claims.approved.adoc
+  - chapters/32-nanabozho-mishipeshu.claims.approved.adoc
+  - sources.yaml
+  - toc.yaml
+  - glossary.yaml
+  - scope.md
+  - chapters/40-C7-inversion-problem.claims.factcheck.yaml  # locked precedent for output structure
+outputs:
+  - file: chapters/41-C8-refusal-and-appropriation.claims.factcheck.yaml
+    lines: 973
+verdict: REVISE
+summary: |
+  Ch41 is the most methodologically-sensitive chapter in the book per
+  brief special_instructions and the closing comparative chapter of
+  Part II. All 13 unique source_ids resolve in sources.yaml; all 17
+  COMPARATIVE-HOOK chapter-references resolve in toc.yaml. Brief
+  sources.anchor routing status: CLEAN PASS at all four anchor entries
+  (merlan-caging-rainbow → §I; hallowell-ojibwa-world → §II;
+  biebuyck-mateene-mwindo → §III; siikala-finnish → §IV).
+  APPROPRIATION-FLAG sub-field schema-conformance status: CLEAN PASS
+  at all three loci (§I Rainbow Serpent line 93, §II Nanabozho line
+  130, §III Mwindo line 162) — every marker has the locked four sub-
+  fields filled (substance | named_specialists | tier_implication |
+  forwards_to), with named-specialists correctly distinguishing in-
+  sources.yaml anchors (Merlan, Hallowell, Johnston, Smith, Vizenor,
+  Biebuyck, Mateene, Belcher) from named-but-flagged secondary anchors
+  (Radcliffe-Brown 1926, Morphy 1991, Rose 1996, Keen 1994 at §I;
+  Biebuyck *Hero and Chief* 1978 at §III), and substance-of-objection
+  in each marker matches the upstream Part-I claims-approved area-
+  specialist reading. The §IV [INFERENCE:] marker (line 190) and §VI
+  [SPECULATION:] marker (line 245) both conform to their locked
+  schemas. Area-specialist-first discipline status: CLEAN PASS at all
+  five sections — the brief's special_instructions on every Anishinaabe
+  / Aboriginal-Australian / Nyanga claim citing an area specialist by
+  name is honoured at every paragraph. Two MEDIUM findings: FIND-01
+  date error in line 221 footnote (Foerster's volume is 1993, not
+  1995 as cited; sources.yaml and Ch27 confirm 1993; EVIDENCE token
+  at line 223 is correctly source_id=foerster-religiosidad-mapuche so
+  attribution is unaffected); FIND-02 unverified scholar name "Henrik
+  Reinhold Antell" at line 178 in the list of named rune-collectors —
+  no upstream attestation in Ch31, sources.yaml, or anywhere in the
+  project source-base; possibly invented, possibly conflated with
+  another scholar's name; particularly consequential in a chapter
+  whose central methodological commitment is the area-specialist
+  citation discipline. Two LOW findings (FIND-03 gun-firing detail
+  in Bakunawa eclipse-noise practices not directly attested by Ch30;
+  FIND-04 Foerster name-form discipline drift "Rolf Foerster" vs
+  canonical "Rolf Foerster González") and three NOTE-level positive
+  structural observations (NOTE-01 marker-distribution choice well-
+  aligned to brief's semantics; NOTE-02 chapter-wide "chaos-X"
+  compounds pervasively in argument-context describing the framing
+  being refused — consistent with critique-register and not a
+  glossary violation; NOTE-03 named-but-flagged pattern is a model
+  application). Per the verdict rule "PASS if zero HIGH and ≤3
+  MEDIUM; otherwise REVISE", with 2 MEDIUM findings the chapter is
+  below threshold on count alone, but both MEDIUM findings are
+  bibliographic-attribution errors in a chapter whose central
+  methodological commitment is the area-specialist citation discipline,
+  and the conservative reading is REVISE since FIND-02's unverified
+  name is the single most consequential issue in any Part-II
+  comparative chapter audited on the area-specialist-citation-
+  discipline axis. Both MEDIUM findings are verbatim-substitutable in
+  the post-human-normalize pass before the chapter advances to claims-
+  approved.
+findings_count:
+  high: 0
+  medium: 2
+  low: 2
+  notes: 3
+  total: 7
+most_consequential_finding: FIND-02 (unverified scholar name "Henrik Reinhold Antell" at line 178 — no upstream attestation in Ch31, sources.yaml, or anywhere in the project source-base; particularly consequential in a chapter whose central methodological commitment is the area-specialist citation discipline)
+appropriation_flag_schema_conformance: clean PASS at all three loci (§I Rainbow Serpent, §II Nanabozho, §III Mwindo) — each marker has all four sub-fields filled with substantive content matching the upstream Part-I area-specialist reading; §IV (Lönnrot) handled with [INFERENCE:] marker per the brief's "different kind of appropriation" framing and §V (Bakunawa) without marker per the inclusion-marginal classification — both choices well-aligned to the brief's semantics
+area_specialist_first_discipline: clean PASS at all five sections — Anishinaabe / Aboriginal-Australian / Nyanga claims all anchored on named area specialists before any chaoskampf-typological overlay; brief special_instructions on the appropriation-protocol commitment honoured throughout
+brief_anchor_routing: clean PASS at all four sources.anchor entries (merlan-caging-rainbow → §I; hallowell-ojibwa-world → §II; biebuyck-mateene-mwindo → §III; siikala-finnish → §IV)

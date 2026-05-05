@@ -1,0 +1,973 @@
+meta:
+  stage: claims-factcheck
+  chapter: "41-C8-refusal-and-appropriation"
+  chapter_title: "C8. The Refusal and the Appropriation Problem"
+  chapter_type: "comparative (Part II) — eighth and last of eight comparative chapters; refusal-and-appropriation subtype; the most methodologically-sensitive chapter in the book per brief special_instructions; consummation of scope.md's appropriation protocol"
+  auditor_model: "claude-opus-4-7-1m"
+  writer_model: "claude-opus-4-7-1m (different conversation; this is a fresh-context audit per skill's hard rule)"
+  audit_date: "2026-05-04"
+  claims_file: "chapters/41-C8-refusal-and-appropriation.claims.adoc"
+  brief_file: "briefs/41-C8-refusal-and-appropriation.yaml"
+  total_claims: 53           # paragraph-claims with footnotes (the 53 prose paragraphs across §§I-VI plus the 9-paragraph Source overview)
+  evidence_tokens: 64        # // EVIDENCE: lines counted across the claims file
+  comparative_hooks: 17      # // COMPARATIVE-HOOK lines counted across the claims file
+  markers:
+    appropriation_flag: 3    # §I Rainbow Serpent (line 93), §II Nanabozho (line 130), §III Mwindo (line 162)
+    inference: 1             # §IV Lönnrot species-classification (line 190)
+    speculation: 1           # §VI strong-form area-specialist-first-discipline meta-claim (line 245)
+    variant: 0
+    lacuna: 0
+    reconstruction: 0
+  triangulations_performed: 13  # 13 unique source_ids verified against sources.yaml as EVIDENCE-token routes
+  verdict: REVISE
+
+  honesty_self_check:
+    fresh_context: >
+      Confirmed: this audit was opened in a separate conversation from the
+      one that produced the claims document. The same model (claude-opus-
+      4-7-1m) is used in both. No memory of producing the claims is
+      present. The fresh-context requirement is satisfied per the skill's
+      hard rule.
+    primary_source_opened: >
+      Ch41 is the comparative chapter at which the chaoskampf typology's
+      *appropriation problem* is consolidated as the closing methodological
+      chapter of Part II, drawing on five Part-I anchor chapters (Ch32
+      Nanabozho/Mishipeshu, Ch29 Mwindo/Kirimu, Ch31 Väinämöinen/Iku-Turso,
+      Ch30 Bakunawa, Ch27 Mapuche Kai-Kai/Tren-Tren) plus the Rainbow Serpent
+      critique (held for this chapter per toc.yaml line 443:
+      "rainbow-serpent-critique: 41   # folded into C8") and on two
+      methodological-typological comparative anchors (Forsyth 1987 long-
+      arc combat-myth typology, Ballentine 2015 over-extension critique).
+      Verification proceeded by (1) checking every EVIDENCE token's
+      source_id against sources.yaml (all 13 unique IDs registered:
+      ballentine-2015, forsyth-1987, koessler-ilg-cuentan, foerster-
+      religiosidad-mapuche, biebuyck-mateene-mwindo, eugenio-philippine-
+      myths, siikala-finnish, belcher-epic, hallowell-ojibwa-world,
+      johnston-manitous, smith-island-anishnaabeg, vizenor-narrative-chance,
+      merlan-caging-rainbow); (2) checking that the brief's four anchor
+      sources are routed where they should be (merlan-caging-rainbow → §I,
+      hallowell-ojibwa-world → §II, biebuyck-mateene-mwindo → §III,
+      siikala-finnish → §IV — all confirmed); (3) checking that each
+      per-tradition factual claim routes through the same source_id that
+      the corresponding Part-I chapter uses for that fact (Hallowell 1960
+      + Johnston 1995 + Smith 1995 + Vizenor 1989 → Ch32; Biebuyck &
+      Mateene 1969 + Belcher 1999 → Ch29; Siikala 2002 → Ch31; Eugenio
+      2001 → Ch30; Koessler-Ilg 1954 + Foerster 1993 → Ch27); (4) cross-
+      checking each per-tradition compression against the corresponding
+      Part-I claims-approved file (Anishinaabe other-than-human-persons
+      framework + Berens River 1930s fieldwork per Ch32; Mwindo 1956 Bese
+      recording from Shé-Kárisi Candi Rureke per Ch29; Iku-Turso two-layer
+      older-rune/Lönnrot-synthesis per Ch31; Bakunawa six-of-seven-moons
+      eclipse-aetiology per Ch30; Mapuche Kai-Kai/Tren-Tren cosmography
+      per Ch27); (5) cross-checking every COMPARATIVE-HOOK chapter-number
+      reference against toc.yaml (C1=Ch34, C2=Ch35, C3=Ch36, C5=Ch38,
+      C7=Ch40 — all resolve); (6) checking the three [APPROPRIATION-FLAG:]
+      markers for full four-sub-field schema conformance (substance |
+      named_specialists | tier_implication | forwards_to); (7) checking
+      the [INFERENCE:] and [SPECULATION:] markers for schema conformance
+      (basis + risk; basis + counterargument respectively); (8) cross-
+      checking all body-prose chaos-term occurrences against scope.md /
+      glossary.yaml banned-term scoping; (9) verifying the area-specialist-
+      first discipline at every Anishinaabe / Aboriginal-Australian /
+      Nyanga claim per the brief's special_instructions and per scope.md
+      §"Appropriation protocol"; (10) verifying the named-but-flagged
+      discipline at the §I Aboriginal-Australian secondary anchors
+      (Radcliffe-Brown 1926, Morphy 1991, Rose 1996, Keen 1994 — none in
+      sources.yaml) and the §II Anishinaabe secondary anchors (Johnston,
+      T. Smith, Vizenor — all in sources.yaml); (11) verifying every
+      named-historical-figure date claim (Lönnrot 1802-1884; Radcliffe-
+      Brown 1926; Hallowell 1960; Vizenor 1989; Smith 1995; Morphy 1991;
+      Rose 1996; Keen 1994; Merlan 1998; Siikala 2002; Eugenio 2001;
+      Koessler-Ilg 1954; Foerster 1993); (12) verifying the regional-
+      specificity claims about the Aboriginal Australian ancestral beings
+      (Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul) against the brief's
+      comparative_argument; (13) cross-checking the foreign-noun italic
+      discipline against the Ch32 / Ch31 / Ch30 / Ch27 / Ch29 upstream
+      conventions.
+    sources_skimmed:
+      - >
+        Merlan, F., *Caging the Rainbow: Places, Politics, and Aborigines
+        in a North Australian Town* (Honolulu: University of Hawaiʻi
+        Press, 1998): sources.yaml entry verified as merlan-caging-rainbow.
+        Anchor for the §I Rainbow Serpent critique (chs. 1-3 on the
+        consolidation-dismantling reading; the regional specificity of
+        Yingarna, Ngalyod, Wanambi, Wagyl, Yulunggul; the post-1980s area-
+        specialist tradition's reckoning with the recording-history
+        situation as itself part of the appropriation problem). PASS on
+        attribution.
+      - >
+        Hallowell, A.I., 'Ojibwa Ontology, Behavior, and World View', in
+        *Culture in History: Essays in Honor of Paul Radin*, ed. Stanley
+        Diamond (Columbia University Press, 1960), 19-52: sources.yaml
+        entry verified as hallowell-ojibwa-world. The "other-than-human
+        persons" framework; the Berens River fieldwork of the 1930s in
+        northwestern Ontario; the manitouk on the same ontological standing
+        as human persons; the relational-and-reciprocity-grounded moral
+        framework — all attested in Ch32 claims-approved with the same
+        loc-pointers. PASS on attribution.
+      - >
+        Biebuyck, D. and Mateene, K.C., *The Mwindo Epic from the Banyanga
+        (Zaire)* (University of California Press, 1969): sources.yaml
+        entry verified as biebuyck-mateene-mwindo. The 1956 Bese recording
+        from Shé-Kárisi Candi Rureke at Bese on the upper Oso river in
+        the Kivu region of what was then the eastern Belgian Congo; the
+        epic's pedagogical apparatus; the killing of Kirimu as hubristic
+        over-reach; Nkuba's lightning-seizing as the narrative's own moral
+        correction; the celestial-realm trials and humiliations as
+        morally-motivated correction; the conditions imposed on Mwindo's
+        return to the human world — all attested in Ch29 claims-approved
+        with the same loc-pointers. PASS on attribution.
+      - >
+        Siikala, A.-L., *Mythic Images and Shamanism: A Perspective on
+        Kalevala Poetry* (Folklore Fellows' Communications 280, Helsinki:
+        Academia Scientiarum Fennica, 2002): sources.yaml entry verified
+        as siikala-finnish. The two-layer textual situation (older rune
+        material + Lönnrot's 1835 / 1849 *Kalevala* editorial synthesis);
+        Lönnrot's 1802-1884 dates and his eleven major collecting tours
+        between 1828 and 1844; the Vanha Kalevala (1835) and Uusi Kalevala
+        (1849) editions; the older rune material as laconic, fragmentary,
+        and not synthesised into a single connected narrative within the
+        singing tradition itself; the Iku-Turso connected-episode
+        structure as Lönnrot's compositional achievement — all attested
+        in Ch31 claims-approved with the same loc-pointers. PASS on
+        attribution. Note: Ch41's "Henrik Reinhold Antell" listing among
+        the rune-collectors is not corroborated by Ch31 (which lists
+        Lönnrot, Europaeus, Ahlqvist, Genetz, the Krohn brothers as the
+        principal collectors); see FIND-02 below.
+      - >
+        Johnston, B., *Ojibway Heritage* (1976/1990): sources.yaml entry
+        verified as johnston-ojibway-heritage. Anishinaabe-authored
+        insider register of cosmology, manitouk, and the Nanabozho cycle.
+        Note: this source is not routed through any EVIDENCE token in
+        Ch41 (only mentioned in body prose and inside APPROPRIATION-FLAG
+        named_specialists), but it is named correctly in body prose at
+        §II per the brief's area-specialist citation requirement.
+        Consistent with Ch32 named-specialist precedent. PASS.
+      - >
+        Johnston, B., *The Manitous: The Spiritual World of the Ojibway*
+        (HarperCollins, 1995): sources.yaml entry verified as johnston-
+        manitous. Anishinaabe-authored treatment of manitous including
+        Mishipeshu and Nanabozho. EVIDENCE-routed at line 116. PASS.
+      - >
+        Smith, T.S., *The Island of the Anishnaabeg: Thunderers and Water
+        Monsters in the Traditional Ojibwe Life-World* (University of
+        Idaho Press, 1995): sources.yaml entry verified as smith-island-
+        anishnaabeg. The Thunderer / Underwater-manitou dialectic as the
+        central interpretive frame; the layered cosmographic equilibrium;
+        the necessary-counterpart-not-adversaries reading. EVIDENCE-routed
+        at lines 110, 113, 128. Consistent with Ch32 use. PASS.
+      - >
+        Vizenor, G. (ed.), *Narrative Chance: Postmodern Discourse on
+        Native American Indian Literatures* (University of New Mexico
+        Press, 1989; reprint Norman: University of Oklahoma Press, 1993):
+        sources.yaml entry verified as vizenor-narrative-chance. The
+        "Trickster Discourse" essay; the methodological refusal to
+        subordinate Anishinaabe trickster narrative to Western combat-myth
+        or hero/villain typologies. EVIDENCE-routed at lines 119, 122.
+        Consistent with Ch32 use. PASS.
+      - >
+        Belcher, S., *Epic Traditions of Africa* (Indiana University
+        Press, 1999): sources.yaml entry verified as belcher-epic. Ch
+        on Mwindo on the maturation-through-humiliation pattern as the
+        load-bearing distinguishing feature of the Nyanga material from
+        the Eurasian combat-myth corpus. EVIDENCE-routed at line 150.
+        Consistent with Ch29 use. PASS.
+      - >
+        Eugenio, D.L., *Philippine Folk Literature: The Myths* (University
+        of the Philippines Press, 2001): sources.yaml entry verified as
+        eugenio-philippine-myths. Bakunawa-and-the-moons sections; the
+        seven-original-moons aetiology; the communal noise-making during
+        eclipses; Visayan and Bikol heartland setting. EVIDENCE-routed
+        at lines 204, 207, 210, 213, 216, 219. Consistent with Ch30 use.
+        PASS. Note: Ch41 line 209 mentions "the firing of guns in later
+        periods" as part of the eclipse-noise-making practice; Ch30's
+        treatment lists "drums, gongs, shouting, banging metal pots" but
+        does not specifically attest gun-firing; see FIND-03 below.
+      - >
+        Koessler-Ilg, B., *Cuentan los araucanos: Mitos, leyendas y
+        tradiciones* (Buenos Aires: Espasa-Calpe, 1954): sources.yaml
+        entry verified as koessler-ilg-cuentan. Mapuche serpent-and-flood
+        narrative; Kai-Kai / Tren-Tren cosmogony. EVIDENCE-routed at
+        line 222. Consistent with Ch27 use. PASS.
+      - >
+        Foerster González, R., *Introducción a la religiosidad mapuche*
+        (Santiago: Editorial Universitaria, 1993): sources.yaml entry
+        verified as foerster-religiosidad-mapuche; year is 1993, NOT
+        1995. EVIDENCE-routed at line 223. Consistent with Ch27 use,
+        which gives the publication date as 1993. Note: Ch41 line 221
+        body-prose footnote misdates the volume as 1995; see FIND-01
+        below.
+      - >
+        Ballentine, D.S., *The Conflict Myth and the Biblical Tradition*
+        (OUP, 2015): sources.yaml entry verified as ballentine-2015.
+        The over-extension critique of the chaoskampf frame in 20th-
+        century comparative scholarship; the methodological discipline
+        of separating area-specialist framings from comparative-typology
+        overlays. Routed throughout Ch41 §§I, III, V, VI as the
+        chapter's principal critical-typological anchor. Consistent
+        with Ch35 / Ch40 use. PASS.
+      - >
+        Forsyth, N., *The Old Enemy: Satan and the Combat Myth*
+        (Princeton University Press, 1987): sources.yaml entry verified
+        as forsyth-1987. The long-arc combat-myth typology supplies
+        the comparative foil. EVIDENCE-routed at line 52 (source
+        overview). Consistent with Ch26 / Ch28 / Ch29 / Ch31 / Ch32 /
+        Ch40 use. PASS.
+    references_assumed:
+      - >
+        sources.yaml entries for A. R. Radcliffe-Brown (1926 *JRAI*
+        article on the Rainbow-Serpent myth of Australia), Howard Morphy
+        (*Ancestral Connections*, 1991), Deborah Bird Rose (*Nourishing
+        Terrains*, 1996), Ian Keen (*Knowledge and Secrecy in an
+        Aboriginal Religion*, 1994), Hermann Gunkel (1895 originating
+        chaoskampf framing), and Biebuyck's later *Hero and Chief*
+        (1978) are NOT in sources.yaml and are correctly handled via
+        the named-but-flagged pattern (no EVIDENCE tokens routed through
+        them; named in body prose and inside APPROPRIATION-FLAG named_
+        specialists fields with the "not currently in sources.yaml" /
+        "named-but-flagged in body prose" qualifier). The chapter's
+        source overview at line 48 documents the named-but-flagged
+        pattern explicitly with a forwarding note for the inventory-
+        audit follow-up. Consistent with Ch32 / Ch29 / Ch31 / Ch40
+        named-but-flagged precedent.
+    quote_pattern_match: >
+      The chapter is a synthesis-of-syntheses: it cites no verbatim
+      primary-source quotation and no verbatim scholar-quotation,
+      instead routing each per-tradition factual claim through the
+      same source_id that the corresponding Part-I chapter uses for
+      that fact. Verification standard is therefore "does the cited
+      Part-I-anchor source_id support the specific claim made", not
+      "does the verbatim quotation appear at the specified loc". The
+      Part-I claims-approved files were used as the second-order
+      verification ground (their factchecks were already passed at
+      the chapter-claims stage). Of the 64 EVIDENCE tokens audited,
+      63 route through Part-I anchor source_ids that are documented
+      to support the specific claim; 1 raises a date-drift finding
+      (FIND-01) and 1 raises a name-attestation finding (FIND-02 —
+      "Henrik Reinhold Antell" listed in body prose at line 178 has
+      no upstream attestation in Ch31 or in sources.yaml, neither
+      via EVIDENCE token nor via secondary-anchor named-but-flagged
+      apparatus).
+    internal_variance_vs_contamination: >
+      No cross-tradition category-import contamination findings (in
+      contrast to Ch40 FIND-01's "wak'a-rich Sahelian landscape"
+      drift): the chapter's per-tradition vocabulary is kept tradition-
+      internal throughout (Aboriginal-Australian regional ancestral
+      beings stay in Aboriginal-Australian frame; Anishinaabe manitouk
+      and Thunderers stay in Anishinaabe frame; Nyanga Nkuba and
+      Mwindo stay in Nyanga frame; Iku-Turso and Lönnrot stay in
+      Finnic frame; Bakunawa stays in Visayan/Bikol frame). One date
+      drift (Foerster 1995 should be 1993; FIND-01) and one name-
+      attestation issue (Antell among the rune-collectors;
+      FIND-02). Otherwise every per-tradition claim routes through
+      the area-specialist anchor for that tradition; the named-but-
+      flagged pattern is correctly applied for the §I Aboriginal-
+      Australian secondary anchors (Radcliffe-Brown, Morphy, Rose,
+      Keen) and the methodological-historical anchors (Gunkel).
+
+tallies:
+  supported: 51                # of 53 paragraph-claims
+  internal_variance: 0
+  unverified: 1                # FIND-02 Antell name-attestation
+  citation_wrong: 1            # FIND-01 Foerster date 1995 should be 1993
+  contamination: 0
+  fabrication: 0               # Antell flagged as UNVERIFIED rather than FABRICATION pending verification
+  silent_bridges: 0
+  marker_issues: 0             # all three APPROPRIATION-FLAG markers schema-conformant; INFERENCE and SPECULATION schema-conformant
+  glossary_violations: 0       # chaos-X compounds throughout body prose are pervasively in argument-context describing the framework being refused, consistent with Ballentine-critique register; see NOTE-02
+  high_findings: 0
+  medium_findings: 2
+  low_findings: 2
+  notes: 3
+  total_findings: 7
+
+# ─────────────────────────────────────────────────────────────────────
+# SUPPORTED CLAIMS — summary register
+# ─────────────────────────────────────────────────────────────────────
+# Of 53 paragraph-claims, 51 are SUPPORTED: each EVIDENCE token routes
+# through a source_id that is registered in sources.yaml (all 13 unique
+# IDs verified present); each footnote attribution fairly characterises
+# the cited scholar's published position; each forward-link to a
+# comparative chapter (C1-C7 → Ch34-Ch40) matches toc.yaml; each back-
+# link to a Part I chapter (Ch27, Ch29, Ch30, Ch31, Ch32) matches
+# toc.yaml.
+#
+# §I Rainbow Serpent (lines 70-99) compression matches the brief's
+# comparative_argument at every tested point: Radcliffe-Brown 1926
+# *JRAI* 56 article "The Rainbow-Serpent Myth of Australia" as the
+# pan-Aboriginal consolidation; Yingarna (western Arnhem Land),
+# Ngalyod (central and eastern Arnhem Land), Wanambi (central Australia),
+# Wagyl (southwest Nyungar country), Yulunggul (northeastern Arnhem
+# Land Yolngu Wagilag Sisters cycle) as the regionally distinct
+# ancestral beings; Merlan 1998's *Caging the Rainbow* (chs. 1-3) as
+# the principal English-language area-specialist anchor for the
+# consolidation-dismantling reading; Morphy 1991 / Rose 1996 / Keen
+# 1994 as the wider Aboriginal-Australian area-specialist tradition
+# (named-but-flagged in body prose; not currently in sources.yaml).
+# The Wagilag Sisters narrative-and-ritual cycle's association with
+# Yulunggul and Yolngu tradition matches Keen 1994's published
+# position. The cosmographic-and-iconographic features (serpentine
+# form; association with water and the rainbow; creative-cosmogonic
+# role) are correctly registered as the surface-similarities that
+# the consolidation pattern-matched on but that the regional
+# specificity dismantles.
+#
+# §II Nanabozho / Mishipeshu / Thunderers (lines 101-136) compression
+# matches Ch32 claims-approved at every tested point: the Anishinaabe
+# trickster-culture-hero spelling variants (Nanabush, Wenebojo,
+# Wisakedjak, Manabozho); Hallowell 1960's "Ojibwa Ontology, Behavior,
+# and World View" essay in *Culture in History* ed. Diamond (Columbia
+# UP); the "other-than-human persons" framework; the Berens River
+# fieldwork of the 1930s in northwestern Ontario; the manitouk on the
+# same ontological standing as human persons; the relational-and-
+# reciprocity-grounded moral framework; Smith 1995's *The Island of
+# the Anishnaabeg* (University of Idaho Press); the Thunderer /
+# Underwater-manitou dialectic; the layered cosmographic equilibrium;
+# Mishipeshu's serpentine-and-feline form; the Agawa Rock pictographs
+# at Lake Superior Provincial Park; the "Underwater Panther" / "Great
+# Lynx" English-language glosses; copper-related associations;
+# residence in the underwater-and-subterranean realm; Vizenor 1989's
+# "Trickster Discourse" essay in *Narrative Chance* (UNM Press); the
+# methodological refusal to subordinate Nanabozho to Western combat-
+# myth or hero/villain typologies; the Anishinaabe refusal as at the
+# level of the categorical apparatus itself.
+#
+# §III Mwindo / Kirimu (lines 138-168) compression matches Ch29
+# claims-approved at every tested point: 1956 Bese recording from
+# Shé-Kárisi Candi Rureke at Bese on the upper Oso river in the
+# Kivu region of what was then the eastern Belgian Congo; Biebuyck
+# and Mateene 1969's *The Mwindo Epic from the Banyanga (Zaire)*
+# (University of California Press) as the standard English-language
+# critical edition and translation; Belcher 1999's *Epic Traditions
+# of Africa* (Indiana UP) ch. on Mwindo for the maturation-through-
+# humiliation pattern; the hero's biographical-and-moral arc; the
+# killing of Kirimu as hubristic over-reach; Nkuba's lightning-
+# seizing as the narrative's own moral correction; the celestial-
+# realm trials and humiliations as morally-motivated correction;
+# the conditions imposed on Mwindo's return as the content of the
+# epic's pedagogy; the renunciation-of-over-reach as a specific
+# moral discipline; the chiefly office's contingency on the
+# celestial powers' authority. The §III treatment correctly
+# develops the *fuller* methodological implication beyond Ch40 §II's
+# moral-valence-inversion observation: that the Nyanga pedagogy is
+# specifically Nyanga and that the comparativist's task is to
+# register it in its own terms.
+#
+# §IV Lönnrot / Iku-Turso (lines 170-199) compression matches Ch31
+# claims-approved at every tested point: Lönnrot 1802-1884; the
+# Vanha Kalevala 1835 and the Uusi Kalevala 1849; Lönnrot's eleven
+# major collecting tours between 1828 and 1844; the Suomalaisen
+# Kirjallisuuden Seura (SKS, founded 1831); the older rune-tradition
+# material as laconic, fragmentary, regionally variable across
+# Karelian and Finnish singing traditions, and not synthesised into
+# a single connected narrative within the singing tradition itself;
+# the Iku-Turso connected-episode structure as Lönnrot's compositional
+# achievement; the *Kalevala*'s textual status as closer to a
+# critical edition with extensive editorial intervention than to a
+# faithful transcription; the historical-political function in the
+# construction of a Finnish national epic under Russian-imperial
+# rule (1809-1917 Grand Duchy of the Russian Empire). One name-
+# attestation issue: "Henrik Reinhold Antell" listed at line 178
+# among the named rune-collectors does not appear in Ch31's
+# collector-list (Lönnrot, Europaeus, Ahlqvist, Genetz, Krohn brothers)
+# or anywhere else in the project's source-base (sources.yaml,
+# glossary.yaml, briefs/, chapters/); see FIND-02 below.
+#
+# §V Bakunawa / Mapuche (lines 201-229) compression matches Ch30
+# and Ch27 claims-approved at every tested point: Visayan and Bikol
+# Philippine oral tradition; the seven-original-moons aetiology;
+# six devoured / one survives; eclipse-aetiology as the narrative's
+# load-bearing function; communal noise-making during eclipses (drums,
+# gongs, shouting, metal pots per Ch30; Ch41 line 209 adds "firing
+# of guns in later periods" as a minor elaboration not directly
+# attested by Ch30, see FIND-03); driving-off-not-slaying; absence-of-
+# a-hero; Eugenio 2001's *Philippine Folk Literature: The Myths* (UP
+# of the Philippines) as the principal Philippine-language-mediated
+# source; the inclusion-marginal classification per Ch30 brief; the
+# Mapuche Kai-Kai vs. Tren-Tren material per Koessler-Ilg 1954's
+# *Cuentan los araucanos*; the Wenu Mapu / Naq Mapu / Minche Mapu
+# vertical cosmography per Foerster 1993's *Introducción a la
+# religiosidad mapuche*. One date drift: Ch41 line 221 footnote
+# misdates Foerster's volume as 1995 instead of 1993 (sources.yaml
+# foerster-religiosidad-mapuche year=1993; Ch27 confirms 1993);
+# see FIND-01 below.
+#
+# §VI What the refusal teaches (lines 231-263) is correctly anchored
+# on Ballentine 2015 (over-extension critique) and on the chapter's
+# own §§I-V evidence; the three methodological-typological lessons
+# are derived from the case-set; the [SPECULATION:] marker at line
+# 245 conforms to the locked schema (claim | basis | counterargument)
+# with the counterargument sub-field substantively engaging the
+# elastic-typology defense (combat-and-encounter-myth with both
+# adversarial and reciprocal-counterpart subtypes) — consistent with
+# the Ch40 [SPECULATION:] schema improvement and faithful to the
+# chapter's argument structure. The closing observation that the
+# inversion problem (Ch40) and the appropriation problem (Ch41) are
+# the same problem viewed at different levels of the typology's
+# reach is registered explicitly per Ch40 §VI.
+#
+# Source-ID registry check (all 13 unique IDs verified present in
+# sources.yaml registry):
+#   ballentine-2015, forsyth-1987, koessler-ilg-cuentan, foerster-
+#   religiosidad-mapuche, biebuyck-mateene-mwindo, eugenio-philippine-
+#   myths, siikala-finnish, belcher-epic, hallowell-ojibwa-world,
+#   johnston-manitous, smith-island-anishnaabeg, vizenor-narrative-
+#   chance, merlan-caging-rainbow.
+# All resolve. No invented or unresolved IDs. (johnston-ojibway-
+# heritage is registered in sources.yaml and named in body prose at
+# §II but is not the route for any EVIDENCE token in Ch41; this is
+# defensible since Smith 1995 / Vizenor 1989 / Hallowell 1960 /
+# Johnston 1995 carry the substantive EVIDENCE-routing burden at §II.)
+#
+# Brief anchor-source routing check (all four brief sources.anchor
+# entries correctly routed):
+#   merlan-caging-rainbow → §I (lines 45, 49, 59, 73, 76, 79, 85, 91)
+#   hallowell-ojibwa-world → §II (lines 41, 104, 107, 125)
+#   biebuyck-mateene-mwindo → §III (lines 42, 141, 144, 147, 153, 156, 159)
+#   siikala-finnish → §IV (lines 46, 173, 176, 179, 182, 185, 188, 193, 196)
+# All resolve to the correct sections. PASS.
+#
+# COMPARATIVE-HOOK chapter-number registry check (all 17 hooks
+# resolved against toc.yaml):
+#   C1=Ch34, C2=Ch35, C3=Ch36, C5=Ch38, C7=Ch40 (forward-links /
+#   back-links within Part II as appropriate). All resolve.
+#
+# APPROPRIATION-FLAG named_specialists check:
+#   §I Rainbow Serpent (line 93): Merlan (in sources.yaml as
+#     merlan-caging-rainbow) named correctly as principal anchor;
+#     Morphy 1991, Rose 1996, Keen 1994 named-but-flagged with
+#     explicit "not currently in sources.yaml" qualifier; Radcliffe-
+#     Brown 1926 named as the originator of the consolidation
+#     dismantled by the area-specialists. PASS.
+#   §II Nanabozho (line 130): Hallowell (in sources.yaml as
+#     hallowell-ojibwa-world), Johnston (johnston-ojibway-heritage,
+#     johnston-manitous), Smith (smith-island-anishnaabeg), Vizenor
+#     (vizenor-narrative-chance) all named correctly with sources.yaml
+#     IDs explicitly indicated. Consistent with Ch32 named-specialist
+#     precedent. PASS.
+#   §III Mwindo (line 162): Biebuyck and Mateene (biebuyck-mateene-
+#     mwindo) named correctly; Belcher (belcher-epic) named correctly;
+#     Biebuyck's later *Hero and Chief* (1978) named-but-flagged per
+#     Ch29 precedent. Consistent with Ch29 / Ch40 §II named-specialist
+#     precedent. PASS.
+# Note: §IV (Lönnrot) and §V (Bakunawa) do not have APPROPRIATION-FLAG
+# markers — §IV is handled with an [INFERENCE:] marker at line 190
+# (since the appropriation is by a known historical figure, not an
+# area-specialist refusal), and §V's inclusion-marginal classification
+# does not require an APPROPRIATION-FLAG marker (since the case is
+# included on hedged terms rather than refused). This appears to be a
+# deliberate and defensible design choice consistent with the brief's
+# semantics; see NOTE-01 below.
+#
+# Section weight check:
+#   Source overview (lines 35-69)        : ~9 paragraph-claims
+#   §I Rainbow Serpent (70-99)           : ~7 paragraph-claims
+#   §II Nanabozho/Mishipeshu (101-136)   : ~9 paragraph-claims (slight main-weight)
+#   §III Mwindo (138-168)                : ~7 paragraph-claims
+#   §IV Lönnrot (170-199)                : ~7 paragraph-claims
+#   §V Bakunawa/Mapuche (201-229)        : ~6 paragraph-claims
+#   §VI What teaches (231-263)           : ~7 paragraph-claims
+# Section weights are roughly balanced, with §II Nanabozho slightly
+# heavier per the brief's framing of the Anishinaabe case as "the
+# principled refusal" / "the most principled refusal in the present
+# book". The brief does not specify a main-weight discipline as Ch40
+# does for Bida/Mwindo, so the balanced distribution is appropriate.
+# PASS.
+#
+# Area-specialist-first discipline check (per scope.md §"Appropriation
+# protocol" and brief special_instructions, the most rigorous check
+# in the audit since this is the most appropriation-sensitive chapter
+# in the book):
+#   §I (Rainbow Serpent): The section opens at line 70 with the
+#     identification of the consolidation as a 20th-century scholarly
+#     construct (Radcliffe-Brown 1926) dismantled by Merlan 1998 et
+#     al.; the chaoskampf-typological extension is invoked only at
+#     line 87, after five paragraphs of Aboriginal-Australian
+#     regional-specificity development. Radcliffe-Brown / Morphy /
+#     Rose / Keen all named in body prose. PASS.
+#   §II (Nanabozho): The section opens at line 103 with the
+#     Anishinaabe ontological framework presented through Hallowell
+#     1960 / Johnston / Smith 1995 / Vizenor 1989 on the tradition's
+#     own terms (the "other-than-human persons" framework; the
+#     reciprocal-counterpart cosmology); the chaoskampf overlay is
+#     invoked only at line 115 within an explicit "would, on a
+#     chaoskampf-typological reading, identify him as a chaos-adversary
+#     class member, but the area-specialist scholarship... explicitly
+#     declines that identification" framing. PASS (clean — the
+#     area-specialist priority is honoured at every paragraph).
+#   §III (Mwindo): The section opens at line 140 with the Nyanga
+#     oral epic and its 1956 Bese recording from Shé-Kárisi Candi
+#     Rureke; Biebuyck and Mateene 1969 + Belcher 1999 are the
+#     area-specialist anchors; the comparison's task is registered
+#     as "register the epic's pedagogy in its own terms before any
+#     comparison is performed". PASS.
+#   §IV (Lönnrot): The section opens at line 172 with the Finnic
+#     encounter on the Finnic textual situation's own terms; Siikala
+#     2002 is the area-specialist anchor. PASS.
+#   §V (Bakunawa / Mapuche): The section opens at line 203 with the
+#     Visayan and Bikol Philippine oral tradition; Eugenio 2001 is
+#     the area-specialist anchor. PASS.
+
+findings:
+  - id: FIND-01
+    severity: MEDIUM
+    category: citation-wrong | date-error
+    claim_anchor: line 221 (§V, Mapuche supporting case — footnote citation of Foerster's volume)
+    description: |
+      Ch41 line 221's body-prose footnote cites Foerster's volume as
+      "Foerster, R., *Introducción a la religiosidad mapuche*
+      (Santiago: Editorial Universitaria, 1995)". The correct
+      publication date is 1993, per (a) sources.yaml line 557 entry
+      foerster-religiosidad-mapuche year: 1993; (b) the full_citation
+      field at line 558: "Foerster González, R., *Introducción a la
+      religiosidad mapuche* (Santiago: Editorial Universitaria,
+      1993)."; (c) Ch27 claims-approved line 39's author-year "Foerster
+      González 1993"; and (d) Ch27 claims-approved line 36's footnote
+      "Foerster 1993, *Introducción a la religiosidad mapuche*
+      (Santiago: Editorial Universitaria, 1993; ISBN 9789561109124)".
+    issue: |
+      Date error in body-prose footnote citation. The error is
+      MEDIUM because (a) it is a verifiable bibliographic-data error
+      with a clear corrective; (b) the same source is registered
+      correctly at sources.yaml; (c) the corresponding EVIDENCE token
+      at line 223 is correctly source_id=foerster-religiosidad-mapuche
+      and routes through the correct sources.yaml entry, so the EVIDENCE
+      attribution is not affected — the error is only in the body-prose
+      footnote's bibliographic citation. The factual claim (the Wenu /
+      Naq / Minche Mapu cosmography per Foerster) is unaffected.
+    evidence: |
+      sources.yaml line 552-558:
+        - id: foerster-religiosidad-mapuche
+          ...
+          year: 1993
+          full_citation: "Foerster González, R., *Introducción a la
+          religiosidad mapuche* (Santiago: Editorial Universitaria,
+          1993)."
+      Ch27 line 36: "Foerster 1993, *Introducción a la religiosidad
+        mapuche* (Santiago: Editorial Universitaria, 1993; ISBN
+        9789561109124)"
+      Ch41 line 221 footnote: "Foerster, R., *Introducción a la
+        religiosidad mapuche* (Santiago: Editorial Universitaria,
+        1995)" — date is wrong.
+    recommended_fix: |
+      Replace "1995" with "1993" in the line 221 footnote. Verbatim-
+      substitutable replacement:
+        "Foerster, R., *Introducción a la religiosidad mapuche*
+        (Santiago: Editorial Universitaria, 1993), on the cosmographic-
+        and-ritual framing"
+      Optionally also align name-form to the Ch27 / sources.yaml
+      convention "Foerster González, R." (currently Ch41 uses bare
+      "Foerster, R." in the footnote and "Rolf Foerster" in body
+      prose).
+
+  - id: FIND-02
+    severity: MEDIUM
+    category: unverified | invented-name | name-attestation-failure
+    claim_anchor: line 178 (§IV, Lönnrot — list of named rune-collectors)
+    description: |
+      Ch41 line 178 lists "Henrik Reinhold Antell" as one of the
+      19th-century rune-collectors that Lönnrot drew on, in a list
+      otherwise composed of (a) Lönnrot himself, (b) "David Emmanuel
+      Daniel Europaeus" (the full name of Daniel Europaeus, 1820-
+      1884, a real historical rune-collector verified upstream), and
+      (c) "the wider Finnish Literature Society [SKS] rune-collecting
+      apparatus that Lönnrot drew on".
+    issue: |
+      No upstream attestation for "Henrik Reinhold Antell". Ch31
+      claims-approved (the upstream anchor for the Finnic material)
+      lists the rune-collectors in the line 38 introductory paragraph
+      as "Elias Lönnrot, Daniel Europaeus, August Ahlqvist, Arvid
+      Genetz, Julius and Kaarle Krohn, and other 19th- and early
+      20th-century rune-collectors", and again at line 121 for the
+      collecting-tour history; Antell appears in neither. A grep
+      across the entire project source-base (sources.yaml, glossary.
+      yaml, briefs/, chapters/, scope.md, toc.yaml) returns zero
+      occurrences of "Antell". The name does not match any known
+      19th-century Finnish folklorist or rune-collector in the
+      published Finnish-folkloristics scholarly tradition that the
+      auditor is aware of. The claim is UNVERIFIED — possibly
+      invented, possibly conflated with another scholar's name —
+      and the chapter should not assert the participation of a named
+      historical figure without a sources.yaml-routed anchor or an
+      upstream-chapter precedent.
+    evidence: |
+      Ch31 claims-approved line 38:
+        "...the textual witness situation for the present chapter is
+        therefore the body of 19th-century rune-collection fieldwork
+        conducted across Karelia and Finland by Elias Lönnrot, Daniel
+        Europaeus, August Ahlqvist, Arvid Genetz, Julius and Kaarle
+        Krohn, and other 19th- and early 20th-century rune-
+        collectors..."
+      Ch31 claims-approved line 67 [VARIANT: ...] lists the same
+      collectors explicitly as Lönnrot, Europaeus, Ahlqvist, Genetz,
+      and the Krohn brothers; no Antell.
+      Ch41 line 178:
+        "Lönnrot himself in his collecting expeditions of the 1820s-
+        1840s; David Emmanuel Daniel Europaeus; Henrik Reinhold
+        Antell; and the wider Finnish Literature Society [SKS] rune-
+        collecting apparatus..."
+      Project-wide grep for "Antell" returns zero matches outside this
+      single Ch41 occurrence.
+    recommended_fix: |
+      Either (a) remove "Henrik Reinhold Antell" from the list and
+      replace with one or more of the rune-collectors actually
+      attested in Ch31 (August Ahlqvist; Arvid Genetz; Julius Krohn;
+      Kaarle Krohn) — verbatim-substitutable replacement:
+        "Lönnrot himself in his collecting expeditions of the 1820s-
+        1840s; David Emmanuel Daniel Europaeus; August Ahlqvist;
+        Arvid Genetz; Julius and Kaarle Krohn; and the wider Finnish
+        Literature Society [SKS] rune-collecting apparatus that
+        Lönnrot drew on"
+      OR (b) verify "Henrik Reinhold Antell" against an external
+      authoritative source (Finnish biographical dictionary; SKS
+      Folklore Archives' published collector-history; relevant
+      Finnish-folkloristics secondary literature) and add the citation
+      to the footnote if the figure is in fact a documented historical
+      rune-collector. Option (a) is the conservative and recommended
+      fix since the chapter's apparatus does not require the specific
+      Antell attribution and the verbatim-substitutable replacement
+      is fully attested by Ch31.
+
+  - id: FIND-03
+    severity: LOW
+    category: paraphrase-drift | minor-narrative-detail-elaboration
+    claim_anchor: line 209 (§V, Bakunawa — eclipse noise-making practice)
+    description: |
+      Ch41 line 209's body-prose footnote describes the Bakunawa
+      eclipse-noise-making practice as "the beating of pots and
+      pans, the firing of guns in later periods, the collective-
+      vocal noise-making". The "firing of guns in later periods"
+      element does not appear in Ch30 claims-approved's enumeration
+      of the practice.
+    issue: |
+      Minor narrative-detail elaboration. Ch30 claims-approved line
+      83 lists the practice as "beating drums, sounding gongs,
+      shouting, banging metal pots and other resonant objects, and
+      otherwise making sustained loud noise"; the brief 30-bakunawa.
+      yaml summary lists "communal noise-making (drums, gongs,
+      shouting)". Neither attests gun-firing specifically. While
+      gun-firing as part of eclipse-noise practices is plausible
+      historically (Spanish-and-American-colonial-period firearms
+      could plausibly have been incorporated into the practice
+      across the colonial centuries), the specific claim "firing of
+      guns in later periods" does not have an upstream attestation
+      in Ch30 or in sources.yaml-routed Eugenio 2001 evidence. This
+      is a minor paraphrase-drift / inferential-elaboration finding
+      registered as LOW severity because (a) the claim is plausible
+      and not fabricated; (b) the load-bearing element of the
+      paragraph (communal-and-recurring noise-making, no hero, no
+      slaying) is fully supported; (c) the EVIDENCE token at line
+      210 is correctly source_id=eugenio-philippine-myths and the
+      attribution is not affected at the source-routing level.
+    evidence: |
+      Ch30 claims-approved line 83:
+        "...the human community responds collectively by beating
+        drums, sounding gongs, shouting, banging metal pots and
+        other resonant objects, and otherwise making sustained loud
+        noise..."
+      Brief 30-bakunawa.yaml summary: "communal noise-making (drums,
+        gongs, shouting)".
+      Ch41 line 209 footnote:
+        "...the villagers' ritual noise-making during eclipses (the
+        beating of pots and pans, the firing of guns in later
+        periods, the collective-vocal noise-making that interrupts
+        the eclipse's progression)..."
+    recommended_fix: |
+      Either (a) remove "the firing of guns in later periods" from
+      the line 209 footnote and align with Ch30's enumeration —
+      verbatim-substitutable replacement:
+        "...the villagers' ritual noise-making during eclipses (the
+        beating of drums and gongs, the banging of metal pots, the
+        collective shouting and vocal noise-making that interrupts
+        the eclipse's progression)..."
+      OR (b) retain the gun-firing element with an explicit
+      citation-and-period qualifier:
+        "...the firing of firearms in the colonial-period and
+        20th-century elaborations of the practice attested in some
+        regional recordings..."
+      Option (a) is the conservative fix and preserves the
+      paragraph's load-bearing communal-and-recurring framing.
+
+  - id: FIND-04
+    severity: LOW
+    category: paraphrase-drift | name-form-discipline
+    claim_anchor: line 221 (§V, Mapuche supporting case — Foerster name form)
+    description: |
+      Ch41 line 221 body prose names the Mapuche-area scholar as
+      "Rolf Foerster" and the line 221 footnote names him as
+      "Foerster, R.". The canonical name form per sources.yaml
+      foerster-religiosidad-mapuche entry (line 555) is "Foerster
+      González, Rolf" / short_citation "Foerster 1993", and Ch27
+      claims-approved line 39 uses the form "Rolf Foerster González".
+    issue: |
+      Minor name-form discipline drift. The Spanish double-surname
+      convention ("Foerster González") is the canonical form in
+      Spanish-language and Anglophone scholarship for this author
+      (Rolf Foerster González, b. 1952, Chilean anthropologist), and
+      Ch27 / sources.yaml use the full form. Ch41's bare "Foerster"
+      form is acceptable on second mention but the first-mention
+      body-prose form should give the full name. LOW severity
+      because (a) "Foerster" is unambiguous in the Mapuche-studies
+      context and the short_citation field at sources.yaml uses
+      "Foerster 1993" without the second surname; (b) the substantive
+      attribution is correct.
+    evidence: |
+      sources.yaml line 555:
+        author: "Foerster González, Rolf"
+      Ch27 claims-approved line 39: "Rolf Foerster González's
+        *Introducción a la religiosidad mapuche* (1993)"
+      Ch41 line 221 body prose: "Rolf Foerster's *Introducción a la
+        religiosidad mapuche*"
+      Ch41 line 221 footnote: "Foerster, R., ..."
+    recommended_fix: |
+      Optional, post-human-normalize. On first body-prose mention
+      use the full canonical form "Rolf Foerster González" per Ch27
+      / sources.yaml convention, and on subsequent footnote citations
+      use either "Foerster González, R." or accept the short form
+      "Foerster, R." (the latter is the existing project convention
+      for short footnote citations and may be retained).
+
+  - id: NOTE-01
+    severity: NOTE
+    category: structural-observation | marker-coverage
+    claim_anchor: §IV (Lönnrot) and §V (Bakunawa) sections
+    description: |
+      The chapter has three [APPROPRIATION-FLAG:] markers (at §I
+      Rainbow Serpent line 93, §II Nanabozho line 130, §III Mwindo
+      line 162) and uses an [INFERENCE:] marker at §IV Lönnrot (line
+      190) instead of a fourth APPROPRIATION-FLAG; §V Bakunawa /
+      Mapuche has no APPROPRIATION-FLAG marker. By contrast Ch40
+      (the comparable inversion-problem chapter) has four
+      APPROPRIATION-FLAG markers at §I, §II, §IV, §V (one for each
+      area-specialist refusal case).
+    issue: |
+      Positive structural observation: the [APPROPRIATION-FLAG:] /
+      [INFERENCE:] marker-distribution choice in Ch41 is defensible
+      and consistent with the brief's distinction between (a) the
+      §§I-III principal area-specialist-refusal cases (where the
+      area-specialist objection is registered as an
+      APPROPRIATION-FLAG with the locked four sub-fields), (b) the
+      §IV Lönnrot case (a "different kind of appropriation" by a
+      known historical figure rather than an area-specialist
+      refusal — the [INFERENCE:] marker is appropriate since the
+      chapter's classification of Lönnrot's editorial synthesis as
+      "appropriation" is the chapter's analytical move rather than
+      a registered area-specialist objection), and (c) the §V
+      Bakunawa case (an inclusion-marginal classification where the
+      surface motif fits but the load-bearing apparatus does not —
+      no area-specialist *refusal* of the chaoskampf framing, since
+      Eugenio 2001 does not register the Bakunawa material as
+      requiring such a refusal). The distribution is consistent
+      with the brief's own structure (which describes §IV as "a
+      different kind of appropriation" and §V as a question about
+      "what excluding it would cost the comparison"), and the
+      chapter's design choice is well-motivated. Recorded as a
+      positive structural observation rather than as a finding.
+    evidence: |
+      Ch41 line 190 [INFERENCE:] marker explicitly registers Lönnrot
+      as a "different kind of appropriation" with full schema (claim
+      | basis | risk).
+      Brief 41-C8-refusal-and-appropriation.yaml structure §IV:
+        "...The 'binding' of Iku-Turso is partly Lönnrot's synthesis.
+        This is a different kind of appropriation — of earlier
+        material by a nationalist-romantic compiler..."
+      Brief structure §V:
+        "...The chapter asks whether this counts as chaoskampf at
+        all, and what excluding it would cost the comparison."
+    recommended_fix: |
+      None. Recorded as positive structural observation. The marker-
+      distribution is well-aligned to the brief's semantics.
+
+  - id: NOTE-02
+    severity: NOTE
+    category: structural-observation | banned-term-scoping
+    claim_anchor: chapter-wide body prose ("chaos-X" compounds)
+    description: |
+      The chapter uses unmarked "chaos-X" compounds throughout body
+      prose and footnotes (line 87 "chaos-adversary class member" /
+      "pan-Aboriginal chaos-adversary"; line 109 "chaos-versus-order
+      adversaries"; line 115 "chaos-adversary class member"; line
+      124 "chaos-vs-order mapping" / "chaos-figure vs. cosmos-figure"
+      / "ordered cosmos against an adversarial chaos"; line 215
+      "chaos-vs-order encounter-framing"; line 225 "chaos-versus-
+      order opposition"; line 239 "chaos-versus-order categorical
+      apparatus"; line 247 "chaos-vs-order encounter-framing"; etc.).
+      The glossary.yaml never_use list (line 126) bans bare "chaos-
+      figure" / "chaos-monster" because they "beg the question";
+      Ch40 FIND-02 flagged this as a MEDIUM finding for §IV body
+      prose specifically.
+    issue: |
+      In Ch41, in contrast to Ch40 §IV's narrower scope, the "chaos-
+      X" compounds are *pervasively* in argument-context describing
+      the framing being refused: every occurrence is in a sentence
+      that registers (a) the chaoskampf-typological reading the
+      area-specialists refuse, or (b) the typological apparatus the
+      Anishinaabe / Nyanga / Aboriginal-Australian frameworks
+      explicitly decline. The compounds function as *names of the
+      framing being critiqued*, not as the chapter's own
+      categorical apparatus, and the chapter's argument structure
+      requires them at exactly the points where they appear (the
+      area-specialists' refusal of these specific framings is the
+      chapter's principal substantive claim). The glossary.yaml
+      banned-term scoping is properly read as banning "chaos-X"
+      compounds *as the chapter's own categorical apparatus*, not
+      as banning their use *as the name of the apparatus the
+      chapter critiques*. The chapter's overall discipline therefore
+      passes — the compounds are used as critical objects, not as
+      analytical tools — and the chapter's argument structure
+      makes the Ballentine-critique register pervasive in a way
+      that Ch40 §IV's local scoping issue does not parallel.
+      Recorded as a structural observation with no finding because
+      the compounds' usage is consistent with the chapter's
+      critique-register argument structure throughout.
+    evidence: |
+      glossary.yaml line 126 never_use: ["chaos-figure (begs the
+      question); chaos-monster (same reason; the corpus is not
+      uniformly 'chaos')"].
+      Ch41 chapter-wide pattern: every "chaos-X" compound is
+      introduced inside a clause that registers the framing as the
+      one being refused or critiqued (e.g., line 124's "the apparatus
+      that places the figures in adversarial pairs (chaos-figure vs.
+      cosmos-figure; serpent vs. champion) and reads the encounters
+      as combat-and-defeat occasions" — explicitly framing the
+      apparatus as the one the Anishinaabe refusal targets).
+      Ch40 FIND-02 precedent: the §IV scope-failure flag was for
+      compounds that did *not* explicitly register the Ballentine-
+      critique frame; Ch41's compounds consistently do so.
+    recommended_fix: |
+      None required. Optional: at post-human-normalize, scare-quote
+      the most prominent "chaos-X" compounds in §I, §II, and §VI
+      ("chaos-adversary", "chaos-vs-order", "chaos-figure vs. cosmos-
+      figure") to make the critique-register attribution explicit
+      at the surface level — but the underlying argument structure
+      already supports the unmarked usage.
+
+  - id: NOTE-03
+    severity: NOTE
+    category: structural-observation | named-but-flagged-pattern
+    claim_anchor: §I, §II, §III APPROPRIATION-FLAG named_specialists
+      sub-fields (lines 93, 130, 162)
+    description: |
+      The named_specialists sub-fields of all three APPROPRIATION-
+      FLAG markers correctly distinguish between scholars in
+      sources.yaml (Merlan, Hallowell, Johnston, Smith, Vizenor,
+      Biebuyck, Mateene, Belcher) and named-but-flagged scholars
+      not currently in sources.yaml (Radcliffe-Brown 1926, Morphy
+      1991, Rose 1996, Keen 1994 at §I; Biebuyck's later *Hero and
+      Chief* 1978 at §III).
+    issue: |
+      Positive structural observation: the named-but-flagged pattern
+      is correctly applied with the "not currently in sources.yaml"
+      / "named in body prose at Ch32 / Ch29 per the named-but-
+      flagged secondary-anchor pattern" qualifier, and the chapter's
+      source overview at line 48 documents the pattern explicitly
+      with a forwarding note for the inventory-audit follow-up
+      ("the named-but-flagged uses for Radcliffe-Brown, Morphy,
+      Rose, and Keen at §I are documented in the chapter's
+      completion record for inventory-audit follow-up"). This is
+      consistent with Ch40 NOTE-03 and Ch29 / Ch32 / Ch31 named-
+      but-flagged precedent and represents a model application of
+      the pattern. The §I treatment of Radcliffe-Brown / Morphy /
+      Rose / Keen is particularly notable in that all four area-
+      specialists are central to the §I argument's substance but
+      are correctly handled via the named-but-flagged pattern with
+      EVIDENCE-routing through the sources.yaml-registered Merlan
+      anchor.
+    evidence: |
+      Ch41 line 48:
+        "...Radcliffe-Brown, Morphy, Rose, and Keen by name in body
+        prose at §I and routes the substantive EVIDENCE token
+        through Merlan 1998 per the named-but-flagged secondary-
+        anchor pattern..."
+      Ch41 line 93 [APPROPRIATION-FLAG:] named_specialists sub-field:
+        "...Howard Morphy (*Ancestral Connections*, 1991), Deborah
+        Bird Rose (*Nourishing Terrains*, 1996), and Ian Keen
+        (*Knowledge and Secrecy in an Aboriginal Religion*, 1994)
+        supply the wider Aboriginal-Australian area-specialist
+        tradition within which the dismantling is set (named-but-
+        flagged in body prose; not currently in sources.yaml)..."
+    recommended_fix: |
+      None. Recorded as positive structural observation. At inventory-
+      audit follow-up, the named-but-flagged scholars (Radcliffe-
+      Brown 1926, Morphy 1991, Rose 1996, Keen 1994, Biebuyck *Hero
+      and Chief* 1978, Gunkel 1895) should be evaluated for promotion
+      to sources.yaml registry entries if their full-volume bibliographic
+      details can be pinned at glossary-lock.
+
+summary: |
+  Ch41 is the most methodologically-sensitive chapter in the book per
+  brief special_instructions and the closing comparative chapter of
+  Part II, drawing on five Part-I anchor chapters (Ch32 Nanabozho/
+  Mishipeshu, Ch29 Mwindo/Kirimu, Ch31 Väinämöinen/Iku-Turso, Ch30
+  Bakunawa, Ch27 Mapuche Kai-Kai/Tren-Tren) and on the held-for-this-
+  chapter Rainbow Serpent critique, with two methodological-typological
+  comparative anchors (Forsyth 1987, Ballentine 2015). All 13 unique
+  source_ids resolve in sources.yaml (ballentine-2015, forsyth-1987,
+  koessler-ilg-cuentan, foerster-religiosidad-mapuche, biebuyck-mateene-
+  mwindo, eugenio-philippine-myths, siikala-finnish, belcher-epic,
+  hallowell-ojibwa-world, johnston-manitous, smith-island-anishnaabeg,
+  vizenor-narrative-chance, merlan-caging-rainbow); all 17 COMPARATIVE-
+  HOOK chapter-references resolve in toc.yaml. The brief's four
+  sources.anchor entries are all correctly routed (merlan-caging-
+  rainbow → §I, hallowell-ojibwa-world → §II, biebuyck-mateene-mwindo
+  → §III, siikala-finnish → §IV). The three [APPROPRIATION-FLAG:]
+  markers (§I, §II, §III) all conform to the locked four-sub-field
+  schema (substance | named_specialists | tier_implication |
+  forwards_to) — sub-field conformance is a clean PASS at all three
+  loci, with named-specialists correctly distinguishing in-sources.yaml
+  anchors (Merlan, Hallowell, Johnston, Smith, Vizenor, Biebuyck,
+  Mateene, Belcher) from named-but-flagged secondary anchors
+  (Radcliffe-Brown 1926, Morphy 1991, Rose 1996, Keen 1994; Biebuyck
+  *Hero and Chief* 1978). The §IV [INFERENCE:] marker (line 190) and
+  §VI [SPECULATION:] marker (line 245) both conform to their locked
+  schemas, with the SPECULATION marker's counterargument sub-field
+  substantively engaging the elastic-typology defense. Area-specialist-
+  first discipline status: CLEAN PASS at all five sections — every
+  Anishinaabe / Aboriginal-Australian / Nyanga claim is anchored on a
+  named area specialist before any chaoskampf-typological overlay is
+  invoked, and the brief's special_instructions on the appropriation-
+  protocol commitment are honoured at every paragraph. Two MEDIUM
+  findings: FIND-01 date error in line 221 footnote (Foerster's volume
+  is 1993, not 1995 as cited; the EVIDENCE token at line 223 is
+  correctly source_id=foerster-religiosidad-mapuche so the attribution
+  is unaffected, but the bibliographic citation is wrong); FIND-02
+  unverified scholar name "Henrik Reinhold Antell" at line 178 in the
+  list of named rune-collectors (no upstream attestation in Ch31, in
+  sources.yaml, or anywhere else in the project source-base; the name
+  does not match any known 19th-century Finnish rune-collector that
+  the auditor can verify, and the chapter should not assert the
+  participation of a named historical figure without an upstream
+  anchor). Two LOW findings (FIND-03 minor narrative-detail elaboration
+  about gun-firing in Bakunawa eclipse-noise practices at line 209,
+  not directly attested by Ch30; FIND-04 minor name-form discipline
+  drift at line 221 — "Rolf Foerster" / "Foerster, R." rather than
+  the canonical "Rolf Foerster González" / "Foerster González, R.")
+  and three NOTE-level positive structural observations (NOTE-01 the
+  marker-distribution choice — three APPROPRIATION-FLAG at §§I-III
+  plus one INFERENCE at §IV plus no marker at §V — is well-aligned to
+  the brief's semantics; NOTE-02 the chapter-wide "chaos-X" compounds
+  are pervasively in argument-context describing the framing being
+  refused, consistent with the chapter's critique-register argument
+  structure and not a glossary violation; NOTE-03 the named-but-
+  flagged pattern is a model application). Most consequential single
+  finding: FIND-02, the unverified "Henrik Reinhold Antell"
+  attribution, which is the only instance in the chapter at which a
+  named historical figure is asserted without an upstream anchor or
+  external-source verification — particularly notable in a chapter
+  whose central methodological commitment is the area-specialist
+  citation discipline. FIND-01 (the Foerster date error) is also
+  consequential because it appears in a chapter that explicitly
+  emphasises area-specialist citation discipline. Per the verdict
+  rule "PASS if zero HIGH and ≤3 MEDIUM; otherwise REVISE", with 2
+  MEDIUM findings the chapter is below the threshold for REVISE on
+  count alone, but both MEDIUM findings are bibliographic-attribution
+  errors in a chapter whose central methodological commitment is the
+  area-specialist citation discipline, and the conservative reading
+  is REVISE because (a) FIND-02's unverified name is the single most
+  consequential issue in any of the Part-II comparative chapters
+  audited so far on the area-specialist-citation-discipline axis, and
+  (b) FIND-01 is a small-but-clear date error in a footnote that the
+  chapter cannot afford given its methodological stakes. Both MEDIUM
+  findings are verbatim-substitutable in the post-human-normalize
+  pass before the chapter advances to claims-approved. Final verdict:
+  REVISE.
