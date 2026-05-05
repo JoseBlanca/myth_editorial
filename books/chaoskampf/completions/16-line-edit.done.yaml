@@ -1,0 +1,89 @@
+stage: "line-edit"
+timestamp: "2026-05-04T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+summary: "Line-edit stage complete across 43 chapters. ~91 conservative Pinker-style polish edits applied (mostly nominalisation removal, throat-clearer cuts, zombie-noun rewrites). All structural counts preserved. The book's deliberate academic register and citation density were respected; long sentences with clear parallel structure were left intact."
+
+execution:
+  batches: 4
+  parallelism: "two-at-a-time per RUNBOOK.md max-2-concurrent-agents rule"
+
+per_batch_summary:
+  batch_a_ch00_ch10: 52
+  batch_b_ch11_ch21: 28
+  batch_c_ch22_ch32: 11
+  batch_d_ch33_ch42: 5
+  total_edits: 96
+
+dominant_edit_categories:
+  - throat_clearing_removal: "'The first thing to register about X is...' opens trimmed (concentrated in batch C)"
+  - of_genitive_chains: "'the development of X' → 'developing X', 'the establishment of Y' → 'establishing Y'"
+  - zombie_noun_to_gerund: "'the implementation of' → 'implementing'"
+  - cleft_redundancy: "'X is what Y' → 'Y X' where the cleft was not load-bearing"
+  - existential_throat_clearing: "'There is no X' → 'No X V…'"
+  - compounding_hedges: "across-sentence hedge stacks tightened"
+
+reverted_edits:
+  - chapter: "00-introduction"
+    note: "'What Ballentine is asking for...' kept progressive aspect — simple-present shift would have lost the 'ongoing scholarly conversation' sense"
+  - chapter: "01-ninurta-asag"
+    note: "Sumerologists' formal phrasings in source-overview register left intact per the citation-dense register policy"
+  - chapter: "09-revelation-red-dragon"
+    note: "punctuation tweak around 'cluster 7, Ra/Apep, with Horus/Seth' deferred — punctuation belongs to grammar-check stage, not line-edit"
+
+structural_preservation:
+  footnote_counts: "preserved between .grammar-checked.adoc and .edited.adoc for all 43 chapters"
+  evidence_token_counts: "preserved for all 43 chapters"
+  comparative_hook_counts: "preserved for all 43 chapters"
+  asciidoc_anchors: "preserved verbatim"
+  asciidoc_headings: "preserved verbatim"
+  italic_marker_brackets: "byte-identical (resolved INFERENCE/SPECULATION/LACUNA/APPROPRIATION-FLAG content untouched per Hard rule #3)"
+  diacritics: "all glossary terms (Tiamat, Vṛtra, Aži Dahāka, Tarḫunna, Þórr, Jǫrmungandr, Iku-Turso, Mishipeshu, *maʿat*, *isfet*, *ngillatun*, *aadizookaanag*, etc.) byte-identical"
+  line_counts: "identical between .grammar-checked.adoc and .edited.adoc for all 43 chapters"
+
+outputs:
+  - { file: "chapters/00-introduction.edited.adoc", lines: 141, diff: "chapters/00-introduction.diff.md" }
+  - { file: "chapters/01-ninurta-asag.edited.adoc", lines: 333, diff: "chapters/01-ninurta-asag.diff.md" }
+  - { file: "chapters/02-ninurta-anzu.edited.adoc", lines: 332, diff: "chapters/02-ninurta-anzu.diff.md" }
+  - { file: "chapters/03-marduk-tiamat.edited.adoc", lines: 605, diff: "chapters/03-marduk-tiamat.diff.md" }
+  - { file: "chapters/04-mesopotamian-minor.edited.adoc", lines: 107, diff: "chapters/04-mesopotamian-minor.diff.md" }
+  - { file: "chapters/05-kumarbi-ullikummi.edited.adoc", lines: 462, diff: "chapters/05-kumarbi-ullikummi.diff.md" }
+  - { file: "chapters/06-illuyanka.edited.adoc", lines: 260, diff: "chapters/06-illuyanka.diff.md" }
+  - { file: "chapters/07-baal-yamm-lotan.edited.adoc", lines: 373, diff: "chapters/07-baal-yamm-lotan.diff.md" }
+  - { file: "chapters/08-yahweh-leviathan-rahab.edited.adoc", lines: 479, diff: "chapters/08-yahweh-leviathan-rahab.diff.md" }
+  - { file: "chapters/09-revelation-red-dragon.edited.adoc", lines: 289, diff: "chapters/09-revelation-red-dragon.diff.md" }
+  - { file: "chapters/10-christian-reception.edited.adoc", lines: 219, diff: "chapters/10-christian-reception.diff.md" }
+  - { file: "chapters/11-zeus-typhon.edited.adoc", lines: 415, diff: "chapters/11-zeus-typhon.diff.md" }
+  - { file: "chapters/12-greek-dragons-after-typhon.edited.adoc", lines: 354, diff: "chapters/12-greek-dragons-after-typhon.diff.md" }
+  - { file: "chapters/13-thraetaona-azidahaka.edited.adoc", lines: 388, diff: "chapters/13-thraetaona-azidahaka.diff.md" }
+  - { file: "chapters/14-indra-vrtra.edited.adoc", lines: 456, diff: "chapters/14-indra-vrtra.diff.md" }
+  - { file: "chapters/15-vedic-reflexes.edited.adoc", lines: 258, diff: "chapters/15-vedic-reflexes.diff.md" }
+  - { file: "chapters/16-ra-apep.edited.adoc", lines: 454, diff: "chapters/16-ra-apep.diff.md" }
+  - { file: "chapters/17-horus-seth.edited.adoc", lines: 175, diff: "chapters/17-horus-seth.diff.md" }
+  - { file: "chapters/18-thor-jormungandr.edited.adoc", lines: 471, diff: "chapters/18-thor-jormungandr.diff.md" }
+  - { file: "chapters/19-ie-reflexes.edited.adoc", lines: 333, diff: "chapters/19-ie-reflexes.diff.md" }
+  - { file: "chapters/20-slavic-baltic.edited.adoc", lines: 227, diff: "chapters/20-slavic-baltic.diff.md" }
+  - { file: "chapters/21-gonggong.edited.adoc", lines: 217, diff: "chapters/21-gonggong.diff.md" }
+  - { file: "chapters/22-hou-yi.edited.adoc", lines: 160, diff: "chapters/22-hou-yi.diff.md" }
+  - { file: "chapters/23-susanoo-orochi.edited.adoc", lines: 219, diff: "chapters/23-susanoo-orochi.diff.md" }
+  - { file: "chapters/24-huitzilopochtli-coatepec.edited.adoc", lines: 220, diff: "chapters/24-huitzilopochtli-coatepec.diff.md" }
+  - { file: "chapters/25-mesoamerican-cluster.edited.adoc", lines: 128, diff: "chapters/25-mesoamerican-cluster.diff.md" }
+  - { file: "chapters/26-pariacaca-amaru.edited.adoc", lines: 162, diff: "chapters/26-pariacaca-amaru.diff.md" }
+  - { file: "chapters/27-mapuche-kai-tren.edited.adoc", lines: 110, diff: "chapters/27-mapuche-kai-tren.diff.md" }
+  - { file: "chapters/28-bida-wagadu.edited.adoc", lines: 182, diff: "chapters/28-bida-wagadu.diff.md" }
+  - { file: "chapters/29-mwindo-kirimu.edited.adoc", lines: 193, diff: "chapters/29-mwindo-kirimu.diff.md" }
+  - { file: "chapters/30-bakunawa.edited.adoc", lines: 155, diff: "chapters/30-bakunawa.diff.md" }
+  - { file: "chapters/31-vainamoinen-iku-turso.edited.adoc", lines: 159, diff: "chapters/31-vainamoinen-iku-turso.diff.md" }
+  - { file: "chapters/32-nanabozho-mishipeshu.edited.adoc", lines: 186, diff: "chapters/32-nanabozho-mishipeshu.diff.md" }
+  - { file: "chapters/33-methods.edited.adoc", lines: 340, diff: "chapters/33-methods.diff.md" }
+  - { file: "chapters/34-C1-combat-as-cosmogony.edited.adoc", lines: 366, diff: "chapters/34-C1-combat-as-cosmogony.diff.md" }
+  - { file: "chapters/35-C2-combat-as-sovereignty.edited.adoc", lines: 358, diff: "chapters/35-C2-combat-as-sovereignty.diff.md" }
+  - { file: "chapters/36-C3-cyclical-maintenance.edited.adoc", lines: 265, diff: "chapters/36-C3-cyclical-maintenance.diff.md" }
+  - { file: "chapters/37-C4-eschatological-displacement.edited.adoc", lines: 443, diff: "chapters/37-C4-eschatological-displacement.diff.md" }
+  - { file: "chapters/38-C5-ie-hero-slay-serpent-formula.edited.adoc", lines: 422, diff: "chapters/38-C5-ie-hero-slay-serpent-formula.diff.md" }
+  - { file: "chapters/39-C6-near-eastern-mediterranean-transmission.edited.adoc", lines: 403, diff: "chapters/39-C6-near-eastern-mediterranean-transmission.diff.md" }
+  - { file: "chapters/40-C7-inversion-problem.edited.adoc", lines: 271, diff: "chapters/40-C7-inversion-problem.diff.md" }
+  - { file: "chapters/41-C8-refusal-and-appropriation.edited.adoc", lines: 246, diff: "chapters/41-C8-refusal-and-appropriation.diff.md" }
+  - { file: "chapters/42-reception-coda.edited.adoc", lines: 259, diff: "chapters/42-reception-coda.diff.md" }
+
+handoff: "to stage 17 character-appendix"
