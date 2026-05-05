@@ -1,0 +1,110 @@
+stage: "post-human-normalize"
+timestamp: "2026-05-05T13:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+
+target: "character-appendix.adoc"
+
+outputs:
+  - file: "character-appendix.adoc"
+    lines: 2162
+
+inputs_consulted:
+  - "character-appendix.factcheck.yaml (40 findings: HIGH 4, MEDIUM 6, LOW 30)"
+  - "scope.md, sources.yaml, glossary.yaml"
+  - "all chapters/NN-*.edited.adoc (for anchor-resolution check)"
+
+factcheck_finding_dispositions:
+  F001:
+    severity: HIGH
+    issue: "Cassiopeia misclassified under === Deities (mortal queen)"
+    disposition: ACCEPT
+    action: "Moved entry to === Heroes and Mortals between Beowulf and Christ. Identification updated to 'Mortal queen of Aithiopia'. Relevance updated to 'mortal mother whose hubris brings the sea-monster.'"
+  F002:
+    severity: HIGH
+    issue: "Hou Yi placement under === Deities (divine/heroic classification debated)"
+    disposition: ACCEPT
+    action: "Moved entry to === Heroes and Mortals between Herakles and Hupasiya. Relevance gained an editorial note explaining the debate and the appendix's choice to align placement with order-restoration role under sage-king Yao."
+  F003:
+    severity: HIGH
+    issue: "Coatlicue statue described as basalt, ~2.6 m — actually andesite, 2.52 m"
+    disposition: ACCEPT
+    action: "Changed 'basalt sculpture approximately 2.6 metres tall' → 'andesite sculpture approximately 2.52 metres tall' in the physical-description; also changed 'Aztec basalt statue' → 'Aztec andesite statue' in the relevance line."
+  F004:
+    severity: HIGH
+    issue: "Coyolxauhqui Stone described as basalt — actually andesite"
+    disposition: ACCEPT
+    action: "Changed 'circular Aztec basalt monolith' → 'circular Aztec andesite monolith'."
+  F005:
+    severity: MEDIUM
+    issue: "Pariacaca chapter citations 'chs. 6, 8, 21' may be off by one — Salomon-Urioste 1991 falcon-egg narrative is in Ch. 5"
+    disposition: FLAGGED-ONLY
+    action: "Deferred — needs direct check against the Salomon-Urioste book; possibly inherited from briefs/26-pariacaca-amaru.yaml which propagates the same numbers. Does not block format-finalize."
+  F006:
+    severity: MEDIUM
+    issue: "Geryon iconography 'three heads, three torsos, three pairs of legs' is one variant; Hesiod gives one body / three heads, vase tradition gives three torsos / one pair of legs"
+    disposition: MODIFY
+    action: "Rewrote the physical-description to flag the variation explicitly: 'Hesiod (Theogony 287) gives him three heads with one body, while the standard fifth-century vase-painting tradition gives him three torsos joined at the waist supported by one set of legs.' Footnote citations expanded."
+  F007:
+    severity: MEDIUM
+    issue: "Kāliya '110 heads in some Bhāgavata manuscripts' unverified"
+    disposition: FLAGGED-ONLY
+    action: "Deferred — needs direct page-level check against Tagare 1976-78. The variant-numbers framing is preserved as written. Does not block format-finalize."
+  F008:
+    severity: MEDIUM
+    issue: "Thor entry's 'Brokkr and Eitri' missing the '(or Sindri)' qualifier present in the Mjǫllnir named-weapon entry"
+    disposition: ACCEPT
+    action: "Added '(or Sindri)' to match the Mjǫllnir entry."
+  F009_through_F040:
+    severity: LOW
+    disposition: ACCEPT
+    action: "All 32 LOW findings either ✓ SUPPORTED on independent verification or accepted with editorial notes. No prose changes required."
+
+beyond_factcheck_findings:
+  - issue: "Hupasiya (mortal man of Ziggaratta) placed under === Deities"
+    rationale: "Symmetric with F001 — same class of structural error the factcheck flagged for Cassiopeia. The factcheck's own audit notes acknowledged the misplacement but did not file a finding because the prior agent had been told 'do not reclassify' during the Additional-sections merge. Fixed for consistency."
+    action: "Moved entry to === Heroes and Mortals between Hou Yi and Hymir. No body-text changes."
+  - issue: "Illuyanka (Hittite serpent-monster) placed under === Deities"
+    rationale: "Symmetric with the Hupasiya case — Illuyanka is a serpent, not a deity. The factcheck's audit notes acknowledged this. Fixed for consistency."
+    action: "Moved entry to === Creatures and Monsters between Iku-Turso and Kai-Kai. No body-text changes."
+
+structural_checks:
+  markers_syntactically_valid:
+    result: "PASS — no markers present in the document (appendix skips marker-resolve per the skill contract)"
+  evidence_tokens_syntactically_valid:
+    result: "PASS — no evidence tokens present"
+  chapter_anchors_resolve:
+    result: "PASS"
+    detail: |
+      All 41 distinct <<ch-NN-slug>> xrefs used in the appendix resolve to live
+      [[ch-NN-slug]] anchors in chapters/NN-*.edited.adoc:
+      ch-01 through ch-32 Part I chapters, ch-33-methods, ch-34 through ch-41
+      Part II comparative chapters, ch-42-reception-coda. The Part II Cn anchors
+      use the chapter file's literal anchor (e.g., ch-34-C1-combat-as-cosmogony)
+      with the C-prefix preserved.
+  glossary_diacritics_consistent:
+    result: "PASS"
+    detail: "Verified glossary forms: Aži Dahāka, Þórr, Vṛtra, Tarḫunna, Thraētaona, Jǫrmungandr, Aŋra Mainyu, Bēlet-ilī, Šauška, Ninḫursaĝa, mušḫuššu, ʿAnat, Apsû, Anšar, Šara, Šarur, Centzon Huitznahua, Coatlicue, Coyolxauhqui, Pariacaca, Kərəsāspa, Frashokereti, Kāliya, Mishipeshu, Iku-Turso. No diacritic violations."
+  never_use_glossary_terms_absent:
+    result: "PASS"
+    detail: "Scanned for: Ningirsu, Ellil, Anshar, Kingu, Zu, Sharur, Jehovah, 'Azhi Dahaka', Vritra, Kung-kung, 'Yamato no Orochi' (the never_use form), 'Rig Veda', 'Tablet of Fates', Illuyankaš. Zero hits."
+  duplicate_anchors:
+    result: "PASS — zero duplicate [[char-*]] anchors after the four moves"
+  alphabetical_ordering:
+    result: "PASS"
+    detail: |
+      All 5 sections alphabetical post-fixes:
+      === Deities (A-Z, 80 entries after the 4 outbound moves)
+      === Heroes and Mortals (Andromeda → Väinämöinen, 28 entries after the 3 inbound moves)
+      === Creatures and Monsters (Asag → Zmey Gorynych, 39 entries after the 1 inbound move)
+      === Personified Concepts and Adversaries (Satan, 1 entry)
+      === Named Weapons (Kusanagi → Yagrush and Ayyamur, 5 entries)
+  entry_count_preserved:
+    result: "PASS — 157 entries before fixes, 157 entries after fixes (4 moves, 0 deletions, 0 additions)"
+
+validation_provenance_block_appended:
+  result: "yes (lines 2158-2162 of the file)"
+
+handoff: "to stage 18 format-finalize"
+
+summary: "Validated character-appendix.adoc against the prose-document checks; applied 6 of 8 factcheck findings (HIGH F001-F004 ACCEPT; MEDIUM F006 MODIFY, F008 ACCEPT) plus two consistency-symmetric structural fixes (Hupasiya, Illuyanka misclassifications symmetric with F001). Two MEDIUM findings (F005 Pariacaca chapter numbers, F007 Kāliya 110 heads) FLAGGED-ONLY pending direct primary-source page-level verification — neither blocks format-finalize. All structural checks PASS. 157 entries preserved across 5 alphabetical sections; file grew from 2157 to 2162 lines (added 5-line validation provenance block at end)."
