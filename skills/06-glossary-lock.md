@@ -51,6 +51,12 @@ terms:
 - Every `never_use` entry is a real out-of-scope equivalent (e.g., Akkadian for a Sumerian book), not just a synonym.
 - First-mention glosses are functional, not poetic (no "mighty", "ancient", etc.).
 
+## Relationship to the gloss ledger
+
+`glossary.yaml` is the *locked vocabulary* — chosen renderings, never_use lists, and the full `first_mention_gloss` text. It is decided once before drafting and rarely changes.
+
+A separate runtime file, `gloss-ledger.yaml`, is created by `intro-chapter` and updated by `chapter-draft` and `comparative-chapter`. It tracks which glossary terms have been glossed in which chapters, so the same term is not re-glossed in full in every chapter. This stage does not write to the ledger and does not need to know about it beyond being aware that `first_mention_gloss` will be reused there as the canonical full-form gloss; later stages compose ad-hoc one-phrase reminder glosses themselves rather than reading a `reminder_gloss:` field, so do not add such a field here.
+
 ## Mid-pipeline glossary updates
 
 If a later stage (e.g., `chapter-claims`) encounters a recurring term that should be in the glossary but isn't, the AI should stop and flag it. The human then adds the term to `glossary.yaml` using the same process (survey renderings, pick one, add `never_use` entries). This does not require re-running `glossary-lock` from scratch — just append the new entry and confirm consistency with existing entries.

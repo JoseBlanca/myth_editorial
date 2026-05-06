@@ -28,7 +28,7 @@ Output:
     overwrite each other's prompt files mid-pipeline.
 
 The assembled prompt contains:
-    1. The governing files (scope.md, sources.yaml, glossary.yaml) if they exist
+    1. The governing files (scope.md, sources.yaml, glossary.yaml, toc.yaml, gloss-ledger.yaml) if they exist
     2. The skill instructions
     3. Any extra input files passed as arguments
 """
@@ -46,7 +46,7 @@ PIPELINE_DIR = Path(__file__).resolve().parent
 SKILLS_DIR = PIPELINE_DIR / "skills"
 BOOKS_DIR = PIPELINE_DIR / "books"
 
-GOVERNING_FILES = ["scope.md", "sources.yaml", "glossary.yaml", "toc.yaml"]
+GOVERNING_FILES = ["scope.md", "sources.yaml", "glossary.yaml", "toc.yaml", "gloss-ledger.yaml"]
 
 
 def find_skill_file(stage: str) -> tuple[Path, int] | tuple[None, None]:

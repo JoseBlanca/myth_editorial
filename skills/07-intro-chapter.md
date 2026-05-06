@@ -23,6 +23,7 @@ This chapter makes factual claims about cultural significance, so it goes throug
 - `scope.md`, `sources.yaml`, `glossary.yaml`
 - All `briefs/*.yaml` (especially the `cultural_relevance` fields)
 - `toc.yaml`
+- `gloss-ledger.yaml` if it exists (it should not for the intro — the intro is chapter 00 and creates the ledger; if the file already exists, stop and ask the human, since chapters were drafted out of order)
 - Primary and secondary sources — pasted into the conversation or accessible via fetch
 
 ## Agent instructions
@@ -68,6 +69,41 @@ Asimov register, same as the rest of the book. The reader is intelligent and uni
 
 Same forbidden-words list as `chapter-draft`. Same glossary discipline: use `glossary.yaml` renderings, gloss on first mention.
 
+### First-mention gloss policy and the ledger
+
+Chapters are drafted strictly in order — intro (00), then 01, 02, …, then the comparative chapter last. To prevent the same term from being glossed in full in every chapter, drafting stages share a runtime file: `gloss-ledger.yaml` (book root). The intro creates it; later stages read and update it.
+
+For each glossary term you are about to use in body prose, decide:
+
+1. **Not yet in the ledger** → write the full `first_mention_gloss` from `glossary.yaml` on first appearance in this chapter. Add a ledger entry with `full_gloss_in: "00"` and `last_mention_in: "00"`.
+2. **Already glossed in full this chapter or a chapter immediately preceding** → bare term, no gloss. Update `last_mention_in` to the current chapter and append the chapter to `chapters_used`.
+3. **Last mentioned at least 2 chapters ago** → write a short *reminder gloss* — one phrase, ad-hoc (not the full functional gloss). For example: "Tiamat, the saltwater chaos-figure" rather than the full glossary entry. Update `last_reminder_in` and `last_mention_in` to the current chapter.
+
+The "at least 2 chapters" rule is a soft guideline. A very central term used in many chapters needs reminding less often than a peripheral one. Use judgement.
+
+The intro chapter is normally the first place the reader meets each term, so most ledger entries this stage writes will be in case (1).
+
+## Output: `gloss-ledger.yaml`
+
+Write this file at the book root, alongside `glossary.yaml`.
+
+```yaml
+meta:
+  description: "Tracks which glossary terms have been glossed in which chapters,
+                so subsequent chapters don't redundantly re-gloss them."
+  created_by: intro-chapter
+  updated_by: [intro-chapter, chapter-draft, comparative-chapter]
+
+terms:
+  - native: "<transliteration as in glossary.yaml>"
+    full_gloss_in: "00"          # chapter where the full first_mention_gloss appeared
+    last_reminder_in: null        # most recent chapter that gave a brief reminder gloss
+    last_mention_in: "00"         # most recent chapter that used the term at all
+    chapters_used: ["00"]
+```
+
+Only include terms actually used in the intro. Later stages append entries as they introduce more terms.
+
 ### Citations
 
 Same rules as `chapter-draft`: cite only sources provided in the conversation or fetched via tool use. AsciiDoc footnotes. Every claim about centrality, function, or cross-cultural resonance needs a citation.
@@ -96,7 +132,7 @@ The composition is catalogued as ETCSL 1.1.1.footnote:[ETCSL 1.1.1.] // EVIDENCE
 
 Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words. For a larger book (15+ chapters): 6000–10000 words. Do not pad.
 
-## Output: `chapters/00-introduction.adoc`
+## Output: `chapters/00-introduction.adoc` and `gloss-ledger.yaml`
 
 ```asciidoc
 == Introduction: The Myths and Their World
@@ -131,6 +167,7 @@ Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words
 7. Every marker has all required sub-fields.
 8. `// COMPARATIVE-HOOK:` comments present for every cross-cultural note.
 9. Every `// EVIDENCE:` and `// COMPARATIVE-HOOK:` marker starts at column 0 on its own line. None appended to paragraph lines.
+10. `gloss-ledger.yaml` written at the book root with one entry per glossary term used in body prose. Each entry has `full_gloss_in: "00"`, `last_mention_in: "00"`, `chapters_used: ["00"]`.
 
 ## Completion protocol
 

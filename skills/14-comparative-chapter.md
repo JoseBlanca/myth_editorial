@@ -17,7 +17,7 @@ This chapter is inherently more speculative than the story chapters. It uses an 
 - All story chapters after narrative-fidelity has passed (`chapters/NN-<slug>.adoc`) — the factual content is locked, though markers have not yet been resolved and prose has not yet been polished. The comparative chapter needs the factual content, not the final formatting.
 - `chapters/00-introduction.adoc` (the intro chapter, post-factcheck)
 - All briefs (for `comparative_hooks`) and all `// COMPARATIVE-HOOK:` comments left in chapter drafts
-- `scope.md`, `sources.yaml`
+- `scope.md`, `sources.yaml`, `glossary.yaml`, `gloss-ledger.yaml`
 - Optional comparative-mythology whitelist (Dumézil, Puhvel, Watkins, West, Witzel, Lincoln — add to `sources.yaml` before this stage)
 
 ## Rules
@@ -30,6 +30,20 @@ This chapter is inherently more speculative than the story chapters. It uses an 
 ## Style
 Asimov register, extended for comparative nuance. Signal uncertainty: "One might observe...", "Scholars such as X have argued...". Avoid grand unifying claims; stay close to specific parallels.
 
+## First-mention gloss policy and the ledger
+
+This chapter runs after every story chapter has been drafted, so most in-scope glossary terms have already been glossed in full somewhere. Apply the same ledger-driven policy as `chapter-draft`:
+
+1. **Not in the ledger** → full `first_mention_gloss` from `glossary.yaml`, then add a ledger entry under this chapter's number.
+2. **`last_mention_in` is the previous chapter or current chapter** → bare term, no gloss.
+3. **`last_mention_in` is at least 2 chapters back** → short ad-hoc reminder gloss (one phrase, not the full functional definition).
+
+For out-of-scope comparative terms (Greek, Vedic, Norse, etc.) that are not in `glossary.yaml`, gloss on first appearance in this chapter the same way you would any unfamiliar term — but do not add them to `gloss-ledger.yaml`, which tracks `glossary.yaml` entries only.
+
+Use the comparative chapter's own number from `toc.yaml` (or, if it is the final chapter, the next number after the last story chapter) as the chapter id when updating the ledger.
+
+After writing, save the updated `gloss-ledger.yaml` back to the book root.
+
 ## Output: `comparative.adoc`
 
 Structured as:
@@ -41,6 +55,7 @@ Structured as:
 - Every comparative claim cites both an in-scope source and an out-of-scope source.
 - Every `[SPECULATION:]` has both basis and counterargument sub-fields.
 - No claim presented as consensus unless it actually is.
+- `gloss-ledger.yaml` updated: every glossary term used in this chapter has its entry created or updated, and no in-scope term that already had a `full_gloss_in` value was re-glossed in full.
 
 ## Completion protocol
 

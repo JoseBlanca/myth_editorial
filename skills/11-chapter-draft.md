@@ -21,12 +21,37 @@ Importantly, the writing AI does **not** receive the original source texts. It o
 5. Citations carry over from the claims document. Do not add, remove, or reassign footnotes.
 6. Foreign-language common nouns and book titles in body prose render as AsciiDoc italic (`_term_`), not bold (`*term*`). Convert any asterisk-bold body-prose terms inherited from the claims file to underscore-italic. Footnote bodies, EVIDENCE tokens (`// EVIDENCE: …`), COMPARATIVE-HOOK comments, and marker contents preserve their original markup byte-for-byte — the verbatim-preservation requirement of rule 4/5 is not violated by the body-prose-only italic conversion.
 
+## First-mention gloss policy and the ledger
+
+Each chapter is drafted in isolation, so without coordination every chapter would re-gloss every recurring term in full and the book would read as if no one talked to anyone. The `gloss-ledger.yaml` file at the book root tracks which terms have already been glossed and where, so this stage can decide whether to gloss in full, give a brief reminder, or use the bare term.
+
+For each `glossary.yaml` term you are about to use in body prose, look it up in the ledger and decide:
+
+1. **Not in the ledger** → write the full `first_mention_gloss` from `glossary.yaml` on first appearance in this chapter. Add a ledger entry with `full_gloss_in:` set to the current chapter number, `last_mention_in:` set to the current chapter, and `chapters_used:` containing the current chapter.
+2. **`last_mention_in` is the previous chapter (N−1) or the current chapter** → bare term, no gloss. Just update `last_mention_in` to the current chapter and append the chapter to `chapters_used`.
+3. **`last_mention_in` is at least 2 chapters back** → write a short *reminder gloss* — one phrase, ad-hoc, not the full functional gloss. For example: "Tiamat, the saltwater chaos-figure" or "the *me* — the cosmic ordinances" rather than the full glossary entry. Update `last_reminder_in` and `last_mention_in` to the current chapter; append to `chapters_used`.
+
+The "at least 2 chapters" threshold is a soft guideline. A very central term used in nearly every chapter does not need a reminder every other chapter — use judgement. A peripheral term that appeared once in chapter 02 and now reappears in chapter 07 should probably get a reminder.
+
+A reminder gloss is shorter and more colloquial than the full first-mention gloss. The full gloss is a careful definition; the reminder is a one-phrase nudge so the reader is not stranded if they jumped chapters.
+
+Only count chapters that you have actually finalized in this run as "previous." If chapter 03 introduces a term that chapter 02 happens to mention but had not yet been drafted at the time chapter 02 was written, that does not retroactively count — fix it by re-drafting from the affected chapter forward.
+
+After writing the chapter, write the updated `gloss-ledger.yaml` back to the book root. Preserve all entries from earlier chapters; add or update only the entries for terms used in this chapter.
+
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
+- `gloss-ledger.yaml` (runtime state — which glossary terms have been glossed in which earlier chapters)
 - `chapters/NN-<slug>.claims.approved.adoc` (fact-checked, human-reviewed claims)
 - `briefs/NN-<slug>.yaml` (for variant classification, target length, special instructions)
 
 **Not** primary source translations. The drafter does not need the sources — the claims document already contains everything verified. Providing sources would tempt the drafter to "improve" claims with additional details.
+
+## Order discipline
+
+Story chapters are drafted strictly in TOC order — chapter 01 first, then 02, then 03, etc. The intro (chapter 00) is drafted before any of them. This ordering is what makes the gloss ledger reliable: each chapter sees only ledger state from chapters that have actually been finalized.
+
+If you need to re-draft chapter N (e.g. fact-check found a problem), you must also re-draft chapters N+1..end, because their gloss decisions depended on what chapter N established. Before starting, verify: the latest `last_mention_in` value in the ledger should be N−1 (the previous chapter). If it is greater, stop and ask the human — chapters were drafted out of order and the ledger is inconsistent with what you are about to write.
 
 ## Style: the Asimov method
 
@@ -72,7 +97,7 @@ This passage sets the Asimov register immediately: the reader understands they a
 
 The source overview is separated from the narrative body by a blank line or a section transition (e.g., "The story, as the tablets preserve it, goes as follows."). It is not a dry bibliography — it is narrative prose about artifacts, written in the same Asimov register as the rest of the chapter.
 
-## Output: `chapters/NN-<slug>.adoc`
+## Output: `chapters/NN-<slug>.adoc` and updated `gloss-ledger.yaml`
 
 ```asciidoc
 == <Chapter Title>
@@ -91,13 +116,14 @@ The source overview is separated from the narrative body by a blank line or a se
 2. **Completeness**: walk the approved claims document claim by claim — including Source overview claims. Is every claim represented in the narrative? List any you cannot find — they are bugs.
 3. **No additions**: scan the narrative for any factual assertion that does not correspond to a claim in the approved document. Flag it.
 4. Scan for forbidden words — each hit is a drift signal; revise.
-5. Every proper noun was glossed on first mention using `glossary.yaml`.
+5. Every proper noun was handled per the ledger policy above: full gloss only if the ledger had no entry; bare term if mentioned in the immediately preceding chapter; short reminder gloss if last mention was 2+ chapters back. No term re-glossed in full when the ledger already records a `full_gloss_in` value.
 6. Variant handling matches the brief's classification.
 7. Every marker has survived from claims to narrative byte-for-byte, including `[SPECULATION:]` blocks with their `basis:` / `counterargument:` pipe-fields.
 8. All footnotes carried over unchanged.
 9. Length matches the brief's target. Not padded.
 10. `// COMPARATIVE-HOOK:` comments carried over.
 11. Foreign-language common nouns and book titles in body prose are italicised with `_term_` (underscore), not bolded with `*term*` (asterisk). Asterisk markup remains only inside footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents.
+12. `gloss-ledger.yaml` written back to the book root: every entry from earlier chapters preserved, every glossary term used in this chapter has its entry created or updated, and the latest `last_mention_in` across all entries is the current chapter number.
 
 ## Completion protocol
 
