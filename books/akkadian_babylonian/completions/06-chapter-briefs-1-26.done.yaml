@@ -1,0 +1,83 @@
+stage: "chapter-briefs"
+timestamp: "2026-05-06T18:56:17Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+scope: "chapters 1-26 (cycles I-IV: cosmogony, divine_conflict, heroic_epic, royal_legend)"
+outputs:
+  - file: "briefs/01-enuma-elish.yaml"
+    lines: 159
+  - file: "briefs/02-atra-hasis.yaml"
+    lines: 144
+  - file: "briefs/03-adapa.yaml"
+    lines: 130
+  - file: "briefs/04-theogony-of-dunnu.yaml"
+    lines: 106
+  - file: "briefs/05-slaying-of-labbu.yaml"
+    lines: 94
+  - file: "briefs/06-enmesharra-defeat.yaml"
+    lines: 99
+  - file: "briefs/07-toil-of-babylon.yaml"
+    lines: 87
+  - file: "briefs/08-uras-and-marduk.yaml"
+    lines: 89
+  - file: "briefs/09-damkina-bond.yaml"
+    lines: 80
+  - file: "briefs/10-founding-of-eridu.yaml"
+    lines: 104
+  - file: "briefs/11-worm-and-toothache.yaml"
+    lines: 106
+  - file: "briefs/12-first-brick.yaml"
+    lines: 90
+  - file: "briefs/13-descent-of-ishtar.yaml"
+    lines: 120
+  - file: "briefs/14-nergal-ereshkigal.yaml"
+    lines: 118
+  - file: "briefs/15-anzu.yaml"
+    lines: 138
+  - file: "briefs/16-erra-and-ishum.yaml"
+    lines: 133
+  - file: "briefs/17-gilgamesh-sb.yaml"
+    lines: 157
+  - file: "briefs/18-etana.yaml"
+    lines: 127
+  - file: "briefs/19-birth-legend-of-sargon.yaml"
+    lines: 110
+  - file: "briefs/20-king-of-battle.yaml"
+    lines: 109
+  - file: "briefs/21-great-revolt-against-naram-sin.yaml"
+    lines: 118
+  - file: "briefs/22-naram-sin-and-lord-of-apishal.yaml"
+    lines: 80
+  - file: "briefs/23-erra-and-naram-sin.yaml"
+    lines: 80
+  - file: "briefs/24-cuthean-legend-of-naram-sin.yaml"
+    lines: 124
+  - file: "briefs/25-elegy-on-death-of-naram-sin.yaml"
+    lines: 83
+  - file: "briefs/26-tukulti-ninurta-epic.yaml"
+    lines: 124
+summary: |
+  Produced 26 chapter briefs for the Akkadian/Babylonian mythology book covering cycles I–IV
+  (cosmogony, divine conflict, heroic epic, royal legend). All briefs follow the schema in
+  skills/05-chapter-briefs.md: chapter_number, slug, title, and chapter_anchor match toc.yaml
+  exactly; sources resolve to entries in sources.yaml; variant classifications are filled
+  (single-prevalent, co-equal, or composite-editorial as warranted); cultural_relevance is
+  populated with centrality, function, and at least two cross-cultural parallels per brief
+  with source pointers; comparative_hooks, triangulation_databases, and target_length_words
+  are populated; special_instructions encode recension handling, dialect issues, and
+  composition-specific concerns. Length sizing follows skill guidance: Enūma Eliš at 14000
+  words, Atra-ḫasīs and Gilgameš SB at 12000–14000, Erra and Išum at 9000, and short or
+  fragmentary creation-dossier and Narām-Sîn-cycle entries at 1200–1800 words. Comparative
+  hooks deploy hoffner-1998 (Hurro-Hittite) and smith-1994 (Ugaritic) as comparative-only
+  per scope.md and audit findings; ETCSL/black-2004 are cited for Sumerian comparanda only,
+  never as primary or fill sources. Audit findings (A1 adapa-Sumerian contamination, A3
+  erra-and-Naram-Sin distinct from Erra-Isum, A4–A6 Naram-Sin cycle additions, A7 eBL for
+  Descent of Ishtar, A8 Lambert page-range spot-checks, A9 Sultantepe field number, A12 VAT
+  identifier verification) are explicitly carried forward into special_instructions where
+  relevant for the chapter-claims stage.
+notes:
+  - "Sibling agent is producing briefs 27–41 (cycles V–VII) in parallel."
+  - "All sources cited in these 26 briefs resolve to sources.yaml registry entries; no fake or invented IDs."
+  - "Comparative-only sources (hoffner-1998, smith-1994, etcsl, black-2004) used in comparative_hooks and cross_cultural_parallels only, not in sources.primary."
+  - "Two briefs (chapters 13 and 26) flag specific audit-finding follow-ups (A7 eBL note; A12 VAT verification) for the chapter-claims stage."
+  - "Audit finding A6 (elegy-on-death-of-naram-sin: editorial decision flagged at chapter-briefs stage) was resolved here: KEEP as a brief 1200-word chapter to round out the Narām-Sîn dossier."

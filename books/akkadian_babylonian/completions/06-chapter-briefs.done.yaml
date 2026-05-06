@@ -1,0 +1,27 @@
+stage: "chapter-briefs"
+timestamp: "2026-05-06T18:58:26Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+sub_agents:
+  - id: "chapters-1-26"
+    record: "06-chapter-briefs-1-26.done.yaml"
+    coverage: "cycles I–IV (cosmogony, divine_conflict, heroic_epic, royal_legend); 26 briefs"
+  - id: "chapters-27-41"
+    record: "06-chapter-briefs-27-41.done.yaml"
+    coverage: "cycles V–VII (wisdom_dialogic, wisdom_practical, disputations, visionary_popular); 15 briefs"
+outputs:
+  - file: "toc.yaml"
+    lines: 227
+  - file: "briefs/ (41 files)"
+    lines: 4491
+summary: "Chapter briefs produced for all 41 stories in inventory.approved.yaml plus toc.yaml. Two general-purpose agents ran in parallel (per runbook two-agent ceiling): one drafted briefs 01–26 (cycles I–IV — cosmogony, divine conflict, heroic epic, royal legend), the other drafted briefs 27–41 (cycles V–VII — wisdom dialogic and practical, disputations and animal fables, visionary and popular). Total target chapter length 166,500 words, ranging from 1,200 (Elegy on the Death of Narām-Sîn) to 14,000 (Enūma Eliš). Variant classifications applied across the corpus: composite-editorial for Atra-ḫasīs, SB Gilgameš, Ludlul, Babylonian Theodicy, and Series of the Fox; co-equal for Anzû (OB Ningirsu / SB Ninurta), Nergal and Ereškigal (Amarna / Sultantepe), Etana (OB / MA / SB), Adapa (Amarna / Nineveh), King of Battle (Amarna / Nineveh), Cuthaean Legend (OB / SB), Šimâ milka (Emar / Ugarit / Hattusa), Tamarisk and Date Palm (OB / MA), and Great Revolt against Narām-Sîn (four recensions); single-prevalent for the rest including Enūma Eliš, Erra and Išum, and the short fragmentary creation-dossier and disputation entries. All four audit-derived special-instruction warnings preserved at brief level: A1 Sumerian-Tell-Haddad-not-fill on adapa; A2 VAT-10057-corrected on underworld-vision; A6 keep-as-1200-word-closing on elegy-on-death-of-naram-sin; A8/A9/A12 spot-check-page-ranges-and-VAT-and-STT-numbers carried into Founding-of-Eridu, First-Brick, Nergal-Ereshkigal, and Tukulti-Ninurta-Epic special_instructions. One source-registry bug surfaced and fixed during validation: sources.yaml had an `id: noegel-2007` entry whose short_citation and full_citation referenced the 2005 *Companion to Ancient Epic*; renamed to `id: noegel-2005` to resolve three brief citations cleanly. No source-pinning gaps; no identifier_missing flags carried forward; every source.id in every brief resolves to the 32-entry registry."
+validation:
+  schema_errors: 0
+  unresolved_source_ids: 0
+  inventory_coverage: "41/41 entries have a brief"
+  toc_coverage: "41/41 chapters have a brief; chapter_anchor matches toc.yaml on every brief"
+  total_target_words: 166500
+post_audit_warnings_carried_forward:
+  - "Lambert 2013 page ranges for Founding of Eridu / First Brick to be spot-checked at chapter-claims (audit A8)."
+  - "VAT identifiers for Tukulti-Ninurta Epic to be verified against CDLI at chapter-claims (audit A12)."
+  - "Sultantepe field number for Nergal and Ereškigal to be verified against CDLI at chapter-claims (audit A9)."
