@@ -22,6 +22,20 @@ Best run with a research-capable AI (like Gemini Deep Research) that can search 
 
 Using deep research and web search over the whitelisted sources and scholarly surveys, enumerate the major narrative cycles and individual stories of the scope mythology. Group stories by cycle: cosmogony, theogony, major heroic cycles, minor narratives, eschatology, etc. — adjusted to fit the culture (some have no cosmogony, some are organized by hero rather than cycle).
 
+### Genre breadth — narrative is not just myth and heroic epic
+Cultures encode cultural knowledge in many narrative forms beyond cosmogony, theogony, and heroic epic. The inventory must take in any text that *tells a story* in order to transmit cultural knowledge — even when it would not be classified as "myth" in a narrow sense. In particular, look for and include:
+
+- **Disputation and debate poems** — personified objects, plants, animals, trades, or seasons argue out their relative usefulness (e.g., the Akkadian *Tamarisk and Date Palm*, the Sumerian *Hoe and Plough*, *Winter and Summer*). These encode agronomy, animal husbandry, and the social hierarchy of the trades.
+- **Animal fables** — animals act out social dramas with ethical or political payload (e.g., the Akkadian *Series of the Fox*; many cultures have analogues).
+- **Practical instruction literature** — a sage or father transmits ethical and social knowledge as connected counsel rather than as a dialogue (e.g., the Akkadian *Counsels of Wisdom* and *Šimâ milka*; Egyptian *Instruction* genre; the Hebrew *Proverbs* tradition; the Vedic and Avestan *Yasna* counsel literature). Include these when they carry continuous narrative or sustained quasi-narrative voice; pure proverb-collections without narrative frame are out.
+- **Etiological narratives embedded in incantations, rituals, and medical texts** — short freestanding cosmogonies and origin stories that explain how a particular ill came to be (e.g., the Akkadian *Worm and the Toothache*; Egyptian *Isis and the Name of Ra*). These are often the oldest layer of a culture's narrative tradition.
+- **Visionary and dream narratives** — first-person otherworld journeys (e.g., the Akkadian *Underworld Vision of an Assyrian Prince*).
+- **Folktales, comic narratives, and satirical pieces** — narrative compositions outside the elite heroic register (e.g., the Akkadian *Poor Man of Nippur*).
+- **Narrative hymns** — hymns that tell a story rather than only praise (e.g., the Akkadian *Agushaya Hymn*, where Ishtar creates Saltu; many Vedic hymns).
+- **Pseudo-prophecies, *naru* literature, royal legends** — texts in the voice of a king or sage that narrate past or claimed-future events with cosmic and political payload.
+
+The principle: any text that transmits cultural knowledge in narrative form is a candidate for inclusion. When in doubt about a borderline genre (instructions, narrative hymns, ritual prologues), include the entry and let the human reviewer decide whether it earns a chapter, an appendix entry, or removal — leaving it out at the inventory stage means it is silently lost.
+
 ### Sourcing rule
 Every story entry must carry at least one verifiable identifier. A verifiable identifier is one of:
 - **DOI** (for journal articles or modern books with DOIs).

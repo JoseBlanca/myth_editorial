@@ -35,6 +35,8 @@ Pay particular attention to three sections that the rest of the pipeline depends
 
 **3. Source whitelist and blacklist.** Propose 8–15 whitelisted academic sources (critical editions, standard reference works, peer-reviewed corpora) and a blacklist of common contaminating popularizations. The user approves or edits.
 
+**4. Genre breadth — do not pre-narrow the corpus.** A book of "myths" is not a book of cosmogonies and heroic epics only. The corpus must take in *every narrative form the culture used to transmit cultural knowledge*: cosmogony and theogony, divine conflict and underworld narrative, heroic and royal epic, royal legend, **disputation and debate poems** (personified objects/animals/trades arguing their relative usefulness), **animal fables**, **practical instruction literature** (father-to-son counsel transmitting ethics and trade knowledge), **etiological narratives embedded in incantations, rituals, and medical texts** (short cosmogonies explaining the origin of a particular ill or institution), **visionary and dream narratives**, **narrative hymns** (hymns that tell a story rather than only praise), and **folktales, comic narratives, and satirical pieces**. Default to including these as named genre groups in `scope.md`'s in-scope corpus, then have the user remove any that are unattested in this culture or that they do not want to cover. Do not let the corpus collapse to "myth and heroic epic" by inertia — the disputation poem about a date palm and a tamarisk arguing in front of a king carries as much cultural knowledge as a creation epic.
+
 ## Outputs
 
 ### `scope.md`
