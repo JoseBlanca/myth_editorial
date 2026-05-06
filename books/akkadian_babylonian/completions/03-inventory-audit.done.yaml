@@ -1,0 +1,12 @@
+stage: "inventory-audit"
+timestamp: "2026-05-06T17:50:23Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "inventory-audit.yaml"
+    lines: 607
+summary: "Audited 36 inventory entries across 8 cycles; produced 14 findings (2 HIGH, 9 MEDIUM, 3 LOW) with verbatim quotes for both HIGH findings; 26 entries listed as clean."
+notes:
+  - "Same-model fresh-conversation audit (claude-opus-4-7[1m] auditing claude-opus-4-7[1m]); permitted by skill §'Hard rule' and by user instructions; declared in meta.honesty_self_check. Different-model audit would provide stronger independence."
+  - "Triangulated 28 identifiers against ORACC, CDLI, the British Museum collection, the Brill Amarna scholarly tablets index, the Hebrew University SEAL corpus, the De Gruyter / Eisenbrauns volume tables of contents, and Wikipedia (used only for triangulation, not as primary scholarly evidence)."
+  - "Most consequential finding: Adapa entry's 'Tell Haddad OB fragment' is Sumerian, not Akkadian — a contamination error per scope.md. Second most consequential: Underworld Vision tablet identifier 'K.883 + K.2727 (Nineveh)' is wrong; correct identifier is VAT 10057 (Aššur)."

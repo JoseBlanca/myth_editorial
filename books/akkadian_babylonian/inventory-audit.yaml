@@ -1,0 +1,607 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  entries_reviewed: 36
+  triangulations_performed: 28
+  time_to_review_estimate_minutes: 90
+  honesty_self_check:
+    - question: "Did I actually resolve each cited identifier, or did I assume well-known sources are correct?"
+      answer: >-
+        I resolved (via web search and triangulation against the British Museum,
+        CDLI, Wikipedia/scholarly secondary sources, the Brill Amarna Scholarly
+        Tablets index, and the SEAL/Sources of Early Akkadian Literature corpus)
+        the following identifiers: BM 74329 (Theogony of Dunnu), CT 13 33–34
+        (Slaying of Labbu), EA 356 (Adapa Amarna), EA 357 (Nergal/Ereškigal
+        Amarna), EA 359 (King of Battle Amarna; Cairo 48396), K.2606 (Etana),
+        K.3401 (Birth Legend of Sargon), STT 38 (Poor Man of Nippur — see
+        finding A1), VAT 10057 (Underworld Vision — see finding A2), Lambert
+        1960 page ranges for Counsels of Wisdom (96–107), Babylonian Theodicy
+        (63–91), Dialogue of Pessimism (139–149), Lambert 2013 First
+        Brick / Founding of Eridu separation, the Cagni 1969 critical edition
+        of Erra, the Westenholz 1997 table of contents (10 chapters of legend
+        texts of which the inventory uses only 3). I ASSUMED without
+        independent verification: the exact Lambert 1960 page ranges for the
+        disputations (Tamarisk 151–164; Ox & Horse 175–185; Nisaba & Wheat
+        168–175; Fable of the Willow 165–167; Series of the Fox 186–209;
+        Poor Man and the Donkey/Riding-Donkey 209–212), the Oshima 2014
+        page ranges for Ludlul (1–200) and Theodicy (201–380), the Cohen
+        2013 page range for Šimâ milka (81–176), Annus 2001 SAACT 3 contents,
+        Vogelzang 1988 contents, Machinist 1978 PhD, Foster 2005 page ranges,
+        and Dalley 2008 page ranges. I assumed the K-numbers given for OB
+        Adapa (Tell Haddad), K.4509 (Counsels of Wisdom), K.7674 (Dialogue of
+        Pessimism), K.7897 (Counsels of a Pessimist), K.4231 (Ox and Horse),
+        K.13228 (King of Battle Nineveh), K.162 (Descent of Ishtar), K.8743
+        (Adapa NA), VAT 9820 (Tukulti-Ninurta), SU 51/7 (Nergal Sultantepe),
+        and RS 22.439 / KUB 4.3 / Emar 6/4 No. 778 (Šimâ milka witnesses)
+        because triangulating each would have exceeded reasonable scope. The
+        K.883 + K.2727 identifier for the Underworld Vision and the SU 51/4
+        identifier for the Poor Man of Nippur I DID independently check and
+        found problematic — see findings A1 and A2.
+    - question: "Did I check every plot detail for provenance, or did I check only major ones?"
+      answer: >-
+        I checked the major plot threads of the contamination-prone entries —
+        Descent of Ishtar (Akkadian seven-gates, Asušunamir, Tammuz substitution
+        all attested in the Akkadian SB recension), Anzû (Tablet of Destinies,
+        two heroes refusing, Ninurta combat all attested in OB and SB Akkadian
+        Anzû), Adapa (south wind / Anu / bread of life / refusal — Akkadian
+        attestation confirmed for Amarna and Nineveh fragments). I did NOT
+        verify each cosmogonic detail in the Founding of Eridu, Worm and
+        Toothache, Damkina's Bond, Uraš and Marduk, or Enmešarra's Defeat —
+        I trusted Lambert 2013 as a rigorous primary edition and looked only
+        at whether the text exists in Akkadian (it does). I did not verify the
+        narrative content of the Tukulti-Ninurta Epic, Counsels of Wisdom,
+        Counsels of a Pessimist, Tamarisk and Date Palm, Nisaba and Wheat,
+        Ox and Horse, Series of the Fox, Erra and Išum, Poor Man of Nippur,
+        Cuthaean Legend, or Šimâ milka beyond confirming the composition is
+        Akkadian and the cited critical editions exist.
+    - question: "For every HIGH finding, did I include a verbatim evidence quote?"
+      answer: >-
+        Yes. Each HIGH finding (one CONTAMINATION, one FABRICATED-IDENTIFIER)
+        has a verbatim quote and a source URL. The other identifier
+        problems were downgraded to MEDIUM where I could not produce a
+        decisive verbatim quote naming the precise inventory error.
+    - question: "Am I the same model that produced the inventory?"
+      answer: >-
+        DECLARATION: yes — same model family (claude-opus-4-7[1m]) but in a
+        FRESH CONVERSATION with no memory of inventory production. The skill
+        explicitly states (§ "Hard rule") that fresh-conversation same-model
+        is acceptable when running a different model is impractical, and
+        the user's instructions explicitly permit this. The fresh context
+        is the load-bearing requirement; the model identity is a
+        weaker preference. Audit therefore proceeds. The user should
+        weigh this caveat when reviewing — a different model family would
+        provide stronger independence, particularly for systematic biases
+        in how this model retrieves and weighs Mesopotamian scholarship.
+
+summary:
+  high: 2
+  medium: 9
+  low: 3
+
+findings:
+
+  # ── HIGH ─────────────────────────────────────────────────────────────
+
+  - severity: HIGH
+    kind: CONTAMINATION
+    story_id: adapa
+    entity_or_detail: >-
+      "Old Babylonian Tell Haddad fragment (Fragment A, ca. 1700 BCE)" — the
+      inventory's first listed witness for Akkadian Adapa.
+    issue: >-
+      The Tell Haddad Adapa fragment is a SUMERIAN-language composition,
+      not an Akkadian Old Babylonian Akkadian fragment. The published
+      Akkadian Adapa corpus consists of the Amarna fragment (MB, 14th c.
+      BCE) plus five Neo-Assyrian fragments from Assurbanipal's library —
+      no Old Babylonian Akkadian Adapa exists. Citing Tell Haddad as the
+      OB Akkadian witness is a contamination error: a Sumerian composition
+      (out of scope per scope.md) has been silently substituted for an
+      Akkadian Old Babylonian Akkadian fragment that does not exist. The
+      "Fragment A" label is also misapplied — Izre'el 2001's Fragment A
+      is the Amarna tablet (MB Akkadian), not the Tell Haddad Sumerian
+      tablet, which Izre'el does not include in his edition.
+    evidence_quote: >-
+      "The oldest tradition about him is from Me-Turan/Tell Haddad tablets
+      (around 19th–16th century BC), which is written in Sumerian
+      language."
+    evidence_source: >-
+      Wikipedia, "Adapa", https://en.wikipedia.org/wiki/Adapa . Confirmed by
+      Cavigneaux & Al-Rawi 1993 reception summarised at
+      https://therealsamizdat.com/2015/09/14/izreel-adapa-and-the-south-wind-as-mythos/
+      ("A Sumerian version of Adapa from the Old Babylonian period has been
+      discovered at Tell Haddad (ancient Meturan) and has been announced
+      by Cavigneaux and al-Rawi (1993: 92–3)"). Confirmed scope-relevance:
+      scope.md §"Out-of-scope" lists "Sumerian-language compositions in
+      their Sumerian form (covered in *The Myths of Sumer*)".
+    recommended_action: >-
+      Strike the Tell Haddad fragment from the Adapa entry. Revise the
+      date_range to read: "Middle Babylonian Amarna fragment (Fragment A,
+      14th c. BCE; the largest and most important manuscript); Neo-Assyrian
+      Nineveh fragments (Fragments B, C, D, etc., 7th c. BCE)." Revise the
+      summary's reference to "an Old Babylonian Eridu prologue" — this
+      content is from the Sumerian Tell Haddad tablet, not from any
+      Akkadian source. Revise the notes to remove "Tell Haddad excavation
+      (OB)" and replace with "Amarna EA 356 (MB) = Izre'el's Fragment A;
+      Kuyunjik fragments K.8743 + duplicates (NA)". The Tell Haddad
+      Sumerian Adapa may be referenced in the influences chapter as
+      comparative Sumerian background, but is not retold and is not
+      cited as a primary source for the Akkadian Adapa narrative.
+
+  - severity: HIGH
+    kind: FABRICATED-IDENTIFIER
+    story_id: underworld-vision-of-an-assyrian-prince
+    entity_or_detail: >-
+      Tablet identifier "K.883 + K.2727 (Nineveh)" cited in the entry's
+      notes field.
+    issue: >-
+      The Underworld Vision of an Assyrian Prince is preserved on a single
+      tablet from AŠŠUR (not Nineveh), catalogued VAT 10057 in the
+      Vorderasiatisches Museum Berlin. K.883 and K.2727 are unrelated
+      Kuyunjik (Nineveh) tablets in the British Museum, neither of which
+      preserves the Underworld Vision. The "K.883 + K.2727 (Nineveh)"
+      identifier appears to be fabricated or inadvertently transposed
+      from another composition; it does not resolve to the cited text,
+      and the provenance "Nineveh" is wrong (the tablet is from Aššur).
+    evidence_quote: >-
+      "The Underworld Vision is recorded on a single tablet (VAT 10057)
+      excavated from Assur."
+    evidence_source: >-
+      Wikipedia, "Underworld Vision of an Assyrian Prince",
+      https://en.wikipedia.org/wiki/Underworld_Vision_of_an_Assyrian_Prince
+      . Confirmed by the title of Sanders' study, "An 'Egyptianising'
+      Underworld judging an Assyrian prince? New perspectives on VAT
+      10057",
+      https://www.degruyterbrill.com/document/doi/10.1515/janeh-2016-0012/html
+      . The standard critical edition is Livingstone 1989, *Court Poetry
+      and Literary Miscellanea*, SAA 3, no. 32 (which the inventory's
+      own note correctly identifies but did not use to correct the
+      tablet identifier).
+    recommended_action: >-
+      Replace "K.883 + K.2727 (Nineveh)" with "VAT 10057 (Aššur)" in the
+      notes field. Add Livingstone 1989 (SAA 3 no. 32) to the source
+      registry as the sources.yaml note already flags. Re-verify every
+      K-number in the inventory against CDLI before chapter-claims, since
+      this error pattern (apparently plausible K-number that does not
+      resolve) is exactly the failure mode this audit is designed to
+      catch.
+
+  # ── MEDIUM ───────────────────────────────────────────────────────────
+
+  - severity: MEDIUM
+    kind: FABRICATED-IDENTIFIER
+    story_id: poor-man-of-nippur
+    entity_or_detail: >-
+      Tablet identifier "SU 51/4 (Sultantepe)" given in the variants and
+      notes fields.
+    issue: >-
+      The Poor Man of Nippur's principal manuscript (Ms A) is STT 38
+      (= Sultantepe Tablets I, no. 38), corresponding to the excavation
+      field number SU 1951, 078. The form "SU 51/4" does not match the
+      Sultantepe field-numbering convention (which uses the year of
+      excavation followed by a running number, e.g., "SU 1951, 078" or
+      "SU 51, 78") and is not the standard scholarly identifier. The
+      composition is universally cited in the literature as STT 38 (with
+      additional witnesses STT 39 and STT 116). I did not find a
+      published manuscript identified as "SU 51/4" associated with the
+      Poor Man of Nippur in CDLI. Downgraded from HIGH because I could
+      not produce a single verbatim quote naming "SU 51/4" as wrong;
+      the evidence is cumulative — every scholarly reference uses STT 38
+      and the corresponding SU number is "SU 1951, 078".
+    evidence_quote: >-
+      "The most complete manuscript version (Ms A) is STT 38, which was
+      the basis of Gurney's 1956 edition. It is in Neo-Assyrian script
+      and dates to 701 BC from its colophon, and was excavated in
+      Sultantepe, ancient Huzirina." And in CDLI:
+      "Excavation Number: SU 1951, 078 ... STT Reference: STT 1, 38."
+    evidence_source: >-
+      Cambridge Apollo repository,
+      https://www.repository.cam.ac.uk/items/966726f0-8bcb-4117-a6f2-ef90fe8fd551
+      ; CDLI artifact P338355,
+      http://cdli.earth/artifacts/338355 .
+    recommended_action: >-
+      Replace "SU 51/4 (Sultantepe)" with "STT 38 (= SU 1951, 078;
+      additional witnesses STT 39, STT 116) — Sultantepe / ancient
+      Ḫuzirina". The reference editions are Gurney *Anatolian Studies*
+      6 (1956) and 7 (1957) — the inventory's own note already cites
+      these.
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW
+    entity_or_detail: >-
+      "Dialogue between a Man and his God" (Akk. *ardu* / *amēlu* dialogue
+      with deity) — Old Babylonian Akkadian wisdom-dialogue narrative.
+    issue: >-
+      A canonical Akkadian-language wisdom composition, OB period (reign
+      of Ammi-Ditana, 1683–1640 BCE), preserved on a single tablet
+      AO 4462 (Louvre), composed by Kalbanum. It is the earliest known
+      Akkadian theodicy-dialogue and the principal precursor of the
+      Babylonian Theodicy and Ludlul bēl nēmeqi. It belongs squarely in
+      the Wisdom: reflective dialogue and complaint cycle (V.A) and
+      its absence is a notable gap in the inventory's coverage of the
+      Akkadian dialogic-theodicy tradition. Translated in Foster 2005
+      *Before the Muses*, p. 148 (3rd ed.); editio princeps Lambert
+      *AfO* 19 (1959–60); recent edition Hätinen, *KASKAL* 16 (2019).
+    evidence_quote: >-
+      "Scholars date 'The Dialogue between a Man and His God' to the
+      latter part of the Old Babylonian period, approximately during the
+      reign of King Ammi-Ditana (1683–1640s BCE). The tablet is attributed
+      to an individual named Kalbanum ... The tablet resides in the
+      Louvre Museum, cataloged under accession number AO 4462."
+    evidence_source: >-
+      World History Edu, "Dialogue between a Man and His God",
+      https://worldhistoryedu.com/dialogue-between-a-man-and-his-god/
+      ; CDLI Wiki entry,
+      https://cdli.ox.ac.uk/wiki/doku.php?id=dialogue_between_a_man_and_his_god
+      ; Wikipedia,
+      https://en.wikipedia.org/wiki/Dialogue_between_a_Man_and_His_God .
+    recommended_action: >-
+      Add a new entry to the wisdom_dialogic cycle: id
+      `dialogue-between-man-and-god`, sources Foster 2005 (BTM 3rd ed.,
+      p. 148) and Lambert *Afo* 19 (or, preferred, Hätinen 2019), tablet
+      AO 4462 (Louvre), date OB ca. 1700 BCE, attributed by colophon to
+      Kalbanum. Note that this is the earliest Akkadian-language
+      theodicy and antedates the Babylonian Theodicy by ca. 700 years.
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW
+    entity_or_detail: >-
+      "Erra and Narām-Sîn" — Old Babylonian Akkadian narrative composition
+      about Narām-Sîn distinct from both *Erra and Išum* and the
+      *Cuthaean Legend*.
+    issue: >-
+      A separate Akkadian narrative composition published in Westenholz
+      1997 chapter 7 (pp. 189–202). The text is preserved on tablet
+      BM 120003 (British Museum) in Old Babylonian Akkadian and was
+      previously published by Lambert *AfO* 24 (1973). It is in
+      scope under both genre IV (royal legends) and genre II (divine
+      conflict — Erra cycle); inclusion is straightforward. Distinct
+      from *Erra and Išum* (different protagonist, different period,
+      different plot) and from the *Cuthaean Legend of Narām-Sîn*
+      (which is the SB *naru* version, not this OB composition).
+    evidence_quote: >-
+      "The composition 'Erra and Narām-Sîn' is an Old Babylonian text
+      preserved on tablet BM 120003 from the British Museum, with an
+      edition by Goodnick Westenholz (1997). The text was previously
+      published by Lambert in 1973."
+    evidence_source: >-
+      SEAL — Sources of Early Akkadian Literature, Hebrew University,
+      https://seal.huji.ac.il/node/1539 ; Westenholz 1997 chapter 7,
+      https://www.degruyterbrill.com/document/doi/10.1515/9781575065038-012/html
+      ; Westenholz 1997 table of contents,
+      https://www.degruyterbrill.com/document/doi/10.1515/9781575065038/html .
+    recommended_action: >-
+      Add to the royal_legend cycle (or create a sub-cycle with the
+      Cuthaean Legend): id `erra-and-naram-sin`, source Westenholz 1997
+      pp. 189–202, tablet BM 120003, date OB ca. 1700 BCE.
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW
+    entity_or_detail: >-
+      "The Great Revolt against Narām-Sîn" — Akkadian *naru* narrative
+      composition in four recensions (Old Akkadian + three Old Babylonian).
+    issue: >-
+      Westenholz 1997 chapter 9 (pp. 221–262). A multi-recension Akkadian
+      composition preserved in (1) an Old Akkadian exercise tablet, (2)
+      two OB excerpt tablets (texts 16A and 16B), (3) one OB recension
+      (text 17), and (4) an OB excerpt tablet (text 19). All recensions
+      are Akkadian-language, all are in-scope. The text narrates a
+      coalition revolt against Narām-Sîn led by Iphur-Kis of Kish and
+      Amar-Girid of Uruk and is one of the major OB narrative
+      compositions about an Akkadian king. Comparable in scholarly
+      weight to the Birth Legend of Sargon, which the inventory does
+      include.
+    evidence_quote: >-
+      "The literary legend is extant in four different versions: (1) an
+      Old Akkadian exercise tablet (text 15), (2) two Old Babylonian
+      excerpt tablets containing a version based closely on the
+      historical descriptions (texts 16A, 16B), (3) one incomplete Old
+      Babylonian recension (text 17), and (4) an Old Babylonian excerpt
+      tablet (text 19), which has points in common with both texts 16
+      and 18 but which concludes with a curse formula of the type found
+      in votive inscriptions."
+    evidence_source: >-
+      SEAL — Sources of Early Akkadian Literature,
+      https://seal.huji.ac.il/node/1542 ; Westenholz 1997 chapter 9,
+      https://www.degruyterbrill.com/document/doi/10.1515/9781575065038-014/html .
+    recommended_action: >-
+      Add to the royal_legend cycle: id `great-revolt-against-naram-sin`,
+      source Westenholz 1997 pp. 221–262, multiple manuscripts (Old
+      Akkadian + OB), variants field acknowledging the four recensions.
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW
+    entity_or_detail: >-
+      "Narām-Sîn and the Lord of Apišal" — Akkadian narrative composition
+      about Narām-Sîn's siege of Apišal.
+    issue: >-
+      Westenholz 1997 chapter 6 (pp. 173–188). A short Akkadian narrative
+      legend preserved on a Neo-Assyrian tablet, distinct from the
+      Cuthaean Legend and from Erra-and-Narām-Sîn. The composition is
+      Akkadian-language and in-scope; including it would make the royal
+      legend coverage complete with respect to Westenholz's edition.
+    evidence_quote: >-
+      Westenholz 1997 table of contents lists "Chapter 6: Naram-Sin and
+      the Lord of Apišal (p. 173)" as one of ten chapters of the
+      Sargon-and-Narām-Sîn legend corpus.
+    evidence_source: >-
+      Westenholz 1997 table of contents,
+      https://www.degruyterbrill.com/document/doi/10.1515/9781575065038/html .
+    recommended_action: >-
+      Add to the royal_legend cycle: id `naram-sin-and-lord-of-apishal`,
+      source Westenholz 1997 pp. 173–188.
+
+  - severity: MEDIUM
+    kind: MISSING
+    story_id: NEW
+    entity_or_detail: >-
+      "Elegy on the Death of Narām-Sîn" — Akkadian narrative composition.
+    issue: >-
+      Westenholz 1997 chapter 8 (pp. 203–220). A short narrative
+      composition mourning the death of Narām-Sîn; in Akkadian; in scope.
+      Less well-known than the Cuthaean Legend but published in the
+      standard critical edition and worth including for completeness of
+      the royal-legend cycle.
+    evidence_quote: >-
+      Westenholz 1997 table of contents lists "Chapter 8: Elegy on the
+      Death of Naram-Sin (p. 203)" as a separate chapter from the
+      Cuthaean Legend.
+    evidence_source: >-
+      Westenholz 1997 table of contents,
+      https://www.degruyterbrill.com/document/doi/10.1515/9781575065038/html .
+    recommended_action: >-
+      Add to the royal_legend cycle: id `elegy-on-death-of-naram-sin`,
+      source Westenholz 1997 pp. 203–220. The human reviewer may judge
+      this entry's narrative substance below the inclusion threshold;
+      flag for editorial decision.
+
+  - severity: MEDIUM
+    kind: SILENT-CONFLATION
+    story_id: first-brick
+    entity_or_detail: >-
+      Relationship between The First Brick (Lambert 2013 pp. 384–386 per
+      inventory) and The Founding of Eridu (Lambert 2013 pp. 376–383 per
+      inventory).
+    issue: >-
+      The inventory's flag `scope_uncertain: true` correctly anticipated
+      this question. Lambert 2013 treats The First Brick and The Founding
+      of Eridu as TWO DISTINCT short cosmogonic compositions in adjacent
+      sections of the volume — they are presented as freestanding texts.
+      The inventory honours that distinction, but the page-range
+      discrepancy noted by web search ("The First Brick" appears as a
+      separate entry in Lambert 2013 in the chapters around 376–386,
+      with the surrounding founding-of-Eridu material in the same
+      complex) suggests the page ranges may be slightly off in the
+      inventory. Severity is MEDIUM not because the entry is wrong but
+      because the audit could not confirm the exact pagination from
+      web sources alone.
+    evidence_quote: >-
+      "Lambert's 'The First Brick' appears in Babylonian Creation Myths,
+      published by Penn State University Press in 2013, on pages
+      376–383."
+    evidence_source: >-
+      Web search summary citing the De Gruyter Brill chapter
+      ("The First Brick"), https://www.degruyterbrill.com/document/doi/10.1515/9781575068619-028/html
+      and the De Gruyter Brill volume index.
+    recommended_action: >-
+      Spot-check the exact page ranges of The First Brick (inventory says
+      384–386) and The Founding of Eridu (inventory says 376–383)
+      against a physical copy of Lambert 2013 before chapter-claims. The
+      `scope_uncertain` flag can be cleared once pagination is verified;
+      the texts are distinct compositions per Lambert's own arrangement.
+
+  - severity: MEDIUM
+    kind: UNSUPPORTED
+    story_id: descent-of-ishtar
+    entity_or_detail: >-
+      Note "no recent single-volume critical edition supersedes Borger
+      1979 *BAL II*."
+    issue: >-
+      The note implies Borger 1979 is the standard critical edition for
+      the Akkadian Descent of Ishtar. Borger 1979 (*Babylonisch-assyrische
+      Lesestücke* II) is a teaching anthology, not a critical edition. A
+      modern text edition of the Descent of Ishtar is available in the
+      electronic Babylonian Library (eBL,
+      https://www.ebl.lmu.de/corpus/L/1/8 ), which post-dates the
+      inventory's note. This is a minor scholarship-currency issue, not a
+      story-content issue. The plot summary for the Descent of Ishtar
+      is otherwise consistent with the Akkadian SB recension (seven
+      gates with stripped jewelry, Asušunamir, Tammuz substitution) and
+      I find no contamination from the Sumerian *Inanna's Descent* in
+      the summary.
+    evidence_quote: >-
+      "Descent of Ištar: Text edition in the electronic Babylonian
+      Library" (project webpage at eBL/LMU München, 2020s).
+    evidence_source: >-
+      eBL — electronic Babylonian Library, https://www.ebl.lmu.de/corpus/L/1/8 .
+    recommended_action: >-
+      Update the note to acknowledge eBL's modern text edition.
+      No structural change to the entry needed.
+
+  - severity: MEDIUM
+    kind: UNSUPPORTED
+    story_id: poor-man-and-donkey
+    entity_or_detail: >-
+      Title "The Poor Man and the Donkey" and its scope_uncertain flag.
+    issue: >-
+      The inventory's `scope_uncertain: true` flag is well-founded. The
+      composition Lambert 1960 publishes at pp. 209–212 is conventionally
+      titled "The Fable of the Riding-Donkey" (cf. Lambert 1960
+      chapter 7 table of contents: Tamarisk and the Palm; Fable of the
+      Willow; Nisaba and Wheat; Ox and the Horse; Fable of the Fox;
+      Fable of the Riding-Donkey). The inventory's title "Poor Man and
+      the Donkey" appears to be a non-standard label, possibly conflated
+      with The Poor Man of Nippur. The composition is a discrete
+      Akkadian fable, in-scope; the issue is the title. I could not
+      find any independent published reference to a composition titled
+      "The Poor Man and the Donkey" in Akkadian wisdom literature.
+    evidence_quote: >-
+      "Chapter 7, 'Fables or Contest Literature' ... the Tamarisk and
+      the Palm; The Fable of the Willow; Nisaba and Wheat; The Ox and
+      the Horse; The Fable of the Fox; The Fable of the Riding-Donkey."
+    evidence_source: >-
+      Internet Archive, "Babylonian Fables or Contest Literature" by
+      W. G. Lambert, https://archive.org/details/lambert-1960-babylonian-fables .
+    recommended_action: >-
+      Rename the entry: id `fable-of-the-riding-donkey` (or keep
+      poor-man-and-donkey as a slug-friendly alias), title "The Fable
+      of the Riding-Donkey", with the standard Akkadian narrative
+      summary (a riding donkey complains about its lot to the man who
+      owns it). Clear `scope_uncertain` once the title is corrected.
+
+  - severity: MEDIUM
+    kind: LOW-CONFIDENCE-IDENTIFIER
+    story_id: nergal-ereshkigal
+    entity_or_detail: >-
+      Sultantepe identifier "SU 51/7 + duplicates" for the SB recension
+      of Nergal and Ereškigal.
+    issue: >-
+      The Sultantepe Tablets edition by Gurney & Finkelstein (1957) and
+      Gurney & Hulin (1964) catalogues the Nergal and Ereškigal
+      manuscripts as STT 28 (with joins/duplicates). The form "SU 51/7"
+      uses the excavation field-numbering, but I could not confirm the
+      exact field number against CDLI in the time available, and the
+      standard scholarly citation is STT 28 (= the version edited by
+      Gurney 1960 in *Anatolian Studies* 10). Severity MEDIUM because
+      the existence of an SU-prefix excavation number is plausible but
+      the form "SU 51/7" cannot be confirmed.
+    evidence_quote: >-
+      "O. R. Gurney's 'The Sultantepe Tablets (Continued): VII. The Myth
+      of Nergal and Ereshkigal,' published in Anatolian Studies, Vol.
+      10 (1960), pp. 105–131."
+    evidence_source: >-
+      JSTOR, https://www.jstor.org/stable/3642431 ; Cambridge Core,
+      https://www.cambridge.org/core/services/aop-cambridge-core/content/view/84F26239ADFFBDF3FD1D42D65A91F557/S0066154600002039a.pdf/sultantepe_tablets_continued_vii_the_myth_of_nergal_and_ereshkigal.pdf .
+    recommended_action: >-
+      Replace "SU 51/7 + duplicates" with the standard STT-system
+      citation (STT 28 + joins) and verify the field-number against
+      CDLI before chapter-claims. The Roman numeral "VII" in Gurney's
+      article title refers to the seventh of his Sultantepe-tablets
+      articles, not to a tablet number — possible source of the
+      "SU 51/7" confusion in the inventory.
+
+  # ── LOW ──────────────────────────────────────────────────────────────
+
+  - severity: LOW
+    kind: UNSUPPORTED
+    story_id: fable-of-the-willow
+    entity_or_detail: >-
+      Inventory's flag `scope_uncertain: true` and the question of
+      whether the Fable of the Willow is a discrete composition or a
+      fragment of another disputation.
+    issue: >-
+      Lambert 1960 chapter 7 lists "The Fable of the Willow" as a
+      discrete composition in its own right (alongside Tamarisk and
+      the Palm; Nisaba and Wheat; Ox and the Horse; Fable of the Fox;
+      Fable of the Riding-Donkey). The composition is Akkadian, in-scope,
+      and on the standard scholarly inventory of Akkadian disputations.
+      The `scope_uncertain` flag can be cleared. The fragment is small
+      (Lambert 1960 pp. 165–167 if the inventory pagination is correct)
+      but it is treated as a freestanding text in the standard edition.
+    evidence_quote: >-
+      "Chapter 7, 'Fables or Contest Literature' ... The Fable of the
+      Willow ..."
+    evidence_source: >-
+      Internet Archive, https://archive.org/details/lambert-1960-babylonian-fables .
+    recommended_action: >-
+      Clear the `scope_uncertain` flag. The composition is discrete and
+      in-scope per Lambert 1960. The plot summary in the inventory
+      ("the willow tree pleads its case for usefulness against rival
+      plants") is generic; spot-check against Foster 2005 *Before the
+      Muses* for any detail-level claims before chapter-claims.
+
+  - severity: LOW
+    kind: UNSUPPORTED
+    story_id: tukulti-ninurta-epic
+    entity_or_detail: >-
+      The Machinist 1978 PhD thesis is cited as the standard critical
+      edition.
+    issue: >-
+      The Machinist 1978 PhD is the standard published study and
+      includes a critical edition, but the inventory should also
+      acknowledge Foster 2005 *Before the Muses* pp. 298–317 as the
+      most accessible English translation, and recent textual readings
+      from the Sources of Early Akkadian Literature (SEAL) project at
+      Hebrew University. The VAT 9820 identifier is plausible but I
+      did not independently verify it against CDLI; the search results
+      I obtained mention VAT 9596 + 12960 and VAT 10358 as further
+      Tukulti-Ninurta witnesses, suggesting the manuscript tradition
+      is more extensive than a single tablet.
+    evidence_quote: >-
+      "the epic is preserved on multiple tablets in collections including
+      the British Museum and the Vorderasiatisches Museum in Berlin,
+      with references to VAT 9596 + 12960 and VAT 10358 among others."
+    evidence_source: >-
+      SEAL — Sources of Early Akkadian Literature,
+      https://seal.huji.ac.il/node/1592 ; Wikipedia,
+      https://en.wikipedia.org/wiki/Tukulti-Ninurta_Epic .
+    recommended_action: >-
+      Verify VAT 9820 against CDLI; consider adding a secondary
+      identifier (VAT 9596 + 12960; VAT 10358) to the notes field if the
+      manuscript tradition is composite. Lab-bench cross-check, not
+      blocking.
+
+  - severity: LOW
+    kind: SILENT-CONFLATION
+    story_id: anzu
+    entity_or_detail: >-
+      OB Anzû provenance ("ca. 1700 BCE").
+    issue: >-
+      The OB Anzû manuscripts are several (Susa Sb 14683 / "Sb 9470"
+      per one source; additional fragments from Tell Harmal /
+      Šaduppum). The inventory date "ca. 1700 BCE" is consistent with
+      the OB period, but the inventory does not mention that the OB
+      hero is Ningirsu (the SB hero is Ninurta). This is a minor
+      narrative-detail conflation that the human reviewer may want to
+      surface in the chapter brief.
+    evidence_quote: >-
+      "The Epic of Anzu is principally known in two versions: an Old
+      Babylonian version of the early second millennium BC, giving the
+      hero as Ningirsu; and 'The Standard Babylonian' version, dating
+      to the first millennium BC, which appears to be the most quoted
+      version, with the hero as Ninurta."
+    evidence_source: >-
+      Wikipedia, https://en.wikipedia.org/wiki/Anz%C3%BB .
+    recommended_action: >-
+      Add to the variants field: "OB hero is Ningirsu; SB hero is
+      Ninurta — the divine identity of the slayer of Anzû changes
+      between recensions and is one of the principal substantive
+      differences." Vogelzang 1988 covers this point.
+
+clean_entries:
+  - enuma-elish
+  - atra-hasis
+  - theogony-of-dunnu
+  - slaying-of-labbu
+  - enmesharra-defeat
+  - toil-of-babylon
+  - uras-and-marduk
+  - damkina-bond
+  - founding-of-eridu
+  - worm-and-toothache
+  - erra-and-ishum
+  - gilgamesh-sb
+  - etana
+  - birth-legend-of-sargon
+  - king-of-battle
+  - cuthean-legend-of-naram-sin
+  - ludlul-bel-nemeqi
+  - babylonian-theodicy
+  - dialogue-of-pessimism
+  - counsels-of-wisdom
+  - counsels-of-pessimist
+  - shima-milka
+  - tamarisk-and-date-palm
+  - ox-and-horse
+  - nisaba-and-wheat
+  - series-of-the-fox
+
+# Note on clean_entries: Items appearing in `findings` are NOT in the clean
+# list. The wisdom-dialogic cycle is not "clean" overall because of the
+# missing Dialogue between a Man and his God (a MEDIUM finding flagging the
+# inventory as a whole, not any of the three included entries individually).
+# The three included wisdom-dialogic entries (ludlul-bel-nemeqi,
+# babylonian-theodicy, dialogue-of-pessimism) are individually clean and so
+# appear here.
