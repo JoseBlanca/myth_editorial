@@ -27,6 +27,8 @@ The outputs of this stage are named after the book, not `book.*`. Determine the 
 Throughout this document, `<slug>` refers to the book slug.
 
 ## Inputs
+- `frontmatter.adoc` (title page, copyright, license, AI-authorship disclosure — produced by stage 16b. Required.)
+- `note-on-making.adoc` (preface explaining how the book was made and the tech stack used — produced by stage 16c. Required.)
 - `chapters/00-introduction.edited.adoc` (intro chapter)
 - All `chapters/NN-<chapter-slug>.edited.adoc` (story chapters)
 - `comparative.edited.adoc` (comparative chapter)
@@ -34,7 +36,9 @@ Throughout this document, `<slug>` refers to the book slug.
 - `sources.yaml`
 - `scope.md` (may carry an explicit `slug:` field — see "Book slug" above)
 - `cover.jpg` or `cover.png` — the cover image, provided by the user. Used by Asciidoctor-PDF for the front cover and by Asciidoctor-EPUB3 for the EPUB cover.
-- `front-matter.adoc` and `back-matter.adoc` (dedication, preface, index, etc. — optional; if absent, omit the corresponding `include::` directives from the master adoc)
+- `back-matter.adoc` (index, colophon, etc. — optional; if absent, omit the corresponding `include::` directive from the master adoc)
+
+If `frontmatter.adoc` or `note-on-making.adoc` is missing, stop and run stage 16b or 16c. These are not optional: every book in this pipeline must disclose, on its own pages, that the prose was written by AI and explain how.
 
 ## Agent instructions
 
@@ -70,7 +74,9 @@ Produce `<slug>.adoc` at the book root. Keep it at the book root (not under `out
 :bibtex-file: bibliography.bib
 :bibtex-style: chicago-author-date
 
-// include::front-matter.adoc[]   ← include only if file exists
+include::frontmatter.adoc[]
+
+include::note-on-making.adoc[]
 
 include::chapters/00-introduction.edited.adoc[]
 
@@ -126,7 +132,8 @@ The marker-resolve stage (13) is the upstream producer of the rendered brackets 
 - Every bibliography entry is on the whitelist.
 - Every `<<chapter-anchor>>` cross-reference in `character-appendix.adoc` resolves to an actual anchor in the chapter files.
 - Cover image file exists and is referenced correctly in `:front-cover-image:`.
-- `front-matter.adoc` and `back-matter.adoc`: if referenced in `<slug>.adoc`, confirm the files exist. If absent, confirm the include directives are removed.
+- `frontmatter.adoc` and `note-on-making.adoc` exist at the book root and are referenced from `<slug>.adoc`. Their inclusion is mandatory; if either is missing, stop and run stage 16b or 16c.
+- `back-matter.adoc`: if referenced in `<slug>.adoc`, confirm the file exists. If absent, confirm the include directive is removed.
 - `output/<slug>.pdf` and `output/<slug>.epub` exist and are non-empty.
 - `reports/validation-report.md` exists. Asciidoctor runs exit clean (no WARN/ERROR recorded).
 - No legacy `book.adoc`, `book.pdf`, `book.epub` at the book root left over from prior runs — either remove or rename them before starting.

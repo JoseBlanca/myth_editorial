@@ -2,6 +2,15 @@
 
 Step-by-step operational instructions. For each stage: what to run, which AI to use, what to paste, and where to save the output.
 
+## Mandatory: book metadata and AI-authorship disclosure
+
+Every book produced by this pipeline must ship with two files at its front:
+
+- **`frontmatter.adoc`** — title page with title, subtitle, author, publisher, copyright year, license, and a one-line statement that the prose was written by AI under human direction. See [`books/sumer/frontmatter.adoc`](books/sumer/frontmatter.adoc) for the canonical form.
+- **`note-on-making.adoc`** — a short preface that explains, in plain prose, how the book was made: the pipeline of stages, the actual AI models used, the Python harness, AsciiDoc/Asciidoctor, and exactly what role the human author played. See [`books/sumer/note-on-making.adoc`](books/sumer/note-on-making.adoc) for the canonical form.
+
+These are not optional. The prose in every book in this project is written by AI; without these two files, a reader can plausibly mistake the human whose name is on the cover for the author of the prose. That mistake is unacceptable. The frontmatter carries a one-line disclosure; the preface unpacks it. Both are produced by dedicated pipeline stages (16b and 16c) and are required inputs to `format-finalize`.
+
 ## Try to be autonomous
 
 You are creating the chaoskampft book.
@@ -60,9 +69,9 @@ The rule is: **every check runs in a fresh conversation (or fresh autonomous pro
 |------|-------------|-----|
 | Research (story-inventory) | Gemini Deep Research | Best at searching many sources |
 | Interactive (scope-lock, glossary-lock) | Any — your preference | These are conversations with you |
-| Writing (intro-chapter, chapter-claims, chapter-draft, comparative, character-appendix) | Claude | Strong at structured writing |
+| Writing (intro-chapter, chapter-claims, chapter-draft, comparative, character-appendix, note-on-making) | Claude | Strong at structured writing |
 | Checking (inventory-audit, claims-factcheck, prose-factcheck, narrative-fidelity) | Ideally a different model from the writer; otherwise the same model in a fresh conversation | Independence preferred; fresh context is the hard requirement |
-| Mechanical (post-human-normalize, marker-resolve, line-edit, format-finalize) | Any | No audit independence needed |
+| Mechanical (post-human-normalize, marker-resolve, line-edit, frontmatter, format-finalize) | Any | No audit independence needed |
 
 The key constraint: the check must be in a **fresh conversation** (no memory of the writing). A different AI model is preferred but not required.
 
@@ -377,6 +386,45 @@ Paste all `.edited.adoc` files and briefs.
 
 ---
 
+### 17b. frontmatter
+
+**Goal:** Produce the title page and license block. Produces `frontmatter.adoc`.
+
+```
+python assemble_prompt.py frontmatter sumer
+```
+
+**How to run:**
+- Any AI
+- Paste the prompt
+- The AI fills the template with the final title/subtitle, author, publisher, copyright year, and the standard CC BY-NC-SA license — and includes the mandatory one-line AI-authorship disclosure that points the reader at the `note-on-making` preface
+
+**Save output to:**
+- `books/sumer/frontmatter.adoc`
+
+This stage runs late on purpose. Titles can change after the chapters are written (the Chaoskampf book was retitled after drafting). Generating the frontmatter at scope-lock time would have produced a stale title.
+
+---
+
+### 17c. note-on-making
+
+**Goal:** Write the short preface explaining how the book was actually made. Produces `note-on-making.adoc`.
+
+```
+python assemble_prompt.py note-on-making sumer
+```
+
+**How to run:**
+- Writing AI (e.g., Claude)
+- Paste the prompt
+- The AI reads `books/sumer/completions/*.done.yaml` to learn which models actually ran which stages, and uses [`books/sumer/note-on-making.adoc`](books/sumer/note-on-making.adoc) as a structural model — not as text to copy
+- The preface must be honest about the tech stack used on **this** book: which AI did the writing, which did the checking, whether the cross-model discipline was held in practice, and exactly what the human author did and did not do
+
+**Save output to:**
+- `books/sumer/note-on-making.adoc`
+
+---
+
 ### 18. format-finalize
 
 **Goal:** Assemble the book, build the bibliography, and render the final PDF + EPUB.
@@ -480,7 +528,9 @@ scope.md + sources.yaml                          ← scope-lock
             → *.edited.adoc                       ← line-edit
               → character-appendix.adoc           ← character-appendix
                 → (factchecked, reviewed, normalized)
-                  → <slug>.adoc + output/<slug>.pdf/epub     ← format-finalize
+                  → frontmatter.adoc              ← frontmatter
+                  → note-on-making.adoc           ← note-on-making
+                    → <slug>.adoc + output/<slug>.pdf/epub     ← format-finalize
                     → glossary.es.yaml                        ← translate-spanish (Pass 0)
                       → *.es.adoc (per chapter)               ← translate-spanish (Pass 1-3)
                         → <slug>.es.adoc + output/<slug>.es.pdf/epub  ← translate-spanish (Pass 4-5)
