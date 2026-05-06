@@ -1,0 +1,55 @@
+stage: "format-finalize-rerender"
+timestamp: "2026-05-06T13:30:20Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+
+reason: |
+  The book had already been format-finalized on 2026-05-05 (see
+  18-format-finalize.done.yaml). The frontmatter and note-on-making
+  pipeline stages were added afterwards (skills 16b and 16c, runbook
+  sections 17b and 17c). This re-render folds the two new front-of-book
+  files into the master adoc and rebuilds the PDF and EPUB. No bibliography
+  extraction, marker-strip, or content-fix work was needed — only assembly
+  and render. The bibliography on disk was unchanged.
+
+changes_to_master_adoc:
+  - "Added include::frontmatter.adoc[] before the introduction"
+  - "Added include::note-on-making.adoc[] before the introduction"
+
+outputs:
+  - file: "the_slayer_and_the_dragon.adoc"
+    lines: 100
+    description: "Master adoc, +4 lines vs. prior run (two include directives + blanks)"
+  - file: "frontmatter.adoc"
+    lines: 22
+    description: "Title page + license + AI-authorship disclosure (produced by stage 17b)"
+  - file: "note-on-making.adoc"
+    lines: 16
+    description: "Seven-paragraph preface explaining how the book was made (produced by stage 17c)"
+  - file: "output/the_slayer_and_the_dragon.pdf"
+    size_bytes: 19533835
+    description: "Re-rendered PDF (was 19503356 bytes; +30479 bytes for the new front-of-book pages)"
+  - file: "output/the_slayer_and_the_dragon.epub"
+    size_bytes: 1693671
+    description: "Re-rendered EPUB (was 1688780 bytes; +4891 bytes for the new front-of-book sections)"
+  - file: "reports/validation-report.md"
+    lines: 25
+    description: "Asciidoctor build log; both renderers exited 0 with no WARN/ERROR. Anti-pattern scan on EPUB xhtml: clean."
+
+self_checks:
+  asciidoctor_clean_exit:
+    pdf: 0
+    epub: 0
+  epub_anti_pattern_scan: "clean — no anti-patterns in EPUB xhtml"
+  frontmatter_present_at_book_root: true
+  note_on_making_present_at_book_root: true
+  master_adoc_includes_both: true
+  output_files:
+    pdf_exists: true
+    pdf_non_empty: true
+    epub_exists: true
+    epub_non_empty: true
+
+handoff: "Book complete with mandatory AI-authorship disclosure now baked into the rendered PDF and EPUB."
+
+summary: "Re-rendered the_slayer_and_the_dragon to fold in the new frontmatter.adoc and note-on-making.adoc front-of-book files. Master adoc updated, container/render_book.sh re-run, both asciidoctor renderers exited 0 with no warnings. PDF grew from 19.50 MB to 19.53 MB; EPUB grew from 1.689 MB to 1.694 MB."
