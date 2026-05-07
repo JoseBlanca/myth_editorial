@@ -1,0 +1,40 @@
+stage: "chapter-draft"
+chapter: 06
+slug: "enmesharra-defeat"
+input: "chapters/06-enmesharra-defeat.claims.approved.adoc"
+output: "chapters/06-enmesharra-defeat.adoc"
+timestamp: "2026-05-07T17:04:32Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/06-enmesharra-defeat.adoc"
+    lines: 95
+  - file: "gloss-ledger.yaml"
+    lines: 240
+summary: "Chapter 6 (Enmešarra's Defeat) draft. Per the no-target-word-count policy, the verified claims document is the chapter's length budget; the chapter is 821 body words — tight Asimov prose around 20 verified claims. Every footnote (20/20) and every EVIDENCE token (33) preserved byte-for-byte from the approved claims; all 6 inline markers (3 INFERENCE, 1 LACUNA, 1 RECONSTRUCTION, 1 VARIANT) byte-for-byte preserved with all subfields intact; all 4 COMPARATIVE-HOOK comments at column 0. Source overview present (single Seleucid/Parthian tablet, Lambert 2013 sole edition, no anthology translation, colophon-based ending identification); Setting (Enmešarra as chthonic god of elder order; seven sons identified with the Sebitti); Aftermath of combat (Nergal as warden; Enmešarra's plea; beheading of seven sons; melammu transferred to Šamaš; offices redistributed — Nabû→Ninurta's powers, Nergal→Erra's powers, Marduk→Enlil's powers); Ritual context (Akītu and Marduk Ordeal text on KAR 143+219 per Frymer-Kensky 1983); Seven sons and Enūma Eliš parallel (structural rather than combat parallel); Variants (single witness, restoration variation only); Place in corpus (late-Babylonian Marduk dossier). Glossary discipline: locked Akkadian forms throughout (Marduk, Enmešarra, Sebitti, Nergal, Šamaš, melammu, akītu, Tiamat, Ninurta, Erra, Enlil, Nabû); no Sumerian-form leakage; no contamination from Enūma Eliš (the original chapter incorrectly imported the Tablet of Destinies transfer; per factcheck F-3 this has been struck and replaced with the actually-attested melammu transfer). Body-prose foreign common nouns and book titles use _underscore-italic_; *asterisk-bold* preserved only inside footnote bodies and marker bodies. Validation: 20/20 footnote match, 33 EVIDENCE markers, all source IDs resolve to sources.yaml (lambert-2013, bottero-2001, black-green-1992, foster-2007), all markers at column 0, all marker counts match the approved claims, no forbidden words, no forbidden openings, no asterisk-bold body-prose foreign terms. gloss-ledger.yaml updated: 7 entries advanced last_mention_in to '06' (Marduk, Tiamat, Nergal, Ninurta, Erra, Enlil, Sebitti); Tablet of Destinies entry annotated with note about chapter 06 contrast-only reference (factcheck F-3 corrected the original chapter's Tablet-of-Destinies-transfer claim, which was contamination from Enūma Eliš)."
+brief_alignment:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — single VARIANT marker noting the single Seleucid/Parthian tablet with restoration variation (not recensional variation) per factcheck F-1."
+  one_lacuna_flagged: "PASS — [LACUNA:] for the single damaged Seleucid/Parthian tablet, with scholarly_reconstruction noting that no parallel manuscripts are available for fill."
+  reconstruction_marker_present: "PASS — [RECONSTRUCTION:] marker covers Lambert 2013's restorations; gap_source = breaks within the single tablet; fill_source = internal-context proposals (no parallel manuscripts); confidence: low (downgraded from medium per factcheck F-1)."
+  base_text: "Lambert 2013 (sole modern critical edition) used as base. No Foster 2005 or Dalley 2008 entry per the brief; Dalley 2008 ToC verified to exclude Enmešarra's Defeat at factcheck."
+  ritual_theological_framing: "PASS per brief — Akītu festival and Marduk Ordeal text foregrounded. Per factcheck F-2, KAR 143+219 reframed as the Marduk Ordeal text itself (Frymer-Kensky 1983), not as commentaries on Enmešarra's Defeat."
+  seven_sons_motif_preserved: "PASS — seven sons identified with the Sebitti (the same Sebitti as Erra's seven demons in Chapter 16), providing a load-bearing cross-chapter link beyond the brief's level of detail."
+  combat_aftermath_framing_per_factcheck: "PASS per factcheck F-4/F-5 — combat itself is in lost portion; surviving text is the judgment-and-execution aftermath."
+  marduk_dossier_cross_references: "PASS — explicitly placed within the late-Babylonian Marduk dossier alongside Enūma Eliš (Chapter 1), Anzû (Chapter 15), Erra and Išum (Chapter 16), and the Marduk Ordeal text."
+  named_but_flagged_scholar: "Frymer-Kensky 1983 named in body as the standard edition of the Marduk Ordeal text (KAR 143 + 219); no EVIDENCE token routes through it. Forwarded to inventory-audit."
+validation:
+  footnote_count_match: true
+  footnote_count: "20 / 20"
+  evidence_marker_count: 33
+  unresolved_source_ids: 0
+  marker_count_match: true
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_comments: 4
+  forbidden_words: 0
+  forbidden_openings: 0
+  asterisk_bold_body_prose_foreign_terms: 0
+  body_word_count: 821

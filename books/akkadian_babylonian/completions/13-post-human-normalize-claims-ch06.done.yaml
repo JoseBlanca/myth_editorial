@@ -1,0 +1,75 @@
+stage: "post-human-normalize"
+chapter: 06
+slug: "enmesharra-defeat"
+input: "chapters/06-enmesharra-defeat.claims.adoc"
+output: "chapters/06-enmesharra-defeat.claims.approved.adoc"
+timestamp: "2026-05-07T17:00:40Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/06-enmesharra-defeat.claims.approved.adoc"
+    lines: 109
+summary: "Post-factcheck normalization of chapter 6 claims after a REVISE verdict (1 HIGH, 5 MEDIUM, 2 LOW). All 8 findings accepted and applied. The HIGH finding F-1 corrects the upstream brief itself: the composition is preserved on a SINGLE damaged Seleucid/Parthian tablet, not 'multiple Babylonian and Assyrian manuscript groups' as the brief said. The framing of LACUNA, RECONSTRUCTION, and VARIANT markers all updated accordingly — manuscript-groups variation is restoration variation on a single witness, and the RECONSTRUCTION confidence is reduced from medium to low (no parallel manuscripts available for fill). F-2 (MEDIUM): KAR 143 + 219 are the Marduk Ordeal text itself (Frymer-Kensky 1983), not 'commentaries on Enmešarra's Defeat' — clarified in body. F-3 (MEDIUM): the Tablet-of-Destinies transfer claim was contamination from Enūma Eliš's Qingu motif; struck. Replaced with the actually-attested transfer of Enmešarra's radiance (Akkadian melammu) to Šamaš, plus the office redistribution: Nabû receives Ninurta's powers, Nergal receives Erra's powers, Marduk takes Enlil's powers. F-4 (MEDIUM): the surviving text is the ENDING of the narrative (per the colophon) — the combat itself is in the lost portion. The chapter now reframes around the judgment-and-execution aftermath rather than treating the surviving text as combat narrative. F-5 (MEDIUM): the seven sons are EXECUTED (beheaded by Marduk), not subdued in combat; reframed in tandem with F-4. F-6 (MEDIUM MARKER-MISUSED): the INFERENCE marker on the Enūma-Eliš parallel rewritten to acknowledge that Enmešarra's Defeat preserves the aftermath rather than the combat; the structural parallel is in the Marduk-displaces-elder-order pattern, not in a both-narrate-combats pattern. F-7 (LOW): Foster 2005 ToC verification deferred — claim retained as defensible based on the secondary literature's exclusive citation of Lambert 2013. F-8 (LOW): claim 19 softened to acknowledge the ritual-theological framing as inferential. The seven sons of Enmešarra are now identified with the Sebitti — same as Erra's seven demons in Chapter 16, providing a load-bearing cross-chapter link. Validation: schema clean, 20 footnotes, 33 EVIDENCE tokens (was 31), all source IDs resolve, all markers at column 0, all 11 correction spot-checks PASS."
+audit_findings_disposition:
+  high:
+    - id: "F-1"
+      kind: "UNVERIFIED — manuscript count framing wrong (single tablet, not multiple groups)"
+      action: "ACCEPTED"
+      applied: "All references to 'multiple Babylonian and Assyrian manuscript groups' replaced with 'single damaged Seleucid/Parthian tablet'. LACUNA marker reframed. RECONSTRUCTION marker reframed (no parallel manuscripts; fill_source = internal restorations; confidence: low not medium). VARIANT marker reframed as restoration variation, not recensional variation. The brief's framing is upstream and remains unchanged in the brief itself; the chapter follows the corrected reading."
+  medium:
+    - id: "F-2"
+      kind: "UNVERIFIED — KAR 143/219 framing"
+      action: "ACCEPTED"
+      applied: "KAR 143 + KAR 219 reframed as the Marduk Ordeal text itself (Frymer-Kensky 1983 standard edition), not as commentaries on Enmešarra's Defeat. The connection to Enmešarra's Defeat is now framed as parallel composition within the Akītu-centred theological dossier, not as commentary."
+    - id: "F-3"
+      kind: "UNVERIFIED — Tablet of Destinies transfer not in surviving text"
+      action: "ACCEPTED"
+      applied: "Tablet of Destinies transfer claim struck. Replaced with the actually-attested melammu (radiance) transfer to Šamaš, plus the office redistribution (Nabû→Ninurta's powers, Nergal→Erra's powers, Marduk→Enlil's powers)."
+    - id: "F-4"
+      kind: "UNVERIFIED — surviving text is the ending, not the combat"
+      action: "ACCEPTED"
+      applied: "Combat-narrative framing reframed throughout: the surviving text is the ending (per colophon), preserving Nergal as warden announcing Marduk's judgment, Enmešarra's unsuccessful plea, the beheading of the seven sons, the radiance transfer, and the office redistribution. The combat itself is acknowledged as in the lost portion of the tablet."
+    - id: "F-5"
+      kind: "UNVERIFIED — collective execution, not collective combat"
+      action: "ACCEPTED"
+      applied: "Seven sons are now described as executed (beheaded), not subdued in combat; the collective-antagonist framing preserved but routed through the execution scene per F-4."
+    - id: "F-6"
+      kind: "MARKER-MISUSED — Enūma-Eliš parallel framing"
+      action: "ACCEPTED"
+      applied: "INFERENCE marker rewritten: the structural parallel between Enmešarra's Defeat and Enūma Eliš is in the Marduk-displaces-elder-order pattern, not in a both-narrate-combats pattern; the aftermath-only character of the surviving text is acknowledged."
+  low:
+    - id: "F-7"
+      kind: "UNVERIFIED — Foster 2005 ToC not directly verified"
+      action: "DEFERRED"
+      applied: "Claim retained: 'no widely-used English-language anthology translation; Lambert 2013 stands alone'. Dalley 2008 ToC was directly verified to exclude Enmešarra's Defeat; Foster 2005 ToC could not be verified online but the secondary-literature citations universally point to Lambert 2013, supporting the absence of a Foster translation."
+    - id: "F-8"
+      kind: "UNVERIFIED — ritual-theological framing presented as fact"
+      action: "ACCEPTED"
+      applied: "Claim softened to acknowledge that the temple-scholarly transmission framing is interpretive; the survival in a single Seleucid/Parthian tablet is now framed as 'consistent with' the priestly-scholarly milieu rather than as proof of it."
+named_but_flagged_scholars:
+  - name: "Frymer-Kensky 1983"
+    publication: "JAOS 103, 131-141 (Marduk Ordeal text edition; KAR 143 + 219)"
+    context: "Named in body prose as the standard edition of the Marduk Ordeal text. No EVIDENCE token routes through Frymer-Kensky's article. Forwarded to inventory-audit for possible addition to sources.yaml on a future pass."
+validation:
+  schema_errors: 0
+  marker_placement_errors: 0
+  unresolved_source_ids: 0
+  footnote_count: 20
+  evidence_marker_count: 33
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_count: 4
+  single_seleucid_parthian_tablet: true
+  manuscript_groups_framing_removed: true
+  tablet_of_destinies_transfer_struck: true
+  melammu_to_shamash_added: true
+  beheading_of_seven_sons_added: true
+  office_redistribution_specified: true
+  nergal_as_warden_added: true
+  enmesharra_plea_added: true
+  colophon_ending_identification_added: true
+  kar_143_219_reframing: true
+  seven_sons_as_sebitti_identified: true
+  original_claims_unchanged: true

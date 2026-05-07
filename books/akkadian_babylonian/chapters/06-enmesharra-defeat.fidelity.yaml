@@ -1,0 +1,243 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  claims_file: "chapters/06-enmesharra-defeat.claims.approved.adoc"
+  narrative_file: "chapters/06-enmesharra-defeat.adoc"
+  total_claims: 20
+  claims_mapped: 20
+  verdict: PASS
+  honesty_self_check:
+    q1_every_claim_mapped: |
+      Yes. I walked all 20 footnoted claim-paragraphs in order and located each
+      in the narrative. None were skipped as "obviously present". The narrative
+      is a near-verbatim rendering of the claims document, so the mapping is
+       high-confidence rather than approximate.
+    q2_every_paragraph_checked_for_additions: |
+      Yes — I checked every body paragraph (lines 6, 8, 11, 13, 22, 25, 27, 33,
+      35, 38, 41, 44, 47, 56, 59, 67, 69, 79, 84, 88) and every marker block
+      (lines 16, 18, 52, 63, 73, 77) against the claims document. A line-by-line
+      diff of body content confirmed the only differences are `*foo*` → `_foo_`
+      italic-style substitutions on body-prose foreign nouns (the body-italic
+      policy). No new factual assertions were introduced.
+    q3_distortion_meaning_check: |
+      Compared at the level of precise meaning, not topic. I verified preserved
+      causal direction (e.g., the radiance-transfer is to Šamaš, not from
+      Šamaš), preserved certainty (INFERENCE blocks remain marked; the seven
+      sons are "presumably" identified with the Sebitti, not flatly identified),
+      preserved scope ("Lambert 2013 reads…" not "scholars agree"), and
+      preserved negations (the office assignments — Nabû gets Ninurta's,
+      Nergal gets Erra's, Marduk gets Enlil's — are in the correct direction;
+      the explicit "not of the Tablet of Destinies but of the *melammu*"
+      negation is preserved verbatim). All 6 markers from the claims document
+      survive in the narrative with their basis/risk fields intact.
+    q4_same_model_as_writer: |
+      I am claude-opus-4-7[1m] in a fresh conversation with no memory of
+      writing the narrative. The narrative for chapter 6 was produced at the
+      chapter-draft stage in a separate session (completion record
+      14-chapter-draft-ch06.done.yaml). This audit is therefore valid under
+      the skill's "fresh-conversation" requirement; the "different model"
+      preference is not met but is not required.
+
+claim_mapping:
+  - claim_number: 1
+    claim_text: "Source overview — fragmentary Babylonian theogonic-cosmogonic composition; single heavily damaged Seleucid/Parthian tablet (late 4th c. BCE – 1st c. CE)."
+    narrative_location: "line 6 (paragraph under 'The text and how it survives')"
+    status: MAPPED
+  - claim_number: 2
+    claim_text: "Modern title 'Enmešarra's Defeat' is conventional after the antagonist; no ancient title."
+    narrative_location: "line 8"
+    status: MAPPED
+  - claim_number: 3
+    claim_text: "Lambert 2013 (Babylonian Creation Myths, MC 16, Eisenbrauns) is the sole modern critical edition; no anthology translation."
+    narrative_location: "line 11"
+    status: MAPPED
+  - claim_number: 4
+    claim_text: "Colophon-based identification: the surviving text is only the ending; combat and lead-up are in the lost upper portion; aftermath is what survives (judgment, execution, redistribution)."
+    narrative_location: "line 13"
+    status: MAPPED
+  - claim_number: 5
+    claim_text: "Enmešarra is a chthonic god of the underworld and the deep, associated in late-Babylonian theology with the elder cosmic order."
+    narrative_location: "line 22"
+    status: MAPPED
+  - claim_number: 6
+    claim_text: "Enmešarra appears in earlier god-lists and incantation literature as one of the bound elder gods of the underworld."
+    narrative_location: "line 25"
+    status: MAPPED
+  - claim_number: 7
+    claim_text: "Seven sons subordinate to Enmešarra; presumably identified with the Sebitti who reappear in Erra and Išum (Ch. 16)."
+    narrative_location: "line 27"
+    status: MAPPED
+  - claim_number: 8
+    claim_text: "Combat itself not preserved (lost upper portion); surviving text begins with Enmešarra and seven sons already in custody."
+    narrative_location: "line 33"
+    status: MAPPED
+  - claim_number: 9
+    claim_text: "Preserved narrative opens with Nergal as Marduk's appointed warden announcing the judgment; Marduk has decreed death for Enmešarra and the seven sons."
+    narrative_location: "line 35"
+    status: MAPPED
+  - claim_number: 10
+    claim_text: "Enmešarra pleads unsuccessfully for clemency; plea preserved and rejected."
+    narrative_location: "line 38"
+    status: MAPPED
+  - claim_number: 11
+    claim_text: "Marduk executes the seven sons by beheading; collective execution, despatched together, is the first decisive action of the surviving text."
+    narrative_location: "line 41"
+    status: MAPPED
+  - claim_number: 12
+    claim_text: "After the execution, Enmešarra's radiance (Akkadian melammu) is stripped and transferred to Šamaš; the transfer is NOT of the Tablet of Destinies but of melammu — the central political-theological event."
+    narrative_location: "line 44"
+    status: MAPPED
+  - claim_number: 13
+    claim_text: "Cosmic offices redistributed: Nabû receives Ninurta's powers; Nergal receives Erra's; Marduk takes Enlil's."
+    narrative_location: "line 47"
+    status: MAPPED
+  - claim_number: 14
+    claim_text: "Connected to Akītu festival cosmology; Lambert 2013 reads it as part of the Akītu ritual-theological complex (annual renewal of Marduk's cosmic kingship)."
+    narrative_location: "line 56"
+    status: MAPPED
+  - claim_number: 15
+    claim_text: "Marduk Ordeal text preserved on KAR 143 + KAR 219 (Frymer-Kensky 1983) is the Marduk Ordeal text itself, a cultic-commentary genre composition — NOT commentaries on a separate base text."
+    narrative_location: "line 59"
+    status: MAPPED
+  - claim_number: 16
+    claim_text: "Seven sons named individually; names and sequence vary across alternative restorations Lambert 2013's apparatus proposes for the broken lines."
+    narrative_location: "line 67"
+    status: MAPPED
+  - claim_number: 17
+    claim_text: "Seven-sons motif resonates with Sebitti in Erra and Išum and (more loosely) the seven apkallu and the seven gates of the netherworld in the Descent of Ishtar."
+    narrative_location: "line 69"
+    status: MAPPED
+  - claim_number: 18
+    claim_text: "Restoration variation concentrated in two places (sons' order; precise office each son held); central narrative (execution, melammu-transfer to Šamaš, redistribution to Nabû/Nergal/Marduk) is stable across Lambert's restorations."
+    narrative_location: "line 79"
+    status: MAPPED
+  - claim_number: 19
+    claim_text: "Significant in the late-Babylonian Marduk dossier alongside Enūma Eliš, Toil of Babylon, and the Marduk Ordeal text — coherent theology of Marduk-as-cosmic-king crystallised in late-Babylonian temple-scholarly milieu."
+    narrative_location: "line 84"
+    status: MAPPED
+  - claim_number: 20
+    claim_text: "Survival on a single Seleucid/Parthian tablet consistent with Late Babylonian priestly-scholarly milieu (Akītu-linked, temple-scholarly transmission rather than popular reading)."
+    narrative_location: "line 88"
+    status: MAPPED
+
+marker_preservation:
+  total_markers_in_claims: 6
+  total_markers_in_narrative: 6
+  markers:
+    - kind: LACUNA
+      claims_line: 21
+      narrative_line: 16
+      status: PRESERVED_VERBATIM
+    - kind: RECONSTRUCTION
+      claims_line: 23
+      narrative_line: 18
+      status: PRESERVED_VERBATIM
+      note: "confidence: low; gap_source/fill_source intact"
+    - kind: INFERENCE
+      claims_line: 63
+      narrative_line: 52
+      topic: "office redistribution as central theological move"
+      status: PRESERVED_VERBATIM
+    - kind: INFERENCE
+      claims_line: 75
+      narrative_line: 63
+      topic: "Akītu liturgical complex / temple-scholarly transmission"
+      status: PRESERVED_VERBATIM
+    - kind: INFERENCE
+      claims_line: 86
+      narrative_line: 73
+      topic: "structural parallel to Enūma Eliš (rewritten per F-6)"
+      status: PRESERVED_VERBATIM
+    - kind: VARIANT
+      claims_line: 90
+      narrative_line: 77
+      topic: "restoration variation, not recensional"
+      status: PRESERVED_VERBATIM
+
+high_risk_factcheck_corrections:
+  - correction_id: F-1
+    description: "Single Seleucid/Parthian tablet, NOT 'multiple manuscript groups'"
+    narrative_status: APPLIED
+    detail: "Reframed throughout: 'a single, heavily damaged tablet from the Seleucid or Parthian period' (line 6); 'the single damaged Seleucid/Parthian tablet' (LACUNA, RECONSTRUCTION, VARIANT); 'survival in a single Seleucid/Parthian tablet' (line 88). No 'manuscript groups' language anywhere in the narrative."
+  - correction_id: F-2
+    description: "KAR 143 + 219 are the Marduk Ordeal TEXT (Frymer-Kensky 1983), not commentaries on Enmešarra's Defeat"
+    narrative_status: APPLIED
+    detail: "Line 59: 'preserved on KAR 143 + KAR 219, edited by Frymer-Kensky 1983 — is a thematically related composition…KAR 143 + 219 are the Marduk Ordeal text itself, a cultic-commentary genre composition, rather than commentaries on a separate base text.'"
+  - correction_id: F-3
+    description: "No Tablet of Destinies transfer (Qingu contamination); melammu transfer to Šamaš plus office redistribution"
+    narrative_status: APPLIED
+    detail: "Line 44 explicitly negates: 'The transfer — not of the Tablet of Destinies but of the _melammu_'. Office redistribution at line 47: 'Nabû receives the powers of Ninurta; Nergal receives the powers of Erra; Marduk takes the powers of Enlil.' No Tablet-of-Destinies-transfer assertion appears anywhere."
+  - correction_id: F-4
+    description: "Surviving text is the ENDING per the colophon; combat is lost"
+    narrative_status: APPLIED
+    detail: "Line 13: 'Based on the colophon, the surviving text is taken to be only the ending of the narrative.' Reinforced at line 33: 'The combat itself…is not preserved in the surviving tablet — it stood in the lost upper portion.' Section heading at line 31 reads 'The aftermath of the combat: judgment, execution, redistribution'."
+  - correction_id: F-5
+    description: "Seven sons EXECUTED (beheaded), not subdued in combat"
+    narrative_status: APPLIED
+    detail: "Line 41: 'Marduk executes the seven sons by beheading. The collective execution is the first decisive action of the surviving text — the seven sons are despatched together, not one at a time.' No 'combat with the sons' framing anywhere."
+  - correction_id: F-6
+    description: "INFERENCE on Enūma Eliš parallel rewritten as STRUCTURAL parallel (Marduk-displaces-elder-order), not both-narrate-combats"
+    narrative_status: APPLIED
+    detail: "Line 73 INFERENCE: 'best read as a structural parallel…both compositions ground Marduk's kingship in the displacement of an elder cosmic order, but they target different elders.' Explicitly notes Enmešarra's Defeat as preserved is aftermath-only. risk field flags scholars who emphasise differences over similarities."
+  - correction_id: F-7
+    description: "Foster 2005 ToC reference deferred"
+    narrative_status: APPLIED
+    detail: "Foster 2007 (Akkadian Literature of the Late Period) is cited; no Foster 2005 anthology references. Citation pattern matches the corrected claims."
+  - correction_id: F-8
+    description: "Ritual-theological framing softened to inferential"
+    narrative_status: APPLIED
+    detail: "Line 56 attributes the Akītu reading to Lambert 2013 ('Lambert 2013 reads the composition as part of the Akītu ritual-theological complex'). The fuller temple-scholarly transmission framing is wrapped in an INFERENCE marker (line 63) with explicit basis and risk fields."
+
+glossary_check:
+  status: PASS
+  never_use_terms_scanned: ["abzu", "Enki", "Inanna", "Nanna", "Nanna-Suen", "Utu", "Iškur", "Damgalnuna", "Bilgames", "Anzud", "Huwawa", "Utnapishtim", "Irra", "Dumuzid", "Ashur"]
+  hits: []
+  notes: |
+    Locked Akkadian renderings used consistently: Marduk, Enmešarra, Šamaš,
+    Nergal, Nabû, Ninurta, Erra, Enlil, Sebitti, akītu, melammu, apkallu,
+    Enūma Eliš, Erra and Išum, Tiamat. No Sumerian-form drift.
+
+forbidden_words_check:
+  status: PASS
+  hits: []
+  notes: |
+    Scanned for marketing register, hedge-shifters, and AI cliché vocabulary
+    (very/really/truly/just/simply/clearly/obviously/essentially/basically/
+    fascinating/intriguing/compelling/profound/seamlessly/delve/tapestry/
+    nuanced/leverage/robust/crucial/vital/pivotal/paramount/key takeaway/
+    in essence/navigate). No hits.
+
+footnote_integrity_check:
+  status: PASS
+  total_footnotes_claims: 20
+  total_footnotes_narrative: 20
+  byte_for_byte_match: true
+  notes: |
+    All 20 footnote payloads are byte-for-byte identical between
+    claims.approved and narrative. No footnotes added, removed, reassigned,
+    or reordered. Footnote citation page-ranges match (e.g., Lambert 2013
+    pp. 281–298, pp. 281–283, pp. 281–284, p. 282, pp. 284–286, pp. 286–288,
+    pp. 286–290, pp. 288–290, pp. 290–294, pp. 290–296, pp. 296–298, p. 285)
+    are preserved unchanged.
+
+body_prose_italic_check:
+  status: PASS
+  notes: |
+    Body-prose foreign nouns are rendered with `_underscore_` italic style:
+    `_Enmešarra's Defeat_`, `_Babylonian Creation Myths_`, `_Erra and Išum_`,
+    `_melammu_`, `_apkallu_`, `_Descent of Ishtar_`, `_Enūma Eliš_`,
+    `_Toil of Babylon_`. Marker blocks (LACUNA / RECONSTRUCTION / INFERENCE
+    / VARIANT) preserve the claims-document `*asterisk*` style intact, which
+    is correct — markers are not body prose.
+
+findings: []
+
+verdict_rationale: |
+  All 20 footnoted claim-paragraphs map cleanly to specific narrative
+  paragraphs. All 6 markers (1 LACUNA, 1 RECONSTRUCTION, 3 INFERENCE,
+  1 VARIANT) are preserved verbatim including their basis/risk fields.
+  All 8 factcheck corrections (F-1 through F-8) are reflected in the
+  narrative. No claims dropped (0), no claims added (0), no claims
+  distorted (0). Glossary, forbidden-words, and footnote-integrity checks
+  all pass. Body-prose italic policy correctly applied. Per the skill's
+  verdict rules — zero CLAIM-DROPPED, zero CLAIM-ADDED, zero HIGH
+  CLAIM-DISTORTED, zero MEDIUM findings — the verdict is PASS.
