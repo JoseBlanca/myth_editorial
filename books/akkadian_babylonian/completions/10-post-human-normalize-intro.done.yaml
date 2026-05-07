@@ -1,0 +1,61 @@
+stage: "post-human-normalize"
+timestamp: "2026-05-07T05:29:06Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/00-introduction.adoc"
+    lines: 228
+  - file: "glossary.yaml"
+    lines: 391
+summary: "Post-factcheck normalization of the introduction. All seven of the seven recommended findings from prose-factcheck (chapters/00-introduction.factcheck.yaml) applied. Five fixes to the prose: (F-1) Sîn-lēqi-unninni's '11th-century compilation' rewritten as 'late-second-millennium compilation... conventionally placed in the 13th-12th centuries BCE, in the late Kassite or Middle Babylonian period' — fixes the internal inconsistency with line 95's 'late second millennium BCE'. (F-3) Poor Man of Nippur tablet citation corrected from 'STT 38, with two minor witnesses STT 39 and STT 116' to 'STT 38, with one minor witness in the joined fragment STT 39+116' — STT 39+116 is a single joined tablet, not two witnesses. (F-5) Erra dating widened: body now reads 'composed somewhere in the late ninth to eighth century BCE' (was 'eighth century BCE' as fact); INFERENCE marker rewritten to acknowledge the full ninth-through-seventh-century scholarly range with most opinion settling on the eighth, replacing the prior late-eighth-with-seventh-century-tail reading. (F-6) Worm and Toothache tablet identifier corrected from 'CT 17, 50' to 'CT 17 50' — comma removed to match scope.md's convention. (F-9) King of Battle date framing rewritten from 'an Old Babylonian Sargon legend, the King of Battle, was preserved in an Egyptian royal archive at Amarna' to 'a Sargon legend of Old Babylonian origin, the King of Battle, was preserved in a Middle Babylonian copy in an Egyptian royal archive at Amarna' — the Amarna copy is the MB witness; the OB qualifier now describes the composition's origin, not the manuscript date. Two policy clarifications to glossary.yaml: (F-2) the Ninurta entry's rationale now permits Ningirsu in any chapter discussing the OB Anzû recension's hero (chapter 15 plus the introduction, comparative chapter, and influences chapter wherever the OB→SB substitution is named) — the prior 'chapter 15 only' lock was over-strict. (F-8) the Gilgameš entry's rationale now permits Bilgames only when citing Sumerian compositions by their Sumerian title (e.g., 'the Sumerian Bilgames poems') or in explicit comparative contexts — never as a name for the Akkadian hero. In parallel, the Ištar entry's rationale was extended to make the same carve-out for the Sumerian Inanna name (permitted only in Sumerian-tradition citations like 'the Sumerian Inanna's Descent'), and the Apsû entry's rationale was extended to permit abzu in the conventional Sumerian temple name E-abzu and in Sumerian-tradition citations. F-4 (Series of the Fox 'about 200 lines') and F-7 (Saggil-kīnam-ubbib acrostic wording variant) deferred as soft notes for chapter-claims to spot-check."
+audit_findings_disposition:
+  medium:
+    - id: "F-3"
+      kind: "CITATION-WRONG"
+      action: "ACCEPTED"
+      applied: "STT 39 and STT 116 corrected to the joined fragment STT 39+116."
+  low:
+    - id: "F-1"
+      kind: "INTERNAL-VARIANCE"
+      action: "ACCEPTED"
+      applied: "Sîn-lēqi-unninni now placed 'in the 13th-12th centuries BCE, in the late Kassite or Middle Babylonian period'."
+    - id: "F-2"
+      kind: "GLOSSARY-VIOLATION"
+      action: "ACCEPTED — glossary updated"
+      applied: "Ninurta entry rationale rewritten to permit Ningirsu in any chapter discussing the OB Anzû recension."
+    - id: "F-4"
+      kind: "UNVERIFIED"
+      action: "DEFERRED"
+      applied: "Soft note — chapter-claims will spot-check the 200-line figure against Kienast 2003."
+    - id: "F-5"
+      kind: "INTERNAL-VARIANCE"
+      action: "ACCEPTED"
+      applied: "Erra dating widened to 'late ninth to eighth century BCE' with INFERENCE marker rewritten to acknowledge the full 9th-through-7th-century scholarly range."
+    - id: "F-6"
+      kind: "CITATION-WRONG"
+      action: "ACCEPTED"
+      applied: "CT 17, 50 → CT 17 50."
+    - id: "F-7"
+      kind: "INTERNAL-VARIANCE"
+      action: "DEFERRED"
+      applied: "Soft note — chapter-claims to verify Saggil-kīnam-ubbib acrostic wording against Oshima 2014."
+    - id: "F-8"
+      kind: "GLOSSARY-VIOLATION"
+      action: "ACCEPTED — glossary updated"
+      applied: "Gilgameš entry rationale rewritten to permit Bilgames in Sumerian-composition citations only. Ištar (Inanna) and Apsû (abzu/E-abzu) entries rewritten in parallel for consistency."
+    - id: "F-9"
+      kind: "UNVERIFIED"
+      action: "ACCEPTED"
+      applied: "King of Battle reframed: 'a Sargon legend of Old Babylonian origin... preserved in a Middle Babylonian copy in an Egyptian royal archive at Amarna'."
+validation:
+  schema_errors: 0
+  marker_placement_errors: 0
+  glossary_never_use_violations: 0
+  footnote_count: 42
+  evidence_marker_count: 47
+  comparative_hook_count: 19
+  inference_marker_count: 3
+  lacuna_marker_count: 1
+  word_count: 6929
+notes:
+  - "Validation script flagged 6 'never_use' substring matches that resolve to documented carve-outs: 4×'Inanna' all in 'the Sumerian Inanna's Descent' or 'Sumerian Inanna' contexts (legitimate per the F-8-parallel Inanna carve-out); 1×'abzu' in 'E-abzu' (legitimate per the F-8-parallel Apsû carve-out); 1×'An' is the English indefinite article in 'An Assyrian prince called Kummâ' (legitimate per English grammar — 'An' before a vowel-starting noun)."
