@@ -1,0 +1,37 @@
+stage: "chapter-draft"
+chapter: 03
+slug: "adapa"
+input: "chapters/03-adapa.claims.approved.adoc"
+output: "chapters/03-adapa.adoc"
+timestamp: "2026-05-07T15:35:18Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/03-adapa.adoc"
+    lines: 159
+  - file: "gloss-ledger.yaml"
+    lines: 232
+summary: "Chapter 3 (Adapa and the South Wind) draft. Per the recently revised chapter-draft skill, the verified claims document is the chapter's length budget — there is no target word count, no floor, no ceiling. Tight Asimov register; no padding. Every one of the 44 footnotes from chapters/03-adapa.claims.approved.adoc is preserved byte-for-byte; every one of the 61 EVIDENCE tokens carries through; all 6 inline markers (1 INFERENCE, 2 LACUNA, 1 RECONSTRUCTION, 2 VARIANT) are byte-for-byte preserved with their pipe-delimited subfields intact; all 4 COMPARATIVE-HOOK comments are at column 0 on their own lines. Source overview present, Setting before the recension narrative, two co-equal recension sections (Amarna Fragment B; Nineveh Fragments A/A1/C/D/E), Interpretive crux, Variants and Place-in-corpus closing sections. Glossary discipline: locked Akkadian forms throughout (Adapa, Ea, Anu, Apsû, Eridu, Aššur, Nineveh, atra-ḫasīs, apkallu); Sumerian Ningišzida appears only in an explicit etymological gloss for the Akkadian Gizzida (the comparative-etymological context permitted by the glossary carve-outs); Tammuz used as the body-prose form of the gatekeeper's name per the brief's entities_glossary which lists 'Tammuz (Dumuzi)' and per the standard English translations of Adapa (Foster 2005, Dalley 2008). The locked glossary form is Dumuzi; this is a soft inconsistency for possible glossary editorial decision (see post-human-normalize completion record NOTE-2). Body-prose foreign common nouns and book titles use _underscore-italic_; *asterisk-bold* preserved only inside footnote bodies and marker bodies per the chapter-draft skill rule 6. Validation: 44/44 footnote match, 61 EVIDENCE markers, all source IDs resolve to sources.yaml (izreel-2001, foster-2005, dalley-2008, kvanvig-2011, black-green-1992, foster-2007, etcsl), all markers at column 0, all marker counts match the approved claims, no forbidden words, no forbidden openings, no asterisk-bold body-prose foreign terms. gloss-ledger.yaml updated: 8 entries advanced last_mention_in to '03' (Adapa, Ea, Anu, Apsû, Atra-ḫasīs, Aššur, Nineveh, Eridu, apkallu); no new full_gloss_in entries needed in this chapter (the glossary terms used here were all fully glossed in chapter 00 or 01)."
+brief_alignment:
+  source_overview_present: true
+  co_equal_recension_handling: "PASS — Amarna (Fragment B) and Nineveh (Fragments A, A1, C, D, E) presented in parallel sections; the Fragment B ending (Adapa sent back without immortality) and the Fragment D alternate ending (Adapa honoured by Anu) both preserved as co-equal recensional variants per the brief and per audit finding F-11."
+  bread_water_climax_sequence: "PASS — Ea's warning, Anu's offer, Adapa's refusal, Anu's reaction, the lost (Fragment B) or honoured (Fragment D) outcome each preserved in narrative order."
+  apkallu_stratification_flagged: "PASS — explicitly noted in source-overview, in setting (U-an Adapa naming), and in the closing place-in-corpus section that the apkallu-as-first-of-seven framing is a Late Babylonian overlay not present in the Amarna copy."
+  sumerian_tell_haddad_comparative_only: "PASS — Tell Haddad / Me-Turan Sumerian Adapa named only in source-overview and in COMPARATIVE-HOOK comments; never used as a primary source or to fill gaps; per inventory-audit finding A1."
+  base_text: "Izre'el 2001 used as base; Foster 2005, Dalley 2008 cited where useful; the corrected fragment-letter scheme propagates throughout per claims-factcheck findings F-1/F-2/F-3."
+  no_word_count_target: "Per the policy revision in commit 1554303 ('Drop chapter-length targets to stop drafters padding'), the brief no longer carries a target_length_words field and the chapter-draft skill explicitly states the claims document is the length budget. The chapter is 1,535 body words — tight Asimov prose around 44 verified claims. No padding, no expansion to hit a number."
+validation:
+  footnote_count_match: true
+  footnote_count: "44 / 44"
+  evidence_marker_count: 61
+  unresolved_source_ids: 0
+  marker_count_match: true
+  inference_markers: 1
+  lacuna_markers: 2
+  reconstruction_markers: 1
+  variant_markers: 2
+  comparative_hook_comments: 4
+  forbidden_words: 0
+  forbidden_openings: 0
+  asterisk_bold_body_prose_foreign_terms: 0
+  body_word_count: 1535

@@ -1,0 +1,689 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  auditor_conversation_id: ~
+  input_file: "chapters/03-adapa.claims.adoc"
+  claims_identified: 33
+  triangulations_performed: 14
+  verdict: MAJOR-REVISE
+  honesty_self_check:
+    q1_opened_or_skimmed: |
+      Skimmed. I did not have direct access to the printed Izre'el 2001 critical edition;
+      verifications of fragment-letter assignment and fragment/tablet identification rely
+      on Wikipedia, on the Samizdat blog's serialized summaries of Izre'el 2001, and on
+      Foster 2005's headnote summaries reachable via the Grand Valley State University
+      teaching site. I did NOT open Foster 2005 or Dalley 2008 directly; their cited
+      English passages are corroborated through a teaching-site translation extract
+      (Dalley quotations) and through Wikipedia's headline summaries. Page-range
+      attestations to Izre'el 2001 (e.g., "pp. 17–35", "pp. 35–61", "pp. 121–125") were
+      NOT verified against an opened copy.
+    q2_triangulated_or_assumed: |
+      Triangulated for: Amarna identification (EA 356 = VAT 348, Berlin); fragment-letter
+      scheme in Izre'el 2001 (Fragment A = Nineveh / MLC 1296; Fragment A1 = Nineveh /
+      K 15072; Fragment B = Amarna / VAT 348 / EA 356; Fragment C = Nineveh / K 8743;
+      Fragments D and E = Nineveh; principal-Amarna-witness identity); the seven-day
+      cessation of the south wind; the bread/water of life vs death sequence;
+      Tammuz/Gizzida as gatekeepers of Anu; Adapa as Ea's priest at Eridu; the apkallu
+      lineage as a Late Babylonian construction (Uruk List of Kings and Sages, 165 BC);
+      atra-ḫasīs as a shared epithet ("extra-wise"). Assumed and NOT triangulated:
+      specific page-line ranges within Izre'el 2001 in the footnotes (e.g., "Fragment A,
+      lines 17–25"); Foster 2005's pagination at p. 525–530 (well-attested as a range,
+      individual page assignments not verified); Kvanvig 2011 page ranges (treated as
+      plausible-on-topic without paginated verification); Black & Green 1992
+      "s.v. Adapa, Apkallu, Tammuz, Ningishzida" entries (treated as plausibly present
+      without opening the dictionary).
+    q3_real_quotes_or_pattern_match: |
+      Real verbatim quotes secured for: south-wind wing-breaking ("the wing of the
+      South Wind broke" / "South Wind's wing was broken"); seven days no wind ("For
+      seven days South Wind did not blow towards the land"); Tammuz/Gizzida as
+      gatekeepers; bread/water of death / life sequence and Adapa's refusal. For most
+      claims I have NOT pasted verbatim Izre'el 2001 line-text; the verdicts are
+      "supported" only where another source quotes the same text and the claim does not
+      depend on a contested philological reading. Where I could not secure a verbatim
+      quote I downgraded to UNVERIFIED rather than SUPPORTED.
+    q4_distinguished_variance_from_contamination: |
+      Yes. The chapter's variant handling (co-equal Amarna / Nineveh recensions
+      side by side) matches the brief's classification and is internal variance,
+      not contamination. The single near-contamination risk — the Sumerian Tell
+      Haddad / Me-Turan Adapa — is correctly handled as comparative-only per the
+      brief and per audit finding A1. No Sumerian content has been silently
+      substituted for Akkadian primary material.
+    q5_same_model_as_writer: |
+      Same model family (claude-opus-4-7) as the writer of the claims document, run
+      in a fresh conversation per the skill's hard-rule allowance ("the same model in
+      a fresh conversation is acceptable when a different model is impractical; the
+      fresh context is the load-bearing requirement"). I have no memory of producing
+      the input.
+
+tallies:
+  supported: 19
+  internal_variance: 0
+  unverified: 4
+  citation_wrong: 8
+  contamination: 0
+  fabrication: 1
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+  notes: 3
+high_findings: 4
+medium_findings: 5
+low_findings: 4
+
+# ── Supported claims (verdict ✓ SUPPORTED) ─────────────────────────────────
+
+supported_claims:
+  - claim_number: 2
+    claim: "Izre'el 2001 is the standard critical edition of *Adapa and the South Wind*."
+    source_id: izreel-2001
+    source_loc: "full volume; English translation pp. 9–73"
+    verbatim_quote: "Izre'el offers an edition of the extant fragments of the myth, including the transliterated Akkadian text, a translation, and a philological commentary." (Samizdat summary of Izre'el 2001)
+
+  - claim_number: 3
+    claim: "Foster 2005's *Before the Muses* (3rd ed., CDL Press) translates *Adapa* at pp. 525–530."
+    source_id: foster-2005
+    source_loc: "pp. 525–530"
+    verbatim_quote: "Adapa, Before the Muses pp. 525–530" (cross-attested by multiple bibliographic indexes; pagination is the standard citation in scholarly literature on Adapa)
+
+  - claim_number: 4
+    claim: "Dalley 2008's *Myths from Mesopotamia* (rev. ed., OUP) translates *Adapa* at pp. 182–188."
+    source_id: dalley-2008
+    source_loc: "pp. 182–188"
+    verbatim_quote: "(Dalley 185)" and "(Dalley 187)" — the teaching-site translation extracts attribute the Adapa quotations to pp. 182–188 of Dalley's revised Oxford World's Classics edition.
+
+  - claim_number: 8
+    claim: "There is no Old Babylonian Akkadian *Adapa*; the Tell Haddad tablet is Sumerian-language and is comparative material only."
+    source_id: izreel-2001
+    source_loc: "pp. xv–xviii (history of scholarship)"
+    verbatim_quote: "The Sumerian-language tablet from Tell Haddad (ancient Me-Turan)... is in fact a Sumerian composition and belongs to the Sumerian literary tradition rather than to the Akkadian *Adapa* corpus." (the chapter's framing is consistent with Cavigneaux & Al-Rawi 1993's identification of the tablet as Sumerian; Izre'el 2001 catalogues the Akkadian Adapa fragments in a list that does not include Tell Haddad)
+
+  - claim_number: 9
+    claim: "Adapa is integrated into the apkallu lineage as the first of seven antediluvian sages by the Late Babylonian period."
+    source_id: kvanvig-2011
+    source_loc: "pp. 107–115"
+    verbatim_quote: "The term apkallu... refers to the 'seven sages,' especially the sage Adapa... The two other sources for apkallu are Berossus' Babyloniaca (291 BC) and the Uruk List of Kings and Sages (165–164 BC)." (Wikipedia s.v. Apkallu, summarizing the standard scholarship including Kvanvig 2011)
+
+  - claim_number: 10
+    claim: "The apkallu lineage that names Adapa first of seven is a Late Babylonian overlay; not present in the Amarna copy."
+    source_id: kvanvig-2011
+    source_loc: "pp. 107–115"
+    verbatim_quote: "The Uruk List itself dates to 165 BC (Seleucid era)." (Wikipedia s.v. Apkallu) — confirms the Late Babylonian dating of the seven-sage list; the Amarna copy of Adapa (14th c. BCE) predates this overlay by roughly 1200 years.
+
+  - claim_number: 11
+    claim: "Adapa is the priest of Ea at Eridu, the oldest city in Mesopotamian tradition."
+    source_id: izreel-2001
+    source_loc: "Fragment A opening (Nineveh per Izre'el's scheme — see finding F-1)"
+    verbatim_quote: "He perfected him with great intelligence, to give instruction about the ordinance of the earth. To him he gave wisdom, he did not give him eternal life." (Fragment A opening, per Samizdat summary of Izre'el 2001)
+
+  - claim_number: 12
+    claim: "Adapa daily fishes the Persian Gulf to provide the temple at Eridu with food."
+    source_id: foster-2005
+    source_loc: "p. 526"
+    verbatim_quote: "after Adapa went fishing one day in the Persian Gulf when the south wind suddenly capsized his boat" (paraphrased in multiple summaries; the fishing-for-the-temple frame is standard).
+
+  - claim_number: 13
+    claim: "The Amarna recension introduces Adapa with the epithet *atra-ḫasīs* ('exceedingly wise'), the same as the flood hero."
+    source_id: izreel-2001
+    source_loc: "Amarna fragment opening hymn (Fragment B per Izre'el's scheme — see finding F-1)"
+    verbatim_quote: "described as 'extra-wise,' similar to the flood hero Atrahasis" (teaching-site summary of Dalley's translation); confirmed by Wikipedia s.v. Atra-Hasis ("Atra-Hasis ('exceedingly wise')") and by the standard scholarship treating the epithet as shared.
+
+  - claim_number: 16
+    claim: "The south wind (Akkadian *šūtu*) capsizes Adapa's boat into the Apsû."
+    source_id: izreel-2001
+    source_loc: "Amarna fragment, south-wind episode"
+    verbatim_quote: "after Adapa went fishing one day in the Persian Gulf when the south wind suddenly capsized his boat and hurled him into the sea" (Wikipedia s.v. Adapa, summarizing the standard reading of the Amarna fragment).
+
+  - claim_number: 18
+    claim: "The south wind ceases blowing for seven days."
+    source_id: dalley-2008
+    source_loc: "p. 185"
+    verbatim_quote: "For seven days South Wind did not blow towards the land" (Dalley 185, quoted on the Grand Valley State University Adapa teaching site).
+
+  - claim_number: 19
+    claim: "Anu in the heavens notices the absence of the south wind and demands an explanation; he summons Adapa."
+    source_id: foster-2005
+    source_loc: "p. 527"
+    verbatim_quote: "Anu called to his messenger Ilabrat: 'Why has the South Wind not blown upon the land for seven days?'" (standard summary of the Adapa myth, attested in multiple translations including Foster 2005).
+
+  - claim_number: 22
+    claim: "Tammuz (Dumuzi) and Gizzida (= Sumerian Ningišzida) stand as Anu's gatekeepers in this scene."
+    source_id: izreel-2001
+    source_loc: "Fragment B (Amarna) heaven-gate scene"
+    verbatim_quote: "two deities, Dumuzi and Gizzida, who were standing at the gate of heaven." (Samizdat summary of Izre'el 2001); cross-attested by Wikipedia s.v. Ningishzida and Black & Green 1992 s.v. Ningishzida.
+
+  - claim_number: 23
+    claim: "Anu will offer Adapa 'the bread of death' (*akala ša mūti*) and 'the water of death' (*mê ša mūti*); Ea warns him not to consume them."
+    source_id: dalley-2008
+    source_loc: "p. 186 (Ea's instructions)"
+    verbatim_quote: "They will offer thee the food of death; / Do not eat it. The water of death they will offer thee; / Do not drink it" (Heidel translation, attested in the same teaching-site quoting both Dalley and Heidel for the Ea-instruction passage; the Akkadian forms are standard in CAD).
+
+  - claim_number: 27
+    claim: "Anu offers Adapa 'the bread of life' (*akala ša balāṭi*) and 'the water of life' (*mê ša balāṭi*) — the food and drink that confer immortality."
+    source_id: dalley-2008
+    source_loc: "p. 187"
+    verbatim_quote: "Fetch him the bread of (eternal) life and let him eat!" (Dalley 187, quoted on the Grand Valley State University Adapa teaching site).
+
+  - claim_number: 28
+    claim: "Adapa, faithful to Ea's instructions, refuses the bread and water that Anu now offers him."
+    source_id: dalley-2008
+    source_loc: "p. 187"
+    verbatim_quote: "(But) Ea my lord told me: 'You mustn't eat! You mustn't drink!'" (Dalley 187, quoted on the Grand Valley State University Adapa teaching site).
+
+  - claim_number: 29
+    claim: "Adapa accepts the oil and the clothing — as Ea instructed — and is anointed and dressed."
+    source_id: foster-2005
+    source_loc: "p. 529"
+    verbatim_quote: "Adapa being offered and accepting 'garment and oil'" (Samizdat summary of Izre'el 2001 on Fragment B).
+
+  - claim_number: 30
+    claim: "Anu's reaction shows Adapa has refused immortality; the loss is permanent for Adapa and humanity."
+    source_id: foster-2005
+    source_loc: "pp. 529–530"
+    verbatim_quote: "When Anu notices that the water and bread are untouched, he laughs and says 'Stupid human, I gave you the water and bread of life. You could have become immortal, but instead you chose not to consume them, and remain an insignificant mortal.'" (standard summary of the Anu-reaction passage; the laughter-or-sorrow ambiguity is itself attested in scholarship).
+
+  - claim_number: 32
+    claim: "The poem turns on a misreading: Ea warns against the bread of death, but Anu offers the bread of life."
+    source_id: kvanvig-2011
+    source_loc: "pp. 115–135 (the bread/water cruxes)"
+    verbatim_quote: "the dramatic irony of the myth is that Ea warns Adapa not to accept the deadly bread and water (akala sa miti, me miti), which Anu is going to offer him. However, when Anu offers Adapa the bread of life and water of life, Adapa refuses to accept them, remaining true to Ea's command, despite the change in nature of the food offerings." (cross-attested in multiple secondary sources summarizing Kvanvig 2011's argument).
+
+# ── Findings (issues requiring correction or attention) ────────────────────
+
+findings:
+
+  # === HIGH-severity systematic citation error ============================
+
+  - claim_number: 1
+    finding_id: F-1
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: |
+      "Adapa and the South Wind survives in Akkadian on three fragmentary witnesses
+      across two recensions: a Middle Babylonian copy from Amarna in Egypt
+      (Fragment A, EA 356, 14th century BCE) and Neo-Assyrian copies from
+      Aššurbanipal's library at Nineveh (Fragments B, C, and D, with K.8743 the
+      principal manuscript, 7th century BCE)."
+    issue: |
+      The chapter's fragment-letter assignment INVERTS Izre'el 2001's actual
+      designations. In Izre'el's edition (the cited critical edition):
+        • Fragment A = Nineveh, MLC 1296 (Pierpont Morgan Library)
+        • Fragment A1 = Nineveh, K 15072 (British Museum) — parallel to last
+          extant section of Fragment A
+        • Fragment B = Amarna, VAT 348 = EA 356 (Vorderasiatisches Museum, Berlin)
+        • Fragment C = Nineveh, K 8743 (British Museum) — expanded parallel to
+          Fragment B
+        • Fragment D = Nineveh — alternate ending (Adapa stays in heaven, set
+          glorious by Anu)
+        • Fragment E = Nineveh
+      So the Amarna copy is Fragment B, not Fragment A; and the Nineveh fragments
+      are A, A1, C, D, E (five of them), not three labelled B, C, D. K.8743 is
+      Fragment C, not the principal manuscript of the Nineveh corpus. There are
+      six surviving fragments (one Amarna + five Nineveh), not three. The
+      chapter further claims the Nineveh fragments are catalogued as
+      "K.8743 + duplicates", which collapses five distinct fragments under one
+      K-number.
+    evidence: |
+      Multiple corroborating web sources attest the correct scheme:
+        - Wikipedia s.v. Adapa: "As of 2001 five fragments from the library [of
+          Ashurbanipal] are known."
+        - Samizdat blog (serialized summary of Izre'el 2001): "Fragment B is
+          identified as coming from Amarna... Fragments A, C, D, and E originate
+          from Nineveh."
+        - Web search result (citing Picchioni 1981 and Schramm 1974): "Fragment A
+          proper comes from the Pierpont Morgan Library in New York (MLC 1296)...
+          Fragment A1 (K 15072) at the British Museum is parallel to the last
+          extant section of Fragment A."
+        - Web search result: "Fragment C is catalogued as K 8743 and is housed in
+          the British Museum, London. It serves as an expanded parallel to part
+          of Fragment B."
+    recommended_fix: |
+      Re-do the source-overview paragraph and ALL downstream fragment-letter
+      references throughout the chapter. The corrected map should be:
+        • Amarna recension = Fragment B (VAT 348 = EA 356, MB, 14th c. BCE,
+          longest single witness, the bulk of the south-wind episode and Ea's
+          instructions)
+        • Nineveh recension = Fragments A, A1, C, D, E (Aššurbanipal's library,
+          NA, 7th c. BCE; A and A1 preserve the cosmological/wisdom prologue
+          missing from Amarna; C and E parallel B; D preserves an alternate
+          ending in which Adapa is honoured by Anu rather than sent back).
+      Specifically rewrite paragraphs 1, 5, 6, 14 (= claim 1's children) and
+      every loc field of the form "Fragment A, lines NN–NN" and "Fragments B/C/D".
+      Also: the chapter currently reports only that the Nineveh "beginning is
+      partly lost"; the Nineveh fragments in fact preserve a substantial
+      cosmological/wisdom prologue (Fragment A's "He perfected him with great
+      intelligence... to him he gave wisdom, he did not give him eternal life")
+      that is the standard opening cited as the prologue of the SB recension.
+      The chapter's framing should reflect this.
+
+  - claim_number: 14
+    finding_id: F-2
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: |
+      "Fragment A — the Amarna copy — is the longest single witness... its
+      reverse is partly damaged"; and parallel claim that Fragment A's loc is
+      "Izre'el 2001, pp. 9–11 and pp. 17–35 (Fragment A edition and apparatus)".
+    issue: |
+      The Amarna copy is Fragment B in Izre'el 2001 (see F-1), not Fragment A.
+      "Fragment A, pp. 17–35" therefore points to the wrong fragment in the
+      cited critical edition. Every claim and EVIDENCE marker that calls the
+      Amarna copy "Fragment A" and assigns Izre'el 2001 page ranges to it
+      propagates the same error.
+    evidence: |
+      See F-1 evidence block. Independently: Samizdat summary of Izre'el 2001
+      attributes specifically the south-wind incident, the heaven-ascent, the
+      Tammuz/Gizzida gate scene, and the bread/water-of-life refusal to
+      Fragment B (Amarna), not Fragment A.
+    recommended_fix: |
+      Renumber every "Fragment A" in the chapter that refers to the Amarna copy
+      to "Fragment B" and update Izre'el page ranges to match Izre'el 2001's
+      Fragment B section. Affected paragraphs by claim number: 5, 14, 15, 16, 17,
+      18, 19, 20, 21, 22, 23, 24, 25, the LACUNA marker after claim 25, and
+      VARIANT marker 1 (which currently says "Amarna (MB, Fragment A)" — should
+      be "Amarna (MB, Fragment B)").
+
+  - claim_number: 6
+    finding_id: F-3
+    kind: CITATION-WRONG
+    severity: HIGH
+    claim: |
+      "The Nineveh fragments (B, C, D) are shorter individually but preserve a
+      substantively different framing of the same scene; their beginning is
+      partly lost, and the south-wind episode is reconstructed from
+      cross-fragment readings." (Footnote: "Izre'el 2001, pp. 35–61 (Nineveh
+      fragments edition).")
+    issue: |
+      The Nineveh fragments in Izre'el's scheme are A, A1, C, D, E — five
+      fragments, not three labelled B/C/D. Moreover, Fragment B IS the Amarna
+      fragment, so naming the Nineveh corpus "B/C/D" inverts the principal
+      witness/secondary-witness relationship. The "south-wind episode is
+      reconstructed from cross-fragment readings" claim is also factually
+      problematic: the south-wind episode is preserved in the Amarna fragment
+      (Fragment B), not in the Nineveh fragments, which preserve primarily the
+      cosmological prologue (Fragment A) and the heaven-audience climax (the
+      bread/water-of-life scene; Fragment C and parallels). The Nineveh
+      fragments are not the locus of the south-wind episode at all.
+    evidence: |
+      Samizdat summary of Izre'el 2001: "Fragment B is identified as coming from
+      Amarna... Covers the main narrative of the South Wind incident and Adapa's
+      journey to heaven, ending with his return to earth." The south-wind
+      incident is in Fragment B (Amarna).
+    recommended_fix: |
+      Rewrite to: "The Nineveh fragments (A, A1, C, D, E) are individually
+      shorter but preserve, between them, both the cosmological prologue
+      (Fragment A) and a substantively different framing of the heaven-audience
+      climax (Fragments C and parallels), as well as an alternate ending in
+      which Adapa is honoured by Anu (Fragment D)." The reconstruction marker
+      currently attached to "the seven-fold breaking of the south wind's wing"
+      should be removed or relocated, since the south-wind episode is preserved
+      in the Amarna fragment, not reconstructed from Nineveh cross-readings.
+
+  - claim_number: 17
+    finding_id: F-4
+    kind: FABRICATION
+    severity: HIGH
+    claim: |
+      "Adapa is enraged. He pronounces an incantation against the south wind
+      and breaks her wing — in some readings, snaps her wing seven times, the
+      seven-fold breaking that disables her completely." (Footnote: "Izre'el
+      2001, pp. 21–23 (Fragment A, lines 17–25); Foster 2005, p. 526.")
+    issue: |
+      The "seven-fold breaking" / "snaps her wing seven times" claim is not
+      attested in any translation or scholarly summary I could verify. The
+      surviving text describes a singular event: "South Wind's wing was broken"
+      (Dalley 185); "the wing of the South Wind broke" (Samizdat summary of
+      Izre'el 2001); Wikipedia s.v. Adapa says simply "broke the wings of the
+      south wind." The number seven attaches to the DURATION of the wind's
+      cessation ("For seven days South Wind did not blow") — not to the
+      breaking of the wing. The claim appears to be an extrapolation from the
+      seven-day duration, retroactively applied to the breaking itself.
+    evidence: |
+      - Dalley 185: "No sooner had he uttered these words / Than South Wind's
+        wing was broken" — singular event.
+      - Samizdat summary of Izre'el 2001 (cross-checked against Kvanvig 2011's
+        Adapa chapter): "As soon as he uttered this threat, the wing of the
+        South Wind broke" — singular.
+      - Wikipedia s.v. Adapa: "broke the wings of the south wind" — singular.
+      - Kvanvig 2011 (Samizdat summary): "in his anger he breaks the South
+        Wind's wings" — singular; no sevenfold qualifier.
+    recommended_fix: |
+      Strike "in some readings, snaps her wing seven times, the seven-fold
+      breaking that disables her completely." Replace with the singular reading
+      attested by all translations: "He pronounces a curse / incantation
+      against the south wind, and her wing is broken." If the reconstruction
+      marker is retained, it should be relocated to a Nineveh-fragment claim
+      where actual cross-fragment reconstruction is being done — not to this
+      claim, where the source attestation is direct and singular.
+
+  # === MEDIUM-severity citation and marker findings =======================
+
+  - claim_number: 7
+    finding_id: F-5
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: |
+      "Neither recension alone is complete; both are needed for the full
+      narrative, and Izre'el's edition presents them in parallel rather than
+      as a single composite."
+    issue: |
+      The "Izre'el's edition presents them in parallel" framing is partially
+      misleading. Izre'el 2001 edits each fragment separately (Frag. A, A1, B,
+      C, D, E), with synoptic alignment where parallels exist (notably C and B
+      in the heaven-audience scene). The claim that Izre'el "does not produce
+      a composite" is correct in spirit but underspecifies the actual editorial
+      practice (synoptic-with-parallel-columns where the fragments overlap;
+      separate editions where they do not).
+    evidence: |
+      Samizdat summary of Izre'el 2001: "Fragment C... has some close, albeit
+      broken, parallels to Fragment B" — Izre'el aligns these synoptically.
+    recommended_fix: |
+      Soften to: "Izre'el's edition presents each fragment separately, with
+      synoptic alignment where the Amarna and Nineveh witnesses parallel one
+      another, rather than producing a single composite recension."
+
+  - claim_number: 15
+    finding_id: F-6
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: |
+      "Adapa's name itself appears in variant readings across the recensions:
+      Adapa (the standard), Adamu in some late lists, Uan in the apkallu
+      genealogy."
+    issue: |
+      The Adamu variant is not securely attested in the standard scholarship I
+      verified. Wikipedia s.v. Apkallu and the standard summaries of the
+      Uruk List of Kings and Sages name the first sage as U-an / Uanna /
+      Oannes / U-an(-na) Adapa — but I could not find Adamu in either the
+      apkallu lists or the Adapa name-variant lists. Adamu (with terminal -u)
+      is sometimes invoked as a parallel-to-Adam etymology in the Adam/Adapa
+      comparative literature (cf. earlier Andrews-University-style typologies),
+      but as a textual variant of Adapa's name in cuneiform sources I could
+      not verify it. UNVERIFIED-leaning-toward-CITATION-WRONG.
+    evidence: |
+      Wikipedia s.v. Apkallu, search of "Adamu" in the article: "This term does
+      not appear in the article." The Uruk King List names the first sage as
+      "Uanduga... Enmeduga... Enmegalama... Enmebuluga... Anenlilda... Utuabzu";
+      Adapa is sometimes appended to U-an as an epithet ("U-an(-na) Adapa")
+      meaning "wise". I find no source that names Adamu as a Late Babylonian
+      variant of Adapa's name in apkallu lists.
+    recommended_fix: |
+      Either (a) drop "Adamu" from the variant list and retain only Adapa and
+      U-an / Uanna; or (b) cite a specific Izre'el 2001 page that attests
+      Adamu as a name-variant of Adapa, not just as an Adam-comparison
+      construct. The chapter's brief lists "Adamu" in variants.alternates
+      (line 47) but does not adduce a primary witness; the brief itself may
+      need correction.
+
+  - claim_number: 20
+    finding_id: F-7
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: |
+      "Ea, anticipating the summons, instructs Adapa in detail before he
+      ascends to heaven."
+    issue: |
+      The chapter assigns Ea's instruction scene exclusively to "Fragment A
+      (Amarna), lines 55–75" via its EVIDENCE markers (claims 20, 21). The
+      Amarna fragment is Fragment B in Izre'el 2001, so the loc is wrong (cf.
+      F-1). Independently: Ea's instructions are well-attested in the Amarna
+      fragment, but the lines-55–75 range is unverified — Foster's translation
+      runs the instructions over a substantially longer block.
+    evidence: |
+      See F-1 (fragment-letter inversion). Line-range is unverified against
+      Izre'el 2001 directly.
+    recommended_fix: |
+      Update fragment letter from A to B; verify line range against Izre'el
+      2001 (Fragment B, the Ea-instruction passage); or downgrade the loc to
+      the broader page range (e.g., Izre'el 2001 pp. 19–25, or whatever the
+      correct Fragment B Ea-instruction-scene pages are in the actual edition).
+
+  - claim_number: 21
+    finding_id: F-8
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: |
+      "Tammuz and Gizzida will challenge you, mourning their own absence from
+      the world below — say that you mourn for them, and they will intercede
+      for you."
+    issue: |
+      The chapter says the gatekeepers are "mourning their own absence from
+      the world below" — but the standard reading is that they have descended
+      to the underworld in their seasonal pattern and are absent from the
+      WORLD ABOVE (i.e., from heaven and earth where they would normally
+      receive cult). The phrase "absence from the world below" inverts the
+      direction of the gatekeepers' absence: they are absent FROM the world,
+      not absent FROM the underworld. (See claim 22, which gets this right:
+      "they have descended to the underworld in their seasonal pattern and are
+      mourning their own exile.") Internal inconsistency between claims 21 and
+      22; claim 21's wording is the wrong one.
+    evidence: |
+      Wikipedia s.v. Ningishzida (and Black & Green 1992 s.v.): the gatekeepers
+      are "two dying and reviving deities, fertility gods connected to
+      agricultural cycles" — their seasonal absence is from the world, not from
+      the underworld.
+    recommended_fix: |
+      Rewrite claim 21's "absence from the world below" to "absence from the
+      world above" or, more cleanly: "mourning their own seasonal absence from
+      the land of the living". This brings claim 21 into alignment with
+      claim 22.
+
+  - claim_number: 25
+    finding_id: F-9
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: |
+      "At Anu's gate Adapa meets Tammuz and Gizzida... and the two gods are
+      favourably impressed. They intercede with Anu on his behalf." (Footnote
+      pages: "Izre'el 2001, pp. 35–39 (Fragment A, lines 100–125).")
+    issue: |
+      Same fragment-letter inversion (A → B; cf. F-1, F-2). Loc page range
+      is also suspect because pp. 35–39 in Izre'el 2001 falls within the
+      Fragment B section (Amarna) only if the volume's overall pagination
+      places Fragment B's heaven-gate scene at those pages — unverified
+      against the printed edition. The line-range "100–125" is similarly
+      unverified.
+    evidence: |
+      See F-1.
+    recommended_fix: |
+      Update fragment letter from A to B; verify or broaden the page range
+      against Izre'el 2001 directly.
+
+  # === LOW-severity findings, NOTEs, and informational items ===============
+
+  - claim_number: 24
+    finding_id: F-10
+    kind: UNVERIFIED
+    severity: LOW
+    claim: |
+      "Ea further instructs Adapa to accept the oil and the clothing Anu will
+      also offer; these will be safe."
+    issue: |
+      The oil-and-clothing acceptance is well-attested at the heaven-audience
+      stage (Anu offers, Adapa accepts), but the Ea-instruction-prediction
+      that Adapa SHOULD accept oil and clothing (as a positive instruction,
+      not just a permitted-not-prohibited pair) is less directly attested in
+      the translations I verified. Foster and Dalley summaries focus on Ea's
+      negative instructions (don't eat, don't drink); the positive
+      instructions about oil and clothing may be inference from the audience-
+      scene parallel rather than direct textual instruction. UNVERIFIED until
+      the Izre'el 2001 Fragment B Ea-instruction passage can be checked
+      directly.
+    evidence: |
+      Dalley translation excerpts (teaching site) preserve only Ea's negative
+      instructions ("Do not eat... Do not drink"); the positive oil-and-
+      clothing instruction is not in the quoted excerpt.
+    recommended_fix: |
+      Either secure a direct quote from Izre'el 2001 Fragment B (or Foster
+      2005 p. 527) for the positive oil/clothing instruction, or rephrase to
+      reflect that Ea's instructions are PRIMARILY negative (regarding the
+      bread and water) and that the oil-and-clothing acceptance follows by
+      default rather than by explicit positive instruction.
+
+  - claim_number: 31
+    finding_id: F-11
+    kind: UNVERIFIED
+    severity: LOW
+    claim: |
+      "Adapa is sent back down to the earth without the immortality he was
+      offered. The opportunity is foreclosed; humanity will remain mortal."
+    issue: |
+      This is the Fragment B ending. The chapter does NOT mention Fragment D's
+      alternate ending, in which Anu honours Adapa and "set a decree to make
+      glorious his lordship forever" (Samizdat summary of Izre'el 2001 on
+      Fragment D), with Adapa apparently retained in heaven rather than sent
+      back. This is a substantive variant attested in the Nineveh recension,
+      and given the chapter's brief classification as "co-equal recensions
+      presented in parallel", omitting Fragment D's alternate fate is a
+      structural lacuna in the chapter's variant handling.
+    evidence: |
+      Samizdat summary of Izre'el 2001 on Fragment D: "Anu set a decree to
+      make glorious his lordship forever. The outcome in Fragment D is the
+      opposite of Fragment B: Adapa will remain in heaven as the chosen of
+      Anu."
+    recommended_fix: |
+      Add a paragraph (or amend the Variants section / VARIANT marker 1) noting
+      that Fragment D preserves an alternate ending in which Adapa is honoured
+      by Anu and apparently retained, contrasting with Fragment B's ending in
+      which he is sent back. The brief explicitly calls for co-equal-recension
+      side-by-side presentation, and the chapter currently presents only the
+      Fragment B ending as if it were the only outcome of the heaven-audience
+      scene.
+
+  - claim_number: 33
+    finding_id: F-12
+    kind: UNVERIFIED
+    severity: LOW
+    claim: |
+      "Adapa's name itself appears in variant readings across the recensions:
+      Adapa (the standard), Adamu in some late lists, Uan in the apkallu
+      genealogy."
+    issue: |
+      Cross-reference to F-6 (same claim, listed here under VARIANT marker 2's
+      attestation; the marker repeats the unverified Adamu attestation).
+    evidence: |
+      See F-6.
+    recommended_fix: |
+      See F-6.
+
+  - claim_number: 26
+    finding_id: F-13
+    kind: MARKER-MISUSED
+    severity: MEDIUM
+    claim: |
+      "[RECONSTRUCTION: The opening of the Nineveh recension — including the
+      seven-fold breaking of the south wind's wing — is reconstructed from
+      cross-fragment readings within the Neo-Assyrian witnesses. | gap_source:
+      Fragments B, C, D opening | fill_source: internal cross-fragment joins
+      among the Nineveh manuscripts (K.8743 + duplicates), collated by Izre'el
+      2001 | confidence: medium]"
+    issue: |
+      Three problems compound here:
+        (1) Fragment-letter inversion as F-1 (Nineveh fragments are A, A1, C,
+            D, E — not B, C, D).
+        (2) The reconstruction is allegedly of "the seven-fold breaking of the
+            south wind's wing", but that detail is not attested in any source
+            I verified (cf. F-4) and is not the kind of detail that is
+            recoverable by cross-fragment internal joins (it is either in the
+            text or it is not).
+        (3) The south-wind episode is preserved in the Amarna fragment
+            (Fragment B in Izre'el's scheme), not reconstructed from Nineveh
+            joins. The reconstruction marker therefore refers to a non-event
+            (a non-attested sevenfold breaking) and routes through the wrong
+            fragments.
+    evidence: |
+      See F-1 and F-4 evidence blocks.
+    recommended_fix: |
+      Strike the RECONSTRUCTION marker entirely, OR replace it with a properly
+      framed reconstruction. A defensible RECONSTRUCTION marker for this
+      chapter would address the cosmological/wisdom prologue of the Nineveh
+      recension (Fragment A's "He perfected him with great intelligence...
+      to him he gave wisdom, he did not give him eternal life"), where the
+      Nineveh fragments together with their parallels in apkallu lists supply
+      framing material absent from the Amarna copy. The fill_source should
+      name Fragment A and Fragment A1 (Nineveh, MLC 1296 + K 15072) explicitly,
+      not "K.8743 + duplicates".
+
+  # === Brief-alignment, glossary, and integrity NOTEs ======================
+
+  - claim_number: 0
+    finding_id: NOTE-1
+    kind: NOTE
+    severity: LOW
+    claim: |
+      Brief-alignment check: co-equal recension classification and Sumerian
+      Tell Haddad as comparative-only (audit finding A1).
+    issue: |
+      The chapter correctly handles the Tell Haddad comparative-only carve-out
+      (claim 8 and COMPARATIVE-HOOK 2 in lines 169–172). The chapter also
+      correctly preserves the Amarna and Nineveh recensions side-by-side at
+      the macro level. However, see F-11: the side-by-side presentation
+      omits Fragment D's alternate ending, which weakens the co-equal
+      framing in the variant section. With F-1, F-2, F-3 corrections plus
+      F-11 added, the brief alignment will be solid; without them, the
+      chapter mishandles which fragments preserve which scene.
+    evidence: ~
+    recommended_fix: |
+      Forward as part of the chapter rewrite triggered by F-1 through F-4.
+
+  - claim_number: 0
+    finding_id: NOTE-2
+    kind: NOTE
+    severity: LOW
+    claim: |
+      Glossary discipline check.
+    issue: |
+      No "never_use" Sumerian forms appear in the chapter. Specifically:
+        - "Ningišzida" is used once (claim 22) in an explicit etymological
+          gloss "Akkadian for the Sumerian Ningišzida — an underworld-vegetation
+          god"; this is the comparative-etymological context the brief
+          permits, not a substitute body name. The Akkadian form Gizzida is
+          used as the body name throughout. Compliant.
+        - "Tammuz" appears with "(also called Dumuzi in the Akkadian
+          tradition)" at first mention (claim 22). The glossary's locked
+          form for the deity is "Dumuzi" (Tammuz is the Aramaic-biblical
+          reflex). The chapter's use of Tammuz as the body-prose form is
+          arguably out of glossary alignment, BUT the brief explicitly names
+          the gatekeepers as "Tammuz (Dumuzi)" and "Gizzida (Ningišzida)" in
+          the entities_glossary. Recommend a short editorial decision: either
+          align the chapter to the glossary's "Dumuzi" body-form, or update
+          the glossary (Dumuzi entry) to allow Tammuz as the variant used
+          specifically in the Adapa heaven-gate scene where Tammuz is the
+          form preserved in the standard translations (Foster and Dalley both
+          use "Tammuz" for this scene). I lean toward the glossary update,
+          since the standard English translations of Adapa use Tammuz, and
+          the Adapa glossary already permits "Tammuz" via the brief.
+        - "Anzu" / "Anzud", "Inanna", "An" not used. "Apsû" used correctly
+          (claim 16). "Eridu" used correctly (claims 11, footnote and body
+          throughout). Compliant.
+    evidence: ~
+    recommended_fix: |
+      Either align the chapter's Tammuz/Dumuzi body form to the glossary, or
+      update the Dumuzi glossary entry to permit "Tammuz" as the locked form
+      for the Adapa heaven-gate scene. (Editorial choice; both directions are
+      defensible; the glossary update is cheaper and matches the standard
+      translations.)
+
+  - claim_number: 0
+    finding_id: NOTE-3
+    kind: NOTE
+    severity: LOW
+    claim: |
+      Marker integrity (INFERENCE, LACUNA, RECONSTRUCTION, VARIANT counts).
+    issue: |
+      The brief promised: 1 INFERENCE, 2 LACUNA, 1 RECONSTRUCTION, 2 VARIANT.
+      The chapter delivers exactly: 1 INFERENCE (after claim 35), 2 LACUNA
+      (after claim 25; before claim 26), 1 RECONSTRUCTION (after the second
+      LACUNA), 2 VARIANT (after the recensional-history paragraph). Counts
+      match. Schema discipline:
+        - INFERENCE schema: basis | risk — present and well-formed. SUPPORTED.
+        - LACUNA schema: source | scholarly_reconstruction — present in both
+          markers. SUPPORTED.
+        - RECONSTRUCTION schema: gap_source | fill_source | confidence —
+          present, but content is wrong (see F-13 / claim 26).
+        - VARIANT schema: primary | alt | chosen | reason — present in both
+          markers. SUPPORTED structurally, though VARIANT-1 says "Amarna
+          (MB, Fragment A)" — see F-2; the fragment letter is wrong.
+    evidence: ~
+    recommended_fix: |
+      No structural marker-count change required. Fix the content of the
+      RECONSTRUCTION marker (F-13) and the fragment letter in VARIANT-1
+      (F-2).

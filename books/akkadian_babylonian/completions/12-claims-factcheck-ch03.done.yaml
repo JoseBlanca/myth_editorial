@@ -1,0 +1,41 @@
+stage: "claims-factcheck"
+timestamp: "2026-05-07T15:21:26Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+chapter: 3
+chapter_slug: "adapa"
+input_file: "chapters/03-adapa.claims.adoc"
+outputs:
+  - file: "chapters/03-adapa.claims.factcheck.yaml"
+    lines: 689
+summary: "Factcheck of chapter 3 (Adapa and the South Wind) claims document — 33 claims identified, 14 triangulations performed, 19 SUPPORTED, 0 INTERNAL-VARIANCE, 4 UNVERIFIED, 8 CITATION-WRONG, 0 CONTAMINATION, 1 FABRICATION, 0 SILENT-BRIDGE, 1 MARKER-MISUSED, 0 GLOSSARY-VIOLATION, 3 NOTEs. 4 HIGH findings (F-1..F-4: systematic Izre'el fragment-letter inversion + sevenfold-wing-breaking fabrication), 5 MEDIUM, 4 LOW. Verdict: MAJOR-REVISE. Same model family as writer (claude-opus-4-7) but run in fresh conversation per skill's hard-rule allowance."
+verdict: MAJOR-REVISE
+tallies:
+  claims_identified: 33
+  triangulations_performed: 14
+  supported: 19
+  internal_variance: 0
+  unverified: 4
+  citation_wrong: 8
+  contamination: 0
+  fabrication: 1
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 0
+  notes: 3
+high_findings: 4
+medium_findings: 5
+low_findings: 4
+key_findings:
+  - finding_id: F-1
+    severity: HIGH
+    summary: "Systematic fragment-letter inversion: chapter assigns Amarna copy to 'Fragment A' and Nineveh corpus to 'Fragments B/C/D'; Izre'el 2001 actually assigns Fragment A/A1/C/D/E to Nineveh (5 fragments) and Fragment B = Amarna (VAT 348 = EA 356). K.8743 is Fragment C, not the principal Nineveh manuscript."
+  - finding_id: F-2
+    severity: HIGH
+    summary: "Downstream consequence of F-1: every loc citation that names 'Fragment A' for the Amarna copy is wrong (paragraphs 5, 14–25 plus VARIANT-1 marker)."
+  - finding_id: F-3
+    severity: HIGH
+    summary: "Chapter asserts the south-wind episode is reconstructed from Nineveh cross-fragment readings; the south-wind episode is in fact preserved in the Amarna fragment (Izre'el's Fragment B)."
+  - finding_id: F-4
+    severity: HIGH
+    summary: "Sevenfold-wing-breaking ('snaps her wing seven times') is unattested in any translation or scholarly summary verified; surviving text describes a singular event. The number seven attaches to the duration of the wind's cessation, not to the breaking."
