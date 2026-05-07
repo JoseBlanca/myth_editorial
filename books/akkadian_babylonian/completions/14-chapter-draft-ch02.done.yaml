@@ -1,0 +1,43 @@
+stage: "chapter-draft"
+chapter: 02
+slug: "atra-hasis"
+input: "chapters/02-atra-hasis.claims.approved.adoc"
+output: "chapters/02-atra-hasis.adoc"
+timestamp: "2026-05-07T15:02:15Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/02-atra-hasis.adoc"
+    lines: 235
+  - file: "gloss-ledger.yaml"
+    lines: 232
+summary: "Chapter 2 (Atra-ḫasīs) draft. 1,847 body words. Every one of the 70 footnotes from chapters/02-atra-hasis.claims.approved.adoc is preserved byte-for-byte; every one of the 94 EVIDENCE tokens carries through; all 8 markers (1 INFERENCE, 3 LACUNA, 2 RECONSTRUCTION, 2 VARIANT) are byte-for-byte preserved with their pipe-delimited subfields intact; all 5 COMPARATIVE-HOOK comments are at column 0 on their own lines. Source overview present, Setting/two-divine-orders before the tablet narrative per the Akkadian-cosmology framing, three tablets I-III, Variants and Place-in-corpus closing sections. Tight Asimov register; no padding to hit the brief's 12,000-word target — per the chapter 1 precedent and the user's anti-padding feedback, the chapter is well below the brief target by deliberate decision. Glossary discipline: locked Akkadian forms throughout (Anu, Enlil, Ea, Mami, Atra-ḫasīs, Apsû, Adad with full first-mention gloss in body, Aššur, Nineveh, Akkad, Gilgameš, Uta-napišti, Eridu); Sumerian forms (Enki, An, Iškur, Anzud) do not appear except inside the comparative footnote citing 'Sumerian Eridu Genesis'. Body-prose foreign common nouns and book titles use _underscore-italic_ (Atra-ḫasīs, Gilgameš, Enūma Eliš, Eridu Genesis, Before the Muses, Myths from Mesopotamia, ṭēmu, eṭemmu, rigmu, ḫubūru, erēšu ṭābu, iriš tābi, inūma ilū awīlum); *asterisk-bold* preserved only inside footnote bodies and inside marker bodies per the chapter-draft skill rule 6. Validation: 70/70 footnote match, 94 EVIDENCE markers, all source IDs resolve to sources.yaml (lambert-millard-1969, foster-2005, dalley-2008, kvanvig-2011, bottero-2001, black-green-1992, foster-2007, george-2003, etcsl), all markers at column 0, all marker counts match the approved claims, no forbidden words, no forbidden openings, no asterisk-bold body-prose foreign terms. gloss-ledger.yaml updated: 11 entries had their last_mention_in advanced to '02' (Ea, Anu, Enlil, Mami, Apsû, Atra-ḫasīs, Uta-napišti, Gilgameš, Aššur, Nineveh, Eridu); 1 new entry added — Adad (full_gloss_in: '02') since the full glossary first_mention_gloss for Adad ('storm god, lord of thunder and the rains that bring or break the harvest') was given in body in this chapter. The Šamaš known limitation noted in chapter 01 carries forward: still mentioned but not yet fully glossed; a future Šamaš-central chapter (e.g., wisdom or omen chapter) should give the full glossary first_mention_gloss."
+brief_alignment:
+  source_overview_present: true
+  three_tablet_structure: "PASS — Tablets I, II, III each have their own ===-headed section."
+  lambert_millard_as_base: "PASS — Lambert & Millard 1969 cited as the base text; Foster 2005 cited where post-1969 joins materially supplement; Dalley 2008 noted as triangulation."
+  variants_composite_editorial: "PASS — two VARIANT markers preserved; Lambert & Millard 1969 composite is the base; MB/SB recensions and Foster 2005's post-1969 joins handled per the brief."
+  three_lacunae_flagged: "PASS — all three brief-mandated [LACUNA:] markers preserved (OB Tablet I lines 1-37, OB Tablet II columns vi-viii, OB Tablet III columns iv-vi)."
+  reconstruction_markers: "PASS — 2 [RECONSTRUCTION:] markers preserved with gap_source / fill_source / confidence fields intact."
+  noise_motif_signature_scene: "PASS — rigmu/ḫubūru noise motif foregrounded at Tablet II opening with explicit Akkadian terms."
+  reed_hut_signature_scene: "PASS — Ea's reed-hut speech presented with rhetorical structure preserved (he addresses the wall, technically not breaking the oath; the legal-rhetorical device explicitly named)."
+  gilgames_xi_relationship: "PASS — asymmetry preserved (Atra-ḫasīs is prior, Gilgameš XI is downstream borrowing)."
+  sumerian_eridu_genesis: "PASS — comparative-only treatment preserved; Sumerian Eridu Genesis cited only in the closing comparative paragraph and in COMPARATIVE-HOOK comments."
+  word_count_target: "Below brief target by design. Brief target was 12,000 (range 10,000-15,000); chapter is 1,847 body words. Tight Asimov register, no padding. Same anti-padding pattern as chapter 1."
+validation:
+  footnote_count_match: true
+  footnote_count: "70 / 70"
+  evidence_marker_count: 94
+  unresolved_source_ids: 0
+  marker_count_match: true
+  inference_markers: 1
+  lacuna_markers: 3
+  reconstruction_markers: 2
+  variant_markers: 2
+  comparative_hook_comments: 5
+  forbidden_words: 0
+  forbidden_openings: 0
+  asterisk_bold_body_prose_foreign_terms: 0
+  body_word_count: 1847
+  body_word_count_target_from_brief: "12000 (range 10000-15000)"
+  body_word_count_disposition: "below-target by design — tight Asimov register; chapter 1 precedent applied"

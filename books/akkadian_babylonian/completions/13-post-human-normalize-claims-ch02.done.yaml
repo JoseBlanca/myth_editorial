@@ -1,0 +1,50 @@
+stage: "post-human-normalize"
+chapter: 02
+slug: "atra-hasis"
+input: "chapters/02-atra-hasis.claims.adoc"
+output: "chapters/02-atra-hasis.claims.approved.adoc"
+timestamp: "2026-05-07T14:53:04Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/02-atra-hasis.claims.approved.adoc"
+    lines: 275
+summary: "Post-factcheck normalization of chapter 2 claims. Factcheck verdict was PASS (zero HIGH, zero MEDIUM, ten LOW NOTE-class findings). All 5 substantive LOW findings with OPTIONAL recommended_fix items applied to tighten philological precision: F-1 (Wê/Wê-ila/Aw-ilu/Geshtu-E/Ilawela variant readings) — footnote on the slain god's name now lists the alternative transliterations. F-2 (ṭēmu/eṭemmu attribution) — footnote acknowledges the bipartite reading follows Bottéro 2001 and Kvanvig 2011 and that alternative readings differ on which physical component yields which divine quality. F-3 (seven-days-vs-seven-days-and-seven-nights flood storm duration) — body text revised to 'seven days' with explicit note that the doublet form is from Gilgameš XI and not preserved as such in the partly-reconstructed OB Atra-ḫasīs III; one additional EVIDENCE token added (source_id=george-2003) to anchor the cross-check. F-4 (erēšu ṭābu lemma vs iriš tābi text form) — body now reads 'iriš tābi in the form preserved in the text, lemma form erēšu ṭābu', with the footnote noting both forms and the biblical Hebrew rêaḥ nîḥôaḥ parallel. F-5 (40 vs 3600 years duration of Igigi labour) — phrasing expanded to 'forty years of the Igigi's labour; by others, the labour extends to three thousand six hundred years before the rebellion breaks out', with footnote clarifying that the textual problems are summarised in Lambert & Millard 1969 pp. 44-46. Five additional LOW NOTE findings were positive integrity-check attestations (no fixes needed); not actioned. Anchor updated from [[ch-02-atra-hasis-claims]] to [[ch-02-atra-hasis-claims-approved]]; original .claims.adoc preserved unchanged for round-trip integrity per post-human-normalize hard rule §1. Validation passed: schema clean, 70 footnotes, 94 EVIDENCE tokens (one added with the F-3 fix), all source IDs resolve to sources.yaml (lambert-millard-1969, foster-2005, dalley-2008, kvanvig-2011, bottero-2001, black-green-1992, foster-2007, george-2003, etcsl), all 8 markers (1 INFERENCE, 3 LACUNA, 2 RECONSTRUCTION, 2 VARIANT) at column 0 with required subfields, all 5 COMPARATIVE-HOOK comments preserved at column 0."
+audit_findings_disposition:
+  low:
+    - id: "F-1"
+      kind: "NOTE (Wê variant readings)"
+      action: "ACCEPTED"
+      applied: "Footnote on first mention of Wê / Wê-ila now lists the alternative transliterations Aw-ilu, Geshtu-E, Ilawela."
+    - id: "F-2"
+      kind: "NOTE (ṭēmu/eṭemmu attribution)"
+      action: "ACCEPTED"
+      applied: "Footnote on the eṭemmu paragraph now acknowledges that the bipartite flesh→ṭēmu / blood→eṭemmu reading follows Bottéro 2001 and Kvanvig 2011, and that alternative readings differ."
+    - id: "F-3"
+      kind: "NOTE (flood-storm duration)"
+      action: "ACCEPTED"
+      applied: "Body text revised to 'seven days' with explicit note that the seven-days-and-seven-nights doublet is from Gilgameš XI and is not preserved as such in the partly-reconstructed OB Atra-ḫasīs III; new EVIDENCE token routed through george-2003 for the cross-check."
+    - id: "F-4"
+      kind: "NOTE (erēšu ṭābu lemma vs text form)"
+      action: "ACCEPTED"
+      applied: "Body now uses both forms: 'iriš tābi in the form preserved in the text, lemma form erēšu ṭābu'; footnote expanded to note the biblical Hebrew rêaḥ nîḥôaḥ parallel."
+    - id: "F-5"
+      kind: "NOTE (40 vs 3600 years)"
+      action: "ACCEPTED"
+      applied: "Phrasing expanded to clarify the two interval candidates; footnote refers to Lambert & Millard 1969 pp. 44–46 on the textual problems."
+    - id: "F-6 through F-10"
+      kind: "NOTE (positive integrity-check attestations)"
+      action: "NOT-ACTIONED"
+      applied: "These were successful-integrity-check attestations from the auditor (e.g., 'all three brief-mandated lacunae are flagged at correct narrative locations'); no fix required."
+validation:
+  schema_errors: 0
+  marker_placement_errors: 0
+  unresolved_source_ids: 0
+  footnote_count: 70
+  evidence_marker_count: 94
+  inference_markers: 1
+  lacuna_markers: 3
+  reconstruction_markers: 2
+  variant_markers: 2
+  comparative_hook_count: 5
+  original_claims_unchanged: true
