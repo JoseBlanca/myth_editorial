@@ -1,0 +1,59 @@
+stage: "claims-factcheck"
+timestamp: "2026-05-07T15:58:57Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+chapter: 4
+chapter_slug: "theogony-of-dunnu"
+input_file: "chapters/04-theogony-of-dunnu.claims.adoc"
+outputs:
+  - file: "chapters/04-theogony-of-dunnu.claims.factcheck.yaml"
+    lines: 493
+summary: "Factcheck of chapter 4 (The Theogony of Dunnu) claims document — 22 claims identified, 11 triangulations performed, 13 SUPPORTED, 0 INTERNAL-VARIANCE, 5 UNVERIFIED (F-1..F-5 plus F-6), 0 CITATION-WRONG, 0 CONTAMINATION, 0 FABRICATION, 0 SILENT-BRIDGE, 0 MARKER-MISUSED, 0 GLOSSARY-VIOLATION, 2 NOTEs. 1 HIGH finding (F-1: chapter omits the reconstructed closing — Enlil and his sons Ninurta and Nušku sharing rule amicably — and frames the ending as not confidently reconstructable when the standard scholarly reading does reconstruct it), 4 MEDIUM (F-2 truncated middle generations Gaiu/River/Haharnum/Belet-seri/Hayyashum; F-3 Sumuqan-as-cattle-god too narrow vs. broader herdsman-god identification; F-4 Sumuqan's sister-marriage omitted from the specific generation; F-5 the colophon attestation 'copied from an original of Assur' not cited), 1 LOW (F-6 Babylon/Eridu-vs-Dunnu framing not page-cited). Verdict: REVISE. BM 74329 = CT 46, 43 directly verified against the etana.org/archive.org full text of CT 46 Part XLVI. Variant-handling matches the single-prevalent classification per the brief; comparative-hook framing correctly defers to the influences chapter; no contamination; no glossary violations. Same model family as writer (claude-opus-4-7) but run in fresh conversation per skill's hard-rule allowance."
+verdict: REVISE
+tallies:
+  claims_identified: 22
+  triangulations_performed: 11
+  supported: 13
+  internal_variance: 0
+  unverified: 5
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  notes: 2
+high_findings: 1
+medium_findings: 4
+low_findings: 1
+key_findings:
+  - finding_id: F-1
+    severity: HIGH
+    summary: "Chapter says the closing is broken and 'may have terminated at the figure of Enlil; the surviving text does not allow a confident reconstruction.' The standard scholarly reading (Lambert 2013, Lambert & Walcot 1965, Wikipedia s.v. Dynasty of Dunnum) DOES reconstruct the closing as Enlil and his sons Ninurta and Nušku sharing rule amicably — a stabilising generation that breaks the parricide-incest cycle. This omission also weakens the chapter's own forward-link to the influences chapter, since the Dunnu→Kumarbi→Hesiod parallel depends on the stable closing generation being visible (Teshub, Zeus)."
+  - finding_id: F-2
+    severity: MEDIUM
+    summary: "Chapter mentions only Sumuqan and Lahar by name and elides middle generations as 'several more generations.' The brief's special_instructions require preserving the 'who killed/married whom' sequence faithfully. Named middle figures attested in Lambert 2013 / Lambert-Walcot 1965 include River, Gaiu (reading-variant), Haharnum and Belet-seri (the herdsman/pasture pairing), and Hayyashum (whose imprisonment of his father — rather than killing — marks the turning point toward the stabilising Enlil generation)."
+  - finding_id: F-3
+    severity: MEDIUM
+    summary: "Sumuqan = Šakkan equivalence is correct; the 'cattle-god' gloss is too narrow. Standard reference (RlA s.v. Sumuqan, Wikipedia s.v. Šumugan) describes him as a herdsman/shepherd god of quadrupeds generally — donkeys, wild sheep, and cattle — with the epithet 'shepherd of everything.' The brief's entities_glossary also oversimplifies and could be updated."
+  - finding_id: F-4
+    severity: MEDIUM
+    summary: "In the specific Sumuqan generation, the chapter records Sumuqan-marries-Earth and Sumuqan-kills-Ḫarab but omits Sumuqan-marries-his-sister (which is preserved in the Wikipedia/Lambert summary). The chapter does generalise later ('marries within the family — mother, sister, daughter') but the specific generation should record the sister-marriage per the brief's faithful-sequence directive."
+  - finding_id: F-5
+    severity: MEDIUM
+    summary: "The CT 46 Summary Catalogue describes BM 74329 as 'A Late Babylonian tablet, copied from an original of Assur' — i.e., the colophon attests an earlier Aššur exemplar, which moves the underlying composition to at least the Middle/Neo-Assyrian period. The chapter writes only 'the underlying composition may be earlier' without naming the colophon-attested earlier exemplar. Adding this concrete detail sharpens the dating claim and supports the lacunae block."
+  - finding_id: F-6
+    severity: LOW
+    summary: "The 'most Akkadian creation poems are set in Babylon (Esagil) or Eridu' framing is the chapter's interpretive contrast and is not directly traceable to a specific page in the cited Lambert 2013 / Foster 2005 / Bottéro 2001. Defensible on the standard view but should either be page-cited from an opened source or reframed as the chapter's own framing."
+notes:
+  - note_id: N-1
+    summary: "hoffner-1998 correctly handled as comparative-only material per scope.md's contamination boundary; no EVIDENCE token routes through it for primary cosmogonic facts; comparative framing forwarded to the influences chapter per brief's special_instructions."
+  - note_id: N-2
+    summary: "Hain (older reading of Ḫarab) and Amakandu (older reading of Sumuqan) are not mentioned in the chapter. These older readings (Lambert & Walcot 1965, Kadmos) are superseded by Lambert 2013's Ḫarab/Sumuqan. The chapter's use of the modern readings is correct; an optional footnote could gesture at the editio princeps."
+brief_alignment:
+  variant_classification: "single-prevalent — matches; one VARIANT marker correctly notes absence of parallels"
+  comparative_framing: "Hurro-Hittite/Greek/Phoenician comparanda confined to one paragraph and four COMPARATIVE-HOOK comments; deferred to influences chapter as required"
+  generational_sequence: "preserved in outline (Ḫarab→Earth→Sea→Sumuqan→Lahar→...) but truncated in the middle (F-2) and missing the named closing generation (F-1); the brief's 'preserve the who-killed/married-whom sequence faithfully' directive is partly unmet"
+  lacuna_handling: "BM 74329 obverse top + reverse end correctly named in the LACUNA marker; scholarly_reconstruction correctly noted as 'not available — the composition is preserved on a single tablet' per brief's lacunae block; F-1 recommends adding a [RECONSTRUCTION:] marker for the internal-context reconstruction of the Enlil/Ninurta/Nušku closing"
+  glossary_discipline: "no never_use Sumerian forms; locked diacritics correctly used (Ḫarab with Ḫ, Šakkan with š, *tâmtu* with circumflex)"
+honesty_caveats: "Lambert 2013 itself was NOT opened directly (DeGruyter/JHU MUSE paywalled); Foster 2005 and Dalley 2008 page ranges accepted on cross-citation rather than direct opening; the etana.org/archive.org full text of CT 46 Part XLVI WAS directly verified for the BM 74329 = plate 43 identification. Same model family as writer (claude-opus-4-7) but run in fresh conversation per skill's hard-rule allowance — the fresh context is the load-bearing requirement."

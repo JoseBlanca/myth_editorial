@@ -1,0 +1,67 @@
+stage: "post-human-normalize"
+chapter: 04
+slug: "theogony-of-dunnu"
+input: "chapters/04-theogony-of-dunnu.claims.adoc"
+output: "chapters/04-theogony-of-dunnu.claims.approved.adoc"
+timestamp: "2026-05-07T16:02:24Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/04-theogony-of-dunnu.claims.approved.adoc"
+    lines: 130
+summary: "Post-factcheck normalization of chapter 4 claims after a REVISE verdict. All six findings (1 HIGH, 4 MEDIUM, 1 LOW) accepted and applied. F-1 (HIGH): the chapter's original 'may have terminated at the figure of Enlil; the surviving text does not allow a confident reconstruction' was too pessimistic — the standard Lambert 2013 reading reconstructs the closing as Enlil sharing rule amicably with his sons Ninurta and Nušku, a stabilising generation that breaks the parricide-and-incest cycle. The closing claim has been rewritten to name the three figures explicitly, and a [RECONSTRUCTION:] marker added (gap_source: BM 74329 reverse end; fill_source: internal context within BM 74329 itself, no parallel manuscripts available; confidence: medium). The first INFERENCE marker on the structuring principle has been amended to acknowledge the violent-middle / stable-closing arc rather than just the violent succession. F-2 (MEDIUM): missing middle-generation figures added — River, Haharnum and Belet-seri (the herdsman/pasture pairing), and Hayyashum (whose imprisonment of his father Haharnum, rather than killing, marks the turning point). A new INFERENCE marker on the Hayyashum-imprisonment turning point has been added. F-3 (MEDIUM): Sumuqan/Šakkan reframed from 'cattle-god' to 'herdsman-god of domesticated quadrupeds (cattle, sheep, and donkeys) and patron of the pastoral economy' per the standard Wikipedia/RlA reference; Black & Green 1992 cited. F-4 (MEDIUM): Sumuqan-marries-his-sister claim added to the specific Sumuqan generation: 'Sumuqan in turn marries his mother Earth and his sister, kills his father Ḫarab, and takes his place'. F-5 (MEDIUM): Aššur-original colophon detail added — 'The colophon of BM 74329 notes that the Late Babylonian copy was made from an earlier exemplar at Aššur. This places the underlying composition at or before the Middle Assyrian period, narrowing the otherwise-open dating question to a manuscript-tradition that runs back at least to an Aššur-archive original.' Cited via the directly-verified CT 46 catalogue entry. F-6 (LOW): the 'most Akkadian creation poems are set in Babylon (Esagil) or Eridu' framing rephrased as the chapter's own framing without claiming Lambert as direct source: 'Compared with the Babylon-centred Enūma Eliš and the Eridu-centred Adapa, the Theogony of Dunnu locates its action in a peripheral town' — and a brief etymology of dunnu (Akkadian for 'fortified place') added. Validation: schema clean, 29 footnotes (was 26; gained from F-2 middle-generation paragraphs and F-5 Aššur colophon claim), 38 EVIDENCE tokens (was 34), all source IDs resolve to sources.yaml, all markers at column 0, marker counts INF=3 (was 2; gained from the F-1 Hayyashum-imprisonment INFERENCE) / LAC=1 / REC=1 (was 0; gained from the F-1 Enlil-Ninurta-Nušku closing reconstruction) / VAR=1, all 7 correction spot-checks PASS."
+audit_findings_disposition:
+  high:
+    - id: "F-1"
+      kind: "UNVERIFIED — Enlil/Ninurta/Nušku closing omitted"
+      action: "ACCEPTED"
+      applied: "Closing claim rewritten to name Enlil and his sons Ninurta and Nušku as the stabilising generation that breaks the parricide cycle. New [RECONSTRUCTION:] marker added (gap_source: BM 74329 reverse end; fill_source: internal context within BM 74329; confidence: medium). Final INFERENCE marker on the structuring principle amended to acknowledge the violent-middle / stable-closing arc."
+  medium:
+    - id: "F-2"
+      kind: "UNVERIFIED — middle generations elided"
+      action: "ACCEPTED"
+      applied: "Two new claim paragraphs added naming River, Haharnum, Belet-seri (the herdsman/pasture pairing), and Hayyashum (whose imprisonment of his father marks the turning point). A new [INFERENCE:] marker on the Hayyashum-imprisonment turning point added."
+    - id: "F-3"
+      kind: "UNVERIFIED — Sumuqan-as-cattle-god gloss too narrow"
+      action: "ACCEPTED"
+      applied: "Sumuqan/Šakkan now glossed as 'the herdsman-god of domesticated quadrupeds (cattle, sheep, and donkeys) and patron of the pastoral economy'; Black & Green 1992 s.v. Šakkan cited."
+    - id: "F-4"
+      kind: "UNVERIFIED — Sumuqan-marries-his-sister omitted"
+      action: "ACCEPTED"
+      applied: "Sumuqan generation now reads 'Sumuqan in turn marries his mother Earth and his sister, kills his father Ḫarab, and takes his place'."
+    - id: "F-5"
+      kind: "UNVERIFIED — Aššur-original colophon detail omitted"
+      action: "ACCEPTED"
+      applied: "New paragraph added on the colophon: BM 74329 was copied from an earlier exemplar at Aššur, placing the underlying composition at or before the Middle Assyrian period."
+  low:
+    - id: "F-6"
+      kind: "UNVERIFIED — Babylon/Eridu vs Dunnu framing not page-cited"
+      action: "ACCEPTED"
+      applied: "Reframed as the chapter's own contrastive framing: 'Compared with the Babylon-centred Enūma Eliš and the Eridu-centred Adapa, the Theogony of Dunnu locates its action in a peripheral town.' Etymology of dunnu added (Akkadian for 'fortified place')."
+  notes:
+    - id: "N-1"
+      kind: "NOTE — hoffner-1998 comparative-only handling"
+      action: "CONFIRMED"
+      applied: "No change needed; the chapter correctly handles hoffner-1998 as comparative-only, with no EVIDENCE tokens routing through it for primary cosmogonic facts about the Akkadian text."
+    - id: "N-2"
+      kind: "NOTE — Hain/Amakandu older readings"
+      action: "DEFERRED — soft note"
+      applied: "No change. The chapter uses the modern readings Ḫarab and Sumuqan per Lambert 2013; the older Lambert & Walcot 1965 readings (Hain, Amakandu) are not mentioned but could be added in a footnote on a future pass if desired."
+validation:
+  schema_errors: 0
+  marker_placement_errors: 0
+  unresolved_source_ids: 0
+  footnote_count: 29
+  evidence_marker_count: 38
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_count: 4
+  enlil_ninurta_nusku_closing_added: true
+  middle_generations_named: true
+  sumuqan_herdsman_reframing: true
+  sumuqan_sister_marriage_added: true
+  assur_colophon_added: true
+  babylon_eridu_reframing: true
+  original_claims_unchanged: true

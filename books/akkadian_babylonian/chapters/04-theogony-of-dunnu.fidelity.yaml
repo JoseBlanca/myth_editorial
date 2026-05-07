@@ -1,0 +1,349 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  claims_file: "chapters/04-theogony-of-dunnu.claims.approved.adoc"
+  narrative_file: "chapters/04-theogony-of-dunnu.adoc"
+  total_claims: 29
+  claims_mapped: 29
+  verdict: PASS
+  honesty_self_check:
+    q1_mapped_every_claim: |
+      Yes — every one of the 29 footnoted claim-paragraphs in the claims-approved
+      file was located in the narrative. None were skipped on the assumption of
+      obviousness; each was matched by line number to a narrative passage, and the
+      match was confirmed against both the prose content and the footnote text.
+    q2_checked_every_paragraph_for_additions: |
+      Yes — I walked every narrative paragraph (lines 6 through 109) and tested
+      each factual assertion against the claims document. The six factcheck
+      corrections (F-1 Enlil/Ninurta/Nušku closing; F-2 middle generations
+      named — River, Haharnum, Belet-seri, Hayyashum; F-3 Sumuqan reframed as
+      herdsman-god of quadrupeds; F-4 Sumuqan-marries-his-sister; F-5 Aššur
+      colophon; F-6 Babylon/Eridu contrast) were verified to be present in the
+      claims document and therefore are not flagged as additions. No new factual
+      assertions appear in the narrative beyond what is in the claims.
+    q3_distortion_check_precise_meaning: |
+      Yes — for each claim-to-narrative mapping I compared precise wording, not
+      just topic. In particular the high-risk sites flagged in the assignment
+      (Enlil/Ninurta/Nušku closing; Hayyashum imprisonment-not-killing;
+      Sumuqan herdsman-god of domesticated quadrupeds with cattle/sheep/donkeys
+      enumerated; Sumuqan marries mother AND sister; Aššur colophon dating
+      consequence; Babylon/Eridu contrast as the chapter's own framing; and the
+      four markers) were each matched word-for-word or near-verbatim against the
+      claims source. No topic-only matches.
+    q4_same_model_as_writer: |
+      No. This audit runs in a fresh conversation with no memory of producing
+      the narrative. The agent_model field reflects the model performing the
+      audit; the chapter-draft completion record (14-chapter-draft-ch04.done.yaml)
+      can be consulted to confirm the writer was a separate session.
+
+claim_mapping:
+  - claim_number: 1
+    claim_text: "Source preservation: BM 74329, published as CT 46, 43"
+    narrative_location: "line 6 (paragraph 1 of '=== The text and how it survives')"
+    status: MAPPED
+  - claim_number: 2
+    claim_text: "Composition has no ancient title; modern title editorial, from place-name Dunnu"
+    narrative_location: "line 9"
+    status: MAPPED
+  - claim_number: 3
+    claim_text: "Standard critical edition is Lambert 2013, pp. 387–395"
+    narrative_location: "line 12"
+    status: MAPPED
+  - claim_number: 4
+    claim_text: "Foster 2005, pp. 487–489 — accessible English translation"
+    narrative_location: "line 14"
+    status: MAPPED
+  - claim_number: 5
+    claim_text: "Dalley 2008, pp. 278–281 — triangulation reference"
+    narrative_location: "line 16"
+    status: MAPPED
+  - claim_number: 6
+    claim_text: "Single manuscript Late Babylonian; no OB/MB witnesses survive"
+    narrative_location: "line 19"
+    status: MAPPED
+  - claim_number: 7
+    claim_text: "Aššur-original colophon: copy made from earlier exemplar at Aššur, places composition at or before Middle Assyrian period (F-5 correction)"
+    narrative_location: "line 22"
+    status: MAPPED
+  - claim_number: 8
+    claim_text: "Opening lines and closing succession episodes partly broken; later generations reconstructed from internal context"
+    narrative_location: "line 27"
+    status: MAPPED
+  - claim_number: 9
+    claim_text: "Cosmogony set in Dunnu, attested in OB and later administrative records"
+    narrative_location: "line 32"
+    status: MAPPED
+  - claim_number: 10
+    claim_text: "Dunnu real Babylonian town; *dunnu* = 'fortified place'; theme of contested rule"
+    narrative_location: "line 35"
+    status: MAPPED
+  - claim_number: 11
+    claim_text: "Babylon-centred Enūma Eliš and Eridu-centred Adapa contrast (F-6 reframed as chapter's own contrast)"
+    narrative_location: "line 38"
+    status: MAPPED
+  - claim_number: 12
+    claim_text: "Genealogical cosmogony; each generation displaces the previous through killing or marriage"
+    narrative_location: "line 43"
+    status: MAPPED
+  - claim_number: 13
+    claim_text: "First father Ḫarab (deified plough); first mother Earth (erṣetu)"
+    narrative_location: "line 46"
+    status: MAPPED
+  - claim_number: 14
+    claim_text: "Cosmic deities are agricultural-pastoral entities: plough → earth → sea → cattle"
+    narrative_location: "line 48"
+    status: MAPPED
+  - claim_number: 15
+    claim_text: "Ḫarab and Earth produce daughter Sea (tâmtu)"
+    narrative_location: "line 50"
+    status: MAPPED
+  - claim_number: 16
+    claim_text: "Ḫarab marries daughter Sea; produces Sumuqan/Šakkan, herdsman-god of domesticated quadrupeds (cattle, sheep, donkeys) (F-3 correction)"
+    narrative_location: "line 53"
+    status: MAPPED
+  - claim_number: 17
+    claim_text: "Sumuqan marries his mother Earth and his sister, kills Ḫarab, takes his place (F-4 sister-marriage correction)"
+    narrative_location: "line 56"
+    status: MAPPED
+  - claim_number: 18
+    claim_text: "Pattern repeats — each generation marries within family and kills/displaces predecessor"
+    narrative_location: "line 59"
+    status: MAPPED
+  - claim_number: 19
+    claim_text: "Fourth generation introduces Lahar, the shepherd-god"
+    narrative_location: "line 61"
+    status: MAPPED
+  - claim_number: 20
+    claim_text: "Further named generations: River, Haharnum, Belet-seri (F-2 middle generations named)"
+    narrative_location: "line 65"
+    status: MAPPED
+  - claim_number: 21
+    claim_text: "Hayyashum (son of Haharnum and Belet-seri) — turning point: marries sister but does NOT kill father, imprisons Haharnum instead"
+    narrative_location: "line 67"
+    status: MAPPED
+  - claim_number: 22
+    claim_text: "Closing reconstructed: Enlil with sons Ninurta and Nušku share rule amicably — stabilising generation that ends the parricide-and-incest cycle (F-1 correction)"
+    narrative_location: "line 72"
+    status: MAPPED
+  - claim_number: 23
+    claim_text: "Distinctive feature: identification of cosmic deities with agricultural and pastoral elements"
+    narrative_location: "line 81"
+    status: MAPPED
+  - claim_number: 24
+    claim_text: "Cosmogony rooted in the Mesopotamian alluvial plain; cosmic order is the agricultural year projected onto divine genealogy"
+    narrative_location: "line 83"
+    status: MAPPED
+  - claim_number: 25
+    claim_text: "No parallel manuscripts; BM 74329 is the only surviving copy; no recensional alternates"
+    narrative_location: "line 90"
+    status: MAPPED
+  - claim_number: 26
+    claim_text: "Marginal in attestation but significant comparatively; principal Akkadian witness to violent-succession cosmogony; Kumarbi Cycle and Hesiod parallels"
+    narrative_location: "line 97"
+    status: MAPPED
+  - claim_number: 27
+    claim_text: "Standard direction of comparison: Mesopotamian → Hurro-Hittite → Greek; Hurrian/Hittite as mediating layer"
+    narrative_location: "line 101"
+    status: MAPPED
+  - claim_number: 28
+    claim_text: "Comparative case rests on stable closings as well as violent middles: Dunnu/Enlil-Ninurta-Nušku, Kumarbi/Teshub, Hesiod/Zeus"
+    narrative_location: "line 104"
+    status: MAPPED
+  - claim_number: 29
+    claim_text: "Theogony of Dunnu is one of the most consequential of the small Akkadian creation-dossier texts; short narrative footprint, substantial comparative reach"
+    narrative_location: "line 107"
+    status: MAPPED
+
+marker_inventory:
+  lacuna:
+    expected: 1
+    found: 1
+    locations:
+      - narrative_line: 25
+        kind: LACUNA
+        match: byte-for-byte
+        note: "BM 74329 obverse top and reverse end; scholarly_reconstruction notes that Lambert reconstructs the Enlil/Ninurta/Nušku closing from internal context within BM 74329."
+  reconstruction:
+    expected: 1
+    found: 1
+    locations:
+      - narrative_line: 75
+        kind: RECONSTRUCTION
+        match: byte-for-byte
+        note: "Enlil-Ninurta-Nušku closing; gap_source=BM 74329 reverse end (broken); fill_source=internal context within BM 74329; confidence=medium."
+  inference:
+    expected: 3
+    found: 3
+    locations:
+      - narrative_line: 70
+        kind: INFERENCE
+        match: byte-for-byte
+        note: "Hayyashum generation breaks the parricide cycle / signals stabilising closing; basis + risk preserved."
+      - narrative_line: 77
+        kind: INFERENCE
+        match: byte-for-byte
+        note: "Structuring principle: violent succession → Hayyashum turning point → Enlil/Ninurta/Nušku stabilising closing; basis + risk preserved."
+      - narrative_line: 86
+        kind: INFERENCE
+        match: byte-for-byte
+        note: "Agrarian-cosmic identification distinguishes Dunnu from Enūma Eliš; basis + risk preserved."
+  variant:
+    expected: 1
+    found: 1
+    locations:
+      - narrative_line: 93
+        kind: VARIANT
+        match: byte-for-byte
+        note: "primary=BM 74329 sole witness; alt=none extant; chosen=Lambert 2013 edition; reason: there is no alternative."
+
+footnote_integrity:
+  total_claims_footnotes: 29
+  total_narrative_footnotes: 29
+  status: ALL_MATCH
+  note: |
+    Side-by-side comparison of all 29 footnotes confirms byte-for-byte
+    correspondence: same Lambert/Foster/Dalley/Bottéro/Black-Green/Hoffner
+    citations, same page ranges, same parenthetical descriptions. The Aššur
+    colophon footnote (claim 7) reproduces the CT 46 catalogue entry verbatim.
+    EVIDENCE comments are also preserved in the narrative.
+
+glossary_check:
+  status: PASS
+  never_use_terms_scanned:
+    - Enki
+    - Inanna
+    - Bilgames
+    - Anzud
+    - Iškur
+    - Damgalnuna
+    - Utu
+    - Nanna
+    - Nanna-Suen
+    - Huwawa
+    - Unug
+    - Ashur
+    - Ellil
+    - Tammuz
+    - Dumuzid
+    - Irra
+    - Utnapishtim
+  hits: []
+  diacritics_check:
+    - Aššur — used (not "Ashur")
+    - Šakkan — diacritic preserved
+    - Ḫarab — preserved (with breve under H)
+    - Enūma Eliš — diacritic preserved
+    - Atra-ḫasīs — n/a (not used in this chapter, mentioned only in comparative-hooks)
+    - tâmtu, erṣetu, dunnu — italicised with proper diacritics
+  italics_check:
+    book_titles_italicised:
+      - Theogony of Dunnu
+      - Babylonian Creation Myths
+      - Before the Muses
+      - Cuneiform Texts from Babylonian Tablets in the British Museum
+      - Myths from Mesopotamia
+      - Akkadian Literature of the Late Period
+      - Enūma Eliš
+      - Adapa
+      - Kumarbi Cycle
+      - Theogony (Hesiod)
+      - Hittite Myths
+    foreign_terms_italicised:
+      - dunnu
+      - erṣetu
+      - tâmtu
+    note: |
+      All book titles and Akkadian foreign nouns appear in body prose with
+      _underscore-italic_ markup as required. Section headings (e.g., "The
+      Theogony of Dunnu" in '=== The text and how it survives') are
+      conventionally non-italicised AsciiDoc headings, which is correct.
+
+forbidden_words_check:
+  status: PASS
+  scanned_terms:
+    - tapestry
+    - delve
+    - nestled
+    - landscape (figurative)
+    - navigate (figurative)
+    - labyrinth
+    - pivotal
+    - testament (figurative)
+    - whilst
+    - cornerstone
+    - underscores
+    - encapsulates
+    - holistic
+    - paradigm
+    - seamless
+    - robust
+    - leverage
+    - unleash
+    - intricate
+  hits: []
+
+factcheck_corrections_present:
+  - finding: F-1 (HIGH)
+    description: "Enlil + Ninurta + Nušku stabilising closing"
+    narrative_location: "lines 72, 75, 77, 104"
+    status: PRESENT
+    detail: |
+      Closing reconstruction described both as a footnoted claim ("Enlil and
+      his sons Ninurta and Nušku share rule amicably — a stabilising
+      generation that ends the parricide-and-incest cycle") and as a formal
+      RECONSTRUCTION marker (gap_source/fill_source/confidence) and an
+      INFERENCE marker. The comparative paragraph at line 104 also references
+      the closing.
+  - finding: F-2 (MEDIUM)
+    description: "Middle generations named — River, Haharnum, Belet-seri, Hayyashum"
+    narrative_location: "lines 65, 67"
+    status: PRESENT
+    detail: |
+      "River appears in the cycle. Haharnum and his sister Belet-seri (the
+      herdsman/pasture pairing) succeed the previous generation; Haharnum
+      kills the parent gods..." and "Hayyashum, son of Haharnum and
+      Belet-seri..."
+  - finding: F-3 (MEDIUM)
+    description: "Sumuqan reframed as herdsman-god of quadrupeds (cattle, sheep, donkeys)"
+    narrative_location: "line 53"
+    status: PRESENT
+    detail: |
+      "Sumuqan, also written Šakkan, the herdsman-god of domesticated
+      quadrupeds (cattle, sheep, and donkeys) and patron of the pastoral
+      economy" — verbatim with claims line 64.
+  - finding: F-4 (MEDIUM)
+    description: "Sumuqan marries his mother Earth AND his sister"
+    narrative_location: "line 56"
+    status: PRESENT
+    detail: |
+      "Sumuqan in turn marries his mother Earth and his sister, kills his
+      father Ḫarab, and takes his place" — verbatim with claims line 68.
+  - finding: F-5 (MEDIUM)
+    description: "Aššur-original colophon detail"
+    narrative_location: "line 22"
+    status: PRESENT
+    detail: |
+      "The colophon of BM 74329 notes that the Late Babylonian copy was made
+      from an earlier exemplar at Aššur. This places the underlying composition
+      at or before the Middle Assyrian period..." — verbatim with claims line 29.
+  - finding: F-6 (LOW)
+    description: "Babylon/Eridu vs Dunnu framing as the chapter's own contrast"
+    narrative_location: "line 38"
+    status: PRESENT
+    detail: |
+      "Compared with the Babylon-centred _Enūma Eliš_ and the Eridu-centred
+      _Adapa_, the _Theogony of Dunnu_ locates its action in a peripheral
+      town — which may reflect a local theological tradition rather than the
+      central Babylonian theology of _Enūma Eliš_." Framed as the chapter's
+      own contrast (using "Compared with..."), not attributed to the source.
+
+findings: []
+
+summary: |
+  All 29 footnoted claim-paragraphs are mapped to the narrative — 29 mapped,
+  0 dropped, 0 partial. No factual assertion appears in the narrative without
+  a corresponding claim — 0 added, 0 implicit additions. Every marker
+  (1 LACUNA, 1 RECONSTRUCTION, 3 INFERENCE, 1 VARIANT) is preserved
+  byte-for-byte. All 29 footnotes match between claims and narrative.
+  Glossary discipline is clean (no never_use forms; diacritics intact).
+  Forbidden-word scan is clean. All six factcheck corrections (F-1 through
+  F-6) are visibly present in the narrative. Verdict: PASS.

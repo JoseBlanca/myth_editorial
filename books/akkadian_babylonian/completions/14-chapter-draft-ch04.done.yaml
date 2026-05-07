@@ -1,0 +1,38 @@
+stage: "chapter-draft"
+chapter: 04
+slug: "theogony-of-dunnu"
+input: "chapters/04-theogony-of-dunnu.claims.approved.adoc"
+output: "chapters/04-theogony-of-dunnu.adoc"
+timestamp: "2026-05-07T16:05:51Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/04-theogony-of-dunnu.adoc"
+    lines: 114
+  - file: "gloss-ledger.yaml"
+    lines: 232
+summary: "Chapter 4 (Theogony of Dunnu) draft. Per the no-target-word-count policy, the verified claims document is the chapter's length budget; the chapter is 1,006 body words — tight Asimov prose around 29 verified claims, no padding. Every footnote (29/29) and every EVIDENCE token (38) is preserved byte-for-byte from the approved claims; all 6 inline markers (3 INFERENCE, 1 LACUNA, 1 RECONSTRUCTION, 1 VARIANT) are byte-for-byte preserved with their pipe-delimited subfields intact; all 4 COMPARATIVE-HOOK comments are at column 0 on their own lines. Source overview present, Setting (Dunnu place-name etymology + Babylon/Eridu contrast), genealogical narrative section (Ḫarab + Earth → Sea; Ḫarab + Sea → Sumuqan; Sumuqan + mother Earth + sister + kills Ḫarab; Lahar; River; Haharnum + Belet-seri; Hayyashum imprisonment turning point; Enlil + Ninurta + Nušku stable closing), Agrarian-cosmic identification, Variants (single-prevalent, no extant alternates), Place in corpus (the Dunnu→Kumarbi→Hesiod comparative case forwarded to the influences chapter). Glossary discipline: locked Akkadian forms throughout (Enlil, Ninurta, Adapa, Eridu, Aššur, Atra-ḫasīs, Ištar; Sumuqan/Šakkan equivalence noted; Ḫarab with locked diacritic Ḫ); no Sumerian-form leakage. Body-prose foreign common nouns and book titles use _underscore-italic_; *asterisk-bold* preserved only inside footnote bodies and marker bodies per the chapter-draft skill rule 6. Validation: 29/29 footnote match, 38 EVIDENCE markers, all source IDs resolve to sources.yaml (lambert-2013, foster-2005, dalley-2008, bottero-2001, black-green-1992, foster-2007, hoffner-1998), all markers at column 0, all marker counts match the approved claims, no forbidden words, no forbidden openings, no asterisk-bold body-prose foreign terms. gloss-ledger.yaml updated: 5 entries advanced last_mention_in to '04' (Enlil, Ninurta, Adapa, Eridu, Aššur)."
+brief_alignment:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — single VARIANT marker noting BM 74329 as the sole witness with no alternates extant."
+  one_lacuna_flagged: "PASS — [LACUNA:] for BM 74329 obverse top and reverse end, with the scholarly_reconstruction subfield correctly noting that no parallel manuscripts are available and the closing is reconstructed from internal context within the same manuscript."
+  reconstruction_marker_added_per_factcheck: "PASS — new [RECONSTRUCTION:] marker added per factcheck finding F-1 to record the Enlil/Ninurta/Nušku closing reconstruction; gap_source: BM 74329 reverse end; fill_source: internal context within BM 74329; confidence: medium."
+  generational_sequence_complete: "PASS per factcheck finding F-2 — Ḫarab + Earth → Sea → Sumuqan → ...Lahar → River → Haharnum + Belet-seri → Hayyashum (imprisonment turning point) → Enlil + Ninurta + Nušku (stable closing). All named generations present in body."
+  agrarian_cosmic_framing: "PASS — plough → earth → sea → herdsman → shepherd identified as the cosmic cascade; the contrast with Enūma Eliš's primordial waters reframed per factcheck F-6."
+  comparative_framing_visible_but_deferred: "PASS — Hurro-Hittite Kumarbi and Hesiodic Greek parallels flagged with the violent-middle / stable-closing structural argument (the Enlil-stabilising-closing makes the comparative case stronger per factcheck F-1's reverse-pass note), but deep analysis reserved for the influences chapter per the brief."
+  base_text: "Lambert 2013 (sole modern critical edition) used as base; Foster 2005 and Dalley 2008 cited where useful."
+validation:
+  footnote_count_match: true
+  footnote_count: "29 / 29"
+  evidence_marker_count: 38
+  unresolved_source_ids: 0
+  marker_count_match: true
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_comments: 4
+  forbidden_words: 0
+  forbidden_openings: 0
+  asterisk_bold_body_prose_foreign_terms: 0
+  body_word_count: 1006

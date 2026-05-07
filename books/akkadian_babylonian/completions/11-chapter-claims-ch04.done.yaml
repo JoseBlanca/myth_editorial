@@ -1,0 +1,22 @@
+stage: "chapter-claims"
+chapter: 04
+slug: "theogony-of-dunnu"
+timestamp: "2026-05-07T15:50:35Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/04-theogony-of-dunnu.claims.adoc"
+    lines: 116
+summary: "Claims document for chapter 4 (Theogony of Dunnu). 26 footnotes, 34 EVIDENCE markers, 4 COMPARATIVE-HOOK comments, 2 INFERENCE markers (the violent-succession structuring principle; the agrarian-cosmic identification), 1 LACUNA marker (BM 74329 obverse top and reverse end damage), 1 VARIANT marker (single-prevalent — sole BM 74329 manuscript, no alternates extant). Sections: Source overview (7 footnoted claims covering the single tablet BM 74329 = CT 46 43, Lambert 2013 sole modern critical edition, Foster 2005 / Dalley 2008 translations, Late Babylonian dating with no OB or MB witnesses, the lacuna at obverse top and reverse end); Setting (Dunnu as obscure Mesopotamian place-name, real Babylonian town not fictional cosmic setting); Genealogical narrative (Ḫarab the deified plough + Earth produce Sea; incestuous succession Ḫarab-Sea producing Sumuqan; Sumuqan marries his mother Earth and kills his father; Lahar later generation; broken closing); Agrarian-cosmic identification (plough/earth/sea/cattle/shepherd as the cosmic deity sequence); Variants (none — single witness); Place in corpus (marginal in attestation, central in Hurro-Hittite/Greek comparative scholarship). Every EVIDENCE source_id resolves to sources.yaml: lambert-2013 (sole critical edition), foster-2005 (translation), dalley-2008 (third translation), bottero-2001 (variant theogonic traditions), black-green-1992 (deity dictionary), foster-2007 (late-Babylonian cosmogonic dossier), hoffner-1998 (comparative Kumarbi parallel). Glossary discipline: locked Akkadian forms throughout; no Sumerian-form leakage. Pre-flight check passed."
+brief_alignment:
+  variant_classification: "single-prevalent (per brief; single manuscript)"
+  variant_handling: "One VARIANT marker noting BM 74329 as the sole witness with no alternates extant."
+  one_lacuna_flagged: "Brief-mandated [LACUNA:] marker present (BM 74329 obverse top and reverse end). Per the brief, no in-tradition fills are available since the composition is preserved on a single tablet."
+  no_reconstruction_marker: "Correctly absent. The brief notes 'no parallel manuscripts' so [RECONSTRUCTION:] cannot apply (would require an in-tradition fill source); the LACUNA marker stands alone, with no scholarly_reconstruction sub-field except 'not available'."
+  base_text: "Lambert 2013 (sole modern critical edition) used as base; Foster 2005 and Dalley 2008 cited where useful."
+  comparative_framing_visible_but_deferred: "PASS — Hurro-Hittite Kumarbi and Hesiodic Greek parallels are flagged in the place-in-corpus section and in COMPARATIVE-HOOK comments, but the deep analysis is reserved for the influences chapter per the brief's special_instructions."
+  generational_sequence_preserved: "PASS — the marry-and-kill cycle is presented faithfully (Ḫarab + Earth → Sea; Ḫarab + Sea → Sumuqan; Sumuqan + Earth + kills Ḫarab; Lahar later generation)."
+  dunnu_real_place: "PASS — Dunnu correctly described as a real but obscure Mesopotamian town, not a fictional cosmic setting, per Lambert 2013's discussion."
+named_but_flagged_scholars: []
+notes:
+  - "Per the new chapter-draft policy (commit 1554303), the brief's target_length_words field is deprecated; the chapter-draft stage will produce whatever tight Asimov prose the 26-claim skeleton yields."
