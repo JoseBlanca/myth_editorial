@@ -1,0 +1,43 @@
+stage: "chapter-claims"
+chapter: 07
+slug: "toil-of-babylon"
+round: 2
+input: "briefs/07-toil-of-babylon.yaml (rewritten 2026-05-07 after factcheck-1)"
+output: "chapters/07-toil-of-babylon.claims.adoc"
+timestamp: "2026-05-07T18:55:32Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+supersedes: "completions/11-chapter-claims-ch07.done.yaml (round-1, factcheck-1 BLOCK / MAJOR-REVISE)"
+outputs:
+  - file: "chapters/07-toil-of-babylon.claims.adoc"
+    lines: 85
+summary: "Chapter 7 (The Toil of Babylon) claims document, round 2, rewritten on the corrected brief after factcheck-1 returned BLOCK / MAJOR-REVISE on round 1. Content model is now the labour-rebellion / divine-displeasure / urban-doom register attested in the surviving columns of Lambert 2013 pp. 301–310: Col. I — Anunnaki hostile to the father of the gods (line 1), Marduk despondent in his temple (line 2), populace of Babylon conscripted into forced labour (lines 5–6), figure determined to overthrow the dynasty (line 13); Col. II — Enlil exultant, Lugaldukuga bitter, Damkina's command to put a figure to death, figure escapes; Col. V — gods decree extinguishing as destiny of the peoples (line 9), gods weep for Babylon (lines 17–19). Page range corrected from pp. 366–375 (Slaying of Labbu) to pp. 301–310 throughout. Manuscript identifier dropped (BM 47860 unverified and likely wrong); working description: single Neo-Babylonian tablet edited by Lambert 2013, witness lineage Boscawen TSBA 5 (1876) → King STC I (1902). Dating corrected from Hellenistic to Neo-Babylonian. Closest Akkadian comparandum reframed: Atra-ḫasīs Igigi-rebellion register (Lambert & Millard 1969), NOT Enūma Eliš VI's Esagil-construction sequence (which is now framed as counter-foil). Two new entities introduced from the corrected content (Damkina, Lugaldukuga); these will need glossary entries on first use in the chapter draft. Royal-legitimation function dropped. lullū/awīlu reading dropped. INFERENCE markers rewritten: (i) Atra-ḫasīs as closer comparandum than Enūma Eliš VI; (ii) Toil of Babylon as darker theological counterpart to Enūma Eliš within the late-Babylonian Marduk dossier. Genesis-11 COMPARATIVE-HOOK reframed: not 'celebration vs condemnation' but 'two Babylon-as-locus-of-divine-displeasure traditions with different theological resolutions'."
+brief_alignment:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — single VARIANT marker noting the single Neo-Babylonian tablet with Boscawen → King → Lambert publication lineage."
+  one_lacuna_flagged: "PASS — [LACUNA:] for the partly-legible columns (3 of 5; none complete); enumerates specific missing content (rebel-figure identity, conflict resolution, connective tissue between Cols I, II, V)."
+  reconstruction_marker_present: "PASS — [RECONSTRUCTION:] covers Lambert 2013's restorations within preserved columns; gap_source: breaks within the single tablet; fill_source: limited (no parallel Akkadian witnesses; Atra-ḫasīs is thematic, not textual fill); confidence: low."
+  base_text: "Lambert 2013, pp. 301–310, used as base. Foster 2005 and Dalley 2008 ToCs verified to exclude this composition; statement that Lambert 2013 stands alone as the modern critical edition is supported."
+  content_model_per_corrected_brief: "PASS — labour-rebellion / divine-displeasure / urban-doom register fully realised. No celebratory-cosmogony residue. Specific column-and-line citations throughout (Col. I.1–2, I.5–6, I.13; Col. II; Col. V.9, V.17–19)."
+  comparandum_correction_per_corrected_brief: "PASS — Atra-ḫasīs's Igigi-rebellion register named as closest comparandum; Enūma Eliš VI explicitly framed as counter-foil rather than parallel."
+  no_BM_47860_assertion: "PASS — manuscript identifier replaced with witness-lineage description (Boscawen TSBA 5, 303 ff.; King STC I, 219–20)."
+  no_hellenistic_dating_assertion: "PASS — manuscript redescribed as Neo-Babylonian throughout."
+  genesis_11_hook_reframed: "PASS — the 'celebration vs condemnation' framing is retracted in the COMPARATIVE-HOOK; full comparison still deferred to influences chapter."
+  marduk_dossier_cross_references: "PASS — explicitly placed within the late-Babylonian Marduk dossier alongside Enūma Eliš (Chapter 1) and Enmešarra's Defeat (Chapter 6); Atra-ḫasīs (Chapter 2) named as closest comparandum."
+new_entities_from_correction:
+  - name: "Damkina"
+    note: "Marduk's mother; she issues the command to put the unnamed figure to death (Col. II). Mentioned briefly in chapter 1 ('his consort Damkina', not full glossary entry); first substantive use in this chapter — the chapter draft should give the full first-mention gloss for Damkina here (gloss-ledger entry for Damkina has full_gloss_in: null — still pending)."
+  - name: "Lugaldukuga"
+    note: "Primordial deity associated with the Duku, the holy mound of creation. New to the book — not in glossary.yaml. The chapter draft should give a first-mention gloss; a glossary entry should be added if Lugaldukuga reappears in later chapters (he is unlikely to — Lugaldukuga is primordial-Babylonian and rarely surfaces in the extant Marduk-cosmogonic dossier outside this composition)."
+validation:
+  footnote_count: 14
+  evidence_marker_count: 21
+  unresolved_source_ids: 0
+  inference_markers: 2
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_comments: 3
+  marker_placement_errors: 0
+  source_overview_footnotes: 4
+  wrong_page_range_residue: 0  # no remaining pp. 366-375 references

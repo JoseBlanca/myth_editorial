@@ -1,0 +1,50 @@
+stage: "claims-factcheck"
+chapter: 07
+slug: "toil-of-babylon"
+round: 1
+input: "chapters/07-toil-of-babylon.claims.adoc (round 1, since-discarded version)"
+output: "chapters/07-toil-of-babylon.claims.factcheck.md"
+timestamp: "2026-05-07T18:30:00Z"
+status: "completed-with-major-revise-block"
+agent_model: "claude-opus-4-7[1m] (fresh conversation, general-purpose subagent)"
+verdict: "BLOCK / MAJOR-REVISE"
+findings_summary:
+  high: 4
+  medium: 9
+  low: 4
+disposition: "ALL FINDINGS ACCEPTED. Brief itself is upstream-corrupt and was rewritten. Claims document was discarded and rewritten from the corrected brief. The single-witness sole-edition status of Lambert 2013 is the only round-1 supported claim that survives unchanged."
+key_corrections_propagated:
+  - kind: "page-range correction"
+    detail: "Lambert 2013 page range corrected from pp. 366–375 (which is The Slaying of Labbu) to pp. 301–310 (the actual range for The Toil of Babylon). Verified independently against the de Gruyter Brill ToC."
+  - kind: "manuscript-identifier correction"
+    detail: "BM 47860 dropped (likely wrong; that BM number is associated with a Late Babylonian Chronicle). Working description: 'single Neo-Babylonian tablet edited by Lambert 2013, witness lineage Boscawen TSBA 5 (1876) → King STC I (1902) → Lambert 2013'."
+  - kind: "dating correction"
+    detail: "Manuscript redescribed as Neo-Babylonian rather than Late Babylonian (Hellenistic). The Hellenistic dating in the original brief was unverified."
+  - kind: "content-model correction (HIGH severity, central reading reversed)"
+    detail: "The original claims described The Toil of Babylon as a celebratory cosmogony with Marduk directing Esagil's construction and the Anunnaki cooperating with a human workforce. The actual surviving columns describe a labour-rebellion / divine-displeasure / urban-doom narrative: Marduk despondent in his temple (Col. I.2); Anunnaki hating the father of the gods (Col. I.1); populace conscripted into onerous toil (Col. I.5–6); a figure determined to overthrow the dynasty (Col. I.13); Damkina ordering an execution and a figure escaping (Col. II); gods decreeing extinguishing as the destiny of the peoples (Col. V.9); gods weeping for Babylon (Col. V.17–19). Independently verified via the de Gruyter Brill ToC, the BSOAS review (van Koppen 2014), and the public transcription of Lambert/Boscawen/Smith on eatthefruit.com."
+  - kind: "comparandum correction"
+    detail: "Closest Akkadian comparandum is Atra-ḫasīs's Igigi-rebellion register (Lambert & Millard 1969), NOT Enūma Eliš VI's Esagil-construction sequence. Enūma Eliš VI is a counter-foil (the triumphal pole) to The Toil of Babylon's dark pole within the Marduk dossier."
+  - kind: "Genesis-11 hook reframed"
+    detail: "The earlier 'Akkadian celebrates / Hebrew condemns' framing was based on the wrong reading of the Akkadian. The corrected framing: both texts present Babylon as a site of divine displeasure and frustrated labour with substantially different theological resolutions. Full comparison still deferred to the influences chapter."
+  - kind: "lullū / awīlu reading dropped"
+    detail: "The original claims asserted the lullū / awīlu human-labour terminology was present in The Toil of Babylon. Public sources do not corroborate this in the surviving columns. Dropped from the rewritten claims."
+  - kind: "royal-legitimation reading dropped"
+    detail: "The original claims framed the composition as royal-legitimation literature. The surviving content (decreed doom over Babylon) is a poor candidate for that function in the conventional sense. Dropped."
+  - kind: "INFERENCE marker rewritten"
+    detail: "The 'third theogonic foundation, constructive rather than violent' INFERENCE rested on the misreading and was unsupportable. Rewritten as: The Toil of Babylon as a darker theological counterpart to Enūma Eliš's triumphal cosmogony — the late-Babylonian Marduk dossier accommodates both registers."
+artifacts_updated:
+  - file: "briefs/07-toil-of-babylon.yaml"
+    kind: "rewrite (preserving structure; correcting content model, sources, lacunae, variants, function, comparative parallels, special_instructions)"
+  - file: "chapters/07-toil-of-babylon.claims.adoc"
+    kind: "complete rewrite from the corrected brief"
+  - file: "completions/11-chapter-claims-ch07.done.yaml"
+    kind: "superseded by 11-chapter-claims-ch07-round2.done.yaml"
+honesty_note: |
+  The factcheck agent itself could not access Lambert 2013 directly (paywalls, archive limitations).
+  The HIGH content-model finding rests on the eatthefruit.com transcription, which quotes
+  Lambert/Boscawen/Smith but is not itself peer-reviewed. The independent verifications
+  performed in the main conversation reproduced the same content reading from the same source.
+  A human checker with print access to Lambert 2013 pp. 301–310 should spot-check the rewritten
+  claims at the chapter-draft / human-review stage; if Lambert's full commentary turns up
+  additional material that complicates the rebellion-and-doom reading, the chapter should
+  be tuned again.

@@ -1,0 +1,61 @@
+stage: "chapter-draft"
+chapter: 07
+slug: "toil-of-babylon"
+input: "chapters/07-toil-of-babylon.claims.approved.adoc"
+output: "chapters/07-toil-of-babylon.adoc"
+timestamp: "2026-05-07T19:16:50Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/07-toil-of-babylon.adoc"
+    lines: 77
+  - file: "gloss-ledger.yaml"
+    lines: 245
+summary: "Chapter 7 (The Toil of Babylon) draft. Per the no-target-word-count policy, the verified claims document is the chapter's length budget; the chapter is 1,039 body words — tight Asimov prose around 13 verified body claims plus 6 inline markers (3 INFERENCE, 1 LACUNA, 1 RECONSTRUCTION, 1 VARIANT) byte-for-byte preserved with all subfields intact. Every footnote (14/14) and every EVIDENCE token (21) preserved byte-for-byte from the approved claims. All 3 COMPARATIVE-HOOK comments at column 0. Source overview present (single Neo-Babylonian tablet, witness lineage Boscawen TSBA 5 (1877) → King STC I (1902) → Lambert 2013, sole modern critical edition, no anthology translation). Body sections: divine displeasure and the populace of Babylon (Col. I.1–2 Anunnaki hostility and Marduk's despondency; Col. I.5–6 conscripted populace; Col. I.13 resolve to overthrow the dynasty, grammatical subject most naturally Marduk on the surviving pronoun chain); Damkina, the death-sentence motif, and a flight (Col. II divine politics — Enlil exultant, Lugaldukuga bitter and descending to the Apsû; Col. II.16–19 death-sentence motif involving Damkina and a 'my son' address, with the agent and patient not securely identifiable from the surviving lines; the Lugaldukuga primordial-disaffection inference wrapped in [INFERENCE:]); the decreed destiny — extinguishing (Col. V.9 verdict; Col. V.17–19 gods weeping for Babylon the pure); the dark-counterpart-to-Enūma-Eliš inference; variants and witness; the poem's place in the corpus. Glossary discipline: locked Akkadian forms throughout; Damkina full first-mention gloss given here per the locked glossary phrasing ('Marduk's mother, consort of Ea'); Lugaldukuga descriptive inline first-mention gloss given here (not in locked glossary; ledger entry opened). No Sumerian-form leakage. Body-prose foreign common nouns and book titles use _underscore-italic_; *asterisk-bold* preserved only inside footnote bodies, marker bodies, and within `*šīmtu*` inside the Col. V footnote. Validation: 14/14 footnote match, 21 EVIDENCE markers, all source IDs resolve to sources.yaml (lambert-2013, foster-2007, black-green-1992, bottero-2001), all markers at column 0, all 21 EVIDENCE tokens / 3 INFERENCE / 1 LACUNA / 1 RECONSTRUCTION / 1 VARIANT marker counts match the approved claims byte-for-byte, no asterisk-bold body-prose foreign terms, no forbidden openings."
+brief_alignment:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — single VARIANT marker noting the single Neo-Babylonian tablet with Boscawen → King → Lambert publication lineage."
+  one_lacuna_flagged: "PASS — [LACUNA:] for the partly-legible columns (3 of 5; none complete); enumerates specific missing content (rebel-figure antecedents, Col. II death-sentence motif agents/patients, Col. II–V connective tissue)."
+  reconstruction_marker_present: "PASS — [RECONSTRUCTION:] covers Lambert 2013's restorations within preserved columns; gap_source: breaks within the single tablet; fill_source: limited (no parallel Akkadian witnesses; *Atra-ḫasīs* as thematic comparandum, not textual fill); confidence: low."
+  base_text: "Lambert 2013, pp. 301–310, used as base. Foster 2005 and Dalley 2008 ToCs verified to exclude this composition; statement that Lambert 2013 stands alone as the modern critical edition is supported."
+  content_model_per_corrected_brief: "PASS — labour-rebellion / divine-displeasure / urban-doom register fully realised in body prose. No celebratory-cosmogony residue. Specific column-and-line citations throughout."
+  comparandum_correction_per_corrected_brief: "PASS — Atra-ḫasīs's Igigi-rebellion register named as closest comparandum; Enūma Eliš VI explicitly framed as counter-foil rather than parallel."
+  no_BM_47860_assertion: "PASS — manuscript identifier replaced with witness-lineage description throughout (no BM number asserted in any line)."
+  no_hellenistic_dating_assertion: "PASS — manuscript redescribed as Neo-Babylonian throughout."
+  genesis_11_hook_reframed: "PASS — the 'celebration vs condemnation' framing is retracted in the COMPARATIVE-HOOK; full comparison still deferred to influences chapter."
+  marduk_dossier_cross_references: "PASS — explicitly placed within the late-Babylonian Marduk dossier alongside *Enūma Eliš* (Chapter 1) and *Enmešarra's Defeat* (Chapter 6); *Atra-ḫasīs* (Chapter 2) named as closest comparandum; *Marduk Ordeal Ritual* (Livingstone 1989) named as Neo-Assyrian extension of register-breadth."
+  factcheck_round1_findings_applied: "All HIGH/MEDIUM round-1 findings absorbed in the round-2 rewrite (page range, BM number, central narrative reading, Marduk-as-builder, Anunnaki-workforce, lullū/awīlu, royal-legitimation, Genesis-11 hook framing)."
+  factcheck_round2_findings_applied: "All round-2 HIGH and MEDIUM findings applied: TSBA 5 1876→1877; Damkina death-sentence motif softened from flat narrative to lacunose-and-uncertain; sub-page locators replaced with column-and-line locators inside verified pp. 301–310 range; Col. I.13 grammatical subject identified as most naturally Marduk; Lugaldukuga primordial-disaffection sentence wrapped in [INFERENCE:]; Marduk Ordeal Ritual citation split to attribute to Livingstone 1989."
+named_but_flagged_scholar:
+  - name: "Boscawen 1877 (TSBA 5)"
+    publication: "*Transactions of the Society of Biblical Archaeology* 5 (1877), pp. 303 ff."
+    context: "Named in body and in marker bodies as the originating publication of the Toil-of-Babylon witness lineage. No EVIDENCE token routes through Boscawen 1877 directly; Lambert 2013 carries the citation forward. Forwarded to inventory-audit for possible addition to sources.yaml on a future pass."
+  - name: "King 1902 (STC I)"
+    publication: "*The Seven Tablets of Creation* I (London 1902), pp. 219–20"
+    context: "Named in body and in marker bodies as the second-stage publication of the Toil-of-Babylon witness lineage. No EVIDENCE token routes through King 1902 directly; Lambert 2013 carries the citation forward. Forwarded to inventory-audit."
+  - name: "Livingstone 1989 (SAA 3 no. 34)"
+    publication: "Marduk Ordeal Ritual, edited in *State Archives of Assyria* 3, no. 34 (Helsinki 1989)"
+    context: "Named in the INFERENCE marker basis-clause as the publication for the Marduk Ordeal Ritual extending register-breadth into the Neo-Assyrian witnesses. Source ID `livingstone-1989` is in sources.yaml; the basis-clause is internally cited (markers carry their own basis citations rather than EVIDENCE tokens at column 0)."
+glossary_discipline:
+  damkina_first_full_gloss: "Damkina's full glossary first_mention_gloss ('Marduk's mother, consort of Ea') was given here per the chapter's narrative need; gloss-ledger.yaml updated (full_gloss_in: '07')."
+  lugaldukuga_inline_gloss: "Lugaldukuga is not in the locked glossary. The chapter draft gives a descriptive inline first-mention gloss ('a primordial deity associated with the Duku — the holy mound of creation in Babylonian theology, the place where divine destinies are decreed'). New gloss-ledger.yaml entry opened (full_gloss_in: '07'); if Lugaldukuga reappears, glossary.yaml entry should be added."
+  ea_anunnaki_apsû_enlil_marduk_atra-hasis_babylon_reminders: "Brief functional reminders given inline ('the ruling order of gods' for Anunnaki; 'the freshwater abyss beneath the earth' for Apsû; 'high-god of the older Mesopotamian pantheon' for Enlil) — none requires re-introducing the full glossary first-mention gloss."
+validation:
+  footnote_count_match: true
+  footnote_count: "14 / 14"
+  evidence_marker_count: 21
+  unresolved_source_ids: 0
+  marker_count_match: true
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_comments: 3
+  forbidden_words: 0
+  forbidden_openings: 0
+  asterisk_bold_body_prose_foreign_terms: 0
+  body_word_count: 1039
+  byte_for_byte_marker_preservation: PASS
+  byte_for_byte_footnote_preservation: PASS
+  byte_for_byte_evidence_token_preservation: PASS
+  byte_for_byte_comparative_hook_preservation: PASS

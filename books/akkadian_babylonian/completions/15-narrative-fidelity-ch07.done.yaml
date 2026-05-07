@@ -1,0 +1,39 @@
+stage: "narrative-fidelity"
+chapter: 07
+slug: "toil-of-babylon"
+input: "chapters/07-toil-of-babylon.adoc + chapters/07-toil-of-babylon.claims.approved.adoc"
+output: "chapters/07-toil-of-babylon.fidelity.md"
+timestamp: "2026-05-07T19:25:46Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m] (fresh conversation, general-purpose subagent)"
+verdict: "PASS"
+findings_summary:
+  high: 0
+  medium: 0
+  low: 1
+disposition: "PASS verdict accepted. The single LOW non-blocking finding (a stylistically-added sentence at line 41 paraphrasing the next-paragraph INFERENCE content into body prose) was nonetheless tightened to match the claims exactly: the sentence 'He is, by ritual association, an apparatus-figure of the cosmogonic order itself.' was dropped. The INFERENCE marker that follows carries the load. Body word count drops from 1,039 to 1,026."
+mechanical_preservation:
+  byte_for_byte_marker_preservation: PASS
+  byte_for_byte_footnote_preservation: PASS
+  byte_for_byte_evidence_token_preservation: PASS
+  byte_for_byte_comparative_hook_preservation: PASS
+  evidence_tokens_at_column_zero: 21/21
+  comparative_hook_comments_at_column_zero: 3/3
+  unresolved_source_ids: 0
+completeness:
+  claims_mapped: 14/14
+  no_dropped_claims: true
+  no_added_claims: true
+glossary_discipline:
+  damkina_full_first_mention_gloss: "PASS — line 37 (now line ~37 after trim) gives the locked glossary phrasing 'Marduk's mother, consort of Ea'."
+  lugaldukuga_inline_first_mention_gloss: "PASS — line 37 gives the descriptive inline gloss ('a primordial deity associated with the Duku [the holy mound of creation in Babylonian theology, the place where divine destinies are decreed]')."
+  no_sumerian_form_leakage: true
+  akkadian_forms_throughout: true
+typography:
+  asterisk_bold_in_body_prose: 0
+  underscore_italic_for_book_titles_and_foreign_nouns: PASS
+  asterisk_bold_inside_footnote_marker_comment_bodies_only: PASS
+final_state:
+  body_word_count: 1026
+  draft_lines: 77
+  ready_for_commit: true

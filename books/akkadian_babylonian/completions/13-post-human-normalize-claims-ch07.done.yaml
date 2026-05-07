@@ -1,0 +1,79 @@
+stage: "post-human-normalize"
+chapter: 07
+slug: "toil-of-babylon"
+input: "chapters/07-toil-of-babylon.claims.adoc (round-2 rewrite)"
+output: "chapters/07-toil-of-babylon.claims.approved.adoc"
+timestamp: "2026-05-07T19:12:14Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/07-toil-of-babylon.claims.approved.adoc"
+    lines: 87
+summary: "Post-factcheck normalization of chapter 7 claims after factcheck-round-2 returned REVISE (2 HIGH, 4 MEDIUM, 4 LOW). All findings accepted and applied. The round-2 rewrite had already absorbed every major round-1 critique (page range pp. 366–375 → 301–310; central narrative inverted from celebratory cosmogony to labour-rebellion / divine-displeasure / urban-doom; BM 47860 dropped; Marduk-as-builder + Anunnaki-workforce + lullū/awīlu + royal-legitimation all dropped; Genesis-11 hook reframed; comparandum corrected to Atra-ḫasīs). The round-2 normalize cycle further tightened: F-9 (HIGH, citation-year) corrected TSBA 5 publication year from 1876 to 1877 throughout (claims and brief); F-10 (HIGH, overreach) softened the Damkina-Col.II framing from 'Damkina ordering execution' to a death-sentence motif involving Damkina, a 'my son' address, and a figure who escapes — agent and patient not securely identifiable from the surviving lines; section header retitled from 'Damkina's command and the rebel's escape' to 'Damkina, the death-sentence motif, and a flight'; F-11 (MEDIUM, sub-page locators) replaced the un-verifiable sub-page guesses (pp. 302–303, p. 303, pp. 304–305, p. 305, pp. 308–309, pp. 301, 310) with column-and-line locators inside the verified pp. 301–310 range (e.g., 'pp. 301–310 (Col. I.1–2)') — option (b) of the factcheck recommendation; F-12 (MEDIUM, overreach) reworded the Col. I.13 paragraph to note the grammatical subject is most naturally Marduk himself (preceding pronoun chain) and dropped the 'rebellion against Babylon's regime' continuation-claim; F-13 (MEDIUM, marker-misused) split the INFERENCE basis-clause citation, attributing the Marduk Ordeal Ritual to Livingstone 1989 SAA 3 no. 34 rather than to Lambert 2013, and re-keyed the dossier-breadth citation to Lambert 2013 pp. 281–331 covering Enmešarra's Defeat and adjacent Part III compositions; F-14 (MEDIUM, inference-needed) wrapped the Lugaldukuga 'primordial order disaffected' interpretive sentence in a new INFERENCE marker (the 3rd inference in the doc) with explicit basis (Lugaldukuga's Duku-mound association makes his disposition cosmogonically marked) and risk (structural reading of an epithet-and-mood pair in a fragmented column). The 4 LOW NOTE-class findings required no action: Foster 2007 loc=passim is acceptable as generic milieu reference; the Genesis-11 reframing, lullū/awīlu drop, and BM-number drop were correctly handled in round 2."
+audit_findings_disposition:
+  high:
+    - id: "F-9"
+      kind: "CITATION-WRONG — TSBA 5 publication year 1876→1877"
+      action: "ACCEPTED"
+      applied: "All occurrences corrected in claims (3 places: source overview paragraph, LACUNA block, VARIANT marker, plus body-prose 'modern publication history' sentence) and in brief (4 places: lacunae fill-source, prevalent-version why, centrality-evidence detail, special_instructions). Optional historical-context note 'collecting papers read at Society meetings in 1876–77' added in source overview paragraph and 'modern publication history' sentence to clarify the meeting/publication-date distinction."
+    - id: "F-10"
+      kind: "OVERREACH — Damkina ordering execution presented as flat narrative"
+      action: "ACCEPTED"
+      applied: "Section header retitled. Body paragraph rewritten: Col. II shifts to divine politics (Enlil exultant, Lugaldukuga bitter and descending to the Apsû); the death-sentence motif involving Damkina (Marduk's mother) and a 'my son' address at Col. II.16–17 is preserved, but the agent and patient cannot be securely identified from the surviving lines. The contour of a divine council and a flight is preserved; the agents and patients are not. LACUNA block updated to match — drops 'Damkina ordering execution' in favour of 'the agent and patient of the death-sentence cannot be securely identified from the surviving lines'. Brief special_instructions and lacunae what_is_missing fields updated in tandem."
+  medium:
+    - id: "F-11"
+      kind: "UNVERIFIED — sub-page EVIDENCE locators inside pp. 301–310"
+      action: "ACCEPTED"
+      applied: "All 8 affected EVIDENCE tokens reformulated to 'loc=pp. 301-310 (Col. X.lines)' form. The verified chapter range becomes the page-locator anchor; the column-and-line reference inside parentheses is invariant across page-layout choices and cannot be wrong. Affected tokens: Col. I.1–2, Col. I.5–6, Col. I.9–13, Col. II.3–32 (with Damkina death-sentence motif at Col. II.16–19), Col. II commentary, Col. V.9, Col. V.17–19, single-manuscript transmission."
+    - id: "F-12"
+      kind: "OVERREACH — Col. I.13 'rebellion against Babylon's regime' continuation"
+      action: "ACCEPTED"
+      applied: "Paragraph rewritten: 'The grammatical subject of this resolve is most naturally Marduk himself — the only named deity in the immediately preceding pronoun chain ... The dynasty in question, and the resolution of this resolve to overthrow, are lost in the breaks; the surviving Col. II material moves to a different register of divine politics rather than continuing the regime-rebellion thread.' The 'unnamed in the surviving lines' over-cautious framing is dropped; the 'rebellion against Babylon's regime' continuation-claim is dropped."
+    - id: "F-13"
+      kind: "MARKER-MISUSED — Marduk Ordeal text mis-pinned to Lambert 2013 in INFERENCE basis-clause"
+      action: "ACCEPTED"
+      applied: "Basis-clause split: 'late-Babylonian dossier preserves *Enmešarra's Defeat* and adjacent compositions alongside *Enūma Eliš* in similarly varied registers (Lambert 2013, pp. 281–331), and the *Marduk Ordeal Ritual* (Livingstone 1989, SAA 3 no. 34) extends the register-breadth into the Neo-Assyrian witnesses.' The Lambert-2013 citation now references Part III compositions actually in Lambert's edition; the Marduk Ordeal Ritual is correctly attributed to Livingstone 1989 (which is in sources.yaml). The dossier-framing is also widened from 'late-Babylonian Marduk dossier' to 'late-Babylonian / Neo-Assyrian Marduk dossier' to reflect the extension."
+    - id: "F-14"
+      kind: "INFERENCE-NEEDED — Lugaldukuga 'primordial order disaffected' interpretive sentence"
+      action: "ACCEPTED"
+      applied: "The first sentence of the Lugaldukuga paragraph (Duku/holy-mound primordial-place-of-destinies association) is well-attested standard Assyriological scholarship and remains in body prose with its existing citations. The second sentence (the cosmogonic-disorder reading) is now wrapped in a new INFERENCE marker with explicit basis-and-risk structure. INFERENCE count in claims doc rises from 2 to 3."
+  low:
+    - id: "F-15"
+      kind: "NOTE — Foster 2007 loc=passim"
+      action: "NO-CHANGE"
+      applied: "Acceptable as generic milieu-situating reference per the factcheck's own LOW recommendation. No load-bearing claim about *The Toil of Babylon* in particular is attributed to Foster 2007."
+    - id: "F-16"
+      kind: "NOTE — Genesis 11 hook reframing correctly handled"
+      action: "NO-CHANGE"
+      applied: "Round-2 framing preserved: 'two Babylon-as-locus-of-divine-displeasure traditions with substantially different theological resolutions'. Full comparison still deferred to influences chapter."
+    - id: "F-17"
+      kind: "NOTE — lullū/awīlu correctly dropped"
+      action: "NO-CHANGE"
+      applied: "Round-2 disposition preserved: explicit drop, with the INFERENCE risk-clause noting that the Atra-ḫasīs parallel is structural, not verbal."
+    - id: "F-18"
+      kind: "NOTE — BM-number correctly dropped"
+      action: "NO-CHANGE"
+      applied: "Round-2 disposition preserved: witness described by lineage (Boscawen TSBA 5, 303 ff., 1877; King STC I, 219–20, 1902; Lambert 2013 standard edition), no BM number asserted."
+named_but_flagged_scholars: []
+new_entities_for_glossary_consideration:
+  - name: "Damkina"
+    note: "Marduk's mother; full first-mention gloss should be given in the chapter draft. gloss-ledger.yaml entry already exists with full_gloss_in: null — Chapter 7 will populate this."
+  - name: "Lugaldukuga"
+    note: "Primordial deity associated with the Duku, the holy mound of creation. New to the book — not in glossary.yaml. Chapter 7 draft should give a first-mention gloss inline."
+validation:
+  schema_errors: 0
+  marker_placement_errors: 0
+  unresolved_source_ids: 0
+  footnote_count: 14
+  evidence_marker_count: 21
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_count: 3
+  wrong_year_residue: 0
+  wrong_page_range_residue: 0
+  damkina_orders_execution_residue: 0
+  old_section_header_residue: false
+  sources_used: ["lambert-2013", "black-green-1992", "foster-2007", "bottero-2001"]
+  livingstone_1989_named_in_inference_basis: true
