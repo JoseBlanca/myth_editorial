@@ -1,0 +1,68 @@
+stage: "post-human-normalize"
+chapter: 01
+slug: "enuma-elish"
+input: "chapters/01-enuma-elish.claims.adoc"
+output: "chapters/01-enuma-elish.claims.approved.adoc"
+timestamp: "2026-05-07T05:51:57Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/01-enuma-elish.claims.approved.adoc"
+    lines: 468
+summary: "Post-factcheck normalization of chapter 1 claims. All seven actionable findings from claims-factcheck applied: F-1 (MEDIUM, eleven monsters) — replaced the species list ('serpent, dragon, sphinx, lion, mad-dog, scorpion-man, demon, fish-man, bull-man, and others') with the canonical eleven from Lambert 2013 / Black & Green 1992: Bašmu, Ušumgallu, Mušmaḫḫū, Mušḫuššu, Laḫmu, Ugallu, Uridimmu, Girtablullû, Umū dabrūtu, Kulullû, Kusarikku, each with the standard English gloss. F-2 (LOW, Smith date) — updated 'first published cuneiform fragments of the poem in 1875' to '1875–76, with a March 1875 announcement in the Daily Telegraph and the formal scholarly edition appearing as The Chaldean Account of Genesis in 1876'. F-6 (LOW, winds gloss) — dropped the speculative 'for a total of eleven' framing on Marduk's seven additional winds; reworded as 'augmenting the four cardinal winds Anu had given him', removing the implicit eleven=Tiamat-monsters parallel which was authorial inference rather than textual claim. F-7 (LOW, two-year construction) — softened 'The construction takes the gods two years' to 'The construction is followed by a banquet of the gods at the newly completed temple', dropping the two-year-vs-one-year translation-dependent specific. F-8 (LOW, four horses) — both Lambert and Foster renderings now cited side-by-side ('Lambert 2013 gives the Killer, the Relentless, the Trampler, the Swift; Foster 2005 reads Killer, Pitiless, Trampler, Fleet') rather than collapsing them into a single English-name list. F-9 (LOW, fifty=Enlil INFERENCE marker) — risk-field rewritten to specify that 'the equation is established from the An = Anum god-list and from Lambert's commentary; the poem of Enūma Eliš does not itself state the connection — the inference is from background scholarship into the poem, not from the poem outward', addressing the auditor's MARKER-MISUSED concern by tightening the inferential gap to its actual scope. F-10 (LOW, Nannar glossary violation) — dropped the parenthetical '(Akkadian moon-god, Nannar in some passages)' on Sîn; the locked rendering Sîn alone is now used. F-3, F-4, F-5 (LOW UNVERIFIED, no fix needed per auditor) — left as-is; flagged for chapter-claims-time print-copy verification of Lambert 2013's introduction (Smith date, Nebuchadnezzar I hypothesis, cult-statue recovery). Anchor updated from [[ch-01-enuma-elish-claims]] to [[ch-01-enuma-elish-claims-approved]]; original .claims.adoc preserved unchanged for the immutable round-trip-integrity record per post-human-normalize hard rule §1. Validation passed: schema clean, all 153 EVIDENCE source_ids resolve to sources.yaml, all markers at column 0, canonical eleven monsters all present, Nannar removed, An = Anum text in INFERENCE risk-field, both Lambert and Foster horse-name renderings present, Smith date updated."
+audit_findings_disposition:
+  medium:
+    - id: "F-1"
+      kind: "CITATION-WRONG"
+      action: "ACCEPTED"
+      applied: "Eleven-monster species list replaced with canonical Bašmu / Ušumgallu / Mušmaḫḫū / Mušḫuššu / Laḫmu / Ugallu / Uridimmu / Girtablullû / Umū dabrūtu / Kulullû / Kusarikku."
+  low:
+    - id: "F-2"
+      kind: "CITATION-WRONG"
+      action: "ACCEPTED"
+      applied: "Smith date '1875' → '1875–76' with Daily Telegraph March 1875 and Chaldean Account of Genesis 1876 distinction."
+    - id: "F-3"
+      kind: "UNVERIFIED"
+      action: "DEFERRED"
+      applied: "No fix needed per auditor; print-copy verification of Lambert 2013 intro deferred."
+    - id: "F-4"
+      kind: "UNVERIFIED"
+      action: "DEFERRED"
+      applied: "No fix needed per auditor; Nebuchadnezzar I commissioning hypothesis is mainstream."
+    - id: "F-5"
+      kind: "UNVERIFIED"
+      action: "DEFERRED"
+      applied: "No fix needed per auditor; cult-statue recovery hypothesis is mainstream."
+    - id: "F-6"
+      kind: "UNVERIFIED"
+      action: "ACCEPTED"
+      applied: "'For a total of eleven' framing dropped from the seven-winds claim; eleven=Tiamat-monsters parallel was authorial inference, not textual statement."
+    - id: "F-7"
+      kind: "UNVERIFIED"
+      action: "ACCEPTED"
+      applied: "Two-year construction figure softened; banquet-on-completion stated without specific year count."
+    - id: "F-8"
+      kind: "UNVERIFIED"
+      action: "ACCEPTED"
+      applied: "Both Lambert and Foster horse-name renderings cited side-by-side."
+    - id: "F-9"
+      kind: "MARKER-MISUSED"
+      action: "ACCEPTED — INFERENCE risk-field tightened"
+      applied: "Risk-field now specifies the An=Anum god-list and Lambert commentary as the equation source; clarifies that the poem itself does not state the connection."
+    - id: "F-10"
+      kind: "GLOSSARY-VIOLATION"
+      action: "ACCEPTED"
+      applied: "Nannar parenthetical dropped on Sîn first mention; only the locked rendering Sîn now used."
+validation:
+  schema_errors: 0
+  marker_placement_errors: 0
+  unresolved_source_ids: 0
+  footnote_count: 132
+  evidence_marker_count: 153
+  canonical_eleven_monsters_present: true
+  nannar_removed: true
+  smith_date_updated: true
+  inference_risk_updated: true
+  horse_names_split: true
+  approved_word_count: 2699
+  original_claims_unchanged: true

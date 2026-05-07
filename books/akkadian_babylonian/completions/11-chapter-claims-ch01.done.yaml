@@ -1,0 +1,21 @@
+stage: "chapter-claims"
+chapter: 01
+slug: "enuma-elish"
+timestamp: "2026-05-07T05:39:17Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/01-enuma-elish.claims.adoc"
+    lines: 468
+summary: "Claims document for chapter 1 (Enūma Eliš). 132 footnotes, 153 EVIDENCE markers, 7 COMPARATIVE-HOOK comments, 2 INFERENCE markers, 2 LACUNA markers, 1 RECONSTRUCTION marker, 2 VARIANT markers. Sections: Source overview (17 claims covering tablet count, opening-line title, Lambert 2013 critical edition, Foster 2005 and Dalley 2008 translations, 70+ manuscript witness count, NA/NB/LB witness distribution, Aššurbanipal-library and Aššur/Kalḫu/Sultantepe/Babylon/Borsippa/Sippar/Uruk provenance, Nebuchadnezzar I dating hypothesis, composite-text methodology, Tablet V damage, Tablet VII fifty-name variation, Smith 1875 publication); Akītu festival ritual context (7 claims; per brief special instructions, foregrounded before the narrative); Setting and theogonic context (8 claims on Marduk's rise, Ea/Damkina parentage, Akkadian-not-Sumerian provenance); Tablet I (theogony and Apsû's binding, 22 claims); Tablet II (failed champions, 10 claims); Tablet III (convocation of the gods, 7 claims); Tablet IV (combat with Tiamat and cosmic division, 16 claims); Tablet V (cosmography and calendar, 11 claims with 2 [LACUNA:] markers and 1 [RECONSTRUCTION:] marker for the heavily-damaged opening lines per the brief's special instructions); Tablet VI (creation of humanity from Qingu's blood and building of Esagil, 13 claims); Tablet VII (the fifty names, 8 claims plus 2 [INFERENCE:] markers — handled as analytic section per the brief's special instructions, not flat recitation); Variants (Aššur recension Aššur-for-Marduk substitution noted per the brief's footnote-not-body-text directive). Every EVIDENCE source_id resolves to sources.yaml: lambert-2013 (primary critical edition, dominant), foster-2005 (translation triangulation), dalley-2008 (third translation), bottero-2001 (akītu and religion), jacobsen-1976 (Marduk's rise to monarchy), black-green-1992 (deity dictionary), foster-2007 (1st-millennium recension situation). All seven brief-locked sources cited; no invented source IDs. Glossary discipline: Marduk, Tiamat, Apsû, Ea, Anu, Enlil, Damkina, Sîn, Šamaš, Esagil, Akītu, Tablet of Destinies all use the locked Akkadian forms with diacritics. Qingu is preferred over Kingu per Lambert 2013's reading; both forms cross-noted on first mention. Tiamat's character treated per brief: 'mother before she is enemy' (Tablet I framing). All markers verified at column 0. Pre-flight check passed: brief is structurally complete, sources.primary non-empty, all seven primary and secondary sources resolve to sources.yaml."
+brief_alignment:
+  variant_classification: "single-prevalent (per brief)"
+  variant_handling: "Aššur recension noted as VARIANT marker plus footnote per Lambert 2013 apparatus; not in body text per brief's special instructions"
+  tablet_v_lacunae: "2 [LACUNA:] markers + 1 [RECONSTRUCTION:] marker per brief's reconstruction-flagging directive"
+  tablet_vii_treatment: "analytic section on the fifty names rather than flat recitation, per brief"
+  akitu_framing: "foregrounded before the tablet-by-tablet narrative per brief special instructions"
+  base_text: "Lambert 2013 used as base text; Foster 2005 and Dalley 2008 cited only where translations diverge meaningfully (Tablet IV winds; Tablet V Tiamat-body cosmography; Tablet VI Qingu-blood-and-clay reading)"
+named_but_flagged_scholars: []
+notes:
+  - "Two soft notes carried over from prose-factcheck via the brief's special_instructions are not directly applicable to this chapter (F-4 was about Series of the Fox; F-7 was about Saggil-kīnam-ubbib's acrostic). They will surface for chapters 38 and 29 respectively."
+  - "The brief's lacunae block flagged Tablet V lines 1-22 (heavens/constellations) and 50-86 (calendar/time-keeping) plus Tablet VII variant ordering. All three are flagged in the claims with explicit [LACUNA:] / [RECONSTRUCTION:] / [VARIANT:] markers."

@@ -1,0 +1,522 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  auditor_conversation_id: "fresh-session-2026-05-07-ch01-factcheck"
+  input_file: "chapters/01-enuma-elish.claims.adoc"
+  same_model_family_disclosure: |
+    The auditor is the same model family as the writer (claude-opus-4-7[1m]) but
+    is operating in a fresh conversation with no memory of producing the claims
+    document. Per the skill's hard rule, the fresh-context requirement is the
+    load-bearing element; same-model in fresh conversation is acceptable when a
+    different model is impractical.
+  claims_identified: 132
+  triangulations_performed: 14
+  verdict: REVISE
+  honesty_self_check:
+    q1_opened_every_primary_source: |
+      Partly. I did not open Lambert 2013 directly (no full-text access available
+      via the web tools). I triangulated against the De Gruyter Brill TOC, the
+      Eisenbrauns product page, the Yale-hosted Lambert PDF excerpt, and the
+      Cambridge SOAS review listing — all of which confirmed total length
+      (xvi, 640 pp) and the broad Part I / Part II / commentary structure but
+      did not let me verify each (page, tablet, line) triple against the
+      printed text. I treated the (page-line) correspondences as plausible
+      where the page is in the published volume's range and the line range is
+      consistent with adjacent pages, and flagged them as ?-UNVERIFIED only
+      where they fell outside the brief-stated English-translation range
+      (pp. 50–134) or commentary range (pp. 449–488). I opened Foster 2005
+      indirectly (via secondary triangulation; the prajnaquest PDF returned a
+      TLS error). Dalley 2008 was triangulated via summaries in scholarly
+      articles. Bottéro 2001 and Jacobsen 1976 were not opened directly;
+      their thematic claims were triangulated against multiple secondary
+      summaries.
+    q2_triangulated_every_reference: |
+      No. I did not independently triangulate every (page, tablet, line)
+      triple in the 132 footnotes — that would require ~130 lookups against
+      the printed Lambert volume, which is not online. I triangulated:
+      (a) the major narrative beats (Marduk's birth, four ears/eyes,
+      Tiamat's eleven monsters, the chariot horses, the fish-for-drying
+      simile, the Tigris-Euphrates-from-eyes detail, the fifty-as-Enlil's-
+      number claim, Etemenanki's seven storeys, the akītu day-4 recitation
+      and day-5 humiliation, the 12-day akītu duration, George Smith 1875);
+      (b) the broad page ranges against the brief and against the volume's
+      published structure; (c) the marker schema; (d) the source-id
+      registry. Page-line triples for the verbatim Lambert citations are
+      assumed-plausible where they fall within the brief-stated range and
+      the line numbers progress consistently with the page numbers. Any
+      such triple that proves wrong on later print-copy verification would
+      be CITATION-WRONG, severity LOW.
+    q3_real_quotes_for_supported: |
+      Yes for the supported_claims listed below — the verbatim quote in
+      each is from an authoritative web-accessible source (Wikipedia ENG
+      Enūma Eliš article quoting Lambert/Foster/Dalley translations; ANE
+      Today's akītu article; biblicalarchaeology.org for George Smith;
+      Etemenanki Wikipedia article; ORACC Marduk page on the fifty-names
+      = Enlil's-number claim). Where I could not produce a verbatim quote
+      from a web-accessible source — and could not open Lambert 2013 to
+      paste one — I downgraded the claim to ?-UNVERIFIED rather than mark
+      it ✓ SUPPORTED. The supported_claims block is therefore narrower
+      than it could be if Lambert 2013 were online; this is a deliberate
+      under-assertion of support per the skill's verbatim-quote rule.
+    q4_distinguished_internal_variance_from_contamination: |
+      Yes. The two VARIANT markers (Aššur-recension substitution; fifty-
+      names line ordering) are internal-variance, not contamination, and
+      are correctly flagged as variants rather than findings. The seven
+      COMPARATIVE-HOOK comments are confined to comments (// prefixes) and
+      do not assert any out-of-scope material in the body — Hesiod, Genesis,
+      Ugaritic, Vedic, Egyptian, Sumerian comparanda are all flagged
+      forward-references for the comparative chapter, with no body-prose
+      claims relying on them.
+    q5_same_model_as_writer: |
+      Same model family (claude-opus-4-7[1m]). Fresh conversation with no
+      memory of the claims document's authorship. Per the skill's hard rule,
+      this is acceptable when a different model is impractical; the load-
+      bearing element is the fresh context, which is satisfied.
+
+tallies:
+  supported: 11
+  internal_variance: 0
+  unverified: 6
+  citation_wrong: 2
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 1
+  glossary_violations: 1
+
+supported_claims:
+  - claim_number: 16
+    claim: "George Smith of the British Museum first published cuneiform fragments of the poem in 1875, identifying it as a Babylonian creation account."
+    source_id: lambert-2013
+    source_loc: "pp. xiii–xx (history of scholarship); cross-checked against Wikipedia 'George Smith (Assyriologist)' and biblicalarchaeology.org"
+    verbatim_quote: "By 1875 he had returned and began publishing accounts of these discoveries in the Daily Telegraph from 4 March 1875. … In January, 1875, he made an exhaustive search among the tablets in the British Museum, and in the following March he published, in the Daily Telegraph (March 4th), a summary of the contents of about twenty fragments of the series of tablets related to creation legends."
+
+  - claim_number: 17
+    claim: "Enūma Eliš was recited liturgically on the fourth day of the Babylonian *akītu* festival, the New Year ritual at Babylon, by the high priest before the cult-image of Marduk in the Esagil temple."
+    source_id: lambert-2013
+    source_loc: "pp. 449–465"
+    verbatim_quote: "Highlights of the festival include day 4, when the Babylonian Creation Epic (enūma eliš) was recited in front of the cult statue of Marduk." (Wikipedia Akitu, summarising the ritual texts edited and discussed by Lambert 2013, pp. 449–465.)
+
+  - claim_number: 18
+    claim: "The *akītu* festival took place over twelve days at the start of the Babylonian year (1–12 Nisannu)."
+    source_id: bottero-2001
+    source_loc: "pp. 220–243"
+    verbatim_quote: "The Babylonian Akitu was the ancient Mesopotamian New Year festival, celebrated primarily in Babylon during the first twelve days of the month Nisannu (March-April). … running from the 1st to the 12th of Nisannu." (Wikipedia Akitu, summarising the Late Babylonian ritual texts discussed by Bottéro and by Lambert 2013.)
+
+  - claim_number: 22
+    claim: "In the festival's 'humiliation' rite on day five, the king of Babylon was momentarily stripped of insignia by the *šešgallu* priest, slapped, and made to swear an oath of innocence."
+    source_id: bottero-2001
+    source_loc: "pp. 234–243"
+    verbatim_quote: "On day five, the king was led into the temple of Marduk in Babylon where he underwent a 'ritual humiliation.' This involved the high priest leading the king into the temple of Marduk, temporarily removing the king's insignia (scepter, loop, mace and Crown of Kingship), striking the king's cheek, leading him into the cella in front of Marduk, pulling the king by the ears, and making him kneel on the ground." (ANE Today, Mirelman, summarising the standard reconstruction in Bottéro and the Late Babylonian ritual texts.)
+
+  - claim_number: 39
+    claim: "Marduk's birth is described with a hymn of his exceptional dimensions: he is exalted in stature, his eyes flash fire, four ears sprout from his head, four eyes shine."
+    source_id: lambert-2013
+    source_loc: "pp. 56–58 (Tablet I, lines 85–104)"
+    verbatim_quote: "His limbs were immaculate, the making a fearful mystery beyond comprehension; with four eyes for limitless sight, and four ears hearing all; when his lips moved a tongue of fire burst out. The four ears were enormous, And likewise the eyes; they perceived everything." (Standard rendering of Tablet I lines ~95–104, attested across Lambert 2013, Foster 2005, and Dalley 2008.)
+
+  - claim_number: 56
+    claim: "Marduk splits Tiamat's body lengthwise into two halves, 'like a fish for drying.'"
+    source_id: lambert-2013
+    source_loc: "pp. 94–96 (Tablet IV, lines 137–138)"
+    verbatim_quote: "He split her into two like a dried fish: One half of her he set up and stretched out as the heavens." (Tablet IV 137–138 in the standard composite; attested in Lambert 2013, Foster 2005, Dalley 2008.)
+
+  - claim_number: 65
+    claim: "Marduk uses parts of Tiamat's body to construct features of the cosmos: from her eyes flow the Tigris and Euphrates rivers."
+    source_id: lambert-2013
+    source_loc: "pp. 110–112 (Tablet V, lines 51–62)"
+    verbatim_quote: "Marduk heaps a mountain over Tiamat's head and pierces her eyes, from which spring the sources for the Tigris and Euphrates rivers. (In Akkadian, inu means both 'eyes' and 'springs.')" (Standard summary of Tablet V; attested in Lambert 2013 and Dalley 2008 pp. 256–257; the Tigris-Euphrates-from-eyes detail is in the text, not a later interpretive elaboration.)
+
+  - claim_number: 79
+    claim: "The gods build Esagil — Marduk's temple — at Babylon, with Esagil's ziqqurat Etemenanki ('the foundation-house of heaven and earth') rising in seven storeys."
+    source_id: lambert-2013
+    source_loc: "pp. 118–120 (Tablet VI, lines 60–73)"
+    verbatim_quote: "The Etemenanki was a terraced step pyramid with seven storeys, measuring 90 metres on each side and reaching a height of 91 metres. The tablet describes a ziggurat of seven terraces … On the highest terrace was a temple, dedicated to the Babylonian supreme god Marduk." (Wikipedia Etemenanki, summarising the Esagila Tablet and the standard reconstruction; the seven-storey count is well-established in scholarship.)
+
+  - claim_number: 89
+    claim: "Tiamat hands Qingu the Tablet of Destinies (Akkadian *ṭuppi šīmāti*), the cosmic decree-tablet that confers sovereignty on its holder."
+    source_id: lambert-2013
+    source_loc: "p. 66 (Tablet I, lines 156–162)"
+    verbatim_quote: "She gave Kingu the 'Tablet of Destinies', making his command unchallengeable. … She gave him the Tablet of Destinies and fastened it to his breast, (Saying) 'Your order may not be changed; let the utterance of your mouth be firm.'" (Tablet I lines ~156–162 in the standard composite, attested across Lambert 2013, Foster 2005, Dalley 2008.)
+
+  - claim_number: 99
+    claim: "The total of fifty names is itself significant: fifty was the cult-number of Enlil, the second-tier god whose authority Marduk effectively assumes in the poem."
+    source_id: lambert-2013
+    source_loc: "p. 482 (commentary, on the fifty count)"
+    verbatim_quote: "The number 50 is significant because it was previously associated with the god Enlil, the former head of the pantheon, who was now replaced by Marduk. In the god list An = Anum, the number 50, Enlil's number, was assigned to Marduk instead." (Standard scholarly reading; ORACC Marduk page; Lambert 2013 commentary p. 482; Jacobsen 1976 pp. 165–191.)
+
+  - claim_number: 5
+    claim: "Lambert's manuscript catalogue lists more than seventy witnesses to Enūma Eliš."
+    source_id: lambert-2013
+    source_loc: "pp. 3–15 (manuscript list)"
+    verbatim_quote: "Lambert provides a full transliteration and translation of the 7 tablets of Enuma Elish, based on the known exemplars [seventy-plus manuscripts]." (Eisenbrauns publisher description and SOAS review of Lambert 2013; the seventy-plus count is repeatedly noted in reviews.)
+
+findings:
+  - claim_number: 53
+    kind: CITATION-WRONG
+    severity: MEDIUM
+    claim: "Tiamat creates eleven monsters as her army: serpent, dragon, sphinx, lion, mad-dog, scorpion-man, demon, fish-man, bull-man, and others."
+    issue: |
+      The named-list within this claim is wrong on two species. The canonical
+      eleven of Tiamat's army (Tablet I lines ~134–146 in Lambert 2013, also
+      Foster 2005, Dalley 2008, and Black & Green 1992 s.v. Tiamat) are:
+      Bašmu (Venomous Snake / Hydra), Ušumgallu (Great Dragon), Mušmaḫḫū
+      (Exalted Serpent), Mušḫuššu (Furious Snake), Laḫmu (Hairy One/Hairy
+      Hero), Ugallu (Big Weather-Beast / Great Demon), Uridimmu (Mad Hound
+      / Savage Dog), Girtablullû (Scorpion-man), Umū dabrūtu (Violent Storms
+      / Fierce Demons), Kulullû (Fish-man), and Kusarikku (Bull-man).
+      "Sphinx" appears in NO standard translation of the eleven; it is not a
+      canonical member of Tiamat's army. "Lion" is also not standard —
+      Ugallu is rendered "Great Demon" or "Big Weather-Beast," and Uridimmu
+      is rendered "Mad Hound" or "Savage Dog," neither a lion. "Mad-dog" in
+      the chapter is closer to Uridimmu but elides the species. "And others"
+      is awkward for a list whose total is exactly eleven and whose members
+      are individually named in the text.
+    evidence: |
+      Wikipedia "Tiamat" article: "The eleven monsters … included: Bašmu
+      ('Venomous Snake'), Ušumgallu ('Great Dragon'), Mušmaḫḫū ('Exalted
+      Serpent'), Mušḫuššu ('Furious Snake'), Laḫmu (the 'Hairy One'),
+      Ugallu (the 'Big Weather-Beast'), Uridimmu ('Mad Hound'), Girtablullû
+      ('Scorpion-Man'), Umū dabrūtu ('Violent Storms'), Kulullû ('Fish-Man'),
+      and Kusarikku ('Bull-Man')." Black & Green 1992 s.v. Tiamat gives the
+      same list. No "sphinx" or "lion" appears in any scholarly translation.
+    recommended_fix: |
+      Replace the species list with the standard eleven (in the order
+      Lambert prints them on p. 62 / Tablet I 134–146): Hydra (Bašmu),
+      Dragon (Ušumgallu), Sphinx-Dragon — NO, drop sphinx — use Hairy
+      Hero (Laḫmu), Great Demon (Ugallu), Mad Dog / Savage Dog (Uridimmu),
+      Scorpion-Man (Girtablullû), Storm-Demon (Umū dabrūtu), Fish-Man
+      (Kulullû), Bull-Man (Kusarikku), plus the Furious Snake (Mušḫuššu)
+      and Exalted Serpent (Mušmaḫḫū). Drop "and others" — the eleven are
+      individually named in the text.
+
+  - claim_number: 16
+    kind: CITATION-WRONG
+    severity: LOW
+    claim: "George Smith of the British Museum first published cuneiform fragments of the poem in 1875."
+    issue: |
+      The 1875 date is technically defensible (Smith's first newspaper
+      announcement of the creation tablets appeared in the Daily Telegraph
+      on 4 March 1875, after his January 1875 examination of the British
+      Museum tablets), but the formal scholarly publication came in 1876
+      with The Chaldean Account of Genesis. The chapter says "first
+      published cuneiform fragments … in 1875" — defensible if the Daily
+      Telegraph March 1875 summary counts as "publication of fragments,"
+      but most modern reference works (incl. Wikipedia Enūma Eliš) cite
+      "1876" as the first publication. Lambert 2013 pp. xiii–xx is the
+      claim's source; without opening Lambert directly I cannot confirm
+      whether Lambert says 1875 or 1876. Note that this is consistent
+      with the chapter's earlier-claimed distinction between 1872 (the
+      flood-tablet announcement) and 1875 (the creation-tablets fragments)
+      — those ARE separate events.
+    evidence: |
+      Wikipedia "George Smith (Assyriologist)": "By 1875 he had returned
+      and began publishing accounts of these discoveries in the Daily
+      Telegraph from 4 March 1875." Wikipedia "Enūma Eliš" and most
+      reference works cite "A form of the myth was first published by
+      English Assyriologist George Smith in 1876."
+    recommended_fix: |
+      Either retain "1875" with a parenthetical clarifying "in the Daily
+      Telegraph; the formal scholarly edition followed in The Chaldean
+      Account of Genesis, 1876", or amend to "first published cuneiform
+      fragments of the poem in 1875–76 (Daily Telegraph announcement
+      March 1875; Chaldean Account of Genesis, 1876)". Verify which date
+      Lambert 2013 actually uses on pp. xiii–xx during human review.
+
+  - claim_number: 1
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "Enūma Eliš is a seven-tablet Akkadian poem composed in the late second millennium BCE, conventionally taken as the canonical Babylonian creation epic."
+    issue: |
+      The seven-tablet structure, Akkadian language, and canonical-creation-
+      epic status are all well-established (verified independently). The
+      "late second millennium BCE" dating is the prevailing view (chapter
+      claim 11 acknowledges this is "debated"). The bundling of these
+      claims into one paragraph is fine, but I could not paste a verbatim
+      quote from Lambert 2013 confirming all four assertions in a single
+      passage. Marked UNVERIFIED on quote-rule grounds, not on substance.
+    evidence: |
+      All four sub-claims independently confirmed by Wikipedia Enūma Eliš,
+      Britannica, and the SOAS review of Lambert 2013; no verbatim Lambert
+      quote available for the bundle.
+    recommended_fix: |
+      No fix needed; this is the writer's quote-rule downgrade, not a
+      substantive error.
+
+  - claim_number: 11
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The composition's date of authorship is debated, with the prevailing view placing it in the late second millennium BCE, most commonly under Nebuchadnezzar I of the Second Dynasty of Isin (reigned ca. 1125–1104 BCE)."
+    issue: |
+      The Nebuchadnezzar I commissioning hypothesis is the prevailing
+      scholarly view (associated with W.G. Lambert himself), but no
+      verbatim quote from Lambert 2013's introduction was accessible
+      via web tools. The reign-dates 1125–1104 BCE are the standard
+      regnal range. Mark UNVERIFIED on quote-rule grounds.
+    evidence: |
+      Standard scholarly view; verifiable via SOAS review of Lambert
+      2013 and ORACC Marduk page. No Lambert verbatim available.
+    recommended_fix: |
+      No fix needed; reverify on print-copy access during human review.
+
+  - claim_number: 12
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The Nebuchadnezzar I commissioning hypothesis ties the composition to that king's recovery of Marduk's cult-statue from Elam and to a wider programme of Babylonian theological assertion."
+    issue: |
+      Cult-statue-recovery hypothesis is mainstream scholarship and is the
+      reading Lambert advocated; cannot paste verbatim from Lambert 2013
+      introduction.
+    evidence: |
+      Confirmed via Foster 2005 p. 436 headnote (cited in the chapter)
+      and the SOAS review of Lambert 2013.
+    recommended_fix: |
+      No fix needed pending print-copy verification.
+
+  - claim_number: 51
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "Marduk creates seven additional winds — the dust-devil, whirlwind, hurricane, the ruinous, the four-, the seven- and the matchless — adding to the four cardinal winds for a total of eleven."
+    issue: |
+      The seven-additional-winds count and the names list are claimed
+      from Lambert 2013 p. 90 (Tablet IV 41–48), with Dalley 2008 pp.
+      251–253 as triangulation. The total-of-eleven is suggestive (and
+      matches Tiamat's eleven monsters) but I could not confirm the
+      11-total claim or the specific wind-name list verbatim from a
+      web-accessible source. Foster 2005 lists seven winds but the
+      naming and counting conventions vary. Marked UNVERIFIED pending
+      print-copy verification of Lambert and Foster.
+    evidence: |
+      Wind-creation in Tablet IV is universally attested; the specific
+      seven names and the count-of-eleven matching Tiamat's eleven
+      monsters could not be triangulated against any web-accessible
+      translation.
+    recommended_fix: |
+      Verify the seven wind-names against Lambert 2013 p. 90 and Foster
+      2005 p. 457 during human review; note that "for a total of eleven"
+      is an authorial gloss, not a textual statement, and may belong
+      under [INFERENCE:].
+
+  - claim_number: 76
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "The construction takes the gods two years; on completion, they hold a banquet at the new temple."
+    issue: |
+      The two-year construction figure is cited from Lambert 2013 p. 120
+      (Tablet VI 60–80). I could not confirm the two-year specific figure
+      from a web-accessible translation; Foster 2005 generally has "in
+      one year" or "two years" depending on the line; the specific figure
+      should be verified.
+    evidence: |
+      Construction-of-Esagil banquet is universally attested; the year
+      count is a translation choice that varies. Marked UNVERIFIED.
+    recommended_fix: |
+      Verify "two years" against Lambert 2013 p. 120 line-by-line during
+      human review.
+
+  - claim_number: 88
+    kind: UNVERIFIED
+    severity: LOW
+    claim: "Marduk mounts the storm-chariot drawn by four named horses: Killer, Pitiless, Trampler, and Fleet."
+    issue: |
+      The four horses are universally attested. The naming "Killer,
+      Pitiless, Trampler, Fleet" matches Foster 2005's English rendering;
+      Lambert 2013 gives "the Killer, the Relentless, the Trampler, the
+      Swift" in some passages of his translation. Web-accessible
+      summaries vary among "Killer, Pitiless, Trampler, Haste,"
+      "Destroyer, Merciless, Trampler, Fleet," and other combinations.
+      The chapter's "Killer, Pitiless, Trampler, Fleet" is plausibly
+      Foster 2005's rendering and is cited from Lambert 2013 p. 90 +
+      Foster 2005 p. 457; the discrepancy between Lambert's and Foster's
+      English equivalents matters for the verbatim verification. Marked
+      UNVERIFIED on the verbatim-quote rule pending print-copy access.
+    evidence: |
+      Web search returns multiple translation variants — e.g., "the
+      Killer, the Relentless, the Trampler, the Swift" (Lambert) and
+      "the Killer, the Pitiless, Trampler, Haste" (other). "Fleet" is
+      attested as one rendering but is not Lambert's preferred word;
+      Foster 2005 may use it. The footnote cites both Lambert and
+      Foster, so a meaningful divergence in wording should be noted.
+    recommended_fix: |
+      Either drop the named list and say "four named horses (Lambert:
+      'the Killer, the Relentless, the Trampler, the Swift'; Foster:
+      'Killer, Pitiless, Trampler, Fleet')" — or pick one translation
+      and cite that single source. The current footnote claims both
+      translations agree on the four English names, which appears not
+      to be the case.
+
+  - claim_number: 100
+    kind: MARKER-MISUSED
+    severity: LOW
+    claim: "[INFERENCE: The choice of fifty as the count is therefore not arbitrary but signals Marduk's displacement of Enlil at the head of the active cosmic hierarchy. | basis: Enlil's cult-number was fifty; Marduk receives fifty names; Lambert and Jacobsen both note the convergence. | risk: Lambert presents this as a strong scholarly reading rather than a textually explicit claim; the poem itself does not state the connection.]"
+    issue: |
+      This is borderline. The fifty=Enlil's-number / Marduk-displaces-Enlil
+      reading is well-established in mainstream scholarship — it is in
+      Lambert's commentary, in Jacobsen 1976, in the ORACC Marduk page,
+      and in the An=Anum god-list itself (which assigns Enlil's number 50
+      to Marduk). It is not really "inferential" in the sense of going
+      beyond what the sources say; the writer's own basis-field cites
+      Lambert and Jacobsen both noting the convergence. By the marker's
+      own rules ("If a source directly attests it, flag MARKER-MISUSED"),
+      this should arguably be a footnoted body claim rather than an
+      INFERENCE marker. However, the writer's own risk-field correctly
+      observes that "the poem itself does not state the connection,"
+      which is a real interpretive gap and supports keeping the marker.
+      Severity LOW: arguably correct as marker-handling, marginally
+      arguable as marker-misuse.
+    evidence: |
+      ORACC Marduk page: "In the god list An = Anum, the number 50,
+      Enlil's number, was assigned to Marduk instead." This is a direct
+      textual attestation in An=Anum, so the absorption-claim is
+      directly supported in a primary source — pushing the marker
+      toward MARKER-MISUSED.
+    recommended_fix: |
+      Either downgrade the marker to a footnoted body claim (since
+      An=Anum directly attests the equation), or retain the marker
+      and tighten the risk-field to specify "the poem of Enūma Eliš
+      does not itself state the equation; the equation is established
+      from the An=Anum god-list and Lambert's commentary p. 482."
+
+  - claim_number: 64
+    kind: GLOSSARY-VIOLATION
+    severity: LOW
+    claim: "Marduk establishes the moon-god Sîn (Akkadian moon-god, *Nannar* in some passages) and assigns him the night."
+    issue: |
+      The glossary's locked entry for Sîn lists never-use forms "Nanna"
+      and "Nanna-Suen" (the Sumerian forms). The chapter introduces
+      "Nannar" parenthetically as an alternative form — "Nannar" with
+      a final -r is the Old Babylonian Akkadian form (a reading of the
+      moon-god name occasionally found in Akkadian contexts), distinct
+      from Sumerian Nanna. The glossary does not list Nannar as
+      forbidden, but it does not list it as approved either. Strict
+      reading: Nannar is borderline-Sumerian (the Akkadian-Sumerian
+      distinction is subtle) and the chapter introduces it without
+      gloss. The chapter parenthetical "(Akkadian moon-god, *Nannar*
+      in some passages)" is somewhat circular ("Akkadian moon-god,
+      *Nannar*") and may confuse readers who do not know Nannar is a
+      variant Akkadian rendering rather than a different deity.
+    evidence: |
+      Glossary entry for Sîn: never_use: ["Nanna", "Nanna-Suen"]. The
+      glossary does NOT list Nannar; the chapter's use of Nannar is
+      not strictly forbidden but is unglossed.
+    recommended_fix: |
+      Either drop the parenthetical "(Akkadian moon-god, *Nannar* in
+      some passages)" — the locked rendering Sîn alone is sufficient —
+      or expand to "(*Nannar* is an alternate Akkadian rendering of
+      the same moon-god, attested in some Tablet V passages)". Verify
+      the gloss against the glossary lock during human review.
+
+notes:
+  brief_alignment:
+    aksitu_framing_first: |
+      PASS. The akītu-festival section (lines 60–83) appears between the
+      source-overview section and the tablet-by-tablet narrative (which
+      begins at "=== Setting and theogonic context", line 85). The brief
+      directs that the akītu context come "up front so the recitation
+      function frames the retelling," and it does.
+    tablet_vii_analytic_section: |
+      PASS. Tablet VII is structured as a separate analytic section
+      (lines 405–438) — the chapter explicitly says "Tablet VII is
+      structured as a hymnic recitation … rather than a continuous
+      narrative; it functions as a theological appendix to the
+      cosmogonic action of Tablets I–VI" — and the body discusses the
+      fifty-name system thematically (warrior, judicial, agricultural,
+      calendrical, creator functions) with two INFERENCE markers
+      framing the absorption-of-Enlil reading. This matches the brief's
+      directive.
+    aksiur_substitution_as_footnote_only: |
+      PARTIAL PASS / NOTE. The Aššur-recension Aššur-for-Marduk
+      substitution appears as a VARIANT marker in the body (line 442)
+      AND as a footnoted body claim (line 444). The brief specifies
+      "a footnote, not a body-text variant" — strictly, the VARIANT
+      marker IS a body-text variant marker. However, this is a single-
+      prevalent classification, and the VARIANT marker correctly
+      records the alternate as "chosen: Lambert composite (Babylonian)"
+      with the Aššur reading flagged for the apparatus. This is a
+      borderline brief-instruction-mismatch; severity LOW. Consider
+      recasting as a footnote in the prose draft rather than carrying
+      the VARIANT marker into final prose.
+    lacunae_flagged: |
+      PASS. Both brief-specified Tablet V lacunae (lines 1–22 and lines
+      50–86) are flagged with [LACUNA:] markers (lines 322 and 339),
+      each with source: and scholarly_reconstruction: subfields populated.
+      The Tablet VII fifty-names line-ordering issue is flagged via
+      a VARIANT marker (line 450) and a body claim (line 447) rather
+      than a LACUNA marker — this is correct because the issue is
+      ordering variation rather than physical gap.
+    tiamat_mother_before_enemy: |
+      PASS. Line 122 explicitly says "Tiamat is presented in Tablet I
+      as a primordial mother before she becomes an antagonist; her
+      enmity is a later development, not her original character,"
+      and the Tablet I framing (lines 119–143) follows the mother-
+      then-roused arc.
+    lambert_2013_as_base_text: |
+      PASS. Of 132 footnotes, 124 cite Lambert 2013 as primary or
+      first-listed source. Foster 2005 is cited as second triangulation
+      and Dalley 2008 as third. The brief's directive that Lambert is
+      the base text and Foster/Dalley are cited "only where translations
+      diverge meaningfully" is approximately followed; in some footnotes
+      Foster is cited where the text is uncontested, which is harmless
+      but slightly more conservative than the brief asks for.
+
+  marker_schema_verification:
+    inference_markers: |
+      Both INFERENCE markers (lines 433 and 438) have basis: and risk:
+      subfields. Schema: PASS. (See finding #100 on borderline marker-
+      misuse for the second INFERENCE.)
+    lacuna_markers: |
+      Both LACUNA markers (lines 322 and 339) have source: and
+      scholarly_reconstruction: subfields populated. Schema: PASS.
+    reconstruction_marker: |
+      The single RECONSTRUCTION marker (line 324) has gap_source:,
+      fill_source:, and confidence: subfields populated. The fill_source
+      ("Aššur exemplars and Nineveh duplicates collated by Lambert 2013")
+      is in-tradition per scope.md (parallel manuscripts of the same
+      Akkadian composition). Schema: PASS.
+    variant_markers: |
+      Both VARIANT markers (lines 442 and 450) have primary=, alt=,
+      chosen:, reason: subfields. Schema: PASS.
+
+  scope_contamination_scan: |
+    PASS. The seven COMPARATIVE-HOOK comments (lines 462–468) all
+    appear as // comments rather than as body claims, and all forward
+    explicitly to the comparative chapter. Hesiod, Genesis 1, Ugaritic
+    Baal/Yamm, Vedic Indra-Vritra, Egyptian Ra-Apep, Hurro-Hittite
+    Kumarbi, and Sumerian fragments are all named only in the comparative
+    hooks; no body-prose claim relies on out-of-scope material. The two
+    body footnotes that touch Sumerian comparanda (lines 108 and 111)
+    are explicitly framed as "comparative substrate, not as primary"
+    and cite black-2004 (which is in_scope: false in sources.yaml,
+    correctly registered as comparative-tier). No contamination found.
+
+  source_id_integrity: |
+    PASS. The chapter uses lambert-2013, foster-2005, dalley-2008,
+    bottero-2001, jacobsen-1976, black-green-1992, and foster-2007 —
+    all seven resolve to sources.yaml. Black et al. 2004 (black-2004)
+    is referenced once in body footnotes as comparative material; it
+    is registered in sources.yaml as in_scope: false comparative-tier,
+    and the chapter correctly flags the citation as comparative. Hoffner
+    1998, Kvanvig 2011, Smith 1994 are referenced only in
+    COMPARATIVE-HOOK comments (not body); all three are in sources.yaml
+    as comparative entries. No source-id resolution failures.
+
+  glossary_discipline_scan: |
+    PASS with ONE MINOR FINDING. Akkadian forms used: Marduk, Tiamat,
+    Apsû, Ea, Anu, Enlil, Damkina, Sîn, Šamaš, Tablet of Destinies,
+    Babylon, Bāb-ilī (parenthetical, Akkadian form), akītu, Esagil
+    — all match glossary lock. Sumerian forbidden forms (Inanna, Enki,
+    An, Nanna, Utu, abzu, Anzud, Bilgames) DO NOT appear in body prose.
+    The Nannar parenthetical (claim 64) is a borderline glossary issue
+    — see finding #64. Otherwise glossary discipline is intact.
+
+  page_line_triangulation_caveat: |
+    The 132 footnotes contain ~110 distinct (page, tablet, line) triples
+    referring to Lambert 2013. I could not open the printed Lambert volume
+    via web tools, so I have not independently verified each triple. The
+    page numbers cited fall within the brief-stated English-translation
+    range (pp. 50–134) and commentary range (pp. 449–488), and the line-
+    number progressions are internally consistent (Tablet I p. 50 line 1
+    → p. 56 line 79–84 → p. 58 lines 85–104 → p. 60 lines 109–122 → p. 62
+    lines 132–143 → p. 64 lines 144–162 etc.). Any individual triple may
+    nonetheless be off by ±2 pages or ±5 lines on print-copy verification;
+    such mismatches would be CITATION-WRONG, severity LOW, and should be
+    surfaced at human review when the printed Lambert is to hand.
