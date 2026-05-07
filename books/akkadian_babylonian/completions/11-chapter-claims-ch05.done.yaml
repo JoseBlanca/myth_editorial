@@ -1,0 +1,21 @@
+stage: "chapter-claims"
+chapter: 05
+slug: "slaying-of-labbu"
+timestamp: "2026-05-07T16:15:39Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/05-slaying-of-labbu.claims.adoc"
+    lines: 91
+summary: "Claims document for chapter 5 (The Slaying of Labbu). 18 footnotes, 23 EVIDENCE markers, 4 COMPARATIVE-HOOK comments, 3 INFERENCE markers (the Tišpak conjecture, the lost-ending pattern-completion, the alternative-combat-cosmogony framing), 1 LACUNA marker (CT 13, 33-34 extensive breaks), 0 RECONSTRUCTION (no parallel manuscripts available), 1 VARIANT marker (single-prevalent — sole CT 13, 33-34 manuscript, no alternates extant). Sections: Source overview (6 footnoted claims covering CT 13 33-34 single Neo-Assyrian tablet, Lambert 2013 sole modern critical edition, Foster 2005 translation, no parallel manuscripts, the lacuna covering the hero's name + kill scene + post-combat outcome); Setting (Labbu emerges from the Sea, monstrous form, divine fear); Divine council and dispatch (Sîn in the council, the lost hero's name, the Tišpak conjecture under [INFERENCE:] per the brief's directive that the conjecture be marked transparently rather than committed to as fact); What is lost (kill scene and aftermath unrecoverable, lost-ending pattern-completion under [INFERENCE:]); Variants (none — single witness); Place in corpus (alternative-combat-cosmogony dossier alongside Marduk-Tiamat, Ninurta-Anzû, Erra-Išum). Every EVIDENCE source_id resolves to sources.yaml: lambert-2013 (sole critical edition), foster-2005 (translation), black-green-1992 (deity dictionary), bottero-2001 (combat-myth typology). Glossary discipline: locked Akkadian forms (Labbu, Sîn, Tišpak, Marduk, Tiamat, Ninurta, Anzû, Erra, Išum, Apsû); no Sumerian-form leakage. Pre-flight check passed."
+brief_alignment:
+  variant_classification: "single-prevalent (per brief; single Neo-Assyrian manuscript)"
+  variant_handling: "One VARIANT marker noting CT 13, 33-34 as the sole witness with no alternates extant."
+  one_lacuna_flagged: "Brief-mandated [LACUNA:] marker present (CT 13, 33-34 extensive breaks). Per the brief, no in-tradition fills are available since the composition is preserved on a single tablet."
+  no_reconstruction_marker: "Correctly absent. The brief notes 'no parallel Akkadian witnesses for fill' so [RECONSTRUCTION:] cannot apply."
+  hero_conjecture_handled: "PASS per the brief's special_instructions. The Tišpak identification is presented under [INFERENCE:] with full basis (Lambert 2013 commentary, Black & Green 1992 iconography, fit with Tišpak's combat profile) and risk (the hero's name is lost in the manuscript; alternative scholarly proposals exist) subfields. The chapter does NOT commit to 'Tišpak' as if it were textually preserved; the conjectural status is transparent. Per the discussion in the chapter-claims completion: I used the standard [INFERENCE:] marker rather than the brief's improvised [CONJECTURE:] marker, since CONJECTURE is not a marker defined in the chapter-claims skill schema and the standard skill markers (INFERENCE, LACUNA, RECONSTRUCTION, VARIANT) cover the schema's authorised subfield set; using a non-standard marker would fail downstream validation."
+  alternative_combat_cosmogony_dossier_framing: "PASS — Labbu is explicitly placed within the Akkadian combat-myth dossier alongside Marduk vs. Tiamat (Enūma Eliš), Ninurta vs. Anzû, Erra and Išum, and the Cuthaean Legend's monstrous adversaries; the framing makes it one node rather than a self-contained narrative."
+  base_text: "Lambert 2013 (sole modern critical edition) used as base; Foster 2005 cited where useful; no Dalley 2008 in this brief."
+named_but_flagged_scholars: []
+notes:
+  - "The brief's special_instructions example used [CONJECTURE: hero's name lost; commonly identified as Tišpak] as a marker. Since [CONJECTURE:] is not defined in the chapter-claims skill schema (which authorises INFERENCE, LACUNA, RECONSTRUCTION, VARIANT, SPECULATION, APPROPRIATION-FLAG), I used [INFERENCE:] with the conjecture content. The brief's intent is preserved; the marker schema is followed. If the brief schema is later extended to authorise CONJECTURE, the marker can be renamed."

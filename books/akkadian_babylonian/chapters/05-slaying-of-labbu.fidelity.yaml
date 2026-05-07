@@ -1,0 +1,314 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  claims_file: "chapters/05-slaying-of-labbu.claims.approved.adoc"
+  narrative_file: "chapters/05-slaying-of-labbu.adoc"
+  brief_file: "briefs/05-slaying-of-labbu.yaml"
+  glossary_file: "glossary.yaml"
+  total_claims: 22
+  claims_mapped: 22
+  verdict: PASS
+
+  honesty_self_check:
+    q1_mapped_every_claim: |
+      Yes. I walked the claims document footnote by footnote (22 footnoted claim-paragraphs)
+      and located each in the narrative. None were skipped. The five non-footnoted markers
+      (1 LACUNA, 3 INFERENCE, 1 VARIANT) and the four COMPARATIVE-HOOK comments were also
+      walked; all are present byte-for-byte in the narrative.
+    q2_checked_every_paragraph_for_additions: |
+      Yes. I read every body paragraph (lines 4–94) of the narrative and matched each factual
+      assertion to a claim. Verified that the post-human-normalize corrections introduced at
+      F-1..F-7 (Tišpak named in surviving dispatch line; storm-and-arrow combat; Sea-bears /
+      Enlil-designs creation/design scene; OB Nergal recension; INFERENCE marker retargeted
+      to Wiggermann's cult-aetiology reading) are all present in the claims and so do not
+      trigger CLAIM-ADDED. Confirmed by inspection that the narrative does NOT reintroduce
+      F-2 contamination ("multiple heads", "covered in scales") — only the single composite
+      lion-or-serpent head, horned-viper horns, lion forelegs, eagle hindlegs.
+    q3_distortion_compared_meaning_not_topic: |
+      For each claim-to-narrative pair I compared precise meaning, not topic. Special
+      attention paid to: (a) Tišpak named in surviving dispatch line — narrative reports
+      "The dispatch line is preserved in the Neo-Assyrian recension" with the quoted line,
+      transparent and accurate; (b) single composite head — narrative says "the head of
+      a lion or serpent" not multi-headed; (c) hero's name — narrative correctly does NOT
+      describe Tišpak's name as lost, and the LACUNA marker correctly specifies kill scene,
+      post-combat outcome, and the strategy-advice speaker as what is lost (not the hero's
+      name); (d) INFERENCE marker — preserved byte-for-byte and targets Wiggermann's
+      cult-aetiology reading, not the name itself.
+    q4_same_model_that_produced_narrative: |
+      I am running in a fresh conversation with no memory of producing the narrative. The
+      caller's prompt confirms this is the narrative-fidelity stage and a different
+      conversation from chapter-draft. Per the skill's hard rule, fresh context is the
+      load-bearing requirement; the review is valid.
+
+claim_mapping:
+  - claim_number: 1
+    claim_text: "Source: NA tablet CT 13, plates 33–34 from Aššurbanipal's library; Rm 282 = CDLI P385885; fragmentary OB copy attested but too broken for parallel readings."
+    narrative_location: "line 6 (paragraph under 'The text and how it survives')"
+    status: MAPPED
+
+  - claim_number: 2
+    claim_text: "No preserved ancient title; modern title editorial, from the antagonist Labbu — Akkadian for 'raging' / 'lion-like'."
+    narrative_location: "line 9"
+    status: MAPPED
+
+  - claim_number: 3
+    claim_text: "Lambert 2013, pp. 361–365 is the standard critical edition (MC 16, Eisenbrauns)."
+    narrative_location: "line 13"
+    status: MAPPED
+
+  - claim_number: 4
+    claim_text: "Foster 2005, pp. 581–582 is the accessible English translation cited for narrative passages."
+    narrative_location: "line 15"
+    status: MAPPED
+
+  - claim_number: 5
+    claim_text: "NA manuscript is the only continuous witness; OB fragment too broken; in OB the hero is reportedly Nergal rather than Tišpak, but the OB lines are too damaged to confirm in detail."
+    narrative_location: "line 18"
+    status: MAPPED
+
+  - claim_number: 6
+    claim_text: "Surviving NA fragment preserves creation/design scene, divine planning council, and start of combat; kill broken; aftermath unrecoverable."
+    narrative_location: "line 23"
+    status: MAPPED
+
+  - claim_number: 7
+    claim_text: "In the surviving opening, the Sea (tâmtu) bears Labbu; Enlil in heaven designs his shape — created by the gods themselves."
+    narrative_location: "line 28"
+    status: MAPPED
+
+  - claim_number: 8
+    claim_text: "Creation-by-the-gods is load-bearing; pattern structurally close to Atra-ḫasīs (gods create then move to destroy)."
+    narrative_location: "line 30"
+    status: MAPPED
+
+  - claim_number: 9
+    claim_text: "Labbu's monstrous form: fifty bēru long, one bēru wide, mouth half a nindanu, ear-span one nindanu; head of a lion or serpent, horns of a horned viper, front legs of a lion, hind legs of a bird of prey."
+    narrative_location: "line 36"
+    status: MAPPED
+
+  - claim_number: 10
+    claim_text: "Labbu emerges from the saltwater Sea rather than the freshwater Apsû."
+    narrative_location: "line 39"
+    status: MAPPED
+
+  - claim_number: 11
+    claim_text: "The gods are terrified and convene in council to decide how to respond."
+    narrative_location: "line 41"
+    status: MAPPED
+
+  - claim_number: 12
+    claim_text: "Sîn appears in the surviving council scene, addressing the assembled gods about the threat."
+    narrative_location: "line 46"
+    status: MAPPED
+
+  - claim_number: 13
+    claim_text: "Gods dispatch Tišpak — warrior-god of Ešnunna in Diyala — as champion; the dispatch line is preserved in the NA recension: 'Go, Tišpak, k[ill] Labbu! Save the broad land!'"
+    narrative_location: "line 48"
+    status: MAPPED
+
+  - claim_number: 14
+    claim_text: "Tišpak warrior-god of Ešnunna; iconographic association with the dragon mušḫuššu on Diyala-region cylinder seals; selection fits his combat profile."
+    narrative_location: "line 51"
+    status: MAPPED
+
+  - claim_number: 15
+    claim_text: "Equipping scene preserved in part; storm erupts in association with the combat and an arrow used by the champion against Labbu."
+    narrative_location: "line 57"
+    status: MAPPED
+
+  - claim_number: 16
+    claim_text: "Combat begins on preserved tablet; surviving lines describe approach, opening exchanges — Tišpak fires arrow against the dragon, storm rising — before manuscript breaks off."
+    narrative_location: "line 59"
+    status: MAPPED
+
+  - claim_number: 17
+    claim_text: "Decisive kill scene not preserved; whether the arrow is the killing blow, whether Tišpak speaks first, whether other weapons (Tišpak's seal, in some Wiggermann readings) are deployed — all unrecoverable."
+    narrative_location: "line 64"
+    status: MAPPED
+
+  - claim_number: 18
+    claim_text: "Post-combat aftermath lost: whether Labbu's body becomes cosmos-feature (as Tiamat's), whether Tišpak is exalted (as Marduk/Ninurta), whether close is hymnic-theological — all unknown."
+    narrative_location: "line 66"
+    status: MAPPED
+
+  - claim_number: 19
+    claim_text: "Strategy-advice scene preserved earlier in the surviving text with the advisor's name broken; the advisor is unnamed in surviving lines."
+    narrative_location: "line 68"
+    status: MAPPED
+
+  - claim_number: 20
+    claim_text: "Two attested recensions: NA CT 13, 33–34 (Tišpak as hero, principal witness) and fragmentary OB copy (Nergal reportedly as hero); OB too damaged to supply parallel readings."
+    narrative_location: "line 75"
+    status: MAPPED
+
+  - claim_number: 21
+    claim_text: "Labbu marginal in attestation but significant as one node in the broader Akkadian combat-myth dossier (Marduk-Tiamat, Ninurta-Anzû, Erra-Išum, Cuthaean Legend)."
+    narrative_location: "line 82"
+    status: MAPPED
+
+  - claim_number: 22
+    claim_text: "Significance: evidence that Akkadian theological imagination ran multiple combat-cosmogonies in parallel; Marduk-Tiamat is canonical, but other compositions described other dragon-slayings, with other heroes, in other places."
+    narrative_location: "line 86"
+    status: MAPPED
+
+marker_check:
+  inference_count_claims: 3
+  inference_count_narrative: 3
+  inference_byte_for_byte: true
+  inference_targets_verified:
+    - target: "Wiggermann cult-aetiology reading of Tišpak's installation as Ešnunna's tutelary god"
+      narrative_line: 55
+      basis_present: true
+      risk_present: true
+      retarget_correct: true
+    - target: "lost ending most likely included a decisive kill and cosmic-political consequence"
+      narrative_line: 71
+      basis_present: true
+      risk_present: true
+    - target: "Labbu best read as part of alternative combat-cosmogony dossier surrounding Marduk-Tiamat"
+      narrative_line: 89
+      basis_present: true
+      risk_present: true
+  lacuna_count_claims: 1
+  lacuna_count_narrative: 1
+  lacuna_byte_for_byte: true
+  lacuna_targets_verified:
+    - target: "kill scene + post-combat outcome + broken strategy-advice speaker (NOT the hero's name)"
+      narrative_line: 21
+      source_present: true
+      scholarly_reconstruction_present: true
+      retarget_correct: true
+  variant_count_claims: 1
+  variant_count_narrative: 1
+  variant_byte_for_byte: true
+  variant_pipefields_verified:
+    - primary: "CT 13, 33–34, Neo-Assyrian (Tišpak as hero)"
+      alt: "Old Babylonian fragment, badly broken (Nergal as hero per Lambert 2013)"
+      chosen: "the Neo-Assyrian recension as edited by Lambert 2013"
+      reason: "OB fragment too broken; NA is only continuous witness"
+      narrative_line: 78
+  reconstruction_count_claims: 0
+  reconstruction_count_narrative: 0
+  reconstruction_correctly_absent: true
+  reconstruction_absence_rationale: |
+    No parallel manuscripts exist (single NA witness; OB too broken to fill the NA lacunae).
+    With no cross-fragment fill possible, RECONSTRUCTION is correctly absent. The single
+    LACUNA marker captures the irreparable gaps.
+
+high_risk_areas_check:
+  tispak_named_in_surviving_dispatch_line:
+    status: PASS
+    narrative_evidence: |
+      Line 48: "The gods dispatch Tišpak ... The dispatch line is preserved in the
+      Neo-Assyrian recension: 'Go, Tišpak, k[ill] Labbu! Save the broad land!'"
+      Footnote credits Lambert 2013, pp. 363–364 ("the dispatch line; Tišpak named
+      in the surviving text"). Transparent, accurate.
+  no_multi_headed_labbu_contamination:
+    status: PASS
+    narrative_evidence: |
+      Line 36 describes "the head of a lion or serpent" — single composite head, not
+      multi-headed. No reintroduction of "multiple heads" or "covered in scales" (the
+      F-2 HIGH contamination corrections held).
+  single_composite_head_described:
+    status: PASS
+    narrative_evidence: |
+      Line 36: "head of a lion or serpent, the horns of a horned viper, the front legs
+      of a lion and the hind legs of a bird of prey" — single composite head, leonine
+      and serpentine.
+  storm_and_arrow_as_combat_elements:
+    status: PASS
+    narrative_evidence: |
+      Line 57: "a storm that erupts in association with the combat and an arrow that the
+      champion uses against Labbu." Line 59: "Tišpak fires an arrow against the dragon,
+      with the storm rising around him."
+  creation_design_scene_present:
+    status: PASS
+    narrative_evidence: |
+      Line 28 (under section 'Labbu is created: Sea bears him, Enlil designs his shape'):
+      "the Sea (Akkadian _tâmtu_) bears Labbu, and Enlil in heaven designs his shape —
+      the dragon is created by the gods themselves." Footnote quotes the preserved
+      opening lines.
+  ob_recension_with_nergal_acknowledged:
+    status: PASS
+    narrative_evidence: |
+      Line 18: "In the Old Babylonian recension the hero is reportedly named as Nergal
+      rather than the Tišpak of the Neo-Assyrian version, but the OB lines are too
+      damaged to confirm this in detail." Also embedded in the VARIANT marker (line 78)
+      and the footnoted recensions paragraph (line 75).
+  inference_marker_retargeted_to_wiggermann_cult_aetiology:
+    status: PASS
+    narrative_evidence: |
+      Line 55 INFERENCE marker targets "The Labbu myth was probably composed in part
+      to justify Tišpak's installation as the tutelary god of Ešnunna — a cult-
+      aetiological reading"; basis explicitly cites "Wiggermann's argument in 'Tišpak,
+      his seal, and the dragon mušḫuššu'"; risk notes Lambert 2013's skepticism and
+      the OB-Nergal complication. Target is the cult-aetiological READING, not the
+      hero's name (which is preserved). F-1 + F-6 corrections held.
+
+glossary_check:
+  status: PASS
+  never_use_violations: 0
+  notes: |
+    Scanned narrative for never_use forms (Inanna, Enki, Anzud, Bilgames, Damgalnuna,
+    Iškur, Utu, Nanna, Nanna-Suen, Ashur, Utnapishtim, Huwawa, abzu, Irra, Dumuzid):
+    none present. Locked Akkadian forms used consistently: Aššurbanipal (with š),
+    Tišpak, Sîn, Enlil, Nergal, Marduk, Tiamat, Ninurta, Anzû, Apsû, Ešnunna, mušḫuššu,
+    tâmtu, bēru, nindanu, akītu, Atra-ḫasīs, Enūma Eliš. Foreign nouns and book titles
+    in body prose are rendered with `_underscore-italic_` per chapter-draft rule 11
+    (e.g., _The Slaying of Labbu_, _Babylonian Creation Myths_, _Before the Muses_,
+    _tâmtu_, _bēru_, _nindanu_, _Atra-ḫasīs_, _Enūma Eliš_, _mušḫuššu_). Asterisk-bold
+    `*term*` is preserved only inside footnotes, EVIDENCE tokens, COMPARATIVE-HOOK
+    comments, and marker contents — confirmed.
+
+forbidden_words_check:
+  status: PASS
+  hits: 0
+  notes: |
+    Forbidden-words list (per skill 11-chapter-draft): shimmering, ancient (as ornament),
+    mystical, unfathomable, primordial (as ornament), ineffable, sacred (as filler),
+    mighty, fearsome, dread, eternal, boundless, infinite, veiled, shrouded.
+    "ancient" appears once at line 9 in the literal phrase "no preserved ancient title"
+    (carried over verbatim from the claims document) — this is a factual descriptor,
+    not ornament; the rule explicitly qualifies "ancient" as forbidden only "as
+    ornament". "primordial" appears once at line 93 inside a `// COMPARATIVE-HOOK:`
+    comment ("primordial sea-monsters") — not body prose, and the rule qualifies the
+    term as forbidden only "as ornament". No forbidden openings ("Long ago...",
+    "In the time before time...", "It is said that...") detected.
+
+footnote_integrity_check:
+  status: PASS
+  footnote_count_claims: 22
+  footnote_count_narrative: 22
+  byte_for_byte_match: true
+  notes: |
+    All 22 footnotes carried over byte-for-byte from claims to narrative — verified by
+    diff of `grep "footnote:\["` lines: the only differences in the diffed output are
+    body-prose `*foo*` → `_foo_` italic-conversions OUTSIDE the footnote brackets
+    (chapter-draft rule 11). Inside `footnote:[ ... ]`, asterisk-bold is preserved as
+    required (e.g., *Babylonian Creation Myths*, *Before the Muses*, *Enūma Eliš*).
+    Footnote sources, page numbers, and parenthetical descriptions all match.
+
+body_prose_italic_check:
+  status: PASS
+  notes: |
+    Foreign common nouns and book titles in body prose use `_underscore-italic_`:
+    _The Slaying of Labbu_, _Cuneiform Texts from Babylonian Tablets in the British
+    Museum_, _Babylonian Creation Myths_, _Before the Muses_, _tâmtu_, _Atra-ḫasīs_,
+    _bēru_, _nindanu_, _mušḫuššu_, _Enūma Eliš_. Asterisk-bold preserved only inside
+    footnote brackets, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents
+    (the INFERENCE markers contain *mušḫuššu* and *akītu* with asterisks per chapter-
+    draft rule 11; this is correct because marker contents are exempt from the
+    body-prose italic rule).
+
+findings: []
+
+verdict_rationale: |
+  Zero CLAIM-DROPPED, zero CLAIM-ADDED, zero HIGH CLAIM-DISTORTED, zero MEDIUM findings.
+  All 22 footnoted claim-paragraphs map to narrative locations. All 5 markers
+  (3 INFERENCE, 1 LACUNA, 1 VARIANT) preserved byte-for-byte. RECONSTRUCTION correctly
+  absent (no parallel manuscripts). All 7 post-human-normalize factcheck corrections
+  (F-1 Tišpak named in dispatch line; F-2 single composite head, no multi-headed
+  contamination; F-3 OB-Nergal recension; F-4 storm + arrow combat; F-5 Sea bears /
+  Enlil designs; F-6 INFERENCE marker retargeted to Wiggermann cult-aetiology;
+  F-7 Foster page reference handled) are faithfully represented in the narrative.
+  Glossary discipline clean; no forbidden words in body prose; footnotes byte-for-byte;
+  body-prose italics conform. Verdict: PASS.

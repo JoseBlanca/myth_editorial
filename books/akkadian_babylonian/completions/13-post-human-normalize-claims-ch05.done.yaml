@@ -1,0 +1,69 @@
+stage: "post-human-normalize"
+chapter: 05
+slug: "slaying-of-labbu"
+input: "chapters/05-slaying-of-labbu.claims.adoc"
+output: "chapters/05-slaying-of-labbu.claims.approved.adoc"
+timestamp: "2026-05-07T16:28:53Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/05-slaying-of-labbu.claims.approved.adoc"
+    lines: 108
+summary: "Post-factcheck normalization of chapter 5 claims after a REVISE verdict (2 HIGH, 4 MEDIUM, 1 LOW). All seven findings accepted and applied. The two HIGH findings are the most consequential. F-1 (HIGH UNVERIFIED): the original chapter (and the brief itself) said the hero's name was 'lost in the lacuna' and the Tišpak identification was conjectural. This is wrong: the surviving Neo-Assyrian text preserves the dispatch line 'Go, Tišpak, k[ill] Labbu! Save the broad land!' Tišpak is named in the surviving text. The chapter has been rewritten to report the dispatch line transparently and to relocate the conjectural element to its actual target — Wiggermann's cult-aetiological reading (that the myth justified Tišpak's installation as Ešnunna's tutelary god), which Lambert 2013 disputes. The INFERENCE marker at claim 11 is rewritten with this proper target. F-2 (HIGH CONTAMINATION): 'multiple heads in some readings' for Labbu was contamination from the Ugaritic seven-headed Lôtan; struck. The 'covered in scales' element was also unattested in the verifiable secondary sources; struck. Replaced with the actually-preserved description: fifty leagues long, one league wide, with a single composite head (lion or serpent), the horns of a horned viper, the front legs of a lion and the hind legs of a bird of prey. F-3 (MEDIUM): the existence of the Old Babylonian recension (in which Nergal is reportedly the hero) acknowledged in source-overview and in the VARIANT marker; the OB fragment is too broken to fill NA lacunae but its existence enriches the recensional history and weakens any single-deity cult-aetiology argument. F-4 (MEDIUM): storm and arrow added as preserved combat elements; Tišpak fires an arrow against Labbu with a storm rising. F-5 (MEDIUM): a creation/design scene added as a new claim before the divine council — Sea bears Labbu and Enlil in heaven designs his shape. This is load-bearing; it makes the Labbu narrative a creation poem, not just a combat poem, and structurally parallels the Atra-ḫasīs create-then-destroy arc. F-6 (MEDIUM MARKER-MISUSED): the INFERENCE marker rewritten per F-1's target relocation. F-7 (LOW): Foster 2005 page reference 581-582 retained as locked in sources.yaml; deferred for direct verification. The LACUNA marker is updated to specify which parts are lost (kill scene, post-combat outcome, strategy-advice scene with broken speaker) rather than the hero's name. Validation: schema clean, 22 footnotes (was 18), 30 EVIDENCE tokens (was 23), all source IDs resolve to sources.yaml, all markers at column 0, all 10 correction spot-checks PASS."
+audit_findings_disposition:
+  high:
+    - id: "F-1"
+      kind: "UNVERIFIED — Tišpak named in surviving text, not lost"
+      action: "ACCEPTED"
+      applied: "Chapter rewritten to report the dispatch line 'Go, Tišpak, k[ill] Labbu!' as preserved; Tišpak is named in the surviving Neo-Assyrian text, not conjectural. The conjectural element relocated to Wiggermann's cult-aetiological reading. The LACUNA marker now specifies kill-scene + post-combat outcome + broken strategy-advice speaker as what is lost, not the hero's name."
+    - id: "F-2"
+      kind: "CONTAMINATION — multi-heads from Ugaritic Lôtan"
+      action: "ACCEPTED"
+      applied: "'Multiple heads in some readings' struck; replaced with the preserved description (single composite head: lion or serpent, with horned-viper horns and lion-and-eagle-legs composite). 'Covered in scales' also struck as unattested. A note added in the Ugaritic COMPARATIVE-HOOK distinguishing the seven-headed Lôtan from Labbu's single composite head."
+  medium:
+    - id: "F-3"
+      kind: "UNVERIFIED — OB fragment under-acknowledged"
+      action: "ACCEPTED"
+      applied: "OB recension (Nergal as hero, badly broken) added to source-overview and to the VARIANT marker as the alternate. NA recension is the principal continuous witness; OB is too broken to provide parallel readings."
+    - id: "F-4"
+      kind: "UNVERIFIED — storm/arrow under-reported"
+      action: "ACCEPTED"
+      applied: "Storm and arrow added as preserved combat elements: 'Tišpak fires an arrow against the dragon, with the storm rising around him'. Per Wiggermann (named-but-flagged), Tišpak's seal may also be a weapon, but this is left for chapter-claims spot-check."
+    - id: "F-5"
+      kind: "UNVERIFIED — creation/design scene omitted"
+      action: "ACCEPTED"
+      applied: "New section added: 'Labbu is created: Sea bears him, Enlil designs his shape' — preserves the opening lines 'Sea [created] the serpent, Enlil in heaven designed [his shape]'. The structural parallel to Atra-ḫasīs's create-then-destroy arc is now made explicit."
+    - id: "F-6"
+      kind: "MARKER-MISUSED — INFERENCE target wrong"
+      action: "ACCEPTED"
+      applied: "INFERENCE marker at claim 11 rewritten to target Wiggermann's cult-aetiological reading (the myth as justification for Tišpak's installation as Ešnunna's tutelary god) with basis (Diyala-region cylinder seals, mušḫuššu iconography) and risk (Lambert's skepticism + the OB Nergal alternative weakens the single-deity cult-aetiology argument)."
+  low:
+    - id: "F-7"
+      kind: "UNVERIFIED — Foster 2005 page number"
+      action: "DEFERRED"
+      applied: "Foster 2005 pp. 581-582 retained per the locked sources.yaml; direct print-copy verification deferred."
+named_but_flagged_scholars:
+  - name: "Wiggermann"
+    publication: "Tišpak, his seal, and the dragon mušḫuššu (in 'To the Euphrates and Beyond')"
+    context: "Named in the INFERENCE marker on the cult-aetiological reading; no EVIDENCE token routed through Wiggermann's work. Per the chapter-claims skill's named-but-flagged pattern, the substantive claim is anchored through Lambert 2013 and Black & Green 1992; Wiggermann's specific publication is forwarded to inventory-audit for possible addition to sources.yaml on a future pass."
+validation:
+  schema_errors: 0
+  marker_placement_errors: 0
+  unresolved_source_ids: 0
+  footnote_count: 22
+  evidence_marker_count: 30
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 0
+  variant_markers: 1
+  comparative_hook_count: 4
+  tispak_dispatch_line_present: true
+  multi_heads_contamination_removed: true
+  scales_claim_removed: true
+  preserved_dimensions_added: true
+  creation_design_scene_added: true
+  storm_arrow_combat_added: true
+  ob_recension_acknowledged: true
+  wiggermann_named_but_flagged: true
+  inference_marker_retargeted: true
+  original_claims_unchanged: true

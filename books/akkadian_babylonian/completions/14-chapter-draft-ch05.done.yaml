@@ -1,0 +1,38 @@
+stage: "chapter-draft"
+chapter: 05
+slug: "slaying-of-labbu"
+input: "chapters/05-slaying-of-labbu.claims.approved.adoc"
+output: "chapters/05-slaying-of-labbu.adoc"
+timestamp: "2026-05-07T16:32:34Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/05-slaying-of-labbu.adoc"
+    lines: 94
+  - file: "gloss-ledger.yaml"
+    lines: 232
+summary: "Chapter 5 (The Slaying of Labbu) draft. Per the no-target-word-count policy, the verified claims document is the chapter's length budget; the chapter is 897 body words — tight Asimov prose around 22 verified claims, no padding. Every footnote (22/22) and every EVIDENCE token (30) preserved byte-for-byte from the approved claims; all 5 inline markers (3 INFERENCE, 1 LACUNA, 1 VARIANT — no RECONSTRUCTION since no parallel manuscripts) are byte-for-byte preserved with their pipe-delimited subfields intact; all 4 COMPARATIVE-HOOK comments are at column 0 on their own lines. Source overview present, creation/design scene, monstrous form, divine council and Tišpak dispatch (with the preserved dispatch line 'Go, Tišpak, k[ill] Labbu! Save the broad land!' explicit), what-is-lost section, Variants (NA Tišpak / OB Nergal recensions), Place in corpus closing. Glossary discipline: locked Akkadian forms throughout (Tišpak, Sîn, Marduk, Tiamat, Ninurta, Anzû, Erra, Išum, Apsû, Ešnunna, Atra-ḫasīs, Enūma Eliš); no Sumerian-form leakage; no contamination from the Ugaritic Lôtan (the multi-headed dragon body description that the original draft incorrectly inserted has been struck per factcheck F-2). Body-prose foreign common nouns and book titles use _underscore-italic_; *asterisk-bold* preserved only inside footnote bodies and marker bodies. Validation: 22/22 footnote match, 30 EVIDENCE markers, all source IDs resolve to sources.yaml (lambert-2013, foster-2005, black-green-1992, bottero-2001), all markers at column 0, all marker counts match the approved claims, no forbidden words, no forbidden openings, no asterisk-bold body-prose foreign terms. gloss-ledger.yaml updated: 8 entries advanced last_mention_in to '05' (Sîn, Marduk, Tiamat, Ninurta, Anzû, Erra, Išum, Apsû)."
+brief_alignment:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — single VARIANT marker noting the NA recension as principal witness with the OB fragment as too-broken alternate per factcheck F-3."
+  one_lacuna_flagged: "PASS — [LACUNA:] for CT 13 33-34 extensive breaks. The marker now correctly specifies what is lost (kill scene, post-combat outcome, broken strategy-advice speaker) rather than the hero's name."
+  hero_handled_per_factcheck: "PASS per factcheck F-1 — Tišpak is named as hero in the surviving dispatch line (correctly reported), and the conjectural element is relocated to Wiggermann's cult-aetiological reading (under [INFERENCE:]) rather than the name itself. The brief's framing 'hero's name lost' was wrong; the chapter does not propagate that error."
+  contamination_removed_per_factcheck: "PASS per factcheck F-2 — the multi-headed Lôtan contamination has been struck; Labbu's preserved description (single composite head, leonine and serpentine, fifty leagues long, etc.) is now textually grounded. The Ugaritic COMPARATIVE-HOOK explicitly distinguishes the seven-headed Lôtan from Labbu's single composite head."
+  alternative_combat_cosmogony_dossier_framing: "PASS — Labbu is explicitly placed within the Akkadian combat-myth dossier alongside Marduk vs. Tiamat (Chapter 1), Ninurta vs. Anzû (Chapter 15), Erra and Išum (Chapter 16), and the Cuthaean Legend's monstrous adversaries (Chapter 24)."
+  base_text: "Lambert 2013 (sole modern critical edition) used as base; Foster 2005 cited where useful; no Dalley 2008 in this brief."
+  named_but_flagged_scholar: "Wiggermann is named in the cult-aetiology INFERENCE marker per the named-but-flagged pattern; no EVIDENCE token routes through Wiggermann's specific publication ('Tišpak, his seal, and the dragon mušḫuššu'). Forwarded to inventory-audit for possible addition to sources.yaml."
+validation:
+  footnote_count_match: true
+  footnote_count: "22 / 22"
+  evidence_marker_count: 30
+  unresolved_source_ids: 0
+  marker_count_match: true
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 0
+  variant_markers: 1
+  comparative_hook_comments: 4
+  forbidden_words: 0
+  forbidden_openings: 0
+  asterisk_bold_body_prose_foreign_terms: 0
+  body_word_count: 897
