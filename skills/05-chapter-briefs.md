@@ -9,13 +9,13 @@ description: Converts the approved story list into one planning document per cha
 
 This step produces a planning document (a "brief") for each chapter. No actual prose is written yet — the brief is a structured dossier that tells the AI everything it needs to know before writing. Getting the brief right means the writing AI has everything it needs and doesn't have to improvise or guess.
 
-Three things the brief must get right:
+Two things the brief must get right:
 
 1. **How to handle different versions.** Many myths exist in multiple versions. For each story, the brief records what the known versions are and whether one clearly dominates the scholarly record. This directly determines how the chapter will be written: if one version dominates, it goes in the main text with alternatives in footnotes. If versions are roughly equal, they're presented side by side in the text.
 
-2. **Chapter length.** The brief sets a target word count based on how much primary source material actually exists for this story — not based on how "important" the story feels. A myth preserved on a single broken tablet gets a short chapter (600–1200 words). A richly-documented multi-tablet cycle gets a long one (up to 15,000 words). The AI is told not to pad.
+2. **Cultural relevance.** For the introductory chapter, the brief records how important this story was in its culture (central, significant, or marginal — with evidence), what function it served (religious, political, educational, etc.), and what parallels exist in other cultures.
 
-3. **Cultural relevance.** For the introductory chapter, the brief records how important this story was in its culture (central, significant, or marginal — with evidence), what function it served (religious, political, educational, etc.), and what parallels exist in other cultures.
+The brief deliberately does **not** set a target word count. The verified claims document — produced two stages later — is the chapter's length budget: the chapter is whatever tight Asimov prose around those claims yields. Sizing the chapter at brief time means guessing before the facts are written, and any number on the page acts as an anchor that pressures the drafter to pad. Don't put one there.
 
 ## Inputs
 - `scope.md`, `sources.yaml`
@@ -62,12 +62,6 @@ Classify as **central**, **significant**, or **marginal**. Cite the evidence. If
 **Function**: What role did the story serve? Common categories: cosmological, theogonic, royal-legitimation, ritual-aetiological, didactic, eschatological, entertainment/literary. A story may serve multiple functions. Cite basis.
 
 **Cross-cultural parallels (brief)**: Note the 1–3 most striking parallels in other traditions, with source pointers. These feed both the introductory chapter (preview) and the comparative chapter (full analysis). Keep to 1–2 sentences each.
-
-### Length sizing
-Target based on source volume, not narrative length:
-- Fragmentary single-source: 600–1200 words.
-- Well-preserved single composition: 2000–4000 words.
-- Multi-tablet or multi-manuscript cycle: 8000–15000 words.
 
 ## Outputs: `briefs/NN-<slug>.yaml` and `toc.yaml`
 
@@ -139,9 +133,7 @@ triangulation_databases:
   # Which external databases fact-check should use to verify citations
   - <e.g., ETCSL, CDLI, Perseus, TITUS>
 
-target_length_words: <integer based on source volume>
-
-special_instructions: <any — e.g., "Preserve the dialogue structure of the original">
+special_instructions: <any — e.g., "Preserve the dialogue structure of the original". Do not include a word-count target or range here; the claims document is the length budget.>
 ```
 
 ## Self-check

@@ -130,7 +130,9 @@ The composition is catalogued as ETCSL 1.1.1.footnote:[ETCSL 1.1.1.] // EVIDENCE
 
 ### Length
 
-Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words. For a larger book (15+ chapters): 6000–10000 words. Do not pad.
+The brief's `cultural_relevance` data across all chapters is the length budget — the introduction is whatever tight Asimov prose around that material yields. There is no target word count.
+
+Padding is forbidden. Recognize it: filler transitions, ornamental reverence, "in other words" restatements, recap paragraphs, and explanatory asides that don't add information. A short, dense introduction is preferable to a longer one stretched to feel weightier.
 
 ## Output: `chapters/00-introduction.adoc` and `gloss-ledger.yaml`
 
@@ -163,7 +165,7 @@ Scale to the number of myths. For a book with 8–12 chapters: 3000–6000 words
 3. Cross-cultural previews cite both the in-scope and out-of-scope source.
 4. Glossary renderings match `glossary.yaml`. First-mention glosses present.
 5. No forbidden words. No reverence. Asimov register throughout.
-6. Length proportional to the number of myths — not padded, not skeletal.
+6. Not padded. Scan for filler transitions, ornamental reverence, "in other words" restatements, and explanatory asides that add no information; remove each one.
 7. Every marker has all required sub-fields.
 8. `// COMPARATIVE-HOOK:` comments present for every cross-cultural note.
 9. Every `// EVIDENCE:` and `// COMPARATIVE-HOOK:` marker starts at column 0 on its own line. None appended to paragraph lines.

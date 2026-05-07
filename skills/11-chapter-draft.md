@@ -43,7 +43,7 @@ After writing the chapter, write the updated `gloss-ledger.yaml` back to the boo
 - `scope.md`, `sources.yaml`, `glossary.yaml`
 - `gloss-ledger.yaml` (runtime state — which glossary terms have been glossed in which earlier chapters)
 - `chapters/NN-<slug>.claims.approved.adoc` (fact-checked, human-reviewed claims)
-- `briefs/NN-<slug>.yaml` (for variant classification, target length, special instructions)
+- `briefs/NN-<slug>.yaml` (for variant classification and special instructions — the brief no longer carries a length target; the claims document is the length budget)
 
 **Not** primary source translations. The drafter does not need the sources — the claims document already contains everything verified. Providing sources would tempt the drafter to "improve" claims with additional details.
 
@@ -83,7 +83,11 @@ These are **not** factual claims — they are prose scaffolding. They must not i
 
 ## Length
 
-Per brief's `target_length_words`, driven by source volume. If you find yourself padding, stop and return the shorter version with a note.
+The approved claims document is the chapter's length budget. The chapter is whatever tight Asimov prose around those claims yields — no more, no less. There is no target word count, no floor, no ceiling.
+
+Padding is forbidden. Recognize it: filler transitions that restate the prior paragraph, ornamental reverence, "in other words" loops, recap paragraphs, expanded glosses where a bare term suffices, explanatory asides that don't add information. If you catch yourself reaching for any of these to make the chapter feel weightier, stop — the chapter is already the right length.
+
+A chapter that comes in much shorter than another chapter in the same book is not a problem to solve. Two myths can have very different amounts of verified factual content; the prose should reflect that.
 
 ## Source overview opening
 
@@ -120,7 +124,7 @@ The source overview is separated from the narrative body by a blank line or a se
 6. Variant handling matches the brief's classification.
 7. Every marker has survived from claims to narrative byte-for-byte, including `[SPECULATION:]` blocks with their `basis:` / `counterargument:` pipe-fields.
 8. All footnotes carried over unchanged.
-9. Length matches the brief's target. Not padded.
+9. Not padded. Scan for filler transitions, ornamental reverence, "in other words" restatements, recap paragraphs, and explanatory asides that add no information; remove each one.
 10. `// COMPARATIVE-HOOK:` comments carried over.
 11. Foreign-language common nouns and book titles in body prose are italicised with `_term_` (underscore), not bolded with `*term*` (asterisk). Asterisk markup remains only inside footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents.
 12. `gloss-ledger.yaml` written back to the book root: every entry from earlier chapters preserved, every glossary term used in this chapter has its entry created or updated, and the latest `last_mention_in` across all entries is the current chapter number.
