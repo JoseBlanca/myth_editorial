@@ -1,0 +1,119 @@
+stage: 15-narrative-fidelity
+chapter: 11
+slug: worm-and-toothache
+title: "The Worm and the Toothache"
+input:
+  claims_file: "books/akkadian_babylonian/chapters/11-worm-and-toothache.claims.approved.adoc"
+  claims_lines: 158
+  narrative_file: "books/akkadian_babylonian/chapters/11-worm-and-toothache.adoc"
+  narrative_lines: 101
+  narrative_words: 3340
+  prompt_file: "books/akkadian_babylonian/prompts/12-narrative-fidelity-ch11.prompt.md"
+  prompt_lines: 2128
+  reference_format_model: "books/akkadian_babylonian/chapters/10-founding-of-eridu.fidelity.yaml"
+output:
+  fidelity_report: "books/akkadian_babylonian/chapters/11-worm-and-toothache.fidelity.yaml"
+timestamp: "2026-05-08T18:42:00Z"
+status: PASS
+agent_model: "claude-opus-4-7[1m]"
+verdict: PASS
+findings_counts:
+  high: 0
+  medium: 0
+  low: 0
+  total: 0
+claim_coverage:
+  total_claims: 14
+  mapped: 14
+  unmapped: 0
+  additional_body_frame_paragraphs_mapped: 4
+structural_marker_counts:
+  claims:
+    evidence_tokens: 31
+    footnotes: 18
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 2
+    comparative_hooks: 5
+  draft:
+    evidence_tokens: 31
+    footnotes: 18
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 2
+    comparative_hooks: 5
+  delta: "zero — all marker counts identical across claims and draft"
+content_consistency:
+  ct_17_50_principal_witness_framing: CONSISTENT
+  foster_2005_pp_995_996_anchor: CONSISTENT
+  six_step_cosmogonic_chain_framing: CONSISTENT
+  verbatim_quotes: PRESERVED_VERBATIM
+  hurrian_mari_5_campbell_fischer_2018_attribution: PRESERVED_VERBATIM
+  yos_11_5a_van_dijk_goetze_hussey_1985_attribution: PRESERVED_VERBATIM
+  cosmogonic_chain_typology_inference: PRESERVED_INSIDE_INFERENCE
+  performative_cosmogony_inference: PRESERVED_INSIDE_INFERENCE
+  epistemic_posture: PRESERVED
+round_1_factcheck_corrections_applied:
+  - id: F-1
+    severity: HIGH
+    description: "Hurrian Mari 5 reanalysis cited to Campbell and Fischer 2018, *RA* 112, pp. 31–47, with daughters-of-Šimige finding (NOT Cohen-Wasserman 2018). Cohen and Wasserman 2008, *RA* 102, pp. 71–88 cited separately as named-but-flagged for OB worm/leech-against-infant incantations."
+    narrative_status: APPLIED
+    detail: "Byte-identical preservation in draft line 100 (Hurro-Hittite COMPARATIVE-HOOK) and draft line 78 (VARIANT block) and draft line 80 (Variants-and-witness footnote)."
+  - id: F-2
+    severity: MEDIUM
+    description: "Six-step Foster cosmogonic chain (Anu → heavens → earth → rivers → irrigation ditches → mud → worm), not seven-step. Speiser five-step variant (with marsh) noted as translation choice on the same Akkadian text."
+    narrative_status: APPLIED
+    detail: "Byte-identical preservation in draft line 30 (cosmogonic chain section); six-step framing consistently maintained throughout draft (lines 4, 14, 30, 34, 38, 93)."
+  - id: F-3
+    severity: MEDIUM
+    description: "YOS 11, 5a attribution to van Dijk, Goetze, and Hussey 1985, *Early Mesopotamian Incantations and Rituals*, Yale Oriental Series 11 (van Dijk as lead editor, NOT 'Hussey-van Dijk'). Siglum tightened to YOS 11, 5a (the 'a' portion of YBC 4616). Genre: OB worm/leech-against-infant incantation invoking Gula, NOT toothache incantation."
+    narrative_status: APPLIED
+    detail: "Byte-identical preservation in draft line 78 (VARIANT block) and reaffirmed in draft line 80 (Variants-and-witness footnote)."
+  - id: F-4
+    severity: LOW
+    description: "Aššur-duplicates claim hedged through Foster 2005's apparatus rather than independently corroborated."
+    narrative_status: APPLIED
+    detail: "Hedge language consistently maintained at draft lines 4 (opening footnote), 11 (composite-text footnote), 14 (LACUNA scholarly_reconstruction subfield), 16 (RECONSTRUCTION marker), 24 (Aššur-duplicates body prose), 80 (Variants-and-witness body prose)."
+  - id: F-5
+    severity: LOW
+    description: "Verbatim quotations: Foster's wording used (consistent with locked source-anchor). Speiser's slightly different wording acknowledged in factcheck but not deployed in draft."
+    narrative_status: APPLIED
+    detail: "All three direct quotations preserved byte-identical in Foster's wording — worm's question (draft line 42), worm's defiance (draft line 51), Ea's curse (draft line 60)."
+summary: |
+  Chapter 11 (The Worm and the Toothache) narrative-fidelity audit
+  complete. Verdict: PASS. All 14 numbered claim-paragraphs mapped to
+  specific narrative paragraphs; 4 additional body-frame paragraphs
+  from post-body sections (Variants-and-witness closing prose, place-
+  in-corpus significance, tooth-worm reception, Founding-of-Eridu
+  internal parallel) also mapped for completeness. All 5 structural
+  markers (1 LACUNA, 1 RECONSTRUCTION, 2 INFERENCE, 1 VARIANT)
+  preserved byte-identical with subfields intact. All 5 COMPARATIVE-
+  HOOK comments preserved byte-identical. All five Round-1 factcheck
+  corrections carried through verbatim: F-1 HIGH (Campbell-Fischer
+  2018 + daughters-of-Šimige); F-2 MEDIUM (six-step Foster
+  cosmogonic chain with Speiser five-step variant noted); F-3 MEDIUM
+  (van Dijk-Goetze-Hussey 1985 YOS 11, 5a attribution + OB worm/
+  leech-against-infant genre); F-4 LOW (Aššur-duplicate attestation
+  consistently hedged through Foster's apparatus); F-5 LOW (Foster's
+  verbatim wording for all three direct quotations). CT 17 plate 50 /
+  BM K.2413 from Aššurbanipal's library principal-witness framing,
+  six-step Foster cosmogonic chain, and three verbatim quotations
+  (worm's question, worm's defiance, Ea's curse) all preserved
+  correctly. Zero structural-marker delta (31 EVIDENCE / 18 footnotes
+  / 1 LACUNA / 1 RECONSTRUCTION / 1 VARIANT / 2 INFERENCE / 5
+  COMPARATIVE-HOOK identical in both files). Zero findings at any
+  severity. One opening "establishing shot" first paragraph at draft
+  line 4 compresses the cosmogonic-narrative arc as a synoptic
+  forecast — paraphrastic gathering of body content (chain of
+  begettings → lament → fig and apricot offer → defiance → Ea's
+  curse → ritual prescription → etiology-as-cure framing), not a
+  new factual claim. One minor verbatim-text variation at draft line
+  42 (and-vs-comma appositive reformatting on the Šamaš descriptor)
+  and one minor de-duplication at draft line 34 ("(a category of
+  creature)" gloss dropped) — both semantic equivalents with no
+  factual change. One heading shortening: claims "Setting: an
+  incantation against toothache" → draft "An incantation against
+  toothache" (section content preserved verbatim). Ready for the
+  next stage.

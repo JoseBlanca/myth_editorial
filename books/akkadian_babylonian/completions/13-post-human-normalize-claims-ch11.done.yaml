@@ -1,0 +1,102 @@
+stage: "post-human-normalize"
+chapter: 11
+slug: "worm-and-toothache"
+input: "chapters/11-worm-and-toothache.claims.adoc"
+output: "chapters/11-worm-and-toothache.claims.approved.adoc"
+timestamp: "2026-05-08T18:08:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/11-worm-and-toothache.claims.approved.adoc"
+    lines: 158
+summary: |
+  Post-factcheck normalization of chapter 11 claims after factcheck-round-1 returned REVISE (1 HIGH, 2 MEDIUM, 2 LOW + 3 NOTES). All five findings ACCEPTED and applied. The HIGH finding (Cohen-Wasserman 2018 misattribution) is a substantive bibliographic correction that propagates from the brief into the comparative-hook; the two MEDIUM findings (cosmogonic-chain step count; YOS 11, 5a publication attribution) are factual corrections to the chapter's structural claims; the two LOW findings (Aššur duplicates hedge; verbatim-quote variants) are wording tightenings.
+
+  - F-1 (HIGH, CITATION-WRONG): The Hurrian Mari 5 reanalysis was misattributed to Cohen and Wasserman 2018; the actual authors are Dennis R. M. Campbell and Sebastian Fischer (Campbell and Fischer, "A Hurrian Ritual Against Toothache: A Reanalysis of Mari 5", *Revue d'Assyriologie* 112 [2018], 31–47). The genuine Cohen-Wasserman publication on Old Babylonian worm/leech incantations including YOS 11, 5a is the 2008 *RA* 102 article "On Leeches, Dogs, and Gods in Old Babylonian Medical Incantations" (pp. 71–88). The COMPARATIVE-HOOK at the end of the chapter is corrected to cite Campbell and Fischer 2018 with the actual finding from their reanalysis: the Hurrian Mari 5 ritual invokes the daughters of the sun-god Šimige rather than a worm etiology, so the parallel between the Akkadian *Worm and the Toothache* and the Hurrian Mari 5 is at the level of shared therapeutic concern (toothache treated through divine-invocation incantation), not a shared worm-cosmogony tradition. Cohen-Wasserman 2008 *RA* 102 is added as a separate named-but-flagged citation in the VARIANT marker and in the manuscript-history footnote, since it is the genuine Cohen-Wasserman publication on the OB worm-cosmogony tradition.
+
+  - F-2 (MEDIUM, INTERNAL-VARIANCE): The original claims doc framed the cosmogonic chain as "seven steps" (Anu → heavens → earth → rivers → canals → marshes → mud → worm). This conflated two different translation traditions: Speiser's older ANET 1969 translation gives a five-step chain (Anu → heaven → earth → rivers → marsh → worm); Foster 2005 gives a six-step chain (Anu → heavens → earth → rivers → irrigation ditches → mud → worm — no "marsh" as a separate node). The brief locks Foster 2005 as the source-anchor, so the six-step framing is correct. The chapter is updated throughout to use the six-step framing with explicit acknowledgement of the Speiser five-step variant. Section heading "The seven-step cosmogonic chain" → "The cosmogonic chain". Claim 7's "seven-step cosmogonic sequence" → "six-step cosmogonic sequence" with the Speiser variant noted parenthetically. Claim 8's "seventh and final term" → "sixth and final term in Foster's translation (the fifth and final term in Speiser's earlier rendering)". The INFERENCE marker after claim 7 updated to drop the "seven-step" framing. The "place in the corpus" section's "seven-step" reference also corrected. The Theogony-of-Dunnu COMPARATIVE-HOOK's "seven-step Anu → ... → worm chain" updated to "six-step".
+
+  - F-3 (MEDIUM, CITATION-WRONG): The OB worm-cosmogony variant publication was misattributed to "Hussey-van Dijk". The correct attribution is van Dijk, Goetze, and Hussey 1985 (*Early Mesopotamian Incantations and Rituals*, Yale Oriental Series 11), with van Dijk (Jan) as the lead editor. The YOS 11, 5 siglum is tightened to YOS 11, 5a (the "a" portion of tablet YBC 4616). The genre is clarified: YOS 11, 5a is an Old Babylonian worm/leech-against-infant incantation invoking Gula, not a toothache incantation; the cosmogonic-chain typology is shared with *The Worm and the Toothache*, but the genre is different (anti-pest vs. anti-toothache). The VARIANT marker is rewritten with the correct attribution, the precise siglum, and the genre clarification.
+
+  - F-4 (LOW, UNDERVERIFIED): The Aššur-duplicates claim was hedged. The Nineveh principal witness is well-attested (BM K.2413 from Aššurbanipal's library, with parallel K-collection fragments — added to the source-overview and LACUNA marker). The Aššur-duplicates attestation is sourced through Foster 2005's apparatus rather than independently corroborated; the LACUNA, RECONSTRUCTION, and source-overview claims are updated to reflect this attribution chain.
+
+  - F-5 (LOW, INTERNAL-VARIANCE): The worm's defiance verbatim quote was noted as an attested translation variant (Foster's wording vs. Speiser's slightly different wording in ANET). The chapter retains Foster's wording (consistent with the locked source-anchor); the variance is acknowledged in the meta-comment header rather than in the body of the claims.
+
+  Additional housekeeping: section anchor updated from `[[ch-11-worm-and-toothache-claims]]` to `[[ch-11-worm-and-toothache-claims-approved]]` (matching chapters 7/8/9/10 approved-version convention); chapter title updated to "The Worm and the Toothache — Claims (post-factcheck approved)"; meta-header comment block expanded with the round-1 fix log (F-1 / F-2 / F-3 / F-4 / F-5 dispositions inline). The substantive narrative content is preserved; all 14 claim paragraphs, 2 INFERENCE markers, 1 LACUNA marker, 1 RECONSTRUCTION marker, 1 VARIANT marker, and 5 COMPARATIVE-HOOK comments are preserved with the citation-routing and structural-correction fixes applied.
+
+audit_findings_disposition:
+  high:
+    - id: "F-1"
+      kind: "CITATION-WRONG — Cohen-Wasserman 2018 misattribution to Campbell-Fischer 2018"
+      action: "ACCEPTED"
+      applied: |
+        The Hurrian Mari 5 reanalysis is correctly attributed to Campbell and Fischer 2018 (*RA* 112, pp. 31–47, not 31–50). The COMPARATIVE-HOOK is rewritten to (a) credit Campbell and Fischer correctly and (b) state the actual finding of the reanalysis (the Hurrian Mari 5 ritual invokes the daughters of Šimige rather than a worm etiology). The genuine Cohen-Wasserman publication on the OB worm-cosmogony tradition is the 2008 *RA* 102 article "On Leeches, Dogs, and Gods in Old Babylonian Medical Incantations" — added as a separate named-but-flagged citation in the VARIANT marker and the manuscript-history footnote.
+  medium:
+    - id: "F-2"
+      kind: "INTERNAL-VARIANCE — cosmogonic-chain step count (seven → six)"
+      action: "ACCEPTED"
+      applied: |
+        The cosmogonic chain is six-step in Foster's translation (Anu → heavens → earth → rivers → irrigation ditches → mud → worm), not seven-step. All references to "seven-step" in the chapter body corrected to "six-step", with explicit acknowledgement that Speiser's older ANET translation gives a five-step variant. Section heading, claim 7, claim 8, INFERENCE marker after claim 7, and the Theogony-of-Dunnu COMPARATIVE-HOOK all updated.
+    - id: "F-3"
+      kind: "CITATION-WRONG — YOS 11, 5 publication attribution and siglum"
+      action: "ACCEPTED"
+      applied: |
+        The OB worm-cosmogony publication is attributed to van Dijk, Goetze, and Hussey 1985 (*Early Mesopotamian Incantations and Rituals*, Yale Oriental Series 11), not "Hussey-van Dijk". The siglum is tightened to YOS 11, 5a (the "a" portion of YBC 4616). The genre is clarified: YOS 11, 5a is an Old Babylonian worm/leech-against-infant incantation invoking Gula, not a toothache incantation. The VARIANT marker and the manuscript-history footnote are rewritten accordingly.
+  low:
+    - id: "F-4"
+      kind: "UNDERVERIFIED — Aššur-duplicates claim"
+      action: "ACCEPTED"
+      applied: |
+        The Aššur-duplicates attestation is hedged through Foster 2005's apparatus rather than independently corroborated. The Nineveh principal witness is identified more precisely (BM K.2413 from Aššurbanipal's library, with parallel K-collection fragments). LACUNA marker, RECONSTRUCTION marker, and source-overview claims updated.
+    - id: "F-5"
+      kind: "INTERNAL-VARIANCE — worm's defiance verbatim quote"
+      action: "ACCEPTED (no body change; meta-comment acknowledges variance)"
+      applied: |
+        The worm's defiance quotation is preserved in the body as Foster's wording (consistent with the locked source-anchor). The variance with Speiser's slightly different wording is acknowledged in the meta-comment header rather than in the body of the claims; the substantive content is identical across translations and is within acceptable verbatim-paraphrase tolerance.
+  notes:
+    - id: "N-1"
+      kind: "NOTE — Cohen-Wasserman 2008 RA 102 sources.yaml addition recommendation"
+      action: "FORWARDED to inventory-audit"
+      applied: |
+        The genuine Cohen-Wasserman publication on the OB worm-cosmogony tradition (Cohen and Wasserman 2008, *RA* 102, "On Leeches, Dogs, and Gods in Old Babylonian Medical Incantations", pp. 71–88) is now named in the VARIANT marker and in the manuscript-history footnote as a named-but-flagged citation. Recommended for sources.yaml addition at inventory-audit; would benefit any further chapters touching on Old Babylonian medical-magical incantations.
+    - id: "N-2"
+      kind: "NOTE — Campbell-Fischer 2018 RA 112 sources.yaml addition recommendation"
+      action: "FORWARDED to inventory-audit"
+      applied: |
+        The Hurrian Mari 5 reanalysis (Campbell and Fischer 2018, *RA* 112, pp. 31–47) is now named in the Hurro-Hittite COMPARATIVE-HOOK as a named-but-flagged citation. Recommended for sources.yaml addition at inventory-audit; will be needed for the influences chapter where the Hurro-Hittite parallel is developed.
+    - id: "N-3"
+      kind: "NOTE — Thompson 1903 CT XVII and van Dijk-Goetze-Hussey 1985 YOS 11 sources.yaml addition recommendation"
+      action: "FORWARDED to inventory-audit"
+      applied: |
+        Two additional cuneiform-publication anchors recommended for sources.yaml addition: Thompson 1903 *Cuneiform Texts* Part XVII (the principal CT 17 50 cuneiform publication of *The Worm and the Toothache*); van Dijk, Goetze, and Hussey 1985 *Early Mesopotamian Incantations and Rituals* (Yale Oriental Series 11; the OB worm-cosmogony YOS 11, 5a publication).
+
+structural_validation:
+  one_claim_per_paragraph: "PASS — every paragraph in the body contains a single claim with one footnote citation."
+  every_claim_has_footnote: "PASS — 18 footnotes across 14 numbered claims plus the source-overview cluster."
+  evidence_tokens_valid: "PASS — 31 EVIDENCE tokens, all syntactically valid."
+  source_ids_resolve: "PASS — all 5 distinct source_ids (foster-2005, dalley-2008, black-green-1992, foster-2007, bottero-2001) resolve to entries in sources.yaml. No EVIDENCE token routes through Lambert 2013 (which is mentioned in the source-overview footnote as a possible-but-unverified additional edition source) or the named-but-flagged citations (Thompson 1903; Campbell-Fischer 2018; van Dijk-Goetze-Hussey 1985; Cohen-Wasserman 2008)."
+  markers_complete: "PASS — every marker has its required sub-fields. INFERENCE markers (2), LACUNA marker (1), RECONSTRUCTION marker (1), VARIANT marker (1) — all schema-compliant with substantive sub-field content."
+  glossary_compliance: "PASS — locked Akkadian renderings used correctly throughout (Marduk, Anu, Ea, Šamaš). Šamaš given a substantive first-mention gloss in chapter 11. *tūltu* italicised per Assyriological convention."
+brief_changes:
+  applied: |
+    The brief at briefs/11-worm-and-toothache.yaml carries the F-1 misattribution (Cohen-Wasserman 2018 → Campbell-Fischer 2018) and the F-3 misattribution (Hussey-van Dijk → van Dijk-Goetze-Hussey 1985, with siglum YOS 11, 5a). The post-human-normalize pass made the corresponding corrections to the claims document only; the brief misattributions are flagged for inventory-audit cleanup. The brief's CRITICAL CONTENT MODEL section also references the seven-step framing for some duplicate references; the chapter body uses the corrected six-step framing.
+notes:
+  named_but_flagged_carry_forward:
+    - scholar: "Thompson, R. Campbell"
+      publication: "*Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XVII (London: British Museum, 1903), plate 50 — i.e., CT 17 50."
+      reason: "Principal cuneiform publication of *The Worm and the Toothache*. Recommended for sources.yaml addition."
+    - scholar: "Campbell, Dennis R. M.; Fischer, Sebastian"
+      publication: "'A Hurrian Ritual Against Toothache: A Reanalysis of Mari 5', *Revue d'Assyriologie et d'archéologie orientale* 112(1) (2018), 31–47."
+      reason: "Reanalysis of the Hurrian Mari 5 toothache ritual. Recommended for sources.yaml addition; will be needed for the influences chapter."
+    - scholar: "van Dijk, Jan; Goetze, Albrecht; Hussey, Mary I."
+      publication: "*Early Mesopotamian Incantations and Rituals* (Yale Oriental Series, Babylonian Texts, vol. XI; New Haven: Yale University Press, 1985)."
+      reason: "Publication of YOS 11, 5a, the OB worm-cosmogony incantation. Recommended for sources.yaml addition."
+    - scholar: "Cohen, Yoram; Wasserman, Nathan"
+      publication: "'On Leeches, Dogs, and Gods in Old Babylonian Medical Incantations', *Revue d'Assyriologie et d'archéologie orientale* 102 (2008), 71–88."
+      reason: "The genuine Cohen-Wasserman publication on the OB worm-cosmogony tradition (NOT the 2018 article, which is by Campbell and Fischer). Recommended for sources.yaml addition."
+  caution_on_specific_attestations: |
+    Verbatim quotations are given for the cosmogonic chain (six-step
+    Foster framing) and the worm's defiance speech (Foster's wording).
+    The Speiser ANET five-step variant of the cosmogonic chain is
+    acknowledged but not quoted verbatim. The closing ritual-prescription
+    is treated descriptively rather than verbatim due to manuscript damage.

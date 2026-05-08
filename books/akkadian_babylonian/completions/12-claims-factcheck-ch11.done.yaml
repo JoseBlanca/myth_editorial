@@ -1,0 +1,148 @@
+stage: "claims-factcheck"
+chapter: 11
+slug: "worm-and-toothache"
+input: "chapters/11-worm-and-toothache.claims.adoc (120 lines, 14 numbered claims, 18 footnotes, 31 EVIDENCE tokens, 2 INFERENCE / 1 LACUNA / 1 RECONSTRUCTION / 1 VARIANT / 5 COMPARATIVE-HOOK markers)"
+output: "chapters/11-worm-and-toothache.claims.factcheck.yaml"
+timestamp: "2026-05-08T18:25:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/11-worm-and-toothache.claims.factcheck.yaml"
+    lines: ~830
+verdict: REVISE
+findings:
+  high: 1
+  medium: 2
+  low: 2
+  notes: 3
+findings_summary:
+  - finding_id: F-1
+    severity: HIGH
+    kind: CITATION-WRONG
+    description: "The Cohen-Wasserman 2018 *RA* 112 attribution for 'A Hurrian Ritual Against Toothache: A Reanalysis of Mari 5' (claims doc line 119, brief line 2136) is WRONG. Per direct verification at shs.cairn.info/revue-d-assyriologie-2018-1-page-31, the actual authors are **Dennis R.M. Campbell and Sebastian Fischer**, page range **31–47** (not 31–50). The genuine Cohen-Wasserman publication on OB worm/leech incantations (including YOS 11, 5) is Cohen and Wasserman 2008, *RA* 102, 71–88, 'On Leeches, Dogs, and Gods in Old Babylonian Medical Incantations' — a different article on a different tablet. REQUIRED: re-attribute to Campbell-Fischer 2018 in line 119 and brief line 2136."
+  - finding_id: F-2
+    severity: MEDIUM
+    kind: INTERNAL-VARIANCE
+    description: "The seven-step cosmogonic chain (Anu → heavens → earth → rivers → canals → marshes → mud → worm) at claim 7 (line 49) and claim 8 (line 53) is not directly attested in any accessible English translation. Speiser ANET 1969 (verified verbatim via mesopotamiangods.com) has 5 steps: Anu → heaven → earth → rivers → marsh → worm (NO canals, NO mud). The ETANA / Foster-reproduction snippet has 6 steps: Anum → heavens → earth → rivers → irrigation ditches → mud → maggot (NO marsh). The claims doc's seven-step chain appears to be an editorial conflation of multiple translations, with **canals + marshes + mud as three separate intermediates** unattested in any single source. REQUIRED: commit to Foster's 6-step chain (rivers → ditches → mud → worm) or to Speiser's 5-step chain (rivers → marsh → worm); revise the 'seventh and final term' framing in claim 8 and the INFERENCE marker at line 57 accordingly."
+  - finding_id: F-3
+    severity: MEDIUM
+    kind: CITATION-WRONG
+    description: "The YOS 11 5 OB variant publication attribution 'Hussey-van Dijk' (VARIANT marker line 97; footnote 17 line 99) is non-standard. Standard citation is **van Dijk, Goetze, and Hussey 1985** *Early Mesopotamian Incantations and Rituals* (Yale Oriental Series 11). The siglum is more precisely **YOS 11, 5a** (the 'a' portion of YBC 4616). The OB text is a worm/leech-against-infant incantation invoking Gula, NOT a toothache incantation per se. REQUIRED: correct the publication attribution; specify the siglum as YOS 11, 5a; clarify the genre-difference (OB anti-leech-against-infant vs. first-millennium anti-toothache)."
+  - finding_id: F-4
+    severity: LOW
+    kind: UNDERVERIFIED
+    description: "The Aššur duplicate(s) claim (claims 1, 4, 13; LACUNA marker line 33) is plausible-on-its-face given the wider Mesopotamian medical-magical corpus's standard Nineveh-Aššur dual-witness pattern (BAM series at Aššur, K-collection at Nineveh) but is not directly verified in open sources. The Nineveh K.2413 + parallel K-collection witnesses are well-attested. The Aššur duplicate is sourced through Foster 2005 pp. 995–996 (which I could not directly open). Optional: add a hedge 'duplicates are also known from Aššur (per Foster 2005's apparatus)' or defer to post-human-normalize."
+  - finding_id: F-5
+    severity: LOW
+    kind: INTERNAL-VARIANCE
+    description: "The worm's defiance verbatim quote at claim 11 (line 70) — 'Lift me up, and let me dwell between the teeth and the gums! I will suck the blood of the tooth, and I will gnaw on the bone of the jaw!' — varies from the canonical Speiser ANET 1969 wording 'Lift me up, and assign me to the teeth and the gums! I will suck the blood of the tooth, and I will gnaw its roots!' The variance is at the level of translation choice (Foster vs. Speiser), not factual error. The claims doc's wording is plausibly Foster's; verify at post-human-normalize."
+notes:
+  - note_id: N-1
+    detail: "**Cohen and Wasserman 2008**, 'On Leeches, Dogs, and Gods in Old Babylonian Medical Incantations', *Revue d'Assyriologie* 102 (2008), 71–88, IS by Cohen and Wasserman and IS the standard modern philological reference for OB worm/leech incantations including YOS 11, 5a. This 2008 article is the genuine Cohen-Wasserman publication that has been confused with the 2018 Campbell-Fischer Mari 5 reanalysis. Recommend (optionally) adding Cohen and Wasserman 2008 *RA* 102 as a named-but-flagged comparative reference for the OB variant."
+  - note_id: N-2
+    detail: "Lambert 2013 pp. 399–402 ('Mythological Introductions on Creation' section) was directly verified at the section-heading level via the Lambert 2013 TOC PDF (in the chapter 10 factcheck — the TOC verbatim has 'Mythological Introductions on Creation 399'). Whether *The Worm and the Toothache* specifically is among the compositions Lambert collects in that section remains unverified at the open-source level (the PDF could not be rendered in this factcheck environment). The claims doc's conservative 'may include the composition... but unverified' framing is honest. Recommend direct verification at post-human-normalize."
+  - note_id: N-3
+    detail: "Foster 2005 pp. 995–996 page reference is taken on trust from the brief; could not be directly verified. The substantive content (cosmogonic chain, worm-Šamaš-Ea dialogue, fig-and-apricot offer, worm's defiance, Ea's curse) is corroborated via Speiser ANET 1969 (mesopotamiangods.com) and the ETANA-reproduction snippet. The page number is genre-consistent with Foster's 'Magic and Healing' / incantation section in the high-900s. No contradicting evidence."
+brief_revision_correctness:
+  upstream_correction_1_lambert_pages:
+    item: "Lambert 2013 pp. 396–398 → conditionally pp. 399–402 (chapter 37, 'Mythological Introductions on Creation', unverified)"
+    status: PARTIALLY_VERIFIED
+    verification: "The brief's preemptive correction from the wrong pp. 396–398 (which is 'The River Incantation', Lambert 2013 chapter 36) is correctly handled. The chapter 10 factcheck verified pp. 399–402 as the 'Mythological Introductions on Creation' section heading. Whether *The Worm and the Toothache* is among the compositions in that section is unverified; the claims doc handles this conservatively as 'may include... but unverified', which is honest."
+  upstream_correction_2_foster_anchor:
+    item: "Foster 2005 pp. 995–996 as principal current-reference anchor"
+    status: TAKEN_ON_TRUST
+    verification: "Foster 2005 pp. 995–996 is taken on trust; not directly verifiable in open sources. The substantive content is corroborated via Speiser ANET (mesopotamiangods.com) and the ETANA-reproduction snippet. Page number is genre-consistent."
+  upstream_correction_3_ct_17_50_anchor:
+    item: "CT 17 plate 50 (R. Campbell Thompson 1903) as cuneiform-publication anchor (named-but-flagged)"
+    status: VERIFIED
+    verification: "CDLI search result directly confirms CT 17 = R. Campbell Thompson 1903, *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XVII. Multiple secondary sources confirm Nineveh / Kuyunjik / K.2413+ provenance for the toothache incantation."
+  upstream_correction_4_dalley_negative:
+    item: "Dalley 2008 *Myths from Mesopotamia* negative attestation"
+    status: VERIFIED
+    verification: "Standard Oxford World's Classics ToC (Atra-ḫasīs, Enūma Eliš, Gilgameš, Descent of Ishtar, Nergal and Ereškigal, Adapa, Anzû, Etana, Erra and Išum, Theogony of Dunnu) does not include *The Worm and the Toothache*. Negative attestation correctly stated."
+honesty_self_check_summary:
+  same_model_family: "claude-opus-4-7[1m] (same model as the chapter-claims writer; fresh context per the skill's hard-rule allowance)"
+  fresh_context: true
+  sources_opened_directly:
+    - "mesopotamiangods.com/the-worm-and-the-toothache/ — verbatim Speiser ANET 1969 pp. 100–101 reproduction; cosmogonic chain (5-step: Anu → heaven → earth → rivers → marsh → worm); worm-Šamaš-Ea dialogue; fig-and-apricot offer; worm's defiance ('assign me to the teeth and the gums... gnaw its roots'); Ea's curse ('May Ea strike you with the might of his hand!')."
+    - "seal.huji.ac.il/node/7193 (YOS 11, 5a) — verbatim cosmogonic chain 'Anu begot the sky, the sky bore the earth, the earth bore the stench, the stench bore the mud, the mud bore the fly, the fly bore the worm'; tablet YBC 4616 (Larsa); OB period; Gula's daughter; references van Dijk/Goetze/Hussey 1985, Wasserman 2008, Cunningham 1997."
+    - "seal.huji.ac.il/node/7174 (YOS 11, 5b) — second portion of YBC 4616 invoking Gula and her dogs against fly and scorpion."
+    - "shs.cairn.info/revue-d-assyriologie-2018-1-page-31 — direct verification of Mari 5 reanalysis bibliographic detail: authors Dennis R.M. Campbell and Sebastian Fischer; pages 31–47; *RA* 112(1) (2018). Cites CT 17 50 in footnote 106."
+    - "shs.cairn.info/revue-d-assyriologie-2008-1-page-71 — Cohen-Wasserman 2008 *RA* 102 'On Leeches, Dogs, and Gods' article; the genuine Cohen-Wasserman publication on YOS 11, 5."
+    - "ETANA / Foster-reproduction snippet (via search results) — cosmogonic chain 'After Anum had made the heavens, the heavens had made the earth, the earth had made the rivers, the rivers had made the irrigation ditches, the ditches had made the mud, and the mud had made the maggot' (6-step, NO marsh)."
+    - "Multiple secondary reproductions: tota.world/article/363/ (Lewis Spence 1916); waxtablets.wordpress.com; strangehistory.net; hubpages.com (consistent: 5 or 6 steps, never 7)."
+    - "Pierre Fauchard / dental-history sources (Wikipedia, zadehdentistry.com, fauchard.org, thearchaeologist.org) — corroborates the tooth-worm theory's persistence in European medicine through the early 18th century, refuted by Fauchard's 1728 *Le chirurgien dentiste*."
+    - "CDLI search result for CT 17 — confirms R. Campbell Thompson 1903 publication."
+  sources_taken_on_trust:
+    - "Foster 2005 *Before the Muses* pp. 995–996 — paywalled; could not be directly opened. The substantive content is corroborated via the Speiser ANET version and the ETANA-reproduction snippet."
+    - "Lambert 2013 pp. 399–402 — paywalled; could not be directly opened. The 'Mythological Introductions on Creation' section heading was verified at the section-heading level in the chapter 10 factcheck."
+    - "Black & Green 1992 entries (s.v. cosmogony, demons, Šamaš, Ea) — taken on trust as genre-appropriate."
+    - "Bottéro 2001 framings on Mesopotamian medical-magical practice and etiological narratives — taken on trust as genre-appropriate."
+    - "Foster 2007 framings on the incantation-prologue genre — taken on trust as genre-appropriate."
+    - "The Aššur duplicate(s) of CT 17 50 — plausible-on-its-face but not directly verified in open sources; sourced through Foster 2005."
+summary: |
+  Chapter 11 (The Worm and the Toothache) claims-factcheck —
+  verdict REVISE (1 HIGH, 2 MEDIUM, 2 LOW, 3 NOTES).
+
+  The claims document represents a substantive and largely
+  well-supported reading of the composition. The worm-Šamaš-Ea
+  dialogue, the fig-and-apricot offer, the worm's defiance, Ea's
+  third-person curse, the late-period manuscript dating with
+  possibly earlier composition, the OB variant cosmogonic chain
+  (YOS 11, 5a), and the tooth-worm theory's transmission to
+  European medicine through Pierre Fauchard's 1728 refutation
+  are all directly or cross-translation corroborated. CT 17 50 =
+  R. Campbell Thompson 1903 is verified.
+
+  Three substantive issues require revision:
+
+  HIGH (F-1): The Hurro-Hittite COMPARATIVE-HOOK at line 119
+  (and the brief at line 2136) attribute 'A Hurrian Ritual
+  Against Toothache: A Reanalysis of Mari 5', *RA* 112 (2018),
+  31–50, to **Cohen and Wasserman**. Per direct verification at
+  shs.cairn.info, the actual authors are **Dennis R.M. Campbell
+  and Sebastian Fischer**; page range is **31–47** (not 31–50).
+  The genuine Cohen-Wasserman publication on OB worm/leech
+  incantations is **Cohen and Wasserman 2008**, *RA* 102, 71–88,
+  'On Leeches, Dogs, and Gods in Old Babylonian Medical
+  Incantations' — a different article on a different tablet.
+  The 2018 Mari 5 article must be re-attributed to Campbell
+  and Fischer.
+
+  MEDIUM (F-2): The seven-step cosmogonic chain (Anu → heavens
+  → earth → rivers → canals → marshes → mud → worm) at claim 7
+  is not directly attested in any accessible English
+  translation. The Speiser ANET 1969 version has 5 steps
+  (rivers → marsh → worm); the Foster / ETANA-reproduction
+  version has 6 steps (rivers → ditches → mud → worm, NO
+  marsh). Recommend committing to Foster's 6-step chain (the
+  brief's locked anchor) and revising the parenthetical caveat
+  and the 'seventh and final term' framing in claim 8 and the
+  INFERENCE marker at line 57.
+
+  MEDIUM (F-3): The YOS 11 5 OB variant attribution should be
+  revised: publication is **van Dijk, Goetze, and Hussey 1985**
+  (not 'Hussey-van Dijk'); siglum is **YOS 11, 5a** (the 'a'
+  portion of YBC 4616); genre difference (OB
+  anti-leech-against-infant vs. first-millennium anti-toothache)
+  should be made explicit.
+
+  Plus 2 LOW findings (F-4 Aššur duplicate under-verified;
+  F-5 worm's defiance verbatim wording variant) and 3 NOTES
+  (N-1 Cohen-Wasserman 2008 *RA* 102 as the genuine
+  Cohen-Wasserman reference; N-2 Lambert 2013 pp. 399–402
+  conservative handling; N-3 Foster 2005 pp. 995–996
+  page-reference taken on trust).
+
+  All 5 COMPARATIVE-HOOK markers are appropriately scoped per
+  scope.md (one needs the F-1 fix). 2 INFERENCE markers PASS.
+  1 LACUNA marker PASS-WITH-CAVEAT (per F-4). 1 RECONSTRUCTION
+  marker PASS. 1 VARIANT marker REVISE (per F-3). Contamination
+  scan returns clean. No silent bridges.
+
+  Per the verdict rules (REVISE = 1–2 HIGH or >3 MEDIUM or any
+  silent bridge), with 1 HIGH, 2 MEDIUM, 2 LOW, and 0 silent
+  bridges, the verdict is REVISE. After REVISE corrections
+  (F-1 Cohen-Wasserman → Campbell-Fischer; F-2 chain step-count;
+  F-3 YOS 11 5 attribution and siglum), the chapter is ready
+  to proceed to chapter-draft.

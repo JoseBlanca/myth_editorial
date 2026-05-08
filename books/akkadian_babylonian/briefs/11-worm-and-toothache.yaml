@@ -3,104 +3,167 @@ slug: "worm-and-toothache"
 title: "The Worm and the Toothache"
 chapter_anchor: "ch-11-worm-and-toothache"
 
+# Brief revised 2026-05-08, before stage 10a, on the basis of preemptive
+# Lambert 2013 TOC verification (DeGruyter Brill chapter landings) and
+# the chapter 8 / 10 factcheck-round-1 page-range pattern. The original
+# brief carried one upstream error:
+# (1) Wrong Lambert 2013 page range — locked as pp. 396–398; that range
+#     belongs to "The River Incantation" (Lambert 2013 chapter 36), not
+#     "The Worm and the Toothache". Lambert 2013 may include *The Worm
+#     and the Toothache* in his "Mythological Introductions on Creation"
+#     section (pp. 399–402, Lambert 2013 chapter 37) — this is a chapter
+#     in which Lambert collects multiple short cosmogonic incantation
+#     prologues — but I have NOT directly verified that Lambert 2013
+#     edits *The Worm and the Toothache* under that section. The chapter
+#     therefore handles Lambert 2013 conservatively: as a possible (but
+#     unverified) edition source within pp. 399–402.
+#
+# In place of Lambert 2013 as the locked critical edition, the chapter
+# uses two anchor sources:
+# - Foster 2005 *Before the Muses* (3rd ed.), pp. 995–996 (the
+#   accessible English translation; this page reference is locked from
+#   the original brief and is plausible — Foster 2005's "Magic and
+#   Healing" / incantation section runs in the high-900s page range).
+# - The original cuneiform publication: R. Campbell Thompson,
+#   *Cuneiform Texts from Babylonian Tablets in the British Museum*,
+#   Part XVII (London: British Museum, 1903), plate 50 — i.e., CT 17 50
+#   (named-but-flagged; not currently in sources.yaml).
+#
+# Two manuscripts are referenced in the standard secondary literature:
+# the Nineveh tablet (Aššurbanipal's library, the principal CT 17 50
+# witness) and an Aššur duplicate. The composite text is stable; the
+# incantation has been actively studied since Thompson 1903 and
+# Speiser's translation in ANET (excluded as a current reference per
+# sources.yaml's exclusion of *Speiser ANET*; cited only for translation
+# history).
+
 sources:
   primary:
-    - id: lambert-2013
-      loc: "pp. 396–398 (text, translation, and commentary)"
-      translator_edition: "Lambert 2013 — sole modern critical edition"
-      identifier: "ISBN 9781575062471"
-      url_or_file: ~
     - id: foster-2005
-      loc: "Before the Muses, pp. 995–996"
-      translator_edition: "Foster 2005 — accessible English translation"
+      loc: "Before the Muses (3rd ed., CDL Press 2005), pp. 995–996 (Foster's English translation in the magical / incantation section)"
+      translator_edition: "Foster 2005 — accessible English translation, the principal current-reference anchor for this chapter"
       identifier: "ISBN 9781883053765"
       url_or_file: ~
+    - id: lambert-2013
+      loc: "possibly within 'Mythological Introductions on Creation', pp. 399–402 — Lambert 2013 chapter 37 collects multiple short cosmogonic incantation prologues; whether *The Worm and the Toothache* is among them has not been directly verified at the brief stage"
+      translator_edition: "Lambert 2013 — possible but unverified as the modern critical edition; cited conditionally"
+      identifier: "ISBN 9781575062471"
+      url_or_file: ~
   secondary:
-    - { id: black-green-1992, loc: "s.v. demons, incantations, dental imagery" }
-    - { id: bottero-2001, loc: "passim — incantation traditions and etiology" }
-    - { id: foster-2007, loc: "passim — incantation prologues" }
+    - { id: black-green-1992, loc: "s.v. demons, incantations, dental imagery, Anu, Ea, Šamaš, worm/maggot" }
+    - { id: bottero-2001, loc: "passim — incantation traditions and etiology in Mesopotamian medicine" }
+    - { id: foster-2007, loc: "passim — incantation prologues with cosmogonic openings" }
+    - { id: rla, loc: "s.v. tooth-worm; s.v. incantation" }
 
 lacunae:
-  - source: lambert-2013
-    location: "CT 17 50, minor breaks in some duplicates"
-    what_is_missing: "A few lines of some Nineveh and Aššur duplicates are damaged; the cosmogonic chain is preserved in full across the witnesses."
-    in_tradition_fills_available: "yes — multiple duplicate manuscripts overlap; the composite text is well-established."
+  - source: foster-2005
+    location: "CT 17 plate 50 — the principal cuneiform publication, by R. C. Thompson 1903 — has minor breaks in some duplicates from Nineveh and Aššur"
+    what_is_missing: "A few lines of some Nineveh and Aššur duplicates are damaged; the cosmogonic chain (Anu → heavens → earth → rivers → canals → marshes → worm) is preserved in full across the witnesses. The composite text is stable. Damage is in the closing ritual-prescription portion of the tablet, where the practitioner's instructions for applying the incantation may be partly recoverable only through general comparison with parallel medical-incantation literature."
+    in_tradition_fills_available: "yes — multiple duplicate manuscripts overlap; the composite text is well-established. The Nineveh principal witness (Aššurbanipal's library copy of CT 17 50) and the Aššur duplicate(s) provide mutual reconstruction."
 
 variants:
   classification: single-prevalent
   prevalent_version:
-    source: lambert-2013
-    why_prevalent: "First-millennium Babylonian/Assyrian recension preserved on CT 17 50 with multiple duplicates from Nineveh and Aššur; the composite text is stable."
+    source: foster-2005
+    why_prevalent: "First-millennium Babylonian/Assyrian recension preserved on CT 17 50 with multiple duplicates from Nineveh and Aššur; the composite text is stable, with only minor lexical variants between duplicates."
   alternates:
-    - source: lambert-2013
-      difference: "Minor lexical variants between Nineveh and Aššur duplicates in the worm's request to Anu."
+    - source: foster-2005
+      difference: "Minor lexical variants between Nineveh and Aššur duplicates in the worm's request to Šamaš and Ea; the cosmogonic chain itself is invariant. (NOTE: an Old Babylonian variant cosmogony with a different worm-creation chain — 'Anu begot heaven, heaven brought forth earth, Earth bore stench, stench bore mud, Mud bore fly, fly bore worm' — is preserved on YOS 11, 5 per Hussey-van Dijk; the relationship between this OB variant and the first-millennium *Worm and the Toothache* is interesting but the chapter focuses on the first-millennium recension.)"
 
 entities_glossary:
   - name: "Anu"
     role: deity
-    first_mention_gloss_candidate: "sky-god; first creator in the cosmogonic chain"
+    first_mention_gloss_candidate: "sky-god; first creator in the cosmogonic chain (already glossed in chapter 0 / 1; reminder gloss only)"
   - name: "Ea"
     role: deity
-    first_mention_gloss_candidate: "wise god of fresh waters; addressed by the worm"
+    first_mention_gloss_candidate: "wise god of fresh waters; the worm petitions him (already glossed in chapter 0 / 1; reminder gloss only)"
   - name: "Šamaš"
     role: deity
-    first_mention_gloss_candidate: "sun-god, sometimes invoked in the incantation closing"
-  - name: "tūltu (the Worm)"
-    role: deity
-    first_mention_gloss_candidate: "personified worm/maggot; protagonist of the etiology"
+    first_mention_gloss_candidate: "sun-god, judge of gods and men; in this incantation the first divine figure the worm approaches with its plea (mentioned in chapter 0 in passing as 'the sun-god Šamaš'; full first-mention gloss given in chapter 11)"
+  - name: "tūltu (the worm)"
+    role: deity / personified pest
+    first_mention_gloss_candidate: "Akkadian *tūltu*, 'worm' or 'maggot', the personified protagonist of the etiology; named after a generic noun rather than as an individual deity"
   - name: "the cosmogonic chain"
     role: ritual-term
-    first_mention_gloss_candidate: "the chain Anu→heavens→earth→rivers→canals→marshes→worm; structures the etiology"
+    first_mention_gloss_candidate: "the seven-step creation sequence Anu → heavens → earth → rivers → canals → marshes → worm; structures the etiology and grounds the magical-aetiological force of the incantation"
 
 cultural_relevance:
   centrality: significant
   centrality_evidence:
     - kind: attestation-volume
-      detail: "CT 17 50 with multiple Nineveh and Aššur duplicates; the most-anthologized brief Akkadian cosmogony."
-      source: "lambert-2013, pp. 396–397"
-    - kind: ritual-context
-      detail: "Incantation against toothache, actively used in the medical-magical practice; the cosmogony grounds the spell."
+      detail: "CT 17 50 (R. C. Thompson 1903) with multiple Nineveh and Aššur duplicates — the most frequently anthologised brief Akkadian cosmogony. Active translation history in scholarly anthologies from Speiser's ANET to Foster 2005's *Before the Muses*."
       source: "foster-2005, pp. 995–996"
+    - kind: ritual-context
+      detail: "Incantation against toothache, actively used in the medical-magical practice of Akkadian dentistry. The cosmogony grounds the spell — knowing the etiology of dental caries is the practitioner's tool against it."
+      source: "foster-2005, pp. 995–996; bottero-2001 on Mesopotamian medical-magical practice"
     - kind: scholarly-attention
-      detail: "Frequently quoted as the illustrative example of brief Akkadian cosmogony in scholarly introductions and anthologies."
-      source: "lambert-2013, p. 396"
+      detail: "Frequently cited as the illustrative example of brief Akkadian cosmogony. Often quoted in introductions to Akkadian literature, Mesopotamian religion, and the history of medicine. The 'tooth-worm' theory persisted in European medical thinking through the 18th century, traceable in part through this Akkadian text."
+      source: "bottero-2001 passim"
   function:
     - role: ritual-aetiological
-      basis: "Etiology of dental caries embedded in an incantation against toothache; the cosmogony is functional, supporting the cure."
+      basis: "Etiology of dental caries embedded in an incantation against toothache; the cosmogony is functional, supporting the cure. Knowing the worm's origin is the practitioner's claim of authority to address it."
       source: "foster-2005, pp. 995–996"
     - role: cosmological
-      basis: "A complete (if compressed) cosmogony in narrative form: Anu creates heavens, heavens create earth, earth rivers, etc., culminating in the worm's choice of human teeth."
-      source: "lambert-2013, pp. 396–398"
+      basis: "A complete (if compressed) cosmogony in narrative form: Anu creates heavens, heavens create earth, earth rivers, rivers canals, canals marshes, marshes the worm. The seven-step chain is fully indexed."
+      source: "foster-2005, pp. 995–996"
     - role: didactic
-      basis: "Teaches the etiology of suffering through an etiological narrative; explains why teeth decay."
-      source: "lambert-2013 (commentary)"
+      basis: "Teaches the etiology of suffering through an etiological narrative; explains why teeth decay in a way intelligible to the patient and ritually-actionable for the practitioner."
+      source: "foster-2005, pp. 995–996"
   cross_cultural_parallels:
-    - other_culture: "Hebrew Bible"
-      parallel: "Genesis 1's hierarchical creation chain (heavens → earth → seas → vegetation → creatures) is structurally similar; the worm's etiology is a vernacular instance of cosmogonic ordering."
-      source: "kvanvig-2011"
-    - other_culture: "Worldwide (etiological narrative)"
-      parallel: "Brief etiological narratives explaining diseases or pests via ad-hoc cosmogonies appear in many cultures' magical-medical traditions."
-      source: "lambert-2013 (commentary)"
     - other_culture: "Akkadian (internal)"
-      parallel: "The Founding of Eridu shares the incantation-prologue cosmogony pattern; together they exemplify how Akkadian incantations frame magical acts in cosmogonic narrative."
-      source: "lambert-2013"
+      parallel: "*The Founding of Eridu* (Chapter 10) shares the incantation-prologue cosmogony pattern; together they exemplify how Akkadian incantations frame magical acts in cosmogonic narrative. *The Founding of Eridu* is the larger and more developed instance; *The Worm and the Toothache* is the most-anthologised brief instance."
+      source: "foster-2005, p. 487 (Founding of Eridu / Marduk Creator of the World) and pp. 995–996 (Worm and the Toothache)"
+    - other_culture: "Hebrew Bible (Genesis 1)"
+      parallel: "Genesis 1's hierarchical creation chain (heavens → earth → seas → vegetation → creatures) is structurally similar to the *Worm and the Toothache* cosmogonic chain; both deploy a stepwise creation sequence. The Akkadian text's distinctive feature is the application to a magical-medical etiology."
+      source: "kvanvig-2011 (Genesis 1 cosmogonic chain)"
+    - other_culture: "Worldwide (folk magic)"
+      parallel: "Brief etiological narratives explaining diseases or pests via ad-hoc cosmogonies appear in many cultures' magical-medical traditions; the etiology-as-cure pattern (knowing the origin of an affliction grants power to address it) is widespread in folk-magical practice."
+      source: "bottero-2001 passim"
+    - other_culture: "Hurro-Hittite"
+      parallel: "Hurrian rituals against toothache are also attested (e.g., Mari 5, the Hurrian toothache ritual studied in the recent reanalysis by Cohen and Wasserman 2018) — the comparative material confirms that the tooth-worm motif circulated in the broader cuneiform cultural sphere. The chapter's primary subject is the Akkadian text; the Hurrian comparandum is mentioned in the comparative-hooks for the influences chapter only."
+      source: "hoffner-1998 (general Hittite mythology); the Hurrian toothache ritual at Mari 5 is treated in Cohen and Wasserman, 'A Hurrian Ritual Against Toothache: A Reanalysis of Mari 5', *Revue d'Assyriologie* 112 (2018), 31–50 (named-but-flagged; not in sources.yaml)"
 
 comparative_hooks:
-  - other_culture: "Hebrew Bible"
-    parallel: "Hierarchical creation-chain pattern (heavens → earth → fauna) shared with Genesis 1; the structure is widespread but the toothache application is distinctive."
-    source: "kvanvig-2011"
   - other_culture: "Akkadian (internal)"
-    parallel: "Founding of Eridu and Worm and the Toothache as twinned incantation-prologue cosmogonies — one for ritual founding, one for medical-magical cure."
-    source: "lambert-2013"
+    parallel: "*The Founding of Eridu* (Chapter 10) is the principal comparandum among incantation-prologue cosmogonies. Both compositions deploy a brief creation narrative as the magical-aetiological ground for a ritual that follows on the same tablet. *The Founding of Eridu* is the larger composition (the bilingual text on BM 93014, with cosmogony grounding a temple incantation); *The Worm and the Toothache* is the most-anthologised brief instance (CT 17 50, with cosmogony grounding a medical-magical incantation)."
+    source: "foster-2005"
+  - other_culture: "Hebrew Bible (Genesis 1)"
+    parallel: "Hierarchical creation-chain pattern (heavens → earth → fauna) shared with Genesis 1; the structure is widespread but the toothache application is distinctive to *Worm and the Toothache*. Reserved for the influences chapter."
+    source: "kvanvig-2011"
+  - other_culture: "Hurro-Hittite (Mari 5)"
+    parallel: "The Hurrian toothache ritual at Mari 5 (Cohen and Wasserman, *RA* 112, 2018) attests that the tooth-worm motif circulated in the broader cuneiform cultural sphere across language boundaries. Reserved for the influences chapter."
+    source: "hoffner-1998 (general); Cohen-Wasserman 2018 (named-but-flagged)"
   - other_culture: "Worldwide (folk magic)"
-    parallel: "The etiology-as-cure pattern (knowing the origin of an affliction grants power to address it) is widespread in folk-magical traditions."
-    source: "lambert-2013"
+    parallel: "The etiology-as-cure pattern (knowing the origin of an affliction grants power to address it) is widespread in folk-magical traditions. The tooth-worm theory specifically persisted in European medical thinking through the 18th century, partly traceable to this Akkadian text. Reserved for the influences chapter."
+    source: "bottero-2001"
 
 triangulation_databases:
   - ORACC
   - CDLI
 
-target_length_words: 1500
+# target_length_words: deprecated; the verified claims document is the chapter's
+# length budget. The composition is short — about a dozen lines — but
+# substantively rich because it is the illustrative type for the incantation-
+# prologue cosmogony genre.
 
 special_instructions: |
-  Short composition (800–2000 words) — but more substantive than its length suggests, because the text is the illustrative type for the incantation-prologue cosmogony genre. Foreground the form: the cosmogony is functional, framing a magical cure. The cosmogonic chain (Anu → heavens → earth → rivers → canals → marshes → worm) is the signature feature; preserve its hierarchy. Pair analytically with Founding of Eridu (chapter 10). The text is often cited as "the shortest Akkadian cosmogony" — but the chapter should resist treating it as a curiosity; it is a window into how cosmogony is deployed in everyday Mesopotamian life.
+  Short Akkadian incantation against toothache, with a cosmogonic prologue. The principal cuneiform publication is CT 17, plate 50 (R. Campbell Thompson, *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XVII, London: British Museum, 1903). Modern accessible English translation: Foster 2005 *Before the Muses* (3rd ed., CDL Press), pp. 995–996. Speiser's older ANET translation is excluded per sources.yaml (cited only for translation history). Lambert 2013 may include the text in his "Mythological Introductions on Creation" section (pp. 399–402, chapter 37) but this has not been directly verified — the chapter handles Lambert 2013 conservatively as a possible but unverified additional edition source. Dalley 2008 *Myths from Mesopotamia* does NOT contain this composition.
+
+  CRITICAL CONTENT MODEL: The composition is a short incantation against toothache, with a cosmogonic prologue that grounds the magical efficacy of the cure. The text consists of:
+
+  1. The seven-step cosmogonic chain: Anu created heaven; heaven created earth; earth created rivers; rivers created canals (irrigation ditches); canals created marsh / mud; marsh / mud created the worm. The chain is hierarchical and sequential — each step generates the next.
+  2. The worm's lament before Šamaš (sun-god) and Ea (god of fresh waters): the worm weeps and asks what it shall be given to eat.
+  3. The gods' offer: "I will give you the ripe fig and the apricot."
+  4. The worm's defiance and demand: "What good is the ripe fig and the apricot? Lift me up, and let me dwell between the teeth and the gums! I will suck the blood of the tooth, and I will gnaw on the bone of the jaw!"
+  5. Ea's curse: "Because you have said this, O worm, may Ea strike you with the might of his hand!"
+  6. Ritual prescription: instructions for the practitioner to apply the incantation (specific ritual-medical actions; partly recoverable from the closing portion of the tablet).
+
+  The composition's signature feature is the cosmogonic chain — preserve its hierarchy explicitly. Pair analytically with *The Founding of Eridu* (Chapter 10) as the two principal incantation-prologue cosmogonies in the Akkadian dossier.
+
+  The Akkadian word for the worm is *tūltu* (also spelled *tu-ul-tu*, *tultu*); the text personifies the worm as a speaking agent without making it a deity. Mark the *tūltu* / "the worm" first-mention gloss.
+
+  Verbatim quotations should be limited to the cosmogonic chain itself (well-attested across translations) and the worm's defiance speech (also well-attested). The closing ritual-prescription is partly damaged in some witnesses; treat it descriptively rather than verbatim.
+
+  Note: an Old Babylonian variant cosmogonic-chain incantation involving worms is preserved on YOS 11, 5 (Hussey-van Dijk publication; "Anu begot heaven, heaven brought forth earth, Earth bore stench, stench bore mud, Mud bore fly, fly bore worm"). This OB variant has a different chain (with stench and fly intermediate); the relationship between it and the first-millennium CT 17 50 *Worm and the Toothache* is interesting comparative material but the chapter focuses on the first-millennium recension. Mark the OB variant in a [VARIANT:] sub-clause.
+
+  R. Campbell Thompson 1903 (CT 17 50) is the cuneiform-publication anchor; not currently in sources.yaml. Recommended for sources.yaml addition at inventory-audit. Cohen and Wasserman 2018 (the *RA* 112 reanalysis of the Hurrian Mari 5 toothache ritual) is named in a comparative-hook only; named-but-flagged.
