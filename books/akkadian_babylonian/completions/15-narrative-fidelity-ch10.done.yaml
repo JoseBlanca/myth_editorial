@@ -1,0 +1,90 @@
+stage: 15-narrative-fidelity
+chapter: 10
+slug: founding-of-eridu
+title: "The Founding of Eridu"
+input:
+  claims_file: "books/akkadian_babylonian/chapters/10-founding-of-eridu.claims.approved.adoc"
+  claims_lines: 165
+  narrative_file: "books/akkadian_babylonian/chapters/10-founding-of-eridu.adoc"
+  narrative_lines: 128
+  prompt_file: "books/akkadian_babylonian/prompts/12-narrative-fidelity-ch10.prompt.md"
+  prompt_lines: 2078
+  reference_format_model: "books/akkadian_babylonian/chapters/09-damkina-bond.fidelity.yaml"
+output:
+  fidelity_report: "books/akkadian_babylonian/chapters/10-founding-of-eridu.fidelity.yaml"
+  fidelity_report_lines: 556
+timestamp: "2026-05-08T17:51:23Z"
+status: PASS
+agent_model: "claude-opus-4-7[1m]"
+verdict: PASS
+findings_counts:
+  high: 0
+  medium: 0
+  low: 0
+  total: 0
+claim_coverage:
+  total_claims: 14
+  mapped: 14
+  unmapped: 0
+  additional_body_frame_paragraphs_mapped: 6
+structural_marker_counts:
+  claims:
+    evidence_tokens: 49
+    footnotes: 20
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 4
+  draft:
+    evidence_tokens: 49
+    footnotes: 20
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 4
+  delta: "zero — all marker counts identical across claims and draft"
+content_consistency:
+  bm_93014_single_manuscript_framing: CONSISTENT
+  foster_2005_marduk_creator_of_the_world_attribution: CONSISTENT
+  negative_cosmogonic_opening_verbatim_quote: PRESERVED_VERBATIM
+  gods_dwelling_motive_verbatim_quote: PRESERVED_VERBATIM
+  seven_step_narrative_shape: PRESERVED
+  marduk_absorbs_ea_prerogative_inference: PRESERVED_INSIDE_INFERENCE
+  marduk_aruru_vs_enuma_elis_anthropogony_inference: PRESERVED_INSIDE_INFERENCE
+  epistemic_posture: PRESERVED
+round_1_factcheck_corrections_applied:
+  - id: F-1
+    severity: LOW
+    description: "King 1901 / 1902 publication-history wording tightening (cuneiform-only edition in CT XIII 1901 vs. translation/transliteration/commentary in Seven Tablets of Creation II 1902)."
+    narrative_status: APPLIED
+    detail: "Byte-identical preservation in draft line 4 footnote (matching claims line 41)."
+summary: |
+  Chapter 10 (The Founding of Eridu) narrative-fidelity audit complete.
+  Verdict: PASS. All 14 numbered claim-paragraphs mapped to specific
+  narrative paragraphs; 6 additional body-frame paragraphs from the
+  post-body sections (ritual-incantation-follows, place-in-dossier,
+  variants-and-witness, place-in-corpus) also mapped for completeness.
+  All 6 structural markers (1 LACUNA, 1 RECONSTRUCTION, 3 INFERENCE,
+  1 VARIANT) preserved byte-identical with subfields intact. All 4
+  COMPARATIVE-HOOK comments preserved byte-identical. Round-1 LOW-
+  finding F-1 (King 1901 / 1902 publication-history wording) carried
+  through to draft footnote verbatim. Single BM 93014 manuscript
+  framing, Foster 2005 p. 487 "Marduk, Creator of the World"
+  attribution, negative-cosmogonic opening verbatim quote ("the holy
+  house, the house of the gods in the holy place had not yet been
+  made"), gods'-dwelling motive verbatim quote ("settle the gods in
+  the dwelling of (their) heart's delight"), and seven-step narrative
+  shape all preserved correctly. Zero structural-marker delta (49
+  EVIDENCE / 20 footnotes / 1 LACUNA / 1 RECONSTRUCTION / 1 VARIANT /
+  3 INFERENCE / 4 COMPARATIVE-HOOK identical in both files). Zero
+  findings at any severity. Chapter-10 audit shows tighter fidelity
+  than chapter-9 audit (no consolidation-driven footnote / EVIDENCE
+  delta; no minor philological refinement to log). One opening
+  "establishing shot" sentence at draft line 4 compresses the seven-
+  step shape as a reading-orientation forecast — paraphrastic
+  gathering of body content, not a new factual claim. One minor
+  reformulation at draft line 120 (italic-vs-quotes shift on Foster's
+  editorial title; "in *Before the Muses*" locator dropped from body
+  but preserved in line-120 footnote). Ready for the next stage.

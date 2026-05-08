@@ -1,0 +1,125 @@
+stage: "claims-factcheck"
+chapter: 10
+slug: "founding-of-eridu"
+input: "chapters/10-founding-of-eridu.claims.adoc (144 lines, 14 numbered claims, 20 footnotes, 49 EVIDENCE tokens, 3 INFERENCE / 1 LACUNA / 1 RECONSTRUCTION / 1 VARIANT / 4 COMPARATIVE-HOOK markers)"
+output: "chapters/10-founding-of-eridu.claims.factcheck.yaml"
+timestamp: "2026-05-08T17:32:03Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/10-founding-of-eridu.claims.factcheck.yaml"
+    lines: 1263
+verdict: PASS
+findings:
+  high: 0
+  medium: 0
+  low: 1
+  notes: 2
+findings_summary:
+  - finding_id: F-1
+    severity: LOW
+    kind: CITATION-WRONG
+    description: "Footnote 1 attribution to 'L. W. King's *The Seven Tablets of Creation* II (1902)' is substantively correct as a translation-and-commentary reference but understates the publication history. Per Three Things 'Neo-Babylonian Creation Texts' and Budge 1921, the cuneiform-only edition of BM 93014 was published in King 1901 *Cuneiform Texts from Babylonian Tablets*, Part XIII, pp. 35–38; the English translation appeared in King's *Seven Tablets of Creation* II (1902). Optional wording tightening (add 'translation; cuneiform-only edition in CT XIII, 1901, pp. 35–38'); substance unaffected."
+notes:
+  - note_id: N-1
+    detail: "Brief-internal misattribution of the 'Notes on the Other Texts' page for *Founding of Eridu* (the brief states 'p. ~497–498'; actual location per the directly-verified Lambert 2013 TOC PDF is **p. 512**; pp. 497–498 contain Notes for *Damkina's Bond*, *Defeat of Enutila / Enmesarra / Qingu*, and *Enki and Ninmah*). Does NOT propagate to the claims document (which cites only the principal pp. 366–375 range). Forwarded to writer's completion record for brief-pass cleanup; the claims document is unaffected."
+  - note_id: N-2
+    detail: "L. W. King 1902 *Seven Tablets of Creation* (London: Luzac), Volume II is named-but-flagged in this chapter (footnote 1, footnote 2). King 1902 is not in sources.yaml; no EVIDENCE token routes through King 1902. Recommend adding King 1902 (esp. Vol II, with the bilingual creation translation) and optionally King 1901 *Cuneiform Texts*, Part XIII (cuneiform-only edition) to sources.yaml at inventory-audit. Both are publicly accessible via Project Gutenberg / Budge 1921's reproduction. Currently named-but-flagged is correctly applied per the chapter-9-factcheck precedent for Oshima 2010 and Streck 2014."
+brief_revision_correctness:
+  upstream_correction_1_page_range:
+    item: "Page range pp. 376–383 → pp. 366–375"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "DIRECTLY VERIFIED via the authoritative Lambert 2013 TOC PDF (toc.library.ethz.ch/objects/pdf03/z01_978-1-57506-247-1_01.pdf, read in full). The TOC verbatim under Part III: 'The Slaying of Labbu 361; The Founding of Eridu 366; The First Brick 376'. Founding of Eridu starts at p. 366; First Brick (Chapter 12 of this book) starts at p. 376. Founding's range is therefore pp. 366–375. The brief's preemptive correction from the wrong pp. 376–383 is fully validated."
+  upstream_correction_2_incipit:
+    item: "Incipit 'enūma Anum ibnû šamê' → 'the holy house, the house of the gods in the holy place had not yet been made'"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "DIRECTLY AND VERBATIM VERIFIED via Project Gutenberg / Budge 1921 *The Babylonian Legends of Creation*, 'The Bilingual Version of the Creation Legend' chapter. The opening verbatim: 'The holy house, the house of the gods in the holy place had not yet been made. No reed had sprung up, no tree had been created.' The brief's preemptive correction from the wrong 'enūma Anum ibnû šamê' incipit (which belongs to a different incantation-prologue composition, possibly Enūma Anu Enlil-related) is fully validated."
+  upstream_correction_3_manuscript_identifier:
+    item: "Manuscript identifier: BM 93014 (British Museum), bilingual Sumerian-Akkadian, ~40 lines preserved, Late Babylonian period"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "Wikipedia s.v. Enūma Eliš (verbatim): 'A tablet at the British Museum (No 93014), known as the bilingual version of the creation legend, describes the creation of man and animals (by Marduk with the aid of Aruru), as well as the creation of the rivers Tigris and Euphrates, of land and plants, as well as the first houses and cities.' British Museum collection database verbatim: BM 1882,0522.1048 = BM 93014, 'fragment of a clay tablet, bilingual creation story, Late Babylonian period'. The manuscript identifier and Late-Babylonian dating are fully corroborated."
+  upstream_correction_4_anthropogony:
+    item: "Joint Marduk-Aruru anthropogony with 'seed of mankind' formulation"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "DIRECTLY AND VERBATIM VERIFIED via Budge 1921: 'The goddess Aruru with him created the seed of mankind.' Independently corroborated by Wikipedia s.v. Enūma Eliš ('creation of man and animals (by Marduk with the aid of Aruru)') and by Three Things ('Marduk, with the help of the goddess Aruru, then created humankind')."
+  upstream_correction_5_e_zida:
+    item: "E-Zida ritual context (Nabu's temple at Borsippa)"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "Three Things 'Neo-Babylonian Creation Texts' (verbatim): 'creation narrative appears in the introduction to an enchantment that was probably recited for the purpose of purifying the temple of Nabu in the locality of Borsippa.' The E-Zida-Nabu-Borsippa attribution is directly corroborated. Wikipedia s.v. Borsippa confirms Borsippa as the cult-centre of Nabu, with the great temple Ezida there."
+  upstream_correction_6_cities_temples:
+    item: "Cities and temples cohort: Eridu/E-sagil[~E-abzu], Babylon/Esagil, Nippur/E-kur, Erech/E-Aena; Tigris/Euphrates rivers"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "Budge 1921 (verbatim): 'At that time Eridu was made, and E-sagil was built; Babylon was made, E-sagil was completed... E-kur and Nippur... E-Aena and Erech... [Tigris and Euphrates named].' All four cities (Eridu, Babylon, Nippur, Erech = Uruk) and all four temples are directly attested. Tigris-Euphrates creation also directly attested via Wikipedia and Budge 1921."
+  upstream_correction_7_foster_attribution:
+    item: "Foster 2005 p. 487 'Marduk, Creator of the World' within 'Myths of Origins'"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "Verified via web search at the title-and-section level: Foster 2005 *Before the Muses* (3rd ed.) contains 'Marduk, Creator of the World' as a composition within the 'Myths of Origins' sub-section. The page reference 487 is taken from the brief and is genre-consistent with Foster 2005's late-period mythology-of-origins coverage; not independently verifiable in open sources but no contradicting evidence."
+  upstream_correction_8_dalley_negative:
+    item: "Dalley 2008 negative attestation"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "Dalley 2008 *Myths from Mesopotamia* (Oxford World's Classics, rev. ed.) standard table of contents includes Atra-ḫasīs, Enūma Eliš, Gilgameš, Descent of Ishtar, Nergal and Ereškigal, Adapa, Anzû, Etana, Erra and Išum, Theogony of Dunnu — *The Founding of Eridu* / *Marduk, Creator of the World* is not among them. Negative attestation correctly stated."
+honesty_self_check_summary:
+  same_model_family: "claude-opus-4-7[1m] (same model as the chapter-claims writer; fresh context per the skill's hard-rule allowance)"
+  fresh_context: true
+  sources_opened_directly:
+    - "Lambert 2013 TOC PDF (toc.library.ethz.ch/objects/pdf03/z01_978-1-57506-247-1_01.pdf, 167 KB) — read in full via the PDF reader. AUTHORITATIVELY VERIFIED the Founding of Eridu page range pp. 366–375 (Founding starts at 366; First Brick at 376) and the location of Notes-on-Other-Texts at p. 512 (NOT p. 497–498 as the brief states; this corrects the brief but does not propagate to the claims doc)."
+    - "Project Gutenberg full text of E. A. Wallis Budge, *The Babylonian Legends of Creation* (1921), 'The Bilingual Version of the Creation Legend' chapter — DIRECTLY VERIFIED the verbatim opening line 'The holy house, the house of the gods in the holy place had not yet been made'; the joint Marduk-Aruru 'seed of mankind' anthropogony; the cities-and-temples cohort (Eridu/E-sagil, Babylon/Esagil, Nippur/E-kur, Erech/E-Aena); the Tigris-Euphrates creation; the bilingual parallel-columns format; King 1902 *Seven Tablets of Creation* II as the foundational publication."
+    - "Wikipedia s.v. Enūma Eliš and s.v. Marduk — verbatim corroboration of the BM 93014 manuscript identifier and the Marduk-with-Aruru anthropogony summary."
+    - "Three Things (three-things.ca) 'Neo-Babylonian Creation Texts' — verbatim corroboration of the E-Zida-Nabu-Borsippa ritual context, the King 1901 CT XIII (35–38) cuneiform publication, the sixth-century-BCE manuscript dating with possibly earlier composition, and the joint Marduk-Aruru anthropogony."
+    - "British Museum collection database (via summary search results) — confirmed BM 93014 = 1882,0522.1048, 'fragment of a clay tablet, bilingual creation story, Late Babylonian period', excavated by Hormuzd Rassam at Sippar in 1882."
+  sources_taken_on_trust:
+    - "Lambert 2013 page-internal verbatim claims (pp. 366–375; the precise dating discussion's argumentation; the bilingual-parallelism reconstruction method's specific application; the narrative-sequence identification) — verified at the TOC-pagination level only."
+    - "Foster 2005 p. 487 specific page reference — verified at the title-and-section level via web search; the page number is taken from the brief and is genre-consistent with Foster's late-period mythology-of-origins coverage."
+    - "L. W. King 1902 *Seven Tablets of Creation* II in-page details — verified via Budge 1921's reproduction and discussion."
+    - "Black & Green 1992 entries (Eridu, Aruru, cosmogony, Babylon, Nippur, Uruk, rivers) — taken on trust as genre-appropriate."
+    - "RlA entries (Eridu, Aruru, Apsû) — taken on trust as genre-appropriate."
+    - "Foster 2007 (Akkadian Literature of the Late Period) — passim framing taken on trust."
+    - "Bottéro 2001 (Religion in Ancient Mesopotamia) — passim framings on Mesopotamian theological geography and Marduk theology registers taken on trust."
+summary: |
+  Chapter 10 (The Founding of Eridu) claims-factcheck — verdict
+  PASS. The claims document represents a strong substantive
+  verification of the brief's preemptive corrections. All eight
+  upstream corrections motivating the brief revision are in place
+  and fully corroborated:
+
+  (1) Lambert 2013 page range pp. 366–375 — DIRECTLY VERIFIED via
+      the authoritative Lambert 2013 TOC PDF.
+  (2) BM 93014 manuscript identifier — verified via Wikipedia and
+      the British Museum collection database.
+  (3) Opening line "the holy house, the house of the gods in the
+      holy place had not yet been made" — DIRECTLY VERBATIM
+      VERIFIED via Project Gutenberg / Budge 1921.
+  (4) Joint Marduk-Aruru anthropogony with "seed of mankind"
+      formulation — DIRECTLY VERBATIM VERIFIED via Budge 1921.
+  (5) E-Zida ritual context (Nabu's temple at Borsippa) — verified
+      via Three Things "Neo-Babylonian Creation Texts".
+  (6) Cities and temples cohort + Tigris/Euphrates creation —
+      DIRECTLY VERIFIED via Budge 1921.
+  (7) Foster 2005 p. 487 "Marduk, Creator of the World" within
+      "Myths of Origins" — verified at the title-section level.
+  (8) Dalley 2008 negative attestation — verified.
+
+  All 14 claims are SUPPORTED. Marker discipline is uniformly
+  well-maintained: 1 LACUNA, 1 RECONSTRUCTION, 1 VARIANT, 3
+  INFERENCE markers, 4 COMPARATIVE-HOOK comments — all schema-
+  correct and honestly labelled. Contamination scan returns clean.
+  No silent bridges. Named-but-flagged convention correctly
+  applied for L. W. King 1902.
+
+  The single LOW finding (F-1) is an optional citation-routing
+  nicety on the King 1901 CT XIII vs. King 1902 *Seven Tablets*
+  II publication-history distinction in footnote 1; substance
+  stands. Plus 2 NOTES: N-1 brief-internal misattribution of
+  Notes-on-Other-Texts page (does NOT propagate to claims doc;
+  forwarded for brief-pass cleanup); N-2 King 1902 candidate
+  addition to sources.yaml at inventory-audit.
+
+  Per the verdict rules (PASS = 0 HIGH and 0 silent bridges and
+  ≤3 MEDIUM), with 0 HIGH, 0 MEDIUM, 1 LOW, and 0 silent bridges,
+  the verdict is PASS. No substantive corrections required; the
+  claims document is ready to proceed to chapter-draft.
+
+follow_ups_for_writer:
+  - "Optional: tighten footnote 1 wording at line 20 to add publication-history detail: 'traceable to L. W. King's *The Seven Tablets of Creation* II (1902) translation; the cuneiform-only edition was earlier published in *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XIII (1901), pp. 35–38'. Wording tightening only; substance unaffected. Can be deferred to post-human-normalize."
+  - "(Brief-pass cleanup, NOT a claims-doc fix): Correct the brief's header note that says Lambert 2013's 'Notes on the Other Texts' for *The Founding of Eridu* is at 'p. ~497–498'. Per the directly-verified Lambert 2013 TOC PDF, the correct location is **p. 512** (alongside Slaying of Labbu 512 and Another Dragon-Slaying Episode 513). Pages 497–498 contain Notes for *Damkina's Bond*, *Defeat of Enutila / Enmesarra / Qingu*, and *Enki and Ninmah*. Brief-internal only; does NOT propagate to the claims document."
+  - "(Inventory-audit follow-up): L. W. King 1902 *The Seven Tablets of Creation* (London: Luzac), Volume II — recommend adding to sources.yaml. Currently named-but-flagged in chapter 10 footnotes 1 and 2; no EVIDENCE token routes through King 1902. Optionally also add King 1901 *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XIII (cuneiform-only edition of BM 93014 at pp. 35–38). Both publicly accessible via Project Gutenberg / Budge 1921 reproduction."

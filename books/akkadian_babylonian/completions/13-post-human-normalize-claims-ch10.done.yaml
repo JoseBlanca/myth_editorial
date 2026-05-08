@@ -1,0 +1,80 @@
+stage: "post-human-normalize"
+chapter: 10
+slug: "founding-of-eridu"
+input: "chapters/10-founding-of-eridu.claims.adoc"
+output: "chapters/10-founding-of-eridu.claims.approved.adoc"
+timestamp: "2026-05-08T16:48:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/10-founding-of-eridu.claims.approved.adoc"
+    lines: 165
+summary: |
+  Post-factcheck normalization of chapter 10 claims after factcheck-round-1 returned PASS (0 HIGH, 0 MEDIUM, 1 LOW + 2 NOTES). The single LOW finding (F-1) is a wording tightening on the King 1901 / 1902 publication history; ACCEPTED and applied. The two NOTES (N-1 brief-internal misattribution about the Notes-on-Other-Texts page; N-2 King 1902 sources.yaml addition recommendation) are forwarded to inventory-audit; the N-1 misattribution does not propagate to the claims document and is flagged for brief-pass cleanup. The brief's preemptive corrections (page range pp. 376-383 → pp. 366-375; incipit corrected from enūma Anum ibnû šamê to the negative-cosmogonic 'holy house had not yet been made'; manuscript identified as BM 93014) all survived the factcheck unchanged.
+
+  - F-1 (LOW, CITATION-WRONG): Footnote 1's attribution to King's *Seven Tablets of Creation* II (1902) tightened. Per the factcheck's verbatim verification of Three Things and Budge 1921, the cuneiform-only edition of BM 93014 was published by King in 1901 in *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XIII, pp. 35–38; the translation, transliteration, and commentary appeared in King's *The Seven Tablets of Creation*, vol. II (London: Luzac, 1902). The footnote at line 20 is updated from "L. W. King's *The Seven Tablets of Creation* II (1902)" to "L. W. King first published the cuneiform-only edition in *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XIII (1901), pp. 35–38; King's *The Seven Tablets of Creation*, vol. II (London: Luzac, 1902) added the English translation, transliteration, and commentary that became the standard reference until Lambert 2013." This wording tightening preserves the substantive King attribution while making the publication-history precise.
+
+  Additional housekeeping: section anchor updated from `[[ch-10-founding-of-eridu-claims]]` to `[[ch-10-founding-of-eridu-claims-approved]]` (matching chapter-7/8/9 approved-version convention); chapter title updated to "The Founding of Eridu — Claims (post-factcheck approved)"; meta-header comment block expanded with the round-1 fix log (F-1 disposition + N-1 / N-2 notes inline). No changes to the substantive narrative content; all 14 claim paragraphs, 3 INFERENCE markers, 1 LACUNA marker, 1 RECONSTRUCTION marker, 1 VARIANT marker, and 4 COMPARATIVE-HOOK comments preserved.
+
+audit_findings_disposition:
+  high: []
+  medium: []
+  low:
+    - id: "F-1"
+      kind: "CITATION-WRONG — King 1901 CT XIII vs. King 1902 *Seven Tablets* II publication history under-specified"
+      action: "ACCEPTED"
+      applied: |
+        Footnote 1 (claim 1) updated to distinguish the King 1901 cuneiform-only CT XIII edition from the King 1902 *Seven Tablets of Creation* II translation/transliteration/commentary edition. New text: "L. W. King first published the cuneiform-only edition in *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XIII (1901), pp. 35–38; King's *The Seven Tablets of Creation*, vol. II (London: Luzac, 1902) added the English translation, transliteration, and commentary that became the standard reference until Lambert 2013." The substantive King attribution stands; the publication-history is now precise.
+  notes:
+    - id: "N-1"
+      kind: "NOTE — brief-internal misattribution of Lambert 2013 Notes-on-Other-Texts page"
+      action: "FORWARDED to inventory-audit"
+      applied: |
+        The brief's header note states "Lambert 2013's 'Notes on the Other Texts' for the 'Founding of Eridu' chapter is at p. ~497–498". Per the factcheck's direct verification of the Lambert 2013 TOC PDF, the correct location is p. 512 (alongside "The Slaying of Labbu 512" and "Another Dragon-Slaying Episode 513"). Pages 497–498 contain the Notes for *Damkina's Bond*, *The Defeat of Enutila, Enmesarra, and Qingu*, and *Enki and Ninmaḫ*. The misattribution does NOT propagate to the claims document (the claims cite only the principal pp. 366–375 range and do not reference the Notes pages). Flagged for brief-pass cleanup at inventory-audit; the brief's header note can be corrected at that point.
+    - id: "N-2"
+      kind: "NOTE — King 1902 / King 1901 sources.yaml addition recommendation"
+      action: "FORWARDED to inventory-audit"
+      applied: |
+        Both King 1902 *The Seven Tablets of Creation* II (London: Luzac) and King 1901 *Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XIII (London: British Museum) are recommended for sources.yaml addition. Both are foundational publications of BM 93014. King 1902 in particular is the standard secondary-literature reference for older bilingual-text scholarship on this composition. Currently named-but-flagged in the source-overview footnote.
+
+structural_validation:
+  one_claim_per_paragraph: "PASS — every paragraph in the body contains a single claim with one footnote citation. No bundled claims; no narrative connective tissue."
+  every_claim_has_footnote: "PASS — 20 footnotes across 14 numbered claims plus the source-overview cluster; one footnote per claim."
+  evidence_tokens_valid: "PASS — 49 EVIDENCE tokens, all syntactically valid `// EVIDENCE: source_id=<id> ; loc=<loc>`."
+  source_ids_resolve: "PASS — all 7 distinct source_ids (lambert-2013, foster-2005, dalley-2008, black-green-1992, rla, foster-2007, bottero-2001) resolve to entries in sources.yaml. King 1902, King 1901 named-but-flagged (no EVIDENCE token routes through them)."
+  markers_complete: "PASS — every marker has its required sub-fields. INFERENCE markers (3), LACUNA marker (1), RECONSTRUCTION marker (1), VARIANT marker (1) — all schema-compliant with substantive sub-field content."
+  glossary_compliance: "PASS — locked Akkadian renderings used correctly throughout (Marduk, Aruru, Anu, Enlil, Apsû, Ea — already in glossary). New first-mention glosses given inline for: Eridu (already glossed in chapter 0), Esagil, E-kur, E-Aena, E-Zida, Idiglat (Tigris), Purattu (Euphrates), Erech (Sumerian Uruk parenthetical). Aruru is a substantive new first-mention gloss in chapter 10. The bilingual-format and incantation-prologue terms used per Assyriological convention. No Sumerian forms used as body-prose substitutes for Akkadian deities."
+brief_changes:
+  applied: |
+    The brief at briefs/10-founding-of-eridu.yaml was substantively revised
+    before stage 10a was run (see header note in the brief). The post-human-
+    normalize pass made no changes to the brief — the F-1 fix affects only
+    the claims document footnote, not the brief. The N-1 brief-internal
+    misattribution (Notes-on-Other-Texts page p. 497-498 → actual p. 512)
+    is flagged for inventory-audit cleanup; correcting it at this stage
+    would create a brief-claims mismatch and is deferred.
+notes:
+  named_but_flagged_carry_forward:
+    - scholar: "King, L. W."
+      publication: "*Cuneiform Texts from Babylonian Tablets in the British Museum*, Part XIII (London: British Museum, 1901), pp. 35–38 (cuneiform-only edition of BM 93014)."
+      reason: "Foundational publication of the BM 93014 cuneiform text. Recommended for sources.yaml addition; would benefit the broader bilingual-text dossier (e.g., chapter 11 *Worm and the Toothache*)."
+    - scholar: "King, L. W."
+      publication: "*The Seven Tablets of Creation*, vol. II (London: Luzac, 1902); the BM 93014 translation, transliteration, and commentary."
+      reason: "Standard older secondary-literature reference for BM 93014 and for the older editorial titles ('The Bilingual Creation of the World by Marduk', 'The Bilingual Version of the Creation Legend'). Recommended for sources.yaml addition."
+    - scholar: "Streck, Michael P."
+      publication: "Review of W. G. Lambert, *Babylonian Creation Myths*. *BSOAS* 77 (2014), 371–372."
+      reason: "Carries forward as named-but-flagged from chapters 8 and 9. Manuscript-base identification anchor for the Part III dossier; recommended for sources.yaml addition."
+    - scholar: "Oshima, Takayoshi"
+      publication: "'Damkianna shall not bring back her burden in the future!' (2010, Festschrift article)."
+      reason: "Carries forward as named-but-flagged from chapter 9. Not cited in chapter 10. Recommended for sources.yaml addition."
+  caution_on_specific_attestations: |
+    The chapter cites Lambert 2013 at the page-range level (pp. 366-375).
+    The negative-cosmogonic opening line ("the holy house, the house of
+    the gods in the holy place had not yet been made") is given verbatim
+    based on Project Gutenberg's Budge 1921 (cited in the factcheck's
+    honesty section); the joint Marduk-Aruru "seed of mankind"
+    formulation is also verbatim-verifiable via Budge 1921. Other
+    narrative content is summarised at the level of the seven cosmogonic
+    moves preserved across the bilingual columns. A finer-grained
+    narrative reconstruction with bilingual-column-specific attribution
+    would require direct access to Lambert 2013 in print.
