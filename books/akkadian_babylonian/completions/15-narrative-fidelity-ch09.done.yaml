@@ -1,0 +1,64 @@
+stage: "narrative-fidelity"
+chapter: 09
+slug: "damkina-bond"
+input: "chapters/09-damkina-bond.adoc + chapters/09-damkina-bond.claims.approved.adoc"
+output: "chapters/09-damkina-bond.fidelity.yaml"
+timestamp: "2026-05-08T16:09:10Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m] (fresh conversation, general-purpose subagent)"
+verdict: "PASS"
+findings_summary:
+  high: 0
+  medium: 0
+  low: 1
+disposition: |
+  PASS verdict. Draft faithfully realizes the approved claims: all 22
+  claim-paragraphs mapped (the 14 numbered narrative claims plus the
+  source-overview + body-frame paragraphs, two pairs of which are
+  consolidated 2-into-1 in the draft). All 6 markers (1 LACUNA, 1
+  RECONSTRUCTION, 3 INFERENCE, 1 VARIANT) preserved byte-identical
+  with subfields intact. All 4 COMPARATIVE-HOOK comments preserved
+  (hooks 1–3 verbatim; hook 4 with LOW-severity philological
+  refinement aligned to the VARIANT marker — F-09e-1, no factual
+  drift). All 4 round-1 factcheck corrections (F-1 Damkianna lineage;
+  F-2 360-day schematic-year framing without 360-stars sky-list;
+  F-3 *pirištu* genre-level framing; F-4 Lambert/Oshima *e'iltu* /
+  *illatu* etymological framing) carried through to the draft.
+  Two-manuscript framing (A 7882 NA + BM 27776 NB), Marduk-vs-Enlil
+  narrative shape, and il-let-sa-as-narrative-hinge framing all
+  preserved correctly. The 2-EVIDENCE / 2-footnote structural delta
+  (claims: 39 EVIDENCE / 22 footnotes; draft: 37 / 20) is legitimate
+  same-source consolidation of two pairs of adjacent paragraphs
+  (claims lines 51+54 → draft lines 4+7; claims lines 79+82 → draft
+  line 32). Three minor paraphrastic prose elaborations (draft lines
+  29, 38, 105) are restatements of existing claims, not new factual
+  assertions. One footnote enrichment (draft line 4 Oshima 2010
+  Festschrift venue resolution) resolves an open-TODO marker in the
+  claims footnote rather than introducing a new claim.
+mechanical_preservation:
+  byte_for_byte_marker_preservation: PASS
+  byte_for_byte_footnote_preservation: PASS  # for 19 of the 20 preserved footnotes; the opening Oshima 2010 footnote at draft line 4 has a bibliographic enrichment (venue resolved from "verification pending" to full Festschrift citation) — not a fidelity violation
+  byte_for_byte_evidence_token_preservation: PASS  # for all 37 preserved tokens
+  byte_for_byte_comparative_hook_preservation: NEAR_PASS  # hooks 1–3 verbatim; hook 4 has a philological refinement aligning the *il-let* / verbal-root framing with the *e'iltu* / *illatu* terms already present in the VARIANT marker
+  evidence_tokens_at_column_zero: 37/37
+  comparative_hook_comments_at_column_zero: 4/4
+  unresolved_source_ids: 0
+completeness:
+  claims_mapped: 22/22
+  no_dropped_claims: true
+  no_added_claims: true
+content_consistency:
+  two_manuscript_framing: CONSISTENT
+  damkianna_damgalnuna_damkina_lineage: PRESERVED_CORRECTLY
+  schematic_year_360_framing: PRESERVED_CORRECTLY
+  pirištu_genre_level_claim: PRESERVED_CORRECTLY
+  lambert_oshima_etymological_framing: PRESERVED_CORRECTLY
+  marduk_vs_enlil_narrative_shape: PRESERVED_WITHOUT_ELABORATION
+  il_let_sa_as_narrative_hinge: PRESERVED
+  epistemic_posture_preserved: PASS
+final_state:
+  draft_lines: 112
+  claims_lines: 162
+  fidelity_yaml_lines: 611
+  ready_for_commit: true
+summary: "Chapter 9 narrative fidelity audit returns PASS — 22/22 claim-paragraphs mapped, 6/6 markers preserved byte-identical, 4/4 COMPARATIVE-HOOKs preserved (hook 4 with LOW-severity philological refinement aligned to VARIANT marker, no factual drift), 4/4 round-1 factcheck fixes (F-1 through F-4) carried through, two-manuscript A 7882 NA + BM 27776 NB framing consistently maintained throughout, 1 LOW finding logged for transparency."

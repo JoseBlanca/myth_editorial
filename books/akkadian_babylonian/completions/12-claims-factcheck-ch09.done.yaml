@@ -1,0 +1,124 @@
+stage: "claims-factcheck"
+chapter: 09
+slug: "damkina-bond"
+input: "chapters/09-damkina-bond.claims.adoc (135 lines, 14 numbered claims, 22 footnotes, 39 EVIDENCE tokens, 3 INFERENCE / 1 LACUNA / 1 RECONSTRUCTION / 1 VARIANT / 4 COMPARATIVE-HOOK markers)"
+output: "chapters/09-damkina-bond.claims.factcheck.yaml"
+timestamp: "2026-05-08T16:42:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/09-damkina-bond.claims.factcheck.yaml"
+    lines: 1110
+verdict: REVISE
+findings:
+  high: 0
+  medium: 2
+  low: 2
+  notes: 2
+findings_summary:
+  - finding_id: F-1
+    severity: MEDIUM
+    kind: CITATION-WRONG
+    description: "Line 73 parenthetical gloss 'Damkianna (the older Sumerian-style form of the name; Akkadian Damkina)' inverts the chronological relationship. Per Wikipedia s.v. Damgalnuna name-forms section (citing Beaulieu), Damkianna is a LATE Akkadian variant spelling attested in Neo-Babylonian Uruk letters; the older Sumerian-style form is Damgalnuna. Single-line fix; substance of Neretagmil's message-to-Damkina narrative unaffected."
+  - finding_id: F-2
+    severity: MEDIUM
+    kind: CITATION-WRONG
+    description: "Line 95 claim that 360 corresponds 'to the count of stars in the standard Mesopotamian sky-list (the Three Stars Each tradition, MUL.APIN-related compendia)' is wrong on the star-count. Verified via Wikipedia s.v. Babylonian star catalogues: Three Stars Each = 36 stars, MUL.APIN = 71 stars and constellations. No 360-star Mesopotamian sky-list exists. The 360-day schematic-year link is correct and should be retained; the star-list link should be dropped or recharacterized."
+  - finding_id: F-3
+    severity: LOW
+    kind: UNVERIFIED
+    description: "Line 49 attribution of the specific Akkadian term 'pirištu' to the BM 27776 colophon is unverified in the secondary sources I could access (Wikipedia gives only English 'secret'; Oshima 2010 quotes the colophon's 'taboo of [Marduk?]' with broken brackets and does not specify the Akkadian word for 'secret'). The substantive secret-of-Marduk classification is fully corroborated; only the specific Akkadian word identification requires direct verification in Lambert 2013's transliteration."
+  - finding_id: F-4
+    severity: LOW
+    kind: CITATION-WRONG
+    description: "Line 87 VARIANT marker's framing of the Lambert 'bond' vs. Oshima 'burden' disagreement is broadly correct but slightly oversharpens the philological underpinning. Per Oshima 2010 (read directly via WebFetch), Oshima's 'burden' is etymologically derived from e'iltu (obligation/bond/sin), so both readings have an 'obligation/bond' semantic component; the difference is whether the released object is a positive displayable token (Lambert) or a catastrophic obligation-release (Oshima). Light wording fix recommended."
+notes:
+  - note_id: N-1
+    detail: "Oshima 2010 publication venue can now be specified beyond 'academia.edu paper'. The paper is in: A Woman of Valor: Jerusalem Ancient Near Eastern Studies in Honor of Joan Goodnick Westenholz, ed. W. Horowitz, U. Gabbay, F. Vukosavović (Biblioteca del Próximo Oriente Antiguo 8), Madrid: CSIC, 2010, pp. 145–162. The claims document footnote at line 21 currently says 'venue verification pending' — venue can now be specified. Recommend adding Oshima 2010 to sources.yaml at inventory-audit; presently correct as named-but-flagged."
+  - note_id: N-2
+    detail: "Streck 2014 (BSOAS 77, 371–372) sources.yaml addition recommendation carryover from chapter 8 round-2 factcheck. Streck 2014's confirmation that Damkina's Bond is one of 16 texts in Lambert 2013 Part III remains useful triangulation-source material. Currently named-but-flagged in this chapter's brief; addition recommended at inventory-audit."
+brief_revision_correctness:
+  upstream_correction_1_page_range:
+    item: "Page range pp. 326–333 → pp. 321–325 + p. 497 notes"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "DeGruyter Brill chapter landing doi:10.1515/9781575068619-021 confirms pp. 321–325. All EVIDENCE token loc fields and footnote references in the claims document use the corrected range."
+  upstream_correction_2_manuscript_count:
+    item: "Manuscript count single → two: A 7882 (NA, Oriental Institute Chicago) + BM 27776 (NB, British Museum)"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "Oshima 2010 academia.edu (verbatim, read via WebFetch): 'A 7882 (Neo-Assyrian script from Oriental Institute, Chicago) and BM 27776 (Neo-Babylonian script from British Museum)'. Independent web search confirms 'BM 27776 preserves 36 lines and recounts a previously unknown mythological episode about Marduk, Enlil, Damkianna, and the gods of Eshumesha'. Both manuscript identifiers and locations fully verified."
+  upstream_correction_3_narrative_summary:
+    item: "Narrative gestures-only → substantive Marduk-vs-Enlil conflict at Nippur"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "All key narrative beats fully corroborated by Wikipedia s.v. Damgalnuna AND Oshima 2010: Marduk arrives at Nippur with army; Eshumesha gods (Ninurta's temple at Nippur, Enlil-pantheon) capture Anunnaki; Neretagmil (sukkal of Nāru) delivers message to Damkianna; Damkianna releases il-let-sa; Marduk captures 360 gods of Eshumesha including Enlil; Neo-Babylonian colophon classes contents as secret of Marduk."
+  upstream_correction_4_framing:
+    item: "Drop 'feminine cosmogonic chthonic pairing with Marduk' framing; replace with Marduk-vs-elder-pantheon framing pairing with Enmešarra's Defeat (Chapter 6)"
+    status: CORRECTLY_IMPLEMENTED
+    verification: "The chapter's argument-arc is fully reframed under the Marduk-vs-elder-pantheon framing throughout (Setting section, Place-in-the-dossier section, all four COMPARATIVE-HOOK comments). The earlier 'feminine consortship sub-cluster' framing is explicitly dropped and replaced with the Enmešarra's Defeat pairing. No residual feminine-cosmogonic-pairing framing remains."
+honesty_self_check_summary:
+  same_model_family: "claude-opus-4-7[1m] (same model as the chapter-claims writer; fresh context per the skill's hard-rule allowance)"
+  fresh_context: true
+  sources_opened_directly:
+    - "DeGruyter Brill chapter landing for 'Damkina's Bond' (doi:10.1515/9781575068619-021) — confirmed pp. 321–325"
+    - "Wikipedia s.v. Damgalnuna — verbatim corroboration of two-manuscript count, Lambert/Oshima dating disagreement, Lambert's Malgium origin proposal, Neretagmil sukkal of Nāru, secret-of-Marduk colophon, il-let-sa 'bond' translation, Damkianna name-form (LATE spelling, not Sumerian-style)"
+    - "Oshima 2010 academia.edu paper 'Damkina shall not bring back her Burden' — verbatim corroboration of A 7882 and BM 27776 identifiers, the 'first quarter of the first millennium' dating, the Aramaic-influence linguistic dating criteria, the il-let-sa philological argument (later form of e'iltu, not illatu), the 360 gods of Eshumesha capture, Neretagmil from An=Anum"
+    - "Streck 2014 BSOAS review (academia.edu) — confirmed Damkina's Bond as one of 16 texts in Lambert 2013 Part III (pp. 281–401)"
+    - "Wikipedia s.v. Babylonian star catalogues — verified Three Stars Each = 36 stars, MUL.APIN = 71 stars; no 360-star sky-list exists"
+    - "Independent web search on BM 27776 — corroborates 36-line preservation, narrative content, damage profile"
+  sources_taken_on_trust:
+    - "Lambert 2013 page-internal verbatim claims (pp. 321–325 + p. 497 notes; the precise wording of the BM 27776 colophon transliteration; the philological apparatus; the dating-argument's specific language) — verified at the TOC-pagination level only"
+    - "Black & Green 1992 entries (Damkina, Enlil, Eshumesha, number symbolism) — taken on trust as genre-appropriate"
+    - "RlA entries (Damkina, Damgalnuna, Eshumesha) — taken on trust as genre-appropriate"
+    - "Foster 2007 (Akkadian Literature of the Late Period) — passim framing taken on trust"
+    - "Bottéro 2001 (Religion in Ancient Mesopotamia) — Marduk-Enlil rivalry framing well-attested elsewhere; taken on trust"
+summary: |
+  Chapter 9 (Damkina's Bond) claims-factcheck — verdict REVISE.
+  The claims document represents a substantial improvement on the
+  preemptively-revised brief, fully implementing the four upstream
+  corrections that motivated the brief revision (page range pp.
+  321–325, two-manuscript count A 7882 NA + BM 27776 NB,
+  substantive Marduk-vs-Enlil narrative, Marduk-vs-elder-pantheon
+  framing pairing with Enmešarra's Defeat). All four upstream
+  corrections are fully corroborated by Wikipedia s.v. Damgalnuna
+  and Oshima 2010 (academia.edu, read directly).
+
+  The four surviving issues are all localized:
+  - MEDIUM-1 (F-1): Line 73 parenthetical gloss inverts the
+    Damkianna name-form chronology (Damkianna is LATE Akkadian, not
+    older Sumerian-style; Damgalnuna is the older Sumerian form).
+  - MEDIUM-2 (F-2): Line 95 link of 360 to "the count of stars in
+    the standard Mesopotamian sky-list (Three Stars Each, MUL.APIN)"
+    is wrong on the star-count (Three Stars Each = 36 stars,
+    MUL.APIN = 71). The 360-day schematic-year link is correct and
+    should be retained.
+  - LOW (F-3): Line 49 attribution of "pirištu" specifically to the
+    BM 27776 colophon is unverified in the secondary sources.
+  - LOW (F-4): Line 87 VARIANT marker oversharpens the Lambert
+    'bond' vs. Oshima 'burden' opposition; both readings carry the
+    obligation/bond semantic component etymologically.
+
+  Plus 2 NOTES on inventory-audit: Oshima 2010 venue can now be
+  specified (Festschrift Westenholz, BPOA 8, Madrid: CSIC 2010,
+  pp. 145–162); Streck 2014 sources.yaml addition recommendation
+  carryover from chapter 8.
+
+  Per the verdict rules (REVISE = 1–2 HIGH or >3 MEDIUM), the
+  present case has 0 HIGH and 2 MEDIUM, which would normally give
+  PASS. However, the 2 MEDIUM findings are factually substantive
+  errors (inverted name-form chronology; wrong star-count
+  attribution), not just citation-routing — and the chapter's
+  audience-facing prose would carry these errors through to chapter-
+  draft if not corrected here. Following the chapter 8 round-2
+  precedent of rating systematically-or-substantively material
+  MEDIUMs as REVISE rather than PASS, I rate this case as REVISE.
+
+  After the four localized fixes, the claims document should PASS
+  to chapter-draft. The substantive corrections from the upstream
+  brief revision are all in place; the surviving issues are
+  citation-routing and wording refinements.
+follow_ups_for_writer:
+  - "Revise line 73 parenthetical: 'delivers a message to Damkianna (the older Sumerian-style form of the name; Akkadian Damkina)' → 'delivers a message to Damkianna (a late-period Akkadian variant spelling of the name Damkina, attested in Neo-Babylonian Uruk letters; the Sumerian-style older form is Damgalnuna)'. Optionally cite Beaulieu via Wikipedia s.v. Damgalnuna for the Neo-Babylonian Uruk attestation."
+  - "Revise line 95 (claim 13): drop the star-count link, retain the schematic-year link. Suggested: 'The number 360 is theologically and astronomically loaded. It corresponds to the canonical count of days in the Mesopotamian schematic year (the standard 12 × 30-day year of the astrolabes and of MUL.APIN) and, by extension, to the 360° zodiacal scheme of later Babylonian astronomy. The 360 gods of Eshumesha are not merely a round number; they index the schematic-year totality, and Marduk's capture of all of them at once is a totalising theological gesture.' Drop 'the count of stars in the standard Mesopotamian sky-list (the Three Stars Each tradition, MUL.APIN-related compendia)' entirely."
+  - "Tighten line 49 (claim 5): either verify the Akkadian word in Lambert 2013's BM 27776 transliteration and retain 'a pirištu' if confirmed, OR rephrase as 'a secret of Marduk (the Akkadian term used in such colophons is typically pirištu)' — making the claim about the genre convention rather than about the specific BM 27776 word."
+  - "Tighten the VARIANT marker at line 87 by adding a brief philological note: 'alt=Oshima 2010's reading 'burden' — derived from e'iltu (obligation, bond, sin), so etymologically a 'binding obligation' that Damkianna's release sends out as ill-fortune (plague or natural / celestial disaster); Oshima rejects the alternative derivation from illatu 'horde'.'"
+  - "(Inventory-audit follow-up): Specify Oshima 2010 venue when adding to sources.yaml. Full citation: Oshima, T., 'Damkianna shall not bring back her burden in the future!: A New Mythological Text of Marduk, Enlil and Damkianna,' in W. Horowitz, U. Gabbay, F. Vukosavović (eds.), A Woman of Valor: Jerusalem Ancient Near Eastern Studies in Honor of Joan Goodnick Westenholz, BPOA 8 (Madrid: CSIC, 2010), pp. 145–162. Open-access copy on academia.edu."
+  - "(Inventory-audit follow-up, carryover): Streck 2014 (BSOAS 77, 371–372, DOI 10.1017/S0041977X14000123) sources.yaml addition recommended; useful for chapters 5–9 on manuscript-base claims."

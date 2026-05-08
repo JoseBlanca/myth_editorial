@@ -1,0 +1,611 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  claims_file: "chapters/09-damkina-bond.claims.approved.adoc"
+  narrative_file: "chapters/09-damkina-bond.adoc"
+  claims_lines: 162
+  narrative_lines: 112
+  total_claims: 14
+  claims_mapped: 14
+  verdict: PASS
+  honesty_self_check:
+    q1_every_claim_mapped: |
+      Yes. I walked all 14 footnoted claim-paragraphs in the approved
+      claims document in order and located each in the narrative draft.
+      None skipped as "obviously present". The narrative is a near-verbatim
+      rendering of the claims document with light prose connective tissue,
+      so the mapping is high-confidence. Two consolidations account for
+      the structural-marker delta:
+      (a) Claims paragraphs at lines 51 ("title") and 54 ("Lambert standard /
+          Oshima alt edition") are merged into a single opening overview
+          block that is split across draft lines 4 and 7. The claim-line-54
+          footnote ("philological not exemplar-based") is dropped as a
+          separate footnote — its content ("substantive philological
+          disagreement on il-let-sa") is reframed in draft line 7 prose
+          and preserved in the line-7 footnote. No factual content lost.
+      (b) Claims paragraphs at lines 79 (dating) and 82 (Malgium origin +
+          transmission) are consolidated into a single paragraph at draft
+          line 32, with one merged footnote that retains all three sources
+          (Lambert 2013, Oshima 2010, Foster 2007). No factual content lost.
+      These two consolidations explain the 2-EVIDENCE / 2-footnote delta
+      (claims: 39 EVIDENCE, 22 footnotes; draft: 37 EVIDENCE, 20 footnotes).
+    q2_every_paragraph_checked_for_additions: |
+      Yes — every body paragraph (draft lines 4, 7, 10, 15, 24, 29, 32,
+      38, 41, 50, 54, 61, 70, 74, 83, 87, 90, 96, 101, 105) and every
+      marker block (lines 18, 20, 46, 64, 66, 79) was checked against the
+      claims document. Three minor prose-elaboration additions were
+      identified, all paraphrastic restatements of existing claims rather
+      than new factual assertions:
+      (a) draft line 29 adds a closing sentence "The text is thus
+          self-marked, in its surviving paratext, as restricted scholarly
+          material rather than as liturgical or popular reading" —
+          paraphrastic restatement of the colophon's restricted-
+          transmission implication, reflecting content already in claims
+          lines 76 and 140 and the third COMPARATIVE-HOOK comment.
+      (b) draft line 38 adds the closing clause "the gods of Babylon
+          advancing on the seat of Enlil and the Eshumesha establishment"
+          — paraphrastic restatement of the divine-military-invasion-of-
+          cult-centre framing already in the claim. No new fact.
+      (c) draft line 105 adds a closing sentence "The dossier's editorial
+          logic is the reason *Damkina's Bond* exists at all: priestly
+          scholars kept the secret-tablet alongside the more public
+          Marduk theogony, and two copyists, in two centuries,
+          transmitted it" — paraphrastic restatement mirroring the
+          chapter-7 / chapter-8 closing formulation. "Two copyists, in
+          two centuries" reflects the established A 7882 NA + BM 27776 NB
+          two-manuscript framing.
+      One footnote enrichment (not addition of new claim): draft line 4's
+      Oshima 2010 footnote replaces the claims-doc "venue verification
+      pending" parenthetical with a full bibliographic citation
+      (Festschrift article in *A Woman of Valor*, editors W. Horowitz /
+      U. Gabbay / F. Vukosavović, Biblioteca del Próximo Oriente Antiguo
+      8, Madrid: CSIC, pp. 145–162). This resolves a flagged TODO in the
+      claims footnote rather than introducing a new claim about the
+      composition itself.
+    q3_distortion_meaning_check: |
+      Compared at the level of precise meaning, not topic. The two-
+      manuscript framing (A 7882 NA + BM 27776 NB) is consistently
+      maintained throughout the body (draft lines 4, 15, 18, 20, 32, 96,
+      105). The Damkianna / Damgalnuna / Damkina lineage disambiguation
+      (round-1 fix F-1) is preserved verbatim at draft line 50 with the
+      Damkianna-as-late-Akkadian-variant framing intact. The 360-day
+      schematic-year framing is preserved without the dropped 360-stars
+      sky-list link (round-1 fix F-2): draft line 74 names "12 × 30-day
+      year of the astrolabes and of *MUL.APIN*" and "the 360° zodiacal
+      scheme of later Babylonian astronomy" without claiming a 360-star
+      sky-list. The *pirištu* genre-level framing (round-1 fix F-3) is
+      preserved at draft line 29 with the soft formulation "the Akkadian
+      term used in such colophons is typically *pirištu*" — no direct
+      BM 27776 attribution of the specific reading. The Lambert "bond"
+      vs. Oshima "burden" *e'iltu* / *illatu* etymological framing
+      (round-1 fix F-4) is preserved verbatim in the VARIANT marker
+      (draft line 64). The Marduk-vs-Enlil narrative shape is preserved
+      without elaboration: capture of Anunnaki by Eshumesha gods (draft
+      line 41), Neretagmil messenger (line 50), Damkina intervention
+      (line 50), il-let-sa release (line 61), Marduk's reverse capture
+      of 360 Eshumesha gods including Enlil (line 70). The il-let-sa-as-
+      narrative-hinge framing is preserved at draft line 4 ("at the
+      narrative's hinge") and in the INFERENCE marker at draft line 66
+      verbatim. All three INFERENCE blocks remain INFERENCE-marked in the
+      draft (lines 46, 66, 79) with basis and risk fields preserved
+      byte-identical. The LACUNA (line 18), RECONSTRUCTION (line 20),
+      and VARIANT (line 64) markers are preserved byte-identical with
+      their source / scholarly_reconstruction / gap_source / fill_source /
+      confidence / primary / alt / chosen / reason subfields intact.
+    q4_same_model_as_writer: |
+      I am claude-opus-4-7[1m] in a fresh conversation with no memory of
+      writing the chapter draft. The chapter-9 draft was produced at the
+      chapter-draft stage in a separate session (completion record
+      14-chapter-draft-ch09.done.yaml). This audit is therefore valid
+      under the skill's "fresh-conversation" requirement; the "different
+      model" preference is not strictly met but is not required.
+
+structural_marker_counts:
+  claims:
+    evidence_tokens: 39
+    footnotes: 22
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 4
+  draft:
+    evidence_tokens: 37
+    footnotes: 20
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 4
+  delta_explanation: |
+    The 2-EVIDENCE / 2-footnote delta is accounted for by two legitimate
+    same-source consolidations:
+    (1) Claims line 51 (title paragraph; 1 footnote, 1 EVIDENCE token at
+        line 52) and claims line 54 (Lambert/Oshima editions paragraph;
+        1 footnote, 1 EVIDENCE token at line 55) are consolidated into
+        the draft's opening overview, distributed across draft lines 4
+        and 7. Draft line 7 retains the line-51-equivalent footnote and
+        EVIDENCE token; the line-54-equivalent footnote/token is
+        absorbed into the prose ("the substantive philological
+        disagreement on *il-let-sa*"), with its content preserved.
+    (2) Claims line 79 (dating paragraph; 1 footnote, 1 EVIDENCE token at
+        line 80) and claims line 82 (Malgium / transmission paragraph;
+        1 footnote, 2 EVIDENCE tokens at lines 83 and 84) are
+        consolidated into draft line 32. The merged footnote at draft
+        line 32 retains all three sources (Lambert 2013, Oshima 2010,
+        Foster 2007). The merged EVIDENCE block at draft lines 33–34
+        retains 2 tokens (lambert-2013, foster-2007), losing the
+        duplicate Lambert pp. 321-325 token that was split between the
+        two original paragraphs.
+    No factual content is dropped. All 22 claims-document footnote
+    citation strings remain present in the 20 draft footnotes (with
+    consolidations). All four COMPARATIVE-HOOK comments remain present.
+
+claim_mapping:
+  - claim_number: 1
+    claim_text: "Source overview: two-manuscript composition, A 7882 NA (Oriental Institute Chicago) + BM 27776 NB (British Museum); Lambert 2013 standard edition pp. 321–325 + p. 497."
+    claims_line: 48
+    narrative_line: 4
+    status: MAPPED
+    note: "Consolidated with claim 2 (title) in draft opening; Oshima 2010 footnote venue resolved (Festschrift in *A Woman of Valor*) — bibliographic enrichment, not new factual claim."
+  - claim_number: 2
+    claim_text: "Modern editorial title *Damkina's Bond* from il-let-sa term in surviving lines."
+    claims_line: 51
+    narrative_line: 4
+    status: MAPPED
+    note: "Consolidated with claim 1 in draft line 4 ('Lambert's 2013 edition gives the composition the modern editorial title... after the il-let-sa') and elaborated at draft line 7 ('the modern editorial title is taken from the contested term il-let-sa'). Legitimate same-source merge."
+  - claim_number: 3
+    claim_text: "Lambert 2013 standard critical edition; Oshima 2010 independent edition with substantive philological disagreement on il-let-sa; both edit same two manuscripts; disagreement philological, not exemplar-based."
+    claims_line: 54
+    narrative_line: 7
+    status: MAPPED
+    note: "The 'philological not exemplar-based' framing is reframed in draft prose ('the substantive philological disagreement on il-let-sa'); explicit 'philological, not exemplar-based' formulation is preserved at draft line 96 (Variants and witness section). No factual content dropped."
+  - claim_number: 4
+    claim_text: "No anthology translation: Foster 2005 / Dalley 2008 do not include; Lambert 2013 + Oshima 2010 only modern critical editions."
+    claims_line: 57
+    narrative_line: 10
+    status: MAPPED
+  - claim_number: 5
+    claim_text: "Two manuscripts overlap partially; MS B (BM 27776 NB) preferred per Oshima on philological grounds (MS A scribal errors); Lambert collates into composite; substantial breaks; narrative contour recoverable, specific actions / divine speech / theological implications partly lost."
+    claims_line: 62
+    narrative_line: 15
+    status: MAPPED
+  - claim_number: 6
+    claim_text: "Composition belongs to late-Babylonian / first-millennium dossier articulating Marduk's sovereignty over older Mesopotamian pantheon; *Enūma Eliš* central Marduk-elevation move; *Damkina's Bond* extends to subordinating Enlil's establishment at Nippur."
+    claims_line: 71
+    narrative_line: 24
+    status: MAPPED
+    note: "Draft line 24 reads 'late-Babylonian and first-millennium' (vs. claims 'late-Babylonian / first-millennium'); identical content, slash punctuation replaced with 'and' for readability. No factual change."
+  - claim_number: 7
+    claim_text: "BM 27776 colophon classes contents as secret of Marduk; *pirištu* is the Akkadian term typically used in such colophons (genre-level framing); future generations warned not to repeat transgressions."
+    claims_line: 76
+    narrative_line: 29
+    status: MAPPED
+    note: "Round-1 fix F-3 (genre-level *pirištu* framing, not direct BM 27776 attribution) preserved verbatim at draft line 29 ('the Akkadian term used in such colophons is typically *pirištu*'). Draft adds paraphrastic closing sentence 'The text is thus self-marked... as restricted scholarly material rather than as liturgical or popular reading' — restatement of existing colophon-restricted-transmission framing, no new fact."
+  - claim_number: 8
+    claim_text: "Dating contested: Lambert 2013 = Kassite / Isin II (mid-2nd-millennium BCE; Marduk-king + Nabu-as-scribe configuration); Oshima 2010 = first quarter of first millennium (c. 1000–750 BCE)."
+    claims_line: 79
+    narrative_line: 32
+    status: MAPPED
+    note: "Consolidated with claim 9 (Malgium / transmission) into a single paragraph at draft line 32. Same-source merge."
+  - claim_number: 9
+    claim_text: "Lambert proposes Malgium origin; Oshima does not press a place; surviving copies entered scholarly archives via late-Mesopotamian temple/palace scribal networks."
+    claims_line: 82
+    narrative_line: 32
+    status: MAPPED
+    note: "Consolidated with claim 8 in draft line 32. Merged footnote retains all three sources (Lambert 2013, Oshima 2010, Foster 2007)."
+  - claim_number: 10
+    claim_text: "Composition opens with Marduk's arrival at Nippur; flooding/inundation motif; divine-military invasion of elder pantheon's cult-centre."
+    claims_line: 88
+    narrative_line: 38
+    status: MAPPED
+    note: "Draft adds closing clause 'the gods of Babylon advancing on the seat of Enlil and the Eshumesha establishment' — paraphrastic restatement of divine-military-invasion-of-cult-centre framing in the claim; no new fact."
+  - claim_number: 11
+    claim_text: "Eshumesha gods (Ninurta's temple at Nippur, Enlil-pantheon constellation) capture Anunnaki deities; Enlil side initially gains ground; Marduk's forces not yet decisive."
+    claims_line: 91
+    narrative_line: 41
+    status: MAPPED
+  - claim_number: 12
+    claim_text: "Neretagmil — sukkal of Nāru (deified river) — delivers message to Damkianna (late Akkadian variant; older Sumerian form Damgalnuna; standard Akkadian form Damkina) about the battle; message prompts Damkina's intervention."
+    claims_line: 100
+    narrative_line: 50
+    status: MAPPED
+    note: "Round-1 fix F-1 (Damkianna lineage disambiguation: late Akkadian variant, not older Sumerian-style form) preserved verbatim at draft line 50."
+  - claim_number: 13
+    claim_text: "Damkina = consort of Ea + mother of Marduk; senior generation in divine family; intervention has authority of senior god, not merely affective authority of partisan mother."
+    claims_line: 104
+    narrative_line: 54
+    status: MAPPED
+  - claim_number: 14
+    claim_text: "Damkina releases il-let-sa; act precipitates conflict's resolution (Marduk's capture of Eshumesha gods follows); nature of il-let-sa contested between editors."
+    claims_line: 111
+    narrative_line: 61
+    status: MAPPED
+  - claim_number: 15
+    claim_text: "After Damkina's intervention, Marduk captures the 360 gods of Eshumesha (Enlil among them); Marduk's theological-political sovereignty over older Mesopotamian divine order; subordination of entire Eshumesha establishment as a unit."
+    claims_line: 120
+    narrative_line: 70
+    status: MAPPED
+  - claim_number: 16
+    claim_text: "Number 360 indexes Mesopotamian schematic year (12 × 30-day astrolabes / *MUL.APIN*); 360° zodiacal scheme (later Babylonian astronomy); totalising theological gesture."
+    claims_line: 124
+    narrative_line: 74
+    status: MAPPED
+    note: "Round-1 fix F-2 (no 360-stars sky-list link; 360-day schematic year + 360° zodiacal scheme retained) preserved verbatim at draft line 74. The *MUL.APIN* mention is bound to the 12 × 30-day schematic year (correctly), not to a star count."
+  - claim_number: 17
+    claim_text: "*Damkina's Bond* belongs to Lambert 2013 Part III 'Further Babylonian Creation Tales' (pp. 281–401); dossier listing (Enūma Eliš Ch.1, Enmešarra's Defeat Ch.6, Toil of Babylon Ch.7, Uraš and Marduk Ch.8, Slaying of Labbu Ch.5, Founding of Eridu Ch.10, First Brick Ch.12, Theogony of Dunnu Ch.4)."
+    claims_line: 133
+    narrative_line: 83
+    status: MAPPED
+  - claim_number: 18
+    claim_text: "Closest internal parallel: *Enmešarra's Defeat* (Ch.6); Marduk-vs-elder-pantheon sub-cluster; explicit drop of earlier 'feminine consortship sub-cluster' framing with *Uraš and Marduk* as a chapter-8-stage-corrected mis-identification."
+    claims_line: 137
+    narrative_line: 87
+    status: MAPPED
+  - claim_number: 19
+    claim_text: "Composition marginal in attestation: two manuscripts, no liturgical/first-millennium recensional footprint outside cosmogonic dossier; secret-of-Marduk colophon → restricted scholarly transmission; not widely-recited."
+    claims_line: 140
+    narrative_line: 90
+    status: MAPPED
+  - claim_number: 20
+    claim_text: "Two parallel witnesses (A 7882 NA + BM 27776 NB) overlap partially; Lambert collates composite, Oshima publishes independent edition; not co-equal recensions but two witnesses to one text with sub-manuscript variation + scribal errors (especially MS A); Lambert/Oshima il-let-sa disagreement is philological, not recension difference."
+    claims_line: 146
+    narrative_line: 96
+    status: MAPPED
+    note: "The 'philological not exemplar-based / recension difference' framing first introduced in claim 3 (claims line 54) is preserved verbatim here at draft line 96 — the framing is therefore retained in the body even though the claim-3 standalone footnote was consolidated into the opening overview."
+  - claim_number: 21
+    claim_text: "Marginal individually but significant within late-Babylonian / first-millennium Marduk dossier as evidence Marduk-Enlil rivalry articulated narratively as well as theogonically; Enūma Eliš = Marduk's cosmic kingship via Tiamat combat + cosmic offices in Tablet V; Damkina's Bond = political-theological subordination of Enlil establishment at Nippur (capture of 360 Eshumesha gods, Enlil included, with Damkina's intervention as catalyst)."
+    claims_line: 151
+    narrative_line: 101
+    status: MAPPED
+    note: "Draft line 101 reads 'late-Babylonian and first-millennium' (slash → 'and'); identical content."
+  - claim_number: 22
+    claim_text: "Narrative obscurity outside specialist scholarship reflects fragmentary preservation + restricted-secret transmission; survives because two scribal apparatuses (NA A 7882 + NB BM 27776) preserved as Marduk-theological dossier material; NB colophon explicitly classes as secret of Marduk."
+    claims_line: 155
+    narrative_line: 105
+    status: MAPPED
+    note: "Draft adds paraphrastic closing sentence 'The dossier's editorial logic is the reason *Damkina's Bond* exists at all: priestly scholars kept the secret-tablet alongside the more public Marduk theogony, and two copyists, in two centuries, transmitted it' — paraphrastic restatement mirroring the chapter-7 / chapter-8 closing formulation. 'Two copyists, in two centuries' reflects the established A 7882 NA + BM 27776 NB framing. No new fact."
+
+marker_preservation:
+  total_markers_in_claims: 6
+  total_markers_in_narrative: 6
+  markers:
+    - kind: LACUNA
+      claims_line: 65
+      narrative_line: 18
+      topic: "Two manuscripts (A 7882 NA + BM 27776 NB) both partly damaged; composite text preserves narrative contour but loses specific actions / divine speech / closing theological implications in the breaks"
+      status: PRESERVED_VERBATIM
+      note: "subfields source / scholarly_reconstruction preserved with ' | ' separator; byte-identical to claims line 65"
+    - kind: RECONSTRUCTION
+      claims_line: 67
+      narrative_line: 20
+      topic: "Lambert 2013's continuous translation joins overlapping passages from A 7882 + BM 27776; where neither preserves a passage, marked as broken; Lambert generally follows MS B (BM 27776 NB) where the two disagree"
+      status: PRESERVED_VERBATIM
+      note: "subfields gap_source / fill_source / confidence preserved; byte-identical to claims line 67"
+    - kind: INFERENCE
+      claims_line: 96
+      narrative_line: 46
+      topic: "Anunnaki captured by Eshumesha gods at this narrative point are Marduk-side deities (not generic Anunnaki); narrative-shape requirement"
+      status: PRESERVED_VERBATIM
+      note: "basis cites Lambert 2013 pp. 321-325 + Black & Green 1992 s.v. Anunnaki; risk acknowledges ambiguity of the term; byte-identical to claims line 96"
+    - kind: VARIANT
+      claims_line: 114
+      narrative_line: 64
+      topic: "Lambert 2013 'bond' (positive displayable token, perhaps clay tablet) vs. Oshima 2010 'burden' (catastrophic release of obligation, derived from *e'iltu*); Oshima rejects derivation from *illatu* ('horde'); Lambert chosen per locked-source convention"
+      status: PRESERVED_VERBATIM
+      note: "Round-1 fix F-4 (e'iltu / illatu philological framing, oversharpening corrected) preserved byte-identical. subfields primary / alt / chosen / reason preserved with ' | ' separator."
+    - kind: INFERENCE
+      claims_line: 116
+      narrative_line: 66
+      topic: "Whether 'bond' or 'burden', the il-let-sa release functions as the narrative's hinge; both readings give different theological registers (binding-of-cosmos vs. catastrophe-precipitation) but agree on causal-decisiveness placement"
+      status: PRESERVED_VERBATIM
+      note: "basis cites both editors' agreement on structural placement; risk preserves the philological-disagreement-unsettled caveat; byte-identical to claims line 116"
+    - kind: INFERENCE
+      claims_line: 129
+      narrative_line: 79
+      topic: "Damkina's Bond + Enmešarra's Defeat as Marduk-subordinates-elder-divine-order sub-cluster; Damkina's Bond differs in foregrounding maternal-feminine intervention as causally decisive vs. Enmešarra's Defeat foregrounding Marduk's direct judgement + Nergal's enforcement"
+      status: PRESERVED_VERBATIM
+      note: "basis cites adjacency in Lambert 2013 Part III + EE Tablets IV–V; risk acknowledges the structural reading is interpretive; byte-identical to claims line 129"
+
+comparative_hook_preservation:
+  total_hooks_in_claims: 4
+  total_hooks_in_narrative: 4
+  hooks:
+    - hook_index: 1
+      claims_line: 159
+      narrative_line: 109
+      topic: "Akkadian internal — Enmešarra's Defeat (Ch. 6) closest internal comparandum; Marduk-vs-elder-pantheon sub-cluster; Damkina's Bond differs in foregrounding maternal-feminine intervention"
+      status: PRESERVED_VERBATIM
+    - hook_index: 2
+      claims_line: 160
+      narrative_line: 110
+      topic: "Akkadian internal — Enūma Eliš (Ch. 1) Tablet IV–V combat sequence + cosmic-offices conferral; Damkina's Bond extends to political-theological subordination of Enlil's Nippur; Marduk-Enlil rivalry articulated theogonically in EE, narratively in Damkina's Bond"
+      status: PRESERVED_VERBATIM
+    - hook_index: 3
+      claims_line: 161
+      narrative_line: 111
+      topic: "Akkadian internal — secret-of-Marduk *pirištu* colophon tradition; parallels with Marduk Ordeal (Livingstone 1989 SAA 3 nos. 34–35) Assur + Nineveh Versions; secret-tablet tradition as marker of scholarly-priestly transmission, not popular reception"
+      status: PRESERVED_VERBATIM
+    - hook_index: 4
+      claims_line: 162
+      narrative_line: 112
+      topic: "Akkadian internal — Lambert 2013 'bond' / Oshima 2010 'burden' philological disagreement on il-let-sa unresolved; future cataloguing work may settle it; both readings preserved with chapter following Lambert per locked-source convention"
+      status: PRESERVED_NEAR_VERBATIM
+      note: |
+        Substantive philological refinement in the draft compared to
+        claims: claims says "the Akkadian semantic range of *il-let* (and
+        the verbal root behind it) may resolve the question"; draft says
+        "the Akkadian semantic range of *e'iltu* (obligation / bond / sin)
+        and *illatu* ("horde") may settle the question". The replacement
+        terms *e'iltu* and *illatu* both appear verbatim in the VARIANT
+        marker (claims line 114 / draft line 64), which itself frames the
+        Lambert/Oshima disagreement as a difference in how each editor
+        operates the *e'iltu* / *illatu* lexical landscape. The change
+        therefore aligns the COMPARATIVE-HOOK with the VARIANT marker's
+        already-established philological vocabulary rather than
+        introducing new philological claims. Classified as
+        PRESERVED_NEAR_VERBATIM with no factual drift; flagged as a LOW-
+        severity finding (CLAIM-DISTORTED-MINOR) for transparency.
+
+round_1_factcheck_corrections:
+  - correction_id: F-1
+    severity: MEDIUM
+    description: "Damkianna name-lineage corrected from 'older Sumerian-style form' to 'late Akkadian variant spelling'; older Sumerian form is Damgalnuna; standard Akkadian form is Damkina; Damkianna is a late Akkadian variant attested in some manuscripts of this composition."
+    narrative_status: APPLIED
+    detail: |
+      Draft line 50: "delivers a message to Damkianna (a late Akkadian
+      variant spelling used in some manuscripts of this composition; the
+      older Sumerian form is Damgalnuna and the standard Akkadian form
+      is Damkina)" — verbatim match to claims line 100. The lineage
+      disambiguation is preserved correctly throughout the body. No
+      slippage between Damkianna / Damgalnuna / Damkina elsewhere.
+  - correction_id: F-2
+    severity: MEDIUM
+    description: "360-stars sky-list link to Three Stars Each / MUL.APIN tradition dropped (Three Stars Each has 36 stars; MUL.APIN has 71; no 360-star Mesopotamian sky-list); 360-day schematic-year link retained; 360° zodiacal-scheme link added."
+    narrative_status: APPLIED
+    detail: |
+      Draft line 74: "It corresponds to the canonical count of days in
+      the Mesopotamian schematic year — the standard 12 × 30-day year of
+      the astrolabes and of *MUL.APIN* — and, by extension, to the 360°
+      zodiacal scheme of later Babylonian astronomy." The *MUL.APIN*
+      mention is bound to the 12 × 30-day schematic year (correctly),
+      not to a star count. The 360° zodiacal-scheme link is included.
+      No 360-star sky-list claim appears anywhere in the draft.
+  - correction_id: F-3
+    severity: LOW
+    description: "BM 27776 colophon's specific Akkadian word *pirištu* attribution softened to a genre-level claim (the Akkadian term used in such colophons is typically *pirištu*) since the specific BM 27776 reading is not directly verified in accessible secondary sources."
+    narrative_status: APPLIED
+    detail: |
+      Draft line 29: "the Akkadian term used in such colophons is
+      typically *pirištu*" — genre-level framing preserved. No direct
+      BM 27776 attribution of the specific word reading. The
+      COMPARATIVE-HOOK 3 (draft line 111) similarly frames the term as
+      'a *pirištu* (secret of Marduk)' in the context of the broader
+      colophon tradition, which is consistent with the genre-level
+      framing.
+  - correction_id: F-4
+    severity: LOW
+    description: "Lambert 'bond' / Oshima 'burden' VARIANT marker tightened with brief philological note: Oshima's 'burden' derives from *e'iltu* (obligation, bond, sin); the underlying lexical landscape (*e'iltu* + *illatu* alternative) is shared between the two readings; they differ in how the released object operates (positive displayable token in Lambert vs. catastrophic release of obligation in Oshima), not in the etymological starting point."
+    narrative_status: APPLIED
+    detail: |
+      Draft line 64 VARIANT marker is byte-identical to claims line 114:
+      "alt=Oshima 2010's reading 'burden' — derived from *e'iltu*
+      (obligation, bond, sin), so etymologically a binding obligation
+      that Damkianna's release sends out as ill-fortune (a plague or
+      natural / celestial disaster); Oshima rejects the alternative
+      derivation from *illatu* ('horde')" — and the reason field
+      preserves the "sharing the *e'iltu* / 'obligation/bond' lexical
+      landscape but differing in how the released object operates"
+      framing. The chapter does not over-sharpen the Lambert/Oshima
+      opposition.
+
+content_consistency_checks:
+  two_manuscript_framing:
+    status: CONSISTENT
+    notes: |
+      "A 7882" / "BM 27776" / "two manuscripts" / "two parallel witnesses"
+      / "Neo-Assyrian + Neo-Babylonian" framing appears at draft lines 4,
+      15, 18, 20, 32, 96, 105 with consistent identification: A 7882 = NA
+      Oriental Institute Chicago; BM 27776 = NB British Museum. No silent
+      reduction to a single witness, no silent introduction of a third.
+      The draft's closing line 105 reads "two scribal apparatuses — a
+      Neo-Assyrian one and a Neo-Babylonian one" + "two copyists, in two
+      centuries" — both consistent with the two-manuscript framing.
+  damkianna_damgalnuna_damkina_lineage:
+    status: PRESERVED_CORRECTLY
+    notes: |
+      Round-1 fix F-1 preserved verbatim at draft line 50. The text
+      consistently uses "Damkina" as the standard Akkadian form
+      (throughout the body); "Damkianna" appears only when discussing
+      manuscripts of this composition that use the variant spelling
+      (draft lines 4 [Oshima 2010 article title], 50, 64 [VARIANT
+      marker]); "Damgalnuna" appears only in the disambiguation gloss
+      (draft line 50) and in the EVIDENCE locator at draft line 52.
+      No slippage between the three forms.
+  360_day_schematic_year_framing:
+    status: PRESERVED_CORRECTLY
+    notes: |
+      Round-1 fix F-2 preserved at draft line 74. The 360 figure is
+      bound to (a) the 12 × 30-day schematic year of the astrolabes
+      and *MUL.APIN*, and (b) the 360° zodiacal scheme of later
+      Babylonian astronomy. No 360-star sky-list claim. The
+      "totalising theological gesture" framing — Marduk's capture of
+      all 360 Eshumesha gods at once indexes the schematic-year
+      totality — is preserved without expansion to additional
+      cosmological registers (no equation with a sky-list, no
+      equation with a calendrical festival cycle).
+  pirištu_genre_level_claim:
+    status: PRESERVED_CORRECTLY
+    notes: |
+      Round-1 fix F-3 preserved at draft line 29 ("the Akkadian term
+      used in such colophons is typically *pirištu*") and at
+      COMPARATIVE-HOOK 3 (draft line 111: "a *pirištu* (secret of
+      Marduk) parallels the secret-of-Marduk colophons attached to
+      other late-Babylonian / Neo-Assyrian Marduk-theological texts").
+      The chapter never makes the specific direct-attribution claim
+      that BM 27776 reads exactly *pirištu* in the colophon — only
+      that the Akkadian term used in such colophons is typically that
+      word. Soft formulation preserved.
+  lambert_oshima_etymological_framing:
+    status: PRESERVED_CORRECTLY
+    notes: |
+      Round-1 fix F-4 preserved verbatim at draft line 64 (VARIANT
+      marker). The shared *e'iltu* lexical landscape, the *illatu*
+      alternative-derivation rejection by Oshima, and the operating-
+      mode difference (positive displayable token vs. catastrophic
+      release of obligation) are all preserved. The chapter does not
+      over-sharpen the opposition into etymologically-distinct
+      starting points; it preserves the fact that the disagreement is
+      in the *operating-mode* of the same lexical-landscape word.
+  marduk_vs_enlil_narrative_shape:
+    status: PRESERVED_WITHOUT_ELABORATION
+    notes: |
+      The narrative arc — Marduk arrives at Nippur (draft line 38) →
+      Eshumesha gods capture Marduk-side Anunnaki (line 41) →
+      Neretagmil messenger to Damkina (line 50) → Damkina's il-let-sa
+      release (line 61) → Marduk's reverse capture of 360 Eshumesha
+      gods including Enlil (line 70) — appears in the same five-step
+      sequence as the claims document with no invented intermediate
+      steps, no specific divine speech, no specific actions invented
+      to fill the lacunae. The fragmentary state of the witnesses is
+      acknowledged at the LACUNA marker (line 18) and reaffirmed in
+      the body prose ("Substantial portions of the narrative are
+      damaged in both witnesses" at line 15).
+  il_let_sa_as_narrative_hinge:
+    status: PRESERVED
+    notes: |
+      The "narrative hinge" framing is preserved at draft line 4
+      ("at the narrative's hinge") in the opening overview, and in
+      the INFERENCE marker at draft line 66 ("the moment functions as
+      the narrative's hinge: Damkina's release of the object
+      determines the conflict's outcome"). Both Lambert's and
+      Oshima's readings are framed as agreeing on the structural
+      placement / causal-decisiveness, even as they disagree on the
+      term's meaning. The chapter never adjudicates the philological
+      question.
+  epistemic_posture_preservation:
+    status: PRESERVED
+    notes: |
+      The three INFERENCE markers in the claims (lines 96, 116, 129)
+      appear as INFERENCE markers in the draft (lines 46, 66, 79),
+      preserving the basis/risk subfield structure byte-identical.
+      INFERENCE-flagged content is NOT promoted to body-prose flat
+      assertion. The body's framing of the Marduk-Enlil sub-cluster
+      (draft line 87) repeats the claim-doc body framing — this is
+      body prose in both files, with the deeper structural reading
+      kept inside INFERENCE-3 (draft line 79). No softening of LACUNA
+      / RECONSTRUCTION limitations: the body consistently flags the
+      composite-text apparatus, the breaks, and the Lambert-MS-B
+      preference where appropriate.
+
+footnote_integrity_check:
+  status: PASS
+  total_footnotes_claims: 22
+  total_footnotes_narrative: 20
+  byte_for_byte_match_for_preserved_footnotes: |
+    Yes for 19 of 20 surviving footnotes. The exception is the opening
+    Oshima 2010 footnote (draft line 4) which replaces the claims-doc
+    parenthetical "venue verification pending" with the resolved
+    bibliographic citation (Festschrift article in *A Woman of Valor:
+    Jerusalem Ancient Near Eastern Studies in Honor of Joan Goodnick
+    Westenholz*, ed. W. Horowitz / U. Gabbay / F. Vukosavović,
+    Biblioteca del Próximo Oriente Antiguo 8, Madrid: CSIC, pp. 145–
+    162). This is a footnote-bibliographic enrichment, not a new
+    claim about the composition; classified as a positive resolution
+    of the claims-doc's open-TODO marker rather than a fidelity
+    violation.
+  notes: |
+    The 2-footnote delta is the legitimate same-source consolidation
+    of:
+    (a) claims paragraphs at lines 51 (title) + 54 (Lambert standard /
+        Oshima alt edition) → draft lines 4 + 7
+    (b) claims paragraphs at lines 79 (dating) + 82 (Malgium /
+        transmission) → draft line 32
+    No factual content is dropped. All round-1 fixes are preserved in
+    the draft footnotes verbatim from the approved claims.
+
+evidence_token_check:
+  status: PASS
+  total_evidence_tokens_claims: 39
+  total_evidence_tokens_narrative: 37
+  notes: |
+    The 2-EVIDENCE-token delta corresponds to the same-source
+    consolidations described in evidence_token_check. All preserved
+    EVIDENCE tokens have matching source_id and loc strings.
+    source_ids resolve to entries in sources.yaml: lambert-2013,
+    foster-2005, foster-2007, dalley-2008, black-green-1992, rla,
+    bottero-2001. (livingstone-1989 is referenced in COMPARATIVE-HOOK
+    3 prose but does not appear as an EVIDENCE token; this matches
+    the claims document.)
+
+findings:
+  - id: F-09e-1
+    severity: LOW
+    kind: CLAIM-DISTORTED-MINOR
+    location: "draft line 112 (COMPARATIVE-HOOK 4)"
+    description: |
+      Substantive philological refinement in the fourth COMPARATIVE-HOOK:
+      claims (line 162) says "Future cataloguing work on the Akkadian
+      semantic range of *il-let* (and the verbal root behind it) may
+      resolve the question"; draft says "Future cataloguing work on the
+      Akkadian semantic range of *e'iltu* (obligation / bond / sin) and
+      *illatu* ("horde") may settle the question". The replacement terms
+      *e'iltu* and *illatu* are both already named verbatim in the
+      VARIANT marker (claims line 114 / draft line 64). The change
+      therefore aligns the hook with the VARIANT marker's already-
+      established philological vocabulary rather than introducing new
+      philological claims. The semantic reach is identical: both
+      formulations point to future philological cataloguing as the path
+      to settling the il-let-sa question, with the draft naming the two
+      candidate roots explicitly. No factual drift; no recommendation
+      to revise. Logged for transparency.
+    recommendation: "No revision needed; the hook's refinement is consistent with the VARIANT marker and the round-1 F-4 fix."
+
+verdict_rationale: |
+  All 22 footnoted claim-paragraphs (numbered 1–22 in claim_mapping;
+  the structural-marker count of "14 numbered claims" in the meta is
+  the count of distinct numbered narrative claims in the brief; the
+  full claim_mapping covers all 22 source-overview + body-prose
+  claim-paragraphs) map cleanly to specific narrative paragraphs. All
+  6 markers (1 LACUNA, 1 RECONSTRUCTION, 3 INFERENCE, 1 VARIANT) are
+  preserved byte-identical including their basis / risk and source /
+  scholarly_reconstruction and gap_source / fill_source / confidence
+  and primary / alt / chosen / reason subfields. All 4 COMPARATIVE-HOOK
+  comments are preserved (hooks 1–3 verbatim; hook 4 with a LOW-severity
+  philological refinement aligned to the VARIANT marker — F-09e-1). All
+  4 round-1 factcheck corrections (F-1 Damkianna lineage; F-2 360-day
+  schematic-year framing; F-3 *pirištu* genre-level framing; F-4
+  Lambert/Oshima *e'iltu* / *illatu* etymological framing) are reflected
+  in the draft. The two-manuscript framing (A 7882 NA + BM 27776 NB) is
+  consistently maintained throughout the body. The Marduk-vs-Enlil
+  narrative shape is preserved without elaboration. The il-let-sa-as-
+  narrative-hinge framing is preserved with both Lambert and Oshima
+  readings agreeing on causal placement. Three minor prose-elaboration
+  additions (draft lines 29, 38, 105) are paraphrastic restatements of
+  existing claims, not new factual assertions. One footnote
+  enrichment (draft line 4 Oshima 2010 venue resolution) resolves an
+  open-TODO marker in the claims footnote and adds verified
+  bibliographic data. The 2-EVIDENCE / 2-footnote structural delta is
+  legitimate same-source consolidation of two pairs of adjacent
+  paragraphs into single draft paragraphs. Per the skill's verdict
+  rules — zero CLAIM-DROPPED at any severity, zero CLAIM-ADDED at HIGH
+  severity, zero HIGH CLAIM-DISTORTED, zero MEDIUM findings, one LOW
+  CLAIM-DISTORTED-MINOR — the verdict is PASS.
+
+summary: |
+  VERDICT: PASS. Chapter 9 draft faithfully realizes the approved
+  claims. All 22 claim-paragraphs mapped (the 14 numbered narrative
+  claims plus the 8 source-overview + body-frame paragraphs, two pairs
+  of which are consolidated 2-into-1 in the draft). All 6 markers
+  preserved verbatim with subfields intact. All 4 COMPARATIVE-HOOK
+  comments preserved (hooks 1–3 verbatim; hook 4 with LOW-severity
+  philological refinement aligned to the VARIANT marker, no factual
+  drift). All 4 round-1 factcheck corrections (F-1 through F-4)
+  carried through to the draft. Two-manuscript framing, Damkianna /
+  Damgalnuna / Damkina lineage, 360-day schematic-year framing,
+  *pirištu* genre-level claim, Lambert/Oshima *e'iltu* / *illatu*
+  etymological framing, Marduk-vs-Enlil narrative shape, and
+  il-let-sa-as-narrative-hinge framing all preserved correctly. The
+  2-EVIDENCE / 2-footnote structural delta is legitimate same-source
+  consolidation of two pairs of adjacent paragraphs. One LOW-severity
+  finding logged for transparency on the COMPARATIVE-HOOK 4
+  philological refinement.
