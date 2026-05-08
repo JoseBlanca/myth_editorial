@@ -1,0 +1,47 @@
+stage: "chapter-claims"
+chapter: 08
+slug: "uras-and-marduk"
+input: "briefs/08-uras-and-marduk.yaml"
+output: "chapters/08-uras-and-marduk.claims.adoc"
+timestamp: "2026-05-08T14:08:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/08-uras-and-marduk.claims.adoc"
+    lines: 98
+summary: "Chapter 8 (Uraš and Marduk) claims document. Lambert 2013 pp. 308-325 is the sole modern critical edition; brief's variants.classification is 'single-prevalent' (Lambert's composite text from partially overlapping late-Babylonian manuscripts). Per the brief's special_instructions, the chapter is treated as a node in the late-Babylonian cosmogonic dossier rather than as a freestanding myth: marginal in attestation, fragmentary, and analytically paired with Damkina's Bond (Chapter 9) as a feminine-consortship sub-cluster. The chapter does NOT reconstruct verbatim quotations or specific column/line attributions, given that the only available source for the chapter writing was Lambert 2013 cited at page-range level (no digitized translation available; Foster 2005 / Dalley 2008 do not include this composition). All page references stay at the page-range level Lambert 2013, pp. 308-325 (with sub-ranges 308-311 for source overview / commentary, 311-321 for narrative content); these match the brief's loc range. Three INFERENCE markers covering (i) the late-Babylonian theological extension framing — Marduk absorbing Anu's consortship roles; (ii) the cosmogonic-theological function attribution — interpretive, deriving from Lambert's commentary rather than from a programmatic statement in the surviving lines; (iii) the dossier-node framing — the composition is best read as a temple-scholarly artifact rather than a freestanding myth. One LACUNA marker for the breaks across the late-Babylonian manuscripts; one RECONSTRUCTION marker for Lambert 2013's internal joins among the witnesses (no external in-tradition donor source available; confidence: low to medium). One VARIANT marker for the single-prevalent / sub-manuscript variation classification. Four COMPARATIVE-HOOK comments: Greek Gaia-Ouranos primordial pair (with Hesiodic inversion); Hurro-Hittite earth-deity material (Hoffner 1998); internal Akkadian Damkina's Bond parallel (closest comparandum); internal Akkadian Enūma Eliš / dossier-register framing. Source IDs used: lambert-2013 (sole anchor for textual claims), black-green-1992 (s.v. Uraš, Marduk, Anu, Ea), rla (s.v. Uraš A and Uraš B — the female earth-goddess vs. the male Dilbat deity distinction; Krebernik 2014 named in the footnote and routed through the rla source ID per the named-but-flagged pattern), bottero-2001 (chthonic-celestial pairings as a recurring Mesopotamian motif), foster-2007 (passim — late-Babylonian compositional milieu), foster-2005 and dalley-2008 (negative attestation: do not include this composition). Hoffner 1998 is named in the COMPARATIVE-HOOK section for the Hurro-Hittite comparison but no EVIDENCE token routes through it (not yet in sources.yaml — the COMPARATIVE-HOOK is a note for the comparative chapter). All seven source IDs in EVIDENCE tokens resolve to existing entries in sources.yaml. Glossary check: Uraš, Marduk, Anu, Ea, and the dossier-locus terms (Apsû, Tablet of Destinies) are used per the locked glossary.yaml renderings. Damkina is referenced from the chapter 07 first-mention gloss tracked in gloss-ledger.yaml. The brief's analytical pairing with Damkina's Bond is preserved as the closest internal comparandum and as a COMPARATIVE-HOOK."
+brief_alignment:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — single VARIANT marker noting Lambert 2013's composite text from partially overlapping late-Babylonian manuscripts; manuscripts differ in subsidiary-deity roles and closing lines but constitute a single tradition, not co-equal alternates."
+  one_lacuna_flagged: "PASS — [LACUNA:] for the breaks across the late-Babylonian manuscripts; scholarly_reconstruction notes Lambert 2013's internal joins as the only available reconstruction; Damkina's Bond is too fragmentary to serve as donor source."
+  reconstruction_marker_present: "PASS — [RECONSTRUCTION:] covers Lambert 2013's internal joins; gap_source: breaks across the late-Babylonian witnesses; fill_source: internal joins among the witnesses (no external donor); confidence: low to medium (high where two or more manuscripts overlap; low where Lambert restores from a single witness)."
+  base_text: "Lambert 2013 used as base. No anthology translation; Foster 2005 and Dalley 2008 do not contain this composition (consistent with brief's special_instructions and the secondary literature)."
+  marduk_dossier_cross_references: "PASS — explicitly placed within the late-Babylonian Marduk-cosmogonic dossier alongside Enūma Eliš (Chapter 1), Enmešarra's Defeat (Chapter 6), The Toil of Babylon (Chapter 7), The Slaying of Labbu (Chapter 5), and Damkina's Bond (Chapter 9, paired analytically)."
+  uras_marduk_pairing: "PASS — the chthonic-celestial pairing between Uraš (earth-goddess) and Marduk (cosmic king) is articulated as the composition's organizing motif; the pairing is explained as a late-Babylonian theological extension of Marduk's absorption of Anu's prerogatives, which is the standard scholarly framing."
+  uras_disambiguation: "PASS — the female earth-goddess Uraš is explicitly distinguished from the homonymous male Dilbat deity, with Lambert 2013's commentary and RlA's separate articles (Uraš A vs. Uraš B) cited."
+  marginal_centrality_handling: "PASS — the composition is described as marginal individually; the chapter avoids over-interpretation per the brief's special_instructions and frames the composition as a node in the dossier rather than as a freestanding myth."
+  damkina_bond_pairing: "PASS — Damkina's Bond (Chapter 9) is identified as the closest internal comparandum; the pair is analytically grouped as a feminine-consortship sub-cluster within the late-Babylonian Marduk dossier."
+  comparative_hooks_complete: "PASS — four COMPARATIVE-HOOK comments cover (i) Greek Gaia-Ouranos with explicit inversion-comparison note; (ii) Hurro-Hittite earth-deities (Hoffner 1998 named); (iii) internal Akkadian Damkina's Bond parallel; (iv) internal Akkadian Enūma Eliš / register-breadth framing within the Marduk dossier."
+validation:
+  footnote_count: 16
+  evidence_marker_count: 32
+  unresolved_source_ids: 0
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_comments: 4
+  marker_placement_errors: 0
+  source_overview_footnotes: 4
+notes:
+  named_but_flagged:
+    - scholar: "Krebernik, Manfred"
+      publication: "Uraš A. *Reallexikon der Assyriologie* (RlA), 2014."
+      anchor_routed_through: "rla"
+      reason: "Krebernik's RlA article is the standard reference for Uraš the earth-goddess; the EVIDENCE token routes through the rla source ID, with Krebernik named in the footnote. No standalone sources.yaml entry needed for this single named author within RlA."
+    - scholar: "Hoffner, Harry A. Jr."
+      publication: "*Hittite Myths* (2nd ed., SBL Writings from the Ancient World, 1998)."
+      anchor_routed_through: "(none — COMPARATIVE-HOOK only, no EVIDENCE token)"
+      reason: "Hoffner 1998 is referenced in a COMPARATIVE-HOOK comment for the Hurro-Hittite earth-deity material; the comment is a note for the comparative chapter and does not anchor a body claim. If the comparative chapter develops the Hurro-Hittite parallel substantively, hoffner-1998 should be added to sources.yaml at that point."
+  out_of_scope_handling: "Hurro-Hittite (Lelwani) and Greek (Gaia-Ouranos) parallels are mentioned only in COMPARATIVE-HOOK comments, never in body claims. No out-of-scope material is retold."
+  caution_on_specific_attestations: "Verbatim quotations and specific column/line attributions are not given in this claims document. Lambert 2013 is cited at the page-range level (pp. 308-311 for source overview; pp. 311-321 for narrative content; pp. 308-325 for the full chapter). This conservative citation profile reflects the limited recoverable narrative and the philological transparency the brief's special_instructions require ('preserve the philological transparency of we have these pieces, fitted together by Lambert')."

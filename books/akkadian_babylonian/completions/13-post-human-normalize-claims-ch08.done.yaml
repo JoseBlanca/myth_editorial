@@ -1,0 +1,98 @@
+stage: "post-human-normalize"
+chapter: 08
+slug: "uras-and-marduk"
+input: "chapters/08-uras-and-marduk.claims.adoc (round 2 — post-factcheck-1 rewrite)"
+output: "chapters/08-uras-and-marduk.claims.approved.adoc"
+timestamp: "2026-05-08T14:48:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/08-uras-and-marduk.claims.approved.adoc"
+    lines: 125
+summary: |
+  Post-factcheck normalization of chapter 8 claims after factcheck-round-2 returned REVISE (0 HIGH, 2 MEDIUM, 1 LOW + 2 NOTES). All three findings ACCEPTED and applied as localized citation-routing edits — the round-2 claims rewrite had already absorbed every round-1 finding (page range pp. 308–325 → 311–315 + 496 notes; Damkina's Bond pp. 326–360 → 321–325; multi-manuscript framing → single tablet UET 6, 398 from Ur per Streck 2014; female cosmogonic Uraš → male Dilbat agricultural tutelary; Greek Gaia–Ouranos and Hurro-Hittite Lelwani comparative hooks dropped). The post-human-normalize pass made these citation-routing fixes:
+
+  - F-R2-1 (MEDIUM, CITATION-WRONG): Foster 2005's "Myths of Origins" sub-section page range corrected from "pp. 436–440" to "pp. 487 ff. (Marduk, Creator of the World p. 487; Myth of the Plow p. 489; Creation of Humankind p. 491; Providing for the Gods; Creation of Sun and Moon; Creation of the King)" — pp. 436 is the start of the Enūma Eliš section, NOT the cosmogonic sub-section. Three places updated: claim 9 footnote and EVIDENCE token; INFERENCE-marker basis after claim 9; second COMPARATIVE-HOOK at line 109. The substantive grouping argument stands; only the page range required revision. The phrase "cosmogonic incantation prologues" (which was imprecise — Foster 2005's Myths-of-Origins sub-section is mixed and not exclusively prologue-material) was loosened to "small Marduk-creation compositions" in the COMPARATIVE-HOOK and to "the broader Marduk-creation pattern" in the body footnote.
+
+  - F-R2-2 (MEDIUM, CITATION-WRONG): The first COMPARATIVE-HOOK (line 108) and the claim-5 footnote previously conflated the *Marduk Ordeal* (Livingstone 1989, SAA 3 nos. 34–35 = the Assur and Nineveh Versions) with the *Marduk's Address to the Demons* (Lambert AfO 17, 1954–56; re-edited Geller 2016 as Udug-hul Tablet 11) — the Marduk Address is NOT in SAA 3. The conflation has been resolved by: (i) splitting the COMPARATIVE-HOOK so that only the *Marduk Ordeal* is cited via Livingstone 1989 SAA 3 nos. 34–35, while *Marduk's Address to the Demons* is named with its correct publication anchors (Lambert AfO 17 1954–56; Geller 2016 De Gruyter Udug-hul Tablet 11) and an explicit note that neither Lambert AfO 17 nor Geller 2016 is currently in sources.yaml — i.e., the named-but-flagged pattern; (ii) tightening claim 5's footnote to "Livingstone 1989 (Court Poetry and Literary Miscellanea, SAA 3 nos. 34–35, the Assur and Nineveh Versions of the Marduk Ordeal)" — dropping the ambiguous "Marduk-name-list compositions" phrase. Both changes preserve the substantive argument while correcting the citation routing.
+
+  - F-R2-3 (LOW, UNVERIFIED): The "Marduk of planting" equation citation. Black & Green 1992, s.v. Urash retained as one anchor (genre-appropriate; their dictionary covers the male Dilbat tutelary). Lambert 2013, pp. 264–265 added as a parallel anchor — the *Enūma Eliš* Tablet VII fifty-names commentary where the equation is articulated, per Wikipedia's tracing of the citation chain. Both citations now appear in the three affected places: claim 6 footnote, INFERENCE-marker basis after claim 6, and claim 11 footnote. The substantive equation is independently corroborated by HandWiki and Wikipedia; the Lambert 2013 pp. 264–265 attribution gives the better anchor for the equation's articulation.
+
+  Additional housekeeping changes: section anchor updated from `[[ch-08-uras-and-marduk-claims]]` to `[[ch-08-uras-and-marduk-claims-approved]]` (matching the chapter-7 approved-version convention); chapter title updated to "Uraš and Marduk — Claims (post-factcheck approved)"; meta-header comment block expanded to include the round-2 fix log (F-R2-1 / F-R2-2 / F-R2-3 dispositions inline). No changes to the substantive narrative content of the claims; all 14 claim paragraphs, 3 INFERENCE markers, 1 LACUNA marker, 1 RECONSTRUCTION marker, 1 VARIANT marker, and 3 COMPARATIVE-HOOK comments are preserved with the citation-routing fixes applied.
+
+audit_findings_disposition:
+  high: []
+  medium:
+    - id: "F-R2-1"
+      kind: "CITATION-WRONG — Foster 2005 page range pp. 436–440 → pp. 487 ff. ('Myths of Origins')"
+      action: "ACCEPTED"
+      applied: |
+        Three citations corrected:
+        1. claim 9 footnote and EVIDENCE token: 'Foster 2005, pp. 436–440' → 'Foster 2005, pp. 487 ff. (the "Myths of Origins" sub-section, including "Marduk, Creator of the World", "The Myth of the Plow", "Creation of Humankind", "Providing for the Gods")'.
+        2. INFERENCE-marker basis after claim 9: 'Foster 2005 pp. 436–440 collects ...' → 'Foster 2005 pp. 487 ff. ("Myths of Origins") collects "Marduk, Creator of the World" (p. 487), "The Myth of the Plow" (p. 489), "Creation of Humankind" (p. 491), "Providing for the Gods", "Creation of Sun and Moon", "Creation of the King"'.
+        3. Second COMPARATIVE-HOOK at line 109: 'cosmogonic incantation prologues collected in Foster 2005 pp. 436–440' → 'small Marduk-creation compositions collected in Foster 2005's "Myths of Origins" sub-section, beginning at p. 487'.
+        EVIDENCE-token loc field updated from `loc=pp. 436-440` to `loc=pp. 487 ff. ("Myths of Origins")`.
+    - id: "F-R2-2"
+      kind: "CITATION-WRONG — Marduk Ordeal AND Marduk's Address conflated under SAA 3 nos. 34–35"
+      action: "ACCEPTED"
+      applied: |
+        Two citations corrected:
+        1. First COMPARATIVE-HOOK (line 108): 'in the *Marduk Ordeal* and *Marduk-Address* texts (Livingstone 1989, SAA 3 nos. 34–35)' → 'is developed further within the cultic-narrative register in the *Marduk Ordeal* (Livingstone 1989, SAA 3 nos. 34–35, the Assur and Nineveh Versions). The *Marduk's Address to the Demons* — a separate composition originally published by W. G. Lambert in *Archiv für Orientforschung* 17 (1954–56) and re-edited by M. J. Geller as Udug-hul Tablet 11 in *Healing Magic and Evil Demons* (De Gruyter, 2016) — is also part of the syncretism dossier, but lies outside SAA 3 and is not currently in this book's `sources.yaml`.' The Marduk-Address composition is now correctly identified with its actual publication anchors and treated under the named-but-flagged pattern (no EVIDENCE token routed through Lambert AfO 17 or Geller 2016).
+        2. Claim 5 footnote: 'Livingstone 1989 (*Court Poetry and Literary Miscellanea*, SAA 3, especially the *Marduk Ordeal* and Marduk-name-list compositions)' → 'Livingstone 1989 (*Court Poetry and Literary Miscellanea*, SAA 3 nos. 34–35, the Assur and Nineveh Versions of the *Marduk Ordeal*)'. The ambiguous "Marduk-name-list compositions" phrase is dropped.
+  low:
+    - id: "F-R2-3"
+      kind: "UNVERIFIED — Black & Green 1992 s.v. Urash citation for 'Marduk of planting' equation"
+      action: "ACCEPTED"
+      applied: |
+        Three citations updated to add Lambert 2013 pp. 264–265 as a parallel anchor for the 'Marduk of planting' equation:
+        1. Claim 6 footnote retained Black & Green 1992 s.v. Urash and RlA s.v. Uraš B; the equation's textual articulation in *Enūma Eliš* Tablet VII commentary at Lambert 2013 pp. 264–265 is anchored at the INFERENCE-marker basis (see #2).
+        2. INFERENCE-marker basis after claim 6: the basis-clause now reads 'the late-Babylonian commentary equation "Urash = Marduk of planting" is articulated within the *Enūma Eliš* Tablet VII fifty-names commentary at Lambert 2013, pp. 264–265, and is attested in the syncretistic god-list tradition more broadly (Black & Green 1992, s.v. Urash)'. Both anchors retained, with Lambert 2013 pp. 264–265 supplying the textual articulation and Black & Green 1992 supplying the secondary-genre framing.
+        3. Claim 11 footnote: 'Black & Green 1992, s.v. Urash ("Marduk of planting" equation)' → 'with the underlying "Marduk of planting" equation articulated in the *Enūma Eliš* Tablet VII fifty-names commentary at Lambert 2013 pp. 264–265; Black & Green 1992, s.v. Urash (the male Dilbat tutelary, agricultural character, syncretism with Marduk)'. The Black & Green attribution is loosened from "the equation specifically" to "the male Dilbat tutelary, agricultural character, syncretism with Marduk" (genre-appropriate as a dictionary entry).
+  notes:
+    - id: "N-R2-1"
+      kind: "NOTE — Streck 2014 named-but-flagged"
+      action: "NO-CHANGE (forwarded to inventory-audit)"
+      applied: "Streck 2014 (BSOAS 77, 371–372) remains named in the source-overview footnote (line 16) for the manuscript identification (UET 6, 398) without an EVIDENCE token routing through it. The named-but-flagged pattern is correctly applied. Recommendation forwarded to inventory-audit: add Streck 2014 to sources.yaml — the addition would benefit chapters 5–9 on manuscript-base claims."
+    - id: "N-R2-2"
+      kind: "NOTE — Lambert AfO 17 (1954–56) and Geller 2016 named-but-flagged"
+      action: "NO-CHANGE (forwarded to inventory-audit)"
+      applied: "Following the F-R2-2 fix, Lambert AfO 17 (1954–56) and Geller 2016 (De Gruyter, *Healing Magic and Evil Demons*, Udug-hul Tablet 11) are now named in the first COMPARATIVE-HOOK at line 108 as the publication anchors for *Marduk's Address to the Demons*, but no EVIDENCE token routes through them. Both are treated under the named-but-flagged pattern. Neither is currently in sources.yaml; if the comparative chapter develops the Marduk-Address material substantively, both should be added. Recommendation forwarded to inventory-audit."
+
+structural_validation:
+  one_claim_per_paragraph: "PASS — every paragraph in the body contains a single claim with one footnote citation. No bundled claims; no narrative connective tissue."
+  every_claim_has_footnote: "PASS — 17 footnotes across 14 numbered claims plus the source-overview cluster; one footnote per claim."
+  evidence_tokens_valid: "PASS — 34 EVIDENCE tokens, all syntactically `// EVIDENCE: source_id=<id> ; loc=<loc>` with no malformed entries."
+  source_ids_resolve: "PASS — all 8 distinct source_ids (lambert-2013, foster-2005, dalley-2008, black-green-1992, rla, foster-2007, bottero-2001, livingstone-1989) resolve to entries in sources.yaml."
+  markers_complete: "PASS — every marker has its required sub-fields. INFERENCE markers (3) all have basis: and risk: fields populated and substantive. LACUNA marker (1) has source: and scholarly_reconstruction: fields. RECONSTRUCTION marker (1) has gap_source:, fill_source:, and confidence: fields. VARIANT marker (1) has primary=, alt=, chosen:, and reason: fields."
+  glossary_compliance: "PASS — locked Akkadian renderings used correctly throughout (Marduk; Urash/Uraš with diacritic; Anu; Ea; Damkina; Tiamat; Enmešarra; Apsû; Tablet of Destinies; Esagil). The male/female Urash distinction is consistently maintained. The narrative refers to the male Dilbat tutelary throughout the body of the chapter; the female cosmogonic Uraš is mentioned only in the disambiguation paragraph (claim 6) and in the brief's entities_glossary. No Sumerian forms appear as body-prose substitutes. The composition title *Uraš and Marduk* uses italic rendering consistent with the scope.md presentation policy. Akkadian common nouns (when present) are italicised per the Assyriological convention."
+  validation_provenance: "Per the chapter-7 precedent, no `// Validated by post-human-normalize` provenance block is appended to the approved file. The completion record is the canonical provenance artifact."
+brief_changes:
+  applied: |
+    The brief at briefs/08-uras-and-marduk.yaml was substantively revised between
+    round 1 and round 2 (see completions/11-chapter-claims-ch08-round2.done.yaml
+    for the full revision log). The post-human-normalize pass made no further
+    changes to the brief — the citation-routing fixes (F-R2-1, F-R2-2, F-R2-3)
+    affected only the claims document, not the brief.
+notes:
+  named_but_flagged_carry_forward:
+    - scholar: "Streck, Michael P."
+      publication: "Review of W. G. Lambert, *Babylonian Creation Myths*. *Bulletin of the School of Oriental and African Studies* 77 (2014), 371–372 (DOI 10.1017/S0041977X14000123)."
+      reason: "Manuscript identification (UET 6, 398) anchor; sources.yaml addition recommended for chapters 5–9 manuscript-base claims."
+    - scholar: "Krebernik, Manfred"
+      publication: "Uraš A. *Reallexikon der Assyriologie* (RlA), 2014."
+      reason: "Routed through the rla source ID; no separate sources.yaml entry needed."
+    - scholar: "Lambert, Wilfred G."
+      publication: "An Address of Marduk to the Demons. *Archiv für Orientforschung* 17 (1954–56)."
+      reason: "Named in COMPARATIVE-HOOK as a publication anchor for *Marduk's Address to the Demons*; not currently in sources.yaml; named-but-flagged."
+    - scholar: "Geller, Markham J."
+      publication: "*Healing Magic and Evil Demons: Canonical Udug-hul Incantations* (Berlin: De Gruyter, 2016), Udug-hul Tablet 11 = the Marduk's Address to the Demons re-edition."
+      reason: "Named in COMPARATIVE-HOOK as the modern re-edition anchor for *Marduk's Address to the Demons*; not currently in sources.yaml; named-but-flagged."
+  caution_on_specific_attestations: |
+    The chapter still cites Lambert 2013 at the page-range level (pp. 311–315
+    + p. 496 notes) for substantive textual claims. Verbatim quotations are
+    not given. The narrative content is summarised at "Marduk creates plant
+    life for Urash" — the standard secondary summary per HandWiki and
+    Streck 2014. A finer-grained narrative reconstruction would require
+    direct access to Lambert 2013, which the chapter writer does not have.
+    The conservative citation profile is appropriate for the limited
+    recoverable narrative.

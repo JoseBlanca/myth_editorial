@@ -1,0 +1,135 @@
+stage: "claims-factcheck (round 2)"
+chapter: 08
+slug: "uras-and-marduk"
+input: "chapters/08-uras-and-marduk.claims.adoc (round 2; 110 lines, 34 EVIDENCE tokens, 17 footnotes, 3 INFERENCE / 1 LACUNA / 1 RECONSTRUCTION / 1 VARIANT / 3 COMPARATIVE-HOOK markers)"
+output: "chapters/08-uras-and-marduk.claims.factcheck.yaml (round 2; canonical factcheck file going forward)"
+prior_round:
+  round1_factcheck: "chapters/08-uras-and-marduk.claims.factcheck-round1.yaml (verdict MAJOR-REVISE; 4 HIGH / 4 MEDIUM / 3 LOW findings)"
+  round1_completion: "completions/12-claims-factcheck-ch08-round1.done.yaml"
+  round2_claims_completion: "completions/11-chapter-claims-ch08-round2.done.yaml"
+timestamp: "2026-05-08T14:38:56Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/08-uras-and-marduk.claims.factcheck.yaml"
+    lines: 1073
+verdict: REVISE
+findings:
+  high: 0
+  medium: 2
+  low: 1
+  notes: 2
+round1_findings_resolution:
+  resolved:
+    - "F-1 (Lambert 2013 pp. 308–325 wrong → pp. 311–315 + p. 496): RESOLVED. All EVIDENCE token loc fields and footnote references in the round-2 claims now use the corrected range. Verified via direct fetch of DeGruyter Brill chapter landing doi:10.1515/9781575068619-019."
+    - "F-2 (Damkina's Bond pp. 326–360 wrong → pp. 321–325): RESOLVED. The round-2 claims correctly cite Damkina's Bond at pp. 321–325."
+    - "F-3 (multi-manuscript framing wrong → single tablet UET 6, 398): RESOLVED. The round-2 claims consistently identify the single tablet UET 6, 398 from Ur as the sole witness; LACUNA / RECONSTRUCTION / VARIANT markers are reframed around the single-witness premise; dating opened to OB / Kassite / late-Babylonian per HandWiki."
+    - "F-4 (female cosmogonic Uraš wrong → male Dilbat agricultural tutelary): RESOLVED. The chapter's central conceptual hinge is correctly rewritten around the male-Urash reading; the female cosmogonic Uraš is explicitly distinguished as a different deity. Narrative reframed as 'Marduk creates plant life for Urash' (per HandWiki and Wikipedia)."
+    - "F-5 (Marduk-absorbs-Anu's-consortship INFERENCE): RESOLVED. Replaced with a Marduk-syncretism INFERENCE marker reading the composition as a small narrative articulation of Marduk's relationship with the Dilbat tutelary as a local-cult double."
+    - "F-6 (marriage / consortship narrative content): RESOLVED. Dropped entirely; replaced with the agricultural-cosmogonic register."
+    - "F-7 (cosmogonic-theological-function INFERENCE): RESOLVED. Rewritten around the Marduk-creation-narrative-dossier framing parallel to Foster 2005's Myths of Origins sub-section."
+    - "F-8 (LACUNA / RECONSTRUCTION multi-manuscript): RESOLVED."
+    - "F-9 (VARIANT multi-manuscript): RESOLVED."
+    - "F-10 (Lelwani / Greek Gaia–Ouranos hooks mis-targeted): RESOLVED. Both round-1 hooks dropped entirely; replaced with three internal-Akkadian hooks."
+    - "F-11 (late-Babylonian dating): RESOLVED. Dating opened to OB / Kassite / late-Babylonian range."
+new_findings:
+  - finding_id: F-R2-1
+    severity: MEDIUM
+    kind: CITATION-WRONG
+    description: "Foster 2005 page range pp. 436–440 (cited 3 times for the 'Myths of Origins' sub-section) is wrong. The sub-section begins at p. 487 (verified directly via dokumen.pub-hosted Foster 2005 TOC and confirmed via multiple convergent web searches). Pages 436–440 are within Section 17 'Epic of Creation' (= Enūma Eliš), not Section 18 'Myths of Origins'. This is a fresh round-2 error introduced by the round-2 rewrite. Locations: claim 9 footnote and EVIDENCE token (line 56, line 59); INFERENCE marker basis after claim 9 (line 64); COMPARATIVE-HOOK at line 109."
+  - finding_id: F-R2-2
+    severity: MEDIUM
+    kind: CITATION-WRONG
+    description: "The COMPARATIVE-HOOK at line 108 conjoins 'the *Marduk Ordeal* and *Marduk-Address* texts' under the citation 'Livingstone 1989, SAA 3 nos. 34–35'. Verified via direct fetch of the Livingstone 1989 SAA 3 TOC: nos. 34–35 are only the Marduk Ordeal (Assur Version no. 34, Nineveh Version no. 35); 'Marduk's Address to the Demons' is NOT in SAA 3 — it is Lambert AfO 17 (1954–56) and Geller 2016 Udug-hul Tablet 11. The conjunction is a false attribution. The claim 5 footnote at line 68 has a related but milder ambiguity ('Marduk-name-list compositions' is imprecise for SAA 3 nos. 36–39)."
+  - finding_id: F-R2-3
+    severity: LOW
+    kind: UNVERIFIED
+    description: "The Black & Green 1992 s.v. Urash citation for the 'Marduk of planting' equation (cited 3 times: claim 6 footnote line 40; INFERENCE marker basis after claim 6 line 49; claim 11 footnote line 73) is unverified. Wikipedia s.v. Urash (god) traces the equation to Lambert 2013 pp. 264–265 (the Enūma Eliš Tablet VII fifty-names commentary), not to Black & Green 1992. Black & Green 1992 is not cited in the Wikipedia article on Urash (god). The substantive equation is fully corroborated by HandWiki and Wikipedia; only the citation attribution is partly uncorroborated."
+notes:
+  - note_id: N-R2-1
+    detail: "Streck 2014 (BSOAS 77, 371–372) sources.yaml addition still recommended (carryover from round 1 N-2). Streck 2014 is named in the source-overview footnote (line 16) for the manuscript identification (UET 6, 398) but no EVIDENCE token routes through it (named-but-flagged pattern; correct disclosure)."
+  - note_id: N-R2-2
+    detail: "The framing of Foster 2005's sub-section as 'the cosmogonic incantation prologues' (claim 9 footnote, line 56) is slightly imprecise — Foster 2005 Section 18 'Myths of Origins' includes both small Marduk-creation compositions ('Marduk, Creator of the World', 'Creation of Humankind', 'Creation of the King') AND incantation-prologue cosmogonies. Minor stylistic note for the chapter-draft pass."
+honesty_self_check_summary:
+  same_model_family: "claude-opus-4-7[1m] (same model as the round-2 claims writer; fresh context per the skill's hard-rule allowance)"
+  fresh_context: true
+  sources_opened_directly:
+    - "DeGruyter Brill chapter landing for 'Uraš and Marduk' (doi:10.1515/9781575068619-019) — confirmed pp. 311–315"
+    - "DeGruyter Brill chapter landing for 'Damkina's Bond' (doi:10.1515/9781575068619-021) — confirmed pp. 321–325"
+    - "HandWiki s.v. Religion:Urash_(god) — confirmed male Dilbat tutelary, agricultural character, 'Marduk of planting' equation, male/female distinction, single-tablet manuscript summary"
+    - "Wikipedia s.v. Urash (god) — confirmed all of the above; noted the bibliography traces 'Marduk of planting' to Lambert 2013 pp. 264–265, NOT to Black & Green 1992"
+    - "Wikipedia s.v. Uraš (the female deity) — confirmed Krebernik 2014 RlA 'Uraš A' for the female cosmogonic deity"
+    - "academia.edu Streck 2014 review — confirmed verbatim 'Uraš and Marduk (UET 6, 398)'"
+    - "epdf.mx-hosted Livingstone 1989 SAA 3 TOC — confirmed nos. 34–35 are the Marduk Ordeal; no SAA 3 text titled 'Marduk-Address'"
+    - "dokumen.pub-hosted Foster 2005 TOC (via web search) — confirmed 'Myths of Origins' begins at p. 487, not p. 436"
+  sources_taken_on_trust:
+    - "Lambert 2013 page-internal verbatim claims (pp. 311–315 + p. 496; pp. 264–265 for the Marduk-of-planting equation per Wikipedia) — verified at the TOC-pagination level only"
+    - "Black & Green 1992 s.v. Urash entry — could not access directly; the s.v. Urash attribution is unverified per F-R2-3"
+    - "RlA s.v. Uraš B (the male Dilbat tutelary) — RlA convention plausibly gives this entry, but I could not verify it directly; Wikipedia cites only Uraš A by Krebernik 2014"
+    - "Foster 2007 (Akkadian Literature of the Late Period) — passim framing taken on trust as genre-consistent"
+    - "Bottéro 2001 (Religion in Ancient Mesopotamia) — Marduk-syncretism framing well-attested elsewhere; taken on trust"
+summary: |
+  Chapter 8 (Uraš and Marduk) claims-factcheck round 2 — verdict
+  REVISE. The round-2 claims document represents a substantial and
+  largely successful correction of the round-1 errors. All eleven
+  round-1 findings (4 HIGH, 4 MEDIUM, 3 LOW) are RESOLVED:
+
+  - F-1 (Lambert 2013 page range pp. 308–325 wrong): RESOLVED at
+    pp. 311–315 + p. 496 throughout. Verified via DeGruyter Brill.
+  - F-2 (Damkina's Bond pp. 326–360 wrong): RESOLVED at pp. 321–325.
+  - F-3 (multi-manuscript framing wrong): RESOLVED — single tablet
+    UET 6, 398 from Ur consistently identified as the sole witness;
+    LACUNA / RECONSTRUCTION / VARIANT markers all reframed around
+    the single-witness premise; dating opened to OB / Kassite /
+    late-Babylonian.
+  - F-4 (female cosmogonic Uraš wrong): RESOLVED — the chapter's
+    central conceptual hinge is correctly rewritten around the male
+    Dilbat agricultural tutelary; the female cosmogonic Uraš is
+    explicitly distinguished as a different deity.
+  - F-5 through F-11: all RESOLVED as dependency-cascading from the
+    four HIGH; the marker schemas, narrative content, and
+    comparative-hooks are all correctly reframed under the corrected
+    male-Urash reading.
+
+  The surviving issues are three CITATION-ROUTING errors, all
+  MEDIUM-or-LOW severity:
+
+  MEDIUM-1 (F-R2-1): Foster 2005 page range pp. 436–440 (cited 3
+  times for the 'Myths of Origins' sub-section) is wrong; correct
+  range is pp. 487 ff. (Section 17 'Epic of Creation' begins at
+  p. 436; Section 18 'Myths of Origins' begins at p. 487). Verified
+  directly via the Foster 2005 TOC. This is a fresh round-2 error
+  introduced by the round-2 rewrite.
+
+  MEDIUM-2 (F-R2-2): The COMPARATIVE-HOOK at line 108 conflates 'the
+  Marduk Ordeal and Marduk-Address texts' under SAA 3 nos. 34–35.
+  Verified via the Livingstone 1989 SAA 3 TOC: nos. 34–35 are only
+  the Marduk Ordeal (Assur and Nineveh versions); Marduk's Address
+  to the Demons is Lambert AfO 17 (1954–56) and Geller 2016, not in
+  SAA 3.
+
+  LOW (F-R2-3): The Black & Green 1992 s.v. Urash citation for the
+  'Marduk of planting' equation (cited 3 times) is unverified;
+  Wikipedia traces this equation to Lambert 2013 pp. 264–265 (the
+  Enūma Eliš VII fifty-names commentary).
+
+  Per the verdict rules (REVISE = 1–2 HIGH or >3 MEDIUM or any
+  silent bridge), the present case has 0 HIGH and 2 MEDIUM, which
+  would normally give PASS. However, the 2 MEDIUM findings are
+  systemic citation errors that appear in multiple locations each
+  (F-R2-1 in 3 places; F-R2-2 in 2 places). I rate the present
+  round-2 case as REVISE rather than PASS to require a localized
+  round-3 citation-routing correction pass before chapter-draft.
+
+  After the round-3 fixes, the claims document should PASS to
+  chapter-draft. The substantive corrections from round 1 are all
+  in place; the surviving issues are limited to citation routing
+  and do not require structural rewriting. The round-2 rewrite is
+  a substantial success on the central conceptual correction
+  (male-Urash reading; agricultural-cosmogonic register;
+  internal-Akkadian comparative hooks).
+follow_ups_for_writer:
+  - "Replace 'Foster 2005, pp. 436–440' with 'Foster 2005, pp. 487 ff. (the Myths of Origins sub-section)' or similar in 3 locations: claim 9 footnote / EVIDENCE token, INFERENCE marker basis after claim 9, COMPARATIVE-HOOK at line 109."
+  - "Tighten the COMPARATIVE-HOOK at line 108: cite the Marduk Ordeal under SAA 3 nos. 34–35 and the Marduk-Address texts under their correct publication (Lambert AfO 17 [1954–56] / Geller 2016, Healing Magic and Evil Demons, Udug-hul Tablet 11). Tighten the claim 5 footnote at line 68 similarly."
+  - "Either verify the Black & Green 1992 s.v. Urash entry directly (it is plausible that Black & Green has the entry, but unverified), OR substitute 'Lambert 2013, pp. 264–265 (the Enūma Eliš VII fifty-names commentary, where the Marduk of planting equation is articulated)' — the Lambert 2013 source is already in sources.yaml. The substantive 'Marduk of planting' claim is well-attested independently and unaffected."
+  - "(Optional, carryover from round 1 N-2): consider adding Streck 2014 (BSOAS 77, 371–372, DOI 10.1017/S0041977X14000123) to sources.yaml. Useful for chapters 5–9 on manuscript-base claims; currently named-but-flagged in the source-overview footnote, which is acceptable but the addition would tighten the inventory."

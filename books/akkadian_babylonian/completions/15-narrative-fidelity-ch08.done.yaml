@@ -1,0 +1,54 @@
+stage: "narrative-fidelity"
+chapter: 08
+slug: "uras-and-marduk"
+input: "chapters/08-uras-and-marduk.adoc + chapters/08-uras-and-marduk.claims.approved.adoc"
+output: "chapters/08-uras-and-marduk.fidelity.yaml"
+timestamp: "2026-05-08T14:53:55Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m] (fresh conversation, general-purpose subagent)"
+verdict: "PASS"
+findings_summary:
+  high: 0
+  medium: 0
+  low: 0
+disposition: |
+  PASS verdict. Draft faithfully realizes the approved claims: all 14
+  numbered claims mapped, all 6 markers (1 LACUNA, 1 RECONSTRUCTION,
+  3 INFERENCE, 1 VARIANT) preserved verbatim with subfields intact, all
+  3 COMPARATIVE-HOOK comments preserved, all 3 round-2 factcheck
+  citation-routing fixes (F-R2-1 Foster 2005 pp. 487 ff.; F-R2-2
+  Marduk Ordeal / Marduk's Address de-conflation; F-R2-3 Lambert 2013
+  pp. 264–265 supplementation) carried through to the draft. The
+  male-Dilbat-Urash vs. female-cosmogonic-Uraš disambiguation (the
+  round-1 MAJOR-REVISE axis) is consistently maintained throughout
+  the body. The 1-EVIDENCE / 1-footnote structural delta (claims: 34
+  EVIDENCE / 17 footnotes; draft: 33 / 16) is legitimate same-source
+  consolidation of two adjacent source-overview claims into a single
+  opening paragraph. Two minor paraphrastic prose elaborations
+  (draft line 25 E-ibbi-Anum disambiguation gloss; draft line 89
+  dossier's-editorial-logic restatement) are restatements of existing
+  claims, not new factual assertions, and are below LOW severity.
+mechanical_preservation:
+  byte_for_byte_marker_preservation: PASS
+  byte_for_byte_footnote_preservation: PASS  # for the 16 preserved footnotes
+  byte_for_byte_evidence_token_preservation: PASS  # for the 33 preserved tokens
+  byte_for_byte_comparative_hook_preservation: PASS  # hooks 1+2 verbatim, hook 3 light prose smoothing without factual drift
+  evidence_tokens_at_column_zero: 33/33
+  comparative_hook_comments_at_column_zero: 3/3
+  unresolved_source_ids: 0
+completeness:
+  claims_mapped: 14/14
+  no_dropped_claims: true
+  no_added_claims: true
+content_consistency:
+  male_dilbat_urash_identification: CONSISTENT
+  female_cosmogonic_uras_only_in_disambiguation: PASS
+  marduk_creates_plant_life_narrative_shape_preserved_without_elaboration: PASS
+  single_tablet_uet_6_398_framing: CONSISTENT
+  epistemic_posture_preserved: PASS
+final_state:
+  draft_lines: 95
+  claims_lines: 125
+  fidelity_yaml_lines: 286
+  ready_for_commit: true
+summary: "Chapter 8 narrative fidelity audit returns PASS — 14/14 claims mapped, 6/6 markers preserved verbatim, 3/3 COMPARATIVE-HOOKs preserved, 3/3 round-2 factcheck fixes carried through, male-Dilbat-Urash identification consistently maintained, no findings."

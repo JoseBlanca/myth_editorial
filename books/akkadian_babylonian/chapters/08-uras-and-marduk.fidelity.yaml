@@ -1,0 +1,382 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  claims_file: "chapters/08-uras-and-marduk.claims.approved.adoc"
+  narrative_file: "chapters/08-uras-and-marduk.adoc"
+  claims_lines: 125
+  narrative_lines: 95
+  total_claims: 14
+  claims_mapped: 14
+  verdict: PASS
+  honesty_self_check:
+    q1_every_claim_mapped: |
+      Yes. I walked all 14 footnoted claim-paragraphs in the approved claims
+      document in order and located each in the narrative. None skipped as
+      "obviously present". The narrative is a near-verbatim rendering of the
+      claims document with light prose connective tissue, so the mapping is
+      high-confidence rather than approximate. The two source-overview claims
+      (claims paragraphs 1 and 2 — UET 6, 398 / Ur Excavations Texts; and
+      "modern title editorial") are merged into a single opening paragraph in
+      the draft (line 4) — this is legitimate consolidation of two adjacent
+      claims sharing source range Lambert 2013 pp. 311–315, accounting for
+      the structural-marker delta (claims: 34 EVIDENCE, 17 footnotes; draft:
+      33 EVIDENCE, 16 footnotes).
+    q2_every_paragraph_checked_for_additions: |
+      Yes — every body paragraph (draft lines 4, 7, 12, 15, 25, 29, 38, 41,
+      46, 53, 58, 65, 69, 79, 85, 89) and every marker block (lines 19, 21,
+      34, 49, 73, 77) was checked against the claims document. Two minor
+      prose-elaboration additions were identified — both are paraphrastic
+      reframings of existing claims rather than new factual assertions:
+      (a) draft line 25 adds "a name that links him to Anu, the high-god of
+      the older pantheon, without making him Anu's consort" — this is a
+      preemptive disambiguation gloss on the temple name *E-ibbi-Anum*,
+      reinforcing the claims' male-Dilbat-Urash vs. female-cosmogonic-Uraš
+      distinction (claim line 59); (b) draft line 89 adds "Its existence is
+      the product of the dossier's editorial logic: a city's priestly
+      scholars kept the small agricultural-cosmogony alongside the great
+      cosmogonic epic, and a single copyist — at Ur, on a single damaged
+      tablet — transmitted it" — paraphrastic restatement of claims line
+      119's temple-scholarly preservation, with no new fact.
+    q3_distortion_meaning_check: |
+      Compared at the level of precise meaning, not topic. The male-
+      Dilbat-Urash identification is consistently maintained throughout the
+      body; the female cosmogonic Uraš (spouse of Anu) appears only in the
+      explicit disambiguation paragraph (draft line 29) and in the third
+      COMPARATIVE-HOOK comment, exactly as in the claims. The "Marduk
+      creates plant life for Urash" narrative shape is preserved without
+      elaboration — the draft does not invent specific plants, sequences, or
+      cultic purposes beyond what the claims (and Lambert 2013) preserve.
+      All three INFERENCE blocks remain INFERENCE-marked in the draft (lines
+      34, 49, 73), with basis and risk fields preserved verbatim. The
+      LACUNA (line 19), RECONSTRUCTION (line 21), and VARIANT (line 77)
+      markers preserve their subfield structure (source/scholarly_recon-
+      struction; gap_source/fill_source/confidence; primary/alt/chosen/
+      reason). The single-tablet UET 6, 398 framing is consistent throughout
+      (mentioned at lines 4, 15, 19, 21, 69, 77, 79). The three round-2
+      factcheck citation-routing fixes (Foster 2005 pp. 487 ff.; Marduk
+      Ordeal vs. Marduk's Address resolution; "Marduk of planting" Lambert
+      2013 pp. 264–265 supplementation) are all preserved in the draft's
+      footnotes and COMPARATIVE-HOOK comments verbatim.
+    q4_same_model_as_writer: |
+      I am claude-opus-4-7[1m] in a fresh conversation with no memory of
+      writing the chapter draft. The chapter-8 draft was produced at the
+      chapter-draft stage in a separate session (completion record
+      14-chapter-draft-ch08.done.yaml). This audit is therefore valid under
+      the skill's "fresh-conversation" requirement; the "different model"
+      preference is not strictly met but is not required.
+
+structural_marker_counts:
+  claims:
+    evidence_tokens: 34
+    footnotes: 17
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 3  # excluding the one mention in the round-2 header comment
+  draft:
+    evidence_tokens: 33
+    footnotes: 16
+    lacuna: 1
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 3
+  delta_explanation: |
+    The 1-EVIDENCE / 1-footnote delta is accounted for by legitimate
+    consolidation of claims paragraphs 1 and 2 (both citing Lambert 2013
+    pp. 311–315 for UET 6, 398 / Ur Excavations Texts vol. 6 / modern
+    editorial title) into a single opening paragraph in the draft (line 4).
+    The merged footnote on draft line 4 retains the full Lambert + Streck
+    citation; no factual content is dropped.
+
+claim_mapping:
+  - claim_number: 1
+    claim_text: "Source overview: UET 6, 398 from Ur (Ur Excavations Texts vol. 6); cosmogonic relationship between Marduk and Urash of Dilbat."
+    claims_line: 31
+    narrative_line: 4
+    status: MAPPED
+    note: "Consolidated with claim 2 in opening paragraph; Lambert + Streck footnote preserved."
+  - claim_number: 2
+    claim_text: "No preserved ancient title; modern title editorial, given by Lambert after the two principal divine actors."
+    claims_line: 34
+    narrative_line: 4
+    status: MAPPED
+    note: "Consolidated with claim 1 in opening paragraph (legitimate same-source merge)."
+  - claim_number: 3
+    claim_text: "Lambert 2013 sole modern critical edition; not in Foster 2005 or Dalley 2008."
+    claims_line: 37
+    narrative_line: 7
+    status: MAPPED
+  - claim_number: 4
+    claim_text: "Tablet poorly preserved with substantial breaks; narrative recoverable in outline but not in detail; major portions lost or heavily damaged."
+    claims_line: 42
+    narrative_line: 12
+    status: MAPPED
+  - claim_number: 5
+    claim_text: "Date of composition uncertain; possibly originated at Dilbat, possibly OB or Kassite rather than late-Babylonian; tablet's date and composition's date should be distinguished."
+    claims_line: 45
+    narrative_line: 15
+    status: MAPPED
+  - claim_number: 6
+    claim_text: "Setting: Urash of Dilbat (Tell al-Deylam, Babil Governorate); agricultural deity; late-Babylonian commentary epithets ('Ninurta of the hoe', 'of the calendar', 'of the tenant farmer', 'Marduk of planting'); main temple E-ibbi-Anum."
+    claims_line: 55
+    narrative_line: 25
+    status: MAPPED
+    note: "Draft adds preemptive disambiguation gloss on E-ibbi-Anum name ('without making him Anu's consort') — paraphrastic reinforcement of the male/female disambiguation, no new fact."
+  - claim_number: 7
+    claim_text: "Disambiguation: this male Urash distinguished from homonymous female cosmogonic deity Uraš (spouse of Anu, personification of earth)."
+    claims_line: 59
+    narrative_line: 29
+    status: MAPPED
+  - claim_number: 8
+    claim_text: "Surviving narrative content: Marduk creates plant life for Urash; cosmogonic-agricultural relationship."
+    claims_line: 68
+    narrative_line: 38
+    status: MAPPED
+  - claim_number: 9
+    claim_text: "Cosmogonic register restricted to agricultural/vegetative domain, not the broader cosmic-architectural register of Enūma Eliš; smaller-scale creation narrative within broader Marduk-creation pattern."
+    claims_line: 71
+    narrative_line: 41
+    status: MAPPED
+  - claim_number: 10
+    claim_text: "Surviving lines do not preserve a complete sequence of creation acts; specific plants/order/cultic purpose partly recoverable only via Lambert's editorial restorations; outline sustained by preserved lines, details not."
+    claims_line: 76
+    narrative_line: 46
+    status: MAPPED
+  - claim_number: 11
+    claim_text: "Marduk's syncretism with local cult-figures: Enūma Eliš Tablet VII fifty names; Marduk Ordeal (Livingstone 1989, SAA 3 nos. 34–35); late-Babylonian commentary tradition equates Marduk with deities under functional epithets ('Marduk of planting', 'Marduk of healing')."
+    claims_line: 83
+    narrative_line: 53
+    status: MAPPED
+  - claim_number: 12
+    claim_text: "Urash–Marduk pairing intelligible against syncretistic background: Urash is 'Marduk of planting'; composition gives narrative form to that equation; act articulates Marduk's cosmogonic sovereignty over agricultural domain and theological identification with Dilbat cult."
+    claims_line: 88
+    narrative_line: 58
+    status: MAPPED
+  - claim_number: 13
+    claim_text: "Place in late-Babylonian cosmogonic dossier: Lambert 2013 Part III 'Further Babylonian Creation Tales' (pp. 281–401); dossier includes Enūma Eliš (Ch. 1), Enmešarra's Defeat (Ch. 6), Toil of Babylon (Ch. 7), Damkina's Bond (Ch. 9), Slaying of Labbu (Ch. 5), Founding of Eridu (Ch. 10), First Brick (Ch. 12), Theogony of Dunnu (Ch. 4)."
+    claims_line: 95
+    narrative_line: 65
+    status: MAPPED
+  - claim_number: 14
+    claim_text: "Composition marginal in attestation: single tablet, no parallel manuscripts, no liturgical/first-millennium recensional footprint; not widely-recited; not part of any festival cycle."
+    claims_line: 99
+    narrative_line: 69
+    status: MAPPED
+  - claim_number: 15
+    claim_text: "No parallel manuscripts; no OB / MB / Kassite / Neo-Assyrian witnesses other than UET 6, 398; textual history confined to one tablet."
+    claims_line: 109
+    narrative_line: 79
+    status: MAPPED
+  - claim_number: 16
+    claim_text: "Marginal individually but significant within late-Babylonian Marduk dossier: extends Marduk's cosmogonic creativity into agricultural/vegetative register via syncretism with Dilbat tutelary; complements Enūma Eliš (cosmic architecture) and Atra-ḫasīs (human creation) with small-scale agricultural-creation narrative."
+    claims_line: 115
+    narrative_line: 85
+    status: MAPPED
+  - claim_number: 17
+    claim_text: "Narrative obscurity outside specialist scholarship reflects fragmentary preservation and tonal distance from larger creation narratives; survives because temple-scholarly apparatus preserved it for the wider Marduk dossier."
+    claims_line: 119
+    narrative_line: 89
+    status: MAPPED
+    note: "Draft adds paraphrastic restatement ('Its existence is the product of the dossier's editorial logic: a city's priestly scholars kept the small agricultural-cosmogony alongside the great cosmogonic epic, and a single copyist — at Ur, on a single damaged tablet — transmitted it.') — restates existing claim, no new fact. Mirrors the chapter-7 'dossier's editorial logic' formulation."
+
+marker_preservation:
+  total_markers_in_claims: 6
+  total_markers_in_narrative: 6
+  markers:
+    - kind: LACUNA
+      claims_line: 49
+      narrative_line: 19
+      topic: "single tablet poorly preserved; no parallel manuscript for textual fill"
+      status: PRESERVED_VERBATIM
+      note: "subfields source / scholarly_reconstruction preserved with ' | ' separator"
+    - kind: RECONSTRUCTION
+      claims_line: 51
+      narrative_line: 21
+      topic: "Lambert 2013's continuous translation restores breaks within single witness; confidence: low"
+      status: PRESERVED_VERBATIM
+      note: "subfields gap_source / fill_source / confidence preserved"
+    - kind: INFERENCE
+      claims_line: 64
+      narrative_line: 34
+      topic: "male Urash as local-cult double / sub-aspect of Marduk; 'Marduk of planting' equation in Tablet VII fifty-names commentary"
+      status: PRESERVED_VERBATIM
+      note: "basis cites Lambert 2013 pp. 264–265 (round-2 fix F-R2-3); risk preserved"
+    - kind: INFERENCE
+      claims_line: 79
+      narrative_line: 49
+      topic: "node in late-Babylonian Marduk-creation dossier; structural grouping with Foster 2005 'Myths of Origins' sub-section"
+      status: PRESERVED_VERBATIM
+      note: "basis cites Foster 2005 pp. 487 ff. (round-2 fix F-R2-1); risk acknowledges anthology omission"
+    - kind: INFERENCE
+      claims_line: 103
+      narrative_line: 73
+      topic: "scholarly rather than popular preservation profile; date-uncertainty caveat preserves both 'composed early, preserved late' and 'late-Babylonian throughout' possibilities"
+      status: PRESERVED_VERBATIM
+    - kind: VARIANT
+      claims_line: 107
+      narrative_line: 77
+      topic: "Lambert 2013's reading of single tablet UET 6, 398; 'single-prevalent' reflects manuscript situation, not recensional choice"
+      status: PRESERVED_VERBATIM
+      note: "subfields primary= / alt= / chosen / reason preserved with ' | ' separator"
+
+comparative_hook_preservation:
+  total_hooks_in_claims: 3
+  total_hooks_in_narrative: 3
+  hooks:
+    - hook_index: 1
+      claims_line: 123
+      narrative_line: 93
+      topic: "Marduk syncretism dossier — fifty-names + Marduk Ordeal SAA 3 nos. 34–35 + Marduk's Address (Lambert AfO 17 / Geller 2016 Udug-hul Tablet 11) noted as outside sources.yaml"
+      status: PRESERVED_VERBATIM
+      note: "round-2 fix F-R2-2 resolves the Marduk Ordeal / Marduk's Address conflation by clearly separating the two compositions and flagging the latter as outside sources.yaml — preserved exactly in draft"
+    - hook_index: 2
+      claims_line: 124
+      narrative_line: 94
+      topic: "Marduk's cosmogonic creation of specific aspects of the lived world — Enūma Eliš VI; Foster 2005 'Myths of Origins' sub-section beginning p. 487; First Brick (Ch. 12) cult-architectural register"
+      status: PRESERVED_VERBATIM
+      note: "round-2 fix F-R2-1 (Foster 2005 pp. 487 ff. corrected from earlier pp. 436–440) preserved"
+    - hook_index: 3
+      claims_line: 125
+      narrative_line: 95
+      topic: "Damkina's Bond (Ch. 9) TOC-adjacent but theologically distinct; explicit drop of the earlier 'feminine consortship sub-cluster' framing as a mis-identification of male Urash as female cosmogonic Uraš"
+      status: PRESERVED_NEAR_VERBATIM
+      note: |
+        Light prose smoothing in the draft compared to claims (e.g., "the
+        two compositions are TOC-adjacent and both fragmentary, but they
+        articulate different theological registers" instead of "are
+        TOC-adjacent and both fragmentary, but they articulate different
+        theological registers — *Uraš and Marduk* the agricultural-
+        cosmogonic register…"). All factual content preserved: TOC
+        adjacency, fragmentary preservation, theological distinctness,
+        explicit drop of the feminine-consortship framing as a
+        mis-identification, female-Uraš spouse-of-Anu identification
+        clarified parenthetically. No factual drift.
+
+round_2_factcheck_corrections:
+  - correction_id: F-R2-1
+    description: "Foster 2005 page range corrected from 'pp. 436–440' to 'pp. 487 ff. (Myths of Origins)' — the original range pointed to start of Enūma Eliš section, not the cosmogonic sub-section."
+    narrative_status: APPLIED
+    detail: |
+      All Foster 2005 references in the draft cite "pp. 487 ff." with the
+      sub-section "Myths of Origins" identifier:
+      — draft line 41 (footnote): "Foster 2005, pp. 487 ff. (the 'Myths of Origins' sub-section, including 'Marduk, Creator of the World', 'The Myth of the Plow', 'Creation of Humankind', 'Providing for the Gods')."
+      — draft line 44 (EVIDENCE): "source_id=foster-2005 ; loc=pp. 487 ff. ('Myths of Origins')"
+      — draft line 49 (INFERENCE basis): "Foster 2005 pp. 487 ff. ('Myths of Origins') collects 'Marduk, Creator of the World' (p. 487), 'The Myth of the Plow' (p. 489), 'Creation of Humankind' (p. 491), 'Providing for the Gods', 'Creation of Sun and Moon', 'Creation of the King'"
+      — draft line 94 (COMPARATIVE-HOOK): same page-range in body of the hook.
+      No "pp. 436–440" appears anywhere in the draft.
+  - correction_id: F-R2-2
+    description: "Marduk Ordeal (Livingstone 1989, SAA 3 nos. 34–35) and Marduk's Address to the Demons (Lambert AfO 17 1954–56; Geller 2016 Udug-hul Tablet 11) are different compositions; the conflation has been resolved."
+    narrative_status: APPLIED
+    detail: |
+      Draft line 53 (body) cites only the Marduk Ordeal: "the *Marduk Ordeal* (Livingstone 1989, SAA 3 nos. 34–35) develops the syncretism further within the cultic-narrative register". The Marduk's Address is mentioned only in COMPARATIVE-HOOK 1 (draft line 93), where it is explicitly identified as "a separate composition originally published by W. G. Lambert in *Archiv für Orientforschung* 17 (1954–56) and re-edited by M. J. Geller as Udug-hul Tablet 11 in *Healing Magic and Evil Demons* (De Gruyter, 2016)" and flagged as "outside SAA 3 and is not currently in this book's `sources.yaml`". No conflation.
+  - correction_id: F-R2-3
+    description: "'Marduk of planting' equation: Black & Green 1992 s.v. Urash retained, supplemented with Lambert 2013 pp. 264–265 (Enūma Eliš Tablet VII fifty-names commentary)."
+    narrative_status: APPLIED
+    detail: |
+      Lambert 2013 pp. 264–265 cited as the locus of the equation in:
+      — INFERENCE-1 basis (draft line 34): "the late-Babylonian commentary equation 'Urash = Marduk of planting' is articulated within the *Enūma Eliš* Tablet VII fifty-names commentary at Lambert 2013, pp. 264–265"
+      — body footnote draft line 53: "Lambert 2013, pp. 1–277 (*Enūma Eliš* Tablet VII fifty-names sequence and commentary; the 'Marduk of planting' equation is articulated at pp. 264–265)"
+      — body footnote draft line 58: "the underlying 'Marduk of planting' equation articulated in the *Enūma Eliš* Tablet VII fifty-names commentary at Lambert 2013 pp. 264–265"
+      — COMPARATIVE-HOOK 1 (draft line 93): "with the Urash equation at pp. 264–265".
+
+content_consistency_checks:
+  male_dilbat_urash_identification:
+    status: CONSISTENT
+    notes: |
+      Throughout the body, "Urash" refers to the male Dilbat tutelary. The
+      female cosmogonic Uraš (spouse of Anu) appears only in the explicit
+      disambiguation paragraph (draft line 29) and in COMPARATIVE-HOOK 3
+      (draft line 95, which explicitly drops the earlier mis-identification
+      framing). No accidental slippage between the two figures elsewhere in
+      the body.
+  marduk_creates_plant_life_narrative_shape:
+    status: PRESERVED_WITHOUT_ELABORATION
+    notes: |
+      The "Marduk creates plant life for Urash" formulation appears at draft
+      lines 19 (LACUNA), 21 (RECONSTRUCTION), 38 (body), 49 (INFERENCE-2
+      basis), 58 (body), 89 (body — paraphrastic), 93 (COMPARATIVE-HOOK 1),
+      94 (COMPARATIVE-HOOK 2). The draft does not invent specific plants,
+      sequences, or cultic purposes — the inability to recover those details
+      is consistently flagged (draft lines 12, 19, 21, 46).
+  single_tablet_uet_6_398_framing:
+    status: CONSISTENT
+    notes: |
+      "UET 6, 398" or "the single tablet" appears at draft lines 4, 15, 19,
+      21, 69, 77, 79, with consistent framing: single witness, no parallel
+      manuscripts in any period or dialect, textual history confined to one
+      tablet. No silent introduction of secondary witnesses.
+  epistemic_posture_preservation:
+    status: PRESERVED
+    notes: |
+      The three INFERENCE markers in the claims (lines 64, 79, 103) appear
+      as INFERENCE markers in the draft (lines 34, 49, 73), preserving the
+      basis/risk subfield structure. INFERENCE-flagged content is NOT
+      promoted to body-prose flat assertion. The body prose's framing of
+      Marduk's syncretism (draft line 53) and the Urash–Marduk pairing
+      (draft line 58) repeats the claim-doc body framing — this is body
+      prose in both files, with the deeper structural reading kept inside
+      INFERENCE-1.
+
+footnote_integrity_check:
+  status: PASS
+  total_footnotes_claims: 17
+  total_footnotes_narrative: 16
+  byte_for_byte_match_for_preserved_footnotes: true
+  notes: |
+    The 1-footnote delta is the legitimate same-source consolidation of
+    claims paragraphs 1 and 2 (both Lambert 2013 pp. 311–315). All
+    surviving footnotes are byte-for-byte identical between
+    claims.approved.adoc and the draft. Round-2 citation-routing fixes
+    (F-R2-1, F-R2-2, F-R2-3) are preserved in the draft footnotes
+    verbatim from the approved claims.
+
+evidence_token_check:
+  status: PASS
+  total_evidence_tokens_claims: 34
+  total_evidence_tokens_narrative: 33
+  notes: |
+    The 1-EVIDENCE-token delta corresponds to the same source-overview
+    consolidation. All preserved EVIDENCE tokens have matching source_id
+    and loc strings. source_ids resolve to entries in sources.yaml:
+    lambert-2013, foster-2005, foster-2007, dalley-2008, black-green-1992,
+    rla, livingstone-1989, bottero-2001.
+
+findings: []
+
+verdict_rationale: |
+  All 17 footnoted claim-paragraphs (14 numbered narrative claims plus
+  the 3 source-overview opening claims; the source-overview opening is
+  consolidated 2-into-1 in the draft) map cleanly to specific narrative
+  paragraphs. All 6 markers (1 LACUNA, 1 RECONSTRUCTION, 3 INFERENCE,
+  1 VARIANT) are preserved verbatim including their basis/risk and
+  source/scholarly_reconstruction and gap_source/fill_source/confidence
+  and primary/alt/chosen/reason subfields. All 3 COMPARATIVE-HOOK
+  comments are preserved (hooks 1 and 2 verbatim; hook 3 with light
+  prose smoothing but no factual drift). All 3 round-2 factcheck
+  corrections (F-R2-1 Foster 2005 page range; F-R2-2 Marduk Ordeal /
+  Marduk's Address de-conflation; F-R2-3 Lambert 2013 pp. 264–265
+  supplementation) are reflected in the draft. The male-Dilbat-Urash
+  vs. female-cosmogonic-Uraš disambiguation (the round-1 MAJOR-REVISE
+  axis) is consistently maintained throughout the body, with the female
+  cosmogonic Uraš mentioned only in the explicit disambiguation
+  paragraph and the corrective COMPARATIVE-HOOK 3. The "Marduk creates
+  plant life for Urash" narrative shape is preserved without
+  elaboration. No claims dropped. No claims added (two minor
+  paraphrastic prose elaborations identified — both are restatements of
+  existing claims, not new factual assertions). No claims distorted.
+  Per the skill's verdict rules — zero CLAIM-DROPPED, zero CLAIM-ADDED
+  at HIGH severity, zero HIGH CLAIM-DISTORTED, zero MEDIUM findings —
+  the verdict is PASS.
+
+summary: |
+  VERDICT: PASS. Chapter 8 draft faithfully realizes the approved claims.
+  All 14 numbered claims mapped; all 6 markers preserved verbatim with
+  subfields intact; all 3 COMPARATIVE-HOOK comments preserved; all 3
+  round-2 factcheck citation-routing fixes carried through to the draft;
+  male-Dilbat-Urash vs. female-cosmogonic-Uraš disambiguation
+  consistently maintained; "Marduk creates plant life for Urash"
+  narrative shape preserved without elaboration. The 1-EVIDENCE /
+  1-footnote structural delta is legitimate same-source consolidation
+  of two adjacent source-overview claims into a single opening
+  paragraph. No findings.

@@ -1,0 +1,82 @@
+stage: "chapter-claims (round 2 — post-factcheck revision)"
+chapter: 08
+slug: "uras-and-marduk"
+input: "briefs/08-uras-and-marduk.yaml (revised 2026-05-08)"
+output: "chapters/08-uras-and-marduk.claims.adoc (rewritten)"
+timestamp: "2026-05-08T14:32:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/08-uras-and-marduk.claims.adoc"
+    lines: 110
+  - file: "briefs/08-uras-and-marduk.yaml"
+    lines: 95
+prior_round:
+  round1_claims_file: "chapters/08-uras-and-marduk.claims.adoc (overwritten by this revision)"
+  round1_factcheck: "chapters/08-uras-and-marduk.claims.factcheck.yaml — verdict MAJOR-REVISE; 4 HIGH / 4 MEDIUM / 3 LOW findings"
+  round1_completion: "completions/11-chapter-claims-ch08.done.yaml"
+  factcheck_completion: "completions/12-claims-factcheck-ch08.done.yaml"
+revisions_applied:
+  - finding: "F-1 (Lambert 2013 page range for Uraš and Marduk wrong: pp. 308–325 → pp. 311–315 + p. 496 notes)"
+    fix: "All EVIDENCE token loc fields and footnote references updated. Source overview, narrative-content, and dossier-framing sections all use the corrected range. The brief's source.loc field has also been re-locked at pp. 311–315 + p. 496."
+  - finding: "F-2 (Damkina's Bond page range wrong: pp. 326–360 → pp. 321–325 + p. 497 notes)"
+    fix: "The Damkina's Bond TOC reference has been corrected to pp. 321–325. The earlier 'pp. 326–360 sub-cluster' framing has been dropped entirely."
+  - finding: "F-3 (multi-manuscript framing wrong: composition is on a single tablet UET 6, 398 from Ur, per Streck 2014)"
+    fix: "All references to 'multiple late-Babylonian manuscripts that overlap partially' are removed. The chapter now consistently identifies the single tablet UET 6, 398 from Ur as the sole witness; the LACUNA, RECONSTRUCTION, and VARIANT markers are all reframed around the single-witness premise. The dating is opened to OB / Kassite / late-Babylonian per the secondary literature."
+  - finding: "F-4 (Uraš identity wrong: identified as female cosmogonic earth-goddess in round 1; corrected to male Dilbat agricultural tutelary in round 2)"
+    fix: "The chapter is substantively rewritten around the male-Urash reading. Urash is now identified as the tutelary god of Dilbat, an agricultural deity equated in late-Babylonian commentary lists with Ninurta ('of the hoe', 'of the calendar', 'of the tenant farmer') and with 'Marduk of planting'. The female cosmogonic Uraš is explicitly distinguished and acknowledged as a different deity. The narrative content is reframed as 'Marduk creates plant life for Urash' (per HandWiki and the standard secondary summary)."
+  - finding: "F-5 (Marduk-absorbs-Anu's-consortship INFERENCE was contingent on F-4)"
+    fix: "The Anu-consortship-extension INFERENCE marker is replaced with a Marduk-syncretism INFERENCE marker. The new framing reads the composition as a small narrative articulation of Marduk's syncretism with the Dilbat tutelary Urash — a local-cult double or sub-aspect of Marduk himself ('Marduk of planting' equation)."
+  - finding: "F-6 (marriage / consortship narrative content not corroborated)"
+    fix: "The marriage / consortship / cosmogonically-inflected-union framing is dropped. The narrative is now framed as Marduk's creation of plant life for Urash — an agricultural-cosmogonic register, not a marriage narrative."
+  - finding: "F-7 (cosmogonic-theological function INFERENCE was contingent on F-4 / F-1)"
+    fix: "The INFERENCE marker is rewritten around the corrected framing — *Uraš and Marduk* as a node in the late-Babylonian dossier of small Marduk-creation narratives (parallel to Foster 2005's 'Myth of the Plow', 'Creation of Humankind', 'Providing for the Gods', etc.). Page-range citations updated."
+  - finding: "F-8 (LACUNA / RECONSTRUCTION markers' multi-manuscript framing wrong)"
+    fix: "Both markers are rewritten around the single-tablet premise. The RECONSTRUCTION marker's fill_source is now correctly 'internal context only; no external in-tradition donor source is available' (instead of 'internal joins among multiple witnesses'). Confidence is uniformly low."
+  - finding: "F-9 (VARIANT marker's multi-manuscript framing wrong)"
+    fix: "The VARIANT marker is reframed as restoration-variation within a single damaged witness, not exemplar-variation. The single-prevalent classification is retained (it correctly describes the manuscript situation), but the primary= / alt= fields no longer reference 'partially overlapping late-Babylonian manuscripts'."
+  - finding: "F-10 (Lelwani COMPARATIVE-HOOK slightly mis-framed — Lelwani is an underworld ruler, not an earth-deity)"
+    fix: "The Hurro-Hittite Lelwani COMPARATIVE-HOOK is dropped entirely. The corrected framing makes the chthonic-earth-goddess reading inapplicable, so the Lelwani comparison is no longer relevant."
+  - finding: "F-11 (Late-Babylonian dating may be wrong — composition possibly OB or Kassite)"
+    fix: "The dating is opened in the source-overview section to acknowledge the OB / Kassite / late-Babylonian range and the possibility of Dilbat origin. The 'late-Babylonian temple-scholarly preservation' framing is now applied to the surviving tablet's transmission context, not to the composition's original setting; the chapter acknowledges that the composition may have been composed earlier and preserved later."
+  - finding: "Greek Gaia–Ouranos COMPARATIVE-HOOK"
+    fix: "Dropped. The Gaia–Ouranos comparison depended on the female-Uraš reading; the male agricultural Urash is not a primordial-earth figure, and the structural comparison is mis-targeted. Replaced with internal-Akkadian comparative hooks (Marduk's syncretism with local cult-figures; Marduk's cosmogonic creation of specific aspects of the lived world)."
+  - finding: "Damkina's Bond 'feminine consortship sub-cluster' framing"
+    fix: "Dropped. The pairing depended on the female-Uraš reading. Damkina's Bond is now identified as TOC-adjacent (Lambert 2013 pp. 321–325) but as a separate composition with a different theological register; the analytical pairing is no longer apt and the COMPARATIVE-HOOK explicitly retracts the earlier framing."
+summary: "Chapter 8 (Uraš and Marduk) claims document round 2 — substantive rewrite after factcheck-1 returned MAJOR-REVISE on the original (Round 1) claims. The original framing as a chthonic-celestial pairing of the female cosmogonic earth-goddess Uraš with Marduk has been corrected to: a small fragmentary cosmogonic-agricultural narrative in which Marduk creates plant life for the MALE agricultural tutelary Urash of Dilbat. Source: Lambert 2013, pp. 311–315 (+ p. 496 notes), the sole modern critical edition, on a single damaged tablet UET 6, 398 from Ur (per Streck 2014, BSOAS 77, 371). The composition is read as a node in the late-Babylonian dossier of small Marduk-creation narratives and as a small narrative articulation of Marduk's syncretism with regional cult-figures (Urash being equated with 'Marduk of planting' in late-Babylonian commentary). Three INFERENCE markers (Marduk-syncretism reading; Marduk-creation-narrative-dossier framing; scholarly-preservation profile); one LACUNA marker (single tablet UET 6, 398 with substantial breaks); one RECONSTRUCTION marker (Lambert 2013's restoration of breaks within the single witness; no external in-tradition donor source available); one VARIANT marker (single-prevalent / restoration-variation within a single damaged witness, not exemplar-variation); three COMPARATIVE-HOOK comments (all internal Akkadian — Marduk's syncretism with local cult-figures; Marduk's cosmogonic creation of specific aspects of the lived world; Damkina's Bond as TOC-adjacent but separate composition). Source IDs used: lambert-2013 (sole anchor for textual claims, at corrected page range pp. 311–315 + p. 496), black-green-1992 (s.v. Urash for the male tutelary), rla (s.v. Uraš A and Uraš B for the male/female distinction), foster-2005 (negative attestation; pp. 436–440 for cosmogonic incantation prologues parallel), foster-2007 (passim for the late-Babylonian milieu), bottero-2001 (Marduk's syncretism), livingstone-1989 (SAA 3 Marduk-Address texts), dalley-2008 (negative attestation). All eight source IDs in EVIDENCE tokens resolve to existing entries in sources.yaml. Streck 2014 (BSOAS 77, 371) is named in the source-overview footnote for the manuscript identification (UET 6, 398) but no EVIDENCE token routes through it (named-but-flagged pattern; sources.yaml addition recommended in the round-1 factcheck note N-2). Glossary check: Marduk and the dossier-locus terms (Apsû, Tablet of Destinies) used per the locked glossary.yaml renderings; Urash, Dilbat, and Ur are introduced with first-mention glosses (the glossary-ledger.yaml will need new entries for Urash and Dilbat; Ur is already present in the sumer book lineage)."
+brief_alignment_round2:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — single VARIANT marker for the single-tablet UET 6, 398 witness; no parallel manuscripts; single-prevalent classification matches the corrected brief and reflects the manuscript situation."
+  one_lacuna_flagged: "PASS — [LACUNA:] for the single tablet UET 6, 398 from Ur; scholarly_reconstruction notes that Lambert 2013 restores breaks within the single witness using internal context only; no external in-tradition donor source is available."
+  reconstruction_marker_present: "PASS — [RECONSTRUCTION:] covers Lambert 2013's internal restorations within the single tablet; gap_source: breaks within UET 6, 398; fill_source: internal context only; confidence: low (uniform, no manuscript overlap to elevate confidence)."
+  base_text: "Lambert 2013 used as base, at corrected page range pp. 311–315 + p. 496 notes. No anthology translation; Foster 2005 and Dalley 2008 do not contain this composition (verified by the round-1 factcheck via direct TOC reads)."
+  marduk_dossier_cross_references: "PASS — explicitly placed within the late-Babylonian Marduk-cosmogonic dossier alongside Enūma Eliš (Chapter 1), Enmešarra's Defeat (Chapter 6), The Toil of Babylon (Chapter 7), Damkina's Bond (Chapter 9, TOC-adjacent at pp. 321–325), The Slaying of Labbu (Chapter 5), The Founding of Eridu (Chapter 10), The First Brick (Chapter 12), and The Theogony of Dunnu (Chapter 4)."
+  uras_marduk_pairing_corrected: "PASS — the Urash in this composition is identified as the male agricultural tutelary of Dilbat, distinguished from the female cosmogonic Uraš (spouse of Anu). The pairing with Marduk is read as Marduk's syncretism with a local cult-figure who is equated in late-Babylonian commentary with 'Marduk of planting'. The chthonic-celestial-pairing framing of round 1 is explicitly retracted."
+  uras_disambiguation: "PASS — the male Dilbat tutelary Urash and the female cosmogonic Uraš (spouse of Anu) are explicitly distinguished, with Black & Green 1992 and RlA's separate articles (Uraš A vs. Uraš B) cited."
+  marginal_centrality_handling: "PASS — the composition is described as marginal individually; the chapter avoids over-interpretation per the brief's special_instructions and frames the composition as a node in the dossier rather than as a freestanding myth."
+  page_ranges_corrected: "PASS — all page-range citations now use the corrected ranges. Lambert 2013 'Uraš and Marduk' is cited at pp. 311–315 (+ p. 496 notes) throughout. *Damkina's Bond* is cited at pp. 321–325 (corrected from the round-1 wrong range pp. 326–360)."
+  comparative_hooks_corrected: "PASS — Greek Gaia–Ouranos and Hurro-Hittite Lelwani comparative-hooks are dropped (both depended on the female-Uraš reading); the round-2 hooks are all internal-Akkadian — (i) Marduk's syncretism with local and functional cult-figures (Enūma Eliš VII, Marduk Ordeal, Marduk-Address); (ii) Marduk's cosmogonic creation of specific aspects of the lived world (Enūma Eliš VI, Foster 2005's cosmogonic incantation prologues, The First Brick); (iii) Damkina's Bond as TOC-adjacent but separate composition with explicit retraction of the earlier 'feminine consortship sub-cluster' framing."
+validation:
+  footnote_count: 17
+  evidence_marker_count: 34
+  unresolved_source_ids: 0
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_comments: 3
+  marker_placement_errors: 0
+  source_overview_footnotes: 5
+notes:
+  named_but_flagged:
+    - scholar: "Streck, Michael P."
+      publication: "Review of W. G. Lambert, *Babylonian Creation Myths*. *Bulletin of the School of Oriental and African Studies* 77 (2014), 371–372 (DOI 10.1017/S0041977X14000123)."
+      anchor_routed_through: "(none — named in the source-overview footnote)"
+      reason: "Streck 2014 is the standard scholarly review of Lambert 2013 and the most authoritative source for the manuscript-identification claim (UET 6, 398). It is currently NOT in sources.yaml. The round-1 factcheck note N-2 recommended adding it; the addition would benefit chapters 5–9 on manuscript-base claims. For this round-2 claims document, Streck 2014 is named in the footnote but no EVIDENCE token routes through it (named-but-flagged pattern); the substantive citation routes through Lambert 2013 directly."
+    - scholar: "Krebernik, Manfred"
+      publication: "Uraš A. *Reallexikon der Assyriologie* (RlA), 2014. (Female cosmogonic deity, distinguished from the male Dilbat tutelary in Uraš B.)"
+      anchor_routed_through: "rla"
+      reason: "Krebernik's RlA article is the standard reference for the female cosmogonic Uraš and is cited s.v. Uraš A in EVIDENCE tokens (routed through the rla source ID, with Krebernik named in the footnote). Uraš B (the male Dilbat tutelary) is also referenced in the s.v. Uraš A and Uraš B EVIDENCE-token loc field. No standalone sources.yaml entry needed for either named author within RlA."
+  out_of_scope_handling: "All comparative-hooks are internal-Akkadian. No Hurro-Hittite, Greek, or Hebrew material is referenced in body claims. The earlier (round-1) Greek Gaia–Ouranos and Hurro-Hittite Lelwani hooks have been dropped."
+  caution_on_specific_attestations: "Verbatim quotations and specific column/line attributions are not given in this claims document. Lambert 2013 is cited at the page-range level (pp. 311–315 for the chapter; p. 496 for the notes). The narrative content is summarised at the level of 'Marduk creates plant life for Urash' (the standard secondary summary, per HandWiki and Streck 2014); a finer-grained narrative reconstruction would require direct access to Lambert 2013, which the chapter writer does not have."
+  brief_revision_log: "The brief at briefs/08-uras-and-marduk.yaml has been revised to correct: (i) source.loc — pp. 311–315 + p. 496 notes; (ii) lacunae block — single tablet UET 6, 398 from Ur, no parallel manuscripts; (iii) variants.classification — single-prevalent (same as round 1, but underlying premise is now correct); (iv) entities_glossary — Urash now identified as the male Dilbat agricultural tutelary; (v) cultural_relevance.function — agricultural-cosmogonic and theological-syncretic (instead of theogonic and cosmological-pairing); (vi) cross_cultural_parallels — internal Akkadian (instead of Greek Gaia–Ouranos and Hurro-Hittite Lelwani); (vii) special_instructions — CRITICAL CONTENT MODEL note added explaining the round-1 → round-2 correction. The header note in the brief documents the revision date (2026-05-08) and the underlying factcheck findings."

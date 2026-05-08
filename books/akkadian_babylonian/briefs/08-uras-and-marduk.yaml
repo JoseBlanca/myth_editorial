@@ -3,87 +3,123 @@ slug: "uras-and-marduk"
 title: "Uraš and Marduk"
 chapter_anchor: "ch-08-uras-and-marduk"
 
+# Brief revised 2026-05-08 after stage 10b factcheck on the original claims
+# returned MAJOR-REVISE. The original brief carried four upstream errors:
+# (1) wrong Lambert 2013 page range — locked as pp. 308–325, but the chapter
+#     "Uraš and Marduk" is in fact at pp. 311–315 (+ p. 496 notes); pp. 308–310
+#     belong to the previous chapter (The Toil of Babylon) and pp. 316–325 to
+#     the next two (The Murder of Anšar?, Damkina's Bond);
+# (2) wrong page range for Damkina's Bond cited downstream — pp. 326–360 in the
+#     old brief vs. the actual pp. 321–325 (+ p. 497 notes);
+# (3) the manuscript framing was wrong on count — Uraš and Marduk is preserved
+#     on a SINGLE poorly-preserved tablet UET 6, 398 from Ur (per Streck 2014,
+#     BSOAS 77, 371; cross-verified at HandWiki s.v. Urash god), not on multiple
+#     overlapping late-Babylonian manuscripts; the date may be Old Babylonian or
+#     Kassite (with Dilbat origin), not necessarily late-Babylonian;
+# (4) the Uraš identity was wrong — the Uraš in this composition is the MALE
+#     agricultural tutelary of Dilbat (consort of Ninegal, equated with Ninurta
+#     "of the hoe", "of the calendar", "of the tenant farmer", and even with
+#     "Marduk of planting"), NOT the female earth-goddess (spouse of Anu).
+#     The female cosmogonic Uraš is a different deity; the Wikipedia article
+#     on the female Uraš does not even mention this composition. The myth's
+#     content per HandWiki is "Marduk created plant life for Urash" — an
+#     agricultural-creation register, not a chthonic-celestial pairing.
+# See chapters/08-uras-and-marduk.claims.factcheck.yaml for the full factcheck
+# (verdict MAJOR-REVISE, 4 HIGH / 4 MEDIUM / 3 LOW findings); see
+# completions/12-claims-factcheck-ch08.done.yaml for the disposition.
+# The corrected brief follows.
+
 sources:
   primary:
     - id: lambert-2013
-      loc: "pp. 308–325 (text, translation, and commentary across multiple manuscripts)"
+      loc: "pp. 311–315 (text, translation, and commentary) + p. 496 (notes on the text)"
       translator_edition: "Lambert 2013 — sole modern critical edition"
       identifier: "ISBN 9781575062471"
       url_or_file: ~
   secondary:
-    - { id: black-green-1992, loc: "s.v. Uraš, Marduk, earth-deities" }
-    - { id: bottero-2001, loc: "passim — chthonic-celestial divine pairings" }
-    - { id: foster-2007, loc: "passim — late-Babylonian cosmogonic dossier" }
+    - { id: black-green-1992, loc: "s.v. Marduk; s.v. Uraš (the male Dilbat tutelary should be distinguished from the female Uraš)" }
+    - { id: rla, loc: "s.v. Uraš A (Krebernik 2014, the female cosmogonic Uraš); s.v. Uraš B (the male Dilbat tutelary)" }
+    - { id: bottero-2001, loc: "passim — Babylonian theological identifications and Marduk's syncretism with local cult-deities" }
+    - { id: foster-2007, loc: "passim — late-period Akkadian compositional milieu (preservation context for the dossier)" }
 
 lacunae:
   - source: lambert-2013
-    location: "Multiple late-Babylonian manuscripts; substantial breaks throughout"
-    what_is_missing: "Major sections of the text are lost; the precise sequence of the chthonic-celestial union and its cosmogonic implications are reconstructed."
-    in_tradition_fills_available: "yes — internal joins among the late-Babylonian manuscripts; Lambert 2013 collates them."
+    location: "Single tablet UET 6, 398 from Ur, poorly preserved with substantial breaks throughout"
+    what_is_missing: "Major portions of the narrative are lost; the precise sequence of Marduk's creation of plant life for Urash, the role of any subsidiary deities or background pantheon figures, and the closing lines are all partly recoverable but with significant gaps."
+    in_tradition_fills_available: "no — single tablet from Ur (UET 6, 398), no parallel manuscripts in any period or dialect; Lambert 2013 restores breaks within the single witness using internal context only."
 
 variants:
   classification: single-prevalent
   prevalent_version:
     source: lambert-2013
-    why_prevalent: "Late Babylonian recension preserved across multiple manuscripts that overlap; Lambert 2013 establishes a composite text. Single tradition, no co-equal alternates."
-  alternates:
-    - source: lambert-2013
-      difference: "Manuscripts differ in the precise role of subsidiary deities and in the closing lines."
+    why_prevalent: "Single tablet UET 6, 398 from Ur; Lambert 2013 establishes the only modern critical edition. No parallel manuscripts."
+  alternates: []
 
 entities_glossary:
-  - name: "Uraš"
+  - name: "Urash (Uraš) of Dilbat"
     role: deity
-    first_mention_gloss_candidate: "earth-goddess, here paired with Marduk as cosmic consort"
+    first_mention_gloss_candidate: "tutelary god of Dilbat (modern Tell al-Deylam, in Marduk's Babylonian cultural sphere); an agricultural deity equated in late commentaries with Ninurta 'of the hoe' and even with 'Marduk of planting' — to be distinguished from the female cosmogonic Uraš (spouse of Anu) who appears under a separate RlA entry"
   - name: "Marduk"
     role: deity
-    first_mention_gloss_candidate: "celestial-cosmic king, Babylonian patron"
-  - name: "Anu"
-    role: deity
-    first_mention_gloss_candidate: "sky-god in the cosmogonic background"
-  - name: "Ea"
-    role: deity
-    first_mention_gloss_candidate: "wise god of fresh waters in the cosmogonic background"
+    first_mention_gloss_candidate: "patron god of Babylon; in this composition he creates plant life for Urash, an act that articulates Marduk's cosmogonic / sovereign relationship to the agricultural domain and to the local cult of Dilbat"
+  - name: "Dilbat"
+    role: place
+    first_mention_gloss_candidate: "ancient city in northern Babylonia (modern Tell al-Deylam, Babil Governorate, Iraq), the cult-centre of the male agricultural Urash; the composition may have originated here, though the surviving tablet was excavated at Ur"
+  - name: "Ur"
+    role: place
+    first_mention_gloss_candidate: "the southern Mesopotamian city from which the surviving tablet (UET 6, 398) was excavated; not the place of composition (which may be Dilbat)"
 
 cultural_relevance:
   centrality: marginal
   centrality_evidence:
     - kind: attestation-volume
-      detail: "Multiple late-Babylonian manuscripts but no liturgical or first-millennium recensional footprint outside the cosmogonic dossier."
-      source: "lambert-2013, pp. 308–311"
+      detail: "Single tablet UET 6, 398 from Ur (per Streck 2014); no parallel manuscripts; possibly composed in the Old Babylonian or Kassite period with Dilbat origin (per HandWiki / RlA Uraš B). No liturgical or recensional footprint outside this single tablet."
+      source: "lambert-2013, pp. 311–315"
     - kind: scholarly-attention
-      detail: "Marginal individually; significant in showing late-Babylonian theological interest in cosmic-divine pairings."
-      source: "lambert-2013, pp. 308–325"
+      detail: "Marginal individually; of interest as a witness to Marduk's cosmogonic relationship with a local agricultural cult-figure who in late commentaries was syncretised with Marduk himself ('Marduk of planting'); a small node in the late-Babylonian theological-syncretism dossier."
+      source: "lambert-2013, pp. 311–315"
   function:
-    - role: theogonic
-      basis: "Pairs the chthonic earth-goddess Uraš with the celestial Marduk in a cosmogonic union."
-      source: "lambert-2013, pp. 308–325"
-    - role: cosmological
-      basis: "Articulates the cosmic order through divine consorship; situates earth and heaven in a balanced pairing."
-      source: "lambert-2013, pp. 308–325"
+    - role: cosmogonic
+      basis: "Marduk creates plant life for Urash — an articulation of Marduk's cosmogonic / sovereign relationship to the agricultural domain (vegetative creation) via the cult-figure of Dilbat. The composition reads as a small-scale creation narrative restricted to the agricultural / vegetative register."
+      source: "lambert-2013, pp. 311–315; HandWiki s.v. Urash (god) — narrative summary"
+    - role: theological-syncretic
+      basis: "The male Urash of Dilbat was equated in late-Babylonian commentary lists with Ninurta and even with 'Marduk of planting'; the composition can be read as articulating Marduk's relationship to a local-cult double or sub-aspect of himself — a theological move characteristic of the late-Babylonian Marduk dossier's absorption of regional divine identities."
+      source: "lambert-2013, pp. 311–315; black-green-1992, s.v. Urash; bottero-2001 on Marduk's syncretism"
   cross_cultural_parallels:
-    - other_culture: "Greek"
-      parallel: "Gaia and Ouranos as primordial earth-heaven pair; Uraš-Marduk inverts the pattern (here the earth is younger and partnered with a celestial latecomer)."
-      source: "lambert-2013 (commentary)"
-    - other_culture: "Hurro-Hittite"
-      parallel: "Earth-god Lelwani in the Anatolian pantheon; chthonic-celestial pairings in the broader cuneiform cultural sphere."
-      source: "hoffner-1998"
     - other_culture: "Akkadian (internal)"
-      parallel: "Uraš shares territory with Damkina (Marduk's mother) in some late-Babylonian theology; the chthonic-celestial pairing recurs across the cosmogonic dossier."
-      source: "lambert-2013"
+      parallel: "Marduk's syncretism with local cult-figures is widespread in the late-Babylonian theological imagination (cf. *Marduk's Address* texts, the Marduk Ordeal, and the syncretistic god-list compositions). The Urash and Marduk myth is one node in this broader syncretistic dossier."
+      source: "lambert-2013; livingstone-1989"
+    - other_culture: "Akkadian (internal)"
+      parallel: "Marduk creating aspects of the cosmos / agricultural domain has parallels in *Enūma Eliš* Tablet VI (Marduk's organisation of cosmos and agriculture) and in the cosmogonic incantation prologues (Foster 2005's 'Myth of the Plow', 'Creation of Humankind', 'Providing for the Gods'). The Urash and Marduk text is a fragmentary witness to the same theological pattern: Marduk as the cosmogonic creator of specific aspects of the world, here the vegetative / agricultural."
+      source: "lambert-2013, pp. 1–277 (Enūma Eliš); foster-2005, pp. 436–440 (cosmogonic incantation prologues)"
 
 comparative_hooks:
-  - other_culture: "Greek"
-    parallel: "Gaia-Ouranos primordial pair; the chthonic-celestial union is widespread but instantiated differently."
+  - other_culture: "Akkadian (internal)"
+    parallel: "Marduk's syncretism with local cult-figures (Marduk-Urash 'of planting'; Marduk-Asalluhi; Marduk-Tutu) is a recurring late-Babylonian theological move — see the Marduk-name lists in *Enūma Eliš* Tablet VII and the Marduk-Address texts (cf. CCP 2.2.1.B). The Urash and Marduk myth is one fragmentary node in this dossier."
     source: "lambert-2013"
   - other_culture: "Akkadian (internal)"
-    parallel: "Damkina's Bond pairs Damkina (Marduk's mother) with cosmic order; Uraš and Marduk parallels this pattern with a different chthonic figure."
-    source: "lambert-2013"
+    parallel: "Marduk's cosmogonic creation of vegetative / agricultural life parallels other small cosmogonic narratives in the dossier — the 'Myth of the Plow' (Foster 2005), the 'Worm and Toothache' (Chapter 11), and the cosmogonic incantation prologues — that articulate Marduk's creation of specific aspects of the lived world."
+    source: "lambert-2013; foster-2005"
 
 triangulation_databases:
   - ORACC
   - CDLI
 
-target_length_words: 1500
+# target_length_words: deprecated; the verified claims document is the chapter's
+# length budget. The composition is short and fragmentary; the chapter should be
+# tight, not padded.
 
 special_instructions: |
-  Short, fragmentary late-Babylonian composition (800–2000 words). Single critical edition (Lambert 2013). The composition's narrative is sketchy due to manuscript damage; treat it as a node in the late-Babylonian cosmogonic dossier rather than as a freestanding myth. Pair it analytically with Damkina's Bond (the next chapter) — both texts foreground a feminine chthonic-celestial pairing with Marduk. Mark all reconstructions. Avoid over-interpreting the limited narrative; preserve the philological transparency of "we have these pieces, fitted together by Lambert."
+  Short, fragmentary Akkadian composition preserved on a single poorly-preserved tablet, UET 6, 398, excavated at Ur. The composition itself may have been composed earlier (Old Babylonian or Kassite period) and may have originated at Dilbat, the cult-centre of the male agricultural deity Urash; the surviving tablet's date and the composition's date should be distinguished. Lambert 2013 pp. 311–315 is the sole modern critical edition; notes on the text are at p. 496. Foster 2005 *Before the Muses* and Dalley 2008 *Myths from Mesopotamia* do NOT contain this composition.
+
+  CRITICAL CONTENT MODEL: The Uraš in this composition is the MALE tutelary god of Dilbat — an agricultural deity equated in late commentaries with Ninurta ("of the hoe", "of the calendar", "of the tenant farmer") and with "Marduk of planting" — NOT the female cosmogonic earth-goddess (spouse of Anu) who is a different figure (RlA s.v. Uraš A). HandWiki summarises the surviving content as: "Marduk created plant life for Urash." The composition is therefore an agricultural-cosmogonic narrative: Marduk (Babylon's patron) creates plant life for Urash (Dilbat's tutelary), an act that articulates Marduk's cosmogonic / sovereign relationship to the agricultural domain and possibly his syncretistic absorption of a local-cult double of himself.
+
+  Do NOT frame this composition as a chthonic-celestial divine pairing or as a feminine consortship — those framings (which the original brief and original claims document advanced) are wrong because they presuppose the female Uraš identification. The corrected framing is: Marduk's cosmogonic-agricultural creation for the male Dilbat tutelary, with theological-syncretism as the operative register. The Damkina's Bond pairing as a "feminine consortship sub-cluster" is also dropped — Damkina's Bond is the next chapter in Lambert's TOC (pp. 321–325, NOT pp. 326–360 as the old brief carried), but it is a separate composition with a different feminine figure (Damkina, Marduk's mother) and the analytical pairing is no longer apt.
+
+  The Greek Gaia–Ouranos comparative-hook is DROPPED (it depended on the female-Uraš reading; the male agricultural Urash is not a primordial-earth figure). The Hurro-Hittite Lelwani hook is also DROPPED. The corrected comparative hooks are internal-Akkadian: Marduk's syncretism with local cult-figures, and Marduk's cosmogonic creation of specific aspects of the lived world.
+
+  All reconstructions must be flagged with [RECONSTRUCTION:] markers; the single witness has substantial breaks. The LACUNA marker should reference the single tablet UET 6, 398 (not "multiple manuscripts"). The RECONSTRUCTION marker's fill_source should be "internal context only; no parallel manuscripts available" (not "internal joins among multiple witnesses"). The VARIANT marker should be reframed as restoration-variation within a single damaged witness, not as exemplar-variation.
+
+  Do NOT assert verbatim quotations from Lambert 2013 unless directly verified against a print copy. The chapter should preserve philological transparency: "we have a single damaged tablet, in poor preservation, that Lambert 2013 has edited and translated; the surviving content is best summarised as Marduk creating plant life for the Dilbat tutelary Urash, with substantial gaps in the narrative."
+
+  Streck 2014 (BSOAS 77, 371–372) — the standard scholarly review of Lambert 2013 — identifies the manuscript base of *Uraš and Marduk* as UET 6, 398. Streck 2014 is not currently in sources.yaml; if added, it would also benefit chapters 5–9 on manuscript-base claims (per factcheck note N-2).
