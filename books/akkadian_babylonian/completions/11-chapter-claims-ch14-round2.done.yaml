@@ -1,0 +1,69 @@
+stage: "chapter-claims"
+chapter: 14
+slug: "nergal-ereshkigal"
+round: 2
+input: "briefs/14-nergal-ereshkigal.yaml (revised round 2 2026-05-09 after round-1 claims-factcheck returned BLOCK)"
+output: "chapters/14-nergal-ereshkigal.claims.adoc (round-2 in-place revision; supersedes round-1)"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/14-nergal-ereshkigal.claims.adoc"
+    lines: 224
+  - file: "briefs/14-nergal-ereshkigal.yaml"
+    lines: 156
+summary: |
+  Chapter 14 (Nergal and Ereškigal) round-2 claims revision. Round-1 factcheck returned BLOCK with three HIGH findings (F-1 Etana wrongly in Amarna cluster; F-2 union duration "seven" → "six" days; F-4 royal-wedding-coronation closure was a fabrication) and two lower findings (F-3 Amarna hair-seizing-and-plea climax was elided; F-5 prohibitions-catalogue translation variance). Round-2 corrections applied to both the brief and the claims:
+
+  Brief (R2-1, R2-2, R2-3): removed the "formal royal-wedding-and-coronation" framing in the Sultantepe alternates; expanded the Amarna alternates entry to flag the hair-seizing climax; corrected the Amarna literary cluster references in special_instructions to remove Etana and to note the actual cluster (Adapa EA 356, Nergal EA 357, King of Battle EA 359, plus lexical/educational material). The brief's special_instructions explicitly note the union duration and the Sultantepe ending corrections.
+
+  Claims (F-1 through F-5): removed Etana from the Amarna cluster (three places: source-overview, INFERENCE marker basis field, COMPARATIVE-HOOK; the COMPARATIVE-HOOK explicitly notes "Etana's witnesses are at Susa, Aššur, and Nineveh, not at Amarna" for clarity). Corrected union duration from "seven days and seven nights" to "six days and six nights" (twice; the action turns on the seventh day with Anu's intervention / Nergal's escape). Expanded the Amarna recension's narrative climax to include the hair-seizing scene, Nergal's threat to kill Ereškigal, Ereškigal's plea for joint rule, and the etiological resolution. Replaced the Sultantepe SB ending paragraph with the actual surviving closure: Anu's decree (much of which is damaged) establishing Nergal's permanent co-rule, followed by the closing line of Nergal and Ereškigal entering the bedchamber together — no separate wedding ceremony, no coronation sequence. Added a sentence linking the hair-seizing motif across both recensions (different functions: existential threat in Amarna, reunion in Sultantepe). Hedged the prohibitions catalogue's fifth item to acknowledge translation variance (Foster's "looking" / "lustfully look" rendering vs. more literal "do what men and women do" / sex-prohibition rendering); the narrative function (bathing-as-failure-point) preserved. Renamed §"Nergal's second descent and the royal wedding" to §"Nergal's second descent and Anu's decree". Updated the LACUNA marker on the SB recension to flag specifically Anu's decree damage and the council scenes.
+
+  Source IDs unchanged from round 1 (foster-2005, dalley-2008, foster-2007, black-green-1992, bottero-2001). Marker counts unchanged: 3 INFERENCE + 2 LACUNA + 1 RECONSTRUCTION + 1 VARIANT = 7 markers. Comparative-hook count unchanged: 5. Round-2 chapter is 224 lines (vs round-1's 183 lines; the additional 41 lines are mostly the round-2 preamble correction-log).
+
+findings_addressed:
+  - finding_id: F-1
+    kind: FACTUAL-FABRICATION
+    severity: HIGH
+    disposition: ACCEPT
+    rationale: "Removed Etana from the Amarna cluster (three places). Replaced with explicit list of the actual Amarna mythological cluster (Adapa EA 356, Nergal EA 357, King of Battle EA 359, plus miscellaneous lexical and educational material). The COMPARATIVE-HOOK at chapter foot now explicitly notes Etana's actual provenance (Susa, Aššur, Nineveh) for clarity."
+  - finding_id: F-2
+    kind: FACTUAL-ERROR
+    severity: HIGH
+    disposition: ACCEPT
+    rationale: "Corrected union duration from 'seven days and seven nights' to 'six days and six nights' (two occurrences). The narrative function (extended union; Nergal flees while Ereškigal sleeps; the action turns on the seventh day) is preserved with the correct numbers. Foster 2005's translation gives 'six days and six nights'."
+  - finding_id: F-3
+    kind: INCOMPLETE-FRAMING
+    severity: MEDIUM
+    disposition: ACCEPT
+    rationale: "Expanded the Amarna recension paragraph to include the hair-seizing scene, Nergal's threat to kill Ereškigal, Ereškigal's plea for joint rule, and the etiological conversion of violence into joint rule. The hair-seizing motif is also attested in the SB Sultantepe second descent, with different narrative function (reunion rather than existential threat); the round-2 SB section explicitly notes the parallel and the divergent resolutions."
+  - finding_id: F-4
+    kind: FACTUAL-FABRICATION
+    severity: HIGH
+    disposition: ACCEPT
+    rationale: "Replaced the SB Sultantepe 'formal royal-wedding-and-coronation' paragraph with the actual surviving closure: Anu's decree (much of which is damaged on the tablet) establishing Nergal's permanent co-rule with Ereškigal, followed by the closing line of the two gods entering the bedchamber together. Anu's decree IS the ratification, and the bedchamber reunion IS the resolution. The court-romantic register thesis is preserved with the corrected ending; the wedding-ceremony-and-coronation fabrication is removed. The §-heading 'Nergal's second descent and the royal wedding' is renamed to '§ Nergal's second descent and Anu's decree'. The LACUNA marker on the SB recension is updated to flag Anu's-decree damage specifically."
+  - finding_id: F-5
+    kind: TRANSLATION-VARIANCE
+    severity: LOW-MEDIUM
+    disposition: ACCEPT
+    rationale: "Hedged the prohibitions-catalogue fifth item to acknowledge translation variance: Foster's 'looking' / 'not to look lustfully' rendering vs. the more literal 'do what men and women do' / 'not to lie with the queen' rendering. The narrative function (bathing-as-failure-point; the prohibition breaks at the bathing scene; Nergal succumbs) is preserved across translations. The chapter follows Foster's translation while explicitly noting the variance in body prose."
+
+self_check:
+  source_overview_present: true
+  every_finding_addressed: PASS
+  factual_fabrications_removed: PASS
+  factual_errors_corrected: PASS
+  incomplete_framing_expanded: PASS
+  translation_variance_hedged: PASS
+  brief_revised_in_concert: PASS
+  glossary_compliance: "PASS — Ereškigal, Nergal, Ea, Apsû, Marduk (in Ea's gloss), Anu, Ištar (in cross-reference to *The Descent of Ishtar*) all use locked glossary.yaml renderings. The Sumerian *Inanna's Descent* not invoked directly in the chapter; cross-reference to chapter 13 is by composition title. *Šar tamḫāri* (Akkadian title for *King of Battle*) used as a transliteration alongside the English title."
+  no_never_use_terms: "PASS — Enki, Inanna, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent from body prose."
+  marker_counts: "3 INFERENCE + 2 LACUNA + 1 RECONSTRUCTION + 1 VARIANT = 7 markers (unchanged from round 1)."
+  comparative_hook_count: "5 COMPARATIVE-HOOK comments (unchanged)."
+  evidence_token_count_approx: "65–70 EVIDENCE tokens (round-1 had 65; round-2 marginal additions)."
+  unresolved_source_ids: 0
+
+notes:
+  proceed_to: "round-2 claims-factcheck (task #22) in a fresh-context agent. The fixes are localized to the F-1 / F-2 / F-3 / F-4 / F-5 issues; the chapter's overall structure, marker discipline, audit-A9 incorporation, and glossary compliance are unchanged from round 1. Round-2 factcheck should focus on whether the F-1 through F-5 corrections are accurate against the surviving SB / MB texts."
+  pattern_match_with_recent_chapters: |
+    Following the chapter 7 / chapter 12 round-1-BLOCK / round-2-PASS pattern: brief revised, claims rewritten with corrections, round-2 factcheck dispatched. The chapter 14 case is intermediate in scope between chapter 12's full content-model rewrite (Marduk → Ea, new-foundation → renovation, single → multi-witness) and chapter 13's PASS-with-light-fixes. Chapter 14's round-2 corrects three HIGH factual findings while preserving the chapter's overall structure.

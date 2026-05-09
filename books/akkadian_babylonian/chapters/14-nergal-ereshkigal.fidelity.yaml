@@ -1,0 +1,809 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  claims_file: "chapters/14-nergal-ereshkigal.claims.approved.adoc"
+  narrative_file: "chapters/14-nergal-ereshkigal.adoc"
+  brief_file: "briefs/14-nergal-ereshkigal.yaml"
+  glossary_file: "glossary.yaml"
+  gloss_ledger_file: "gloss-ledger.yaml"
+  round1_factcheck_file: "chapters/14-nergal-ereshkigal.claims.factcheck.yaml"
+  round2_factcheck_file: "chapters/14-nergal-ereshkigal.claims.factcheck-round2.yaml"
+  post_human_normalize_record: "completions/13-post-human-normalize-claims-ch14.done.yaml"
+  writer_completion_record: "completions/14-chapter-draft-ch14.done.yaml"
+  reference_fidelity_format: "chapters/13-descent-of-ishtar.fidelity.yaml"
+  claims_lines: 261
+  claims_words: 5510
+  narrative_lines: 157
+  narrative_words: 4672
+  total_claims: 14
+  claims_mapped: 14
+  verdict: PASS
+  verdict_severity: NONE
+  verdict_one_line: |
+    PASS — every approved claim is represented in the chapter draft;
+    all five round-1-BLOCK / round-2-PASS findings (F-1 Etana removed
+    from Amarna cluster; F-2 six-day union; F-3 Amarna hair-seizing
+    climax + SB hair-seizing parallel; F-4 Anu's-decree-and-bedchamber
+    closure with no royal wedding/coronation; F-5 hedged fifth
+    prohibition) carry through correctly into the body prose of the
+    draft. All seven structural markers (3 INFERENCE + 2 LACUNA + 1
+    RECONSTRUCTION + 1 VARIANT) are present with all required sub-
+    fields, all five COMPARATIVE-HOOK comments are preserved, all 27
+    footnotes are preserved, all 65 EVIDENCE tokens are preserved.
+    Glossary compliance: PASS — Ereškigal, Nergal, Ea, Apsû, Marduk,
+    Anu, Ištar (body-prose cross-reference) all use the locked
+    glossary.yaml renderings; the editorial form "Ishtar" is confined
+    to the composition title "*The Descent of Ishtar*" (chapter 13's
+    own approved title form). Forbidden-words check: PASS. Asimov
+    register: PASS. Italics convention: PASS. Two minor
+    non-byte-identical edits inside the third INFERENCE marker
+    ("courtship-and-wedding" → "courtship-and-reunion"; "formal
+    installation" → "Anu's decree") are documented as correct
+    F-4-consistency improvements that the post-human-normalize stage
+    applied to brief lacunae and basis but not to this marker; the
+    writer carried the F-4 correction through to the marker as well.
+    These edits are noted as findings_for_record below but do not
+    affect the fidelity verdict.
+  honesty_self_check:
+    q1_every_claim_mapped: |
+      Yes. I walked all 14 footnoted claim-paragraphs in the approved
+      claims document in order and located each in the narrative
+      draft. None were skipped as "obviously present". The narrative
+      is a near-verbatim Asimov-register rendering of the claims
+      document with light prose connective tissue and one structural
+      reformulation: the source-overview heading and the "Co-equal
+      recensions: a methodological note" heading are folded into the
+      opening run of paragraphs (lines 4, 9, 14, 18, 22, 32) without
+      separate headings, following the chapter-12 / chapter-13
+      precedent of letting the source-overview content stand as
+      establishing-shot prose. Every element of the source-overview
+      and the co-equal methodological note is preserved. No factual
+      content lost. Structural-marker counts: claims body has 27
+      footnotes / 65 EVIDENCE tokens / 2 LACUNA / 1 RECONSTRUCTION /
+      1 VARIANT / 3 INFERENCE / 5 COMPARATIVE-HOOK; draft has the
+      same. (Note: a naive grep on the claims document counts an
+      additional LACUNA / RECONSTRUCTION / VARIANT mention in the
+      claims-document header comment block at lines 10-13 — these
+      are not actual marker blocks but in-comment references to the
+      marker types; the actual marker count is identical to the
+      draft.)
+    q2_every_paragraph_checked_for_additions: |
+      Yes — every body paragraph in the draft (lines 4, 9, 14, 18,
+      22, 32, 38, 43, 47, 51, 60, 64, 70, 75, 80, 88, 92, 96, 102,
+      106, 115, 121, 126, 135, 139, 144, 148) and every marker block
+      (lines 26, 28, 30, 56, 84, 111, 133) and every COMPARATIVE-
+      HOOK comment (lines 153–157) was checked against the claims
+      document. No new factual content introduced; semantic reach
+      identical. The third INFERENCE marker (draft line 111 / claims
+      line 178) has two non-byte-identical word substitutions
+      ("courtship-and-wedding" → "courtship-and-reunion"; "formal
+      installation" → "Anu's decree") that bring the marker into
+      consistency with the F-4 resolution; the post-human-normalize
+      record (R2-F-3) noted that the corresponding leftover in the
+      brief was patched but did not flag this marker. The writer's
+      edit is a correctness improvement not a factual addition.
+      Documented as findings_for_record G-1 below.
+    q3_distortion_meaning_check: |
+      Compared at the level of precise meaning, not topic. The
+      composition's narrative arc — three-recension witness frame
+      (Amarna EA 357 / Sultantepe STT 28 + joins / Late Babylonian
+      Uruk fragment); Amarna brief recension (banquet → Namtar →
+      Nergal-fails-to-rise → descent → hair-seizing climax →
+      Ereškigal's plea → joint rule); Sultantepe long recension
+      (banquet → Nergal-fails-to-rise → Ea's stratagem with fourteen
+      demons and five-prohibition catalogue → seven gates → chair-
+      trick → bathing-prohibition fails → six-day union → escape →
+      Ereškigal's threat → assembly → second descent with hair-
+      seizing-as-reunion → Anu's decree → bedchamber closure) — is
+      preserved beat-for-beat. All five round-1-BLOCK / round-2-PASS
+      findings carry through to the draft. F-1 (Etana NOT in the
+      Amarna cluster) is preserved at draft line 9 (Amarna cluster
+      listed as Adapa EA 356, Nergal EA 357, *Šar tamḫāri* / *King
+      of Battle* EA 359, plus miscellaneous lexical/educational
+      material), draft line 56 (INFERENCE basis subfield same
+      cluster), draft line 126 (theological-context paragraph same
+      cluster), and draft line 157 (Late-Bronze COMPARATIVE-HOOK
+      ends with "Note: *Etana*'s witnesses are at Susa, Aššur, and
+      Nineveh, not at Amarna" — explicit clarification of Etana's
+      actual provenance). F-2 (six days and six nights, action turns
+      on the seventh day) is preserved at draft line 80 ("passionate
+      union for six days and six nights") and draft line 88 ("After
+      six days and six nights of union with Ereškigal, on the seventh
+      day Nergal escapes"). F-3 (Amarna hair-seizing climax with
+      Nergal's threat and Ereškigal's plea for joint rule) is
+      preserved at draft line 47 ("Nergal seizes her by the hair and
+      pulls her from her throne. He is on the point of killing her
+      when she pleads for her life — offering him joint kingship of
+      the underworld in exchange"); the SB hair-seizing parallel is
+      noted at draft line 102 ("Nergal seizes Ereškigal by the hair
+      and draws her down from her throne — the same hair-seizing
+      motif preserved in the Amarna recension's climactic
+      confrontation"). F-4 (§-heading is "Nergal's second descent
+      and Anu's decree", NOT "the royal wedding"; SB closure is
+      Anu's decree much-damaged + closing bedchamber line; no
+      wedding ceremony, no coronation) is preserved at draft line
+      100 (heading) and draft line 106 ("There is no separate
+      wedding ceremony or coronation sequence in the surviving
+      text: Anu's decree IS the ratification, and the bedchamber
+      reunion IS the resolution"). F-5 (fifth prohibition hedged
+      with both Foster's "looking" rendering and the literal "what
+      men and women do" rendering) is preserved at draft line 70
+      ("when Ereškigal removes her clothes to bathe — he is not to
+      lie with her (Foster's translation glosses this last
+      prohibition as a warning against looking upon the bathing
+      queen, while more literal translations render the underlying
+      Akkadian phrase as a prohibition on doing 'what men and women
+      do')"). Co-equal recensional handling is consistently
+      maintained: both recensions narrated separately and each
+      attributed to its source. Epistemic posture preserved: the
+      three INFERENCE-flagged readings (Amarna-as-Late-Bronze-
+      compact-etiology vs Sultantepe-as-Neo-Assyrian-courtly-
+      elaborate; the Ea-instructs-the-marginal-figure structural
+      pattern; the elaborated courtly-romantic register) are NOT
+      promoted to flat body-prose assertion — the body framing of
+      these moves either restates the claim-doc body framing or
+      paraphrases with the deeper structural reading kept inside
+      the INFERENCE blocks.
+    q4_same_model_as_writer: |
+      I am claude-opus-4-7[1m] in a fresh conversation with no
+      memory of writing the chapter draft. The chapter-14 draft was
+      produced at the chapter-draft stage in a separate session
+      (completion record 14-chapter-draft-ch14.done.yaml). This
+      audit is therefore valid under the skill's "fresh-
+      conversation" requirement; the "different model" preference
+      is not strictly met but is not required.
+
+structural_marker_counts:
+  claims:
+    evidence_tokens: 65
+    footnotes: 27
+    lacuna: 2
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 5
+  draft:
+    evidence_tokens: 65
+    footnotes: 27
+    lacuna: 2
+    reconstruction: 1
+    variant: 1
+    inference: 3
+    comparative_hooks: 5
+  delta_explanation: |
+    Zero delta on structural-marker counts. EVIDENCE token count
+    (65→65), footnote count (27→27), LACUNA (2→2), RECONSTRUCTION
+    (1→1), VARIANT (1→1), INFERENCE (3→3), COMPARATIVE-HOOK (5→5)
+    are all identical. Note on count methodology: a naive grep on
+    the claims document for `[LACUNA:`, `[RECONSTRUCTION:`,
+    `[VARIANT:` returns 3 / 2 / 3 because the claims-document
+    header comment block (lines 10-13) contains in-comment
+    references to those marker types. The actual marker-block
+    count (excluding in-comment references) is 2 / 1 / 1, matching
+    the draft. The writer's completion record reports "30
+    footnotes carried over verbatim"; actual count by grep is 27
+    in both files (the writer's "30" is a minor self-check
+    miscount; verified count is 27→27 with zero delta — same
+    pattern as chapter 13's writer-self-check miscount).
+    Section heading delta: claims has 10 `=== ` headings (Source
+    overview; Co-equal recensions: a methodological note; The MB
+    Amarna recension; The SB Sultantepe recension: opening at the
+    divine banquet; Ea's stratagem: the fourteen demons and the
+    chair-trick; Nergal's flight and return; Nergal's second
+    descent and Anu's decree; Ritual context and theological
+    function; Variants and witness; The poem's place in the
+    corpus). Draft has 8 `=== ` headings: drops "Source overview"
+    and "Co-equal recensions: a methodological note" (folded into
+    opening prose run lines 4, 9, 14, 18, 22, 32 — chapter-12 /
+    chapter-13 precedent), and rewords "Ea's stratagem: the
+    fourteen demons and the chair-trick" → "Ea's stratagem: the
+    fourteen demons and the prohibitions catalogue" (more accurate
+    to the section content, which catalogues the five prohibitions
+    rather than just the chair-trick). All section content
+    preserved.
+
+claim_coverage:
+  total_claims: 14
+  mapped: 14
+  unmapped: 0
+  claim_mapping:
+    - claim_number: 1
+      claim_text: "Source overview: *Nergal and Ereškigal* is an Akkadian myth narrating Nergal's descent to the underworld and joint rule with Ereškigal; preserved in three substantially different recensions (MB Amarna; SB Sultantepe; LB Uruk fragment) across nearly a millennium."
+      claims_line: 69
+      narrative_line: 4
+      status: MAPPED
+      note: "Verbatim semantic content; opens the chapter as
+        establishing-shot prose without a Source-overview heading
+        (chapter-12 / chapter-13 precedent). All three recensions
+        named with their geographic provenance (Amarna in Egypt,
+        Sultantepe in southeastern Anatolia, Uruk in southern
+        Mesopotamia). Footnote byte-identical."
+    - claim_number: 2
+      claim_text: "EA 357 from the Amarna archive in Egypt; Akkadian; 14th century BCE; ~90 lines; brief etiological recension; found alongside *Adapa* EA 356, *Šar tamḫāri* EA 359, and miscellaneous lexical/educational material."
+      claims_line: 74
+      narrative_line: 9
+      status: MAPPED
+      note: "Verbatim. F-1 resolution preserved: Etana is NOT
+        listed in the Amarna cluster; the cluster is *Adapa*
+        (EA 356), *Šar tamḫāri* / *King of Battle* (EA 359), plus
+        miscellaneous lexical/educational material. Footnote
+        byte-identical."
+    - claim_number: 3
+      claim_text: "Sultantepe STT 28 + joins; ancient Ḫuzirina; excavated 1951; edited by Gurney 1960 *Anatolian Studies* 10, pp. 105–131; ~750 lines; the long recension elaborates Amarna with extended Ea-instruction and prohibitions sequences and a closing decree by Anu; named-but-flagged for Gurney 1960 not in sources.yaml; Roman-numeral 'VII' refers to Gurney's seventh Sultantepe-tablets article, not a tablet number."
+      claims_line: 79
+      narrative_line: 14
+      status: MAPPED
+      note: "Verbatim. STT 28 + joins identifier preserved per audit
+        finding A9. Gurney 1960 named-but-flagged annotation
+        preserved including the Roman-numeral 'VII' clarification.
+        Footnote byte-identical."
+    - claim_number: 4
+      claim_text: "Late Babylonian Uruk fragment; partial overlap with Sultantepe; supplements where STT 28 is broken; recensionally close to the SB long version rather than the Amarna short."
+      claims_line: 83
+      narrative_line: 18
+      status: MAPPED
+      note: "Verbatim. Footnote byte-identical."
+    - claim_number: 5
+      claim_text: "Standard accessible English translations Foster 2005 *Before the Muses* pp. 506–524 and Dalley 2008 *Myths from Mesopotamia* pp. 163–181; standard critical edition for SB Sultantepe is Gurney 1960 *Anatolian Studies* 10; no recent single-volume critical edition consolidating all three recensions in the Lambert/George sense; Foster 2005 and Dalley 2008 are the consolidated translations of record."
+      claims_line: 87
+      narrative_line: 22
+      status: MAPPED
+      note: "Verbatim. Footnote byte-identical."
+    - claim_number: 6
+      claim_text: "Co-equal recensional methodological note: MB Amarna and SB Sultantepe roughly co-equal in scholarly weight; substantially different versions of the same myth — same characters and outcome but different narrative treatment, register, and length; chapter presents both in sequence rather than reducing to a single composite."
+      claims_line: 99
+      narrative_line: 32
+      status: MAPPED
+      note: "Verbatim. Folded into the source-overview run without
+        a separate heading. Footnote byte-identical."
+    - claim_number: 7
+      claim_text: "Amarna recension opening: divine banquet hosted by Anu; gods of heaven gather; Ereškigal cannot ascend in person but is to receive her portion; Anu and the assembled gods send Namtar — Ereškigal's vizier (deity of fate and disease, herald and executor of the queen's commands) — up to fetch her share."
+      claims_line: 105
+      narrative_line: 38
+      status: MAPPED
+      note: "Verbatim. Namtar's reminder gloss surfaced in body
+        prose at first mention (per the writer's gloss-decision).
+        Footnote byte-identical."
+    - claim_number: 8
+      claim_text: "Amarna recension: Namtar arrives, every god rises except Nergal; the slight is reported back to Ereškigal; she takes offence and demands that the offending god be sent down to her for punishment."
+      claims_line: 110
+      narrative_line: 43
+      status: MAPPED
+      note: "Verbatim. Footnote byte-identical."
+    - claim_number: 9
+      claim_text: "Amarna recension narrative climax: Nergal descends to the underworld; brief composition does not elaborate gates or stratagems; moves quickly to violent confrontation; inside Ereškigal's house, Nergal seizes her by the hair and pulls her from her throne; on the point of killing her she pleads for her life — offering him joint kingship of the underworld in exchange; Nergal accepts; the two are married; he is established as co-ruler alongside Ereškigal; Amarna closes with this etiological resolution."
+      claims_line: 114
+      narrative_line: 47
+      status: MAPPED
+      note: "Verbatim. F-3 resolution preserved: the hair-seizing
+        scene, Nergal's threat to kill Ereškigal, and her plea for
+        joint rule are all narrated. Footnote byte-identical."
+    - claim_number: 10
+      claim_text: "Amarna recension etiological function: explains how Nergal — by origin a war-god of the upper world, in some other Akkadian compositions identified with Erra and associated with violent death and plague — came to share the throne of the underworld with Ereškigal; the Amarna text supplies a divine-quarrel-resolved-by-marriage frame that establishes the cosmic-political configuration the narrative presupposes."
+      claims_line: 118
+      narrative_line: 51
+      status: MAPPED
+      note: "Verbatim. Nergal's identification with Erra preserved.
+        Footnote byte-identical."
+    - claim_number: 11
+      claim_text: "Sultantepe recension opening parallels Amarna: divine banquet hosted by Anu; Ereškigal cannot ascend; Namtar sent up to receive her portion; framing significantly elaborated."
+      claims_line: 127
+      narrative_line: 60
+      status: MAPPED
+      note: "Verbatim with light prose connective tissue ('So far
+        the Sultantepe opening parallels the Amarna'). Footnote
+        byte-identical."
+    - claim_number: 12
+      claim_text: "Sultantepe recension: Nergal again fails to rise; slight is reported; Ereškigal demands the offending god; Nergal — knowing the danger — does not descend immediately but goes to Ea (god of wisdom, the freshwater *Apsû*, and incantation, patron of craft and cunning, father of Marduk) for advice and protection."
+      claims_line: 131
+      narrative_line: 64
+      status: MAPPED
+      note: "Verbatim. Ea's locked first-mention gloss surfaced at
+        the substantive narrative actor scene. Footnote byte-
+        identical."
+    - claim_number: 13
+      claim_text: "Sultantepe recension: Ea's stratagem includes the fourteen apotropaic demons and the prohibitions catalogue (no chair, no food, no beer, no foot-bath, and — when Ereškigal removes her clothes to bathe — not to lie with her, with Foster's 'looking' rendering and the literal 'what men and women do' rendering both noted)."
+      claims_line: 137
+      narrative_line: 70
+      status: MAPPED
+      note: "Verbatim. F-5 resolution preserved: the fifth
+        prohibition is hedged with both Foster's 'looking' rendering
+        and the literal 'what men and women do' rendering.
+        Footnote byte-identical."
+    - claim_number: 14
+      claim_text: "Sultantepe recension: Nergal descends through the seven gates (parallel to *The Descent of Ishtar* but the gates here are entry points not stripping-points); accompanied by his fourteen demons; Namtar receives Nergal at each gate."
+      claims_line: 142
+      narrative_line: 75
+      status: MAPPED
+      note: "Verbatim. Cross-reference to *The Descent of Ishtar*
+        chapter 13 preserved. Footnote byte-identical."
+  additional_body_paragraph_claims:
+    note: |
+      Beyond the 14 numbered footnoted claim-paragraphs above, the
+      claims document contains 13 additional footnoted claim-
+      paragraphs in the post-claim-14 body sections. These are also
+      mapped 1-for-1 in the draft (as required by the chapter-draft
+      skill's per-claim-footnoted policy):
+      - SB chair-trick / refusals / bathing failure / six-day union
+        (claims 147 → draft 80; F-2 carry-through)
+      - SB Nergal escapes on the seventh day (claims 155 → draft 88;
+        F-2 carry-through)
+      - SB Ereškigal's threat to raise the dead so they outnumber
+        the living (claims 159 → draft 92; cross-reference to
+        *Descent of Ishtar*)
+      - SB divine assembly's decision (fragmentary) and Nergal's
+        return (claims 163 → draft 96)
+      - SB second descent: hair-seizing motif preserved as reunion
+        rather than threat; shared-motif evidence for single-
+        tradition framing (claims 169 → draft 102; F-3
+        carry-through for SB-side hair-seizing parallel)
+      - SB closure: Anu's decree (much damaged), permanent co-rule
+        with Ereškigal, closing bedchamber line; no separate
+        wedding ceremony or coronation (claims 173 → draft 106; F-4
+        carry-through for the SB ending)
+      - Ritual context: theological functions, etiological
+        explanation of cosmic-political configuration, Sultantepe-
+        recension's literary distinctiveness (claims 182 → draft
+        115)
+      - Sultantepe / Ḫuzirina library context within the wider
+        Neo-Assyrian literary scribal culture (claims 188 →
+        draft 121)
+      - Amarna preservation in Egypt; international circulation of
+        Akkadian literature in the Late Bronze Age (claims 193 →
+        draft 126; F-1 carry-through with the corrected Amarna
+        cluster)
+      - Variants section: shared narrative skeleton; Amarna treats
+        skeleton at minimal length, Sultantepe elaborates each
+        stage; Sultantepe second descent with hair-seizing parallel
+        to Amarna; closing scene with Anu's decree and bedchamber
+        reunion (claims 202 → draft 135; F-3 and F-4 carry-through)
+      - Late Babylonian Uruk fragment as partial witness to SB long
+        version, not a third independent recension (claims 206 →
+        draft 139)
+      - *Nergal and Ereškigal* as one of the principal Akkadian
+        underworld narratives; paired underworld dossier with
+        *The Descent of Ishtar* (claims 211 → draft 144)
+      - Geographic spread (Amarna / Sultantepe / Uruk) and
+        chronological breadth across nearly a millennium (claims
+        215 → draft 148)
+      All 13 mapped, all footnotes preserved byte-identical.
+
+f1_through_f5_resolution_check:
+  status: PASS
+  notes: |
+    All five round-1-BLOCK / round-2-PASS findings from the
+    factcheck cycle carry through into the chapter-draft body prose
+    correctly:
+    - F-1 (Etana NOT in the Amarna cluster). Body prose at draft
+      lines 9, 56 (INFERENCE basis), 126 lists the Amarna cluster
+      correctly as *Adapa* (EA 356), *Nergal* (EA 357 — this
+      composition itself), *Šar tamḫāri* / *King of Battle*
+      (EA 359), plus miscellaneous lexical / educational material;
+      Etana is NOT named at any of the three locations. The Late-
+      Bronze COMPARATIVE-HOOK at draft line 157 explicitly notes
+      Etana's actual provenance: "*Etana*'s witnesses are at Susa,
+      Aššur, and Nineveh, not at Amarna." All three F-1 sites
+      confirmed.
+    - F-2 (six days and six nights of union; the action turns on
+      the seventh day with Nergal's escape, not Anu's intervention).
+      Draft line 80: "passionate union for six days and six nights".
+      Draft line 88: "After six days and six nights of union with
+      Ereškigal, on the seventh day Nergal escapes back to the upper
+      world while she sleeps." Both occurrences carry the "six days
+      / seventh-day-escape" pattern. The footnote at draft line 80
+      uses the corrected "the six-day union" tag (R2-F-1 housekeeping
+      edit applied at post-human-normalize and carried through to
+      draft).
+    - F-3 (Amarna recension paragraph includes the hair-seizing
+      scene, Nergal's threat, Ereškigal's plea for joint rule; SB
+      second-descent paragraph notes the hair-seizing parallel
+      between recensions). Draft line 47 (Amarna): "Inside
+      Ereškigal's house, Nergal seizes her by the hair and pulls
+      her from her throne. He is on the point of killing her when
+      she pleads for her life — offering him joint kingship of the
+      underworld in exchange. Nergal accepts; the two are married,
+      and he is established as the underworld's co-ruler alongside
+      Ereškigal." Draft line 102 (SB second descent): "Nergal
+      seizes Ereškigal by the hair and draws her down from her
+      throne — the same hair-seizing motif preserved in the Amarna
+      recension's climactic confrontation, but here the gesture is
+      one of reunion rather than existential threat. The
+      Sultantepe seizure resolves in embrace; the Amarna seizure
+      ends in Ereškigal's plea for life." Both sites confirmed.
+    - F-4 (§-heading is "Nergal's second descent and Anu's decree";
+      SB closure is Anu's decree much-damaged + closing bedchamber
+      line; NO wedding ceremony, NO coronation). Draft line 100
+      heading: "=== Nergal's second descent and Anu's decree".
+      Draft line 106: "The Sultantepe recension closes with Anu's
+      decree. Much of the decree is damaged on the tablet, but the
+      surviving lines establish that Nergal is to remain forever
+      with Ereškigal as co-ruler of the underworld. The poem's
+      final preserved line shows Nergal and Ereškigal entering the
+      bedchamber together. There is no separate wedding ceremony
+      or coronation sequence in the surviving text: Anu's decree
+      IS the ratification, and the bedchamber reunion IS the
+      resolution." The wording explicitly negates wedding /
+      coronation. Confirmed.
+    - F-5 (prohibitions catalogue's fifth item hedged with both
+      Foster's "looking" rendering and the literal "what men and
+      women do" rendering). Draft line 70: "when Ereškigal removes
+      her clothes to bathe — he is not to lie with her (Foster's
+      translation glosses this last prohibition as a warning
+      against looking upon the bathing queen, while more literal
+      translations render the underlying Akkadian phrase as a
+      prohibition on doing 'what men and women do')". Both
+      renderings preserved verbatim. Confirmed.
+
+marker_preservation_check:
+  status: PASS_WITH_RECORDED_DEVIATION
+  total_markers_claims: 7
+  total_markers_draft: 7
+  per_marker:
+    - marker_kind: LACUNA
+      marker_id: "Sultantepe SB recension — STT 28 + joins"
+      claims_line: 91
+      draft_line: 26
+      status: BYTE_IDENTICAL
+      sub_fields_preserved: ["source", "scholarly_reconstruction"]
+    - marker_kind: LACUNA
+      marker_id: "Amarna MB recension — EA 357"
+      claims_line: 93
+      draft_line: 28
+      status: BYTE_IDENTICAL
+      sub_fields_preserved: ["source", "scholarly_reconstruction"]
+    - marker_kind: RECONSTRUCTION
+      marker_id: "Foster 2005's three-recension parallel reconstructions"
+      claims_line: 95
+      draft_line: 30
+      status: BYTE_IDENTICAL
+      sub_fields_preserved: ["gap_source", "fill_source", "confidence"]
+    - marker_kind: INFERENCE
+      marker_id: "Amarna brevity as Late Bronze international-medium register"
+      claims_line: 123
+      draft_line: 56
+      status: BYTE_IDENTICAL
+      sub_fields_preserved: ["basis", "risk"]
+      notes: |
+        Includes the F-1 Amarna cluster basis: "the Amarna archive's
+        other Akkadian literary tablets (*Adapa* on EA 356, *Šar
+        tamḫāri* / *King of Battle* on EA 359, plus miscellaneous
+        lexical and educational material)" — Etana correctly not
+        listed.
+    - marker_kind: INFERENCE
+      marker_id: "Sultantepe prohibitions as wider Mesopotamian narrative pattern (Adapa, Gilgameš)"
+      claims_line: 151
+      draft_line: 84
+      status: BYTE_IDENTICAL
+      sub_fields_preserved: ["basis", "risk"]
+    - marker_kind: INFERENCE
+      marker_id: "Sultantepe elaborated courtly-romantic register"
+      claims_line: 178
+      draft_line: 111
+      status: NON_BYTE_IDENTICAL_RECORDED
+      sub_fields_preserved: ["basis", "risk"]
+      notes: |
+        Two non-byte-identical word substitutions inside the
+        marker's narrative-prose body:
+        (1) "elaborate courtship-and-wedding register" (claims) →
+            "elaborate courtship-and-reunion register" (draft);
+        (2) "extended Ea-instruction sequence, refusals catalogue,
+            passionate union, separation, return, formal
+            installation" (claims) → "extended Ea-instruction
+            sequence, refusals catalogue, passionate union,
+            separation, return, Anu's decree" (draft).
+        Both edits are F-4-consistency improvements: the post-
+        human-normalize record (R2-F-3) patched the corresponding
+        leftover phrasing in the brief's
+        cultural_relevance.function[2].basis but did not flag this
+        marker. The writer extended the F-4 correction to the
+        marker as well, replacing "wedding" / "formal installation"
+        leftovers with "reunion" / "Anu's decree" so the marker
+        body reads consistently with the F-4-corrected SB closure
+        (Anu's decree + bedchamber reunion, not wedding /
+        installation). The basis and risk sub-fields are preserved
+        byte-identical. The edit is a correctness improvement, not
+        a factual addition or distortion. Documented as
+        findings_for_record G-1 below; does not change the
+        fidelity verdict.
+    - marker_kind: VARIANT
+      marker_id: "primary=Sultantepe SB recension; alt=Amarna MB recension; chosen=BOTH RECENSIONS PRESENTED"
+      claims_line: 200
+      draft_line: 133
+      status: BYTE_IDENTICAL
+      sub_fields_preserved: ["primary", "alt", "chosen", "reason"]
+
+footnote_integrity_check:
+  status: PASS
+  total_footnotes_claims: 27
+  total_footnotes_narrative: 27
+  byte_for_byte_match_for_preserved_footnotes: |
+    All 27 footnotes preserved byte-identical between claims and
+    draft. Bibliographic data including Foster 2005 page ranges
+    (pp. 506–524, pp. 506–509, pp. 514–524, pp. 506, 514–524, p.
+    506, pp. 506, 498–505), Dalley 2008 page ranges (pp. 163–181,
+    pp. 163–164, pp. 164–165, pp. 165–166, pp. 166–167, pp. 167–
+    168, pp. 168–169, pp. 169–171, pp. 171–173, pp. 173–174, pp.
+    174–175, pp. 175–177, pp. 177–179), Foster 2007 (pp. 30–34),
+    Black & Green 1992 s.v. entries (Amarna; Anu, Namtar; Nergal;
+    Ea; underworld; Sultantepe; Ereškigal, Nergal, underworld;
+    Amarna, Sultantepe), Bottéro 2001 attribution lines, and the
+    Gurney 1960 *Anatolian Studies* 10 named-but-flagged citation
+    (with the Roman-numeral-VII-clarifies-not-a-tablet-number
+    annotation) all preserved verbatim. The R2-F-1 housekeeping
+    edit (line 147 footnote tag "the six-day union" instead of the
+    leftover "seven-day union") is preserved correctly at draft
+    line 80's footnote.
+  notes: |
+    Zero footnote delta on count (27→27). The writer's completion
+    record reports "30 footnotes carried over verbatim"; actual
+    count by grep is 27 in both files (the writer's "30" is a
+    minor self-check miscount; the verified count is 27→27 with
+    zero delta — same pattern as chapter 13's writer-self-check
+    miscount). Nothing of substance is affected by the miscount —
+    the footnotes themselves are all preserved byte-identical.
+
+evidence_token_check:
+  status: PASS
+  total_evidence_tokens_claims: 65
+  total_evidence_tokens_narrative: 65
+  notes: |
+    Zero EVIDENCE-token delta. All 65 EVIDENCE tokens preserved
+    byte-identical between claims and draft, with matching
+    source_id and loc strings. source_ids resolve to entries in
+    sources.yaml: foster-2005 (most-cited), dalley-2008, foster-
+    2007, black-green-1992, bottero-2001. Lambert-2013 is correctly
+    absent (this composition is not from Lambert's creation-myths
+    corpus; it is from Foster's anthology and Dalley's translation,
+    with Gurney 1960 *Anatolian Studies* 10 as the standard
+    critical edition for the SB recension — named-but-flagged, not
+    in sources.yaml).
+
+comparative_hook_preservation_check:
+  status: PASS
+  total_hooks_claims: 5
+  total_hooks_draft: 5
+  per_hook:
+    - hook_id: 1
+      kind: "Akkadian internal — *The Descent of Ishtar*"
+      claims_line: 220
+      draft_line: 153
+      status: BYTE_IDENTICAL
+    - hook_id: 2
+      kind: "Akkadian internal — Ea's instruction-and-prohibition pattern (Adapa parallel)"
+      claims_line: 221
+      draft_line: 154
+      status: BYTE_IDENTICAL
+    - hook_id: 3
+      kind: "Greek — Hades and Persephone (celestial-chthonic divine pairing through descent and union)"
+      claims_line: 222
+      draft_line: 155
+      status: BYTE_IDENTICAL
+    - hook_id: 4
+      kind: "Hurro-Hittite — celestial-chthonic encounter motifs (Hoffner 1998)"
+      claims_line: 223
+      draft_line: 156
+      status: BYTE_IDENTICAL
+    - hook_id: 5
+      kind: "Late Bronze international circulation — Amarna cluster, including the Etana-actually-at-Susa-Aššur-Nineveh clarification"
+      claims_line: 224
+      draft_line: 157
+      status: BYTE_IDENTICAL
+      notes: |
+        F-1-related parenthetical preserved verbatim: "(Note:
+        *Etana*'s witnesses are at Susa, Aššur, and Nineveh, not
+        at Amarna.)" — explicitly disambiguates Etana's actual
+        provenance from the Amarna cluster.
+
+glossary_compliance_check:
+  status: PASS
+  notes: |
+    All locked glossary.yaml renderings are used in body prose:
+      - Ereškigal (locked form with š-háček and -kigal): 28+ body-
+        prose occurrences, all in the locked form.
+      - Nergal: ubiquitous in body prose, locked form.
+      - Ea: locked form. The first-mention gloss at draft line 64
+        uses the locked glossary.yaml chosen-gloss field verbatim:
+        "god of wisdom, the freshwater *Apsû*, and incantation,
+        patron of craft and cunning, father of Marduk".
+      - Apsû (with circumflex): used inside Ea's gloss in body
+        prose, locked form.
+      - Marduk: used inside Ea's gloss in body prose, locked form.
+      - Anu: locked form throughout body prose.
+      - Ištar (with š-háček): body-prose cross-reference at draft
+        line 92 ("the same threat Ištar had earlier issued at the
+        gate of *Kurnugê* in *The Descent of Ishtar*"); INFERENCE
+        marker basis at draft line 111 ("Tablet VI's encounter
+        between Ištar and Gilgameš"). Both are body-prose / marker-
+        body uses of the goddess herself, both use the locked
+        Ištar form.
+      - Kurnugê (with circumflex): body-prose use, locked form
+        (*Kurnugê*).
+    Composition title carve-out: the editorial form "Ishtar" is
+    used only in the composition title "*The Descent of Ishtar*"
+    (chapter 13's locked title). The chapter-13 fidelity report
+    (G-1 finding) recommended body-prose-only s/Ishtar/Ištar/ for
+    the goddess herself, with the composition title preserved as
+    the editorial title form; the chapter-14 draft follows that
+    adjudicated standard from day one (Ištar in body prose for the
+    goddess; Ishtar in the composition title only).
+    Foster's editorial "Ishtar" used only in 4 occurrences and all
+    are composition-title uses: draft lines 75, 92, 144 (three
+    body-prose uses of "*The Descent of Ishtar*"), and draft line
+    153 (COMPARATIVE-HOOK).
+    No never_use glossary terms in body prose: grep for Inanna,
+    Enki, Damgalnuna, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna,
+    Anzud, Irra, Utnapishtim, Dumuzid returns zero matches in body
+    prose.
+
+forbidden_words_check:
+  status: PASS
+  notes: |
+    Grep for "primordial", "primeval", "in the time before time",
+    "long ago", "once upon a time", "It is said that", "it came to
+    pass" returns zero matches in the chapter draft. Asimov-register
+    plain modern English throughout.
+
+italics_convention_check:
+  status: PASS
+  notes: |
+    Akkadian common nouns and place-names use AsciiDoc *underscore*
+    italic in body prose: *Apsû*, *Kurnugê*, *Šar tamḫāri*. Composition
+    titles use *underscore* italic in body prose: *Nergal and
+    Ereškigal*, *The Descent of Ishtar*, *Adapa*, *Šar tamḫāri* (=
+    *King of Battle*), *Anatolian Studies*, *Before the Muses*,
+    *Myths from Mesopotamia*, *Akkadian Literature of the Late
+    Period*, *Religion in Ancient Mesopotamia*, *Gods, Demons and
+    Symbols of Ancient Mesopotamia*, *Etana* (in the F-1
+    clarification), *Gilgameš* (composition title in INFERENCE
+    basis). Asterisk-bold occurrences are confined to footnotes,
+    EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents
+    per the chapter-draft skill rules 4 and 5 verbatim-preservation
+    rule.
+
+asimov_register_check:
+  status: PASS
+  notes: |
+    Short paragraphs throughout. Plain modern English. No "Long
+    ago..." / "It is said that..." / "In the time before time..."
+    openings. No ornamental reverence; no padding; no recap
+    paragraphs. 157 lines (4672 words) is tight Asimov register
+    around 14 numbered claims plus 13 additional body-paragraph
+    claims and 7 markers + 5 COMPARATIVE-HOOKs. Co-equal
+    recensional handling preserved: each recension's distinctive
+    features clearly attributed to its source (Amarna or
+    Sultantepe).
+
+additions_check:
+  status: PASS
+  notes: |
+    No factual additions in the draft beyond what the claims
+    document supports. The light prose connective tissue
+    ("So far the Sultantepe opening parallels the Amarna" at line
+    60; "until the moment when Ereškigal removes her clothes to
+    bathe" at line 80; "But the Sultantepe recension elaborates
+    the consequences" at line 64; etc.) is paraphrastic, not
+    additive. Two minor surfacings of glossary-locked content:
+      (1) Ea's first-mention gloss at draft line 64 expanded to the
+          full locked glossary.yaml chosen-gloss field "god of
+          wisdom, the freshwater *Apsû*, and incantation, patron
+          of craft and cunning, father of Marduk" — same surfacing
+          pattern as chapter 13 (Papsukkal-reports-to-Ea scene).
+          Drawn exclusively from glossary.yaml; consistent with
+          gloss-ledger entry for Ea.
+      (2) Namtar's reminder gloss surfaced inline at draft line 38:
+          "the deity of fate and disease, herald and executor of
+          his queen's commands". Drawn from Namtar's first-mention
+          gloss in the gloss-ledger; consistent with Namtar
+          last_reminder='13' → reminder for ch14.
+    No new sources cited. No new factual claim introduced.
+
+findings_for_record:
+  - finding_id: G-1
+    severity: ADVISORY
+    kind: NON_BYTE_IDENTICAL_MARKER_BODY
+    description: |
+      The third INFERENCE marker (Sultantepe elaborated courtly-
+      romantic register) at draft line 111 / claims line 178
+      contains two non-byte-identical word substitutions inside
+      the marker's narrative-prose body:
+        (1) "elaborate courtship-and-wedding register" (claims) →
+            "elaborate courtship-and-reunion register" (draft).
+        (2) The trailing list item "extended Ea-instruction
+            sequence, refusals catalogue, passionate union,
+            separation, return, formal installation" (claims) →
+            "extended Ea-instruction sequence, refusals catalogue,
+            passionate union, separation, return, Anu's decree"
+            (draft).
+      Both edits are F-4-consistency improvements. The F-4
+      resolution of the round-1 BLOCK replaced the SB ending's
+      "royal wedding and coronation" framing with "Anu's decree
+      and bedchamber reunion" framing. The post-human-normalize
+      record (R2-F-3) explicitly noted that one corresponding
+      leftover ("royal-wedding closure") in the brief's
+      cultural_relevance.function[2].basis was patched at
+      housekeeping; that record did not flag this INFERENCE
+      marker, so the leftover ("courtship-and-wedding" / "formal
+      installation") survived into the post-human-normalize-
+      approved claims document. The writer extended the F-4
+      correction to the marker body to keep the chapter
+      internally consistent; the basis and risk sub-fields of the
+      INFERENCE marker were preserved byte-identical. The edit
+      is a correctness improvement (and follows the spirit of the
+      housekeeping cycle) rather than a factual addition or
+      distortion.
+    impact: |
+      Does not change the fidelity verdict. The chapter is more
+      internally consistent with the F-4 correction than the
+      claims document. Recommendation for the project record:
+      either (a) accept the writer's marker-body edit as a
+      housekeeping carry-through, or (b) back-port the edit to
+      the .claims.approved.adoc as an additional R2-F-4 leftover-
+      patch (no factcheck re-run needed since this is a
+      housekeeping consistency edit not a factual change).
+    recommended_revision: NONE
+    note: |
+      Documenting for project-record completeness. The chapter
+      draft itself does not require revision.
+
+verdict_rationale: |
+  All 14 numbered claim-paragraphs map cleanly to specific
+  narrative paragraphs (with 13 additional body-frame paragraphs
+  in the post-claim-14 sections — six-day union; Nergal escapes
+  on the seventh day; Ereškigal's threat to raise the dead; SB
+  divine assembly's decision; SB second descent with hair-seizing
+  parallel; SB closure with Anu's decree and bedchamber line;
+  ritual context theological functions; Sultantepe library
+  context; Amarna preservation in Egypt; variants section with
+  the recensional comparison; LB Uruk fragment as partial
+  witness; *Nergal and Ereškigal*'s place in the corpus paired
+  with *The Descent of Ishtar*; geographic and chronological
+  spread — all mapped for completeness). All 7 markers (2
+  LACUNA, 1 RECONSTRUCTION, 3 INFERENCE, 1 VARIANT) are present
+  with all required sub-fields; 6 of 7 are preserved byte-
+  identical, the seventh (third INFERENCE) has two F-4-
+  consistency word substitutions in the marker body documented
+  as advisory finding G-1. All 5 COMPARATIVE-HOOK comments are
+  preserved byte-identical. All 27 footnotes are preserved byte-
+  identical. All 65 EVIDENCE tokens are preserved byte-identical.
+  All five round-1-BLOCK / round-2-PASS findings carry through to
+  the body prose: F-1 (Etana removed from Amarna cluster, with
+  explicit note of Etana's actual Susa/Aššur/Nineveh provenance);
+  F-2 (six-day union, seventh-day escape); F-3 (Amarna hair-
+  seizing climax + SB hair-seizing parallel); F-4 (Anu's-decree-
+  and-bedchamber closure for SB; no royal wedding or coronation;
+  §-heading "Nergal's second descent and Anu's decree"); F-5
+  (fifth prohibition hedged with both Foster's "looking" and the
+  literal "what men and women do" renderings). Glossary
+  compliance: PASS — Ereškigal, Nergal, Ea, Apsû, Marduk, Anu,
+  Ištar (body-prose cross-reference) all use the locked
+  glossary.yaml renderings; the editorial form "Ishtar" is
+  confined to the composition title "*The Descent of Ishtar*"
+  (chapter 13's locked title). The chapter draft applies the
+  chapter-13-fidelity-adjudicated body-prose-Ištar / composition-
+  title-Ishtar standard from day one. No never_use glossary terms
+  in body prose. Forbidden-words check: PASS. Asimov register:
+  PASS. Italics convention: PASS. No factual additions. The
+  pipeline is fidelity-clean and ready to proceed to the commit
+  stage.
+
+summary: |
+  VERDICT: PASS. Chapter 14 (Nergal and Ereškigal) draft is
+  faithful to the round-2-PASS / stage-13-housekeeping-corrected
+  claims document. All 14 numbered claims plus all 13 additional
+  body-frame paragraphs map 1-for-1 to the draft. All 7 structural
+  markers preserved with required sub-fields (6 byte-identical;
+  1 INFERENCE marker has two F-4-consistency word substitutions
+  in the marker body — documented as advisory finding G-1, not a
+  blocker). All 5 COMPARATIVE-HOOKs preserved byte-identical. All
+  27 footnotes preserved byte-identical. All 65 EVIDENCE tokens
+  preserved byte-identical. All five round-1-BLOCK / round-2-PASS
+  findings (F-1 Etana correction; F-2 six-day union; F-3 Amarna
+  hair-seizing climax with SB parallel; F-4 Anu's-decree-and-
+  bedchamber closure; F-5 hedged fifth prohibition) carry through
+  to the body prose correctly. Glossary compliance: PASS — body
+  prose uses the locked Ištar (with š-háček) for the goddess; the
+  composition title "*The Descent of Ishtar*" preserves the
+  editorial title form per chapter-13-fidelity adjudication. No
+  never_use glossary terms in body prose. Forbidden-words check:
+  PASS. No factual additions. Asimov register and italics
+  convention both PASS. The chapter is fidelity-clean and ready
+  to proceed to the commit stage.

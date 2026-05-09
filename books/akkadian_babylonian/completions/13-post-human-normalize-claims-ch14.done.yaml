@@ -1,0 +1,63 @@
+stage: "post-human-normalize"
+chapter: 14
+slug: "nergal-ereshkigal"
+input: "chapters/14-nergal-ereshkigal.claims.adoc (round 2; supersedes round 1) + chapters/14-nergal-ereshkigal.claims.factcheck-round2.yaml (verdict PASS)"
+output: "chapters/14-nergal-ereshkigal.claims.approved.adoc"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/14-nergal-ereshkigal.claims.approved.adoc"
+    lines: 256
+summary: |
+  Chapter 14 (Nergal and Ereškigal) post-human-normalize on the round-2 claims. Round-1 factcheck returned BLOCK with three HIGH + one MEDIUM + one LOW-MEDIUM findings; round-2 brief revision and round-2 claims rewrite resolved them; round-2 factcheck returned PASS with three LOW housekeeping leftovers. The approved file applies the three housekeeping fixes:
+    (R2-F-1) line 147 footnote tag changed from "the seven-day union" to "the six-day union" (claims doc).
+    (R2-F-2) brief lacunae[0].what_is_missing replaced the "elaborate courtship and royal-wedding scenes" leftover with "Anu's closing decree and council scenes" (brief).
+    (R2-F-3) brief cultural_relevance.function[2].basis replaced the "royal-wedding closure" leftover with the corrected Sultantepe narrative arc (brief).
+  Provenance comment block appended at file foot recording: timestamp, edits applied, structural checks passed, round-1 / round-2 factcheck cross-references.
+
+findings_triage:
+  - finding_id: R2-F-1
+    kind: TEXTUAL-LEFTOVER
+    severity: LOW
+    disposition: ACCEPT
+    rationale: "Footnote tag 'the seven-day union' (line 147 footnote descriptor) was inconsistent with the corrected body-prose 'six days and six nights of union' (line 147 body). Corrected at post-human-normalize."
+  - finding_id: R2-F-2
+    kind: BRIEF-LEFTOVER
+    severity: LOW
+    disposition: ACCEPT
+    rationale: "The brief's lacunae[0].what_is_missing field still mentioned 'elaborate courtship and royal-wedding scenes are partly reconstructed' from before the round-2 brief revision. Replaced with 'Anu's closing decree and council scenes' to align with the round-2 corrections."
+  - finding_id: R2-F-3
+    kind: BRIEF-LEFTOVER
+    severity: LOW
+    disposition: ACCEPT
+    rationale: "The brief's cultural_relevance.function[2].basis field still mentioned 'royal-wedding closure' from before the round-2 brief revision. Replaced with the corrected Sultantepe narrative arc to align with the round-2 corrections."
+
+checks_performed:
+  - check: "one-claim-per-paragraph"
+    status: PASS
+  - check: "every-claim-footnoted"
+    status: PASS
+  - check: "evidence-tokens-syntactically-valid"
+    status: PASS
+    detail: "65+ EVIDENCE tokens; all source_id values resolve to sources.yaml entries (foster-2005, dalley-2008, foster-2007, black-green-1992, bottero-2001)."
+  - check: "markers-with-required-sub-fields"
+    status: PASS
+    detail: "3 INFERENCE w/ basis+risk; 2 LACUNA w/ source+scholarly_reconstruction; 1 RECONSTRUCTION w/ gap_source+fill_source+confidence; 1 VARIANT w/ primary+alt+chosen+reason."
+  - check: "glossary-renderings-consistent"
+    status: PASS
+    detail: "Ereškigal, Nergal, Ea, Apsû, Anu, Marduk (in Ea's first-mention gloss), Ištar (only in cross-references to *The Descent of Ishtar* — composition title preserves Ishtar editorial form) — all use locked glossary.yaml renderings."
+  - check: "no-never-use-glossary-terms-in-body"
+    status: PASS
+    detail: "Enki, Inanna, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent from body prose, markers, footnotes."
+  - check: "canonical-chapter-anchor-present"
+    status: PASS
+    detail: "[[ch-14-nergal-ereshkigal-claims]] present at line 1, unchanged."
+  - check: "original-file-unchanged"
+    status: PASS
+    detail: "chapters/14-nergal-ereshkigal.claims.adoc (round-2 claims) is the immutable record; chapters/14-nergal-ereshkigal.claims.approved.adoc carries the housekeeping fix and the provenance comment block."
+
+notes:
+  proceed_to: "stage 14 (chapter-draft) using chapters/14-nergal-ereshkigal.claims.approved.adoc as the input. Per RUNBOOK 10d, chapter-draft must NOT receive primary sources — claims are the only input."
+  pattern_match_with_recent_chapters: |
+    Chapter 14's round-1-BLOCK / round-2-PASS / stage-13-housekeeping pattern parallels chapter 12 (also round-1-BLOCK from a brief-level content-model error / round-2-PASS / stage-13-housekeeping). The chapter 7 / chapter 12 / chapter 14 cases all required brief revision before round-2; chapter 13 was a single-round PASS-WITH-LIGHT-FIXES; chapters 8-11 went round-1-PASS. The pipeline's round-1-BLOCK → round-2 workflow is now well-established.

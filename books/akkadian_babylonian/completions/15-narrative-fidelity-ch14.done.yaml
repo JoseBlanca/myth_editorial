@@ -1,0 +1,119 @@
+stage: "narrative-fidelity"
+chapter: 14
+slug: "nergal-ereshkigal"
+input: "chapters/14-nergal-ereshkigal.adoc + chapters/14-nergal-ereshkigal.claims.approved.adoc + briefs/14-nergal-ereshkigal.yaml + glossary.yaml + gloss-ledger.yaml + chapters/14-nergal-ereshkigal.claims.factcheck.yaml + chapters/14-nergal-ereshkigal.claims.factcheck-round2.yaml + completions/13-post-human-normalize-claims-ch14.done.yaml + completions/14-chapter-draft-ch14.done.yaml"
+output: "chapters/14-nergal-ereshkigal.fidelity.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_conversation: true
+verdict: PASS
+verdict_severity: NONE
+
+summary: |
+  Stage-15 narrative-fidelity audit of chapter 14 (Nergal and
+  Ereškigal) returns PASS. The chapter draft is faithful to the
+  round-2-PASS / stage-13-housekeeping-corrected claims document.
+
+  All 14 numbered claim-paragraphs map 1-for-1 to specific
+  narrative paragraphs in the draft, plus all 13 additional
+  body-frame paragraphs. All 7 structural markers (3 INFERENCE +
+  2 LACUNA + 1 RECONSTRUCTION + 1 VARIANT) are present with all
+  required sub-fields; 6 of 7 are preserved byte-identical and
+  the third INFERENCE (line 111) has two F-4-consistency word
+  substitutions in its marker body ("courtship-and-wedding" →
+  "courtship-and-reunion"; "formal installation" → "Anu's
+  decree") documented as advisory finding G-1. All 5
+  COMPARATIVE-HOOK comments preserved byte-identical. All 27
+  footnotes preserved byte-identical. All 65 EVIDENCE tokens
+  preserved byte-identical.
+
+  All five round-1-BLOCK / round-2-PASS findings from the
+  factcheck cycle carry through correctly:
+    - F-1 (Etana NOT in the Amarna cluster; the Amarna cluster
+      is Adapa EA 356, Nergal EA 357, *Šar tamḫāri* / *King of
+      Battle* EA 359, plus miscellaneous lexical/educational
+      material). Confirmed at draft lines 9, 56 (INFERENCE
+      basis), 126, and 157 (Late-Bronze COMPARATIVE-HOOK closing
+      Etana clarification).
+    - F-2 (six days and six nights of union; action turns on
+      the seventh day with Nergal's escape). Confirmed at draft
+      lines 80 and 88.
+    - F-3 (Amarna recension: hair-seizing scene, Nergal's threat
+      to kill, Ereškigal's plea for joint rule; SB second
+      descent: hair-seizing parallel resolved as reunion).
+      Confirmed at draft lines 47 (Amarna) and 102 (SB).
+    - F-4 (§-heading "Nergal's second descent and Anu's decree";
+      SB closure is Anu's decree much-damaged + closing
+      bedchamber line; NO wedding ceremony, NO coronation).
+      Confirmed at draft lines 100 (heading) and 106 (closure
+      paragraph with explicit "no separate wedding ceremony or
+      coronation sequence").
+    - F-5 (fifth prohibition hedged with both Foster's "looking"
+      and the literal "what men and women do" renderings).
+      Confirmed at draft line 70.
+
+  Glossary compliance: PASS. Body prose uses the locked Ištar
+  (with š-háček) for the goddess herself; the editorial form
+  "Ishtar" is confined to the composition title "*The Descent of
+  Ishtar*" (chapter 13's locked title), per the chapter-13-
+  fidelity-adjudicated body-prose-Ištar / composition-title-
+  Ishtar standard. Ereškigal, Nergal, Ea, Apsû, Marduk, Anu, and
+  Kurnugê all use locked glossary.yaml renderings. No never_use
+  glossary terms in body prose (Inanna, Enki, Damgalnuna, etc.
+  all absent).
+
+  Forbidden-words check: PASS. Asimov register: PASS. Italics
+  convention: PASS. No factual additions.
+
+  One advisory finding G-1 documented for project record (the
+  third INFERENCE marker's two F-4-consistency word substitutions);
+  does not change the fidelity verdict and does not require
+  revision of the chapter draft.
+
+  The chapter is fidelity-clean and ready for the commit stage.
+
+findings:
+  - finding_id: G-1
+    severity: ADVISORY
+    kind: NON_BYTE_IDENTICAL_MARKER_BODY
+    summary: "Third INFERENCE marker (line 111) has two F-4-consistency word substitutions in its narrative body ('courtship-and-wedding' → 'courtship-and-reunion'; 'formal installation' → 'Anu's decree'); a correctness improvement that the post-human-normalize stage (R2-F-3) applied to the brief but did not flag in this marker. The writer carried the F-4 correction through. Basis and risk sub-fields preserved byte-identical. Not a blocker."
+
+f1_through_f5_check:
+  F1_etana_removed_from_amarna_cluster: PASS
+  F2_six_day_union_seventh_day_escape: PASS
+  F3_amarna_hair_seizing_climax_and_sb_parallel: PASS
+  F4_anus_decree_and_bedchamber_no_wedding_no_coronation: PASS
+  F5_fifth_prohibition_hedged_with_both_renderings: PASS
+
+structural_marker_counts:
+  evidence_tokens: { claims: 65, draft: 65, delta: 0 }
+  footnotes: { claims: 27, draft: 27, delta: 0 }
+  lacuna: { claims: 2, draft: 2, delta: 0 }
+  reconstruction: { claims: 1, draft: 1, delta: 0 }
+  variant: { claims: 1, draft: 1, delta: 0 }
+  inference: { claims: 3, draft: 3, delta: 0 }
+  comparative_hooks: { claims: 5, draft: 5, delta: 0 }
+
+self_check:
+  every_claim_mapped: PASS
+  no_factual_additions: PASS
+  no_silent_omissions: PASS
+  markers_byte_for_byte_or_documented: "PASS — 6/7 byte-identical; 1 documented advisory finding G-1 (F-4-consistency edit, not a regression)"
+  footnotes_carried_over: PASS
+  comparative_hooks_carried_over: PASS
+  glossary_compliance: PASS
+  no_never_use_terms: PASS
+  forbidden_words_clear: PASS
+  italics_convention: PASS
+  asimov_register: PASS
+  fresh_conversation: PASS
+
+notes:
+  proceed_to: "stage 16 (commit-and-move-to-chapter-15). Chapter 14's full per-chapter pipeline (chapter-claims → round-1-claims-factcheck-BLOCK → brief-revise → round-2-rewrite-claims → round-2-claims-factcheck-PASS → post-human-normalize → chapter-draft → narrative-fidelity-PASS) is complete. Ready to commit ch14 artefacts."
+  pattern_match_with_recent_chapters: |
+    Chapter 14's fidelity audit mirrors chapter 12's fidelity
+    audit: a clean PASS with one advisory finding documented for
+    project-record completeness (chapter 12 had a similar
+    advisory finding for housekeeping carry-through). The pipeline
+    is now well-established across chapters 7, 12, 13, and 14.

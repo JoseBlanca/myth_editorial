@@ -1,0 +1,90 @@
+stage: "claims-factcheck"
+chapter: 14
+slug: "nergal-ereshkigal"
+round: 2
+input:
+  - "chapters/14-nergal-ereshkigal.claims.adoc (round-2)"
+  - "briefs/14-nergal-ereshkigal.yaml (round-2; R2-1, R2-2, R2-3 corrections)"
+  - "chapters/14-nergal-ereshkigal.claims.factcheck.yaml (round-1, verdict BLOCK)"
+  - "completions/11-chapter-claims-ch14-round2.done.yaml (writer's round-2 record)"
+output: "chapters/14-nergal-ereshkigal.claims.factcheck-round2.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+verdict: PASS
+
+findings_count:
+  high: 0
+  medium: 0
+  low: 3
+  notes: 3
+
+round1_findings_disposition:
+  - finding_id: F-1
+    round1_kind: FACTUAL-FABRICATION
+    round1_severity: HIGH
+    round2_status: RESOLVED
+  - finding_id: F-2
+    round1_kind: FACTUAL-ERROR
+    round1_severity: HIGH
+    round2_status: RESOLVED-WITH-MINOR-LEFTOVER  # see R2-F-1 (footnote descriptor)
+  - finding_id: F-3
+    round1_kind: INCOMPLETE-FRAMING
+    round1_severity: MEDIUM
+    round2_status: RESOLVED
+  - finding_id: F-4
+    round1_kind: FACTUAL-FABRICATION
+    round1_severity: HIGH
+    round2_status: RESOLVED
+  - finding_id: F-5
+    round1_kind: TRANSLATION-VARIANCE
+    round1_severity: LOW-MEDIUM
+    round2_status: RESOLVED
+
+new_findings:
+  - finding_id: R2-F-1
+    kind: FOOTNOTE-DESCRIPTOR-LEFTOVER
+    severity: LOW
+    location: "round-2 claims doc line 147 footnote: 'the seven-day union' descriptor leftover"
+    blocker: false
+  - finding_id: R2-F-2
+    kind: BRIEF-DESCRIPTOR-LEFTOVER
+    severity: LOW
+    location: "brief line 57 (lacunae[0].what_is_missing): 'elaborate courtship and royal-wedding scenes' leftover"
+    blocker: false
+  - finding_id: R2-F-3
+    kind: BRIEF-DESCRIPTOR-LEFTOVER
+    severity: LOW
+    location: "brief line 117 (cultural_relevance.function[2].basis): 'royal-wedding closure' leftover"
+    blocker: false
+
+summary: |
+  Chapter 14 (Nergal and Ereškigal) round-2 factcheck: VERDICT PASS.
+
+  All five round-1 BLOCK findings (F-1 Etana fabrication, F-2 six-vs-seven-day union, F-3 Amarna hair-seizing climax framing, F-4 royal-wedding-and-coronation fabrication, F-5 prohibitions catalogue translation variance) are RESOLVED in the round-2 claims document. The corrections were verified against the round-1 anchor sources (gatewaystobabylon, spokenpast, Wikipedia s.v. Nergal and Amarna letters, encyclopedia.com, Cambridge Core abstract). The §-heading was correctly renamed from "Nergal's second descent and the royal wedding" to "Nergal's second descent and Anu's decree"; the LACUNA marker on the SB recension was updated to flag Anu's-decree damage. Three minor LOW-severity housekeeping leftovers detected: R2-F-1 (a footnote descriptor in claims doc line 147 still says "seven-day union" while body text correctly says "six days and six nights"); R2-F-2 (brief lacunae line 57 leftover wedding language); R2-F-3 (brief literary-function line 117 leftover wedding closure language). None are blockers; all are descriptive metadata, not load-bearing claims. The claims document itself is fully cleansed of all round-1 findings.
+
+  Marker counts unchanged (3 INFERENCE + 2 LACUNA + 1 RECONSTRUCTION + 1 VARIANT = 7; 5 COMPARATIVE-HOOK; ~65 EVIDENCE tokens). Glossary compliance PASS. No never-use terms. No Sumerian *Inanna's Descent* contamination. Source IDs all resolve to sources.yaml. Audit-A9 (STT 28 + joins, Roman-numeral VII disambiguation) correctly incorporated. Gurney 1960 named-but-flagged citation correctly applied.
+
+self_check:
+  every_round1_finding_addressed: PASS
+  factual_fabrications_removed: PASS
+  factual_errors_corrected: PASS
+  incomplete_framing_expanded: PASS
+  translation_variance_hedged: PASS
+  no_new_fabrications: PASS
+  marker_counts_unchanged: PASS  # 3 INFERENCE + 2 LACUNA + 1 RECONSTRUCTION + 1 VARIANT = 7; 5 COMPARATIVE-HOOK
+  evidence_token_count_unchanged: PASS  # 65, unchanged from round-1
+  glossary_compliance: PASS
+  no_never_use_terms: PASS
+  no_sumerian_contamination: PASS
+  source_ids_all_resolve: PASS
+  audit_A9_correctly_applied: PASS
+  honest_self_check_completed: PASS
+  fresh_context_factcheck: PASS  # opened in fresh conversation per skill's hard-rule allowance
+
+notes:
+  proceed_to: "stage 13 post-human-normalize. Three LOW-severity housekeeping leftovers (one in claims doc footnote descriptor, two in brief descriptive metadata fields) are optional cleanup items at stage 13 or 14; none blocks progression."
+  pattern_match_with_recent_chapters: |
+    Following the chapter 7 / chapter 12 round-1-BLOCK / round-2-PASS pattern: round-1 returned BLOCK with three HIGH findings; round-2 rewrite addressed all five findings; round-2 factcheck returns PASS with three LOW housekeeping leftovers. The chapter 14 case parallels chapter 12's round-2-PASS-with-light-fixes outcome where all the load-bearing findings are resolved and the residual issues are descriptive metadata. The chapter is ready for stage-13 progression.
+  caution_on_specific_attestations: |
+    Round-2 factcheck reused round-1's verbatim quotes from gatewaystobabylon, spokenpast, Wikipedia, encyclopedia.com, and Cambridge Core abstract. Foster 2005, Dalley 2008, Foster 2007, Black & Green 1992, Bottéro 2001, and Gurney 1960 were taken on trust at the same level as round-1 (paywalled / access-restricted). The page-number allocation per paragraph is taken on trust as a writer-imposed structural convention. The narrative-fidelity check at stage 15 will apply additional scrutiny.

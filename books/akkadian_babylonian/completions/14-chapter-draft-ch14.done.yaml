@@ -1,0 +1,65 @@
+stage: "chapter-draft"
+chapter: 14
+slug: "nergal-ereshkigal"
+input: "chapters/14-nergal-ereshkigal.claims.approved.adoc + briefs/14-nergal-ereshkigal.yaml + gloss-ledger.yaml"
+output: "chapters/14-nergal-ereshkigal.adoc + updated gloss-ledger.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/14-nergal-ereshkigal.adoc"
+    lines: 157
+  - file: "gloss-ledger.yaml"
+    lines: 749
+summary: |
+  Chapter 14 (Nergal and Ereškigal) narrative draft. Asimov-style prose drawn from chapters/14-nergal-ereshkigal.claims.approved.adoc (the round-2-revised + post-human-normalize-housekeeping-edited version). Every claim represented; no factual additions; all seven markers (3 INFERENCE + 2 LACUNA + 1 RECONSTRUCTION + 1 VARIANT) preserved byte-for-byte; all five COMPARATIVE-HOOK comments carried over verbatim; all 30 footnotes carried over unchanged. Chapter ID anchor [[ch-14-nergal-ereshkigal]] (per toc.yaml).
+
+  Co-equal recensions presented in sequence per the brief's classification: source overview opens with the three witnesses (EA 357 Amarna, STT 28 + joins Sultantepe, Late Babylonian Uruk fragment); then the MB Amarna recension is narrated (compact etiology with hair-seizing climax and Ereškigal's plea for joint rule); then the SB Sultantepe recension is narrated (Ea's stratagem with fourteen demons and prohibitions catalogue, six-day union, flight, second descent with hair-seizing parallel, Anu's decree and bedchamber closure). Followed by ritual-context and Late-Bronze-international-circulation reflections; variants section discussing the recensional relationship; and place-in-the-corpus closing.
+
+  All five round-1 BLOCK / round-2 PASS findings preserved correctly in the draft: F-1 (Etana removed from Amarna cluster, with explicit clarification of Etana's actual provenance at Susa/Aššur/Nineveh in the Late-Bronze COMPARATIVE-HOOK); F-2 (six days and six nights of union; the action turns on the seventh day with Nergal's escape); F-3 (Amarna hair-seizing climax narrated; SB hair-seizing parallel noted); F-4 (Anu's-decree-and-bedchamber closure for the SB recension; no royal wedding ceremony); F-5 (prohibitions-catalogue fifth item hedged with both Foster's and the literal renderings).
+
+  Style: Asimov register; short paragraphs; plain modern English. No forbidden ornament-words. Co-equal recensional handling preserved: each recension's distinctive features clearly attributed.
+
+gloss_decisions:
+  - term: "Ereškigal"
+    decision: "BARE — Ereškigal was just glossed in chapter 13; chapter 14 uses the bare term consistently. Ledger updated: last_reminder_in='14', last_mention_in='14'."
+  - term: "Nergal"
+    decision: "REMINDER_GLOSS — last full mention was chapter 0 (5 chapters back if we count actual narrative usage; chapter 6 was incidental). Chapter 14 is Nergal-centred and gives a fuller reminder gloss in body prose at line 26 and elaborates the Erra-identification-and-plague-association in §'Amarna recension etiological function'. Ledger updated."
+  - term: "Anu"
+    decision: "REMINDER_GLOSS — last full mention was chapter 3 (11 chapters back). Chapter 14 reminds the reader at first mention ('the sky-god') since Anu's authority frames both ends of the SB recension's narrative arc. Ledger updated."
+  - term: "Ea"
+    decision: "FULL_GLOSS_REFRESH — Ea was full-glossed in chapter 12; ch14 uses the locked first-mention gloss in full at the Sultantepe scene where Nergal seeks Ea's protection. Ledger updated."
+  - term: "Apsû"
+    decision: "BARE — Apsû appears once in body prose in Ea's gloss; bare term sufficient given recent ch12 reminder. Ledger updated."
+  - term: "Marduk"
+    decision: "BARE — Marduk appears in body prose only as Ea's son in the inline first-mention gloss; bare term sufficient. Ledger updated."
+  - term: "Ištar"
+    decision: "BARE (cross-reference) — Ištar appears in body prose only as a cross-reference to *The Descent of Ishtar* (chapter 13) and to the Ištar-Gilgameš Tablet VI episode within an INFERENCE marker. The locked Ištar form is used in body prose; the composition title preserves 'Ishtar' (editorial form). Ledger updated."
+  - term: "Namtar"
+    decision: "REMINDER_GLOSS — Namtar was glossed in chapter 13; ch14 gives a parenthetical reminder at first mention ('the deity of fate and disease, herald and executor of his queen's commands'). Ledger updated."
+  - term: "Kurnugê"
+    decision: "BARE — Kurnugê glossed in chapter 13; ch14 uses the bare term. Ledger updated."
+  - term: "Sultantepe"
+    decision: "FULL_GLOSS — new chapter-14 ledger entry; the Anatolian site (ancient Ḫuzirina) where STT 28 was excavated. Inline gloss in body prose."
+  - term: "Amarna"
+    decision: "FULL_GLOSS — new chapter-14 ledger entry; the Egyptian site of the Amarna archive. Inline gloss in body prose."
+
+self_check:
+  source_overview_present: true
+  every_claim_represented: PASS
+  no_factual_additions: PASS
+  forbidden_words_clear: PASS
+  glossary_compliance: "PASS — Ereškigal, Nergal, Ea, Apsû, Marduk (in Ea's gloss), Anu, Ištar (cross-reference body prose; composition titles preserve Ishtar) all use locked glossary.yaml renderings."
+  no_never_use_terms: "PASS — Enki, Inanna, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent."
+  variant_handling_matches_brief: "PASS — co-equal recensional structure preserved per the brief; both recensions narrated in sequence with their attributions."
+  markers_byte_for_byte: "PASS — all 7 markers preserved verbatim from .claims.approved.adoc."
+  footnotes_carried_over: "PASS — all 30 footnotes carried over verbatim."
+  not_padded: "PASS — 157 lines for a ~5000-word target; tight Asimov prose around the approved claims."
+  comparative_hooks_carried: "PASS — all 5 COMPARATIVE-HOOK comments preserved at chapter foot."
+  italic_markup_correct: "PASS — Akkadian common nouns (*Apsû*, *Kurnugê*, *Šar tamḫāri*) and composition titles (*Nergal and Ereškigal*, *The Descent of Ishtar*, *Adapa*, *Šar tamḫāri*, *Anatolian Studies*, *Before the Muses*, *Myths from Mesopotamia*) use *underscore* italic in body prose. Asterisk-bold confined to footnotes/EVIDENCE/COMPARATIVE-HOOK/marker contents."
+  gloss_ledger_updated: "PASS — gloss-ledger.yaml updated: Ereškigal, Nergal, Anu, Ea, Apsû, Marduk, Ištar last_mention_in='14'; Namtar/Kurnugê reminder gloss; new ch14 entries for Sultantepe and Amarna."
+
+notes:
+  proceed_to: "stage 15 (narrative-fidelity) in a fresh-context agent. Chapter 14 went through the round-1-BLOCK / round-2-PASS / stage-13-housekeeping cycle parallel to chapter 12. The chapter draft is now ready for fidelity verification."
+  pattern_match_with_recent_chapters: |
+    Chapter 14's pipeline mirrors chapter 12's: round-1 claims-factcheck found brief-level content errors (Etana-at-Amarna, seven-day union, royal-wedding closure); round-2 brief revision and round-2 claims rewrite resolved them; round-2 factcheck passed with three LOW housekeeping leftovers; post-human-normalize applied the leftovers. Chapter draft proceeded normally. The pipeline's round-1-BLOCK → round-2-PASS workflow is now well-established across chapters 7, 12, and 14.

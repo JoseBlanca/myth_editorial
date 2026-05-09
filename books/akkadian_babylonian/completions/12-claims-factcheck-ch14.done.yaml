@@ -1,0 +1,132 @@
+stage: "claims-factcheck"
+chapter: 14
+slug: "nergal-ereshkigal"
+input: "chapters/14-nergal-ereshkigal.claims.adoc"
+brief_file: "briefs/14-nergal-ereshkigal.yaml"
+output: "chapters/14-nergal-ereshkigal.claims.factcheck.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_context: true
+
+verdict: BLOCK
+block_severity: HIGH
+proceed_to_stage: 11.5    # round-2 chapter-claims rewrite of ~5 paragraphs after brief update; then focused round-2 factcheck before stage 13
+
+tallies:
+  claims_identified: 19
+  evidence_tokens_audited: 65
+  triangulations_performed: 12
+  supported: 14
+  internal_variance: 1     # F-3 hair-seizing distribution
+  factual_error: 1         # F-2 (seven days vs six days)
+  fabrication: 2           # F-1 (Etana@Amarna) and F-4 (formal royal wedding/coronation)
+  unverified: 0
+  contamination: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  notes: 2
+
+severity_summary:
+  high_findings: 3       # F-1 Etana@Amarna; F-2 seven-day union; F-4 formal royal wedding
+  medium_findings: 1     # F-3 hair-seizing distribution
+  low_findings: 1        # F-5 prohibition lemma variance
+
+high_findings_detail:
+  - finding_id: F-1
+    kind: FACTUAL-FABRICATION
+    locations: [line 33, line 152, line 183]
+    issue: "Etana is NOT in the Amarna archive. The attested Amarna literary cluster is EA 356 (Adapa), EA 357 (Nergal & Ereshkigal), EA 359 (King of Battle); Etana's witnesses are Susa, Aššur, and Nineveh."
+  - finding_id: F-2
+    kind: FACTUAL-ERROR
+    locations: [line 106, line 113]
+    issue: "Union duration is six days and six nights, not seven; the action turns on the seventh day."
+  - finding_id: F-4
+    kind: FACTUAL-FABRICATION
+    locations: [line 132]
+    issue: "No formal royal wedding/coronation in the Sultantepe ending. The actual ending is Anu's decree (largely damaged) containing the word 'forever' plus the closing line about Nergal and Ereškigal entering the bedchamber."
+
+honesty:
+  direct_access:
+    foster_2005_pp_506_524: false
+    dalley_2008_pp_163_181: false
+    gurney_1960_anatolian_studies_10_pp_105_131: false
+    foster_2007_pp_30_34: false
+    black_green_1992: false
+    bottero_2001: false
+  triangulated_via_open_web:
+    - "Cambridge Core abstract for Gurney 1960 (STT 28 identifier; tablet history; audit-A9 disambiguation)"
+    - "Wikipedia s.v. Amarna letters (EA 356/357/359 cluster; Etana NOT included)"
+    - "Wikipedia s.v. Nergal (recensional summary; six-day union; SB ending bedchamber line)"
+    - "gatewaystobabylon.com (verbatim Sultantepe and Amarna readings; six-day union; hair-seizing in both recensions; Anu-decree ending)"
+    - "spokenpast.com (recensional comparison; ~90 lines / ~750 lines; six-day union; Bottéro violence-vs-love-affair)"
+    - "encyclopedia.com s.v. Nergal (six-day union; Ea's prohibitions including 'looking' lemma)"
+    - "historyandmyths.com (Amarna ending hair-seizing; Bottéro's observation)"
+    - "Novotny 'Were there Seven or Fourteen Gates of the Netherworld?' search-result extract (fourteen demons, seven gates, demons stationed at gates)"
+  taken_on_trust:
+    - "Foster 2005's specific page-anchors (506-509 Amarna; 514-524 Sultantepe) — overall range plausible"
+    - "Dalley 2008's specific page-anchors (163-179 across recensions) — overall range plausible"
+    - "Foster 2007 pp. 30–34 — recensional history coverage"
+    - "Black & Green 1992 entries — taken on trust as genre-appropriate"
+    - "Bottéro 2001 — taken on trust as standard handbook material; the historyandmyths source independently confirms Bottéro's violence-vs-love-affair observation"
+
+caution_flags_resolved:
+  recensional_content: "PARTIALLY VERIFIED — Amarna brief etiological ✓; Sultantepe long courtly-romantic ✓; bathing scene ✓; flight ✓; second descent ✓; BUT seven-day union INCORRECT (F-2) and formal royal wedding INCORRECT (F-4)"
+  seven_gate_descent_entry_vs_stripping: "VERIFIED ✓ (Novotny extract supports gates as entry points where Nergal stations the fourteen demons)"
+  fourteen_demons_and_prohibitions: "fourteen demons VERIFIED ✓; chair/food/beer/water VERIFIED ✓; 'looking' prohibition partially supported (encyclopedia.com supports; gatewaystobabylon attests verbatim 'must not do what men and women do'); see F-5"
+  formal_royal_wedding_closure: "INCORRECT — see F-4 (HIGH)"
+  namtar_role: "VERIFIED ✓"
+  late_bronze_amarna_cluster: "INCORRECT inclusion of Etana — see F-1 (HIGH)"
+
+routing:
+  proceed_to_stage_13_with_light_fixes: false
+  needs_brief_revision: true     # brief line 42 'formal royal-wedding-and-coronation' framing must be corrected (Note N-2)
+  needs_round_2_chapter_claims_rewrite: true
+  rewrite_scope: "~5 paragraphs and 1 COMPARATIVE-HOOK; targeted not structural"
+  re_factcheck_after_round_2: true
+
+summary: |
+  Round-1 fact-check VERDICT: BLOCK. Three HIGH-severity findings,
+  two of which are factual fabrications: (F-1) Etana is asserted
+  three times to be in the Amarna archive; it is not — the Amarna
+  literary cluster is EA 356 (Adapa), EA 357 (Nergal), EA 359
+  (King of Battle), no Etana. (F-2) The union duration is given
+  as "seven days and seven nights" twice; the actual surviving
+  text reports six days and six nights. (F-4) The Sultantepe
+  ending is described as a "formal royal wedding and coronation"
+  with divine-assembly ratification and formal-recognition
+  speeches; the actual surviving SB ending is Anu's decree
+  (largely damaged) plus the closing "they impetuously entered
+  the bedchamber" line — there is no formal wedding ceremony.
+
+  Two further findings: (F-3, MEDIUM) the hair-seizing motif is
+  in BOTH recensions; the chapter's Amarna section omits the
+  recension's narrative climax; the Bottéro violence-vs-love-
+  affair contrast is invisible from the chapter as written.
+  (F-5, LOW-MEDIUM) the "looking" prohibition variance: Foster's
+  rendering vs. the verbatim "do that which men and women do"
+  Sultantepe text; needs a hedge.
+
+  Other elements check out: the audit-A9 STT 28 identifier is
+  correctly incorporated; the named-but-flagged citation policy
+  for Gurney 1960 is correctly applied; the Late Babylonian Uruk
+  fragment is correctly handled; the seven-gate-as-entry-points
+  framing is supported by Novotny against the chapter-13
+  stripping-points contrast; Namtar's role as vizier and
+  embassy-bearer is supported; the fourteen apotropaic demons
+  count is supported. No glossary violations; no Sumerian
+  contamination; no silent bridges. The marker discipline
+  (3 INFERENCE / 2 LACUNA / 1 RECONSTRUCTION / 1 VARIANT /
+  5 COMPARATIVE-HOOK) is correct.
+
+  Recommendation: BLOCK round-1; update the brief (line 42's
+  'formal royal-wedding-and-coronation' framing); round-2
+  chapter-claims rewrite of ~5 paragraphs and 1 COMPARATIVE-HOOK
+  (lines 33, 73–75, 96, 106, 113, 132, 152, 183); focused
+  round-2 fact-check on the corrected paragraphs; then proceed
+  to stage 13 (post-human-normalize). The chapter's overall
+  structure, source coverage, audit-A9 incorporation, and
+  glossary compliance are sound — the five findings are
+  localised to specific narrative beats, not to the chapter's
+  organising framework.
