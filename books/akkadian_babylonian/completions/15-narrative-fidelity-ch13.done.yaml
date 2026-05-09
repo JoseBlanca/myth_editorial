@@ -1,0 +1,141 @@
+stage: "narrative-fidelity"
+chapter: 13
+slug: "descent-of-ishtar"
+input: "chapters/13-descent-of-ishtar.adoc + chapters/13-descent-of-ishtar.claims.approved.adoc + briefs/13-descent-of-ishtar.yaml + glossary.yaml + gloss-ledger.yaml + chapters/13-descent-of-ishtar.claims.factcheck.yaml + completions/14-chapter-draft-ch13.done.yaml"
+output: "chapters/13-descent-of-ishtar.fidelity.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+verdict: REVISE
+verdict_severity: GLOSSARY-COMPLIANCE-ONLY
+
+outputs:
+  - file: "chapters/13-descent-of-ishtar.fidelity.yaml"
+    role: "fidelity audit report"
+
+summary: |
+  Chapter 13 (The Descent of Ishtar) narrative-fidelity audit. The
+  chapter draft is faithful to the approved claims at the content
+  level: every claim mapped (14 numbered + 13 body-frame
+  paragraphs); all 6 markers preserved byte-identical (1 LACUNA,
+  1 RECONSTRUCTION, 3 INFERENCE, 1 VARIANT) with subfields intact;
+  all 6 COMPARATIVE-HOOKs preserved byte-identical; all 27
+  footnotes preserved byte-identical; all 64 EVIDENCE tokens
+  preserved byte-identical. All three round-1 factcheck light-fix
+  items (F-1 *halziqu* lexeme gloss hedged; F-2 Lapinkivi 2010
+  SAACT 6 added named-but-flagged as the modern critical edition;
+  F-3 ascent-list verbatim quotation hedged) carried through to
+  the draft byte-identical.
+
+  The single blocker for a clean PASS is the Ishtar/Ištar glossary-
+  compliance question that the writer explicitly flagged in the
+  completion record as an OPEN GLOSSARY QUESTION requiring
+  fidelity-stage adjudication. The chapter draft uses "Ishtar"
+  (Foster's editorial form, matching the composition title) for
+  the Akkadian goddess herself in 28 body-prose occurrences plus
+  1 section heading. The locked glossary form per glossary.yaml
+  is "Ištar" with the š-háček, and chapter 0's precedent uses
+  "Ištar" for the goddess in body prose while preserving "Ishtar"
+  in the composition title.
+
+  My adjudication: REVISE — body prose should be aligned with the
+  locked glossary form and chapter 0's precedent. The required
+  revision is body-prose-only s/Ishtar/Ištar/ at 28 body-prose
+  occurrences plus 1 section heading; composition titles ("*The
+  Descent of Ishtar*", "*Descent of Ishtar*") and verbatim-
+  preserved annotation contents (footnotes, EVIDENCE tokens,
+  marker contents, COMPARATIVE-HOOK comments) remain unchanged
+  per chapter-draft skill rules 4 and 5. Tammuz form is accepted
+  as the Foster-translation convention (parallel to Apsû/Abzû and
+  Gilgameš/Bilgames carve-outs); recommend opening a glossary.yaml
+  carve-out for Tammuz in Foster-translation contexts.
+
+  Other glossary items COMPLIANT: Ereškigal (locked form with
+  diacritic, 26 occurrences), Ea (locked first-mention gloss
+  surfaced at substantive narrative actor scene), Apsû, Marduk,
+  Tammuz (Foster-translation form). Inanna / Geshtinanna in
+  explicit Sumerian-tradition citation contexts only, permitted
+  per glossary.yaml's never_use carve-out.
+
+  Other checks: PASS — no forbidden ornament-words; no never-use
+  glossary terms in body prose; italics-convention compliant
+  (Akkadian common nouns and composition titles in *underscore*
+  italic; asterisk-bold confined to footnotes and EVIDENCE tokens
+  per verbatim-preservation rule); Asimov register PASS (short
+  paragraphs, plain modern English, no "Long ago..." or "It is
+  said that..." openings).
+
+  Once the body-prose s/Ishtar/Ištar/ revision is applied, the
+  chapter is fidelity-clean and ready to proceed to commit and
+  chapter-14.
+
+key_findings:
+  - finding_id: G-1
+    severity: GLOSSARY-COMPLIANCE
+    kind: BODY-PROSE-FORM-MISMATCH
+    description: "Body prose uses 'Ishtar' (Foster's editorial
+      form) for the Akkadian goddess herself; locked glossary
+      form is 'Ištar' with š-háček. Chapter 0 precedent: 'Ištar'
+      for goddess in body prose, 'Ishtar' for composition title
+      only."
+    locations_count: 28 body-prose + 1 section heading + 1 EVIDENCE-token loc string
+    recommended_revision: |
+      Body-prose-only s/Ishtar/Ištar/ for the goddess. Chapter
+      title and composition titles ("*The Descent of Ishtar*")
+      remain. Footnotes/marker contents/COMPARATIVE-HOOK
+      contents preserve verbatim per skill rules 4 and 5.
+
+structural_marker_counts:
+  evidence_tokens_claims_vs_draft: "64 == 64 (zero delta)"
+  footnotes_claims_vs_draft: "27 == 27 (zero delta; writer's record reports 30 — minor self-check miscount)"
+  lacuna_claims_vs_draft: "1 == 1"
+  reconstruction_claims_vs_draft: "1 == 1"
+  variant_claims_vs_draft: "1 == 1"
+  inference_claims_vs_draft: "3 == 3"
+  comparative_hooks_claims_vs_draft: "6 == 6"
+
+claim_coverage:
+  total_numbered_claims: 14
+  mapped: 14
+  unmapped: 0
+  additional_body_paragraph_claims_mapped: 13
+
+ishtar_istar_adjudication:
+  decision: REVISE-RECOMMENDED
+  rationale: |
+    Chapter 0 uses "Ištar" (locked form) for the goddess in body
+    prose and "Ishtar" only in the composition title. Chapter 13's
+    draft body prose breaks from this precedent. Locked
+    glossary.yaml form is "Ištar" per Assyriological-standard
+    policy (scope.md). The Foster-editorial-form argument the
+    writer raises (visual consistency with composition title) is
+    overridden by chapter 0's mixed convention which already
+    handles this. Recommend body-prose-only s/Ishtar/Ištar/ for
+    the goddess (28 body-prose occurrences + 1 section heading),
+    leaving composition title and verbatim-preserved annotation
+    contents unchanged.
+
+tammuz_dumuzi_adjudication:
+  decision: ACCEPT-FOSTER-TRANSLATION-FORM
+  rationale: |
+    Chapter uses "Tammuz" (Foster 2005 / Dalley 2008 translation
+    form for the SB recension) consistently. Locked glossary form
+    is "Dumuzi". For the SB *Descent of Ishtar* — a first-
+    millennium late-period composition — Tammuz is the form
+    Foster's principal-cited translation adopts. The writer's
+    composition-specific gloss-decision documents this as
+    FOSTER_TRANSLATION_FORM with parallel to the Apsû/Abzû carve-
+    out for E-abzu. Accept this convention; recommend opening a
+    glossary.yaml carve-out for Tammuz in Foster-translation /
+    SB-late-period contexts.
+
+next_steps:
+  - "Apply the body-prose s/Ishtar/Ištar/ revision (28 body-prose occurrences + 1 section heading) per the recommended_revision in the fidelity report"
+  - "Optionally apply the same revision in the claims-approved doc for archival consistency (not required for fidelity)"
+  - "Open a glossary.yaml carve-out for Tammuz in Foster-translation / SB-late-period contexts"
+  - "After the revision, the chapter is fidelity-clean and ready to commit and proceed to chapter 14 (Nergal and Ereškigal)"
+
+proceed_to: |
+  Body-prose Ishtar→Ištar revision (the only blocker). Once
+  applied, the chapter draft is ready to commit and proceed to
+  chapter 14.

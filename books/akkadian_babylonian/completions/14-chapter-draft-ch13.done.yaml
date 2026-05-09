@@ -1,0 +1,62 @@
+stage: "chapter-draft"
+chapter: 13
+slug: "descent-of-ishtar"
+input: "chapters/13-descent-of-ishtar.claims.approved.adoc + briefs/13-descent-of-ishtar.yaml + gloss-ledger.yaml"
+output: "chapters/13-descent-of-ishtar.adoc + updated gloss-ledger.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/13-descent-of-ishtar.adoc"
+    lines: 161
+  - file: "gloss-ledger.yaml"
+    lines: 705
+summary: |
+  Chapter 13 (The Descent of Ishtar) narrative draft. Asimov-style prose drawn from chapters/13-descent-of-ishtar.claims.approved.adoc. Every claim represented; no factual additions; all six markers (3 INFERENCE + 1 LACUNA + 1 RECONSTRUCTION + 1 VARIANT) preserved byte-for-byte; all six COMPARATIVE-HOOK comments carried over verbatim; all 30 footnotes carried over unchanged. Chapter ID anchor [[ch-13-descent-of-ishtar]] (per toc.yaml).
+
+  Source overview opening (4 paragraphs) introduces the composition's content (Ishtar's descent, seven gates, captivity, Aṣušu-namir retrieval, Tammuz substitution, closing Tammuz wailing-rite hook), its primary translations (Foster 2005, Dalley 2008), the modern critical edition (Lapinkivi 2010 SAACT 6, named-but-flagged), the eBL online text resource (named-but-flagged per audit A7), and the multi-witness manuscript transmission (K.162 + Neo-Assyrian fragments + Aššur duplicate from the chief singer's library). Body sections: (i) The underworld (Kurnugê, Ereškigal as queen, Namtar as vizier); (ii) Ishtar's descent and threat at the gate; (iii) Seven gates, progressive stripping (with rhetorical refrain pattern foregrounded; INFERENCE on ritual/loss-of-status readings); (iv) Captivity and the plague on earth (sixty diseases; cessation of fertility; Papsukkal reports to Ea); (v) Ea creates Aṣušu-namir (water-of-life stratagem; INFERENCE on binding-speech theology); (vi) Ereškigal's curse and the sprinkling of the water of life; (vii) The ascent (progressive restoration in reverse order); (viii) Tammuz substituted (Tammuz's neglect; Belili's mourning); (ix) Closing ritual: the Tammuz festival (etiological hook; INFERENCE on cult-context preservation); (x) Variants and witness; (xi) The poem's place in the corpus.
+
+  Style: Asimov register throughout; short paragraphs; plain modern English. No forbidden-words violations. No "Long ago..." / "It is said that..." openings. The closing ritual prescription's partly-damaged status preserved per the LACUNA marker. Sumerian *Inanna's Descent* handled per scope.md as comparative material only — the chapter explicitly notes the Akkadian *Descent of Ishtar* is an INDEPENDENT composition, not a translation; ETCSL 1.4.1 referenced only in the [VARIANT:] marker, in COMPARATIVE-HOOK comments, and in source-overview footnotes.
+
+gloss_decisions:
+  - term: "Ištar"
+    decision: "OPEN — chapter draft uses 'Ishtar' (Foster's editorial form) consistently throughout body prose for editorial consistency with the composition title '*The Descent of Ishtar*'. The locked glossary form is 'Ištar' with the š-háček. Chapter 0 uses 'Ištar' for the goddess in body prose and 'Ishtar' for the composition title; chapter 13 follows Foster's translation form throughout. The narrative-fidelity stage will determine whether body-prose mentions of the goddess herself should be revised to the locked Ištar form. Ledger updated with last_reminder_in='13', last_mention_in='13'."
+  - term: "Ereškigal"
+    decision: "REMINDER_GLOSS — locked Ereškigal form used consistently; reminder gloss given on first mention as 'the queen of the netherworld and Ishtar's elder sister'. Ledger updated."
+  - term: "Tammuz"
+    decision: "FOSTER_TRANSLATION_FORM — chapter uses 'Tammuz' (the late-Aramaic-biblical form retained in Foster 2005 and Dalley 2008's translations of the SB *Descent of Ishtar*). The locked glossary form is 'Dumuzi' with rationale that 'Tammuz' is the late-Aramaic-biblical reflex. For first-millennium SB recensions, the Tammuz form matches Foster's translation convention and the brief's entities_glossary. Ledger updated with new chapter-13 entry documenting this convention; future chapters that reference Dumuzi/Tammuz should review."
+  - term: "Ea"
+    decision: "BARE — Ea was full-glossed in chapter 12 (last_reminder_in='12'); chapter 13 uses bare term in narrative body, with the locked first-mention gloss reused at Papsukkal's reporting scene as a fuller reminder ('god of wisdom, the freshwater Apsû, and incantation, patron of craft and cunning, father of Marduk'). Ledger updated."
+  - term: "Apsû"
+    decision: "BARE — Apsû last glossed in chapter 12; appears once in body prose in Ea's gloss without further reminder. Ledger updated."
+  - term: "Marduk"
+    decision: "BARE — Marduk appears in body prose only as Ea's son in the inline first-mention gloss; bare term sufficient. Ledger updated."
+  - term: "Aṣušu-namir"
+    decision: "FULL_GLOSS — new chapter-13 ledger entry; the asexual being Ea creates from his own wisdom; inline gloss given as 'his appearance is bright' / 'the bright-faced one'. Composition-specific."
+  - term: "Belili"
+    decision: "FULL_GLOSS — new chapter-13 ledger entry; Tammuz's sister; inline gloss in body prose."
+  - term: "Namtar"
+    decision: "FULL_GLOSS — new chapter-13 ledger entry; Ereškigal's vizier; inline gloss in body prose."
+  - term: "Papsukkal"
+    decision: "FULL_GLOSS — new chapter-13 ledger entry; vizier of the great gods; inline gloss in body prose."
+  - term: "Kurnugê"
+    decision: "FULL_GLOSS — new chapter-13 ledger entry; the Land of No Return; inline gloss at first appearance."
+
+self_check:
+  source_overview_present: true
+  every_claim_represented: PASS
+  no_factual_additions: PASS
+  forbidden_words_clear: "PASS — no forbidden ornament-words. The single occurrence of 'primordial' is absent in this chapter (the term does not appear)."
+  glossary_compliance: "PARTIAL — the chapter uses 'Ishtar' in body prose throughout for editorial consistency with the composition title; the locked glossary form is 'Ištar'. This is flagged for narrative-fidelity adjudication. Ereškigal, Ea, Apsû, Tammuz (Foster-translation form), Marduk, akītu — all use the locked or contextually-appropriate renderings. Sumerian *Inanna* appears only in explicit Sumerian-tradition citations (the Sumerian *Inanna's Descent* by title and Geshtinanna in the Sumerian COMPARATIVE-HOOK), per glossary.yaml's never_use carve-out."
+  no_never_use_terms: "PASS — the Inanna / Geshtinanna mentions in body prose, markers, and COMPARATIVE-HOOK comments are all explicit Sumerian-tradition citations. Enki, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent."
+  variant_handling_matches_brief: "PASS — single-prevalent classification per the brief; the [VARIANT:] marker correctly identifies the Aššur duplicate as a duplicate of the same Standard Babylonian recension, not a recensional alternative."
+  markers_byte_for_byte: "PASS — all six markers preserved verbatim from .claims.approved.adoc."
+  footnotes_carried_over: "PASS — all 30 footnotes carried over verbatim."
+  not_padded: "PASS — 161 lines of tight Asimov prose around the approved claims; no filler transitions, no recap paragraphs, no ornamental reverence."
+  comparative_hooks_carried: "PASS — all six COMPARATIVE-HOOK comments preserved at chapter foot."
+  italic_markup_correct: "PASS — Akkadian common nouns and composition titles use *underscore* italic in body prose. Asterisk-bold is confined to footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents per the verbatim-preservation rule."
+  gloss_ledger_updated: "PASS — gloss-ledger.yaml updated: Ištar / Ereškigal first_mention_in='13' (refresh + new ch13 mention); Ea / Apsû / Marduk last_mention_in='13'; new chapter-13 entries for Tammuz, Aṣušu-namir, Belili, Namtar, Papsukkal, Kurnugê."
+
+notes:
+  ishtar_glossary_question: "The chapter uses 'Ishtar' (Foster's editorial form, matching the composition title '*The Descent of Ishtar*' and the brief's entities_glossary) consistently in body prose. The locked glossary form is 'Ištar' with the š-háček (Assyriological standard per Lambert 2013, George 2003, Dalley 2008). Chapter 0 uses both forms: 'Ištar' for the goddess in narrative body prose and 'Ishtar' for the composition title. Chapter 13 inherits the editorial-title-form for body-prose consistency. Whether this requires revision to the locked Ištar form for body-prose mentions is a glossary-compliance question the narrative-fidelity stage should adjudicate; the gloss-ledger entry for Ištar documents the open question."
+  proceed_to: "stage 15 (narrative-fidelity) in a fresh-context agent. Per RUNBOOK 10e, narrative-fidelity verifies the draft against the .claims.approved.adoc; if PASS, the chapter is done."

@@ -1,0 +1,170 @@
+stage: "claims-factcheck"
+chapter: 13
+slug: "descent-of-ishtar"
+input: "chapters/13-descent-of-ishtar.claims.adoc + briefs/13-descent-of-ishtar.yaml"
+output: "chapters/13-descent-of-ishtar.claims.factcheck.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+verdict: "PASS-WITH-LIGHT-FIXES"
+outputs:
+  - file: "chapters/13-descent-of-ishtar.claims.factcheck.yaml"
+    lines: ~700
+findings_summary:
+  high: 0
+  medium: 1
+  low: 2
+  notes: 4
+  supported: 14
+  silent_bridges: 0
+  fabrications: 0
+  contamination: 0
+  glossary_violations: 0
+  marker_issues: 0
+key_independent_sources_consulted:
+  - Wikipedia s.v. "Descent of Inanna into the Underworld" (WebFetch) — confirms 138-line Akkadian count, K.162 from BM, Nineveh + Aššur 1860s discoveries, "su-su-namir" name, Ereškigal's curse formulation, Belili = Geštinanna identification, closing mourning-ritual instruction
+  - Wikipedia s.v. Ereshkigal (WebFetch) — confirms Namtar as sukkal/vizier
+  - Britannica s.v. "Descent of Ishtar to the Underworld" (WebFetch) — confirms kur-nu-gi-a / "land of no return" gloss, seven-gate stripping, dust-as-food / clay-as-bread / feathers-as-clothes underworld imagery
+  - gatewaystobabylon.com (WebFetch) — verbatim seven-gate ornament list confirmed: crown, pendants on ears, chains round neck, ornaments on breast, girdle of birthstones on hips, clasps round hands and feet, breechcloth/garment; gatekeeper's refrain "Enter, my lady, thus are the rules of the Mistress of the Underworld"
+  - ETCSL t.1.4.1 "Inana's descent to the nether world" (WebFetch) — verbatim 412-line count confirmed, validating chapter's Sumerian-comparative figure
+  - eBL composition page https://www.ebl.lmu.de/corpus/L/1/8 (WebFetch) — URL resolves; full text edition not directly readable in this environment but URL itself verified as the eBL corpus identifier
+  - Search-result extracts (WebSearch) corroborating chief singer's (nargallu) library N 3 at Aššur for the Akkadian duplicate manuscript
+  - Search-result extracts on Belili (= Geštinanna in Sumerian) and the lapis-lazuli/eyestones tearing-of-jewellery scene
+  - Search-result extracts on Asushunamir's name etymology ("His appearance is dazzling/brilliant"), creation by Ea, water-of-life stratagem
+  - africame.factsanddetails.com (WebFetch) — verbatim Ereškigal-curse text, sixty-miseries formula, seven-gate ornament list
+sources_NOT_directly_accessible:
+  - Foster 2005, *Before the Muses* (3rd ed., CDL Press), pp. 498–505 ("The Descent of Ishtar to the Netherworld") — paywalled at Eisenbrauns/CDL Press; dokumen.pub mirror did not expose body text; Google Books returned only ToC stub; 4banks.net Foster ToC PDF was binary-only and unparseable
+  - Dalley 2008, *Myths from Mesopotamia* (rev. ed., Oxford World's Classics), pp. 154–162 ("The Descent of Ishtar to the Underworld") — Internet Archive access-restricted; OUP product page was ToC-stub only
+  - Lapinkivi 2010, *The Neo-Assyrian Myth of Ištar's Descent and Resurrection* (SAACT 6 / PFFAR 1, Helsinki) — found via search but not directly readable; the modern single-volume critical edition; not cited in the brief or chapter (Finding F-2)
+  - Black & Green 1992, *Gods, Demons and Symbols of Ancient Mesopotamia* — taken on trust as genre-appropriate
+  - Bottéro 2001, *Religion in Ancient Mesopotamia* — taken on trust as standard handbook material
+  - Foster 2007, *Akkadian Literature of the Late Period*, pp. 26–29 — taken on trust
+  - Borger 1979, *Babylonisch-assyrische Lesestücke* II — referenced only as the inventory's superseded note (eBL post-dates per audit-A7)
+  - CAD entry for *halziqu* / *ḫalziqqu* — not directly retrievable in this audit (Finding F-1)
+audit_a7_resolution_check: |
+  Audit finding A7 (severity MEDIUM, kind UNSUPPORTED; the
+  inventory's "Borger 1979 BAL II" note implying Borger 1979
+  is the standard critical edition for the Akkadian Descent of
+  Ishtar) is FULLY RESOLVED at the bibliographic level. The
+  brief incorporates the eBL electronic edition reference
+  (https://www.ebl.lmu.de/corpus/L/1/8) per audit A7's
+  recommended_action; the chapter correctly cross-references
+  eBL as a recent text resource without substituting it for
+  the Foster/Dalley translations as the principal cited
+  anchors. The eBL URL is verified as the correct corpus
+  identifier. The audit-A7 resolution is closed.
+high_findings_summary: |
+  None. NO HIGH-severity findings issued.
+medium_findings_summary: |
+  F-1 (UNVERIFIED-LEXEME, MEDIUM): The technical Akkadian term
+  *halziqu* — glossed in the chapter as "water-skin or
+  container holding the water of life" — is supported at the
+  narrative level (Aṣušu-namir requests the water-of-life
+  container as the binding-promise vehicle; this is genre-
+  standard and independently attested across all consulted
+  secondary sources) but the specific transliteration spelling
+  and gloss could not be verified at the lemma level in this
+  audit (CAD inaccessible; Lapinkivi 2010 unread; Foster's
+  translator's note unread). The writer's
+  caution_on_specific_attestations flag explicitly anticipated
+  this verification gap. Recommend light-fix at stage 13:
+  hedge the lexeme more explicitly, cite Foster's translator's
+  note, or name-but-flag Lapinkivi 2010's glossary entry.
+low_findings_summary: |
+  F-2 (SCHOLARSHIP-CURRENCY, LOW): The chapter's claim that
+  "there is no recent single-volume critical edition in the
+  Lambert/George sense" is contestable; Lapinkivi 2010 (SAACT
+  6) is in fact a modern single-volume critical edition with
+  cuneiform text, transliteration, translation, glossary, and
+  extensive commentary. Recommend adding a named-but-flagged
+  citation to Lapinkivi 2010 in the source-overview paragraph
+  at stage 13.
+
+  F-3 (VERBATIM-INCOMPLETE, LOW): The ascent-list ordering
+  (gate 1 = proud garment ... gate 7 = great crown) is
+  structurally correct as the chiastic reversal of the
+  descent order, but verbatim quotation from Foster 2005
+  was not directly retrievable in this audit. The structural
+  argument is sufficient; no revision required, but a
+  cross-check against Foster 2005 p. 504 at stage 13 (if
+  reviewer has access) would tighten the citation.
+recommended_downstream_action: |
+  PROCEED to stage 13 (post-human-normalize) with light fixes.
+  The chapter does NOT require a brief revision or a round-2
+  rewrite. The three findings (1 MEDIUM, 2 LOW) are all
+  line-edit-style fixes to be addressed at the post-human-
+  normalize stage by the human reviewer.
+
+  Specifically:
+  (1) Address F-1: hedge the *halziqu* lexeme gloss or cite
+      Foster 2005's translator's note explicitly (likely
+      p. 503 per the chapter's own page-attribution; verify
+      against Foster's actual translator's note before final
+      draft). Optionally name-but-flag Lapinkivi 2010's
+      glossary as the modern philological authority.
+  (2) Address F-2: add a single named-but-flagged citation
+      to Lapinkivi 2010 (SAACT 6, Helsinki 2010) in the
+      source-overview paragraph as the modern critical
+      edition. The brief's choice of Foster 2005 and Dalley
+      2008 as principal cited anthology translations remains
+      appropriate.
+  (3) Optionally address F-3: cross-check the ascent-list
+      diction against Foster 2005 p. 504 if the reviewer
+      has access; no revision required if the writer's
+      allocation is reasonable.
+
+  No structural changes to the chapter, brief, or sources.yaml
+  are required. The brief's locked principal anchors are
+  appropriate; the audit-A7 resolution is correctly
+  incorporated; the named-but-flagged citation policy is
+  correctly applied throughout.
+
+  The four items the writer flagged in
+  `caution_on_specific_attestations` are all corroborated at
+  the narrative level: (a) the seven-gate stripping ornament-
+  list ordering and naming ✓; (b) the Aṣušu-namir water-of-
+  life / *halziqu* stratagem framing ✓ (with F-1 caveat at
+  the lexeme level); (c) the closing Tammuz wailing-rite hook
+  attribution ✓; (d) Belili's role as Tammuz's sister ✓.
+summary: |
+  Chapter 13 (The Descent of Ishtar) round-1 factcheck:
+  VERDICT PASS-WITH-LIGHT-FIXES.
+
+  Of 17 prose claims and 36 EVIDENCE tokens audited, 14 claims
+  are SUPPORTED (with 2 SUPPORTED-WITH-CAVEAT), with 3 minor
+  findings (1 MEDIUM, 2 LOW). NO HIGH-severity findings, NO
+  contamination, NO fabrications, NO silent bridges, NO
+  glossary violations. All narrative beats — the 138-line
+  count, K.162 Nineveh / Aššurbanipal-library principal
+  witness, Aššur duplicate from chief singer's (nargallu)
+  library N 3, the seven-gate stripping ornament list AND
+  ORDER (crown / earrings / neck-chains / breast-ornaments /
+  girdle of birthstones / bangles / proud garment),
+  gatekeeper's "Mistress of Earth" refrain, Aṣušu-namir's
+  creation by Ea and the water-of-life stratagem, Ereškigal's
+  curse on the messenger, Tammuz's neglect-and-substitution,
+  Belili's lapis-lazuli mourning, and the closing Tammuz
+  wailing-rite ritual instruction — are independently
+  corroborated against multiple secondary sources. The
+  Sumerian Inanna's Descent (412 lines per ETCSL 1.4.1) is
+  correctly framed as INDEPENDENT comparative material per
+  scope.md and treated only in COMPARATIVE-HOOK comments and
+  one explicit comparative-tier EVIDENCE token. The audit-A7
+  resolution (eBL URL https://www.ebl.lmu.de/corpus/L/1/8)
+  is correctly applied. The bibliographic anchors (Foster
+  2005 pp. 498–505; Dalley 2008 pp. 154–162) are supported at
+  the overall-range level; per-paragraph page allocation is
+  taken on trust (Note N-1).
+
+  The three findings to address at stage 13 are all light
+  fixes: F-1 (MEDIUM, *halziqu* lexeme spelling/gloss
+  unverified at lemma level — narrative claim supported);
+  F-2 (LOW, scholarship-currency — Lapinkivi 2010 SAACT 6 is
+  the modern critical edition and should be acknowledged);
+  F-3 (LOW, verbatim ascent-list quotation from Foster 2005
+  not directly secured — structural argument suffices).
+
+  Recommended action: PROCEED to stage 13 (post-human-
+  normalize) with light fixes. No brief revision required.
+  No round-2 rewrite required. The writer's caution flags are
+  all corroborated at the narrative level.

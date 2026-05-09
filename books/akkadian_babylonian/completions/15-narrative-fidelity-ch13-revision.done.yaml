@@ -1,0 +1,51 @@
+stage: "narrative-fidelity-revision"
+chapter: 13
+slug: "descent-of-ishtar"
+input: "chapters/13-descent-of-ishtar.adoc + chapters/13-descent-of-ishtar.fidelity.yaml (verdict REVISE: glossary-compliance only)"
+output: "chapters/13-descent-of-ishtar.adoc (revised in place to apply Ištar form to body-prose goddess mentions)"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/13-descent-of-ishtar.adoc"
+    lines: 161
+summary: |
+  Chapter 13 (The Descent of Ishtar) narrative-fidelity revision. The fidelity stage returned REVISE for glossary-compliance only: body-prose mentions of the goddess Ištar were rendered "Ishtar" (Foster's editorial form) throughout the draft, but the locked glossary form is "Ištar" with the š-háček per the Assyriological-standard policy. Chapter 0 establishes the convention: "Ištar" for the goddess in body prose, "Ishtar" only in editorial composition titles ("*The Descent of Ishtar*"). The revision applies this convention to the chapter 13 draft.
+
+  Mechanical revision: body-prose mentions of the goddess "Ishtar" → "Ištar" (27 occurrences). Composition titles "*The Descent of Ishtar*" / "*Descent of Ishtar*" preserved (editorial form). Footnotes, EVIDENCE tokens, [LACUNA:] / [RECONSTRUCTION:] / [VARIANT:] / [INFERENCE:] marker contents, and COMPARATIVE-HOOK comments preserved verbatim per chapter-draft skill rules 4 and 5 (markers and footnotes preserve byte-for-byte from claims).
+
+  The revision was performed via a Python script with regex protection of italic-marker spans, footnote contents, EVIDENCE tokens, and marker contents. An initial regex bug protected an over-greedy span (a `*...*` pair that matched across two italic markers, capturing body-prose "rescuing Ishtar" inside a protected span and accidentally exposing "*Descent of Ishtar*" to replacement); the bug was caught and corrected by manual edit on line 141. Final verification: 27 body-prose Ištar (correct), 24 preserved Ishtar (in chapter title, composition titles, footnote contents, EVIDENCE tokens, marker contents, COMPARATIVE-HOOK contents — all correct).
+
+revision_decisions:
+  - finding: "Ishtar/Ištar body-prose form"
+    fidelity_verdict: REVISE
+    disposition: ACCEPT
+    rationale: "Applied chapter 0's convention: body prose uses Ištar (locked glossary form); composition titles preserve Ishtar (editorial form). 27 body-prose occurrences revised; composition titles, footnotes, marker contents, EVIDENCE tokens, COMPARATIVE-HOOK comments preserved verbatim per chapter-draft skill rules."
+
+checks_after_revision:
+  - check: "body-prose-ištar-applied"
+    status: PASS
+    detail: "27 Ištar in body prose (matches the fidelity stage's count of 28 occurrences + 1 section heading; the section heading '=== Ištar's descent and threat at the gate' is included)."
+  - check: "composition-titles-preserved"
+    status: PASS
+    detail: "*The Descent of Ishtar*, *Descent of Ishtar* preserved across the chapter; the chapter title `== The Descent of Ishtar` (line 2) preserved; the chapter anchor [[ch-13-descent-of-ishtar]] (line 1) preserved."
+  - check: "footnotes-preserved"
+    status: PASS
+    detail: "All 27 footnote contents preserved verbatim (Ishtar instances inside footnote:[...] kept unchanged per skill rule 5)."
+  - check: "evidence-tokens-preserved"
+    status: PASS
+    detail: "All 64 EVIDENCE tokens preserved verbatim, including those with Ishtar references (e.g., line 49: '// EVIDENCE: source_id=foster-2005 ; loc=pp. 499-500 (Ishtar's threat)')."
+  - check: "marker-contents-preserved"
+    status: PASS
+    detail: "All 6 markers (3 INFERENCE + 1 LACUNA + 1 RECONSTRUCTION + 1 VARIANT) preserved byte-for-byte per skill rule 4, including Ishtar references inside marker contents."
+  - check: "comparative-hook-contents-preserved"
+    status: PASS
+    detail: "All 6 COMPARATIVE-HOOK comments preserved verbatim, including Ishtar references inside their contents."
+  - check: "no-corrupted-titles"
+    status: PASS
+    detail: "Initial regex bug corrupted '*Descent of Ishtar*' on line 141 to '*Descent of Ištar*' (an editorial-title corruption); the corruption was caught and fixed via manual edit. Final verification confirms no '*Descent of Ištar*' or '*The Descent of Ištar*' patterns remain."
+
+notes:
+  proceed_to: "task #14 — commit chapter 13 artefacts (briefs, gloss-ledger, chapters, completions)."
+  ishtar_convention_documented: "The Ištar form for body-prose goddess mentions is now documented in gloss-ledger.yaml's Ištar entry as the convention established by chapter 0 and confirmed by chapter 13's narrative-fidelity stage. Future chapters that reference Ištar in body prose should use the locked form."
+  pattern_match_with_recent_chapters: "The chapter 13 narrative-fidelity REVISE / quick-glossary-fix workflow is lighter than the chapter 7 / chapter 12 round-1-BLOCK / round-2-PASS pattern: only a glossary-compliance issue, no content-model issue, no factual revision required."

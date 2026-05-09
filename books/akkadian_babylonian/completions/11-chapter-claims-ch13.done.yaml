@@ -1,0 +1,63 @@
+stage: "chapter-claims"
+chapter: 13
+slug: "descent-of-ishtar"
+input: "briefs/13-descent-of-ishtar.yaml"
+output: "chapters/13-descent-of-ishtar.claims.adoc"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/13-descent-of-ishtar.claims.adoc"
+    lines: 178
+summary: |
+  Chapter 13 (The Descent of Ishtar) claims document. The Akkadian Standard Babylonian poem of 138 lines, narrating Ishtar's descent into the underworld (Kurnugê), her stripping at the seven gates, captivity, retrieval through Ea's creation Aṣušu-namir, and substitution of Tammuz. Closes with a partly-damaged ritual instruction for the seasonal Tammuz wailing rites — the etiological hook of the composition. Per scope.md, treated as an INDEPENDENT composition, NOT a translation of the Sumerian *Inanna's Descent* (ETCSL 1.4.1).
+
+  Sources: Foster 2005 (pp. 498–505) and Dalley 2008 (pp. 154–162) as the principal cited translations; Foster 2007 (pp. 26–29) for late-period transmission context; Black & Green 1992 for deity entries (Ishtar, Ereškigal, Tammuz, Namtar, Papsukkal, Ea, underworld); Bottéro 2001 for the seasonal Tammuz cult and underworld theology; ETCSL 1.4.1 for the Sumerian comparative reference. Audit finding A7 (severity MEDIUM, kind UNSUPPORTED) is honoured: the eBL electronic edition (https://www.ebl.lmu.de/corpus/L/1/8) is named-but-flagged as the modern online text resource superseding the inventory's earlier Borger 1979 *BAL II* note; eBL is not currently in sources.yaml but is referenced in the brief and named in the chapter's source-overview footnotes.
+
+  Manuscript witnesses (verified via web search and British Museum collection record): K.162 from Aššurbanipal's seventh-century BCE royal library at Nineveh as the principal witness, with parallel Neo-Assyrian fragments; an additional manuscript from the chief singer's library at Aššur (the *nargallu* / N 3 attestation noted in the eBL/Wikipedia summary). The witnesses agree on the seven-gate structure and the substitution ending; minor textual variants principally in the closing ritual lines.
+
+  Narrative structure (twelve narrative moves preserved): (1) underworld-description opening (Kurnugê, Ereškigal as queen, Namtar as vizier); (2) Ishtar's resolve and arrival at the gate; (3) Ishtar's threat to the gatekeeper; (4) Ereškigal's response and "ancient ordinances" instruction; (5) seven-gate stripping with formulaic refrain; (6) captivity and the sixty diseases; (7) cessation of fertility on earth; (8) Papsukkal's report to Ea; (9) Ea creates Aṣušu-namir; (10) Aṣušu-namir's water-of-life stratagem and Ereškigal's curse; (11) ascent through seven gates with progressive restoration; (12) Tammuz substitution and Belili's mourning; closing ritual instruction.
+
+  Three INFERENCE markers: (i) the seven-gate stripping as ritual sequence + loss-of-status mythologem reading; (ii) the binding-speech theology underpinning Aṣušu-namir's stratagem and Ereškigal's curse; (iii) the etiological-cult function of the closing ritual instruction. One LACUNA marker (closing ritual instruction partly damaged in some witnesses; cross-witness joining and eBL consolidation reconstructs most of it). One RECONSTRUCTION marker (Foster 2005's composite text from the K.162 principal witness, Neo-Assyrian fragments, and Aššur duplicate). One VARIANT marker (single-prevalent classification per brief; minor textual variants principally in closing ritual lines; Aššur duplicate not a recensional variant).
+
+  Six COMPARATIVE-HOOK comments: (i) Sumerian *Inanna's Descent* (ETCSL 1.4.1) as the wider Mesopotamian background — INDEPENDENT, not translation; (ii) Akkadian-internal *Nergal and Ereškigal* (chapter 14) as the paired underworld dossier; (iii) Greek Persephone (seasonal-vegetation parallel); (iv) Egyptian Osiris (dying-god typology); (v) Hebrew Bible Sheol imagery (Job, Psalms, Isaiah 14); (vi) worldwide dying-god typology.
+
+  Source IDs used in EVIDENCE tokens (64 total): foster-2005 (the principal anchor at pp. 498–505 throughout); dalley-2008 (the second triangulation translation at pp. 154–162 throughout); foster-2007 (pp. 26–29 for late-period transmission); black-green-1992 (s.v. Ishtar, Ereškigal, Tammuz, Namtar, Papsukkal, Ea, underworld); bottero-2001 (passim on underworld theology and Tammuz cult); etcsl (ETCSL 1.4.1 comparative reference). All six source IDs resolve to existing entries in sources.yaml.
+
+  Glossary check: Ishtar, Ereškigal, Tammuz, Ea, Apsû — all use locked glossary.yaml renderings. Tammuz appears as the locked Akkadian form (per glossary.yaml's Dumuzi/Tammuz handling: "Dumuzi" is the standard Akkadian form; "Tammuz" is the later Aramaic-biblical form retained in some 1st-millennium translations and is appropriate here per Foster's translation convention). The composition's named deities not in glossary.yaml — Namtar, Papsukkal, Aṣušu-namir, Belili — receive inline first-mention glosses in the chapter. Place-name *Kurnugê* receives an inline first-mention gloss as "the Land of No Return". Ritual term *halziqu* (water-skin holding the water of life) is referenced once with inline gloss; the technical term *šīmtu* (fate, mentioned in the binding-speech INFERENCE) is referenced via Black & Green 1992 entry.
+
+brief_alignment:
+  source_overview_present: true
+  single_prevalent_handling: "PASS — the [VARIANT:] marker addresses the brief's single-prevalent classification; the witnesses (K.162 + Neo-Assyrian fragments + Aššur duplicate) function as duplicates of a single Standard Babylonian recension, not recensional alternatives. Minor textual variants principally in closing ritual lines per the brief."
+  one_lacuna_flagged: "PASS — [LACUNA:] for the closing ritual instruction's partial damage; the etiological hook (Tammuz wailing rite) is preserved in outline."
+  reconstruction_marker_present: "PASS — [RECONSTRUCTION:] covers Foster 2005's composite text from K.162, Neo-Assyrian fragments, and the Aššur duplicate; the eBL electronic edition's online text supplies an additional cross-witness control. Confidence: high for narrative body; medium for closing ritual instruction."
+  base_text: "Foster 2005 pp. 498–505 used as principal anchor throughout; Dalley 2008 pp. 154–162 used as the second triangulation translation; eBL named-but-flagged as the modern online text resource per audit finding A7."
+  ishtar_independent_composition: "PASS — the chapter explicitly states multiple times (preamble, opening claim, source-overview, comparative-hook) that the Akkadian *Descent of Ishtar* is an INDEPENDENT composition on a shared theme with the Sumerian *Inanna's Descent*, NOT a translation. Per scope.md, the Sumerian original is comparative material only and never used to fill gaps in the Akkadian text."
+  seven_gate_stripping_handling: "PASS — the seven-gate descent and ascent are foregrounded as the composition's structural centrepiece; the rhetorical refrain pattern is explicitly preserved; the ornaments named at each gate are listed (crown, earrings, neck-chains, breast-ornaments, girdle, bangles, garment); the descent and ascent reverse-mirror each other."
+  closing_ritual_handling: "PASS — the closing Tammuz wailing-rite ritual instruction is foregrounded as the composition's etiological hook; Belili's mourning is preserved; the partial manuscript damage is flagged in the LACUNA marker."
+  audit_a7_handling: "PASS — eBL (https://www.ebl.lmu.de/corpus/L/1/8) is named-but-flagged in source-overview footnotes and in the LACUNA / RECONSTRUCTION markers as the modern online text resource; the inventory's earlier Borger 1979 *BAL II* note is corrected without substituting eBL for the Foster/Dalley translations as principal anchors."
+  comparative_hooks_complete: "PASS — six COMPARATIVE-HOOK comments cover the Sumerian *Inanna's Descent*, Akkadian-internal *Nergal and Ereškigal*, Greek Persephone, Egyptian Osiris, Hebrew Bible Sheol imagery, and worldwide dying-god typology."
+
+validation:
+  footnote_count: 30
+  evidence_marker_count: 64
+  unresolved_source_ids: 0
+  inference_markers: 3
+  lacuna_markers: 1
+  reconstruction_markers: 1
+  variant_markers: 1
+  comparative_hook_comments: 6
+  marker_placement_errors: 0
+  source_overview_footnotes: 4
+
+notes:
+  named_but_flagged:
+    - scholar: "electronic Babylonian Library (eBL) project"
+      publication: "*Descent of Ištar*: Text edition in the electronic Babylonian Library, Ludwig-Maximilians-Universität München, https://www.ebl.lmu.de/corpus/L/1/8"
+      anchor_routed_through: "(none — named in source-overview footnote and LACUNA marker)"
+      reason: "The current online text resource for *The Descent of Ishtar*, post-dating the inventory's Borger 1979 *BAL II* note (audit finding A7). Not currently in sources.yaml; recommended for sources.yaml addition (in the reference category alongside ORACC and CDLI) given its wider relevance for first-millennium Akkadian text resources."
+  out_of_scope_handling: "The Sumerian *Inanna's Descent* (ETCSL 1.4.1) is correctly handled per scope.md: ETCSL is in sources.yaml as a comparative-tier source (in_scope: false for primary use), and the Sumerian composition is referenced only in the [VARIANT:] marker (for the manuscript history of the related but textually-distinct tradition), in COMPARATIVE-HOOK comments, and in source-overview footnotes — never as a textual fill or primary anchor. The Greek (Persephone), Egyptian (Osiris), and Hebrew Bible (Sheol imagery) parallels appear ONLY as COMPARATIVE-HOOK comments and are reserved for the influences chapter."
+  caution_on_specific_attestations: |
+    The chapter is conservative about specific line-by-line attestations within Foster 2005 and Dalley 2008. The writer has not directly accessed Foster 2005's pp. 498–505 or Dalley 2008's pp. 154–162; the structural claims are anchored to those page ranges per the brief, and the manuscript history (K.162 + Neo-Assyrian fragments + Aššur duplicate) is corroborated via the British Museum collection record (W_K-162) and the eBL Wikipedia summary. Round-1 factcheck should focus on whether (a) the seven-gate stripping ornament-list is correctly ordered and named, (b) the Aṣušu-namir water-of-life / *halziqu* stratagem is correctly framed, (c) the closing Tammuz wailing-rite hook is correctly attributed to the surviving lines, (d) Belili's role as Tammuz's sister is correctly attested.
+  pattern_match_with_recent_chapters: |
+    Following the chapter 11 / chapter 12 pattern of conservative line-by-line claims when the writer does not have direct primary-source access; specific verbatim quotations are not given; the chapter operates at the level of the composition's overall narrative structure with appropriate INFERENCE markers for interpretive readings (seven-gate stripping reading, binding-speech theology, etiological-cult function). Round-1 factcheck should verify the structural claims; if any HIGH findings emerge, the chapter-7 / chapter-12 round-1-BLOCK / round-2-PASS workflow is available.

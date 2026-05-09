@@ -1,0 +1,76 @@
+stage: "post-human-normalize"
+chapter: 13
+slug: "descent-of-ishtar"
+input: "chapters/13-descent-of-ishtar.claims.adoc + chapters/13-descent-of-ishtar.claims.factcheck.yaml (verdict PASS-WITH-LIGHT-FIXES)"
+output: "chapters/13-descent-of-ishtar.claims.approved.adoc"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/13-descent-of-ishtar.claims.approved.adoc"
+    lines: 215
+summary: |
+  Chapter 13 (The Descent of Ishtar) post-human-normalize. Round-1 claims-factcheck returned PASS-WITH-LIGHT-FIXES (0 HIGH / 1 MEDIUM / 2 LOW); three light edits applied to produce the approved file:
+
+    (1) F-1 MEDIUM: hedged the *halziqu* lexeme gloss. The chapter no longer asserts the specific lexeme spelling "halziqu" at the lexical level (CAD lookup for the term was not retrievable in the open during the factcheck audit; Lapinkivi 2010's glossary was not directly accessed for transliterational authority). The narrative now follows Foster's narrative-level summary of the water-of-life stratagem and parenthetically notes that the technical Akkadian term for the vessel of the water of life appears in Foster's translation in transliteration but is not asserted at lemma level. The narrative claim about Aṣušu-namir's deception and the binding promise is unchanged.
+    (2) F-2 LOW: added Lapinkivi 2010, *The Neo-Assyrian Myth of Ištar's Descent and Resurrection*, State Archives of Assyria Cuneiform Texts (SAACT) 6 (Helsinki: Neo-Assyrian Text Corpus Project, 2010), as the modern critical edition (named-but-flagged; not currently in sources.yaml). Foster 2005 and Dalley 2008 remain the principal cited translations; eBL is named as the online text resource consolidating Lapinkivi. The framing "no recent single-volume critical edition in the Lambert/George sense" was corrected: Lapinkivi 2010 IS such a critical edition.
+    (3) F-3 LOW: hedged the ascent-list verbatim quotation. The chapter now describes the ascent as the structural reverse of the descent (the same items, in reverse order: garment → bangles → girdle → breast-ornaments → neck-chains → earrings → crown), drawn from Foster's translation's structural symmetry rather than from a verbatim quotation of the ascent passage. Cross-witness corroboration via Wikipedia s.v. Descent of Inanna and Sacred-Texts/ANET reproductions confirms the reverse-order pattern; the structural-symmetry argument suffices and the chapter no longer asserts a specific verbatim ornament-list at the ascent.
+
+  Provenance comment block appended at the file foot recording: timestamp, edits applied, structural checks passed, and round-1 factcheck cross-references.
+
+findings_triage:
+  - finding_id: F-1
+    kind: UNVERIFIED-LEXEME
+    severity: MEDIUM
+    disposition: ACCEPT
+    rationale: "Hedged the *halziqu* lexeme gloss per the factcheck recommended_fix option (a). The narrative-level water-of-life stratagem framing is well-attested across the independent corroboration sources; the lexeme-level specifity was the unverified element. Hedging avoids the specific lexicographic claim while preserving the narrative."
+  - finding_id: F-2
+    kind: SCHOLARLY-CURRENCY
+    severity: LOW
+    disposition: ACCEPT
+    rationale: "Added Lapinkivi 2010 SAACT 6 (named-but-flagged) as the modern critical edition. The chapter's earlier framing 'no recent single-volume critical edition in the Lambert/George sense' was contestable: Lapinkivi 2010 IS such a critical edition. The scholarly-currency correction parallels audit finding A7's spirit (the inventory's earlier Borger 1979 *BAL II* note was likewise outdated); Lapinkivi 2010 is the more recent and authoritative reference."
+  - finding_id: F-3
+    kind: CITATION-PRECISION
+    severity: LOW
+    disposition: ACCEPT
+    rationale: "Hedged the ascent-list verbatim claim. The descent ornament-list (crown, earrings, neck-chains, breast-ornaments, girdle, bangles, garment) is verbatim-confirmed across multiple independent translations (Wikipedia s.v. Descent of Inanna; Sacred-Texts/ANET; eBL); the ascent reverse-order pattern is structurally inevitable and well-attested but the chapter's earlier verbatim ascent-list ('at the first gate her proud garment, at the second the bangles, ...') was a structural rather than a quoted claim. The hedge clarifies this without changing the substance."
+  - finding_id: NOTE-1
+    kind: NAMED-BUT-FLAGGED-ADDITIONS
+    severity: NOTE
+    disposition: ACCEPT
+    rationale: "Lapinkivi 2010 SAACT 6 added to the named-but-flagged list in the writer's completion record (chapter-claims). Recommended for sources.yaml addition (in the primary-translation / primary tier given its critical-edition status). eBL also added as a named-but-flagged online text resource per audit finding A7."
+  - finding_id: NOTE-2
+    kind: SUMERIAN-INANNA-INDEPENDENCE
+    severity: NOTE
+    disposition: PRESERVE
+    rationale: "The chapter's framing of the Akkadian *Descent of Ishtar* as an INDEPENDENT composition (not a translation) of the Sumerian *Inanna's Descent* is preserved. The framing is supported by scope.md, by the brief, by Foster 2005's introduction, and by the round-1 factcheck's verification (Sumerian = 412 lines vs Akkadian = 138 lines; structurally distinct rescue-mechanism and substitution-mechanism). The Inanna mentions in body prose are all explicit Sumerian-tradition citations (Sumerian *Inanna's Descent* title; Geshtinanna in Sumerian-comparative-hook context) — permitted per glossary.yaml's never_use carve-out for explicit Sumerian-tradition contexts."
+
+checks_performed:
+  - check: "one-claim-per-paragraph"
+    status: PASS
+  - check: "every-claim-footnoted"
+    status: PASS
+  - check: "evidence-tokens-syntactically-valid"
+    status: PASS
+    detail: "64 EVIDENCE tokens; all source_id values resolve to sources.yaml entries (foster-2005, dalley-2008, foster-2007, black-green-1992, bottero-2001, etcsl)."
+  - check: "markers-with-required-sub-fields"
+    status: PASS
+    detail: "3 INFERENCE markers w/ basis+risk; 1 LACUNA w/ source+scholarly_reconstruction; 1 RECONSTRUCTION w/ gap_source+fill_source+confidence; 1 VARIANT w/ primary+alt+chosen+reason."
+  - check: "glossary-renderings-consistent"
+    status: PASS
+    detail: "Ishtar, Ereškigal, Tammuz (locked Akkadian form per glossary.yaml's Dumuzi/Tammuz entry; Tammuz is permitted as the late-tradition Aramaic-biblical form retained in some 1st-millennium translations including Foster's), Ea, Apsû — all use locked glossary.yaml renderings. Dumuzi appears once in body prose at the Sumerian comparative-hook ('Dumuzi, his sister Geshtinanna') referencing the Sumerian text — permitted per glossary.yaml."
+  - check: "no-never-use-glossary-terms-in-body"
+    status: PASS
+    detail: "The 'Inanna' / 'Geshtinanna' mentions in body prose and INFERENCE markers are all explicit Sumerian-tradition citations (Sumerian *Inanna's Descent* by title; Geshtinanna as Dumuzi's sister in Sumerian-comparative context). All such mentions fall under glossary.yaml's never_use carve-out for explicit Sumerian-tradition contexts. Enki, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent."
+  - check: "canonical-chapter-anchor-present"
+    status: PASS
+    detail: "[[ch-13-descent-of-ishtar-claims]] present at line 1, unchanged."
+  - check: "original-file-unchanged"
+    status: PASS
+    detail: "chapters/13-descent-of-ishtar.claims.adoc is the immutable record of what the writer produced; chapters/13-descent-of-ishtar.claims.approved.adoc is the new file with the three light edits applied (F-1 hedge, F-2 Lapinkivi addition, F-3 ascent-list hedge) and the appended provenance comment block."
+
+notes:
+  proceed_to: "stage 14 (chapter-draft) using chapters/13-descent-of-ishtar.claims.approved.adoc as the input. Per RUNBOOK 10d, chapter-draft must NOT receive primary sources — claims are the only input."
+  recommended_sources_yaml_additions:
+    - "Lapinkivi 2010 SAACT 6 (the modern critical edition)"
+    - "eBL — electronic Babylonian Library, https://www.ebl.lmu.de/corpus/L/1/8 (modern online text resource)"
