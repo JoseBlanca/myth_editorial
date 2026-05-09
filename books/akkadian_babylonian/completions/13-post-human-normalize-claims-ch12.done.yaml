@@ -1,0 +1,66 @@
+stage: "post-human-normalize"
+chapter: 12
+slug: "first-brick"
+input: "chapters/12-first-brick.claims.adoc (round-2; superseded round-1) + chapters/12-first-brick.claims.factcheck-round2.yaml (verdict PASS)"
+output: "chapters/12-first-brick.claims.approved.adoc"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/12-first-brick.claims.approved.adoc"
+    lines: 190
+summary: |
+  Chapter 12 (The First Brick) post-human-normalize on the round-2 claims document. Round-1 factcheck returned BLOCK; round-2 brief revision and round-2 claims rewrite passed the round-2 factcheck (verdict PASS, with one LOW finding F-R2-1 and three informational notes). The approved document carries forward the round-2 claims with two minor edits applied per the round-2 factcheck:
+
+    (1) Ea first-mention gloss conformed to glossary.yaml's locked form ("god of wisdom, the freshwater Apsû, and incantation, patron of craft and cunning, father of Marduk").
+    (2) F-R2-1 minor cleanup: the "partly-Akkadianised" qualifier on Arazu was removed from the Sumerian-inheritance INFERENCE marker and from the associated COMPARATIVE-HOOK comment; Arazu is now listed alongside the other Sumerian-named craft-pantheon deities without the unverified qualifier (per the round-2 factcheck's recommended_fix option (i)).
+
+  Provenance comment block appended at the file foot recording: timestamp, edits applied, structural checks passed, and round-1/round-2 factcheck cross-references.
+findings_triage:
+  - finding_id: F-R2-1
+    kind: PRECISION
+    severity: LOW
+    disposition: ACCEPT
+    rationale: "Removed the 'partly-Akkadianised' qualifier on Arazu per round-2 factcheck recommended_fix option (i); Arazu's Akkadian/Sumerian linguistic classification is not independently verifiable from the open sources consulted, and the wider Sumerian-named-deity-inheritance claim is well-founded without the Arazu-specific gloss."
+  - finding_id: NOTE-1
+    kind: GLOSSARY-PARAPHRASE
+    severity: NOTE
+    disposition: ACCEPT
+    rationale: "Conformed Ea first-mention gloss to glossary.yaml's locked form. The round-2 claims used a paraphrase ('the wise god of the freshwater Apsû, patron of craft and cunning, father of Marduk in the wider Babylonian theology'); the locked form is 'god of wisdom, the freshwater Apsû, and incantation, patron of craft and cunning, father of Marduk'. The paraphrase dropped 'incantation' and 'wisdom' and added 'in the wider Babylonian theology' as a hedge; the conformed form restores the locked language."
+  - finding_id: NOTE-2
+    kind: ABZU-APSU-DUAL-RENDERING
+    severity: NOTE
+    disposition: PRESERVE
+    rationale: "The round-2 claims preserve the Apsû/Abzû dual-rendering convention: Apsû (Akkadian, locked glossary form) is used in body prose; Abzû is named once at the introduction of Ea's creation of the freshwater deep as 'the Sumerian form *Abzû* appears in the late-Babylonian Akkadian-Sumerian register that Lambert's translation preserves'. This treatment is correct per glossary.yaml's never_use carve-out ('abzu... permitted in the Sumerian temple name *E-abzu* and in explicit Sumerian-tradition citations'); Abzû here is in an explicit Sumerian-tradition citation (Lambert's translation of a late-Babylonian Akkadian-Sumerian register). No edit needed; the dual-rendering convention is preserved through to the chapter-draft stage."
+  - finding_id: NOTE-3
+    kind: SEAM-INTEGRITY
+    severity: NOTE
+    disposition: PRESERVE
+    rationale: "The round-2 claims preserve the round-1→round-2 revision history in a header comment block (lines 4–35), explaining the F-1, F-2, F-3 corrections and the audit-A8 page-range correction. This is consistent with the chapter 7 / chapter 10 / chapter 11 precedent of round-1→round-2 traceability in the claims document header. Preserved through to .approved.adoc."
+checks_performed:
+  - check: "one-claim-per-paragraph"
+    status: PASS
+  - check: "every-claim-footnoted"
+    status: PASS
+  - check: "evidence-tokens-syntactically-valid"
+    status: PASS
+    detail: "44 EVIDENCE tokens; all source_id values resolve to sources.yaml entries (lambert-2013, foster-2007, black-green-1992, bottero-2001, cad)."
+  - check: "markers-with-required-sub-fields"
+    status: PASS
+    detail: "3 INFERENCE markers w/ basis+risk; 1 LACUNA w/ source+scholarly_reconstruction; 1 RECONSTRUCTION w/ gap_source+fill_source+confidence; 1 VARIANT w/ primary+alt+chosen+reason."
+  - check: "glossary-renderings-consistent"
+    status: PASS
+    detail: "Marduk, Ea, Apsû (with Abzû dual-rendering carve-out per glossary.yaml never_use clause), akītu, Tiamat, Enūma Eliš — all use locked glossary.yaml renderings. Ea first-mention gloss now matches the locked form verbatim."
+  - check: "no-never-use-glossary-terms"
+    status: PASS
+    detail: "Enki, Inanna, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid — all absent from body prose."
+  - check: "canonical-chapter-anchor-present"
+    status: PASS
+    detail: "[[ch-12-first-brick-claims]] present at line 1, unchanged from the round-2 claims file."
+  - check: "original-file-unchanged"
+    status: PASS
+    detail: "chapters/12-first-brick.claims.adoc (round-2 claims) is the immutable record of what the writer produced; chapters/12-first-brick.claims.approved.adoc is the new file with normalize edits applied. The two files differ only in (a) the two minor edits applied above (Ea gloss, Arazu cleanup) and (b) the appended provenance comment block."
+notes:
+  pattern_match_with_ch07_ch10_ch11: |
+    The round-1 BLOCK / brief-revision / round-2 PASS pattern of this chapter follows the chapter 7 (Toil of Babylon) workflow precedent, with ch10 and ch11's preemptive-brief-revision-before-stage-10a precedents informing the round-1 brief revision. Chapter 7's content-model BLOCK was on a labour-rebellion vs Esagil-celebration mismatch; chapter 12's content-model BLOCK was on Ea-centred vs Marduk-centred and temple-renovation vs new-foundation. Both were resolved by brief revision plus claims rewrite, not by ad-hoc post-human-normalize patching. The post-human-normalize stage handled only the residual LOW-severity finding and minor glossary-conformance notes.
+  proceed_to: "stage 14 (chapter-draft) using chapters/12-first-brick.claims.approved.adoc as the input. Per RUNBOOK 10d, chapter-draft must NOT receive primary sources — claims are the only input."

@@ -1,0 +1,154 @@
+stage: "claims-factcheck"
+chapter: 12
+slug: "first-brick"
+round: 2
+input: "chapters/12-first-brick.claims.adoc + briefs/12-first-brick.yaml"
+output: "chapters/12-first-brick.claims.factcheck-round2.yaml"
+prior_factcheck: "chapters/12-first-brick.claims.factcheck.yaml (round 1; verdict BLOCK)"
+timestamp: "2026-05-09T06:30:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+verdict: "PASS"
+outputs:
+  - file: "chapters/12-first-brick.claims.factcheck-round2.yaml"
+findings_summary:
+  high: 0
+  medium: 0
+  low: 1     # F-R2-1: minor "partly-Akkadianised Arazu" sub-claim within an otherwise properly-hedged INFERENCE
+  notes: 3
+  supported: 13
+  silent_bridges: 0
+  fabrications: 0
+  contamination: 0
+round1_findings_resolution:
+  F-1_CONTAMINATION_HIGH: RESOLVED
+  F-2_CITATION-WRONG_HIGH: RESOLVED
+  F-3_CITATION-WRONG_HIGH: RESOLVED
+  F-4_UNVERIFIED_MEDIUM: RESOLVED
+  F-5_INFERENCE-OVER-EXTENDS_MEDIUM: RESOLVED
+  F-6_PRECISION_LOW: RESOLVED
+  F-7_CITATION-PRECISION_LOW: RESOLVED
+key_independent_sources_consulted:
+  - "chapters/12-first-brick.claims.factcheck.yaml (round 1; full text including verbatim quotes from Wikipedia s.v. Enki, Kusu, Ningishzida; Streck 2014 BSOAS review; Novotny 'Temple Building in Assyria'; DeGruyter Brill chapter landing) — re-affirmed as the round-2 evidence base for the corrected content model"
+  - "briefs/12-first-brick.yaml (round-2-revised; revision log R2-1 through R2-6 in header)"
+  - "chapters/12-first-brick.claims.adoc (round 2; 160 lines)"
+  - "completions/11-chapter-claims-ch12-round2.done.yaml (round-2 writer's completion record)"
+  - "sources.yaml (verified registry resolution for lambert-2013, foster-2007, black-green-1992, bottero-2001, cad)"
+  - "glossary.yaml (verified locked first-mention glosses for Marduk, Ea, Apsû, Tiamat, *Enūma Eliš*, *akītu*)"
+sources_NOT_directly_accessible:
+  - "Lambert 2013, *Babylonian Creation Myths*, pp. 376–383 (chapter 33, 'The First Brick') — paywalled at DeGruyter Brill, JSTOR, Project MUSE; access-restricted at Internet Archive; dokumen.pub mirror under maintenance. Round-2 verification rides on the round-1 factcheck's open-source corroboration anchors (Wikipedia + Streck + Novotny)."
+round1_to_round2_resolution_check: |
+  All round-1 findings resolved per the brief's R2-1 through R2-6
+  revisions:
+
+  R2-1 (Ea principal, not Marduk; round-1 F-1 CONTAMINATION):
+  RESOLVED. The round-2 claims foreground Ea throughout; no
+  §"Marduk as divine architect" section; Marduk appears only in
+  Ea's first-mention gloss, in explicit absence statements, and
+  in comparative observations about other dossier compositions.
+
+  R2-2 (Wider divine cast / seventeen craft-pantheon deities;
+  round-1 F-1): RESOLVED. The seventeen named deities (Kulla,
+  Ninildu, Ninsimug, Ninagal, Arazu, Guškinbanda, Ninzadim,
+  Ninkurra, Ašnan, Laḫar, Siris, Ningišzida, Ninšar, Adag,
+  Umunmutamgu, Umunmutamnag, Kusu) match the Wikipedia s.v. Enki
+  verbatim list name-for-name and role-for-role. Plus the king
+  and mankind, also in Wikipedia's verbatim summary.
+
+  R2-3 (Temple renovation, not new-temple foundation; round-1
+  F-3 CITATION-WRONG): RESOLVED. Section heading "Setting: temple
+  renovation and the *libittu maḫrītu*" (line 58); explicit
+  framing of the libittu maḫrītu as the brick recovered from the
+  existing temple's structure and reset into the new structure
+  as a continuity-marker between old and new temples (line 60);
+  lexical commentary at line 120 explicitly distinguishes the
+  "first/former brick" reading from "the inaugural brick of the
+  building".
+
+  R2-4 (Multi-witness manuscript history; round-1 F-2
+  CITATION-WRONG): RESOLVED. Multiple Late Babylonian tablets
+  (principally WVDOG 4 plate 12, with "etc." per Streck 2014)
+  plus a late Assyrian fragment, consistently described at
+  lines 51, 54, 56, 126, 128. The LACUNA, RECONSTRUCTION, and
+  VARIANT markers all reflect the multi-witness reality.
+  Single-prevalent classification retained on the
+  duplicate-vs-recensional rationale per round-1 F-2 recommended
+  fix.
+
+  R2-5 (ušumgallu removed; round-1 F-4 UNVERIFIED): RESOLVED.
+  The string "ušumgallu" does not appear anywhere in the round-2
+  claims document; the §"The ušumgallu attribute and the
+  foundation register" section is removed entirely; the
+  associated INFERENCE marker is gone.
+
+  R2-6 (Architectural-cosmogony framing hedged; round-1 F-5
+  INFERENCE-OVER-EXTENDS): RESOLVED. The COMPARATIVE-HOOK at
+  line 155 explicitly notes the divine-actor mismatch between
+  *First Brick* (Ea-centred) and *Toil of Babylon* / *Founding
+  of Eridu* (Marduk-centred); the closing-reflection INFERENCE
+  at line 153 also handles the dossier-diversity framing in a
+  way that does not assimilate *The First Brick* to a
+  Marduk-centred whole.
+
+  Round-1 LOW findings F-6 (libittu vs. libittu maḫrītu
+  precision) and F-7 (WVDOG 4 plate 12 citation precision) are
+  also RESOLVED at the round-2 rewrite stage: line 120 carries
+  the libittu maḫrītu lexical commentary with both CAD L and
+  CAD M/I cited; lines 51, 54, 126, 128 cite WVDOG 4 plate 12
+  consistently.
+new_round2_findings_summary: |
+  F-R2-1 (PRECISION, LOW): The round-2 INFERENCE marker at line
+  111 (Sumerian-named-deity inheritance) characterises Arazu as
+  "partly-Akkadianised" within an otherwise well-founded
+  linguistic-historical observation. The "partly-Akkadianised"
+  qualifier is a minor sub-claim that is not independently
+  verifiable from the open sources consulted in round 2 and is
+  not specifically flagged in the INFERENCE's risk field. Not
+  blocking; optional fix at chapter-draft stage to either drop
+  the qualifier or footnote-source it via Tallqvist or CAD A.
+recommended_downstream_action: |
+  PASS. The chapter is cleared to proceed to stage 13
+  post-human-normalize and stage 14 chapter-draft. The round-2
+  rewrite faithfully applies all round-1 corrections.
+
+  Optional cleanups at the chapter-draft stage (none blocking):
+  (i) Either drop the "partly-Akkadianised" qualifier on Arazu
+      at line 111, or preserve it with a god-list footnote
+      citing Tallqvist *Akkadische Götterepitheta* or the CAD A
+      entry on Arazu (F-R2-1 LOW).
+  (ii) The chapter-draft stage may want to either restore the
+       locked Ea first-mention gloss verbatim from glossary.yaml
+       or apply a stable shortened form (Note N-R2-2 — minor
+       paraphrase at line 73 of "god of wisdom" → "wise god"
+       and omission of "and incantation").
+  (iii) Preserve the Abzû/Apsû dual rendering convention per
+        the brief's entities_glossary at lines 113–114 (Note
+        N-R2-3): Apsû as the body-prose form; Abzû as the
+        flagged Sumerian variant when discussing the form
+        Lambert's translation preserves.
+summary: |
+  Chapter 12 (The First Brick) round-2 factcheck: VERDICT PASS.
+  All five round-1 HIGH/MEDIUM findings (F-1 CONTAMINATION /
+  Marduk-centred-reading; F-2 CITATION-WRONG / single-witness;
+  F-3 CITATION-WRONG / new-foundation; F-4 UNVERIFIED /
+  ušumgallu; F-5 INFERENCE-OVER-EXTENDS / architectural-
+  cosmogony framing) are RESOLVED. Both round-1 LOW findings
+  (F-6 libittu maḫrītu precision; F-7 WVDOG 4 plate 12
+  citation) are also RESOLVED. The round-2 rewrite faithfully
+  applies the brief's R2-1 through R2-6 content-model
+  corrections. The seventeen named craft-pantheon deities at
+  lines 91, 95, 99, 103 match Wikipedia s.v. Enki's verbatim
+  list (round-1 q3) name-for-name and role-for-role. The new
+  round-2 INFERENCE on Sumerian-named-deity inheritance (line
+  111) is properly hedged with basis-and-risk fields. The
+  single new finding F-R2-1 (LOW) is a precision concern on a
+  minor sub-claim (Arazu "partly-Akkadianised" qualifier) within
+  the otherwise well-founded Sumerian-inheritance INFERENCE; it
+  is not blocking and can be addressed optionally at the
+  chapter-draft stage. Source-id resolution: lambert-2013,
+  foster-2007, black-green-1992, bottero-2001, cad all resolve;
+  Streck 2014 and Novotny 2010 are correctly named-but-flagged.
+  Glossary compliance: Marduk, Ea, Apsû, Tiamat, *Enūma Eliš*,
+  *akītu* all carry their locked renderings. Out-of-scope
+  handling: PASS. The chapter is cleared to proceed to stage 13
+  post-human-normalize and stage 14 chapter-draft.

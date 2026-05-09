@@ -3,81 +3,165 @@ slug: "first-brick"
 title: "The First Brick"
 chapter_anchor: "ch-12-first-brick"
 
+# Brief revised 2026-05-09 (round 1), before stage 10a, on the basis of
+# preemptive Lambert 2013 TOC verification (DeGruyter Brill chapter
+# landing; resolves audit finding A8). The original brief carried one
+# upstream error:
+# (1) wrong Lambert 2013 page range — locked as pp. 384–386; actual
+#     range for "The First Brick" (Lambert 2013 chapter 33) is pp.
+#     376–383, verified at the DeGruyter Brill chapter landing for
+#     "The First Brick" (doi:10.1515/9781575068619-028). The original
+#     pp. 384–386 corresponds to a different chapter in the volume
+#     ("Another Dragon-Slaying Episode", per the DeGruyter Brill
+#     volume table of contents). This correction is consistent with
+#     the chapter 10 brief revision, which determined that pp. 366–375
+#     is "The Founding of Eridu" (not pp. 376–383, as the chapter 10
+#     inventory had said) and that pp. 376–383 is "The First Brick".
+# Audit finding A8 (severity MEDIUM, kind SILENT-CONFLATION) is
+# accordingly resolved at the bibliographic level: the page-range
+# discrepancy is corrected; the distinction between The First Brick
+# and The Founding of Eridu as two separate compositions in adjacent
+# sections of Lambert 2013 is preserved.
+#
+# Brief revised again 2026-05-09 (round 2), after the round-1
+# claims-factcheck returned BLOCK with three HIGH findings (F-1
+# CONTAMINATION, F-2 and F-3 CITATION-WRONG). The original brief
+# (and the round-1 brief revision) was structurally misaligned with
+# the actual content of Lambert 2013 chapter 33. The round-2
+# revisions:
+#
+# (R2-1) Principal divine actor: Ea (NOT Marduk). Verified via
+#     three independent Wikipedia articles (s.v. Enki, Kusu,
+#     Ningishzida), each footnoted to specific Lambert 2013 pages
+#     within pp. 376–381. Marduk is conspicuously absent from
+#     Lambert 2013 chapter 33.
+# (R2-2) Wider divine cast: Ea creates the Abzû and then fashions
+#     from clay seventeen further deities — Kulla (the brick-god,
+#     tasked to renovate the first brick), Ninildu, Ninsimug,
+#     Ninagal (tasked to help with the construction), Arazu,
+#     Guškinbanda, Ninzadim, Ninkurra, Ašnan, Laḫar, Siris,
+#     Ningišzida, Ninšar, Adag, Umunmutamgu, and Umunmutamnag (the
+#     last eight tasked to supply resources to mankind for regular
+#     offerings), and Kusu (tasked to perform the rites of the
+#     temple) — plus a king and mankind. The composition is a
+#     polytheistic / craft-pantheon-creation cosmogony, not a
+#     Marduk-and-Ea two-actor cosmogony.
+# (R2-3) Ritual context: TEMPLE RENOVATION (not new-temple
+#     foundation). The libittu maḫrītu ("first/former brick") is
+#     the brick recovered from the existing temple's structure
+#     during renovation, recycled into the new structure as a
+#     continuity-marker between old and new temples; not the
+#     inaugural brick of a wholly-new construction. Independently
+#     attested by Novotny "Temple Building in Assyria" for the
+#     Esarhaddon and Assurbanipal royal-inscription first-brick rite
+#     and by all three Wikipedia summaries of Lambert 2013 ch. 33.
+# (R2-4) Manuscript witnesses: NOT a single manuscript — multiple
+#     Late Babylonian tablets (principally WVDOG 4 plate 12, with
+#     "etc." per Streck 2014 BSOAS 77 [2014] 371–372 review) PLUS a
+#     late Assyrian fragment. The single-prevalent classification is
+#     retained because the late Assyrian fragment functions as a
+#     duplicate rather than a recensional variant; but the witness
+#     statement must accurately reflect plural witnesses.
+# (R2-5) ušumgallu attribute: REMOVED from the entities glossary —
+#     no accessible independent source confirms its presence in
+#     Lambert 2013 chapter 33. The Wikipedia article on Ušumgallu
+#     does not cite The First Brick; the three composition-summaries
+#     do not mention ušumgallu. Without direct Lambert 2013 access,
+#     the safer course is to omit.
+# (R2-6) Architectural-cosmogony sub-corpus framing: HEDGED. The
+#     three compositions (First Brick, Toil of Babylon, Founding of
+#     Eridu) differ in principal divine actor — First Brick is
+#     Ea-centred, while Founding of Eridu and Toil of Babylon are
+#     Marduk-centred. The unifying thread is "construction-as-
+#     cosmogony" only at the broadest typological level; the
+#     editorial grouping reflects modern thematic categorisation,
+#     not ancient compositional intent or divine-actor coherence.
+#
+# See chapters/12-first-brick.claims.factcheck.yaml for the full
+# round-1 factcheck findings (verdict: BLOCK; HIGH findings F-1, F-2,
+# F-3; MEDIUM findings F-4, F-5; LOW findings F-6, F-7).
+
 sources:
   primary:
     - id: lambert-2013
-      loc: "pp. 384–386 (text, translation, and commentary; page range to be spot-checked per audit finding A8)"
+      loc: "pp. 376–383 (text, translation, and commentary; Lambert 2013 chapter 33 — corrected from inventory's pp. 384–386 per audit finding A8 resolution; verified at DeGruyter Brill chapter landing doi:10.1515/9781575068619-028)"
       translator_edition: "Lambert 2013 — sole modern critical edition"
       identifier: "ISBN 9781575062471"
       url_or_file: ~
   secondary:
-    - { id: black-green-1992, loc: "s.v. brick, foundation rituals, Marduk" }
-    - { id: bottero-2001, loc: "passim — temple-foundation cult and royal piety" }
-    - { id: foster-2007, loc: "passim — late-Babylonian cosmogonic dossier" }
+    - { id: black-green-1992, loc: "s.v. Ea, Enki, Kulla, brick, foundation rituals, craft pantheon" }
+    - { id: bottero-2001, loc: "passim — temple-foundation cult, temple-renovation ritual, royal piety" }
+    - { id: foster-2007, loc: "passim — late-Babylonian cosmogonic dossier and incantation literature" }
 
 lacunae:
   - source: lambert-2013
-    location: "Single late-Babylonian manuscript, partial breaks"
-    what_is_missing: "Several lines damaged; the precise sequence of divine action in laying the first brick is partly reconstructed."
-    in_tradition_fills_available: "no — single manuscript; no parallel witnesses."
+    location: "Late Babylonian manuscript witnesses (principally WVDOG 4 plate 12, with additional Late Babylonian tablets per Streck 2014 BSOAS review's 'etc.') plus a late Assyrian fragment; partial breaks"
+    what_is_missing: "Several lines damaged across the witnesses; the precise sequence of Ea's clay-creation of the seventeen craft-pantheon deities and the king and mankind, and the sequence of the renovation labour assignments, is partly reconstructed. The Late Assyrian fragment provides limited cross-witness control for some passages."
+    in_tradition_fills_available: "limited — multiple Late Babylonian witnesses plus a late Assyrian fragment provide internal cross-witness control; Lambert 2013's edition collates them into a single composite reading."
 
 variants:
   classification: single-prevalent
   prevalent_version:
     source: lambert-2013
-    why_prevalent: "Single late-Babylonian manuscript; Lambert 2013 establishes the only modern edition."
+    why_prevalent: "Multiple Late Babylonian witnesses (WVDOG 4 plate 12, etc.) and a late Assyrian fragment all attest the same composition; the witnesses function as duplicates of a single recension rather than as recensional variants. Lambert 2013 establishes the only modern edition."
   alternates: []
 
 entities_glossary:
-  - name: "Marduk"
-    role: deity
-    first_mention_gloss_candidate: "Babylonian patron god; here, the divine architect of the first brick"
   - name: "Ea"
     role: deity
-    first_mention_gloss_candidate: "wise god of fresh waters and craft; associated with foundational construction"
-  - name: "the First Brick (libittu)"
+    first_mention_gloss_candidate: "wise god of the freshwater Apsû, patron of craft and cunning, father of Marduk; here, the principal creator deity who fashions the Abzû and creates the seventeen craft-pantheon deities, the king, and mankind"
+  - name: "Abzû"
+    role: cosmic-place
+    first_mention_gloss_candidate: "the cosmic freshwater deep beneath the earth, dwelling of Ea; rendered in Akkadian as Apsû in body prose per glossary.yaml; Abzû reflects the Sumerian form preserved in Lambert 2013's translation of this Late Babylonian composition"
+  - name: "Kulla"
+    role: deity
+    first_mention_gloss_candidate: "the brick-god created by Ea from clay; tasked in The First Brick with renovating the first brick (libittu maḫrītu); the divine artisan of the brick-laying labour"
+  - name: "the craft pantheon (Ninildu, Ninsimug, Ninagal; Arazu, Guškinbanda, Ninzadim, Ninkurra, Ašnan, Laḫar, Siris, Ningišzida, Ninšar, Adag, Umunmutamgu, Umunmutamnag; Kusu)"
+    role: deity-collective
+    first_mention_gloss_candidate: "the seventeen named craft-pantheon deities created by Ea from clay alongside Kulla; tasked variously with construction (Ninildu, Ninsimug, Ninagal), with supplying resources to mankind for regular offerings (Arazu through Umunmutamnag), and with performing the rites of the temple (Kusu, addressed as 'chief priest of the great gods')"
+  - name: "the first brick (libittu maḫrītu)"
     role: artifact
-    first_mention_gloss_candidate: "the primal brick whose laying inaugurates temple foundation; cosmic prototype for all bricks"
-  - name: "ušumgallu"
-    role: ritual-term
-    first_mention_gloss_candidate: "great-dragon attribute; sometimes invoked in foundation rites"
+    first_mention_gloss_candidate: "the libittu maḫrītu — 'first/former brick' — the brick recovered from the existing temple's structure during renovation, recycled into the new structure; the cosmogonic-typological object that bridges old and new temples in the temple-renovation cycle"
 
 cultural_relevance:
   centrality: marginal
   centrality_evidence:
     - kind: attestation-volume
-      detail: "Single late-Babylonian manuscript; no liturgical or recensional footprint beyond this tablet."
-      source: "lambert-2013, p. 384"
+      detail: "Multiple Late Babylonian tablets (principally WVDOG 4 plate 12, with additional witnesses per Streck 2014 BSOAS) plus a late Assyrian fragment; modest liturgical footprint within the temple-renovation ritual context."
+      source: "lambert-2013, p. 376; Streck 2014 BSOAS 77 (2014) 371–372"
     - kind: ritual-context
-      detail: "The composition is embedded in foundation-ritual context; it grounds the act of brick-making in divine inheritance."
-      source: "lambert-2013, pp. 384–386 (commentary)"
+      detail: "The composition is a building incantation embedded in the temple-RENOVATION ritual context; it grounds the renovation of brick-by-brick by tracing the labour-force back to Ea's divine creation of the seventeen craft-pantheon deities."
+      source: "lambert-2013, pp. 376–383; Wikipedia summaries of Lambert 2013 ch. 33 (s.v. Enki, Kusu, Ningishzida) for the temple-renovation context"
     - kind: scholarly-attention
-      detail: "Marginal individually; significant in the cosmogonic dossier as one of the texts foregrounding ritual-architectural cosmogony."
-      source: "lambert-2013, pp. 384–386"
+      detail: "Marginal individually; significant within the late-Babylonian cosmogonic dossier as a polytheistic / craft-pantheon-creation cosmogony — Ea-centred rather than Marduk-centred — that complements the more famous Marduk-centred compositions of the dossier."
+      source: "lambert-2013, pp. 376–383; foster-2007, passim"
   function:
     - role: ritual-aetiological
-      basis: "Etiological narrative for the act of brick-laying in temple foundation, framing the act as inherited from the gods."
-      source: "lambert-2013, pp. 384–386"
+      basis: "Etiological narrative for the temple-renovation labour-force: Ea creates from clay the seventeen craft-pantheon deities who perform the renovation; the human practitioners of temple-renovation ritual recapitulate the divine labour-force established at creation."
+      source: "lambert-2013, pp. 376–383"
     - role: cosmological
-      basis: "Imagines temple foundation as cosmogonic act; the first brick is a microcosm of cosmic establishment."
+      basis: "Cosmogony as the establishment of a divine-craft labour-force: Ea fashions the Abzû, then creates from clay the divine artisans who maintain the cosmic and architectural order through their craft."
       source: "lambert-2013 (commentary)"
   cross_cultural_parallels:
     - other_culture: "Hebrew Bible"
-      parallel: "Job 38:6 — God laying the cornerstone of the earth; similar imagery of foundational construction by the deity."
-      source: "lambert-2013 (commentary)"
+      parallel: "Job 38:6 'who laid the cornerstone' shares the imagery of cosmogony as architectural construction; the parallel is typological (cosmogony-as-construction is a wider ancient Near Eastern pattern), not transmissional. Reserved for the influences chapter."
+      source: "general typological observation"
     - other_culture: "Egyptian"
-      parallel: "Egyptian foundation-deposit rituals trace temple foundation to divine archetypes; comparable ritual-cosmogonic logic."
-      source: "lambert-2013 (commentary)"
+      parallel: "Egyptian temple-renovation rituals likewise traced architectural acts to divine archetypes; the libittu maḫrītu concept (continuity-brick recovered from the old temple) has Egyptian functional analogues in foundation-deposit rituals. Reserved for the influences chapter."
+      source: "general typological observation"
     - other_culture: "Akkadian (internal)"
-      parallel: "Pairs naturally with the Toil of Babylon (chapter 7) and the Founding of Eridu (chapter 10); together these texts show late-Babylonian interest in the divine origin of architectural foundation."
-      source: "lambert-2013"
+      parallel: "Pairs at the typological level with the Toil of Babylon (chapter 7) and the Founding of Eridu (chapter 10) as compositions in which architectural acts are framed cosmogonically; but note that First Brick is Ea-centred (with a craft pantheon), Founding of Eridu is Marduk-centred (city-and-rivers cosmogony), and Toil of Babylon is Marduk-centred (labour-rebellion / divine-alienation register). The three compositions share 'construction-as-cosmogony' at the broadest typological level only; their principal divine actors and ritual contexts differ."
+      source: "lambert-2013, pp. 281–401 (the late-Babylonian Marduk-cosmogonic dossier collected); chapter 10 brief; chapter 7 brief"
 
 comparative_hooks:
   - other_culture: "Akkadian (internal)"
-    parallel: "Toil of Babylon, Founding of Eridu, and First Brick form a sub-corpus of foundation-cosmogony texts; together they show the late-Babylonian theology of construction-as-cosmogony."
+    parallel: "First Brick (Ea-centred craft-pantheon-creation for temple renovation), Founding of Eridu (Marduk-centred city-and-rivers cosmogony for temple incantation), and Toil of Babylon (Marduk-centred labour-rebellion / divine-alienation composition) form a typological grouping at the level of construction-as-cosmogony. The grouping is editorial; the principal divine actors and ritual contexts differ. The grouping shows the late-Babylonian dossier's range of registers when architectural acts are theologically loaded."
     source: "lambert-2013"
   - other_culture: "Hebrew Bible"
-    parallel: "Job 38:6 'where were you when I laid the foundations of the earth?' shares the cosmogonic-foundation imagery."
+    parallel: "Job 38:6 'where were you when I laid the foundations of the earth?' shares the cosmogony-as-architectural-construction imagery."
+    source: "lambert-2013"
+  - other_culture: "Mesopotamian (internal — Sumerian background)"
+    parallel: "The seventeen craft-pantheon deities created by Ea in The First Brick are largely Sumerian-named deities (Kulla, Ninildu, Ninsimug, Ninagal, Guškinbanda, Ningišzida, etc.); the composition shows the late-Babylonian preservation of Sumerian-named divine craftsmen within an Akkadian-language theological framework. Reserved for the influences chapter."
     source: "lambert-2013"
 
 triangulation_databases:
@@ -87,4 +171,10 @@ triangulation_databases:
 target_length_words: 1200
 
 special_instructions: |
-  Short composition (800–2000 words). Single late-Babylonian manuscript = single-prevalent. Audit finding A8 flagged the Lambert 2013 page range for spot-checking before chapter-claims — preserve this note. The text is a discrete composition (per Lambert 2013's chapter arrangement, cleared by audit A8); do NOT conflate with the Founding of Eridu. The brick-foundation theme is best framed as part of the architectural-cosmogony sub-corpus alongside Toil of Babylon and Founding of Eridu. Mark all reconstructions; the manuscript's brokenness should be transparent. The chapter is the closing piece of the cosmogonic cycle in the book — provide a brief summative reflection on how the cosmogonic dossier has shown the diversity of Babylonian creation thought beyond the dominant Enūma Eliš.
+  Short composition (800–2000 words). The composition is preserved on multiple Late Babylonian witnesses (principally WVDOG 4 plate 12, with additional witnesses per Streck 2014 BSOAS) plus a late Assyrian fragment; classified single-prevalent because the witnesses function as duplicates of a single recension. Audit finding A8 (page-range spot-check) is resolved at the bibliographic level by the 2026-05-09 round-1 brief revision: Lambert 2013 chapter 33 = pp. 376–383.
+
+  PRINCIPAL CONTENT MODEL (round-2-revised): The First Brick is an Ea-centred polytheistic / craft-pantheon-creation cosmogony embedded in a temple-RENOVATION incantation. Ea creates the Abzû and then fashions from clay seventeen named craft-pantheon deities (Kulla and the rest), plus a king and mankind, who together perform the temple-renovation labour. Marduk is NOT in the composition; do not import Marduk-centred framing from the wider late-Babylonian dossier. The libittu maḫrītu ("first/former brick") is the brick recovered from the existing temple during renovation and recycled into the new structure — a continuity-marker between old and new temples, not the inaugural brick of a wholly-new construction.
+
+  The text is a discrete composition (per Lambert 2013's chapter arrangement, cleared by audit A8); do NOT conflate with the Founding of Eridu. The brick-renovation theme can be framed at the level of typology with Toil of Babylon and Founding of Eridu as compositions in which architectural acts are cosmogonically loaded, but the chapter must explicitly note the divine-actor difference (First Brick is Ea-centred; the other two are Marduk-centred). Do not present the three compositions as a unified Marduk-cosmogonic sub-corpus.
+
+  Mark all reconstructions; the manuscript's brokenness should be transparent. The chapter is the closing piece of the cosmogonic cycle in the book — provide a brief summative reflection on how the cosmogonic dossier has shown the diversity of Babylonian creation thought beyond the dominant Enūma Eliš, with First Brick contributing the polytheistic / craft-pantheon-creation register that complements the more familiar Marduk-centred compositions.

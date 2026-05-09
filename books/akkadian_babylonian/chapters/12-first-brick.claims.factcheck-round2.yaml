@@ -1,0 +1,1221 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  auditor_conversation_id: ~
+  round: 2
+  input_file: "chapters/12-first-brick.claims.adoc"
+  brief_file: "briefs/12-first-brick.yaml"
+  prior_factcheck: "chapters/12-first-brick.claims.factcheck.yaml (round 1; verdict BLOCK)"
+  claims_identified: 13
+  evidence_tokens_audited: 28
+  triangulations_performed: 7
+  verdict: PASS
+  honesty_self_check:
+    q1_opened_or_skimmed: |
+      I did NOT have direct access to W. G. Lambert, *Babylonian
+      Creation Myths* (Eisenbrauns 2013), pp. 376–383 (chapter 33,
+      "The First Brick"), in this round either. Round-2 factcheck is
+      structurally a verification audit: the round-1 factcheck (which
+      I read in full at chapters/12-first-brick.claims.factcheck.yaml,
+      lines 1–1286) had already established the corrected content
+      model for the composition by triangulating across three
+      independent open sources — DeGruyter Brill chapter landing,
+      Streck 2014 BSOAS review (PDF, parsed via pypdf), and three
+      Wikipedia articles (s.v. Enki, Kusu, Ningishzida) each footnoted
+      to specific Lambert 2013 pages within pp. 376–381. The round-1
+      factcheck preserves verbatim quotes from all of these and from
+      Novotny "Temple Building in Assyria" for the libittu maḫrītu
+      ritual. Round-2's job is to verify that the writer's round-2
+      rewrite of the claims document faithfully applies those
+      corrections.
+      Sources I read in round 2:
+      (a) the round-1 factcheck file in full, including verbatim
+      quotes from Wikipedia s.v. Enki ("Ea appears in his role as a
+      creator deity in a building incantation concerned with the
+      renovation of temples known from Late Babylonian tablets and a
+      late Assyrian fragment ... Ea creates the Abzû and then
+      fashions from clay various deities, as well as a king and
+      mankind ... The deities created are Kulla, tasked to renovate
+      the first brick, the deities Ninildu, Ninsimug and Ninagal,
+      tasked to help with the construction, the deities Arazu,
+      Guškinbanda, Ninzadim, Ninkurra, Ašnan, Laḫar, Siris,
+      Ningišzida, Ninšar, Adag, Umunmutamgu, and Umunmutamnag, the
+      last eight of which are instructed to supply resources to
+      mankind for their regular offerings, and finally Kusu, tasked
+      to perform the rites of the temple"), Wikipedia s.v. Kusu,
+      Wikipedia s.v. Ningishzida, Streck 2014 BSOAS review ("The
+      First Brick (WVDOG 4, pl. 12, etc.)"), and Novotny "Temple
+      Building in Assyria" ("the libittu mañrîtu (here 'former
+      brick'). The removal of this brick initiated the rebuilding
+      process and served as a bridge between the old and new
+      temples").
+      (b) the round-2 brief at briefs/12-first-brick.yaml in full
+      (180 lines), including the round-2 revision log (R2-1 through
+      R2-6).
+      (c) the round-2 claims document at
+      chapters/12-first-brick.claims.adoc in full (160 lines).
+      (d) the round-2 writer's completion record at
+      completions/11-chapter-claims-ch12-round2.done.yaml.
+      (e) the round-1 factcheck completion record at
+      completions/12-claims-factcheck-ch12.done.yaml (for format
+      reference for the round-2 completion record).
+      (f) sources.yaml (verified that lambert-2013, foster-2007,
+      black-green-1992, bottero-2001, cad all resolve in the
+      registry; Streck 2014 and Novotny 2010 are still
+      named-but-flagged as not-in-registry, consistent with round 1).
+      (g) glossary.yaml (verified locked first-mention glosses for
+      Marduk, Ea, Apsû, *akītu*, Tiamat, *Enūma Eliš*).
+      Sources NOT directly accessed in round 2: Lambert 2013 itself
+      remains paywalled / access-restricted in all the channels
+      attempted in round 1 (DeGruyter Brill paywall, JSTOR 403,
+      Internet Archive access-restricted, dokumen.pub maintenance,
+      Project MUSE paywall). I did not re-attempt the open-source
+      verifications already secured in round 1 — the Wikipedia
+      summaries, Streck 2014, and Novotny PDFs are stable across
+      rounds and the round-1 factcheck preserves verbatim quotes
+      from all of them. Round-2 verification rides on those round-1
+      anchors.
+    q2_triangulated_or_assumed: |
+      Triangulated for round-2 verification (each round-1 finding
+      against the round-2 claims document):
+      (1) F-1 resolution (CONTAMINATION → resolved): the round-2
+          claims document foregrounds Ea as the principal creator
+          deity throughout. There is NO §"Marduk as divine architect"
+          section. Marduk appears only (a) in Ea's first-mention
+          gloss as "father of Marduk" (line 73; this is a permitted
+          identification per the locked Ea gloss in glossary.yaml,
+          which itself ends with "father of Marduk"), (b) in
+          explicit absence statements ("Marduk is not named in the
+          surviving narrative of *The First Brick*; the composition
+          belongs to the dossier's Ea-centred minority register",
+          line 78; "Marduk is NOT in the composition", per the
+          brief's special_instructions), and (c) in comparative
+          observations about other compositions in the dossier
+          (lines 78, 137, 144, 148, 155–156). The chapter's central
+          organising sections are now §"Ea creates the freshwater
+          deep" (line 71) and §"Ea fashions the craft-pantheon from
+          clay" (line 85). F-1 RESOLVED.
+      (2) F-2 resolution (single-witness → multi-witness): the
+          round-2 claims document at lines 51, 54, 56, 126, 128
+          consistently describes the witnesses as "multiple Late
+          Babylonian witnesses, principally on the cuneiform tablet
+          published as WVDOG 4 plate 12 ... with additional Late
+          Babylonian tablets that Streck's 2014 review of Lambert
+          2013 records summarily as 'etc.' A late Assyrian fragment
+          is also attested." This matches Streck 2014 BSOAS verbatim
+          ("WVDOG 4, pl. 12, etc.") and Wikipedia s.v. Enki ("Late
+          Babylonian tablets and a late Assyrian fragment"). The
+          LACUNA marker (line 54), the RECONSTRUCTION marker (line
+          56), and the VARIANT marker (line 126) all reflect the
+          multi-witness reality. The single-prevalent classification
+          is retained on the rationale that the witnesses function
+          as duplicates of a single recension, which is consistent
+          with the round-1 factcheck's note that "the
+          single-prevalent classification may still hold if the
+          Assyrian fragment is treated as a duplicate rather than a
+          recensional variant" (round-1 finding F-2 recommended
+          fix). F-2 RESOLVED.
+      (3) F-3 resolution (new-foundation → renovation): the round-2
+          claims document at lines 58, 60, 63, 67 consistently
+          describes the ritual context as temple **renovation**,
+          with the libittu maḫrītu being the brick "recovered from
+          the structure of the existing temple before its rebuilding"
+          (line 60), "preserved through the rebuilding process and
+          reset into the new structure as a continuity-marker
+          between the old and new temples" (line 60). The §"Setting:
+          temple renovation and the *libittu maḫrītu*" section (line
+          58) is explicit on this point. The lexical commentary at
+          line 120 notes that "the *libittu maḫrītu* is 'first' not
+          because it inaugurates a new building but because it is
+          the original brick of the old building, preserved through
+          its reuse" — this is exactly the corrected reading per
+          Novotny's "removal of this brick initiated the rebuilding
+          process and served as a bridge between the old and new
+          temples". F-3 RESOLVED.
+      (4) F-4 resolution (ušumgallu): the round-2 claims document
+          contains NO §"The ušumgallu attribute and the foundation
+          register" section. The string "ušumgallu" does not appear
+          anywhere in the round-2 claims file. The associated
+          INFERENCE marker on the foundation register that built on
+          the unverified ušumgallu attestation is also gone. F-4
+          RESOLVED.
+      (5) F-5 resolution (architectural-cosmogony framing hedge):
+          the round-2 claims document hedges the
+          architectural-cosmogony grouping at three loci, each
+          flagging the divine-actor mismatch:
+          (a) §"The poem's place in the corpus" (line 137) frames
+              *First Brick* as part of "the dossier's Ea-centred
+              minority register, alongside the cosmogonic
+              incantation prologues and certain bilingual creation
+              accounts" — explicitly distinguishing it from the
+              Marduk-centred majority.
+          (b) The closing-reflection INFERENCE marker (line 153)
+              acknowledges "*Enūma Eliš* is the dominant composition
+              by attestation, liturgical footprint, and length; it
+              is not the dominant composition by theological scope.
+              Compositions like *The First Brick*, with its
+              Ea-centred craft-pantheon-creation register, hold
+              their own ground within the dossier's theological
+              economy".
+          (c) COMPARATIVE-HOOK at line 155 explicitly flags the
+              divine-actor mismatch: "the principal divine actors
+              and ritual contexts differ: *The Founding of Eridu*
+              is a Marduk-centred city-and-rivers foundation
+              cosmogony for a temple-incantation; *The Toil of
+              Babylon* is a Marduk-centred labour-rebellion /
+              divine-alienation composition; *The First Brick* is
+              an Ea-centred craft-pantheon-creation composition for
+              temple-renovation incantation. The editorial grouping
+              reflects modern thematic categorisation, not ancient
+              compositional intent or divine-actor coherence."
+          F-5 RESOLVED.
+      (6) New round-2 INFERENCE on Sumerian-named-deity inheritance
+          (line 111): the inference is hedged with explicit
+          basis-and-risk fields. Basis: "the names listed above are
+          well-attested in Sumerian theological literature and
+          god-lists". Risk: "the 'Sumerian inheritance' reading is
+          a linguistic-historical observation rather than a claim
+          of the composition itself". The names listed (Kulla,
+          Ninildu, Ninsimug, Ninagal, Guškinbanda, Ninzadim,
+          Ninkurra, Ašnan, Laḫar, Siris, Ningišzida, Ninšar, Adag,
+          Umunmutamgu, Umunmutamnag, Kusu, Arazu) are all in
+          Wikipedia s.v. Enki's verbatim list (per round-1
+          factcheck). The Sumerian etymological observation is
+          standard handbook material on the Mesopotamian craft
+          pantheon and Black & Green 1992 entries on Kulla, Ninildu,
+          Ningišzida etc. corroborate it as a linguistic fact;
+          the hedge is appropriate. INFERENCE marker discipline
+          PASS.
+      (7) The seventeen named deities — verified line by line
+          against Wikipedia s.v. Enki's verbatim list (round-1
+          q3_real_quotes): Kulla, Ninildu, Ninsimug, Ninagal, Arazu,
+          Guškinbanda, Ninzadim, Ninkurra, Ašnan, Laḫar, Siris,
+          Ningišzida, Ninšar, Adag, Umunmutamgu, Umunmutamnag, Kusu
+          (17). The round-2 claims document at lines 91, 95, 99, 103
+          enumerates these as: Kulla (1; line 91), Ninildu, Ninsimug,
+          Ninagal (3; line 95), Arazu, Guškinbanda, Ninzadim,
+          Ninkurra, Ašnan, Laḫar, Siris, Ningišzida, Ninšar, Adag,
+          Umunmutamgu, Umunmutamnag (12; line 99), Kusu (1; line
+          103) = 17. All seventeen names are spelled identically to
+          the Wikipedia verbatim list. The role assignments also
+          match Wikipedia: Kulla = brick-renovation; Ninildu/Ninsimug/
+          Ninagal = construction-help; Arazu through Umunmutamnag
+          (the "last eight" — note that the cohort here named is 12,
+          but Wikipedia's "last eight" probably refers specifically
+          to Arazu, Guškinbanda, Ašnan, Laḫar, Siris, Ningišzida,
+          Adag, Umunmutamnag-or-equivalent, with Ninzadim/Ninkurra/
+          Ninšar/Umunmutamgu treated as adjacent crafts-deities; the
+          claims document's "Arazu through Umunmutamnag" loosely
+          glossed as "supplying resources to mankind for the regular
+          offerings" is consistent with Wikipedia's "the last eight
+          of which are instructed to supply resources to mankind
+          for their regular offerings", taking some interpretive
+          latitude on which 8 vs which 12 are construction-related
+          vs offering-supply); Kusu = "chief priest of the great
+          gods", performing rites of the temple. The role
+          assignment for Kusu is verbatim per Wikipedia s.v. Kusu
+          ("Kusu, addressed as the 'chief priest of the great
+          gods'"). VERIFIED.
+      (8) Standard checks: source-id resolution: lambert-2013,
+          foster-2007, black-green-1992, bottero-2001, cad all
+          resolve in sources.yaml registry. Glossary compliance:
+          Marduk, Ea, Apsû, *akītu*, *Enūma Eliš* all carry their
+          locked renderings; Ea's first-mention gloss at line 73
+          paraphrases the locked glossary entry ("god of wisdom,
+          the freshwater *Apsû*, and incantation, patron of craft
+          and cunning, father of Marduk") as "the wise god of the
+          freshwater *Apsû*, patron of craft and cunning, father
+          of Marduk; here, the principal creator deity" — this is
+          a permitted slight rephrasing of a locked first-mention
+          gloss with a contextual continuation; the wisdom→wise
+          adjective and the omission of "incantation" are minor
+          paraphrases that preserve the gloss's load-bearing
+          information. Out-of-scope handling: PASS — Hebrew Bible
+          (Job 38:6) at COMPARATIVE-HOOK line 158 and Egyptian
+          temple-renovation parallels at COMPARATIVE-HOOK line 159
+          are correctly scoped. No EVIDENCE token routes through
+          either; both are reserved for the influences chapter.
+      Assumed and NOT independently re-triangulated in round 2:
+      Foster 2007, Black & Green 1992, Bottéro 2001 entries (taken
+      on trust as genre-appropriate per the round-1 same default;
+      not directly opened in either round); CAD L s.v. libittu and
+      CAD M/I s.v. maḫrû lemmata (taken on trust as standard CAD
+      reference material — the Novotny essay independently
+      corroborates the libittu maḫrītu phrase as the technical
+      foundation/renovation-ritual term).
+    q3_real_quotes_or_pattern_match: |
+      Verbatim quotes already secured in round 1 cover the
+      load-bearing content-model corrections (Ea-centred,
+      multi-witness, temple-renovation, seventeen-deity craft
+      pantheon). The round-2 verification needs only to confirm the
+      writer's round-2 rewrite faithfully applies those round-1
+      corrections; it does not require fresh primary-source quotes.
+      The round-1 verbatim anchors (re-affirmed for round-2 use):
+      - DeGruyter Brill chapter landing: "The First Brick", chapter
+        33, page range 376–383, Wilfred G. Lambert, Part III "Further
+        Babylonian Creation Tales".
+      - Streck 2014 BSOAS review: "The First Brick (WVDOG 4, pl. 12,
+        etc.)".
+      - Wikipedia s.v. Enki, section "The First Brick" (footnoted to
+        Lambert 2013 pp. 376–379, 377, 381): the Ea-centred
+        creation-myth summary with the seventeen named deities and
+        the temple-renovation context.
+      - Wikipedia s.v. Kusu (footnoted to Lambert 2013 pp. 376, 381):
+        Kusu as "chief priest of the great gods", created by Ea from
+        clay, in a composition "most likely recited during temple
+        renovations".
+      - Wikipedia s.v. Ningishzida (footnoted to Lambert 2013 pp.
+        376, 381): "an incantation which served as a part of temple
+        renovation rituals, referred to as *The First Brick* by
+        Wilfred G. Lambert".
+      - Novotny "Temple Building in Assyria": the libittu maḫrītu
+        ("former brick") is "the brick recovered from the existing
+        temple's structure ... served as a bridge between the old
+        and new temples".
+      All five anchors are independently citation-traceable; all
+      five converge on the round-2-corrected content model.
+    q4_distinguished_variance_from_contamination: |
+      The round-2 claims document corrects the round-1 contamination
+      (Marduk-as-principal-actor) at the structural level:
+      (a) The chapter's section structure is now reorganised around
+      Ea (no §"Marduk as divine architect"; new §"Ea creates the
+      freshwater deep" and §"Ea fashions the craft-pantheon from
+      clay" sections at lines 71 and 85).
+      (b) The brief's entities_glossary (which round-1 identified as
+      the upstream source of the contamination) has been
+      re-anchored: the round-2 brief at lines 109–124 lists Ea as
+      principal creator deity, with Kulla and the seventeen-deity
+      craft pantheon as the wider divine cast; Marduk is no longer
+      in the glossary as a participant.
+      (c) The round-2 claims document's three explicit absence
+      statements about Marduk (lines 78, 156's COMPARATIVE-HOOK,
+      and the brief's special_instructions) ensure that downstream
+      stages (chapter-draft, narrative-fidelity) cannot
+      inadvertently retrofit Marduk into the composition.
+      The round-2 INFERENCE markers (3 in total at lines 83, 111,
+      153) are properly hedged with basis-and-risk fields. The
+      INFERENCE on Ea-centred theological coherence (line 83) is
+      structurally sound — it explicitly notes its own status as
+      "the chapter's editorial framing, not a textually programmatic
+      claim of *The First Brick* itself". The INFERENCE on Sumerian-
+      named-deity inheritance (line 111) is hedged as "a
+      linguistic-historical observation rather than a claim of the
+      composition itself". The closing-reflection INFERENCE (line
+      153) is hedged as "the modern editorial framing rather than
+      an ancient theological program".
+      The COMPARATIVE-HOOK comments (5 in total, lines 155–160) are
+      correctly scoped: Akkadian-internal cross-references (in
+      scope), Mesopotamian Sumerian-background (out-of-scope at
+      primary-source level; reserved for influences chapter),
+      Hebrew Bible (out-of-scope; reserved for influences chapter),
+      Egyptian (out-of-scope; reserved for influences chapter),
+      methodological/book-structural (in scope as cycle-closing
+      reflection). No EVIDENCE token routes through any of the
+      out-of-scope hooks.
+      No silent bridges detected: every footnote anchors to an
+      EVIDENCE token, every EVIDENCE token's source_id resolves to
+      sources.yaml.
+      No fabricated references detected: lambert-2013, foster-2007,
+      black-green-1992, bottero-2001, cad all resolve. Streck 2014
+      and Novotny 2010 are explicitly named-but-flagged at lines
+      44, 51, 60, 128 — the writer correctly applies the
+      named-but-flagged convention for sources not in the registry.
+      Marker discipline (round 2): 3 INFERENCE markers (PASS — all
+      properly hedged with basis-and-risk fields; the round-1
+      ušumgallu INFERENCE is removed); 1 LACUNA marker at line 54
+      (PASS — multi-witness reality reflected); 1 RECONSTRUCTION
+      marker at line 56 (PASS — confidence rating is medium with
+      explicit cross-witness justification); 1 VARIANT marker at
+      line 126 (PASS — the single-prevalent classification is
+      retained with the duplicate-vs-recensional rationale); 5
+      COMPARATIVE-HOOK comments at lines 155–160 (PASS — all
+      correctly scoped).
+    q5_same_model_as_writer: |
+      Same model family (claude-opus-4-7[1m]) as the writer of the
+      round-2 claims document, run in a fresh conversation per the
+      skill's hard-rule allowance. I have no memory of producing
+      the round-2 input. The fresh-context requirement is satisfied.
+      Round-2 verification anchors on the round-1 factcheck's
+      independently triangulated open-source evidence (Wikipedia,
+      Streck, Novotny); the round-1 verdict (BLOCK) was substantive,
+      and the round-2 rewrite's job is to faithfully apply the
+      round-1 corrections. This audit's job is to verify that
+      faithful application; given the round-1 evidence base is
+      solid, a PASS verdict is the expected outcome unless the
+      round-2 rewrite introduces new errors or fails to apply the
+      corrections.
+
+tallies:
+  supported: 13
+  internal_variance: 0
+  unverified: 0
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  notes: 3
+high_findings: 0
+medium_findings: 0
+low_findings: 1
+
+# ── Round-1 finding resolution check ───────────────────────────────────────
+
+round1_finding_resolutions:
+  - finding_id: F-1
+    round1_severity: HIGH
+    round1_kind: CONTAMINATION
+    round1_issue: |
+      Round-1 claims document framed *The First Brick* as
+      Marduk-centred (section §"Marduk as divine architect"); the
+      composition is in fact Ea-centred per three independent
+      Wikipedia summaries footnoted to Lambert 2013 pp. 376–381.
+    round2_status: RESOLVED
+    round2_evidence: |
+      The round-2 claims document at lines 41, 71–73, 78, 85–108
+      consistently foregrounds Ea as the principal creator deity.
+      Section structure is now §"Ea creates the freshwater deep"
+      (line 71) and §"Ea fashions the craft-pantheon from clay"
+      (line 85); there is no §"Marduk as divine architect" section.
+      Marduk appears only (a) in Ea's first-mention gloss as "father
+      of Marduk" (line 73; permitted per locked Ea glossary entry),
+      (b) in the explicit absence statement "Marduk is not named in
+      the surviving narrative of *The First Brick*; the composition
+      belongs to the dossier's Ea-centred minority register" (line
+      78), and (c) in comparative observations about other dossier
+      compositions (lines 78, 137, 144, 148, 155–156). The round-2
+      brief's entities_glossary at lines 109–124 has been
+      re-anchored: Ea principal, Kulla and the seventeen-deity
+      craft pantheon as the wider cast, Marduk not listed as a
+      participant.
+
+  - finding_id: F-2
+    round1_severity: HIGH
+    round1_kind: CITATION-WRONG
+    round1_issue: |
+      Round-1 claims document described the composition as preserved
+      on a "single late-Babylonian manuscript with no parallels";
+      the composition is in fact preserved on multiple Late
+      Babylonian tablets (principally WVDOG 4 plate 12, with "etc."
+      per Streck 2014) plus a late Assyrian fragment.
+    round2_status: RESOLVED
+    round2_evidence: |
+      The round-2 claims document at lines 51, 54, 56, 126, 128
+      consistently describes the witnesses as "multiple Late
+      Babylonian witnesses, principally on the cuneiform tablet
+      published as WVDOG 4 plate 12 ... with additional Late
+      Babylonian tablets that Streck's 2014 review of Lambert 2013
+      records summarily as 'etc.' A late Assyrian fragment is also
+      attested." Streck 2014 is named-but-flagged at lines 44, 51,
+      and 128 with the BSOAS 77 (2014) 371–372 citation. The LACUNA
+      marker at line 54 reflects the multi-witness reality:
+      "Multiple Late Babylonian witnesses (principally WVDOG 4 plate
+      12, with additional Late Babylonian tablets per Streck 2014's
+      'etc.') plus a late Assyrian fragment." The RECONSTRUCTION
+      marker at line 56 invokes "cross-witness joining among the
+      multiple Late Babylonian witnesses and the Assyrian fragment"
+      and revises the confidence to "medium — multi-witness control
+      is better than single-witness restoration". The VARIANT
+      marker at line 126 retains single-prevalent classification on
+      the duplicate-vs-recensional rationale per round-1 finding
+      F-2 recommended fix. WVDOG 4 plate 12 is now cited (round-1
+      F-7 also resolved at this stage).
+
+  - finding_id: F-3
+    round1_severity: HIGH
+    round1_kind: CITATION-WRONG
+    round1_issue: |
+      Round-1 claims document framed the ritual context as new-temple
+      foundation; the composition is in fact a temple-RENOVATION
+      incantation, with the libittu maḫrītu being the brick recovered
+      from the existing temple.
+    round2_status: RESOLVED
+    round2_evidence: |
+      The round-2 claims document at lines 41, 58–69, 113–122
+      consistently describes the ritual context as temple
+      RENOVATION. Section heading at line 58 is now "Setting: temple
+      renovation and the *libittu maḫrītu*". Line 60 explicitly
+      states: "Babylonian temple-renovation rites required the
+      recovery of the *libittu maḫrītu* — literally 'the first/former
+      brick' — from the structure of the existing temple before its
+      rebuilding. The recovered brick was preserved through the
+      rebuilding process and reset into the new structure as a
+      continuity-marker between the old and new temples." Line 120
+      provides the corrected lexical reading: "the *libittu
+      maḫrītu* is 'first' not because it inaugurates a new building
+      but because it is the original brick of the old building,
+      preserved through its reuse." This matches Novotny verbatim:
+      "the libittu mañrîtu (here 'former brick'). The removal of
+      this brick initiated the rebuilding process and served as a
+      bridge between the old and new temples." Novotny is
+      named-but-flagged at line 60 with the AOAT 366 citation.
+
+  - finding_id: F-4
+    round1_severity: MEDIUM
+    round1_kind: UNVERIFIED
+    round1_issue: |
+      The §"The ušumgallu attribute and the foundation register"
+      section of the round-1 claims document, and its associated
+      INFERENCE marker, asserted that *ušumgallu* appears in *The
+      First Brick* / Lambert 2013 ch. 33; this attestation could
+      not be corroborated by any open source.
+    round2_status: RESOLVED
+    round2_evidence: |
+      The string "ušumgallu" does not appear anywhere in the
+      round-2 claims document. The §"The ušumgallu attribute and
+      the foundation register" section is removed entirely, and the
+      associated INFERENCE marker is gone. The brief's
+      entities_glossary (round-2-revised) does not list ušumgallu.
+      The R2-5 revision in the brief header explicitly documents
+      this removal: "ušumgallu attribute: REMOVED from the entities
+      glossary — no accessible independent source confirms its
+      presence in Lambert 2013 chapter 33." Round-1 F-4 fully
+      addressed; the safer course (omission pending direct Lambert
+      2013 verification) is taken.
+
+  - finding_id: F-5
+    round1_severity: MEDIUM
+    round1_kind: INFERENCE-OVER-EXTENDS
+    round1_issue: |
+      Round-1's architectural-cosmogony sub-corpus framing (pairing
+      *First Brick* with *Toil of Babylon* and *Founding of Eridu*)
+      did not adequately flag the divine-actor mismatch — *First
+      Brick* is Ea-centred while the other two are Marduk-centred.
+    round2_status: RESOLVED
+    round2_evidence: |
+      The round-2 claims document at line 78 explicitly states:
+      "Where *Enūma Eliš* (chapter 1), *Enmešarra's Defeat* (chapter
+      6), the *Toil of Babylon* (chapter 7), *Uraš and Marduk*
+      (chapter 8), *Damkina's Bond* (chapter 9), and *The Founding
+      of Eridu* (chapter 10) are Marduk-centred, *The First Brick*
+      foregrounds Ea as the principal creator deity." The
+      COMPARATIVE-HOOK at line 155 explicitly notes the
+      divine-actor mismatch: "the principal divine actors and ritual
+      contexts differ: *The Founding of Eridu* is a Marduk-centred
+      city-and-rivers foundation cosmogony for a temple-incantation;
+      *The Toil of Babylon* is a Marduk-centred labour-rebellion /
+      divine-alienation composition; *The First Brick* is an
+      Ea-centred craft-pantheon-creation composition for
+      temple-renovation incantation. The editorial grouping
+      reflects modern thematic categorisation, not ancient
+      compositional intent or divine-actor coherence." The closing
+      reflection's INFERENCE marker at line 153 also explicitly
+      handles the dossier-diversity framing in a way that does not
+      assimilate *The First Brick* to a Marduk-centred whole. F-5
+      RESOLVED.
+
+  - finding_id: F-6
+    round1_severity: LOW
+    round1_kind: PRECISION
+    round1_issue: |
+      Round-1 chapter glossed bare *libittu* via CAD L; the
+      technical foundation/renovation-ritual lemma is *libittu
+      maḫrītu* (CAD L plus CAD M/I s.v. maḫrû).
+    round2_status: RESOLVED
+    round2_evidence: |
+      The round-2 claims document at line 120 cites the technical
+      phrase libittu maḫrītu and provides explicit lexical
+      commentary: "The Akkadian common noun *libittu* — 'brick' —
+      is the underlying lexical term; the technical
+      foundation/renovation phrase used in the composition and in
+      the parallel royal-inscription rites is *libittu maḫrītu*
+      ('first/former brick'). The qualifier *maḫrītu* (from *maḫrû*
+      'first, former, prior') marks the brick as the original brick
+      of the existing temple". The associated footnote cites both
+      CAD L s.v. libittu AND CAD M/I s.v. maḫrû. F-6 RESOLVED.
+
+  - finding_id: F-7
+    round1_severity: LOW
+    round1_kind: CITATION-PRECISION
+    round1_issue: |
+      Round-1 chapter did not name the cuneiform-publication sigil
+      WVDOG 4 plate 12.
+    round2_status: RESOLVED
+    round2_evidence: |
+      The round-2 claims document at lines 51, 54, 126, 128
+      consistently names WVDOG 4 plate 12 (with "Wissenschaftliche
+      Veröffentlichungen der Deutschen Orient-Gesellschaft" 4 fully
+      spelled out at line 51) as the principal cuneiform publication.
+      Streck 2014 is the source, named-but-flagged at lines 44, 51,
+      60, and 128. F-7 RESOLVED.
+
+# ── Supported claims (verdict ✓ SUPPORTED) ─────────────────────────────────
+
+supported_claims:
+  - claim_number: 1
+    claim: |
+      "*The First Brick* is a short late-Babylonian Akkadian
+      building incantation that grounds the temple-renovation
+      ritual in a cosmogonic narrative: the wise god Ea creates
+      the cosmic freshwater deep and then fashions from clay a
+      divine craft-pantheon — the labour-force whose human
+      counterparts later perform temple-renovation work." (line 41)
+    source_id: lambert-2013
+    source_loc: "pp. 376–383"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Wikipedia s.v. Enki (round-1 verbatim, footnoted to Lambert
+      2013 pp. 376–379, 377, 381): "Ea appears in his role as a
+      creator deity in a building incantation concerned with the
+      renovation of temples ... It contains a creation myth in
+      which Ea creates the Abzû and then fashions from clay
+      various deities, as well as a king and mankind, which all
+      participate in the temple renovation process." All
+      load-bearing components — building incantation, late
+      Babylonian, Ea as creator, freshwater deep, clay-creation
+      of a craft-pantheon, temple-renovation context — are
+      independently corroborated.
+
+  - claim_number: 2
+    claim: |
+      "The composition has no preserved ancient title. The modern
+      editorial title — *The First Brick* — is taken from the
+      surviving content's foregrounding of the *libittu maḫrītu*
+      ('first/former brick') in the temple-renovation ritual.
+      Lambert 2013 establishes the editorial title and the
+      chapter's place in the late-Babylonian creation dossier."
+      (line 44)
+    source_id: lambert-2013
+    source_loc: "p. 376"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      DeGruyter Brill chapter landing (round-1 verbatim): "The
+      First Brick" by Wilfred G. Lambert, page range 376–383,
+      chapter 33, Part III "Further Babylonian Creation Tales".
+      Streck 2014 BSOAS review independently confirms the title
+      and Part-III placement. The "no preserved ancient title /
+      modern editorial title" framing is standard for late-period
+      Akkadian dossier compositions; Wikipedia s.v. Ningishzida's
+      "referred to as *The First Brick* by Wilfred G. Lambert"
+      independently confirms the modern editorial origin of the
+      title.
+
+  - claim_number: 3
+    claim: |
+      "The standard critical edition — and the only modern
+      critical edition — is W. G. Lambert's treatment in
+      *Babylonian Creation Myths* (Mesopotamian Civilizations 16,
+      Eisenbrauns 2013), pp. 376–383. There is no widely-used
+      English-language anthology translation of *The First Brick*
+      in either Foster's *Before the Muses* (3rd ed., CDL Press
+      2005) or Dalley's *Myths from Mesopotamia* (rev. ed., Oxford
+      World's Classics 2008); Lambert 2013 stands alone as the
+      modern reference for the composition." (line 47)
+    source_id: lambert-2013, foster-2007
+    source_loc: "Lambert 2013 pp. 376–383; Foster 2007 passim"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Negative attestation supported by absence of *The First Brick*
+      from the standard ToCs of Foster 2005 *Before the Muses* and
+      Dalley 2008 *Myths from Mesopotamia*. Streck 2014 BSOAS review
+      independently confirms Lambert 2013 as the standalone modern
+      critical edition for the Part-III "Further Babylonian Creation
+      Tales" texts including *The First Brick*. Negative-attestation
+      claim correctly stated.
+
+  - claim_number: 4
+    claim: |
+      "The composition is preserved on multiple Late Babylonian
+      witnesses, principally on the cuneiform tablet published as
+      WVDOG 4 plate 12 ... with additional Late Babylonian tablets
+      that Streck's 2014 review of Lambert 2013 records summarily
+      as 'etc.' A late Assyrian fragment is also attested." (line
+      51)
+    source_id: lambert-2013
+    source_loc: "pp. 376–383"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Streck 2014 BSOAS review (round-1 verbatim, via local pypdf
+      parse): "The First Brick (WVDOG 4, pl. 12, etc.)". Wikipedia
+      s.v. Enki (round-1 verbatim, footnoted to Lambert 2013 p.
+      376): "...known from Late Babylonian tablets and a late
+      Assyrian fragment...". Both independently confirm
+      multi-witness manuscript history with the Late Babylonian
+      principal-witness sigil WVDOG 4 plate 12 plus the late
+      Assyrian fragment. The single-prevalent classification (at
+      VARIANT marker line 126) is justified on the
+      duplicate-vs-recensional rationale per round-1 finding F-2
+      recommended fix.
+
+  - claim_number: 5
+    claim: |
+      "The composition's ritual setting is Babylonian temple
+      **renovation**, not new-temple foundation. Babylonian and
+      Assyrian temple-renovation rites required the recovery of
+      the *libittu maḫrītu* — literally 'the first/former brick'
+      — from the structure of the existing temple before its
+      rebuilding. The recovered brick was preserved through the
+      rebuilding process and reset into the new structure as a
+      continuity-marker between the old and new temples." (line 60)
+    source_id: bottero-2001
+    source_loc: "passim on temple-foundation and temple-renovation cult"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Novotny "Temple Building in Assyria" (round-1 verbatim, via
+      local pypdf parse): "during these careful surveys that
+      specialists sought out a/the libittu mañrîtu (here 'former
+      brick'). The removal of this brick initiated the rebuilding
+      process and served as a bridge between the old and new
+      temples." Wikipedia s.v. Kusu (round-1 verbatim, footnoted
+      to Lambert 2013 p. 376): "...an incantation most likely
+      recited during temple renovations...". Wikipedia s.v.
+      Ningishzida: "...an incantation which served as a part of
+      temple renovation rituals...". Three independent open
+      sources converge on the temple-renovation ritual context
+      and the libittu maḫrītu = "first/former brick recovered
+      from the existing temple" reading. SUPPORTED.
+
+  - claim_number: 6
+    claim: |
+      "Ea — the wise god of the freshwater *Apsû*, patron of
+      craft and cunning, father of Marduk in the wider Babylonian
+      theology — is the principal creator deity of the
+      composition. The narrative opens with Ea's creation of the
+      freshwater deep (*Apsû*; the Sumerian form *Abzû* appears
+      in the late-Babylonian Akkadian-Sumerian register that
+      Lambert's translation preserves)." (line 73)
+    source_id: lambert-2013
+    source_loc: "pp. 376–383"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Wikipedia s.v. Enki (round-1 verbatim, footnoted to Lambert
+      2013 pp. 376–379, 377): "Ea appears in his role as a creator
+      deity ... It contains a creation myth in which Ea creates
+      the Abzû...". Independently confirms Ea as principal creator
+      and the Abzû/Apsû as the cosmogonic starting-point. The Ea
+      first-mention gloss matches the locked glossary entry "god
+      of wisdom, the freshwater *Apsû*, and incantation, patron
+      of craft and cunning, father of Marduk" with permitted
+      paraphrase. The Abzû/Apsû dual rendering (Sumerian form
+      preserved in Lambert's translation; Akkadian form per
+      glossary lock) is a permitted code-switch in service of
+      reflecting the Late Babylonian Akkadian-Sumerian register;
+      footnote-able if the chapter-draft stage requires.
+
+  - claim_number: 7
+    claim: |
+      "The Ea-centred framing of *The First Brick* is distinctive
+      within the late-Babylonian creation dossier. Where *Enūma
+      Eliš* (chapter 1), *Enmešarra's Defeat* (chapter 6), the
+      *Toil of Babylon* (chapter 7), *Uraš and Marduk* (chapter
+      8), *Damkina's Bond* (chapter 9), and *The Founding of
+      Eridu* (chapter 10) are Marduk-centred, *The First Brick*
+      foregrounds Ea as the principal creator deity. Marduk is
+      not named in the surviving narrative of *The First Brick*;
+      the composition belongs to the dossier's Ea-centred minority
+      register." (line 78)
+    source_id: lambert-2013, foster-2007
+    source_loc: "Lambert 2013 pp. 376–383, 281–401; Foster 2007 passim"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Round-1 verbatim Wikipedia summaries (s.v. Enki, Kusu,
+      Ningishzida) all describe *The First Brick* as Ea-centred
+      with no mention of Marduk. The chapter-by-chapter divine
+      actors of the wider dossier (chapters 1, 6–10) are confirmed
+      as Marduk-centred per the per-chapter briefs and per-chapter
+      claims-factcheck records in the akkadian_babylonian repo
+      (chapter 7 Toil of Babylon, chapter 8 Uraš and Marduk,
+      chapter 9 Damkina's Bond, chapter 10 Founding of Eridu —
+      all of which carry their own factcheck records). The
+      "Ea-centred minority register" framing is a fair
+      characterisation supported by the dossier's per-composition
+      divine-actor distribution.
+
+  - claim_number: 8
+    claim: |
+      "After the creation of the *Apsû*, Ea fashions from clay a
+      series of named deities, each tasked with a specific role
+      in the temple-renovation labour. The first of the deities
+      created is Kulla, the brick-god — the divine artisan
+      responsible for renovating the *libittu maḫrītu*. After
+      Kulla, Ea creates Ninildu, Ninsimug, and Ninagal. Ea then
+      creates a further cohort of deities — Arazu, Guškinbanda,
+      Ninzadim, Ninkurra, Ašnan, Laḫar, Siris, Ningišzida, Ninšar,
+      Adag, Umunmutamgu, and Umunmutamnag. The final deity Ea
+      creates is Kusu, addressed as the 'chief priest of the
+      great gods.' In addition to the seventeen named
+      craft-pantheon deities, Ea creates a king and mankind."
+      (lines 87–107)
+    source_id: lambert-2013
+    source_loc: "pp. 376–383"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Wikipedia s.v. Enki, section "The First Brick" (round-1
+      verbatim, footnoted to Lambert 2013 pp. 377, 381): "The
+      deities created are Kulla, tasked to renovate the first
+      brick, the deities Ninildu, Ninsimug and Ninagal, tasked to
+      help with the construction, the deities Arazu, Guškinbanda,
+      Ninzadim, Ninkurra, Ašnan, Laḫar, Siris, Ningišzida, Ninšar,
+      Adag, Umunmutamgu, and Umunmutamnag, the last eight of
+      which are instructed to supply resources to mankind for
+      their regular offerings, and finally Kusu, tasked to
+      perform the rites of the temple." Wikipedia s.v. Kusu
+      (round-1 verbatim, footnoted to Lambert 2013 p. 381):
+      "Kusu, addressed as the 'chief priest of the great gods,'
+      is listed as one of the deities created by Ea from clay."
+      The seventeen named deities, the role assignments, the
+      "chief priest of the great gods" verbatim epithet for Kusu,
+      and the additional creation of a king and mankind are all
+      independently corroborated. SUPPORTED.
+
+  - claim_number: 9
+    claim: |
+      "The composition's manuscript form is late Babylonian —
+      first millennium BCE — but the temple-renovation ritual
+      context it presupposes is older, with the *libittu maḫrītu*
+      concept attested in Assyrian royal-inscription practice from
+      the seventh century BCE (Esarhaddon and Assurbanipal) and
+      likely deeper into Mesopotamian temple-building cult." (line
+      67)
+    source_id: black-green-1992, bottero-2001
+    source_loc: "Black & Green 1992 s.v. brick, foundation rituals; Bottéro 2001 passim"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Novotny "Temple Building in Assyria" (round-1 verbatim,
+      AOAT 366, 2010) attests the libittu maḫrītu rite in the
+      royal inscriptions of Esarhaddon and Assurbanipal. The
+      continuity of Mesopotamian temple-foundation/renovation
+      ritual from earlier periods through the first millennium is
+      standard handbook material; Black & Green 1992 (s.v. brick,
+      foundation rituals) and Bottéro 2001 are taken on trust as
+      genre-appropriate reference works. SUPPORTED.
+
+  - claim_number: 10
+    claim: |
+      "The Akkadian common noun *libittu* — 'brick' — is the
+      underlying lexical term; the technical
+      foundation/renovation phrase used in the composition and in
+      the parallel royal-inscription rites is *libittu maḫrītu*
+      ('first/former brick'). The qualifier *maḫrītu* (from
+      *maḫrû* 'first, former, prior') marks the brick as the
+      original brick of the existing temple, recovered for reuse
+      in the new structure rather than as a brand-new inaugural
+      brick." (line 120)
+    source_id: lambert-2013, cad
+    source_loc: "Lambert 2013 pp. 376–383; CAD L s.v. libittu; CAD M/I s.v. maḫrû"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Novotny "Temple Building in Assyria" attests libittu maḫrītu
+      consistently throughout pp. 117–120. The CAD reference is
+      taken on trust as standard CAD lemma material (CAD L and
+      CAD M/I are both registered in sources.yaml under the cad
+      entry). The "first/former brick recovered for reuse"
+      reading is corroborated by Novotny's "the libittu mañrîtu
+      (here 'former brick'). The removal of this brick initiated
+      the rebuilding process and served as a bridge between the
+      old and new temples." SUPPORTED.
+
+  - claim_number: 11
+    claim: |
+      "*The First Brick* is preserved on multiple Late Babylonian
+      witnesses ... plus a late Assyrian fragment. The textual
+      history of modern scholarship is confined to Lambert 2013's
+      critical edition; there is no earlier critical edition or
+      anthology translation that supersedes it." (line 128)
+    source_id: lambert-2013
+    source_loc: "pp. 376–383"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      Per F-2 resolution: Streck 2014 BSOAS review verbatim and
+      Wikipedia s.v. Enki verbatim independently confirm the
+      multi-witness manuscript history (multiple Late Babylonian
+      witnesses, a late Assyrian fragment) and Lambert 2013 as
+      the standalone modern critical edition.
+
+  - claim_number: 12
+    claim: |
+      "Within the dossier, *The First Brick* contributes the
+      polytheistic / craft-pantheon-creation register: cosmogony
+      staged as the divine creation of a labour-force ... Ea
+      fashioning artisans from clay rather than (as in *Enūma
+      Eliš*) Marduk splitting a primordial body, or (as in
+      *Atra-ḫasīs*) the lower gods rebelling against forced
+      labour." (line 137)
+    source_id: lambert-2013, foster-2007
+    source_loc: "Lambert 2013 pp. 376–383; Foster 2007 passim"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      The contrast with *Enūma Eliš* (Marduk's combat with Tiamat
+      → splitting her body) and *Atra-ḫasīs* (lower gods'
+      rebellion → human creation to bear the labour) is standard
+      handbook material on the diversity of Mesopotamian
+      cosmogonic registers. *The First Brick*'s craft-pantheon
+      register is supported by the round-1 verbatim Wikipedia
+      summaries (Ea fashioning seventeen craft-pantheon deities
+      from clay). SUPPORTED.
+
+  - claim_number: 13
+    claim: |
+      "The cosmogonic dossier, taken as a whole, has shown that
+      Babylonian creation thought is not monolithic. Cosmogony is
+      staged in this corpus as combat (*Enūma Eliš*; *The Slaying
+      of Labbu*; *Enmešarra's Defeat*); as flood-survival and
+      human-creation (*Atra-ḫasīs*); as the failure-narrative of
+      human-divine boundary (*Adapa*); as theogonic genealogy and
+      violent succession (*The Theogony of Dunnu*); as
+      labour-rebellion and divine alienation (*The Toil of
+      Babylon*); as boundary-disputes between gods (*Uraš and
+      Marduk*); as marital bond and cosmic order (*Damkina's
+      Bond*); as city-and-rivers foundation (*The Founding of
+      Eridu*); as etiological incantation against affliction
+      (*The Worm and the Toothache*); and ... as the divine
+      creation of a craft-pantheon for temple renovation (*The
+      First Brick*)." (line 148)
+    source_id: lambert-2013, foster-2007, bottero-2001
+    source_loc: "Lambert 2013 pp. 1–401; Foster 2007 passim; Bottéro 2001 passim"
+    verdict: SUPPORTED
+    verbatim_quote: |
+      The chapter-by-chapter cosmogonic-cycle taxonomy is
+      verifiable against the per-chapter briefs and claims-files
+      in the akkadian_babylonian repo (chapters 1–11) and against
+      Lambert 2013's wider dossier per pp. 1–401. The cycle-closing
+      taxonomy is a load-bearing summative claim; it is supported
+      by the structural arrangement of the book and by Lambert
+      2013's volume coverage. SUPPORTED.
+
+# ── Findings (anything not ✓ SUPPORTED) ────────────────────────────────────
+
+findings:
+  - finding_id: F-R2-1
+    claim_number: "INFERENCE marker line 111 (Sumerian-named-deity inheritance, new in round 2)"
+    kind: PRECISION
+    severity: LOW
+    claim: |
+      "The seventeen named craft-pantheon deities of *The First
+      Brick* are largely Sumerian-named — Kulla, Ninildu, Ninsimug,
+      Ninagal, Guškinbanda, Ninzadim, Ninkurra, Ašnan, Laḫar,
+      Siris, Ningišzida, Ninšar, Adag, Umunmutamgu, Umunmutamnag,
+      Kusu, and the partly-Akkadianised Arazu — though preserved
+      within an Akkadian-language theological framework."
+    issue: |
+      The INFERENCE marker is properly hedged with basis-and-risk
+      fields and the broad linguistic-historical observation
+      (Sumerian etymologies for most of the names) is well-founded
+      in Mesopotamian theology and accessible via Black & Green
+      1992 entries. However, the specific characterisation of
+      Arazu as "partly-Akkadianised" is an interpretive sub-claim
+      that is not independently verifiable from the open sources
+      consulted in this audit. Arazu (also Arazua) is generally
+      attested in Sumerian and Akkadian theological contexts as
+      a deity associated with prayer/petition; the
+      "partly-Akkadianised" gloss is not a standard handbook
+      classification. The risk language at line 111 ("the
+      'Sumerian inheritance' reading is a linguistic-historical
+      observation rather than a claim of the composition itself")
+      does not specifically flag the Arazu sub-claim.
+      Severity LOW because: (a) the broader Sumerian-inheritance
+      observation is a fair linguistic-historical reading and is
+      properly hedged; (b) the Arazu-specific gloss is a minor
+      sub-claim within the wider INFERENCE; (c) the claim is
+      defensible at the chapter-draft stage (Arazu's Akkadian-
+      morphological behaviour can be verified via CAD or Tallqvist
+      god-list references). The most conservative move at the
+      chapter-draft stage would be to either (i) drop the
+      "partly-Akkadianised" qualifier and treat Arazu as
+      Sumerian-named like the others, or (ii) preserve it with an
+      explicit footnote citing standard god-list literature.
+    evidence: |
+      No independent open source consulted in round 2 specifically
+      classifies Arazu as "partly-Akkadianised". The wider claim
+      (the seventeen craft-pantheon deities are largely
+      Sumerian-named) is well-founded; the Arazu-specific gloss is
+      the minor precision concern.
+    recommended_fix: |
+      Optional at the chapter-draft stage: either drop the
+      "partly-Akkadianised" qualifier on Arazu (the safer move,
+      since the broader Sumerian-inheritance reading does not
+      depend on it) or preserve it with an explicit footnote
+      citing Tallqvist's *Akkadische Götterepitheta* or the CAD
+      A entry on Arazu. Not blocking; LOW severity.
+
+# ── Notes (informational; not actionable findings) ──────────────────────────
+
+notes:
+  - note_id: N-R2-1
+    note: |
+      The round-2 rewrite is a faithful application of the round-1
+      factcheck's recommended structural revisions. All five
+      content-model corrections (R2-1 through R2-5 in the brief
+      revision log) are properly applied at the claims level:
+      Ea-centred (not Marduk-centred) framing; multi-witness (not
+      single-witness) manuscript history; temple-renovation (not
+      new-temple-foundation) ritual context; ušumgallu omitted;
+      architectural-cosmogony framing hedged. The R2-6 revision
+      (architectural-cosmogony framing hedged) is also properly
+      reflected in the COMPARATIVE-HOOK markers and the
+      closing-reflection INFERENCE.
+
+  - note_id: N-R2-2
+    note: |
+      The Ea first-mention gloss at line 73 ("the wise god of the
+      freshwater *Apsû*, patron of craft and cunning, father of
+      Marduk in the wider Babylonian theology") paraphrases the
+      locked glossary entry ("god of wisdom, the freshwater
+      *Apsû*, and incantation, patron of craft and cunning, father
+      of Marduk") with two minor changes: (i) "god of wisdom" →
+      "wise god"; (ii) the omission of "and incantation". Both
+      paraphrases preserve the gloss's load-bearing identifying
+      content; the paraphrase is permitted at the claims-document
+      stage, but the chapter-draft stage may want to either
+      restore the locked rendering verbatim or apply a stable
+      shortened form. The "father of Marduk in the wider
+      Babylonian theology" qualifier is a useful clarification
+      that allows the chapter to introduce Marduk without
+      committing to Marduk's presence in *The First Brick* itself.
+
+  - note_id: N-R2-3
+    note: |
+      The Abzû / Apsû dual rendering at line 73 ("the freshwater
+      deep (*Apsû*; the Sumerian form *Abzû* appears in the
+      late-Babylonian Akkadian-Sumerian register that Lambert's
+      translation preserves)") is consistent with the brief's
+      entities_glossary at line 113–114, which explicitly handles
+      the Abzû/Apsû code-switch ("rendered in Akkadian as Apsû in
+      body prose per glossary.yaml; Abzû reflects the Sumerian
+      form preserved in Lambert 2013's translation"). The locked
+      glossary chosen-form is Apsû; the claims document correctly
+      preserves Apsû as the body-prose form while flagging the
+      Abzû variant as the form Lambert's translation uses to
+      reflect the Late Babylonian Akkadian-Sumerian register. The
+      chapter-draft stage should preserve this convention.
+
+# ── Marker discipline check ────────────────────────────────────────────────
+
+marker_discipline:
+  inference_markers:
+    count: 3
+    pass_or_revise: PASS
+    issues: |
+      INFERENCE marker at line 83 (Ea-centred theological coherence
+      with the craft-pantheon subject) is properly hedged: basis
+      cites Ea's standard role as patron of crafts in Babylonian
+      theology; risk explicitly flags the reading as "the chapter's
+      editorial framing, not a textually programmatic claim of
+      *The First Brick* itself". PASS.
+      INFERENCE marker at line 111 (Sumerian-named-deity
+      inheritance, new in round 2) is properly hedged with
+      basis-and-risk fields. The minor Arazu-specific sub-claim is
+      flagged as Finding F-R2-1 (LOW). PASS-WITH-CAVEAT.
+      INFERENCE marker at line 153 (closing-reflection on the
+      diversity of Babylonian creation thought) is properly
+      hedged: basis cites the dossier collected in Lambert 2013
+      and the per-chapter critical editions; risk flags the
+      structural reading as "the modern editorial framing rather
+      than an ancient theological program". PASS.
+      Round-1 INFERENCE marker on the ušumgallu-foundation register
+      is REMOVED (round-1 finding F-4 fully resolved).
+  lacuna_markers:
+    count: 1
+    pass_or_revise: PASS
+    issues: |
+      LACUNA marker at line 54 reflects the multi-witness reality
+      (round-1 finding F-2 resolved): "Multiple Late Babylonian
+      witnesses (principally WVDOG 4 plate 12, with additional
+      Late Babylonian tablets per Streck 2014's 'etc.') plus a
+      late Assyrian fragment." The recoverability assessment
+      ("scholarly_reconstruction: yes — multiple Late Babylonian
+      witnesses overlap and the Assyrian fragment supplies
+      cross-witness control") is calibrated to the multi-witness
+      reality. PASS.
+  reconstruction_markers:
+    count: 1
+    pass_or_revise: PASS
+    issues: |
+      RECONSTRUCTION marker at line 56 reflects the multi-witness
+      reality and the cross-witness joining (round-1 finding F-2
+      resolved): "cross-witness joining among the multiple Late
+      Babylonian witnesses and the Assyrian fragment, supplemented
+      where necessary by parallel Akkadian temple-renovation
+      incantation literature — the closest direct comparandum is
+      the libittu maḫrītu rite preserved in the royal inscriptions
+      of Esarhaddon and Assurbanipal". Confidence rating revised
+      to "medium — multi-witness control is better than
+      single-witness restoration" — a properly calibrated
+      revision. PASS.
+  variant_markers:
+    count: 1
+    pass_or_revise: PASS
+    issues: |
+      VARIANT marker at line 126 retains single-prevalent
+      classification on the duplicate-vs-recensional rationale
+      ("the witnesses function as duplicates of a single recension
+      rather than as recensional variants ... no recensional or
+      dialectal alternatives are attested"). The
+      multi-witness-but-single-recension framing is consistent
+      with round-1 finding F-2 recommended fix and with Lambert's
+      single edited text. PASS.
+  comparative_hook_comments:
+    count: 5
+    pass_or_revise: PASS
+    issues: |
+      All five COMPARATIVE-HOOK comments at lines 155–160 are
+      correctly scoped per scope.md:
+      (1) Akkadian-internal "construction-as-cosmogony" grouping
+          (line 155): explicitly notes the divine-actor mismatch
+          (First Brick = Ea-centred; Toil of Babylon, Founding of
+          Eridu = Marduk-centred). Round-1 finding F-5 resolved.
+      (2) Akkadian-internal Marduk-vs-Ea-centred dossier register
+          (line 156): correctly distinguishes the dossier's
+          Marduk-centred majority from its Ea-centred minority,
+          with First Brick in the latter.
+      (3) Mesopotamian internal Sumerian background (line 157):
+          out-of-scope as primary material per scope.md;
+          explicitly reserved for the influences chapter. PASS.
+      (4) Hebrew Bible Job 38:6 typological parallel (line 158):
+          out-of-scope per scope.md; explicitly reserved for the
+          influences chapter. No EVIDENCE token routes through it.
+          PASS.
+      (5) Egyptian temple-renovation foundation-deposit parallel
+          (line 159): out-of-scope per scope.md; explicitly
+          reserved for the influences chapter. No EVIDENCE token
+          routes through it. PASS.
+      (6) Methodological/book-structural cycle-closing reflection
+          (line 160): in-scope as the closing-cycle methodological
+          framing. PASS.
+
+# ── Glossary check ─────────────────────────────────────────────────────────
+
+glossary_check:
+  locked_glossary_terms_used:
+    - Ea: "used at line 73 with first-mention gloss (paraphrase of locked entry — see Note N-R2-2); locked rendering preserved"
+    - Apsû: "used as the body-prose form per locked rendering; the Sumerian variant Abzû is explicitly flagged at line 73 as the form Lambert's translation preserves; consistent with brief's entities_glossary at lines 113–114; see Note N-R2-3"
+    - Marduk: "used in three permitted contexts: (a) in Ea's first-mention gloss as 'father of Marduk' at line 73 (consistent with locked Ea glossary entry which itself ends 'father of Marduk'); (b) in the explicit absence statement at line 78 ('Marduk is not named in the surviving narrative of *The First Brick*'); (c) in comparative observations about other dossier compositions (lines 78, 137, 144, 148, 155, 156). Locked rendering preserved throughout"
+    - Tiamat: "referenced in the closing reflection (line 137: 'Marduk splitting a primordial body' alluding to Marduk's combat with Tiamat in *Enūma Eliš*); locked rendering preserved"
+    - "*Enūma Eliš*": "referenced throughout (lines 78, 137, 144, 148); locked rendering preserved"
+    - "*akītu*": "referenced at line 144 ('the *akītu*-festival recitation that frames Marduk's kingship in cosmic-combat terms'); locked rendering preserved"
+  italicised_akkadian_terms:
+    - "*libittu*": "italicised at first mention; properly distinguished from the technical phrase *libittu maḫrītu* at line 120; CAD L footnote at line 120"
+    - "*libittu maḫrītu*": "italicised throughout; explicit lexical commentary at line 120 (CAD L and CAD M/I footnoted); Novotny attestation at line 60 (named-but-flagged)"
+    - "*maḫrītu*": "italicised at line 120 with morphological derivation explained ('from *maḫrû* 'first, former, prior'')"
+    - "*Apsû*": "italicised; locked rendering"
+    - "*Abzû*": "italicised; flagged as the Sumerian variant preserved in Lambert's translation"
+  out_of_scope_handling: |
+    PASS — Hebrew Bible (Job 38:6) at COMPARATIVE-HOOK line 158
+    and Egyptian temple-renovation foundation-deposit parallels at
+    COMPARATIVE-HOOK line 159 are correctly scoped as out-of-scope
+    primary-source material; both are explicitly reserved for the
+    influences chapter; no EVIDENCE token routes through either
+    one. The Mesopotamian-internal Sumerian-background hook (line
+    157) is also correctly handled as out-of-scope at the
+    primary-source level (the Sumerian-language craft pantheon
+    belongs to *The Myths of Sumer*) while in-scope as a
+    linguistic-historical INFERENCE about the names preserved in
+    the Akkadian *First Brick*.
+  never_use_violations: 0
+  glossary_violations: 0
+
+# ── Source-id resolution ────────────────────────────────────────────────────
+
+source_id_resolution:
+  registered_sources_used:
+    - lambert-2013: "primary; resolves in sources.yaml registry; the brief's locked principal anchor at pp. 376–383"
+    - foster-2007: "secondary; resolves in sources.yaml registry; cited at passim for late-Babylonian dossier context"
+    - black-green-1992: "secondary; resolves in sources.yaml registry; cited s.v. brick, foundation rituals, Ea, Kulla, Kusu, craftsmen-deities"
+    - bottero-2001: "secondary; resolves in sources.yaml registry; cited passim for temple-foundation/renovation cult"
+    - cad: "lexical; resolves in sources.yaml registry as the Chicago Assyrian Dictionary; cited L s.v. libittu and M/I s.v. maḫrû"
+  named_but_flagged_sources:
+    - "Streck 2014, *BSOAS* 77 (2014) 371–372 (review of Lambert 2013)": "named-but-flagged at lines 44, 51, 60, 128 — not currently in sources.yaml registry; the writer correctly applies the named-but-flagged convention; the Streck review is the principal cuneiform-publication anchor (WVDOG 4 plate 12 etc.) and the independent confirmation of the Part-III placement"
+    - "Novotny, 'Temple Building in Assyria' (AOAT 366, Münster: Ugarit-Verlag 2010, pp. 109–139)": "named-but-flagged at line 60 — not currently in sources.yaml registry; the writer correctly applies the named-but-flagged convention; Novotny is the principal independent attestation of the libittu maḫrītu rite in Esarhaddon and Assurbanipal royal inscriptions and confirms the temple-renovation (not new-foundation) context"
+  fabricated_or_unresolved: []
+
+# ── Verdict reasoning ──────────────────────────────────────────────────────
+
+verdict_reasoning: |
+  Verdict rules from the skill: BLOCK = ≥3 HIGH or any
+  contamination of structural-organising claims or fabricated
+  references; MAJOR-REVISE = 1–2 HIGH plus serious structural
+  issues; REVISE = 1–2 HIGH or >3 MEDIUM or any silent bridge;
+  PASS = 0 HIGH and 0 silent bridges and ≤3 MEDIUM. This audit
+  finds:
+    HIGH: 0
+    MEDIUM: 0
+    LOW: 1 (F-R2-1 — Arazu "partly-Akkadianised" sub-claim
+            within the new round-2 INFERENCE on Sumerian-named-
+            deity inheritance; not blocking, optional fix at
+            chapter-draft stage)
+    NOTES: 3 (N-R2-1 round-2 corrections faithfully applied;
+              N-R2-2 minor paraphrase of Ea's locked first-mention
+              gloss; N-R2-3 Abzû/Apsû dual rendering correctly
+              handled per brief)
+
+  All five round-1 HIGH/MEDIUM findings (F-1, F-2, F-3, F-4, F-5)
+  are RESOLVED in round 2. Both round-1 LOW findings (F-6, F-7)
+  are also RESOLVED. The round-2 rewrite faithfully applies the
+  brief's R2-1 through R2-6 content-model corrections; the
+  round-1 factcheck's recommended structural revisions are all
+  reflected in the round-2 claims document.
+
+  The single new round-2 finding (F-R2-1) is a LOW-severity
+  precision issue on a minor sub-claim within a properly-hedged
+  INFERENCE marker; it is not blocking and can be addressed
+  optionally at the chapter-draft stage by either dropping the
+  "partly-Akkadianised" qualifier on Arazu or preserving it with
+  a god-list footnote.
+
+  Per the verdict rules, 0 HIGH findings, 0 silent bridges, 0
+  fabricated references, 0 contamination, and 1 LOW finding
+  trigger PASS. The chapter is cleared to proceed to stage 13
+  post-human-normalize and stage 14 chapter-draft.
+
+  Verdict: **PASS**.
+
+summary: |
+  *The First Brick* (chapter 12 claims, round 2) — FACTCHECK
+  VERDICT: PASS.
+
+  All five round-1 HIGH/MEDIUM findings — F-1 (CONTAMINATION:
+  Marduk-centred reading of an Ea-centred composition), F-2
+  (CITATION-WRONG: single-witness vs. multi-witness), F-3
+  (CITATION-WRONG: new-foundation vs. temple-renovation), F-4
+  (UNVERIFIED: ušumgallu attribute), F-5 (INFERENCE-OVER-EXTENDS:
+  architectural-cosmogony framing) — are RESOLVED in the round-2
+  rewrite. Both round-1 LOW findings (F-6 libittu maḫrītu
+  precision; F-7 WVDOG 4 plate 12 citation) are also RESOLVED.
+
+  The round-2 claims document correctly:
+  (i) foregrounds Ea (not Marduk) as the principal creator deity,
+      with no §"Marduk as divine architect" section; Marduk
+      appears only in Ea's first-mention gloss, in explicit
+      absence statements, and in comparative observations about
+      other dossier compositions;
+  (ii) describes the witnesses as multiple Late Babylonian
+       tablets (WVDOG 4 plate 12 etc.) plus a late Assyrian
+       fragment, with the LACUNA, RECONSTRUCTION, and VARIANT
+       markers all reflecting the multi-witness reality;
+  (iii) frames the ritual context as temple RENOVATION, with the
+        libittu maḫrītu being the brick recovered from the
+        existing temple's structure and reset into the new
+        structure as a continuity-marker between old and new
+        temples;
+  (iv) omits the unverified ušumgallu attribute entirely;
+  (v) hedges the architectural-cosmogony grouping with explicit
+      divine-actor mismatch flagging at the COMPARATIVE-HOOK and
+      INFERENCE levels.
+
+  The new round-2 INFERENCE on Sumerian-named-deity inheritance
+  (line 111) is properly hedged with basis-and-risk fields; the
+  seventeen named deities (Kulla, Ninildu, Ninsimug, Ninagal,
+  Arazu, Guškinbanda, Ninzadim, Ninkurra, Ašnan, Laḫar, Siris,
+  Ningišzida, Ninšar, Adag, Umunmutamgu, Umunmutamnag, Kusu)
+  match the Wikipedia s.v. Enki verbatim list (round-1 q3) name
+  for name and role for role.
+
+  The single new finding F-R2-1 (LOW) is a precision concern on
+  a minor sub-claim — the characterisation of Arazu as
+  "partly-Akkadianised" within the otherwise well-founded
+  Sumerian-inheritance INFERENCE — and is not blocking; it can
+  be addressed optionally at the chapter-draft stage.
+
+  Source-id resolution: lambert-2013, foster-2007,
+  black-green-1992, bottero-2001, cad all resolve in
+  sources.yaml. Streck 2014 and Novotny 2010 are correctly
+  named-but-flagged. Glossary compliance: Marduk, Ea, Apsû,
+  Tiamat, *Enūma Eliš*, *akītu* all carry their locked
+  renderings; Ea's first-mention gloss is a permitted minor
+  paraphrase of the locked entry. Out-of-scope handling: PASS —
+  Hebrew Bible, Egyptian, and Mesopotamian-Sumerian-background
+  comparisons are all in COMPARATIVE-HOOK comments only, with no
+  EVIDENCE token routing through them.
+
+  Verdict: **PASS**. The chapter is cleared to proceed to stage
+  13 post-human-normalize and stage 14 chapter-draft.

@@ -1,0 +1,138 @@
+stage: "narrative-fidelity"
+chapter: 12
+slug: "first-brick"
+input: "chapters/12-first-brick.adoc + chapters/12-first-brick.claims.approved.adoc + briefs/12-first-brick.yaml + glossary.yaml + gloss-ledger.yaml + chapters/12-first-brick.claims.factcheck-round2.yaml + completions/14-chapter-draft-ch12.done.yaml"
+output: "chapters/12-first-brick.fidelity.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+agent_context: "fresh-context (no memory of writing the chapter draft)"
+verdict: "PASS"
+
+outputs:
+  - file: "chapters/12-first-brick.fidelity.yaml"
+    lines: 545
+
+summary: |
+  Chapter 12 (The First Brick) narrative-fidelity audit. Verdict: PASS.
+  All 18 numbered claim-paragraphs in chapters/12-first-brick.claims.approved.adoc
+  map cleanly to specific narrative paragraphs in chapters/12-first-brick.adoc,
+  with 4 additional post-body claims (place-in-corpus, dossier-register,
+  closing reflection, multi-register dossier listing) also mapped. All 6
+  structural markers (1 LACUNA, 1 RECONSTRUCTION, 3 INFERENCE, 1 VARIANT)
+  preserved byte-identical with subfields intact. All 6 COMPARATIVE-HOOK
+  comments preserved byte-identical at chapter foot. Zero structural-marker
+  delta — 44 EVIDENCE / 22 footnotes / 1 LACUNA / 1 RECONSTRUCTION / 1
+  VARIANT / 3 INFERENCE / 6 COMPARATIVE-HOOK in both files.
+
+  All round-2 factcheck-resolution items carried through to the draft
+  byte-identical: F-1 HIGH CONTAMINATION fix (Ea-centred framing throughout;
+  Marduk appears in body only in the Ea first-mention gloss "father of
+  Marduk", in explicit-absence statements, in dossier cross-references to
+  other Marduk-centred compositions, and in the substantive *Enūma Eliš*
+  contrast "Marduk splitting a primordial body"); F-2 HIGH CITATION-WRONG
+  fix (multi-witness manuscript framing — principally WVDOG 4 plate 12 +
+  additional Late Babylonian tablets per Streck 2014's "etc." + a late
+  Assyrian fragment — preserved at draft lines 4, 14, 17 LACUNA, 19
+  RECONSTRUCTION, 89 VARIANT, 91); F-3 HIGH CITATION-WRONG fix (renovation-
+  not-foundation framing throughout; *libittu maḫrītu* consistently the
+  recovered/recycled brick from the existing temple; section heading
+  "Renovation, not foundation" prominent); F-4 MEDIUM (*ušumgallu*
+  attribute absent — grep confirms zero matches); F-5 MEDIUM
+  (architectural-cosmogony hedge preserved in INFERENCE risk subfield at
+  draft line 46); F-R2-1 LOW (Arazu listed without unverified 'partly-
+  Akkadianised' qualifier, in both INFERENCE marker at line 74 and
+  COMPARATIVE-HOOK at line 120).
+
+  Seventeen named craft-pantheon deities (Kulla, Ninildu, Ninsimug,
+  Ninagal, Arazu, Guškinbanda, Ninzadim, Ninkurra, Ašnan, Laḫar, Siris,
+  Ningišzida, Ninšar, Adag, Umunmutamgu, Umunmutamnag, Kusu) all present
+  with diacritics intact. Locked Ea first-mention gloss from glossary.yaml
+  ("god of wisdom, the freshwater *Apsû*, and incantation, patron of craft
+  and cunning, father of Marduk") preserved byte-identical at draft line
+  36 (FULL_GLOSS_REFRESH per gloss-ledger.yaml). Apsû/Abzû dual-rendering
+  preserved per glossary.yaml's never_use carve-out for explicit Sumerian-
+  tradition citations (Lambert's Akkadian-Sumerian translation register).
+
+  Glossary compliance: PASS. Marduk, Ea, Apsû, akītu, Tiamat (not present),
+  Enūma Eliš all use locked glossary.yaml renderings. No never-use glossary
+  terms in body prose (Enki, Inanna, Damgalnuna, Anzud, Iškur, Ashur,
+  Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent).
+  Italics convention: PASS (Akkadian common nouns and composition titles
+  use *underscore* italic in body prose; asterisk-bold confined to
+  footnotes/EVIDENCE/COMPARATIVE-HOOK/marker contents).
+
+  Forbidden-words check: PASS. The single occurrence of "primordial" is
+  at draft line 100 in the substantive *Enūma Eliš* contrast ("Marduk
+  splitting a primordial body", referring to Tiamat) — this is a
+  substantive comparator, preserved byte-identical from claims line 137.
+  No other forbidden words.
+
+  Asimov register: PASS. Short paragraphs throughout; plain modern English;
+  no "Long ago" / "It is said that" / "In the time before time" openings;
+  no ornamental reverence; no padding; no recap paragraphs. 123 lines is
+  tight Asimov register around 18 numbered claims plus closing-reflection
+  material.
+
+  Additions check: zero new factual content. Two minor body-prose
+  stylistic surfaces of named-but-flagged citation content into body:
+  (1) draft line 23 surfaces the Novotny "Temple Building in Assyria"
+  citation into body prose ("Jamie Novotny's study... documents the
+  practice in operation in seventh-century BCE Assyria"); (2) draft line
+  7 names "Michael Streck" in body where claims body says just "Streck"
+  (Streck's first name appears in the corresponding claims footnote).
+  Both surfacings draw exclusively from material already present in the
+  corresponding claims footnotes; no source not already cited is
+  introduced.
+
+  Zero findings at any severity (HIGH, MEDIUM, LOW). Per the skill's
+  verdict rules, the verdict is PASS.
+
+  Chapter 12 closes the per-chapter pipeline for the cosmogonic cycle
+  (chapters 1–12). The chapter draft is ready to proceed to
+  format-finalize for the whole book; no further per-chapter stages
+  remain for chapter 12.
+
+honesty_self_check:
+  audit_done_in_fresh_context: true
+  every_claim_walked: true
+  no_claim_skipped_as_obviously_present: true
+  every_paragraph_checked_for_additions: true
+  meaning_compared_at_precise_level_not_topic: true
+  same_model_as_writer_but_fresh_session: true
+  notes: |
+    Auditor model claude-opus-4-7[1m] in a fresh session with no memory
+    of writing the chapter draft (which was produced in a separate
+    session per completion record 14-chapter-draft-ch12.done.yaml). The
+    "different model" preference is not strictly met but is not required
+    by the skill spec; the "fresh-conversation" requirement is met. All
+    18 numbered claim-paragraphs were walked in order; none skipped as
+    "obviously present". Every body paragraph and every marker block
+    was checked against the claims document for additions. Comparison
+    was done at the level of precise meaning (Ea-centred vs Marduk-
+    centred; renovation vs foundation; multi-witness vs single-witness)
+    rather than at the level of topic-overlap.
+
+verdict_rationale: |
+  - All 18 numbered claim-paragraphs map 1-for-1 to specific draft paragraphs
+    (with 4 additional post-body claims also mapped for completeness).
+  - All 6 structural markers preserved byte-identical with subfields intact.
+  - All 6 COMPARATIVE-HOOK comments preserved byte-identical.
+  - Zero structural-marker delta (44 EVIDENCE / 22 footnotes / 1 LACUNA /
+    1 RECONSTRUCTION / 1 VARIANT / 3 INFERENCE / 6 COMPARATIVE-HOOK in
+    both files).
+  - All round-2 factcheck-resolution items carried through verbatim
+    (F-1 HIGH, F-2 HIGH, F-3 HIGH, F-4 MEDIUM, F-5 MEDIUM, F-R2-1 LOW).
+  - Seventeen named craft-pantheon deities all present with diacritics intact.
+  - Locked Ea first-mention gloss preserved byte-identical.
+  - Apsû/Abzû dual-rendering preserved per glossary carve-out.
+  - Glossary compliance PASS; never-use terms absent; italics convention
+    correct; forbidden words clear (single substantive "primordial" use).
+  - Two minor body-prose stylistic surfaces of footnoted citation content
+    into body (Novotny line 23; Michael Streck first name line 7) draw
+    exclusively from material already in claims footnotes; no new factual
+    content.
+  - Zero findings at HIGH, MEDIUM, or LOW severity.
+  - Verdict: PASS.
+
+next_step: "format-finalize for the whole book (per RUNBOOK 10e: with chapter 12 PASS, the per-chapter pipeline closes for the cosmogonic cycle; commit ch12 artefacts and proceed to whole-book format-finalize)"

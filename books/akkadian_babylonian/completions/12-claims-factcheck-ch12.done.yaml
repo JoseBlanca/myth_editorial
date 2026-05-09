@@ -1,0 +1,162 @@
+stage: "claims-factcheck"
+chapter: 12
+slug: "first-brick"
+input: "chapters/12-first-brick.claims.adoc + briefs/12-first-brick.yaml"
+output: "chapters/12-first-brick.claims.factcheck.yaml"
+timestamp: "2026-05-09T05:57:26Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+verdict: "BLOCK"
+outputs:
+  - file: "chapters/12-first-brick.claims.factcheck.yaml"
+    lines: 1286
+findings_summary:
+  high: 3
+  medium: 2
+  low: 2
+  notes: 3
+  supported: 5
+  silent_bridges: 0
+  fabrications: 0
+  contamination: 1     # F-1: Marduk-centred reading of an Ea-centred composition
+key_independent_sources_consulted:
+  - DeGruyter Brill chapter landing for "The First Brick" (doi:10.1515/9781575068619-028) — page range 376–383, chapter 33, Part III "Further Babylonian Creation Tales" CONFIRMED
+  - DeGruyter Brill volume table of contents (doi:10.1515/9781575068619) — full ToC confirms chapter sequence
+  - Streck 2014 BSOAS review of Lambert 2013 (gkr.uni-leipzig.de PDF; parsed locally) — confirms cuneiform publication WVDOG 4 plate 12 etc.
+  - Wikipedia s.v. Enki, section "The First Brick" (MediaWiki API; footnoted to Lambert 2013 pp. 376–379, 377, 381) — confirms Ea as principal creator deity, temple-renovation context, and seventeen-deity craft pantheon
+  - Wikipedia s.v. Kusu (goddess) (MediaWiki API; footnoted to Lambert 2013 pp. 376, 381)
+  - Wikipedia s.v. Ningishzida (MediaWiki API; footnoted to Lambert 2013 pp. 376, 381)
+  - Wikipedia s.v. Kulla (god) — Kulla as brick-god, Mušdam (not Marduk) as divine architect in foundation cult
+  - Wikipedia s.v. Ušumgallu — *ušumgallu* as Marduk epithet generally; not cited as appearing in *The First Brick*
+  - Jamie Novotny "Temple Building in Assyria" (epub.ub.uni-muenchen.de PDF; parsed locally) — libittu maḫrītu as the technical foundation/renovation-ritual term
+sources_NOT_directly_accessible:
+  - Lambert 2013, *Babylonian Creation Myths*, pp. 376–383 (chapter 33, "The First Brick") — paywalled at DeGruyter Brill, JSTOR, Project MUSE; access-restricted at Internet Archive; dokumen.pub mirror under maintenance
+  - Black & Green 1992, *Gods, Demons and Symbols of Ancient Mesopotamia* (taken on trust as genre-appropriate)
+  - Bottéro 2001, *Religion in Ancient Mesopotamia* (taken on trust as genre-appropriate)
+  - Foster 2007, *Akkadian Literature of the Late Period* (taken on trust as genre-appropriate)
+  - Ambos 2004, *Mesopotamische Baurituale* (Streck review identifies Ambos as last edition of *The Founding of Eridu*; not directly read)
+audit_a8_resolution_check: |
+  Audit finding A8 (severity MEDIUM, kind SILENT-CONFLATION; the
+  page-range discrepancy and possible First Brick / Founding of
+  Eridu conflation in inventory-audit.yaml) is FULLY RESOLVED at
+  the bibliographic level. The brief's preemptive correction (from
+  the inventory's pp. 384–386 → pp. 376–383) is independently
+  corroborated by THREE open sources: (i) the DeGruyter Brill
+  chapter landing for "The First Brick"
+  (doi:10.1515/9781575068619-028); (ii) the DeGruyter Brill volume
+  table of contents which lists *Another Dragon-Slaying Episode*
+  at p. 384 (the composition that occupies the original-but-wrong
+  pp. 384–386 range); (iii) Streck 2014 BSOAS review which
+  confirms *The First Brick* is in Lambert 2013 Part III with
+  cuneiform publication WVDOG 4 plate 12. The two compositions
+  *The First Brick* and *The Founding of Eridu* are confirmed as
+  distinct compositions in adjacent sections of Lambert 2013 (with
+  *Eridu* at chapter 32 / pp. 366–375 per the chapter 10 brief
+  revision; *First Brick* at chapter 33 / pp. 376–383). The
+  audit-A8 bibliographic concern is closed.
+high_findings_summary: |
+  F-1 (CONTAMINATION, HIGH): The chapter's central organising claim
+  — "Marduk appears in the composition as the divine architect of
+  the first brick" (section §"Marduk as divine architect") — is
+  contradicted by three independent Wikipedia articles (s.v. Enki,
+  Kusu, Ningishzida), all citing Lambert 2013 pp. 376–381.
+  Lambert 2013 ch. 33's composition is **Ea-centred**: Ea creates
+  the Abzû and then fashions from clay seventeen further deities
+  (Kulla, Ninildu, Ninsimug, Ninagal, Arazu, Guškinbanda,
+  Ninzadim, Ninkurra, Ašnan, Laḫar, Siris, Ningišzida, Ninšar,
+  Adag, Umunmutamgu, Umunmutamnag, Kusu) plus a king and mankind,
+  who together perform temple-renovation work. **Marduk is not
+  named in any of the three Wikipedia summaries.** The brief's
+  entities_glossary (which locks "Marduk: divine architect" at
+  high confidence) is the upstream source of the contamination
+  and must be revised at brief level.
+
+  F-2 (CITATION-WRONG, HIGH): The chapter's repeated assertion of
+  "a single late-Babylonian manuscript" with "no parallel
+  manuscripts" is wrong. The composition is preserved on
+  **multiple Late Babylonian tablets** (Streck 2014: "WVDOG 4
+  plate 12, etc.") **plus a late Assyrian fragment** (Wikipedia
+  s.v. Enki, citing Lambert 2013 p. 376). The LACUNA,
+  RECONSTRUCTION, and VARIANT markers all inherit this wrong
+  manuscript-count premise.
+
+  F-3 (CITATION-WRONG, HIGH): The chapter's ritual-context framing
+  as new-temple foundation is wrong; Lambert 2013 ch. 33 is a
+  building incantation for **temple renovation** (recovering and
+  recycling the libittu maḫrītu of the existing temple), per all
+  three independent Wikipedia summaries and per Novotny's essay
+  on the libittu maḫrītu rite.
+medium_findings_summary: |
+  F-4 (UNVERIFIED, MEDIUM): The *ušumgallu* attribute's appearance
+  in *The First Brick* is not corroborated by any accessible
+  independent source. The wider Marduk-centred reading that
+  motivates the *ušumgallu* discussion is itself contradicted
+  (F-1).
+
+  F-5 (INFERENCE-OVER-EXTENDS, MEDIUM): The architectural-cosmogony
+  sub-corpus framing (pairing *First Brick* with *Toil of Babylon*
+  and *Founding of Eridu*) is more strained than the INFERENCE
+  marker allows: the three compositions differ in principal divine
+  actor (*First Brick* is Ea-centred, the other two are
+  Marduk-centred).
+low_findings_summary: |
+  F-6 (PRECISION, LOW): The technical foundation/renovation-ritual
+  lemma is *libittu maḫrītu* (not bare *libittu*); the chapter's
+  CAD-L gloss is under-specified.
+
+  F-7 (CITATION-PRECISION, LOW): WVDOG 4 plate 12 should be
+  named-but-flagged as the principal cuneiform witness; not
+  required, but improves manuscript transparency.
+recommended_downstream_action: |
+  BLOCK at stage 13 post-human-normalize. Escalate to human
+  reviewer for brief-level reauthorisation BEFORE proceeding. The
+  brief's entities_glossary, cultural_relevance, and
+  special_instructions need substantial revision (not line-edits)
+  to:
+  (i) replace Marduk with Ea as the principal divine actor;
+  (ii) add the seventeen-deity craft pantheon (Kulla, Ninildu,
+       Ninsimug, Ninagal, Arazu, Guškinbanda, Ninzadim, Ninkurra,
+       Ašnan, Laḫar, Siris, Ningišzida, Ninšar, Adag, Umunmutamgu,
+       Umunmutamnag, Kusu) as the wider divine cast;
+  (iii) reframe the ritual context as temple **renovation** (not
+       new-temple foundation);
+  (iv) reflect the multi-witness manuscript history (Late
+       Babylonian tablets plural plus late Assyrian fragment);
+  (v) confirm or remove the *ušumgallu* claim (F-4) — the safer
+      default if direct Lambert 2013 access cannot be obtained is
+      to remove the *ušumgallu* section.
+  Once the brief is reauthorised, a FRESH stage-11 chapter-claims
+  rewrite is recommended (the structural problems are too deep
+  for line-edit-style stage-13 normalisation). The bibliographic
+  anchor (pp. 376–383, chapter 33, *The First Brick*) is correct
+  and should be preserved as-is.
+summary: |
+  Chapter 12 (The First Brick) round-1 factcheck: VERDICT BLOCK.
+  The bibliographic anchor (Lambert 2013 ch. 33 / pp. 376–383 /
+  *The First Brick*) is correct and the audit-A8 resolution is
+  fully corroborated. However, three HIGH-severity structural
+  findings BLOCK the chapter: F-1 (CONTAMINATION) — the chapter's
+  central organising claim that Marduk is the divine architect of
+  the first brick is contradicted by three independent Wikipedia
+  articles citing specific Lambert 2013 pages; the composition is
+  Ea-centred, with Ea creating seventeen craft-pantheon deities
+  (Kulla and others) from clay to perform temple renovation; F-2
+  (CITATION-WRONG) — the "single late-Babylonian manuscript"
+  framing is wrong, the composition has multiple Late Babylonian
+  witnesses plus a late Assyrian fragment; F-3 (CITATION-WRONG) —
+  the new-temple-foundation ritual context is wrong, Lambert 2013
+  ch. 33 is a temple-renovation incantation. Plus 2 MEDIUM
+  findings (*ušumgallu* in foundation register unverified;
+  architectural-cosmogony sub-corpus framing over-extends), 2 LOW
+  findings (libittu maḫrītu precision; WVDOG 4 plate 12 citation
+  precision), and 3 NOTES. The structural problem is upstream of
+  the writer: the brief's entities_glossary locks Marduk as
+  "divine architect" at high confidence, and the writer correctly
+  executed the brief but the brief itself is wrong about the
+  composition's principal divine actor. The writer's
+  caution_on_specific_attestations field in the completion record
+  explicitly asked round-1 factcheck to verify this claim,
+  anticipating exactly this finding. Recommended action: BLOCK at
+  stage 13; escalate to human reviewer for brief-level
+  reauthorisation; run a fresh stage-11 rewrite once the brief is
+  corrected.

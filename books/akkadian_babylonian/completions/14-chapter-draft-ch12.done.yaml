@@ -1,0 +1,64 @@
+stage: "chapter-draft"
+chapter: 12
+slug: "first-brick"
+input: "chapters/12-first-brick.claims.approved.adoc + briefs/12-first-brick.yaml + gloss-ledger.yaml"
+output: "chapters/12-first-brick.adoc + updated gloss-ledger.yaml"
+timestamp: "2026-05-09T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/12-first-brick.adoc"
+    lines: 123
+  - file: "gloss-ledger.yaml"
+    lines: 555
+summary: |
+  Chapter 12 (The First Brick) narrative draft. Asimov-style prose drawn from chapters/12-first-brick.claims.approved.adoc; every claim represented; no factual additions; all six markers (3 INFERENCE + 1 LACUNA + 1 RECONSTRUCTION + 1 VARIANT) preserved byte-for-byte; all six COMPARATIVE-HOOK comments carried over verbatim. Chapter ID anchor [[ch-12-first-brick]] (per toc.yaml).
+
+  Source overview opening (4 paragraphs) introduces the composition's content (Ea creates the freshwater deep, then fashions seventeen craft-pantheon deities + king + mankind for temple renovation; Marduk absent), its modern editorial title (after the *libittu maḫrītu*), its sole modern critical edition (Lambert 2013 pp. 376–383), and its multi-witness manuscript transmission (Late Babylonian tablets including WVDOG 4 plate 12 + a late Assyrian fragment). Body sections: (i) Renovation, not foundation — clarifies the libittu maḫrītu as the recovered/recycled brick rather than an inaugural new-building brick; (ii) Ea creates the freshwater deep — establishes the Ea-centred opening and the Ea-centred-minority-register placement within the late-Babylonian dossier; (iii) The clay-creation of the craft-pantheon — Kulla, the construction trio Ninildu/Ninsimug/Ninagal, the resource-supply cohort, Kusu the chief priest, plus king and mankind; (iv) The renovation as the divine archetype — closes the cosmogonic loop by tying the divine labour-force to the human ritual-present, with lexical commentary on libittu / libittu maḫrītu; (v) Variants and witness; (vi) The poem's place in the corpus; (vii) Closing reflection on the diversity of Babylonian creation thought (the cycle's closing chapter).
+
+  Style: Asimov register throughout; short paragraphs; plain modern English; treats the reader as intelligent and uninformed. No forbidden-words violations (the single occurrence of "primordial" is in a substantive context — "Marduk splitting a primordial body", referring to Tiamat in *Enūma Eliš* — not as ornament). No "Long ago..." / "It is said that..." / "In the time before time..." openings. Full claims-document length budget honoured: 123 lines is tight Asimov prose around the approved claims; no padding, no ornamental reverence, no recap paragraphs.
+
+gloss_decisions:
+  - term: "Ea"
+    decision: "FULL_GLOSS_REFRESH — last full mention was chapter 07 (5 chapters back); chapter 12 is Ea-centred and the locked first_mention_gloss from glossary.yaml ('god of wisdom, the freshwater Apsû, and incantation, patron of craft and cunning, father of Marduk') is reused in full as a refresher on first substantive mention. Ledger updated: last_reminder_in='12', last_mention_in='12'."
+  - term: "Apsû"
+    decision: "REMINDER_GLOSS — last full mention was chapter 07 (5 chapters back); chapter 12 gives a brief reminder gloss in passing ('the cosmic freshwater deep beneath the earth, his own dwelling') alongside the introduction of the Sumerian form *Abzû* used in Lambert's translation. Sumerian-form Abzû handled per glossary.yaml's never_use carve-out for explicit Sumerian-tradition citations. Ledger updated: last_reminder_in='12', last_mention_in='12'."
+  - term: "Marduk"
+    decision: "BARE — Marduk has been the central figure of chapters 1, 5, 6, 7, 8, 9, 10, 11; chapter 12 uses the bare term in all mentions (Ea's son in the Ea first-mention gloss; explicit-absence statements; cross-references to Marduk-centred compositions of the dossier). No reminder gloss given; the term is fully familiar to any reader of the cycle. Ledger updated: last_mention_in='12'."
+  - term: "Atra-ḫasīs"
+    decision: "BARE (cross-reference) — last full mention was chapter 07 (5 chapters back), but chapter 12 names *Atra-ḫasīs* only as the title of the chapter-2 composition in two cross-reference contrasts in the closing reflection. The title in cross-reference context is unambiguous. Ledger updated: last_mention_in='12'."
+  - term: "akītu"
+    decision: "BARE (cross-reference) — last full mention was chapter 01; chapter 12 names *akītu*-festival recitation once in the closing reflection cross-reference to *Enūma Eliš*. Ledger updated: last_mention_in='12'."
+  - term: "Kulla"
+    decision: "FULL_GLOSS — new chapter-12 ledger entry; brick-god of the Mesopotamian craft-pantheon. Inline gloss given in body prose."
+  - term: "Ninildu"
+    decision: "FULL_GLOSS — new chapter-12 ledger entry; the divine carpenter. Inline gloss given as part of the construction-craft trio."
+  - term: "Ninsimug"
+    decision: "FULL_GLOSS — new chapter-12 ledger entry; the divine smith. Inline gloss given as part of the construction-craft trio."
+  - term: "Ninagal"
+    decision: "FULL_GLOSS — new chapter-12 ledger entry; the divine metalworker. Inline gloss given as part of the construction-craft trio."
+  - term: "Kusu"
+    decision: "FULL_GLOSS — new chapter-12 ledger entry; addressed in the text as 'chief priest of the great gods'; the divine priestly counterpart to Kulla. Inline gloss given."
+  - term: "libittu"
+    decision: "FULL_GLOSS — new chapter-12 ledger entry; Akkadian for 'brick' (CAD L)."
+  - term: "libittu maḫrītu"
+    decision: "FULL_GLOSS — new chapter-12 ledger entry; Akkadian technical phrase for 'first/former brick' (the brick recovered from the existing temple in renovation; CAD M/I s.v. maḫrû for the qualifier)."
+
+self_check:
+  source_overview_present: true
+  every_claim_represented: PASS
+  no_factual_additions: PASS
+  forbidden_words_clear: "PASS — single 'primordial' occurrence is substantive (refers to Tiamat in *Enūma Eliš* contrast), not ornament."
+  glossary_compliance: "PASS — Marduk, Ea, Apsû, akītu, Tiamat, Enūma Eliš all use locked glossary.yaml renderings. Sumerian Abzû used once at first introduction of the freshwater-deep creation, per glossary.yaml's never_use carve-out for explicit Sumerian-tradition citations (Lambert's translation register)."
+  no_never_use_terms: "PASS — Enki, Inanna, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent from body prose."
+  variant_handling_matches_brief: "PASS — single-prevalent classification per the brief; the [VARIANT:] marker correctly identifies the Late Babylonian witnesses + late Assyrian fragment as duplicates of a single recension, not recensional alternatives."
+  markers_byte_for_byte: "PASS — all six markers (3 INFERENCE w/ basis+risk; 1 LACUNA w/ source+scholarly_reconstruction; 1 RECONSTRUCTION w/ gap_source+fill_source+confidence; 1 VARIANT w/ primary+alt+chosen+reason) preserved verbatim from .claims.approved.adoc."
+  footnotes_carried_over: "PASS — every footnote in the approved claims appears verbatim in the draft, attached to the corresponding narrative paragraph."
+  not_padded: "PASS — 123 lines for a ~1200-word target chapter, tight Asimov register, no filler transitions or recap paragraphs."
+  comparative_hooks_carried: "PASS — all six COMPARATIVE-HOOK comments preserved at chapter foot."
+  italic_markup_correct: "PASS — Akkadian common nouns (libittu, libittu maḫrītu, akītu, Apsû, Abzû, Apsû reminder) and composition titles (*The First Brick*, *Enūma Eliš*, *Atra-ḫasīs*, *Adapa*, *The Theogony of Dunnu*, *The Toil of Babylon*, *Uraš and Marduk*, *Damkina's Bond*, *The Founding of Eridu*, *The Worm and the Toothache*, *The Slaying of Labbu*, *Enmešarra's Defeat*) use AsciiDoc *underscore* italic in body prose. Asterisk-bold occurrences are confined to footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents (which carry through later stages verbatim per the verbatim-preservation rule)."
+  gloss_ledger_updated: "PASS — gloss-ledger.yaml updated with chapter-12 entries for Ea, Apsû, Marduk, Atra-ḫasīs, akītu (last_mention_in updated); Kulla, Ninildu, Ninsimug, Ninagal, Kusu, libittu, libittu maḫrītu (new chapter-12 entries). Total entries: chapters 0-9 entries preserved; chapter-12 entries added per skill spec."
+
+notes:
+  ushgallu_absence: "Per the round-2 brief revision (R2-5) and the round-2 factcheck (F-4 resolved), the *ušumgallu* attribute is absent from the chapter draft. The round-1 chapter wrongly attributed an *ušumgallu* presence to Lambert 2013 chapter 33; the round-2 revision removed the attribution as unverified."
+  proceed_to: "stage 15 (narrative-fidelity) in a fresh-context agent. Per RUNBOOK 10e, narrative-fidelity verifies the draft against the .claims.approved.adoc; if PASS, the chapter is done and the per-chapter pipeline closes."
