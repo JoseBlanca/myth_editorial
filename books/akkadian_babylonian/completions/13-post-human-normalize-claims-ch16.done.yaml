@@ -1,0 +1,67 @@
+stage: "post-human-normalize"
+chapter: 16
+slug: "erra-and-ishum"
+input: "chapters/16-erra-and-ishum.claims.adoc + chapters/16-erra-and-ishum.claims.factcheck.yaml (verdict PASS-WITH-LIGHT-FIXES)"
+output: "chapters/16-erra-and-ishum.claims.approved.adoc"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/16-erra-and-ishum.claims.approved.adoc"
+    lines: 303
+summary: |
+  Chapter 16 (Erra and Išum) post-human-normalize. Round-1 claims-factcheck returned PASS-WITH-LIGHT-FIXES (0 HIGH / 2 MEDIUM / 1 LOW); three light edits applied to produce the approved file:
+
+    (1) F-2 MEDIUM: hedged the Sennacherib reception framing in the Marduk-leaving-his-throne COMPARATIVE-HOOK (line 241). The earlier "canonical theological frame within which Babylonian writers later read the catastrophes of their own history" formulation was overstated. Per Foster 2007, Frahm's *Enūma Eliš* reception survey, Tadmor 2022, and Bottéro 2001, the 689 BCE Sennacherib sack reading is one widely-discussed but contested proposal among several, not the consensus frame; the composition date is itself disputed (proposals span the eleventh to the seventh centuries BCE). The hook now describes the reading as "one widely-discussed but contested strand of the scholarship" and "one proposal among several rather than the consensus frame", and notes the composition-date dispute. Detailed treatment remains reserved for the influences chapter. The fix is localized to the COMPARATIVE-HOOK; the body claim is unchanged.
+
+    (2) F-3 LOW: tightened the Marduk flood-era recollection paragraph (line 136). The unsupported paraphrase "the gods feared the consequences" was dropped and replaced with the attested textual material from Tablet I.131–162: the heavens-shaking detail (positions of heavenly bodies altered, could not be restored), the netherworld-quaking detail (yield of the furrow diminished, regulation of heaven and earth disintegrated), and — the load-bearing detail of the recollection, omitted in round 1 — Marduk's dispatch of the seven *apkallū* (antediluvian sages, original craftsmen of the cult statue) down to the Apsû with the order not to come back up. This element bears directly on the cult-statue refurbishment pretext: the original craftsmen are no longer within easy reach, which is precisely why a fresh cleansing requires Marduk himself to step away. Footnote updated to cite Cagni 1969 I.131–162 exactly and to add the Black & Green 1992 s.v. apkallu glossary entry. The body now uses the locked glossary rendering *apkallū* (italicized, plural with macron) and Apsû (with circumflex) per glossary.yaml.
+
+    (3) F-4 MEDIUM: pinned the Sebitti differentiation claim (line 107) to the named catalogue. The earlier "differentiated within the catalogue: each carries a specific destructive remit" formulation was abstract. The fix appends the seven named commissions in the order Cagni 1969's critical text preserves: terror, fire, lion, mountain-feller, wind-encircler, no-survivors, venom (per Cagni 1969 I.31–44 and Foster 2005, pp. 882–884). The differentiation claim is now catalogue-grounded rather than abstract, and the writer-flagged-for-scrutiny item #6 (Sebitti differentiation) is now backed by the specific named destinies. Footnote updated to cite the exact line range and to record the apparatus on manuscript variation in the order.
+
+  Provenance comment block appended at the file foot recording: timestamp, edits applied, structural checks passed, and round-1 factcheck cross-references.
+
+findings_triage:
+  - finding_id: F-2
+    kind: HEDGING-NEEDED
+    severity: MEDIUM
+    disposition: ACCEPT
+    rationale: "Hedged the Sennacherib reception framing in the COMPARATIVE-HOOK per the factcheck recommended_fix. The chapter's earlier 'canonical theological frame' formulation overstated the scholarly consensus: Foster 2007, Frahm, Tadmor 2022, and Bottéro 2001 treat the 689 BCE reading as one proposal among several; the composition date itself is disputed (proposals span the eleventh to the seventh centuries BCE). The fix is localized to the COMPARATIVE-HOOK (not body); the body claim about Marduk's cleansing-absence as the structural theological pivot is unchanged. Detailed treatment remains reserved for the influences chapter."
+  - finding_id: F-3
+    kind: HEDGING-NEEDED
+    severity: LOW
+    disposition: ACCEPT
+    rationale: "Replaced the unsupported paraphrase 'the gods feared the consequences' with the attested textual material from Tablet I.131–162. The factcheck's evidence section flagged that three of four elements of the round-1 paraphrase were verbatim-supported (Marduk-left-his-throne-at-the-flood; heavens-shook; underworld-trembled) while the fourth ('gods feared') was a writer's paraphrase rather than a textual feature; and that the load-bearing element of the recollection — Marduk's dispatch of the *apkallū*/craftsmen to the Apsû — was omitted. The fix takes the factcheck's recommended_fix option (b): adds the attested apkallu-in-Apsû detail, which strengthens the chapter on the cult-statue refurbishment logic (the original craftsmen are no longer accessible, which is precisely why Marduk must step away)."
+  - finding_id: F-4
+    kind: HEDGING-NEEDED
+    severity: MEDIUM
+    disposition: ACCEPT
+    rationale: "Appended the seven named Sebitti commissions (terror, fire, lion, mountain-feller, wind-encircler, no-survivors, venom) per Cagni 1969 I.31–44 and Foster 2005, pp. 882–884. The factcheck's evidence section confirmed that the differentiation is real and textually attested in the Tablet I catalogue; the chapter's round-1 'differentiated within the catalogue' formulation was abstract and risked being read as a writer's gloss. The fix converts the abstract claim into a catalogue-grounded claim with the specific named destinies, strengthening the Sebitti-differentiation argument that the writer flagged for scrutiny in flag #6. Footnote updated to cite the exact line range and record the apparatus on manuscript variation in the order (which remains flagged at the line-125 [LACUNA: ... | scholarly_reconstruction: yes] marker)."
+
+checks_performed:
+  - check: "one-claim-per-paragraph"
+    status: PASS
+  - check: "every-claim-footnoted"
+    status: PASS
+  - check: "evidence-tokens-syntactically-valid"
+    status: PASS
+    detail: "112 EVIDENCE tokens; all source_id values resolve to sources.yaml entries (cagni-1969, foster-2005, dalley-2008, foster-2007, black-green-1992, bottero-2001)."
+  - check: "markers-with-required-sub-fields"
+    status: PASS
+    detail: "2 INFERENCE markers w/ basis+risk (the cleansing-absence-as-theology-disguised-as-plot reading; the deliberate-combination reading of the named-author + amulet-format dossier); 4 LACUNA markers w/ source+scholarly_reconstruction (Tablet III damaged lines; Tablet IV opening; Tablet I Sebitti-order variants; Tablet V amulet-colophon variants); 1 RECONSTRUCTION w/ gap_source+fill_source+confidence (Cagni 1969's cross-witness critical text); 1 VARIANT w/ primary+alt+chosen+reason (Cagni 1969's principal text vs. the Tablet I and Tablet V in-tradition manuscript variants). 5 COMPARATIVE-HOOK comments preserved (Marduk-leaving-his-throne and Sennacherib reception, now hedged; Sebitti demonic-Seven typology; Apollo Iliad I plague comparandum; apotropaic-ritual reception; Hebrew Bible prophetic comparandum)."
+  - check: "glossary-renderings-consistent"
+    status: PASS
+    detail: "Erra, Išum, Sebitti, Marduk, Anu, Kabti-ilāni-Marduk (with macron), Esagil, Babylon, Aššur (with š), Apsû (with circumflex, added at line 136 with F-3 fix), *apkallū* (italicized, plural with macron, added at line 136 with F-3 fix) — all use locked glossary.yaml renderings. The composition title *Erra and Išum* preserves the editorial form with š. Cross-references to *Nergal and Ereškigal* (chapter 14), *Anzû* (chapter 15), *Enūma Eliš* (chapter 1), *Erra and Narām-Sîn* (chapter 23), *Ludlul bēl nēmeqi* (chapter 28), *The Babylonian Theodicy* (chapter 29) all preserve their glossary-locked composition-title forms."
+  - check: "no-never-use-glossary-terms-in-body"
+    status: PASS
+    detail: "Enki, Inanna, Damgalnuna, Anzud, Iškur, Ashur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid all absent from body prose, markers, footnotes."
+  - check: "canonical-chapter-anchor-present"
+    status: PASS
+    detail: "[[ch-16-erra-and-ishum-claims]] present at line 1, unchanged."
+  - check: "original-file-unchanged"
+    status: PASS
+    detail: "chapters/16-erra-and-ishum.claims.adoc is the immutable record of what the writer produced; chapters/16-erra-and-ishum.claims.approved.adoc is the new file with the three light edits applied (F-2 Sennacherib hedge in COMPARATIVE-HOOK; F-3 Marduk flood-recollection apkallū fix; F-4 Sebitti named-destinies addition) and the appended provenance comment block."
+
+notes:
+  proceed_to: "stage 14 (chapter-draft) using chapters/16-erra-and-ishum.claims.approved.adoc as the input. Per RUNBOOK 10d, chapter-draft must NOT receive primary sources — claims are the only input."
+  pattern_match_with_recent_chapters: |
+    Chapter 16's round-1 PASS-WITH-LIGHT-FIXES / stage-13-housekeeping pattern parallels chapter 13 (also single-round PASS-WITH-LIGHT-FIXES with three light edits applied at post-human-normalize). Chapters 7, 12, and 14 went round-1-BLOCK / round-2-PASS via brief revision; chapters 8–11 and 15 went round-1-PASS without housekeeping. The single-round PASS-WITH-LIGHT-FIXES pattern (ch13, ch16) is the lightest of the three established pipelines and requires no brief revision or round-2 rewrite — only mechanical hedge-adjustments at the approved-file stage.

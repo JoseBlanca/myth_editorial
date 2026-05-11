@@ -1,0 +1,164 @@
+stage: "claims-factcheck"
+chapter: 16
+slug: "erra-and-ishum"
+input: "chapters/16-erra-and-ishum.claims.adoc"
+brief_file: "briefs/16-erra-and-ishum.yaml"
+output: "chapters/16-erra-and-ishum.claims.factcheck.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_context: true
+
+verdict: PASS-WITH-LIGHT-FIXES
+block_severity: NONE
+proceed_to_stage: 13   # post-human-normalize claims, with three localised hedge-adjustments at the human-review step
+
+tallies:
+  claims_identified: 24
+  evidence_tokens_audited: 112
+  triangulations_performed: 11
+  supported: 20
+  internal_variance: 1     # F-1 Sebitti-order Tablet I (handled correctly via [LACUNA: ...])
+  factual_error: 0
+  citation_wrong: 0
+  fabrication: 0
+  unverified: 0
+  contamination: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  hedging_needed: 3
+  notes: 2
+
+severity_summary:
+  high_findings: 0
+  medium_findings: 2     # F-2 Sennacherib-reception framing; F-4 Sebitti-differentiation precision
+  low_findings: 1        # F-3 Marduk flood-era recollection paraphrase
+
+medium_findings_detail:
+  - finding_id: F-2
+    kind: HEDGING-NEEDED
+    locations: [line 241 COMPARATIVE-HOOK]
+    issue: "Sennacherib 689 BCE reception reading is one scholarly proposal, not consensus. Composition date itself disputed (11th–7th c. BCE proposals); the chapter's 'canonical theological frame' framing is too strong. Fix is in COMPARATIVE-HOOK framing only (not body), reserved for influences chapter."
+  - finding_id: F-4
+    kind: HEDGING-NEEDED
+    locations: [line 107]
+    issue: "Sebitti differentiation is real and well-attested but the chapter would be strengthened by naming the seven destinies explicitly (terror, fire, lion, mountain-feller, wind-encircler, etc.) rather than the abstract 'differentiated within the catalogue' formulation."
+
+low_findings_detail:
+  - finding_id: F-3
+    kind: HEDGING-NEEDED
+    locations: [line 136]
+    issue: "Marduk's flood-era recollection: heavens-shook ✓ and underworld-trembled ✓ are supported; 'the gods feared the consequences' is writer's paraphrase, not verbatim. Optionally add the apkallu/craftsmen-in-Apsu detail (Tablet I.147–162) — load-bearing for the cult-statue pretext."
+
+honesty:
+  direct_access:
+    cagni_1969_studi_semitici_34: false   # Italian print-only
+    foster_2005_pp_880_911: false   # CDL Press paywalled
+    dalley_2008_pp_282_315: false   # OUP World's Classics
+    foster_2007_pp_39_43: false     # print-only
+    black_green_1992: false         # paywalled
+    bottero_2001: false             # print-only
+  triangulated_via_open_web:
+    - "Wikipedia s.v. Erra (god): composition date 1st-millennium BCE; Sebitti as 'sons of heaven and earth' assigned destinies by Anu; Kabti-ilāni-Marduk dream-revelation colophon"
+    - "Wikipedia s.v. Sebitti: Sebitti as creations of Anu following the god into battle as weapons; multiple parentage traditions across texts"
+    - "Wikipedia s.v. Ishum: Ishum as herald/vizier; restraint role"
+    - "Britannica s.v. Kabti-ilani-Marduk: composer, son of Dabibi, dream-revelation transcriber"
+    - "Britannica s.v. Erra: cult-statue refurbishment pretext verbatim"
+    - "Oxford Classical Dictionary entry on Epic of Erra: 1st-millennium BCE, manuscript distribution, scholarly date dispute"
+    - "gatewaystobabylon.com verbatim translation: Marduk's flood-era recollection (heavens-stations-altered, netherworld-furrow-yield-diminished), Tablet III destruction catalogue, Tablet V apotropaic colophon"
+    - "maniadelight.com Poem of Erra Tablet I detail: 'I rose from my seat and contrived the deluge'; 'jewelry like the stars of heaven has gotten dirty'"
+    - "mostlydeadlanguages.tumblr.com Erra I.1–123: opening invocation; Sebitti incitement; weapons-growing-slack rhetoric"
+    - "mythicremembering.com Epic of Erra: Kabti-ilani-Marduk son of Dabibi colophon; dream-revelation; Sebitti destinies"
+    - "Tadmor 2022 Yale dissertation, Frahm Enūma Eliš reception survey (via search-result extracts): Erra-Išum as Babylonian counter-text to Enūma Eliš; multiple reading-traditions; Sennacherib reception is one proposal not consensus"
+    - "darkchamberz / grokipedia / brickthology Sebitti destinies enumeration (terror/fire/lion/mountain/wind/spare-none/venom)"
+    - "Samizdat colophon transcription: 'annû ša Kabti-ilāni-Marduk mār Dabibi ušabrišuma idbubû'"
+    - "displaceddynasties scholarly date summary: proposals span 11th–7th centuries BCE"
+  taken_on_trust:
+    - "Cagni 1969 apparatus details on Sebitti-order variants and amulet-colophon variants — variant existence corroborated by the brief and the secondary surveys"
+    - "Foster 2005 specific page-anchors pp. 880–911 (overall range consistent with the chapter's coverage; individual claims triangulated via translation mirrors)"
+    - "Dalley 2008 specific page-anchors pp. 282–315 (same disposition)"
+    - "Foster 2007 pp. 39–43 — recensional and reception coverage; the Sennacherib-as-canonical-frame reading is NOT supported as consensus per the broader scholarly survey (see F-2)"
+    - "Black & Green 1992 s.v. entries: deity-handbook coverage taken as genre-appropriate triangulation"
+    - "Bottéro 2001 Religion in Ancient Mesopotamia: religious-thought commentary taken on trust per the brief"
+
+writer_flagged_for_scrutiny_resolution:
+  flag_1_anu_paternity: UPHELD
+  flag_2_cult_statue_pretext: UPHELD
+  flag_3_marduk_flood_recollection: UPHELD-WITH-HEDGE   # F-3 LOW
+  flag_4_sennacherib_reception_consensus: OVERTURNED-CONTESTED   # F-2 MEDIUM
+  flag_5_kabti_ilani_marduk_son_of_dabibi: UPHELD
+  flag_6_sebitti_individuation: UPHELD-WITH-SLIGHT-HEDGE   # F-4 MEDIUM
+  flag_7_apollo_plague_typological: UPHELD
+
+caution_flags_resolved:
+  single_prevalent_variant_handling: "VERIFIED ✓ — SINGLE-PREVALENT classification correctly applied; Sebitti-order and amulet-colophon variants flagged at [LACUNA: ... | scholarly_reconstruction: yes] markers (lines 125, 213)"
+  named_author_colophon: "VERIFIED ✓ — Kabti-ilāni-Marduk, son of Dābibi; dream-revelation; verbatim-transmission claim"
+  cult_statue_pretext_load_bearing: "VERIFIED ✓ — statue tarnished, regalia dim, refurbishment proposed, craftsman pretext"
+  cleansing_absence_theological_pivot: "VERIFIED ✓ — handled correctly as INFERENCE marker (line 155); brief's special_instructions framing preserved"
+  apotropaic_self_amulet_framing: "VERIFIED ✓ — closing colophon framing supported across all translation mirrors"
+  single_recension_no_split: "VERIFIED ✓ — five tablets, multiple manuscripts agreeing closely, no recensional split per Foster 2007 / Cagni 1969"
+  manuscript_dossier_geography: "VERIFIED ✓ — Babylon, Aššur, Nineveh, Sultantepe, with amulet-format witnesses"
+  ob_erra_naram_sin_distinction: "VERIFIED ✓ — chapter correctly distinguishes from OB royal-legend Erra and Narām-Sîn (ch 23) per brief special_instructions"
+  apollo_iliad_typological_only: "VERIFIED ✓ — chapter explicitly disclaims transmission; reserved for influences chapter"
+  hebrew_bible_prophetic_typological_only: "VERIFIED ✓ — same handling per scope.md"
+
+routing:
+  proceed_to_stage_13_with_light_fixes: true
+  needs_brief_revision: false
+  needs_round_2_chapter_claims_rewrite: false
+  rewrite_scope: |
+    Three targeted human-review edits at stage 12a:
+    (i) line 107: append named Sebitti-destinies catalogue (F-4 fix, MEDIUM).
+    (ii) line 136: drop 'the gods feared the consequences' paraphrase;
+         optionally add the apkallu/craftsmen-in-Apsu detail (F-3 fix, LOW).
+    (iii) line 241 COMPARATIVE-HOOK: hedge the Sennacherib-reception
+          framing (F-2 fix, MEDIUM); 'one of the theological frames'
+          rather than 'the canonical theological frame'; note dating
+          dispute.
+    All three localised; no structural rewrite. No round-2 chapter-claims needed.
+  re_factcheck_after_fixes: false   # PASS-WITH-LIGHT-FIXES verdict; the hedge-adjustments are mechanical not factual
+
+outputs:
+  - file: "chapters/16-erra-and-ishum.claims.factcheck.yaml"
+    lines: 846
+
+summary: |
+  Round-1 fact-check of chapters/16-erra-and-ishum.claims.adoc
+  completed in fresh context (no writer-side memory of producing
+  the claims). Verdict: PASS-WITH-LIGHT-FIXES.
+
+  Zero HIGH findings. Two MEDIUM hedging-needed findings: F-2
+  (Sennacherib reception consensus framing too strong in
+  COMPARATIVE-HOOK; reading is one proposal among several;
+  composition date itself disputed 11th–7th c. BCE) and F-4
+  (Sebitti differentiation real but should name the seven
+  destinies explicitly). One LOW hedging-needed: F-3 (Marduk's
+  flood-era recollection paraphrase 'gods feared' is writer's
+  gloss; the verbatim text foregrounds apkallu-craftsmen-in-
+  Apsu and heaven-stations-altered).
+
+  All seven writer-flagged-for-scrutiny items resolved:
+  (1) Anu's paternity of Sebitti = UPHELD;
+  (2) Cult-statue pretext = UPHELD;
+  (3) Marduk's flood-era recollection = UPHELD-WITH-HEDGE (F-3);
+  (4) Sennacherib reception consensus reading = OVERTURNED — the
+      reading is contested, not consensus (F-2);
+  (5) Kabti-ilāni-Marduk son of Dābibi patronymic = UPHELD;
+  (6) Sebitti individuated destinies = UPHELD-WITH-SLIGHT-HEDGE
+      (F-4 recommends naming the seven explicitly);
+  (7) Apollo-Iliad plague typological comparandum = UPHELD.
+
+  No fabrications, no contamination, no silent bridges, no
+  glossary violations, no marker-schema failures. The named-
+  author colophon, cult-statue pretext, manuscript-dossier
+  geography, apotropaic-colophon framing, five-tablet
+  narrative spine, and SINGLE-PREVALENT variant handling are
+  all supported. The chapter's core spine — Erra–Sebitti–
+  Marduk–Išum dynamic, Marduk's cleansing-absence as
+  theological pivot, Tablet III–IV destruction, Tablet V
+  resolution and apotropaic colophon — is factually sound.
+
+  Recommendation: route to stage 13 (post-human-normalize) with
+  the three localised hedge-adjustments applied at human review.
+  No round-2 chapter-claims rewrite required.

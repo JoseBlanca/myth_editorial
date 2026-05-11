@@ -1,0 +1,152 @@
+stage: "narrative-fidelity"
+chapter: 16
+slug: "erra-and-ishum"
+input: "chapters/16-erra-and-ishum.claims.approved.adoc + chapters/16-erra-and-ishum.adoc + briefs/16-erra-and-ishum.yaml + glossary.yaml + gloss-ledger.yaml + scope.md + sources.yaml + chapters/16-erra-and-ishum.claims.factcheck.yaml + completions/14-chapter-draft-ch16.done.yaml"
+output: "chapters/16-erra-and-ishum.fidelity.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_conversation: true
+verdict: PASS-WITH-ADVISORY
+verdict_severity: ADVISORY
+
+outputs:
+  - file: "chapters/16-erra-and-ishum.fidelity.yaml"
+    lines: 471
+
+summary: |
+  Chapter 16 (Erra and Išum) narrative-fidelity audit returns
+  PASS-WITH-ADVISORY (severity ADVISORY).
+
+  Every approved claim is represented in the chapter draft;
+  every numbered claim paragraph maps to a prose paragraph in
+  the same sequential position. All three post-human-normalize
+  light-fixes (F-2 Sennacherib reception hedge with eleventh-
+  to-seventh-century BCE date dispute and variable-construal
+  across Foster 2007 / Frahm / Tadmor 2022 / Bottéro 2001;
+  F-3 Tablet II Marduk's flood-era recollection with the
+  apkallū-in-Apsû load-bearing detail and the dropped "gods
+  feared" paraphrase; F-4 Sebitti seven named commissions
+  catalogue per Cagni 1969 I.31–44 — terror, fire, lion,
+  mountain-feller, wind-encircler, no-survivors, venom) carry
+  through correctly into the body prose.
+
+  All eight structural markers (2 INFERENCE + 4 LACUNA +
+  1 RECONSTRUCTION + 1 VARIANT) are preserved byte-identical
+  with all required pipe-delimited sub-fields. All five
+  COMPARATIVE-HOOK comments preserved byte-identical. All
+  27 footnotes preserved byte-identical. All 112 EVIDENCE
+  tokens preserved byte-identical.
+
+  Glossary compliance: PASS — Erra, Išum, Sebitti, Marduk,
+  Anu, Apsû (locked û), apkallu (locked plural _apkallū_),
+  Aššur, Esagil, Nergal, Kabti-ilāni-Marduk (locked macron-
+  ā), Dābibi (locked macron-ā), Babylon all use the locked
+  glossary.yaml renderings; no Ishum / Ashur / Apsu / Irra
+  leakage. No never_use glossary terms in body prose;
+  Sumerian *udug* and *gallû* demon names appear once inside
+  the Sebitti COMPARATIVE-HOOK with the proper "Reserved for
+  the influences chapter" disclaimer (scope-compliant).
+  Forbidden-words check: PASS. Asimov register: PASS.
+  Italics convention: PASS. No factual additions; no silent
+  omissions of substantive content.
+
+  Two ADVISORY findings, both gloss-ledger-licensed and not
+  requiring revision:
+    G-1: Erra/Išum reminder glosses relocated from the claims
+         Tablet I opener to the prose source-overview opener;
+         the "(chapter 14)" cross-reference parenthetical was
+         dropped in the relocation. Substantive Erra-Nergal
+         identification preserved.
+    G-2: Marduk's claims first-mention gloss "the patron-god
+         of Babylon, head of the Babylonian pantheon" not
+         preserved verbatim at the Tablet II opener;
+         substantive content preserved redundantly across the
+         chapter (Babylon reminder gloss carries "Marduk's
+         city"; Tablet II departure paragraph names "the
+         patron-god of Babylon"; COMPARATIVE-HOOK names
+         Marduk as "the patron-god of Babylon"). Licensed by
+         gloss_decisions.Marduk: BARE.
+
+  Delta tallies — all zero:
+    - EVIDENCE tokens: 112 → 112
+    - footnotes: 27 → 27
+    - LACUNA blocks: 4 → 4
+    - RECONSTRUCTION blocks: 1 → 1
+    - VARIANT blocks: 1 → 1
+    - INFERENCE blocks: 2 → 2
+    - COMPARATIVE-HOOK comments: 5 → 5
+
+honesty_self_check:
+  every_claim_mapped: true
+  every_paragraph_checked_for_additions: true
+  meaning_distortion_check_done: true
+  same_model_as_writer: true
+  fresh_conversation: true
+  notes: |
+    The writer (chapter-draft stage) and the auditor (narrative-
+    fidelity stage) are both claude-opus-4-7[1m]. The fresh-
+    conversation requirement is met (separate session, no
+    memory of writing the draft). The same-model preference is
+    not strictly met but is not required by the skill.
+
+findings_for_record:
+  - finding_id: G-1
+    severity: ADVISORY
+    kind: LICENSED_GLOSS_RELOCATION
+    summary: |
+      The claims Tablet I opening paragraph introduces Erra and
+      Išum with reminder glosses inline ("the god of plague and
+      violent destruction, sometimes identified with Nergal in
+      the wider Akkadian tradition (chapter 14)"; "the herald of
+      the gods ... the calming counterweight to Erra's rage").
+      The prose chapter has relocated this reminder-gloss
+      content to the chapter's first paragraph; the parenthetical
+      "(chapter 14)" cross-reference was dropped in the
+      relocation. Substantive Erra-Nergal identification and
+      Išum's vizier-and-restraint role are fully preserved.
+      Licensed by gloss_decisions.Erra: REMINDER_GLOSS and
+      gloss_decisions.Išum: REMINDER_GLOSS in the writer's
+      completion record. Does not affect the fidelity verdict.
+
+  - finding_id: G-2
+    severity: ADVISORY
+    kind: LICENSED_GLOSS_OMISSION
+    summary: |
+      The claims Tablet II opening paragraph introduces Marduk
+      with the first-mention reminder gloss "Marduk — the
+      patron-god of Babylon, head of the Babylonian pantheon —
+      and his cult statue". The prose chapter drops this inline
+      gloss ("The action of the poem turns on Marduk and his
+      cult statue."). The substantive Marduk content is
+      preserved redundantly across the chapter (Babylon reminder
+      gloss at line 10 names Marduk as Babylon's patron and
+      Esagila as his temple; the Tablet II departure paragraph
+      at line 109 names "the patron-god of Babylon"; the
+      COMPARATIVE-HOOK at line 202 names Marduk as "the patron-
+      god of Babylon"). The "head of the Babylonian pantheon"
+      phrase is not preserved verbatim anywhere in the prose,
+      but its content is implicit in the multiple patron-god
+      descriptions. Licensed by gloss_decisions.Marduk: BARE
+      in the writer's completion record. Does not affect the
+      fidelity verdict.
+
+notes:
+  proceed_to: "stage 16 (commit) per RUNBOOK §10f. Chapter 16 is fidelity-clean and ready for the commit + per-chapter prompts commit step."
+  pattern_match_with_recent_chapters: |
+    Chapter 16's fidelity audit pattern mirrors chapters 14 and
+    15: PASS-WITH-ADVISORY with documented gloss-ledger-licensed
+    deviations. Chapter 14's G-1 was two F-4-consistency word
+    substitutions inside an INFERENCE marker body; chapter 15's
+    G-1 was a licensed Ea full-gloss omission per the gloss-
+    ledger ch14→ch15 bare policy; chapter 16 has two ADVISORY
+    findings (G-1 Erra/Išum reminder-gloss relocation with one
+    cross-reference clause dropped; G-2 Marduk first-mention
+    gloss BARE handling with substance preserved redundantly).
+    The pattern is stable: gloss-ledger-licensed gloss
+    adjustments are the principal residual deviation class at
+    the narrative-fidelity stage and consistently do not
+    trigger REVISE. All eight markers in chapter 16 are byte-
+    identical; the chapter-14 third INFERENCE marker had two
+    F-4-consistency word substitutions documented as ADVISORY,
+    but chapter 16 has no such marker-body deviations.

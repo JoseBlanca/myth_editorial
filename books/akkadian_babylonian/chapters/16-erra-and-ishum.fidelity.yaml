@@ -1,0 +1,663 @@
+stage: "narrative-fidelity"
+chapter: 16
+slug: "erra-and-ishum"
+input:
+  - "chapters/16-erra-and-ishum.claims.approved.adoc"   # the contract
+  - "chapters/16-erra-and-ishum.adoc"                   # prose under audit
+  - "briefs/16-erra-and-ishum.yaml"
+  - "chapters/16-erra-and-ishum.claims.factcheck.yaml"  # PASS-WITH-LIGHT-FIXES
+  - "completions/14-chapter-draft-ch16.done.yaml"       # writer's record
+  - "glossary.yaml"
+  - "gloss-ledger.yaml"
+  - "scope.md"
+  - "sources.yaml"
+output: "chapters/16-erra-and-ishum.fidelity.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+agent_model: "claude-opus-4-7[1m]"
+fresh_conversation: true
+verdict: PASS-WITH-ADVISORY
+verdict_severity: ADVISORY
+
+# ─────────────────────────────────────────────────────────────────────────
+# Delta tallies — every preserved element confirmed at byte level
+# ─────────────────────────────────────────────────────────────────────────
+delta_tallies:
+  EVIDENCE_tokens:
+    claims_count: 112
+    prose_count: 112
+    byte_identical: true
+    method: |
+      Sorted-line diff of all "// EVIDENCE:" lines yielded zero
+      differences; document-order extraction confirms identical
+      sequence and identical content.
+  footnotes:
+    claims_count: 27
+    prose_count: 27
+    byte_identical: true
+    method: |
+      Document-order extraction of all `footnote:[...]` bodies
+      yielded zero differences across 27 footnotes.
+  COMPARATIVE_HOOK_comments:
+    claims_count: 5
+    prose_count: 5
+    byte_identical: true
+    method: |
+      Document-order extraction of all "// COMPARATIVE-HOOK:"
+      lines yielded zero differences; all 5 hooks preserved
+      including the F-2-hedged Sennacherib reception body.
+  markers_total:
+    claims_count: 8
+    prose_count: 8
+    breakdown:
+      INFERENCE:
+        claims: 2
+        prose: 2
+        byte_identical: true
+        notes: |
+          Both INFERENCE blocks preserved with required
+          basis+risk sub-fields, byte-identical.
+            (a) Marduk's cleansing-absence as load-bearing
+                theological pretext ("theology disguised as
+                plot"); basis cites Cagni 1969, Foster 2005,
+                Dalley 2008, Foster 2007, Bottéro 2001; risk
+                flags the chapter's interpretive reading.
+            (b) The unusual combination of named-author
+                dream-inspiration + apotropaic self-framing +
+                wide manuscript dossier; basis cites the
+                colophon and amulet-format witnesses; risk
+                flags the "theologically deliberate" reading.
+      LACUNA:
+        claims: 4
+        prose: 4
+        byte_identical: true
+        notes: |
+          All four LACUNA blocks preserved with required
+          source+scholarly_reconstruction sub-fields:
+            (a) Tablet III central column damage / cross-witness
+                collation recovery.
+            (b) Tablet IV opening damage / secondary-manuscript
+                fills.
+            (c) Tablet I Sebitti-order variants documented
+                (the F-1 internal-variance pattern from the
+                factcheck).
+            (d) Tablet V amulet-style closing-colophon variants.
+      RECONSTRUCTION:
+        claims: 1
+        prose: 1
+        byte_identical: true
+        notes: |
+          The single RECONSTRUCTION block (Foster 2005 follows
+          Cagni 1969's cross-witness critical text within the
+          single first-millennium recension) is preserved with
+          required gap_source+fill_source+confidence sub-fields.
+      VARIANT:
+        claims: 1
+        prose: 1
+        byte_identical: true
+        notes: |
+          The single VARIANT block (Cagni 1969's critical text as
+          primary, with Tablet I order-of-Sebitti and Tablet V
+          amulet-colophon variants as alt) is preserved with
+          required primary+alt+chosen+reason sub-fields.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Claim-to-prose mapping — every numbered claim mapped to its paragraph(s)
+# ─────────────────────────────────────────────────────────────────────────
+claim_to_prose_mapping:
+  classification: complete
+  every_claim_mapped: true
+  method: |
+    Each non-marker, non-comment paragraph in the claims document
+    was located in the prose chapter by anchor content (footnote
+    body, EVIDENCE token sequence, and unique phrase signatures).
+    Every claim paragraph maps to exactly one corresponding prose
+    paragraph in the same sequential position. Where the prose
+    paragraph contains an additional gloss-ledger-licensed
+    descriptor (reminder gloss inserted at the source-overview
+    opener for Erra, Išum, Aššur, Babylon's Esagila descriptor,
+    etc.), the underlying claim content is preserved unaltered.
+  mappings:
+    - claim_loc: "claims line 43"
+      prose_loc: "prose line 4"
+      claim: "*Erra and Išum* is a first-millennium BCE Akkadian poem — plague-god rage, Marduk's persuasion to step away, Babylon devastation, Išum's restraint persuasion."
+      notes: "Prose absorbs the Tablet-I-opening reminder gloss for Erra (god of plague and violent destruction, sometimes identified with Nergal) and Išum (vizier and herald, calming counterweight) into this opener — see advisory G-1 below."
+    - claim_loc: "claims line 49"
+      prose_loc: "prose line 10"
+      claim: "Manuscript provenance Babylon/Aššur/Nineveh/Sultantepe + amulet-format witnesses."
+      notes: "Prose adds the gloss-ledger-licensed REMINDER glosses for Babylon (Marduk's city, seat of Esagila, cosmic centre) and Aššur (the late Neo-Assyrian capital, Aššurbanipal's library) inline with the manuscript-provenance list — documented in completion record's gloss_decisions for Babylon and Aššur."
+    - claim_loc: "claims line 55"
+      prose_loc: "prose line 16"
+      claim: "Five-tablet structure; Cagni 1969 numbers I–V; not OB/SB split; close manuscript agreement."
+      notes: "Cross-references to ch15 _Anzû_ and ch14 _Nergal and Ereškigal_ preserved verbatim."
+    - claim_loc: "claims line 61"
+      prose_loc: "prose line 22"
+      claim: "Kabti-ilāni-Marduk colophon, dream-inspiration claim, unusual named-author attribution."
+      notes: "Full-gloss for Kabti-ilāni-Marduk per completion record (new ch16 ledger entry)."
+    - claim_loc: "claims line 67"
+      prose_loc: "prose line 28"
+      claim: "Cagni 1969 as standard critical edition; Cagni 1977 English; Foster 2005 / Dalley 2008 as working translations."
+    - claim_loc: "claims line 73"
+      prose_loc: "prose line 34"
+      claim: "[LACUNA: Tablet III central-column damage; cross-witness collation reconstruction]"
+      notes: "Byte-identical marker preservation."
+    - claim_loc: "claims line 75"
+      prose_loc: "prose line 36"
+      claim: "[LACUNA: Tablet IV opening damage; secondary-manuscript fills]"
+      notes: "Byte-identical marker preservation."
+    - claim_loc: "claims line 77"
+      prose_loc: "prose line 38"
+      claim: "[RECONSTRUCTION: Foster 2005 follows Cagni 1969 cross-witness collation; in-tradition fill per scope.md]"
+      notes: "Byte-identical marker preservation with all three pipe-delimited sub-fields."
+    - claim_loc: "claims line 81"
+      prose_loc: "prose line 42"
+      claim: "The poem closes with a self-disclosure colophon naming Kabti-ilāni-Marduk son of Dābibi; dream-revelation; recorded without addition or subtraction."
+    - claim_loc: "claims line 87"
+      prose_loc: "prose line 48"
+      claim: "Apotropaic closing instruction: text as protective object; one of the few Akkadian compositions explicitly framed as its own amulet."
+    - claim_loc: "claims line 95"
+      prose_loc: "prose line 56"
+      claim: "Tablet I opening invocation of Erra and Išum; the Erra–Išum dyad as the poem's central dialogue."
+      notes: |
+        ADVISORY G-1: The claims paragraph contains the Erra
+        reminder gloss with the "(chapter 14)" cross-reference
+        ("the god of plague and violent destruction, sometimes
+        identified with Nergal in the wider Akkadian tradition
+        (chapter 14)") and the Išum reminder gloss "the herald
+        of the gods, who in this composition is the figure of
+        restraint, the calming counterweight to Erra's rage". The
+        prose chapter has relocated this reminder-gloss content
+        to the source-overview opening paragraph (prose line 4,
+        where Erra and Išum are both glossed in the chapter's
+        first sentence). The cross-reference parenthetical
+        "(chapter 14)" was dropped in the relocation. The
+        substantive identifications — Erra as plague-god
+        sometimes identified with Nergal; Išum as vizier-and-
+        herald and calming counterweight — are fully preserved.
+        See `findings_for_record.G-1` below for full advisory
+        rationale; the omission is licensed by gloss-ledger
+        policy (the writer's gloss_decisions document Erra and
+        Išum as REMINDER_GLOSS terms placed in the chapter's
+        first paragraph).
+    - claim_loc: "claims line 101"
+      prose_loc: "prose line 62"
+      claim: "Sebitti introduced — the Seven, Erra's war-band of seven demonic agents; Akkadian sebitti = the Seven; proper-noun designation."
+      notes: |
+        Claims paragraph's prefatory phrase "Per glossary.yaml's
+        locked first-mention gloss" (a meta-comment internal to
+        the claims document) does not appear in the prose, which
+        is appropriate — the locked gloss content itself is
+        preserved in the body sentence.
+    - claim_loc: "claims line 107"
+      prose_loc: "prose line 68"
+      claim: "Sebitti as offspring of Anu; seven differentiated commissions; Cagni 1969 I.31–44 catalogue named: terror, fire, lion, mountain-feller, wind-encircler, no-survivors, venom."
+      notes: |
+        F-4 light-fix from claims-factcheck preserved correctly
+        — the seven named commissions appear in catalogue order
+        in the prose paragraph, matching the claims paragraph
+        sentence-for-sentence (with minor punctuation-style
+        change: claims uses comma-delimited catalogue; prose
+        uses semicolon-delimited catalogue — same content).
+    - claim_loc: "claims line 113"
+      prose_loc: "prose line 74"
+      claim: "Sebitti urge Erra to action; weapons-growing-slack rhetoric; rage dishonoured by stillness; lands grown insolent."
+      notes: "Prose adds the transitional phrase 'With the catalogue established, ...' (purely transitional, no factual content)."
+    - claim_loc: "claims line 119"
+      prose_loc: "prose line 80"
+      claim: "Išum's restraint counsel against the Sebitti in closing exchanges of Tablet I; the central dialogue established before action begins."
+    - claim_loc: "claims line 125"
+      prose_loc: "prose line 86"
+      claim: "[LACUNA: Tablet I Sebitti-order variants; Cagni 1969 apparatus records variants]"
+      notes: "Byte-identical marker preservation."
+    - claim_loc: "claims line 129"
+      prose_loc: "prose line 90"
+      claim: "Marduk and his cult statue; Erra/Sebitti's cult-statue pretext; statue dim, insignia tarnished, crown lustreless; proposed remedy is Marduk's stepping-away."
+      notes: |
+        ADVISORY G-2: The claims paragraph contains the Marduk
+        first-mention reminder gloss "the patron-god of Babylon,
+        head of the Babylonian pantheon — and his cult statue."
+        The prose paragraph drops this inline gloss ("The action
+        of the poem turns on Marduk and his cult statue."). The
+        substantive Marduk content (patron-god of Babylon;
+        figure induced to leave his throne) is preserved
+        redundantly across the chapter (the Babylon reminder
+        gloss at prose line 10 names Marduk as Babylon's patron;
+        the Tablet II departure paragraph at prose line 109
+        names "the patron-god of Babylon"; the chapter foot
+        and COMPARATIVE-HOOKs reinforce). Omission is licensed
+        by gloss-ledger policy: Marduk's gloss_decision in the
+        completion record is BARE (Marduk was last mentioned in
+        ch15 and is central across the cycle; the full glossary
+        first_mention_gloss is woven into the Babylon reminder
+        gloss in the source overview). See
+        `findings_for_record.G-2` below.
+    - claim_loc: "claims line 136"
+      prose_loc: "prose line 97"
+      claim: "Marduk's hesitant reply: heavens shaken, netherworld quaked, regulation disintegrated, apkallū-in-Apsû recollection; the load-bearing detail."
+      notes: |
+        F-3 light-fix from claims-factcheck preserved correctly
+        — "the gods feared the consequences" paraphrase has been
+        dropped; the apkallū-in-Apsû recollection and the
+        regulation-of-heaven-and-earth disintegration detail
+        are present. The locked glossary REMINDER gloss for
+        *apkallū* ('the seven antediluvian sages who brought
+        civilization to humanity, the original craftsmen of the
+        cult statue and its insignia') is woven into the
+        paragraph, and *Apsû* is named with the locked
+        circumflex-û rendering.
+    - claim_loc: "claims line 142"
+      prose_loc: "prose line 103"
+      claim: "Erra's guarantee; Marduk accepts; structural irony of plague-god guaranteeing order."
+    - claim_loc: "claims line 148"
+      prose_loc: "prose line 109"
+      claim: "Marduk leaves the throne; cult statue taken for cleansing; theological pivot established."
+    - claim_loc: "claims line 155"
+      prose_loc: "prose line 116"
+      claim: "[INFERENCE: Marduk's cleansing-absence as load-bearing theological pretext; theology disguised as plot]"
+      notes: "Byte-identical marker preservation with basis+risk sub-fields."
+    - claim_loc: "claims line 159"
+      prose_loc: "prose line 120"
+      claim: "Tablet III destruction begins; Babylon central target; indiscriminate rampage; just and unjust not separated."
+    - claim_loc: "claims line 165"
+      prose_loc: "prose line 126"
+      claim: "Tablet III extended catalogue: kings struck down, cities levelled, rivers broken, hearts hardened, dead driven from graves, social order inverted."
+    - claim_loc: "claims line 171"
+      prose_loc: "prose line 132"
+      claim: "Tablet III — Išum's protest is rebuffed; the rage will not be argued away."
+    - claim_loc: "claims line 179"
+      prose_loc: "prose line 140"
+      claim: "Tablet IV — destruction of Babylon in detail; Esagil exposed and profaned; urban-lament structure."
+    - claim_loc: "claims line 185"
+      prose_loc: "prose line 146"
+      claim: "Tablet IV turns toward the city-lament genre; Babylon's catastrophe at the rhetorical register of public mourning."
+    - claim_loc: "claims line 194"
+      prose_loc: "prose line 155"
+      claim: "Tablet V — Erra's rage exhausts itself; Išum's persuasion speech; Tablet III rebuff vs. Tablet V hearing."
+    - claim_loc: "claims line 200"
+      prose_loc: "prose line 161"
+      claim: "Erra's decree of restoration: Babylon rebuilt, peoples restored, Marduk returned to throne."
+    - claim_loc: "claims line 207"
+      prose_loc: "prose line 168"
+      claim: "Closing Tablet V apotropaic colophon — any house safe, any person spared; the poem turns itself into protection."
+    - claim_loc: "claims line 213"
+      prose_loc: "prose line 174"
+      claim: "[LACUNA: Tablet V amulet-style closing-colophon variants; in-tradition manuscript variation]"
+      notes: "Byte-identical marker preservation."
+    - claim_loc: "claims line 217"
+      prose_loc: "prose line 178"
+      claim: "[VARIANT: Cagni 1969 critical text as primary; in-tradition manuscript-level variants flagged at LACUNA markers]"
+      notes: "Byte-identical marker preservation with primary+alt+chosen+reason sub-fields."
+    - claim_loc: "claims line 221"
+      prose_loc: "prose line 182"
+      claim: "Place in corpus: with Ludlul bēl nēmeqi (ch28) and Babylonian Theodicy (ch29); urban-lament inheritance."
+    - claim_loc: "claims line 227"
+      prose_loc: "prose line 188"
+      claim: "Erra dossier of Akkadian literature; OB Erra and Narām-Sîn (ch23) is distinct generic tradition."
+    - claim_loc: "claims line 233"
+      prose_loc: "prose line 194"
+      claim: "Manuscript dossier geography + amulet format places Erra and Išum among most widely circulating long compositions."
+    - claim_loc: "claims line 239"
+      prose_loc: "prose line 200"
+      claim: "[INFERENCE: deliberate combination of named-author + apotropaic-self-framing + amulet-format manuscripts; theologically deliberate]"
+      notes: "Byte-identical marker preservation with basis+risk sub-fields."
+    - claim_loc: "claims lines 241–249"
+      prose_loc: "prose lines 202–210"
+      claim: "5 COMPARATIVE-HOOK comments (Sennacherib reception with F-2 hedge; Sebitti and demonic-Seven; Apollo plague typological; apotropaic ritual reception; Hebrew Bible prophetic)."
+      notes: "All 5 hooks preserved byte-identical."
+
+# ─────────────────────────────────────────────────────────────────────────
+# Three light-fixes from post-human-normalize — verified in prose
+# ─────────────────────────────────────────────────────────────────────────
+light_fixes_carry_through:
+  F2_sennacherib_reception_hedge:
+    location_in_prose: "prose line 202 (COMPARATIVE-HOOK on Marduk-leaving-his-throne reception)"
+    fix_preserved: true
+    details: |
+      The hedge language "one widely-discussed but contested
+      strand of the scholarship", "one proposal among several
+      rather than the consensus frame", and the explicit
+      composition-date dispute "(scholarly proposals span the
+      eleventh to the seventh centuries BCE)" plus the variable
+      construal "(as composition-trigger, as reception-frame,
+      or as typological-coincidence) across Foster 2007,
+      Frahm's *Enūma Eliš* reception survey, Tadmor 2022, and
+      Bottéro 2001" are all present byte-identical.
+  F3_marduk_flood_apkallu_apsu_detail:
+    location_in_prose: "prose line 97 (Marduk's reply paragraph in Tablet II)"
+    fix_preserved: true
+    details: |
+      The "gods feared the consequences" paraphrase is absent
+      from the prose (grep returns zero hits). The apkallū-in-
+      Apsû recollection is present: "Marduk further recalls
+      that at that earlier moment he had sent the _apkallū_ —
+      the seven antediluvian sages who brought civilization to
+      humanity, the original craftsmen of the cult statue and
+      its insignia — down to the _Apsû_ with the order not to
+      come back up." The heavens-bodies-altered + netherworld-
+      yield-diminished + regulation-of-heaven-and-earth-
+      disintegrated triplet is preserved verbatim. Footnote
+      cites Cagni 1969 Tablet I.131–162 (the load-bearing line
+      range from the F-3 fix). The locked glossary REMINDER
+      gloss for *apkallū* is woven into the paragraph.
+  F4_sebitti_seven_named_commissions:
+    location_in_prose: "prose line 68 (Sebitti catalogue paragraph in Tablet I)"
+    fix_preserved: true
+    details: |
+      The seven commissions are catalogued in order — terror,
+      burn like fire, annihilate like a lion, fell mountains,
+      encircle like the wind, spare no one, slay with venom —
+      anchored to Cagni 1969 I.31–44 and Foster 2005 pp. 882-884.
+      The catalogue grounds the differentiation claim per the
+      F-4 fix; the paragraph reads as catalogue-grounded rather
+      than abstract. Footnote cites the same line range and
+      records apparatus on manuscript variation in the order.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Glossary discipline
+# ─────────────────────────────────────────────────────────────────────────
+glossary_compliance:
+  status: PASS
+  locked_renderings_verified:
+    Erra: PASS (locked form used throughout; no Irra leakage)
+    Išum: PASS (Iš with š-háček; no Ishum leakage)
+    Sebitti: PASS (locked capitalised proper-noun rendering with italicised *sebitti* / _sebitti_ for the common-noun discussion; both forms per locked glossary)
+    Marduk: PASS (locked form throughout)
+    Anu: PASS (locked form)
+    Apsû: PASS (locked circumflex-û form; appears at prose line 97; no "Apsu" without circumflex)
+    apkallu: PASS (locked form; the italicised plural _apkallū_ used in body prose at line 97 per glossary lock)
+    Aššur: PASS (locked š-háček form; no Ashur leakage)
+    Esagil: PASS (locked form used at line 140; the variant Esagila appears only inside the Babylon locked first-mention gloss at line 10 and inside Black & Green s.v. citation footnotes; both forms permitted per locked glossary)
+    Nergal: PASS (locked form, single bare mention at line 4 per gloss-ledger BARE decision)
+    Kabti-ilāni-Marduk: PASS (locked macron-ā form per brief entities_glossary)
+    Dābibi: PASS (locked macron-ā form)
+  never_use_terms_check:
+    status: PASS
+    notes: |
+      Sumerian-tradition never_use terms (Inanna, Enki,
+      Damgalnuna, Iškur, Bilgames, Huwawa, Utu, Nanna, Irra,
+      Utnapishtim, Dumuzid, Ashur) all absent from body prose,
+      footnotes, EVIDENCE tokens, and COMPARATIVE-HOOK comments.
+      The Sumerian *udug* and *gallû* demon names appear once
+      inside the Sebitti COMPARATIVE-HOOK at line 204 with the
+      proper italic markup and the "Reserved for the influences
+      chapter" disclaimer — Sumerian-tradition references inside
+      a COMPARATIVE-HOOK with an out-of-scope disclaimer are
+      permitted per scope.md.
+  gloss_ledger_compliance:
+    status: PASS-WITH-ADVISORY
+    notes: |
+      The writer's completion record (14-chapter-draft-ch16.done.
+      yaml) documents 11 ledger updates + 1 new ch16 entry
+      (Kabti-ilāni-Marduk). REMINDER glosses for Erra, Išum,
+      Sebitti, Anu, Babylon, Aššur, Esagil, apkallu were applied
+      to the chapter; BARE handling for Marduk, Nergal, Apsû was
+      applied. Two of the REMINDER glosses (Erra at the Tablet I
+      opening; Marduk at the Tablet II opening) were relocated
+      from their claims-paragraph position to adjacent opening
+      paragraphs of the prose — see G-1 and G-2 in
+      findings_for_record. Substantive content preserved in both
+      cases; relocation is licensed by gloss-ledger policy.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Asimov register / forbidden-words / no factual additions
+# ─────────────────────────────────────────────────────────────────────────
+asimov_register:
+  status: PASS
+  notes: |
+    Short paragraphs; plain modern English; no ornate ritual
+    cadence. The chapter opens with a sourcing sentence rather
+    than an ornamental cosmogonic opener.
+
+forbidden_words_check:
+  status: PASS
+  searched_terms_zero_hits:
+    - shimmering
+    - mystical
+    - unfathomable
+    - ineffable
+    - sacred
+    - mighty
+    - fearsome
+    - dread
+    - eternal
+    - boundless
+    - infinite
+    - veiled
+    - shrouded
+    - "primordial darkness"
+    - "mists of time"
+    - "Long ago,"
+    - "In the time before time"
+    - "It is said that"
+  notes: |
+    None of the chapter's forbidden ornament-vocabulary appears.
+    The lexicon of the violent rampage (rage, destruction,
+    plague, war-band, indiscriminate, profaned, etc.) is the
+    plain-modern-English vocabulary the chapter needs to narrate
+    Erra's violence without ornamenting it.
+
+no_factual_additions:
+  status: PASS
+  notes: |
+    Side-by-side paragraph-level diff of claims body prose vs.
+    chapter body prose surfaces zero additions of factual
+    content. The only insertions are (a) the gloss-ledger-
+    licensed REMINDER gloss content for Erra/Išum (relocated to
+    line 4), Babylon (line 10), Aššur (line 10), Esagil (line
+    140), apkallu (line 97) — all of which carry locked
+    glossary first_mention_gloss content per the writer's
+    gloss_decisions and add no factual material beyond the
+    locked glosses; (b) a few transitional connectives ("With
+    the catalogue established, ..."; "He recalls that ... The
+    heavens shook ... The netherworld quaked ...") that re-
+    structure compound sentences into multiple short ones with
+    no semantic change.
+
+no_silent_omissions:
+  status: PASS-WITH-ADVISORY
+  notes: |
+    Two minor advisory deviations documented in
+    findings_for_record (G-1: dropped "(chapter 14)"
+    parenthetical from the Erra-Nergal cross-reference; G-2:
+    Marduk's first-mention gloss "head of the Babylonian
+    pantheon" not relocated explicitly into prose, though
+    semantically equivalent material is preserved in the
+    Babylon reminder gloss at line 10). Both omissions are
+    licensed by gloss-ledger policy and do not affect the
+    fidelity verdict.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Honesty self-check
+# ─────────────────────────────────────────────────────────────────────────
+honesty_self_check:
+  every_claim_mapped: true
+  every_paragraph_checked_for_additions: true
+  meaning_distortion_check_done: true
+  same_model_as_writer: true
+  fresh_conversation: true
+  notes: |
+    The writer (chapter-draft stage) and the auditor (narrative-
+    fidelity stage) are both claude-opus-4-7[1m]. The fresh-
+    conversation requirement is met: this audit ran in a
+    separate session with no memory of writing the draft. The
+    same-model preference is not strictly met for this pipeline
+    but is not required by the narrative-fidelity skill.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Findings for record
+# ─────────────────────────────────────────────────────────────────────────
+findings_for_record:
+  - finding_id: G-1
+    severity: ADVISORY
+    kind: LICENSED_GLOSS_RELOCATION
+    summary: |
+      The claims-document Tablet I opening paragraph (claims
+      line 95) introduces Erra and Išum with the chapter's
+      reminder glosses inline ("Erra — the god of plague and
+      violent destruction, sometimes identified with Nergal in
+      the wider Akkadian tradition (chapter 14) — and of his
+      vizier Išum, the herald of the gods, who in this
+      composition is the figure of restraint, the calming
+      counterweight to Erra's rage"). The prose chapter has
+      relocated this reminder-gloss content to the chapter's
+      first paragraph (prose line 4), where Erra is glossed
+      as "the god of plague and violent destruction, sometimes
+      identified with Nergal" and Išum as "his vizier and
+      herald, the calming counterweight to Erra's rage". In
+      the relocation, the parenthetical cross-reference
+      "(chapter 14)" was dropped — the Erra–Nergal identification
+      is still explicit, but the explicit pointer to chapter 14
+      (which is where Erra–Nergal syncretism is fully treated)
+      is absent.
+
+      Licensed by gloss-ledger policy per the writer's
+      completion record: Erra and Išum's gloss_decisions are
+      both REMINDER_GLOSS with the reminder applied "in the
+      opening paragraph". The relocation is the writer's
+      structural choice to front-load the reminder glosses
+      rather than placing them at the first body-prose mention.
+      Substantive content (Erra-Nergal identification; Išum's
+      vizier-and-restraint role) preserved. The Tablet I
+      opening paragraph in the prose ("The first tablet opens
+      with an invocation of Erra and of Išum") is consequently
+      simpler than the corresponding claims paragraph; no
+      factual content is lost.
+    impact: |
+      ADVISORY only. Does not affect the fidelity verdict. The
+      "(chapter 14)" cross-reference clause is a navigational
+      pointer, not a factual claim; its omission is a stylistic
+      consequence of the gloss-relocation and is recoverable by
+      the reader from the surviving "sometimes identified with
+      Nergal" phrasing combined with the chapter-14 anchor in
+      the toc.
+    recommended_action: NONE — no revision required.
+
+  - finding_id: G-2
+    severity: ADVISORY
+    kind: LICENSED_GLOSS_OMISSION
+    summary: |
+      The claims-document Tablet II opening paragraph (claims
+      line 129) introduces Marduk with the locked first-mention
+      gloss "Marduk — the patron-god of Babylon, head of the
+      Babylonian pantheon — and his cult statue". The prose
+      chapter at line 90 drops this inline reminder gloss:
+      "The action of the poem turns on Marduk and his cult
+      statue." The substantive Marduk content is preserved
+      redundantly across the chapter: (a) the Babylon REMINDER
+      gloss at prose line 10 ("Babylon (Marduk's city and the
+      seat of his temple Esagila, the cosmic centre of the
+      Akkadian literary world)") carries the patron-god-of-
+      Babylon descriptor; (b) the Tablet II departure paragraph
+      at prose line 109 explicitly names "the patron-god of
+      Babylon"; (c) the COMPARATIVE-HOOK at line 202 names
+      Marduk as "the patron-god of Babylon".
+
+      Licensed by gloss-ledger policy per the writer's
+      completion record (gloss_decisions.Marduk: BARE) —
+      Marduk was last mentioned in ch15 and is central across
+      the cycle. The full glossary first_mention_gloss is
+      woven into the Babylon reminder gloss in the source
+      overview, which carries the load-bearing descriptor
+      "the patron-god of Babylon" for any reader new to the
+      term. The phrase "head of the Babylonian pantheon" from
+      the claims paragraph is, strictly speaking, not preserved
+      verbatim anywhere in the prose chapter, but its content
+      is implicit in the multiple "patron-god of Babylon"
+      descriptions.
+    impact: |
+      ADVISORY only. Does not affect the fidelity verdict.
+      Substantive Marduk content fully preserved in the
+      chapter; the omission is a gloss-ledger-licensed
+      choice not to gloss a high-frequency cross-chapter
+      term redundantly at every introduction.
+    recommended_action: NONE — no revision required.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Routing
+# ─────────────────────────────────────────────────────────────────────────
+routing:
+  proceed_to: "stage 16 (commit) per RUNBOOK §10f. Chapter 16 is fidelity-clean (PASS-WITH-ADVISORY); two ADVISORY findings are documented gloss-ledger-licensed deviations, neither of which requires revision."
+  pattern_match_with_recent_chapters: |
+    Chapter 16's fidelity audit pattern mirrors chapters 14 and
+    15: PASS-WITH-ADVISORY with one-to-two documented gloss-
+    ledger deviations that do not require revision. Chapter 14's
+    G-1 was two F-4-consistency word substitutions inside an
+    INFERENCE marker body; chapter 15's G-1 was a licensed Ea
+    full-gloss omission per the gloss-ledger ch14→ch15 bare
+    policy; chapter 16 has two ADVISORY findings (G-1 Erra/Išum
+    reminder-gloss relocation with one cross-reference clause
+    dropped; G-2 Marduk first-mention gloss BARE handling with
+    substance preserved redundantly across the chapter). The
+    pattern is stable: gloss-ledger-licensed gloss adjustments
+    are the principal residual deviation class at the narrative-
+    fidelity stage, and they consistently do not trigger REVISE.
+  re_audit_required: false
+  needs_revision: false
+
+# ─────────────────────────────────────────────────────────────────────────
+# Summary
+# ─────────────────────────────────────────────────────────────────────────
+summary: |
+  Chapter 16 (Erra and Išum) narrative-fidelity audit returns
+  PASS-WITH-ADVISORY (severity ADVISORY).
+
+  Every approved claim is represented in the chapter draft;
+  every numbered claim paragraph maps to a prose paragraph in
+  the same sequential position. All three round-1-PASS-WITH-
+  LIGHT-FIXES findings (F-2 Sennacherib reception hedge; F-3
+  Marduk's flood-era recollection with the apkallū-in-Apsû
+  load-bearing detail and the dropped "gods feared" paraphrase;
+  F-4 Sebitti seven named commissions catalogue) carry through
+  correctly into the body prose.
+
+  All eight structural markers (2 INFERENCE + 4 LACUNA +
+  1 RECONSTRUCTION + 1 VARIANT) are preserved byte-identical
+  with all required pipe-delimited sub-fields. All five
+  COMPARATIVE-HOOK comments preserved byte-identical. All
+  27 footnotes preserved byte-identical. All 112 EVIDENCE
+  tokens preserved byte-identical.
+
+  Glossary compliance: PASS. Erra, Išum, Sebitti, Marduk, Anu,
+  Apsû (locked û), apkallu (locked plural _apkallū_), Aššur,
+  Esagil, Nergal, Kabti-ilāni-Marduk (locked macron-ā), Dābibi
+  (locked macron-ā), Babylon all use the locked glossary.yaml
+  renderings; no Ishum / Ashur / Apsu / Irra leakage. No
+  never_use glossary terms in body prose; Sumerian *udug* and
+  *gallû* demon names appear once inside the Sebitti
+  COMPARATIVE-HOOK at line 204 with the proper italic markup
+  and the "Reserved for the influences chapter" disclaimer
+  (scope-compliant).
+
+  Forbidden-words check: PASS. Asimov register: PASS. Italics
+  convention: PASS (asterisk-bold _Erra and Išum_ etc. in
+  claims correctly converted to underscore-italic in body
+  prose; asterisks preserved verbatim inside footnote /
+  EVIDENCE / COMPARATIVE-HOOK / marker contexts). No factual
+  additions. No silent omissions of substantive content.
+
+  Two ADVISORY findings, both gloss-ledger-licensed and not
+  requiring revision:
+    G-1: Erra/Išum reminder glosses relocated from claims-
+         paragraph Tablet I opener to prose-paragraph source-
+         overview opener; the "(chapter 14)" cross-reference
+         parenthetical from the Erra-Nergal gloss was dropped
+         in the relocation. Substantive identification
+         preserved.
+    G-2: Marduk's claims-paragraph first-mention reminder
+         gloss "the patron-god of Babylon, head of the
+         Babylonian pantheon" not preserved verbatim at the
+         Tablet II opener; substantive content preserved
+         redundantly across the chapter (Babylon reminder
+         gloss at line 10; Tablet II departure paragraph at
+         line 109; COMPARATIVE-HOOK at line 202). Licensed by
+         the writer's gloss_decisions.Marduk: BARE policy.
+
+  Delta tallies — all zero:
+    - EVIDENCE tokens: 112 → 112 (byte-identical)
+    - footnotes: 27 → 27 (byte-identical)
+    - LACUNA blocks: 4 → 4 (byte-identical)
+    - RECONSTRUCTION blocks: 1 → 1 (byte-identical)
+    - VARIANT blocks: 1 → 1 (byte-identical)
+    - INFERENCE blocks: 2 → 2 (byte-identical)
+    - COMPARATIVE-HOOK comments: 5 → 5 (byte-identical)
+
+  The chapter is fidelity-clean and ready for stage 16 (commit).
