@@ -1,0 +1,210 @@
+stage: "chapter-draft"
+chapter: 17
+slug: "gilgamesh-sb"
+input: "chapters/17-gilgamesh-sb.claims.approved.adoc + briefs/17-gilgamesh-sb.yaml + gloss-ledger.yaml"
+output: "chapters/17-gilgamesh-sb.adoc + updated gloss-ledger.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/17-gilgamesh-sb.adoc"
+    lines: 346
+  - file: "gloss-ledger.yaml"
+    lines: 1492
+summary: |
+  Chapter 17 (Standard Babylonian Epic of Gilgameš) narrative draft.
+  Asimov-style prose drawn from chapters/17-gilgamesh-sb.claims.
+  approved.adoc (post-human-normalize PASS-WITH-LIGHT-FIXES version).
+  Every claim represented; no factual additions; all 10 markers
+  (2 INFERENCE + 3 LACUNA + 2 RECONSTRUCTION + 3 VARIANT) preserved
+  byte-for-byte with all pipe-delimited sub-fields; all 5
+  COMPARATIVE-HOOK comments carried over verbatim; all 47 footnotes
+  carried over unchanged; all 190 EVIDENCE tokens preserved byte-for-
+  byte. Chapter ID anchor [[ch-17-gilgamesh-sb]] (per toc.yaml; NOT
+  the claims-only anchor [[ch-17-gilgamesh-sb-claims]]).
+
+  Composite-editorial classification per the brief — George 2003's
+  SB recension narrated directly as the body text, with OB and MB
+  forerunners cited by name and dialect as cross-fill donors flagged
+  in RECONSTRUCTION markers (Tablet IV OB/MB cross-fill; Tablet VII
+  Nineveh+Sultantepe joins). Tablet-by-tablet structure for Tablets
+  I–XI (Tablet I: Gilgameš at Uruk, the creation of Enkidu, the
+  meeting; Tablet II: Enkidu enters Uruk, the wrestling-match, the
+  proposal to attack Ḫumbaba; Tablet III: preparations, Ninsun's
+  prayer to Šamaš, departure; Tablet IV: the seven-day-march journey
+  and the dream sequences; Tablet V: the slaying of Ḫumbaba in the
+  Cedar Forest; Tablet VI: Ištar's proposal and the Bull of Heaven;
+  Tablet VII: Enkidu's curse-and-blessing of Šamḫat, the death of
+  Enkidu; Tablet VIII: Gilgameš's mourning and Enkidu's funeral;
+  Tablet IX: the journey begins — wandering, Mt Māšu, the Scorpion-
+  People; Tablet X: Šiduri, Ur-šanabi, the crossing of the Waters of
+  Death; Tablet XI: the flood narrative, the plant of rejuvenation,
+  the return). Tablet XII presented as a separate editorial-appendix
+  section flagged by [VARIANT:] with the literal/near-verbatim
+  framing per the F-4 fix in the claims document.
+
+  Two prologues co-present within SB Tablet I (the late-recension
+  *ša naqba īmuru* outer-wisdom prologue and the inner hymnic *šūtur
+  eli šarrī* opening) narrated in dedicated §"The two prologues"
+  section; the redactional doubling preserved as [VARIANT:] within
+  the single SB recension rather than as a recensional split.
+  Sîn-lēqi-unninni's redactorship handled as [INFERENCE:] per the
+  claims document: the body prose presents the attribution
+  appropriately hedged ("attributed to ... is reconstructed in the
+  secondary literature as the canonical attestation"; "the redaction
+  itself ... is reconstructed by inference"); the INFERENCE marker
+  carries the basis (catalogue notice + SB-manuscript colophons,
+  with the catalogue's first-millennium date distinguished from the
+  tradent's late-2nd-millennium date per the F-1 fix) and the risk
+  (redactor-vs-composer framing) byte-for-byte.
+
+  Three post-human-normalize light-fixes preserved correctly:
+  F-1 (Catalogue of Texts and Authors dating: catalogue's first-
+  millennium date distinguished from Sîn-lēqi-unninni's late-2nd-
+  millennium date in both the source-overview attribution paragraph
+  and the [INFERENCE:] marker basis-clause); F-3 (SB-Gilgameš-
+  manuscript colophons cited alongside the catalogue notice as the
+  second attribution trace, in both the body paragraph and the
+  [INFERENCE:] marker basis-clause); F-2 (Tablet VI Bull-of-Heaven
+  snort-pit sequence: "the snort-pit sequence escalates in continuing
+  stages across the SB recension's pit-enumeration" rather than
+  fixing the third stage at 300 men; first two stages 100 / 200
+  retained as directly attested); F-4 (Tablet XII framed as "literal
+  Akkadian translation of the second half ... literal in technique
+  (near-verbatim, word-for-word), partial only in scope" throughout
+  body prose, the dedicated section, the [VARIANT:] marker, and the
+  COMPARATIVE-HOOK on Tablet XII).
+
+  Style: Asimov register; short paragraphs; plain modern English.
+  Forbidden ornament-words (shimmering, mystical, unfathomable,
+  ineffable, sacred, mighty, fearsome, dread, eternal, boundless,
+  infinite, veiled, shrouded) absent from body prose; the body uses
+  the claims document's own phrasing where the claim wording is
+  load-bearing, with light narrative connectives only. No "Long
+  ago..." / "In the time before time..." / "It is said that..."
+  openings. Composite-editorial recensional handling per the brief:
+  the SB recension narrated as the primary body text; OB and MB
+  cross-fills flagged at [RECONSTRUCTION:] markers and named by
+  manuscript (Schøyen tablet, Sippar tablets, Boğazköy fragments;
+  Pennsylvania, Yale, Sippar, Schøyen OB tablets; Boğazköy, Megiddo,
+  Ur, Nippur MB fragments). No co-equal recensional-alternation
+  framing in body prose. Glossary discipline: Gilgameš, Enkidu,
+  Šamḫat, Ḫumbaba, Ištar, Bull of Heaven, Uta-napišti, Sîn-lēqi-
+  unninni, Uruk, Cedar Forest, Mt Māšu, Šiduri, Ur-šanabi, Scorpion-
+  People / *girtablilû*, Aššur, Nineveh, Sultantepe, Sippar,
+  Boğazköy, Megiddo, Apsû, Atra-ḫasīs, Ninsun, Lugalbanda, Aruru,
+  Šamaš, Anu, Ea, Enlil, Ereškigal, Namtar, Nedu, Bēlet-ṣēri,
+  Dumuzi (Tammuz), Išullānu, *šūtur eli šarrī*, *ša naqba īmuru*,
+  *pukku*, *mekkû*, *urnu*-stones, Mt Nimuš all use locked
+  glossary.yaml renderings (or, for the new ch17-specific entities,
+  the brief's entities_glossary forms and the claims-document
+  spellings). The forms "Gilgamesh" / "Ishtar" appear only inside
+  preserved book or composition titles (e.g., *The Babylonian
+  Gilgamesh Epic*; *Descent of Ishtar*) per the ch13-precedent
+  editorial-title convention.
+
+gloss_decisions:
+  - term: "Gilgameš"
+    decision: "REMINDER_GLOSS (full inline) — last full mention was chapter 00 (17 chapters back). Chapter 17 is Gilgameš-centred. Full glossary.yaml first_mention_gloss ('king of Uruk, two-thirds divine, hero of the Standard Babylonian epic') woven inline at first substantive mention in §'The two prologues' section. Ledger updated: last_reminder_in='17', last_mention_in='17'."
+  - term: "Enkidu"
+    decision: "REMINDER_GLOSS (full inline) — last full mention was chapter 00 (17 chapters back). Chapter 17 is Enkidu-centred as Gilgameš's companion. Full glossary.yaml first_mention_gloss ('wild man fashioned by the gods, companion of Gilgameš, whose death precipitates the search for immortality') woven inline at first substantive mention in Tablet I. Ledger updated."
+  - term: "Uta-napišti"
+    decision: "REMINDER_GLOSS (full inline) — last full mention was chapter 00 (17 chapters back). Chapter 17 has Uta-napišti centrally in Tablets IX–XI. Full glossary.yaml first_mention_gloss ('he found life — the flood-survivor whom Gilgameš seeks out for the secret of immortality, the Akkadian counterpart of *Atra-ḫasīs*') woven inline at first substantive mention in Tablet IX, including the *Atra-ḫasīs* cross-reference. Ledger updated."
+  - term: "Ḫumbaba"
+    decision: "REMINDER_GLOSS — last full mention was chapter 00 (17 chapters back). Chapter 17 features Ḫumbaba centrally in Tablets II–V. Inline gloss at first substantive mention in Tablet II ('the ogre-monster Ḫumbaba, the guardian of the Cedar Forest appointed by Enlil') weaves the locked glossary first_mention_gloss. The locked š-háček form is used throughout body prose; *Huwawa* (never_use) absent. Ledger updated."
+  - term: "Sîn-lēqi-unninni"
+    decision: "FULL_GLOSS (new ledger entry) — Sîn-lēqi-unninni is not in glossary.yaml. Substantively introduced in the source-overview paragraph and elaborated in the [INFERENCE:] marker on the redactor-attribution. The catalogue's first-millennium date distinguished from the tradent's late-2nd-millennium date per the F-1 fix; the SB-Gilgameš-manuscript colophons cited alongside the catalogue notice per the F-3 fix. One of the very few named-redactor attestations in Akkadian literature; paralleled by Kabti-ilāni-Marduk for *Erra and Išum* in ch16. Tracked as a new ch17 ledger entry."
+  - term: "Ninsun"
+    decision: "FULL_GLOSS (new ledger entry) — Ninsun is not in glossary.yaml. Inline functional descriptor 'the goddess Ninsun' at first mention in Tablet I; load-bearing in Tablets I (the dream-interpretation), II (her warning), and centrally in Tablet III (the prayer to Šamaš and the adoption of Enkidu). Tracked as a new ch17 ledger entry."
+  - term: "Lugalbanda"
+    decision: "FULL_GLOSS (new ledger entry) — Lugalbanda is not in glossary.yaml. Inline functional descriptor 'the legendary king Lugalbanda' at first mention in Tablet I (Gilgameš's father). Tracked as a new ch17 ledger entry; Sumerian-tradition Lugalbanda is out of scope per scope.md."
+  - term: "Šamḫat"
+    decision: "FULL_GLOSS (new ledger entry) — Šamḫat is not in glossary.yaml. Inline gloss at first mention in Tablet I ('the temple-prostitute Šamḫat') and re-glossed parenthetically in Tablet VII ('Šamḫat — the temple-prostitute who civilizes Enkidu') at the curse-and-blessing sequence. The locked š-háček form is used throughout. Tracked as a new ch17 ledger entry."
+  - term: "Uruk"
+    decision: "REMINDER_GLOSS — last full mention was chapter 00 (17 chapters back). Chapter 17 is Uruk-centred: the city is Gilgameš's seat, the setting of Tablets I–III and VI, and the destination of Tablet XI's structural ring-closure (Gilgameš shows the walls to Ur-šanabi). Locked glossary first_mention_gloss ('the walled city of Gilgameš in the southern Mesopotamian alluvium, seat of Ištar's temple the E-ana') decomposed and woven inline at first substantive mention in Tablet I ('king of the city of Uruk in the southern Mesopotamian alluvium ... builder of Uruk's massive wall and the temple precinct of Ištar'). *Unug* (never_use) absent. Ledger updated."
+  - term: "Cedar Forest"
+    decision: "FULL_GLOSS (new ledger entry) — Cedar Forest is not in glossary.yaml in its own right (listed in the brief's entities_glossary). Inline functional descriptor 'a distant land at the edge of the world, guarded by the ogre-monster Ḫumbaba' at first mention in Tablet II. Central in Tablets II–V. Tracked as a new ch17 ledger entry."
+  - term: "Bull of Heaven"
+    decision: "FULL_GLOSS (new ledger entry) — Bull of Heaven is not in glossary.yaml in its own right (listed in the brief's entities_glossary as 'Bull of Heaven (Alû)'). Inline functional descriptor 'the Bull of Heaven — the celestial bull, a creature of cosmic strength' at first mention in Tablet VI. Tracked as a new ch17 ledger entry."
+  - term: "Šiduri"
+    decision: "FULL_GLOSS (new ledger entry) — Šiduri is not in glossary.yaml. Inline gloss at first mention in Tablet X ('Šiduri, the tavern-keeper at the edge of the sea — the alewife who keeps a tavern at the cosmic shore'). Tracked as a new ch17 ledger entry."
+  - term: "Ur-šanabi"
+    decision: "FULL_GLOSS (new ledger entry) — Ur-šanabi is not in glossary.yaml. Inline gloss at first mention in Tablet X ('Ur-šanabi, Uta-napišti's boatman, who alone can ferry him across the Waters of Death'). Tracked as a new ch17 ledger entry."
+  - term: "Mt Māšu"
+    decision: "FULL_GLOSS (new ledger entry) — Mt Māšu is not in glossary.yaml. Inline gloss at first mention in Tablet IX ('Mt Māšu — the twin-peaked mountain at the edge of the world, the cosmic boundary that the sun-god Šamaš passes through each morning and evening'). Tracked as a new ch17 ledger entry."
+  - term: "Scorpion-People"
+    decision: "FULL_GLOSS (new ledger entry) — the Scorpion-People (*girtablilû*) are not in glossary.yaml. Inline gloss at first mention in Tablet IX with the Akkadian transliteration parenthetically. Tracked as a new ch17 ledger entry."
+  - term: "Aruru"
+    decision: "BARE — last full mention was chapter 10 (7 chapters back). Inline functional descriptor 'the mother-goddess Aruru, the creator-goddess who first formed Gilgameš' carries the load-bearing identity in Tablet I. Ledger updated: last_mention_in='17'."
+  - term: "Šamaš"
+    decision: "REMINDER_GLOSS — last full mention was chapter 11 (6 chapters back); Šamaš is central in Tablets III, V, VII, and IX. Reminder descriptor 'the sun-god, patron of justice and of travellers' given inline at first mention in Tablet III. Ledger updated: last_reminder_in='17', last_mention_in='17'."
+  - term: "Anu"
+    decision: "BARE — Anu was reminder-glossed in ch16 just one chapter back. Chapter 17 names Anu in Tablet VI as Ištar's father; relational descriptor 'her father Anu' carries the load-bearing context inline. Ledger updated."
+  - term: "Ea"
+    decision: "BARE — Ea was reminder-glossed in ch14 (three chapters back). Chapter 17 names Ea in Tablet XI of the flood narrative; the Tablet XI context (warning-through-the-reed-wall, post-flood defence) carries the identity inline. Ledger updated."
+  - term: "Enlil"
+    decision: "BARE — Enlil was reminder-glossed in ch15 (two chapters back). Chapter 17 names Enlil in Tablets II, V (the temple at Nippur receives the great cedar gate), VII (the divine council that decrees Enkidu's death), and XI (the post-flood assembly). The functional contexts carry the load-bearing identity inline. Ledger updated."
+  - term: "Ištar"
+    decision: "BARE — Ištar was reminder-glossed in ch13 (four chapters back). Chapter 17 features Ištar centrally in Tablets I (her temple precinct), VI (the marriage proposal and Bull of Heaven), and VII. The brief-locked descriptor 'queen of heaven' is woven inline in Tablet VI at first substantive mention. Editorial-title convention preserved: 'Ishtar' appears only in *Descent of Ishtar* citations inside the COMPARATIVE-HOOK byte-for-byte. Ledger updated."
+  - term: "Ereškigal"
+    decision: "BARE — Ereškigal was reminder-glossed in ch14 (three chapters back). Chapter 17 names Ereškigal in Tablet VIII as one of the underworld gods in the funerary offerings, and in the chapter-13 COMPARATIVE-HOOK. List-context transparent. Ledger updated."
+  - term: "Namtar"
+    decision: "BARE — Namtar was reminder-glossed in ch14 (three chapters back). Chapter 17 names Namtar once in Tablet VIII in the funerary-offerings list (Ereškigal, Namtar, Nedu, Bēlet-ṣēri). List-context transparent. Ledger updated."
+  - term: "Apsû"
+    decision: "BARE — Apsû was last mentioned in ch16 (one chapter back). Chapter 17 names the freshwater *Apsû* once in Tablet XI as the dwelling of the rejuvenation plant. The freshwater functional descriptor is preserved inline. Ledger updated."
+  - term: "Atra-ḫasīs"
+    decision: "BARE — Atra-ḫasīs was last mentioned in ch12 (5 chapters back). Chapter 17 names *Atra-ḫasīs* in Tablet XI as both (a) the title of the parallel composition (cross-reference to chapter 2) and (b) the older name / epithet of Uta-napišti ('exceedingly wise'). The Uta-napišti gloss in Tablet IX already identifies Uta-napišti as 'the Akkadian counterpart of *Atra-ḫasīs*'. Ledger updated."
+  - term: "Dumuzi (Tammuz)"
+    decision: "BARE — Dumuzi last mentioned in ch00 (17 chapters back); Tammuz last mentioned in ch13. Chapter 17 names 'Dumuzi (Tammuz) the shepherd, whom she sent annually to the underworld' in Tablet VI's catalogue of Ištar's previous lovers. The parenthetical pairing and the immediate functional descriptor carry the identity inline; the locked Akkadian form *Dumuzi* is the primary, with *Tammuz* parenthetical per the SB Tablet VI tradition. *Dumuzid* (never_use) absent. Both ledger entries updated."
+  - term: "Aššur"
+    decision: "BARE — Aššur was reminder-glossed in ch16 (one chapter back) in the same manuscript-provenance context. Chapter 17 names Aššur in the manuscript-provenance list and the [VARIANT:] block; list-context transparent. *Ashur* (never_use) absent. Ledger updated."
+  - term: "Babylon"
+    decision: "BARE — Babylon was reminder-glossed in ch16 (one chapter back). Chapter 17 names Babylon only in the manuscript-provenance list and the [VARIANT:] block; list-context transparent. Ledger updated."
+  - term: "Nineveh"
+    decision: "BARE — last full mention was ch01 (16 chapters back); last bare mention was ch03. Chapter 17 names Nineveh repeatedly as the principal manuscript-provenance centre and in the LACUNA / RECONSTRUCTION markers. The Aššur reminder gloss in the same source-overview paragraph names Aššurbanipal's library at Nineveh and carries the Neo-Assyrian-library identity inline. Treated as BARE rather than reminder-gloss given the adjacent Aššur contextualisation. Ledger updated."
+  - term: "Sultantepe"
+    decision: "BARE — Sultantepe was glossed in ch14 (three chapters back). Chapter 17 names Sultantepe repeatedly in the manuscript-provenance list and centrally in the Tablet VII RECONSTRUCTION marker. The RECONSTRUCTION marker carries the functional context (Sultantepe as the cross-witness provenance centre joining the Nineveh manuscripts). Ledger updated."
+  - term: "Nippur"
+    decision: "BARE — Nippur was glossed in ch09 (8 chapters back). Chapter 17 names Nippur in two contexts (the destination of the great cedar gate, implicitly as Enlil's cult-centre; and as one of the MB-forerunner provenance sites). The Enlil-temple-at-Nippur reference carries the cult-centre identity inline. Ledger updated."
+  - term: "Sippar"
+    decision: "FULL_GLOSS (new ledger entry) — Sippar is not in glossary.yaml. Named in chapter 17 in the manuscript-provenance list (Nineveh, Aššur, Sultantepe, Sippar, Babylon, Uruk) and centrally as the find-spot of the OB Sippar tablet (the 'Old Babylonian Tablet III/IV'), one of the principal OB Gilgameš forerunners. Tracked as a new ch17 ledger entry."
+  - term: "Boğazköy"
+    decision: "FULL_GLOSS (new ledger entry) — Boğazköy is not in glossary.yaml. Named in chapter 17 in the MB-forerunner discussion with inline functional descriptor '(the Hittite capital)'. Find-spot of MB Akkadian Gilgameš fragments (in-scope) and of separate Hurrian and Hittite Gilgameš versions (out-of-scope per scope.md, named only in the comparative-hook discussion of Late Bronze international diffusion). Tracked as a new ch17 ledger entry."
+  - term: "Megiddo"
+    decision: "FULL_GLOSS (new ledger entry) — Megiddo is not in glossary.yaml. Named in chapter 17 in the MB-forerunner discussion with inline functional descriptor '(Late Bronze Palestine)'. Find-spot of one of the MB-forerunner Akkadian Gilgameš fragments. Tracked as a new ch17 ledger entry."
+  - term: "Nedu"
+    decision: "FULL_GLOSS (new ledger entry) — Nedu is not in glossary.yaml. Named in passing in Tablet VIII's funerary-offerings catalogue (Ereškigal, Namtar, Nedu, Bēlet-ṣēri). The list-context is transparent. Tracked as a new ch17 ledger entry; composition-specific in the SB Gilgameš dossier."
+  - term: "Bēlet-ṣēri"
+    decision: "FULL_GLOSS (new ledger entry) — Bēlet-ṣēri is not in glossary.yaml. Named in passing in Tablet VIII's funerary-offerings catalogue. The list-context is transparent. Tracked as a new ch17 ledger entry; composition-specific."
+  - term: "Išullānu"
+    decision: "FULL_GLOSS (new ledger entry) — Išullānu is not in glossary.yaml. Inline gloss at the Tablet VI catalogue of Ištar's previous lovers ('the gardener Išullānu, whom she turned into a frog or dwarf'). The both-readings hedge for the transformation is preserved from the claims document. Tracked as a new ch17 ledger entry; composition-specific."
+  - term: "ša naqba īmuru"
+    decision: "FULL_GLOSS (new ledger entry) — this is the incipit and conventional title of the late-recension prologue. Inline gloss in §'The two prologues' section and in the [VARIANT:] marker. Composition-specific in the Akkadian Gilgameš dossier. Tracked as a new ch17 ledger entry."
+  - term: "šūtur eli šarrī"
+    decision: "FULL_GLOSS (new ledger entry) — this is the incipit and conventional title of the inner hymnic-royal opening. Inline gloss in §'The two prologues' section and in the [VARIANT:] marker. Composition-specific. Tracked as a new ch17 ledger entry."
+  - term: "pukku, mekkû"
+    decision: "FULL_GLOSS (new ledger entries) — composition-specific cultic objects in Tablet XII. Inline gloss in the Tablet XII appendix section (the drum-and-drumstick / ball-and-mallet interpretive disagreement preserved). Two new ch17 ledger entries."
+  - term: "urnu-stones"
+    decision: "FULL_GLOSS (new ledger entry) — composition-specific sacred objects in Tablet X (the punting-pole crossing). Inline gloss in the Tablet X crossing section. Tracked as a new ch17 ledger entry."
+  - term: "Mt Nimuš"
+    decision: "FULL_GLOSS (new ledger entry) — Mt Nimuš is named only inside the Hebrew Bible COMPARATIVE-HOOK comment preserved byte-for-byte (the grounding-on-a-mountain motif paralleling Genesis's Ararat). Tracked as a new ch17 ledger entry; composition-specific in the flood-comparative dossier."
+
+self_check:
+  source_overview_present: true
+  every_claim_represented: PASS
+  no_factual_additions: PASS
+  forbidden_words_clear: PASS
+  glossary_compliance: "PASS — all locked glossary.yaml forms used. Gilgameš (š-háček) throughout body prose; Gilgamesh only inside preserved book titles (*The Babylonian Gilgamesh Epic*). Ḫumbaba (Ḫ-with-dot) throughout body prose; Huwawa (never_use) absent. Ištar (š-háček) throughout body prose; Ishtar only inside preserved composition title *Descent of Ishtar* in the chapter-13 COMPARATIVE-HOOK byte-for-byte. Uta-napišti (š-háček) throughout body prose; Utnapishtim (never_use) absent. Ḫumbaba, Ištar, Šamḫat, Aššur, Šamaš, Ereškigal — all with locked diacritics. Atra-ḫasīs (ḫ-with-dot, macrons) throughout."
+  no_never_use_terms: "PASS — Inanna, Bilgames, Huwawa, Utu, Utnapishtim, Enki, Dumuzid, Ashur, Anzud all absent from body prose. Body-prose terms verified by direct grep: 0 hits on Utnapishtim, 0 hits on Huwawa, 0 hits on Bilgames, 0 hits on Inanna, 0 hits on Anzud, 0 hits on Ashur (as a freestanding spelling rather than inside Aššur or 'Aššurbanipal'), 0 hits on Enki, 0 hits on Dumuzid, 0 hits on Utu (as the Sumerian sun-god spelling rather than inside other words)."
+  variant_handling_matches_brief: "PASS — composite-editorial classification per the brief. SB recension narrated directly as the body text per George 2003's composite. Tablet-by-tablet structure for Tablets I–XI; Tablet XII as a separate editorial-appendix section. OB and MB forerunners cited by name and dialect as cross-fill donors flagged in the two [RECONSTRUCTION:] markers (Tablet IV OB/MB cross-fill; Tablet VII Nineveh+Sultantepe joins). Three [VARIANT:] markers preserved byte-for-byte: the two-prologues redactional doubling within SB Tablet I; the integral-eleven-tablet-vs-Tablet-XII-appendix structural distinction; and the SB-vs-OB/MB witness variant. No co-equal recensional-alternation framing — the chapter narrates the SB composite directly with OB and MB as cross-fill donors per the brief's composite-editorial classification."
+  markers_byte_for_byte: "PASS — all 10 markers (2 INFERENCE + 3 LACUNA + 2 RECONSTRUCTION + 3 VARIANT) preserved verbatim from .claims.approved.adoc, including all pipe-delimited sub-fields (basis/risk; source/scholarly_reconstruction; gap_source/fill_source/confidence; primary/alt/chosen/reason). Diff against the claims document for marker lines returned zero output."
+  footnotes_carried_over: "PASS — all 47 footnotes carried over verbatim from the claims document. Diff against the claims document for footnote contents returned zero output."
+  evidence_tokens_carried_over: "PASS — all 190 EVIDENCE tokens preserved byte-for-byte. Diff against the claims document for EVIDENCE lines returned zero output."
+  not_padded: "PASS — 346 lines for the chapter's brief target of 14000 words; tight Asimov prose around the approved claims. The chapter is materially longer than ch15 (220 lines) and ch16 (210 lines) because the claims document for ch17 is materially longer (515 lines vs ~ 220 for the earlier two), reflecting the supreme literary length of the SB Gilgameš and the 12-tablet tablet-by-tablet structure required by the brief. The chapter's line count is anchored to the claims, not padded: each claim paragraph corresponds to one chapter paragraph, with the EVIDENCE and footnote bundles carried forward. No filler transitions, no ornamental reverence, no recap paragraphs."
+  comparative_hooks_carried: "PASS — all 5 COMPARATIVE-HOOK comments preserved byte-for-byte at chapter foot: (i) Akkadian-internal Tablet XI as Atra-ḫasīs intertext (cross-link to chapter 2); (ii) Akkadian-internal Bull of Heaven and *Descent of Ishtar* (cross-link to chapter 13 via Ištar / Ereškigal); (iii) Akkadian-internal Tablet XII as the only major in-corpus engagement with the Sumerian Gilgameš tradition; (iv) Hebrew Bible Genesis 6–9 flood parallel; (v) Greek epic Iliad/Odyssey heroic-mortality and friendship comparanda."
+  italic_markup_correct: "PASS — Akkadian common nouns and composition titles use _underscore_ italic in body prose (_Epic of Gilgameš_, _Atra-ḫasīs_, _Gilgameš, Enkidu, and the Netherworld_, _Anzû_, _Etana_, _Tukulti-Ninurta_, _The Babylonian Gilgamesh Epic_, _Before the Muses_, _Myths from Mesopotamia_, _Akkadian Literature of the Late Period_, _Catalogue of Texts and Authors_, _ša naqba īmuru_, _šūtur eli šarrī_, _girtablilû_, _urnu_, _pukku_, _mekkû_, _allallu_, _naqbu_, _Apsû_). Asterisk-bold markup confined to footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents (where byte-for-byte preservation requires the original asterisks)."
+  gloss_ledger_updated: "PASS — gloss-ledger.yaml updated. 16 existing entries updated for ch17 (Anu, Enlil, Ea, Ištar, Ereškigal, Apsû, Šamaš receive ch17 use; Gilgameš, Enkidu, Atra-ḫasīs, Uta-napišti, Ḫumbaba, Aššur, Uruk, Babylon, Nineveh, Aruru, Nippur, Sultantepe, Namtar, Tammuz, Dumuzi receive ch17 use); 22 new ch17 entries created (Sîn-lēqi-unninni, Ninsun, Lugalbanda, Šamḫat, Cedar Forest, Bull of Heaven, Šiduri, Ur-šanabi, Mt Māšu, Scorpion-People, Nedu, Bēlet-ṣēri, Išullānu, Sippar, Boğazköy, Megiddo, *ša naqba īmuru*, *šūtur eli šarrī*, *pukku*, *mekkû*, *urnu*-stones, Mt Nimuš). Latest last_mention_in across all updated entries is '17' as required."
+  anchor_correct: "PASS — chapter opens with [[ch-17-gilgamesh-sb]] per toc.yaml; the claims-only [[ch-17-gilgamesh-sb-claims]] anchor is not used in the prose chapter."
+
+notes:
+  proceed_to: "stage 15 (narrative-fidelity) in a fresh-context agent. Chapter 17 followed the composite-editorial pipeline pattern per the brief (SB recension narrated directly with OB and MB as cross-fill donors flagged in RECONSTRUCTION markers; no co-equal recensional-alternation framing). Tablet-by-tablet structure for Tablets I–XI with Tablet XII as separate editorial-appendix section. The two prologues (ša naqba īmuru wisdom-literature outer + šūtur eli šarrī hymnic-royal inner) are co-present within SB Tablet I per the brief's special_instructions; the chapter narrates them accordingly in the dedicated §'The two prologues' section. Sîn-lēqi-unninni's redactorship is handled as [INFERENCE:] with the catalogue's first-millennium date distinguished from the tradent's late-2nd-millennium date per the F-1 fix, and with the SB-Gilgameš-manuscript colophons cited alongside the catalogue notice per the F-3 fix. The F-2 hedge on the Bull of Heaven snort-pit sequence is preserved (first two stages 100/200 retained as directly attested; third and subsequent stages framed as 'continuing stages across the SB recension's pit-enumeration'). The F-4 'literal Akkadian translation ... literal in technique (near-verbatim, word-for-word), partial only in scope' framing for Tablet XII is preserved throughout body prose, the [VARIANT:] marker, and the COMPARATIVE-HOOK. The chapter draft is ready for fidelity verification."

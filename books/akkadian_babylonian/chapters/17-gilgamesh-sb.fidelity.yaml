@@ -1,0 +1,700 @@
+stage: "narrative-fidelity"
+chapter: 17
+slug: "gilgamesh-sb"
+input:
+  - "chapters/17-gilgamesh-sb.claims.approved.adoc"     # the contract
+  - "chapters/17-gilgamesh-sb.adoc"                     # prose under audit
+  - "briefs/17-gilgamesh-sb.yaml"
+  - "chapters/17-gilgamesh-sb.claims.factcheck.yaml"    # PASS-WITH-LIGHT-FIXES
+  - "completions/14-chapter-draft-ch17.done.yaml"       # writer's record
+  - "glossary.yaml"
+  - "gloss-ledger.yaml"
+  - "scope.md"
+  - "sources.yaml"
+output: "chapters/17-gilgamesh-sb.fidelity.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+agent_model: "claude-opus-4-7[1m]"
+fresh_conversation: true
+verdict: PASS-WITH-ADVISORY
+verdict_severity: ADVISORY
+
+# ─────────────────────────────────────────────────────────────────────────
+# Delta tallies — every preserved element confirmed at byte level
+# ─────────────────────────────────────────────────────────────────────────
+delta_tallies:
+  EVIDENCE_tokens:
+    claims_count: 190
+    prose_count: 190
+    byte_identical: true
+    method: |
+      Document-order extraction of all `// EVIDENCE:` lines from
+      both files (`grep -E '^// EVIDENCE:'`) yielded zero
+      differences across 190 tokens. All source_id values resolve
+      to sources.yaml: george-2003, foster-2005, dalley-2008,
+      foster-2007, noegel-2005, lambert-millard-1969,
+      black-green-1992, bottero-2001.
+  footnotes:
+    claims_count: 47
+    prose_count: 47
+    byte_identical: true
+    method: |
+      Document-order extraction of all `footnote:[...]` bodies
+      (`grep -oE 'footnote:\[[^]]*\]'`) yielded zero differences
+      across 47 footnotes.
+  COMPARATIVE_HOOK_comments:
+    claims_count: 5
+    prose_count: 5
+    byte_identical: true
+    method: |
+      Document-order extraction of all `// COMPARATIVE-HOOK:`
+      lines yielded zero differences across 5 hooks: (1)
+      Akkadian-internal Tablet XI / Atra-ḫasīs intertext to
+      chapter 2; (2) Akkadian-internal Bull of Heaven / Descent
+      of Ishtar to chapter 13; (3) Akkadian-internal Tablet XII
+      as the only major in-corpus engagement with the Sumerian
+      Gilgameš tradition (with the F-4 literal/word-for-word
+      framing); (4) Hebrew Bible Genesis 6–9 flood parallel;
+      (5) Greek epic Iliad/Odyssey heroic-mortality and
+      friendship comparanda.
+  markers_total:
+    claims_count: 10
+    prose_count: 10
+    breakdown:
+      INFERENCE:
+        claims: 2
+        prose: 2
+        byte_identical: true
+        notes: |
+          Both INFERENCE blocks preserved byte-identical with
+          required basis+risk sub-fields:
+            (a) Sîn-lēqi-unninni-as-redactor inference (line 60
+                in prose; line 123 in claims). Basis names the
+                Catalogue of Texts and Authors (10th–7th c. BCE;
+                Lambert 1962), distinguishes the catalogue's
+                first-millennium date from the tradent's
+                late-2nd-millennium date, and cites the SB-
+                Gilgameš-manuscript colophons (the F-3 evidence
+                augmentation) alongside the catalogue. Risk
+                flags the redactor-as-author framing.
+            (b) Wisdom-literature-meditation reading of the SB
+                epic (line 336 in prose; line 399 in claims).
+                Basis cites the *ša naqba īmuru* prologue,
+                ring-composition closing on Uruk's walls,
+                Bottéro 2001, Noegel 2005. Risk flags this as
+                one interpretive line among tragic /
+                theological-justice / political-legitimation
+                readings.
+      LACUNA:
+        claims: 3
+        prose: 3
+        byte_identical: true
+        notes: |
+          All three LACUNA blocks preserved with required
+          source+scholarly_reconstruction sub-fields:
+            (a) Tablet I prologue lines 1–28 (the *ša naqba
+                īmuru* opening; cross-witness collation from
+                multi-manuscript SB dossier).
+            (b) Tablet IV breaks across the seven-day-march
+                framework and dream sequences (Nineveh and
+                Sultantepe witnesses; OB and MB cross-fill
+                from Schøyen/Sippar fragments).
+            (c) Tablet VII opening (Enkidu's curse and
+                dream sequences; Nineveh+Sultantepe joins).
+      RECONSTRUCTION:
+        claims: 2
+        prose: 2
+        byte_identical: true
+        notes: |
+          Both RECONSTRUCTION blocks preserved with required
+          gap_source+fill_source+confidence sub-fields:
+            (a) Tablet IV OB/MB cross-fill from Schøyen tablet,
+                Sippar tablets, and Boğazköy fragments —
+                confidence medium; in-tradition Akkadian per
+                scope.md with explicit dialect/period flagging.
+            (b) Tablet VII opening secondary-Nineveh-with-
+                Sultantepe joins within the SB recension —
+                confidence high; same composition, same
+                recension, same dialect.
+      VARIANT:
+        claims: 3
+        prose: 3
+        byte_identical: true
+        notes: |
+          All three VARIANT blocks preserved with required
+          primary+alt+chosen+reason sub-fields:
+            (a) Tablet I two prologues — *ša naqba īmuru*
+                (wisdom-literature outer) and *šūtur eli
+                šarrī* (hymnic royal inner); chosen "both"
+                as a redactional doubling within SB Tablet I.
+            (b) Tablet XII appendix vs Tablets I–XI integral
+                epic; chosen "both, with structural
+                distinction" per the brief's composite-
+                editorial classification. Carries the F-4
+                literal/near-verbatim framing for Tablet XII.
+            (c) SB recension as primary body text vs OB and
+                MB forerunners as cross-fill donors; chosen
+                SB recension as primary per the brief.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Claim-to-prose mapping — every numbered claim mapped to its paragraph(s)
+# ─────────────────────────────────────────────────────────────────────────
+claim_to_prose_mapping:
+  classification: complete
+  every_claim_mapped: true
+  method: |
+    Each non-marker, non-comment paragraph in the approved
+    claims document was located in the prose chapter by anchor
+    content (footnote body, EVIDENCE-token sequence, and unique
+    phrase signatures). Body-prose paragraph count matches
+    exactly: 47 numbered claim paragraphs map to 47 corresponding
+    prose paragraphs in the same sequential position. Where the
+    prose paragraph contains an additional gloss-ledger-licensed
+    REMINDER gloss (inline first-mention reminder for Gilgameš,
+    Enkidu, Šamḫat, Šamaš, Uta-napišti, etc.), the underlying
+    claim content is preserved unaltered.
+  section_anchors:
+    - section: "Source overview (paragraphs 1–6) + leading LACUNA/RECONSTRUCTION markers"
+      prose_lines: "4–42"
+      claims_lines: "67–105"
+    - section: "The two prologues (paragraphs 7–8) + VARIANT + INFERENCE"
+      prose_lines: "46–60"
+      claims_lines: "109–123"
+    - section: "Tablet I: Gilgameš at Uruk, creation of Enkidu, the meeting (paragraphs 9–13)"
+      prose_lines: "64–91"
+      claims_lines: "127–154"
+    - section: "Tablet II: wrestling-match, Ḫumbaba proposal (paragraphs 14–15)"
+      prose_lines: "95–105"
+      claims_lines: "158–168"
+    - section: "Tablet III: Ninsun's prayer to Šamaš, departure (paragraphs 16–18)"
+      prose_lines: "109–124"
+      claims_lines: "172–187"
+    - section: "Tablet IV: seven-day-march, dream sequences, threshold (paragraphs 19–22)"
+      prose_lines: "128–144"
+      claims_lines: "191–207"
+    - section: "Tablet V: slaying of Ḫumbaba (paragraphs 23–25)"
+      prose_lines: "148–165"
+      claims_lines: "211–228"
+    - section: "Tablet VI: Ištar's proposal, Bull of Heaven (paragraphs 26–29)"
+      prose_lines: "169–192"
+      claims_lines: "232–255"
+    - section: "Tablet VII: curse-and-blessing, death of Enkidu (paragraphs 30–33)"
+      prose_lines: "196–218"
+      claims_lines: "259–281"
+    - section: "Tablet VIII: mourning and funeral (paragraphs 34–35)"
+      prose_lines: "222–233"
+      claims_lines: "285–296"
+    - section: "Tablet IX: wandering, Mt Māšu, Scorpion-People (paragraphs 36–38)"
+      prose_lines: "237–252"
+      claims_lines: "300–315"
+    - section: "Tablet X: Šiduri, Ur-šanabi, Waters of Death (paragraphs 39–41)"
+      prose_lines: "256–272"
+      claims_lines: "319–335"
+    - section: "Tablet XI: flood narrative, plant of rejuvenation, return (paragraphs 42–44)"
+      prose_lines: "276–299"
+      claims_lines: "339–362"
+    - section: "Tablet XII editorial appendix (paragraphs 45–46) + VARIANT"
+      prose_lines: "303–316"
+      claims_lines: "366–379"
+    - section: "Variants and witness + epic's place in corpus + INFERENCE + 5 COMPARATIVE-HOOKs"
+      prose_lines: "320–346"
+      claims_lines: "383–409"
+  representative_mappings:
+    - claim_loc: "claims line 67 (source overview opener)"
+      prose_loc: "prose line 4"
+      notes: "Byte-near-identical; one minor punctuation reflow ('narrating' → 'It narrates'). Asciidoc *italic* → _italic_ on *Epic of Gilgameš* is a markup harmonisation, not a content change."
+    - claim_loc: "claims line 78 (Sîn-lēqi-unninni attribution paragraph)"
+      prose_loc: "prose line 15"
+      notes: |
+        F-1 (catalogue dating) and F-3 (SB-colophon evidence)
+        carry through. The catalogue is correctly described as
+        first-millennium ("Neo-Assyrian Nineveh manuscripts
+        (seventh century BCE, from Ashurbanipal's library) and
+        ... Late Babylonian witnesses from Babylon; its
+        compositional date is conventionally placed in the
+        tenth to seventh centuries BCE"), distinct from the
+        tradent's "late second millennium BCE, in the Kassite
+        period (ca. 1300–1000 BCE)". Colophons of SB Gilgameš
+        manuscripts at Nineveh "where later scribal families
+        traced their scholarly lineage to Sîn-lēqi-unninni"
+        cited alongside the catalogue notice. Spelling
+        "Ashurbanipal" preserved verbatim from claims — see
+        finding G-1 below for cross-chapter consistency note.
+    - claim_loc: "claims line 138 (creation of Enkidu paragraph)"
+      prose_loc: "prose line 75"
+      notes: |
+        Prose adds the gloss-ledger-licensed inline REMINDER
+        gloss for Enkidu ('the wild man fashioned by the
+        gods, companion of Gilgameš, whose death precipitates
+        the search for immortality') at the first body-prose
+        mention. Substantive claim content preserved unaltered.
+    - claim_loc: "claims line 144 (Šamḫat civilizing sequence)"
+      prose_loc: "prose line 81"
+      notes: |
+        Prose adds the inline REMINDER gloss for Šamḫat ('the
+        temple-prostitute who civilizes Enkidu') at first
+        mention. The six-days-and-seven-nights detail, the
+        bread-and-beer / clothing / oil / shepherds / Uruk
+        civilizing sequence, and the gazelles' rejection are
+        all preserved exactly per claims; no pop-Šamḫat-and-
+        Enkidu scene additions.
+    - claim_loc: "claims line 244 (Bull of Heaven sequence)"
+      prose_loc: "prose line 181"
+      notes: |
+        F-2 hedge preserved byte-identical. First snort = 100
+        men; second snort = 200 men; third and subsequent
+        stages framed as 'the snort-pit sequence escalates in
+        continuing stages across the SB recension's pit-
+        enumeration' (no fixed 300 figure introduced).
+    - claim_loc: "claims line 300 (Tablet IX opening)"
+      prose_loc: "prose line 237"
+      notes: |
+        Prose adds the gloss-ledger-licensed inline REMINDER
+        gloss for Uta-napišti ('he found life', 'the
+        flood-survivor whom Gilgameš seeks out for the secret
+        of immortality, the Akkadian counterpart of
+        *Atra-ḫasīs*'). Substantive content preserved.
+    - claim_loc: "claims line 366 (Tablet XII description)"
+      prose_loc: "prose line 303"
+      notes: |
+        F-4 framing preserved byte-identical: 'a literal
+        Akkadian translation of the second half of the
+        Sumerian poem _Gilgameš, Enkidu, and the Netherworld_
+        (ETCSL 1.8.1.4) — literal in technique, near-verbatim
+        and word-for-word where it appears, and partial only
+        in that it covers the second half of the Sumerian
+        source rather than the whole'. The *pukku* and
+        *mekkû* identification ('drum and drumstick or ball
+        and mallet, the precise identification debated in
+        the scholarship') preserved verbatim.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Four light-fixes from post-human-normalize — verified in prose
+# ─────────────────────────────────────────────────────────────────────────
+light_fixes_carry_through:
+  F1_catalogue_dating:
+    location_in_prose: "prose line 15 (Sîn-lēqi-unninni attribution paragraph)"
+    fix_preserved: true
+    details: |
+      The "Late Babylonian … ca. 1200 BCE" framing has been
+      replaced throughout. The catalogue is correctly described
+      as "preserved on Neo-Assyrian Nineveh manuscripts (seventh
+      century BCE, from Ashurbanipal's library) and on Late
+      Babylonian witnesses from Babylon; its compositional date
+      is conventionally placed in the tenth to seventh centuries
+      BCE, since the latest works it names belong to the tenth
+      century and the earliest surviving manuscripts are
+      seventh-century." The redactor Sîn-lēqi-unninni is
+      separately dated "in the late second millennium BCE, in
+      the Kassite period (ca. 1300–1000 BCE)". The two dates
+      are explicitly distinguished in body prose and in the
+      INFERENCE marker basis (preserved verbatim from claims).
+  F3_SB_colophon_evidence:
+    location_in_prose: "prose line 15 (attribution paragraph) and line 60 (INFERENCE marker)"
+    fix_preserved: true
+    details: |
+      The body paragraph at line 15 names the colophons
+      explicitly: "The attribution is named not only in the
+      catalogue but also in colophons of SB Gilgameš manuscripts
+      at Nineveh and other centres, where later scribal families
+      traced their scholarly lineage to Sîn-lēqi-unninni." The
+      INFERENCE marker at line 60 augments the basis-clause with
+      the corresponding manuscript-level evidence: "the
+      SB-Gilgameš-manuscript colophons supply an additional,
+      manuscript-level attribution trace that anchors the
+      catalogue notice to the SB textual dossier." Both
+      occurrences are preserved byte-identical from the
+      approved claims.
+  F2_third_snort_hedge:
+    location_in_prose: "prose line 181 (Bull of Heaven sequence)"
+    fix_preserved: true
+    details: |
+      The first two snort-pit stages are directly attested
+      ("with its first snort it opens a pit that swallows a
+      hundred men, with its second snort two hundred"). The
+      third stage is correctly hedged as escalation without
+      a fixed figure: "the snort-pit sequence escalates in
+      continuing stages across the SB recension's
+      pit-enumeration". No "third snort three hundred" claim
+      appears in body prose.
+  F4_tablet_XII_literal_word_for_word_framing:
+    location_in_prose: "prose lines 10, 303, 316 (VARIANT marker), 342 (COMPARATIVE-HOOK)"
+    fix_preserved: true
+    details: |
+      All four occurrences carry the F-4 sharpened framing:
+      (a) line 10 (source overview): "a literal Akkadian
+          translation of the second half of the Sumerian
+          _Gilgameš, Enkidu, and the Netherworld_ — literal
+          in technique (near-verbatim, word-for-word) and
+          partial only in scope (covering the Sumerian
+          source's second half)";
+      (b) line 303 (Tablet XII section): "a literal Akkadian
+          translation of the second half of the Sumerian
+          poem _Gilgameš, Enkidu, and the Netherworld_
+          (ETCSL 1.8.1.4) — literal in technique,
+          near-verbatim and word-for-word where it appears,
+          and partial only in that it covers the second
+          half of the Sumerian source rather than the whole";
+      (c) line 316 (VARIANT marker): "literal Akkadian
+          translation of the second half … literal in
+          technique, partial only in scope";
+      (d) line 342 (COMPARATIVE-HOOK): "a literal
+          (near-verbatim, word-for-word) Akkadian
+          translation of the second half … literal in
+          technique and partial only in scope".
+      The "partial Akkadian translation" framing flagged in
+      F-4 nowhere appears in the prose.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Glossary discipline
+# ─────────────────────────────────────────────────────────────────────────
+glossary_compliance:
+  status: PASS-WITH-ADVISORY
+  locked_renderings_verified:
+    Gilgameš: PASS (š-háček throughout body prose; 'Gilgamesh' appears only inside the preserved book title *The Babylonian Gilgamesh Epic* / George 2003 — permitted per scope.md as a composition title)
+    Uta-napišti: PASS (š-háček throughout; 'Utnapishtim' (never_use) zero hits)
+    Ḫumbaba: PASS (Ḫ-with-dot throughout; 'Huwawa' (never_use) zero hits)
+    Šamḫat: PASS (locked š+ḫ form throughout)
+    Ištar: PASS (š-háček throughout body prose; 'Ishtar' appears only inside the preserved composition title *Descent of Ishtar* in the chapter-13 COMPARATIVE-HOOK byte-for-byte)
+    Šamaš: PASS (REMINDER gloss "the sun-god, patron of justice and of travellers" applied inline at first ch17 mention, prose line 115, per gloss-ledger entry — last full mention was ch11, six chapters back)
+    Anu: PASS (BARE per gloss-ledger — last mentioned ch16, one chapter back; first ch17 mention at prose line 181 as "her father Anu")
+    Ea: PASS (BARE per gloss-ledger — last mentioned ch15; first ch17 mention at prose line 276; 'Enki' (never_use) zero hits in body prose)
+    Enlil: PASS (BARE per gloss-ledger — last mentioned ch15, two chapters back; first ch17 mention at prose line 101 as "appointed by Enlil")
+    Ereškigal: PASS (š-háček; locked)
+    Ninsun: PASS (locked form; new ch17 ledger entry)
+    Lugalbanda: PASS (locked form; new ch17 ledger entry)
+    Aruru: PASS (locked form)
+    Atra-ḫasīs: PASS (ḫ-with-dot, macrons; locked)
+    Šiduri: PASS (š-háček; new ch17 ledger entry)
+    Ur-šanabi: PASS (š-háček; new ch17 ledger entry)
+    Mt Māšu: PASS (macron+š; new ch17 ledger entry)
+    Scorpion-People: PASS (locked form; *girtablilû* italicised plural with locked û)
+    Aššur: PASS (locked š-háček form in body prose; new ledger entry confirmed)
+    Sippar: PASS (locked form; new ch17 ledger entry)
+    Boğazköy: PASS (locked Turkish spelling with ğ+ö+y)
+    Megiddo: PASS (locked form; new ch17 ledger entry)
+    Apsû: PASS (locked circumflex-û; appears at prose line 289 as "the freshwater _Apsû_")
+    Ninurta: not present (chapter is Gilgameš-centred; Ninurta not relevant)
+    Dumuzi: PASS (locked Akkadian primary; "Dumuzi (Tammuz)" parenthetical at line 175 preserves both forms; 'Dumuzid' (never_use) zero hits)
+    Tammuz: PASS (locked alternative Akkadian form, parenthetical at line 175)
+    Išullānu: PASS (š-háček + macron; locked)
+    Nedu: PASS (locked form; new ch17 ledger entry)
+    Bēlet-ṣēri: PASS (macron-ē + ṣ-emphatic + macron-ē)
+    Namtar: PASS (locked form)
+    "ša naqba īmuru": PASS (locked italic transliteration with macron+ḫ)
+    "šūtur eli šarrī": PASS (š+macron+ū / š+macron+ī forms)
+    "pukku": PASS (locked italic transliteration)
+    "mekkû": PASS (locked circumflex-û)
+    "urnu-stones": PASS (italic *urnu* with hyphen-stones English suffix)
+    "Mt Nimuš": PASS (locked š-háček)
+    Sîn-lēqi-unninni: PASS (locked macron-ē / macron-ī forms throughout)
+  never_use_terms_check:
+    status: PASS
+    verified_zero_hits_in_body:
+      - Bilgames
+      - Inanna
+      - Anzud
+      - Enki
+      - Dumuzid
+      - Huwawa
+      - Utnapishtim
+      - Ashur (as freestanding spelling — see G-1 advisory on "Ashurbanipal")
+      - Utu
+    notes: |
+      All listed never_use terms verified zero hits in body
+      prose, EVIDENCE tokens, COMPARATIVE-HOOK comments, and
+      marker bodies. 'Gilgamesh' appears only in the preserved
+      book title *The Babylonian Gilgamesh Epic* (George 2003 /
+      Foster 2005) at lines 4, 21, and inside footnote bodies —
+      permitted under scope.md's policy that composition titles
+      and bibliographic citations preserve their published form.
+      'Ishtar' appears only inside the preserved composition
+      title *Descent of Ishtar* in the chapter-13
+      COMPARATIVE-HOOK byte-for-byte.
+  gloss_ledger_compliance:
+    status: PASS
+    notes: |
+      The writer's completion record (14-chapter-draft-ch17.
+      done.yaml) documents 16 existing ledger updates + 22 new
+      ch17 entries (Sîn-lēqi-unninni, Ninsun, Lugalbanda,
+      Šamḫat, Cedar Forest, Bull of Heaven, Šiduri, Ur-šanabi,
+      Mt Māšu, Scorpion-People, Nedu, Bēlet-ṣēri, Išullānu,
+      Sippar, Boğazköy, Megiddo, *ša naqba īmuru*, *šūtur eli
+      šarrī*, *pukku*, *mekkû*, *urnu*-stones, Mt Nimuš).
+      REMINDER gloss for Šamaš applied inline at the Tablet III
+      first mention (last full mention was ch11, six chapters
+      back). Anu, Ea, Enlil, Ereškigal handled BARE per ledger
+      (recent mentions within 1–3 chapters back). New ch17
+      entries carry locked-form glosses at first mention.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Asimov register / forbidden-words / no factual additions
+# ─────────────────────────────────────────────────────────────────────────
+asimov_register:
+  status: PASS
+  notes: |
+    Plain-modern-English narrative prose throughout. The
+    chapter opens with a sourcing sentence ("The Standard
+    Babylonian _Epic of Gilgameš_ is the principal Akkadian
+    heroic epic.") rather than an ornamental cosmogonic opener.
+    Tablet-by-tablet sections each open with a structural
+    summary sentence; specific story details (six-days-and-
+    seven-nights coupling, six days of sleep with bread loaves
+    ageing, three hundred punting-poles) are reported as
+    catalogue rather than ornamented. No melodramatic or
+    cinematic embellishment of the Šamḫat-and-Enkidu scene,
+    the Cedar Forest combat, the Bull of Heaven rampage, the
+    plant-of-rejuvenation snake scene, or the dream sequences.
+
+forbidden_words_check:
+  status: PASS
+  searched_terms_zero_hits:
+    - shimmering
+    - mystical
+    - unfathomable
+    - ineffable
+    - sacred
+    - mighty
+    - fearsome
+    - dread
+    - eternal
+    - boundless
+    - infinite
+    - veiled
+    - shrouded
+    - "primordial darkness"
+    - "mists of time"
+    - "Long ago,"
+    - "In the time before time"
+    - "It is said that"
+    - actually
+    - basically
+    - obviously
+    - "in fact"
+    - "kind of"
+    - "sort of"
+  notes: |
+    None of the forbidden ornament or hedge vocabulary appears
+    in body prose, markers, footnotes, or COMPARATIVE-HOOKs.
+    The single occurrence of "merely" appears inside the
+    Sîn-lēqi-unninni-redactor INFERENCE marker risk-clause and
+    is preserved verbatim from claims (the marker body is the
+    contract). The word "literally" appears repeatedly but only
+    in the technical "literal Akkadian translation" / "literal
+    in technique" framing for Tablet XII (the F-4 sharpened
+    framing) — not as an intensifier.
+
+no_factual_additions:
+  status: PASS
+  notes: |
+    Paragraph-level diff (47 prose paragraphs vs 47 claim
+    paragraphs, in same sequential order) surfaces zero
+    additions of factual content. The only insertions are:
+    (a) Gloss-ledger-licensed inline REMINDER glosses for
+        Gilgameš (line 83), Enkidu (line 75), Šamḫat (line 81),
+        Šamaš (line 115), Uta-napišti (line 237), and similar
+        first-mention glosses for new ch17 ledger entries.
+        All gloss content matches the locked glossary.yaml
+        first_mention_gloss for the respective terms.
+    (b) Punctuation and clause-structure re-flow for plain-
+        English readability: claims' nested "in which …, in
+        which …" subordinate-clause chains (notably the flood
+        paragraph at prose line 276) are rendered into
+        independent clauses joined by semicolons or periods.
+        No element of the chain is added or dropped.
+    (c) Asciidoc markup harmonisation: `*italic*` (claims
+        convention for emphasis) → `_italic_` (chapter
+        convention for body-prose italics). Markup inside
+        footnote bodies, EVIDENCE tokens, marker bodies, and
+        COMPARATIVE-HOOKs is preserved with the claims `*`
+        convention — verified byte-identical above.
+    No pop-Gilgameš details added: no Šamḫat-and-Enkidu scene
+    ornament, no dream-sequence content beyond what claims
+    report, no Bull-of-Heaven imagery beyond the snort-pit
+    sequence and the right-thigh-thrown-at-Ištar gesture, no
+    plant-of-rejuvenation snake-scene wording beyond the
+    etiology-by-sloughing detail in claims.
+
+no_silent_omissions:
+  status: PASS
+  notes: |
+    Every claim paragraph maps to a prose paragraph; every
+    footnote, every EVIDENCE token, every marker, every
+    COMPARATIVE-HOOK preserved byte-identical. No silent
+    omissions of substantive content.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Honesty self-check
+# ─────────────────────────────────────────────────────────────────────────
+honesty_self_check:
+  every_claim_mapped: true
+  every_paragraph_checked_for_additions: true
+  meaning_distortion_check_done: true
+  same_model_as_writer: true
+  fresh_conversation: true
+  notes: |
+    The writer (chapter-draft stage) and the auditor (narrative-
+    fidelity stage) are both claude-opus-4-7[1m]. The fresh-
+    conversation requirement is met: this audit ran in a
+    separate session with no memory of writing the draft. The
+    paragraph-level body diff was computed programmatically
+    (python difflib over normalized markup) and inspected
+    chunk-by-chunk; all 17 non-typographic difference loci were
+    verified as either gloss-ledger-licensed REMINDER-gloss
+    insertions or punctuation-and-clause-flow re-renderings.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Findings for record
+# ─────────────────────────────────────────────────────────────────────────
+findings_for_record:
+  - finding_id: G-1
+    severity: ADVISORY
+    kind: CROSS_CHAPTER_SPELLING_CONSISTENCY
+    summary: |
+      The prose chapter at line 15 uses the spelling
+      "Ashurbanipal" (without the š-háček on the root) in the
+      phrase "Neo-Assyrian Nineveh manuscripts (seventh century
+      BCE, from Ashurbanipal's library)". This spelling is
+      byte-identical with the approved claims contract (claims
+      line 78) and with the comment-block provenance trail at
+      claims line 425.
+
+      Cross-chapter inspection reveals that chapter 00
+      (Introduction) uses the spelling "Aššurbanipal" with the
+      š-háček consistently (five occurrences: ch00 lines 4, 15,
+      63, 114, 187). The glossary.yaml `Aššur` entry's
+      first_mention_gloss also uses "Aššurbanipal" with the
+      š-háček. The gloss-ledger comment trail at line 448
+      uses "Aššurbanipal"; at line 517 it uses "Ashurbanipal"
+      (inside a comment referring to ch17's prose usage). The
+      writer's completion record (line 198) describes the body-
+      prose check as "0 hits on Ashur (as a freestanding
+      spelling rather than inside Aššur or 'Aššurbanipal')" —
+      indicating the writer's own framing-of-record treats
+      "Aššurbanipal" as the preferred form. The lone
+      "Ashurbanipal" occurrence in ch17 came in verbatim from
+      the post-human-normalize approved claims contract.
+
+      "Ashurbanipal" is not in the brief's never_use list (the
+      never_use list flags "Ashur" as a freestanding spelling
+      for the city / god; the name "Aššurbanipal" / "Ashurbanipal"
+      is a compound proper-noun referring to the seventh-century
+      Neo-Assyrian king, treated separately).
+    impact: |
+      ADVISORY only. Does not affect the fidelity verdict.
+      The prose preserves the contract byte-identically; the
+      cross-chapter consistency note is for the editorial /
+      copy-editing stage. Substantive content (Ashurbanipal's
+      library at Nineveh as the seventh-century BCE find-spot
+      of the Catalogue of Texts and Authors witnesses) is fully
+      preserved and correct.
+    recommended_action: |
+      NONE at the narrative-fidelity stage — the prose follows
+      the contract verbatim. The copy-editing stage may wish to
+      regularise to "Aššurbanipal" across the volume for
+      consistency with ch00's locked form and the glossary.yaml
+      Aššur entry. This would be a downstream global-replace
+      decision, not a ch17-specific revision.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Routing
+# ─────────────────────────────────────────────────────────────────────────
+routing:
+  proceed_to: "stage 16 (commit) per RUNBOOK §10f. Chapter 17 is fidelity-clean (PASS-WITH-ADVISORY); the single ADVISORY finding is a cross-chapter spelling-consistency note that does not require revision — the prose follows the post-human-normalize approved claims contract byte-identically."
+  pattern_match_with_recent_chapters: |
+    Chapter 17's fidelity audit pattern matches chapters 14, 15,
+    and 16: PASS-WITH-ADVISORY with one documented advisory
+    finding (G-1) that does not require revision. Chapter 14's
+    G-1 was two F-4-consistency word substitutions inside an
+    INFERENCE marker body; chapter 15's G-1 was a licensed Ea
+    full-gloss omission per the ch14→ch15 BARE policy; chapter
+    16 had two ADVISORY findings (G-1 Erra/Išum reminder-gloss
+    relocation with one cross-reference dropped; G-2 Marduk
+    BARE handling with substance preserved redundantly).
+    Chapter 17's G-1 is a cross-chapter spelling consistency
+    note ("Ashurbanipal" in ch17 vs "Aššurbanipal" in ch00 and
+    the Aššur glossary entry) preserved verbatim from the
+    approved claims contract. The pattern is stable: minor
+    gloss-or-spelling adjustments licensed by the contract or
+    the gloss-ledger are the principal residual deviation class
+    at narrative-fidelity, and they consistently do not trigger
+    REVISE.
+  re_audit_required: false
+  needs_revision: false
+
+# ─────────────────────────────────────────────────────────────────────────
+# Summary
+# ─────────────────────────────────────────────────────────────────────────
+summary: |
+  Chapter 17 (Standard Babylonian Epic of Gilgameš) narrative-
+  fidelity audit returns PASS-WITH-ADVISORY (severity ADVISORY).
+
+  Every approved claim is represented in the chapter draft;
+  every numbered claim paragraph (47 paragraphs in body) maps
+  to a prose paragraph in the same sequential position. All
+  four round-1 PASS-WITH-LIGHT-FIXES findings carry through
+  correctly into the body prose:
+    F-1 catalogue dating: catalogue's first-millennium
+        date distinguished from tradent's late-2nd-millennium
+        date at line 15 and in the INFERENCE marker basis.
+    F-3 SB-colophon evidence: the SB-Gilgameš-manuscript
+        colophons cited alongside the catalogue notice at
+        line 15 and in the INFERENCE marker basis.
+    F-2 third-snort hedge: only first two snort-pit stages
+        (100, 200 men) are stated as fixed figures; the
+        third and subsequent stages framed as "the snort-
+        pit sequence escalates in continuing stages across
+        the SB recension's pit-enumeration".
+    F-4 Tablet XII literal/word-for-word framing: all four
+        Tablet XII references (source overview, dedicated
+        section, VARIANT marker, COMPARATIVE-HOOK) carry
+        the "literal Akkadian translation of the second
+        half … literal in technique (near-verbatim,
+        word-for-word) … partial only in scope" wording.
+
+  All ten structural markers (2 INFERENCE + 3 LACUNA +
+  2 RECONSTRUCTION + 3 VARIANT) are preserved byte-identical
+  with all required pipe-delimited sub-fields. All five
+  COMPARATIVE-HOOK comments preserved byte-identical. All
+  47 footnotes preserved byte-identical. All 190 EVIDENCE
+  tokens preserved byte-identical.
+
+  Glossary compliance: PASS. Gilgameš, Uta-napišti, Ḫumbaba,
+  Šamḫat, Ištar with locked diacritics throughout body prose;
+  "Gilgamesh" / "Utnapishtim" / "Huwawa" / "Ishtar" appear
+  only in preserved composition titles or book citations
+  (*The Babylonian Gilgamesh Epic*; *Descent of Ishtar* in
+  the ch13 COMPARATIVE-HOOK byte-for-byte). All never_use
+  glossary terms (Bilgames, Inanna, Anzud, Enki, Dumuzid,
+  Huwawa, Utnapishtim, Utu) verified zero hits in body prose.
+  Šamaš REMINDER gloss applied inline at first ch17 mention
+  (Tablet III rooftop prayer, line 115) per gloss-ledger
+  entry; Anu / Ea / Enlil handled BARE per gloss-ledger (each
+  was mentioned within the past 1–3 chapters).
+
+  Forbidden-words check: PASS. Asimov register: PASS. No
+  factual additions (verified by paragraph-level diff); the
+  only insertions are gloss-ledger-licensed REMINDER glosses
+  and punctuation/clause-flow re-renderings. No pop-Gilgameš
+  scene ornament added — Šamḫat-and-Enkidu scene, dream
+  sequences, Bull of Heaven imagery, plant-of-rejuvenation
+  snake scene all match claims content exactly.
+
+  One ADVISORY finding documented:
+    G-1: "Ashurbanipal" spelling at prose line 15 preserved
+         verbatim from the approved claims contract; ch00
+         and the glossary.yaml `Aššur` entry use
+         "Aššurbanipal" with the š-háček. Cross-chapter
+         consistency note for downstream copy-editing; not a
+         narrative-fidelity violation because the prose
+         follows the contract byte-identically.
+
+  Delta tallies — all zero (byte-identical preservation):
+    - EVIDENCE tokens: 190 → 190 (byte-identical)
+    - footnotes: 47 → 47 (byte-identical)
+    - LACUNA blocks: 3 → 3 (byte-identical)
+    - RECONSTRUCTION blocks: 2 → 2 (byte-identical)
+    - VARIANT blocks: 3 → 3 (byte-identical)
+    - INFERENCE blocks: 2 → 2 (byte-identical)
+    - COMPARATIVE-HOOK comments: 5 → 5 (byte-identical)
+
+  The chapter is fidelity-clean and ready for stage 16 (commit).

@@ -1,0 +1,209 @@
+stage: "claims-factcheck"
+chapter: 17
+slug: "gilgamesh-sb"
+input: "chapters/17-gilgamesh-sb.claims.adoc"
+brief_file: "briefs/17-gilgamesh-sb.yaml"
+output: "chapters/17-gilgamesh-sb.claims.factcheck.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_context: true
+
+verdict: PASS-WITH-LIGHT-FIXES
+block_severity: NONE
+proceed_to_stage: 13   # post-human-normalize claims, with four localised fixes at the human-review step
+
+tallies:
+  claims_identified: 47
+  evidence_tokens_audited: 190
+  triangulations_performed: 14
+  supported: 43
+  internal_variance: 0
+  factual_error: 1     # F-1 Catalogue of Texts and Authors dating "ca. 1200 BCE"
+  citation_wrong: 0
+  fabrication: 0
+  unverified: 1        # F-2 Bull's third-snort 300-men detail
+  contamination: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  hedging_needed: 2    # F-3 Sîn-lēqi-unninni redactor framing; F-4 Tablet XII "partial" vs "literal" translation
+  notes: 2
+
+severity_summary:
+  high_findings: 0
+  medium_findings: 2   # F-1 Catalogue dating; F-3 redactor framing
+  low_findings: 2      # F-2 Bull third snort; F-4 Tablet XII literal/partial framing
+
+medium_findings_detail:
+  - finding_id: F-1
+    kind: FACTUAL-ERROR
+    locations: [line 33 (comment block), line 67 (body)]
+    issue: "The *Catalogue of Texts and Authors* is conventionally dated 10th-7th c. BCE (Lambert 1962; surviving manuscripts from 7th-c. Nineveh and Hellenistic/Arsacid Babylon), NOT 'ca. 1200 BCE'. The chapter conflates the (estimated) date of Sîn-lēqi-unninni himself (ca. 1300-1000 BCE) with the date of the catalogue that names him. The phrase 'Late Babylonian... ca. 1200 BCE' is internally contradictory; 'Lambert's list' is misleading shorthand (Lambert published it in 1962, did not author it)."
+  - finding_id: F-3
+    kind: HEDGING-NEEDED
+    locations: [line 67 (body), line 112 (INFERENCE marker)]
+    issue: "Sîn-lēqi-unninni's redactorship framing is essentially correct but should foreground SB-colophon evidence alongside the catalogue notice. The brief's entities_glossary already notes 'his name appears in colophons' — the chapter body could augment line 67's catalogue-only framing with colophon-attestation. Combined with the F-1 dating correction, this strengthens the [INFERENCE:] marker."
+
+low_findings_detail:
+  - finding_id: F-2
+    kind: UNVERIFIED
+    locations: [line 233]
+    issue: "Bull of Heaven's third-snort 300-men detail is plausible from George 2003's SB Tablet VI but not directly confirmed in open-web triangulation (Wikipedia and translation mirrors give only 100 and 200). Verify against Foster 2005 pp. 162-166 / Dalley 2008 pp. 82-86 at human review; retain if attested, hedge with 'escalating sequence' if restored or variant."
+  - finding_id: F-4
+    kind: HEDGING-NEEDED
+    locations: [lines 40-46, 355, 394]
+    issue: "Tablet XII could be more sharply framed as 'literal' rather than 'partial' translation; open-web sources describe it as 'word-for-word translation of the last part' of the Sumerian poem. The 'partial' framing is defensible (partial in scope: covers only the second half) but understates the translation's literal-not-adaptive technique. Optional precision improvement, not a factual fix."
+
+honesty:
+  direct_access:
+    george_2003_vols_1_2: false   # SOAS PDF mirror redirects to landing page; no readable in-text preview
+    foster_2005_pp_99_220: false  # CDL Press paywalled
+    dalley_2008_pp_39_153: false  # OUP World's Classics
+    lambert_millard_1969: false   # archive.org mirror exists; not directly opened in this audit
+    black_green_1992: false       # paywalled
+    bottero_2001: false           # print-only
+    foster_2007_pp_1_20: false    # print-only
+    noegel_2005_pp_233_245: false # print-only
+  triangulated_via_open_web:
+    - "Wikipedia s.v. Epic of Gilgamesh: two-prologue structure, Tablet XII as Akkadian translation of Sumerian source with Enkidu alive, 12 double-hours Tablet IX, snake-and-shedding Tablet XI, Sîn-lēqi-unninni as editor"
+    - "Wikipedia s.v. Sîn-lēqi-unninni: ca. 1300-1000 BCE, redactor not author, ša nagba īmuru incipit, name in colophons, Uruk families traced ancestry"
+    - "Wikipedia s.v. Catalogue of Texts and Authors: CRITICAL — 10th-7th c. BCE dating; Neo-Assyrian and Hellenistic/Arsacid manuscripts; NOT ca. 1200 BCE"
+    - "Wikipedia s.v. Bull of Heaven: Ištar's proposal, seven-year famine, seven-years' provisions, thigh-throw, joint-offences death sentence, 100/200-men snort pits"
+    - "Wikipedia s.v. Gilgamesh flood myth: direction of dependence (FROM Atra-ḫasīs INTO Gilgameš XI), dove/swallow/raven, Mt Nimuš, gods-gather-like-flies"
+    - "Wikipedia s.v. Scorpion man: girtablilû, Mt Māšu twin-peaked, Šamaš's tunnel, 12 double-hours"
+    - "Wikipedia s.v. Urshanabi: boatman, urnu-stones, punting-poles, crossing of Waters of Death"
+    - "Bryn Mawr Classical Review of George 2003: OB vs SB as distinct textual traditions; SB epic 'in complete contrast to its forerunners'; Sîn-lēqi-unninni late 2nd millennium BCE"
+    - "Tigay 1982 (via Wikipedia citation): Tablet XI flood based on late Atrahasis"
+    - "spokenpast / ancientmesopotamia.org / Granneman Tablet XII summaries: 'literal, word-for-word translation of the last part of Gilgamesh, Enkidu, and the Netherworld'"
+    - "Translation mirrors (gatewaystobabylon, ancienttexts.org) for verbatim Akkadian-text correspondences in Tablets VI-XI"
+    - "Lambert 1962 publication record: A Catalogue of Texts and Authors, JCS 16 (3): 59-77 — modern editor, not author"
+    - "Wikipedia s.v. Akkadian literature: standard SB Gilgameš coverage"
+    - "lostmediawiki Gilgameš article: two-prologue structure confirmation"
+  taken_on_trust:
+    - "George 2003 vol. 1 introduction's specific verbal-correspondence analysis for SB Gilgameš XI ↔ Atra-ḫasīs (triangulated via Tigay 1982 / Lambert & Millard 1969 secondary citations rather than directly opened)"
+    - "George 2003's apparatus-level claims about Sultantepe+Nineveh joins for Tablet VII opening and OB Schøyen/Sippar cross-fill for Tablet IV (consistent with standard critical-edition practice; documented in the brief)"
+    - "Foster 2005 / Dalley 2008 exact page-anchors (pp. 99-220 / pp. 39-153 — broad range consistent with the chapter's coverage; individual claims triangulated via translation mirrors)"
+    - "Foster 2007 pp. 1-20 (cuneiform literary tradition coverage)"
+    - "Noegel 2005 pp. 233-245 (Mesopotamian epic genre)"
+    - "Black & Green 1992 s.v. entries (deity-handbook coverage as genre-appropriate triangulation)"
+    - "Bottéro 2001 commentary on the SB epic's wisdom register"
+
+writer_flagged_for_scrutiny_resolution:
+  flag_1_sin_leqi_unninni_redactorship: UPHELD-WITH-HEDGE   # F-1 MEDIUM (catalogue date) + F-3 MEDIUM (colophon framing)
+  flag_2_two_prologues_co_present: UPHELD
+  flag_3_tablet_xii_appendix: UPHELD                        # F-4 LOW (literal vs partial framing)
+  flag_4_tablet_xi_atrahasis_borrowing: UPHELD
+  flag_5_bull_of_heaven: UPHELD                              # F-2 LOW (300-men detail)
+  flag_6_mt_mashu_shiduri: UPHELD
+  flag_7_plant_rejuvenation_snake: UPHELD
+  flag_8_composite_editorial_classification: UPHELD
+
+caution_flags_resolved:
+  composite_editorial_classification: "VERIFIED ✓ — COMPOSITE-EDITORIAL correctly applied; SB Gilgameš = (11-tablet integral epic redacted by Sîn-lēqi-unninni from older Akkadian material) + (12th-tablet editorial appendix translating Sumerian source)"
+  sin_leqi_unninni_named_author_via_catalogue: "UPHELD-WITH-HEDGE — INFERENCE marker line 112 hedges correctly; catalogue dating is wrong (F-1); colophon evidence should be foregrounded (F-3)"
+  two_prologues_doubling: "VERIFIED ✓ — ša naqba īmuru (late) + šūtur eli šarrī (older); VARIANT marker line 110 handles correctly"
+  tablet_xii_editorial_appendix: "VERIFIED ✓ — second half of Sumerian source, Enkidu alive, VARIANT marker line 368"
+  atrahasis_direction_of_borrowing: "VERIFIED ✓ — FROM Atra-ḫasīs INTO Gilgameš XI (Tigay, Lambert & Millard, George 2003)"
+  bull_of_heaven_sequence: "VERIFIED ✓ — Ištar proposal precedes, seven-year drought, joint-offences death sentence (F-2 LOW on 300-men)"
+  mt_mashu_cosmology: "VERIFIED ✓ — twin-peaked, Scorpion-People, 12 double-hours, jewelled garden"
+  plant_of_rejuvenation: "VERIFIED ✓ — thorny plant in Apsû, stone-weighted dive, snake-shedding etiology"
+  ob_sb_distinct_compositions: "VERIFIED ✓ — George 2003 treats as distinct traditions per BMCR review; cross-fill discipline sound"
+  sumerian_comparative_only: "VERIFIED ✓ — Sumerian Gilgameš poems are comparative material only; Tablet XII is the only Akkadian translation of a Sumerian Gilgameš source, correctly flagged as editorial appendix"
+  reconstruction_marker_discipline: "VERIFIED ✓ — OB/MB cross-fill at Tablet IV (line 92) and Sultantepe+Nineveh joins at Tablet VII (line 94) both flagged with dialect/period gaps named"
+  hebrew_bible_typological_only: "VERIFIED ✓ — COMPARATIVE-HOOK line 396, reserved for influences chapter"
+  greek_epic_typological_only: "VERIFIED ✓ — COMPARATIVE-HOOK line 398, reserved for influences chapter"
+
+routing:
+  proceed_to_stage_13_with_light_fixes: true
+  needs_brief_revision: false
+  needs_round_2_chapter_claims_rewrite: false
+  rewrite_scope: |
+    Four targeted human-review edits at stage 12a:
+    (i) line 33 (comment) and line 67 (body): correct the
+        Catalogue of Texts and Authors dating. Replace "Late
+        Babylonian *Catalogue of Texts and Authors* (Lambert's
+        list, ca. 1200 BCE)" with "first-millennium *Catalogue
+        of Texts and Authors* (preserved on Neo-Assyrian and
+        Late Babylonian manuscripts; published by Lambert 1962
+        [JCS 16: 59-77])". Optionally distinguish the catalogue's
+        date (10th-7th c. BCE composition; 7th c. BCE Nineveh +
+        Hellenistic/Arsacid Babylon manuscripts) from the
+        conventionally inferred date of Sîn-lēqi-unninni himself
+        (late 2nd millennium BCE, ca. 1300-1000 BCE). [F-1 fix,
+        MEDIUM]
+    (ii) line 67: augment Sîn-lēqi-unninni's attribution to
+         mention SB-colophon evidence alongside the catalogue
+         notice. [F-3 fix, MEDIUM]
+    (iii) line 233: verify the third-snort 300-men detail against
+          Foster 2005 / Dalley 2008 / George 2003 at human review;
+          retain if attested, hedge with "escalating sequence"
+          if not. [F-2 fix, LOW]
+    (iv) lines 40-46, 355, 394 (optional refinement): consider
+         replacing "partial Akkadian translation of the second
+         half" with "literal Akkadian translation of the second
+         half" to sharpen Tablet XII's distinctive textual
+         status. [F-4 fix, LOW]
+    All four are localised; no structural rewrite is required.
+  re_factcheck_after_fixes: false   # PASS-WITH-LIGHT-FIXES verdict; the dating correction (F-1) is a substantive but mechanical substitution
+
+outputs:
+  - file: "chapters/17-gilgamesh-sb.claims.factcheck.yaml"
+    lines: ~ 760
+
+summary: |
+  Round-1 fact-check of chapters/17-gilgamesh-sb.claims.adoc
+  completed in fresh context (no writer-side memory of producing
+  the claims). Verdict: PASS-WITH-LIGHT-FIXES.
+
+  Zero HIGH findings. Two MEDIUM findings: F-1 (FACTUAL-ERROR —
+  the *Catalogue of Texts and Authors* dating "ca. 1200 BCE" is
+  incorrect; the catalogue is conventionally dated 10th-7th c.
+  BCE, with manuscripts from 7th-c. Nineveh and Hellenistic/
+  Arsacid Babylon; the chapter has conflated the date of
+  Sîn-lēqi-unninni himself with the date of the catalogue that
+  names him) and F-3 (HEDGING-NEEDED — Sîn-lēqi-unninni's
+  redactor framing should foreground SB-colophon evidence
+  alongside the catalogue notice). Two LOW findings: F-2
+  (UNVERIFIED — Bull of Heaven's third-snort 300-men detail not
+  directly confirmed in open-web triangulation) and F-4
+  (HEDGING-NEEDED — Tablet XII could be more sharply framed as
+  "literal" rather than merely "partial" translation).
+
+  All eight writer-flagged-for-scrutiny items resolved:
+  (1) Sîn-lēqi-unninni redactorship = UPHELD-WITH-HEDGE
+      (catalogue dated wrong F-1; colophon evidence should
+      be foregrounded F-3);
+  (2) Two prologues co-present = UPHELD;
+  (3) Tablet XII as appendix (second half, translation,
+      Enkidu alive) = UPHELD;
+  (4) Tablet XI as Atra-ḫasīs intertext (direction of
+      borrowing FROM Atra-ḫasīs INTO Gilgameš XI) = UPHELD;
+  (5) Bull of Heaven (Ištar's proposal precedes, Anu's seven-
+      year drought, Enkidu's joint-offences death sentence) =
+      UPHELD;
+  (6) Mt Māšu and Šiduri (geographic/cosmological framing) =
+      UPHELD;
+  (7) Plant of rejuvenation / snake = UPHELD;
+  (8) Composite-editorial classification (SB distinct from OB
+      per George 2003; cross-fill discipline sound) = UPHELD.
+
+  No HIGH findings; no fabrications; no contamination; no
+  silent bridges; no glossary violations; no marker-schema
+  failures. The 12-tablet structure, 80-manuscript dossier,
+  two-prologue doubling, Tablet-by-Tablet narrative spine
+  (I-XI integral, XII editorial appendix), Atra-ḫasīs intertext
+  direction, and the COMPOSITE-EDITORIAL classification are
+  all supported. The chapter's core spine — Sîn-lēqi-unninni
+  redaction, two prologues, Tablet I-V Cedar Forest arc, Tablet
+  VI Bull of Heaven, Tablet VII-VIII Enkidu's death and funeral,
+  Tablet IX-X wanderer journey through Mt Māšu and the Waters
+  of Death, Tablet XI flood narrative and plant of rejuvenation,
+  Tablet XII as editorial appendix — is factually sound.
+
+  Recommendation: route to stage 13 (post-human-normalize) with
+  the four localised fixes applied at human review. The dating
+  correction (F-1 MEDIUM) is substantive but mechanical; F-3 is
+  a framing augmentation; F-2 is a single-detail verification;
+  F-4 is an optional precision refinement. No round-2
+  chapter-claims rewrite required.
