@@ -1,0 +1,726 @@
+meta:
+  auditor_model: "claude-opus-4-7[1m]"
+  auditor_conversation_id: ~
+  input_file: "chapters/15-anzu.claims.adoc (round-2)"
+  brief_file: "briefs/15-anzu.yaml (round-2)"
+  round: 2
+  prior_round: "chapters/15-anzu.claims.factcheck.yaml (round-1, verdict BLOCK; 4 HIGH [F-1 SB tablet count; F-2 candidate-search sequence; F-3 OB manuscript provenance; F-4 Black & Green misattribution] + 1 MEDIUM [F-5 fifty-names hedge] + 1 LOW [F-6 OB Sharur / Lugal-e framing])"
+  claims_identified: 23      # ~23 claim paragraphs across source overview (4), co-equal note (2), OB-recension narrative (6), SB-recension narrative (4 candidate-search Adad/Gerra/Šara + Ea + maternal-commission + Sharur 2 + first-combat 2 + Ea/second-combat 2 + closing 1), ritual/function (2), variants & corpus (3); excluding pure marker blocks
+  evidence_tokens_audited: 84  # round-2 added ~5 tokens for the new Gerra claim, expanded Black & Green framing, Tell Asmar iconography paragraph
+  triangulations_performed: 5   # round-2 focused factcheck: F-1, F-2, F-3, F-4 corrections re-verified against round-1 anchor sources (Eisenbrauns ToC, gatewaystobabylon, encyclopedia.com, altorientale-mythologie, SEAL HUJI, Wikipedia s.v. Ningirsu/Ninurta/Anzû); F-5 hedge and F-6 hedge confirmed in body and brief
+  verdict: PASS
+  honesty_self_check:
+    q1_opened_or_skimmed: |
+      Round-2 factcheck primarily verifies that round-1 BLOCK
+      findings (F-1, F-2, F-3, F-4 HIGH; F-5 MEDIUM; F-6 LOW)
+      were faithfully corrected in the round-2 claims and brief.
+      The round-1 factcheck already secured verbatim quotes
+      from independent sources, which round-2 reuses for
+      correction-application verification:
+      (a) Eisenbrauns ToC for Annus 2001 SAACT 3 (round-1
+          verbatim): "Tablet 1," "Tablet 2," "Tablet 3" —
+          confirming THREE tablets in the SB recension.
+      (b) gatewaystobabylon (round-1 verbatim): "Adad (canal-
+          controller), Gerra, and Shara (Ishtar's son)" —
+          three named refusers, Gerra second, Šara third.
+      (c) encyclopedia.com (round-1 verbatim): "Adad — sent
+          first... unsuccessful"; "Girru and Shara — chosen
+          next." Confirms three-named-refuser canonical sequence.
+      (d) altorientale-mythologie (round-1 verbatim, Neo-Assyrian
+          SB sequence): "Adad → Gibil → Šara."
+      (e) SEAL HUJI s.v. Anzu OB II and OB III (round-1
+          verbatim): Sb 9470 and Sb 14683, both Susa, both
+          Louvre — NOT Tell Asmar.
+      (f) Wikipedia s.v. Ningirsu (round-1 verbatim): "Black &
+          Green (1992) are cited as interpreting Ningirsu and
+          Ninurta as 'two gods from different cult centers in
+          origin.'"
+      (g) Wikipedia s.v. Ninurta (round-1 verbatim): "Ninĝirsu
+          was identified as a local hypostasis of Ninurta in a
+          syncretism... However, Assyriologists are divided on
+          the question of whether they were originally two
+          manifestations of the same god, or two separate
+          deities."
+      Round-2 also performed fresh confirmatory web searches:
+      WebSearch on "Annus 2001 SAACT 3 Tablet 1/2/3" confirmed
+      the three-tablet structure across independent listings;
+      WebSearch on "Adad Gerra Shara refuse candidate" returned
+      independent confirmation that all three gods refuse before
+      Ninurta accepts ("Anu's sons Adad and Gerra, as well as
+      Shara... are asked first to attack Anzu, but they refuse");
+      WebFetch on Wikipedia s.v. Anzû confirmed the OB version
+      came from Susa and the Tell Asmar Hoard statue is
+      iconographic (Anzu bird on the base, not a literary
+      tablet); WebFetch on Wikipedia s.v. Ningirsu confirmed
+      Jeremy Black "interpreted them as two gods from different
+      cult centers in origin" — supporting Black & Green 1992's
+      originally-distinct-deities reading. WebFetch attempts
+      against Eisenbrauns and gatewaystobabylon returned
+      404/empty content this audit pass; round-1's verbatim
+      quotes from those sources are reused per the round-2-
+      reuses-round-1-anchors pattern (chapter 14 precedent).
+      Did NOT directly verify (taken on trust as round-1 caveats
+      remain in force):
+      - Annus 2001 SAACT 3 internal text (transliteration /
+        translation / commentary): paywalled / ResearchGate 403.
+      - Vogelzang 1988 internal text (OB Anzu critical edition):
+        no preview accessible.
+      - Foster 2005 pp. 555–578 internal text: paywalled.
+      - Dalley 2008 pp. 203–227 internal text: paywalled.
+      - Black & Green 1992 directly (relied on Wikipedia s.v.
+        Ningirsu / Ninurta as the proxy for B&G's positions).
+      - Bottéro 2001, Foster 2007, Lambert 2013: taken on trust
+        at the round-1 access level.
+    q2_triangulated_or_assumed: |
+      Round-2 verification is correction-application focused.
+      Each of the six round-1 findings (F-1 through F-6) was
+      checked against the round-2 claims document and round-2
+      brief.
+      F-1 (SB tablet count, two → three): VERIFIED. A targeted
+      grep for any surviving "two.tablet|two-tablet|two tablet"
+      in the round-2 claims document returned only the preamble
+      correction-log entries documenting the round-1 fix (lines
+      8, 12 of the preamble). No body claim retains the "two-
+      tablet" framing. The body, source-overview footnote, both
+      LACUNA markers, the RECONSTRUCTION marker, the VARIANT
+      block, and the corpus-place § all consistently state three
+      tablets (Tablet I, Tablet II, Tablet III per Annus 2001
+      SAACT 3 ToC). The SB-vs-OB comparison is reframed in
+      terms of LENGTH (SB longer; OB shorter on the same three-
+      tablet frame), not tablet count — per the round-1
+      recommended fix verbatim. RESOLVED.
+      F-2 (candidate-search canonical sequence Adad → Gerra/
+      Gibil → Šara): VERIFIED. Round-2 line 180 (Adad first as
+      canal-controller / storm-god); round-2 line 185 (new
+      paragraph: Gerra also spelled Girra or Gibil, identified
+      as fire-god, approached second); round-2 line 190 (Šara
+      now approached THIRD, with "son of Ištar" per
+      altorientale-mythologie); round-2 line 195 (Ea proposes
+      Ninurta "where Adad, Gerra, and Šara have declined"); the
+      VARIANT block at line 274 and the corpus-place § at line
+      276 both reference the canonical Adad → Gerra/Gibil → Šara
+      sequence. The brief's entities_glossary at lines 112–117
+      now includes Gerra (Girra, Gibil) as second refuser and
+      Šara as third refuser (son of Ištar). RESOLVED.
+      F-3 (OB manuscripts: Susa only, not Tell Asmar): VERIFIED.
+      Round-2 line 96 (source-overview): "Susa manuscripts —
+      Sb 9470 (= OB Anzu II) and Sb 14683 (= OB Anzu III), both
+      held at the Louvre"; round-2 line 114 (LACUNA marker):
+      "Susa manuscripts Sb 9470 (= OB Anzu II) and Sb 14683
+      (= OB Anzu III), both Louvre"; round-2 line 274 (VARIANT
+      block): "Susa manuscripts only — Sb 9470 (= OB Anzu II)
+      and Sb 14683 (= OB Anzu III), both Louvre per SEAL HUJI";
+      round-2 line 296 (geographic spread): "Susa manuscripts
+      (Sb 9470, Sb 14683)." A grep for "Tell Asmar" in round-2
+      claims returns ONLY (i) preamble correction-log entries at
+      lines 29 and 33 documenting the round-1 fix and (ii) the
+      iconography paragraph at line 267 — where the Tell Asmar
+      Hoard statue (early-dynastic eye-statue from Eshnunna with
+      an Anzû bird carved on the base) appears exclusively as an
+      iconographic precursor, not as a literary witness. The
+      claim explicitly flags "a third-millennium iconographic
+      witness, not a literary tablet of the epic." RESOLVED.
+      F-4 (Ningirsu/Ninurta as originally distinct cult-centre
+      deities subsequently syncretized): VERIFIED. Round-2 line
+      128 (co-equal note §): "Ningirsu (the Lagash war-god) and
+      Ninurta (the Nippur war-god, warrior-son of Enlil) are
+      treated by Black & Green 1992 as originally distinct
+      cult-centre deities, syncretized by the time of Gudea
+      (late third millennium)"; the hedge is explicit: "Whether
+      the two were originally manifestations of a single
+      warrior-god or two distinct deities subsequently merged
+      is a question on which Assyriologists remain divided;
+      Black & Green lean toward two-deities-in-origin." Round-2
+      line 282 (Variants & witness §): "Black & Green 1992
+      (s.v. Ningirsu, Ninurta) treat the two as originally
+      distinct cult-centre deities — distinct in origin and in
+      pantheon-political affiliation — subsequently syncretized;
+      whether the two were originally manifestations of a single
+      warrior-god or two distinct deities later merged is a
+      question on which Assyriologists remain divided." The SB
+      substitution is now framed as a "cult-political shift,
+      not a mere rename." The "same warrior-god under different
+      local names" framing of round-1 is removed. RESOLVED.
+      F-5 (fifty-names hedge): VERIFIED. Round-2 line 251 reads
+      "structured as a hymnic litany of Ninurta's names and
+      epithets across the southern Mesopotamian sanctuaries —
+      a structural feature paralleled by the fifty-names finale
+      of Enūma Eliš (Tablet VI–VII)... Whether the SB Anzû
+      closing hymn formally enumerates exactly fifty names is
+      not securely established in the surviving text; the
+      structural parallel to the Enūma Eliš fifty-names finale
+      is the load-bearing observation." The INFERENCE marker at
+      line 257 is preserved with its risk field expanded to
+      include the count-hedge. The corpus-place § at line 290
+      reads "a litany of Ninurta's names and epithets in the
+      SB Anzû (paralleling the Enūma Eliš structure, with the
+      exact count for SB Anzû not securely established)."
+      RESOLVED.
+      F-6 (OB Sharur attestation hedge; Lugal-e comparative
+      framing foregrounded): VERIFIED. Round-2 line 209 reads
+      "A distinctive feature of the SB recension — and,
+      fragmentarily attested in the OB recension per Vogelzang
+      1988 — is Sharur (*Šaruru*)." The Sumerian COMPARATIVE-
+      HOOK at line 304 now foregrounds: "The sentient war-mace
+      Sharur is more prominent in *Lugal-e* (where the mace's
+      role is foregrounded as Ninurta's encourager-to-battle)
+      than in the Akkadian *Anzû* (where Sharur's role is
+      concentrated in the messenger-to-Ea episode); this
+      comparative observation is reserved for the influences
+      chapter." The Sharur INFERENCE marker at line 221 also
+      mentions Lugal-e in its risk field as "Sumerian and thus
+      out-of-scope as primary." RESOLVED.
+      Marker counts re-verified: 2 INFERENCE (Sharur older
+      tradition, line 221; SB closing hymnic litany / fifty-
+      names parallel, line 257) + 2 LACUNA (OB Susa
+      manuscripts, line 114; SB Tablets I, II, III damage,
+      line 116) + 2 RECONSTRUCTION (Foster 2005 parallel
+      reconstructions, line 118; OB Tablet III combat-climax
+      filled from SB Tablet III, line 166) + 1 VARIANT (line
+      274) = 7 markers (unchanged from round 1); 5 COMPARATIVE-
+      HOOK comments (lines 302–306; unchanged); ~84 EVIDENCE
+      tokens. All within PASS bands for the chapter-claims
+      skill.
+      Source IDs all resolve to sources.yaml: annus-2001,
+      vogelzang-1988, foster-2005, dalley-2008, black-green-
+      1992, bottero-2001, foster-2007, lambert-2013. Watkins
+      1995 retained as named-but-flagged in the Indo-European
+      COMPARATIVE-HOOK (no EVIDENCE token routes through it;
+      per round-1 N-1, ACCEPTABLE). Hoffner 1998 retained as
+      named-but-flagged in the Hittite COMPARATIVE-HOOK.
+      Glossary compliance: re-verified PASS. Ningirsu permitted
+      for OB-hero contexts per glossary carve-out; Ninurta,
+      Enlil, Anu, Adad, Gerra (newly added per F-2), Šara (with
+      š-háček), Ea, Bēlet-ilī, Anzû (with â), Sharur (Šaruru)
+      all use locked glossary renderings. No never-use terms
+      (Enki, Inanna, Anzud, Bilgames, Huwawa, Utu, Nanna,
+      Iškur, Damgalnuna, Ashur) detected in body prose. The
+      Sumerian form *Anzud* appears once in the Sumerian
+      COMPARATIVE-HOOK only to flag the out-of-scope-as-primary
+      status of the Sumerian form.
+    q3_real_quotes_or_pattern_match: |
+      Round-2 verification reuses round-1's secured verbatim
+      quotes from Eisenbrauns, gatewaystobabylon,
+      encyclopedia.com, altorientale-mythologie, SEAL HUJI, and
+      Wikipedia, and adds fresh round-2 confirmations:
+      - WebSearch (round-2): "Adad and Gerra, as well as Shara
+        ... are asked first to attack Anzu, but they refuse,
+        knowing they will be turned to clay at the will of
+        Anzu" — independent confirmation of the three-named-
+        refuser canonical sequence.
+      - WebFetch Wikipedia s.v. Anzû (round-2): OB "was found
+        at Susa"; Tell Asmar Hoard statue is "an iconographic
+        artifact, not a literary manuscript witness."
+      - WebFetch Wikipedia s.v. Ningirsu (round-2): "Jeremy
+        Black also interpreted them as two gods from different
+        cult centers in origin" — confirms Black & Green 1992's
+        originally-distinct-deities reading.
+      For the writer's per-paragraph Foster 2005 and Dalley
+      2008 page allocations, the round-1 caveat carries forward:
+      the overall page-range bracket (Foster 555–578; Dalley
+      203–227) is consistent with the brief; the per-paragraph
+      page allocation is taken on trust as a writer-imposed
+      structural convention. The narrative-fidelity check at
+      stage 15 will apply additional scrutiny.
+    q4_distinguished_variance_from_contamination: |
+      Sumerian *Lugal-e* contamination boundary properly
+      observed and now MORE EXPLICIT in round-2. The Sumerian
+      COMPARATIVE-HOOK at line 304 explicitly states "*Anzû* is
+      NOT a translation of *Lugal-e*"; the Sharur-in-Lugal-e
+      comparative observation is foregrounded per F-6, while
+      still flagged as "reserved for the influences chapter"
+      and "Sumerian material is comparative only per scope.md."
+      The Sumerian *Anzud* form is explicitly flagged as
+      out-of-scope as primary in the same hook.
+      Hurro-Hittite Illuyanka contamination boundary properly
+      observed (line 306).
+      No biblical / Hebrew / Ugaritic / Aramaic contamination
+      detected.
+      Glossary compliance: re-verified PASS.
+      Marker discipline: re-verified PASS. The LACUNA markers
+      and RECONSTRUCTION markers are well-formed with explicit
+      source identification and confidence levels; the OB→SB
+      cross-recension fill is scope.md-compliant per N-2 of
+      round-1.
+      Source IDs all resolve to sources.yaml. No new IDs
+      introduced. Named-but-flagged citations (Watkins 1995,
+      Hoffner 1998) correctly applied.
+      No silent bridges. No new fabrications detected.
+    q5_same_model_as_writer: |
+      Same model family (claude-opus-4-7[1m]) as the writer of
+      both round-1 and round-2 claims documents, run in a fresh
+      conversation per the skill's hard-rule allowance for
+      round-2 factcheck (chapter 7 / 8 / 12 / 14 pattern).
+      The writer's round-2 completion record (file 11-chapter-
+      claims-ch15-round2.done.yaml) lists ACCEPT dispositions
+      for all six round-1 findings. Round-2 factcheck
+      independently verifies each correction against the
+      round-1 anchor sources plus fresh round-2 web checks:
+      F-1 ACCEPT — verified by grep-and-content scan. RESOLVED.
+      F-2 ACCEPT — verified by grep-and-content scan; new
+                   Gerra paragraph inserted; Šara correctly
+                   repositioned as third. RESOLVED.
+      F-3 ACCEPT — verified by grep-and-content scan; Tell
+                   Asmar appears only in iconography context.
+                   RESOLVED.
+      F-4 ACCEPT — verified by content-and-source scan; B&G's
+                   actual reading correctly attributed;
+                   scholarly division hedge explicit. RESOLVED.
+      F-5 ACCEPT — verified by content-scan; fifty-names count
+                   explicitly hedged. RESOLVED.
+      F-6 ACCEPT — verified by content-scan; OB Sharur hedged;
+                   Lugal-e comparative framing foregrounded.
+                   RESOLVED.
+      No new HIGH or MEDIUM findings introduced. No new factual
+      errors or fabrications detected. The six round-1
+      findings are RESOLVED. The chapter is ready to proceed
+      to stage 13 (post-human-normalize).
+
+tallies:
+  supported: 23           # all 23 prose claim paragraphs now SUPPORTED post round-2 corrections
+  internal_variance: 0    # F-4 Ningirsu/Ninurta identity reading now correctly hedged
+  unverified: 0
+  citation_wrong: 0
+  contamination: 0
+  fabrication: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  factual_error: 0        # F-1, F-2, F-3 corrected
+  evidence_misattribution: 0  # F-4 corrected
+  hedging_needed: 0       # F-5 and F-6 hedged
+  notes: 2                # N-1 (Watkins 1995 named-but-flagged, carried forward); N-2 (OB→SB RECONSTRUCTION, carried forward)
+high_findings: 0
+medium_findings: 0
+low_findings: 0
+
+# ── Round-1 findings disposition ───────────────────────────────────────────
+
+round1_findings_disposition:
+  - finding_id: F-1
+    round1_kind: FACTUAL-ERROR
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    verification: |
+      SB recension corrected from "two tablets" to THREE
+      tablets (Tablet I, Tablet II, Tablet III per Annus 2001
+      SAACT 3 ToC) throughout the round-2 claims document.
+      grep "two.tablet|two-tablet|two tablet" returns only
+      preamble correction-log entries (lines 8, 12)
+      documenting the fix; no body claim retains the old
+      framing. Specifically verified:
+      - Source overview (round-2 line 90): "Standard
+        Babylonian recension... also on three tablets —
+        Tablet I, Tablet II, Tablet III per the Annus 2001
+        SAACT 3 critical edition."
+      - SB-recension narrative section heading and body
+        (round-2 line 102): "The SB recension is structured
+        in three tablets (Tablet I, Tablet II, Tablet III
+        per Annus 2001 SAACT 3)."
+      - LACUNA marker (round-2 line 116): "Annus 2001's
+        SAACT 3 base, comprising Tablet I, Tablet II, and
+        Tablet III."
+      - RECONSTRUCTION marker (round-2 line 166): "SB
+        recension (Annus 2001, SAACT 3, SB Tablet III)."
+      - VARIANT block (round-2 line 274): "three-tablet
+        structure (Tablet I, Tablet II, Tablet III per Annus
+        2001 SAACT 3 ToC)."
+      - Corpus-place § (round-2 line 276): "the SB recension's
+        structure across three tablets."
+      The SB-vs-OB comparison is reframed in terms of LENGTH
+      (SB longer; OB shorter on the same three-tablet frame),
+      not tablet count — verbatim per the round-1 recommended
+      fix. The brief's variants block is correspondingly
+      updated (briefs/15-anzu.yaml lines 86, 91). Independently
+      confirmed by Eisenbrauns ToC for Annus 2001 (round-1
+      verbatim "Tablet 1," "Tablet 2," "Tablet 3"),
+      gatewaystobabylon, encyclopedia.com, bildungblocks.
+
+  - finding_id: F-2
+    round1_kind: FACTUAL-ERROR
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    verification: |
+      SB candidate-search canonical sequence corrected from
+      round-1's "Adad → Šara → unnamed third" to the canonical
+      Adad → Gerra/Gibil → Šara (three named candidates who all
+      refuse before Ea proposes Ninurta).
+      - Round-2 line 180: "Adad — the storm-god, lord of
+        thunder and the rains that bring or break the harvest,
+        here cast as the canal-controller — is approached
+        first and declines the task."
+      - Round-2 line 185 (NEW paragraph inserted in round-2):
+        "Gerra (also spelled Girra or Gibil) — the fire-god
+        — is approached second and likewise declines, citing
+        the same impossibility. The SB candidate-search names
+        Gerra explicitly as the second refuser; the figure
+        is the divine personification of fire."
+      - Round-2 line 190 (Šara repositioned as THIRD): "Šara
+        — a warrior-god of the pantheon, son of Ištar — is
+        approached third and likewise declines... The
+        canonical SB candidate-search sequence is thus Adad
+        → Gerra/Gibil → Šara: three named refusers."
+      - Round-2 line 195 (Ea's proposal updated): "Ninurta
+        — as the candidate-hero who can succeed where Adad,
+        Gerra, and Šara have declined."
+      - Round-2 line 274 (VARIANT block): "SB candidate-search
+        names three refusers — Adad → Gerra/Gibil → Šara."
+      - Round-2 line 276 (corpus-place §): "named sequence in
+        SB: Adad → Gerra/Gibil → Šara."
+      The brief's entities_glossary is updated in concert:
+      "Gerra (also Girra, Gibil)" added at briefs/15-anzu.yaml
+      lines 112–114 with gloss identifying Gerra as fire-god
+      and second refuser; Šara's gloss updated to "third
+      refuser, son of Ištar." Triangulated against
+      gatewaystobabylon ("Adad (canal-controller), Gerra, and
+      Shara (Ishtar's son)"), encyclopedia.com ("Adad...
+      Girru and Shara"), altorientale-mythologie ("Adad →
+      Gibil → Šara"), plus fresh round-2 WebSearch
+      confirmation of the three-named-refuser sequence.
+
+  - finding_id: F-3
+    round1_kind: FACTUAL-ERROR
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    verification: |
+      All references to "Tell Asmar tablets" as OB literary
+      witnesses removed. OB Anzû manuscripts now consistently
+      specified as Susa manuscripts only — Sb 9470 (= OB Anzu
+      II) and Sb 14683 (= OB Anzu III), both Louvre per SEAL
+      HUJI:
+      - Round-2 line 96 (source-overview): "Susa manuscripts
+        — Sb 9470 (= OB Anzu II) and Sb 14683 (= OB Anzu III),
+        both held at the Louvre."
+      - Round-2 line 114 (LACUNA marker): "Susa manuscripts
+        Sb 9470 (= OB Anzu II) and Sb 14683 (= OB Anzu III),
+        both Louvre."
+      - Round-2 line 118 (RECONSTRUCTION marker): "OB Susa
+        manuscripts (Sb 9470, Sb 14683)."
+      - Round-2 line 274 (VARIANT block): "Susa manuscripts
+        only — Sb 9470 (= OB Anzu II) and Sb 14683 (= OB Anzu
+        III), both Louvre per SEAL HUJI."
+      - Round-2 line 296 (geographic spread): "OB Susa
+        witnesses (Sb 9470, Sb 14683 — both Louvre) place the
+        composition at the eastern edge of the Old Babylonian-
+        period scribal world."
+      The Tell Asmar Hoard statue now appears EXCLUSIVELY in
+      the iconography paragraph at round-2 line 267: "An
+      early-dynastic iconographic precursor of the storm-bird
+      is preserved on the Tell Asmar Hoard statue (Eshnunna),
+      where a small Anzû bird is carved on the base of a human
+      eye-statue — a third-millennium iconographic witness,
+      not a literary tablet of the epic." The brief's lacunae,
+      alternates, special_instructions, and centrality_evidence
+      iconography are correspondingly updated. Independently
+      reconfirmed by round-2 WebFetch on Wikipedia s.v. Anzû
+      ("OB version... was found at Susa"; Tell Asmar Hoard
+      statue is "an iconographic artifact, not a literary
+      manuscript witness").
+
+  - finding_id: F-4
+    round1_kind: EVIDENCE-MISATTRIBUTION
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    verification: |
+      Ningirsu/Ninurta identity framing rewritten at both the
+      co-equal note § and the Variants & witness § to reflect
+      Black & Green 1992's actual reading (originally distinct
+      cult-centre deities, syncretized by the time of Gudea)
+      and to make the scholarly division explicit:
+      - Round-2 line 128 (co-equal note §): "Ningirsu (the
+        Lagash war-god) and Ninurta (the Nippur war-god,
+        warrior-son of Enlil) are treated by Black & Green
+        1992 as originally distinct cult-centre deities,
+        syncretized by the time of Gudea (late third
+        millennium) into a documented identification of
+        Ningirsu as a 'local hypostasis' of Ninurta. Whether
+        the two were originally manifestations of a single
+        warrior-god or two distinct deities subsequently
+        merged is a question on which Assyriologists remain
+        divided; Black & Green lean toward two-deities-in-
+        origin... The SB recension's substitution... reflects
+        the 1st-millennium cosmopolitan consolidation of the
+        warrior-god identity under the Nippur-centred name —
+        a cult-political shift, not a mere rename."
+      - Round-2 line 282 (Variants & witness §): "Black &
+        Green 1992 (s.v. Ningirsu, Ninurta) treat the two as
+        originally distinct cult-centre deities — distinct in
+        origin and in pantheon-political affiliation —
+        subsequently syncretized; whether the two were
+        originally manifestations of a single warrior-god or
+        two distinct deities later merged is a question on
+        which Assyriologists remain divided."
+      The "same warrior-god under different local names"
+      framing of round-1 is removed. The OB→SB substitution
+      is reframed as a "cult-political shift" / "cult-
+      political consolidation," not a mere rename. The
+      brief's variants alternates entry (line 91), R2-4
+      preamble entry (lines 28–38), and special_instructions
+      (lines 205–213) are all updated in concert per the
+      round-1 recommended fix. Independently confirmed by
+      round-2 WebFetch on Wikipedia s.v. Ningirsu ("Jeremy
+      Black also interpreted them as two gods from different
+      cult centers in origin") and Wikipedia s.v. Ninurta
+      (round-1 verbatim "Assyriologists are divided").
+
+  - finding_id: F-5
+    round1_kind: HEDGING-NEEDED / PARTIALLY-SUPPORTED
+    round1_severity: MEDIUM
+    round2_status: RESOLVED
+    verification: |
+      The "fifty names" claim is now hedged at every
+      occurrence. The exact count is no longer asserted as
+      fact for SB Anzû.
+      - Round-2 line 251 (body): "structured as a hymnic
+        litany of Ninurta's names and epithets across the
+        southern Mesopotamian sanctuaries — a structural
+        feature paralleled by the fifty-names finale of
+        Enūma Eliš (Tablet VI–VII), where Marduk's victory
+        over Tiamat is similarly celebrated by an extended
+        litany of names. Whether the SB Anzû closing hymn
+        formally enumerates exactly fifty names is not
+        securely established in the surviving text; the
+        structural parallel to the Enūma Eliš fifty-names
+        finale is the load-bearing observation."
+      - Round-2 line 257 (INFERENCE marker, expanded): "The
+        exact count 'fifty' for the SB Anzû closing litany
+        is not securely established in the surviving text
+        and is hedged in the body."
+      - Round-2 line 290 (corpus-place §): "Marduk's fifty
+        names in *Enūma Eliš*; a litany of Ninurta's names
+        and epithets in the SB *Anzû* (paralleling the Enūma
+        Eliš structure, with the exact count for SB Anzû not
+        securely established)."
+      The structural parallel to Enūma Eliš VI–VII is
+      preserved as the load-bearing observation per the
+      round-1 recommended fix; the count claim itself is
+      hedged. Lambert 2013 retains its EVIDENCE token. The
+      brief's special_instructions (lines 226–230) are
+      correspondingly updated.
+
+  - finding_id: F-6
+    round1_kind: PARTIAL-SUPPORT / COMPARATIVE-FRAMING
+    round1_severity: LOW
+    round2_status: RESOLVED
+    verification: |
+      OB Sharur attestation hedged; Lugal-e comparative
+      framing foregrounded in the Sumerian COMPARATIVE-HOOK:
+      - Round-2 line 209: "A distinctive feature of the SB
+        recension — and, fragmentarily attested in the OB
+        recension per Vogelzang 1988 — is Sharur (*Šaruru*)."
+      - Round-2 line 304 (Sumerian COMPARATIVE-HOOK): "The
+        sentient war-mace Sharur is more prominent in *Lugal-e*
+        (where the mace's role is foregrounded as Ninurta's
+        encourager-to-battle) than in the Akkadian *Anzû*
+        (where Sharur's role is concentrated in the
+        messenger-to-Ea episode); this comparative observation
+        is reserved for the influences chapter."
+      - Round-2 line 221 (Sharur INFERENCE marker risk
+        field): "comparative material from the Sumerian
+        Lugal-e — but Sumerian material is comparative only
+        per scope.md."
+      The OB Sharur attestation is now hedged as fragmentary
+      per Vogelzang 1988; the Lugal-e comparative observation
+      is foregrounded; the Sumerian/Akkadian boundary is
+      explicit. Triangulated against mythlok.com and
+      worldhistory.org/Ninurta per round-1.
+
+# ── New round-2 findings ─────────────────────────────────────────────────────
+
+new_findings: []
+# No new round-2 findings detected. The round-2 corrections were thorough
+# and did not introduce any new factual errors, evidence misattributions,
+# fabrications, marker issues, glossary violations, or contamination.
+# Marker counts unchanged (7 = 2 INFERENCE + 2 LACUNA + 2 RECONSTRUCTION
+# + 1 VARIANT); COMPARATIVE-HOOK count unchanged (5); EVIDENCE token count
+# increased moderately from ~79 to ~84 to accommodate the new Gerra claim
+# paragraph, the expanded Black & Green framing, and the Tell Asmar Hoard
+# iconography paragraph; all within PASS bands. No housekeeping leftovers
+# from the round-1 fix list survive in either the claims document or the
+# brief (contrast chapter 14's round-2 outcome, which had three LOW
+# brief-side / footnote-descriptor housekeeping leftovers).
+
+# ── Notes (carried forward from round-1) ──────────────────────────────────
+
+notes:
+  - note_id: N-1
+    note: |
+      Watkins 1995 (*How to Kill a Dragon*) named-but-flagged
+      in the Indo-European COMPARATIVE-HOOK at round-2 line
+      305. No EVIDENCE token routes through watkins-1995
+      (only lambert-2013 carries the Enūma Eliš fifty-names
+      parallel at line 292). The named-but-flagged pattern is
+      ACCEPTABLE per the chapter-claims skill. RECOMMENDATION
+      for inventory-audit (forwarded from round-1): consider
+      adding watkins-1995 to sources.yaml at the next
+      inventory-audit round if the influences chapter (Part II)
+      will route an EVIDENCE token through Watkins's work.
+      No change in round-2.
+
+  - note_id: N-2
+    note: |
+      The OB→SB cross-recensional [RECONSTRUCTION:] marker at
+      round-2 line 166 fills the damaged OB Tablet III combat-
+      climax from the SB recension (Annus 2001 SAACT 3, SB
+      Tablet III). Scope.md's reconstruction policy explicitly
+      permits "earlier or later Akkadian recensions of the
+      same composition" as fill source, provided the
+      dialect/period gap is named in the marker. The marker
+      correctly names the donor recension and identifies the
+      dialect/period gap (OB → SB; ca. 1700 BCE → 1st
+      millennium BCE). The fill is in-tradition Akkadian and
+      the marker is well-formed. Confidence is rated "medium"
+      in the marker, appropriate given the specific-details
+      uncertainty. SUPPORTED per round-1 N-2. No change in
+      round-2.
+
+  - note_id: N-3
+    note: |
+      Round-2 access caveats (carried forward from round-1):
+      Annus 2001 SAACT 3 internal text, Vogelzang 1988
+      internal text, Foster 2005 pp. 555–578, Dalley 2008
+      pp. 203–227, Black & Green 1992 directly, Bottéro 2001,
+      Foster 2007 pp. 35–39, and Lambert 2013 are paywalled
+      or access-restricted at the same level as round-1. The
+      round-2 verification relies on the external secondary
+      anchors (Eisenbrauns ToC for Annus 2001 SAACT 3,
+      gatewaystobabylon, encyclopedia.com, altorientale-
+      mythologie, SEAL HUJI, Wikipedia s.v. Anzû / Ninurta /
+      Ningirsu, mythlok.com, worldhistory.org/Ninurta) plus
+      the round-1 verbatim quotes preserved in the round-1
+      factcheck honesty_self_check section. Per-paragraph
+      page-allocation for Foster 2005 and Dalley 2008 is
+      taken on trust as a writer-imposed structural
+      convention; the overall page-range brackets are
+      consistent with the brief. The narrative-fidelity
+      check at stage 15 will apply additional scrutiny to
+      the page-level allocations.
+
+# ── Verdict and recommended action ─────────────────────────────────────────
+
+verdict_summary:
+  verdict: PASS
+  rationale: |
+    Chapter 15 (Anzû) round-2 factcheck: VERDICT PASS.
+
+    All six round-1 findings (F-1 SB tablet count; F-2 SB
+    candidate-search sequence; F-3 OB manuscript provenance;
+    F-4 Black & Green evidence misattribution; F-5 fifty-names
+    hedge; F-6 OB Sharur / Lugal-e comparative framing) are
+    RESOLVED in the round-2 claims document and brief. The
+    corrections are:
+
+    - F-1 (FACTUAL-ERROR, HIGH): RESOLVED. SB recension
+      corrected from "two tablets" to THREE tablets (Tablet I,
+      Tablet II, Tablet III) per Annus 2001 SAACT 3 ToC,
+      throughout the source-overview, SB-recension narrative,
+      LACUNA marker, RECONSTRUCTION marker, VARIANT block, and
+      corpus-place §. The SB-vs-OB comparison reframed in terms
+      of LENGTH (SB longer; OB shorter on the same three-tablet
+      frame), not tablet count. The brief's variants block is
+      updated in concert. No surviving "two-tablet" claims in
+      body prose.
+
+    - F-2 (FACTUAL-ERROR, HIGH): RESOLVED. SB candidate-search
+      canonical sequence corrected to Adad → Gerra/Gibil → Šara
+      (three named refusers). New claim paragraph inserted for
+      Gerra (Girra, Gibil) as the second refuser, identified as
+      the fire-god; Šara repositioned as the third refuser, son
+      of Ištar; Ea's proposal paragraph references all three
+      refusers by name. The brief's entities_glossary is
+      updated to include Gerra with appropriate gloss.
+
+    - F-3 (FACTUAL-ERROR, HIGH): RESOLVED. All "Tell Asmar
+      tablets" references for OB literary witnesses removed.
+      OB Anzû manuscripts consistently specified as Susa
+      manuscripts only — Sb 9470 (= OB Anzu II) and Sb 14683
+      (= OB Anzu III), both Louvre per SEAL HUJI. The Tell
+      Asmar Hoard statue appears EXCLUSIVELY in the iconography
+      paragraph at line 267 as an early-dynastic iconographic
+      precursor, explicitly flagged as "not a literary tablet
+      of the epic." The brief's lacunae, alternates,
+      special_instructions, and centrality_evidence iconography
+      are correspondingly updated.
+
+    - F-4 (EVIDENCE-MISATTRIBUTION, HIGH): RESOLVED. The
+      Ningirsu/Ninurta identity framing rewritten at both the
+      co-equal note § and the Variants & witness § to reflect
+      Black & Green 1992's actual reading (originally distinct
+      cult-centre deities, Ningirsu at Lagash and Ninurta at
+      Nippur, syncretized by the time of Gudea) per Wikipedia
+      s.v. Ningirsu / Ninurta. The scholarly division is made
+      explicit. The OB→SB substitution is reframed as a
+      cult-political shift, not a mere rename. The brief's
+      variants alternates and special_instructions are updated
+      in concert.
+
+    - F-5 (HEDGING-NEEDED, MEDIUM): RESOLVED. The "fifty
+      names" claim hedged at every occurrence. The body now
+      describes the SB closing hymn as "a hymnic litany of
+      Ninurta's names and epithets" structurally paralleled by
+      the Enūma Eliš VI–VII fifty-names finale, with explicit
+      hedging: "Whether the SB Anzû closing hymn formally
+      enumerates exactly fifty names is not securely
+      established in the surviving text." The INFERENCE marker
+      is retained as the locus of the interpretive parallel,
+      with its risk field expanded to include the count-hedge.
+
+    - F-6 (PARTIAL-SUPPORT / COMPARATIVE-FRAMING, LOW):
+      RESOLVED. OB Sharur attestation hedged as "fragmentarily
+      attested in the OB recension per Vogelzang 1988." The
+      Lugal-e comparative observation (Sharur more prominent
+      in Lugal-e than in Akkadian Anzû) foregrounded in the
+      Sumerian COMPARATIVE-HOOK and noted in the Sharur
+      INFERENCE marker's risk field, while still flagged as
+      "reserved for the influences chapter" and Sumerian
+      material as "comparative only per scope.md."
+
+    No new round-2 findings detected. No new factual errors,
+    evidence misattributions, fabrications, marker issues,
+    glossary violations, or contamination introduced. The
+    round-2 corrections were thorough and complete; both the
+    claims document and the brief have been cleansed of all
+    round-1 findings with no housekeeping leftovers.
+
+    Marker discipline: PASS (2 INFERENCE + 2 LACUNA + 2
+    RECONSTRUCTION + 1 VARIANT = 7; 5 COMPARATIVE-HOOK;
+    ~84 EVIDENCE tokens — all within PASS bands).
+    Glossary compliance: PASS. No never-use terms detected.
+    Sumerian/Akkadian contamination boundary properly
+    observed; Hurro-Hittite Illuyanka boundary observed.
+    Source IDs all resolve to sources.yaml. Watkins 1995
+    and Hoffner 1998 correctly named-but-flagged in
+    COMPARATIVE-HOOKs (no EVIDENCE token routes through
+    them). OB→SB cross-recensional RECONSTRUCTION marker
+    scope.md-compliant.
+
+    The chapter is ready to proceed to stage 13 (post-
+    human-normalize). No light fixes required; the round-2
+    rewrite is cleaner than chapter 14's round-2 outcome
+    (which carried three LOW housekeeping leftovers); the
+    chapter 15 case parallels the chapter 7 / 12 pattern of
+    a fully-cleansed round-2 PASS.
+
+  recommended_downstream_action: |
+    PASS to stage 13 (post-human-normalize). No blocking or
+    light-fix items. Optional inventory-audit follow-up
+    (carried forward from N-1): consider adding Watkins 1995
+    to sources.yaml at the next inventory-audit round if the
+    influences chapter (Part II) will route an EVIDENCE token
+    through it.
+
+    The chapter's structural organization, source coverage,
+    marker discipline, glossary compliance, scope.md
+    contamination-boundary discipline, and EVIDENCE-token
+    coverage are sound. The six round-1 findings are RESOLVED.
+    No new HIGH, MEDIUM, or LOW findings. The chapter is
+    ready for stage-13 post-human-normalize and the
+    downstream chapter-draft transformation.
+
+  proceed_to_stage: 13      # post-human-normalize
+  pass_with_light_fixes: false
+  light_fixes_summary: |
+    None. The round-2 corrections were thorough and complete;
+    no housekeeping leftovers in either the claims document
+    or the brief. Chapter is cleanly PASS for stage-13
+    progression.

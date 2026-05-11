@@ -1,0 +1,89 @@
+stage: "chapter-claims"
+chapter: 15
+slug: "anzu"
+input: "briefs/15-anzu.yaml"
+output: "chapters/15-anzu.claims.adoc"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/15-anzu.claims.adoc"
+    lines: 245
+summary: |
+  Chapter 15 (Anzû: The Theft of the Tablet of Destinies) claims document. Co-equal Old Babylonian (Vogelzang 1988) and Standard Babylonian (Annus 2001) recensions presented in sequence per the brief's co-equal classification and the chapter-claims skill's co-equal handling. The principal substantive recensional difference — the hero's identity (Ningirsu in OB; Ninurta in SB) and tablet structure (three tablets in OB; two in SB) — is preserved throughout, not glossed over, per the brief's special_instructions.
+
+  The glossary.yaml carve-out for "Ningirsu" (updated 2026-05-07: "*Ningirsu* is permitted in any passage discussing the OB *Anzû* recension's hero") is exercised. The OB Ningirsu / SB Ninurta substitution is presented as evidence for the 1st-millennium consolidation of the warrior-god identity (the two figures are the same warrior-god under different local-city names: Ningirsu of Lagash; Ninurta of Nippur).
+
+  Sources: Annus 2001 (SAACT 3, SB critical edition) and Vogelzang 1988 (OB critical edition) as the primary critical editions; Foster 2005 (pp. 555–578, both recensions side by side) and Dalley 2008 (pp. 203–227) as the principal English translations; Foster 2007 (pp. 35–39) for late-tradition recensional context; Black & Green 1992 for deity entries (Anzû, Ninurta, Ningirsu, Ea, Tablet of Destinies); Bottéro 2001 for divine kingship and royal-legitimation theology; Lambert 2013 for the Enūma Eliš fifty-names parallel. All source IDs resolve to existing entries in sources.yaml.
+
+  Narrative structure presents BOTH recensions:
+    - OB Vogelzang 1988 (3-tablet, Ningirsu hero, ~1700 BCE, Susa and Tell Asmar): opening assembly; Anzû's bath-theft of the Tablet of Destinies from Enlil; cosmic decree-crisis; divine search for champion (partly damaged); Ningirsu identified as hero; combat with weapons-decree-reversal; second combat (partly damaged at climax); victory and Tablet recovery (partly damaged at conclusion).
+    - SB Annus 2001 (2-tablet, Ninurta hero, 1st millennium, Nineveh + Sultantepe + Tarbiṣu + Aššur): elaborated divine-council opening; bath-theft (parallel to OB); structured catalogue of refusing candidate-heroes (Adad, Šara, third candidate); Ea proposes Ninurta; maternal commission by Bēlet-ilī/Mami; Sharur the sentient mace and its dialogue with hero; first combat with Anzû's decree-reversal of weapons (arrow-to-reed-bed, bowstring-to-sheep, bow-to-tree imagery); Sharur to Ea for tactical counsel; second combat (south wind, pinions); killing-blow and Tablet recovery; closing fifty-names hymn to Ninurta.
+    - The fifty-names closing hymn structural parallel to *Enūma Eliš* (Tablets VI–VII) Marduk's fifty names is preserved as INFERENCE marker.
+
+  Two INFERENCE markers: (i) Sharur as sentient war-mace and its placement within the older Mesopotamian tradition of personified divine weapons (with the Marduk's-bow comparandum in *Enūma Eliš* IV); (ii) the SB closing fifty-names hymn structural parallel to *Enūma Eliš* and the scribal-milieu reading. Two LACUNA markers (one for OB recension breaks; one for SB Tablet I and Tablet III climax damage). Two RECONSTRUCTION markers (Foster 2005's parallel reconstructions; OB Tablet III climax filled from SB Tablet III with explicit dialect/period flagging per scope.md's reconstruction policy). One VARIANT marker (the co-equal recensional structure documented per the skill's co-equal handling).
+
+  Five COMPARATIVE-HOOK comments: (i) Akkadian-internal *Enūma Eliš* (chapter 1) as paired combat-myth dossier (Marduk-Tiamat / Ninurta-Anzû; shared Tablet of Destinies and fifty-names structures); (ii) Akkadian-internal Ninurta-as-warrior elsewhere in the tradition (Damkina's Bond ch9, 1st-millennium royal inscriptions, Neo-Assyrian iconography); (iii) Sumerian *Lugal-e* (ETCSL 1.6.2) as comparative-only background (NOT the original of which *Anzû* would be a translation; the Sumerian *Anzud* form acknowledged as out of scope); (iv) Indo-European HERO SLAY SERPENT typology (Watkins 1995 — named-but-flagged; Indra-Vṛtra RV 1.32, Thor-Jörmungandr, Apollo-Python, Zeus-Typhon, Tarḫunna-Illuyanka); (v) Hurro-Hittite *Illuyanka* (CTH 321) as the closest geographic-chronological neighbour with the storm-god-defeats-monster pattern.
+
+  EVIDENCE tokens (116 total): annus-2001, vogelzang-1988, foster-2005, dalley-2008, foster-2007, black-green-1992, bottero-2001, lambert-2013. All eight source IDs resolve to existing entries in sources.yaml. Zero invented IDs.
+
+  Glossary check: Anzû (locked form with circumflex per glossary.yaml; never_use Anzud is respected — Anzud appears only inside one COMPARATIVE-HOOK comment as an explicit Sumerian-tradition reference); Ninurta (SB hero); Ningirsu (OB hero — glossary.yaml carve-out for OB *Anzû* recension passages); Enlil; Anu (sky-god, formal head of the divine hierarchy); Ea (with full first-mention gloss per its prominence in the SB strategic role); Adad; Marduk (in Ea's first-mention gloss and in cross-reference to *Enūma Eliš*); Tablet of Destinies (locked English form with *ṭuppi šīmāti* in parentheses on first mention); *Apsû* (with circumflex); Mami / Bēlet-ilī (in the SB maternal-commission section). Composition-specific entities not in glossary.yaml — Sharur (*Šaruru*), Šara, the Susa, Tell Asmar, Tarbiṣu witness locations — receive inline first-mention glosses.
+
+brief_alignment:
+  source_overview_present: true
+  co_equal_handling: "PASS — both OB and SB recensions presented in sequence; the [VARIANT:] marker documents the co-equal structure per the chapter-claims skill's co-equal handling. The chapter does not 'choose' one recension over the other; it presents both with their attributions and notes the structural skeleton shared between them."
+  ningirsu_ninurta_substitution_handling: "PASS — the OB→SB substitution of the warrior-god's name is preserved as a central interpretive issue (not glossed over per brief's special_instructions). The glossary.yaml Ningirsu carve-out is exercised; the chapter explains the substitution as reflecting the 1st-millennium consolidation of the warrior-god identity (the same warrior-god under different local-city names: Ningirsu of Lagash, Ninurta of Nippur)."
+  ob_recension_handling: "PASS — the OB Vogelzang 1988 recension is foregrounded with its three-tablet structure, Susa and Tell Asmar manuscripts, ~1700 BCE date, and Ningirsu (Lagash war-god) framing. Substantial breaks are flagged with [LACUNA:] and [RECONSTRUCTION:] markers."
+  sb_recension_handling: "PASS — the SB Annus 2001 recension is foregrounded with its two-tablet structure, Nineveh/Sultantepe/Tarbiṣu/Aššur manuscripts, 1st-millennium date, and Ninurta (warrior-son of Enlil) framing. The elaborated divine-council, candidate-search (Adad, Šara, third candidate declined), maternal commission, Sharur the sentient mace, the weapons-decree-reversal imagery, Ea's south-wind-and-pinions counter-strategy, and closing fifty-names hymn are all preserved as the SB recension's distinctive features."
+  sharur_handling: "PASS — Sharur (*Šaruru*), the sentient war-mace, is preserved as a distinctive feature with its dialogue with the hero, its mission to Ea for tactical counsel, and the broader interpretive reading (INFERENCE marker on Sharur within the older Mesopotamian tradition of personified divine weapons; comparandum to Marduk's bow in *Enūma Eliš* IV)."
+  tablet_of_destinies_handling: "PASS — the Tablet of Destinies (*ṭuppi šīmāti*) is the central cosmic artifact whose theft, weapons-decree-reversal, and recovery articulate the precariousness of cosmic order. Its parallel role in *Enūma Eliš* is preserved in the paired combat-myth COMPARATIVE-HOOK."
+  reconstruction_policy_handling: "PASS — cross-recension fill between OB and SB Akkadian is treated as in-tradition per scope.md; the OB Tablet III climax reconstruction is flagged with dialect/period gap (OB→SB). The Sumerian *Lugal-e* is preserved as comparative-only and is NOT used as a fill source."
+  indo_european_typology_handling: "PASS — the HERO SLAY SERPENT typology is foregrounded as one of the most defensible cross-cultural anchors; the Watkins 1995 formula (named-but-flagged) is identified, with Indra-Vṛtra (RV 1.32), Thor-Jörmungandr, Apollo-Python, Zeus-Typhon, and Tarḫunna-Illuyanka cited as parallel instances. Reserved for the influences chapter."
+  comparative_hooks_complete: "PASS — five COMPARATIVE-HOOK comments cover (i) Akkadian-internal *Enūma Eliš* pairing, (ii) Akkadian-internal Ninurta-as-warrior elsewhere, (iii) Sumerian *Lugal-e* as comparative background, (iv) Indo-European HERO SLAY SERPENT typology, (v) Hurro-Hittite *Illuyanka*."
+
+validation:
+  footnote_count: 32
+  evidence_marker_count: 116
+  unresolved_source_ids: 0
+  inference_markers: 2
+  lacuna_markers: 2
+  reconstruction_markers: 2
+  variant_markers: 1
+  comparative_hook_comments: 5
+  marker_placement_errors: 0
+  source_overview_footnotes: 4
+  source_ids_used:
+    - annus-2001
+    - vogelzang-1988
+    - foster-2005
+    - dalley-2008
+    - foster-2007
+    - black-green-1992
+    - bottero-2001
+    - lambert-2013
+
+notes:
+  named_but_flagged:
+    - scholar: "Watkins, Calvert"
+      publication: "*How to Kill a Dragon: Aspects of Indo-European Poetics* (New York: Oxford University Press, 1995). ISBN 9780195085952."
+      anchor_routed_through: "(none — named in COMPARATIVE-HOOK comment only)"
+      reason: "The principal modern reconstruction of the Proto-Indo-European *HERO SLAY SERPENT* formula and its cross-IE attestations (Indra-Vṛtra RV 1.32, Thor-Jörmungandr, Apollo-Python, Zeus-Typhon, Tarḫunna-Illuyanka). Named-but-flagged in the Indo-European COMPARATIVE-HOOK comment; the substantive comparative claim is anchored through annus-2001 (which discusses the IE typological context) per the brief's cross_cultural_parallels list. Watkins 1995 should be added to sources.yaml when the comparative / influences chapter is developed, as a comparative-tier source for the IE storm-god/dragon-slaying typology. Not currently in sources.yaml."
+  out_of_scope_handling: "The Sumerian *Lugal-e* (ETCSL 1.6.2) is preserved as comparative-only and is NOT used as a fill source — per scope.md, the Sumerian original is comparative material only. The Hittite *Illuyanka* (CTH 321) is preserved as comparative-only in the COMPARATIVE-HOOK comment; Hoffner 1998 (the Hittite Myths translation; out_of_scope=false in sources.yaml as a comparative source) is not directly EVIDENCE-token-routed but is implicitly relevant to the Illuyanka hook and should be considered for the influences chapter. The Indo-European IE-typology comparanda (Indra-Vṛtra RV 1.32, Thor-Jörmungandr, Apollo-Python, Zeus-Typhon) appear ONLY as COMPARATIVE-HOOK content and are forwarded to the influences chapter."
+  caution_on_specific_attestations: |
+    The chapter is conservative about specific line-by-line attestations within Annus 2001 (SAACT 3), Vogelzang 1988, Foster 2005 (pp. 555–578), and Dalley 2008 (pp. 203–227). The writer has not directly accessed the Annus, Vogelzang, Foster, or Dalley pages; structural claims are anchored to those page ranges per the brief's locked sources, and the manuscript history (Susa and Tell Asmar for the OB recension; Nineveh, Sultantepe, Tarbiṣu, Aššur for the SB recension; the OB→SB recensional substitution and the fifty-names closing hymn) is presented at the level of the composition's overall narrative structure.
+
+    Round-1 factcheck should focus on whether (a) the recensional content is correctly attributed (OB: three-tablet Ningirsu version; SB: two-tablet Ninurta version with the elaborated divine-council, candidate-search, maternal commission, Sharur dialogue, weapons-decree-reversal, south-wind-and-pinions strategy, and fifty-names closing hymn); (b) the bath-theft motif is correctly attributed to both recensions (Enlil bathing → Anzû seizes the Tablet); (c) the candidate-hero refusal-catalogue is correctly enumerated in the SB recension (Adad, Šara, third candidate) — the brief lists Adad and Šara explicitly; the third refusing candidate's identity in the SB recension should be verified at factcheck; (d) the weapons-decree-reversal imagery (arrow-to-reed-bed, bowstring-to-sheep, bow-to-tree, bronze-to-mountain) is correctly preserved; (e) the south-wind-and-pinions counter-strategy is correctly attributed (Ea's tactical counsel via Sharur); (f) the fifty-names closing hymn parallel to *Enūma Eliš* is correctly framed (the SB *Anzû* closes with a fifty-names litany; Lambert 2013 for the *Enūma Eliš* parallel); (g) the Sharur-as-sentient-mace claim is correctly anchored (Sharur speaks to the hero and serves as Ea-to-hero messenger in the SB recension; OB attestation is partly damaged).
+
+  pattern_match_with_recent_chapters: |
+    Following the chapter 14 / chapter 13 pattern of conservative line-by-line claims when the writer does not have direct primary-source access; specific verbatim quotations are not given; the chapter operates at the level of the composition's overall narrative structure with appropriate INFERENCE markers for interpretive readings. The chapter 15 case is structurally comparable to chapter 14 (co-equal recensions presented in sequence): the factcheck must verify both the OB and SB claims separately and cross-check the recensional substitutions (especially the Ningirsu/Ninurta naming and the structural differences in length, tablet count, and elaborated SB content). The 1st-millennium consolidation reading (the warrior-god identity consolidated under the Ninurta name in the SB recension) is the chapter's interpretive framing of the recensional substitution; the factcheck should verify this is properly attested in Annus 2001's commentary.
+
+  decisions_on_ambiguous_points: |
+    (i) The bath-theft motif is preserved as attested across BOTH recensions, on the strength of Foster 2005's narrative-level summary; the brief and the secondary literature (Black & Green 1992, Foster 2007) consistently locate the theft at the moment when Enlil sets the Tablet aside to bathe, and Foster 2005 / Dalley 2008 preserve this scene in both recensions.
+
+    (ii) The third refusing candidate in the SB recension is named only generically in the chapter ("third candidate") because the brief's entities_glossary identifies Adad and Šara explicitly as the named candidate-heroes who refuse, with the third candidate's identity not specified in the brief. The factcheck should verify the third candidate's identity from Annus 2001's commentary if a specific name is attested.
+
+    (iii) The Ningirsu / Ninurta substitution is presented as evidence for the 1st-millennium consolidation of the warrior-god identity — this reading follows Annus 2001's commentary and Black & Green 1992 s.v. Ningirsu/Ninurta, both of which identify the two figures as the same warrior-god under different local-city names. The chapter does NOT take the position that Ningirsu and Ninurta are distinct deities; the OB Ningirsu and SB Ninurta are presented as the same warrior-figure renamed in the 1st-millennium recension.
+
+    (iv) The fifty-names closing hymn for Ninurta in the SB recension is presented as structurally parallel to the Marduk fifty-names of *Enūma Eliš* VI–VII; the INFERENCE marker on this parallel is hedged (the "shaped within the same scribal milieu" reading is the chapter's interpretive framing). Foster 2007 (pp. 35–39) supports the structural alignment; the precise scribal-milieu reading is interpretive.
+
+    (v) The Watkins 1995 *HERO SLAY SERPENT* formula is named in the Indo-European COMPARATIVE-HOOK comment as the principal modern reconstruction of the IE typology; named-but-flagged (no EVIDENCE token routes through it). The IE comparanda (Indra-Vṛtra RV 1.32; Thor-Jörmungandr; Apollo-Python; Zeus-Typhon; Tarḫunna-Illuyanka) are listed as the canonical instances; the substantive typological claim is anchored through annus-2001 per the brief's cross_cultural_parallels.

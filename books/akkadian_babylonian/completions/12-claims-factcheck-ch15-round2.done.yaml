@@ -1,0 +1,98 @@
+stage: "claims-factcheck"
+chapter: 15
+slug: "anzu"
+round: 2
+input:
+  - "chapters/15-anzu.claims.adoc (round-2)"
+  - "briefs/15-anzu.yaml (round-2; R2-1, R2-2, R2-3, R2-4 corrections)"
+  - "chapters/15-anzu.claims.factcheck.yaml (round-1, verdict BLOCK)"
+  - "completions/11-chapter-claims-ch15-round2.done.yaml (writer's round-2 record)"
+output: "chapters/15-anzu.claims.factcheck-round2.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_context: true
+verdict: PASS
+
+findings_count:
+  high: 0
+  medium: 0
+  low: 0
+  notes: 3                # N-1 (Watkins 1995 named-but-flagged, carried forward); N-2 (OB→SB RECONSTRUCTION compliant, carried forward); N-3 (access caveats, carried forward)
+
+round1_findings_disposition:
+  - finding_id: F-1
+    round1_kind: FACTUAL-ERROR
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    notes: "SB recension corrected from 'two tablets' to THREE tablets (Tablet I, II, III) per Annus 2001 SAACT 3 ToC throughout the document — source-overview, SB-recension narrative, LACUNA marker, RECONSTRUCTION marker, VARIANT block, corpus-place §. SB-vs-OB comparison reframed in terms of LENGTH, not tablet count. Brief variants block updated in concert. No surviving two-tablet claims in body prose; grep confirms only preamble correction-log mentions of the old framing."
+  - finding_id: F-2
+    round1_kind: FACTUAL-ERROR
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    notes: "SB candidate-search canonical sequence corrected to Adad → Gerra/Gibil → Šara. New claim paragraph inserted for Gerra (Girra, Gibil) as second refuser (fire-god); Šara repositioned as third refuser, son of Ištar; Ea's proposal updated to reference all three by name. Brief entities_glossary updated to include Gerra with appropriate gloss. Triangulated against gatewaystobabylon, encyclopedia.com, altorientale-mythologie."
+  - finding_id: F-3
+    round1_kind: FACTUAL-ERROR
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    notes: "All 'Tell Asmar tablets' references for OB literary witnesses removed. OB Anzû manuscripts now consistently specified as Susa manuscripts only — Sb 9470 (= OB Anzu II) and Sb 14683 (= OB Anzu III), both Louvre per SEAL HUJI. Tell Asmar Hoard statue appears exclusively in iconography paragraph (line 267) as early-dynastic iconographic precursor, explicitly flagged as 'not a literary tablet.' Brief lacunae, alternates, special_instructions, and centrality_evidence updated in concert."
+  - finding_id: F-4
+    round1_kind: EVIDENCE-MISATTRIBUTION
+    round1_severity: HIGH
+    round2_status: RESOLVED
+    notes: "Ningirsu/Ninurta identity framing rewritten at both the co-equal note § and the Variants & witness § to reflect Black & Green 1992's actual reading (originally distinct cult-centre deities at Lagash and Nippur, syncretized by the time of Gudea). Scholarly division made explicit ('Assyriologists remain divided'). OB→SB substitution reframed as cult-political shift, not mere rename. Brief variants alternates and special_instructions updated in concert. Verified by round-2 WebFetch on Wikipedia s.v. Ningirsu confirming Jeremy Black's two-cult-centres reading."
+  - finding_id: F-5
+    round1_kind: HEDGING-NEEDED
+    round1_severity: MEDIUM
+    round2_status: RESOLVED
+    notes: "Fifty-names claim hedged at every occurrence. Body now describes SB closing hymn as hymnic litany of names/epithets paralleled by Enūma Eliš VI–VII fifty-names finale, with explicit count-hedge: 'Whether the SB Anzû closing hymn formally enumerates exactly fifty names is not securely established in the surviving text.' INFERENCE marker retained with risk field expanded. Corpus-place § also hedges the count."
+  - finding_id: F-6
+    round1_kind: PARTIAL-SUPPORT / COMPARATIVE-FRAMING
+    round1_severity: LOW
+    round2_status: RESOLVED
+    notes: "OB Sharur attestation hedged as 'fragmentarily attested in the OB recension per Vogelzang 1988.' Lugal-e comparative observation (Sharur more prominent in Lugal-e than in Akkadian Anzû) foregrounded in Sumerian COMPARATIVE-HOOK and noted in Sharur INFERENCE marker's risk field, while preserving Sumerian-material-is-comparative-only flag per scope.md."
+
+new_findings: []
+# No new round-2 findings. The corrections were thorough and complete; the
+# round-2 rewrite did not introduce any new factual errors, evidence
+# misattributions, fabrications, marker issues, glossary violations, or
+# contamination. The chapter 15 round-2 outcome is cleaner than chapter 14's
+# (which had three LOW brief-side / footnote-descriptor leftovers); chapter
+# 15 follows the chapter 7 / 12 pattern of a fully-cleansed round-2 PASS.
+
+summary: |
+  Chapter 15 (Anzû) round-2 factcheck: VERDICT PASS.
+
+  All six round-1 BLOCK findings (F-1 SB tablet count corrected from two to three; F-2 SB candidate-search canonical sequence Adad → Gerra/Gibil → Šara with Gerra inserted as named second refuser and Šara repositioned as third; F-3 Tell Asmar removed as OB literary witness, OB manuscripts now Susa only — Sb 9470 and Sb 14683 — with Tell Asmar Hoard statue confined to iconography paragraph; F-4 Black & Green 1992 reading correctly attributed as originally-distinct-cult-centre-deities syncretized by Gudea, with scholarly division hedge explicit; F-5 fifty-names count hedged; F-6 OB Sharur fragmentary attestation hedged and Lugal-e comparative framing foregrounded) are RESOLVED in the round-2 claims document and brief. The corrections were verified by content-grep against the round-2 claims doc and by reuse of round-1's verbatim anchor quotes (Eisenbrauns ToC for Annus 2001, gatewaystobabylon, encyclopedia.com, altorientale-mythologie, SEAL HUJI, Wikipedia s.v. Anzû/Ningirsu/Ninurta) plus fresh round-2 WebFetch confirmations of the Susa OB provenance, the three-named-refuser canonical sequence, and Black & Green's originally-distinct-deities reading.
+
+  No new round-2 findings detected. Marker counts unchanged (2 INFERENCE + 2 LACUNA + 2 RECONSTRUCTION + 1 VARIANT = 7; 5 COMPARATIVE-HOOK; ~84 EVIDENCE tokens, modest increase from round-1's 79 to accommodate the new Gerra claim paragraph, expanded Black & Green framing, and Tell Asmar Hoard iconography paragraph). Glossary compliance PASS (Ningirsu permitted for OB-hero contexts per carve-out; Gerra newly added to entities_glossary; all locked forms preserved). No never-use terms detected in body prose. Sumerian/Akkadian contamination boundary properly observed and now more explicit per F-6. Hurro-Hittite Illuyanka boundary observed. Source IDs all resolve to sources.yaml. Watkins 1995 and Hoffner 1998 correctly named-but-flagged in COMPARATIVE-HOOKs (no EVIDENCE token routes through them). OB→SB cross-recensional RECONSTRUCTION marker scope.md-compliant per round-1 N-2.
+
+self_check:
+  every_round1_finding_addressed: PASS
+  factual_errors_corrected: PASS
+  evidence_misattributions_corrected: PASS
+  hedging_applied: PASS
+  brief_revised_in_concert: PASS
+  no_new_factual_errors: PASS
+  no_new_fabrications: PASS
+  no_new_evidence_misattributions: PASS
+  marker_counts_unchanged: PASS  # 2 INFERENCE + 2 LACUNA + 2 RECONSTRUCTION + 1 VARIANT = 7; 5 COMPARATIVE-HOOK
+  evidence_token_count_within_band: PASS  # ~84, modest increase from round-1's 79
+  glossary_compliance: PASS
+  no_never_use_terms: PASS
+  no_sumerian_contamination: PASS
+  sumerian_akkadian_boundary_explicit: PASS  # now more explicit per F-6
+  source_ids_all_resolve: PASS
+  ob_to_sb_reconstruction_compliant: PASS  # per round-1 N-2
+  named_but_flagged_citations_acceptable: PASS  # Watkins 1995, Hoffner 1998
+  honest_self_check_completed: PASS
+  fresh_context_factcheck: PASS  # opened in fresh conversation per skill's hard-rule allowance
+
+notes:
+  proceed_to: "stage 13 post-human-normalize. No light-fix items. Chapter cleanly PASS for stage-13 progression."
+  pattern_match_with_recent_chapters: |
+    Following the chapter 7 / 12 round-1-BLOCK / round-2-PASS pattern (fully-cleansed round-2 with no housekeeping leftovers). The chapter 15 case is cleaner than chapter 14's round-2 (which carried three LOW brief-side / footnote-descriptor leftovers); chapter 15 has zero housekeeping items remaining. Round-1 returned BLOCK with four HIGH (F-1, F-2, F-3, F-4) + one MEDIUM (F-5) + one LOW (F-6); round-2 rewrite addressed all six findings at both the brief level and the claims level; round-2 factcheck returns PASS with zero new findings. The chapter is ready for stage-13 progression.
+  caution_on_specific_attestations: |
+    Round-2 factcheck reused round-1's verbatim quotes from Eisenbrauns ToC for Annus 2001 SAACT 3, gatewaystobabylon, encyclopedia.com, altorientale-mythologie, SEAL HUJI s.v. Anzu OB II and OB III, Wikipedia s.v. Anzû / Ningirsu / Ninurta, mythlok.com, worldhistory.org/Ninurta, and bildungblocks. Fresh round-2 WebFetch on Wikipedia s.v. Anzû independently confirmed OB Susa provenance and Tell Asmar Hoard iconographic-not-literary status; WebFetch on Wikipedia s.v. Ningirsu independently confirmed Black's two-cult-centres reading; WebSearch confirmed the three-named-refuser canonical sequence (Adad, Gerra, Shara all refusing before Ninurta). Annus 2001, Vogelzang 1988, Foster 2005, Dalley 2008, Foster 2007, Black & Green 1992 directly, Bottéro 2001, and Lambert 2013 were taken on trust at the same level as round-1 (paywalled / access-restricted). Per-paragraph Foster 2005 and Dalley 2008 page allocations taken on trust as writer-imposed structural convention; overall page-range brackets consistent with brief. Narrative-fidelity check at stage 15 will apply additional scrutiny.
+  watkins_1995_named_but_flagged: |
+    Per round-1 N-1 carried forward: Watkins 1995 (*How to Kill a Dragon*) remains named-but-flagged in the Indo-European COMPARATIVE-HOOK at round-2 line 305. No EVIDENCE token routes through watkins-1995 (only lambert-2013 carries the Enūma Eliš fifty-names parallel). ACCEPTABLE per the chapter-claims skill. Recommendation forwarded for inventory-audit: consider adding watkins-1995 to sources.yaml at the next inventory-audit round if the influences chapter (Part II) will route an EVIDENCE token through it.

@@ -1,0 +1,56 @@
+stage: "post-human-normalize"
+chapter: 15
+slug: "anzu"
+input: "chapters/15-anzu.claims.adoc (round 2; supersedes round 1) + chapters/15-anzu.claims.factcheck-round2.yaml (verdict PASS)"
+output: "chapters/15-anzu.claims.approved.adoc"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/15-anzu.claims.approved.adoc"
+    lines: 399
+summary: |
+  Chapter 15 (Anzû) post-human-normalize on the round-2 claims. Round-1 factcheck returned BLOCK with four HIGH (F-1 SB tablet count two→three; F-2 SB candidate-search sequence Adad → Gerra/Gibil → Šara; F-3 OB manuscript provenance — Susa only, not Tell Asmar; F-4 Black & Green Ningirsu/Ninurta evidence-misattribution) + one MEDIUM (F-5 fifty-names hedge) + one LOW (F-6 OB Sharur attestation / Lugal-e comparative framing) findings; round-2 brief revision and round-2 claims rewrite resolved all six; round-2 factcheck returned PASS with ZERO findings (no HIGH / MEDIUM / LOW housekeeping leftovers — contrast chapter 14's round-2 which carried three LOW leftovers; chapter 15 parallels the chapter 7 / chapter 12 fully-cleansed round-2 pattern).
+  The approved file equals the round-2 claims document plus a provenance comment block appended at the foot recording: timestamp, the "edits applied: none — round-2 factcheck PASS with zero housekeeping leftovers" disposition, structural checks passed, and round-1 / round-2 factcheck cross-references.
+
+findings_triage:
+  # Round-2 factcheck (chapters/15-anzu.claims.factcheck-round2.yaml)
+  # returned PASS with 0 HIGH / 0 MEDIUM / 0 LOW findings. No
+  # housekeeping leftovers in either the claims document or the brief.
+  # No light edits required at post-human-normalize.
+  round2_findings_count: 0
+  housekeeping_leftovers: 0
+  edits_applied: "none — round-2 factcheck PASS with zero housekeeping leftovers"
+  pattern_match: "fully-cleansed round-2 PASS (parallels chapter 7 and chapter 12; contrasts chapter 14's three-LOW housekeeping-leftover round-2 PASS)"
+  unexpected_fixes_at_normalize: "none — independent structural sweep at post-human-normalize confirmed the round-2 factcheck's PASS verdict; no surviving EVIDENCE-token resolution failures, marker sub-field omissions, off-glossary terms, or anchor anomalies were detected"
+
+checks_performed:
+  - check: "one-claim-per-paragraph"
+    status: PASS
+  - check: "every-claim-footnoted"
+    status: PASS
+  - check: "evidence-tokens-syntactically-valid"
+    status: PASS
+    detail: "116 EVIDENCE tokens; all source_id values resolve to sources.yaml entries (annus-2001 at line 76; vogelzang-1988 at line 88; foster-2005 at line 186; dalley-2008 at line 198; black-green-1992 at line 290; bottero-2001 at line 302; foster-2007 at line 326; lambert-2013 at line 4)."
+  - check: "markers-with-required-sub-fields"
+    status: PASS
+    detail: "7 markers total: 2 INFERENCE w/ basis+risk (Sharur older-tradition at line 221; SB closing hymnic litany / fifty-names parallel at line 257); 2 LACUNA w/ source+scholarly_reconstruction (OB Susa manuscripts at line 114; SB Tablets I, II, III damage at line 116); 2 RECONSTRUCTION w/ gap_source+fill_source+confidence (Foster 2005 parallel reconstructions at line 118; OB Tablet III combat-climax filled from SB Tablet III at line 166); 1 VARIANT w/ primary+alt+chosen+reason (OB vs SB recensions, BOTH PRESENTED in sequence at line 274). 5 COMPARATIVE-HOOK comments at lines 302–306."
+  - check: "glossary-renderings-consistent"
+    status: PASS
+    detail: "Anzû (â), Ninurta, Ningirsu (permitted via OB-hero carve-out per glossary.yaml s.v. Ninurta, updated 2026-05-07), Enlil, Anu, Adad, Gerra (Girra, Gibil), Šara (š-háček), Ea, Apsû, Bēlet-ilī, Mami, Sharur (Šaruru), Marduk, Tiamat all use locked glossary.yaml renderings."
+  - check: "no-never-use-glossary-terms-in-body"
+    status: PASS
+    detail: "Enki, Inanna, Damgalnuna, Iškur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid, Ashur all absent from body prose, markers, and footnotes. The Sumerian form Anzud appears once, only in the Sumerian COMPARATIVE-HOOK at line 304, where it is explicitly flagged as the out-of-scope Sumerian form ('the Sumerian *Anzud*... is also out of scope as a primary; the Akkadian *Anzû* is preserved as the locked form per glossary.yaml')."
+  - check: "canonical-chapter-anchor-present"
+    status: PASS
+    detail: "[[ch-15-anzu-claims]] present at line 62, unchanged."
+  - check: "original-file-unchanged"
+    status: PASS
+    detail: "chapters/15-anzu.claims.adoc (round-2 claims) is the immutable record; chapters/15-anzu.claims.approved.adoc carries only the appended provenance comment block."
+
+notes:
+  proceed_to: "stage 14 (chapter-draft) using chapters/15-anzu.claims.approved.adoc as the input. Per RUNBOOK 10d, chapter-draft must NOT receive primary sources — claims are the only input."
+  pattern_match_with_recent_chapters: |
+    Chapter 15's round-1-BLOCK / round-2-PASS-cleanly / stage-13-no-edits pattern parallels chapter 7 and chapter 12 (also round-1-BLOCK / round-2-PASS / stage-13-no-edits — fully-cleansed round-2). Chapter 14's round-2 carried three LOW housekeeping leftovers requiring light edits at stage 13; chapter 13 was a single-round PASS-WITH-LIGHT-FIXES; chapters 8-11 went round-1-PASS. The pipeline's round-1-BLOCK → round-2 workflow is well-established; chapter 15 is a textbook fully-cleansed round-2 outcome.
+  inventory_audit_carryforward: |
+    Watkins 1995 (*How to Kill a Dragon*) remains named-but-flagged in the Indo-European COMPARATIVE-HOOK at line 305; no EVIDENCE token routes through watkins-1995. The chapter-claims skill ACCEPTS the named-but-flagged pattern. RECOMMENDATION for the next inventory-audit round (carried forward from N-1 of round-1 and round-2 factchecks): consider adding watkins-1995 to sources.yaml if the influences chapter (Part II) will route an EVIDENCE token through Watkins's work. Hoffner 1998 *Hittite Myths* similarly named-but-flagged in the Hurro-Hittite COMPARATIVE-HOOK at line 306; same recommendation.

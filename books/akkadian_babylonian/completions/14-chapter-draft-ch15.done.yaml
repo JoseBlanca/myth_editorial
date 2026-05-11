@@ -1,0 +1,75 @@
+stage: "chapter-draft"
+chapter: 15
+slug: "anzu"
+input: "chapters/15-anzu.claims.approved.adoc + briefs/15-anzu.yaml + gloss-ledger.yaml"
+output: "chapters/15-anzu.adoc + updated gloss-ledger.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/15-anzu.adoc"
+    lines: 220
+  - file: "gloss-ledger.yaml"
+    lines: 875
+summary: |
+  Chapter 15 (Anzû) narrative draft. Asimov-style prose drawn from chapters/15-anzu.claims.approved.adoc (the round-2-revised, fully-cleansed PASS version). Every claim represented; no factual additions; all 7 markers (2 INFERENCE + 2 LACUNA + 2 RECONSTRUCTION + 1 VARIANT) preserved byte-for-byte with all pipe-delimited sub-fields; all 5 COMPARATIVE-HOOK comments carried over verbatim; all 32 footnotes carried over unchanged; all 116 EVIDENCE tokens preserved byte-for-byte. Chapter ID anchor [[ch-15-anzu]] (per toc.yaml; NOT the claims-only anchor [[ch-15-anzu-claims]]).
+
+  Co-equal recensions presented in sequence per the brief's classification: source overview opens with the witnesses (OB Susa Sb 9470 and Sb 14683, both Louvre; SB Nineveh, Sultantepe, Tarbiṣu, Aššur — three tablets each, SB longer); methodological note on co-equal status and the OB→SB Ningirsu/Ninurta cult-political shift (hedged per Black & Green 1992's two-cult-centre framing and the Assyriologists-are-divided scholarly note); OB recension narrated with Ningirsu as hero (assembly, bath-theft, decree-suspension, candidate-search, Ningirsu identified, partly-damaged combat-climax); SB recension narrated with Ninurta as hero (elaborated divine-council frame; same bath-theft; canonical Adad → Gerra/Gibil → Šara refusal sequence; Ea proposes Ninurta; Bēlet-ilī/Mami maternal commission); Sharur the sentient mace; first combat with Anzû's decree-reversal of weapons (arrow-to-reed-bed); Ea's south-wind-and-pinions counter-strategy and second combat killing-blow; cosmic-order restoration and SB closing hymnic litany of Ninurta's names (with fifty-names parallel to *Enūma Eliš* hedged on count); ritual context and theogonic/cosmological/royal-legitimation functions; iconography (Neo-Assyrian reliefs and Tell Asmar Hoard statue as Early Dynastic iconographic precursor — NOT a literary witness); variants section comparing the shared skeleton; place-in-the-corpus closing on the *Anzû* / *Enūma Eliš* paired combat-myth dossier and the geographic-chronological spread; 5 COMPARATIVE-HOOK comments preserved at chapter foot.
+
+  All five round-1 BLOCK / round-2 PASS findings preserved correctly in the draft: F-1 (SB recension corrected from "two tablets" to THREE tablets — Tablet I, II, III per Annus 2001 SAACT 3); F-2 (SB candidate-search canonical sequence Adad → Gerra/Gibil → Šara — three named refusers before Ea proposes Ninurta); F-3 (Tell Asmar appears ONLY in the iconography paragraph as the Early Dynastic statue-base iconographic precursor; OB literary witnesses are Susa-only Sb 9470 and Sb 14683); F-4 (Ningirsu/Ninurta framed as originally distinct cult-centre deities subsequently syncretized per Black & Green; the Assyriologists-divided hedge explicit); F-5 (fifty-names claim hedged at every occurrence — exact count for SB Anzû closing litany flagged as not securely established; structural parallel to *Enūma Eliš* VI–VII fifty-names finale preserved as load-bearing); F-6 (OB Sharur attestation hedged as fragmentary per Vogelzang 1988; *Lugal-e* comparative framing — Sharur more prominent in Lugal-e than in Akkadian Anzû — foregrounded in the Sumerian COMPARATIVE-HOOK).
+
+  Style: Asimov register; short paragraphs; plain modern English. No forbidden ornament-words (shimmering, mystical, unfathomable, ineffable, sacred, mighty, fearsome, dread, eternal, boundless, infinite, veiled, shrouded — all absent). No "Long ago..." / "In the time before time..." / "It is said that..." openings. Co-equal recensional handling preserved per the brief: each recension's distinctive features clearly attributed (OB Ningirsu; SB Ninurta; SB longer + more elaborated on the same three-tablet frame). Glossary discipline: Ningirsu permitted in OB-recension passages per the carve-out in glossary.yaml s.v. Ninurta (updated 2026-05-07); Anzud appears only inside the Sumerian COMPARATIVE-HOOK with an explicit out-of-scope flag.
+
+gloss_decisions:
+  - term: "Anzû"
+    decision: "REMINDER_GLOSS — last full mention was chapter 00 (15 chapters back). Chapter 15 is Anzû-centred. First-mention reminder gloss given as 'the great storm-bird' in the opening paragraph; the figure is then elaborated through the body. The Sumerian form *Anzud* appears only inside the preserved Sumerian COMPARATIVE-HOOK and is explicitly flagged as the out-of-scope Sumerian form per glossary.yaml's never_use list. Ledger updated: last_reminder_in='15', last_mention_in='15'."
+  - term: "Ninurta"
+    decision: "REMINDER_GLOSS — last full mention was chapter 00 (15 chapters back). Chapter 15 is Ninurta-centred (SB hero). The locked first-mention gloss is woven in at the introduction of the SB hero ('the warrior-son of Enlil') and at Ea's proposal scene ('Ninurta, slayer of Anzû and champion of the gods'). Ledger updated: last_reminder_in='15', last_mention_in='15'."
+  - term: "Ningirsu"
+    decision: "FULL_GLOSS (new ledger entry) — Ningirsu is permitted in OB-recension passages per the glossary.yaml carve-out (s.v. Ninurta, updated 2026-05-07). Body prose gives the inline first-mention gloss ('the Lagash war-god, the patron-deity of the southern Mesopotamian city-state of Girsu') in the source overview and elaborates the figure in the OB-recension narrative. Tracked in this ledger as a new entry with full_gloss_in='15' since the glossary.yaml locks Ninurta as the preferred form for the warrior-god and Ningirsu is the carve-out variant for OB-recension contexts."
+  - term: "Tablet of Destinies"
+    decision: "REMINDER_GLOSS — last full mention was chapter 01 (14 chapters back). Chapter 15 is Tablet-of-Destinies-centred. First-mention reminder gloss given in the opening paragraph as 'the cosmic decree-tablet that confers supreme authority on whoever holds it'; Akkadian *ṭuppi šīmāti* preserved per glossary.yaml. Ledger updated."
+  - term: "Enlil"
+    decision: "REMINDER_GLOSS — last full mention was chapter 07 (8 chapters back). Chapter 15 names Enlil as the holder of the Tablet of Destinies (robbed during his bath) and as the father of the warrior-hero. Reminder gloss given at first mention in the OB-recension narrative ('the storm and command-god of Nippur, second-ranking god of the cosmos, who decrees fates'). Ledger updated."
+  - term: "Anu"
+    decision: "BARE — last reminder gloss was just given in chapter 14 ('the sky-god'). Chapter 15 carries the functional descriptor 'the sky-god' inline at the single SB-recension mention where Anu presides over the candidate-search; no additional reminder needed given ch14's recency. Ledger updated."
+  - term: "Adad"
+    decision: "REMINDER_GLOSS — last full mention was chapter 02 (13 chapters back). Chapter 15 names Adad as the first refuser in the canonical SB candidate-search. Reminder gloss given at first mention in body prose ('the storm-god, lord of thunder and the rains that bring or break the harvest, here cast as the canal-controller'). Ledger updated."
+  - term: "Gerra"
+    decision: "FULL_GLOSS (new ledger entry) — Gerra is not in glossary.yaml. Body prose gives the inline first-mention gloss ('the fire-god') with variant spellings noted parenthetically ('also spelled Girra or Gibil') per the brief's entities_glossary. Tracked in this ledger as a new ch15 entry."
+  - term: "Šara"
+    decision: "FULL_GLOSS (new ledger entry) — Šara is not in glossary.yaml. Body prose gives the inline first-mention gloss ('a warrior-god of the pantheon, son of Ištar') per the brief's entities_glossary. Tracked in this ledger as a new ch15 entry."
+  - term: "Ea"
+    decision: "BARE — Ea was full-glossed in chapter 14 (with the locked first-mention gloss). Chapter 15 uses the bare term throughout; Ea is named at the proposal scene and the counter-strategy scene without re-glossing. Ledger updated: last_mention_in='15'."
+  - term: "Bēlet-ilī / Mami"
+    decision: "REMINDER_GLOSS — Mami's last full mention was chapter 02 (13 chapters back). Chapter 15 names the maternal commissioner in the SB recension. Short reminder gloss given inline ('Bēlet-ilī, also called Mami, the mother goddess'), preserving glossary.yaml's interchangeable-epithet convention. Ledger updated."
+  - term: "Sharur (Šaruru)"
+    decision: "FULL_GLOSS (new ledger entry) — Sharur is not in glossary.yaml. Body prose gives the inline first-mention gloss ('Sharur (*Šaruru*), the sentient war-mace of the warrior-hero') at the dedicated §'Sharur the sentient mace' section opening, with the Akkadian form *Šaruru* preserved parenthetically. The mace's functional role (speaking instrument; messenger between Ninurta and Ea; tactical adviser) is elaborated in the body. Tracked in this ledger as a new ch15 entry."
+  - term: "Marduk"
+    decision: "BARE — Marduk last mentioned in chapter 14. Chapter 15 names Marduk in body prose only at the *Enūma Eliš* closing-litany comparative reference ('Marduk's victory over Tiamat') and as Ea's son inside the Marduk-bow INFERENCE marker; bare term sufficient. Ledger updated."
+  - term: "Tiamat"
+    decision: "REMINDER_GLOSS — last full mention was chapter 06 (9 chapters back). Chapter 15 names Tiamat in the *Enūma Eliš* comparative reference for the closing-litany parallel; short reminder gloss given inline ('Tiamat, the primordial saltwater chaos-figure') at first mention. Bare term used at the second mention in the closing place-in-the-corpus section. Ledger updated."
+  - term: "Ištar"
+    decision: "BARE — Ištar was last mentioned in chapter 14. Chapter 15 names Ištar only at the single mention 'Šara — a warrior-god of the pantheon, son of Ištar' as a parental relation; bare term sufficient. The locked š-háček form preserved per glossary.yaml and ch13's precedent. Ledger updated."
+
+self_check:
+  source_overview_present: true
+  every_claim_represented: PASS
+  no_factual_additions: PASS
+  forbidden_words_clear: PASS
+  glossary_compliance: "PASS — Anzû, Ninurta (SB hero), Ningirsu (OB hero per the carve-out s.v. Ninurta), Enlil, Anu, Adad, Ea, Marduk, Tiamat, Ištar, Mami/Bēlet-ilī, Tablet of Destinies (with *ṭuppi šīmāti* transliteration) all use locked glossary.yaml renderings."
+  no_never_use_terms: "PASS — Enki, Inanna, Damgalnuna, Iškur, Bilgames, Huwawa, Utu, Nanna, Irra, Utnapishtim, Dumuzid, Ashur all absent. The Sumerian form *Anzud* appears once, only inside the Sumerian COMPARATIVE-HOOK comment, where it is explicitly flagged as the out-of-scope Sumerian form per glossary.yaml's never_use list for Anzû."
+  variant_handling_matches_brief: "PASS — co-equal recensional structure preserved per the brief; both recensions narrated in sequence with their attributions (OB Ningirsu / SB Ninurta; both on three tablets; SB longer and more elaborated). [VARIANT:] block preserved byte-for-byte."
+  markers_byte_for_byte: "PASS — all 7 markers (2 INFERENCE + 2 LACUNA + 2 RECONSTRUCTION + 1 VARIANT) preserved verbatim from .claims.approved.adoc, including all pipe-delimited sub-fields (basis/risk; source/scholarly_reconstruction; gap_source/fill_source/confidence; primary/alt/chosen/reason)."
+  footnotes_carried_over: "PASS — all 32 footnotes carried over verbatim from the claims document."
+  evidence_tokens_carried_over: "PASS — all 116 EVIDENCE tokens preserved byte-for-byte."
+  not_padded: "PASS — 220 lines for the chapter's brief's ~5000-word target; tight Asimov prose around the approved claims. No filler transitions, no ornamental reverence, no recap paragraphs, no padded explanatory asides."
+  comparative_hooks_carried: "PASS — all 5 COMPARATIVE-HOOK comments preserved at chapter foot (Akkadian-internal *Enūma Eliš* pairing; Akkadian-internal Ninurta-as-warrior; Sumerian *Lugal-e*; Indo-European HERO SLAY SERPENT typology; Hurro-Hittite *Illuyanka*)."
+  italic_markup_correct: "PASS — Akkadian common nouns (_ṭuppi šīmāti_, _Šaruru_ inline) and composition titles (_Anzû_, _Enūma Eliš_, _Nergal and Ereškigal_, _Adapa_) use _underscore_ italic in body prose. Asterisk-bold markup confined to footnotes, EVIDENCE tokens, COMPARATIVE-HOOK comments, and marker contents (where byte-for-byte preservation requires the original asterisks)."
+  gloss_ledger_updated: "PASS — gloss-ledger.yaml updated. Existing entries: Anzû/Ninurta/Tablet of Destinies/Enlil/Adad/Mami/Tiamat receive reminder-gloss updates; Anu/Ea/Marduk/Ištar receive bare-term last_mention_in updates. New ch15 entries: Ningirsu (carve-out tracker), Gerra, Šara, Sharur. Latest last_mention_in across all entries is '15' as required."
+  anchor_correct: "PASS — chapter opens with [[ch-15-anzu]] per toc.yaml line 84; the claims-only [[ch-15-anzu-claims]] anchor is not used in the prose chapter."
+
+notes:
+  proceed_to: "stage 15 (narrative-fidelity) in a fresh-context agent. Chapter 15 followed the round-1-BLOCK / round-2-PASS pattern parallel to chapters 7, 12, and 14; round-2 claims-factcheck returned a fully-cleansed PASS with zero housekeeping leftovers (parallel to chapters 7 and 12). The chapter draft is now ready for fidelity verification."
+  pattern_match_with_recent_chapters: |
+    Chapter 15's pipeline mirrors chapter 14's: round-1 claims-factcheck found brief-level content errors (SB tablet count, SB candidate-search sequence, OB manuscript provenance — Tell Asmar misattribution, Ningirsu/Ninurta evidence framing); round-2 brief revision and round-2 claims rewrite resolved them; round-2 factcheck passed with zero housekeeping leftovers (fully-cleansed PASS, parallel to chapters 7 and 12). Chapter draft proceeded normally with co-equal recensional handling as in chapter 14. The pipeline's round-1-BLOCK → round-2-PASS workflow is now well-established across chapters 7, 12, 14, and 15.

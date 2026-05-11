@@ -1,0 +1,60 @@
+stage: "claims-factcheck"
+chapter_number: 15
+chapter_slug: "anzu"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_context: true
+outputs:
+  - file: "chapters/15-anzu.claims.factcheck.yaml"
+    lines: 1085
+summary: |
+  Round-1 factcheck of chapters/15-anzu.claims.adoc completed in
+  fresh context (no writer-side memory). Verdict: BLOCK. Five HIGH
+  findings surface independent factual errors and one evidence-
+  misattribution issue: F-1 SB Anzu has THREE tablets per Annus
+  2001 SAACT 3, not the two claimed (the writer's own "SB Tablet
+  III" EVIDENCE tokens at lines 184–191 internally contradict the
+  two-tablet framing); F-2 SB candidate-search canonical sequence
+  is Adad → Gerra/Gibil → Šara, not Adad → Šara → unnamed third
+  (writer's brief omits Gerra from entities_glossary); F-3 OB Anzu
+  literary manuscripts are from Susa only (Sb 9470, Sb 14683 per
+  SEAL HUJI) — the writer's "Susa and Tell Asmar tablets" claim
+  appears to confuse the Tell Asmar Hoard iconographic statue
+  with a literary tablet; F-4 Black & Green 1992 are
+  misattributed as supporting "the same warrior-god under
+  different local names" framing — they actually treat Ningirsu
+  and Ninurta as "two gods from different cult centers in
+  origin"; the underlying identity question is scholarly-divided
+  (Wikipedia s.v. Ningirsu, Ninurta); plus the structural weight
+  of the SB-tablet-count internal-inconsistency. One MEDIUM
+  finding F-5 (hedge "fifty-names" closing-hymn claim — the
+  structural parallel to Enūma Eliš VI–VII is supported, the
+  exact count "fifty" is not). One LOW finding F-6 (Sharur
+  fragmentary-OB attestation taken on trust; Lugal-e
+  comparative framing could be foregrounded). Two NOTES:
+  Watkins 1995 named-but-flagged in IE COMPARATIVE-HOOK is
+  ACCEPTABLE per skill (no EVIDENCE token routes through it);
+  the OB Tablet III cross-recensional [RECONSTRUCTION:] from
+  SB is COMPLIANT with scope.md's reconstruction policy. The
+  writer's four flagged-for-scrutiny items resolve as: third
+  refuser = UPHELD (F-2 HIGH); Ningirsu→Ninurta substitution =
+  UPHELD with twist (F-4 HIGH); Watkins 1995 = ACCEPTABLE;
+  OB→SB cross-recension RECONSTRUCTION = COMPLIANT. Three
+  additional HIGH findings not flagged by the writer (F-1, F-3,
+  the framing aspect of F-4) surface independent factual errors
+  in the narrative spine. Recommended fixes are upstream-brief
+  corrections to briefs/15-anzu.yaml plus a round-2 chapter-
+  claims rewrite.
+tallies:
+  supported: 13
+  internal_variance: 1
+  factual_error: 3
+  evidence_misattribution: 1
+  hedging_needed: 1
+  high_findings: 5
+  medium_findings: 1
+  low_findings: 1
+  notes: 2
+verdict: BLOCK
+honesty_self_check_completed: true

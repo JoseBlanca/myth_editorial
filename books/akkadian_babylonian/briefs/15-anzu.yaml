@@ -1,3 +1,42 @@
+# ROUND 2 CORRECTIONS (2026-05-11)
+# Revised after round-1 claims-factcheck (chapters/15-anzu.claims.factcheck.yaml)
+# returned BLOCK with five HIGH findings. Brief-level corrections:
+#   R2-1: SB Anzû recension structure corrected from "2 tablets" to
+#         "3 tablets" (Tablet I, II, III per Annus 2001 SAACT 3 ToC;
+#         independently confirmed by gatewaystobabylon, encyclopedia.com,
+#         bildungblocks). The variants block (prevalent_version,
+#         alternates) is corrected; the chapter-claims doc's own
+#         EVIDENCE tokens at "SB Tablet III" had been internally
+#         inconsistent with the previous "2 tablets" framing.
+#   R2-2: Tell Asmar removed as an OB literary witness. The OB Anzû
+#         literary manuscripts are from Susa only — Sb 9470 (= OB Anzu
+#         II) and Sb 14683 (= OB Anzu III), both Louvre, per SEAL HUJI.
+#         The "Tell Asmar" reference appears to confuse the Tell Asmar
+#         Hoard iconographic statue (early-dynastic eye-statue with an
+#         Anzû bird carved on the base — Black & Green s.v. Anzû) with
+#         a literary tablet of the epic. The Tell Asmar Hoard Anzû
+#         iconography is retained as iconographic, not literary,
+#         evidence.
+#   R2-3: Gerra (also Girra, Gibil) added to entities_glossary as the
+#         second candidate-refuser in the SB Anzû divine-council
+#         search. Canonical sequence is Adad → Gerra/Gibil → Šara
+#         (three named candidates who all refuse before Ea proposes
+#         Ninurta). Per gatewaystobabylon (verbatim "Adad (canal-
+#         controller), Gerra, and Shara"), encyclopedia.com (verbatim
+#         "Adad... Girru and Shara"), and altorientale-mythologie
+#         (verbatim "Adad → Gibil → Šara").
+#   R2-4: Ningirsu/Ninurta variant alternates entry hedged to reflect
+#         the scholarly division — Black & Green 1992 are cited
+#         (per Wikipedia s.v. Ningirsu) as treating Ningirsu and
+#         Ninurta as "two gods from different cult centers in origin"
+#         (Ningirsu = Lagash; Ninurta = Nippur), subsequently
+#         syncretized; the question of original single-deity vs.
+#         two-deities-merged is contested (Wikipedia s.v. Ninurta:
+#         "Assyriologists are divided"). The brief's framing is
+#         updated from "identified with Ningirsu but distinct in
+#         pantheon" to "originally distinct cult-centre deities,
+#         syncretized by the time of Gudea (late third millennium)."
+
 chapter_number: 15
 slug: "anzu"
 title: "Anzû: The Theft of the Tablet of Destinies"
@@ -6,12 +45,12 @@ chapter_anchor: "ch-15-anzu"
 sources:
   primary:
     - id: annus-2001
-      loc: "SAACT 3, entire (Standard Babylonian recension, critical edition with translation)"
+      loc: "SAACT 3, entire (Standard Babylonian recension, critical edition with translation; three tablets — Tablet I, Tablet II, Tablet III)"
       translator_edition: "Annus 2001 — definitive critical edition of the SB Anzû"
       identifier: "ISBN 9789514590498"
       url_or_file: ~
     - id: vogelzang-1988
-      loc: "entire (Old Babylonian recension, critical edition with analysis)"
+      loc: "entire (Old Babylonian recension, critical edition with analysis; Susa manuscripts Sb 9470 and Sb 14683)"
       translator_edition: "Vogelzang 1988 — definitive critical edition of the OB Anzû"
       identifier: "ISBN 9789072371041"
       url_or_file: ~
@@ -32,24 +71,24 @@ sources:
 
 lacunae:
   - source: vogelzang-1988
-    location: "OB recension, breaks throughout the three-tablet structure"
-    what_is_missing: "The OB recension is preserved on Susa and Tell Asmar tablets with substantial breaks; the precise conclusion is partly damaged."
-    in_tradition_fills_available: "yes — partial cross-fill from SB recension (Annus 2001) but with explicit dialect/period flagging."
+    location: "OB recension, breaks throughout the three-tablet structure; especially the OB Tablet III combat conclusion"
+    what_is_missing: "The OB recension is preserved on Susa manuscripts (Sb 9470 = OB Anzu II; Sb 14683 = OB Anzu III, both Louvre) with substantial breaks; the conclusion of OB Tablet III is partly damaged — the killing-blow does not appear in the preserved portions per SEAL HUJI."
+    in_tradition_fills_available: "yes — partial cross-fill from SB recension (Annus 2001) where the recensions overlap, but the dialect/period gap (Old Babylonian → Standard Babylonian) must be flagged explicitly per scope.md's reconstruction policy."
   - source: annus-2001
     location: "SB recension, Tablet I introduction and Tablet III battle climax"
-    what_is_missing: "Several lines of Tablet I and the climax of Tablet III are damaged."
-    in_tradition_fills_available: "yes — multiple SB manuscripts (Nineveh, Sultantepe, Tarbiṣu) overlap; cross-fill from OB recension where compatible (with `[RECONSTRUCTION:]` flagging)."
+    what_is_missing: "Several lines of Tablet I are damaged; the climax of Tablet III (the killing-blow scene) is fragmentary across the principal Nineveh, Sultantepe, Tarbiṣu, and Aššur witnesses."
+    in_tradition_fills_available: "yes — multiple SB manuscripts overlap and supply mutual coverage; cross-fill from OB recension where compatible (with `[RECONSTRUCTION:]` flagging)."
 
 variants:
   classification: co-equal
   prevalent_version:
     source: annus-2001
-    why_prevalent: "Two substantively different recensions: OB Anzû (3 tablets, Ningirsu hero, ca. 1700 BCE) and SB Anzû (2 tablets, Ninurta hero, 1st millennium). The SB recension is more complete and more widely attested in 1st-millennium libraries; the OB is earlier and shows the original framing. Neither alone is sufficient — the recensional difference is itself central to the chapter."
+    why_prevalent: "Two substantively different recensions: OB Anzû (3 tablets, Ningirsu as hero, ca. 1700 BCE, Susa manuscripts only) and SB Anzû (3 tablets — Tablet I, II, III per Annus 2001 SAACT 3 ToC; Ninurta as hero; 1st millennium BCE). The SB recension is longer and more widely attested across 1st-millennium libraries (Nineveh, Sultantepe, Tarbiṣu, Aššur); the OB is earlier and shows the original framing. Neither alone is sufficient — the recensional difference is itself central to the chapter."
   alternates:
     - source: vogelzang-1988
-      difference: "OB recension: hero is Ningirsu (the Lagash war-god); 3-tablet structure; Tablet's recovery from Enlil's bath at the start; Susa and Tell Asmar manuscripts."
+      difference: "OB recension: hero is Ningirsu (the Lagash war-god); three-tablet structure; bath-theft motif preserved; Susa manuscripts only (Sb 9470 = OB Anzu II; Sb 14683 = OB Anzu III, both Louvre per SEAL HUJI). NOT attested on Tell Asmar tablets — the Tell Asmar Hoard's Anzû bird is iconographic (statue base), not a literary witness."
     - source: annus-2001
-      difference: "SB recension: hero is Ninurta (the more cosmopolitan war-god, identified with Ningirsu but distinct in pantheon); 2-tablet structure with divine-council frame; multiple Nineveh, Sultantepe, and Tarbiṣu manuscripts."
+      difference: "SB recension: hero is Ninurta (the warrior-son of Enlil at Nippur). Ningirsu (the Lagash war-god) and Ninurta (the Nippur war-god) are treated by Black & Green 1992 as originally distinct cult-centre deities subsequently syncretized; the OB→SB substitution reflects the 1st-millennium cosmopolitan consolidation under the Nippur-centred name. Three-tablet structure (Tablet I, II, III per Annus 2001 SAACT 3 ToC); divine-council frame elaborated; multiple Nineveh, Sultantepe, Tarbiṣu, and Aššur manuscripts."
 
 entities_glossary:
   - name: "Anzû"
@@ -69,10 +108,19 @@ entities_glossary:
     first_mention_gloss_candidate: "sky-god, presides over the divine council in the SB framing"
   - name: "Adad"
     role: deity
-    first_mention_gloss_candidate: "storm-god, candidate-hero who refuses the task"
+    first_mention_gloss_candidate: "storm-god, candidate-hero who refuses the task first in the SB candidate-search"
+  - name: "Gerra (also Girra, Gibil)"
+    role: deity
+    first_mention_gloss_candidate: "fire-god, candidate-hero who refuses the task second in the canonical SB candidate-search sequence (Adad → Gerra → Šara) per gatewaystobabylon, encyclopedia.com, altorientale-mythologie"
   - name: "Šara"
     role: deity
-    first_mention_gloss_candidate: "warrior-god, candidate-hero who refuses the task"
+    first_mention_gloss_candidate: "warrior-god, son of Ištar; candidate-hero who refuses the task third in the canonical SB sequence"
+  - name: "Ea"
+    role: deity
+    first_mention_gloss_candidate: "god of wisdom, freshwater Apsû, and cunning; proposes Ninurta after the three named refusers decline; supplies the tactical counsel that enables the killing-blow"
+  - name: "Bēlet-ilī (Mami)"
+    role: deity
+    first_mention_gloss_candidate: "the mother goddess; commissions her son Ninurta for the cosmic mission in the SB expansion"
   - name: "Tablet of Destinies (ṭuppi šīmāti)"
     role: artifact
     first_mention_gloss_candidate: "the cuneiform tablet of cosmic decrees, conferring sovereignty"
@@ -84,13 +132,13 @@ cultural_relevance:
   centrality: significant
   centrality_evidence:
     - kind: attestation-volume
-      detail: "OB recension on Susa and Tell Asmar tablets; SB recension at Nineveh, Sultantepe, Tarbiṣu, Aššur — wide first-millennium circulation."
+      detail: "OB recension on Susa manuscripts (Sb 9470, Sb 14683 — Louvre); SB recension at Nineveh, Sultantepe, Tarbiṣu, Aššur — wide first-millennium circulation."
       source: "annus-2001; vogelzang-1988"
     - kind: scholarly-attention
       detail: "Two modern critical editions (Annus 2001, Vogelzang 1988); foundational text for studying the Akkadian combat-myth."
       source: "annus-2001; vogelzang-1988"
     - kind: iconography
-      detail: "The Anzû-Ninurta combat is depicted on Neo-Assyrian reliefs and seals; the bird-monster motif is widespread."
+      detail: "The Anzû-Ninurta combat is depicted on Neo-Assyrian reliefs and seals; the bird-monster motif is widespread. The Tell Asmar Hoard's early-dynastic eye-statue features an Anzû bird carved on the statue base — an iconographic precursor, not a literary witness."
       source: "black-green-1992, s.v. Anzû"
   function:
     - role: theogonic
@@ -104,7 +152,7 @@ cultural_relevance:
       source: "annus-2001 (commentary)"
   cross_cultural_parallels:
     - other_culture: "Sumerian (comparative)"
-      parallel: "Lugal-e (ETCSL 1.6.2) — Sumerian Ninurta epic against the asakku-monster; covers similar Ninurta-vs-monster motifs but is a distinct composition (out of scope here as primary, comparative in the influences chapter)."
+      parallel: "Lugal-e (ETCSL 1.6.2) — Sumerian Ninurta epic against the asakku-monster; covers similar Ninurta-vs-monster motifs but is a distinct composition (out of scope here as primary, comparative in the influences chapter). Sharur is more prominent in Lugal-e than in the Akkadian Anzû."
       source: "etcsl"
     - other_culture: "Indo-European"
       parallel: "The HERO SLAY SERPENT formula — Indra-Vṛtra, Thor-Jörmungandr, Apollo-Python — structurally parallels Ninurta-Anzû; one of the clearest Akkadian instances of the widespread Indo-European storm-god/dragon-slaying typology."
@@ -115,7 +163,7 @@ cultural_relevance:
 
 comparative_hooks:
   - other_culture: "Sumerian (Lugal-e)"
-    parallel: "Lugal-e is the Sumerian Ninurta combat-epic; Anzû is the Akkadian. Treat as distinct compositions — Anzû is not a translation of Lugal-e. Per scope.md, Sumerian is comparative only."
+    parallel: "Lugal-e is the Sumerian Ninurta combat-epic; Anzû is the Akkadian. Treat as distinct compositions — Anzû is not a translation of Lugal-e. Per scope.md, Sumerian is comparative only. Sharur, the sentient war-mace, is more prominent in Lugal-e than in the Akkadian Anzû."
     source: "etcsl 1.6.2"
   - other_culture: "Indo-European"
     parallel: "HERO SLAY SERPENT formula; the storm-god-defeats-dragon pattern is one of the deepest motifs in Indo-European mythology, with Akkadian Ninurta-Anzû as a Near Eastern instantiation."
@@ -135,4 +183,48 @@ triangulation_databases:
 target_length_words: 5000
 
 special_instructions: |
-  Co-equal recensions (4000–6000 words). Present the OB Anzû (Ningirsu hero, 3 tablets) and SB Anzû (Ninurta hero, 2 tablets) side by side in the body — the hero's identity change between recensions is one of the principal substantive variants and must NOT be glossed over. Vogelzang 1988 is the OB base; Annus 2001 is the SB base. Mark dialect explicitly throughout. The Sumerian Lugal-e is comparative only — never a primary, never a fill source. The Indo-European HERO SLAY SERPENT typology is one of the most defensible cross-cultural anchors; preview it here for the influences chapter and comparative analysis. Sharur, the sentient mace, is a distinctive feature; preserve its dialogue with the hero. Mark all reconstructions, especially where SB fills OB or vice versa, with `[RECONSTRUCTION:]` markers naming the donor recension and dialect.
+  Co-equal recensions (4000–6000 words). Present the OB Anzû (Ningirsu
+  hero, three tablets, Susa manuscripts only — Sb 9470 = OB Anzu II
+  and Sb 14683 = OB Anzu III, both Louvre per SEAL HUJI) and SB Anzû
+  (Ninurta hero, three tablets — Tablet I, II, III per Annus 2001
+  SAACT 3 ToC) side by side in the body — the hero's identity change
+  between recensions is one of the principal substantive variants and
+  must NOT be glossed over. Vogelzang 1988 is the OB base; Annus 2001
+  is the SB base. Mark dialect explicitly throughout.
+
+  Tell Asmar is NOT an OB literary witness — the Tell Asmar Hoard
+  statue (with an Anzû bird on the base) is iconographic, attested in
+  Black & Green s.v. Anzû, and may be mentioned in the iconography
+  paragraph, but it is not a manuscript of the epic.
+
+  The SB candidate-search canonical sequence is Adad → Gerra/Gibil →
+  Šara (three named candidates who all refuse before Ea proposes
+  Ninurta). All three must be named; the brief's entities_glossary
+  includes Gerra accordingly.
+
+  The Ningirsu/Ninurta relationship is a contested scholarly question.
+  Per Black & Green 1992 (via Wikipedia s.v. Ningirsu), the two are
+  treated as originally distinct cult-centre deities (Ningirsu =
+  Lagash; Ninurta = Nippur), syncretized by the time of Gudea (late
+  third millennium). Wikipedia s.v. Ninurta: "Assyriologists are
+  divided on the question of whether they were originally two
+  manifestations of the same god, or two separate deities." The
+  chapter should hedge the relationship as syncretism / cult-political
+  shift rather than as a mere local-name change.
+
+  The Sumerian Lugal-e is comparative only — never a primary, never a
+  fill source. Sharur is more prominent in Lugal-e than in the
+  Akkadian Anzû; this comparative observation may be foregrounded in
+  the COMPARATIVE-HOOK to the influences chapter. The Indo-European
+  HERO SLAY SERPENT typology is one of the most defensible cross-
+  cultural anchors; preview it here for the influences chapter and
+  comparative analysis. Sharur, the sentient mace, is a distinctive
+  feature; preserve its dialogue with the hero. Mark all
+  reconstructions, especially where SB fills OB or vice versa, with
+  `[RECONSTRUCTION:]` markers naming the donor recension and dialect.
+
+  The SB closing hymn enumerates a litany of Ninurta's names and
+  epithets, structurally parallel to the fifty-names finale of Enūma
+  Eliš VI–VII (Lambert 2013); the exact count "fifty" for the SB
+  Anzû closing litany should be hedged unless directly verifiable
+  in Annus 2001's transliteration.

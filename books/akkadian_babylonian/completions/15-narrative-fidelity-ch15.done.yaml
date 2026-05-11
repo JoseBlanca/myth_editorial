@@ -1,0 +1,104 @@
+stage: "narrative-fidelity"
+chapter: 15
+slug: "anzu"
+input: "chapters/15-anzu.claims.approved.adoc + chapters/15-anzu.adoc + briefs/15-anzu.yaml + glossary.yaml + gloss-ledger.yaml + scope.md + sources.yaml + chapters/15-anzu.claims.factcheck-round2.yaml + completions/14-chapter-draft-ch15.done.yaml"
+output: "chapters/15-anzu.fidelity.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_conversation: true
+verdict: PASS
+verdict_severity: NONE
+
+outputs:
+  - file: "chapters/15-anzu.fidelity.yaml"
+    lines: 740
+
+summary: |
+  Chapter 15 (Anzû) narrative-fidelity audit returns PASS.
+  Every approved claim is represented in the chapter draft; all six
+  round-1-BLOCK / round-2-PASS findings (F-1 SB three tablets — Tablet
+  I, II, III; F-2 Adad → Gerra/Gibil → Šara canonical refusal sequence;
+  F-3 Susa-only OB literary witnesses with Tell Asmar quarantined to
+  iconography paragraph; F-4 Ningirsu/Ninurta as distinct cult-centre
+  deities syncretized per Black & Green 1992 with Assyriologists-divided
+  hedge explicit; F-5 fifty-names claim hedged with structural parallel
+  to Enūma Eliš VI–VII fifty-names finale as load-bearing observation;
+  F-6 OB Sharur attestation hedged as fragmentary per Vogelzang 1988
+  with Lugal-e comparative framing foregrounded in Sumerian
+  COMPARATIVE-HOOK) carry through correctly into the body prose. All
+  seven structural markers (2 INFERENCE + 2 LACUNA + 2 RECONSTRUCTION +
+  1 VARIANT) are preserved byte-identical with all required pipe-
+  delimited sub-fields. All five COMPARATIVE-HOOK comments preserved
+  byte-identical. All 32 footnotes preserved byte-identical. All 116
+  EVIDENCE tokens preserved byte-identical. Glossary compliance: PASS
+  — Anzû, Ninurta, Ningirsu (OB-recension carve-out per glossary.yaml
+  s.v. Ninurta updated 2026-05-07), Enlil, Anu, Adad, Gerra
+  (Girra/Gibil), Šara (š-háček), Ea, Apsû, Bēlet-ilī, Mami, Sharur
+  (Šaruru), Marduk, Tiamat, Ištar (locked š-háček) all use the locked
+  glossary.yaml renderings; no Ishtar leakage. No never_use glossary
+  terms in body prose; *Anzud* appears once in the Sumerian
+  COMPARATIVE-HOOK with the out-of-scope flag explicit. Forbidden-
+  words check: PASS. Asimov register: PASS. Italics convention:
+  PASS. No factual additions. One advisory finding (G-1: Ea full-
+  gloss licensed-omitted in deference to chapter 14's recent full-
+  gloss, per gloss-ledger policy; substantive Ea content fully
+  preserved). The chapter is fidelity-clean.
+
+  Delta tallies — all zero:
+    - EVIDENCE tokens: 116 → 116
+    - footnotes: 32 → 32
+    - LACUNA blocks: 2 → 2
+    - RECONSTRUCTION blocks: 2 → 2
+    - VARIANT blocks: 1 → 1
+    - INFERENCE blocks: 2 → 2
+    - COMPARATIVE-HOOK comments: 5 → 5
+
+honesty_self_check:
+  every_claim_mapped: true
+  every_paragraph_checked_for_additions: true
+  meaning_distortion_check_done: true
+  same_model_as_writer: true
+  fresh_conversation: true
+  notes: |
+    The writer (chapter-draft stage) and the auditor (narrative-
+    fidelity stage) are both claude-opus-4-7[1m]. The fresh-
+    conversation requirement is met (separate session, no
+    memory of writing the draft). The same-model preference is
+    not strictly met but is not required by the skill.
+
+findings_for_record:
+  - finding_id: G-1
+    severity: ADVISORY
+    kind: LICENSED_GLOSS_OMISSION
+    summary: |
+      The Ea claim-paragraph at claims line 195 has its locked
+      first-mention gloss "Ea — god of wisdom, the freshwater
+      *Apsû*, and incantation, patron of craft and cunning,
+      father of Marduk —" dropped from the corresponding
+      narrative paragraph at draft line 109 ("Ea proposes the
+      solution"). The substantive Ea content (adviser-of-
+      strategy role; cross-references to *Nergal and Ereškigal*
+      and *Adapa*; Ea identifies Ninurta as champion after the
+      three named refusers) is fully preserved. The omission is
+      licensed by gloss-ledger policy: Ea was full-glossed in
+      chapter 14 one chapter back, so the chapter-15 first
+      mention uses the bare form per the writer's
+      gloss_decision (documented in completion record 14-
+      chapter-draft-ch15.done.yaml). Does not affect the
+      fidelity verdict.
+
+notes:
+  proceed_to: "stage 16 (commit) per RUNBOOK §10f. Chapter 15 is fidelity-clean and ready for the commit + per-chapter prompts commit step."
+  pattern_match_with_recent_chapters: |
+    Chapter 15's fidelity audit pattern mirrors chapter 14's:
+    PASS with one advisory finding (G-1 in both cases is a
+    documented minor deviation that does not require revision).
+    Chapter 14's G-1 was two F-4-consistency word substitutions
+    inside the third INFERENCE marker body; chapter 15's G-1 is
+    a licensed Ea full-gloss omission per the gloss-ledger
+    ch14→ch15 bare policy. Neither pattern triggers REVISE.
+    All seven markers in chapter 15 are byte-identical (the
+    chapter-14 third INFERENCE marker had two F-4-consistency
+    word substitutions documented as ADVISORY; chapter 15
+    has no such marker-body deviations).
