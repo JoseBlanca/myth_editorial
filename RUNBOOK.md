@@ -22,6 +22,22 @@ Remember:
 - I'm busy, so try to avoid asking me too many questions.
 Go on with the project. You will have to report to me when you complete the next pair of chapters.
 
+## Strict chapter order (one chapter at a time)
+
+Story chapters MUST be produced **strictly sequentially, one at a time, in numerical order**. Do **not** start chapter N until chapter N−1 is fully complete — meaning all five per-chapter stages (chapter-claims → claims-factcheck → post-human-normalize → chapter-draft → narrative-fidelity) have written their `.done.yaml` files in `books/<book>/completions/` AND the narrative-fidelity verdict for that chapter is PASS (not REVISE).
+
+Concretely, before beginning chapter-claims for chapter N, verify all of the following exist:
+
+- `completions/11-chapter-claims-ch{N-1}.done.yaml`
+- `completions/12-claims-factcheck-ch{N-1}.done.yaml`
+- `completions/13-post-human-normalize-claims-ch{N-1}.done.yaml`
+- `completions/14-chapter-draft-ch{N-1}.done.yaml`
+- `completions/15-narrative-fidelity-ch{N-1}.done.yaml` (with PASS verdict in the corresponding `chapters/{N-1}-*.fidelity.yaml`)
+
+If any of those is missing, **stop and finish chapter N−1 first**. Do not parallelise across chapters: the two-agents-at-a-time budget is for stages within a single chapter (e.g., research lookups, multi-source factcheck), never for running two different chapters in parallel.
+
+Why this matters: chapters cite glossary entries, comparative hooks, and cross-references that solidify as each chapter ships. Running chapter N+1 in parallel with chapter N risks drifting from terminology and structural decisions that haven't been finalised, producing rework that costs more than the parallelism saved. Strict sequencing also keeps the completions log monotonically readable, so any later agent can pick up exactly where the previous one stopped.
+
 ## Execution environment (preferred: container)
 
 Run the pipeline **inside the myth-claude container** whenever possible. It bundles Claude Code, Python, the full Asciidoctor toolchain (including `asciidoctor-bibtex`), Pandoc, and Git, and only sees this project's directory as `/workspace` — nothing outside. That lets Claude Code run with `--dangerously-skip-permissions` without any risk of touching files elsewhere on the host.

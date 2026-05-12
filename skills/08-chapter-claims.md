@@ -29,8 +29,16 @@ Before producing any claims, verify the brief is complete:
 1. `briefs/NN-<slug>.yaml` exists and is structurally valid.
 2. `sources.primary` is non-empty AND every entry has an `id` that resolves to `sources.yaml`.
 3. There is no `primary_sources_to_pin_at_glossary_lock` block, no `# identifier_missing: true` comment in the sources block, and no other deferral language saying the brief is in a partially-pinned state.
+4. **Previous chapter is fully complete.** For chapter N (where N ≥ 2 among the story chapters — i.e., not the introduction), all five per-chapter `.done.yaml` files for chapter N−1 must exist in `books/<book>/completions/`:
+   - `11-chapter-claims-ch{N-1}.done.yaml`
+   - `12-claims-factcheck-ch{N-1}.done.yaml`
+   - `13-post-human-normalize-claims-ch{N-1}.done.yaml`
+   - `14-chapter-draft-ch{N-1}.done.yaml`
+   - `15-narrative-fidelity-ch{N-1}.done.yaml`
 
-If any of these fails, STOP. Do NOT proceed. Surface the block to the human with a one-paragraph diagnostic naming which check failed and what would unblock it (typically: chapter-briefs needs to do its source-pinning step). The chapter-claims stage is downstream of source-pinning and cannot do its own; attempting to work around the block by inventing source IDs is the canonical failure mode and produces output that must be discarded.
+   AND `chapters/{N-1}-*.fidelity.yaml` must record a PASS verdict (not REVISE). Chapters are produced strictly sequentially in numerical order: do not start chapter N until chapter N−1 has passed narrative-fidelity. If the previous chapter is not done, STOP and surface which chapter is unfinished — finish it first.
+
+If any of these fails, STOP. Do NOT proceed. Surface the block to the human with a one-paragraph diagnostic naming which check failed and what would unblock it (typically: chapter-briefs needs to do its source-pinning step, or the previous chapter needs to finish narrative-fidelity). The chapter-claims stage is downstream of source-pinning and chapter ordering, and cannot do either itself; attempting to work around either block (by inventing source IDs, or by jumping ahead to a later chapter while a previous one is still in flight) is the canonical failure mode and produces output that must be discarded.
 
 ## Inputs
 - `scope.md`, `sources.yaml`, `glossary.yaml`
