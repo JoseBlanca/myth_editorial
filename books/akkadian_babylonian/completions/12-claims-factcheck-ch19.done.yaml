@@ -1,0 +1,238 @@
+stage: "claims-factcheck"
+chapter: 19
+slug: "birth-legend-of-sargon"
+input: "chapters/19-birth-legend-of-sargon.claims.adoc"
+brief_file: "briefs/19-birth-legend-of-sargon.yaml"
+output: "chapters/19-birth-legend-of-sargon.claims.factcheck.yaml"
+timestamp: "2026-05-12T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_context: true
+
+verdict: PASS-WITH-LIGHT-FIXES
+block_severity: NONE
+proceed_to_stage: 13   # post-human-normalize claims, with three localised fixes at the human-review step
+
+tallies:
+  claims_identified: 25
+  evidence_tokens_audited: 78
+  triangulations_performed: 12
+  supported: 23
+  internal_variance: 0
+  factual_error: 1     # F-1 "mother's brothers / maternal uncles" inversion
+  citation_wrong: 0
+  fabrication: 0
+  unverified: 1        # F-2 K.3401 + Neo-Babylonian-duplicates manuscript-provenance specifics
+  contamination: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  hedging_needed: 1    # F-3 composition-date framing
+  notes: 2
+
+severity_summary:
+  high_findings: 0
+  medium_findings: 2   # F-1 paternal-vs-maternal inversion; F-2 manuscript provenance specifics
+  low_findings: 1      # F-3 composition-date hedging
+
+medium_findings_detail:
+  - finding_id: F-1
+    kind: FACTUAL-ERROR
+    locations: [line 91 (parentage paragraph, body)]
+    issue: "The chapter renders the legend's line about the hill-loving brothers as 'the mother's brothers — Sargon's maternal uncles' — but the standard scholarly translation across multiple translation mirrors (ANET/Speiser; World History Encyclopedia; mostlydeadlanguages CT 13 42-43; intertextual.bible) reads 'the brother(s) of MY FATHER' — i.e., PATERNAL uncles, NOT maternal. The chapter attributes the maternal reading to Westenholz 1997, but the mainstream rendering is paternal kinship. The highland-population framing can stand for either side; only the kinship-side needs correction. Verify Westenholz 1997's specific reading at human review; if Westenholz also reads 'father's brothers' (paternal), the chapter is in error and should be corrected; if Westenholz proposes a maternal-kin reinterpretation, the chapter should make clear this is Westenholz's specific reading against the older Speiser/ANET standard."
+  - finding_id: F-2
+    kind: UNVERIFIED
+    locations: [line 50 (source overview), line 57 (paragraph 2), line 80 (LACUNA), line 82 (RECONSTRUCTION), line 216 (VARIANT)]
+    issue: "The chapter's specific framing 'K.3401 (Neo-Assyrian) + at least two Neo-Babylonian duplicate manuscripts' is plausible but not directly verifiable from open-web triangulation. Wikipedia confirms 'three manuscripts' total (verbatim: 'only the beginning of the text (the first two columns) is known, from the fragments of three manuscripts'). The British Museum K-3401 catalogue confirms K.3401 as Neo-Assyrian from Aššurbanipal's library. But the NA-vs-NB breakdown of the duplicates is not specified in open-web sources, and one web-search summary reported 'three Neo-Assyrian and one Neo-Babylonian' (four total) — a different configuration. The chapter's framing may reflect Westenholz 1997's specific manuscript inventory and is plausible; needs direct verification against Westenholz 1997 pp. 36-37 at human review."
+
+low_findings_detail:
+  - finding_id: F-3
+    kind: HEDGING-NEEDED
+    locations: [line 50, line 62, line 187, line 232]
+    issue: "The chapter's 'first-millennium literary composition' framing is defensible as a manuscript-attestation-floor framing but slightly overstates scholarly consensus on the composition-date question. Some scholars (e.g., Brian Lewis 1980 building on earlier proposals) date the underlying composition to the Neo-Assyrian period linked to Sargon II (722–705 BCE) as propaganda; others place the composition earlier (Old Babylonian roots) with first-millennium curation. The 'fully literary elaboration' framing at line 62 reads as if the composition itself is uncontroversially first-millennium. Optional refinement: add a brief hedge acknowledging the composition-date debate at line 187 or 232."
+
+honesty:
+  direct_access:
+    westenholz_1997_pp_36_49: false   # archive.org and Eisenbrauns only give TOC stubs; in-text preview not accessible
+    foster_2005_pp_912_913: false     # CDL Press paywalled; dokumen.pub mirror "under maintenance"
+    foster_2007_pp_95_98: false       # print-only; not directly opened
+    black_green_1992: false           # paywalled
+    bottero_2001: false               # print-only
+    noegel_2005_pp_233_245: false     # print-only
+    kvanvig_2011: false               # Brill paywalled
+  triangulated_via_open_web:
+    - "Wikipedia s.v. Sargon of Akkad: reign dates 2334-2279 BC (middle chronology); Birth Legend from Library of Ashurbanipal at Nineveh; Azupiranu on Euphrates; mother as priestess; basket of rushes sealed with bitumen; Akki the water-drawer rescued and raised as gardener; 'Ishtar granted me her love, and for four and ... years I exercised kingship'; 'first two columns known from fragments of three manuscripts'"
+    - "British Museum K-3401 catalogue: 'fragment of clay tablet containing a legend concerning Sargon I... Neo-Assyrian in date... from the Library of Ashurbanipal' (Kouyunjik, Nineveh)"
+    - "Wikipedia s.v. The Myth of the Birth of the Hero: Otto Rank 1909, Der Mythus von der Geburt des Helden; typology includes Sargon of Akkad, Moses, Karna, Oedipus, Romulus, Cyrus the Great, alongside others"
+    - "Amazon / Open Library / Goodreads / abebooks for Brian Lewis 1980: The Sargon Legend, ASOR Dissertation Series no. 4, 1980, 298 pp., ISBN 9780897571043"
+    - "Eisenbrauns catalogue page: Westenholz 1997 Legends of the Kings of Akkade: The Texts, Mesopotamian Civilizations 7, ISBN 978-0-931464-85-0, annotated edition with transliteration, translation, and commentary"
+    - "Slightly Alive Translations / mostlydeadlanguages CT 13 42-43: full translation of the Birth Legend; verbatim opening 'I am Sargon, mighty king, king of Akkad'; high-priestess mother; explicit note that the hill-brothers line 'literally means my father's brother' (paternal kinship — CRITICAL for F-1)"
+    - "World History Encyclopedia s.v. Sargon of Akkad: 'Sargon, the mighty king, king of Agade, am I... brother(s) of my father loved the hills... mother was a changeling [older Speiser/ANET rendering]... set me in a basket of rushes... cast me into the river... water carried me to Akki, the drawer of water... took me as his son... made me his gardener'"
+    - "World History Encyclopedia 'The Legend of Sargon of Akkad: Inspiration for the Story of Moses' article: Moses-Exodus 2 parallel as the most-discussed cross-cultural anchor"
+    - "Intertextual.bible Sargon Legend ↔ Exodus 2:3 page: motif-by-motif parallel; reed basket, bitumen, river, rescue"
+    - "Wikipedia s.v. Akkad (city): unlocated capital; Sargon 2334-2279 BC; no secure archaeological identification"
+    - "Web-search summary on Sargon Birth Legend composition-date scholarship: Neo-Assyrian compilation linked to Sargon II 722-705 BCE; relevant for F-3 hedging"
+    - "Multiple translation mirrors (livius / ancient-origins / christianleaders / tektonics.org): Moses-Sargon comparison and verbatim translation cross-checks"
+  taken_on_trust:
+    - "Westenholz 1997 exact pagination (pp. 36-49 for the Birth Legend; pp. 38-39 for opening; pp. 38-40 for basket-and-river; pp. 40-42 for Aqqi sequence; pp. 42-44 for Ištar's love; pp. 44-48 for conquest catalogue; pp. 44-49 for closing): consistent with brief and standard breakdown"
+    - "Foster 2005 exact pagination (pp. 912-913): plausible for back-of-volume placement in 3rd edition"
+    - "Foster 2007 pp. 95-98 (Sargon legends in late tradition): consistent with brief"
+    - "Black & Green 1992 s.v. Sargon / Akkad / Ištar entries: deity-handbook coverage"
+    - "Bottéro 2001 passim on royal-legend tradition"
+    - "Noegel 2005 pp. 233-245 on Mesopotamian epic / narû genre"
+    - "Kvanvig 2011 passim on Babylonian-biblical intertextual parallels"
+    - "Westenholz 1997's specific NA-vs-NB breakdown of the three principal manuscripts (F-2 verification needed)"
+    - "Westenholz 1997's specific reading of the hill-brothers line (F-1 verification needed)"
+
+writer_flagged_for_scrutiny_resolution:
+  flag_1_historical_sargon_reign_dates: UPHELD
+  flag_2_K3401_plus_duplicates_manuscript_identifier: UPHELD-WITH-HEDGE   # F-2 MEDIUM on NB-vs-NA breakdown
+  flag_3_autobiographical_opening: UPHELD
+  flag_4_mother_as_enitu_priestess: UPHELD-WITH-MINOR-HEDGE
+  flag_5_azupiranu_on_euphrates: UPHELD
+  flag_6_aqqi_water_drawer: UPHELD
+  flag_7_ishtar_love_kingship: UPHELD
+  flag_8_basket_reeds_bitumen: UPHELD
+  flag_9_westenholz_1997_publication: UPHELD
+  flag_10_otto_rank_1909: UPHELD
+  flag_11_brian_lewis_1980: UPHELD
+  flag_12_moses_exodus_2_parallel: UPHELD
+
+caution_flags_resolved:
+  variant_classification_single_prevalent: "VERIFIED ✓ — SINGLE-PREVALENT correctly applied; first-millennium witnesses preserve substantively the same autobiographical narrative; minor textual variants do not affect the substance; closing material's loss is a structural fact (LACUNA, not variant)"
+  K3401_principal_manuscript: "VERIFIED ✓ — British Museum catalogue confirms K.3401 as Neo-Assyrian, Aššurbanipal's library, Nineveh"
+  three_principal_manuscripts: "VERIFIED ✓ — Wikipedia confirms 'fragments of three manuscripts' (the specific NA-NB breakdown is at F-2 MEDIUM)"
+  autobiographical_opening_translation: "VERIFIED ✓ — 'Sargon, mighty king, king of Akkad, am I' attested across multiple translations"
+  mother_as_high_priestess: "VERIFIED ✓ — *enītu* / *enitu* high-priestess; older 'changeling' rendering (Speiser/ANET) is alternative; chapter's dual framing is correct"
+  azupiranu_on_euphrates: "VERIFIED ✓ — attested verbatim across multiple sources"
+  aqqi_water_drawer: "VERIFIED ✓ — Akkadian *dālû*; gardener apprenticeship attested"
+  ishtar_love_granting_kingship: "VERIFIED ✓ — verbatim 'Ishtar granted me her love'; years-of-reign figure damaged"
+  basket_of_reeds_bitumen: "VERIFIED ✓ — verbatim 'basket of rushes, with bitumen she sealed my lid'"
+  westenholz_1997_definitive_edition: "VERIFIED ✓ — ISBN 9780931464850, Mesopotamian Civilizations 7, Eisenbrauns"
+  otto_rank_1909_named_but_flagged: "VERIFIED ✓ — typology confirmed (Sargon, Moses, Karna, Oedipus, Romulus, Cyrus); no EVIDENCE token (correct)"
+  brian_lewis_1980_named_but_flagged: "VERIFIED ✓ — ASOR Diss. Series 4, 1980; no EVIDENCE token (correct)"
+  moses_parallel_comparative_hook: "VERIFIED ✓ — Moses/Exodus 2 parallel is the most-discussed; correctly reserved for comparative chapter; Kvanvig 2011 anchor used appropriately"
+  hill_loving_brothers_kinship_side: "FAILED ✗ — chapter says 'mother's brothers' but standard rendering is 'father's brothers' (paternal); F-1 MEDIUM"
+  manuscript_provenance_NA_vs_NB_breakdown: "UNVERIFIED — chapter says 1 NA + 2 NB; open-web does not confirm or deny; verify against Westenholz 1997 directly; F-2 MEDIUM"
+  composition_date_first_millennium_framing: "VERIFIED-WITH-HEDGING-RECOMMENDED — first-millennium attestation is secure; composition-date itself is debated (Sargon II vs. earlier roots); F-3 LOW"
+  narû_genre_classification: "VERIFIED ✓ — Westenholz 1997 edits Birth Legend, King of Battle, Cuthaean Legend together; narû genre correctly framed"
+  comparative_hook_discipline: "VERIFIED ✓ — Hebrew Bible Exodus 2, Greek-Roman Romulus/Remus, Persian Cyrus, Egyptian Königsnovelle, Indic Karna all held in COMPARATIVE-HOOK markers; none retold as primary text in chapter body; compliant with scope.md"
+  anchor_convention: "VERIFIED ✓ — chapter uses the claims-only anchor 'ch-19-birth-legend-of-sargon-claims' at line 1; does not use the prose anchor 'ch-19-birth-legend-of-sargon' (reserved for stage 14)"
+  brief_alignment: "VERIFIED ✓ — all brief-mandated elements (lacunae, variants, cross_cultural_parallels, comparative_hooks, special_instructions) addressed; SINGLE-PREVALENT classification applied; historical Sargon ca. 2334-2279 BCE without conflation with legend; Moses parallel previewed; narû genre cross-link to ch. 24 Cuthaean Legend"
+
+routing:
+  proceed_to_stage_13_with_light_fixes: true
+  needs_brief_revision: false
+  needs_round_2_chapter_claims_rewrite: false
+  rewrite_scope: |
+    Three targeted human-review edits at stage 12a:
+    (i) line 91 (parentage paragraph): correct the kinship-side of
+        the hill-loving brothers. Standard scholarly translation
+        (ANET/Speiser; mostlydeadlanguages; World History
+        Encyclopedia; intertextual.bible) reads 'brother(s) of MY
+        FATHER' (PATERNAL uncles), not 'the mother's brothers /
+        Sargon's maternal uncles' as the chapter states. Verify
+        Westenholz 1997's specific reading at human review; if
+        Westenholz also reads paternal, the chapter is in error and
+        should be corrected to 'the brothers of Sargon's father —
+        his paternal uncles — are said to love the hills'; if
+        Westenholz proposes a maternal-kin reinterpretation, the
+        chapter should make clear this is Westenholz's specific
+        reading. The highland-population framing can stand for
+        either side. [F-1 fix, MEDIUM]
+    (ii) lines 50, 57, 80, 82, 216: verify against Westenholz 1997
+         (pp. 36-37 manuscript dossier) whether the duplicate
+         manuscripts are Neo-Babylonian (as the chapter states) or
+         a different configuration. Safe interim fix: 'K.3401
+         (Neo-Assyrian, from Aššurbanipal's library) together with
+         two further first-millennium duplicate manuscripts'. [F-2
+         fix, MEDIUM]
+    (iii) line 187 (or line 232) optional refinement: add a brief
+          hedge about the composition-date debate — e.g., 'some
+          scholars locate the underlying composition in the Neo-
+          Assyrian period (linked to Sargon II); others place it
+          earlier in the Akkadian literary tradition with first-
+          millennium curation'. [F-3 fix, LOW]
+    All three fixes are localised; no structural rewrite required.
+  re_factcheck_after_fixes: false   # PASS-WITH-LIGHT-FIXES verdict; the two MEDIUM findings are verifiable against Westenholz 1997 directly at human review and are localised
+
+outputs:
+  - file: "chapters/19-birth-legend-of-sargon.claims.factcheck.yaml"
+    lines: ~ 720
+
+summary: |
+  Round-1 fact-check of chapters/19-birth-legend-of-sargon.claims.
+  adoc completed in fresh context (no writer-side memory of
+  producing the claims). Verdict: PASS-WITH-LIGHT-FIXES.
+
+  Zero HIGH findings. Two MEDIUM findings: F-1 (FACTUAL-ERROR —
+  the chapter's 'mother's brothers / Sargon's maternal uncles'
+  framing at line 91 inverts the standard scholarly rendering,
+  which reads 'brother(s) of MY FATHER' / paternal uncles; the
+  chapter attributes the non-standard reading to Westenholz 1997,
+  but multiple independent translation mirrors read paternal
+  kinship; the kinship-side itself needs correction, the
+  highland-population framing can stand) and F-2 (UNVERIFIED — the
+  chapter's 'K.3401 + at least two Neo-Babylonian duplicate
+  manuscripts' framing is plausible but not directly verifiable
+  from open-web triangulation; Wikipedia confirms 'three
+  manuscripts' total but does not specify the NA-NB breakdown).
+  One LOW finding: F-3 (HEDGING-NEEDED — the 'first-millennium
+  literary composition' framing is defensible but slightly
+  overstates scholarly consensus on the genuinely-contested
+  composition-date question).
+
+  All twelve writer-flagged-for-scrutiny items resolved:
+  (1) Historical Sargon reign dates (ca. 2334-2279 BCE, middle
+      chronology) = UPHELD;
+  (2) K.3401 + duplicates manuscript identifier = UPHELD-WITH-
+      HEDGE (F-2 MEDIUM on the NB-vs-NA breakdown);
+  (3) Autobiographical opening 'Sargon, mighty king, king of
+      Akkad, am I' = UPHELD;
+  (4) Mother as *enitu* high-priestess = UPHELD-WITH-MINOR-HEDGE;
+  (5) Azupirānu on the Euphrates ('Saffron City') = UPHELD;
+  (6) Aqqi the water-drawer (*dāli* / *dālû*) = UPHELD;
+  (7) Ištar's love granting kingship = UPHELD;
+  (8) Basket of reeds sealed with bitumen = UPHELD;
+  (9) Westenholz 1997 publication details (ISBN, MC 7,
+      Eisenbrauns) = UPHELD;
+  (10) Otto Rank 1909 (Sargon in typology with Moses, Karna,
+       Oedipus, Romulus, Cyrus) named-but-flagged = UPHELD;
+  (11) Brian Lewis 1980 (ASOR Diss. Series 4) named-but-flagged
+       = UPHELD;
+  (12) Moses/Exodus 2 parallel as most-discussed cross-cultural
+       anchor = UPHELD.
+
+  No HIGH findings; no fabrications; no contamination; no silent
+  bridges; no glossary violations; no marker-schema failures. The
+  K.3401 manuscript identifier, the autobiographical opening, the
+  basket-and-bitumen image, the Aqqi-and-gardener sequence,
+  Ištar's love granting kingship, the conquest catalogue, the
+  Westenholz 1997 critical edition, Otto Rank 1909's typology,
+  Brian Lewis 1980's monograph, the SINGLE-PREVALENT classification,
+  and the COMPARATIVE-HOOK discipline (Moses parallel previewed
+  for the comparative chapter without retelling Exodus 2 as
+  primary text) are all supported. The chapter's core spine —
+  autobiographical opening, parentage (high-priestess mother,
+  unknown father), Azupirānu birthplace on the Euphrates, basket
+  of reeds with bitumen, river-borne rescue by Aqqi the water-
+  drawer, gardener apprenticeship, Ištar's love granting kingship,
+  partial conquest catalogue, lost narû peroration — is factually
+  sound.
+
+  Variant classification (SINGLE-PREVALENT) correctly applied:
+  the first-millennium witnesses (K.3401 + the duplicates)
+  preserve substantively the same autobiographical narrative;
+  minor textual variants do not affect the substance; Westenholz
+  1997 establishes the composite from the overlapping witnesses;
+  the closing material's loss is a LACUNA-level structural fact,
+  not a variant issue.
+
+  Recommendation: route to stage 13 (post-human-normalize) with
+  the three localised fixes applied at human review. The kinship-
+  side correction (F-1 MEDIUM) is a clear factual fix verifiable
+  against Westenholz 1997. The manuscript-provenance specification
+  (F-2 MEDIUM) is a verification item against Westenholz 1997's
+  manuscript-dossier pages (pp. 36-37). The composition-date
+  hedge (F-3 LOW) is an optional precision improvement. No
+  round-2 chapter-claims rewrite required.

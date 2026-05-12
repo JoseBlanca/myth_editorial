@@ -1,0 +1,391 @@
+stage: "chapter-draft"
+chapter: 19
+slug: "birth-legend-of-sargon"
+input: "chapters/19-birth-legend-of-sargon.claims.approved.adoc + briefs/19-birth-legend-of-sargon.yaml + gloss-ledger.yaml"
+output: "chapters/19-birth-legend-of-sargon.adoc + updated gloss-ledger.yaml"
+timestamp: "2026-05-12T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/19-birth-legend-of-sargon.adoc"
+    lines: 217
+  - file: "gloss-ledger.yaml"
+    lines: 2086
+summary: |
+  Chapter 19 (Birth Legend of Sargon) narrative draft. Asimov-style
+  prose drawn from chapters/19-birth-legend-of-sargon.claims.approved.adoc
+  (post-human-normalize edited version). Every claim represented; no
+  factual additions; all 5 markers (2 INFERENCE + 1 LACUNA + 1
+  RECONSTRUCTION + 1 VARIANT) preserved byte-for-byte with all
+  pipe-delimited sub-fields; all 7 COMPARATIVE-HOOK comments carried
+  over verbatim; all 30 footnotes carried over unchanged; all 111
+  EVIDENCE tokens preserved byte-for-byte. Chapter ID anchor
+  [[ch-19-birth-legend-of-sargon]] (per toc.yaml; NOT the claims-only
+  anchor [[ch-19-birth-legend-of-sargon-claims]]).
+
+  Single-prevalent recension classification per the brief — the
+  first-millennium Babylonian/Assyrian recension preserved on
+  K.3401 (Neo-Assyrian, Aššurbanipal's library at Nineveh, 7th c.
+  BCE) + duplicate manuscripts (three fragments attested in the
+  dossier) is presented as the prevailing reading, with minor
+  textual variants among the duplicates noted in the [VARIANT:]
+  marker. The chapter does not foreground minor textual variants
+  in the body prose; the substance of the basket-on-the-river
+  narrative is stable across witnesses per the brief. Materially
+  simpler than ch17's composite-editorial 12-tablet structure or
+  ch18's co-equal three-recension structure: ch19 has a single
+  unified body-prose narrative following the autobiographical
+  sequence (parentage → birthplace → secret conception → basket
+  and river → Aqqi the water-drawer → gardener apprenticeship →
+  Ištar's love → kingship → partial conquest catalogue → lost
+  closing peroration).
+
+  Three post-human-normalize fixes preserved correctly:
+  F-1 (paternal vs. maternal uncles): body prose names "the
+  brothers of Sargon's father — his paternal uncles, in the
+  legend's Akkadian phrasing *aḫi abīya* 'the brother(s) of my
+  father' — are said to love the hills", per the corrected
+  scholarly translation across ANET/Speiser, Foster 2005, World
+  History Encyclopedia, and intertextual.bible. The textual
+  puzzle (speaker claims unknown father yet knows of paternal
+  uncles) is noted in the body. 0 hits on "maternal" in body
+  prose; 0 hits on "mother's brothers".
+  F-2 (manuscript provenance): body prose names "K.3401 (Neo-
+  Assyrian, from Aššurbanipal's library at Nineveh) + duplicate
+  manuscripts; three fragments are attested in the dossier" —
+  K.3401 specifically (independently verified via the British
+  Museum K-3401 catalogue and via Wikipedia s.v. Sargon of
+  Akkad) and the three-manuscript / three-fragment count, with
+  the NA/NB breakdown of the two further witnesses left
+  un-verified per the open-web sources. The Westenholz 1997
+  critical edition is named as the authoritative reference for
+  the manuscript inventory.
+  F-3 (composition-date hedging): the first body-prose claim
+  asserting first-millennium dating preserves the hedging
+  clause "the composition's earliest core may go back further —
+  some scholars locate the underlying composition in the Old
+  Babylonian literary tradition, others in the Neo-Assyrian
+  period as propaganda linked to Sargon II — but the surviving
+  witnesses are all first-millennium and the manuscript-
+  attestation floor is securely first-millennium". The other
+  "first-millennium literary composition" loci remain as the
+  conservative manuscript-attestation-floor framing per the
+  post-human-normalize note.
+
+  Iconic autobiographical opening handled per the brief: the
+  §"The autobiographical opening" section opens with the king's
+  own voice rendered as Asimov-style narrative analysis ("The
+  legend opens with the iconic first-person self-presentation
+  that gives the composition its character. The opening lines,
+  in the standard translation, are rendered: 'Sargon, mighty
+  king, king of Akkad, am I.'") — quoted as Foster 2005's
+  published translation per the chapter-draft skill's rule on
+  preserved quotations of published translations, not as the
+  chapter's own ornament; the body prose then continues in
+  third-person analytical mode. The section heading itself
+  quotes Foster's published title-translation, which IS the
+  iconic line preserved byte-for-byte from the claims doc.
+  "mighty" appears twice in body prose, both inside the
+  literal-translation quotation marks of the Foster 2005
+  published rendering; the skill's forbidden-word list
+  explicitly permits "mighty" inside preserved Foster
+  translation per the special-instructions note in the task
+  prompt.
+
+  Historical vs. legendary Sargon handled: the §"The historical
+  Sargon and the legendary tradition" section explicitly
+  distinguishes the historical reign (ca. 2334–2279 BCE,
+  attested in Old Akkadian royal inscriptions, year-name and
+  date-formula traditions, contemporary administrative record)
+  from the first-millennium legendary composition (roughly a
+  millennium and a half later, a fully literary elaboration
+  rather than a contemporary record). The chapter notes the
+  historical anchor without treating the legend as biography
+  per the brief's special_instructions.
+
+  Moses / Exodus 2 cross-cultural parallel handled per scope:
+  the Moses comparison is reserved for the comparative chapter
+  (chapter 25+ in the present volume) and recorded as a
+  // COMPARATIVE-HOOK: comment at chapter foot — preserved
+  byte-for-byte from the claims document. The Hebrew Bible
+  Exodus 2 narrative is NOT retold in body prose (Hebrew Bible
+  is out of scope per scope.md); the body-prose treatment is
+  confined to the Akkadian composition on its own terms, with
+  the cross-cultural parallels acknowledged at the chapter's
+  §"The legend's place in the corpus" closing ("The substantive
+  comparative analysis is reserved for the comparative chapter")
+  but not retold. The four other cross-cultural
+  COMPARATIVE-HOOK comments (Romulus-Remus / Greek-Roman; Cyrus
+  / Persian; Königsnovelle / Egyptian; Karna / Indic) are
+  similarly preserved at chapter foot and not retold in body.
+
+  narû genre handled as a load-bearing genre-classification term:
+  the §"The narû genre and the legend's literary function"
+  section is dedicated to the genre's structure (pseudo-
+  autobiographical royal literature with first-person voice,
+  dynastic self-presentation, address to future audience) and
+  to the *Birth Legend*'s three literary-function levels (royal-
+  legitimation, literary, didactic). The Akkadian *narû*-genre
+  dossier (the *Birth Legend*, the *King of Battle*, the
+  *Cuthaean Legend of Narām-Sîn* — all edited by Westenholz 1997
+  in the same volume) is explicitly named in the source-overview
+  *narû*-genre paragraph and in the dedicated section. The
+  cross-reference to chapter 24 (the *Cuthaean Legend of
+  Narām-Sîn*) is preserved in body prose, in the [LACUNA:]
+  marker's "no in-tradition fill" framing for the lost closing,
+  and in the COMPARATIVE-HOOK cross-link.
+
+  Style: Asimov register; short paragraphs; plain modern English.
+  Forbidden ornament-words (shimmering, mystical, unfathomable,
+  primordial-as-ornament, ineffable, sacred-as-filler, fearsome,
+  dread, eternal, boundless, infinite, veiled, shrouded) absent
+  from body prose. "Mighty" appears twice in body prose, both
+  inside literal-quotation translation of Foster 2005's published
+  English rendering of the iconic opening line — permitted per
+  the skill's special-instructions exception for preserved
+  Foster translation. No "Long ago..." / "In the time before
+  time..." / "It is said that..." openings.
+
+  Glossary discipline: Sargon (Šarru-kīn), Narām-Sîn, Akkad
+  (Agade), Ištar, Sîn, Aššur (via Aššurbanipal), Nineveh,
+  Aqqi (the water-drawer), Azupirānu (the Saffron City), *narû*
+  (the genre), *enitu* (the priestess-mother), *aḫi abīya*
+  ("the brother[s] of my father"), *râmu* (Ištar's relational
+  love), *dāli* (Aqqi's water-drawing trade), *nukaribbu*
+  (the gardener's trade) all use locked glossary.yaml renderings
+  where in glossary, or the brief's entities_glossary forms and
+  the claims-document spellings where ch19-specific. The
+  never_use forms Ishtar / Shamash / Ashur / Anzud / Utu /
+  Inanna / Bilgames / Huwawa / Utnapishtim / Enki / Dumuzid all
+  absent from body prose (verified by direct grep — all 0 hits).
+  The locked diacritics throughout: Šarru-kīn (š-háček, ī-macron),
+  Ištar (š-háček), Narām-Sîn (ā-macron, î-circumflex), Aššur
+  (š-háček), Aššurbanipal (š-háček), Sîn (î-circumflex),
+  Azupirānu (ā-macron), *aḫi abīya* (ḫ-with-dot, ī-macron),
+  *râmu* (â-circumflex), *dāli* (ā-macron), *narû* (û-circumflex).
+
+  Italic discipline per the chapter-draft skill's rule 6: body-
+  prose foreign-language common nouns and book/composition
+  titles use _underscore_ italic (_The Birth Legend of Sargon_,
+  _Birth Legend_, _narû_, _Cuthaean Legend of Narām-Sîn_,
+  _King of Battle_, _šar tamḫāri_, _enitu_, _aḫi abīya_, _râmu_,
+  _dāli_, _nukaribbu_, _Gilgameš_). Asterisk-bold markup confined
+  to footnote contents, EVIDENCE tokens, marker contents
+  (LACUNA / INFERENCE / RECONSTRUCTION / VARIANT pipe-fields),
+  and COMPARATIVE-HOOK comments — all preserved byte-for-byte
+  per rules 4 and 5. Diff against the claims document on
+  EVIDENCE, footnote, marker, and COMPARATIVE-HOOK strings
+  returned zero output (verified by direct shell diff). Body-
+  prose asterisk-italic scan returned 0 hits.
+
+gloss_decisions:
+  - term: "Sargon (Šarru-kīn)"
+    decision: "FULL REMINDER_GLOSS — last full mention chapter 00 (19 chapters back). The locked glossary.yaml first_mention_gloss ('Šarru-kīn (\"the king is true\") — founder of the Akkadian empire (ca. 2334 BCE), protagonist of the *Birth Legend* and *šar tamḫāri*') is woven inline at first body-prose mention in the source-overview ('Sargon of Akkad, Šarru-kīn, \"the king is true\", founder of the Akkadian Empire ca. 2334–2279 BCE'), with the Akkadian form *Šarru-kīn* and the etymology preserved per the locked glossary entry; re-asserted in the §'The historical Sargon and the legendary tradition' section. Ledger updated: last_reminder_in='19', last_mention_in='19'. The conventional English form 'Sargon' is the locked body-prose primary per glossary.yaml; the Akkadian form *Šarru-kīn* is given parenthetically on first mention and the etymology repeated at the historical-Sargon section. The dating (ca. 2334–2279 BCE) matches the brief's historical anchor."
+  - term: "Šarru-kīn"
+    decision: "FULL_GLOSS (new ledger entry) — the Akkadian throne-name form, named within Sargon's glossary.yaml first_mention_gloss. Tracked as a ch19-specific ledger entry separate from 'Sargon' because the Akkadian-form rendering is the load-bearing etymology that the chapter foregrounds. Inline transliteration with macron preserved byte-for-byte from the claims document; the form *Šarru-kīn* (š-háček, ī-macron) is used at two substantive mentions (source-overview; historical-Sargon section)."
+  - term: "Narām-Sîn"
+    decision: "REMINDER_GLOSS — last full mention chapter 00 (19 chapters back). Inline reminder gloss 'whose name means \"beloved of Sîn\"' added at first body-prose mention in the source-overview *narû*-genre paragraph; the locked glossary first_mention_gloss components beyond the etymology (ca. 2254–2218 BCE; *Cuthaean Legend*, *Great Revolt*, *Erra and Narām-Sîn* protagonist roles) are deferred to chapter 24 (the *Cuthaean Legend* chapter), where Narām-Sîn is the central figure. The grandson-of-Sargon relational descriptor is preserved verbatim from the claims document where it stood as bare-term context. Ledger updated: last_reminder_in='19', last_mention_in='19'. Locked Assyriological form with macrons (*Narām-Sîn*) used throughout; *Naram-Sin* absent."
+  - term: "Akkad (Agade)"
+    decision: "REMINDER_GLOSS — last full mention chapter 00 (19 chapters back). The locked glossary first_mention_gloss ('Agade — the lost capital city of Sargon's empire, and the name of the kingdom that gave Akkadian its name') is decomposed and the components are woven inline across the §'The historical Sargon and the legendary tradition' section: 'the dynasty that gave Akkadian its name as a language and as a literary tradition' (line preserving claims-doc framing); 'the city of Akkad — Agade, Sargon's capital and the eponymous centre of the Akkadian dynasty'; 'the historical city's location remains unidentified despite a century and a half of scholarly search' (the brief's unlocated-historical-city framing). All wording preserved byte-for-byte from the claims document. Ledger updated: last_reminder_in='19', last_mention_in='19'. The locked anglicised form *Akkad* is the body-prose primary (33 hits); *Agade* is the cuneiform-own form, named alongside *Akkad* in the dedicated paragraph per glossary.yaml's rationale ('*Agade* used only when explicitly transliterating cuneiform')."
+  - term: "Agade"
+    decision: "FULL_GLOSS (new ledger entry) — the cuneiform-own form of Akkad, tracked separately from 'Akkad' because *Agade* is named as such once in body prose at the dedicated §'The city of Akkad' paragraph, per glossary.yaml's rationale for Akkad. Body-prose appearance preserved byte-for-byte from the claims document."
+  - term: "Ištar"
+    decision: "BARE — Ištar was last named in ch18 just one chapter back. Chapter 19 features Ištar centrally in the rise-to-kingship turning point ('Ištar granted me her love'). The inline descriptor 'queen of heaven, goddess of love and war and the planet Venus' at the §'Ištar's love and the rise to kingship' opening matches the locked glossary first_mention_gloss almost verbatim; preserved byte-for-byte from the claims document. The descriptor's placement is the claims document's, not a new gloss added at the chapter-draft stage. Ledger updated: last_mention_in='19'."
+  - term: "Sîn"
+    decision: "BARE — Sîn was reminder-glossed in ch18 just one chapter back. Chapter 19 names Sîn only inside the inline reminder gloss for Narām-Sîn ('whose name means \"beloved of Sîn\"') and via the Narām-Sîn name itself. No independent reminder gloss for Sîn is given. Ledger updated: last_mention_in='19'. Locked î-circumflex form used."
+  - term: "Aššur (via Aššurbanipal)"
+    decision: "BARE — Aššur was last named in ch18 just one chapter back. Chapter 19 does not name Aššur as a standalone city or god in body prose; the š-háček form appears only in the compound 'Aššurbanipal's library' (4 hits, tracking Aššur via the king's name and Nineveh as the library location). Ledger updated: last_mention_in='19' to track the implicit reference via Aššurbanipal. Locked š-háček form preserved throughout; *Ashur* / *Ashurbanipal* (never_use) absent."
+  - term: "Nineveh"
+    decision: "BARE — Nineveh was last named in ch18 just one chapter back. Chapter 19 names Nineveh as the find-spot of K.3401 (the Sargon Birth Legend principal manuscript) in the source-overview ('K.3401, a Neo-Assyrian tablet from Aššurbanipal's library at Nineveh') and in the [VARIANT:] block. The 'Aššurbanipal's library at Nineveh' framing carries the load-bearing Neo-Assyrian-capital context transparently. Ledger updated: last_mention_in='19'."
+  - term: "Aqqi"
+    decision: "FULL_GLOSS (new ledger entry) — Aqqi is not in glossary.yaml. Per the brief's entities_glossary first_mention_gloss_candidate ('the water-drawer who finds Sargon in the basket and raises him as a gardener'), inline functional descriptor 'Aqqi (also transliterated Akki) — described as a *dāli*, a \"drawer of water\", a labourer of the irrigation-and-water-supply class' at first body-prose mention in the §'Aqqi the water-drawer and the gardener apprenticeship' opening; preserved byte-for-byte from the claims document. The variant transliteration 'Akki' is named once at first mention and not re-asserted afterwards. Tracked as a new ch19 ledger entry. Composition-specific; no diacritics."
+  - term: "Azupirānu"
+    decision: "FULL_GLOSS (new ledger entry) — Azupirānu is not in glossary.yaml. Inline functional descriptor 'Azupirānu — translated as \"Saffron City\" or \"city of saffron\" — and locates it on the banks of the Euphrates' at first body-prose mention in the §'The autobiographical opening' parentage-and-birthplace subsection. The uncertainty of historical identification is preserved per the brief and claims doc ('not securely identified with any historically attested site and may be a literary creation of the legend'). Tracked as a new ch19 ledger entry. Composition-specific. Locked ā-macron form preserved throughout."
+  - term: "narû"
+    decision: "FULL_GLOSS (new ledger entry) — *narû* (the genre) is not in glossary.yaml. Inline gloss at first body-prose mention in the source-overview ('the *narû* genre — pseudo-autobiographical royal literature in which a king ... addresses a future ruler from the inscribed monument that bears his words'), re-asserted in the dedicated §'The narû genre and the legend's literary function' section. The *narû* term is one of the load-bearing genre-classification terms of the chapter and recurs across the body. Body-prose underscore italic per rule 6; the asterisks-bold form *narû* preserved verbatim inside footnotes / EVIDENCE / markers / COMPARATIVE-HOOK comments per rules 4 and 5. Tracked as a new ch19 ledger entry; will be referenced in chapter 24 (Cuthaean Legend of Narām-Sîn — the principal cognate *narû* composition). Locked û-circumflex form preserved."
+  - term: "enitu"
+    decision: "FULL_GLOSS (new ledger entry) — *enitu* is not in glossary.yaml. Inline gloss at first body-prose mention in the §'The autobiographical opening' parentage paragraph ('an *enitu* — a high-priestess of the type whose office in Mesopotamian temple administration involved ritual celibacy; the term is rendered in Westenholz 1997 and Foster 2005 as \"high priestess\" or \"changeling-priestess\"'); preserved byte-for-byte from the claims document. The *enitu* term is load-bearing for the legend's narrative motivation (the priestess-mother whose ritual office forbade childbearing is why the infant is exposed 'in secret'). Tracked as a new ch19 ledger entry. Composition-specific."
+  - term: "aḫi abīya"
+    decision: "FULL_GLOSS (new ledger entry) — *aḫi abīya* is not in glossary.yaml. Inline transliteration and gloss at first body-prose mention in the §'The autobiographical opening' parentage paragraph ('his paternal uncles, in the legend's Akkadian phrasing *aḫi abīya* \"the brother(s) of my father\"'); preserved byte-for-byte from the post-human-normalize-edited claims document (F-1 fix: paternal kinship, not maternal). The textual puzzle (speaker claims unknown father yet knows of paternal uncles) is noted in the corrected body prose. Tracked as a new ch19 ledger entry. Locked diacritics (ḫ-with-dot, ī-macron) preserved."
+  - term: "râmu"
+    decision: "FULL_GLOSS (new ledger entry) — *râmu* is not in glossary.yaml. Inline gloss at first body-prose mention in the §'Ištar's love and the rise to kingship' opening paragraph ('the specific Akkadian noun is *râmu*, the relational love that the goddess directs toward favoured kings'); preserved byte-for-byte from the claims document. Composition-specific lexical entry within the divine-election theology of the *narû* genre. Tracked as a new ch19 ledger entry. Locked â-circumflex form preserved."
+  - term: "dāli"
+    decision: "FULL_GLOSS (new ledger entry) — *dāli* is not in glossary.yaml. Inline gloss at first body-prose mention in the §'Aqqi the water-drawer and the gardener apprenticeship' opening paragraph ('Aqqi ... described as a *dāli*, a \"drawer of water\", a labourer of the irrigation-and-water-supply class'); preserved byte-for-byte from the claims document. The *dāli* term is load-bearing for the legend's social-stratum framing. Tracked as a new ch19 ledger entry. Locked ā-macron form preserved."
+  - term: "nukaribbu"
+    decision: "FULL_GLOSS (new ledger entry) — *nukaribbu* is not in glossary.yaml. Inline gloss at first body-prose mention in the §'Aqqi the water-drawer and the gardener apprenticeship' appointment paragraph ('the gardener's trade — *nukaribbu*, the orchard-and-vegetable cultivator whose work in Mesopotamian agriculture sits within the irrigated landscape that Aqqi's own water-drawing trade supplies'); preserved byte-for-byte from the claims document. The *nukaribbu* appointment is the legend's specific framing of Sargon's pre-royal humble origin. Tracked as a new ch19 ledger entry. Composition-specific."
+
+self_check:
+  source_overview_present: true
+  every_claim_represented: PASS
+  no_factual_additions: PASS
+  forbidden_words_clear: |
+    PASS — direct grep on forbidden ornament-words (shimmering,
+    mystical, unfathomable, primordial-as-ornament, ineffable,
+    sacred-as-filler, fearsome, dread, eternal, boundless, infinite,
+    veiled, shrouded) returned 0 hits in body prose. 'Mighty' returned
+    2 hits in body prose, both inside the literal-quotation translation
+    of Foster 2005's published English rendering of the iconic opening
+    line ('Sargon, mighty king, king of Akkad, am I') — once as the
+    §'The autobiographical opening' section heading and once in the
+    paragraph rendering of the standard translation. Both are
+    preserved Foster-translation quotations and are explicitly
+    permitted per the chapter-draft skill's special-instructions
+    exception for preserved translation quotations. No 'Long ago...' /
+    'In the time before time...' / 'It is said that...' openings.
+  glossary_compliance: |
+    PASS — all locked glossary.yaml forms used. Sargon (English
+    primary; *Šarru-kīn* given parenthetically on first mention with
+    full etymology) throughout body prose. Šarru-kīn (š-háček,
+    ī-macron) at two substantive mentions. Narām-Sîn (ā-macron,
+    î-circumflex) throughout; *Naram-Sin* absent (0 hits). Ištar
+    (š-háček) throughout; *Ishtar* absent from body prose, appears
+    only in preserved COMPARATIVE-HOOK and footnote contents.
+    Aššur (š-háček) appears only in compound 'Aššurbanipal's library'
+    (4 hits, all locked form); *Ashur* / *Ashurbanipal* absent.
+    Sîn (î-circumflex) preserved in Narām-Sîn name throughout. Locked
+    diacritics throughout: Šarru-kīn, Ištar, Narām-Sîn, Aššurbanipal,
+    Sîn, Azupirānu, *aḫi abīya* (ḫ-with-dot, ī-macron), *râmu*
+    (â-circumflex), *dāli* (ā-macron), *narû* (û-circumflex).
+  no_never_use_terms: |
+    PASS — Inanna, Bilgames, Huwawa, Utu, Utnapishtim, Enki, Dumuzid,
+    Anzud, Ashur, Ishtar, Shamash all absent from body prose (verified
+    by direct grep — all 0 hits). The Akkadian-conventional 'Sargon'
+    is the locked body-prose form per glossary.yaml (not on the
+    never_use list; the form 'Sargon' is the chosen rendering, with
+    the Akkadian-original *Šarru-kīn* given parenthetically on first
+    mention). The form 'Naram-Sin' (without macrons) absent (0 hits);
+    locked Narām-Sîn used throughout.
+  variant_handling_matches_brief: |
+    PASS — single-prevalent recension classification per the brief.
+    The chapter presents the first-millennium Babylonian/Assyrian
+    recension (K.3401 + duplicate manuscripts; three fragments in the
+    dossier) as the prevailing reading; minor textual variants among
+    the duplicates are noted in the [VARIANT:] marker at the chapter
+    foot but are not foregrounded in the body prose. The substance of
+    the basket-on-the-river narrative is stable across witnesses per
+    the brief's variants.classification. The single [VARIANT:] marker
+    preserves the K.3401 + duplicate-manuscript-1 + duplicate-manuscript-2
+    framing with the F-2 post-human-normalize hedge ('open-web sources
+    confirm three manuscript fragments total but do not confirm an
+    NA/NB breakdown for the two further witnesses; Westenholz 1997's
+    manuscript inventory is the authoritative reference'). The
+    structural [LACUNA:] (lost closing peroration across all surviving
+    witnesses) is preserved and the body prose at the §'The conquest
+    catalogue and the closing autobiographical address' section
+    explicitly states that the closing is not substantively preserved
+    and is reconstructed in form only through generic affiliation
+    with the *Cuthaean Legend of Narām-Sîn* (chapter 24).
+  markers_byte_for_byte: |
+    PASS — all 5 markers (2 INFERENCE + 1 LACUNA + 1 RECONSTRUCTION
+    + 1 VARIANT) preserved byte-for-byte from .claims.approved.adoc,
+    including all pipe-delimited sub-fields (basis/risk;
+    source/scholarly_reconstruction; gap_source/fill_source/confidence;
+    primary/alt1/alt2/chosen/reason). Diff against the claims document
+    for marker lines returned zero output (grep -E
+    '^\[(INFERENCE|LACUNA|RECONSTRUCTION|VARIANT):' produced identical
+    line sets across the two files).
+  footnotes_carried_over: |
+    PASS — all 30 footnotes carried over verbatim from the claims
+    document. Diff against the claims document for footnote contents
+    returned zero output (grep -oE 'footnote:\[[^]]*\]' sorted
+    produced identical line sets across the two files).
+  evidence_tokens_carried_over: |
+    PASS — all 111 EVIDENCE tokens preserved byte-for-byte. Diff
+    against the claims document for EVIDENCE lines returned zero
+    output (grep -E '^// EVIDENCE:' produced identical line sets
+    across the two files).
+  not_padded: |
+    PASS — 217 lines for the chapter's claims-approved budget of 315
+    lines (one chapter-paragraph per claim-paragraph, plus the
+    necessary marker / footnote / EVIDENCE bundles and the section
+    structure). Materially shorter than ch18 (248 lines) because ch19's
+    claims document (315 lines) is itself shorter than ch18's (419
+    lines), and because ch19's single-prevalent recension structure
+    is more compact than ch18's three-recension co-equal structure
+    (no recension-by-recension narration of the same shared spine).
+    The chapter is in the 180–260-line range anchored in the task
+    prompt. Each claim paragraph corresponds to one chapter paragraph,
+    with the EVIDENCE and footnote bundles carried forward. No filler
+    transitions, no ornamental reverence, no recap paragraphs.
+  comparative_hooks_carried: |
+    PASS — all 7 COMPARATIVE-HOOK comments preserved byte-for-byte at
+    chapter foot: (i) Akkadian-internal Sargon legendary cycle
+    (Birth Legend, King of Battle, Cuthaean Legend — Westenholz 1997's
+    three-composition *narû* dossier); (ii) Akkadian-internal *narû*
+    genre cross-link to chapter 24 (Cuthaean Legend of Narām-Sîn);
+    (iii) Hebrew Bible (Exodus 2) Moses parallel — the single
+    most-discussed cross-cultural anchor, with motif-by-motif
+    correspondence detailed and the shared-Near-Eastern-motif vs.
+    direct-borrowing question reserved for the comparative chapter;
+    (iv) Greek-Roman Romulus and Remus exposed-twins typology (Rhea
+    Silvia / Mars; the Tiber; the she-wolf and Faustulus); (v) Persian
+    Cyrus's birth legend (Herodotus 1.107–122; Astyages and the
+    herdsman Mitradates); (vi) Egyptian Königsnovelle genre (genre-
+    level parallel rather than motif-level); (vii) Indic Karna's birth
+    legend (Mahābhārata; Kuntī and Sūrya; Adhiratha the charioteer
+    and Rādhā). Diff against the claims document for COMPARATIVE-HOOK
+    lines returned zero output.
+  italic_markup_correct: |
+    PASS — Akkadian common nouns and composition titles in body prose
+    use _underscore_ italic (_The Birth Legend of Sargon_, _Birth
+    Legend_, _Legend of Sargon_, _Sargon Birth Legend_, _Sargon naru_,
+    _narû_, _Cuthaean Legend of Narām-Sîn_, _King of Battle_,
+    _šar tamḫāri_, _enitu_, _aḫi abīya_, _râmu_, _dāli_, _nukaribbu_,
+    _Gilgameš_). Asterisk-bold markup confined to footnote contents
+    (e.g., *Before the Muses*, *Legends of the Kings of Akkade: The
+    Texts*, *Akkadian Literature of the Late Period*, *Gods, Demons
+    and Symbols of Ancient Mesopotamia*, *Religion in Ancient
+    Mesopotamia*, *The Myth of the Birth of the Hero*, *The Sargon
+    Legend: A Study of the Akkadian Text and the Tale of the Hero
+    Who Was Exposed at Birth*), EVIDENCE tokens (no asterisks),
+    COMPARATIVE-HOOK comments (where the *Birth Legend*, *narû*,
+    *enitu*, *tebah*, *ḥemar*, *zefet*, *šar tamḫāri*, etc. preserve
+    asterisks byte-for-byte), and marker contents (where byte-for-byte
+    preservation requires the original asterisks). Direct grep for
+    body-prose asterisks (excluding lines starting with footnote: /
+    // / [) returned zero hits.
+  gloss_ledger_updated: |
+    PASS — gloss-ledger.yaml updated. 7 existing entries updated for
+    ch19 use (Ištar, Sîn, Aššur, Akkad, Nineveh, Sargon, Narām-Sîn);
+    10 new ch19 entries created (Šarru-kīn, Aqqi, Azupirānu, narû,
+    enitu, aḫi abīya, râmu, dāli, nukaribbu, Agade). Latest
+    last_mention_in across all updated entries is '19' as required
+    (verified by python yaml.safe_load: 17 terms have
+    last_mention_in='19'). File grew from 1773 to 2086 lines.
+    Validates as well-formed YAML. The 'Sargon' entry was at
+    last_mention_in='00' (only chapter 00) before ch19 use — now
+    promoted to full REMINDER_GLOSS at ch19 first substantive use.
+    The 'Narām-Sîn' entry was at last_mention_in='00' before ch19
+    use — now promoted to short REMINDER_GLOSS at ch19 first
+    substantive use (the full first_mention_gloss is deferred to
+    chapter 24 where Narām-Sîn is the central figure). The 'Akkad'
+    entry was at last_mention_in='00' before ch19 use — now promoted
+    to full REMINDER_GLOSS with the Agade form preserved.
+  anchor_correct: |
+    PASS — chapter opens with [[ch-19-birth-legend-of-sargon]] per the
+    task prompt; the claims-only [[ch-19-birth-legend-of-sargon-claims]]
+    anchor is not used in the prose chapter.
+
+notes:
+  proceed_to: |
+    stage 15 (narrative-fidelity) in a fresh-context agent. Chapter 19
+    followed the single-prevalent recension pipeline pattern per the
+    brief (first-millennium K.3401 + duplicate manuscripts; three
+    fragments in the dossier; the composite established by Westenholz
+    1997). All three post-human-normalize fixes preserved correctly:
+    F-1 (paternal uncles — *aḫi abīya* 'the brother[s] of my father'
+    — the highland-populations framing held for paternal kinship per
+    the standard scholarly translation); F-2 (K.3401 + duplicate
+    manuscripts; three fragments attested; NA/NB breakdown of the two
+    further witnesses left un-verified per the open-web sources); F-3
+    (composition-date hedging clause preserved at the first
+    body-prose claim asserting first-millennium dating). The lost
+    closing peroration is preserved in the [LACUNA:] marker and
+    explicitly noted in body prose at the §'The conquest catalogue
+    and the closing autobiographical address' section; no
+    extrapolation of a resolution. The cross-cultural Moses /
+    Exodus 2 parallel is preserved as a COMPARATIVE-HOOK comment at
+    chapter foot (NOT retold in body prose; Hebrew Bible is out of
+    scope per scope.md); the body-prose treatment is confined to the
+    Akkadian composition on its own terms. The chapter draft is
+    ready for fidelity verification.
