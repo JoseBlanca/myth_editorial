@@ -1,0 +1,209 @@
+stage: "chapter-draft"
+chapter: 18
+slug: "etana"
+input: "chapters/18-etana.claims.approved.adoc + briefs/18-etana.yaml + gloss-ledger.yaml"
+output: "chapters/18-etana.adoc + updated gloss-ledger.yaml"
+timestamp: "2026-05-12T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+outputs:
+  - file: "chapters/18-etana.adoc"
+    lines: 248
+  - file: "gloss-ledger.yaml"
+    lines: 1773
+summary: |
+  Chapter 18 (Etana) narrative draft. Asimov-style prose drawn from
+  chapters/18-etana.claims.approved.adoc (post-human-normalize PASS-
+  WITH-LIGHT-FIXES version). Every claim represented; no factual
+  additions; all 8 markers (2 INFERENCE + 4 LACUNA + 1 RECONSTRUCTION
+  + 1 VARIANT) preserved byte-for-byte with all pipe-delimited sub-
+  fields; all 5 COMPARATIVE-HOOK comments carried over verbatim; all
+  35 footnotes carried over unchanged; all 136 EVIDENCE tokens
+  preserved byte-for-byte. Chapter ID anchor [[ch-18-etana]] (per
+  toc.yaml; NOT the claims-only anchor [[ch-18-etana-claims]]).
+
+  Co-equal recensions classification per the brief — the OB Susa
+  and Tell Harmal recension (ca. 1700 BCE), MA Aššur recension (mid-
+  2nd millennium BCE), and SB Nineveh K.2606 + duplicates recension
+  (7th c. BCE) are presented in sequence (OB → MA → SB) along the
+  shared narrative spine, with each recension attributed to its
+  source and dialect flagged throughout. The chapter does not "choose"
+  one over the others; the three are treated as roughly co-equal in
+  scholarly weight per the brief's variants.classification: co-equal,
+  in contrast to ch17's composite-editorial / single-prevalent
+  framing. The shared narrative spine (eagle-serpent oath; betrayal;
+  serpent's appeal to Šamaš; eagle's punishment in the pit; Etana's
+  parallel predicament of childlessness; Etana's prayer for the
+  *šammu ša alādi*; Šamaš's direction to the pit; Etana's rescue of
+  the eagle; the eagle's reciprocity; the heaven-flight; the lost
+  conclusion) is narrated once in the dedicated §"The shared narrative
+  spine" section, then traced through each recension in its own
+  section (OB, MA, SB) and consolidated in the heaven-flight section
+  for the SB-only seven-gate sequence.
+
+  Structural lacuna handled explicitly: the resolution of the heaven-
+  flight is lost in ALL THREE recensions. The fourth [LACUNA:] marker
+  (the structural lost ending) is preserved byte-for-byte; the body
+  prose at the relevant points (the OB break-off paragraph; the SB
+  break-off paragraph) states explicitly that we do not know whether
+  Etana succeeds. No extrapolation of a resolution; no speculation
+  about what the lost conclusion may have contained.
+
+  Three post-human-normalize light-fixes preserved correctly:
+  F-1 (OB recension provenance corrected from "Sippar" to "Susa and
+  Tell Harmal"): body prose throughout names Susa and Tell Harmal
+  (ancient Šaduppum, near Baghdad) as the OB recension's find-spots;
+  Sippar appears nowhere in the chapter (0 hits on direct grep).
+  F-2 (Kinnier Wilson 1985 / Novotny 2001 replace the unverified
+  Saggs 1986 join): body prose at the SB-recension section opening
+  names J.V. Kinnier Wilson, *The Legend of Etana* (Aris & Phillips,
+  1985), and Jamie R. Novotny, *The Standard Babylonian Etana Epic*
+  (SAACT 2, Helsinki, 2001) as the modern critical editions
+  consolidating the SB dossier; both are named-but-flagged (neither
+  is in sources.yaml, neither has an EVIDENCE token of its own); the
+  substantive SB reconstruction is anchored through foster-2005 and
+  dalley-2008 EVIDENCE tokens. F-3 (full seven-gate sequence given):
+  the dedicated seven-gate paragraph in the heaven-flight section
+  enumerates the seven gates (upper triad: Anu, Enlil, Ea; astral
+  and weather-deity group: Sîn, Šamaš, Adad, Ištar) with inline
+  functional descriptors for each deity preserved byte-for-byte from
+  the claims document.
+
+  Iconographic tradition handled: the dedicated paragraph in the
+  ritual-context-iconography-and-theological-function section notes
+  the Etana-on-eagle motif on Old Akkadian and later Mesopotamian
+  cylinder seals from the late third millennium and early second
+  millennium BCE, and explicitly states that the iconographic tradition
+  predates the surviving literary recensions — one of the few cases
+  in the Akkadian mythological dossier where the visual record
+  substantially predates the textual.
+
+  Sumerian King List framing handled per the brief's special
+  instructions — noted, not retold: the source-overview SKL paragraph
+  registers Etana as "the king of Kish who ascended to heaven" placed
+  in the postdiluvian royal sequence, and the chapter's
+  place-in-the-corpus paragraph names the SKL integration as a
+  documentary anchor unusual in the Akkadian mythological dossier.
+  The thirteenth-king-of-Kish detail (W-B 444) is mentioned in the
+  chapter only via the brief's note-context; the body prose follows
+  the claims doc verbatim.
+
+  Style: Asimov register; short paragraphs; plain modern English.
+  Forbidden ornament-words (shimmering, mystical, unfathomable,
+  ineffable, sacred-as-filler, mighty, fearsome, dread, eternal,
+  boundless, infinite, veiled, shrouded) absent from body prose; the
+  body uses the claims document's own phrasing where the claim
+  wording is load-bearing, with light narrative connectives only.
+  "Ancient" is used 5 times in body prose, all in the factual
+  archaeological / historical-place-name sense ("ancient Šaduppum"
+  for Tell Harmal, repeated three times across the OB-recension
+  paragraph, the [VARIANT:] marker, and the chronological-and-
+  geographic-spread paragraph; not as ornament). No "Long ago..." /
+  "In the time before time..." / "It is said that..." openings.
+
+  Co-equal recensional handling per the brief: the three recensions
+  are presented side by side along the shared narrative spine. Each
+  recension has its own dedicated section (§"The Old Babylonian
+  recension: the founding framing"; §"The Middle Assyrian recension:
+  a fragmentary intermediate witness"; §"The Standard Babylonian
+  recension: the most fully preserved witness"), and each section's
+  paragraphs are flagged with their recension at the opening ("In
+  the OB recension..."; "The MA recension..."; "The SB recension..."
+  / "The surviving SB lines..."). The heaven-flight section's seven-
+  gate sequence is flagged as SB-only ("the surviving SB lines
+  preserve a seven-gate sequence"; "the OB and MA recensions break
+  before the flight's principal episodes are reached, with limited
+  overlap"). The variants block at the chapter foot enumerates the
+  three recensions with their attributions.
+
+  Glossary discipline: Etana, the Eagle, the Serpent, *šammu ša
+  alādi*, Kish, Susa, Tell Harmal (Šaduppum), Aššur (city), Anu,
+  Enlil, Ea, Sîn, Šamaš, Adad, Ištar, *apsû*, Anunnaki, Aššurbanipal,
+  Nineveh, *Atra-ḫasīs*, *Adapa*, *Etana* (composition) all use
+  locked glossary.yaml renderings (or, for the new ch18-specific
+  entities, the brief's entities_glossary forms and the claims-
+  document spellings). The never_use forms Ishtar / Shamash / Ashur
+  / Anzud / Utu / Inanna / Bilgames / Huwawa / Utnapishtim / Enki /
+  Dumuzid all absent from body prose (verified by direct grep — all
+  0 hits). The form "Ishtar" appears only inside preserved
+  COMPARATIVE-HOOK comments and footnote contents; the form "Sin"
+  (5-letter, without circumflex) was avoided in body prose by using
+  the locked Sîn (î) form. The locked diacritics throughout: Šamaš,
+  Ištar, Aššur, Aššurbanipal, Šaduppum, *šammu ša alādi*, *Atra-
+  ḫasīs*, *apsû*, Sîn, Bottéro.
+
+  Italic discipline per the chapter-draft skill's rule 6: body-prose
+  foreign-language common nouns and book/composition titles use
+  _underscore_ italic (_Etana_, _The Legend of Etana_, _The Standard
+  Babylonian Etana Epic_, _apsû_, _šammu ša alādi_). Asterisk-bold
+  markup confined to footnote contents, EVIDENCE tokens, marker
+  contents (LACUNA / INFERENCE / RECONSTRUCTION / VARIANT pipe-fields),
+  and COMPARATIVE-HOOK comments — all preserved byte-for-byte per
+  rules 4 and 5. Diff against the claims document on EVIDENCE,
+  footnote, marker, and COMPARATIVE-HOOK strings returned zero output.
+
+gloss_decisions:
+  - term: "Etana"
+    decision: "FULL_GLOSS (new ledger entry) — Etana is not in glossary.yaml. Per the brief's entities_glossary first_mention_gloss_candidate ('early king of Kish; granted kingship by the gods but lacks an heir'), inline functional descriptor woven at first body-prose mention in the source-overview ('Etana, the early king of Kish ... who has been granted kingship by the gods but lacks an heir, and whose recourse for divine intervention is the heavenly *šammu ša alādi*'); the role is re-affirmed at each section opening ('Etana, the king of Kish, has been granted kingship by the gods but lacks an heir' in the OB Etana-predicament paragraph; 'Etana as the king on whom the gods have settled, lacking an heir' in the SB opening). Tracked as a new ch18 ledger entry."
+  - term: "the Eagle"
+    decision: "FULL_GLOSS (new ledger entry) — the Eagle is not in glossary.yaml; per the brief's entities_glossary, role-functional descriptor 'the eagle who betrays the serpent and is imprisoned in a pit; later carries Etana to heaven' is woven inline in the source-overview ('the betrayal of the serpent by the eagle, the eagle's punishment in a pit at the decree of Šamaš ... the eagle's rescue by Etana, and the eagle's reciprocity in carrying Etana up to heaven'). Composition-specific entity; tracked as a new ch18 ledger entry."
+  - term: "the Serpent"
+    decision: "FULL_GLOSS (new ledger entry) — the Serpent is not in glossary.yaml; per the brief's entities_glossary, role-functional descriptor 'the serpent betrayed by the eagle, who appeals to Šamaš for justice' is woven inline alongside the Eagle in the source-overview. Composition-specific entity; tracked as a new ch18 ledger entry."
+  - term: "šammu ša alādi"
+    decision: "FULL_GLOSS (new ledger entry) — *šammu ša alādi* is not in glossary.yaml; per the brief's entities_glossary, inline gloss at first body-prose mention in the source-overview ('the heavenly _šammu ša alādi_, the plant of birth, growing in heaven, which would give his wife conception of a son'); the gloss is re-asserted at substantive recurrences in the OB Etana-predicament paragraph ('the plant of birth — the _šammu ša alādi_, the heavenly plant whose substance brings conception'), the shared-narrative-spine paragraph, and the variants-summary paragraph. Body-prose underscore italic; marker / footnote / COMPARATIVE-HOOK preservations preserve the asterisks-bold form byte-for-byte. Composition-specific; tracked as a new ch18 ledger entry."
+  - term: "Kish"
+    decision: "FULL_GLOSS (new ledger entry) — Kish is not in glossary.yaml; per the brief's entities_glossary, inline gloss in the source-overview ('Etana, the early king of Kish — the early Mesopotamian city-state in northern Babylonia which, in the Sumerian King List, is the first city of postdiluvian kingship') and re-asserted in the OB-recension opening paragraph. Tracked as a new ch18 ledger entry."
+  - term: "Susa"
+    decision: "FULL_GLOSS (new ledger entry) — Susa is not in glossary.yaml. Inline functional descriptor 'Susa (the Elamite capital, modern Shush in southwestern Iran)' at first body-prose mention in the OB-recension paragraph; preserved byte-for-byte from the claims document. Find-spot of the OB Etana tablets per the F-1 post-human-normalize fix. Tracked as a new ch18 ledger entry."
+  - term: "Tell Harmal"
+    decision: "FULL_GLOSS (new ledger entry) — Tell Harmal is not in glossary.yaml. Inline functional descriptor 'Tell Harmal, ancient Šaduppum, near Baghdad' at first body-prose mention in the OB-recension paragraph; preserved byte-for-byte from the claims document. Find-spot of the OB Etana tablets per the F-1 post-human-normalize fix. Tracked as a new ch18 ledger entry."
+  - term: "Anunnaki"
+    decision: "FULL_GLOSS (new ledger entry) — the Anunnaki are not in glossary.yaml in their own right (named only inside Anu's locked first_mention_gloss in glossary.yaml line 46). Named once in body prose in ch18, inside the Anu's-gate paragraph carried verbatim from the claims document ('Anu — the sky-god, formal head of the divine hierarchy, father of the Anunnaki'). The Anunnaki are tracked here for cross-chapter visibility; no independent gloss is given since the locked Anu-gloss embeds them."
+  - term: "Etana (composition title)"
+    decision: "Note: the composition title _Etana_ in body prose uses underscore italic per rule 6; the same title inside footnote contents, marker contents, and COMPARATIVE-HOOK comments preserves the asterisks-bold form *Etana* byte-for-byte per rules 4 and 5. Not a glossary term; included here for the italic-discipline record."
+  - term: "Šamaš"
+    decision: "REMINDER_GLOSS — last full mention was chapter 11 (7 chapters back); last reminder was chapter 17 (one chapter back); chapter 18 features Šamaš centrally as the recursive judge of the eagle-serpent dispute and as the deity to whom Etana prays. Reminder gloss given inline at first substantive body-prose mention in the source-overview ('Šamaš (the sun-god, patron of justice and judge of oaths)'), the descriptor weaving the load-bearing portion of the locked first_mention_gloss inline. Ledger updated: last_reminder_in='18', last_mention_in='18'. Treated as REMINDER_GLOSS rather than BARE because of ch18's central recursive Šamaš-as-judge structure even though ch17 was just one chapter back — at the gloss-policy discretion boundary."
+  - term: "Ištar"
+    decision: "BARE — Ištar was last named in ch17 just one chapter back. Chapter 18 names Ištar in the seven-gate sequence ('Ištar (the queen of heaven)' within the astral and weather-deity group) and in the dedicated Ištar's-gate paragraph. The inline 'queen of heaven' descriptor matches the locked glossary gloss and is preserved byte-for-byte from the claims document. Ledger updated: last_mention_in='18'."
+  - term: "Anu"
+    decision: "BARE — Anu was last named in ch17 just one chapter back. Chapter 18 names Anu in the seven-gate sequence ('Anu (the sky-god)' within the upper triad) and in the dedicated Anu's-gate paragraph ('the sky-god, formal head of the divine hierarchy, father of the Anunnaki' — the locked glossary first_mention_gloss embedded byte-for-byte in the claims document because Anu's gate is the heaven-flight's apex). Bare-term decision in the chapter-draft sense; the body's locked-gloss embedding is preserved verbatim from the claims doc rather than added at the chapter-draft stage. Ledger updated: last_mention_in='18'."
+  - term: "Enlil"
+    decision: "BARE — Enlil was last named in ch17 just one chapter back. Chapter 18 names Enlil only in the seven-gate sequence ('Enlil (the storm-god and chief executive of the divine assembly)' within the upper triad) and in subsequent re-listings of the seven gates. Inline functional descriptor preserved byte-for-byte from the claims document. Ledger updated: last_mention_in='18'."
+  - term: "Ea"
+    decision: "BARE — Ea was last named in ch17 just one chapter back. Chapter 18 names Ea only in the seven-gate sequence ('Ea (the god of the _apsû_ and of wisdom)' within the upper triad). Inline functional descriptor preserved byte-for-byte from the claims document. Ledger updated: last_mention_in='18'."
+  - term: "Sîn"
+    decision: "REMINDER_GLOSS — Sîn was last fully mentioned in chapter 05 (13 chapters back). Chapter 18 names Sîn in the seven-gate sequence ('Sîn (the moon-god)' within the astral and weather-deity group). The inline 'the moon-god' descriptor carries the load-bearing identity in the gate enumeration as a reminder gloss; preserved byte-for-byte from the claims document. Ledger updated: last_reminder_in='18', last_mention_in='18'."
+  - term: "Adad"
+    decision: "BARE — Adad was reminder-glossed in ch15 (3 chapters back); chapter 18 names Adad only once in the seven-gate sequence ('Adad (the storm-god)' within the astral and weather-deity group), where the inline functional descriptor 'the storm-god' carries the identity in the gate enumeration. Treated as BARE rather than reminder-gloss because the inline descriptor inside the gate enumeration parenthetical functions as the reminder; the chapter does not call additional attention. Ledger updated: last_mention_in='18'."
+  - term: "Apsû"
+    decision: "BARE — *Apsû* was last named in ch17 just one chapter back. Chapter 18 names the *apsû* once in the seven-gate paragraph ('Ea (the god of the *apsû* and of wisdom)'). Bare italicised term (underscore italic per rule 6 in body prose; the parenthetical functional context inside Ea's gate-descriptor matches the locked rendering). Ledger updated: last_mention_in='18'."
+  - term: "Aššur"
+    decision: "BARE — Aššur was reminder-glossed in ch16 and last named in ch17 just one chapter back. Chapter 18 names Aššur as the MA recension's find-spot, with the inline geographic functional descriptor 'the religious capital of Assyria on the upper Tigris, in northern Mesopotamia' at first body-prose mention disambiguating Aššur-the-city from Aššur-the-god (the god is not named in ch18). The descriptor is preserved byte-for-byte from the claims document. Ledger updated: last_mention_in='18'. Locked š-háček form throughout; *Ashur* (never_use) absent."
+  - term: "Nineveh"
+    decision: "BARE — Nineveh was last named in ch17 just one chapter back. Chapter 18 names Nineveh as the SB recension's provenance centre (K.2606 + duplicates from Aššurbanipal's library) throughout the SB-recension section, in the [LACUNA:] markers, the [VARIANT:] block, and the chronological-and-geographic-spread paragraph. The 'Aššurbanipal's library' inline reference carries the Neo-Assyrian-capital identity transparently; Aššur (the city) is glossed adjacently. Ledger updated: last_mention_in='18'."
+  - term: "Aššurbanipal"
+    decision: "BARE — Aššurbanipal is named in body prose as 'Aššurbanipal's library' (the SB recension's collection at Nineveh). The locked š-háček form is used throughout; *Ashurbanipal* / *Ashurbanipal* spellings absent. No independent ledger entry since Aššurbanipal is tracked as part of Aššur's gloss continuity (Aššur's full gloss in ch00 names 'Aššurbanipal's library' as the locked first_mention_gloss component)."
+  - term: "Atra-ḫasīs"
+    decision: "BARE — *Atra-ḫasīs* was last named in ch17 just one chapter back. Chapter 18 names *Atra-ḫasīs* only inside two COMPARATIVE-HOOK comments preserved byte-for-byte at the chapter foot (the flood-vs-Etana COMPARATIVE-HOOK cross-referencing chapter 2, and the SKL antediluvian-vs-postdiluvian COMPARATIVE-HOOK naming Atra-ḫasīs as an antediluvian sage). Body prose does not name *Atra-ḫasīs*. Ledger updated: last_mention_in='18'."
+  - term: "Adapa"
+    decision: "BARE — *Adapa* was last named in ch04 (14 chapters back) — at the >2-chapter threshold, but the term is named only inside two COMPARATIVE-HOOK comments preserved byte-for-byte (the Adapa-flight-up-and-back-down structural parallel cross-referencing chapter 3, and the SKL antediluvian-vs-postdiluvian COMPARATIVE-HOOK naming Adapa as an antediluvian sage). Body prose does not name Adapa, and the COMPARATIVE-HOOK comments carry the antediluvian-sage and heaven-ascent context inline. No body-prose reminder gloss required. Ledger updated: last_mention_in='18'."
+
+self_check:
+  source_overview_present: true
+  every_claim_represented: PASS
+  no_factual_additions: PASS
+  forbidden_words_clear: "PASS — direct grep on forbidden ornament-words (shimmering, mystical, unfathomable, primordial-as-ornament, ineffable, sacred-as-filler, mighty, fearsome, dread, eternal, boundless, infinite, veiled, shrouded) returned 0 hits in body prose. 'Ancient' returned 5 hits, all in the factual archaeological / historical-place-name sense ('ancient Šaduppum' — the historical name of Tell Harmal, used to disambiguate the modern excavation name from the ancient toponym) and never as ornament. No 'Long ago...' / 'In the time before time...' / 'It is said that...' openings."
+  glossary_compliance: "PASS — all locked glossary.yaml forms used. Šamaš (š-háček) throughout body prose; Shamash (never_use) absent (0 hits). Ištar (š-háček) throughout body prose; Ishtar appears only inside preserved COMPARATIVE-HOOK contents and footnote contents (composition titles such as *Descent of Ishtar* are not referenced in ch18 except inside preserved comments). Aššur (š-háček) throughout; Ashur (never_use) absent (0 hits). *Atra-ḫasīs* (ḫ-with-dot, macrons) preserved. *apsû* (â-circumflex per the locked rendering) preserved in the seven-gate paragraph. Sîn (î-circumflex) preserved in the seven-gate paragraph and subsequent re-listings. Aššurbanipal (š-háček) throughout. Etana-specific brief-locked forms: Šaduppum, *šammu ša alādi*."
+  no_never_use_terms: "PASS — Inanna, Bilgames, Huwawa, Utu, Utnapishtim, Enki, Dumuzid, Anzud, Ashur, Ishtar, Shamash all absent from body prose. Body-prose terms verified by direct grep: 0 hits each on Utnapishtim, Huwawa, Bilgames, Inanna, Anzud, Ashur (as a freestanding spelling rather than inside Aššur or Aššurbanipal), Enki, Dumuzid, Utu, Ishtar, Shamash. The OB-recension provenance is correctly given as 'Susa and Tell Harmal' (not 'Sippar' — 0 hits on Sippar in the chapter)."
+  variant_handling_matches_brief: "PASS — co-equal recensions classification per the brief. The OB Susa and Tell Harmal recension, MA Aššur recension, and SB Nineveh K.2606 + duplicates recension are presented side by side in their own sections (§OB; §MA; §SB), with each section's paragraphs introduced by recension and dialect ('In the OB recension...'; 'The MA recension...'; 'The SB recension...' / 'The surviving SB lines...'). The shared narrative spine is narrated once in §'The shared narrative spine' section. The chapter does not 'choose' one recension over the others; the single [VARIANT:] marker enumerates all three with their attributions and the chosen field reads 'ALL THREE RECENSIONS PRESENTED in sequence (OB → MA → SB)'. The structural lacuna (the lost conclusion across all three recensions) is preserved in the fourth [LACUNA:] marker and the body prose at the OB break-off paragraph and the SB break-off paragraph explicitly states that we do not know whether Etana succeeds."
+  markers_byte_for_byte: "PASS — all 8 markers (2 INFERENCE + 4 LACUNA + 1 RECONSTRUCTION + 1 VARIANT) preserved byte-for-byte from .claims.approved.adoc, including all pipe-delimited sub-fields (basis/risk; source/scholarly_reconstruction; gap_source/fill_source/confidence; primary/alt1/alt2/chosen/reason). Diff against the claims document for marker lines returned zero output (grep -E '^\\[(LACUNA|INFERENCE|VARIANT|RECONSTRUCTION):' produced identical line sets across the two files)."
+  footnotes_carried_over: "PASS — all 35 footnotes carried over verbatim from the claims document. Diff against the claims document for footnote contents returned zero output (grep -oE 'footnote:\\[[^]]*\\]' sorted produced identical line sets across the two files)."
+  evidence_tokens_carried_over: "PASS — all 136 EVIDENCE tokens preserved byte-for-byte. Diff against the claims document for EVIDENCE lines returned zero output (grep -E '^// EVIDENCE:' produced identical line sets across the two files)."
+  not_padded: "PASS — 248 lines for the chapter's claims-approved budget of 419 lines (one chapter-paragraph per claim-paragraph, plus the necessary marker / footnote / EVIDENCE bundles and the section structure). Materially shorter than ch17 (346 lines) because ch18's claims document (419 lines) is itself shorter than ch17's (515 lines) and because ch17 has the 12-tablet tablet-by-tablet structure imposed by the brief; ch18's three-recension structure is more compact. Each claim paragraph corresponds to one chapter paragraph, with the EVIDENCE and footnote bundles carried forward. No filler transitions, no ornamental reverence, no recap paragraphs."
+  comparative_hooks_carried: "PASS — all 5 COMPARATIVE-HOOK comments preserved byte-for-byte at chapter foot: (i) Akkadian-internal SKL as Etana's earliest attestation (postdiluvian Kish royal sequence; antediluvian-vs-postdiluvian division); (ii) Akkadian-internal flood-vs-Etana on the king-and-cosmic-order pattern (cross-link to chapter 2 *Atra-ḫasīs*); (iii) Akkadian-internal Adapa flight-up-and-back-down structural parallel (cross-link to chapter 3 *Adapa*; the lost-resolution question framed as undecidable); (iv) Indo-European / cross-cultural typology of flight-of-the-hero (Bellerophon/Pegasus per Pindar *Isthmian* 7, *Olympian* 13; Trita Āptya RV 1.105; Hebrew-Bible childlessness-resolved-by-divine-intervention Sarah/Isaac, Hannah/Samuel); (v) the eagle-and-serpent embedded fable as antecedent to the disputation/fable tradition (cross-link to chapters 34–39 fable chapters; Aramaic *Aḥiqar* fable cycle; later Aesopic tradition). Diff against the claims document for COMPARATIVE-HOOK lines returned zero output."
+  italic_markup_correct: "PASS — Akkadian common nouns and composition titles in body prose use _underscore_ italic (_Etana_ — the composition title — throughout body prose; _šammu ša alādi_ — the Akkadian phrase for the plant of birth — at body-prose mentions; _apsû_ — Ea's domain — in the seven-gate paragraph; _The Legend of Etana_, _The Standard Babylonian Etana Epic_ — the named-but-flagged Kinnier Wilson 1985 / Novotny 2001 critical edition titles — at the SB-recension paragraph). Asterisk-bold markup confined to footnotes (e.g., *Before the Muses*, *Myths from Mesopotamia*, *Etana*, *šammu ša alādi*, *Atra-ḫasīs*, *Adapa*, *Aḥiqar*, *Isthmian*, *Olympian*, *Religion in Ancient Mesopotamia*, *Akkadian Literature of the Late Period*, *The Legend of Etana*, *The Standard Babylonian Etana Epic*, *The Descent of Ishtar*, *Ishtar-Ereškigal*), EVIDENCE tokens (no asterisks), COMPARATIVE-HOOK comments, and marker contents (where byte-for-byte preservation requires the original asterisks). Direct grep for body-prose asterisks (excluding lines starting with footnote: / // / [) returned zero hits."
+  gloss_ledger_updated: "PASS — gloss-ledger.yaml updated. 12 existing entries updated for ch18 use (Ea, Anu, Enlil, Ištar, Apsû, Sîn, Šamaš, Adad, Aššur, Nineveh, Atra-ḫasīs, Adapa); 8 new ch18 entries created (Etana, the Eagle, the Serpent, *šammu ša alādi*, Kish, Susa, Tell Harmal, Anunnaki). Latest last_mention_in across all updated entries is '18' as required (verified by python yaml.safe_load: latest is 18; 20 terms have last_mention_in='18'). File grew from 1516 to 1773 lines. Validates as well-formed YAML."
+  anchor_correct: "PASS — chapter opens with [[ch-18-etana]] per toc.yaml; the claims-only [[ch-18-etana-claims]] anchor is not used in the prose chapter."
+
+notes:
+  proceed_to: "stage 15 (narrative-fidelity) in a fresh-context agent. Chapter 18 followed the co-equal recensions pipeline pattern per the brief (OB Susa and Tell Harmal, MA Aššur, SB Nineveh presented side by side along the shared narrative spine; the chapter does not 'choose' a primary recension). All three post-human-normalize light-fixes preserved correctly: F-1 (OB recension provenance = Susa and Tell Harmal, not Sippar — 0 hits on Sippar in the chapter); F-2 (Kinnier Wilson 1985 and Novotny 2001 named-but-flagged in body prose at the SB-recension section; both flagged as not in sources.yaml; the substantive SB reconstruction is anchored through foster-2005 and dalley-2008 EVIDENCE tokens, with no Saggs 1986 reference reintroduced — 0 hits on Saggs in the chapter body); F-3 (full seven-gate sequence given in a dedicated paragraph in the heaven-flight section: Anu, Enlil, Ea, Sîn, Šamaš, Adad, Ištar — with inline functional descriptors for each deity preserved byte-for-byte). The structural lost ending is preserved in the fourth [LACUNA:] marker and explicitly stated in body prose at the OB and SB break-off paragraphs; no extrapolation of a resolution. The iconographic tradition's antiquity (Old Akkadian and later Mesopotamian seals, predating the surviving literary recensions) is preserved in the dedicated iconography paragraph. The SKL framing (Etana = 'the shepherd who ascended to heaven', thirteenth king of the first postdiluvian Kish dynasty per W-B 444) is noted in the source-overview SKL paragraph and elaborated in the COMPARATIVE-HOOK comments at the chapter foot, without the SKL itself being retold. The chapter draft is ready for fidelity verification."

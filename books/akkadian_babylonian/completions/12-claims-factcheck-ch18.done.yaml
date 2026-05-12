@@ -1,0 +1,231 @@
+stage: "claims-factcheck"
+chapter: 18
+slug: "etana"
+input: "chapters/18-etana.claims.adoc"
+brief_file: "briefs/18-etana.yaml"
+output: "chapters/18-etana.claims.factcheck.yaml"
+timestamp: "2026-05-11T00:00:00Z"
+status: "completed"
+agent_model: "claude-opus-4-7[1m]"
+fresh_context: true
+
+verdict: PASS-WITH-LIGHT-FIXES
+block_severity: NONE   # the HIGH finding F-1 is a load-bearing factual error but is localised to a single attribute (OB provenance) and can be corrected by mechanical find-and-replace; no structural rewrite required, so PASS-WITH-LIGHT-FIXES rather than BLOCK
+proceed_to_stage: 13   # post-human-normalize claims, with three localised fixes + one brief revision at the human-review step
+
+tallies:
+  claims_identified: 32
+  evidence_tokens_audited: 132
+  triangulations_performed: 9
+  supported: 27
+  internal_variance: 0
+  factual_error: 1     # F-1 OB recension provenance (Susa+Tell Harmal, NOT Sippar)
+  citation_wrong: 1    # F-3 Saggs 1986 not located; Kinnier Wilson 1985 / Novotny 2001 are the actual editions
+  fabrication: 0
+  unverified: 1        # F-3 Saggs 1986 join — named-but-flagged but unverifiable
+  contamination: 0
+  silent_bridges: 0
+  marker_issues: 0
+  glossary_violations: 0
+  hedging_needed: 1    # F-2 heaven-flight gates: chapter mentions Ištar and Anu; surviving text mentions seven deities
+  notes: 1             # N-1 brief's "antediluvian king" loc-note is wrong; chapter is correct
+
+severity_summary:
+  high_findings: 1     # F-1 OB Sippar misattribution — pervasive (≈10–12 instances) but mechanical to fix
+  medium_findings: 2   # F-2 heaven-flight gates incomplete; F-3 Saggs 1986 named-but-flagged unverifiable
+  low_findings: 0
+
+high_findings_detail:
+  - finding_id: F-1
+    kind: FACTUAL-ERROR
+    locations: [line 9 (comment block), line 51 (source-overview), line 57 (OB-recension paragraph), line 58 (EVIDENCE token), line 64 (MA-recension paragraph), line 88 (LACUNA marker), line 96 (RECONSTRUCTION marker), line 113 (OB-recension section), line 116 (EVIDENCE token), line 151 (OB-recension closing), line 152 (EVIDENCE token), line 258 (Variants block), line 280 (chronological spread)]
+    issue: "The Old Babylonian recension of Etana is from Susa (Elamite capital) and Tell Harmal (Šaduppum, near Baghdad), NOT from Sippar. The chapter's 'OB Sippar' attribution is pervasive across approximately 10–12 instances and is factually wrong in every case. Per Wikipedia s.v. Etana, Hejon07 Substack, Kinnier Wilson 1985 catalogue, and Novotny 2001: 'The Old Babylonian version comes from Susa and Tell Harmal, the Middle Assyrian version comes from Assur, and the Standard version is from Nineveh.' The error appears to have been introduced by pattern-matching from other OB Akkadian compositions (Atra-ḫasīs MS B; OB Anzû; OB Gilgameš Sippar tablet) where Sippar IS the principal OB provenance. The Etana OB tradition is specifically Susa + Tell Harmal. Fix is mechanical: global find-and-replace 'OB Sippar' → 'OB Susa+Tell Harmal' (or simply 'OB recension'). HIGH severity but does not BLOCK because the fix is localised."
+
+medium_findings_detail:
+  - finding_id: F-2
+    kind: HEDGING-NEEDED
+    locations: [line 107 (shared-spine paragraph), line 213 (Ištar's gate paragraph), line 219 (Anu's gate paragraph)]
+    issue: "The heaven-flight gates citation mentions only Ištar and Anu when the surviving SB lines preserve seven gates: 'the gates of Anu, Enlil and Ea' AND 'the gates of Sin, Shamash, Adad and Ishtar' (per World History Encyclopedia, multiple translation mirrors). Seven deities at gates, not two. The chapter's selective citation foregrounds the two most narratively load-bearing (Ištar as plant-of-birth keeper; Anu as head of hierarchy) but understates the documentary record. Recommended augmentation: at line 107, expand to mention the full seven-gate sequence; at lines 213 and 219, retain the existing focus but add a brief note on the wider sequence."
+  - finding_id: F-3
+    kind: CITATION-WRONG / UNVERIFIED
+    locations: [line 32 (comment block), line 69 (SB-recension paragraph), line 92 (LACUNA marker), line 176 (SB-recension section), line 258 (Variants block)]
+    issue: "The 'important join published by H.W.F. Saggs in 1986' is not located in any open-web source. H.W.F. Saggs's bibliography (per Wikipedia and CDLI Wiki) does not list any Etana publication in 1986. The actual modern scholarly editions that consolidate and extend the SB Etana dossier are: (i) J.V. Kinnier Wilson, *The Legend of Etana* (Aris & Phillips, 1985) — the edition that reconstructs all three recensions; (ii) Kinnier Wilson, *Studia Etanaica* (Ugarit-Verlag, 2007) — the follow-up volume; (iii) Jamie R. Novotny, *The Standard Babylonian Etana Epic* (SAACT 2, Helsinki, 2001) — the modern critical edition with cuneiform/transliteration/score. The named-but-flagged framing in the chapter is appropriate but the underlying claim is unverified and likely a confusion with Kinnier Wilson 1985 (right year-region, wrong author). Recommended substitution: replace 'Saggs 1986 join' with 'Kinnier Wilson 1985 / Novotny 2001' as named-but-flagged anchors."
+
+low_findings_detail: []
+
+notes:
+  - note_id: N-1
+    kind: BRIEF-INCONSISTENCY
+    location: "briefs/18-etana.yaml line 20"
+    issue: "Brief's sources.secondary loc-note for bottero-2001 reads 'passim — Etana as antediluvian king'. This is inconsistent with (a) the brief's own cross_cultural_parallels block (line 86, which acknowledges the postdiluvian placement), (b) the scholarly consensus per the SKL (Etana is the 13th king of the FIRST POSTDILUVIAN Kish dynasty per W-B 444), and (c) the chapter body (which correctly places Etana on the postdiluvian side of the flood-divide). The CHAPTER is correct; the BRIEF's loc-note is wrong. Revise to 'passim — royal-divine relations and the antediluvian/postdiluvian royal sequence'."
+
+honesty:
+  direct_access:
+    foster_2005_pp_533_554: false   # CDL Press paywalled
+    dalley_2008_pp_189_202: false   # OUP World's Classics
+    foster_2007_pp_43_46: false     # print-only
+    noegel_2005_pp_233_245: false   # print-only
+    bottero_2001: false             # print-only
+    black_green_1992: false         # paywalled
+  triangulated_via_open_web:
+    - "Wikipedia s.v. Etana: CRITICAL — OB recension is from Susa AND Tell Harmal, NOT Sippar; Etana is the 13th king of the first (postdiluvian) Kish dynasty; SKL phrase 'shepherd who ascended to heaven'"
+    - "World History Encyclopedia, The Myth of Etana: lost ending; heaven-flight gates of Anu/Enlil/Ea AND Sin/Shamash/Adad/Ishtar (seven deities)"
+    - "Britannica s.v. Etana Epic: lost ending; two possible outcomes (success or fall) — chapter's refusal to extrapolate is appropriate"
+    - "Hejon07 Substack 'The Memory Beneath the Memory': independent confirmation of OB Susa + Tell Harmal provenance"
+    - "Selz / Samizdat blog (Plant of Birth or Plant of Life): šammu ša alādi as correct lexeme; distinct from šammu ša balāṭi in Gilgameš"
+    - "eBL šammu I dictionary entry: birth-plant as medicinal herb"
+    - "Mythicscribes.com The Legend of Etana: SKL position; thirteenth king of first Kish dynasty"
+    - "Sumerian King List Wikipedia: postdiluvian Kish dynasty as the first dynasty after kingship descended from heaven"
+    - "Tree of Visions / GatewaysToBabylon translation mirrors: seven-gate sequence in surviving SB heaven-flight"
+    - "Kinnier Wilson 1985 The Legend of Etana (Aris & Phillips) — bibliographic confirmation as the standard modern edition"
+    - "Novotny 2001 The Standard Babylonian Etana Epic (SAACT 2) — bibliographic confirmation"
+    - "H.W.F. Saggs bibliography (Wikipedia s.v. H.W.F. Saggs; CDLI Wiki): NO Etana 1986 publication located"
+    - "Valk 2020 JAOS 140.4 'The Eagle and the Snake, or Anzû and Bašmu?': comparative-mythological dimension noted but not engaged by the chapter"
+  taken_on_trust:
+    - "Foster 2005 pp. 533–554 exact page-anchors (page-ranges consistent with the chapter's coverage; OB provenance error is confirmed against multiple secondary sources)"
+    - "Dalley 2008 pp. 189–202 exact page-anchors"
+    - "Foster 2007 pp. 43–46 (Etana in the late tradition)"
+    - "Noegel 2005 pp. 233–245 (Mesopotamian heroic-epic context)"
+    - "Bottéro 2001 commentary on royal-divine relations"
+    - "Black & Green 1992 s.v. Etana / eagle / serpent / Šamaš / Anu / Ištar"
+    - "MA Aššur four-tablets-two-manuscripts dossier (14th–11th c. BCE) — consistent across summaries"
+    - "SB Nineveh K.2606 + duplicates dossier — confirmed in Novotny 2001 summaries"
+
+writer_flagged_for_scrutiny_resolution:
+  flag_1_antediluvian_vs_postdiluvian: UPHELD                    # chapter correct (postdiluvian per SKL); brief's loc-note wrong (N-1)
+  flag_2_saggs_1986_join: UNVERIFIED-RECOMMEND-REPLACE            # F-3 MEDIUM
+  flag_3_three_recensions_provenance: PARTIAL-FACTUAL-ERROR       # OB Susa+Tell Harmal not Sippar (F-1 HIGH); MA and SB correct
+  flag_4_lost_ending_all_three_recensions: UPHELD
+  flag_5_shammu_sha_aladi: UPHELD
+  flag_6_eagle_serpent_fable_structural_prologue: UPHELD-AS-INFERENCE
+  flag_7_ishtar_anu_gates: PARTIAL-INCOMPLETE                     # F-2 MEDIUM — gates are named in text, but five additional gates also preserved
+
+caution_flags_resolved:
+  co_equal_recensions_classification: "VERIFIED ✓ — three recensions (OB, MA, SB) correctly presented as co-equal; sequence-presentation (OB → MA → SB) along shared narrative spine; no recension privileged"
+  ob_recension_provenance: "FACTUAL ERROR ✗ — OB is from Susa+Tell Harmal, NOT Sippar (F-1 HIGH; pervasive throughout chapter)"
+  ma_recension_provenance: "VERIFIED ✓ — Aššur tablets, mid-2nd millennium (14th–11th c. BCE), four tablets / two manuscripts, fragmentary"
+  sb_recension_provenance: "VERIFIED ✓ — Nineveh K.2606 + duplicates, Aššurbanipal's library, 7th c. BCE"
+  saggs_1986_join: "UNVERIFIED ✗ — Saggs bibliography has no 1986 Etana publication; likely confusion with Kinnier Wilson 1985 / Novotny 2001 (F-3 MEDIUM)"
+  shammu_sha_aladi_lexeme: "VERIFIED ✓ — 'plant of birth' Akkadian term correct; fertility/conception function standard; distinct from Gilgameš's šammu ša balāṭi"
+  lost_ending_structural: "VERIFIED ✓ — all three recensions break before resolution; no in-tradition fill; LACUNA marker line 94 (scholarly_reconstruction: no) is sound"
+  eagle_serpent_structural_prologue: "VERIFIED ✓ — INFERENCE marker line 237 hedges appropriately; structural reading is interpretive but consensus"
+  heaven_flight_gates: "INCOMPLETE — chapter cites Ištar and Anu (both in text); five additional gates (Enlil, Ea, Sin, Šamaš, Adad) also preserved in surviving SB lines (F-2 MEDIUM)"
+  sumerian_king_list_postdiluvian: "VERIFIED ✓ — Etana is the 13th king of first (postdiluvian) Kish dynasty per W-B 444; chapter correct; brief inconsistent (N-1)"
+  etana_iconographic_tradition: "VERIFIED ✓ — Old Akkadian cylinder seals depict Etana-on-eagle motif; iconography predates literary recensions"
+  bellerophon_typological_only: "VERIFIED ✓ — COMPARATIVE-HOOK line 288, reserved for influences chapter"
+  hebrew_bible_childlessness_typological_only: "VERIFIED ✓ — COMPARATIVE-HOOK line 288 (Sarah/Isaac, Hannah/Samuel), reserved for influences chapter"
+  marker_discipline: "VERIFIED ✓ — 2 INFERENCE, 4 LACUNA, 1 RECONSTRUCTION, 1 VARIANT, 5 COMPARATIVE-HOOK markers; schema-compliant"
+  glossary_compliance: "VERIFIED ✓ — all eight glossed entities (Etana, eagle, serpent, Šamaš, Ištar, Anu, šammu ša alādi, Kish) glossed on first mention"
+
+routing:
+  proceed_to_stage_13_with_light_fixes: true
+  needs_brief_revision: true   # N-1: brief's antediluvian-king loc-note for bottero-2001
+  needs_round_2_chapter_claims_rewrite: false
+  rewrite_scope: |
+    Three targeted human-review edits at stage 12a + one brief revision:
+
+    (i) **F-1 (HIGH) — OB recension provenance correction**.
+        Global find-and-replace across the chapter:
+        - "OB Sippar recension" → "OB Susa+Tell Harmal recension"
+          (or simply "OB recension")
+        - "Sippar tablets" → "Susa and Tell Harmal tablets"
+        - "OB Sippar (ca. 1700 BCE)" → "OB (Susa and Tell Harmal,
+          ca. 1700 BCE)"
+        Specific lines: 9, 51, 57, 58, 64, 88, 96, 113, 116, 151,
+        152, 258, 280 (≈10–12 instances).
+        Also revise the brief at line 41 to match.
+
+    (ii) **F-2 (MEDIUM) — heaven-flight gates completeness**.
+         At line 107, expand "(Ištar's heaven, Anu's heaven)" to
+         "(Anu, Enlil, Ea, Sin, Šamaš, Adad, Ištar — the seven
+         gates of the surviving SB heaven-flight episodes)".
+         At lines 213 and 219, retain existing focus but add
+         brief mention of the wider seven-gate sequence.
+
+    (iii) **F-3 (MEDIUM) — Saggs 1986 → Kinnier Wilson 1985 /
+          Novotny 2001**. At lines 32, 69, 92, 176, 258, replace
+          "Saggs 1986 join" with reference to Kinnier Wilson 1985
+          (*The Legend of Etana*, Aris & Phillips — the standard
+          modern edition consolidating all three recensions) and/or
+          Novotny 2001 (*The Standard Babylonian Etana Epic*,
+          SAACT 2 — the critical cuneiform/transliteration edition).
+
+    (iv) **N-1 (NOTE) — brief revision**. Revise briefs/18-etana.yaml
+         line 20 from "bottero-2001, loc: passim — Etana as
+         antediluvian king" to "bottero-2001, loc: passim —
+         royal-divine relations and the antediluvian/postdiluvian
+         royal sequence".
+
+    All four edits are localised; no structural rewrite required.
+  re_factcheck_after_fixes: false   # PASS-WITH-LIGHT-FIXES; the fixes are mechanical (F-1 find-and-replace; F-3 citation substitution; F-2 augmentation; N-1 brief loc-note)
+
+outputs:
+  - file: "chapters/18-etana.claims.factcheck.yaml"
+    lines: ~ 590
+
+summary: |
+  Round-1 fact-check of chapters/18-etana.claims.adoc completed
+  in fresh context (no writer-side memory of producing the
+  claims). Verdict: PASS-WITH-LIGHT-FIXES.
+
+  ONE HIGH-severity finding: F-1 (FACTUAL-ERROR — the Old
+  Babylonian recension of Etana is from **Susa and Tell Harmal**,
+  NOT from Sippar; the chapter's 'OB Sippar' attribution is
+  pervasive [≈10–12 instances] and factually wrong in every case).
+  This is a load-bearing manuscript-provenance error verified
+  against Wikipedia s.v. Etana, Hejon07 Substack, the Kinnier
+  Wilson 1985 edition's catalogue description, and the Novotny
+  2001 critical edition. The error appears to have been
+  introduced by pattern-matching from other OB Akkadian
+  compositions (Atra-ḫasīs MS B; OB Anzû; OB Gilgameš Sippar
+  tablet) where Sippar IS the principal OB provenance. The fix
+  is mechanical (global find-and-replace) but must be applied
+  before chapter-draft. Despite HIGH severity, the verdict is
+  PASS-WITH-LIGHT-FIXES (not BLOCK) because the error is
+  localised to a single attribute (the OB provenance) — the
+  recension-history structure, the eagle-serpent fable handling,
+  the heaven-flight treatment, and the lost-ending discipline are
+  all sound.
+
+  Two MEDIUM findings: F-2 (HEDGING-NEEDED — the heaven-flight
+  gates citation mentions only Ištar and Anu when the surviving
+  SB lines preserve seven gates: Anu/Enlil/Ea AND
+  Sin/Šamaš/Adad/Ištar) and F-3 (CITATION-WRONG / UNVERIFIED —
+  the 'Saggs 1986 join' is not located in any open-web source;
+  H.W.F. Saggs's bibliography does not include a 1986 Etana
+  publication; the actual modern editions are Kinnier Wilson
+  1985 *The Legend of Etana* and Novotny 2001 *The Standard
+  Babylonian Etana Epic* SAACT 2).
+
+  Zero LOW findings. One note: N-1 (BRIEF-INCONSISTENCY — the
+  brief's sources.secondary loc-note for bottero-2001 describes
+  Etana as 'antediluvian king', which is inconsistent with the
+  brief's own cross_cultural_parallels block, with the SKL's
+  postdiluvian placement, and with the chapter's correct
+  framing; the brief should be revised at line 20).
+
+  All seven writer-flagged-for-scrutiny items resolved:
+  (1) Antediluvian vs postdiluvian = UPHELD (chapter correct;
+      brief was wrong — Etana IS postdiluvian per SKL).
+  (2) Saggs 1986 join = UNVERIFIED-RECOMMEND-REPLACE.
+  (3) Three recensions provenance = PARTIAL-FACTUAL-ERROR
+      (OB Susa+Tell Harmal not Sippar — F-1 HIGH; MA and SB
+      correct).
+  (4) Lost-ending claim = UPHELD (scholarly consensus).
+  (5) Šammu ša alādi (plant of birth) = UPHELD.
+  (6) Eagle-and-serpent fable as structural prologue = UPHELD-
+      AS-INFERENCE (INFERENCE marker hedges appropriately).
+  (7) Ištar's and Anu's gates = PARTIAL-INCOMPLETE (both named
+      in text but five other gates also preserved — F-2 MEDIUM).
+
+  Zero fabrications; zero contamination; zero silent bridges;
+  zero glossary violations; zero marker-schema failures.
+
+  Recommendation: route to stage 13 (post-human-normalize) with
+  the four localised fixes applied at human review:
+  (i)   F-1 global find-and-replace for OB Sippar → Susa+Tell Harmal;
+  (ii)  F-2 gates augmentation at lines 107, 213, 219;
+  (iii) F-3 Saggs 1986 → Kinnier Wilson 1985 / Novotny 2001
+        substitution at lines 32, 69, 92, 176, 258;
+  (iv)  N-1 brief loc-note correction at line 20.
+  No round-2 chapter-claims rewrite required.

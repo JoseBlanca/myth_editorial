@@ -1,0 +1,391 @@
+stage: "narrative-fidelity"
+chapter: 18
+slug: "etana"
+status: "done"
+timestamp: "2026-05-12T00:00:00Z"
+agent_model: "claude-opus-4-7[1m]"
+fresh_conversation: true
+
+input:
+  - "chapters/18-etana.claims.approved.adoc"
+  - "chapters/18-etana.adoc"
+  - "briefs/18-etana.yaml"
+  - "chapters/18-etana.claims.factcheck.yaml"
+  - "completions/14-chapter-draft-ch18.done.yaml"
+  - "glossary.yaml"
+  - "gloss-ledger.yaml"
+  - "scope.md"
+  - "sources.yaml"
+
+output:
+  - "chapters/18-etana.fidelity.yaml"
+  - "completions/15-narrative-fidelity-ch18.done.yaml"
+
+verdict: PASS-WITH-ADVISORY
+verdict_severity: ADVISORY
+
+# ─────────────────────────────────────────────────────────────────────────
+# Audit headline
+# ─────────────────────────────────────────────────────────────────────────
+headline: |
+  Chapter 18 (Etana) is fidelity-clean. Every numbered
+  claim maps to a body-prose paragraph in the same
+  sequential position; all eight structural markers
+  (2 INFERENCE + 4 LACUNA + 1 RECONSTRUCTION + 1 VARIANT),
+  all five COMPARATIVE-HOOK comments, all 35 footnotes,
+  and all 136 EVIDENCE tokens are preserved byte-identical
+  from the approved claims contract. All three post-human-
+  normalize light-fixes carry through correctly: F-1 (OB
+  provenance = Susa and Tell Harmal, not Sippar — 0 hits
+  on Sippar); F-2 (Kinnier Wilson 1985 / Novotny 2001
+  named-but-flagged in body prose at SB-recension section,
+  replacing the unverified Saggs 1986 — 0 hits on Saggs);
+  F-3 (full seven-gate sequence preserved with inline
+  deity descriptors at five body-prose loci). Co-equal
+  recensions handling per the brief: PASS — OB, MA, SB
+  presented side by side. Structural lost ending: PASS —
+  flagged in 7 body-prose loci including the load-bearing
+  fourth LACUNA marker; no extrapolation. Glossary
+  discipline: PASS — locked diacritics on Šamaš, Ištar,
+  Aššur, Aššurbanipal, Sîn, Šaduppum, *šammu ša alādi*;
+  all 11 never_use forms zero hits in body prose. Two
+  ADVISORY findings documented (G-1 markup-normalisation
+  `*` → `_`; G-2 glossary-lock "Sin" → "Sîn" in body prose
+  with footnote/EVIDENCE preservation); both are policy-
+  compliant transformations and do not require revision.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Delta tallies (echo of fidelity.yaml, for completion-stream visibility)
+# ─────────────────────────────────────────────────────────────────────────
+delta_tallies:
+  EVIDENCE_tokens:
+    claims: 136
+    prose: 136
+    byte_identical: true
+  footnotes:
+    claims: 35
+    prose: 35
+    byte_identical: true
+  COMPARATIVE_HOOK_comments:
+    claims: 5
+    prose: 5
+    byte_identical: true
+  markers:
+    INFERENCE:
+      claims: 2
+      prose: 2
+      byte_identical: true
+    LACUNA:
+      claims: 4
+      prose: 4
+      byte_identical: true
+    RECONSTRUCTION:
+      claims: 1
+      prose: 1
+      byte_identical: true
+    VARIANT:
+      claims: 1
+      prose: 1
+      byte_identical: true
+    total:
+      claims: 8
+      prose: 8
+      byte_identical: true
+
+# ─────────────────────────────────────────────────────────────────────────
+# Verification of the three post-human-normalize light-fixes
+# ─────────────────────────────────────────────────────────────────────────
+light_fixes_verified:
+  F1_OB_provenance_Susa_and_Tell_Harmal: PASS
+  F2_Kinnier_Wilson_and_Novotny_named_but_flagged: PASS
+  F3_seven_gate_sequence: PASS
+  notes: |
+    F-1: Body prose uniformly names "Susa and Tell Harmal"
+         as the OB recension's find-spots at the source-
+         overview, OB-recension paragraphs, LACUNA markers,
+         RECONSTRUCTION marker, co-equal recensions paragraph,
+         OB-recension section, VARIANT marker, and
+         chronological-and-geographic-spread paragraph.
+         Direct grep on body prose for "Sippar" returns 0
+         hits anywhere in the chapter.
+    F-2: Body prose at line 22 (source-overview SB-recension
+         paragraph) and line 129 (SB-recension section
+         opening) names "J. V. Kinnier Wilson, _The Legend of
+         Etana_ (Aris & Phillips, 1985)" and "Jamie R.
+         Novotny, _The Standard Babylonian Etana Epic_
+         (SAACT 2, Helsinki, 2001)" with explicit named-but-
+         flagged framing. Neither is anchored as an EVIDENCE
+         token; the substantive SB reconstruction is
+         anchored through foster-2005 and dalley-2008.
+         Direct grep on body prose for "Saggs" returns 0
+         hits anywhere in the chapter.
+    F-3: Body prose preserves the full seven-gate sequence
+         (Anu, Enlil, Ea, Sîn, Šamaš, Adad, Ištar) at five
+         loci: the shared-narrative-spine paragraph (line
+         60), the dedicated seven-gate paragraph (line 166)
+         with inline functional descriptors for each deity,
+         the Ištar's-gate paragraph (line 172), the Anu's-
+         gate paragraph (line 178), and the variants-summary
+         paragraph (line 219). All seven deities are named
+         per the F-3 light-fix.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Glossary compliance
+# ─────────────────────────────────────────────────────────────────────────
+glossary_compliance:
+  status: PASS-WITH-ADVISORY
+  locked_diacritics_verified:
+    - "Šamaš (š-háček) — PASS; REMINDER gloss inline at source-overview first mention"
+    - "Ištar (š-háček) — PASS; 'Ishtar' zero hits in body prose"
+    - "Aššur (š-háček) — PASS; 'Ashur' zero hits in body prose"
+    - "Aššurbanipal (š-háček) — PASS; 'Ashurbanipal' (the unhacked form) zero hits in body prose, a marked improvement over ch17"
+    - "Sîn (î-circumflex) — PASS in body prose; see finding G-2 for the body-prose-vs-footnote glossary-lock advisory"
+    - "Šaduppum (š-háček) — PASS; embedded in Tell Harmal's FULL_GLOSS"
+    - "*šammu ša alādi* (š+macron-ā+macron-ī) — PASS; underscore italic in body prose, asterisks-bold preserved byte-identical in footnotes/markers"
+    - "*Atra-ḫasīs* (ḫ-with-dot, macrons) — PASS; preserved only in COMPARATIVE-HOOK comments"
+    - "_apsû_ (â-circumflex per locked rendering) — PASS"
+  never_use_zero_hits:
+    - Ishtar
+    - Shamash
+    - Ashur
+    - Inanna
+    - Bilgames
+    - Huwawa
+    - Utnapishtim
+    - Enki
+    - Dumuzid
+    - Anzud
+    - Utu
+  reminder_vs_bare_per_gloss_ledger:
+    Šamaš: "REMINDER applied inline at source-overview first mention (prose line 4) — '(the sun-god, patron of justice and judge of oaths)' — per gloss-ledger entry; gloss-policy discretion call given ch18's central recursive Šamaš-as-judge structure even though ch17 was just one chapter back."
+    Sîn: "REMINDER applied inline at seven-gate paragraph (prose line 166) — '(the moon-god)' — per gloss-ledger entry (last full mention was ch05, 13 chapters back)."
+    Ištar: "BARE per gloss-ledger — last mentioned ch17, one chapter back; inline '(the queen of heaven)' descriptor at line 166/172 preserved byte-identical from claims, not added at draft stage."
+    Anu: "BARE per gloss-ledger — last mentioned ch17, one chapter back; inline 'sky-god' / 'formal head of the divine hierarchy, father of the Anunnaki' descriptors preserved byte-identical from claims at lines 166 and 178."
+    Enlil: "BARE per gloss-ledger — last mentioned ch17, one chapter back; inline 'storm-god and chief executive of the divine assembly' descriptor preserved byte-identical from claims at line 166."
+    Ea: "BARE per gloss-ledger — last mentioned ch17, one chapter back; inline 'god of the *apsû* and of wisdom' descriptor preserved byte-identical from claims at line 166."
+    Adad: "BARE per gloss-ledger — reminder in ch15; inline 'storm-god' descriptor preserved in seven-gate paragraph."
+    Apsû: "BARE per gloss-ledger — last mentioned ch17."
+    Aššur: "BARE per gloss-ledger — last mentioned ch17, one chapter back; the city, not the god."
+    Nineveh: "BARE per gloss-ledger — last mentioned ch17, one chapter back."
+    Atra-ḫasīs: "BARE per gloss-ledger — last mentioned ch17, one chapter back; named only inside COMPARATIVE-HOOK comments."
+    Adapa: "BARE per gloss-ledger — last mentioned ch04; named only inside COMPARATIVE-HOOK comments."
+  new_ch18_full_gloss_entries:
+    Etana: "FULL_GLOSS at first body-prose mention; new ch18 ledger entry"
+    "the Eagle": "FULL_GLOSS at first body-prose mention; new ch18 ledger entry"
+    "the Serpent": "FULL_GLOSS at first body-prose mention; new ch18 ledger entry"
+    "šammu ša alādi": "FULL_GLOSS at first body-prose mention; new ch18 ledger entry"
+    Kish: "FULL_GLOSS at first body-prose mention; new ch18 ledger entry"
+    Susa: "FULL_GLOSS at first body-prose mention; new ch18 ledger entry"
+    "Tell Harmal": "FULL_GLOSS at first body-prose mention; new ch18 ledger entry"
+    Anunnaki: "FULL_GLOSS embedded in Anu's locked first_mention_gloss preserved verbatim from claims; new ch18 ledger entry"
+  advisory_notes: |
+    G-2: The moon-god is rendered "Sîn" (î-circumflex) at
+    five body-prose loci per the locked glossary entry,
+    while the approved claims contract renders "Sin"
+    (without circumflex) at the corresponding body-prose
+    positions. Inside footnotes, EVIDENCE tokens, and the
+    post-human-normalize provenance comment block, "Sin"
+    is preserved byte-identical. This is the correct
+    application of body-prose glossary discipline plus
+    byte-for-byte preservation in footnotes/markers/
+    EVIDENCE — both rules co-apply consistently. See
+    finding G-2 in the fidelity.yaml.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Co-equal recensions handling (the brief's distinctive ch18 requirement)
+# ─────────────────────────────────────────────────────────────────────────
+co_equal_handling:
+  status: PASS
+  notes: |
+    Per the brief's variants.classification: co-equal, the
+    three Akkadian recensions (OB Susa and Tell Harmal, MA
+    Aššur, SB Nineveh) are presented side by side in their
+    own sections (§OB, §MA, §SB); the chapter has a dedicated
+    §"Co-equal recensions: a methodological note" making the
+    co-equal framing explicit; the shared narrative spine is
+    narrated once in §"The shared narrative spine" then
+    traced through each recension; the VARIANT marker
+    chosen-clause reads "ALL THREE RECENSIONS PRESENTED in
+    sequence (OB → MA → SB), per the brief's co-equal
+    classification — the chapter does not 'choose' one over
+    the others but treats them as roughly co-equal in
+    scholarly weight". In contrast to ch17's single-prevalent
+    SB-as-primary framing, ch18 follows the brief's co-equal
+    classification.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Structural lacuna handling (the brief's no-extrapolation requirement)
+# ─────────────────────────────────────────────────────────────────────────
+structural_lacuna_handling:
+  status: PASS
+  notes: |
+    The lost conclusion of the heaven-flight is flagged at
+    seven body-prose loci: (1) source-overview opener (line
+    4) "the conclusion of the heaven-flight is lost in
+    every witness"; (2) SB LACUNA marker (line 45) "the
+    conclusion of the heaven-flight … is not preserved in
+    any SB manuscript"; (3) structural-lost-ending LACUNA
+    marker (line 47) "scholarly_reconstruction: no — the
+    loss is structural; no in-tradition fill exists … The
+    chapter must not extrapolate a resolution"; (4) shared-
+    narrative-spine paragraph (line 60) "the resolution is
+    lost in every witness"; (5) OB break-off paragraph
+    (line 104) "the OB recension on its own does not tell
+    us whether Etana brings back the plant of birth"; (6)
+    SB break-off paragraph (line 190) explicit statement of
+    the four unknowns; (7) VARIANT marker (line 217) "the
+    chapter does not extrapolate a resolution"; plus the
+    Adapa-flight-parallel COMPARATIVE-HOOK framing the
+    lost-resolution question as "undecidable" on the
+    surviving evidence. No extrapolation, no speculation,
+    no provisional resolution.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Asimov register / forbidden words / factual additions
+# ─────────────────────────────────────────────────────────────────────────
+register_and_content_checks:
+  asimov_register: PASS
+  forbidden_words: PASS
+  no_factual_additions: PASS
+  no_silent_omissions: PASS
+  pop_etana_scene_check: |
+    No pop-Etana details added beyond claims content.
+    Verified explicitly for:
+      - Eagle-and-serpent oath scene (poplar / shared tree
+        at the foot of the world-mountain; oath sworn by
+        Šamaš — all match claims).
+      - Eagle's deliberation with his chick (the chick
+        counsels against the betrayal but is overruled —
+        matches claims).
+      - Pit-trap mechanics (the eagle lured into a pit, his
+        wings damaged, left to die slowly — matches SB
+        recension claims).
+      - Rescue scene (Etana descending to the pit at
+        Šamaš's direction; feeding the eagle; restoring
+        the wings over a period of months — matches SB
+        claims).
+      - Heaven-flight imagery (receding earth: rivers
+        narrowing to threads, lands shrinking to small
+        shapes, sea becoming a band, earth shrinking to
+        a small enclosure — all match claims).
+      - Seven-gate sequence (Anu, Enlil, Ea, Sîn, Šamaš,
+        Adad, Ištar — matches the F-3 light-fix claims).
+      - Iconographic tradition (Old Akkadian cylinder
+        seals predate the literary recensions — matches
+        claims).
+      - Sumerian King List framing (Etana = "the king of
+        Kish who ascended to heaven", postdiluvian royal
+        sequence — matches claims; noted but not retold).
+
+# ─────────────────────────────────────────────────────────────────────────
+# Italic discipline
+# ─────────────────────────────────────────────────────────────────────────
+italic_discipline:
+  status: PASS
+  notes: |
+    Body-prose composition titles (_Etana_), named-but-
+    flagged critical-edition titles (_The Legend of Etana_,
+    _The Standard Babylonian Etana Epic_), and Akkadian
+    common nouns (_šammu ša alādi_, _apsû_) use underscore
+    italic per chapter-draft skill rule 6. Asterisks-bold
+    preserved byte-identical inside footnote bodies (e.g.,
+    *Before the Muses*, *Etana*, *šammu ša alādi*),
+    EVIDENCE tokens, marker bodies (LACUNA / INFERENCE /
+    RECONSTRUCTION / VARIANT), and COMPARATIVE-HOOK
+    comments. Python regex over the chapter text with
+    footnote and marker bodies stripped returns 0 asterisk-
+    bold tokens in body prose — verifying full italic
+    discipline compliance.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Anchor
+# ─────────────────────────────────────────────────────────────────────────
+anchor_check:
+  status: PASS
+  expected_anchor: "[[ch-18-etana]]"
+  actual_anchor: "[[ch-18-etana]]"
+  notes: "Chapter opens with [[ch-18-etana]] per toc.yaml; the claims-only [[ch-18-etana-claims]] anchor is not used in the prose chapter."
+
+# ─────────────────────────────────────────────────────────────────────────
+# Findings for record
+# ─────────────────────────────────────────────────────────────────────────
+findings:
+  - finding_id: G-1
+    severity: ADVISORY
+    kind: MARKUP_NORMALISATION
+    summary: |
+      Markup-normalisation `*italic*` → `_italic_` for body-
+      prose composition titles (_Etana_), named-but-flagged
+      critical-edition titles (_The Legend of Etana_, _The
+      Standard Babylonian Etana Epic_), and Akkadian common
+      nouns (_šammu ša alādi_, _apsû_). Permitted per
+      chapter-draft skill rule 6 with the complementary
+      byte-identical preservation of asterisk-bold inside
+      footnotes, EVIDENCE tokens, marker bodies, and
+      COMPARATIVE-HOOK comments per rules 4 and 5.
+    impact: |
+      ADVISORY only. Does not affect the fidelity verdict.
+      Policy-compliant markup conversion.
+    recommended_action: |
+      NONE at the narrative-fidelity stage.
+
+  - finding_id: G-2
+    severity: ADVISORY
+    kind: GLOSSARY_LOCK_NORMALISATION
+    summary: |
+      Body-prose normalisation of the moon-god "Sin" → "Sîn"
+      (î-circumflex) at five body-prose loci per the locked
+      glossary.yaml entry; footnotes, EVIDENCE tokens, and
+      the post-human-normalize provenance comment block
+      preserve "Sin" byte-identical with claims. This is the
+      correct application of the body-prose glossary
+      discipline alongside the byte-for-byte preservation
+      rule for footnotes and markers.
+    impact: |
+      ADVISORY only. Does not affect the fidelity verdict.
+      Policy-compliant glossary-lock application.
+      Substantive content preserved correctly.
+    recommended_action: |
+      NONE at the narrative-fidelity stage. A downstream
+      consideration: the chapter-claims and post-human-
+      normalize stages could be aligned with the Sîn
+      glossary lock to remove the body-prose-vs-footnote
+      split, but this is a multi-stage policy question
+      outside the scope of the ch18 fidelity audit.
+
+# ─────────────────────────────────────────────────────────────────────────
+# Routing
+# ─────────────────────────────────────────────────────────────────────────
+routing:
+  proceed_to: "stage 16 (commit) per RUNBOOK §10f."
+  pattern_match: |
+    Chapter 18 matches the chapter 14, 15, 16, and 17
+    fidelity-stage pattern: PASS-WITH-ADVISORY with one or
+    two documented advisory findings that do not require
+    revision.
+  re_audit_required: false
+  needs_revision: false
+
+# ─────────────────────────────────────────────────────────────────────────
+# Honesty self-check
+# ─────────────────────────────────────────────────────────────────────────
+honesty_self_check:
+  every_claim_mapped: true
+  every_paragraph_checked_for_additions: true
+  meaning_distortion_check_done: true
+  fresh_conversation: true
+  same_model_as_writer: true
+  method: |
+    Programmatic byte-level diff of EVIDENCE tokens
+    (136 → 136), footnotes (35 → 35), COMPARATIVE-HOOK
+    comments (5 → 5), and structural markers (8 → 8) all
+    returned zero differences. Paragraph-level body count
+    confirmed 35 prose paragraphs match 35 claim paragraphs
+    in the same sequential order. The two non-typographic
+    difference loci (G-1 markup conversion `*` → `_` for
+    body-prose italics; G-2 body-prose glossary-lock "Sin"
+    → "Sîn") were inspected and verified as policy-compliant
+    chapter-draft transformations. Direct grep confirmed
+    zero hits on all 11 never_use glossary terms, zero hits
+    on "Sippar" (F-1), zero hits on "Saggs" (F-2), and
+    seven-deity coverage at five body-prose loci (F-3).
